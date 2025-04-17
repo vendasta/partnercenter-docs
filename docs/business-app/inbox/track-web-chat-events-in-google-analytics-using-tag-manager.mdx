@@ -1,0 +1,90 @@
+---
+title: Track web chat events in Google Analytics using Tag Manager
+description: Learn how to track web chat events in Google Analytics using Tag Manager
+---
+
+# Track web chat events in Google Analytics using Tag Manager
+
+Integrating Google Tag Manager (GTM) with your web chat can provide valuable insights into user interactions. This guide walks you through the process of tracking chat events using Google Tag Manager and Google Analytics.
+
+## Prerequisites
+
+Before beginning this integration, ensure you have:
+
+1. An active Web Chat account
+2. Access to Google Tag Manager
+3. A configured Google Analytics property
+
+## Setting up event tracking
+
+Follow these steps to set up web chat event tracking:
+
+### 1. Create custom event triggers in Google Tag Manager
+
+Start by creating triggers that will respond to your web chat events:
+
+![Creating a new trigger in GTM](/img/business-app/inbox/web_chat_gtm_1.jpg)
+
+Create specific triggers for each chat event you want to track:
+
+![Setting up a custom event trigger](/img/business-app/inbox/web_chat_gtm_2.jpg)
+
+### 2. Configure Google Analytics event tags
+
+Create new GA4 event tags that will fire when your triggers are activated:
+
+![Creating a new GA4 event tag](/img/business-app/inbox/web_chat_gtm_3.jpg)
+
+Configure your event parameters:
+
+![Configuring event parameters](/img/business-app/inbox/web_chat_gtm_4.jpg)
+
+### 3. Link your tags to triggers
+
+Connect each tag to its corresponding trigger:
+
+![Linking tags to triggers](/img/business-app/inbox/web_chat_gtm_5.jpg)
+
+### 4. Preview and test your configuration
+
+Use the GTM preview mode to ensure your events are firing correctly:
+
+![Testing in preview mode](/img/business-app/inbox/web_chat_gtm_6.jpg)
+
+### 5. Publish your changes
+
+Once you've verified everything is working correctly in preview mode, publish your changes to make them live on your website:
+
+![Publishing changes in GTM](/img/business-app/inbox/web_chat_gtm_7.jpg)
+
+## Verifying event tracking
+
+After publishing your changes, you can verify that events are being tracked by:
+
+1. Opening your Google Analytics dashboard
+2. Navigating to the Real-Time reports section
+3. Interacting with your chat widget on your website
+4. Confirming that events appear in your real-time reports
+
+## Available web chat events
+
+The following events can be tracked through this integration:
+
+- **Chat Started**: Triggered when a visitor initiates a chat session
+- **Chat Message Sent**: Triggered when a visitor sends a message
+- **Chat Message Received**: Triggered when the visitor receives a response
+- **Chat Ended**: Triggered when a chat session concludes
+
+## Troubleshooting
+
+If you're not seeing events in Google Analytics:
+
+1. Verify that your GTM container is properly installed on your website
+2. Check that your triggers are set up with the correct event names
+3. Ensure your Google Analytics configuration is correctly linked in GTM
+4. Use the GTM preview mode to debug event firing
+
+## Additional resources
+
+- [Google Tag Manager Help Center](https://support.google.com/tagmanager/)
+- [Google Analytics 4 Documentation](https://developers.google.com/analytics/devguides/collection/ga4)

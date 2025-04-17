@@ -1,0 +1,37 @@
+---
+id: how-to-use-sftp
+title: How to use SFTP to access the file system
+description: Learn how to access your Website Pro file system via SFTP for direct file management.
+sidebar_label: SFTP File System Access
+---
+
+When hosting your site on Website Pro, we allow you to access your file system via SFTP. Other systems often allow this, but through FTP. It's the same concept, but SFTP adds a layer of encryption for security purposes. In this article, we'll explain how to connect to your sites file system through SFTP.
+
+## Step 1: Add an SFTP key pair
+
+The first step in connecting SFTP is to set up your SFTP key pair in the Website Pro dashboard. To do this, navigate to the **Advanced Tools > SFTP section** (see screenshot below).
+
+![SFTP section in Website Pro dashboard](/img/vendasta-products/website/sftp/sftp-section-alt.jpg)
+
+On the SFTP page, click "Add Key" and enter in a key name. You will then be able to download your private key that is associated with the key that was just added.
+
+## Step 2: Connect to your file system using SFTP
+
+Once your new key pair has been generated and you've downloaded your private key, you will be able to connect directly to your file system. To do so, you will need an SFTP client, such as [FileZilla](https://filezilla-project.org/). It is free and available for Mac or PC.
+
+How to use FileZilla:
+
+1. Open **FileZilla > File > Site Manager > New Site**
+2. Enter host as: **sftp.websitepro.hosting**
+3. Enter port as: **22**
+4. Set protocol field to: SFTP – SSH File Transfer Protocol
+5. Set logon type to: Key file
+6. Enter your user: **xxxxx**
+7. Choose your key file
+8. Click connect
+
+Your SFTP client setup should look like the screenshot below:
+
+![FileZilla SFTP setup](/img/vendasta-products/website/sftp/filezilla-setup-alt.png)
+
+Once connected, you will have the ability to modify the file system directly. This will allow you to do things like overwrite the site with a new build, delete plugins or themes, or easily make small changes without logging into the Website Pro dashboard.

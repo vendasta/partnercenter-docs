@@ -1,0 +1,18 @@
+---
+title: Website showing insecure when SSL is showing secure
+description: Troubleshooting mixed content issues when your website is showing as insecure despite having SSL
+---
+
+A common issue after adding an SSL certificate is that your browser still shows your site as insecure. This most often happens because there are links on your page that still point to HTTP instead of HTTPS.
+
+On a page showing ![Not secure indicator](/img/vendasta-products-website-faqs/4406961221527.png), you can hit F12 or right-click and choose "Inspect" and select the "Console" tab.
+
+![Console tab in browser developer tools](/img/vendasta-products-website-faqs/4406961222167.png)
+
+The Console tab will show you errors on the page. This will help you identify which images or links need to be fixed.
+
+Even though the site is secured over SSL, non-secure (HTTP://) images will cause the site to show as Not Secure.
+
+![Console showing mixed content errors](/img/vendasta-products-website-faqs/4406961222679.png)
+
+Here is a guide to help fix the issue: [How to Fix the Mixed Content Error in WordPress](https://www.wpbeginner.com/plugins/how-to-fix-the-mixed-content-error-in-wordpress-step-by-step/#:~:text=Fixing%20Mixed%20Content%20Error%20in,to%20configure%20the%20plugin%20settings.)

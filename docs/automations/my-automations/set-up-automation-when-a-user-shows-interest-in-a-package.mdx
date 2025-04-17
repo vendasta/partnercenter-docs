@@ -1,0 +1,44 @@
+---
+title: Set up automation when a user shows interest in a package
+description: Learn how to set up automations to handle package inquiries and interest from users.
+sidebar_position: 3
+---
+
+Partners can use Automations to access events from the Public or Business App stores and gather detailed information about package inquiries. They can also use the webhook action in Automations to push data to their platforms.
+
+**Use Case 1-** Utilize Store data and harness the power of AI to enhance messaging and optimize CRM maintenance.
+
+**Step 1:** Go to **Partner Center > Automations > My automations > Create automation.**
+
+**Step 2:** Add the trigger "When a user shows interest in a package."
+
+**Step 3:** Add the step "Get associated company."
+
+**Step 4:** Add the step "Add a task to the company" and include dynamic content to pull details from the original enquiry.
+
+**Step 5:** Add the step "Send a prompt to AI" to generate an auto-response to the lead. Include dynamic content to personalize the response for each lead.
+
+**Step 6:** Add the step "Send an Inbox message" to send the AI-generated message to the lead via Inbox.
+
+**Step 7:** Continue customizing the sales process with further triggers and actions.
+
+**Step 8:** Turn on your new automation!
+
+<iframe src="//www.loom.com/embed/ece67d0707ab4768a047f6baf73a47fe" width="560" height="315" frameborder="0" allowFullScreen></iframe>
+
+**Use Case 2:** Transfer data from Vendasta to your CRM, such as Salesforce or other platforms, with provisions for catching a webhook.
+
+**Step 1:** Go to **Partner Center > Automations > My Automations > Create automation.**
+
+**Step 2:** Add the trigger "When a user shows interest in a package."
+
+**Step 3:** Use the Send a webhook action and confirm the data to be sent out.
+
+<iframe src="//www.loom.com/embed/64f4db2cc818418fab3f5c42602d8c18" width="560" height="315" frameborder="0" allowFullScreen></iframe>
+
+**Pre-requisites**
+
+- This will only work when a package has been saved with a Purchase behavior of Contact Form.
+- It will not work with standalone products. (Recommend adding a standalone product within a package if needed.)
+
+![Package with Contact Form purchase behavior](/img/automations/automations-my-automations/package-interest-contact-form.png)

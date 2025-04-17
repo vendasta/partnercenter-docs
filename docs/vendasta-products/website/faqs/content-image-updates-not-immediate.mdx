@@ -1,0 +1,21 @@
+---
+title: "I'm not seeing my Website content/image updates immediately"
+sidebar_label: "Content/image updates not immediate"
+description: "Information about Website Pro's caching and how to see content updates immediately"
+---
+
+## Question
+
+I'm not seeing my Website content/image updates immediately. I only see them when logged in as a WordPress Admin, or after about an hour.
+
+## Answer
+
+One of the things that makes Website Pro fast is the caching we perform in Nginx and Google CDN. As a result, when updates are performed site owners will need to clear the cache if they want their customers to see the changes immediately.
+
+Another option is waiting, as the cache for every site clears automatically after an hour.
+
+Finally, customers can also make changes/updates in the staging environment (only available for the Pro version), and when pushed to Live, the cache is cleared automatically.
+
+Website Pro does not cache URLs with query parameters.
+
+**Tip** - If you would like to access the un-cached version of a page, use a query param, i.e., add a *?v=12345* to the page URL you'd like to access (so [www.mysite.com](http://www.mysite.com) becomes [www.mysite.com?v=123456](http://www.mysite.com?v=123456), bear in mind any random number will work) to the end of the URL. This will be slower to load the page, but it will bypass the NGINX cache.

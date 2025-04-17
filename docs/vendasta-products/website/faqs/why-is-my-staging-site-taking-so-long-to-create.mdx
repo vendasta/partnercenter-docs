@@ -1,0 +1,9 @@
+---
+title: Why is my staging site taking so long to create?
+sidebar_label: Staging site creation time
+description: Learn about factors that affect how long it takes to create a staging site
+---
+
+In general, the size of a site's files and the database will determine how long it will take to be migrated, however, aside from just its size, if the site has a large database with lots of database entries, this can also extend the staging creation time.
+
+For instance, a 4.5GB eCommerce site with 10,000+ products, will take a lot longer than a 4.5GB site with less than 5 pages, but lots of large videos and pictures. The eCommerce site will do a lot of 'database writes' which will slow down the staging creation process, while the other will just take time copying over the filesystem contents.

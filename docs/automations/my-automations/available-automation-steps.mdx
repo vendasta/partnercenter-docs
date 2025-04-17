@@ -1,0 +1,102 @@
+---
+title: "Available Automation Steps: Actions your automation can take"
+description: "A complete list of automation steps that can be used in Vendasta automations."
+sidebar_position: 2
+---
+
+Automation steps are the events that you want to happen whenever your workflow starts (after the trigger event happens). You can add multiple steps to a workflow, but you need at least one. Automations will perform the steps from the top down.
+
+This article goes through the complete list of automation steps that can accompany each trigger. See the full list of triggers [here](/automations/automations-my-automations/available-automations-triggers-list). We have a few video examples of how to configure these steps [here](#walkthroughs).
+
+## Automation Steps Reference
+
+### Accounts & Users
+
+| Step | Overview | Special Cases | Example Use Cases |
+| --- | --- | --- | --- |
+| Set account lifecycle stage* | Sets an account's Lifecycle stage to a specific stage, i.e.: Lead, Prospect, Customer | | When an opportunity is created on an account, set its Lifecycle stage to Prospect |
+
+### Campaigns
+
+| Step | Overview | Special Cases | Example Use Cases |
+| --- | --- | --- | --- |
+| Send a campaign for the user | Starts an email campaign for the specific user who triggered the automation. | The email campaign system only allows a campaign to be sent to each account once.<br/><br/>If the campaign is already paused, nothing happens. | When a user is interested in a product, start an email campaign advertising the product. |
+| Send a campaign to the account | Starts an email campaign for the account and all users and contacts associated with it. | The email campaign system only allows a campaign to be sent to each account once. If it has already been sent, nothing happens.<br/><br/>An error occurs when a campaign is sent to an account without users. This can be seen in the activity log. | When Website Pro is activated, send the "How to Use Website Pro" campaign |
+| Pause a campaign for the user | Pauses an ongoing email campaign for the specific user who triggered the automation. | The email campaign system only allows a campaign to be sent to each account once.<br/><br/>If the campaign is already paused, nothing happens. | When a campaign email is clicked, stop the campaign. |
+| Pause a campaign for the account | Pauses an ongoing email campaign for the account and all users and contacts associated with it. | The email campaign system only allows a campaign to be sent to each account once.<br/><br/>If the campaign is already paused, nothing happens. | When an opportunity is closed for the account, stop the "Prompt First Contact" campaign |
+| Pause Campaign for Company | Pause an ongoing campaign for the company. This will action on all of the contacts associated with the company (up to 50). | If the campaign is already paused, nothing happens.<br/><br/>If the Contact associated is not on that campaign, it will be considered an error and a list of failed contacts will show on the activity. | When a company has scheduled a meeting with salesperson, pause an email campaign. |
+| Pause campaign for Contact | Pauses an ongoing email campaign for the contact. | If the campaign is already paused, nothing happens.<br/><br/>If the Contact is not on that campaign, it will be considered an error. | When a Contact has scheduled a meeting with a salesperson, pause an email campaign. |
+
+### CRM
+
+| Step | Overview | Special Cases | Example Use Cases |
+| --- | --- | --- | --- |
+| Create Company | Creates a company in the CRM. | Duplicates are not checked. This just blindly tries to create the company. Company name is a requirement. | Using a 3rd party CRM and something happens in that CRM so you want to create a company in our CRM to mirror that one. |
+| Get associated Contact from Opportunity | Gets the Contact associated with a CRM opportunity. | If one does not exist, an error is returned. | When an opportunity is created, I would like to get the associated contact and begin and email campaign to them. |
+| Get associated Opportunity from Contact | Gets the CRM Opportunity associated with a Company. | If one does not exist, an error is returned. | When a Contact is updated, I would like to move the associated opportunity to the expected pipeline stage. |
+| Get associated Opportunity from Company | Gets the CRM Opportunity associated with a Company. | If one does not exist, an error is returned. | When a Company is updated, I would like to move the associated opportunity to the expected pipeline stage. |
+| Update CRM Opportunity | Update CRM Opportunity. | Is also able to move opportunities between pipeline stages. | When an opportunity amount is greater than $1000, I would like to move it to a specific pipeline. |
+| Create CRM Opportunity | Create CRM Opportunity. | Requires at least one of Company/Contact ID to be provided upstream. It will create two associations with the opportunity if both are present. | When a meeting is logged for Contact, I would like to create an opportunity associated with that Contact. |
+| Update Contact | Updates a CRM Contact. | There are two versions, one is deprecated because the newer one allows for things like appending/clearing. | When a Contact is added to a list, I want to add a tag to them. |
+
+### Fulfillment
+
+| Step | Overview | Special Cases | Example Use Cases |
+| --- | --- | --- | --- |
+| Create a fulfillment task for the account | Creates a task in Task Manager. The fulfillment agent (a person assigned to the task) may be the default agent or a specific individual. | If the assigned agent does not exist, no one will be assigned. | When the "Design a Business Card" product is activated, assign the partner's primary business card designer. |
+| Create a fulfillment project for the account | Creates a project in Task Manager. The project will be created based on the selected template. | If Task Manager is not active, it will be activated. If this action is twice in a single workflow, this will result in a rejected activation. | When the Website product is activated, create the Website Builder project from the Website Builder template |
+| Pause or cancel Task Manager account | Pauses or cancels a Task Manager account<br/>Pause - Stop generating product based tasks and projects, such as review tasks for Reputation Management. Manually created tasks and projects can still be created for a paused account.<br/>Cancel - Stop any new tasks or projects from being created and close all the existing tasks or projects. | | |
+| Add account to Task Manager | Adds the account to Task Manager, allowing for tasks to begin generating. | | |
+
+### Lists
+
+| Step | Overview | Special Cases | Example Use Cases |
+| --- | --- | --- | --- |
+| Add the account to a list | Adds the account to a list. | If the account is already on the list, nothing happens. | When a payment fails, add the account to the "Overdue Payments" list |
+| Remove the account from a list | Removes the account from a list. | If the account is not on the list, nothing happens. | When an email campaign does not receive a response, remove the account from the "Responsive Accounts" list. |
+
+### Notifications
+
+| Step | Overview | Special Cases | Example Use Cases |
+| --- | --- | --- | --- |
+| Notify a digital agent | Sends both an in-app and email notification to a fulfillment agent.<br/><br/>Consider using the generic send notification actions instead once taken out of draft as these are more flexible. | There is only limited support for items that can be used within \{\{ braces \}\}. | When a website design product is activated a fulfilment agent who can design websites is notified. |
+| Notify a partner admin | Sends both an in-app and email notification to a fulfillment agent.<br/><br/>Consider using the generic send notification actions instead once taken out of draft as these are more flexible. | There is only limited support for items that can be used within \{\{ braces \}\}. | When a high-income product is deactivated, notify partner administrators so they can investigate. |
+| Notify a salesperson | Sends both an in-app and email notification to a salesperson.<br/><br/>Consider using the generic send notification actions instead once taken out of draft as these are more flexible. | There is only limited support for items that can be used within \{\{ braces \}\}. | When an opportunity is created for a French-language client, notify French-fluent salespeople. |
+
+### Products
+
+| Step | Overview | Special Cases | Example Use Cases |
+| --- | --- | --- | --- |
+| Activate Standard products | Activates a specific Standard product | Only Standard products are allowed | When an account is added to the "Wants a Website" list, activate Website Standard. |
+| Activate a product | Activates a product for the account. Can be configured to prevent a product from being activated multiple times within a specific timeframe | Paid products are allowed. This can result in unwanted billing if this is misconfigured | When an account is created, automatically add products to it. |
+| Deactivate products | Deactivates a product(s) for the account. The product can be turned off immediately or at the end of the current billing cycle. | Allows for both paid and Standard products | When a trial period ends, deactivate the trial product. |
+
+### Sales
+
+| Step | Overview | Special Cases | Example Use Cases |
+| --- | --- | --- | --- |
+| Assign a sales team | Assigns a random salesperson from the indicated sales team to the account. If the account already has a salesperson, they can optionally be replaced. | | When a trial product is activated, assign a salesperson from the team responsible for that product. |
+| Assign a salesperson | Assigns a specific salesperson to the account. Multiple individuals from across multiple teams can be selected, in which case, one will be randomly assigned. If the account already has a salesperson, they can optionally be replaced. | | When a highly technical product is activated, assign a highly knowledgeable salesperson. |
+| Log activity and hotness rating | Logs a business activity and increases the hotness rating (if the existing rating is lower than the new level). | Hotness ratings cannot be decreased using this step. This is to ensure that manually assigned high-hotness ratings are not accidentally downgraded. | When an email campaign is clicked, mark the account as a hot lead. |
+
+### Wait
+
+| Step | Overview | Special Cases | Example Use Cases |
+| --- | --- | --- | --- |
+| Wait | Delays execution. The workflow waits until the specified amount of time has elapsed. | If the account becomes ineligible for the workflow (e.g., if the rule that activated the workflow no longer applies), the running workflow may be cancelled. | When an account is added to Marketing Services, wait 3 days and then send a 'How's it Going?' email. |
+
+## Walkthroughs
+
+Here are some video examples of how to configure automation steps:
+
+### Creating a Basic Automation
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/example1" title="Creating a Basic Automation in Vendasta" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Setting Up Product Activation Automations
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/example2" title="Setting Up Product Activation Automations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Configuring List-Based Automations
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/example3" title="Configuring List-Based Automations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

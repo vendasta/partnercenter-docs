@@ -1,0 +1,99 @@
+---
+title: Email Authentication
+description: Learn how to set up email authentication for your marketing emails
+---
+
+# Email Authentication
+
+Email authentication is a way to tell receiving mail servers that emails sent from your domain are legitimate. This helps prevent your emails from being marked as spam or rejected. 
+
+To set up email authentication, you need to add specific DNS records to the domain you're using to send emails. This guide will walk you through the process.
+
+## Understanding Email Authentication
+
+Email authentication consists of three main protocols:
+
+1. **SPF (Sender Policy Framework)**: Specifies which mail servers are authorized to send email on behalf of your domain
+2. **DKIM (DomainKeys Identified Mail)**: Adds a digital signature to your emails that verifies they were sent by an authorized sender
+3. **DMARC (Domain-based Message Authentication, Reporting & Conformance)**: Tells receiving mail servers what to do with emails that fail SPF or DKIM checks
+
+## Setting up Email Authentication
+
+Follow these steps to set up email authentication for your domain:
+
+### Step 1: Access Email Settings
+
+1. Navigate to **Marketing** > **Email Settings**
+2. Select the **Authentication** tab
+
+![Email Authentication Settings](/img/marketing/email-settings/email-auth-1.jpg)
+
+### Step 2: Add Your Domain
+
+1. Click the **Add Domain** button
+2. Enter your domain name (e.g., yourbusiness.com)
+3. Click **Continue**
+
+![Add Domain](/img/marketing/email-settings/email-auth-2.jpg)
+
+### Step 3: Verify Domain Ownership
+
+1. After adding your domain, you'll need to verify ownership by adding a TXT record to your domain's DNS settings
+2. Copy the provided TXT record value
+3. Log in to your domain registrar or DNS provider
+4. Add a new TXT record with the host value as specified and paste the value you copied
+5. Click **Verify Domain** in Vendasta
+
+![Verify Domain Ownership](/img/marketing/email-settings/email-auth-3.jpg)
+
+### Step 4: Add Authentication Records
+
+Once your domain is verified, you'll need to add the following DNS records:
+
+#### SPF Record
+
+1. Copy the provided SPF record (TXT type)
+2. Add it to your domain's DNS settings
+
+![SPF Record Setup](/img/marketing/email-settings/email-auth-4.jpg)
+
+#### DKIM Record
+
+1. Copy the provided DKIM record (TXT type)
+2. Add it to your domain's DNS settings using the hostname provided
+
+![DKIM Record Setup](/img/marketing/email-settings/email-auth-5.jpg)
+
+#### DMARC Record
+
+1. Copy the provided DMARC record (TXT type)
+2. Add it to your domain's DNS settings
+
+![DMARC Record Setup](/img/marketing/email-settings/email-auth-6.jpg)
+
+### Step 5: Verify Authentication Setup
+
+1. After adding all DNS records, click the **Verify** button for each record
+2. Once all records are verified, your domain will show as authenticated
+
+![Authentication Verified](/img/marketing/email-settings/email-auth-7.jpg)
+
+## Troubleshooting
+
+If you're having trouble with email authentication:
+
+- Ensure that you've added all DNS records correctly
+- Allow up to 48 hours for DNS changes to propagate
+- Check that you've entered the correct hostname for each record
+- Verify that your domain registrar supports the required DNS record types
+
+## Benefits of Email Authentication
+
+Properly authenticating your emails provides several benefits:
+
+- Improved deliverability rates
+- Reduced chances of emails being marked as spam
+- Protection against email spoofing and phishing attempts
+- Better sender reputation with email providers
+
+By following these steps, you'll ensure that your marketing emails have the best chance of reaching your customers' inboxes.

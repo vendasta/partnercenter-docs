@@ -1,0 +1,77 @@
+---
+title: Guide - Adding SPF, DKIM, & DMARC Records (GoDaddy)
+sidebar_position: 1
+description: Learn how to add SPF, DKIM, and DMARC records on GoDaddy to improve email deliverability
+---
+
+# Guide - Adding SPF, DKIM, & DMARC Records (GoDaddy)
+
+Before proceeding with the instructions below, follow this first and then continue with this guide: [Add Domain](email-deliverability#setting-up-a-domain)
+
+## Adding SPF Record
+
+1. Go to your GoDaddy account
+2. Navigate to your Domain section
+3. Click on Manage DNS
+4. Look for the DNS records management section
+
+5. Add the following record
+   - Type: **TXT**
+   - Host: **@**
+   - Value: **v=spf1 include:_spf.google.com ~all**
+   - TTL: **1 hour**
+
+## Validate SPF Record
+
+To verify that your SPF record is set up properly:
+
+## Adding DKIM Records
+
+1. In your DNS Records, add the below. Replace "YOUR-DOMAIN-COM" with your actual domain with "-" (hyphens) replacing the periods. For example, if your domain is "example.com", you would enter "example-com".
+
+2. Add the following records:
+   - Type: **CNAME**
+   - Host: **google._domainkey**
+   - Value: **google._domainkey.YOUR-DOMAIN-COM.dkim.amazonses.com.**
+   - TTL: **1 hour**
+
+   - Type: **CNAME**
+   - Host: **s1._domainkey**
+   - Value: **s1._domainkey.YOUR-DOMAIN-COM.dkim.amazonses.com.**
+   - TTL: **1 hour**
+
+   - Type: **CNAME**
+   - Host: **s2._domainkey**
+   - Value: **s2._domainkey.YOUR-DOMAIN-COM.dkim.amazonses.com.**
+   - TTL: **1 hour**
+
+## On Your Domain
+
+Once the above is added, your GoDaddy DNS Records **must match** the image below:
+
+## Validate DKIM
+
+If any of the hostnames or values **do not match** the above, you will receive a **Not Found** status and emails will **NOT** be delivered effectively.
+
+To validate the DKIM records, you need to wait up to 48 hours for the changes to take effect. After that, you can check the DKIM status in your email settings.
+
+## Adding DMARC Record
+
+1. In your DNS Records, add the following:
+   - Type: **TXT**
+   - Host: **_dmarc**
+   - Value: **v=DMARC1; p=none; rua=mailto:YOUR-EMAIL-HERE@YOUR-DOMAIN.COM**
+   - TTL: **1 hour**
+
+2. Replace "YOUR-EMAIL-HERE@YOUR-DOMAIN.COM" with your actual email address that will receive DMARC reports.
+
+## Important Notes
+
+- DNS changes can take up to 48 hours to propagate throughout the internet
+- If you're experiencing issues with email deliverability after adding these records, please wait at least 48 hours before troubleshooting further
+- For additional help with email configuration, contact GoDaddy support or refer to their documentation
+
+## Related Articles
+
+- [Email Deliverability](/marketing/email-deliverability)
+- [Marketing Email Settings](/marketing/marketing-email-settings)

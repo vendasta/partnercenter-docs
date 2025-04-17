@@ -1,0 +1,90 @@
+---
+title: "Marketing Email Settings"
+sidebar_position: 6
+---
+
+# Marketing Email Settings
+
+If you're a partner using or reselling marketing email products like Constant Contact, you'll need to set up your DNS records to ensure the email campaigns sent on behalf of your customer's domain work properly. This guide will walk you through the process of setting up the necessary DNS records.
+
+## Domain Connection
+
+When using marketing email services, you need to verify domain ownership and ensure proper email delivery through DNS settings. The required DNS settings depend on the hosting provider:
+
+![Domain connections showing DNS settings](/img/marketing-email-settings/domain-connections.jpg)
+
+## DNS Hosting Options
+
+You have several options for where your DNS is hosted:
+
+### 1. Website Pro
+
+#### Name Servers
+
+If your domain is using Website Pro name servers, you'll have these settings:
+
+![Name server settings for Website Pro](/img/marketing-email-settings/name-servers.jpg)
+
+#### DNS Records
+
+You can add the required DNS records in the Website Pro interface:
+
+![Website Pro DNS record settings](/img/marketing-email-settings/website-pro-records.jpg)
+
+### 2. Google Workspace (formerly G Suite)
+
+If your domain uses Google Workspace, you'll need to add the MX records in your DNS settings:
+
+![Google Workspace MX records](/img/marketing-email-settings/google-workspace-mx.jpg)
+
+### 3. Other DNS Providers
+
+If you're using a different DNS provider, you'll need to add the required records in their interface.
+
+## Required DNS Records
+
+### Verification Record
+
+You need to add a verification record to prove domain ownership to the email marketing service:
+
+![Verification record example](/img/marketing-email-settings/verification-record.jpg)
+
+### Campaign Settings
+
+After domain verification, you'll need to set up your campaign settings. Navigate to the Campaign Settings tab and follow these steps:
+
+1. Visit the Campaign Settings tab
+2. Select the domain used for sending emails
+3. Choose the verified domain
+4. Configure any additional options as needed
+
+![Campaign settings interface](/img/marketing-email-settings/campaign-settings.jpg)
+
+### SPF Record
+
+The SPF (Sender Policy Framework) record helps prevent email spoofing by specifying which mail servers are authorized to send emails on behalf of your domain.
+
+1. Add an SPF record to your domain's DNS settings
+2. Follow the format provided by your email marketing service
+3. This helps improve email deliverability and prevents emails from being marked as spam
+
+![SPF record setup example](/img/marketing-email-settings/spf-record-setup.jpg)
+
+## Troubleshooting
+
+If you encounter issues with your email marketing setup:
+
+- Verify all DNS records are correctly entered
+- Check for typos or formatting errors
+- Allow sufficient time for DNS propagation (can take up to 24-48 hours)
+- Confirm you have the necessary permissions to modify DNS settings
+- Review [Email Deliverability Errors](/products/reputation-management/email-deliverability-errors) if your emails are being rejected
+- Contact your DNS provider or email marketing service for additional assistance
+
+## Additional Resources
+
+- [How Vendasta Helps Improve Your Email Deliverability](/products/reputation-management/email-deliverability-improvement)
+- [Troubleshooting Emails Sent to Spam - How to Get Email Headers](/products/reputation-management/troubleshooting-emails-sent-to-spam)
+- For help with specific DNS providers, consult their documentation
+- Check with your email marketing service for up-to-date DNS requirements
+- Consider setting up DKIM and DMARC for additional email security

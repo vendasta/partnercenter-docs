@@ -1,0 +1,29 @@
+---
+title: Turn off an automation
+description: Learn how to turn off automations and understand the difference between stopping and draining automation runs.
+sidebar_position: 3
+---
+
+You can turn off automation from the Workflow page, or from the main Automations page.
+
+## What is the difference between setting an automation to drain and turning off an automation?
+
+When you turn off an automation, you can stop it immediately or set it to drain. Automation draining allows you to stop an automation that is running but lets the existing runs finish rather than halting their progress. No new automation runs are started once the automation is stopped. This is an optional feature that ensures automation runs don't stop at any given action in an automation, but rather can fully complete that automation run.
+
+## How to turn off an Automation:
+
+Go to **Partner Center > Automations**. Choose the automation you would like to turn off or allow to drain before it completely stops. **Click the kebab icon > Turn off the automation.**
+
+![Turn off automation from kebab menu](/img/automations/turn-off-automation/turn_off_automation_1.jpg)
+
+You can also click into the automation and stop it from there by toggling from 'On' to 'Off'.
+
+![Toggle automation off](/img/automations/turn-off-automation/toggle_automation_off.jpg)
+
+You will now be prompted to either "Stop automation runs in progress" or "drain automation runs". By selecting to stop runs in progress, all scheduled steps will be stopped immediately.
+
+By choosing to drain the automation, you are allowing the remaining steps of the automation to run for any account still in progress, however, no new runs will be activated.
+
+![Drain automation dialog](/img/automations/turn-off-automation/drain_automation_dialog.jpg)
+
+**Please Note:** When you turn off automation without selecting the "drain automation runs" option, all scheduled steps are canceled and will not resume if the automation is turned on again. For example, if you have an automation running that sends an email 5 days after a new account is created, any currently running workflows to send emails to the accounts triggered in the last 5 days will be canceled.

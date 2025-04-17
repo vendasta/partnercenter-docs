@@ -1,0 +1,138 @@
+---
+title: Setting up Vendasta Payments
+description: Learn how to set up Vendasta Payments to begin accepting payments via invoices and the Shopping Cart.
+sidebar_position: 1
+---
+
+To begin accepting payments via [invoices](/commerce/invoices) and the [Shopping Cart](/commerce/shopping-cart), Partners will need to set up Vendasta Payments. You can also check out our video guide: [Getting Started: Collect payments in-platform](/getting-started/collect-payments-in-platform).
+
+Vendasta Payments is currently available to partners operating in one or more of the following currencies:
+
+- Canadian Dollar (CAD)
+- US Dollar (USD)
+- Australian Dollar (AUD)
+- Great British Pound (GBP)
+- New Zealand Dollar (NZD)
+- Czech koruna (CZK)
+
+Other countries supported. For these countries, please contact a Salesperson to assist you with the setup.
+- UAE (AED)
+- Germany (EUR)
+- Belgium (EUR)
+- Netherlands (EUR)
+- Poland (PLN)
+- Switzerland (CHF)
+
+## Table of Contents
+
+1. [Set up contact and payment information in My Billing](#set-up-contact-and-payment-information-in-my-billing)
+2. [Set up account information in Vendasta Payments](#set-up-account-information-in-vendasta-payments)
+   - [Transaction fees](#transaction-fees)
+   - [Customer statement description](#customer-statement-description)
+   - [Receive payouts](#receive-payouts)
+   - [Changing your Payout currency](#changing-your-payout-currency)
+3. [Customer-facing Terms of Service for payment processing](#customer-facing-terms-of-service-for-payment-processing)
+
+## Set up contact and payment information in My Billing
+
+Partners can access and update information relevant to their billing relationship with Vendasta in **Partner Center > Administration > My Billing**. The following settings must be [properly configured](/commerce/my-billing) in order to be billed the wholesale costs associated with activating products and services.
+
+- Billing Contact
+- Payment Method
+  - Partners who are currently billed by Vendasta via invoice do not need to add a credit card as a payment method.
+
+## Set up account information in Vendasta Payments
+
+<iframe src="https://www.loom.com/embed/df6a770f5aef4db2935b81683559f7e9" frameborder="0" width="100%" height="400px" allowfullscreen></iframe>
+
+Before beginning the setup process, partners must review and agree to the additional [Terms of Service](https://www.vendasta.com/terms/terms-of-service/) associated with using Vendasta Payments.
+
+![Terms of Service](/img/commerce/commerce-payments/setup-terms-of-service.jpg)
+
+To receive credit card payments through the Vendasta platform, partners must create a Stripe account (used to receive payments) and add one or more bank accounts (used to receive payouts from Stripe).
+
+Vendasta Payments can currently accept payments from Visa, Mastercard, American Express, and Discover credit cards.
+
+## Accept online payments
+
+![Accept online payments](/img/commerce/commerce-payments/accept-online-payments.jpg)
+
+By default, the currency that you accept for online payments is the currency that you use in your billing relationship with Vendasta (your contract currency).
+
+Go to **Partner Center > Administration > Vendasta Payments** and click **Set up Vendasta Payments** to create your Stripe account.
+
+Note that currently, you cannot connect a preexisting Stripe account to Vendasta Payments—the Stripe account that you use with Vendasta Payments must be created by following the method detailed below.
+
+The following information is required to create your Stripe account:
+
+- Your legal business name
+  - The name you provide must exactly match the name associated with your tax ID
+- Business Number
+  - For US companies, enter your Employer Identification Number (EIN). For Canadian companies, enter your Canada Revenue Agency (CRA) Business Number. [Learn more](https://stripe.com/docs/connect/identity-verification).
+- The operating name of your company, if it's different than the legal name (your "Doing business as" name)
+- A registered business address, or a home address (if you don't have a business address)
+- An account representative
+  - Legal name
+  - Home address
+  - ID verification
+    - Full Social Security number (if located in the U.S.), and
+    - Government-issued ID (verify through the picture on webcam, picture on phone, or upload a file)
+
+Payments that you have received will be displayed under the **Partner Center > Commerce > Payments** tab.
+
+![Payments tab](/img/commerce/commerce-payments/payments-tab.jpg)
+
+After your first payment has been received, Stripe will hold the payments you receive for up to a week. At the end of this period, Stripe will begin paying out a portion of the balance you've accumulated, on a 7-day rolling basis, into the bank account that you add in the **Receive payouts** section.
+
+If payment has failed, partners can hover their cursor over the ⓘ **Information** icon next to the status for more information.
+
+### Transaction fees
+
+Vendasta Payments charges a 2.9% + $0.30 USD transaction fee per successful credit card transaction. This fee will be applied on all transactions as follows:
+
+- Transactions in USD, CAD, AUD, NZD all pay 2.9% + $0.30 in the local currency
+- Transactions in GBP pay 2.9% + £0.20
+- Transactions in CZK pay 2.9% + 8.00 Kč
+
+Allowing international credit cards for payments may result in additional fees for cross-border rates and currency conversion rates. Please visit [Stripe Docs](https://stripe.com/docs/international-pricing) for more information.
+
+Transactions processed through Vendasta Payments are reflected on Partner statements as non-taxable items. Partners can view their fees on their **Wholesale invoice** in Snapshot each month.
+
+### Customer statement description
+
+By default, "Vendasta" appears on customer credit card statements when they make a payment. Partners can replace this statement descriptor with their own business name by entering this information when setting up Vendasta Payments. You may use up to 22 characters for your statement description.
+
+### Receive payouts
+
+![Receive payouts](/img/commerce/commerce-payments/receive-payouts.jpg)
+
+Partners can receive payouts from online credit card payments in one or more bank accounts by entering their account details in Stripe.
+
+If you do not have a banking relationship in every country where you operate, but you'd like to add a bank account in a different country, contact [support@vendasta.com](mailto:support@vendasta.com) for more information.
+
+To add your bank account details to receive payouts from Stripe, click **Add a bank account**.
+
+The following information will be required:
+
+- Account holder type (Individual or Company)
+- Individual's name (if Individual is selected) or company name (if Company is selected)
+- Bank account number
+- Bank routing number
+
+#### Setting a default bank account
+
+If you add more than one bank account to receive payouts, you need to select a default account to specify which account receives your payouts. You can change your default bank account at any time within the Stripe dashboard.
+
+![Set default bank account](/img/commerce/commerce-payments/set-default-bank-account.jpg)
+
+### Changing your Payout currency
+
+By default, payouts will be made to your bank account in your default currency. However, you can add a new payout destination and choose to convert your funds to a different currency before the funds are deposited into a bank account. Stripe may charge a fee for currency conversion; visit the [Stripe Docs](https://stripe.com/docs/payouts) to learn more.
+
+## Customer-facing Terms of Service for payment processing
+
+Your customers need to accept the Terms of Service that apply to payment processing when they pay for a Service Order. These terms explain that Vendasta is facilitating payment collection on your behalf, and provides information about how refunds, disputes, and other payment-specific details are handled.
+
+This helps limit your liability in case of payment disputes with your customers. In most jurisdictions, you are legally required to have terms that apply specifically to payment processing when accepting payments.
+
+The Terms have been created with partner protection and minimizing your liability in mind. All partners using Vendasta Payments should leave this setting switched on so that these Terms will be displayed when the customer makes a payment. Disabling these Terms is not recommended, as it may increase your liability.

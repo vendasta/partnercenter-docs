@@ -1,0 +1,126 @@
+---
+id: create-account
+title: Create account in Partner Center
+sidebar_label: Create account in Partner Center
+description: Customer account management is one of the core pieces of managing your system. You can create individual accounts or import multiple accounts from a CSV file.
+---
+
+# Create account in Partner Center
+
+Customer account management is one of the core pieces of managing your system. You can create individual accounts or import multiple accounts from a CSV file.
+
+- [Individual accounts](#create-individual-accounts)
+- [Multiple accounts](#create-multiple-accounts)
+
+## Create Individual Accounts
+
+To add an individual customer account to the Platform:
+
+1. Go to **Partner Center** > **Accounts** > **Manage Accounts**.
+2. Click **Create Account** in the upper right corner of the screen.
+
+![Create Account button](/img/accounts/create-account/create_account_button.jpg)
+
+3. Search for the business you want to add.
+   - In the **Specific search bar**, enter the name and location of a specific business. For example, to create an account for Starbucks on Broadway, you could search for: *Starbucks, Broadway, New York, NY, USA.*
+   - If you do not see the business you're looking for, click **Go to Account Creation**.
+   - **Note:** When using the Specific search bar, you'll also see an automatically-generated list of competitors for that business. This allows you to select up to three and have them automatically added to the Snapshot Report.
+
+![Search for business](/img/accounts/create-account/search_business.jpg)
+
+![Competitor selection](/img/accounts/create-account/competitor_selection.jpg)
+
+4. Fill in the form that appears. As the information here comprises the "Business Profile" used for many different products and services, it is important to fill this out as thoroughly as possible. The following fields are required:
+   - Market (if applicable).
+   - Business Name.
+   - Categories.
+     - If you are unable to locate a suitable business category, select **Other**. Please be aware that certain product features may be unavailable.
+   - Country/Region.
+   - Street Address.
+     - If the account does not have a physical address, select **Service Area Business** below the ZIP/Postal Code field.
+   - City.
+   - State/Province.
+   - ZIP/Postal Code.
+   - Business Phone Number.
+5. Click **Create Account**.
+
+<a href="https://partners.vendasta.com/manage-accounts" target="_blank">Create Account</a>
+
+**What is the purpose of the Customer Identifier field in the account creation process?**
+
+To clarify, the "Customer Identifier" is an optional field when creating an account and serves as a reference or serial number for the account. Although it is not required, you may choose to include one and it can also be used for searching the account in Partner Center.
+
+## Create Multiple Accounts
+
+:::note
+This feature may only be available on certain [subscriptions](https://www.vendasta.com/pricing/).
+:::
+
+To add multiple customer accounts to the Platform:
+
+1. Go to **Partner Center** > **Accounts** > **Manage Accounts**.
+2. Click on the **Menu** icon ![Menu icon](/img/accounts/create-account/menu_icon.jpg) in the upper right corner of the screen. Click **Import Accounts (CSV Upload)**.
+
+![Import accounts menu](/img/accounts/create-account/import_accounts.jpg)
+
+3. If you have a CSV file containing your customer data, click **Select file...** to upload the file, then continue to Step 4. If you don't have a CSV file, follow the steps below:
+   1. Click **Download CSV Template**.
+   2. Open the template in your program of choice.
+      :::note
+      You can use [Google Sheets](http://sheets.google.com/) if you don't have a separate program.
+      :::
+   3. Fill out the template with your customer information. Make sure to delete the second row with sample data (this row begins with [Sample-->]).
+      :::note
+      **Note:**
+      - **CompanyName** and **Zip** are required fields.
+      - We recommend limiting the number of rows per upload to 500.
+      :::
+   4. Save the file.
+   5. In Partner Center, click **Select file...** to upload the file.
+
+![CSV upload interface](/img/accounts/create-account/csv_upload.jpg)
+
+4. Map the columns in your file to the corresponding fields in Partner Center.
+   :::note
+   The **Header Row** column represents the columns in your CSV file.
+   The **First Row** column displays the first row of data for each column.
+   The **Map To** column links the data in your CSV file to a corresponding field in Partner Center.
+   :::
+   1. For each **Header Row**, use the dropdown menu under the **Map To** column to indicate where the data should be stored in Partner Center.
+      - For example, a "Street Name" column in a CSV file would correspond to the **Address** field in Partner Center.
+      :::note
+      You can also select **Do not import** if the data in a column does not apply to Partner Center.
+      :::
+   2. Click **Next**.
+
+![Mapping columns](/img/accounts/create-account/mapping_columns.jpg)
+
+5. Set User Permissions and Notifications.
+   1. Select the options you would like to enable for new users in your CSV file. If you unselect each of these options, the users can still receive marketing campaign emails.
+   2. Click **Next**.
+
+![User permissions](/img/accounts/create-account/user_permissions.jpg)
+
+6. Choose a Market and List.
+   1. If you have an Enterprise subscription, select the Market associated with these accounts.
+   2. Select one of the following:
+      - **Select an Existing List**—Adds all accounts in the CSV to an existing account list. If you have a pre-existing list you want to add these accounts to, select this option.
+        - For example, you provide business to doctors', lawyers', and dentists' offices. Your CSV file contains a list of new law offices that you want to add to an account list titled "Law Offices."
+      - **Create a New List**—Creates a new account list. This is useful if you don't want to group the accounts you are importing with existing accounts in the system.
+   3. Select the existing list you want to add the accounts to, or enter a new list name.
+   4. Click **Next**.
+
+![Market and list selection](/img/accounts/create-account/market_list.jpg)
+
+7. Confirm that the details are accurate, then click **Finish**.
+   - If you select **Attempt to fill in empty cells**, we will attempt to infer missing information using Google data.
+
+![Confirmation screen](/img/accounts/create-account/confirmation_screen.jpg)
+
+:::note
+Importing these accounts will take several minutes, depending on the number of accounts you are importing.
+:::
+
+You will be taken to a screen that shows you the progress of the import. You are free to leave this page as the upload will continue in the background. Once the import is complete, the accounts will appear in **Partner Center** > **Accounts** > **Manage Accounts**, and **Partner Center** > **Accounts** > **Lists**.
+
+<a href="https://partners.vendasta.com/manage-accounts" target="_blank">Import Accounts</a>

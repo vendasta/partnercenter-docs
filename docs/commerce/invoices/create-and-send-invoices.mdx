@@ -1,0 +1,95 @@
+---
+title: Create and send invoices
+description: Learn how to create and send invoices to request and collect payment for products and services you provide to customers.
+---
+
+![Create and send invoices](/img/commerce/invoices/create-send-invoices-header.jpg)
+
+Partners can use invoices to request and collect payment for the products and services that they provide their customers. Invoices can be manually created or can be [automatically generated](/getting-started/commerce/invoices/automatic-invoicing) according to an account's subscriptions and product renewal dates.
+
+Invoices will function differently depending on whether or not a partner has [set up Vendasta Payments](/getting-started/commerce/payments/setup-vendasta-payments). Partners who have not set up Vendasta Payments are able to create, edit, and send invoices to their customers, but cannot collect payments from directly within the invoice email.
+
+Note that it is possible to invoice a customer for any product you're selling or any package (draft or published) in your Store. However, if you are invoicing a customer for a product that is not already active on their account, the product will not automatically activate once the invoice has been paid. Partners can instead activate the product by following the usual [steps for product activation](/getting-started/accounts/manage-products/activate-products) at any stage of the invoicing process
+
+<div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+  <iframe 
+    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} 
+    src="https://www.loom.com/embed/1d669023e0ed44ef96cebb6a115616d5" 
+    frameBorder="0" 
+    allowFullScreen
+  ></iframe>
+</div>
+
+### Preparing to use invoices
+
+Invoices can be used most effectively when the following criteria are met:
+
+- You have set retail prices and added the product/ package to your Store
+- Your Store uses packages that are priced using the [new package pricing model](/getting-started/commerce/store/package-pricing-model)
+- An account exists for the business that you intend to invoice
+- You have set up Vendasta Payments and are capable of accepting payments and receiving payouts
+- You have created [tax rates](/getting-started/commerce/taxes/create-tax-rates) (if applicable)
+
+### Creating an invoice
+
+Invoices can be created at any time from the **Commerce > Invoices** tab in Partner Center. or by simply going into the account you wish to create an invoice for and clicking on the invoice tab. 
+
+- Click **New > Invoice** and select an account to create a draft invoice
+- Select a **Due date** for the invoice 
+- Select a **User** (recipient) for the invoice
+- Click **Add Item** to add an individual product to the invoice. You can add any product that you're currently selling in your Marketplace, or type any text into the text box to represent a line item that does not exist in your Marketplace
+  - If the product you select already has a retail price set, it will automatically populate the Unit Price and currency for that item. The price and currency can also be overwritten on an individual invoice (note that invoices can currently only accept payments in USD and CAD)
+  - To add a discount as a line item, input the description of the discount and enter a negative dollar amount. The negative value entered will be subtracted from the invoice total
+- You can also click **Add Custom Item** to create your own line item. 
+- If your invoice includes more than one of a certain item, this can be specified using the Quantity column
+- Use the Options **⋮** menu to remove an item from the invoice or [apply a tax rate](/getting-started/commerce/taxes/create-tax-rates) to a line item.
+- If necessary, add additional information to the invoice using the **Memo** field at the bottom of the invoice
+
+Invoices can also be created at any time when viewing an individual account in **Partner Center > Manage Accounts** by clicking the Options **⋮** menu next to the **Open Business App** button.
+
+Invoices can be generated from an order in **Partner Center > Sales > Orders** by viewing an order and clicking the **Create Invoice** button.
+
+### Sending or charging an invoice
+
+![Sending an invoice](/img/commerce/invoices/send-invoice.jpg)
+
+Before sending an invoice, we recommend reviewing the Subtotal, Discount, and Total fields to ensure that the invoice was properly assembled. A draft invoice can be edited as many times as necessary, but once an invoice has been sent, it cannot be edited.
+
+When your invoice is ready, click **Send Invoice** to choose one or more recipients from the users that exist on the given account. The window will also display a preview of the email that each recipient will receive. 
+
+Alternatively, you may instantly charge your customer for the contents of the invoice by selecting **Automatically charge a payment method on file** under the **Collection** section. This will change the **Send Invoice** button at the top-right of the page to **Charge invoice**. After a successful charge, your customer will receive a receipt via email. This requires your customer to have at least one payment method saved in Vendasta Payments. Your customer will have a payment method saved if they have previously paid an invoice or made a purchase using the Shopping Cart. If your customer does not have a saved payment method, it is possible to enter a payment method on behalf of your customer by clicking **Edit** next to the payment method field in the **Collection** section.
+
+Sent invoices can be viewed at any time from the table on **Partner Center > Commerce > Invoices**.
+
+If an invoice has been missed or misplaced by its recipient, it can be sent again at any time. Clicking **Resend Invoice** while viewing a Due invoice will allow you to choose any recipient on the account to resend the invoice.
+
+### Paying an invoice
+
+![Invoice email](/img/commerce/invoices/paying-invoice-email.jpg)
+
+After sending an invoice, the recipient that you've chosen will be emailed a digital copy of the invoice. Invoices sent to an account will also appear under the **Invoices** tab in Business App.
+
+If Vendasta Payments is enabled when the invoice is sent, the recipient will have the option to pay the invoice directly by clicking **Pay this invoice** while viewing the invoice. This will direct the recipient to a landing page that displays all line items on the invoice and allows them to pay via credit card.
+
+![Invoice payment page](/img/commerce/invoices/invoice-payment-page.jpg)
+
+After an invoice has been paid, the recipient can click **Download as PDF** to save a receipt in PDF format.
+
+### Managing invoices
+
+All invoices can be viewed at any time from the table on **Partner Center > Commerce > Invoices**. Clicking the Options **⋮** menu on an invoice allows users to edit or delete a draft invoice, download a copy of an invoice in PDF format, or download a receipt for a paid invoice in PDF format.
+
+Business App users can view the complete list of invoices they have received using the **Invoices** tab in the Business App.
+
+Partners can download a complete table of all sent non-voided invoices by clicking the ☁ **Download** button in the top right corner of the Invoices table.
+
+### Invoice statuses
+
+An invoice's status is displayed in the Status column on the table in **Partner Center > Commerce > Invoices**. An invoice can have one of the following statuses.
+
+- **Draft**: A draft invoice can be edited, and has not yet been sent to a recipient.
+- **Due**: A Due invoice has been sent to a recipient and can no longer be edited. Clicking **Resend Invoice** allows you to reselect a recipient and send the invoice again.
+- **Paid**: A Due invoice will be marked as Paid when its recipient pays for it via the **Pay this invoice** button. Alternately, if payment was collected outside of Vendasta Payments, an invoice can be marked as Paid by clicking the Options **⋮** menu, selecting **Change invoice status**, and selecting **Paid**.
+- **Void**: If an invoice has been sent in error or is no longer relevant, an invoice can be marked as Void by clicking the Options **⋮** menu, selecting **Change invoice status**, and selecting **Void**.
+
+Note that an account's **Invoicing settings** are all off by default. To edit these settings for a particular account, go to the **Products** section on the account's page under **Partner Center > Accounts > Manage Accounts > Select account** and click **Invoices.**

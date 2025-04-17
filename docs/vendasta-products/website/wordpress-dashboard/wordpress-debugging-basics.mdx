@@ -1,0 +1,92 @@
+---
+id: wordpress-debugging-basics
+title: WordPress Debugging Basics
+sidebar_label: WordPress Debugging Basics
+---
+
+# WordPress Debugging Basics
+
+This guide will help you understand the basics of debugging WordPress sites to find and fix errors.
+
+## Debug Logging
+
+One of the most useful tools for debugging WordPress is enabling debug logging. This will log PHP errors to a file that you can review.
+
+To enable debug logging:
+
+1. Access your WordPress configuration file (wp-config.php)
+2. Add or update the following code:
+
+```php
+// Enable WP_DEBUG mode
+define('WP_DEBUG', true);
+
+// Enable Debug logging to the /wp-content/debug.log file
+define('WP_DEBUG_LOG', true);
+
+// Disable display of errors and warnings
+define('WP_DEBUG_DISPLAY', false);
+@ini_set('display_errors', 0);
+```
+
+Once enabled, PHP errors will be logged to the wp-content/debug.log file.
+
+## Common Issues and Solutions
+
+### 1. White Screen of Death
+If your site shows a blank white screen:
+- Enable debug logging as described above
+- Check your PHP error logs
+- Temporarily deactivate all plugins to see if a plugin is causing the issue
+- Switch to a default theme
+
+### 2. 500 Internal Server Error
+This usually indicates a server configuration issue or a PHP error:
+
+![Internal Server Error example](/img/wordpress-dashboard/internal-server-error.png)
+
+- Check your PHP error logs
+- Increase PHP memory limit in wp-config.php: `define('WP_MEMORY_LIMIT', '256M');`
+- Deactivate plugins one by one to identify the problematic one
+
+### 3. Database Connection Issues
+If you see a "Error establishing a database connection" message:
+- Verify your database credentials in wp-config.php
+- Check if your database server is running
+- Make sure your database user has the proper permissions
+
+## Accessing File Logs
+
+You can access logs through the SFTP file manager:
+
+![SFTP Access](/img/wordpress-dashboard/sftp-access.png)
+
+A common place to find PHP error logs is in the logs directory or in wp-content/debug.log if you've enabled WP_DEBUG_LOG.
+
+Here's an example of what PHP logs might look like:
+
+![PHP Logs Example](/img/wordpress-dashboard/php-logs-example.png)
+
+## Using the File Viewer
+
+The file viewer allows you to directly view and edit files on your server:
+
+![File Viewer](/img/wordpress-dashboard/file-viewer.png)
+
+## Using the Staging Environment
+
+It's always best to debug issues in a staging environment before making changes to your live site:
+
+![Staging Environment](/img/wordpress-dashboard/staging-environment.png)
+
+The staging environment is a copy of your live site where you can safely test changes without affecting your visitors.
+
+## Tips for Efficient Debugging
+
+1. **Work systematically**: Make one change at a time and test
+2. **Document everything**: Keep track of what you've tried
+3. **Check recent changes**: Did you recently update WordPress, themes, or plugins?
+4. **Verify file permissions**: Incorrect permissions can cause unexpected errors
+5. **Use version control**: If possible, use Git to track changes and revert if needed
+
+If you need further assistance, please contact Vendasta Support.

@@ -1,0 +1,39 @@
+---
+title: Custom Headers in the Snapshot Report
+sidebar_label: Custom Headers in the Snapshot Report
+description: Learn how to customize headers in the Snapshot Report using HTML and CSS.
+---
+
+# Custom Headers in the Snapshot Report
+
+The Snapshot Report incorporates both a header and footer that you can customize via the Partner Center Customization options.
+
+1. Go to **Partner Center > Administration > Customize.**
+2. Once in the customization menu, go to **Sales > Snapshot Banner.**
+   ![Snapshot Banner menu option](/img/snapshot-report/custom-header-1.jpg)
+3. To begin customizing the header, open up the 'source code' option (\<\>).
+   ![Source code button](/img/snapshot-report/custom-header-2.jpg)
+4. Insert your custom HTML into the 'source code' and click **Ok.**
+5. Click **Save & Continue.**
+
+:::note
+Remember to use the 'Preview' feature available before saving your changes, to use in-line or scoped CSS when adding your custom source code and that any images must be externally hosted.
+:::
+
+### Sample HTML Text
+
+![Sample HTML preview](/img/snapshot-report/custom-header-3.jpg)
+
+```html
+<div class="call-to-action" style="background: #3FAAE0; border: 3px solid #308CED; border-radius: 2px;">
+<img src="//salestool-prod.appspot.com/static/images/snapshot/cta-ecom-computer.png" alt="" />
+<h1 style="color: white;">Fix Your Online Reputation</h1>
+<p style="color: white;">Nearly 75% of people lose trust in brands with inaccurate business listingsand 90% of people look to online reviews when making purchase decisions. <strong>Make sure you&rsquo;re not losing real money because of bad listings and reviews. With our suite of free tools, you can begin strengthening your online presence in minutes.</strong></p>
+<a class="cta-button snapshot-cta-button" style="background-color: #3d9a63;" target="_blank">Get Started Today</a>
+<a class="snapshot-salesperson-phone-container" target="_blank">Call Us Today</a>
+</div>
+```
+
+:::note
+**Note:** To change the background colour, find this piece of code **div class="call-to-action" style="background: #3FAAE0;**. Replace **#3FAAE0** with the hex code for the colour you'd prefer as the background.
+:::

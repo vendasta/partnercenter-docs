@@ -1,0 +1,69 @@
+---
+title: Setting Up Triggers for Closed Matters in Clio
+description: Learn how to configure triggers for Closed Matters in Clio, specifically for opting out or opting in to syncing customer data.
+---
+
+# Setting Up Triggers for Closed Matters in Clio
+
+This guide will help you configure triggers for Closed Matters in Clio, specifically for opting out or opting in to syncing customer data. Follow the instructions below to set up these configurations effectively.
+
+## Setting Up the Closed Matter (Opt Out) Trigger
+
+The Closed Matter (Opt Out) trigger allows you to exclude specific customers from syncing their data to the platform when a Matter is closed. When the "Opt Out" checkbox is checked, Clio will not send the customer's information. By default, the checkbox is unchecked, and data will sync automatically.
+
+### Steps to Configure
+
+1. **Log in to your Clio Dashboard.**
+
+2. Navigate to **Settings > Custom Fields.**
+
+3. Ensure you are in the **Contact Custom Fields** section.
+
+4. Select **Individual Fields.**
+
+5. Click the green **Add** button.
+
+6. Fill out the details as follows:
+   - **Field Name:** BroadlyOptOut
+   - **Type:** Checkbox
+   - **Default:** Checked
+   - **Required:** Leave unchecked
+
+7. Click **Save.**
+
+**Important Notes**
+
+- The system will reference the "BroadlyOptOut" field for each Contact when a Matter is marked as Closed.
+- If the checkbox is checked, the customer's data will **not** sync to the platform.
+- If the checkbox is unchecked (default), the data will sync as usual.
+
+## Setting Up the Closed Matter (Opt In) Trigger
+
+The Closed Matter (Opt In) trigger ensures that customer data syncs only if a specific custom field for a Matter is explicitly marked for syncing. By default, this field is checked to allow syncing.
+
+### Steps to Configure
+
+1. **Log in to your Clio Dashboard.**
+
+2. Navigate to **Settings > Custom Fields.**
+
+3. Ensure you are in the **Matter Custom Fields** section.
+
+4. Select **Individual Fields.**
+
+5. Click the green **Add** button.
+
+6. Fill out the details as follows:
+   - **Field Name:** SendBroadlyThankYou
+   - **Type:** Checkbox
+   - **Default:** Checked
+   - **Required:** Leave unchecked
+
+7. Click **Save.**
+
+**Important Notes**
+
+- The field name must be exactly "SendBroadlyThankYou" (case-sensitive and no extra spaces).
+- Customer data will sync only if the "SendBroadlyThankYou" checkbox is marked for the Matter.
+
+By following these steps, you can successfully manage how customer data syncs when Matters are closed in Clio. If you have further questions or need assistance, feel free to contact our support team.
