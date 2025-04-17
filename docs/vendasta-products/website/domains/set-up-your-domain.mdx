@@ -1,0 +1,55 @@
+---
+title: Set up your domain
+description: Learn how to set up your domain for Website Pro by configuring A and CNAME records.
+sidebar_position: 1
+---
+
+To set up your domain for Website Pro, there are two records you'll need to change.
+
+**A record:** This allows you to point your root domain to your website
+
+**CNAME record**: Allows pointing a subdomain to your website, such as www.
+
+### Setting up an A record
+
+To set up A record, log in to your domain registrar and access your domain settings. From there, choose to add an A record. For this new record, add the following information:
+
+**HOST**: This should be either blank or @ (depending on your provider)
+
+**Points to**:  34.149.86.124 
+
+**TTL**: 3600 seconds (1 hour)
+
+### Setting up a CNAME record
+
+To set up your CNAME record, log in to your domain registrar and access your domain settings. From there, choose to add a CNAME record and enter the following information:
+
+**HOST:** This should be the subdomain you want to use (usually www)
+
+**Points to:** host.websiteprohosting.com
+
+**TTL:** 3600 seconds (1 hour)
+
+### Validating A and CNAME records
+
+Once the above records are set up, you will need to validate them in Website Pro. Open Website Pro for the applicable account, navigate to the **Domains** tab, and select "Connect Domain." In the dialog, add the root domain you want to connect. If applicable, check the box to add the www. address.
+
+From here, Website Pro will regularly check to ensure those records are in place. Until it finds the records you created, your added domains will be marked as Pending. You can check to see if your domains are propagating by looking them up on MxToolbox:
+
+**A record**: Enter your root domain: [https://mxtoolbox.com/DNSLookup.aspx](https://mxtoolbox.com/DNSLookup.aspx)
+The A record that is returned should include an IP address of 34.149.86.124 
+
+**CNAME record**: Enter your subdomain (e.g. www.business.com): [https://mxtoolbox.com/DNSLookup.aspx](https://mxtoolbox.com/DNSLookup.aspx) 
+The record that is returned should reflect a Canonical Name of [host.websiteprohosting.com](http://host.websiteprohosting.com/)
+
+### FAQs
+
+**When do I use an A Record**: You would use an A record if you want your root domain, for example, business.com, to point to your site on Website Pro
+
+**When do I use a CNAME record:** You would use a CNAME record any time you want a subdomain to point to your website. Some example subdomains would be *www.business.com* or *listings.business.com*. In both of these cases you would add only the subdomain portion as the host in your record, so www and listings in the example.
+
+**What is the base requirement:** To link your domain to Website Pro you must use at least one A record or CNAME record. Which one you use depends on whether you want to link the root domain or a subdomain to Website Pro. To link the root domain you would use an A record. To link a subdomain you would use a CNAME record.
+
+**Do I need to do anything to setup SSL**: All Website Pro sites are automatically provisioned with a Let's Encrypt SSL certificate, so you would not need to follow any extra steps to set this up
+
+**How do I set the preferred URL:** This can be done from the domains tab of Website Pro. Select the kabob menu next to the domain you want to use, then select Make Primary. This will make it so that when the site is accessed from any of its connected domains, the user is redirected to your primary one.

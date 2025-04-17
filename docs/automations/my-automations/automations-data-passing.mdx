@@ -1,0 +1,74 @@
+---
+title: "Automations: Data Passing"
+description: Learn how to use data passing in Vendasta Automations to connect workflow steps
+---
+
+# Automations: Data Passing
+
+Data passing allows you to **run workflow steps using data from steps that have previously run as an input**. For example, if you create a fulfillment project as an action step, a delay until the logic step can wait until the new fulfillment project has been completed.
+{/* ![Data passing example](/img/automations/data-passing-example.png) */}
+
+## What can I do with Data Passing?
+
+This feature includes the ability to name steps in workflow automation, jumping from one named step to another named step (for instance, if a sales order was initially declined and then approved by a salesperson, the automation will jump to the next named step rather than having to build out the workflow steps again), better error handling (for instance, if an error occurs the automation can restart from a different named step in the workflow), and passing data for the actions: *create a fulfillment project* and *trigger a webhook*.
+
+See the following links for more information:
+
+- [Automation Activity](/automations/automation-activity)
+- [Logic Steps](/automations/logic-steps)
+- [API Actions (Trigger a Webhook & Data Passing)](/automations/api-actions)
+
+## How do I use Data Passing?
+
+**Why is the step I want to use greyed out?**
+
+Data passing allows you to run workflow steps using data from a previous step. When creating an Automation, steps that are greyed out (disabled) often require information that the preceding triggers or steps don't provide. For example, an automation with an account trigger will not have the action 'Update opportunity stage' action available. However, if you add the 'Retrieve the newest opportunity for the account' action, the 'Update opportunity stage' will now be available when choosing an action step - because there is an opportunity action on.
+
+In addition to determining what action steps are available, data within an automation workflow can be used as inputs within later automation steps. This example will show how to select available data for use in dynamic content within an action step.
+
+**1. Create an automation**
+
+Automations always have a trigger and one or more action steps. If the trigger or action steps contain any data that can be used in other steps, they will be available in the following steps' input options.
+
+In this example, we are going to start with new automation. Create new automation using the account automation type. For the trigger in this example, we choose "when an account is created".
+{/* ![Create automation](/img/automations/create-automation.png) */}
+
+**2. Create a fulfillment project step**
+
+Add the 'Create a fulfillment project for the account' step and choose any fulfillment project. There is now a fulfillment project in the data stream.
+
+![Create fulfillment project](/img/automations/create-fulfillment-project.png)
+
+**3. Wait for the fulfillment project**
+For this example, add a Delay until an event happens logic step and choose the A fulfillment project status for the account is changed trigger.
+
+**3a. Choose the Delay until an event happens logic step**
+For this example, we want to wait until the fulfillment project created has been completed. Choose the Delay until an event happens logic step so that the automation will wait until a specific trigger event has happened.
+{/* ![Delay until logic step](/img/automations/delay-until-logic-step.png) */}
+
+**3b. Choose the workflow step to use data from**
+Now we need to specify what to wait for in the delay until step. To do this, specify the Workflow data origin we want to use data from in the first dropdown. In this case, choose the step you named in part 1 of the lesson.
+
+![Workflow data origin](/img/automations/workflow-data-origin.png)
+
+**3c. Choose the data from that workflow step**
+As you can imagine, action steps can output several different data fields. For this example, the Create a fulfillment project action step only outputs the Fulfillment project data field. Select Fulfillment project in the second dropdown to specify what data you are using from `Data passing step 1`.
+
+![Data field selection](/img/automations/data-field-selection.png)
+
+**4. Choose a trigger event to wait for based on the data selected**
+With the Fulfillment project data field selected, you can now choose one of two triggers that relate to fulfillment projects. Choose **A fulfillment project status for the account is changed**. Next, choose the fulfillment status you want the step to trigger. In this example, the trigger will start when a fulfillment project status is changed to "**Completed**".
+
+![Fulfillment status change](/img/automations/fulfillment-status-change.png)
+
+The **delay until logic** step will now wait for the fulfillment project created in "Data passing step 1" to have its status change to "Completed".
+
+**5. Notify the assigned salesperson**
+To fully experience this automation in action, we should do something when the project has been completed. Let's notify a salesperson that the fulfillment project has been completed.
+
+![Input params for API call](/img/automations/input-params-api-call.png)
+
+**6. Try it out!**
+Our automation will now trigger when a new account is created. Then, it will create a fulfillment project for that account. The workflow will wait until that new fulfillment project is complete, then send a notification to the assigned salesperson. Turn the automation on and test it out!
+
+{/* ![Automation complete](/img/automations/automation-complete.png) */}

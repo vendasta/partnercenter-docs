@@ -1,0 +1,30 @@
+---
+title: "How do Automations work with the Acquisition Widget?"
+sidebar_position: 5
+---
+
+There is no direct link between Automations and the Acquisition Widget. However, you can create an Automation workflow that will start when someone submits their information through the Acquisition Widget.
+
+To start, you'll have to configure an Acquisition Widget to add a unique tag to a new account. To do this:
+
+1. Go to **Partner Center** > **Marketing** > **Acquisition Widgets**
+2. Create a new Acquisition Widget, or select an existing Widget.
+3. In the **Tag** field, enter a unique tag for this Widget. When someone submits their information through this Widget, an account will be created for them in Partner Center, and the tag you entered will be added to the account.
+4. Click **Save and continue**, and fill in the remaining details for the Widget.
+
+Next, create an Automation that starts when an account is created. To do this:
+
+1. Go to **Partner Center** > **Automations > My Automations.**
+2. Create a new Automation, or select an existing Automation. If you created a new Automation, use the **Blank template**.
+3. Set the trigger to **An account is created**. In the trigger panel, select **Add conditions for starting this automation**.
+4. For the **Account data** condition type, select **Tags** > **Include any:** or **Include all:**
+5. Select the tag specified in the Acquisition Widget, then click **Save**.
+
+:::note
+**Can't find your tag in the list?**  
+You may have to first add the tag to an account. Once the tag is on an account, it should appear in the list.
+:::
+
+6. Build out the remaining workflow steps, then turn on the Automation.
+
+Once the Automation is turned on, make sure the Widget is embedded on your website and turned on. You will now have an Automation that only runs when an account is created via the specific Acquisition Widget.

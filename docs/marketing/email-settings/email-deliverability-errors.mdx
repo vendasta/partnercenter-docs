@@ -1,0 +1,23 @@
+---
+sidebar_position: 2
+title: Email Deliverability Errors
+description: Information about common email deliverability errors and how to resolve them.
+---
+
+# Email Deliverability Errors
+
+### **Common Email Deliverability errors**
+
+| | **Error** | **Meaning** |
+|:---:|---|---|
+| 1 | If your message was rejected with **listed on spamrl.com as a source of spam** | This means we have seen multiple (verified) spam emails originating from your IP(s). |
+| 2 | If your message was rejected with **listed on spamrl.com as a source of viruses** | This means we have seen multiple (automatically classified) virus emails originating from your IP(s) |
+| 3 | If your message was rejected with **listed on spamrl.com as a source of phishing** | This means we have seen multiple (verified) phishing emails originating from your IP(s). OR large amounts of failing auth (SPF/DKIM/DMARC) reports. |
+| 4 | If your message was rejected with **listed on spamrl.com as a source of dictionary attacks** | This means we have been seeing significant traffic to non-existing mailboxes originating from your IP(s), compared to legitimate deliveries. This is automated, and NOT caused by spam reports. |
+| 5 | If your message was rejected with **(domain|IP) listed on spamrl.com** | This means we have seen multiple (verified) spam/virus/phishing emails originating from your IP(s) or domain(s) OR a trusted third-party source has blacklisted your IP(s) or domain(s) and we have seen insufficient legitimate traffic or reports to ignore that third-party listing. |
+
+### **What should I do?**
+
+1. **[Check](http://mxtoolbox.com/blacklists.aspx)** any external blacklists, and request delisting on systems where you are listed.
+
+2. Request for the domain or IP to be whitelisted **[here](https://spamrl.com/delist/)**.

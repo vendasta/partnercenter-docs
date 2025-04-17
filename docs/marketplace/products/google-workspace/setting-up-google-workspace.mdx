@@ -1,0 +1,184 @@
+---
+title: Setting up Google Workspace
+description: Learn how to set up Google Workspace for your clients
+---
+
+# Setting up Google Workspace
+
+## Watch the walkthrough video
+
+[Watch the walkthrough video](#walkthrough-video)
+
+- [Pre-start checklist](#pre-start-checklist)
+- [Configuring Business App users](#configuring-business-app-users)
+  - [Creating a new user](#creating-a-new-user)
+  - [Using an existing user](#using-an-existing-user)
+- [Activating Google Workspace](#activating-google-workspace)
+  - [Scenario A: Your client will be doing all of the Google Workspace setup work themselves](#scenario-a-your-client-will-be-doing-all-of-the-google-workspace-setup-work-themselves)
+  - [Scenario B: You are completing the setup but will not be an administrator](#scenario-b-you-are-completing-the-setup-but-will-not-be-an-administrator)
+  - [Scenario C: You are completing the setup and would also like to remain as an administrator](#scenario-c-you-are-completing-the-setup-and-would-also-like-to-remain-as-an-administrator)
+- [Google Workspace configuration (admins only)](#google-workspace-configuration-admins-only)
+- [Final steps](#final-steps)
+- [Linking Google Workspace and Business App users](#linking-google-workspace-and-business-app-users)
+- [Allowing users to log in directly through Google](#allowing-users-to-log-in-directly-through-google)
+
+## Pre-start checklist
+
+Before you're able to use Google Workspace, there are a few things you'll want to configure first:
+
+- **Domain name:** Ensure you have administrative access to your domain name's DNS settings.
+- **Business App users**: Ensure you've set up a Business App user for each Google Workspace user. These users should match the domain name you are using above.
+  - Example: username@**domainname.com**
+- **Secondary email address**: Ensure you have an email address that is not at the above domain name. This will be used as your administrative email address.
+
+## Configuring Business App Users
+
+As your clients will log in to Google Workspace with their Business App credentials, you will need to be sure that each user is set up in Business App.
+
+## Creating a new user
+
+1. **Partner Center > Businesses > Users**, click **Create User**.
+   - Alternatively, you can access this option from **Partner Center > Businesses > Accounts > *Account Name* > Users**.
+2. Complete the form. Make sure the **Email** has the same domain name as the domain you are configuring.
+3. You'll need to add the user to the account you are activating Google Workspace on. Select ![Edit icon](/img/google-workspace/4406959970967.jpg) > **Edit Permissions > Add Account**
+4. Locate the account and click the checkbox next to it.
+5. Click **Add Accounts**.
+6. Repeat steps 1-5 for each user you are configuring.
+
+## Using an existing user
+
+If you already have users with the same domain as the domain you are configuring Google Workspace for, you can assign those users to the account instead of creating new ones.
+
+If the users have already been assigned to the account, you can skip ahead to the **[Activating Google Workspace](#activating-google-workspace)** step.
+
+1. From **Partner Center > Businesses > Users**, click ![Edit icon](/img/google-workspace/4406959970967.jpg) **> Edit Permissions** next to the user you wish to use.
+2. Click **Add Account**.
+3. Locate the account and click the checkbox next to it.
+4. Click **Add Accounts**.
+5. Repeat steps 1-4 for each user you are configuring.
+
+## Activating Google Workspace
+
+Now it's time to activate Google Workspace. There are three common ways to activate Google Workspace, depending on how much of the setup and administration you would like to do. Choose the right scenario for you.
+
+### Scenario A: Your client will be doing all of the Google Workspace setup work themselves
+
+1. From **Partner Center > Businesses > Accounts**, locate and click the account you are setting up.
+2. Click **Products > Purchase Services**.
+3. Locate and click **Google Workspace**.
+4. Follow the steps in the purchase flow up until the **Activate** button appears.
+5. Send the activation link to your client.
+   - Click the arrow next to the **Activate** button and select **Send Activation Link**.
+   - When your client clicks the link they will go through the rest of the activation steps listed below.
+   - You will not be included as an administrator.
+   - Your client will need to ensure they follow all of the remaining steps, including [linking any users](#linking-google-workspace-and-business-app-users).
+
+### Scenario B: You are completing the setup but will not be an administrator
+
+1. From **Partner Center > Businesses > Accounts**, locate and click the account you are setting up.
+2. Click **Products > Purchase Services**.
+3. Locate and click **Google Workspace**.
+4. Follow the steps in the purchase flow.
+5. Click the **Activate** button.
+6. Click **Get Started**.
+7. Click **Continue** when prompted about the domain.
+8. Select the **I am an administrator for domainname.com > Continue**.
+9. Select the **Using this domain with email > Continue**
+   - This is the best choice in most cases. If you know this is a brand new domain with no email, choose from one of the other options.
+10. Complete the admin setup form. Be sure to use an **email** that is different from the domain name you are setting up.
+    - Example: If you're setting up Google Workspace for domainname.com, use an email address that is not at domainname.com.
+11. Complete the **Super admin profile (name, phone)** and click **Accept**.
+12. Continue with [Google Workspace Configuration](#google-workspace-configuration-admins-only).
+
+### Scenario C: You are completing the setup and would also like to remain as an administrator
+
+1. From **Partner Center > Businesses > Accounts**, locate and click the account you are setting up.
+2. Click **Products > Purchase Services**.
+3. Locate and click **Google Workspace**.
+4. Follow the steps in the purchase flow.
+5. Click the **Activate** button.
+6. Click **Get Started**.
+7. Click **Continue** when prompted about the domain.
+8. Select the **I am an administrator for domainname.com > Continue**.
+9. Select the **Using this domain with email > Continue**
+   - This is the best choice in most cases. If you know this is a brand new domain with no email, choose from one of the other options.
+10. Complete the admin setup form. Be sure to use an **email** that is different from the domain name you are setting up.
+    - Example: If you're setting up Google Workspace for domainname.com, use an email address that is not at domainname.com.
+11. Complete the **Super admin profile (name, phone)** and click **Accept**.
+12. Continue with steps below.
+13. When you have completed all of the steps below including DNS verification, etc., continue to the final steps below and ensure you [make the customer a super admin](#final-steps) as well.
+
+## Google Workspace configuration (admins only)
+
+Now we are going to configure Google Workspace. This step is only for those who have administrative access to Google Workspace for this domain (you followed either Scenario B or C above).
+
+1. Click **Verify your domain**. 
+2. Select **Another way to verify**.
+3. Select **Any of the verification methods**.
+4. Choose which verification method you would like to use. Most people choose one of the first 2 options.
+   - **Add a TXT record (recommended)**: This requires adding a TXT record to your domain's DNS settings.
+   - **Add a CNAME record**: This requires adding a CNAME record to your domain's DNS settings.
+   - Other methods are also available but are less common.
+5. Follow the instructions for your chosen verification method.
+6. Return to the Google Workspace setup page and click **Verify**.
+7. Click **Set up Google Workspace**.
+8. Click **Set up Email**.
+9. Go to your domain registrar or DNS provider and add the MX records shown by Google.
+   - Ensure you remove any existing MX records for the domain.
+   - Ensure you add all of the MX records shown by Google.
+10. Return to the Google Workspace setup page and click **Verify records**.
+11. Click **Activate Gmail**.
+12. Click **Continue**.
+13. Add the site verification record shown by Google to your domain's DNS settings.
+   - This may be a TXT record or a CNAME record, depending on what you chose earlier.
+14. Return to the Google Workspace setup page and click **Verify**.
+15. Click **Set up Devices**.
+
+## Final steps
+
+Now you need to ensure your clients have access to Google Workspace and are able to log in to it. In scenario A, your client would have already gone through the steps above, and would have admin access. In scenarios B and C, you would have gone through these steps, and may need to provide access to your client.
+
+In scenarios B and C, you should assign your client as a super admin:
+
+1. From the Google Admin console, click the hamburger menu, then **Directory > Users**.
+2. Click **Add a new user**.
+3. Complete the form. Be sure to use the email address that matches the client's Business App User email address.
+   - First name: (client's first name)
+   - Last name: (client's last name)
+   - Primary email: (client's Business App user email address)
+   - The password will be automatically generated, but it is not needed
+4. Click **Add new user**.
+5. Click the newly created user.
+6. Click **Admin roles and privileges**.
+7. Click **Assign roles**.
+8. Check the box for **Super Admin**.
+9. Click **Save**.
+
+## Linking Google Workspace and Business App users
+
+1. From **Partner Center > Businesses > Accounts**, locate and click the account you are setting up.
+2. Click **Products**.
+3. Locate and click **Google Workspace**.
+4. Click the **Users** tab.
+5. Locate the Google Workspace user you want to link.
+6. Click **Link to Business App User**.
+7. Select the Business App user you want to link to.
+8. Click **Link User**.
+9. Repeat steps 5-8 for each user you want to link.
+
+## Allowing users to log in directly through Google
+
+By default, users will need to use their Business App credentials to log in to Google Workspace. You can also enable an option that allows them to log in directly through Google, which is particularly useful for clients who are already comfortable with Google.
+
+1. From **Partner Center > Businesses > Accounts**, locate and click the account you are setting up.
+2. Click **Products**.
+3. Locate and click **Google Workspace**.
+4. Click the **Settings** tab.
+5. Find the **Allow users to login directly via Google** option and toggle it to **ON**. 
+6. Click **OK** on the confirmation popup.
+
+## Walkthrough video
+
+This walkthrough video shows how to set up Google Workspace:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nNRDsWdREzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

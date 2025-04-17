@@ -1,0 +1,28 @@
+---
+title: 500 Error when Logging In to WordPress Admin (Jetpack)
+description: "Since Website Pro does not support logins from other sources, Jetpack settings can conflict with the system and cause a 500 error upon entering the WordPress Admin Dashboard."
+slug: /vendasta-products/vendasta-products-website/vendasta-products-website-wordpress-dashboard/500-error-when-logging-in-to-wordpress-admin-jetpack
+---
+
+# 500 Error when Logging In to WordPress Admin (Jetpack)
+
+Since Website Pro does not support logins from other sources, Jetpack settings can conflict with the system and cause a 500 error upon entering the WordPress Admin Dashboard.
+
+If you are receiving response code 500 when attempting to log in to the WordPress admin page and have the Jetpack by WordPress.com plugin installed, check your security settings. If you have enabled **WordPress.com login**, you will likely get this error because our system does not currently support logins from other sources. If you do not have this plugin installed or have not adjusted any of the settings for this plugin, the root of your problem may lie elsewhere.
+
+## Solution
+
+Disable the "WordPress.com log in" feature.
+
+1. Go to your WordPress Admin page. Use the "WordPress Dashboard" button in Website Pro. If you are unable to get there because you continue to receive 500 error codes then try to: 
+   - Copy the URL of your site from the left-hand side panel of the Website Pro dashboard
+   - Paste your URL into the address field of your browser
+   - Add "/wp-admin" to the end of the URL, and hit enter. This should redirect you to your WordPress admin page.
+
+2. Go to the **Jetpack by WordPress.com** settings. This might be found 
+   - In the **Plugins** tab on the left-hand side visit the Plugins page. Upon arriving on the Plugins page, find the **Jetpack by WordPress.com** plugin and click the **Settings** button immediately below the plugin name. **OR:** 
+     - Click on **Jetpack > Settings** tab on the left-hand side
+
+3. This will redirect you to the settings page for the Jetpack by WordPress.com plugin, which should contain multiple headers at the top. Click on the **Security** header to adjust the security settings of the Plugin. You should find a panel labelled **WordPress.com log in**. Disable this by turning off the radio button that says **Allow users to log in to this site using WordPress.com accounts** within this panel. 
+
+You can also set up an SFTP user and remove the Jetpack plugin from your installation.

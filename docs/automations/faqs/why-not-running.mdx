@@ -1,0 +1,25 @@
+---
+title: Why Isn't My Automation Running?
+description: Understand potential reasons why your automation or a step within it might not be running as expected.
+sidebar_position: 2
+---
+
+# Why Isn't My Automation Running?
+
+There are several reasons why your automation, or a step in your automation might not be running:
+
+1. The automation must be turned **On** using the toggle button in the top-right of the automation editor.
+
+![Automation toggle button](/img/automations/faqs/automation-toggle-button.png)
+
+2. The automation may be configured to run **once per account**, which is the default behavior. To allow the automation to run multiple times per account, update the **Entry settings** in the **Settings** tab of the automation.
+{/* ![Entry settings](/img/automations/faqs/entry-settings.png) */}
+
+3. The automation may have encountered an error. Check the **Activity** tab for error messages. If you would like the automation to keep running when an error occurs, update the **Error handling settings** in the **Settings** tab of the automation.
+{/* ![Error handling settings](/img/automations/faqs/error-handling-settings.png) */}
+
+4. The automation may have a trigger condition that doesn't match any accounts. Double-check how your trigger is set up to make sure accounts meet all of the criteria.
+
+5. The automation may have a step that only makes sense after a delay occurs, but no delay was provided. For example, you may build automation that starts with a trigger of an account being created, and then an if/else branch based on the salesperson assigned to the account. In this case, it takes about 10 mins to assign a salesperson to an account once the account is created. Since that delay is not accounted for in the automation, the automation will stop running when it gets to the if/else branch.
+
+6. The automation may have a step that can only run once per account under any circumstance, which can't be changed. For example, an email campaign can only be sent **once** to the same account. If you build automation that involves sending a campaign to an account, and you want the automation to run multiple times per account, the automation will have errors since it can't send the campaign multiple times.

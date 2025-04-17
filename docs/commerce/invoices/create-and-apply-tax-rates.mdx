@@ -1,0 +1,55 @@
+---
+title: Create and apply Tax Rates
+description: Learn how to create tax rates and apply them to invoices and Shopping Cart purchases
+---
+
+Partners [invoicing](/commerce/commerce-invoices/invoicing-overview) their customers or accepting purchases through [the Shopping Cart](/commerce/commerce-shopping-cart/shopping-cart-overview) using [Vendasta Payments](/commerce/commerce-payment-processing/vendasta-payments) may find it necessary to charge taxes on the products and services they sell. Tax rates can be specified and applied to invoice line items, as well as Shopping Cart purchases and sales orders, to ensure that you are collecting the appropriate taxes from your customers.
+
+Note that partners are responsible for creating and maintaining the appropriate tax rates for the regions in which they do business. 
+
+*To see a full list of Merchant Services/Vendasta Payments feature availability, [click here](/commerce/commerce-payment-processing/merchant-services-feature-availability).*
+
+*For a video walkthrough on creating and applying tax rates, [click here](#video-walkthrough).*
+
+### Create and manage tax rates
+
+To create a tax rate, go to **Partner Center > Administration > Tax Rates** and click **Create Tax Rate**.
+
+<div style={{textAlign: 'center'}}>
+  <img src="/img/commerce/taxes/create-tax-rate.jpg" alt="Create Tax Rate interface" />
+</div>
+
+Fill out the following values:
+
+- Country 
+- State/Province
+- Tax Name 
+  - Suggested values include GST, PST, HST, State Tax
+- Rate (a percentage)
+- Description / Tax number
+  - This optional description will be displayed on the tax column of the invoices you generate, on your sales orders, and in the Shopping Cart checkout.
+
+Depending on the locations of your customers, you may need to define each tax rate that is applied to a country and state or provincial region. For example, if you were defining taxes to apply in Ontario, Saskatchewan, and Alberta, you would define the following:
+
+- Canada, Ontario, HST, 13%
+- Canada, Saskatchewan, GST, 5%
+- Canada, Saskatchewan, PST, 5%
+- Canada, Alberta, GST, 5%
+
+### Apply a tax rate to an invoice
+
+To apply a tax rate to a line item on an invoice, click the Options **⋮** menu on the line item, select **Set Item Tax**, and choose a tax rate to apply.
+
+<img src="/img/commerce/taxes/set-item-tax.jpg" alt="Setting item tax interface" />
+
+### Set a tax rate for a Sales Order or Shopping Cart purchase
+
+The tax rates that you have defined will be automatically applied to Shopping Cart purchases, as well as sales orders generated from Shopping Carts containing [items that can't be purchased with a credit card](/commerce/commerce-shopping-cart/adding-non-credit-card-items). The application of tax rates is based on the address of the account, according to the regions for which you have specified tax rates.
+
+Note that if no tax rates for a given region have been created, purchases and sales orders conducted through the Shopping Cart by customers located in the region will not have a tax rate applied to them. 
+
+*Learn about how to use Tax Exemptions [here](/commerce/commerce-taxes/tax-exemptions).*
+
+## Video Walkthrough
+
+<iframe src="//www.loom.com/embed/7a58fd36374a4d4ab706ed9b4f5ac829" width="560" height="315" frameborder="0" allowfullscreen></iframe>

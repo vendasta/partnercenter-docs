@@ -1,0 +1,39 @@
+---
+sidebar_position: 4
+title: Payout Status
+description: How to check the status of your payouts in Vendasta Payments
+---
+
+# Payout Status
+
+To check the status of a payout, navigate to **Partner Center > Commerce > Payouts.** At the top of this page, you can see if you have any upcoming payouts and if any money is currently in transit. Below, you will see a breakdown of all payouts and their status.  
+
+![Payout Status Overview](/img/commerce/payouts/payout-status.jpg)
+
+If a payout hasn't arrived by its expected delivery date, there can be several reasons why, including: 
+
+- Your payout date keeps getting changed and postponed
+- You have a [**reserve**](https://support.stripe.com/topics/reserves) on your account
+- Your payout is being processed by your bank
+- Your bank account details are incorrect
+
+1. When the Payout date has been **changed and postponed**, it means your next expected payout date has been updated to a future date. This is due to [**account verification issues**](https://support.stripe.com/topics/verification). Please check both your [**dashboard**](https://dashboard.stripe.com/account/verifications) and email to see if we requested additional information from you to complete this process.
+
+2. **Payout is missing** (Payout date less than 5 business days ago)
+
+If your expected payout was sent less than 5 business days ago, your payout funds have left Stripe and the payout is being processed by your bank. Banks can add extra days, including weekends and holidays. Once the bank has finished processing your payout, they will deposit the funds into your account automatically. While the payout funds have left Stripe, your bank may not yet have an update.
+
+3. **Payout is missing** (Payout date more than 5 business days ago)
+
+If your expected payout has not landed in your bank account after 5 business days, contact your bank for an update. You will need to provide the following information: bank account details, date expected, exact amount, and payor (Stripe).
+
+- See: [**How to check the status of a payout with your bank**](https://support.stripe.com/questions/payouts-being-processed-at-your-bank)
+
+If your bank is unable to locate the missing payout after 5 business days, contact [**support**](https://support.stripe.com/contact/login).
+
+4. **Bank account details were entered incorrectly or were changed**
+
+- You updated your bank account after a payout was initiated: When you update your bank account while your payout is already in transit, it will [go to your old bank account](https://support.stripe.com/questions/updating-your-bank-account-while-a-payout-is-in-transit).
+- Incorrect bank account details: It is possible you added the wrong bank account details. You can [update your bank account details](https://support.stripe.com/questions/update-existing-bank-account-information) from your Dashboard.
+- Your bank account is closed: If your payout is sent to a closed bank account, it will [return to your Stripe account automatically](https://support.stripe.com/questions/payout-sent-to-a-closed-bank-account).
+  - See also: [Updating your bank account while a payout is in transit](https://support.stripe.com/questions/updating-your-bank-account-while-a-payout-is-in-transit)

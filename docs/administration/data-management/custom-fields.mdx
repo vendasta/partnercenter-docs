@@ -1,0 +1,55 @@
+---
+title: Custom Fields
+description: Learn about custom fields in Vendasta and how to use them effectively
+---
+
+### **What are custom fields?**
+
+<iframe src="//fast.wistia.com/embed/iframe/3vkidhas6i" width="560" height="315" frameborder="0" allowfullscreen=""></iframe>
+
+With the release of Custom Fields, Vendasta Channel Partners will be able to create unique fields to hold the information that you find important for accounts, users, orders, and products. This allows more flexibility in how you segment and personalize your marketing, automate your sales processes, collect payments from clients, and fulfill your work with less effort.
+
+### **Why are custom fields important?**
+
+Depending on who you are working with and how you are working with them, the information that you need to document could be very different from another business' needs. Instead of including every possible combination of data points, Custom Fields allows you to define fields that will be important to you in your day-to-day use of the Vendasta Platform. 
+
+Some examples of ways you might use Custom Fields include:
+
+- Sending a "starter" email campaign to dental offices with less than 100 patients and an "established" email campaign to dental offices with more than 100 patients
+- Storing a user's favorite football team so your salespeople have a good icebreaker
+- Automatically assigning a salesperson or sales team to an account based on the estimated revenue of the business 
+
+![Custom Fields Example](/img/administration/data-management/custom-fields-example.jpg)
+
+### **How do custom fields work?**
+
+**Defining Fields:**
+
+Before information can be stored in a custom field, the field needs to be defined in **Administration > Custom Fields.** When defining a field, you must choose which "object" type will be associated with this data. For example, it makes sense that you want to know the number of hotel rooms associated with an account, but you likely don't need a field for the number of hotel rooms associated with individual users.
+
+![Creating a Custom Field](/img/administration/data-management/custom-fields-create.jpg)
+
+After clicking **Create Custom Field**, a **Name** and **Field Type** must be filled out. The field type has a significant effect on the type of data that can be stored in the custom field and how the data can be filtered and sorted.
+
+![Custom Field Types](/img/administration/data-management/custom-fields-type.jpg)
+
+### **Field Types**
+
+Examples of how the field type affects the stored values and how you interact with them can be found in the table below:
+
+| **Field Type** | **Example Names** | **Example values** | **Automation Filter Types** |
+| --- | --- | --- | --- |
+| Text | <ul><li>favorite dog breed</li><li>last event type</li><li>first content download</li></ul> | <ul><li>golden retriever</li><li>basketball</li><li>rule book</li></ul> | <ul><li>Is any value</li><li>Is missing</li><li>Contains</li><li>Does not contain</li><li>Is one of</li><li>Is not one of</li></ul> |
+| Integer | <ul><li>number of employees</li><li>customer touchpoint score</li><li>number of locations</li></ul> | <ul><li>4</li><li>-2</li><li>100</li></ul> | <ul><li>Less than or equal to</li><li>Equals</li><li>Greater than</li></ul> |
+| Date | <ul><li>birthday</li><li>best single-day sales date</li><li>manually remove-by</li></ul> | <ul><li>Aug 13, 1991</li><li>Feb 14, 2022</li><li>Mar 22, 2233</li></ul> | <ul><li>After</li><li>Before</li></ul> |
+| Dropdown | <ul><li>service level</li><li>initially purchased package</li><li>call priority</li></ul> | <ul><li>Silver</li><li>Gold</li><li>Platinum</li></ul> | <ul><li>Is</li><li>Is Not</li></ul> |
+| Currency | <ul><li>preferred monthly budget</li><li>average revenue per customer</li><li>external spend in Thailand</li></ul> | <ul><li>USD 1000</li><li>CAD 10.50</li><li>THB 50000</li></ul> | <ul><li>Less than or equal to</li><li>Greater than</li></ul> |
+
+### **Entering custom data**
+
+Custom fields can be filled with data in a number of ways:
+
+- In bulk by importing an [account List](/account-list/account-list)
+- Through Vendasta's public [API](https://developers.vendasta.com)
+
+![Data Entry for Custom Fields](/img/administration/data-management/custom-fields-data-entry.jpg)

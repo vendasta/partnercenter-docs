@@ -1,0 +1,114 @@
+/**
+ * Custom CSS for Vendasta Support site
+ * Customizing Infima variables to match Vendasta branding
+ */
+
+/* Vendasta brand colors for light mode */
+:root {
+  /* Vendasta blue */
+  --ifm-color-primary: #0068b3;
+  --ifm-color-primary-dark: #005da1;
+  --ifm-color-primary-darker: #005898;
+  --ifm-color-primary-darkest: #00477d;
+  --ifm-color-primary-light: #0073c5;
+  --ifm-color-primary-lighter: #0078ce;
+  --ifm-color-primary-lightest: #0089e9;
+  
+  /* Other brand colors */
+  --vendasta-teal: #00a3b4;
+  --vendasta-gray: #58595b;
+  --vendasta-light-gray: #f5f5f5;
+  
+  /* Other customizations */
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: 'Open Sans', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-family: 'Open Sans', system-ui, -apple-system, sans-serif;
+  --ifm-navbar-height: 70px;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-footer-background-color: var(--vendasta-gray);
+}
+
+/* Vendasta brand colors for dark mode */
+[data-theme='dark'] {
+  --ifm-color-primary: #2d9cdb;
+  --ifm-color-primary-dark: #238bc9;
+  --ifm-color-primary-darker: #2184be;
+  --ifm-color-primary-darkest: #1b6d9c;
+  --ifm-color-primary-light: #45a7df;
+  --ifm-color-primary-lighter: #51ade1;
+  --ifm-color-primary-lightest: #75bfe8;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-footer-background-color: #333333;
+}
+
+/* Custom styling for the navbar */
+.navbar {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar__brand {
+  height: 40px;
+}
+
+.navbar__logo {
+  height: 40px;
+  margin-right: 12px;
+}
+
+/* Custom styling for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+/* Custom styling for the sidebar */
+.menu__link--active {
+  font-weight: 600;
+}
+
+/* Customizing cards for better visibility */
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom button styling */
+.button {
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.button--primary {
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+.button--primary:hover {
+  background-color: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+}
+
+/* Custom styling for footer */
+.footer__title {
+  font-weight: 600;
+  color: white;
+}
+
+.footer__link-item {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer__link-item:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.6);
+}

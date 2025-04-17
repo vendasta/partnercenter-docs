@@ -1,0 +1,15 @@
+---
+title: "Why am I seeing 'Storage engine MyISAM is disabled (Table creation is disallowed)'"
+sidebar_label: "MyISAM storage engine disabled"
+description: "Understanding the MyISAM storage engine disabled error and possible workarounds"
+---
+
+At the moment the only storage engine supported by our databases is InnoDB, MyISAM is not supported, unfortunately. Therefore, the call being made by the plugin when downloading content will fail.
+
+According to Google, our provider, this is a stability issue.  
+
+## Is there a workaround?
+
+You can investigate maybe manipulating the DB Table creation script to not use MyISAM, but to use InnoDB. 
+
+This is a conversation you will need to have with the plugin/theme developer on the feasibility/validity of such a measure.

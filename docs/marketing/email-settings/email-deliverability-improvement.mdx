@@ -1,0 +1,77 @@
+---
+title: "How Vendasta Helps Improve Your Email Deliverability"
+sidebar_position: 7
+---
+
+# How Vendasta Helps Improve Your Email Deliverability
+
+Spam laws and regulations are becoming more complex, and precautions are needed to prevent emails from being flagged as spam. To help deliver your emails successfully, we make a small change to the email address that's used to send emails.
+
+We start with the email you used to sign up for Vendasta, but we update the address domain portion to a generic domain. For example, if you sign up with john@gmail.com, we'll send emails from john@smblogin.com.
+
+## Why do we change the domain?
+
+We change the domain portion of your sender email address to help send your emails properly. If the platform tried to send emails from john@gmail.com (for example), the emails wouldn't pass spam filters and wouldn't get delivered to your clients.
+
+There are a few restrictions associated with sending marketing emails using free email service providers:
+
+- Free email addresses, such as john@gmail.com, can't be verified since you don't own these domains.
+- Free email address services have a [DMARC policy](https://dmarc.org/overview/) in place. Although this is intended to prevent emails from going to spam, it can nevertheless disrupt your email deliverability.
+
+## What if I sign up with my own domain?
+
+Until you update your SPF records in your Domain Name System (DNS), there's a high chance your emails will land in the spam folder of your recipients. This applies even if you sign up for Vendasta with a custom-domain email address. This is why it's crucial to grey-label your sender address until you own a custom domain and update the SPF records.
+
+## What if someone replies to any email?
+
+All replies will be sent to the email address you used to sign up for the platform, so you don't have to worry about missing anything. An email may be sent from john@smblogin.com, but when someone replies to that email, it will be sent to john@gmail.com.
+
+## How do I update my email settings?
+
+You can update your email settings in **Partner Center** > **Marketing** > **Email Settings** > **Sender and Reply Settings**.
+
+![Sender and Reply Settings interface](/img/email-deliverability/sender-settings.jpg)
+
+### Sender address
+
+If you own a custom domain, you can update the sender address to use your domain instead of smblogin.com.
+
+To update this address, you'll first need to update the SPF record in your Domain Name System (DNS).
+
+Once your DNS is updated, click **Update**, then enter your custom email address.
+
+:::note
+**Notes:**
+- You can only update the sender address with a custom email. For example, any free email address—such as an email from gmail.com, outlook.com, yahoo.com—will not save.
+- You may see an error message that the sender's address was not updated. In this case, make sure you've updated your DNS correctly, and that enough time has elapsed after updating it. Domain updates can sometimes take up to **72 hours** to propagate.
+:::
+
+## How to configure DNS records
+
+To authenticate your custom domain, log in to your DNS provider. For instance, if you bought your domain from GoDaddy, you have to log in to GoDaddy to authenticate your domain.
+
+- This article provides more instructions on how to update records in GoDaddy: [Guide: Adding SPF, DKIM, DMARC Records (GoDaddy)](/products/reputation-management/adding-spf-dkim-dmarc-godaddy)
+
+For other domain providers, check the instructions on their site or contact their customer service.
+
+<div style={{ textAlign: 'center', marginTop: '2rem', marginBottom: '2rem' }}>
+  <a
+    href="https://partners.vendasta.com/campaign-settings"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      fontSize: '16px',
+      fontWeight: 'bold',
+      color: '#ffffff',
+      backgroundColor: '#33ace2',
+      textDecoration: 'none',
+      borderRadius: '5px',
+      padding: '10px 30px 9px 30px',
+      border: '1px solid #33ACE2',
+      display: 'inline-block',
+      textAlign: 'center'
+    }}
+  >
+    Update email settings
+  </a>
+</div>

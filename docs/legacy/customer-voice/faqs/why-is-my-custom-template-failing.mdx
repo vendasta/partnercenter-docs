@@ -1,0 +1,26 @@
+---
+title: "Why is my custom template failing?"
+sidebar_label: "Why is my custom template failing?"
+---
+
+*Note: As of February 21st, 2025, Customer Voice has become a legacy Vendasta product. Start using [Reputation Management Premium](https://partners.vendasta.com/marketplace/products/RM) to automatically collect reviews and NPS via email and SMS.*
+
+### **HTML**
+
+HTML errors are primarily caused by the use of smart quotes (also known as curly quotes). These are Unicode which often causes rendering issues. These are generally caused by auto-formatting when copying and pasting from a separate source.
+
+Please note that you can use Unicode characters in the body of your email, but they cannot be included in any HTML tags.
+
+To fix this error, convert all smart quotes to plain/straight quotes.
+
+### **CSS**
+
+Media queries are the most common issue when using CSS for your template.
+
+To resolve this, you will need to move each media query to its own style tag. An example of how one might format this is as follows: 
+
+```html
+<style media="screen"type="text/css">body{width:75%;}</style>
+<style media="only screen and (max-width: 650px)"type="text/css">@mediaonlyscreenand(max-width:650px){body{width: 80%;}}</style>
+<style media="only screen and (max-width: 480px)"type="text/css">@mediaonlyscreenand(max-width:480px){body{width:100%;}}</style>
+```
