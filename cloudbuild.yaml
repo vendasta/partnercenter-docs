@@ -1,0 +1,39 @@
+steps:
+  # Build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/repcore-prod/docs-repo/partnercenter-docs:$COMMIT_SHA', '.']
+
+  # Push the container image to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-central1-docker.pkg.dev/repcore-prod/docs-repo/partnercenter-docs:$COMMIT_SHA']
+
+  # Deploy container image to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'partnercenter-docs'
+      - '--image'
+      - 'us-central1-docker.pkg.dev/repcore-prod/docs-repo/partnercenter-docs:$COMMIT_SHA'
+      - '--region'
+      - 'us-central1'
+      - '--platform'
+      - 'managed'
+
+  # Also tag as latest for convenience
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['tag', 
+           'us-central1-docker.pkg.dev/repcore-prod/docs-repo/partnercenter-docs:$COMMIT_SHA', 
+           'us-central1-docker.pkg.dev/repcore-prod/docs-repo/partnercenter-docs:latest']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-central1-docker.pkg.dev/repcore-prod/docs-repo/partnercenter-docs:latest']
+
+# Store images in Artifact Registry
+images:
+  - 'us-central1-docker.pkg.dev/repcore-prod/docs-repo/partnercenter-docs:$COMMIT_SHA'
+  - 'us-central1-docker.pkg.dev/repcore-prod/docs-repo/partnercenter-docs:latest'
+
+# Set a longer timeout for the build
+timeout: '1200s' 
