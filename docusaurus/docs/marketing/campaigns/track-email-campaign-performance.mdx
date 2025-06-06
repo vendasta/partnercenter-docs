@@ -6,50 +6,28 @@ sidebar_position: 17
 
 # Track Email Campaign Performance
 
-To track the performance of email campaigns, you need to monitor key metrics such as open rates, click rates, and other engagement indicators. This guide will show you how to access and analyze your campaign performance data.
+## Overview
 
-## Accessing Campaign Analytics
+Once you start an email marketing campaign, Vendasta tracks how recipients engage with the campaign to help you make insightful decisions. When you open a campaign, you can view how many recipients received, opened, and clicked through each email in the campaign. You can also view how many times an email bounced, or how many recipients unsubscribed from an email.
 
-To view campaign analytics:
+All activity is always attributed to the original recipient, even though external processes and systems can sometimes initiate the activity. There are no clear indicators to differentiate if these activities are initiated by a human or an automated program, resulting in some Open Rates or Click-Through Rates (CTRs) being falsely registered on behalf of the recipient. Here are some common reasons why that may happen:
 
-1. Navigate to **Marketing** > **Campaigns** in Business App.
-2. Open the campaign you want to analyze by clicking its name.
-3. Click the **Analytics** tab to see the campaign's performance metrics.
+- **Third-party unsubscribe links**: Our email campaigns contain an unsubscribe link. When this link is clicked, it only registers as an “unsubscribe” and not as a click. However, many email clients nowadays have the option to ask the recipient to unsubscribe from suspected spam/newsletter emails. If the recipient unsubscribes using these third-party links, it registers with a click.
+- **Recipient email client settings**: An email's open rate is recorded with a single tracking pixel embedded into the email. Usually, this tracking pixel is associated with an image. A recipient’s email client may block loading images to protect the recipient from spammers. If the email client blocks loading images, the open rate is not tracked.
+- **Spam and virus scanners**: Some internet service providers (ISP) click on links within an email to check for security risks. When this happens, the clicks are recorded on behalf of the recipient.
 
-## Understanding Campaign Metrics
+Unfortunately, these external initiations are out of our control. To maintain accurate email metrics, we recommend identifying domains that skew campaign metrics and segmenting those domains from your analysis.
 
-The Analytics tab displays several important metrics that help you evaluate your campaign's effectiveness:
+## Export Campaign Activity
 
-- **Open Rate**: The percentage of recipients who opened your email
-- **Click Rate**: The percentage of recipients who clicked on a link in your email
-- **Bounce Rate**: The percentage of emails that could not be delivered
-- **Unsubscribe Rate**: The percentage of recipients who unsubscribed after receiving your email
+After starting an email campaign, you can export a list of users who interacted with the campaign. Then, you can use that exported data to create a new user list and retarget those users with another campaign.
 
-## Campaign Configuration for Performance Tracking
+To export campaign activity:
 
-To ensure proper tracking of your email campaigns, configure your campaign settings appropriately:
+1. Go to **Marketing > Campaigns**.
+2. Go to the **Campaign Activity** page.
+3. At the end of a row in the campaigns table, click the three dots next to the Campaign, then click **View History**.
 
-![Campaign configuration settings](/img/marketing-campaigns/campaign_configuration.jpg)
+## Why is this important?
 
-## Previewing and Testing Your Email
-
-Before sending a campaign, you can preview it and send test emails to verify that tracking is set up correctly:
-
-![Preview and send test emails](/img/marketing-campaigns/send_test_email.jpg)
-
-## Best Practices for Campaign Performance
-
-1. **Set clear goals**: Define what success looks like for your campaign before sending
-2. **Test before sending**: Always preview and test your emails to ensure proper formatting and tracking
-3. **Monitor regularly**: Check campaign performance regularly to identify trends
-4. **Segment your audience**: Target specific audience segments for better engagement
-5. **Optimize send times**: Experiment with different send times to find what works best for your audience
-
-## Troubleshooting Tracking Issues
-
-If you notice tracking discrepancies or issues with your campaign analytics:
-
-1. Verify that tracking parameters are enabled in your campaign settings
-2. Check for email client compatibility issues
-3. Ensure your HTML email templates include the necessary tracking pixels
-4. Confirm that recipients haven't blocked images or tracking in their email clients
+The Email Builder streamlines the process of creating emails, offering an easy-to-use drag-and-drop functionality. This empowers you to save time and craft effective emails that engage prospects and drive conversions.
