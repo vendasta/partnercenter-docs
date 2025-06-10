@@ -5,12 +5,12 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Vendasta Support',
+  title: 'Partner Center',
   tagline: 'Welcome to the Vendasta Help Center',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://support.vendasta.com',
+  url: 'https://docs.vendasta.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -18,7 +18,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'vendasta', // Usually your GitHub org/user name.
-  projectName: 'vendasta-support', // Usually your repo name.
+  projectName: 'partnercenter-docs', // Usually your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -38,8 +38,8 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           // Remove edit URLs
-          editUrl: undefined,
-          routeBasePath: '/', // Set docs as the root
+          // editUrl: undefined,
+          // routeBasePath: '/', // Set docs as the root
         },
         blog: false, // Disable blog
         theme: {
@@ -56,7 +56,7 @@ const config: Config = {
     // Vendasta's social card
     image: 'img/vendasta-social-card.jpg',
     navbar: {
-      title: 'Vendasta Support',
+      title: 'Partner Center',
       logo: {
         alt: 'Vendasta Logo',
         src: 'img/vendasta-logo.png',
@@ -66,17 +66,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'mainSidebar',
           position: 'left',
-          label: 'Help Center',
-        },
-        {
-          href: 'https://www.vendasta.com/contact-us/',
-          label: 'Contact Support',
-          position: 'right',
-        },
-        {
-          href: 'https://roadmap.vendasta.com',
-          label: 'Product Roadmap',
-          position: 'right',
+          label: 'Overview',
         },
       ],
     },
