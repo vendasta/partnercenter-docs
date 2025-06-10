@@ -84,10 +84,6 @@ const config: Config = {
               label: 'Partner Center',
               to: '/partner-center',
             },
-            {
-              label: 'Business App',
-              to: '/business-app',
-            },
           ],
         },
         {
