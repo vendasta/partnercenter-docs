@@ -12,7 +12,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Get Started',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/ai-contentwriter-icon.png').default,
     description: (
       <>
         Step-by-step guidance, product overviews, and quick answers to help you get started with ease.
@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'AI-Powered Platform Documentation',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/ai-receptionist-icon.png').default,
     description: (
       <>
        Discover how Vendasta AI tools streamline your workflows from content generation to campaign automation.
@@ -30,7 +30,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Frequently Asked Questions (FAQs)',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/ai-seoexpert-icon.png').default,
     description: (
       <>
         Dive into our most commonly asked questions to get fast, clear answers about setup, troubleshooting and more.
