@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'AI-Powered Platform Documentation',
-    Svg: require('@site/static/img/ai-receptionist-icon.png').default,
+    Svg: () => <img src="/img/ai-receptionist-icon.png" alt="AI Receptionist" />,
     description: (
       <>
        Discover how Vendasta AI tools streamline your workflows from content generation to campaign automation.
