@@ -1,4 +1,3 @@
-import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
@@ -6,13 +5,13 @@ import styles from './styles.module.css';
 type FeatureItem = {
   title: string;
   Img: string;
-  description: ReactNode;
+  description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: 'Easy to Use',
-    Img: require('@site/static/img/ai-contentwriter-icon.png').default,
+    Img: require('@site/static/img/AI-ContentWriter-icon.png').default,
     description: (
       <>
         Step-by-step guidance, product overviews, and quick answers to help you get started with ease.
@@ -21,7 +20,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'AI-Powered Platform Documentation',
-    Img: require('@site/static/img/ai-receptionist-icon.png').default,
+    Img: require('@site/static/img/AI-Receptionist-icon.png').default,
     description: (
       <>
         Discover how Vendasta AI tools streamline your workflows from content generation to campaign automation.
@@ -30,7 +29,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Frequently Asked Questions (FAQs)',
-    Img: require('@site/static/img/ai-seoexpert-icon.png').default,
+    Img: require('@site/static/img/AI-SEOExpert-icon.png').default,
     description: (
       <>
         Dive into our most commonly asked questions to get fast, clear answers about setup, troubleshooting and more.
