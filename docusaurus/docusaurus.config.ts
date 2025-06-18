@@ -49,7 +49,24 @@ const config: Config = {
     ],
   ],
   plugins: [
-    // Add plugins if needed
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        // Index docs and don't index blog (since blog is disabled)
+        indexDocs: true,
+        indexBlog: false,
+        // Only English content
+        language: ['en'],
+        // Make search more visible
+        searchBarPosition: 'right',
+        // Highlight search terms in results
+        highlightSearchTermsOnTargetPage: true,
+        // Add search page that shows all results
+        searchResultLimits: 8,
+        searchResultContextMaxLength: 50,
+        docsRouteBasePath: '/',
+      },
+    ],
   ],
 
   themeConfig: {
