@@ -23,6 +23,14 @@ const config: Config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
+  // Enable faster builds with Rspack bundler and persistent cache
+  future: {
+    experimental_faster: {
+      rspackBundler: true,
+      rspackPersistentCache: true,
+    },
+  },
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
