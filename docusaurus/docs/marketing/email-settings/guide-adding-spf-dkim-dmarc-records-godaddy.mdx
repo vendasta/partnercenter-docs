@@ -14,7 +14,7 @@ You can also use our default domain if you do not have your own domain.
 
 Below is an example for **vendasta.com**
 
-![Email settings example](/img/marketing-email-settings/13963036744471.jpg)
+![Email settings example](./img/marketing-email-settings/13963036744471.jpg)
 
 Note: Each domain would have different values for their records, so the values in the screenshots below WILL NOT work for your domains. You will have to get your own values from Partner Center in the Email Settings tab.
 
@@ -32,7 +32,7 @@ For SPF Validation, you will have to add a TXT record. This guide from GoDaddy p
 
 **TXT Value:** This will be the value that appears in the Partner Center. If you have an existing record, you should add the portion that is recommended to your current record. The **Value** is what the full record should look like. The screenshot below highlights these values:
 
-![SPF validation settings](/img/marketing-email-settings/13963191622679.jpg)
+![SPF validation settings](./img/marketing-email-settings/13963191622679.jpg)
 
 **TTL:** We generally recommend a TTL of 3600 (or 1 hour)
 
@@ -42,7 +42,7 @@ For DKIM records, you will need to add three CNAME records to your domain. The g
 [https://ca.godaddy.com/help/add-a-cname-record-19236](https://ca.godaddy.com/help/add-a-cname-record-19236)
 
 Each of the records will be on a separate row as shown below:
-![DKIM settings](/img/marketing-email-settings/13963195485719.jpg)
+![DKIM settings](./img/marketing-email-settings/13963195485719.jpg)
 
 **Values:**
 
@@ -54,13 +54,13 @@ seb2._domainkey
 **"Points to" Value:** This will be the full value as it appears in the **Value** column.
 **On Your Domain:** This shows the record returned when checking against your DNS settings. 
 
-![DKIM verification](/img/marketing-email-settings/13963238850199.jpg)
+![DKIM verification](./img/marketing-email-settings/13963238850199.jpg)
 
 If the records do not match they will show a "**Not Found**" status.
 
 **Errors - Not Found (Screenshot Below)**
 
-![DKIM errors](/img/marketing-email-settings/13968121039895.jpg)
+![DKIM errors](./img/marketing-email-settings/13968121039895.jpg)
 
 **TTL:** We generally recommend a TTL of 3600 (or 1 hour)
 Examples of the records would be the following:
@@ -78,6 +78,6 @@ For DMARC validation, you will once again be adding a TXT record. I have pasted 
 
 **Value:** The value will be as it appears in this area. It will be the second value that appears and will have an icon to Copy the value next to it:
 
-![DMARC value](/img/marketing-email-settings/22242291883927.jpg)
+![DMARC value](./img/marketing-email-settings/22242291883927.jpg)
 
 **TTL:** We recommend a TTL of 3600 (or 1 hour)
