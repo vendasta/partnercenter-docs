@@ -109,6 +109,10 @@ const config: Config = {
               label: 'Partner Center',
               to: '/partner-center',
             },
+            {
+              label: 'Product Documentation',
+              to: '/vendasta-products/help-documentation',
+            },
           ],
         },
         {
