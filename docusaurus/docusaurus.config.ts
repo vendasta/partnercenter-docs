@@ -5,12 +5,12 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Vendasta Help Center',
-  tagline: 'Welcome to the Vendasta Help Center',
-  favicon: 'img/favicon.ico',
+  title: 'Partner Center',
+  tagline: 'Empowering partners to build, sell, and manage solutions for local businesses.',
+  favicon: 'img/logo.png',
 
   // Set the production url of your site here
-  url: 'https://docs.vendasta.com',
+  url: 'https://support.vendasta.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -99,58 +99,16 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Help Resources',
+          title: 'Docs',
           items: [
             {
-              label: 'Getting Started',
-              to: '/getting-started',
-            },
-            {
-              label: 'Partner Center',
-              to: '/partner-center',
-            },
-            {
-              label: 'Product Documentation',
-              to: '/vendasta-products/help-documentation',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Partner Community',
-              href: 'https://www.facebook.com/groups/vendasta',
-            },
-            {
-              label: 'Vendasta Academy',
-              href: 'https://academy.vendasta.com/',
-            },
-            {
-              label: 'Blog',
-              href: 'https://www.vendasta.com/blog/',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Vendasta.com',
-              href: 'https://www.vendasta.com',
-            },
-            {
-              label: 'Submit a Ticket',
-              href: 'https://support.vendasta.com/hc/en-us/requests/new',
-            },
-            {
-              label: 'Product Feedback',
-              href: 'https://roadmap.vendasta.com',
+              label: 'Getting started',
+              to: '/docs/category/getting-started',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Vendasta. All Rights Reserved.`,
+      copyright: `Copyright © ${new Date().getFullYear()}`,
     },
     prism: {
       theme: prismThemes.github,
