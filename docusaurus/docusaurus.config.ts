@@ -46,7 +46,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           // Remove edit URLs
-          // editUrl: undefined,
+          // editUrl: 'https://github.dev/vendasta/partnercenter-docs',
           // routeBasePath: '/', // Set docs as the root
         },
         blog: false, // Disable blog
