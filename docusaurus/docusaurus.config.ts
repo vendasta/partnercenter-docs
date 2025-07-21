@@ -93,6 +93,14 @@ const config: Config = {
           position: 'left',
           label: 'Overview',
         },
+        {
+          type: 'html',
+          position: 'right',
+          value: `<a href="https://docs.businessapp.io/" target="_blank" rel="noopener noreferrer" class="business-app-navbar-button">
+            <span class="button-text">Business App</span>
+            <span class="diagonal-arrow">↗</span>
+          </a>`,
+        },
       ],
     },
     footer: {

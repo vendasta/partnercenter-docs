@@ -7,8 +7,6 @@ type FeatureItem = {
   title: string;
   Img?: string;
   description: JSX.Element;
-  isButton?: boolean;
-  buttonLink?: string;
 };
 
 const FeatureList: FeatureItem[] = [
@@ -18,16 +16,6 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         Step-by-step guidance, product overviews, and quick answers to help you get started with ease.
-      </>
-    ),
-  },
-  {
-    title: 'Business App',
-    isButton: true,
-    buttonLink: 'https://businessapp-docs-642433220657.us-central1.run.app/',
-    description: (
-      <>
-        Access comprehensive Business App documentation and guides for partners and customers.
       </>
     ),
   },
@@ -51,32 +39,9 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, Img, description, isButton, buttonLink}: FeatureItem) {
-  if (isButton && buttonLink) {
-    return (
-      <div className={clsx('col col--3')}>
-        <div className="text--center">
-          <a
-            href={buttonLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.businessAppButton}
-          >
-            <div className={styles.buttonContent}>
-              <span className={styles.arrow}>←</span>
-              <span className={styles.buttonText}>{title}</span>
-            </div>
-          </a>
-        </div>
-        <div className="text--center padding-horiz--md">
-          <p>{description}</p>
-        </div>
-      </div>
-    );
-  }
-
+function Feature({title, Img, description}: FeatureItem) {
   return (
-    <div className={clsx('col col--3')}>
+    <div className={clsx('col col--4')}>
       <div className="text--center">
         <img src={Img} className={styles.featureImage} alt={title} />
       </div>
