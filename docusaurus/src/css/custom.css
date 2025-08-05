@@ -62,53 +62,92 @@
   font-weight: bold;
 }
 
-/* Custom search bar styling */
-.navbar__search {
-  position: absolute !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
+/* Custom search bar styling for docusaurus-search-local */
+.navbar__item.navbar__link {
+  position: relative;
+}
+
+/* Target the search box container */
+.aa-DetachedSearchBox, 
+.aa-DetachedSearchButton,
+[class*="searchBox"],
+[class*="searchButton"] {
   width: 400px !important;
   max-width: 400px !important;
 }
 
-/* Make the search input longer */
-.navbar__search .DocSearch-Button {
+/* Center the search bar in navbar */
+.navbar__items--right {
+  display: flex !important;
+  justify-content: center !important;
+  flex: 1 !important;
+  margin-right: 120px !important; /* Account for Business App Docs button */
+}
+
+/* Target search input specifically */
+.aa-DetachedSearchBox input,
+.aa-DetachedSearchButton input,
+[class*="searchBox"] input,
+[class*="searchButton"] input {
   width: 100% !important;
-  max-width: 400px !important;
   min-width: 400px !important;
 }
 
-/* Hide the keyboard shortcut hint (Cmd+K) */
+/* Hide keyboard shortcuts */
+.aa-DetachedSearchButtonPlaceholder kbd,
+.aa-DetachedSearchButton kbd,
+[class*="searchBox"] kbd,
+[class*="searchButton"] kbd,
 .DocSearch-Button-Keys,
 .navbar__search .DocSearch-Button-Keys {
   display: none !important;
 }
 
-/* Mobile responsiveness for search bar */
+/* Alternative selectors for keyboard shortcuts */
+span[data-key="command"],
+span[data-key="ctrl"],
+span[data-key="k"],
+.aa-DetachedSearchButton span:last-child,
+.aa-DetachedSearchBox span:last-child {
+  display: none !important;
+}
+
+/* Mobile responsiveness */
 @media screen and (max-width: 996px) {
-  .navbar__search {
-    position: relative !important;
-    left: auto !important;
-    transform: none !important;
+  .navbar__items--right {
+    justify-content: flex-end !important;
+    margin-right: 0 !important;
+  }
+  
+  .aa-DetachedSearchBox, 
+  .aa-DetachedSearchButton,
+  [class*="searchBox"],
+  [class*="searchButton"] {
     width: 250px !important;
     max-width: 250px !important;
   }
   
-  .navbar__search .DocSearch-Button {
-    width: 100% !important;
-    max-width: 250px !important;
+  .aa-DetachedSearchBox input,
+  .aa-DetachedSearchButton input,
+  [class*="searchBox"] input,
+  [class*="searchButton"] input {
     min-width: 250px !important;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .navbar__search {
+  .aa-DetachedSearchBox, 
+  .aa-DetachedSearchButton,
+  [class*="searchBox"],
+  [class*="searchButton"] {
     width: 200px !important;
     max-width: 200px !important;
   }
   
-  .navbar__search .DocSearch-Button {
-    max-width: 200px !important;
+  .aa-DetachedSearchBox input,
+  .aa-DetachedSearchButton input,
+  [class*="searchBox"] input,
+  [class*="searchButton"] input {
     min-width: 200px !important;
   }
 }
