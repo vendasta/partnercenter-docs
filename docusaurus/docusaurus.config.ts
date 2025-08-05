@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Partner Center',
   tagline: 'Empowering partners to build, sell, and manage solutions for local businesses.',
-  favicon: 'img/logo.png',
+  favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://docs.vendasta.com',
