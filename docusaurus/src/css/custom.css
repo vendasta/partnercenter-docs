@@ -110,26 +110,19 @@
   z-index: 10 !important;
 }
 
-/* Theme toggle button positioning - immediately to the left of Business App Docs button */
-.navbar__items--right .navbar__item:last-child {
-  position: absolute !important;
-  right: 11rem !important; /* Position it to the left of the Business App Docs button */
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  z-index: 10 !important;
-  order: 1 !important;
-}
-
-/* Alternative selectors for theme toggle */
+/* Completely hide the theme toggle */
+.navbar__items--right .navbar__item:last-child,
 .navbar__items--right button[class*="colorModeToggle"],
 .navbar__items--right button[class*="darkToggle"],
 .navbar__items--right button[class*="lightToggle"],
-.navbar__items--right .clean-btn {
-  position: absolute !important;
-  right: 11rem !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  z-index: 10 !important;
+.navbar__items--right .clean-btn,
+.navbar [aria-label*="Switch between dark and light mode"],
+.navbar [title*="Switch between dark and light mode"],
+button[title*="dark"],
+button[title*="light"],
+button[title*="theme"] {
+  display: none !important;
+  visibility: hidden !important;
 }
 
 /* Move Business App Docs button to far right */
@@ -141,15 +134,7 @@
   z-index: 10 !important;
 }
 
-/* Subtle hover effect for theme toggle */
-.navbar__items--right .navbar__item:last-child:hover,
-.navbar__items--right button[class*="colorModeToggle"]:hover,
-.navbar__items--right button[class*="darkToggle"]:hover,
-.navbar__items--right button[class*="lightToggle"]:hover,
-.navbar__items--right .clean-btn:hover {
-  opacity: 0.7 !important;
-  transition: opacity 0.3s ease !important;
-}
+/* Theme toggle is completely hidden - no styling needed */
 
 /* Search bar styling - target the local search plugin classes */
 .navbar__search-local,
@@ -250,34 +235,12 @@ form[role="search"] span:last-child {
     justify-self: end !important;
   }
   
-  .navbar__items--right .navbar__item:last-child,
-  .navbar__items--right button[class*="colorModeToggle"],
-  .navbar__items--right button[class*="darkToggle"],
-  .navbar__items--right button[class*="lightToggle"],
-  .navbar__items--right .clean-btn {
-    position: relative !important;
-    right: auto !important;
-    top: auto !important;
-    transform: none !important;
-    margin-right: 0.5rem !important;
-    order: 1 !important;
-  }
-  
   .business-app-navbar-button {
     position: relative !important;
     right: auto !important;
     top: auto !important;
     transform: none !important;
     margin-right: 0 !important;
-  }
-  
-  .navbar__items--right .navbar__item:last-child:hover,
-  .navbar__items--right button[class*="colorModeToggle"]:hover,
-  .navbar__items--right button[class*="darkToggle"]:hover,
-  .navbar__items--right button[class*="lightToggle"]:hover,
-  .navbar__items--right .clean-btn:hover {
-    opacity: 0.7 !important;
-    transition: opacity 0.3s ease !important;
   }
   
   .navbar__search-local,
