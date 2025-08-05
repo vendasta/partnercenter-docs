@@ -61,3 +61,54 @@
   font-size: 1rem;
   font-weight: bold;
 }
+
+/* Custom search bar styling */
+.navbar__search {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 400px !important;
+  max-width: 400px !important;
+}
+
+/* Make the search input longer */
+.navbar__search .DocSearch-Button {
+  width: 100% !important;
+  max-width: 400px !important;
+  min-width: 400px !important;
+}
+
+/* Hide the keyboard shortcut hint (Cmd+K) */
+.DocSearch-Button-Keys,
+.navbar__search .DocSearch-Button-Keys {
+  display: none !important;
+}
+
+/* Mobile responsiveness for search bar */
+@media screen and (max-width: 996px) {
+  .navbar__search {
+    position: relative !important;
+    left: auto !important;
+    transform: none !important;
+    width: 250px !important;
+    max-width: 250px !important;
+  }
+  
+  .navbar__search .DocSearch-Button {
+    width: 100% !important;
+    max-width: 250px !important;
+    min-width: 250px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__search {
+    width: 200px !important;
+    max-width: 200px !important;
+  }
+  
+  .navbar__search .DocSearch-Button {
+    max-width: 200px !important;
+    min-width: 200px !important;
+  }
+}
