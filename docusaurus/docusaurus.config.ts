@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Partner Center',
-  tagline: 'Empowering partners to build, sell, and manage solutions for local businesses.',
+  title: 'Vendasta Documentation',
+  tagline: 'Your comprehensive guide to Vendasta\'s platform and tools.',
   favicon: 'img/vendasta-logo.png',
 
   // Set the production url of your site here
