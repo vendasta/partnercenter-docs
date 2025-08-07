@@ -206,9 +206,16 @@ Yes, you can configure different monthly limits for each market. Navigate to the
 </details>
 
 <details>
-<summary>What products can salespeople sell if I disable standalone sales?</summary>
+<summary>How do I disable salespeople from selling standalone products on opportunities and orders?</summary>
 
-When standalone product sales are disabled, salespeople must sell products as part of complete packages or bundles. They cannot sell individual products separately.
+To prevent salespeople from selling standalone products and require them to sell only complete packages or bundles:
+
+1. Go to **Partner Center > Administration > Customize**
+2. Click **Sales**
+3. Under **Sales Processes**, click **Configure orders and sales processes**
+4. Look for the standalone products setting and disable it
+
+When standalone product sales are disabled, salespeople must sell products as part of complete packages or bundles rather than individual products separately. This helps maintain consistent package offerings and pricing strategies.
 </details>
 
 <details>
