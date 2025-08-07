@@ -1,27 +1,27 @@
 ---
-title: Client Experience and Customization
-sidebar_label: Client Experience & Customization
-description: Comprehensive guide to customizing client-facing features, purchasing workflows, and Business App experience
-tags: [client-experience, business-app, purchasing, customization]
-keywords: [buy-it-yourself, client-access, business-app-customization, snapshot-experience]
+title: Platform Customization and Client Settings
+sidebar_label: Platform Customization & Client Settings
+description: Comprehensive guide to customizing platform features, purchasing workflows, and Business App settings
+tags: [customize, business-app, purchasing, platform-settings]
+keywords: [buy-it-yourself, platform-customization, business-app-settings, snapshot-configuration]
 ---
 
-# Client Experience and Customization
+# Platform Customization and Client Settings
 
-This guide covers how to customize your clients' experience across the platform, from purchasing workflows to Business App interactions and snapshot access.
+This guide covers how to customize platform features and settings that affect your clients, from purchasing workflows to Business App interactions and snapshot access.
 
-## What is Client Experience Customization?
+## What is Platform Customization?
 
-Client experience customization allows you to control how your clients interact with your platform, including purchasing processes, Business App access, and various client-facing features. These settings help you align the platform experience with your business model and client needs.
+Platform customization allows you to control how clients interact with your platform, including purchasing processes, Business App access, and various platform features. These settings help you align the platform experience with your business model and client needs.
 
-## Why is Client Experience Customization Important?
+## Why is Platform Customization Important?
 
 - **Business Model Alignment**: Tailor purchasing and access flows to match your sales process
 - **Professional Branding**: Create a consistent, branded experience for your clients
 - **Controlled Access**: Manage when and how clients can purchase or access features
 - **Improved User Experience**: Streamline client interactions and reduce confusion
 
-## What's Included with Client Experience Customization?
+## What's Included with Platform Customization?
 
 - Buy-it-Yourself purchasing controls
 - Business App contact and communication settings
@@ -186,9 +186,9 @@ Include questions that help you control the sales process, such as approval chec
 </details>
 
 <details>
-<summary>Can I preview changes before applying them to client experience?</summary>
+<summary>Can I preview changes before applying them to the platform?</summary>
 
-Yes, most customization wizards include a preview option before finalizing changes. Always preview significant modifications to ensure they align with your intended client experience.
+Yes, most customization wizards include a preview option before finalizing changes. Always preview significant modifications to ensure they align with your intended platform configuration.
 </details>
 
 <details>
@@ -197,8 +197,3 @@ Yes, most customization wizards include a preview option before finalizing chang
 Check the listing source configuration for media support indicators. Sites like Google Business Profile, Facebook, and major review platforms typically support images and videos, while smaller directories may only support text.
 </details>
 
-## Screenshots or Videos
-
-For visual guidance on these customization processes, refer to the specific configuration screens within Partner Center. Each section provides contextual help and examples to guide your setup.
-
-If you need assistance with client experience customization, please [submit a ticket](https://support.vendasta.com/hc/en-us/requests/new) to our support team.
