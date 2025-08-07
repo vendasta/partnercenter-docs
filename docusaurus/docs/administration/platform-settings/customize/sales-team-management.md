@@ -139,6 +139,21 @@ To control how many Snapshot Reports each salesperson can generate monthly:
 
 ![Screenshot showing the Snapshot Report limit configuration](./img/limit-snapshot-reports/snapshot-report-limit-config.png)
 
+### Market-Specific Snapshot Limits
+
+While there's no direct way to limit snapshots per market, you can limit snapshots per salesperson within specific markets:
+
+**For Individual Markets:**
+1. Navigate to the **Markets** section in customization settings
+2. Select your target market
+3. Go to the **Sales** configuration for that market
+4. Check **limit monthly snapshot report** checkbox
+5. Set the **snapshot creation limit** for salespeople in that market
+
+:::info
+If multiple salespeople work in a market, the market limit represents the total allowable maximum that all salespeople in that market can create combined.
+:::
+
 :::warning
 If you have customized markets, you'll need to adjust this setting for each market individually. Check the Markets section to see which markets won't be affected by the default change.
 :::
@@ -161,6 +176,18 @@ When a salesperson reaches their monthly limit, they'll see a notification preve
 <summary>What's the difference between a Sales Manager and a Salesperson?</summary>
 
 Sales Managers have full market access and can see all accounts regardless of assignment or market-wide access settings. Salespeople can only see accounts assigned to them when market-wide access is turned off.
+</details>
+
+<details>
+<summary>How do I hide wholesale pricing from my salespeople?</summary>
+
+You can prevent your salespeople from seeing the wholesale pricing of marketplace products:
+
+1. Go to **Partner Center > Administration > Customize**
+2. Expand the **Sales** section
+3. Scroll down and toggle off **Show wholesale prices**
+
+This setting hides pricing from salespeople while still allowing them to create quotes and process orders with standard pricing. This helps protect your profit margins while maintaining operational functionality.
 </details>
 
 <details>
@@ -202,7 +229,14 @@ Salespeople will be able to create and send email marketing campaigns to their a
 <details>
 <summary>Can I set different snapshot report limits for different markets?</summary>
 
-Yes, you can configure different monthly limits for each market. Navigate to the Markets section to set market-specific limits that override the default setting.
+Yes, you can configure different monthly limits for each market. While there's no direct market-wide limit, you can set limits per salesperson within specific markets:
+
+1. Navigate to the **Markets** section in customization settings
+2. Select your target market  
+3. Configure **limit monthly snapshot report** for that market
+4. Set the **snapshot creation limit** for salespeople in that market
+
+Remember: If multiple salespeople work in a market, the limit applies to each individual salesperson, not as a combined market total.
 </details>
 
 <details>
