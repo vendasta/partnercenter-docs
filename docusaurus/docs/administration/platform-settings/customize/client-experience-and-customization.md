@@ -125,12 +125,14 @@ Customer agreements should be reviewed by legal counsel to ensure compliance wit
 
 ### Overview
 
-The Listing Management app allows you to select which listing and review sites are monitored for each client, enabling you to choose the most relevant sites based on industry and location.
+The Listing Management app allows you to select which listing and review sites are monitored for each client, enabling you to choose the most relevant sites based on industry and location. Additionally, you can prioritize sources that support media content to enhance SEO rankings and customer engagement.
 
 ### Accessing Listing Sources Settings
 
-1. Navigate to **Admin > Platform Settings > Customize**
-2. Under **Product Settings**, select **Listing and Review Sources**
+You can view and edit the sources that appear in Reputation Management and Local SEO for your clients:
+
+1. Navigate to **Partner Center > Administration > Customize**
+2. Under **Product Settings**, select **Listing Sources**
 
 ### Managing Listing Sites
 
@@ -140,12 +142,28 @@ The interface includes:
 **Site Management**: Enable/disable specific listing and review platforms
 **Bulk Actions**: Apply changes to multiple sites simultaneously
 
+### Media-Supported Listing Sources
+
+Adding visual content to business listings or using sources that allow customers to add photos and videos to their reviews creates more engaging content and can increase SEO rankings.
+
+**Benefits of Media-Supported Sources:**
+- Enhanced visual appeal for business listings
+- Improved customer engagement through photos and videos
+- Better SEO rankings with rich media content
+- More comprehensive online presence
+
+**Available Media Sources:**
+Only certain listing and review sources support media content such as photographs and videos. For a complete list of Vendasta's listing sources that support media, download the reference document:
+
+<a href="/attachments/Listing_Sources_that_Support_Media.pdf" target="_blank" rel="noopener">Listing_Sources_that_Support_Media.pdf</a> (40 KB)
+
 ### Best Practices
 
-- Enable sites relevant to your clients' industries
-- Consider geographic location when selecting sources
-- Review and update selections periodically
-- Test listings to ensure proper functionality
+- Prioritize media-supported sources for better visual impact
+- Enable sites relevant to your clients' industries and geographic locations
+- Consider sources that allow customer-generated visual reviews
+- Review and update selections periodically as new platforms emerge
+- Test listings to ensure proper functionality and media upload capabilities
 
 ## Frequently Asked Questions (FAQs)
 
@@ -194,6 +212,6 @@ Yes, most customization wizards include a preview option before finalizing chang
 <details>
 <summary>How do I ensure listing sources support media uploads?</summary>
 
-Check the listing source configuration for media support indicators. Sites like Google Business Profile, Facebook, and major review platforms typically support images and videos, while smaller directories may only support text.
+Check the listing source configuration for media support indicators, or reference the downloadable PDF guide that lists all media-supported sources. Sites like Google Business Profile, Facebook, and major review platforms typically support images and videos, while smaller directories may only support text. Prioritizing media-supported sources can significantly improve your clients' online visual presence and SEO performance.
 </details>
 

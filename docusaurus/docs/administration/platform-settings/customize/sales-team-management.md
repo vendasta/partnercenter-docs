@@ -102,12 +102,16 @@ This setting prevents salespeople from seeing product costs while still allowing
 
 To allow salespeople to send marketing campaigns:
 
-1. Navigate to `Administration` > `Customize` > `Sales`
+1. Navigate to **Partner Center > Administration > Customize > Sales**
 2. Toggle on **Salespeople can send campaigns**
 3. Configure any campaign-specific restrictions
 4. Save the settings
 
 This enables salespeople to create and send email marketing campaigns directly to their assigned accounts.
+
+:::info
+Look for the "Salespeople can send campaigns" toggle in the Sales section of the customization settings. This control determines whether your sales team can access campaign features within Partner Center.
+:::
 
 ### Disable Standalone Product Sales
 
