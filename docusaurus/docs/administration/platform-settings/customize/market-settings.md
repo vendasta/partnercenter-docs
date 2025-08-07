@@ -1,20 +1,20 @@
 ---
-title: Market and Territory Settings – Organization, Branding, and Configuration
-sidebar_label: Market and Territory Settings
-description: Configure markets for business segmentation, customize market-specific branding, and manage territory-based settings
-tags: [markets, territories, branding, business-segmentation]
-keywords: [market-configuration, territory-management, market-branding, business-segmentation, market-settings]
+title: Market Settings – Organization, Branding, and Configuration
+sidebar_label: Market Settings
+description: Configure markets for business segmentation, customize market-specific branding, and manage market-based settings
+tags: [markets, branding, business-segmentation]
+keywords: [market-configuration, market-management, market-branding, business-segmentation, market-settings]
 ---
 
-## What are Market and Territory Settings?
+## What are Market Settings?
 
-Market and Territory Settings allow you to segment your business by region, brand, industry, or any other organizational structure that makes sense for your operations. Each market can have its own branding, settings, and configuration while maintaining centralized management and oversight.
+Market Settings allow you to segment your business by region, brand, industry, or any other organizational structure that makes sense for your operations. Each market can have its own branding, settings, and configuration while maintaining centralized management and oversight.
 
-## Why are Market and Territory Settings important?
+## Why are Market Settings important?
 
 Markets help organize numerous accounts and provide targeted experiences for different business segments. You can customize branding per market, configure market-specific settings, and manage large-scale operations more efficiently while maintaining brand consistency and operational control.
 
-## What's Included with Market and Territory Settings?
+## What's Included with Market Settings?
 
 ### Market Organization and Structure
 - **Account assignment**: All new accounts must be assigned to a specific market
