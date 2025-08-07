@@ -1,27 +1,27 @@
 ---
-title: Platform Administration Settings
-sidebar_label: Platform Administration
-description: Configure platform-wide settings including markets, early access programs, and administrative features
-tags: [platform-settings, markets, early-access, administration]
-keywords: [markets-overview, early-access-program, platform-configuration, business-priorities]
+title: Markets and Advanced Configuration
+sidebar_label: Markets & Advanced Configuration
+description: Configure markets, early access programs, business priorities, and advanced platform features
+tags: [markets, early-access, business-priorities, advanced-configuration]
+keywords: [markets-overview, early-access-program, business-priorities, marketplace-vendor-control]
 ---
 
-# Platform Administration Settings
+# Markets and Advanced Configuration
 
-This guide covers platform-wide administrative settings that affect your overall system configuration, including markets management, early access programs, and business priority options.
+This guide covers advanced platform configurations including markets management, Early Access Program enrollment, business priorities customization, and marketplace vendor controls.
 
-## What are Platform Administration Settings?
+## What are Markets and Advanced Configuration Settings?
 
-Platform administration settings are system-wide configurations that control how your platform operates at the organizational level. These settings affect all users and clients across your entire platform and include market segmentation, feature access programs, and administrative tools.
+Markets and advanced configuration settings are specialized platform features that help you organize your business structure, access new features early, and customize advanced business workflows. These settings include market segmentation, feature preview programs, and business priority management.
 
-## Why are Platform Administration Settings Important?
+## Why are Markets and Advanced Configuration Important?
 
 - **Organizational Structure**: Properly segment your business with markets and regions
 - **Feature Management**: Control access to new features and capabilities
 - **Business Alignment**: Configure settings to match your business priorities and workflows
 - **Scalability**: Set up systems that grow with your business
 
-## What's Included with Platform Administration Settings?
+## What's Included with Markets and Advanced Configuration?
 
 - Markets overview and configuration
 - Early Access Program management
