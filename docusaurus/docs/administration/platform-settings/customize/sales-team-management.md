@@ -175,7 +175,22 @@ When a salesperson reaches their monthly limit, they'll see a notification preve
 <details>
 <summary>What's the difference between a Sales Manager and a Salesperson?</summary>
 
-Sales Managers have full market access and can see all accounts regardless of assignment or market-wide access settings. Salespeople can only see accounts assigned to them when market-wide access is turned off.
+**Key Access Differences:**
+
+**Sales Managers:**
+- Have the ability to see and access **all** accounts within their market regardless of the assignee
+- Maintain full access even when **Market-wide access** configuration is **turned off**
+- Can override market-wide access restrictions
+
+**Salespeople:**
+- Can only see accounts specifically assigned to them when **Market-wide access** is **turned off**
+- Limited to their assigned accounts unless market-wide access is enabled
+- Subject to market-wide access configuration settings
+
+**Configuration Location:**
+The market-wide access settings can be found in **Partner Center > Administration > Customize > Sales > Settings**.
+
+This distinction ensures proper account segregation while giving Sales Managers the oversight they need to manage their teams effectively.
 </details>
 
 <details>
