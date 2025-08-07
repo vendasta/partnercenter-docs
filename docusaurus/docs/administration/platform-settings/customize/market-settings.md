@@ -1,20 +1,28 @@
 ---
-title: Market Settings – Organization, Branding, and Configuration
-sidebar_label: Market Settings
-description: Configure markets for business segmentation, customize market-specific branding, and manage market-based settings
-tags: [markets, branding, business-segmentation]
-keywords: [market-configuration, market-management, market-branding, business-segmentation, market-settings]
+title: Markets and Advanced Configuration
+sidebar_label: Markets & Advanced Configuration
+description: Configure markets, early access programs, business priorities, and advanced platform features
+tags: [markets, early-access, business-priorities, advanced-configuration]
+keywords: [market-configuration, market-management, early-access-program, business-priorities, marketplace-vendor-control]
 ---
 
-## What are Market Settings?
+# Markets and Advanced Configuration
 
-Market Settings allow you to segment your business by region, brand, industry, or any other organizational structure that makes sense for your operations. Each market can have its own branding, settings, and configuration while maintaining centralized management and oversight.
+This comprehensive guide covers market configuration, advanced platform settings, and specialized features including Early Access Program enrollment, business priorities customization, and marketplace vendor controls.
 
-## Why are Market Settings important?
+## What are Markets and Advanced Configuration Settings?
 
-Markets help organize numerous accounts and provide targeted experiences for different business segments. You can customize branding per market, configure market-specific settings, and manage large-scale operations more efficiently while maintaining brand consistency and operational control.
+Markets and advanced configuration settings help you organize your business structure, customize market-specific branding and settings, access new features early, and configure specialized business workflows. These settings include market segmentation, branding customization, feature preview programs, and business priority management.
 
-## What's Included with Market Settings?
+## Why are Markets and Advanced Configuration Important?
+
+- **Business Organization**: Segment your business by region, brand, industry, or custom criteria
+- **Market-Specific Branding**: Customize logos, colors, and experiences for different markets
+- **Feature Management**: Control access to new features and capabilities through Early Access programs
+- **Business Alignment**: Configure settings to match your business priorities and workflows
+- **Scalability**: Set up systems that grow with your business and maintain centralized oversight
+
+## What's Included with Markets and Advanced Configuration?
 
 ### Market Organization and Structure
 - **Account assignment**: All new accounts must be assigned to a specific market
@@ -165,6 +173,107 @@ To expand your market structure:
 - **Regular review**: Periodically assess market structure effectiveness
 - **User training**: Ensure team members understand market assignments and implications
 
+## How to Join the Early Access Program
+
+### What is the Early Access Program?
+
+The Early Access Program provides access to features before they're released to all users. This allows you to test new capabilities and provide feedback to help shape future development.
+
+**Benefits:**
+- Immediate access to newest features
+- Influence future development through feedback
+- Competitive advantage with latest capabilities
+
+**Considerations:**
+- Features may change without notice
+- Limited advance documentation
+- Potential for unexpected behavior
+
+### Joining Early Access
+
+**For Your Entire Platform:**
+1. Go to **Partner Center > Administration > Customize**
+2. Navigate to **General Product Settings > Others**
+3. Select **Join Early Access Program**
+
+**For Individual Markets:**
+1. Go to **Partner Center > Administration > Customize**
+2. Navigate to **Markets** and select your target market
+3. Go to **General Product Settings** section
+4. Locate **Early Access Program**
+5. Change selection to **Enable**
+
+:::info
+Market-specific settings override partner defaults unless explicitly defined.
+:::
+
+### Leaving Early Access
+
+If you leave the program, you'll no longer have access to Early Access features. Consider this carefully as some features may be removed from your platform.
+
+## How to Manage Business Priorities
+
+### Customizing Business Priority Options
+
+You can customize the business priority options available to your clients, allowing them to focus on the most relevant goals for their industry or business model.
+
+### Configuration Steps
+
+1. Navigate to **Partner Center > Administration > Customize**
+2. Go to **Product Settings > Business Priorities**
+3. Review available priority categories
+4. Enable/disable priorities based on your client base
+5. Customize priority descriptions if needed
+6. Save your configuration
+
+### Best Practices for Business Priorities
+
+- **Industry Relevance**: Enable priorities that align with your clients' industries
+- **Simplicity**: Don't overwhelm clients with too many options
+- **Regular Review**: Update priorities as your client base evolves
+- **Clear Descriptions**: Ensure priority descriptions are easily understood
+
+## How to Control Marketplace Vendor Contact
+
+### Preventing Direct Vendor Contact
+
+You can prevent Marketplace Vendors from directly contacting your partners, maintaining control over vendor relationships and communications.
+
+### Enabling Contact Protection
+
+To prevent direct marketplace vendor contact:
+
+1. Navigate to **Partner Center > Administration > Customize**
+2. Go to **General Product Settings**
+3. Locate **Marketplace Vendor Contact** settings
+4. Select **Prevent Direct Contact**
+5. Save your changes
+
+### Benefits of Contact Control
+
+- **Relationship Management**: Maintain control over vendor partnerships
+- **Quality Assurance**: Filter vendor communications for relevance
+- **Brand Protection**: Ensure consistent messaging from your organization
+- **Client Protection**: Shield clients from unsolicited vendor outreach
+
+## How to Restore Market Sales Order Settings
+
+### Understanding Default vs Custom Settings
+
+Market sales order settings can be customized per market or inherit from partner-level defaults. Sometimes you may need to restore these settings to their original configuration.
+
+### Restoration Process
+
+1. Navigate to **Partner Center > Administration > Customize**
+2. Go to **Markets** and select your target market
+3. Locate **Sales Order Settings** section
+4. Click **Restore to Partner Defaults**
+5. Confirm the restoration when prompted
+
+:::warning
+Restoring market settings will override any custom configurations you've made for that specific market.
+:::
+
 ## Frequently Asked Questions (FAQs)
 
 <details>
@@ -225,4 +334,52 @@ When creating new accounts, you must select a market from a dropdown menu in the
 <summary>What happens if multiple salespeople work in the same market?</summary>
 
 When multiple salespeople work in a market with snapshot report limits, the limit represents the total maximum all salespeople in that market can create combined, not per individual.
+</details>
+
+<details>
+<summary>Do I need Markets if I only serve one geographic area?</summary>
+
+Markets aren't required for single-region businesses, but they can still be useful for segmenting by industry, service tier, or business type. Evaluate if the organizational benefits justify the additional complexity.
+</details>
+
+<details>
+<summary>Can I test Early Access features before fully committing?</summary>
+
+Early Access features are released directly to production. There's no separate testing environment. Consider starting with a single market in Early Access if you want to limit exposure while testing.
+</details>
+
+<details>
+<summary>What happens to accounts if I remove a market?</summary>
+
+Accounts assigned to removed markets need to be reassigned before the market can be deleted. Contact support for assistance with market consolidation or removal.
+</details>
+
+<details>
+<summary>Can I customize business priorities for different markets?</summary>
+
+Yes, business priorities can be configured differently for each market, allowing you to tailor options based on the specific industries or focus areas of each market segment.
+</details>
+
+<details>
+<summary>How do I know which Early Access features are currently active?</summary>
+
+Early Access features are typically announced in partner communications and release notes. Check your partner dashboard and communication preferences to stay informed about new releases.
+</details>
+
+<details>
+<summary>Can I prevent vendor contact for some markets but not others?</summary>
+
+Marketplace vendor contact settings are typically platform-wide. If you need market-specific vendor contact controls, contact support to discuss available options.
+</details>
+
+<details>
+<summary>Will restoring market settings affect existing orders?</summary>
+
+Restoring settings affects future order processing but doesn't modify existing orders. However, any custom fields or processes specific to that market will revert to defaults.
+</details>
+
+<details>
+<summary>How often are new features added to Early Access?</summary>
+
+Feature release frequency varies based on development cycles. Early Access participants typically see new features monthly, though timing can vary based on feature complexity and testing requirements.
 </details>
