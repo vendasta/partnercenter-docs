@@ -222,6 +222,4 @@ Restoring settings affects future order processing but doesn't modify existing o
 Feature release frequency varies based on development cycles. Early Access participants typically see new features monthly, though timing can vary based on feature complexity and testing requirements.
 </details>
 
-## Support and Additional Resources
 
-For questions about platform administration settings or assistance with configuration, please [submit a ticket](https://support.vendasta.com/hc/en-us/requests/new) to our support team. Include specific details about your market configuration or feature requirements for faster assistance.
