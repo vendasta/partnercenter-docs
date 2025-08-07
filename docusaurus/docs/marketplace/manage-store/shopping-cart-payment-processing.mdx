@@ -69,6 +69,14 @@ The shopping cart's checkout functionality varies based on your payment processi
 - **Customer Notification** - Customers notified when products are activated
 - **Business App Access** - Product access through Business App after approval
 
+### Supported Currencies and Cards
+
+When Vendasta Payments is enabled, the following cards and currency behaviors apply:
+
+- **Supported cards**: Visa, Mastercard, American Express, Discover
+- **Default currency**: Follows your Vendasta contract currency
+- **Additional currencies**: May be available based on your configuration and market
+
 ### Supported Payment Methods
 
 **Credit Card Acceptance:**
@@ -158,6 +166,8 @@ Packages with the following settings cannot be purchased through shopping cart:
 - **Contact Sales Settings** - Packages requiring sales consultation
 - **Legacy Package Settings** - Packages using older pricing configurations
 
+> Note: If any item in the cart is incompatible with direct purchase, the entire checkout will switch to a sales order submission flow (no credit card payment).
+
 ### Purchase Behavior Impact
 
 **Package Configuration for Optimal Cart Experience:**
@@ -224,6 +234,10 @@ If customers cannot see credit card payment options:
 3. **Review Package Settings** - Confirm packages use "Add to Shopping Cart" behavior
 4. **Test Package Configuration** - Remove problematic packages and test cart functionality
 
+### Tax Rate Application
+
+Tax rates are automatically applied to shopping cart purchases and sales orders based on your tax settings and the customer’s address. For regions without defined rates, no tax is applied.
+
 **Package Purchase Problems:**
 When packages cannot be added to shopping cart:
 
@@ -241,6 +255,10 @@ When packages cannot be added to shopping cart:
 - **Alternative Payment Options** - Provide backup payment methods
 - **Customer Communication** - Clear instructions for resolving payment issues
 - **Support Escalation** - Process for handling persistent payment problems
+
+### Order Processing Behavior
+
+When credit card payment isn’t available due to settings or configuration, the checkout submits a sales order for manual review and approval. Customers are notified when products are activated.
 
 **Order Processing Delays:**
 - **Status Communication** - Keep customers informed of order processing status
