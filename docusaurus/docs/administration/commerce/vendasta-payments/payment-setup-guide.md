@@ -92,7 +92,7 @@ To change the address appearing on customer invoices:
 
 Updated addresses will appear on all future customer invoices.
 
-![Billing contact address editing](./img/admin/billing/billing-contact-address-edit.png)
+![Billing contact address editing](../../platform-settings/img/admin/billing/billing-contact-address-edit.png)
 
 ## Troubleshooting Setup Issues
 
