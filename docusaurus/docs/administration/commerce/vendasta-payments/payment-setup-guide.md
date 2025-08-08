@@ -1,23 +1,24 @@
 ---
-title: Payment Account Setup and Management
-sidebar_label: Account Setup
-description: Set up payment processing accounts, connect Stripe, and manage account verification and settings
-tags: [payments, setup, stripe, account-management]
-keywords: [payment-setup, stripe-connection, account-verification, payment-configuration]
+title: Vendasta Payments Setup Guide
+sidebar_label: Vendasta Payments Setup
+sidebar_position: 1
+description: Set up Vendasta Payments, connect Stripe accounts, and manage account verification and settings
+tags: [vendasta-payments, setup, stripe, account-management]
+keywords: [vendasta-payments, stripe-connection, account-verification, payment-configuration]
 ---
 
-## What is Payment Setup?
+## What is Vendasta Payments Setup?
 
-Payment setup enables you to configure payment processing for collecting payments from customers. This includes connecting existing payment accounts, configuring new payment processing, and managing account settings for secure transaction handling.
+Vendasta Payments setup enables you to configure payment processing for collecting payments from customers. This includes connecting existing Stripe accounts, configuring new Vendasta Payments processing, and managing account settings for secure transaction handling.
 
-## Why is Payment Setup important?
+## Why is Vendasta Payments Setup important?
 
-Proper payment setup ensures secure, reliable payment collection while maintaining compliance with financial regulations. It streamlines your billing process and provides customers with trusted payment options.
+Proper Vendasta Payments setup ensures secure, reliable payment collection while maintaining compliance with financial regulations. It streamlines your billing process and provides customers with trusted payment options.
 
-## What's Included with Payment Setup?
+## What's Included with Vendasta Payments Setup?
 
 ### Account Configuration Options
-- **New payment account**: Create a new payment processing account
+- **New Vendasta Payments account**: Create a new Vendasta Payments processing account
 - **Stripe account connection**: Connect your existing Stripe Standard account
 - **Account verification**: Complete identity verification requirements
 - **Banking setup**: Configure payout destinations and financial details
@@ -28,49 +29,64 @@ Proper payment setup ensures secure, reliable payment collection while maintaini
 - Pre-Authorized Debits (PADs)
 
 ### Regional Availability
-Payment processing is available in:
+Vendasta Payments is available in:
 - USA, Canada, New Zealand, Australia, United Kingdom, Czech Republic
 - Additional countries with sales assistance: UAE, Germany, Belgium, Netherlands, Poland, Switzerland
 
-## How to Set Up Payment Processing
+## How to Set Up Vendasta Payments
 
-### Standard Payment Account Setup
-1. Navigate to `Administration` > `Payment Processing`
+### Standard Vendasta Payments Account Setup
+1. Navigate to `Administration` > `Vendasta Payments`
 2. Complete the account application with business information
 3. Provide required documentation for verification
 4. Configure banking details for payouts
 5. Wait for account approval (typically 1-2 business days)
 
 :::warning
-Payment processing is not available for Free or Trial subscription tiers. This restriction applies to new users and current non-users on these tiers due to fraud prevention measures.
+Vendasta Payments is not available for Free or Trial subscription tiers. This restriction applies to new users and current non-users on these tiers due to fraud prevention measures.
 :::
 
 ### Connect Your Existing Stripe Account
 
-If you already use Stripe Standard for payment processing:
+If you're a Partner with an existing Stripe Standard account, you can connect it to Vendasta Payments to take advantage of comprehensive billing features, including invoicing, subscriptions, and payments.
 
-#### Requirements
-- Active Stripe Standard account in good standing
-- Billing currency supported by the platform
-- No previous transactions using platform-generated payment accounts
+#### Requirements for Stripe Connection
+- You already use Stripe to collect payments from customers
+- You bill in a currency supported by Vendasta Payments
+- You have not completed a transaction using a custom connect account from Vendasta
+
+#### Supported Payment Methods with Stripe Connection
+- Credit and Debit Cards
+- ACH Transfers
+- Pre-Authorized Debits (PADs)
+
+#### Processing Fees with Connected Stripe Account
+- **Credit/Debit/Bank Debit**: Your existing Stripe fees remain unchanged
+- **Platform Fee**: 0.75% of the transaction amount
 
 #### Connection Process
-1. Go to `Administration` > `Payment Processing`
-2. Select `Connect Stripe Account`
-3. Choose your Stripe account from the authentication flow
-4. Review and accept connection terms
-5. Complete the integration process
+1. Navigate to `Administration` > `Vendasta Payments`
+2. Select the option to `Connect Stripe Account`
 
 ![Connect Stripe Account option](./img/vendasta-payments/connect-stripe-account-1.jpg)
 
+3. Choose the Stripe account you wish to connect to Vendasta Payments. If you have multiple Stripe accounts, you'll be prompted to select the one you want to connect.
+
 ![Select Stripe account](./img/vendasta-payments/connect-stripe-account-2.jpg)
+
+4. Review and accept connection terms
+5. Complete the integration process
+
+:::info
+This feature is currently only available for new users who haven't completed transactions with platform-generated accounts.
+:::
 
 ## Managing Account Information
 
 ### Update Ownership Information
 To replace ownership details in your payment account:
 
-1. Navigate to `Administration` > `Payment Processing`
+1. Navigate to `Administration` > `Vendasta Payments`
 2. In the `Accepting Payments` section, click `Manage Account`
 3. On the Identity Verification page, click `Update` beside the current owner
 4. Complete the new owner information form
@@ -92,8 +108,6 @@ To change the address appearing on customer invoices:
 
 Updated addresses will appear on all future customer invoices.
 
-![Billing contact address editing](../../platform-settings/img/admin/billing/billing-contact-address-edit.png)
-
 ## Troubleshooting Setup Issues
 
 ### "Unsupported in Your Area" Error
@@ -104,15 +118,15 @@ If you see this message despite being in a supported region:
 3. Ensure your billing address is fully filled out with postal code
 4. Save any missing information and retry setup
 
-Missing billing address information prevents payment processing activation even in supported regions.
+Missing billing address information prevents Vendasta Payments activation even in supported regions.
 
 ### No Setup Option Available
-If you don't see payment processing setup options, this typically indicates:
+If you don't see Vendasta Payments setup options, this typically indicates:
 - Your account is on a Free or Trial tier (upgrade required)
 - You're in an unsupported geographic region
-- Your account has restrictions that prevent payment processing
+- Your account has restrictions that prevent Vendasta Payments
 
-## Common Questions About Payment Setup
+## Common Questions About Vendasta Payments Setup
 
 <details>
 <summary>What are the fees for connecting my own Stripe account?</summary>
@@ -139,7 +153,19 @@ This feature is currently only available for new users who haven't completed tra
 </details>
 
 <details>
-<summary>Why is payment processing unavailable on Free and Trial tiers?</summary>
+<summary>Does Vendasta charge additional Stripe fees when I connect my own Stripe account?</summary>
 
-Due to increased fraudulent transactions, payment processing is restricted on Free and Trial tiers. Existing users on these tiers who already use the service retain access.
+No, you'll keep your negotiated Stripe fees. Vendasta only charges a 0.75% platform fee on the transaction amount.
+</details>
+
+<details>
+<summary>If I need support with my personal Stripe account, can I contact Vendasta?</summary>
+
+Due to limited account access, all support for personal Stripe accounts must be handled directly with Stripe.
+</details>
+
+<details>
+<summary>Why is Vendasta Payments unavailable on Free and Trial tiers?</summary>
+
+Due to increased fraudulent transactions, Vendasta Payments is restricted on Free and Trial tiers. Existing users on these tiers who already use the service retain access.
 </details>
