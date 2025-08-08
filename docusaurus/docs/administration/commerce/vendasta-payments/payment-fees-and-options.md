@@ -147,3 +147,15 @@ Yes, payment processing is available in Australia, UK, New Zealand, Czech Republ
 
 Platform processing uses standard rates (2.9% + $0.30) while connecting your Stripe account uses your existing rates plus a 0.75% platform fee. Choose based on which option offers better total costs.
 </details>
+
+<details>
+<summary>Can I integrate third-party billing systems other than Stripe?</summary>
+
+Currently, there is no integration support for third-party billing systems other than Stripe. The platform's payment processing is the primary method for invoicing and billing clients.
+</details>
+
+<details>
+<summary>Are there any additional charges beyond transaction fees?</summary>
+
+No, there are no setup fees, monthly fees, or hidden charges. You only pay the transaction fees: either 2.9% + $0.30 for standard processing or your Stripe rates + 0.75% platform fee for connected Stripe accounts.
+</details>
