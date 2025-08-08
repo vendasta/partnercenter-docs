@@ -47,23 +47,38 @@ Vendasta Payments is not available for Free or Trial subscription tiers. This re
 
 ### Connect Your Existing Stripe Account
 
-If you already use Stripe Standard for payment processing:
+If you're a Partner with an existing Stripe Standard account, you can connect it to Vendasta Payments to take advantage of comprehensive billing features, including invoicing, subscriptions, and payments.
 
-#### Requirements
-- Active Stripe Standard account in good standing
-- Billing currency supported by the platform
-- No previous transactions using platform-generated payment accounts
+#### Requirements for Stripe Connection
+- You already use Stripe to collect payments from customers
+- You bill in a currency supported by Vendasta Payments
+- You have not completed a transaction using a custom connect account from Vendasta
+
+#### Supported Payment Methods with Stripe Connection
+- Credit and Debit Cards
+- ACH Transfers
+- Pre-Authorized Debits (PADs)
+
+#### Processing Fees with Connected Stripe Account
+- **Credit/Debit/Bank Debit**: Your existing Stripe fees remain unchanged
+- **Platform Fee**: 0.75% of the transaction amount
 
 #### Connection Process
-1. Go to `Administration` > `Vendasta Payments`
-2. Select `Connect Stripe Account`
-3. Choose your Stripe account from the authentication flow
-4. Review and accept connection terms
-5. Complete the integration process
+1. Navigate to `Administration` > `Vendasta Payments`
+2. Select the option to `Connect Stripe Account`
 
 ![Connect Stripe Account option](./img/vendasta-payments/connect-stripe-account-1.jpg)
 
+3. Choose the Stripe account you wish to connect to Vendasta Payments. If you have multiple Stripe accounts, you'll be prompted to select the one you want to connect.
+
 ![Select Stripe account](./img/vendasta-payments/connect-stripe-account-2.jpg)
+
+4. Review and accept connection terms
+5. Complete the integration process
+
+:::info
+This feature is currently only available for new users who haven't completed transactions with platform-generated accounts.
+:::
 
 ## Managing Account Information
 
@@ -134,6 +149,18 @@ Yes, you can view payment details processed through the platform. However, payou
 <summary>Can I add my own Stripe account if I'm already using a platform account?</summary>
 
 This feature is currently only available for new users who haven't completed transactions with platform-generated accounts.
+</details>
+
+<details>
+<summary>Does Vendasta charge additional Stripe fees when I connect my own Stripe account?</summary>
+
+No, you'll keep your negotiated Stripe fees. Vendasta only charges a 0.75% platform fee on the transaction amount.
+</details>
+
+<details>
+<summary>If I need support with my personal Stripe account, can I contact Vendasta?</summary>
+
+Due to limited account access, all support for personal Stripe accounts must be handled directly with Stripe.
 </details>
 
 <details>
