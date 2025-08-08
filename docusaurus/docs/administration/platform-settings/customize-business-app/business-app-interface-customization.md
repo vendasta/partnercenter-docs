@@ -58,23 +58,21 @@ To control which pages appear in your clients' Business Apps:
 To control access to automation features:
 
 1. Go to `Partner Center` > `Administration` > `Customize Business App` > `Automations`
-2. Toggle the **Show this Page** option:
+2. Toggle the **Show this Page** option and save:
    - **Enabled**: Clients can access automation features
    - **Disabled**: Automation page is hidden from client view
-3. Save the changes
 
-The Automations page visibility change takes effect immediately in all client Business Apps. This is useful when automation features aren't relevant to your client base or when you want to simplify the interface.
+The change takes effect immediately for all clients. Automations will continue to run when triggers are met even if the page is hidden.
 
 ### Enable or Disable Guides Section
 
 To control the Guides tab visibility:
 
-1. Navigate to `Administration` > `Customize Business App`
-2. Locate the **Guides** section settings
-3. Toggle the Guides tab visibility:
+1. Navigate to `Partner Center` > `Administration` > `Customize Business App` > `Pages` > `Guides`
+2. Toggle the **Guides** tab visibility and save:
    - **Show**: Clients can access educational guides and resources
    - **Hide**: Guides tab is removed from navigation
-4. Apply the changes
+3. If you have multiple markets, repeat these steps per market
 
 :::info
 Hiding the Guides section can simplify the interface for clients who don't need educational resources or when you provide training through other channels.
@@ -88,8 +86,7 @@ To use your preferred name instead of "Business App":
 
 1. Go to `Partner Center` > `Administration` > `Customize Business App` > `Branding`
 2. Select **Rename Business App**
-3. Enter your preferred application name
-4. Save the configuration
+3. Enter your preferred application name and save
 
 ![Rename Business App interface](./img/rename-business-app/24508342660759.png)
 
@@ -101,7 +98,9 @@ To optimize logo visibility and brand recognition:
 
 1. Access `Administration` > `Customize Business App` > `Branding`
 2. Upload your logo if not already configured
-3. Select optimal logo placement:
+3. Select placement options. Turning off "Display your logo in footer of Business App navigation" moves the logo from the bottom-left to the top-left.
+   
+   Placement guidance:
    - **Header positioning**: Primary visibility location
    - **Size optimization**: Ensure proper display across devices
    - **Brand consistency**: Maintain visual identity standards
@@ -115,14 +114,14 @@ Proper logo placement reinforces brand identity and creates professional present
 
 To communicate important information to all users:
 
-1. Navigate to `Administration` > `Customize Business App`
-2. Select **Notification Banner** settings
+1. Navigate to `Partner Center` > `Administration` > `Customize Business App`
+2. Open the **Notifications** tab > **Global notification banner**
 3. Configure banner content:
    - **Message text**: Clear, concise information
    - **Display duration**: Temporary or persistent display
    - **Visual styling**: Colors and formatting
    - **Target audience**: All users or specific groups
-4. Activate the notification banner
+4. Add an expiry date if needed and activate the banner
 
 Notification banners are effective for announcements, important updates, or promotional information that all clients should see.
 
@@ -130,14 +129,11 @@ Notification banners are effective for announcements, important updates, or prom
 
 To control how clients can invite other businesses:
 
-1. Go to `Administration` > `Customize Business App`
-2. Access **Client Invitation** settings
-3. Configure invitation parameters:
-   - **Enable/disable invitations**: Control invitation capability
-   - **Invitation scope**: Define who can be invited
-   - **Approval process**: Set invitation approval requirements
-   - **Notification settings**: Manage invitation notifications
-4. Save the invitation configuration
+1. Create a landing page on your website (ideally with an Acquisition Widget for sign-up or trials)
+2. Go to `Partner Center` > `Administration` > `Customize Business App` > `Add Your Clients`
+3. Paste your landing page link into the **Invitation Landing Page URL** field and save
+
+After saving, an **Invite a business** button appears in the client profile section. Clients can copy and share your landing page link to invite other businesses.
 
 This feature helps expand your client network while maintaining control over new business onboarding.
 
@@ -207,4 +203,3 @@ Focus on client needs, simplicity, and functionality. Remove unused features, ma
 
 Interface customization changes are immediately visible in the Business App. Test all modifications in a controlled environment before applying them to all clients to ensure optimal user experience.
 
-If you need assistance with Business App interface customization, please [submit a ticket](https://support.vendasta.com/hc/en-us/requests/new) to our support team.
