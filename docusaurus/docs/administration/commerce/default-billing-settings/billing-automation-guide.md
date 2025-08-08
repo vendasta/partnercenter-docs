@@ -32,6 +32,15 @@ Billing automation eliminates manual billing tasks, reduces the risk of missed p
 - **Flexible scheduling**: Set different collection schedules per market
 - **Recurring frequencies**: Support for monthly, yearly, and custom billing intervals
 
+## How Default Billing Automation Works
+
+New accounts are created without billing settings unless you define defaults. When you configure default billing automation, those settings are applied automatically to the Billing settings of every new account you create.
+
+- Configure defaults at `Administration` > `Default Billing Settings`
+- Defaults can be set per market, if applicable
+- Changing defaults does not modify any existing accounts; only accounts created after saving will use the new defaults
+- You can still edit Billing settings on any individual account at any time
+
 ## How to Configure Default Billing Automation
 
 ### Initial Setup Process
@@ -64,6 +73,13 @@ When you configure default billing automation:
 - **Existing accounts**: Retain their current settings unchanged
 - **Individual overrides**: Specific accounts can still have their billing settings modified manually
 - **Market variations**: Different markets can have different default settings
+
+### Example Workflow Summary
+
+1. Define your desired collection method (automatic charge vs. invoice) and collection timing once.
+2. Save the configuration under `Default Billing Settings`.
+3. Create new accounts as usual; their Billing settings will reflect your defaults automatically.
+4. For exceptions, open an individual account and adjust its Billing settings as needed.
 
 ## Managing Billing Settings After Configuration
 
