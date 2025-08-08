@@ -207,13 +207,22 @@ Yes, the platform offers comprehensive white-labeling capabilities. You can repl
 <details>
 <summary>Why is my favicon not uploading?</summary>
 
-Favicons must be ICO files, not PNG or JPG. Check your file format and ensure it uses the .ico extension. Convert your image to ICO format using online conversion tools if needed.
+All favicons must be an ICO file. For example, instead of image.png or image.jpg, it must be image.ico. To add a favicon, navigate to **Partner Center > Administration > Partner Branding > Favicon**.
+
+If you encounter an upload error, check the file type and try again. Common issues include:
+- **Wrong file format**: Ensure the file uses .ico extension, not .png or .jpg
+- **File size**: Keep favicon files small (typically 16x16 or 32x32 pixels)
+- **File corruption**: Try recreating the ICO file using online conversion tools
+
+If you are still experiencing an issue after checking the file format, contact support for additional assistance.
 </details>
 
 <details>
 <summary>Can I customize the Business App login page?</summary>
 
-The login page cannot be fully white-labeled. However, you can use a generic logo for the default market, and market-specific branding will display after users log in.
+You cannot white-label the Business App login page completely. However, if you are using multiple markets with different branding on each, you can use a generic logo for the default branding market. This will display the generic logo on the login page, and as soon as the user logs into Business App the market-specific branding will be shown within Business App.
+
+To change the branding, go to **Administration** > **Partner Branding** > **Logo**. If you have multiple markets and would like to brand them differently, select another Market in the **All Markets** tab (top right of the same page) and customize accordingly.
 </details>
 
 <details>

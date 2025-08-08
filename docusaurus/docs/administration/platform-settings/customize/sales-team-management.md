@@ -102,12 +102,16 @@ This setting prevents salespeople from seeing product costs while still allowing
 
 To allow salespeople to send marketing campaigns:
 
-1. Navigate to `Administration` > `Customize` > `Sales`
+1. Navigate to **Partner Center > Administration > Customize > Sales**
 2. Toggle on **Salespeople can send campaigns**
 3. Configure any campaign-specific restrictions
 4. Save the settings
 
 This enables salespeople to create and send email marketing campaigns directly to their assigned accounts.
+
+:::info
+Look for the "Salespeople can send campaigns" toggle in the Sales section of the customization settings. This control determines whether your sales team can access campaign features within Partner Center.
+:::
 
 ### Disable Standalone Product Sales
 
@@ -139,6 +143,21 @@ To control how many Snapshot Reports each salesperson can generate monthly:
 
 ![Screenshot showing the Snapshot Report limit configuration](./img/limit-snapshot-reports/snapshot-report-limit-config.png)
 
+### Market-Specific Snapshot Limits
+
+While there's no direct way to limit snapshots per market, you can limit snapshots per salesperson within specific markets:
+
+**For Individual Markets:**
+1. Navigate to the **Markets** section in customization settings
+2. Select your target market
+3. Go to the **Sales** configuration for that market
+4. Check **limit monthly snapshot report** checkbox
+5. Set the **snapshot creation limit** for salespeople in that market
+
+:::info
+If multiple salespeople work in a market, the market limit represents the total allowable maximum that all salespeople in that market can create combined.
+:::
+
 :::warning
 If you have customized markets, you'll need to adjust this setting for each market individually. Check the Markets section to see which markets won't be affected by the default change.
 :::
@@ -160,7 +179,34 @@ When a salesperson reaches their monthly limit, they'll see a notification preve
 <details>
 <summary>What's the difference between a Sales Manager and a Salesperson?</summary>
 
-Sales Managers have full market access and can see all accounts regardless of assignment or market-wide access settings. Salespeople can only see accounts assigned to them when market-wide access is turned off.
+**Key Access Differences:**
+
+**Sales Managers:**
+- Have the ability to see and access **all** accounts within their market regardless of the assignee
+- Maintain full access even when **Market-wide access** configuration is **turned off**
+- Can override market-wide access restrictions
+
+**Salespeople:**
+- Can only see accounts specifically assigned to them when **Market-wide access** is **turned off**
+- Limited to their assigned accounts unless market-wide access is enabled
+- Subject to market-wide access configuration settings
+
+**Configuration Location:**
+The market-wide access settings can be found in **Partner Center > Administration > Customize > Sales > Settings**.
+
+This distinction ensures proper account segregation while giving Sales Managers the oversight they need to manage their teams effectively.
+</details>
+
+<details>
+<summary>How do I hide wholesale pricing from my salespeople?</summary>
+
+You can prevent your salespeople from seeing the wholesale pricing of marketplace products:
+
+1. Go to **Partner Center > Administration > Customize**
+2. Expand the **Sales** section
+3. Scroll down and toggle off **Show wholesale prices**
+
+This setting hides pricing from salespeople while still allowing them to create quotes and process orders with standard pricing. This helps protect your profit margins while maintaining operational functionality.
 </details>
 
 <details>
@@ -202,13 +248,27 @@ Salespeople will be able to create and send email marketing campaigns to their a
 <details>
 <summary>Can I set different snapshot report limits for different markets?</summary>
 
-Yes, you can configure different monthly limits for each market. Navigate to the Markets section to set market-specific limits that override the default setting.
+Yes, you can configure different monthly limits for each market. While there's no direct market-wide limit, you can set limits per salesperson within specific markets:
+
+1. Navigate to the **Markets** section in customization settings
+2. Select your target market  
+3. Configure **limit monthly snapshot report** for that market
+4. Set the **snapshot creation limit** for salespeople in that market
+
+Remember: If multiple salespeople work in a market, the limit applies to each individual salesperson, not as a combined market total.
 </details>
 
 <details>
-<summary>What products can salespeople sell if I disable standalone sales?</summary>
+<summary>How do I disable salespeople from selling standalone products on opportunities and orders?</summary>
 
-When standalone product sales are disabled, salespeople must sell products as part of complete packages or bundles. They cannot sell individual products separately.
+To prevent salespeople from selling standalone products and require them to sell only complete packages or bundles:
+
+1. Go to **Partner Center > Administration > Customize**
+2. Click **Sales**
+3. Under **Sales Processes**, click **Configure orders and sales processes**
+4. Look for the standalone products setting and disable it
+
+When standalone product sales are disabled, salespeople must sell products as part of complete packages or bundles rather than individual products separately. This helps maintain consistent package offerings and pricing strategies.
 </details>
 
 <details>
