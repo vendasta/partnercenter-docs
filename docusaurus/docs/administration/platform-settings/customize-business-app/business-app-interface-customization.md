@@ -199,7 +199,4 @@ Notification banner scheduling depends on your platform capabilities. Check the 
 Focus on client needs, simplicity, and functionality. Remove unused features, maintain clear navigation, ensure brand consistency, and gather client feedback on changes.
 </details>
 
-## Screenshots or Videos
-
-Interface customization changes are immediately visible in the Business App. Test all modifications in a controlled environment before applying them to all clients to ensure optimal user experience.
-
+ 
