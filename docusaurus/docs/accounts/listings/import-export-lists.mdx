@@ -1,0 +1,269 @@
+---
+title: Import and Export Lists
+sidebar_label: Import and Export Lists
+description: Transfer account lists to and from external systems for data management and analysis
+tags: [list-import, list-export, data-transfer, csv-management]
+keywords: [import-lists, export-lists, csv-import, data-migration]
+---
+
+# Import and Export Lists
+
+## What is List Import and Export?
+
+List Import and Export functionality allows you to transfer account list data between your Business App system and external applications like spreadsheets, CRM systems, or other business tools. This enables data sharing, backup creation, and integration with existing business workflows.
+
+## Why Use Import and Export?
+
+Import and Export capabilities provide essential data management benefits:
+
+- **Data Migration**: Transfer existing customer lists from other systems
+- **Backup and Recovery**: Create secure copies of important account lists
+- **External Analysis**: Use specialized tools for advanced data analysis and reporting
+- **System Integration**: Share data with other business applications and platforms
+- **Collaboration**: Share account information with external partners or team members
+- **Compliance**: Meet data portability and backup requirements
+
+## What's Included with Import and Export?
+
+### Import Capabilities
+- CSV file import with automatic data mapping
+- Bulk account list creation from external data
+- Data validation and error checking
+- Duplicate detection and resolution
+
+### Export Capabilities
+- Multiple file format support (CSV, Excel, JSON)
+- Customizable data field selection
+- Filtered export based on criteria
+- Scheduled and automated exports
+
+### Data Management
+- Field mapping and data transformation
+- Error reporting and resolution tools
+- Import preview and validation
+- Data quality assurance features
+
+## How to Export Account Lists
+
+### Basic Export Process
+
+**Exporting Lists to Files:**
+1. Navigate to **Accounts** > **Lists**
+2. **Select the list** you want to export
+3. **Click the Export option** (may be in Actions menu or toolbar)
+4. **Configure export settings**:
+   - **File Format**: Choose CSV, Excel, or other supported formats
+   - **Data Fields**: Select which account information to include
+   - **Filter Options**: Apply additional criteria to limit exported data
+   - **File Name**: Specify descriptive filename with date/purpose
+5. **Execute export** and download the file
+
+### Advanced Export Configuration
+
+**Customizing Export Content:**
+1. **Select specific data fields** to include:
+   - **Basic Information**: Business name, address, contact details
+   - **Account Metadata**: Customer ID, tags, categories, markets
+   - **Product Data**: Active products, editions, add-ons
+   - **User Information**: User accounts and permissions
+   - **Activity Data**: Last login, engagement metrics
+   - **Custom Fields**: Notes, custom attributes, special designations
+
+2. **Apply export filters**:
+   - **Date Ranges**: Accounts created or modified within specific periods
+   - **Product Filters**: Only accounts with specific products or services
+   - **Geographic Filters**: Limit to specific markets or regions
+   - **Status Filters**: Active, inactive, or trial accounts only
+
+**Export Format Options:**
+- **CSV**: Universal format for spreadsheet applications and database imports
+- **Excel**: Formatted spreadsheets with multiple tabs and advanced formatting
+- **JSON**: Structured data for API integrations and technical applications
+- **PDF**: Read-only reports for sharing and presentation purposes
+
+### Scheduled and Automated Exports
+
+**Setting Up Recurring Exports:**
+1. **Access export automation** settings
+2. **Configure export schedule**:
+   - **Frequency**: Daily, weekly, monthly, or custom intervals
+   - **Time**: Specific time for export execution
+   - **Day of Week/Month**: For weekly or monthly exports
+3. **Set export parameters**:
+   - **Consistent file naming**: Include dates and identifiers
+   - **Delivery method**: Email, FTP, or cloud storage integration
+   - **Recipient lists**: Who should receive automated exports
+4. **Test automation** with initial manual execution
+5. **Monitor automated exports** for successful completion
+
+## How to Import Account Lists
+
+### Preparing Data for Import
+
+**CSV File Preparation:**
+1. **Download import template** from your system
+2. **Structure your data** according to template requirements:
+   - **Required Fields**: Business name, address components, contact information
+   - **Optional Fields**: Categories, tags, custom identifiers, additional details
+   - **Data Formatting**: Consistent phone numbers, addresses, and text formatting
+   - **Character Encoding**: UTF-8 encoding for special characters and international data
+
+**Data Quality Best Practices:**
+- **Remove duplicates** before importing
+- **Standardize formatting** for phone numbers, addresses, and business names
+- **Validate addresses** using mapping services when possible
+- **Clean data** by removing extra spaces, special characters, or formatting issues
+- **Verify business categories** match available system options
+
+### Import Process Execution
+
+**Step-by-Step Import:**
+1. Navigate to **Accounts** > **Lists** > **Import Lists**
+2. **Upload your prepared CSV file**
+3. **Map data fields** between your file and system fields:
+   - **Automatic mapping**: System attempts to match column headers
+   - **Manual mapping**: Manually assign columns to appropriate fields
+   - **Custom field mapping**: Map additional data to custom attributes
+4. **Review import preview**:
+   - **Validation results**: Check for errors, warnings, or data issues
+   - **Duplicate detection**: Review potential duplicates identified by system
+   - **Import summary**: Verify total records and field mapping accuracy
+5. **Configure import options**:
+   - **List creation**: Create new list or add to existing list
+   - **Duplicate handling**: Skip, merge, or create separate records
+   - **Error handling**: Continue on errors or stop import process
+6. **Execute import** and monitor progress
+
+### Import Validation and Error Handling
+
+**Common Import Issues:**
+- **Missing required fields**: Business name, address, or contact information
+- **Invalid data formats**: Incorrect phone numbers, email addresses, or dates
+- **Duplicate records**: Multiple entries for the same business
+- **Category mismatches**: Business categories not available in system
+- **Address validation failures**: Addresses that cannot be verified or geocoded
+
+**Error Resolution Strategies:**
+1. **Review error report** provided after import attempt
+2. **Correct data issues** in your source file:
+   - **Fix formatting errors** in phone numbers and addresses
+   - **Add missing required information**
+   - **Resolve duplicate records** before re-importing
+   - **Verify business categories** against available options
+3. **Re-import corrected data** using same process
+4. **Manual creation** for problematic records that can't be automatically imported
+
+## Advanced Import and Export Features
+
+### Data Transformation and Mapping
+
+**Field Transformation:**
+- **Data type conversion**: Converting text to numbers, dates, or boolean values
+- **Format standardization**: Consistent formatting for phone numbers and addresses
+- **Value mapping**: Converting external codes to system-compatible values
+- **Default value assignment**: Setting default values for missing optional fields
+
+**Custom Field Mapping:**
+1. **Identify custom fields** needed for your business processes
+2. **Map external data** to custom attributes or tags
+3. **Configure transformation rules** for data consistency
+4. **Test mapping** with sample data before full import
+
+### Integration with External Systems
+
+**API-Based Integration:**
+- **Real-time data synchronization** between systems
+- **Automated import/export** triggered by external events
+- **Bidirectional data exchange** for comprehensive integration
+- **Error handling and retry logic** for reliable data transfer
+
+**Cloud Storage Integration:**
+- **Automatic file pickup** from cloud storage services
+- **Secure data transfer** with encryption and access controls
+- **File archiving** and retention management
+- **Audit trails** for compliance and tracking
+
+## Data Security and Compliance
+
+### Security Best Practices
+
+**Data Protection:**
+- **Encrypt sensitive data** during export and transfer
+- **Use secure file transfer** methods for external sharing
+- **Implement access controls** for import/export functionality
+- **Regular security audits** of data handling processes
+
+**Privacy Compliance:**
+- **Data minimization**: Export only necessary information
+- **Consent management**: Ensure proper consent for data export
+- **Right to portability**: Support customer data export requests
+- **Data retention**: Manage exported data according to retention policies
+
+### Audit and Compliance
+
+**Tracking and Logging:**
+- **Import/export logs**: Detailed records of all data transfer activities
+- **User tracking**: Who performed imports/exports and when
+- **Data lineage**: Track data sources and transformations
+- **Compliance reporting**: Generate reports for audit and compliance purposes
+
+## Frequently Asked Questions (FAQs)
+
+<details>
+<summary>What file formats are supported for import and export?</summary>
+
+Most systems support CSV (comma-separated values) as the primary format, with additional support for Excel (.xlsx), JSON, and sometimes XML. CSV is recommended for maximum compatibility across different systems.
+</details>
+
+<details>
+<summary>How do I handle duplicate accounts during import?</summary>
+
+Most import processes include duplicate detection features. You can typically choose to skip duplicates, merge data into existing accounts, or create separate records. Review the duplicate detection results carefully before making decisions.
+</details>
+
+<details>
+<summary>Can I import lists with different data structures than my current system?</summary>
+
+Yes, through field mapping functionality. You can map columns from your import file to corresponding fields in your system, even if the names or structures don't match exactly.
+</details>
+
+<details>
+<summary>What happens if my import file contains errors?</summary>
+
+Import processes typically validate data before importing and provide error reports. You can usually choose to skip error records, fix them manually, or correct the source file and re-import.
+</details>
+
+<details>
+<summary>Can I schedule automated exports of my account lists?</summary>
+
+Many systems support scheduled exports that run automatically and can deliver files via email or upload to cloud storage. This is useful for regular backups or integration with other business systems.
+</details>
+
+<details>
+<summary>How do I ensure data security when exporting sensitive account information?</summary>
+
+Use secure file transfer methods, encrypt exported files when necessary, limit export access to authorized users, and follow your organization's data handling policies and regulatory requirements.
+</details>
+
+<details>
+<summary>Can I export only specific fields from my account lists?</summary>
+
+Yes, most export functions allow you to select which data fields to include, helping you create focused datasets and protect sensitive information by excluding unnecessary fields.
+</details>
+
+<details>
+<summary>What should I do if my imported accounts don't appear in the expected list?</summary>
+
+Check your import settings to verify which list the accounts were added to, review any error messages from the import process, and verify that the import completed successfully without skipping records.
+</details>
+
+## Screenshots or Videos
+
+![Export Configuration](./img/accounts/lists/export-options.jpg)
+*Export configuration interface showing file format options and data field selection*
+
+![Import File Mapping](./img/accounts/lists/import-mapping.jpg)
+*Field mapping interface for importing CSV files with custom data structures*
+
+![Import Validation Results](./img/accounts/lists/import-validation.jpg)
+*Import validation and error checking results before finalizing the import process*
