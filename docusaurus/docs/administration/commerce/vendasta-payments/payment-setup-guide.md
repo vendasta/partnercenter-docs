@@ -1,7 +1,7 @@
 ---
 title: Vendasta Payments Setup Guide
 sidebar_label: Vendasta Payments Setup
-sidebar_position: 2
+sidebar_position: 1
 description: Set up Vendasta Payments, connect Stripe accounts, and manage account verification and settings
 tags: [vendasta-payments, setup, stripe, account-management]
 keywords: [vendasta-payments, stripe-connection, account-verification, payment-configuration]

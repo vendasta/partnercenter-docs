@@ -1,7 +1,7 @@
 ---
 title: Payment Methods, Fees, and Regional Support
 sidebar_label: Methods and Fees
-sidebar_position: 1
+sidebar_position: 2
 description: Understand transaction fees, supported payment methods, currencies, and regional availability for payment processing
 tags: [payments, fees, currencies, payment-methods]
 keywords: [transaction-fees, payment-methods, supported-currencies, regional-availability]
