@@ -304,3 +304,62 @@ form[role="search"] span:last-child {
   margin-bottom: 0;
   color: var(--ifm-color-primary);
 }
+
+/* Make homepage card rows align flush with title edges */
+.homepage-row-edge {
+  margin-left: calc(-1 * var(--ifm-spacing-horizontal));
+  margin-right: calc(-1 * var(--ifm-spacing-horizontal));
+}
+
+.homepage-row-edge > [class^="col"],
+.homepage-row-edge > [class*=" col"] {
+  padding-left: var(--ifm-spacing-horizontal);
+  padding-right: var(--ifm-spacing-horizontal);
+}
+
+/* Homepage YouTube image card */
+.home-youtube-image-link {
+  display: block;
+}
+
+.home-youtube-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px; /* nice padding on all edges */
+}
+
+/* Remove outer gutters so first and last columns align with title */
+.homepage-row-edge > [class^="col"]:first-child,
+.homepage-row-edge > [class*=" col"]:first-child {
+  padding-left: 0;
+}
+
+.homepage-row-edge > [class^="col"]:last-child,
+.homepage-row-edge > [class*=" col"]:last-child {
+  padding-right: 0;
+}
+
+/* Adjust vertical spacing between homepage sections */
+.homepage-top-section {
+  margin-top: var(--ifm-spacing-vertical);
+  margin-bottom: 2.5rem; /* slightly tighter than default */
+}
+
+.homepage-bottom-section {
+  margin-top: 2.5rem; /* slightly larger to match top section's bottom */
+  margin-bottom: var(--ifm-spacing-vertical);
+}
+
+/* Ensure consistency at small screens */
+@media screen and (max-width: 996px) {
+  .homepage-top-section {
+    margin-bottom: 2rem;
+  }
+  .homepage-bottom-section {
+    margin-top: 2rem;
+  }
+}
