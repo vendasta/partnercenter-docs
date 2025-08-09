@@ -343,6 +343,12 @@ form[role="search"] span:last-child {
   padding: 12px; /* nice padding on all edges */
 }
 
+/* Fallback: hide emojis in older cached HTML that still renders spans */
+.home-link-list .home-icon,
+.home-link-list li > span[aria-hidden] {
+  display: none !important;
+}
+
 /* Remove outer gutters so first and last columns align with title */
 .homepage-row-edge > [class^="col"]:first-child,
 .homepage-row-edge > [class*=" col"]:first-child {
