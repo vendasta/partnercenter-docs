@@ -51,19 +51,27 @@ Previously, billing automation had to be configured individually for each accoun
 
 ### Step-by-Step Configuration
 
-1. Navigate to `Administration` > `Default Billing Settings`
-2. Select a market (if your business operates in multiple markets)
-3. Toggle the automation switch from `Off` to `On` to begin configuration
-4. Configure your collection preferences:
-   - **Collection method**: Select how you want to collect payments from customers
-   - **Collection timing**: Choose which days of the month to collect payments
-5. Review the configuration summary at the bottom of the page
-6. Click `Save` to apply your default settings
+The default billing automation feature simplifies the process of ensuring that your customers are charged or invoiced consistently by allowing partners to specify default billing automation settings for every new account they create. This saves time and effort while ensuring that new accounts are being billed in a consistent fashion.
+
+When invoicing customers for products and services with recurring subscriptions (monthly, yearly), you may want to automate creating and sending invoices, or automate the charging of an account's saved credit card. Previously, you could only manage these settings on a per-account basis by turning on **Billing Automation** under an account's **Billing settings**. Now partners can apply default billing automation settings to every new account automatically.
+
+Follow these steps to set or change your preferred default billing automation settings for new accounts:
+
+1. Go to **Partner Center > Administration > Default Billing Settings**
+2. Select a Market (if applicable)
+3. By default, these settings will be **Off**. Switch the toggle to **On** to begin changing these settings
+4. Select your preferences for:
+   - **Collection method** (how you will notify and collect payment from an account)
+   - **Collect on** (what day or days you will collect payment from an account)
+5. Review the summary at the bottom of the page
+6. Hit **Save** to apply your changes
 
 ![Default billing settings configuration page](./img/administration/default-billing-settings/default-billing-settings.png)
 
+Once you have finished configuring these settings, they will be automatically applied to the **Billing settings** of all new accounts.
+
 :::warning
-These default settings only affect accounts created after you save the configuration. Existing accounts will retain their current billing settings and will not be automatically updated.
+Setting or changing your **Default billing automation** settings will not override the billing settings of any accounts that already exist—only accounts created after you save these settings will use the defaults you specify here.
 :::
 
 ### Understanding the Configuration Impact
@@ -85,7 +93,7 @@ When you configure default billing automation:
 
 ### Override Settings for Individual Accounts
 
-Even with default automation enabled, you can modify billing settings for specific accounts when needed:
+Whether or not an account is already using **Default billing automation** settings, an individual account's **Billing settings** can be changed at any time. Even with default automation enabled, you can modify billing settings for specific accounts when needed:
 
 1. Go to `Accounts` > `Manage Accounts`
 2. Select the specific account you want to modify
@@ -93,6 +101,8 @@ Even with default automation enabled, you can modify billing settings for specif
 4. Modify the billing settings as required for that account
 
 This flexibility allows you to accommodate special billing requirements for specific customers while maintaining consistency for most accounts.
+
+To learn more about configuring the billing settings of individual accounts, read our article on [invoicing and product subscriptions](/administration/administration-platform-settings/default-billing-settings/invoicing-and-product-subscriptions).
 
 ### Market-Specific Configuration
 

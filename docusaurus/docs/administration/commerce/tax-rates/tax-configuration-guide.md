@@ -1,41 +1,41 @@
 ---
-title: Tax Rates and Exemption Management
+title: Tax management
 sidebar_label: Tax Management
 description: Complete guide to configuring tax rates, managing exemptions, and handling tax calculations for your business
 tags: [tax, configuration, exemptions, rates]
 keywords: [tax-rates, tax-exemptions, tax-configuration, sales-tax, invoice-tax]
 ---
 
-## What is Tax Configuration?
+## What is tax configuration?
 
 Tax configuration enables you to set up tax rates, manage exemptions, and ensure accurate tax calculations on invoices, sales orders, and subscription billing. The system handles complex tax rules and automatically applies them based on customer locations and exemption status.
 
-## Why is Tax Configuration important?
+## Why is tax configuration important?
 
 Proper tax configuration ensures compliance with local tax regulations while accommodating special circumstances like tax-exempt organizations or non-taxable products. Automated tax calculations reduce errors, save time, and maintain accurate financial records.
 
-## What's Included with Tax Configuration?
+## What's included in tax configuration?
 
-### Tax Rate Management
+### Tax rate management
 - **Custom tax rates**: Set specific percentages for different regions or jurisdictions
 - **Automatic application**: Taxes apply automatically based on customer addresses
 - **Rate modifications**: Update existing tax rates as regulations change
 - **Multi-jurisdiction support**: Handle different tax rates for various locations
 
-### Tax Exemption Options
+### Tax exemption options
 - **Item exemptions**: Exclude specific products or services from taxation
 - **Account exemptions**: Exempt entire customer accounts from tax collection
 - **Selective exemption**: Choose which tax rates apply to specific items or accounts
 - **Government exemptions**: Special handling for government and non-profit organizations
 
-### Address-Based Logic
+### Address-based logic
 - **Postal code detection**: System determines applicable tax rates from customer addresses
 - **No address handling**: Accounts without complete addresses show no tax rates
 - **Location verification**: Ensures tax calculations match customer jurisdiction
 
-## How to Configure Tax Rates
+## How to configure tax rates
 
-### Edit Existing Tax Rates
+### Edit existing tax rates
 
 1. Navigate to `Administration` > `Tax Rates`
 2. Locate the tax rate you want to modify
@@ -56,18 +56,18 @@ Proper tax configuration ensures compliance with local tax regulations while acc
 
 ![Save button location](./img/tax-rates/save-button.jpg)
 
-### Address Requirements for Tax Calculation
+### Address requirements for tax calculation
 
 Tax calculations require complete customer addresses with postal codes. If an account lacks address information with postal code, the system will not display any tax rate in opportunities. This prevents incorrect tax calculations and ensures compliance accuracy.
 
-#### Best Practices for Address Management
+#### Best practices for address management
 - **Verify completeness**: Ensure all customer accounts have complete addresses
 - **Regular updates**: Keep address information current as customers relocate
 - **Postal code requirements**: Confirm postal codes are accurate for tax jurisdiction determination
 
-## How to Manage Tax Exemptions
+## How to manage tax exemptions
 
-### Configure Item Exemptions
+### Configure item exemptions
 
 When certain products or services should not be taxed, you can exempt them from specific tax rates:
 
@@ -85,7 +85,7 @@ Exempted items will automatically exclude applicable taxes in sales orders and s
 
 ![Select tax rates for exemption](./img/tax-exemptions/tax-exemptions-select-rates.jpg)
 
-### Set Up Account Exemptions
+### Set up account exemptions
 
 For tax-exempt customers such as government agencies, tribal councils, and NGOs:
 
@@ -99,9 +99,9 @@ The account will be exempt from selected taxes on all products and services.
 
 ![Account exemptions configuration](./img/tax-exemptions/tax-exemptions-account.jpg)
 
-## Managing Complex Tax Scenarios
+## Managing complex tax scenarios
 
-### Tax-Exempt Organizations
+### Tax-exempt organizations
 Special exemption categories that commonly require tax exemptions include:
 - **Government agencies**: Federal, state, and local government entities
 - **Tribal councils**: Indigenous organizations and tribal governments
@@ -109,21 +109,21 @@ Special exemption categories that commonly require tax exemptions include:
 - **Educational institutions**: Schools, universities, and educational foundations
 - **Religious organizations**: Churches and religious institutions
 
-### Digital Product Taxation
+### Digital product taxation
 Different tax rules may apply to digital products based on:
 - **Product type**: Software, services, or digital content
 - **Delivery method**: Downloaded vs. cloud-based services
 - **Jurisdiction rules**: Local regulations on digital taxation
 - **Business classification**: How your business is classified for tax purposes
 
-### Multi-Jurisdiction Considerations
+### Multi-jurisdiction considerations
 When operating across multiple tax jurisdictions:
 - **Rate variations**: Different regions may have different tax rates
 - **Exemption rules**: Tax exemptions may vary by location
 - **Compliance requirements**: Each jurisdiction may have specific compliance needs
 - **Documentation**: Maintain appropriate tax exemption certificates
 
-## Common Questions About Tax Configuration
+## Frequently asked questions
 
 <details>
 <summary>What happens when a customer account has no address information?</summary>
@@ -161,6 +161,6 @@ Yes, you can modify tax rates at any time. However, changes only affect new tran
 Edit the existing tax rates through Administration > Tax Rates using the kebab menu. Update the rates as needed and save changes. New rates will apply to future transactions.
 </details>
 
-## Screenshots or Videos
+## Apply tax exemptions - video walkthrough
 
 <iframe src="https://www.youtube-nocookie.com/embed/zEUKJFFfh1k" width="560" height="315" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
