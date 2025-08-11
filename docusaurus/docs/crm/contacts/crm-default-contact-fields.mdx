@@ -7,66 +7,122 @@ description: Learn about the default contact properties in the CRM system
 
 Contact properties store information about a contact that you work with, such as their name, or the last time you reached out to them. Default properties are created in each contact to store important information. Some of the properties, such as the last engagement date, are automatically populated.
 
-## Contact information
+## Contact Information
 
 1. **ID:** Unique identifier assigned to each contact.
 2. **External ID:** An identifier used by external systems or databases to reference the contact.
 3. **First name:** The given or first name of the contact.
 4. **Last name:** The family or last name of the contact.
-5. **Phone number:** The contact's primary phone number.
-6. **Email:** The email address of the contact.
-7. **Tags:** Keywords or labels used to categorize or classify the contact.
-8. **Job title:** The position or job title of the contact within the company.
-9. **Role:** The role or responsibility of the contact within the company.
-10. **Seniority:** The level of seniority or authority of the contact within the company.
-11. **LinkedIn URL:** The URL of the contact's LinkedIn profile.
-12. **Lifecycle stage:** The stage of the contact in the customer lifecycle (Including Visitor, Lead, Marketing qualified lead, Sales accepted lead, Sales qualified lead, Prospect, Customer and Former Customer).
-13. **Record Source:** This tells you how the records were originally created within your CRM system. It may refer to manual data entry, data import, or capture through web forms, among other sources.
-14. **Record Source Drill Down 1:** This provides a more detailed breakdown of the primary record source, offering additional insights into specific methods or channels within the main source category.
-15. **Record Source Drill Down 2:** This offers even further detail about the record source, giving granular insights into the processes or sub-channels that contribute to the creation of records in the CRM.
-16. **Original Source:** This tells you the source where a contact interacted with your business, such as a website visit, a social media interaction, or a direct contact through email. This is currently not captured automatically, you will need to set up automation to infer this field from the UTM parameters.
-17. **Original Source Drill Down 1:** This provides a more specific look into the original source, detailing the particular platform or medium within the original source where the contact first interacted with your business (e.g., a specific social media platform or search engine).
-18. **Original Source Drill Down 2:** This goes deeper into the specifics of the original source, offering detailed insights about the specific activity or interaction that brought the contact to your business (e.g., a specific campaign or advertisement).
-19. **Timezone:** The timezone in which the contact operates or is located.
-20. **Updated date:** The date when the contact record was last updated.
-21. **Created date:** The date when the contact record was created.
-22. **UTM Campaign:** The name or identifier of the marketing campaign associated with the contact.
-23. **UTM Medium:** The medium or channel of the marketing campaign associated with the contact.
-24. **UTM Source:** The specific source of the marketing campaign associated with the contact.
-25. **UTM Content:** The content or variant of the marketing campaign associated with the contact.
-26. **UTM Term:** The specific keyword or term associated with the marketing campaign for the contact.
-27. **GCLID:** Google Click Identifier associated with the contact.
-28. **FBCLID:** Facebook Click Identifier associated with the contact.
-29. **MSCLKID:** Microsoft Click Identifier associated with the contact.
-30. **Street address line 1:** First line of the contact's physical street address.
-31. **Street address line 2:** Second line of the contact's physical street address (if applicable).
-32. **City/locality:** The city or locality where the contact is located.
-33. **State/province/region:** The state, province, or region where the contact is located.
-34. **Zip/postal code:** The postal code or ZIP code of the contact's location.
-35. **Country:** The country where the contact is located.
-36. **Birth Year:** The birth year of the contact.
-37. **Gender:** The gender of the contact.
-38. **Group:** Indicates the group to which the contact belongs.
-39. **Interests:** The interests or preferences of the contact.
-40. **Last activity date:** The date of the last recorded activity associated with the contact.
-41. **Last campaign email clicked date:** The date when the last campaign email was clicked by the contact.
-42. **Last campaign email bounced date:** The date when the last campaign email was bounced by any of the company's contact
-43. **Last campaign email open date:** The date when the last campaign email was opened by the contact.
-44. **Last campaign email sent date:** The date when the last campaign email was sent to the contact.
-45. **Last campaign email sent name:** The name or identifier of the last campaign email sent to the contact.
-46. **Last contact date:** The date of the last contact made with the contact.
-47. **Last sales email received date:** The date when the last sales email was sent by the contact and received by any salesperson.
-48. **Last sales email sent date:** The date when the last sales email was sent by any salesperson to the contact.
-49. **Mobile phone number:** The mobile phone number of the contact.
-50. **Next task ID:** The identifier of the next task assigned to the contact.
-51. **Next task due date:** The due date for the next task assigned to the contact.
-52. **Owner ID:** The unique identifier of the owner or manager of the contact.
-53. **Primary company:** The primary company associated with the contact.
-54. **Skills:** The skills or expertise of the contact.
+5. **Email:** The primary email address of the contact used for communication and identification.
+6. **Phone number:** The contact's primary phone number for voice communication.
+7. **Additional phone number:** A secondary phone number for the contact, providing alternative contact methods.
+8. **Job title:** The position or job title of the contact within their organization.
+9. **Role:** The specific role or responsibility of the contact within their company or in relation to your business.
+10. **Seniority:** The level of seniority or authority of the contact within their organization.
+11. **LinkedIn URL:** The URL of the contact's LinkedIn profile for professional networking.
+12. **Company name:** The name of the contact's company. This may be set independently from the name property on the contact's associated company record.
+13. **Company website:** The website URL of the contact's company. This may be set independently from the website property on the contact's associated company record.
+14. **Primary Company:** The primary company record associated with the contact in the CRM.
 
-## Partner specific information (Does not exist in Business App)
+## Personal Information
 
-1. **Platform SSC contact IDs:** Identifier associated with the contact in a specific platform or system.
-2. **Platform user ID:** The unique identifier of the user associated with the contact in a specific platform or system.
-3. **Salesperson:** The individual responsible for managing sales activities for the contact.
-4. **Additional salespeople:** Other individuals involved in sales activities for the contact.
+15. **Birthday:** The contact's full birth date including month and day.
+16. **Birth Year:** The birth year of the contact (e.g., '1980').
+17. **Gender:** The gender of the contact (e.g., 'male', 'female', 'other').
+18. **Timezone:** The timezone of the contact represented as a string (e.g., 'America/New_York').
+19. **Interests:** Contact's interests and hobbies (e.g., 'Hiking', 'Skiing', 'Cooking', 'Paintball').
+20. **Skills:** Contact's professional skills and expertise (e.g., 'Java', 'Python', 'Javascript').
+21. **Message:** Message or notes sent from the contact, commonly input by the contact themselves on an intake form.
+
+## Address Information
+
+22. **Street address line 1:** First line of the contact's physical street address.
+23. **Street address line 2:** Second line of the contact's physical street address (apartment, suite, etc.).
+24. **City/locality:** The city or locality where the contact is located.
+25. **State/province/region:** The state, province, or region where the contact is located.
+26. **Zip/postal code:** The postal code or ZIP code of the contact's location.
+27. **Country:** The country where the contact is located.
+
+## Lead Management & Scoring
+
+28. **Lifecycle stage:** The stage of the contact in the customer lifecycle, this field is customizable.
+29. **Lead score:** The calculated lead score of the contact based on engagement and behavior.
+30. **Lead quality:** The customizable lead quality assessment of the contact based on the lead score.
+31. **Tags:** Descriptive keywords that help you find and segment contacts for organization and targeting.
+
+## Activity & Engagement Tracking
+
+32. **Last activity date:** The date of the last recorded activity associated with the contact.
+33. **Last engagement date:** The date of the last engagement from the contact.
+34. **Last contact date:** The date of the last direct contact made with the contact.
+
+## Email Campaign Tracking
+
+35. **Last campaign email sent date:** The date when the last marketing campaign email was sent to the contact.
+36. **Last campaign email sent name:** The name or identifier of the last marketing campaign email sent to the contact.
+37. **Last campaign email open date:** The date when the last marketing campaign email was opened by the contact.
+39. **Last campaign email clicked date:** The date when the last marketing campaign email was clicked by the contact.
+40. **Last campaign email bounced date:** The date when the last marketing campaign email bounced for the contact.
+41. **Last campaign email dropped date:** The date when the last marketing campaign email was dropped (not delivered) for the contact.
+
+## Sales Email Tracking
+
+42. **Last sales email sent date:** The date when the last sales email was sent by any salesperson to the contact.
+43. **Last sales email received date:** The date when the last sales email was sent by the contact and received by any salesperson.
+
+## SMS Campaign Tracking
+
+44. **Last campaign SMS sent date:** The date when the last marketing campaign SMS was sent to the contact.
+45. **Last campaign SMS sent name:** The name or identifier of the last marketing campaign SMS sent to the contact.
+46. **Last campaign SMS delivered date:** The date when the last marketing campaign SMS was successfully delivered to the contact.
+47. **Last campaign SMS undelivered date:** The date when the last marketing campaign SMS failed to be delivered to the contact.
+48. **Last campaign SMS failed date:** The date when the last marketing campaign SMS failed to send to the contact.
+
+## Consent & Privacy Management
+
+49. **Marketing email consent:** The current status for the contact's marketing email consent ('Subscribed', 'Unsubscribed', or unset).
+50. **Marketing email consent timestamp:** The timestamp when the marketing email consent status was last updated.
+51. **Marketing email consent source:** The source or method that updated the marketing email consent field.
+52. **SMS consent:** The current status for the contact's SMS marketing consent ('Subscribed', 'Unsubscribed', or unset).
+53. **SMS consent timestamp:** The timestamp when the SMS consent status was last updated.
+54. **SMS consent source:** The source or method that updated the SMS consent field.
+
+## Task Management
+
+55. **Next task ID:** The unique identifier of the next task assigned to the contact.
+56. **Next task due date:** The due date for the next task assigned to the contact.
+
+## Attribution & Source Tracking
+
+57. **Record Source:** How the contact record was originally created in the CRM system (e.g., 'CRM UI', 'Bulk Import', 'Web Chat', 'Form').
+58. **Record Source Drill Down 1:** Additional detail about the primary record source, providing specific methods or channels within the main source category.
+59. **Record Source Drill Down 2:** Further granular detail about the record source, giving insights into specific processes or sub-channels.
+60. **Original Source:** The original source where a contact first interacted with your business (e.g., website visit, social media, direct contact). Requires customization based on automation or integration.
+61. **Original Source Drill Down 1:** More specific details about the original source, such as the particular platform or medium within the original source.
+62. **Original Source Drill Down 2:** Deeper specifics about the original source, detailing the exact activity or interaction that brought the contact to your business.
+
+## UTM & Campaign Attribution
+
+63. **UTM Campaign:** The marketing campaign name from UTM parameters (e.g., 'summer_sale', 'black_friday', 'spring_promotion').
+64. **UTM Medium:** The medium or channel from UTM parameters (e.g., 'cpc', 'email', 'social', 'organic', 'referral').
+65. **UTM Source:** The traffic source from UTM parameters (e.g., 'google', 'facebook', 'twitter', 'linkedin', 'newsletter').
+66. **UTM Content:** The content variant from UTM parameters (e.g., 'banner', 'sidebar', 'footer', 'popup', 'cta_button').
+67. **UTM Term:** The keyword or search term from UTM parameters (e.g., 'running+shoes', 'digital+marketing', 'small+business+software').
+
+## Click Tracking IDs
+
+68. **GCLID:** Google Click Identifier used to track the contact's origin from Google Ads campaigns.
+69. **FBCLID:** Facebook Click Identifier used to track the contact's origin from Facebook advertising campaigns.
+70. **MSCLKID:** Microsoft Click Identifier used to track the contact's origin from Microsoft Advertising campaigns.
+
+## System Fields
+
+71. **Updated date:** The date when the contact record was last updated.
+72. **Created date:** The date when the contact record was created.
+
+## Partner Specific Information (Does not exist in Business App)
+
+73. **Platform SSC contact IDs:** Identifier associated with the contact in a specific platform or system.
+74. **Platform user ID:** The unique identifier of the user associated with the contact in a specific platform or system.
+75. **Salesperson:** The individual responsible for managing sales activities for the contact.
+76. **Additional salespeople:** Other individuals involved in sales activities for the contact.
