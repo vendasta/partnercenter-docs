@@ -363,7 +363,13 @@ form[role="search"] span:last-child {
 /* Adjust vertical spacing between homepage sections */
 .homepage-top-section {
   margin-top: var(--ifm-spacing-vertical);
-  margin-bottom: 2.5rem; /* slightly tighter than default */
+  /* Reduce gap below the first three cards to better match the next section */
+  margin-bottom: 1.5rem;
+}
+
+/* Reduce extra whitespace contributed by the linked cards themselves */
+.homepage-top-section .card-link {
+  margin-bottom: 1rem;
 }
 
 .homepage-bottom-section {
@@ -374,7 +380,7 @@ form[role="search"] span:last-child {
 /* Ensure consistency at small screens */
 @media screen and (max-width: 996px) {
   .homepage-top-section {
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
   }
   .homepage-bottom-section {
     margin-top: 2rem;
