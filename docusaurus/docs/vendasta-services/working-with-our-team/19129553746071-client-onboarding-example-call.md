@@ -2,12 +2,6 @@
 title: "Client Onboarding: Example Call"
 sidebar_label: "Client Onboarding: Example Call"
 description: "Almost all services include a pre-launch call, often called an onboarding call, to welcome the customer, go through a content questionnaire, and set expectatio"
-zendesk_id: 19129553746071
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/19129553746071-Client-Onboarding-Example-Call"
-updated_at: "2024-03-18T16:23:59Z"
-labels: []
-section_id: 18564396323479
-locale: "en-us"
 ---
 
 Almost all services include a pre-launch call, often called an onboarding call, to welcome the customer, go through a content questionnaire, and set expectations for the services. Check out [this article](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services) to see which services receive a pre-launch call.

@@ -2,12 +2,6 @@
 title: "How to Receive Notifications for Review Response Approvals"
 sidebar_label: "How to Receive Notifications for Review Response Approvals"
 description: "One of the reputation management services Vendasta’s Marketing Services offers is responding to reviews via products such as  Review Responses Unlimited  ."
-zendesk_id: 23186071999127
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/23186071999127-How-to-Receive-Notifications-for-Review-Response-Approvals"
-updated_at: "2024-05-01T17:37:07Z"
-labels: []
-section_id: 18564452742423
-locale: "en-us"
 ---
 
 One of the reputation management services Vendasta’s Marketing Services offers is responding to reviews via products such as [Review Responses Unlimited](https://partners.vendasta.com/marketplace/products/MP-d72509177df6404bb290d560bb966233)_._

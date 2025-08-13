@@ -2,12 +2,6 @@
 title: "Google Business Profile: Support Tickets and Suspensions"
 sidebar_label: "Google Business Profile: Support Tickets and Suspensions"
 description: "Sometimes during the claiming process, our team needs to open a support ticket with Google to address the issue. This is especially common if a Google Business"
-zendesk_id: 18618036593943
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/18618036593943-Google-Business-Profile-Support-Tickets-and-Suspensions"
-updated_at: "2023-10-27T21:18:13Z"
-labels: []
-section_id: 18537122795415
-locale: "en-us"
 ---
 
 Sometimes during the claiming process, our team needs to open a support ticket with Google to address the issue. This is especially common if a Google Business Profile is suspended and our team needs to work with Google support to reinstate the listing.

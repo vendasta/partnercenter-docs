@@ -2,12 +2,6 @@
 title: "Important: Completing Fulfillment Forms"
 sidebar_label: "Important: Completing Fulfillment Forms"
 description: "After submitting an order, it's crucial to complete the in-platform Fulfillment Form. Failure to do so can result in service delays. Fulfillment Forms can be c"
-zendesk_id: 18948592252567
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/18948592252567-Important-Completing-Fulfillment-Forms"
-updated_at: "2023-11-09T17:05:26Z"
-labels: []
-section_id: 18564452742423
-locale: "en-us"
 ---
 
 After submitting an order, it's crucial to complete the in-platform Fulfillment Form. Failure to do so can result in service delays. Fulfillment Forms can be completed before or after placing an order and they can be shared with your customer to receive their input.

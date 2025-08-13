@@ -2,12 +2,6 @@
 title: "Ordering Marketing Services Products: Best Practices"
 sidebar_label: "Ordering Marketing Services Products: Best Practices"
 description: "Ordering products - General    Ordering Marketing Services products is the same as  ordering any product  in the platform. It's important to know that our team"
-zendesk_id: 19129571446039
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/19129571446039-Ordering-Marketing-Services-Products-Best-Practices"
-updated_at: "2023-11-20T14:22:25Z"
-labels: []
-section_id: 18564452742423
-locale: "en-us"
 ---
 
 ### Ordering products - General

@@ -2,12 +2,6 @@
 title: "Marketing Services Training Webinars for Partners"
 sidebar_label: "Marketing Services Training Webinars for Partners"
 description: "Marketing Services hosts online training sessions exclusively for partners to provide insider knowledge and insights into our fulfillment offerings and process"
-zendesk_id: 22386525361687
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/22386525361687-Marketing-Services-Training-Webinars-for-Partners"
-updated_at: "2024-11-04T20:58:18Z"
-labels: []
-section_id: 18564396323479
-locale: "en-us"
 ---
 
 Marketing Services hosts online training sessions exclusively for partners to provide insider knowledge and insights into our fulfillment offerings and processes. These training sessions are crucial to strengthening alignment and ensuring a smooth fulfillment process—from pre-sale to delivery to ongoing support!

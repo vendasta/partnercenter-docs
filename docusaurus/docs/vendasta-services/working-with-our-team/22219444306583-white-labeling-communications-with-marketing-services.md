@@ -2,12 +2,6 @@
 title: "White-labeling Communications with Marketing Services"
 sidebar_label: "White-labeling Communications with Marketing Services"
 description: "Marketing Services is Vendasta’s in-house fulfillment vendor. Our commitment to white-labeling best practices ensures seamless communication with your clients."
-zendesk_id: 22219444306583
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/22219444306583-White-labeling-Communications-with-Marketing-Services"
-updated_at: "2024-03-21T15:53:05Z"
-labels: []
-section_id: 18564396323479
-locale: "en-us"
 ---
 
 Marketing Services is Vendasta’s in-house fulfillment vendor. Our commitment to white-labeling best practices ensures seamless communication with your clients. Below, we outline the process and option to white-label email communication through our dedicated ticketing system.

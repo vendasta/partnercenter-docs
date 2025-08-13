@@ -2,12 +2,6 @@
 title: "Project Tracking for Your Customers"
 sidebar_label: "Project Tracking for Your Customers"
 description: "When will this website be live? What's the status of our digital ads campaign? Is my blog ready? When should I expect the next social calendar?  \n These are al"
-zendesk_id: 18949699414039
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/18949699414039-Project-Tracking-for-Your-Customers"
-updated_at: "2023-11-09T17:17:29Z"
-labels: []
-section_id: 18564452742423
-locale: "en-us"
 ---
 
 When will this website be live? What's the status of our digital ads campaign? Is my blog ready? When should I expect the next social calendar? 

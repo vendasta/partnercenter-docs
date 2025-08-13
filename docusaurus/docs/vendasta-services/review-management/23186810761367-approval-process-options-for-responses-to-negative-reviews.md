@@ -2,12 +2,6 @@
 title: "Approval Process Options for Responses to Negative Reviews"
 sidebar_label: "Approval Process Options for Responses to Negative Reviews"
 description: "One of the reputation management services Marketing Services offers is fully managed and drafted responses to online reviews for the business, via products lik"
-zendesk_id: 23186810761367
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/23186810761367-Approval-Process-Options-for-Responses-to-Negative-Reviews"
-updated_at: "2024-05-01T17:36:30Z"
-labels: []
-section_id: 18536948501015
-locale: "en-us"
 ---
 
 One of the reputation management services Marketing Services offers is fully managed and drafted responses to online reviews for the business, via products like [Review Responses: Up to 10](https://partners.vendasta.com/marketplace/products/MP-BCPH7SCSJTNXFZNC7RCJTBD5CGLGF8S8) and [Review Responses Unlimited](https://partners.vendasta.com/marketplace/products/MP-d72509177df6404bb290d560bb966233).

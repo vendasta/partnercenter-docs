@@ -2,12 +2,6 @@
 title: "Marketing Services Resource Overview"
 sidebar_label: "Marketing Services Resource Overview"
 description: "Vendasta has many different teams and departments to keep everything running smoothly. This resource shares resources and contacts you’ll find helpful when wor"
-zendesk_id: 24317621231127
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/24317621231127-Marketing-Services-Resource-Overview"
-updated_at: "2024-12-11T21:37:32Z"
-labels: []
-section_id: 18564396323479
-locale: "en-us"
 ---
 
 Vendasta has many different teams and departments to keep everything running smoothly. This resource shares resources and contacts you’ll find helpful when working with Marketing Services—Vendasta’s In-house Fulfillment Vendor. 

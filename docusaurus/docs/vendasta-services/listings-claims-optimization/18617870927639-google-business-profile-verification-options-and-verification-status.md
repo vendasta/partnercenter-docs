@@ -2,12 +2,6 @@
 title: "Google Business Profile Verification Options and Verification Status"
 sidebar_label: "Google Business Profile Verification Options and Verification Status"
 description: "Google offers verification through phone, text, email, or video. Please note the following: \n \n You may need to verify with more than one method. \n The availab"
-zendesk_id: 18617870927639
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/18617870927639-Google-Business-Profile-Verification-Options-and-Verification-Status"
-updated_at: "2024-04-29T17:10:05Z"
-labels: []
-section_id: 18537122795415
-locale: "en-us"
 ---
 
 Google offers verification through phone, text, email, or video. Please note the following:
