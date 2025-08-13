@@ -1,6 +1,7 @@
 ---
-title: Create and send invoices
-description: Learn how to create and send invoices to request and collect payment for products and services you provide to customers.
+title: Create and Manage Invoices
+description: Learn how to create, send, and manage invoices, customize invoice settings, and configure email preferences for your billing operations.
+sidebar_position: 2
 ---
 
 ![Create and send invoices](./img/commerce/invoices/create-send-invoices-header.jpg)
@@ -93,3 +94,184 @@ An invoice's status is displayed in the Status column on the table in **Partner 
 - **Void**: If an invoice has been sent in error or is no longer relevant, an invoice can be marked as Void by clicking the Options **⋮** menu, selecting **Change invoice status**, and selecting **Void**.
 
 Note that an account's **Invoicing settings** are all off by default. To edit these settings for a particular account, go to the **Products** section on the account's page under **Partner Center > Accounts > Manage Accounts > Select account** and click **Invoices.**
+
+### Customize invoice numbers
+
+Next invoice number customization allows new and existing partners to define the next number sequence for their upcoming invoices. This customization ensures seamless transitions, enhances professional appearance, and maintains a coherent invoicing system for your business.
+
+**Common reasons to customize invoice numbers:**
+
+1. **Continuity from Previous Platforms:** New Partners can continue the numbering sequence from their previous billing system.
+2. **Professional Appearance:** New Partners can avoid starting their invoice number sequence from 001.
+
+**To customize the next invoice number:**
+
+1. Navigate to **Partner Center > Commerce > Invoices**
+2. To access the setting, select the **three dots** in the top right hand corner of the page, and click **Set new invoice number**
+3. Input the desired **next invoice number**. **Note:** The number must be greater than any previously used invoice number
+
+![Setting a new invoice number](./img/commerce/invoices/set-new-invoice-number.png)
+
+4. Click **Confirm**, and your next invoice generated will follow the new number sequence
+
+**Invoice number customization notes:**
+
+- The invoice number only supports numeric values (no alphanumeric prefixes)
+- You can only set the next invoice number to a value greater than any number already used on an invoice
+- The invoice number sequence applies to all your transactions across all customers
+
+### Change invoice email settings
+
+The email address showing at the bottom of the invoice sent to clients can be changed by going to **Partner Center > Administration > Customize >** Under partner defaults tab; click on **Email Settings > Sender Email > Change it and then apply the changes.**
+
+![Email settings screenshot](./img/commerce/invoices/change-email-invoice.jpg)
+
+This is also the email address from which the platform will send reports, to which recipients can reply.
+
+For Partners with multiple markets, repeat the same steps under the '**Markets**' heading > click the pencil icon to select market and update email accordingly or simply apply the Partner branding configurations to the additional market(s).
+
+## Frequently Asked Questions
+
+<details>
+<summary>Can I change an invoice status after it is marked "paid"?</summary>
+
+**No** - Once an invoice has been marked as "paid," it cannot be adjusted to another status (such as "due" or "past due.") If an invoice needs to be sent to a client again, recreate the original invoice and send it again.
+
+![Invoice status cannot be changed after marked as paid](./img/commerce/invoices/invoice-status-paid.jpg)
+
+</details>
+
+<details>
+<summary>Can I delete an invoice?</summary>
+
+Currently, Partners cannot retract or delete an invoice that has already been sent.
+
+If you have sent an incorrect invoice, create and send a new invoice to your customer.
+
+If you have sent an invoice to the incorrect recipient, an invoice can be sent to a different recipient at any time by clicking **Send Invoice** and choosing a different recipient.
+
+![Send invoice option](./img/commerce/invoices/send-invoice-option.jpg)
+
+If the invoice is still under the status 'due,' it can also be voided.
+
+To void the invoice, navigate to **Partner Center > Commerce > Invoices > Click the 3 dots next to the invoice and select Change Invoice Status.** Select the **void** status, and **save.**
+
+![Change invoice status option](./img/commerce/invoices/change-invoice-status-option.jpg)
+
+![Void invoice status selection](./img/commerce/invoices/void-invoice-status.jpg)
+
+</details>
+
+<details>
+<summary>How do I mark an invoice as "paid" if it has not been paid through Vendasta Payments?</summary>
+
+If you want to generate an invoice on an account but do not want to send it to your client, or the client has already paid, you can mark the invoice status as "Paid" for your records:
+
+In **Partner Center > Commerce > Invoices > Select the invoice** (any invoice that is Past Due, or Due status) > **Click the three dots at the end of the row > Change invoice status > Paid:**
+
+![Mark invoice as paid step 1](./img/commerce/invoices/mark-invoice-paid-1.png)
+
+![Mark invoice as paid step 2](./img/commerce/invoices/mark-invoice-paid-2.png)
+
+***Please note that invoices with the status "Paid" or "Void" do not have the option to change the invoice status.***
+
+</details>
+
+<details>
+<summary>Can invoices and receipts from Vendasta be sent to multiple users?</summary>
+
+**Yes** - a comma-separated list of email addresses can be added to the Billing Contact Information card in **Partner Center > Administration > My Billing**. Addresses listed here will receive invoices and email notifications regarding successful and failed payments, etc.
+
+![Billing Contact Information in Partner Center](./img/commerce/invoices/billing-contact-information.png)
+
+</details>
+
+<details>
+<summary>Will I be notified when an invoice is sent to my customer?</summary>
+
+**Yes!** You will receive an email every time an invoice is generated and sent to your customer.
+
+![Invoice notification email sent to merchant](./img/commerce/invoices/invoice-notification-email-1.jpg)
+
+The customer will also receive an email invoice (if you have chosen the payment option to **Email Invoice**). Otherwise, the customer will receive an email receipt for the charge to their Credit Card.
+
+![Invoice email sent to customer](./img/commerce/invoices/invoice-notification-email-2.jpg)
+
+![Invoice receipt email sent to customer](./img/commerce/invoices/invoice-notification-email-3.jpg)
+
+</details>
+
+<details>
+<summary>Why is my invoice showing the wrong currency?</summary>
+
+If the invoice appears in a different currency than expected, it's possible that the invoice was **duplicated**. When an invoice is duplicated, it retains the currency of the original invoice along with the same line item values.
+
+If you create a new invoice from scratch, the default currency will be **CAD**, which can be identified by the **"CA$"** prefix in the dollar values.
+
+**How to Differentiate Between CAD and USD:**
+- **CA$**: Indicates the invoice is in **CAD (Canadian Dollars)**.  
+- **$ (without "CA")**: Indicates the invoice is in **USD (US Dollars)**.
+
+</details>
+
+<details>
+<summary>Why isn't my package appearing when I try to add it to an invoice?</summary>
+
+If a package is not using the new package pricing model based on the retail prices of the individual products contained in the package, it cannot be added to an invoice.
+
+Partners can update their packages to use the new pricing model at any time.
+
+**Note:** Packages using the old pricing model also cannot be purchased through the Shopping Cart.
+
+</details>
+
+<details>
+<summary>Is the client payment transaction fee calculated before or after tax?</summary>
+
+Transaction fees are calculated based on the **total amount** the client has paid. 
+
+If a Partner has set up their invoicing to include taxes, the transaction fee is calculated from the total amount which already includes taxes. 
+
+If taxes haven't been set up, the transaction fee is still based on the total invoice amount the client paid, but without taxes, since taxes wasn't indicated on the invoice.
+
+</details>
+
+<details>
+<summary>Are client account owners allowed to remove stored Credit Card on file?</summary>
+
+Yes, the Billing Settings functionality within Business App allows users within an account the ability to 'replace' a credit card provided another one has been added.
+
+</details>
+
+<details>
+<summary>What is a recurring invoice template?</summary>
+
+:::caution Discontinued Feature
+The Recurring Invoice functionality has been discontinued for new Partners. Please familiarize yourself with the enhanced Subscription Billing feature, which has been introduced as a replacement.
+:::
+
+Templates can not only ease your workload but also make you feel less stressed and at the same increase your efficiency. It helps to save time and money while improving consistency.
+
+A recurring invoice template can be used to repeatedly invoice a customer for products or services they have bought that have a monthly renewal and can be automatically invoiced every month.
+
+The processes will run continuously according to your set schedule in the template.
+
+![Recurring invoice template](./img/commerce/invoices/recurring-invoice-template.jpg)
+
+</details>
+
+<details>
+<summary>Why is my invoice showing past due before the due date?</summary>
+
+If your invoice is showing as past due before the actual due date, this could be due to timezone differences or system processing timing. Check the due date and time zone settings in your invoice configuration.
+
+</details>
+
+<details>
+<summary>Why does my package product have an unexpected price when I add it to an invoice?</summary>
+
+If a package shows an unexpected price when added to an invoice, it may be using the old package pricing model. Packages need to use the new package pricing model based on the retail prices of individual products to work properly with invoicing.
+
+Partners can update their packages to use the new pricing model at any time through their Store settings.
+
+</details>
