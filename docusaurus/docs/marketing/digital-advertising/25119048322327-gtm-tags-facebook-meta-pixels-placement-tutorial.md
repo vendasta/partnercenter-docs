@@ -78,7 +78,7 @@ To add a GTM or Facebook Meta Pixel to your website, you will need to add the co
 **Finding the GTM Code:**
 
 1.  Open the [Google Tag Manager website](https://tagmanager.google.com/) and sign in with the Google account you’ve used to create the tags and containers.
-2.  Once your container is created, Google Tag Manager will provide you with the GTM code snippets. There will be two pieces of code: one to be placed in the **<head>** section and one in the **<body>** section of your website's HTML.
+2.  Once your container is created, Google Tag Manager will provide you with the GTM code snippets. There will be two pieces of code: one to be placed in the `<head>` section and one in the `<body>` section of your website's HTML.
     1.  The GTM itself is quite short (ex: GTM-ABCDEFG), but the entire code will be several lines of text.
 
 **Finding the Facebook Meta Pixel Code:**
@@ -122,14 +122,14 @@ In case the code has been already placed on the site, it’s a good idea to chec
     ![](./img/25119048322327-8016ff584a.png)
 3.  From the Divi Theme Options page, click on the **Integration** tab.  
     ![](./img/25119048322327-6c06f2c968.png)
-4.  Look for two boxes in which code can be added—one for the **<head>** and one for the **<body>**.  
+4.  Look for two boxes in which code can be added—one for the `<head>` and one for the `<body>`.  
     ![](./img/25119048322327-d0ba257aff.png)
 
 **Adding the GTM Code to the Website:**
 
 1.  From Google Tag Manager, copy the GTM code snippets and paste them into your website’s HTML where instructed.
-    1.  Paste the code for the **<head>** in the relevant section and the code for the **<body>** into the relevant section.
-        1.  The **<head>** snippet should be placed as high in the **<head>** section as possible, and the **<body>** snippet immediately after the opening **<body>** tag.
+    1.  Paste the code for the `<head>` in the relevant section and the code for the `<body>` into the relevant section.
+        1.  The `<head>` snippet should be placed as high in the `<head>` section as possible, and the `<body>` snippet immediately after the opening `<body>` tag.
             
             This approach ensures that your tags in the GTM will fire ASAP, whereas placing the code lower in the HTML script will cause them to fire later and could result in missing some of your data.
             
@@ -138,9 +138,9 @@ In case the code has been already placed on the site, it’s a good idea to chec
 **Adding the Facebook Meta Pixel Code to the Site:**
 
 1.  Copy the entire pixel code provided by Facebook.
-2.  Paste the pixel code into your website’s HTML within the header (ie. the **<head>**) section.
+2.  Paste the pixel code into your website’s HTML within the header (ie. the `<head>`) section.
     1.  (You will need to access the backend of your website to do this.)
-3.  Paste the entire pixel code just before the closing **</head>** tag.  
+3.  Paste the entire pixel code just before the closing `</head>` tag.  
     ![](./img/25119048322327-a9b3470729.png)
 4.  Click the green **Save Changes** button at the bottom of the page.
 
