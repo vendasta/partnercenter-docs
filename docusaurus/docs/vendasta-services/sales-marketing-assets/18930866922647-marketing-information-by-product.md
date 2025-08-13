@@ -2,12 +2,6 @@
 title: "Marketing Information By Product"
 sidebar_label: "Marketing Information By Product"
 description: "We have a host of information and marketing assets available in the Marketplace. For quick access and easy reference, we have provided a list of the main produ"
-zendesk_id: 18930866922647
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/18930866922647-Marketing-Information-By-Product"
-updated_at: "2025-01-23T15:07:00Z"
-labels: []
-section_id: 18536842201495
-locale: "en-us"
 ---
 
 We have a host of information and marketing assets available in the Marketplace. For quick access and easy reference, we have provided a list of the main product pages here:

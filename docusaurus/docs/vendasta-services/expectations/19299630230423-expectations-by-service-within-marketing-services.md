@@ -2,12 +2,6 @@
 title: "Expectations by Service within Marketing Services"
 sidebar_label: "Expectations by Service within Marketing Services"
 description: "With Vendasta's Marketing Services, you have access to a team of digital marketing experts. Leveraging our team, you can claim and optimize your customers' onl"
-zendesk_id: 19299630230423
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services"
-updated_at: "2023-11-24T16:10:53Z"
-labels: []
-section_id: 18536847555351
-locale: "en-us"
 ---
 
 With Vendasta's Marketing Services, you have access to a team of digital marketing experts. Leveraging our team, you can claim and optimize your customers' online listings, boost their reputation, engage their followers with content on social and blogs, build their website, and drive awareness of their business with digital advertising. All the while, our team will communicate with you and your clients to help set service expectations, inform them about updates, and respond to questions related to their service.

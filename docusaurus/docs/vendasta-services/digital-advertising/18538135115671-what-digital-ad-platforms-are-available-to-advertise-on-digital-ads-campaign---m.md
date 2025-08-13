@@ -2,12 +2,6 @@
 title: "What digital ad platforms are available to advertise on? | Digital Ads: Campaign - Marketing Services"
 sidebar_label: "What digital ad platforms are available to advertise on? | Digital Ads: Campaign - Marketing Services"
 description: "With the   Digital Ads: Campaign   product, Marketing Services We offers advertising across a diverse range of platforms for advertising, catering to differen"
-zendesk_id: 18538135115671
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/18538135115671-What-digital-ad-platforms-are-available-to-advertise-on-Digital-Ads-Campaign-Marketing-Services"
-updated_at: "2024-07-17T17:36:28Z"
-labels: []
-section_id: 18536906308375
-locale: "en-us"
 ---
 
 With the [Digital Ads: Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN) product, Marketing Services We offers advertising across a diverse range of platforms for advertising, catering to different needs and budgets.

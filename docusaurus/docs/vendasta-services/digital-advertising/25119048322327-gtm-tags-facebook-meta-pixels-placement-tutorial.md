@@ -2,12 +2,6 @@
 title: "GTM Tags & Facebook Meta Pixels + Placement Tutorial"
 sidebar_label: "GTM Tags & Facebook Meta Pixels + Placement Tutorial"
 description: "This article will guide you through the essentials of Google Tag Manager (GTM) tags and Facebook Meta Pixels. Understanding and implementing these tools is cru"
-zendesk_id: 25119048322327
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/25119048322327-GTM-Tags-Facebook-Meta-Pixels-Placement-Tutorial"
-updated_at: "2024-07-24T18:10:38Z"
-labels: []
-section_id: 18536906308375
-locale: "en-us"
 ---
 
 This article will guide you through the essentials of Google Tag Manager (GTM) tags and Facebook Meta Pixels. Understanding and implementing these tools is crucial for tracking and optimizing your digital marketing campaigns, ensuring you get the most out of your advertising efforts.

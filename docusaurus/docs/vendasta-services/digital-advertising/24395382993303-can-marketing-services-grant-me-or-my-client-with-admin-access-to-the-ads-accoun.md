@@ -2,12 +2,6 @@
 title: "Can Marketing Services grant me or my client with admin access to the ads account and/or Google Analytics?"
 sidebar_label: "Can Marketing Services grant me or my client with admin access to the ads account and/or Google Analytics?"
 description: "At Vendasta's Marketing Services, we prioritize transparency and collaboration with our valued agency partners. One common inquiry we receive is whether we can"
-zendesk_id: 24395382993303
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/24395382993303-Can-Marketing-Services-grant-me-or-my-client-with-admin-access-to-the-ads-account-and-or-Google-Analytics"
-updated_at: "2024-06-24T20:05:04Z"
-labels: []
-section_id: 18536906308375
-locale: "en-us"
 ---
 
 At Vendasta's Marketing Services, we prioritize transparency and collaboration with our valued agency partners. One common inquiry we receive is whether we can provide admin access to our Google Ads/Analytics accounts for managed digital ad campaigns.  

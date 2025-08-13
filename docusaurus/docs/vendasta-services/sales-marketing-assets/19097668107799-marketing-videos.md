@@ -2,12 +2,6 @@
 title: "Marketing Videos"
 sidebar_label: "Marketing Videos"
 description: "You can use these videos to help advertise these services. They include insights on what customers can expect like timelines and some best practices. The video"
-zendesk_id: 19097668107799
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/19097668107799-Marketing-Videos"
-updated_at: "2024-03-04T19:57:30Z"
-labels: []
-section_id: 18536842201495
-locale: "en-us"
 ---
 
 You can use these videos to help advertise these services. They include insights on what customers can expect like timelines and some best practices. The videos are unbranded and include download links below.

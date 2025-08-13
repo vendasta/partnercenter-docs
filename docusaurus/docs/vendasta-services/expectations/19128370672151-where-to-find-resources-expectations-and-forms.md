@@ -2,12 +2,6 @@
 title: "Where to find resources, expectations, and forms"
 sidebar_label: "Where to find resources, expectations, and forms"
 description: "Building a new website, taking over your customers' social posting, and setting up a successful digital ads campaign comes with a lot of moving parts.  These s"
-zendesk_id: 19128370672151
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/19128370672151-Where-to-find-resources-expectations-and-forms"
-updated_at: "2023-11-16T21:37:49Z"
-labels: []
-section_id: 18536847555351
-locale: "en-us"
 ---
 
 Building a new website, taking over your customers' social posting, and setting up a successful digital ads campaign comes with a lot of moving parts.

@@ -2,12 +2,6 @@
 title: "Social Posting Timeline: Submitting content, requesting edits, and receiving your calendar"
 sidebar_label: "Social Posting Timeline: Submitting content, requesting edits, and receiving your calendar"
 description: "Providing content for our team \n Content refers to topics, specials/sales, pictures, and other assets that you want to ensure is shared with your customers as"
-zendesk_id: 18618684425239
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/18618684425239-Social-Posting-Timeline-Submitting-content-requesting-edits-and-receiving-your-calendar"
-updated_at: "2023-10-27T21:11:07Z"
-labels: []
-section_id: 18536934674839
-locale: "en-us"
 ---
 
 ### Providing content for our team

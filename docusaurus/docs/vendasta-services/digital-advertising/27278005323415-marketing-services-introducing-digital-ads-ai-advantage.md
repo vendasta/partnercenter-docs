@@ -2,12 +2,6 @@
 title: "Marketing Services: Introducing Digital Ads: AI AdVantage"
 sidebar_label: "Marketing Services: Introducing Digital Ads: AI AdVantage"
 description: "What is this?   This is an all-in-one, multi-channel, multi-campaign, digital advertising solution that makes it easy to attract, engage, and convert custome"
-zendesk_id: 27278005323415
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/27278005323415-Marketing-Services-Introducing-Digital-Ads-AI-AdVantage"
-updated_at: "2024-10-23T17:02:54Z"
-labels: []
-section_id: 18536906308375
-locale: "en-us"
 ---
 
 **What is this?**  

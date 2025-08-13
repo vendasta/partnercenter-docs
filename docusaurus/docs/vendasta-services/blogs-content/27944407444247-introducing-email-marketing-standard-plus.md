@@ -2,12 +2,6 @@
 title: "Introducing Email Marketing: Standard & Plus"
 sidebar_label: "Introducing Email Marketing: Standard & Plus"
 description: "What is This? \n Email marketing is a vital component of successful digital strategies, and we’re excited to launch our new  Email Marketing Standard  and  Emai"
-zendesk_id: 27944407444247
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/27944407444247-Introducing-Email-Marketing-Standard-Plus"
-updated_at: "2024-11-20T19:38:32Z"
-labels: ["Marketing Sevices"]
-section_id: 18536996762647
-locale: "en-us"
 ---
 
 ## What is This?

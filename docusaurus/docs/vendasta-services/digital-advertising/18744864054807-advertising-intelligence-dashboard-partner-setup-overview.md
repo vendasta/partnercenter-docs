@@ -2,12 +2,6 @@
 title: "Advertising Intelligence Dashboard: Partner Setup Overview"
 sidebar_label: "Advertising Intelligence Dashboard: Partner Setup Overview"
 description: "This guide provides an overview of setting up and using the Advertising Intelligence Dashboard for the first time. The dashboard s designed to help users effic"
-zendesk_id: 18744864054807
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/18744864054807-Advertising-Intelligence-Dashboard-Partner-Setup-Overview"
-updated_at: "2023-12-18T18:56:17Z"
-labels: []
-section_id: 18536906308375
-locale: "en-us"
 ---
 
 This guide provides an overview of setting up and using the Advertising Intelligence Dashboard for the first time. The dashboard s designed to help users efficiently view their ad campaigns' performance. The video below takes you through some of the key features.

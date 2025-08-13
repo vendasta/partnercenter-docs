@@ -2,12 +2,6 @@
 title: "MatchCraft Ad Services Refund Policy"
 sidebar_label: "MatchCraft Ad Services Refund Policy"
 description: "At Vendasta, we value transparency and trust with our partners. With many different working parts and departments, there are multiple policies and processes f"
-zendesk_id: 19299670112535
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/19299670112535-MatchCraft-Ad-Services-Refund-Policy"
-updated_at: "2025-06-13T15:54:12Z"
-labels: []
-section_id: 18536906308375
-locale: "en-us"
 ---
 
 At Vendasta, we value transparency and trust with our partners. With many different working parts and departments, there are multiple policies and processes for each. Our MatchCraft Services team has a special ad spend policy we would like to remind all of our partners of.

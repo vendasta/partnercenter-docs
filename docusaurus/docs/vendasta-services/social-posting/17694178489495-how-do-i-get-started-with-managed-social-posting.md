@@ -2,12 +2,6 @@
 title: "How do I get started with managed Social Posting?"
 sidebar_label: "How do I get started with managed Social Posting?"
 description: "You want to build up your social following and ensure you're staying top-of-mind by providing continuous content to your customers. By partnering with our team"
-zendesk_id: 17694178489495
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/17694178489495-How-do-I-get-started-with-managed-Social-Posting"
-updated_at: "2024-04-25T20:34:30Z"
-labels: []
-section_id: 18536934674839
-locale: "en-us"
 ---
 
 You want to build up your social following and ensure you're staying top-of-mind by providing continuous content to your customers. By partnering with our team, we'll help save you the hassle of keeping up on your social presence so you can focus more on running your business.

@@ -2,12 +2,6 @@
 title: "Completing Digital Ads Order Forms: Key Details"
 sidebar_label: "Completing Digital Ads Order Forms: Key Details"
 description: "When working on our digital ads order form, the accuracy and detail you provide are crucial for us to build the best possible campaign in alignment with your v"
-zendesk_id: 18538314053143
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/18538314053143-Completing-Digital-Ads-Order-Forms-Key-Details"
-updated_at: "2023-11-09T15:16:49Z"
-labels: []
-section_id: 18536906308375
-locale: "en-us"
 ---
 
 When working on our digital ads order form, the accuracy and detail you provide are crucial for us to build the best possible campaign in alignment with your vision. In this guide, we're emphasizing certain fields that need your utmost attention:

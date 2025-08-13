@@ -2,12 +2,6 @@
 title: "Criteria for Unskippable YouTube Ads"
 sidebar_label: "Criteria for Unskippable YouTube Ads"
 description: "The table below reflects ad options available in YouTube Studio, where you can control the placement of ads before (“pre”), during (“mid”), or after (“post”) t"
-zendesk_id: 19404040963351
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/19404040963351-Criteria-for-Unskippable-YouTube-Ads"
-updated_at: "2023-11-28T22:20:29Z"
-labels: []
-section_id: 18536906308375
-locale: "en-us"
 ---
 
 The table below reflects ad options available in YouTube Studio, where you can control the placement of ads before (“pre”), during (“mid”), or after (“post”) the video.
