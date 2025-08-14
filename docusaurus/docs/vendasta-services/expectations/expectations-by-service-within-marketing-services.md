@@ -10,145 +10,17 @@ With so many services available, it's important to understand what to expect fro
 
 # Expectation by Managed Service
 
- 
-
-**L****istings**
-
-**Reputation**
-
-**Social**
-
-**Blogs**
-
-**Websites**
-
-**DigitalAds**
-
-**Order confirmation email within 48 hours**
-
-✅
-
-✅
-
-✅
-
-✅
-
-✅
-
-✅
-
-**Pre-launch call**
-
-❌
-
-✅
-
-✅
-
-✅
-
-✅
-
-✅
-
-**Post-launch call**
-
-❌
-
-❌
-
-❌
-
-❌
-
-❌
-
-✅
-
-**Direct-to-customer communication is available**
-
-✅
-
-✅
-
-✅
-
-✅
-
-✅
-
-❌
-
-**Project tracking in Business App**
-
-✅
-
-✅
-
-✅
-
-✅
-
-✅
-
-✅
-
-**Business App connections required**
-
-✅
-
-✅
-
-✅
-
-❌
-
-❌
-
-✅
-
-**External credentials (passwords) required**
-
-❌
-
-✅
-
-✅
-
-❌
-
-✅[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNSZXGATFMA6XKMG0B38KVX)
-
-❌
-
-**Digital Agents access required**
-
-✅
-
-✅
-
-✅
-
-**❌**
-
-✅[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNT07KYFS0Y5JSTEDQ4QEAK)
-
-✅[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNT07KYFS0Y5JSTEDQ4QEAK)
-
-**Business days to launch after assets received**
-
-**3**[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNT2PA61DE430WNW2XXBEPT)
-
-**1-2**
-
-**5**
-
-**5**
-
-**5-10**
-
-**3-10**
+| Service Feature | Listings | Reputation | Social | Blogs | Websites | DigitalAds |
+|---|---|---|---|---|---|---|
+| **Order confirmation email within 48 hours** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **Pre-launch call** | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **Post-launch call** | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
+| **Direct-to-customer communication is available** | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| **Project tracking in Business App** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **Business App connections required** | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ |
+| **External credentials (passwords) required** | ❌ | ✅ | ✅ | ❌ | ✅[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNSZXGATFMA6XKMG0B38KVX) | ❌ |
+| **Digital Agents access required** | ✅ | ✅ | ✅ | ❌ | ✅[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNT07KYFS0Y5JSTEDQ4QEAK) | ✅[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNT07KYFS0Y5JSTEDQ4QEAK) |
+| **Business days to launch after assets received** | **3**[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNT2PA61DE430WNW2XXBEPT) | **1-2** | **5** | **5** | **5-10** | **3-10** |
 
 \*See more in definitions below.
 
