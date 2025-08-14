@@ -282,6 +282,11 @@ form[role="search"] span:last-child {
   }
 }
 
+/* Fix letter spacing for headings */
+h2 {
+  letter-spacing: normal;
+}
+
 /* Card customization */
 .card-link {
   text-decoration: none;
@@ -313,8 +318,8 @@ form[role="search"] span:last-child {
 
 .homepage-row-edge > [class^="col"],
 .homepage-row-edge > [class*=" col"] {
-  padding-left: var(--ifm-spacing-horizontal);
-  padding-right: var(--ifm-spacing-horizontal);
+  padding-left: 0.5rem; /* match vs-cards-grid gap (1rem / 2) */
+  padding-right: 0.5rem; /* match vs-cards-grid gap (1rem / 2) */
 }
 
 /* Slightly darken shadows for the five homepage cards */
@@ -326,6 +331,32 @@ form[role="search"] span:last-child {
 .homepage-top-section .card:hover,
 .homepage-bottom-section .card:hover {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
+
+/* Make top 3 cards match bottom cards formatting */
+.homepage-top-section .card {
+  padding: 1rem; /* match vs-card padding */
+}
+
+.homepage-top-section .card__header {
+  padding-bottom: 0; /* remove default padding */
+  margin-bottom: 0.125rem; /* match vs-card-title margin */
+}
+
+.homepage-top-section .card__header h3 {
+  margin-bottom: 0.125rem; /* match vs-card-title spacing */
+  font-weight: 600; /* match vs-card-title weight */
+  font-size: 1rem; /* match vs-card-title size */
+}
+
+.homepage-top-section .card__body {
+  padding-top: 0; /* remove default padding */
+}
+
+.homepage-top-section .card__body p {
+  color: var(--ifm-color-content-secondary); /* match vs-card-desc */
+  font-size: 0.9rem; /* match vs-card-desc size */
+  margin-bottom: 0; /* tighter spacing */
 }
 
 /* Homepage YouTube image card */
@@ -397,6 +428,24 @@ form[role="search"] span:last-child {
 .vs-cards-grid.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .vs-cards-grid.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
+/* Mobile responsiveness for vs-cards-grid */
+@media screen and (max-width: 996px) {
+  .vs-cards-grid.grid-cols-3 { 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  }
+  .vs-cards-grid.grid-cols-4 { 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .vs-cards-grid.grid-cols-2,
+  .vs-cards-grid.grid-cols-3,
+  .vs-cards-grid.grid-cols-4 { 
+    grid-template-columns: 1fr; 
+  }
+}
+
 .vs-card {
   display: flex;
   align-items: flex-start;
@@ -427,6 +476,6 @@ form[role="search"] span:last-child {
 
 /* Spacing harmony with other homepage sections */
 .explore-by-product-section {
-  margin-top: 2.5rem; /* align with .homepage-bottom-section top margin */
+  margin-top: 3.5rem; /* increased to match the spacing from Quick Start Resources to two cards */
   margin-bottom: var(--ifm-spacing-vertical);
 }
