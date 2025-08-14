@@ -1,25 +1,41 @@
 ---
 title: Zapier Integration
 sidebar_label: Zapier Integration
-description: Connect Vendasta to thousands of apps through Zapier
+description: Complete guide to Vendasta's Zapier integration, including setup, automation triggers, and frequently asked questions.
+tags: [zapier, integration, automation, webhooks, crm]
+keywords: [zapier integration, automation, zaps, triggers, actions, webhooks, CRM integration, workflow automation]
 ---
 
-# Zapier Integration
+## What is Zapier Integration?
 
-Vendasta's Zapier Integration enables you to connect your Vendasta account with thousands of other applications through Zapier's automation platform.
+Vendasta's Zapier Integration enables you to connect your Vendasta account with thousands of other applications through Zapier's automation platform. This powerful integration allows you to automate workflows between Vendasta and other applications you use daily, extending your platform's capabilities.
 
-## Overview
+## Why is Zapier Integration Important?
 
-With the Vendasta Zapier Integration, you can automate workflows between Vendasta and other applications you use daily. For example, you can automatically:
+Zapier integration helps you:
+- Automate repetitive tasks between applications
+- Synchronize data across multiple platforms
+- Create seamless workflows without custom coding
+- Connect Vendasta to over 6,000+ supported applications
+- Reduce manual data entry and human error
+- Scale your operations with automated processes
 
-- Create a business in Vendasta when a new lead comes in from another system
-- Update customer data in Vendasta when it changes in your CRM
-- Trigger actions in other applications when changes occur in Vendasta
+## What You Can Do with Zapier Integration
 
-## How to Access Zapier Integration
+| Feature | Description |
+|---------|-------------|
+| **App Connectivity** | Connect Vendasta to thousands of applications |
+| **CRM Integration** | Sync contacts and companies with external CRMs |
+| **Automation Triggers** | Use Vendasta automations to trigger Zapier workflows |
+| **Activity Logging** | Log activities like notes, calls, and meetings in Vendasta CRM |
+| **Workflow Automation** | Create complex multi-step automated processes |
+
+## How to Set Up Zapier Integration
+
+### Accessing the Integration
 
 1. Log in to your Vendasta account
-2. Navigate to **Administration** > **Integrations**
+2. Navigate to **Administration > Integrations**
 3. Locate the Zapier integration tile
 
 ![Zapier Integration in Admin Portal](../img/administration/zapier/zapier_admin_integrations.jpg)
@@ -28,20 +44,21 @@ With the Vendasta Zapier Integration, you can automate workflows between Vendast
 
 ![Zapier Connect Button](../img/administration/zapier/zapier_connect_button.jpg)
 
-## Connecting Vendasta to Zapier
+### Connecting Vendasta to Zapier
 
 Once you're on the Zapier website, you can start creating automations (Zaps) between Vendasta and other applications.
 
 ![Zapier Connect to Apps](../img/administration/zapier/zapier_connect_to_apps.jpg)
 
-## Creating a Zap
+### Creating Your First Zap
 
-### Step 1: Set up your Trigger
+#### Step 1: Set up your Trigger
+
 First, select the app and event that will trigger your automation.
 
 ![Zapier Setup Trigger](../img/administration/zapier/zapier_setup_trigger.jpg)
 
-### Step 2: Connect to Vendasta
+#### Step 2: Connect to Vendasta
 
 1. Select Vendasta as your action app
 
@@ -62,31 +79,228 @@ First, select the app and event that will trigger your automation.
 ## Available Triggers and Actions
 
 ### Triggers (Events in Vendasta that can start a Zap)
-- New Business Created
-- Business Updated
-- New Order Placed
-- Order Status Changed
+
+- **New Business Created** - When a new business is added to Vendasta
+- **Business Updated** - When business information is modified
+- **New Order Placed** - When a new order is created
+- **Order Status Changed** - When an order status is updated
 
 ### Actions (Things Zapier can do in Vendasta)
-- Create a Business
-- Update a Business
-- Create a Task
-- Add a Note to Business
+
+- **Create a Business** - Add new businesses to Vendasta CRM
+- **Update a Business** - Modify existing business information
+- **Create a Task** - Add tasks to Vendasta's task management
+- **Add a Note to Business** - Log notes against business records
+- **Create or Update CRM Contact** - Manage contact records in Vendasta CRM
+- **Create or Update CRM Companies** - Manage company records in Vendasta CRM
+- **Log CRM Activity** - Record notes, emails, calls, meetings, and tasks
+
+:::tip Coming Soon Features
+- Associate contacts with companies
+- Grey labeling of Zapier App
+- Run automations for an account or an order
+:::
+
+## How to Trigger Zapier Zaps Using Vendasta Automations
+
+### Prerequisites
+
+- A Vendasta Partner account with access to Automations
+- A Zapier account
+- Basic understanding of webhooks
+
+### Setting up the Zap for Automation Triggers
+
+1. Go to [Zapier](https://zapier.com/) and log in to your account
+2. Click on **Create Zap**
+
+![Zapier Create Zap](../img/administration/zapier/zapier1.png)
+
+3. Search for and select **Webhooks by Zapier** as the trigger app
+
+![Webhooks by Zapier](../img/administration/zapier/zapier2.png)
+
+4. Select **Catch Hook** as the trigger event, then click **Continue**
+
+5. Copy the webhook URL. You'll need this for setting up the Automation in Vendasta
+
+![Copy webhook URL](../img/administration/zapier/zapier4.png)
+
+6. Click **Continue** and then **Test trigger**. Don't worry that the test will fail at this point
+
+### Setting up the Automation in Vendasta
+
+1. Log in to your Vendasta Partner Center
+2. Navigate to **Administration > Automations**
+3. Create a new Automation or edit an existing one
+4. Add a **Webhook** action to your Automation
+5. In the webhook configuration, paste the URL you copied from Zapier
+
+![Webhook action configuration](../img/administration/zapier/zapier5.png)
+
+6. Configure any additional data you want to send to Zapier in the **Body** field
+7. Save your Automation
+
+### Testing the Integration
+
+1. Trigger your Automation in Vendasta
+2. Go back to Zapier and you should see that the test was successful
+
+![Zapier test successful](../img/administration/zapier/zapier6.png)
+
+3. Continue setting up the rest of your Zap, adding actions that should happen when the webhook is triggered
+
+![Add action in Zapier](../img/administration/zapier/zapier7.png)
+
+4. Name your Zap, test it, and turn it on
+
+## Zapier App Information and FAQ
+
+### What is Beta Mode?
+
+We know our Partners are eager to start using this! While our development team is still bringing some exciting new features to the Zapier integration, the Beta tag will be used to signify this.
+
+:::note Subscription Requirement
+This feature is currently available only to Partners on a subscription tier that includes integrations.
+:::
+
+### Who Can Use the App?
+
+The app can be used by Partners, Salespeople, and their clients as it uses the permissions of the user that set up the Zap. It should be noted that the app is Vendasta branded so if you wish to white-label the platform, you won't be able to offer this currently. You may instead choose to build the zaps on behalf of your clients.
+
+### App Store Availability
+
+The Zapier app will be available in the Zapier app store soon!
+
+### How Companies Relate to Accounts
+
+An account will be created as a copy of the company data the first time that an account is needed on the platform. Once created, updating the company record will only update the assigned Salesperson and all custom fields on the account. When a client updates their account most fields will update the company record.
 
 ## Best Practices
 
-- Test your Zaps thoroughly before relying on them for critical business processes
-- Monitor your Zaps regularly to ensure they continue to work as expected
-- Use error notifications in Zapier to be alerted if a Zap fails
-- Review Zapier's usage limits to ensure your automation needs fall within your plan's constraints
+### Planning Your Integrations
+
+- **Start Simple** - Begin with basic integrations before building complex workflows
+- **Map Your Data** - Understand how data flows between applications
+- **Test Thoroughly** - Test your Zaps thoroughly before relying on them for critical business processes
+- **Monitor Regularly** - Monitor your Zaps regularly to ensure they continue to work as expected
+
+### Optimization Tips
+
+- **Use Error Notifications** - Set up error notifications in Zapier to be alerted if a Zap fails
+- **Review Usage Limits** - Review Zapier's usage limits to ensure your automation needs fall within your plan's constraints
+- **Batch Operations** - Where possible, use batch operations to reduce API calls
+- **Data Validation** - Implement data validation to ensure clean data transfer
+
+### Security Considerations
+
+- **Permissions** - Ensure your Vendasta account has the necessary permissions
+- **Account Security** - Keep your Zapier and Vendasta accounts secure
+- **Data Privacy** - Consider data privacy implications when connecting systems
+- **Access Control** - Limit Zap access to necessary team members only
 
 ## Troubleshooting
 
-If you encounter issues with your Vendasta-Zapier integration:
+### Common Issues
 
+**Zap Not Triggering**
 1. Verify your Vendasta account has the necessary permissions
 2. Ensure your Zapier account is active and on an appropriate plan
-3. Check that the data being passed between apps is formatted correctly
-4. Review the Zap History in Zapier to identify where failures might be occurring
+3. Check that the trigger conditions are being met in Vendasta
 
-For additional support, contact Vendasta Customer Support.
+**Data Transfer Issues**
+1. Check that the data being passed between apps is formatted correctly
+2. Verify field mappings in your Zap configuration
+3. Review the Zap History in Zapier to identify where failures might be occurring
+
+**App Greyed Out**
+You may be trying to add the app as a trigger instead of an action! We do not currently support any Vendasta-built triggers. (You can use Zapier's catch a webhook trigger to send data from Vendasta to other systems.)
+
+![Zapier app greyed out](../img/administration/administration-advanced/zapier-app-faq/zapier-app-greyed-out.png)
+
+### Getting Support
+
+For additional support with Zapier integration:
+1. Check Zapier's documentation for general Zapier issues
+2. Review Vendasta's API documentation for data format requirements
+3. Contact Vendasta Customer Support for platform-specific issues
+4. Use Zapier's support resources for Zapier-specific problems
+
+## Use Cases and Examples
+
+### CRM Synchronization
+
+**Example**: Automatically create Vendasta CRM contacts when new leads are added to your external CRM
+- **Trigger**: New contact in external CRM (e.g., HubSpot, Salesforce)
+- **Action**: Create or update CRM contact in Vendasta
+
+### Review Management Integration
+
+Once automations are released in Business App, users will be able to set up an automation with the 'Send Review Request' option to a contact action that is triggered via Zapier or a CRM activity. We will have a template available to do so.
+
+### Task Management Workflow
+
+**Example**: Create Vendasta tasks when specific events occur in other systems
+- **Trigger**: New support ticket in help desk system
+- **Action**: Create task in Vendasta for follow-up
+
+### Data Backup and Reporting
+
+**Example**: Automatically export Vendasta data to spreadsheets for reporting
+- **Trigger**: Scheduled trigger in Zapier
+- **Action**: Export data from Vendasta to Google Sheets
+
+## FAQs
+
+<details>
+<summary>What does the Zapier app do?</summary>
+
+The Zapier app allows you to:
+1. Create or update CRM contacts in Vendasta
+2. Create or update CRM companies in Vendasta
+3. Log CRM activities (notes, emails, calls, meetings, tasks)
+4. Run Vendasta automations using API triggers
+5. Connect Vendasta to 6000+ apps that Zapier supports
+</details>
+
+<details>
+<summary>Who can use the Zapier app?</summary>
+
+The app can be used by Partners, Salespeople, and their clients. It uses the permissions of the user who set up the Zap. Note that the app is currently Vendasta branded, so white-labeling options are limited (grey-labeling is coming soon).
+</details>
+
+<details>
+<summary>Is the app available in the Zapier app store?</summary>
+
+The app will be available in the Zapier app store soon! Currently, it's in Beta mode with active development ongoing.
+</details>
+
+<details>
+<summary>How does this affect Reputation Management review requesting?</summary>
+
+Once automations are released in Business App, users will be able to set up an automation with the 'Send Review Request' option that can be triggered via Zapier or CRM activity. Templates will be available.
+</details>
+
+<details>
+<summary>Why is the app greyed out when I try to add it?</summary>
+
+You may be trying to add the app as a trigger instead of an action. We don't currently support Vendasta-built triggers. Use Zapier's "catch a webhook" trigger to send data from Vendasta to other systems.
+</details>
+
+<details>
+<summary>What are the usage limits for Zapier integration?</summary>
+
+Both Vendasta Automations and Zapier have their own usage limits and pricing. Check both platforms' documentation for specific details about limits and costs.
+</details>
+
+<details>
+<summary>Can I use webhooks to trigger Zaps from Vendasta automations?</summary>
+
+Yes! You can use Vendasta automations with webhook actions to trigger Zapier workflows. Use "Webhooks by Zapier" as your trigger app and configure the webhook URL in your Vendasta automation.
+</details>
+
+<details>
+<summary>What subscription level do I need for Zapier integration?</summary>
+
+Zapier integration is available only to Partners on a subscription tier that includes integrations. Check your subscription details or contact support for more information.
+</details>
