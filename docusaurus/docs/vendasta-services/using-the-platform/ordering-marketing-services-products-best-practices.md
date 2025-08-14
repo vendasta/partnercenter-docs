@@ -23,7 +23,7 @@ Check out this video for full details on inputting information, sharing, and sub
 
 ### Ordering - Website Services
 
-Website services in particular require a lot of information about a business in order to successfully create their website and web copy with expedient turnaround times. Check out our [website ordering guide](https://marketing-services.zendesk.com/hc/en-us/articles/19127162749463) and the video below for more info.
+Website services in particular require a lot of information about a business in order to successfully create their website and web copy with expedient turnaround times. Check out our [website ordering guide](../website-creation-support/marketing-services-website-ordering-guide.md) and the video below for more info.
 
 **Note:** The following video showcases an older workflow from before the implementation of fulfillment forms. The workflow is very similar, with the exception that the ability to upload a content form pdf comes _after_ the purchase.
 

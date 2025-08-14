@@ -12,6 +12,6 @@ Google offers verification through phone, text, email, or video. Please note the
 
 ### What is the status of my Google Business Profile verification? Is my verification complete?
 
-You can view the current status of verification in the Projects tab of your dashboard. There you can find information about any in-progress or complete work that our team is fulfilling on your behalf. You will be able to see any notes left by our team about the status, including any issues that may require a different type of verification or may be waiting on resolution from a [Google support ticket](https://marketing-services.zendesk.com/hc/en-us/articles/18618036593943).
+You can view the current status of verification in the Projects tab of your dashboard. There you can find information about any in-progress or complete work that our team is fulfilling on your behalf. You will be able to see any notes left by our team about the status, including any issues that may require a different type of verification or may be waiting on resolution from a [Google support ticket](./google-business-profile-support-tickets-and-suspensions.md).
 
 ![Projects Tab.png](./img/18617870927639-802d00bc47.png)

@@ -43,6 +43,6 @@ Once we deliver the revised website to you, you can review it and let us know if
 Minor changes can be actioned via Marketing Services’ Website Support team after the website is live. View [this resource](https://marketing-services.zendesk.com/hc/en-us/articles/18930123215127) to learn what’s included with our Website Support service and how to make a website support request.
 
 **Helpful Articles:**  
-[Website Ordering Guide](https://marketing-services.zendesk.com/hc/en-us/articles/19127162749463)  
+[Website Ordering Guide](./marketing-services-website-ordering-guide.md)  
 [What can I expect from my Marketing Services’ Website build?](https://marketing-services.zendesk.com/hc/en-us/articles/17694515362199)  
-[Fulfillment & Marketing Services Help: Tips, Tricks, and FAQs](https://marketing-services.zendesk.com/hc/en-us/articles/19128976174103)
+[Fulfillment & Marketing Services Help: Tips, Tricks, and FAQs](../working-with-our-team/fulfillment-marketing-services-help-tips-tricks-and-faqs.md)

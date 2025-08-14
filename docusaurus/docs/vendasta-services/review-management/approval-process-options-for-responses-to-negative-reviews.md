@@ -16,7 +16,7 @@ During the project onboarding call, we'll discuss which approach works best for 
       
     
 2.  To receive these emails, [add the respective person as a user to the account in Partner Center](https://support.vendasta.com/hc/en-us/articles/4406951619479-Add-a-user-to-an-account) and ensure Instant Email Notifications for "Review," "Review Response," and "Review Response Approval" are enabled for that user.  
-    (See: [_How to Receive Notifications for Review Response Approvals_](https://marketing-services.zendesk.com/hc/en-us/articles/23186071999127-How-to-Receive-Notifications-for-Review-Response-Approvals))  
+    (See: [_How to Receive Notifications for Review Response Approvals_](../using-the-platform/how-to-receive-notifications-for-review-response-approvals.md))  
       
     
 3.  We aim to provide a prompt response to the negative review, so if we do not hear back from you with your approval, our team will move ahead and publish our response.  

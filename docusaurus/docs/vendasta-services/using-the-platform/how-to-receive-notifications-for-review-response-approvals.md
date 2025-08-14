@@ -6,7 +6,7 @@ description: "One of the reputation management services Vendasta’s Marketing S
 
 One of the reputation management services Vendasta’s Marketing Services offers is responding to reviews via products such as [Review Responses Unlimited](https://partners.vendasta.com/marketplace/products/MP-d72509177df6404bb290d560bb966233)_._
 
-This service includes an (optional) approval process for [responding to negative reviews](https://marketing-services.zendesk.com/hc/en-us/articles/23186810761367-Approval-Process-Options-for-Responses-to-Negative-Reviews), where users can receive notifications with our proposed responses to negative reviews.
+This service includes an (optional) approval process for [responding to negative reviews](../review-management/approval-process-options-for-responses-to-negative-reviews.md), where users can receive notifications with our proposed responses to negative reviews.
 
 To receive these email notifications, you must [add the respective person as a user to the account in Partner Center](https://support.vendasta.com/hc/en-us/articles/4406951619479-Add-a-user-to-an-account) and configure the applicable user notifications.
 
