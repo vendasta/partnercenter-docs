@@ -9,7 +9,6 @@ This guide provides an overview of setting up and using the Advertising Intellig
 ### 1\. Connecting Accounts:
 
 *   To get started, ensure relevant accounts are connected under the settings section.
-*   [Follow available videos for steps on connecting accounts like Google and Facebook.](https://support.vendasta.com/hc/en-us/articles/9817333695639-Business-App-Connections)
 *   Once an account is connected, admins can edit and adjust management fees to be applied to the ad spend. 
 
 **Note:** Our Digital Ads team does not update ad management fees. These must be updated by a partner administrator.

@@ -1,10 +1,10 @@
 ---
-title: "What digital ad platforms are available to advertise on? | Digital Ads: Campaign - Marketing Services"
-sidebar_label: "What digital ad platforms are available to advertise on? | Digital Ads: Campaign - Marketing Services"
+title: "What digital ad platforms are available to advertise on? | Digital Ads: Campaign - Vendasta Services"
+sidebar_label: "What digital ad platforms are available to advertise on? | Digital Ads: Campaign - Vendasta Services"
 description: "With the   Digital Ads: Campaign   product, Marketing Services We offers advertising across a diverse range of platforms for advertising, catering to differen"
 ---
 
-With the [Digital Ads: Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN) product, Marketing Services We offers advertising across a diverse range of platforms for advertising, catering to different needs and budgets.
+With the [Digital Ads: Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN) product, Vendasta Services offers advertising across a diverse range of platforms for advertising, catering to different needs and budgets.
 
 **Search Ads - Google & Bing**
 

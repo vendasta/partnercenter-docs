@@ -1,6 +1,6 @@
 ---
-title: "Marketing Services: Introducing Digital Ads: AI AdVantage"
-sidebar_label: "Marketing Services: Introducing Digital Ads: AI AdVantage"
+title: "Vendasta Services: Introducing Digital Ads: AI AdVantage"
+sidebar_label: "Vendasta Services: Introducing Digital Ads: AI AdVantage"
 description: "What is this?   This is an all-in-one, multi-channel, multi-campaign, digital advertising solution that makes it easy to attract, engage, and convert custome"
 ---
 
