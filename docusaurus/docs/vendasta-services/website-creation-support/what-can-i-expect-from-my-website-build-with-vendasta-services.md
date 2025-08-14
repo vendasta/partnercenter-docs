@@ -1,6 +1,6 @@
 ---
-title: "What can I expect from my website build with Marketing Services?"
-sidebar_label: "What can I expect from my website build with Marketing Services?"
+title: "What can I expect from my website build with Vendasta Services?"
+sidebar_label: "What can I expect from my website build with Vendasta Services?"
 description: "You're either thinking of getting a new website, or you've decided to go ahead with a new website build. Congratulations! Follow this article as we set you up"
 zendesk_id: 17694515362199
 zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/17694515362199-What-can-I-expect-from-my-website-build-with-Marketing-Services"
@@ -12,7 +12,7 @@ locale: "en-us"
 
 You're either thinking of getting a new website, or you've decided to go ahead with a new website build. Congratulations! Follow this article as we set you up for success. Also, check out the attachments at the bottom of the article for a helpful PDF guide that you can keep handy.
 
-_This article is in reference to Marketing Services’ [Website: Up to 3](https://partners.vendasta.com/marketplace/products/MP-VM63SLW2BWQPQ2XCP3XK52RHWB4FC8TC)/[5](https://partners.vendasta.com/marketplace/products/MP-626DQ35GTDK77P2GX37G6KQGM3NKF338)/[10 Pages](https://partners.vendasta.com/marketplace/products/MP-NJ4M8RMVQJS635F6LPTKDSDXBNC56NWZ) products.  
+_This article is in reference to Vendasta Services’ [Website: Up to 3](https://partners.vendasta.com/marketplace/products/MP-VM63SLW2BWQPQ2XCP3XK52RHWB4FC8TC)/[5](https://partners.vendasta.com/marketplace/products/MP-626DQ35GTDK77P2GX37G6KQGM3NKF338)/[10 Pages](https://partners.vendasta.com/marketplace/products/MP-NJ4M8RMVQJS635F6LPTKDSDXBNC56NWZ) products.  
 _
 
 **1\. Framework Foundation**
@@ -40,9 +40,9 @@ Once we deliver the revised website to you, you can review it and let us know if
 
 **5\. Ongoing Website Support**
 
-Minor changes can be actioned via Marketing Services’ Website Support team after the website is live. View [this resource](https://marketing-services.zendesk.com/hc/en-us/articles/18930123215127) to learn what’s included with our Website Support service and how to make a website support request.
+Minor changes can be actioned via Vendasta Services’ Website Support team after the website is live. View [this resource](https://marketing-services.zendesk.com/hc/en-us/articles/18930123215127) to learn what’s included with our Website Support service and how to make a website support request.
 
 **Helpful Articles:**  
-[Website Ordering Guide](./marketing-services-website-ordering-guide.md)  
-[What can I expect from my Marketing Services’ Website build?](https://marketing-services.zendesk.com/hc/en-us/articles/17694515362199)  
-[Fulfillment & Marketing Services Help: Tips, Tricks, and FAQs](../working-with-our-team/fulfillment-marketing-services-help-tips-tricks-and-faqs.md)
+[Website Ordering Guide](./vendasta-services-website-ordering-guide.md)  
+[What can I expect from my Vendasta Services’ Website build?](https://marketing-services.zendesk.com/hc/en-us/articles/17694515362199)  
+[Fulfillment & Vendasta Services Help: Tips, Tricks, and FAQs](../working-with-our-team/fulfillment-vendasta-services-help-tips-tricks-and-faqs.md)

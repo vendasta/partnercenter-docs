@@ -52,7 +52,7 @@ For more info, [check out this article.](https://support.vendasta.com/hc/en-us/a
 1.  Go to Sales & Success Center > Accounts
 2.  Select the account for which you want to create a draft order/draft fulfillment form.
 3.  Click **Actions** and select **Create order**
-4.  Click **\+ Add items** and select the Marketing Services product(s) you wish to include in the order
+4.  Click **\+ Add items** and select the Vendasta Services product(s) you wish to include in the order
 5.  Click **Continue** then click **Save as draft**
 6.  Your salesperson will then be directed to the fulfillment form which will exist as a draft and can be saved as progress is made.
 

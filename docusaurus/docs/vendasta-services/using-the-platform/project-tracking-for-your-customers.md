@@ -27,7 +27,7 @@ Your customers will have a much better understanding of the work that our fulfil
 
 **What if I don’t want my customers to see this information?**
 
-Not a problem! You can turn off the Projects tab for all Business App users by going to Partner Center > Administration > Customize > Business App and turning off tab access for Projects. You can also reach out to the Marketing Services team to turn off the visibility for an individual project.
+Not a problem! You can turn off the Projects tab for all Business App users by going to Partner Center > Administration > Customize > Business App and turning off tab access for Projects. You can also reach out to the Vendasta Services team to turn off the visibility for an individual project.
 
 **Will my customers see every task that is being worked on?**
 

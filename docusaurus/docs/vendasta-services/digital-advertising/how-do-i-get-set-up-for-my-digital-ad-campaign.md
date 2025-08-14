@@ -34,7 +34,7 @@ Now click on New Page Experiences
 
 ![page exp.png](./img/17693803882519-d7faaa54ea.png)
 
-You'll see a section for Page Access and inside of it you may see an access request from Marketing Services or Digital Agency.
+You'll see a section for Page Access and inside of it you may see an access request from Vendasta Services or Digital Agency.
 
 Accept the request.
 

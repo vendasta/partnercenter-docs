@@ -1,6 +1,6 @@
 ---
-title: "Marketing Services Website Ordering Guide"
-sidebar_label: "Marketing Services Website Ordering Guide"
+title: "Vendasta Services Website Ordering Guide"
+sidebar_label: "Vendasta Services Website Ordering Guide"
 description: "Walkthrough Video  \n \n Note:  The following video showcases an older workflow from before the implementation of fulfillment forms. The workflow is very simila"
 zendesk_id: 19127162749463
 zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/19127162749463-Marketing-Services-Website-Ordering-Guide"
@@ -16,7 +16,7 @@ locale: "en-us"
 
 ## Guide
 
-There are a few steps that need to be taken to order a website from Marketing Services. By following this guide, you will ensure that your client’s website is delivered as quickly as possible. You can check out our [**walkthrough video**](https://marketing-services.zendesk.com/hc/en-us/articles/19127162749463-Marketing-Services-Website-Ordering-Guide#h_01GDH1MK1HZM2HEW6GRQ1FWHBB) for a quick overview and **read ahead for the full details**!
+There are a few steps that need to be taken to order a website from Vendasta Services. By following this guide, you will ensure that your client’s website is delivered as quickly as possible. You can check out our [**walkthrough video**](https://marketing-services.zendesk.com/hc/en-us/articles/19127162749463-Marketing-Services-Website-Ordering-Guide#h_01GDH1MK1HZM2HEW6GRQ1FWHBB) for a quick overview and **read ahead for the full details**!
 
 Ordering a website for your client requires two steps:
 
@@ -106,6 +106,6 @@ The PDF and a text copy of the form are sent to the email addresses that were in
 
 Part of the activation process will ensure that you are activating dependent products like [Website](https://partners.vendasta.com/marketplace/products/MP-ee4ea04e553a4b1780caf7aad7be07cd) (Pro edition). You will also need to fill in a few fields, like the contact information for onboarding. After activation, you will see a fulfillment form that requests information that you may have already filled out in the Creation & Content form. You do not need to fill this information out, and instead, you will be given the option to upload the PDF of the completed form. Because the completion of the previous Website Creation & Content Form does not tie directly to the product activation, uploading the PDF in the fulfillment form will ensure a faster launch of your website project.
 
-Once the product is activated, it will kick off a project that can be tracked in your client’s Business App. Our team will process the order and book an onboarding call with the contacts provided during the activation to go over the expectations and discuss required assets and design choices. Check out [this article](../working-with-our-team/fulfillment-marketing-services-help-tips-tricks-and-faqs.md) to learn tips and tricks for ordering websites—and other services—with Marketing Services.
+Once the product is activated, it will kick off a project that can be tracked in your client’s Business App. Our team will process the order and book an onboarding call with the contacts provided during the activation to go over the expectations and discuss required assets and design choices. Check out [this article](../working-with-our-team/fulfillment-vendasta-services-help-tips-tricks-and-faqs.md) to learn tips and tricks for ordering websites—and other services—with Vendasta Services.
 
 And there you have it! By following these steps (completing the Website Content & Creation Form and then activating the product), your client will be set up for success for their new website!

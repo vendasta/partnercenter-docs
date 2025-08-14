@@ -1,10 +1,10 @@
 ---
-title: "Expectations by Service within Marketing Services"
-sidebar_label: "Expectations by Service within Marketing Services"
-description: "With Vendasta's Marketing Services, you have access to a team of digital marketing experts. Leveraging our team, you can claim and optimize your customers' onl"
+title: "Expectations by Service within Vendasta Services"
+sidebar_label: "Expectations by Service within Vendasta Services"
+description: "With Vendasta's Vendasta Services, you have access to a team of digital marketing experts. Leveraging our team, you can claim and optimize your customers' onl"
 ---
 
-With Vendasta's Marketing Services, you have access to a team of digital marketing experts. Leveraging our team, you can claim and optimize your customers' online listings, boost their reputation, engage their followers with content on social and blogs, build their website, and drive awareness of their business with digital advertising. All the while, our team will communicate with you and your clients to help set service expectations, inform them about updates, and respond to questions related to their service.
+With Vendasta's Vendasta Services, you have access to a team of digital marketing experts. Leveraging our team, you can claim and optimize your customers' online listings, boost their reputation, engage their followers with content on social and blogs, build their website, and drive awareness of their business with digital advertising. All the while, our team will communicate with you and your clients to help set service expectations, inform them about updates, and respond to questions related to their service.
 
 With so many services available, it's important to understand what to expect from each one. This article will break down what you and your clients can expect based on each product line.
 
@@ -28,7 +28,7 @@ With so many services available, it's important to understand what to expect fro
 
 ## Order confirmation
 
-All points of contact that have been included on the order form will receive an order confirmation email within 48 hours for any services ordered to confirm that a member of the Marketing Services team has processed the order. This email will include an order reference number and request details and information that will be needed for fulfillment to complete the service. For services that include a pre-launch call, details about that call will be included here.
+All points of contact that have been included on the order form will receive an order confirmation email within 48 hours for any services ordered to confirm that a member of the Vendasta Services team has processed the order. This email will include an order reference number and request details and information that will be needed for fulfillment to complete the service. For services that include a pre-launch call, details about that call will be included here.
 
 If you would only like specific people to be contacted in relation to the order placed, please make sure to note this in the order form.
 

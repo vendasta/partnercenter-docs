@@ -1,7 +1,7 @@
 ---
-title: "Marketing Services’ Website Support — Service Inclusions & Process"
-sidebar_label: "Marketing Services’ Website Support — Service Inclusions & Process"
-description: "This article details the inclusions of Marketing Services’   Website Support   product and the process/best practices for submitting requests to our Website Su"
+title: "Vendasta Services’ Website Support — Service Inclusions & Process"
+sidebar_label: "Vendasta Services’ Website Support — Service Inclusions & Process"
+description: "This article details the inclusions of Vendasta Services’   Website Support   product and the process/best practices for submitting requests to our Website Su"
 zendesk_id: 18930123215127
 zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/18930123215127-Marketing-Services-Website-Support-Service-Inclusions-Process"
 updated_at: "2025-06-03T17:15:23Z"
@@ -10,13 +10,13 @@ section_id: 18536913508375
 locale: "en-us"
 ---
 
-This article details the inclusions of Marketing Services’ [Website Support](https://partners.vendasta.com/marketplace/products/MP-9f77626ea38b4e44b044382b50c5f83e) product and the process/best practices for submitting requests to our Website Support team.
+This article details the inclusions of Vendasta Services’ [Website Support](https://partners.vendasta.com/marketplace/products/MP-9f77626ea38b4e44b044382b50c5f83e) product and the process/best practices for submitting requests to our Website Support team.
 
 **What is Included in Website Support?**
 
-Website Support is a fulfillment service offered by Marketing Services for WordPress websites hosted on Vendasta’s WordPress Hosting Pro platform. Website Support includes the following:
+Website Support is a fulfillment service offered by Vendasta Services for WordPress websites hosted on Vendasta’s WordPress Hosting Pro platform. Website Support includes the following:
 
-*   Access to Marketing Services’ Website Support team for technical support
+*   Access to Vendasta Services’ Website Support team for technical support
 *   Minor changes to the website’s appearance, such as:
     *   Fonts
     *   Colours
@@ -29,7 +29,7 @@ Website Support is a fulfillment service offered by Marketing Services for WordP
 *   Health checks to website upon request
 *   Uptime monitoring and urgent support if your website goes offline
 
-**How to Submit a Website Support Request to Marketing Services:**
+**How to Submit a Website Support Request to Vendasta Services:**
 
 1.  Send an email to our team at [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com) 
     1.  Sending edits via email ensures that your request is properly documented, as our teams use a ticketing system. This is the best forum to communicate with us.  
@@ -51,7 +51,7 @@ Please keep an eye out for our emails. Our team may request further clarificatio
 
 **In the event that your website goes down:**
 
-Marketing Services’ Website Support Team has automations in place that will flag when websites go down. Our goal is to be aware of website downtime and get the website back up and running as soon as possible. However, there may be times when you or your client notices an issue before we have been able to resolve the issue.  
+Vendasta Services’ Website Support Team has automations in place that will flag when websites go down. Our goal is to be aware of website downtime and get the website back up and running as soon as possible. However, there may be times when you or your client notices an issue before we have been able to resolve the issue.  
   
 _If you notice your website is down, first:_
 
@@ -72,11 +72,11 @@ _If you notice your website is down, first:_
           
         
 5.  After sending your email, please also give us a call. Our team does our best to catch urgent emails right away, but giving us a call will allow us to check in on your request and flag it with the website support specialists immediately:  
-    Marketing Services: **1-866-378-8031** _(Monitored Mondays-Fridays, 8 am - 5 pm CST)_
+    Vendasta Services: **1-866-378-8031** _(Monitored Mondays-Fridays, 8 am - 5 pm CST)_
     1.  If your website is down outside of these hours, you can alternatively contact Vendasta’s Support on Demand team:
         1.  Open the WordPress Hosting Pro dashboard and click on the blue **Help** button at the bottom right:![](./img/18930123215127-2ef55fe49f.png)  
               
             
         2.  Click **Live Chat** at the bottom of the pop-up window:  
             ![](./img/18930123215127-95f3f6e7f2.png)  
-            This live chat is monitored 24/7, and they can assist with downed websites outside of Marketing Services' operating hours.
+            This live chat is monitored 24/7, and they can assist with downed websites outside of Vendasta Services' operating hours.

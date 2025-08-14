@@ -1,7 +1,7 @@
 ---
-title: "Do I have to use a website framework? | Building Websites with Marketing Services"
-sidebar_label: "Do I have to use a website framework? | Building Websites with Marketing Services"
-description: "When ordering a website with Marketing Services, a website framework is the baseline from which we build your website. It can be configured and customized to s"
+title: "Do I have to use a website framework? | Building Websites with Vendasta Services"
+sidebar_label: "Do I have to use a website framework? | Building Websites with Vendasta Services"
+description: "When ordering a website with Vendasta Services, a website framework is the baseline from which we build your website. It can be configured and customized to s"
 zendesk_id: 19144758265623
 zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/19144758265623-Do-I-have-to-use-a-website-framework-Building-Websites-with-Marketing-Services"
 updated_at: "2025-01-14T15:12:32Z"
@@ -10,7 +10,7 @@ section_id: 18536913508375
 locale: "en-us"
 ---
 
-When ordering a website with Marketing Services, a website framework is the baseline from which we build your website. It can be configured and customized to suit your needs, depending on the product you order. You can find all of our [available frameworks here](https://frameworks.yourdigitalagents.com/).
+When ordering a website with Vendasta Services, a website framework is the baseline from which we build your website. It can be configured and customized to suit your needs, depending on the product you order. You can find all of our [available frameworks here](https://frameworks.yourdigitalagents.com/).
 
 We do have the capability to offer other options, but additional costs and extended timelines for higher levels of customization will need to be considered. If you are looking for additional customization, we will need to scope the work and determine what the requirements are for us to complete this build. Please submit a [Website Quote Request](https://pre-sale-website-request.marketingservices.dev/) to receive a quote and confirmation of what can be accomplished. Website quotes will be delivered to the email you provided on the form in as little as 3 business days.
 

@@ -1,18 +1,18 @@
 ---
-title: "White-labeling Communications with Marketing Services"
-sidebar_label: "White-labeling Communications with Marketing Services"
-description: "Marketing Services is Vendasta’s in-house fulfillment vendor. Our commitment to white-labeling best practices ensures seamless communication with your clients."
+title: "White-labeling Communications with Vendasta Services"
+sidebar_label: "White-labeling Communications with Vendasta Services"
+description: "Vendasta Services is Vendasta’s in-house fulfillment vendor. Our commitment to white-labeling best practices ensures seamless communication with your clients."
 ---
 
-Marketing Services is Vendasta’s in-house fulfillment vendor. Our commitment to white-labeling best practices ensures seamless communication with your clients. Below, we outline the process and option to white-label email communication through our dedicated ticketing system.
+Vendasta Services is Vendasta’s in-house fulfillment vendor. Our commitment to white-labeling best practices ensures seamless communication with your clients. Below, we outline the process and option to white-label email communication through our dedicated ticketing system.
 
-## How does Marketing Services communicate with my clients?
+## How does Vendasta Services communicate with my clients?
 
-Marketing Services’ primary form of communication is email. Our default unbranded email address is [**marketingservices@yourdigitalagents.com**](mailto:marketingservices@yourdigitalagents.com) 
+Vendasta Services’ primary form of communication is email. Our default unbranded email address is [**marketingservices@yourdigitalagents.com**](mailto:marketingservices@yourdigitalagents.com) 
 
 Our unbranded phone line is: **1-866-378-8031**
 
-Our communications team will answer with a greeting mentioning “Marketing Services,” and we will ask the following questions to determine the caller and relevant business information:
+Our communications team will answer with a greeting mentioning “Vendasta Services,” and we will ask the following questions to determine the caller and relevant business information:
 
 *   Caller Name
 *   Business Name
@@ -20,9 +20,9 @@ Our communications team will answer with a greeting mentioning “Marketing Serv
 
 ## Our Communications Process
 
-After completing a sale and activating the desired Marketing Services products, we send a confirmation email to the contact(s) listed on the sales order and fulfillment form. Please ensure accurate contact information on these forms.
+After completing a sale and activating the desired Vendasta Services products, we send a confirmation email to the contact(s) listed on the sales order and fulfillment form. Please ensure accurate contact information on these forms.
 
-For more details on our fulfillment process, refer to [Marketing Services Expectation Brochures](https://examples.yourdigitalagents.com/expectation-brochures/).
+For more details on our fulfillment process, refer to [Vendasta Services Expectation Brochures](https://examples.yourdigitalagents.com/expectation-brochures/).
 
 #### Non-Client-Facing Communication:
 
@@ -43,7 +43,7 @@ Integrate a custom white-labeled email address into our ticketing system for per
 2.  **Integration Steps:**
     1.  Submit the required information via this [Google Form](https://forms.gle/FsmDJiKKR6UU3qCq6).
     2.  Allow 3 business days for completion (assuming no 2-factor authentication is required).
-    3.  Marketing Services will be enabling forwarding, updating DNS settings, and completing integration checks.  
+    3.  Vendasta Services will be enabling forwarding, updating DNS settings, and completing integration checks.  
           
         
 3.  **Email Integration Confirmation:**
@@ -56,13 +56,13 @@ Any alterations to settings may cause integration issues. To undo integration, c
 
 #### Creating a White-Labeled Email Address:
 
-Once integrated into our Marketing Services ticketing system, our Marketing Services team will use this email address to communicate with you and your clients in a white-labeled fashion. 
+Once integrated into our Vendasta Services ticketing system, our Vendasta Services team will use this email address to communicate with you and your clients in a white-labeled fashion. 
 
 **\*We ask that you create a unique email address not used by anyone else on your team, as it is confusing if we have additional communications running through the address.** 
 
 Please do _NOT_ create an alias email address\*—doing so can make the integration complicated and confusing for both ends. Instead, please create a unique email address.
 
-This email address should not be posted on your website or anywhere public. This email address is to be used for communications between Marketing Services and your current clients with active Marketing Services products.
+This email address should not be posted on your website or anywhere public. This email address is to be used for communications between Vendasta Services and your current clients with active Vendasta Services products.
 
 _\*An alias email is an alternate email address set to forward to a primary user’s email address. We do not recommend integrating alias email addresses with this process as we usually end up receiving personal emails to our ticketing system that are not intended for us. **For this email integration, please set up a unique separate email address.**_
 

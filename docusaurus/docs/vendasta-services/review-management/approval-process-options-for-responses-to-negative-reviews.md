@@ -1,10 +1,10 @@
 ---
 title: "Approval Process Options for Responses to Negative Reviews"
 sidebar_label: "Approval Process Options for Responses to Negative Reviews"
-description: "One of the reputation management services Marketing Services offers is fully managed and drafted responses to online reviews for the business, via products lik"
+description: "One of the reputation management services Vendasta Services offers is fully managed and drafted responses to online reviews for the business, via products lik"
 ---
 
-One of the reputation management services Marketing Services offers is fully managed and drafted responses to online reviews for the business, via products like [Review Responses: Up to 10](https://partners.vendasta.com/marketplace/products/MP-BCPH7SCSJTNXFZNC7RCJTBD5CGLGF8S8) and [Review Responses Unlimited](https://partners.vendasta.com/marketplace/products/MP-d72509177df6404bb290d560bb966233).
+One of the reputation management services Vendasta Services offers is fully managed and drafted responses to online reviews for the business, via products like [Review Responses: Up to 10](https://partners.vendasta.com/marketplace/products/MP-BCPH7SCSJTNXFZNC7RCJTBD5CGLGF8S8) and [Review Responses Unlimited](https://partners.vendasta.com/marketplace/products/MP-d72509177df6404bb290d560bb966233).
 
 With this service, when our system finds a positive review, we will respond on behalf of the business with a personalized, tailored response. These responses are posted within 2 business days of the review being pulled into our system.
 

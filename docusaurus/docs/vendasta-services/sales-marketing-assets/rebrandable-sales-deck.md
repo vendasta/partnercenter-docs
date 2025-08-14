@@ -1,10 +1,10 @@
 ---
 title: "Rebrandable Sales Deck"
 sidebar_label: "Rebrandable Sales Deck"
-description: "Set yourself up quickly to start selling Marketing Services. You can leverage this rebrandable sales deck that showcases all of our product categories. Not sel"
+description: "Set yourself up quickly to start selling Vendasta Services. You can leverage this rebrandable sales deck that showcases all of our product categories. Not sel"
 ---
 
-Set yourself up quickly to start selling Marketing Services. You can leverage this rebrandable sales deck that showcases all of our product categories. Not selling all of our solutions? No problem! You can easily adjust or remove slides, or simply take images and copy from these slides and add them to your existing sales materials and talk tracks. 
+Set yourself up quickly to start selling Vendasta Services. You can leverage this rebrandable sales deck that showcases all of our product categories. Not selling all of our solutions? No problem! You can easily adjust or remove slides, or simply take images and copy from these slides and add them to your existing sales materials and talk tracks. 
 
-*   [**Download the Marketing Services Rebrandable Sales Deck**](https://docs.google.com/presentation/d/1bXg7Y1yTyuz5Edabcl6Pd7fTbeXzeKiQ/edit#slide=id.p1)
+*   [**Download the Vendasta Services Rebrandable Sales Deck**](https://docs.google.com/presentation/d/1bXg7Y1yTyuz5Edabcl6Pd7fTbeXzeKiQ/edit#slide=id.p1)
 *   Check out the full [Vendasta Go-to-Market Playbook](https://www.vendasta.com/content-library/tools/gtm-playbook/)

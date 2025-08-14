@@ -1,6 +1,6 @@
 ---
-title: "Website Plugins | Working with Marketing Services"
-sidebar_label: "Website Plugins | Working with Marketing Services"
+title: "Website Plugins | Working with Vendasta Services"
+sidebar_label: "Website Plugins | Working with Vendasta Services"
 description: "What are website plugins?  \n A website plugin adds additional functionality to a WordPress website that isn’t provided as a standard setting by the website bu"
 zendesk_id: 24462249835287
 zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/24462249835287-Website-Plugins-Working-with-Marketing-Services"
@@ -23,13 +23,13 @@ For simplicity’s sake, we can group website plugins can be thought of as one o
 
 **Identifying Website Plugins**
 
-It may not always be easy to identify what aspects of a website are made possible via a plugin or if they are a default capability of the website builder. When working with Marketing Services, we will be happy to review any website functionality inquiries and help determine what plugins and integrations may be required to achieve your desired effect.
+It may not always be easy to identify what aspects of a website are made possible via a plugin or if they are a default capability of the website builder. When working with Vendasta Services, we will be happy to review any website functionality inquiries and help determine what plugins and integrations may be required to achieve your desired effect.
 
 Feel free to send us an email at [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com) 
 
 For larger projects (new builds, rebuilds, and imports), request a website quote via our [Website Quote Request form](https://pre-sale-website-request.marketingservices.dev/).
 
-## **Plugins/Widgets Marketing Services Can Integrate**
+## **Plugins/Widgets Vendasta Services Can Integrate**
 
 When you build a website with us via one of our _[Website: Up to 3](https://partners.vendasta.com/marketplace/products/MP-VM63SLW2BWQPQ2XCP3XK52RHWB4FC8TC)/[5](https://partners.vendasta.com/marketplace/products/MP-626DQ35GTDK77P2GX37G6KQGM3NKF338)/[10 Pages](https://partners.vendasta.com/marketplace/products/MP-NJ4M8RMVQJS635F6LPTKDSDXBNC56NWZ)_ products these include the integration of some Standard plugins where the integration cost is included in the price of the website build.
 
@@ -49,7 +49,7 @@ When you build a website with us via one of our _[Website: Up to 3](https://part
 *   Yoast Breadcrumbs
 
 _\*Defender Pro is not added to websites automatically but can be added free of charge upon request._  
-_\*\* Divi Plus is only added when needed, as determined by Marketing Services’ website fulfillment team._
+_\*\* Divi Plus is only added when needed, as determined by Vendasta Services’ website fulfillment team._
 
 **Premium Plugins**  
 For all premium plugins, you will need to purchase the license and provide the necessary information (ie. licenses) and credentials to our team for integration. Integration costs are subject to hourly fees. We will not purchase premium plugins on behalf of you/your clients.

@@ -1,7 +1,7 @@
 ---
-title: "Importing Websites with Marketing Services"
-sidebar_label: "Importing Websites with Marketing Services"
-description: "If you have an existing WordPress website and would like to move it onto Vendasta’s hosting platform (WordPress Hosting Pro), Marketing Services can help! \n Yo"
+title: "Importing Websites with Vendasta Services"
+sidebar_label: "Importing Websites with Vendasta Services"
+description: "If you have an existing WordPress website and would like to move it onto Vendasta’s hosting platform (WordPress Hosting Pro), Vendasta Services can help! \n Yo"
 zendesk_id: 18929271935639
 zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/18929271935639-Importing-Websites-with-Marketing-Services"
 updated_at: "2025-06-03T17:16:27Z"
@@ -10,14 +10,14 @@ section_id: 18536913508375
 locale: "en-us"
 ---
 
-If you have an existing WordPress website and would like to move it onto Vendasta’s hosting platform (WordPress Hosting Pro), Marketing Services can help!
+If you have an existing WordPress website and would like to move it onto Vendasta’s hosting platform (WordPress Hosting Pro), Vendasta Services can help!
 
-You will also gain access to Marketing Services’ Website Support team when we import a site with Website Support activated _(12-month commitment for imported sites)_.
+You will also gain access to Vendasta Services’ Website Support team when we import a site with Website Support activated _(12-month commitment for imported sites)_.
 
 **Table of Contents**
 
 *   [Website Support Inclusions](https://marketing-services.zendesk.com/hc/en-us/articles/18929271935639-Importing-Websites-with-Marketing-Services#h_01J15WB0WFCDG2SR9N8AEWVCSJ)
-*   [Benefits of Importing via Marketing Services](https://marketing-services.zendesk.com/hc/en-us/articles/18929271935639-Importing-Websites-with-Marketing-Services#h_01J15WAXXT0C6QSR6FY0595V78)
+*   [Benefits of Importing via Vendasta Services](https://marketing-services.zendesk.com/hc/en-us/articles/18929271935639-Importing-Websites-with-Marketing-Services#h_01J15WAXXT0C6QSR6FY0595V78)
 *   [Vetting & Import Process](https://marketing-services.zendesk.com/hc/en-us/articles/18929271935639-Importing-Websites-with-Marketing-Services#h_01J15WAQGCNF4C6BK2R4365XKJ)
 *   [Additional FAQs](https://marketing-services.zendesk.com/hc/en-us/articles/18929271935639-Importing-Websites-with-Marketing-Services#h_01J15WD710PBE7Y4QRWF6609BV)
 
@@ -30,9 +30,9 @@ You will also gain access to Marketing Services’ Website Support team when we 
 *   Health checks to website upon request
 *   Uptime monitoring and urgent support if your website goes offline
 
-## **What benefits are there when importing a site through Marketing Services?**
+## **What benefits are there when importing a site through Vendasta Services?**
 
-With Marketing Services, your website is in trusted hands! To import the site, our Website Support team will:
+With Vendasta Services, your website is in trusted hands! To import the site, our Website Support team will:
 
 *   Package and download the website from the original hosting platform
 *   Upload and set up the site in our WordPress Hosting Pro hosting platform
@@ -90,11 +90,11 @@ If our Website Support team is unable to support the website in question, we wil
 
 We support the following for Website Support:
 
-*   WordPress websites built by our Marketing Services Websites team
+*   WordPress websites built by our Vendasta Services Websites team
 *   Most WordPress websites built with approved visual builders
     *   I.e., Divi, Elementor, WPBakery, etc.
 
-Websites not built by Marketing Services (or with significant changes done externally after being built by us) will need to be vetted before being approved for Website Support.
+Websites not built by Vendasta Services (or with significant changes done externally after being built by us) will need to be vetted before being approved for Website Support.
 
 **My site is already on WordPress Hosting Pro, can you support it?**
 

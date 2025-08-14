@@ -1,15 +1,15 @@
 ---
-title: "Marketing Services Resource Overview"
-sidebar_label: "Marketing Services Resource Overview"
+title: "Vendasta Services Resource Overview"
+sidebar_label: "Vendasta Services Resource Overview"
 description: "Vendasta has many different teams and departments to keep everything running smoothly. This resource shares resources and contacts you’ll find helpful when wor"
 ---
 
-Vendasta has many different teams and departments to keep everything running smoothly. This resource shares resources and contacts you’ll find helpful when working with Marketing Services—Vendasta’s In-house Fulfillment Vendor. 
+Vendasta has many different teams and departments to keep everything running smoothly. This resource shares resources and contacts you’ll find helpful when working with Vendasta Services—Vendasta’s In-house Fulfillment Vendor. 
 
 **Contacts:**
 
-**Marketing Services: _(for partners & clients)  
-_**_For questions/assistance regarding Marketing Services products, fulfillment, active projects, etc.  
+**Vendasta Services: _(for partners & clients)  
+_**_For questions/assistance regarding Vendasta Services products, fulfillment, active projects, etc.  
 _Email - **marketingservices@yourdigitalagents.com** Phone - **1-866-378-8031 (Monday to Friday 8AM - 5PM Central Standard time)**
 
 **Vendasta Sales: _(for partners only)  
@@ -26,7 +26,7 @@ To get in touch with your **assigned Vendasta Onboarding Specialist, please emai
 _**[Vendasta Help Options](https://support.vendasta.com/hc/en-us/articles/24293302704279-Help-Options)**  
 Email - **support@vendasta.com**
 
-**Marketing Services Resources Per Product Line:**
+**Vendasta Services Resources Per Product Line:**
 
 **Service**
 
@@ -50,7 +50,7 @@ _(social posts, websites, etc.)_
 
 Presale Questions
 
-Reach out to Marketing Services at [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com) and CC your Vendasta Sales Representative so we can coordinate with the best-suited team members to assist.
+Reach out to Vendasta Services at [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com) and CC your Vendasta Sales Representative so we can coordinate with the best-suited team members to assist.
 
 **Websites**
 
