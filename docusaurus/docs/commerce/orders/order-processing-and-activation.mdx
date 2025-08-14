@@ -1,0 +1,214 @@
+---
+title: Order Processing and Activation
+sidebar_label: Order Processing and Activation
+description: Understand order statuses, approval workflows, activation processes, and how to resolve activation errors in Partner Center.
+tags: [commerce, orders, order-status, activation, order-processing]
+keywords: [order status, order activation, order processing, activation errors, order workflow, product activation]
+---
+
+# Order Processing and Activation
+
+## What is Order Processing and Activation?
+
+Order processing and activation encompasses the complete workflow from order submission through product activation. This includes understanding order statuses, managing approval workflows, activating products on accounts, and resolving any activation errors that may occur. The system ensures products are properly delivered to customers while maintaining quality control through approval processes.
+
+## Why is Order Processing Important?
+
+Proper order processing ensures customers receive their products and services without delays while maintaining business controls and quality assurance. Understanding order statuses helps teams track progress, identify bottlenecks, and resolve issues quickly. The activation process connects orders to actual product delivery, creating subscriptions and enabling customer access to purchased services.
+
+## What You Can Do with Order Processing
+
+With order processing, you can:
+
+- Track orders through various status stages
+- Manage approval workflows for customer and admin approvals
+- Control when and how products are activated
+- Resolve activation errors when they occur
+- Access activated products through multiple methods
+- Schedule activations for future dates
+- Monitor order progress in real-time
+
+## Order Statuses
+
+Understanding order statuses is crucial for managing your sales process effectively. Here are the complete order statuses and their meanings:
+
+| **Status** | **What it means** | **Notes** |
+|------------|-------------------|------------|
+| Drafted | The order has been created but not submitted | Drafted orders can be archived by both salespeople and admins |
+| Awaiting customer approval | The order was sent to the customer to approve or decline | Orders in this status cannot be altered. If there's an error, they can be cancelled or archived and then duplicated to edit details |
+| Pending | The order has been submitted to an admin to approve or decline | Pending orders require action from an administrator to move to the next step |
+| Approved | The order was approved by the customer or admin | Intermediary status used for actions like collecting payment before activation |
+| Processing | The products in the order are being activated | This status generally appears for only a few moments |
+| Scheduled activation | The order was approved and set to activate on a future date | Products will not be activated until the scheduled date |
+| Activated | All products in the order were activated | Products and services have been successfully activated |
+| Activation errors | Some products couldn't be activated and action is needed | Hover over the "Activation Error" badge to see details. Action is typically needed to correctly activate products |
+| Declined | The customer or admin has declined the order | Includes a reason provided by whoever declined the order |
+| Archived | The order is kept for historical purposes only | These orders are only visible by filtering and are not visible in Business App |
+| Cancellation request | A salesperson or admin has requested cancellation | Includes a reason for the cancellation request |
+| Canceled | The order has been canceled | Useful for tracking churn. Note: canceling an order does not cancel retail or wholesale subscriptions |
+| Resubmitted | A salesperson has sent a previously rejected order for approval again | Used when addressing decline reasons and resubmitting |
+
+**Orders can be accessed via:**
+- Partner Center > Commerce > Orders
+- Partner Center > Accounts > Account Details > Orders Card  
+- Partner Center > Companies > Company Details > Orders Card
+
+## Approval Workflows
+
+### Where Orders Go After Submission
+
+Based on partner configuration, orders can be sent to one of two places:
+
+**Customer Approval Workflow:**
+1. You're prompted to choose a contact for order delivery
+2. Order is delivered to your selected contact
+3. Delivery can be tracked in the Order Activity card
+4. You can resend using "Resubmit for Customer Approval" button
+
+**Admin Approval Workflow:**
+1. Order enters "Pending" status when submitted
+2. Administrator with "Can Manage Orders" permissions reviews the order
+3. Admin either approves or declines the order
+
+## Product Activation Process
+
+### Does an Approved Order Automatically Activate Products?
+
+**Not immediately!** Additional steps are required after approval:
+
+1. **Approve the Order**: Review and approve the order first
+
+![Approve order screen](./img/approve-order.jpg)
+
+2. **Billing Agreement**: Check the box to agree to be billed for selected products
+
+![Billing agreement screen](./img/billing-agreement.jpg)
+
+3. **Choose Activation Timing**: Select when products should be activated:
+   - **Activate Immediately**: Products activate right away
+   - **Activate on Contract Start Date**: Products activate when contract begins
+
+![Activation timing selection](./img/activation-timing.jpg)
+
+4. **Confirmation**: Products activate according to your selected timing
+
+:::tip
+Products will NOT activate until you explicitly agree to billing and choose an activation option.
+:::
+
+## Accessing Activated Products
+
+Once products are activated, there are several ways to access them:
+
+### Method 1: Via Permissions
+1. Navigate to **Partner Center > Business Details > Clients & Prospects**
+2. Find the business and click the edit icon (three dots)
+3. Go to **Permissions > Settings**
+4. Activated products and services display in this section
+
+![Edit Permissions Icon](./img/edit-permissions-icon.jpg)
+![Permissions Settings](./img/permissions-settings.jpg)
+
+### Method 2: Via Impersonation
+1. Navigate to **Partner Center > Business Details > Clients & Prospects**
+2. Find the business and click the impersonate icon (three dots)
+3. Look for the red banner confirming successful impersonation
+4. Business products and services display under **Apps**
+
+![Impersonate Icon](./img/impersonate-icon.jpg)
+
+### Method 3: Via Business Details
+1. Navigate to **Partner Center > Business Details > Clients & Prospects**
+2. Click on the business name
+3. Click on the **Products & Services** tab
+4. All active products and services display here
+
+![Account Details Products](./img/account-details-products.jpg)
+
+### Method 4: Via Order Details Page
+1. Navigate to **Partner Center > Commerce > Orders**
+2. Find the order with the activated product
+3. Click **View** next to the order
+4. Click on the order item that says **Setup**, **Access**, or **Launch**
+
+## Handling Activation Errors
+
+### What is an Activation Error?
+
+The **Activation Error** status appears when there's a problem activating one or more items on an order. This status ensures you're aware of issues requiring attention before the order can be fully activated.
+
+### How to Resolve Activation Errors
+
+1. **Open the order** with Activation Error status
+2. **Check the Fulfillment card** in the order:
+   - Red badge appears next to affected items
+   - Hover over badge for error details
+3. **Get additional information**:
+   - Go to the Account Group
+   - Review rejection reason in the Products card
+4. **Take corrective action**:
+   - Select `Edit and resubmit` from the menu (kebab icon), **OR**
+   - Dismiss the error, resolve the issue, and submit a new order
+5. **Complete the process**:
+   - After submitting corrected order and reviewing subscriptions
+   - Return to the error order
+   - Select kebab menu and choose `Ignore All Errors`
+   - Status updates to **Activated**
+
+:::warning
+Only ignore errors after reviewing and resolving issues that could affect product delivery.
+:::
+
+<details>
+<summary>Will Activation Error stop my entire order from activating?</summary>
+
+It may affect only specific items with errors, but the order remains in Activation Error status until resolved or ignored.
+</details>
+
+<details>
+<summary>Can I fix only one item and leave others in error?</summary>
+
+Yes. You can edit and resubmit individual line items in account details, then choose to ignore specific errors on the order after reviewing them.
+</details>
+
+<details>
+<summary>Where can I find error details?</summary>
+
+Details appear in the Fulfillment card (red badge tooltip) and in the Products card of Account details.
+</details>
+
+<details>
+<summary>When should I use "Ignore All Errors"?</summary>
+
+Use it only after confirming that remaining issues will not impact your customer's services.
+</details>
+
+<details>
+<summary>Can I prevent Activation Errors?</summary>
+
+Most errors occur due to missing information, incorrect form entries, or account setup issues. Reviewing all order details before submission can help prevent them.
+</details>
+
+<details>
+<summary>What happens if I select "Activate on Contract Start Date"?</summary>
+
+Products will be scheduled for activation when the contract officially begins. Ensure the start date is correctly configured to avoid delays.
+</details>
+
+<details>
+<summary>How long does the Processing status last?</summary>
+
+The Processing status generally appears for only a few moments while products are being activated in the system.
+</details>
+
+<details>
+<summary>Can I change activation timing after approval?</summary>
+
+Once you've agreed to billing terms and selected activation timing, you cannot change it. You would need to create a new order if different timing is required.
+</details>
+
+<details>
+<summary>What's the difference between Canceled and Archived orders?</summary>
+
+Canceled orders are specifically marked as canceled (useful for tracking churn), while Archived orders are simply moved out of active view for historical purposes. Neither status cancels existing subscriptions.
+</details>
