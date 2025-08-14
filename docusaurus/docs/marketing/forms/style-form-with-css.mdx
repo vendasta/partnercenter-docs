@@ -1,0 +1,215 @@
+---
+title: Styling Forms With Custom CSS Guide
+sidebar_label: Styling Forms with CSS
+description: Learn how to apply custom CSS to form widgets and input fields on WordPress pages.
+tags: [forms, styling, wordpress]
+keywords: [form-widget, jsonform-error, divi, custom-css]
+---
+
+## What is Styling Forms?
+
+Styling forms with custom CSS allows you to modify the appearance of form elements directly on your WordPress website. You can target form widgets and specific fields to match your site's branding and layout.
+
+## Why is Styling Forms important?
+
+Customizing form styles improves consistency with your website’s design, enhances user experience, and allows better control over spacing, alignment, and responsiveness.
+
+## What’s Included with Styling Forms?
+
+You can style:
+
+- All form widgets using `.form-widget`
+- Specific form instances using `.form-widget-[FormID]`
+- Individual input fields using `.jsonform-error-[FieldID]`
+
+## How to Apply Custom CSS
+
+### 1. Locate the Form or Field ID
+
+Inspect your form elements in the browser (right-click > Inspect) to find:
+
+- The `form-widget` class
+- The specific `form-widget-[FormID]`
+- Individual `jsonform-error-[FieldID]` for input fields
+
+### 2. Add Custom CSS
+
+Example CSS to align two input fields side by side:
+
+```css
+.jsonform-error-FieldID-211d398a-d905-43f8-a8e2-c1c952d4f5cc {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: calc(50% - 10px);
+  box-sizing: border-box;
+}
+.jsonform-error-FieldID-a1c64750-0a8e-457b-8575-bcada69db4a1 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  box-sizing: border-box;
+}
+```
+
+### 3. Apply Widget Styles
+
+```css
+.form-widget {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding: 32px;
+  margin: 48px auto;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+.form-widget label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+.form-widget .form-group {
+  margin-bottom: 20px;
+}
+```
+
+### 4. Input Field Styling
+
+```css
+.form-widget input:not([type="submit"]):not(.pac-target-input),
+.form-widget select,
+.form-widget textarea {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  font-size: 14px !important;
+  padding: 10px 12px !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 10px !important;
+  color: #111827 !important;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  line-height: 1.4 !important;
+}
+```
+
+### 5. Focus States and Dropdowns
+
+```css
+.form-widget input:focus:not(.pac-target-input),
+.form-widget select:focus,
+.form-widget textarea:focus {
+  outline: none;
+  border-color: #0071e3 !important;
+  box-shadow: 0 0 0 2px rgba(0, 113, 227, 0.15) !important;
+}
+.form-widget select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg fill='none' stroke='%23666' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+  padding-right: 40px !important;
+  cursor: pointer;
+}
+.form-widget textarea {
+  min-height: 100px !important;
+  resize: vertical;
+}
+```
+
+### 6. Button Styling
+
+```css
+.form-widget .btn-primary {
+  background-color: #0071e3;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 12px 16px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+```
+
+### 7. Mobile Responsiveness
+
+```css
+@media (max-width: 480px) {
+  .form-widget {
+    padding: 20px;
+  }
+}
+```
+
+### 8. Save CSS in Divi
+
+1. Navigate to your WordPress Dashboard.
+2. Go to `Divi > Theme Options > Custom CSS`.
+3. Paste the CSS code into the `Custom CSS` field.
+4. Save your changes.
+
+:::warning
+Make sure to use the correct widget and field IDs for your specific form.
+:::
+
+:::info
+Adjust spacing, widths, and other properties as needed to match your design requirements.
+:::
+
+## Frequently Asked Questions (FAQs)
+
+<details>
+<summary>Where do I find the Field ID or Form ID?</summary>
+
+Inspect the form using your browser's Developer Tools. Look for classes like `.form-widget-xxxx` or `.jsonform-error-xxxx`.
+</details>
+
+<details>
+<summary>Can I style individual input fields?</summary>
+
+Yes. Use `.jsonform-error-[FieldID]` to target specific input fields.
+</details>
+
+<details>
+<summary>Will these styles apply to all pages?</summary>
+
+Yes, if added to a global stylesheet or theme options, the styles will apply site-wide.
+</details>
+
+<details>
+<summary>What happens if I don’t use the correct ID?</summary>
+
+The styles won’t apply. Double-check the class names and IDs from your form markup.
+</details>
+
+<details>
+<summary>Do I need to use !important?</summary>
+
+Use `!important` only if other styles are overriding yours. Avoid overusing it to prevent conflicts.
+</details>
+
+<details>
+<summary>Can I style Google Places inputs?</summary>
+
+No. Inputs with the `pac-target-input` class are excluded from these styles.
+</details>
+
+<details>
+<summary>How do I add spacing between form fields?</summary>
+
+Use `margin-bottom` or layout properties like `display: inline-block` or CSS Grid/Flexbox.
+</details>
+
+<details>
+<summary>Is this specific to Divi?</summary>
+
+This example uses Divi, but the CSS techniques apply to any WordPress theme with access to custom styles.
+</details>
