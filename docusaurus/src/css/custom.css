@@ -402,12 +402,16 @@ form[role="search"] span:last-child {
   align-items: flex-start;
   gap: 0.75rem;
   padding: 1rem;
-  border: 1px solid var(--ifm-toc-border-color);
-  border-radius: 8px;
+  border-radius: 12px; /* match homepage cards */
   text-decoration: none;
   background: var(--ifm-card-background-color);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); /* match homepage cards */
+  transition: all 0.2s ease;
 }
-.vs-card:hover { box-shadow: var(--ifm-global-shadow-lw); }
+.vs-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16); /* match homepage hover */
+}
 .vs-card-icon {
   width: 28px;
   height: 28px;
@@ -419,4 +423,10 @@ form[role="search"] span:last-child {
 .vs-card-desc {
   color: var(--ifm-color-content-secondary);
   font-size: 0.9rem;
+}
+
+/* Spacing harmony with other homepage sections */
+.explore-by-product-section {
+  margin-top: 2.5rem; /* align with .homepage-bottom-section top margin */
+  margin-bottom: var(--ifm-spacing-vertical);
 }
