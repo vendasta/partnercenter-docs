@@ -3,14 +3,82 @@ title: Data Management
 description: Learn about Data Management in Vendasta's platform including CRM objects, scoring, and pipelines
 ---
 
-# Data Management
+Data management provides tools for organizing your business data through custom fields, sales pipelines, and scoring systems. Create custom fields to capture specific business information, build pipelines that reflect your sales process, and implement scoring to prioritize opportunities.
 
-Manage your data in the Vendasta platform with these comprehensive tools and settings. Navigate through the following subsections to find specific guidance:
+## What you can do with Data Management
 
-## Available Sections
+- Create custom fields for accounts, users, orders, and products to store business-specific information
+- Build sales pipelines with customizable stages and probability percentages for revenue forecasting
+- Define custom field types including text, integer, date, dropdown, and currency fields
+- Import account data in bulk or enter custom field information through Vendasta's public API
+- Track opportunities through pipeline stages with default percentages (Lead 0%, Contact 20%, Qualified 40%, Proposal 60%)
 
-- [CRM Objects](./crm-objects/index.mdx) - Manage CRM objects and data structures
-- [Score](./score/index.mdx) - Configure and manage scoring systems for leads and opportunities
-- [Pipelines](./pipelines/index.mdx) - Create and manage sales pipelines and workflow processes
+## How it works
 
-If you need additional assistance with data management, please contact our support team.
+Data management components work together to structure your business information:
+
+- **Custom Fields**: Define unique fields to hold information important for accounts, users, orders, and products. Choose from different field types that affect how data can be stored, filtered, and sorted in automation rules.
+- **Pipelines**: The default pipeline includes four stages: "Lead," "Contact," "Qualified," and "Proposal" with corresponding forecast percentages. You can create custom pipelines and define your own forecast percentages if the default doesn't fit your business.
+- **Scoring**: Configure scoring systems for leads and opportunities with custom rules and analytics to track performance and trends.
+
+## Get started
+
+1. Define custom fields at `Administration` > `Custom Fields`
+   - Choose which object type (account, user, order, product) will be associated with the data
+   - Select appropriate field type (text, integer, date, dropdown, currency) based on your data needs
+2. Create or customize pipelines at `Partner Center` > `Administration` > `Pipelines`
+   - Edit the existing pipeline or create new pipelines by clicking "Create pipeline"
+   - Define forecast percentages for each stage based on probability of success
+3. Configure scoring systems for leads and opportunities through the scoring section
+
+:::tip
+Consider what information you need to document that's specific to your business before creating custom fields—this allows more flexibility in segmenting marketing, automating sales processes, and fulfilling work efficiently.
+:::
+
+## Key Data Management Settings
+
+### Custom Fields Configuration
+- **Object Association**: Choose whether fields apply to accounts, users, orders, or products based on where the information logically belongs
+- **Field Types**: Select from text (for open-ended data), integer (for numbers), date (for time-based data), dropdown (for predefined options), or currency (for monetary values)
+- **Field Names**: Create descriptive names like "favorite dog breed," "number of employees," "service level," or "preferred monthly budget"
+- **Data Entry Methods**: Fill custom fields through bulk account import, Vendasta's public API, or manual entry
+
+### Pipeline Management
+- **Default Stages**: Standard pipeline includes Lead (0%), Contact (20%), Qualified (40%), and Proposal (60%) stages
+- **Custom Creation**: Create new pipelines by clicking "Create pipeline" in the Administration section
+- **Stage Probability**: Assign probability percentages to each stage for revenue forecasting
+- **Stage Ordering**: Pipeline stages appear in order of the probability of success you assign them
+
+### Scoring System Setup
+- **Lead Scoring**: Set up automated scoring for incoming leads with custom criteria
+- **Opportunity Scoring**: Configure scoring criteria for sales opportunities in your pipeline
+- **Custom Rules**: Create custom scoring rules and weightings specific to your business
+- **Score Analytics**: View and analyze scoring performance and trends over time
+
+## Error handling and troubleshooting
+
+### Custom Field Issues
+- **Field Type Selection**: Ensure you choose the correct field type as it significantly affects how data can be stored and filtered
+- **Object Assignment**: Verify fields are assigned to the appropriate object type (account vs. user vs. order vs. product)
+- **Data Import**: When importing account lists, ensure field mapping matches your custom field definitions
+
+### Pipeline Issues
+- **Stage Configuration**: Review that pipeline stages are ordered correctly by probability of success
+- **Forecast Accuracy**: Verify that probability percentages reflect realistic conversion rates for each stage
+- **Custom vs. Default**: Determine if the default four-stage pipeline fits your business or if custom creation is needed
+
+:::warning
+Field type significantly affects how data can be stored and filtered in automation rules. Choose carefully as changes after creation may impact existing data.
+:::
+
+## Learn more
+
+### Configuration Guides
+- [CRM Objects](./crm-objects/index.mdx) - Custom fields and data structure management for accounts, users, orders, and products
+- [Pipelines](./pipelines/index.mdx) - Sales pipeline creation, customization, and probability forecasting
+- [Score](./score/index.mdx) - Lead and opportunity scoring configuration with custom rules and analytics
+
+### Related Documentation
+- Custom field automation filtering (available in automation configuration)
+- Account list importing and bulk data entry (found in account management)
+- API integration for custom field data entry (available in developer resources)
