@@ -14,9 +14,9 @@ The Contacts section eliminates manual processes through bulk import/export capa
 
 ## What's included
 
-- **[Importing and exporting CRM contacts and companies](./importing-exporting-crm-contacts-companies.mdx)**: Efficiently add or update multiple contacts and companies in bulk
-- **[Pause or resume campaigns for a contact](./pause-or-resume-campaigns-for-a-contact.mdx)**: Control campaign delivery for individual contacts
-- **[Schedule campaigns for CRM contacts](./schedule-campaigns-for-crm-contacts.mdx)**: Schedule email marketing campaigns for optimal engagement timing
+- **Importing and exporting**: Efficiently add or update multiple contacts and companies in bulk through CSV files
+- **Campaign management**: Control campaign delivery and scheduling for individual contacts or groups
+- **Contact field customization**: Standard and custom fields for tracking detailed contact information
 - **[CRM default contact fields](./crm-default-contact-fields.mdx)**: Standard fields available for tracking contact information
 
 ## Get started
@@ -38,14 +38,161 @@ The Contacts section eliminates manual processes through bulk import/export capa
    - Navigate to `Partner Center` > `Contacts` > Select contacts
    - Click `Actions` > `Add to Campaign`
 
-## Bulk importing and exporting
+## Importing and exporting contacts and companies
 
 In the Vendasta CRM, you can efficiently add or update multiple contacts and companies at once by importing them in a single file. This powerful feature streamlines contact management and ensures data accuracy through proper field mapping during the import process.
 
-## Campaign scheduling capabilities
+### Before you begin
+
+Before initiating an import:
+
+- Ensure you have permission to manage CRM contacts and companies
+- Confirm that each contact entry includes at least one of the following: First name, last name, email, or phone number
+- Ensure each company entry includes a company name
+
+### How to import CRM records
+
+To import records, follow these steps:
+
+**Step 1: Upload CSV**
+
+Click `Import` in the top right corner of the contact table. You'll be guided through a three-step process to complete the import.
+
+Upload a CSV file containing the data you want to import, then click `Next`. You can use the optional CSV template to ensure your file is correctly formatted.
+
+![CSV Upload Screen](./img/crm/contacts/csv-upload.jpg)
+
+**Step 2: Map fields**
+
+- Map the fields from your CSV file to the corresponding fields in the CRM for contacts and companies. The system will attempt to auto-map columns to existing CRM fields, but you can manually adjust these mappings as needed
+- For each column, choose whether it relates to a contact or company, then select the specific CRM field to map it to. Once you've completed the mapping, click `Next`
+
+![Field Mapping Interface](./img/crm/contacts/field-mapping.jpg)
+
+**Step 3: Review import**
+
+- Review the records to be imported. You can choose to update existing contacts if a match is found based on ID, external ID, or email
+- After confirming your settings, click `Finish`
+
+After completing the import, you can return to the contact or company table to view the newly created records. Records added through this process will be created with the record source "Bulk import" and record source drill down 1 with the bulk import ID for easy reference.
+
+### How to export contacts and companies
+
+To export Contacts or Companies from the CRM, click the checkbox in the top-left corner of the table, then click `select all...` > `Export`.
+
+![Export Contacts Interface](./img/crm/contacts/export-contacts.jpg)
+
+**Import limitations**: The maximum file size is 5 MB, which typically allows for up to 35,000 contacts per import.
+
+## Campaign management
+
+### Schedule campaigns for optimal engagement
 
 When creating an email marketing campaign, you have the ability to schedule it for a later date and time. This feature ensures timely and consistent communication with your audience without the need for manual intervention. By scheduling your emails, you can optimize engagement and manage your time more effectively, ensuring your messages reach your audience at the perfect moment.
+
+#### How to schedule campaigns for CRM contacts
+
+**Step 1:** Navigate to `Partner Center` > `Contacts` > Select the contacts you wish to send the campaigns to. Click `Actions` > `Add to Campaign`.
+
+![Schedule Campaigns Step 1](./img/crm/crm-contacts/schedule_campaigns_step1.jpg)
+
+**Step 2:** Schedule the campaign for now, or a later date/time.
+
+![Schedule Campaigns Step 2](./img/crm/crm-contacts/schedule_campaigns_step2.jpg)
+
+**Step 3:** Select the campaigns.
+
+![Schedule Campaigns Step 3](./img/crm/crm-contacts/schedule_campaigns_step3.jpg)
+
+**Step 4:** Select the email type - Default, custom or from the assigned salesperson. If the default email is selected, the details pulled in will be from your email settings.
+
+![Schedule Campaigns Step 4](./img/crm/crm-contacts/schedule_campaigns_step4.jpg)
+
+- If a custom email is selected:
+
+![Schedule Campaigns Custom Email](./img/crm/crm-contacts/schedule_campaigns_custom.jpg)
+
+- If a Salesperson is selected:
+
+![Schedule Campaigns Salesperson](./img/crm/crm-contacts/schedule_campaigns_salesperson.jpg)
+
+**Step 5:** The `schedule send` option will allow you to pick a date and time for campaigns to be sent at.
+
+![Schedule Campaigns Time Selection](./img/crm/crm-contacts/schedule_campaigns_time.jpg)
+
+### Pause or resume campaigns for individual contacts
+
+You can pause or resume campaigns for an individual contact in the CRM. This is useful when a contact is temporarily unavailable or if they request a break from communications.
+
+#### How to pause campaigns for a contact
+
+1. Navigate to the `Contacts` section of your CRM
+2. Find and select the contact for whom you wish to pause campaigns
+3. Click on the `Campaigns` tab in the contact details
+
+![Campaigns tab in contact details](./img/crm/contacts/pause-resume-campaigns/campaigns-tab.jpg)
+
+4. Click on the three dots menu to access more options
+
+![Three dots menu](./img/crm/contacts/pause-resume-campaigns/three-dots-menu.jpg)
+
+5. Select `Pause Campaigns` from the dropdown menu
+
+![Pause Campaigns option](./img/crm/contacts/pause-resume-campaigns/pause-campaigns-option.jpg)
+
+6. Confirm your action when prompted
+
+Once you pause campaigns for a contact, all active campaigns for that contact will be suspended until you decide to resume them. The contact will not receive any campaign emails, tasks, or notifications during this period.
+
+#### How to resume campaigns for a contact
+
+To resume campaigns for a contact:
+
+1. Navigate to the `Contacts` section of your CRM
+2. Find and select the contact whose campaigns you want to resume
+3. Click on the `Campaigns` tab in the contact details
+4. Click on the three dots menu to access more options
+5. Select `Resume Campaigns` from the dropdown menu
+
+![Resume Campaigns option](./img/crm/contacts/pause-resume-campaigns/resume-campaigns-option.jpg)
+
+6. Confirm your action when prompted
+
+After resuming campaigns, the contact will start receiving campaign emails, tasks, and notifications again according to the campaign schedules.
 
 ## Contact field management
 
 The CRM provides comprehensive default contact fields that help you store and track important information about your contacts. These fields can be customized to match your specific business needs and ensure you capture all relevant prospect information throughout your sales process.
+
+## Frequently asked questions
+
+<details>
+<summary>What is the maximum number of contacts you can import in Partner Center?</summary>
+
+The maximum number of contacts you can import at one time depends on the file size and the fields included. The file size limit is 5 MB, which typically allows for up to 35,000 contacts per import.
+
+To import contacts:
+1. Navigate to `Partner Center`
+2. Go to `CRM` > `Contacts`
+3. Select `Import` to upload your file
+
+Ensure your file meets the size and format requirements before importing.
+</details>
+
+<details>
+<summary>What happens when I pause campaigns for a contact?</summary>
+
+When you pause campaigns for a contact, all active campaigns for that contact will be suspended. The contact will not receive any campaign emails, tasks, or notifications during this period until you resume campaigns.
+</details>
+
+<details>
+<summary>Can I schedule campaigns for multiple contacts at once?</summary>
+
+Yes, you can select multiple contacts from the contact table and use the `Actions` > `Add to Campaign` option to schedule campaigns for all selected contacts simultaneously.
+</details>
+
+<details>
+<summary>What information is required when importing contacts?</summary>
+
+Each contact entry must include at least one of the following: First name, last name, email, or phone number. For companies, a company name is required.
+</details>
