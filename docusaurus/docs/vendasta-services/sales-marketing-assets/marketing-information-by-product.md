@@ -4,7 +4,7 @@ sidebar_label: "Marketing Information By Product"
 description: "We have a host of information and marketing assets available in the Marketplace. For quick access and easy reference, we have provided a list of the main produ"
 ---
 
-We have a host of information and marketing assets available in the Marketplace. Go to *Screenshots and Files* at the top of each page to find valuable resources. For quick access and easy reference, we have provided a list of the main product pages here:
+We have a host of information and marketing assets available in the Marketplace. Go to *Screenshots and Files* at the top of each page to find valuable resources. For quick access and easy reference, here is a list of the main product pages here:
 
 *   [Local Listings Mangement](https://partners.vendasta.com/marketplace/products/MP-5DVQX5R8JBTD2RHWZLZ5BD56RTHJPW84)
     
