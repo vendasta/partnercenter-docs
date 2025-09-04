@@ -1,5 +1,5 @@
 ---
-title: "Can Vendasta Services grant me or my client with admin access to the ads account and/or Google Analytics?"
+title: "Admin access to the ads account and/or Google Analytics?"
 sidebar_label: "Can Vendasta Services grant me or my client with admin access to the ads account and/or Google Analytics?"
 description: "At Vendasta Services, we prioritize transparency and collaboration with our valued agency partners. One common inquiry we receive is whether we can"
 ---

@@ -1,10 +1,10 @@
 ---
-title: "What digital ad platforms are available to advertise on? | Digital Ads: Campaign - Vendasta Services"
-sidebar_label: "What digital ad platforms are available to advertise on? | Digital Ads: Campaign - Vendasta Services"
+title: "Vendasta Serice Advertsing Platforms"
+sidebar_label: "What digital ad platforms are available to advertise on? | Vendasta Services"
 description: "With the   Digital Ads: Campaign   product, Vendasta Services We offers advertising across a diverse range of platforms for advertising, catering to differen"
 ---
 
-With the [Digital Ads: Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN) product, Vendasta Services offers advertising across a diverse range of platforms for advertising, catering to different needs and budgets.
+With the [MatchCraft Managed Ads Campaign](https://partners.vendasta.com/marketplace/products/MP-23KNRJZRP2HZDXQHRSNV775DDKDPCC5D), [MatchCraft Managed AI AdVantage](https://partners.vendasta.com/marketplace/products/MP-23KNRJZRP2HZDXQHRSNV775DDKDPCC5D) and [MatchCraft Express Ads](https://partners.vendasta.com/marketplace/products/MP-8MS2CFPW6TM2WW4RZK3D4JZGKM6LF6MZ), Vendasta Services offers advertising across a diverse range of platforms for advertising, catering to different needs and budgets.
 
 **Search Ads - Google & Bing**
 

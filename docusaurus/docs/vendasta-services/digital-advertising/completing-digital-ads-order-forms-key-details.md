@@ -23,6 +23,11 @@ When working on our digital ads order form, the accuracy and detail you provide 
 *   Outline the primary objective of your campaign, whether that's to garner phone calls, leads, sales, etc.
 *   Specifying this ensures that we craft your campaign to be most effective in achieving the desired outcome.
 
+**4\. Ensure You Follow Google's Advertising Policies**
+
+* For ads run on Google, there are advertising policies regarding pertinent advertising categories, required business verifications and restrictions. Ensure that your requested campaign does not violate these policies.
+* Click [here](https://examples.yourdigitalagents.com/wp-content/uploads/2024/04/Google-Ads-Policies-and-Restrictions.pdf) to see more detail on Google's advertising policies and required certifications
+
 * * *
 
 Lastly, we appreciate the time and effort you invest in filling out the order form. The clearer and more detailed you are, the better equipped our team will be to execute your vision.
