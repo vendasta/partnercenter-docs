@@ -2,6 +2,7 @@
 title: "Expectations by Service within Vendasta Services"
 sidebar_label: "Expectations by Service within Vendasta Services"
 description: "With Vendasta's Vendasta Services, you have access to a team of digital marketing experts. Leveraging our team, you can claim and optimize your customers' onl"
+draft: true
 ---
 
 With Vendasta's Vendasta Services, you have access to a team of digital marketing experts. Leveraging our team, you can claim and optimize your customers' online listings, boost their reputation, engage their followers with content on social and blogs, build their website, and drive awareness of their business with digital advertising. All the while, our team will communicate with you and your clients to help set service expectations, inform them about updates, and respond to questions related to their service.
