@@ -12,7 +12,7 @@ Vendasta Services’ primary form of communication is email. Our default unbrand
 
 Our unbranded phone line is: **1-866-378-8031**
 
-Our communications team will answer with a greeting mentioning “Vendasta Services,” and we will ask the following questions to determine the caller and relevant business information:
+Our communications team will answer with an unbranded greeting and we will ask the following questions to determine the caller and relevant business information:
 
 *   Caller Name
 *   Business Name

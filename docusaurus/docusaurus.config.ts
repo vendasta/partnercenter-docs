@@ -104,19 +104,65 @@ const config: Config = {
       ],
     },
     footer: {
-      style: 'dark',
+      style: 'light',
       links: [
         {
-          title: 'Docs',
+          title: 'RESOURCES',
           items: [
             {
-              label: 'Getting started',
-              to: '/category/getting-started',
+              label: 'Vendasta Website',
+              href: 'https://www.vendasta.com/ai/',
+            },
+            {
+              label: 'Blog',
+              href: 'https://www.vendasta.com/blog/',
+            },
+            {
+              label: 'Content Library',
+              href: 'https://www.vendasta.com/content-library/',
+            },
+            {
+              label: 'Community',
+              href: 'https://www.facebook.com/groups/vendasta',
+            },
+          ],
+        },
+        {
+          title: 'COMPANY',
+          items: [
+            {
+              label: 'About Us',
+              href: 'https://www.vendasta.com/company/',
+            },
+            {
+              label: 'Contact',
+              href: 'https://www.vendasta.com/contact/',
+            },
+            {
+              label: 'Newsroom',
+              href: 'https://www.vendasta.com/newsroom/',
+            },
+          ],
+        },
+        {
+          title: 'LEGAL',
+          items: [
+            {
+              label: 'Terms of Service',
+              href: 'https://www.vendasta.com/terms/',
+            },
+            {
+              label: 'Privacy Policy',
+              href: 'https://www.vendasta.com/privacy/',
+            },
+            {
+              label: 'GDPR',
+              href: 'https://www.vendasta.com/gdpr/',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()}`,
+      copyright: `Copyright © ${new Date().getFullYear()} Vendasta Technologies Inc.`,
     },
     prism: {
       theme: prismThemes.github,
