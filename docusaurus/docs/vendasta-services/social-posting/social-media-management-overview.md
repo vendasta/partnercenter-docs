@@ -58,13 +58,6 @@ The content creation and review process follows a clear monthly cycle.
 ## Managing your content
 
 You have full access to the scheduled content in the social media platform. You are welcome and encouraged to make quick tweaks or changes directly in the platform at any time.
-
-## Troubleshooting
-
-### Facebook Post boosting
-Boosting increases a post's visibility to a broader audience. However, some business types may not be eligible for boosting due to Meta's advertising guidelines. This includes, but is not limited to, businesses related to credit, employment, housing, insurance, and social or political issues. The service currently only offers boosting for Facebook posts.
-
-
 ## Frequently asked questions
 <details>
 <summary>What is the difference between the Standard and Plus service?</summary>
@@ -79,6 +72,11 @@ The service supports Facebook, X, Instagram, LinkedIn, Google Business Profile, 
 <details>
 <summary>Where will my blog be posted?</summary>
 You own the creative rights and can publish the blog wherever you like. If your website is hosted on the Website Pro platform, our team can post the blog to your site for you, free of charge, 3 business days after you approve it.
+</details>
+
+<details>
+<summary>What is Facebook post boosting?</summary>
+Boosting increases a post's visibility to a broader audience. However, some business types may not be eligible for boosting due to Meta's advertising guidelines. This includes, but is not limited to, businesses related to credit, employment, housing, insurance, and social or political issues. The service currently only offers boosting for Facebook posts.
 </details>
 
 <details>
