@@ -75,3 +75,25 @@ To have our strategists review your campaign goals and provide platform, budget,
 
 
 MatchCraft advertising campaigns can be run across a diverse range of platforms, catering to different business needs and budgets. This guide outlines the key platforms and associates them with the available managed ad services.
+
+## Frequently Asked Questions (FAQs)
+<details>
+  <summary>What’s the difference between Search Ads and Display Ads?</summary>
+
+  Search ads appear in Google or Bing results when users actively search for a service (pay-per-click).  
+  Display ads are visual banners shown across websites (pay-per-impression) to build awareness, even when users aren’t searching.
+</details>
+
+<details>
+  <summary>Can I have admin access to the ads account or Google Analytics?</summary>
+
+  No. To protect campaign integrity, data security, and compliance with Google’s policies, we cannot provide admin access. This prevents unauthorized changes, protects sensitive information, and ensures proper account oversight.
+
+  If you have further questions, please contact us at [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com).
+</details>
+
+<details>
+  <summary>Can I run ads on both Google and Bing?</summary>
+
+  Yes. Running ads on both expands reach and often improves conversion results, since Bing sometimes yields high conversion rates. Our campaigns can be set to run across one or both platforms depending on budget.
+</details>
