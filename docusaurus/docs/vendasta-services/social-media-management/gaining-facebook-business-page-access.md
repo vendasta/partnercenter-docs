@@ -1,7 +1,8 @@
 ---
-title: "How do I get started with managed Social Posting?"
-sidebar_label: "How do I get started with managed Social Posting?"
+title: "Gaining Facebook business page access"
+sidebar_label: "Facebook page access"
 description: "You want to build up your social following and ensure you're staying top-of-mind by providing continuous content to your customers. By partnering with our team"
+sidebar_position: 4
 ---
 
 You want to build up your social following and ensure you're staying top-of-mind by providing continuous content to your customers. By partnering with our team, we'll help save you the hassle of keeping up on your social presence so you can focus more on running your business.

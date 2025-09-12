@@ -1,7 +1,8 @@
 ---
 title: "Social Media Marketing Timeline"
-sidebar_label: "Social Media Marketing Timeline"
+sidebar_label: "Timeline"
 description: "Providing content for our team \n Content refers to topics, specials/sales, pictures, and other assets that you want to ensure is shared with your customers as"
+sidebar_position: 2
 ---
 
 ### Providing content for our team

@@ -1,7 +1,8 @@
 ---
 title: "Social Media Marketing Overview"
-sidebar_label: "Social Media Marketing Overview"
+sidebar_label: "Overview"
 description: "Overview of Vendasta Services Social Media Marketing services"
+sidebar_position: 1
 ---
 
 ## The Onboarding Process
