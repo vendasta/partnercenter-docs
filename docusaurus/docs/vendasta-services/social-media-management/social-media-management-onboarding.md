@@ -1,6 +1,6 @@
 ---
-title: "Social Media Marketing Onboarding"
-sidebar_label: "Social Media Marketing Onboarding"
+title: "Social Media Management Onboarding"
+sidebar_label: "Social Media Management Onboarding"
 description: "Have a successful onboarding with Vendasta Services' Social Media Management service"
 ---
 The onboarding process is designed to give the service team a clear understanding of your brand, goals, and expectations to ensure the content aligns with your vision.

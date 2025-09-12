@@ -1,6 +1,6 @@
 ---
-title: "Social Posting Timeline: Submitting content, requesting edits, and receiving your calendar"
-sidebar_label: "Social Posting Timeline: Submitting content, requesting edits, and receiving your calendar"
+title: "Social Media Marketing Timeline"
+sidebar_label: "Social Media Marketing Timeline"
 description: "Providing content for our team \n Content refers to topics, specials/sales, pictures, and other assets that you want to ensure is shared with your customers as"
 ---
 
