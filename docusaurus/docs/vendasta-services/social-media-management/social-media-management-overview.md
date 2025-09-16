@@ -1,17 +1,18 @@
 ---
 title: "Social Media Marketing Overview"
-sidebar_label: "Social Media Marketing Overview"
+sidebar_label: "Overview"
 description: "Overview of Vendasta Services Social Media Marketing services"
+sidebar_position: 1
 ---
 
-## The Onboarding Process
+## The onboarding process
 
 The onboarding process is designed to give the service team a clear understanding of your brand, goals, and expectations to ensure the content aligns with your vision.
 
-### Step 1: Forms and Preparation
+### Step 1: Forms and preparation
 The process begins once you complete the Fulfillment Form. It is crucial to provide as much detail as possible. It is also recommended to complete the [Social Posting Questionnaire](https://socialcontentquestionnaire.yourdigitalagents.com/) before your onboarding call. You can upload brand assets and other documents directly in the Fulfillment Form or send them via email.
 
-### Step 2: The Optional Onboarding Call
+### Step 2: The optional onboarding call
 After you submit the form, you will receive a confirmation email with a link to book your onboarding call. During the call, a specialist will discuss your form details, complete the questionnaire with you (if needed), and review your business's existing web presence.
 
 To prepare for this call, you should have the following ready:
@@ -20,13 +21,13 @@ To prepare for this call, you should have the following ready:
 * Direct access to your Facebook Business Manager for post boosting.
 * Ideas for blog topics and examples of social media content you like.
 
-### Step 3: Social Media Profile Setup
+### Step 3: Social media profile setup
 The service can create profiles for you on Facebook, X, Instagram, LinkedIn, and Pinterest. To do this, the team will need your exact business name and address, access to an email account, and your personal login credentials for Facebook and LinkedIn, which are required to build business profiles.
 
 Read more about Social Media Management onboarding **[here](./social-media-management-onboarding.md)**
 
 
-## What’s Included
+## What’s included
 
 The service is available in two tiers with different deliverables. Posts can be shared across any supported platform with no extra charge. 
 
@@ -47,7 +48,7 @@ This service includes all Standard features plus additional deliverables for a m
 * **Quarterly strategy calls:** These sessions review key metrics, post performance, and gather feedback. 
 * **Optional monthly check-ins:** You can book optional monthly meetings for feedback or to address urgent updates.
 
-## The Content Delivery and Review Process
+## The content delivery and review process
 
 The content creation and review process follows a clear monthly cycle.
 
@@ -58,15 +59,16 @@ The content creation and review process follows a clear monthly cycle.
 5.  **Automatic publishing:** Content is automatically published 5 business days after the calendar has been sent to you for review. This is to ensure your service continues without interruption. Be sure to submit edit requests in a timely manner.
 
 
-## Managing Your Content
+## Managing your content
 
 You have full access to the scheduled content in the social media platform. You are welcome and encouraged to make quick tweaks or changes directly in the platform at any time.
 
 
-## Frequently Asked Questions (FAQs)
+## Frequently asked questions (FAQs)
 
 <details>
 <summary>What is the difference between the Standard and Plus service?</summary>
+
 The Standard service creates and posts content to all requested platforms. The Plus service adds a strategic layer, including an initial proposal for the best posting times and platforms for your industry and optional quarterly performance reports with suggestions for improvement.
 </details> 
 
@@ -84,6 +86,7 @@ You own the creative rights and can publish the blog wherever you like. If your 
 
 <details>
 <summary>What is Facebook post boosting?</summary>
+
 Boosting increases a post's visibility to a broader audience. However, some business types may not be eligible for boosting due to Meta's advertising guidelines. This includes, but is not limited to, businesses related to credit, employment, housing, insurance, and social or political issues. The service currently only offers boosting for Facebook posts.
 </details>
 
