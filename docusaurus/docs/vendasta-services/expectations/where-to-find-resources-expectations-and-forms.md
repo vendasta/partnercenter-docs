@@ -11,8 +11,8 @@ These steps are laid out to help equip you with plenty of resources and informat
 ### **Find product details and assets in the Marketplace**
 
 1.  Go to Partner Center > Marketplace > [Discover Products](https://partners.vendasta.com/marketplace/products)
-2.  Click More filters
-3.  Check the box for Vendasta Services
+2.  Click Add filter, then Vendor
+3.  Check the box for Services
 4.  Click into any service you want to learn more about
 5.  Read through product information, find FAQs, and check out add-ons
 6.  Click Screenshots & Files to find marketing images, sales decks, and expectation brochures
@@ -31,13 +31,11 @@ You can find expectation brochures inside of the platform:
 
 Or you can access them on the Vendasta Services [unbranded website](https://examples.yourdigitalagents.com/) and click Expectation Brochures. 
 
-[Learn more.](https://marketing-services.zendesk.com/hc/en-us/articles/11624544314647)
-
 ### Review the fulfillment forms
 
 An important step in ensuring a quick turnaround for your fulfillment is providing a completed fulfillment form. The information in these forms help the Vendasta Services teams to complete the ordered services in alignment with what you and your customer wants.
 
-You can also find downloadable pdf versions of all of the fulfillment form details [here](https://examples.yourdigitalagents.com/expectation-brochures/). Fulfillment form information is also available in Partner Center > Marketplace > Discover Products by visiting any of the product pages. On the right, you will find a section for Required Forms and clicking into it will show you the form.
+Fulfillment form information is available in Partner Center > Marketplace > Discover Products by visiting any of the product pages. On the right, you will find a section for Required Forms and clicking into it will show you the form.
 
 ![FillFormPage.png](./img/19128370672151-f619b9c4de.png)
 

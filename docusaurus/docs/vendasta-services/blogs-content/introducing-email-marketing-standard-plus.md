@@ -1,12 +1,12 @@
 ---
-title: "Introducing Email Marketing: Standard & Plus"
+title: "Email Marketing Standard & Plus Overview"
 sidebar_label: "Introducing Email Marketing: Standard & Plus"
 description: "What is This? \n Email marketing is a vital component of successful digital strategies, and we’re excited to launch our new  Email Marketing Standard  and  Emai"
 ---
 
 ## What is This?
 
-Email marketing is a vital component of successful digital strategies, and we’re excited to launch our new _Email Marketing Standard_ and _Email Marketing Plus_ products. These offerings are crafted to meet the diverse needs of businesses, from small enterprises building their initial email campaigns to growing companies seeking more advanced options and strategies. Designed to help your clients reach and engage their audiences effectively, these email marketing solutions provide flexibility, consistency, and strategic partnership that keeps clients connected with their customers.
+Email marketing is a vital component of successful digital strategies, and Vendasta Services offers two, Standard and Plus, email services. These offerings are crafted to meet the diverse needs of businesses, from small enterprises building their initial email campaigns to growing companies seeking more advanced options and strategies. Designed to help your clients reach and engage their audiences effectively, these email marketing solutions provide flexibility, consistency, and strategic partnership that keeps clients connected with their customers.
 
 ## Why Should I Use This Product?
 
@@ -21,13 +21,13 @@ Designed for businesses that need effective, ongoing email outreach without the 
 *   **Monthly List Uploads**: Consistent list management and contact upload assistance for easy communication.
 *   **Basic Automation**: Automated welcome emails to help build initial relationships with new subscribers.
 *   **Basic Strategy**: Delivered once at service start.
-*   **2 Monthly Emails**: Consistently deliver engaging email content, keeping audiences informed and interested.
+*   **Up to 4 Monthly Emails**: Consistently deliver engaging email content, keeping audiences informed and interested.
 
 **Email Marketing Plus** ($149 USD/month):  
 This add-on to _Email Marketing Standard_ offers an elevated service with enhanced tools and strategic flexibility, perfect for businesses aiming to maximize email performance and engagement. Here’s what’s included:
 
 *   **Drip Campaigns & A/B Testing**: Optimized email sequences and performance testing for targeted results.
-*   **Additional Email Campaigns**: Up to 4 extra emails per month (totaling 6 pieces of email content), aligned with customized strategies.
+*   **Additional Email Campaigns**: Up to 4 extra emails per month (totaling 8 pieces of email content), aligned with customized strategies.
 *   **Quarterly Strategy and Performance Reviews**: Includes a call and an In-depth strategy, and performance review (KPIs) to measure and enhance success.
 
 ## Why Choose Our Product?
