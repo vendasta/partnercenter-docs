@@ -15,7 +15,7 @@ During the project onboarding call, we'll discuss which approach works best for 
 1.  When we find a negative review, we'll email it to you along with our suggested response.  
       
     
-2.  To receive these emails, [add the respective person as a user to the account in Partner Center](https://support.vendasta.com/hc/en-us/articles/4406951619479-Add-a-user-to-an-account) and ensure Instant Email Notifications for "Review," "Review Response," and "Review Response Approval" are enabled for that user.  
+2.  To receive these emails, [add the respective person as a user to the account in Partner Center](https://docs.vendasta.com/accounts/manage-users/add-a-user-to-an-account?_highlight=add&_highlight=user) and ensure Instant Email Notifications for "Review," "Review Response," and "Review Response Approval" are enabled for that user.  
     (See: [_How to Receive Notifications for Review Response Approvals_](../using-the-platform/how-to-receive-notifications-for-review-response-approvals.md))  
       
     
