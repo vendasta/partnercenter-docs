@@ -1,7 +1,12 @@
 ---
 title: AI Capabilities Overview
 sidebar_label: AI Capabilities
+description: Learn what AI Capabilities are, how to manage them globally, assign them to AI Employees, and when to create companion or custom capabilities.
+slug: /ai/ai-capabilities
+tags: [ai, capabilities, workforce]
 ---
+
+import Head from '@docusaurus/Head';
 
 AI Capabilities are specialized skills that define what your AI Employees can do and how they behave when interacting with customers. Think of capabilities as building blocks that transform a basic AI assistant into a skilled employee who can handle specific business tasks.
 
@@ -32,12 +37,6 @@ For specialized workflows, you can create your own custom capabilities that:
 - Integrate with third-party tools and databases
 - Automate unique processes specific to your industry
 
-## Business Impact
-
-Capabilities transform customer interactions from generic chatbot exchanges into personalized assistance that feels like talking to a knowledgeable team member. Instead of customers waiting for business hours or getting generic responses, they receive immediate help with real business tasks like checking inventory, booking appointments, or getting account information.
-
-This automation allows your human team to focus on high-value activities while ensuring consistent service quality regardless of volume or time of day.
-
 ## How Capabilities Work with AI Employees
 
 ### Capability Assignment
@@ -54,8 +53,12 @@ Capabilities can be configured with specific prompts and parameters that modify 
 
 ## Capability Architecture for AI Employees
 
+AI Capabilities are built on a structured architecture that enables flexible, scalable automation. Understanding this architecture helps you design effective capabilities and troubleshoot issues when they arise.
+
+Each capability consists of two main components that work together:
+
 ### Prompts
-Written instructions that tell the AI when and how to use a capability. Prompts define:
+Prompts are written instructions that tell the AI when and how to use a capability. Prompts define:
 - Trigger conditions for activation
 - Required information before proceeding
 - Response templates and tone
@@ -68,6 +71,103 @@ For custom capabilities, tools define the technical implementation:
 - Integration workflows
 - Response processing logic
 
-- **Configure Built-in Capabilities**: [How to Configure AI Capabilities](./configuring-capabilities)
-- **Create Custom Capabilities**: [Creating Custom Capabilities](./creating-custom-capabilities)
+:::warning
+Editing a capability’s Prompt or Tool updates the capability itself and applies to all AI Employees that use it. If you need employee‑specific behavior, prefer using "Additional Instructions" or create a companion capability instead of changing the shared definition.
+:::
 
+---
+
+## Managing Capabilities
+
+Use the Capabilities tab to see all the created capabilities for your AI workforce, edit them, and assign them to your AI Employees. This view is ideal for discovery and management at scale.
+
+- Search at the top to quickly find capabilities by name or description
+- Columns include: Capability name, Description, Source (Built‑in or Custom), Assigned Employees, and Last modified
+- Click a row to review details or edit a capability
+- Use the Create capability button to add a new custom capability (see Creating Custom Capabilities)
+
+### Create a new capability
+
+To create a new custom capability, follow the guide in [Creating Custom Capabilities](./creating-custom-capabilities).
+You can start from the global Capabilities tab (Create capability) or from an AI Employee.
+
+## Assign capabilities to an AI Employee
+
+Capabilities can be assigned to an AI Employee by navigating to `AI` › `AI Workforce` and selecting `Configure` on the AI Employee you want to assign capabilities to. This opens a panel where capabilities and other settings specific to that employee are managed.
+
+Clicking on "Add a capability" provides a searchable list of available capabilities. You can select one or multiple capabilities to be added and can be multi‑selected and added in a single action. 
+
+When a use case *isn't* covered by existing options, you can click `New capability` to start building a custom capability (see [Creating Custom Capabilities](./creating-custom-capabilities)). Adding attaches the capability to this employee only; it can be attached to other employees independently.
+
+### Editing prompts and additional instructions
+Your custom capabilities and some default capabilities have an editable Prompt field in their details. When available, update the Prompt directly to change default behavior. 
+
+Common modifications include:
+
+- **Trigger conditions** – When the capability should activate (e.g., "Only when customer asks about pricing")
+- **Response tone** – How formal or casual the AI should be when using this capability
+- **Required information** – What data must be collected before the capability can execute
+- **Error handling** – How to respond when the capability fails or returns no results
+- **Output formatting** – How to present information back to the customer
+
+ :::tip
+ Some default capabilites have a fixed system prompt that is not editable. For these, you may be able to create a new Capability that helps alter the AI Employee's behavior when using the default capability. See [Creating Custom Capabilities](./creating-custom-capabilities) for how to add a companion capability and test your changes often.
+:::
+
+## FAQs
+
+<details>
+<summary>Where should I put business policies like returns, pricing, or service areas?</summary>
+
+Generally, policies and static information should be added to your [Knowledge Base](../knowledge-base.mdx). If the capability requires real-time data, it should be added to the capability's instructions.
+
+</details>
+
+<details>
+<summary>Why didn’t my capability activate during testing?</summary>
+
+Check trigger conditions and required information in the capability’s instructions. Confirm the capability is attached to the employee and enabled. If prompts are locked, add a companion capability to provide additional guidance.
+
+</details>
+
+<details>
+<summary>Can I reuse the same capability across multiple AI Employees?</summary>
+
+Yes. You can assign the same capability to multiple AI Employees.
+</details>
+
+<!-- Structured FAQ (schema.org) for SEO -->
+<Head>
+  <script type="application/ld+json">{`
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where should I put business policies like returns, pricing, or service areas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally, policies and static information should be added to your Knowledge Base. If the capability requires real-time data, include specific guidance in the capability's instructions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why didn’t my capability activate during testing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check trigger conditions and required information in the instructions. Confirm the capability is attached to the employee and enabled. If prompts are locked, add a companion capability for additional guidance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I reuse the same capability across multiple AI Employees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Assign the capability to multiple employees and use Additional Instructions to tailor behavior per employee."
+      }
+    }
+  ]
+}
+`}</script>
+</Head>
