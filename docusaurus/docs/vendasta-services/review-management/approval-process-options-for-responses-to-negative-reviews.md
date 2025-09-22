@@ -10,7 +10,7 @@ With this service, when our system finds a positive review, we will respond on b
 
 During the project onboarding call, we'll discuss which approach works best for your business in the case of receiving a **negative review**. You can request to approve responses to negative reviews, or have our team respond on behalf of the business without requiring approval. 
 
-## If you choose the Approval Required option:
+## If you choose the approval required option:
 
 1.  When we find a negative review, we'll email it to you along with our suggested response.  
       
@@ -25,7 +25,7 @@ During the project onboarding call, we'll discuss which approach works best for 
     
 4.  You can provide feedback or edits via the platform link in the email notification.
 
-## If you prefer No Approval Required:
+## If you prefer no approval required:
 
 1.  When we find a negative review, we'll respond within 2 business days.  
       
