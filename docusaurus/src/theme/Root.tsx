@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Root({children}: {children: React.ReactNode}): JSX.Element {
+export default function Root({children}: {children: React.ReactNode}): React.ReactElement {
   return (
     <>
       {/* Google Tag Manager (noscript) */}

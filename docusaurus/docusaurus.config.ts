@@ -25,13 +25,7 @@ const config: Config = {
 
   // Add external scripts
   scripts: [
-    {
-      src: 'https://consent.cookiebot.com/uc.js',
-      'data-cbid': '18defc9c-f3d9-498d-b1d8-469fdf619133',
-      'data-blockingmode': 'auto',
-      async: false,
-    },
-    // Google Tag Manager
+    // Google Tag Manager - placed in <head>
     {
       innerHTML: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
