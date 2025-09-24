@@ -1,6 +1,36 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
+import {useLocation} from '@docusaurus/router';
+
+declare global {
+  interface Window {
+    dataLayer?: Array<Record<string, unknown>>;
+  }
+}
 
 export default function Root({children}: {children: React.ReactNode}): React.ReactElement {
+  const location = useLocation();
+  const previousPathRef = useRef<string>('');
+
+  // Push pageview event to dataLayer on initial load and on every route change
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    window.dataLayer = window.dataLayer || [];
+
+    const page_path = `${location.pathname}${location.search}`;
+    const payload = {
+      event: 'pageview',
+      page_path,
+      page_title: typeof document !== 'undefined' ? document.title : '',
+      page_location: typeof window !== 'undefined' ? window.location.href : '',
+      previous_path: previousPathRef.current,
+      referrer: typeof document !== 'undefined' ? document.referrer : '',
+    };
+
+    window.dataLayer.push(payload);
+
+    // Update previous path for next navigation
+    previousPathRef.current = page_path;
+  }, [location.pathname, location.search]);
   return (
     <>
       {/* Google Tag Manager (noscript) */}
