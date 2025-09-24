@@ -27,11 +27,10 @@ It may not always be easy to identify what aspects of a website are made possibl
 
 Feel free to send us an email at [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com) 
 
-For larger projects (new builds, rebuilds, and imports), request a website quote via our [Website Quote Request form](https://pre-sale-website-request.marketingservices.dev/).
 
 ## **Plugins/Widgets Vendasta Services Can Integrate**
 
-When you build a website with us via one of our _[Website: Up to 3](https://partners.vendasta.com/marketplace/products/MP-VM63SLW2BWQPQ2XCP3XK52RHWB4FC8TC)/[5](https://partners.vendasta.com/marketplace/products/MP-626DQ35GTDK77P2GX37G6KQGM3NKF338)/[10 Pages](https://partners.vendasta.com/marketplace/products/MP-NJ4M8RMVQJS635F6LPTKDSDXBNC56NWZ)_ products these include the integration of some Standard plugins where the integration cost is included in the price of the website build.
+When you build a website with us via one of our _[Templated Website](https://partners.vendasta.com/marketplace/products/MP-XQC6XC2VMV3B4ZJZLD6Z6ZDXKN2VTC86)_ or _[Tailored Website](https://partners.vendasta.com/marketplace/products/MP-K3KB3DNTX5HTFDKPJB8BF54B5PSMNNDK)_ products these include the integration of some Standard plugins where the integration cost is included in the price of the website build.
 
 **Standard Plugins:**
 

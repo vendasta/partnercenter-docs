@@ -1,6 +1,6 @@
 ---
-title: "Advertising Intelligence Dashboard: Partner Setup Overview"
-sidebar_label: "Advertising Intelligence Dashboard: Partner Setup Overview"
+title: "Advertising Intelligence Dashboard"
+sidebar_label: "Advertising Intelligence Dashboard"
 description: "This guide provides an overview of setting up and using the Advertising Intelligence Dashboard for the first time. The dashboard s designed to help users effic"
 ---
 

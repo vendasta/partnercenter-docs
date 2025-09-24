@@ -58,11 +58,12 @@ For Yelp, you must provide a username and password. Additionally, the Yelp profi
 
 ### Standard service
 * **Unlimited review responses:** The team will respond to all reviews received on connected platforms for as long as the service is active.
-* **Website review widget:** If your website is on the supported website platform, the team will install a dynamic widget that displays your Google reviews directly on your site. This feature is not offered for websites on other platforms.
+* **Website review widget:** If your website is on our WordPress Hosting, the team will install a dynamic widget that displays your Google reviews directly on your site. This feature is not offered for websites on other platforms.
 
 ### Plus service
 This includes all features of the Standard service, plus tools for generating new reviews.
 * **Review request generation:** The service helps you get new reviews by sending out requests to your customers.
+* **Net Promoter Score (NPS) Requests:** The review request process uses an NPS email to gauge customer loyalty. 
 * **Email and SMS templates:** The team will create a review request template for your approval. If you have SMS credits with the required reputation software, an SMS template can also be created.
 * **Customer list uploads:** The team will upload your list of customer contacts and send them review requests within 2 business days. Lists cannot exceed 500 customers per upload.
 * **Google Q&A responses:** The team will also respond to questions that come through the Google Q&A feature for your business.
@@ -81,34 +82,88 @@ Due to their sensitive nature, responses to negative reviews are drafted and sen
 * The response will invite the reviewer to resolve the issue offline by providing contact information for a person at your business.
 * If no feedback on the drafted response is received within one business day, it will be published automatically to ensure a timely reply.
 
+## How we request new reviews (Plus service)
+
+The Plus service includes a proactive system for generating new reviews. This process is designed to encourage satisfied customers to share their feedback publicly while directing neutral or negative feedback to you privately.
+
+The process follows these steps:
+1.  **Template creation:** The service team creates an email and/or SMS template for you to approve.
+2.  **Customer list submission:** You provide a list of customer contacts (up to 500 per list). You can submit a new list at any time.
+3.  **Net Promoter Score template:** This email a Net Promoter Score (NPS), where they are asked how likely they are to recommend your business on a scale of 0-10.
+4.  **Directing feedback:** Based on the customer's score, the system directs them to the next step:
+    * **Promoters (score 9-10):** These happy customers are directed to your chosen public review sites (like Google or Facebook) to leave a public review.
+    * **Passives (score 7-8):** These customers are sent to a private feedback form to share their experience directly with you without posting a public review.
+    * **Detractors (score 0-6):** These customers are also sent to the private feedback form. A notification is immediately sent to your designated business contact so you can follow up and address their concerns.
+5.  **Sending requests:** Within 2 business days, the team will upload your list and send the approved message to your customers.
+
+
 ## Frequently Asked Questions (FAQs)
 
 <details>
 
 <summary> Is there a limit to the number of reviews you will respond to?</summary>
+
 No, there is no limit. The service team will respond to as many reviews as you receive on the platforms we have access to.
 </details>
 
 <details>
 
 <summary> Will you respond to reviews that were received before the service started?</summary>
+
 No, the service only covers reviews received from the date the service is activated.
 </details>
 
 <details>
 
 <summary> Do you respond to reviews in languages other than English?</summary>
+
 No, the service team will only respond to reviews written in English.
 </details>
 
 <details>
 
 <summary> What about replies to your responses or reviews that a customer edits?</summary>
+
 The service does not address customer replies to our responses or reviews that are edited after the initial response has been posted. It is recommended that your business responds to these interactions directly.
 </details>
 
 <details>
 
 <summary> How often can I submit a new customer list for review requests (Plus Service)?</summary>
+
 You can share a new list of customers whenever you are ready. The team will upload it and send out review requests on your behalf.
+</details>
+
+<details>
+
+<summary>Will you flag negative reviews with the review site?</summary>
+
+The team will flag negative reviews with the review site if the review clearly violates the platform's terms of service (e.g., it contains hate speech or is posted by a competitor). However, we cannot guarantee that the review site will remove the flagged review.
+</details>
+
+<details>
+
+<summary>Do you respond to Google Q&A questions?</summary>
+For Review Responses Plus, yes of course! Our team will respond to any questions that come through Google Q&A. With Review Responses Standard, this is not included.
+</details>
+
+<details>
+
+<summary>What if I get a negative review on a site that you don't have access to?</summary>
+
+The service team can only respond to reviews on sites where access has been granted. If you receive a review on a site we cannot access, we will be unable to respond until you provide the necessary access.
+</details>
+
+<details>
+
+<summary>Can I customize the Review Request emails that will be sent to my customers?</summary>
+
+During your onboard with our team, you’ll be able to choose from set email templates or upload your own.
+</details>
+
+<details>
+
+<summary>What is a Net Promoter Score?</summary>
+
+Net Promoter Score (NPS) measures how likely customers are to recommend a business to others. Customers rate this on a scale of 0 to 10, and the business uses those responses to calculate a score between -100 and +100. A higher score means more happy, loyal customers, while a lower score shows there's room for improvement. It’s a quick way to gauge customer satisfaction and loyalty.
 </details>
