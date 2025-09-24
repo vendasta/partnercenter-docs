@@ -4,8 +4,6 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
-const cookiebotDomainGroupId = process.env.COOKIEBOT_DOMAIN_GROUP_ID;
-
 const config: Config = {
   title: 'Vendasta Documentation',
   tagline: 'Your comprehensive guide to Vendasta\'s platform and tools.',
@@ -27,21 +25,6 @@ const config: Config = {
 
   // Add head tags
   headTags: [
-    ...(cookiebotDomainGroupId
-      ? [
-          {
-            tagName: 'script',
-            attributes: {
-              id: 'Cookiebot',
-              src: 'https://consent.cookiebot.com/uc.js',
-              'data-cbid': cookiebotDomainGroupId,
-              'data-blockingmode': 'auto',
-              type: 'text/javascript',
-              async: 'true',
-            },
-          },
-        ]
-      : []),
     // Google Tag Manager script
     {
       tagName: 'script',
@@ -193,7 +176,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               to: '/legal/cookie-policy',
             },
             {
-              html: '<a href="javascript:void(0)" onclick="Cookiebot.show()">Cookie Settings</a>',
+              html: '<a href="#cookie-settings" data-cookie-settings-link>Cookie Settings</a>',
             },
             {
               label: 'GDPR',
