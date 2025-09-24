@@ -23,6 +23,22 @@ const config: Config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
+  // Add head tags
+  headTags: [
+    // Google Tag Manager script
+    {
+      tagName: 'script',
+      attributes: {
+        type: 'text/javascript',
+      },
+      innerHTML: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M8CQT5');`,
+    },
+  ],
+
   // Enable faster builds with Rspack bundler and persistent cache
   future: {
     experimental_faster: {
@@ -154,6 +170,13 @@ const config: Config = {
             {
               label: 'Privacy Policy',
               href: 'https://www.vendasta.com/privacy/',
+            },
+            {
+              label: 'Cookie Policy',
+              to: '/legal/cookie-policy',
+            },
+            {
+              html: '<a href="#cookie-settings" data-cookie-settings-link>Cookie Settings</a>',
             },
             {
               label: 'GDPR',
