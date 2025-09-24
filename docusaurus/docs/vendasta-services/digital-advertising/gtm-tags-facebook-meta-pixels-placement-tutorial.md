@@ -98,9 +98,9 @@ In case the code has been already placed on the site, it’s a good idea to chec
 
 1.  Open the homepage (or any page) of your website on a desktop computer.
 2.  Right-click on the page and click “Inspect” from the drop-down menu.  
-    ![](./img/25119048322327-ccb3fc9b97.png)
+    <img src="/img/25119048322327-ccb3fc9b97.png" alt="Left Click Inspect" width="80%"/>
 3.  After you’re redirected to the additional tab, click CTRL + F (Windows) or Command + F (Mac) and paste your code into the search bar.  
-    ![](./img/25119048322327-a7c8b07864.png)
+    <img src="/img/25119048322327-a7c8b07864.png" alt="Search Bar" width="80%"/>
     1.  Review the results to see if any match your GTM or Facebook Meta Pixel.
 4.  If the code is not on the website, proceed with the below steps to add it.
 
@@ -113,11 +113,11 @@ In case the code has been already placed on the site, it’s a good idea to chec
     _Below are the steps for a WordPress website built with Divi:_
     
 2.  Within the WordPress dashboard, click on “Divi” from the navigation bar on the left.  
-    ![](./img/25119048322327-8016ff584a.png)
+    <img src="/img/25119048322327-8016ff584a.png" alt="Divi" width="80%"/>
 3.  From the Divi Theme Options page, click on the **Integration** tab.  
-    ![](./img/25119048322327-6c06f2c968.png)
+    <img src="/img/25119048322327-6c06f2c968.png" alt="Integration" width="80%"/>
 4.  Look for two boxes in which code can be added—one for the `<head>` and one for the `<body>`.  
-    ![](./img/25119048322327-d0ba257aff.png)
+    <img src="/img/25119048322327-d0ba257aff.png" alt="Code Boxes" width="80%"/>
 
 **Adding the GTM Code to the Website:**
 
@@ -135,7 +135,7 @@ In case the code has been already placed on the site, it’s a good idea to chec
 2.  Paste the pixel code into your website’s HTML within the header (ie. the `<head>`) section.
     1.  (You will need to access the backend of your website to do this.)
 3.  Paste the entire pixel code just before the closing `</head>` tag.  
-    ![](./img/25119048322327-a9b3470729.png)
+    <img src="/img/25119048322327-a9b3470729.png" alt="Pixel Code" width="80%"/>
 4.  Click the green **Save Changes** button at the bottom of the page.
 
 Now that the GTM code and/or the Facebook Meta Pixel codes have been added to the site, you should verify the installation and that they’re functioning correctly.
@@ -153,7 +153,7 @@ _Note: This extension is deprecated however, we find it is more straightforward 
     1.  Refresh/reload your website homepage within the same tab.
         
 3.  Google Tag Assistant Legacy will show you which Google tags are added and if they are functioning properly. It may take a few moments for the full list to reflect.  
-    ![](./img/25119048322327-f0b3c838b6.png)
+    <img src="/img/25119048322327-f0b3c838b6.png" alt="Tag Assistant Legacy" width="80%"/>
     1.  If there are any errors, you can click on them to view more details.
 
 **Verify Your Pixel Installation:**
@@ -163,6 +163,6 @@ You can use a browser extension tool, like [Meta Pixel Helper](https://chromeweb
 1.  Install and enable the Meta Pixel Helper browser extension from the Chrome Web Store.
 2.  Visit the front end of your website and the page where you installed the pixel. The Pixel Helper will indicate if the pixel is correctly installed and firing.  
     1.  If it’s not, you will see an error message.  
-        ![](./img/25119048322327-1bce84a5c2.png)
+        <img src="/img/25119048322327-1bce84a5c2.png" alt="Meta Pixel Helper" width="80%"/>
 
 By following these steps, you can successfully add the Google Tag Manager (GTM) and/or Facebook Meta Pixel to your website. This will allow you to track user interactions, optimize your ad campaigns, and create targeted audiences.
