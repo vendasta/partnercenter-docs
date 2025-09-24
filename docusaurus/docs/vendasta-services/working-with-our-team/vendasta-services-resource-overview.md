@@ -4,80 +4,49 @@ sidebar_label: "Vendasta Services Resource Overview"
 description: "Vendasta has many different teams and departments to keep everything running smoothly. This resource shares resources and contacts you’ll find helpful when wor"
 ---
 
-Vendasta has many different teams and departments to keep everything running smoothly. This resource shares resources and contacts you’ll find helpful when working with Vendasta Services—Vendasta’s In-house Fulfillment Vendor. 
+### Vendasta Services Resource Overview
 
-**Contacts:**
+This article provides an overview of Vendasta's teams and resources, which will be helpful when working with Vendasta Services, the company's in-house fulfillment vendor.
 
-**Vendasta Services: _(for partners & clients)  
-_**_For questions/assistance regarding Vendasta Services products, fulfillment, active projects, etc.  
-_Email - **marketingservices@yourdigitalagents.com** Phone - **1-866-378-8031 (Monday to Friday 8AM - 5PM Central Standard time)**
+---
 
-**Vendasta Sales: _(for partners only)  
-_**_For sales-related questions/assistance (ie. subscription inquiries, product recommendations, discussing prospects and opportunities, etc.)  
-_[How to find/contact your assigned representative](https://support.vendasta.com/hc/en-us/articles/4406957618711-Partner-Center-Contact-your-assigned-representative)
+### **Contacts**
 
-For agencies assigned to the “Customer Success” sales team:  
-Email - **customersuccess@vendasta.com**  Office hours - Daily, Mondays-Fridays **3-4 pm ET** [Schedule](https://www.vendasta.com/webinar/)
+* **Vendasta Services (for partners & clients):** For questions about products, fulfillment, or active projects.
+    * **Email:** marketingservices@yourdigitalagents.com
+    * **Phone:** 1-866-378-8031 (Monday - Friday, 8:00 AM - 5:00 PM CST)
 
-To get in touch with your **assigned Vendasta Onboarding Specialist, please email** **onboarding@vendasta.com** 
+* **Vendasta Sales (for partners only):** For sales-related inquiries, like subscriptions, product recommendations, or discussing opportunities.
+    * [How to find your assigned representative](https://support.vendasta.com/hc/en-us/articles/4406957618711-Partner-Center-Contact-your-assigned-representative)
+    * **For agencies with the "Customer Success" team:**
+        * **Email:** customersuccess@vendasta.com
+        * **Office Hours:** Monday - Friday, 3:00 PM - 4:00 PM ET
 
-**Support on Demand:** _**(for partners only)  
-**__For platform-related questions/assistance (i.e. Partner Center, Business App, Social Marketing, Customer Voice, etc.)  
-_**[Vendasta Help Options](https://support.vendasta.com/hc/en-us/articles/24293302704279-Help-Options)**  
-Email - **support@vendasta.com**
+* **Onboarding Specialist:** To get in touch with your assigned specialist.
+    * **Email:** onboarding@vendasta.com
 
-**Vendasta Services Resources Per Product Line:**
+* **Support on Demand (for partners only):** For questions about the Vendasta platform, including Partner Center, Business App, and Social Marketing.
+    * [Vendasta Help Options](https://support.vendasta.com/hc/en-us/articles/24293302704279-Help-Options)
+    * **Email:** support@vendasta.com
 
-**Service**
+---
 
-**Inquiry**
+### **Vendasta Services Resources Per Product Line**
 
-**Resource**
+#### **General Inquiries**
+* **Phone:** For all inquiries regarding projects managed by the Marketing Services team or to speak with a specific agent, contact **1-866-378-8031**. This line is exclusively for partners with active Marketing Services products and is monitored Monday through Friday from 8:00 AM to 5:00 PM CST.
+* **Presale Questions:** Reach out to [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com) and CC your Vendasta Sales Representative for coordinated assistance.
+* **Examples of Services:**
+    * **Expectation Brochures:** [https://examples.yourdigitalagents.com/expectation-brochures/](https://examples.yourdigitalagents.com/expectation-brochures/)
+    * **Social Posts and Websites:** [https://examples.yourdigitalagents.com/](https://examples.yourdigitalagents.com/)
 
-**All**
+#### **Websites**
+* **Request a Website Quote:** [https://pre-sale-website-request.marketingservices.dev/](https://pre-sale-website-request.marketingservices.dev/)
+* **Website Frameworks:** [https://frameworks.yourdigitalagents.com/](https://frameworks.yourdigitalagents.com/)
+* **Website Content & Creation Form:** [https://websitecreationform.yourdigitalagents.com/e-commerce-csv-help/](https://websitecreationform.yourdigitalagents.com/e-commerce-csv-help/) (to be filled out by the client before the onboard call)
 
-Expectations Brochures
+#### **Digital Ads**
+* **Request a Digital Ads Proposal:** [https://digital-ads-proposal.websitepro.hosting/](https://digital-ads-proposal.websitepro.hosting/)
 
-_(processes, FAQs, product/service information, etc.)_
-
-[https://examples.yourdigitalagents.com/expectation-brochures/](https://examples.yourdigitalagents.com/expectation-brochures/)  
-
-Fulfillment Deliverables Examples
-
-_(social posts, websites, etc.)_
-
-[https://examples.yourdigitalagents.com/](https://examples.yourdigitalagents.com/)  
-
-Presale Questions
-
-Reach out to Vendasta Services at [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com) and CC your Vendasta Sales Representative so we can coordinate with the best-suited team members to assist.
-
-**Websites**
-
-Request a Website Quote
-
-[https://pre-sale-website-request.marketingservices.dev/](https://pre-sale-website-request.marketingservices.dev/)  
-
-Website Frameworks
-
-[https://frameworks.yourdigitalagents.com/](https://frameworks.yourdigitalagents.com/)  
-
-Website Content & Creation Form
-
-_(to be filled out by the client prior to the project onboard call)_
-
-[https://websitecreationform.yourdigitalagents.com/e-commerce-csv-help/](https://websitecreationform.yourdigitalagents.com/e-commerce-csv-help/)  
-
-**Digital Ads**
-
-Request a Digital Ads Proposal
-
-[https://digital-ads-proposal.websitepro.hosting/](https://digital-ads-proposal.websitepro.hosting/)  
-
-**Social**
-
-Social Content & Creation Form
-
-_(to be filled out by the client prior to the project onboard call)_
-
-[https://socialcontentquestionnaire.yourdigitalagents.com/](https://socialcontentquestionnaire.yourdigitalagents.com/)
+#### **Social**
+* **Social Content & Creation Form:** [https://socialcontentquestionnaire.yourdigitalagents.com/](https://socialcontentquestionnaire.yourdigitalagents.com/) (to be filled out by the client before the onboard call)
