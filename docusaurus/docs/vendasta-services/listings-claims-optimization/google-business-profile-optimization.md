@@ -62,8 +62,7 @@ One service-based post will be published to the listing each month. These posts 
 * Images are sourced from stock photo websites or the business website.
 * You can provide specific images or content you would like to see posted.
 
-
-## Frequently asked questions (FAQs)
+## Frequently Asked Questions (FAQs)
 
 <details>
 
@@ -104,27 +103,42 @@ Posts are created using relevant content from your business website. If you have
 
 <summary>What is the status of my Google Business Profile verification? Is my verification complete?</summary>
 
-You can view the current status of verification in the Projects tab of your dashboard. There you can find information about any in-progress or complete work that our team is fulfilling on your behalf. You will be able to see any notes left by our team about the status, including any issues that may require a different type of verification.
+You can view the current status of verification in the Projects tab of your dashboard. There you can find information about any in-progress or complete work that our team is fulfilling on your behalf. You will be able to see any notes left by our team about the status, including any issues that may require a different type of verification or may be waiting on resolution from a [Google support ticket](./google-business-profile-support-tickets-and-suspensions.md).
 
 ![Projects Tab.png](./img/18617870927639-802d00bc47.png)
 </details>
 
-## Frequently Asked Questions (FAQs)
-
 <details>
+
 <summary>Why was my Google Business Profile suspended?</summary>
 
 If your Google Business Profile becomes suspended, note that Google doesn't provide transparency on why businesses are unverified, why they become suspended, or how their support requests are triaged. We work with them as best as we can to pass information on when we are managing a support request, but we can only be as transparent as they are.
 </details>
 
 <details>
+
 <summary>What's the status of my Google support ticket? When will it be resolved?</summary>
 
 Note that Google is not transparent about their service level expectations and we won't know precisely when to expect an answer from them on tickets. If it's a brand new support or reinstatement request, we typically hear from them within 3 to 7 business days. If no response is received after 7 business days, we submit a new ticket. For existing support tickets, if there is no response and the process becomes blocked, we may have no options but to submit a new support request.
 </details>
 
 <details>
+
 <summary>Can I be added to the Google Support ticket?</summary>
 
 Our team is trained to use best practices to resolve an issue with Google. In order to streamline the communications with Google's Support team and work toward the best resolution possible, we do not typically add other stakeholders to the ticket. We are able to do so upon request. Note that we do pass on all of the updates as we receive them.
+</details>
+
+<details>
+
+<summary>How does multi-location & bulk verification work?</summary>
+
+For businesses with 10 or more locations, we can request bulk verification from Google. This process requires a spreadsheet containing the information for all locations. Please note that Google may still require individual verification for some or all of the locations.
+</details>
+
+<details>
+
+<summary>What is the process for reinstating a suspended listing?</summary>
+
+Making edits to a profile can sometimes trigger a re-verification requirement or a suspension from Google. If a listing is suspended, our team will work diligently with Google to have the suspension lifted. However, there is no guarantee that Google will agree to reinstate the listing, as the final decision rests with them.
 </details>
