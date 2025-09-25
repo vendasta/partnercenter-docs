@@ -32,6 +32,8 @@ This article goes through the complete list of automation steps that can accompa
 | Step | Overview | Special Cases | Example Use Cases |
 | --- | --- | --- | --- |
 | Create Company | Creates a company in the CRM. | Duplicates are not checked. This just blindly tries to create the company. Company name is a requirement. | Using a 3rd party CRM and something happens in that CRM so you want to create a company in our CRM to mirror that one. |
+| Get associated Contact from Company | Gets the Contact associated with a CRM company. | If one does not exist, an error is returned. | When a company is created, I would like to get the associated contact and begin and email campaign to them. |
+| Get associated Company from Contact | Gets the Contact associated with a CRM contact. | If one does not exist, an error is returned. | When a contact is created, I would like to get the associated company and notify the assigned salesperson on the company. |
 | Get associated Contact from Opportunity | Gets the Contact associated with a CRM opportunity. | If one does not exist, an error is returned. | When an opportunity is created, I would like to get the associated contact and begin and email campaign to them. |
 | Get associated Opportunity from Contact | Gets the CRM Opportunity associated with a Company. | If one does not exist, an error is returned. | When a Contact is updated, I would like to move the associated opportunity to the expected pipeline stage. |
 | Get associated Opportunity from Company | Gets the CRM Opportunity associated with a Company. | If one does not exist, an error is returned. | When a Company is updated, I would like to move the associated opportunity to the expected pipeline stage. |

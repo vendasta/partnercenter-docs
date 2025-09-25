@@ -1,0 +1,53 @@
+---
+title: Email Configuration in Business App
+description: Learn how to review, verify, and manage email configuration settings including SPF/DMARC/DKIM setup in Business App.
+---
+
+# Email Configuration in Business App
+
+This guide covers how to manage email configuration settings in Business App, including validating send-from email addresses and reviewing SPF/DMARC/DKIM setup to prevent review requests from going to spam.
+
+## Reviewing Email Configuration
+
+You can review SPF/DMARC/DKIM setup for your client in Business App. Open **Business App > Settings > Email Configuration**.
+
+- A red circle with the exclamation point next to a record indicates it has not been verified.
+- A green circle with a checkmark next to a record indicates it has been verified.
+
+![Email Configuration Screen](./img/business-app/email-configuration.png)
+
+## Managing Email Configuration Settings
+
+Through the Business App section **Email Configuration** under **Settings**, you can validate the send-from email address that appears in your Review Request Template, preventing your review requests from going to spam.
+
+### Updating Email Send From Information
+
+To update your email configuration settings:
+
+1. Navigate to **Business App > Settings > Email Configuration**
+2. Update the email address and name as needed
+3. Save your changes
+
+### Deleting Email Configuration
+
+You can delete an email configuration within the Business App by clicking on the "Delete Email configuration" button:
+
+![Delete email configuration button](./img/business-app/email-configuration/delete-config.jpg)
+
+## Troubleshooting
+
+### Common Error: "An unexpected error occurred, please try again"
+
+If you receive the error message "an unexpected error occurred, please try again" when trying to update your 'Email Send from Information':
+
+![Error message when updating email information](./img/business-app/email-configuration/error-message.jpg)
+
+**Solution**: This error typically occurs when you impersonate a user or open the Business App directly from Partner Center.
+
+To resolve this:
+1. Ensure the Business App user logs into the Business App directly (not through impersonation)
+2. Then update their email address and name
+
+A successful update will look like this:
+
+![Successful update of email configuration](./img/business-app/email-configuration/successful-update.jpg)
