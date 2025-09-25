@@ -4,11 +4,11 @@ sidebar_label: "Approval Process Options for Responses to Negative Reviews"
 description: "One of the reputation management services Vendasta Services offers is fully managed and drafted responses to online reviews for the business, via products lik"
 ---
 
-One of the reputation management services Vendasta Services offers is fully managed and drafted responses to online reviews for the business, via products like [Review Responses: Up to 10](https://partners.vendasta.com/marketplace/products/MP-BCPH7SCSJTNXFZNC7RCJTBD5CGLGF8S8) and [Review Responses Unlimited](https://partners.vendasta.com/marketplace/products/MP-d72509177df6404bb290d560bb966233).
+Some of the reputation services that Vendasta Services offers are fully managed and drafted responses to online reviews for a business, via products like [Review Resposes Standard](https://partners.vendasta.com/marketplace/products/MP-K8LLNZBS5DTVCHQ4J54C463F3HWGJCQP) or [Review Responses Plus](https://partners.vendasta.com/marketplace/products/MP-K8LLNZBS5DTVCHQ4J54C463F3HWGJCQP/addon/A-NCSGCP37R4). 
 
 With this service, when our system finds a positive review, we will respond on behalf of the business with a personalized, tailored response. These responses are posted within 2 business days of the review being pulled into our system.
 
-During the project onboarding call, we'll discuss which approach works best for your business—requiring approval or posting without approval for responses to negative reviews.
+During the project onboarding call, we'll discuss which approach works best for your business in the case of receiving a **negative review**. You can request to approve responses to negative reviews, or have our team respond on behalf of the business without requiring approval. 
 
 ## If you choose the Approval Required option:
 
