@@ -1,6 +1,6 @@
 ---
-title: "Vendasta Services’ Website Support — Service Inclusions & Process"
-sidebar_label: "Vendasta Services’ Website Support — Service Inclusions & Process"
+title: "Website Support"
+sidebar_label: "Website Support"
 description: "This article details the inclusions of Vendasta Services’   Website Support   product and the process/best practices for submitting requests to our Website Su"
 zendesk_id: 18930123215127
 zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/18930123215127-Marketing-Services-Website-Support-Service-Inclusions-Process"
