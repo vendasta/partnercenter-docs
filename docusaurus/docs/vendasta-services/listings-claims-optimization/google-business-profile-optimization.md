@@ -73,6 +73,21 @@ Businesses that conduct in-person business with customers, either from a storefr
 
 <details>
 
+<summary>What type of business cannot be claimed with this service?</summary>
+
+* Rental or for-sale properties such as vacation homes, model homes, or vacant apartments
+* An ongoing service, class, or meeting at a location that you don't own or have the authority to represent
+* Lead generation agents or companies
+* Brands
+* Organizations
+* Artists
+
+Other online-only businesses including ecommerce
+For a full list of eligibility criteria, please refer to [Google’s guidelines](https://support.google.com/business/answer/3038177) for representing your business online.
+</details>
+
+<details>
+
 <summary> What happens if someone else already owns the business listing?</summary>
 
 If the listing is already claimed by another owner, our team can request ownership and work with Google Support to gain access. If access cannot be gained, we will discuss the next steps with you.
@@ -103,7 +118,7 @@ Posts are created using relevant content from your business website. If you have
 
 <summary>What is the status of my Google Business Profile verification? Is my verification complete?</summary>
 
-You can view the current status of verification in the Projects tab of your dashboard. There you can find information about any in-progress or complete work that our team is fulfilling on your behalf. You will be able to see any notes left by our team about the status, including any issues that may require a different type of verification or may be waiting on resolution from a [Google support ticket](./google-business-profile-support-tickets-and-suspensions.md).
+You can view the current status of verification in the Projects tab of your dashboard. There you can find information about any in-progress or complete work that our team is fulfilling on your behalf. You will be able to see any notes left by our team about the status, including any issues that may require a different type of verification or may be waiting on resolution from a Google support ticket.
 
 ![Projects Tab.png](./img/18617870927639-802d00bc47.png)
 </details>
@@ -142,3 +157,19 @@ For businesses with 10 or more locations, we can request bulk verification from 
 
 Making edits to a profile can sometimes trigger a re-verification requirement or a suspension from Google. If a listing is suspended, our team will work diligently with Google to have the suspension lifted. However, there is no guarantee that Google will agree to reinstate the listing, as the final decision rests with them.
 </details>
+
+<details>
+
+<summary>What business types or categories don't have access to Google Business Profile posts?</summary>
+
+* Adult Entertainment
+* Camps
+* Cannabis shop
+* Casino
+* Conference Center
+* Gun Shop
+* Hotel (all hotel categories)
+* Vacation Rental
+* Wine Store (and other alcohol-related categories)
+</details>
+

@@ -54,14 +54,14 @@ For clients looking to add more advanced features, **Accelerated Templated Websi
 
 <summary>How does the design process work?</summary>
 
-Each client starts with an onboarding call where our design team collects important information. We then create the site based on the selected Duda templates, with AI-written copy and stock images. Clients can request up to two major rounds of edits before finalizing the design. During these rounds of edits, they’ll have a chance to leave pins and feedback directly on their site using Duda’s platform.
+Each client starts with an onboarding call where our design team collects important information. We then create the site based on the selected Duda templates, with AI-written copy and stock images. Clients can request one major round of edits before finalizing the design. During this round of edits, they’ll have a chance to leave pins and feedback directly on their site using Duda’s platform.
 </details>
 
 <details>
 
 <summary>What support is offered after launch?</summary>
 
-Once the website is live, we provide ongoing hosting, technical support, and unlimited minor edits to text and images. Plus clients also receive additional support for Ecommerce and other enhanced features.
+Once the website is live, we provide ongoing hosting, technical support, and monthly minor edits to text and images. Plus clients also receive additional support for Ecommerce and other enhanced features.
 </details>
 
 <details>
