@@ -63,21 +63,12 @@ If you have multiple markets, select your target market before proceeding.
 
 ### Contact Us Button Customization
 
-You can customize the "Contact Us" button that appears in the Business App to direct clients to your preferred communication method.
+You can customize the "Contact Us" button that appears in the Business App to allow clients to start a conversation with you.
 
 To configure the Contact Us button:
 
-1. Navigate to **Partner Center > Administration > Customize**
-2. Go to **General Product Settings > Contact button for Business App users**
-3. Choose your preferred contact method:
-   - **Email**: Clients will be prompted to send an email
-   - **Phone**: Clients will see your phone number
-   - **Website**: Direct clients to a specific webpage
-   - **Hide**: Remove the contact button entirely
-
-:::warning
-Ensure your contact information is current and monitored regularly for the best client experience.
-:::
+1. Navigate to **Partner Center > Administration > Customize Business App**
+2. Go to **Conversation Messages > Check on/off the 'Customers can start conversations with you' setting**
 
 ## How to Configure Prospect Snapshot Experience
 
@@ -171,12 +162,6 @@ Only certain listing and review sources support media content such as photograph
 <summary>Can I disable Buy-it-Yourself purchasing completely?</summary>
 
 Yes, you can control BIY purchasing by creating required administrative questions that are hidden from end users. This forces all orders into "Awaiting Partner Approval" status, giving you complete control over the purchasing process.
-</details>
-
-<details>
-<summary>What happens if I hide the Contact Us button in Business App?</summary>
-
-Hiding the Contact Us button removes the direct contact option from Business App. Clients will need to use alternative communication methods you've established. Ensure you have other clear communication channels available.
 </details>
 
 <details>
