@@ -8,7 +8,7 @@ updated_at: "2025-01-14T15:12:32Z"
 labels: []
 section_id: 18536913508375
 locale: "en-us"
-Draft: true
+draft: true
 ---
 
 When ordering a website with Vendasta Services, a website framework is the baseline from which we build your website. It can be configured and customized to suit your needs, depending on the product you order. You can find all of our [available frameworks here](https://frameworks.yourdigitalagents.com/).
