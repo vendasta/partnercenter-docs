@@ -1,6 +1,6 @@
 ---
 title: "How to Receive Notifications for Review Response Approvals"
-sidebar_label: "How to Receive Notifications for Review Response Approvals"
+sidebar_label: "Configuring User Notifications"
 description: "One of the reputation management services Vendasta’s Vendasta Services offers is responding to reviews via products such as  Review Responses Standard  ."
 ---
 
