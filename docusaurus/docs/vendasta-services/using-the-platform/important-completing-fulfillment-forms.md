@@ -1,6 +1,6 @@
 ---
-title: "Important: Completing Fulfillment Forms"
-sidebar_label: "Important: Completing Fulfillment Forms"
+title: "Fulfillment Forms with Vendasta Services"
+sidebar_label: "Fulfillment Forms"
 description: "After submitting an order, it's crucial to complete the in-platform Fulfillment Form. Failure to do so can result in service delays. Fulfillment Forms can be c"
 ---
 
@@ -66,7 +66,7 @@ When ready, your salesperson can submit the order for admin approval and activat
 
 From this point, Partner Center admins can approve and activate the order and the fulfillment form will already have all of the details that the salesperson had entered during the drafting stage.
 
-For more information on managing orders between Sales & Success Center and Partner Center, [learn more here.](https://support.vendasta.com/hc/en-us/articles/13234110271511-Getting-Started-Onboard-your-customers-from-pre-sale-to-post-sale-#h_01GW06AVFMAKV00DS82XD9DEVM)
+For more information on managing orders between Sales & Success Center and Partner Center, [learn more here.](../../commerce/orders/creating-and-managing-orders.mdx)
 
 ## Notifications and Tracking
 

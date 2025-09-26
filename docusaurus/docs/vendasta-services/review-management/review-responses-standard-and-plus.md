@@ -144,6 +144,7 @@ The team will flag negative reviews with the review site if the review clearly v
 <details>
 
 <summary>Do you respond to Google Q&A questions?</summary>
+
 For Review Responses Plus, yes of course! Our team will respond to any questions that come through Google Q&A. With Review Responses Standard, this is not included.
 </details>
 
