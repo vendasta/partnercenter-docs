@@ -89,13 +89,13 @@ _Examples of capabilities you might enable:_
 The **Knowledge Sources** section is where you teach your AI Employee about your business, so it can give accurate, up-to-date answers to customers.
 
 _What this is:_  
-Knowledge sources are collections of business information your AI can refer to during conversations—such as your business profile, website pages, FAQs, or uploaded documents. The AI uses this info only when it needs to answer a relevant question.
+Knowledge sources are collections of business information your AI can refer to during conversations—such as website pages, FAQs, or uploaded documents. The AI uses this info only when it needs to answer a relevant question.
 
 _What to do:_  
 Add any information that would help your AI answer questions or provide better service:
-- **Connect your business profile:** This gives the AI basics like your address, hours, services, and contact info.
 - **Add your website:** Let the AI "read" your site to answer questions about your offerings, prices, or policies.
 - **Upload documents or custom text:** Share menus, price lists, terms, or answers to frequently asked questions.
+- **Provide basic business information:** Include essentials like your address, hours, services, and contact info.
 - **Review and update regularly:** Make sure your knowledge sources are current, so your AI never gives outdated info.
 
 > **Tip:** The more up-to-date and specific your knowledge sources, the more helpful and accurate your AI Employee will be!

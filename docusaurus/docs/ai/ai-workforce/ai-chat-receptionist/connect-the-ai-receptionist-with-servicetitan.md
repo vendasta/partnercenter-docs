@@ -52,7 +52,7 @@ This capability allows your AI Receptionist to search for customers and retrieve
 
 ### Step 1: Add a ServiceTitan Customer Lookup Capability
 
-1. In Business App, navigate to <AISparkleIcon /> `AI` → `AI Workforce`
+1. In your Business App, navigate to <AISparkleIcon /> `AI` → `AI Workforce`
 2. Select your AI Employee and click `Configure`.
 3. Under `Custom Capabilities`, click `Add a capability`.
 4. Fill in the following fields:
@@ -230,7 +230,7 @@ This capability enables your AI Receptionist to schedule new appointments, creat
 
 ### Step 1: Add a ServiceTitan Appointment Scheduling Capability
 
-1. In Business App, navigate to <AISparkleIcon /> `AI` → `AI Workforce`
+1. In your Business App, navigate to <AISparkleIcon /> `AI` → `AI Workforce`
 2. Select your AI Employee and click `Configure`.
 3. Under `Custom Capabilities`, click `Add a capability`.
 4. Fill in the following fields:
@@ -384,7 +384,7 @@ This capability allows your AI Receptionist to provide real-time updates on job 
 
 ### Step 1: Add a ServiceTitan Job Status Capability
 
-1. In Business App, navigate to <AISparkleIcon /> `AI` → `AI Workforce`
+1. In your Business App, navigate to <AISparkleIcon /> `AI` → `AI Workforce`
 2. Select your AI Employee and click `Configure`.
 3. Under `Custom Capabilities`, click `Add a capability`.
 4. Fill in the following fields:
@@ -705,7 +705,7 @@ ServiceTitan returned a `429 Too Many Requests` error, indicating you've exceede
 This view shows the raw HTTP request the AI sent, including headers and request body.
 
 #### How do we fix this error?
-1. Open "Conversations" → "Explanation" in the Business App
+1. Open "Conversations" → "Explanation" in your Business App
 2. Review the API call details for correct endpoints and parameters
 3. Verify that all required headers are included
 4. Check that request body format matches ServiceTitan API requirements
@@ -734,7 +734,7 @@ The API returned a `404 Not Found` error, meaning the requested resource doesn't
 <details>
 <summary>Can I use this ServiceTitan integration with other AI Employees besides the Chat Receptionist?</summary>
 
-Absolutely! While this guide focuses on the AI Chat Receptionist, the Custom Capabilities and tools you create here work with any AI Employee, including your [AI Voice Receptionist](/docs/ai/ai-workforce/ai-voice-receptionist).
+Absolutely! While this guide focuses on the AI Chat Receptionist, the Custom Capabilities and tools you create here work with any AI Employee, including your [AI Voice Receptionist](../ai-voice-receptionist.md).
 
 This means customers can get ServiceTitan information and schedule appointments through phone calls, SMS, web chat, or any other channel your AI Employees support. The same ServiceTitan data will be available regardless of how customers choose to interact with your business.
 
@@ -764,18 +764,18 @@ You can create additional Custom Capabilities for features like inventory lookup
 <details>
 <summary>How does the ServiceTitan integration work with my AI's Knowledge Base?</summary>
 
-The ServiceTitan integration provides real-time operational data through API calls, while your [Knowledge Base](/docs/ai/knowledge-base) contains static business information. These work together as follows:
+The ServiceTitan integration provides real-time operational data through API calls, while your [Knowledge Base](../../knowledge-base.md) contains static business information. These work together as follows:
 
 **ServiceTitan API provides:** Live job status, customer history, technician schedules, real-time availability  
 **Knowledge Base should include:** Service policies, pricing information, service area details, company procedures, emergency protocols
 
-Your AI will use the ServiceTitan API to answer "When is my next appointment?" and the Knowledge Base to answer "What's your service area?" For best results, ensure your [Knowledge Sources](/ai/ai-workforce/ai_workforce_overview#knowledge-sources) include comprehensive business policies and procedures to complement the real-time operational data.
+Your AI will use the ServiceTitan API to answer "When is my next appointment?" and the Knowledge Base to answer "What's your service area?" For best results, ensure your [Knowledge Sources](../index.mdx#knowledge-management) include comprehensive business policies and procedures to complement the real-time operational data.
 </details>
 
 <details>
 <summary>What if customers ask about ServiceTitan-related information the API can't provide?</summary>
 
-Great question! The ServiceTitan API provides operational and customer data, but customers often need additional business information. Add these topics to your [Knowledge Base](/docs/ai/knowledge-base):
+Great question! The ServiceTitan API provides operational and customer data, but customers often need additional business information. Add these topics to your [Knowledge Base](../../knowledge-base.md):
 
 - Service area boundaries and travel charges
 - Emergency service policies and after-hours rates
@@ -863,7 +863,7 @@ Emergency services require special handling to ensure rapid response:
 
 Monitor customer service patterns through several methods:
 
- 1. **Conversation Analytics:** Review the [Conversations](../../conversations/) tab to identify frequently requested services
+ 1. **Conversation Analytics:** Review the [Conversations](/business-app/conversations/) tab to identify frequently requested services
 
 2. **ServiceTitan Reporting:** Use ServiceTitan's built-in reporting to track jobs created through AI interactions by tagging them appropriately
 
@@ -932,8 +932,8 @@ You can create follow-up workflows using ServiceTitan webhooks and Business App 
 - Review request campaigns for positive experiences
 
 **Implementation Options:**
- 1. Use ServiceTitan webhooks to trigger Business App [automations](../../automations/index.md)
- 2. Set up [Zapier](../../automations/zapier.md) integrations between ServiceTitan and Business App
+ 1. Use ServiceTitan webhooks to trigger Business App [automations](/business-app/automations/)
+ 2. Set up [Zapier](/business-app/automations/) integrations between ServiceTitan and Business App
 3. Create scheduled follow-up tasks in your AI workflow
 
 **Example Workflow:**

@@ -8,7 +8,7 @@ import { AISparkleIcon } from '@site/src/components/Icons';
 The AI Chat Receptionist helps you capture leads and respond to website visitors 24/7. In this guide, you'll learn how to set up, train, and monitor your AI assistant to work for your business.
 
 **By default, the AI Chat Receptionist:**
-- Answers questions about your business using information from your business profile and knowledge base
+- Answers questions about your business using information from your knowledge base and website
 - Collects visitor contact information (name, phone number, or email) so you can follow up with leads
 - Detects and responds in over 40 languages, including English, French, and Spanish
 - Lets visitors know when it doesn't have enough information, so a team member can follow up
@@ -34,7 +34,7 @@ Give your AI a friendly, professional name and photo. The AI Receptionist knows 
 Your AI Chat Receptionist is assigned to the **Web Chat** channel by default. This channel is always active and cannot be disabled. You can also assign your AI Receptionist to the **SMS** channel to reach customers via text messaging.
 
 :::note  
-The Web Chat widget isn't automatically added to your website! You'll need to install the widget code or enable it within your site builder before your AI can start engaging visitors. When you are ready to install the widget, refer to [How to install the Conversations Web Chat Widget](/conversations/conversations-ai-web-chat-overview)
+The Web Chat widget isn't automatically added to your website! You'll need to install the widget code or enable it within your site builder before your AI can start engaging visitors. When you are ready to install the widget, refer to [How to install the Conversations Web Chat Widget](/business-app/conversations/web-chat/)
 :::
 
 ### Step 2: Configure Your AI Chat Receptionist Capabilities
@@ -54,7 +54,7 @@ Capabilities are like instructions that guide how your AI Chat Receptionist beha
 
 To respond accurately to general inquiries, your AI Chat Receptionist needs context about your business. 
 
-- **Knowledge**: This includes detailed business information, such as FAQs, service descriptions, and policies, that the AI uses to answer specific questions. Your **Business Profile** and information for you homepage is included by default.
+- **Knowledge**: This includes detailed business information, such as FAQs, service descriptions, and policies, that the AI uses to answer specific questions. Information from your website homepage is included by default.
 
  For a complete guide on providing your AI Employees with Knowledge, see the [Knowledge Sources section in the AI Workforce Overview](../ai_workforce_overview.md#knowledge-sources).
 
