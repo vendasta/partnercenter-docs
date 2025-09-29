@@ -1,5 +1,5 @@
 ---
-title: "Social Media Marketing Overview"
+title: "Social Media Management Overview"
 sidebar_label: "Overview"
 description: "Overview of Vendasta Services Social Media Marketing services"
 sidebar_position: 1

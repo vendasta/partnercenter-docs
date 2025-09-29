@@ -1,6 +1,6 @@
 ---
-title: "Which MatchCraft Ads Service Is Right for You?"
-sidebar_label: "Overview"
+title: "MatchCraft Ads Services"
+sidebar_label: "Service Overview"
 description: "A guide to choosing between MatchCraft Express Ads, Managed Ads Campaign, and Managed AI AdVantage for different needs."
 ---
 
