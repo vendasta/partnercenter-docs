@@ -1,7 +1,7 @@
 ---
 title: "Guide to Digital Advertising Platforms"
-sidebar_label: "What digital ad platforms are available to advertise on? | Vendasta Services"
-description: "n overview of the available digital advertising platforms and the managed services that support them, including search, display, social, and video."
+sidebar_label: "Advertising Platforms"
+description: "An overview of the available digital advertising platforms and the managed services that support them, including search, display, social, and video."
 tags:
   - advertising-platforms
   - google-ads
