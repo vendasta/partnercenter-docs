@@ -9,13 +9,15 @@ AI Capabilities are specialized skills that define what your AI Employees can do
 
 ## What are AI Capabilities?
 
-A **capability** is a discrete skill you can enable or disable for an AI Employee. Each capability contains instructions that guide the AI on:
+A **capability** is a discrete set of instructions you can enable or disable for an AI Employee. Simply put, a capability is a section of prompt, along with an optional tool to call an API. 
+
+Each capability contains instructions that guide the AI on:
 
 - Which actions to take in specific situations
 - What outcomes to prioritize
 - How to respond to different types of requests
 
-Capabilities work together to create AI Employees that can handle complex, multi-step interactions while maintaining consistency with your business processes.
+Multiple capabilities can work together to create AI Employees that can handle complex, multi-step interactions while maintaining consistency with your business processes. When the AI employee handles a request, it combines all the Capabilities into the prompt the governs its behaviour. 
 
 ### Types of AI Capabilities
 
@@ -29,14 +31,14 @@ The Vendasta platform provides pre-configured capabilities for common business f
 #### Custom Capabilities
 For specialized workflows, you can create your own custom capabilities that:
 
-- Connect to external systems via APIs
+- Simply add new instructions for the AI employee to follow (no tools needed)
+- Connect to external systems via APIs (using tools)
 - Execute complex business logic
-- Integrate with third-party tools and databases
 - Automate unique processes specific to your industry
 
 ## Business Impact
 
-Capabilities transform customer interactions from generic chatbot exchanges into personalized assistance that feels like talking to a knowledgeable team member. Instead of customers waiting for business hours or getting generic responses, they receive immediate help with real business tasks like checking inventory, booking appointments, or getting account information.
+Capabilities transform customer interactions from generic chatbot exchanges into personalized assistance that feels like talking to a capable team member. Instead of customers waiting for business hours or getting generic responses, they receive immediate help with real business tasks like checking live inventory, booking appointments, or getting account information.
 
 This automation allows your human team to focus on high-value activities while ensuring consistent service quality regardless of volume or time of day.
 
