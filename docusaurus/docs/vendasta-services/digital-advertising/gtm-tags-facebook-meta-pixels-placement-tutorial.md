@@ -1,6 +1,6 @@
 ---
 title: "Google Tag Manager & Facebook Meta Pixels Overview"
-sidebar_label: "GTM Tags & Facebook Meta Pixels + Placement Tutorial"
+sidebar_label: "GTM Tags & Facebook Meta Pixels"
 description: "This article will guide you through the essentials of Google Tag Manager (GTM) tags and Facebook Meta Pixels. Understanding and implementing these tools is cru"
 ---
 

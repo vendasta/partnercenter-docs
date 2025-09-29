@@ -1,6 +1,6 @@
 ---
-title: "Tips For A Successful Ad Campaign"
-sidebar_label: "How do I get set up for my Digital Ad Campaign?"
+title: "Tips for a Successful Campaign"
+sidebar_label: "Campaign Tips"
 description: "You want to get started with a successful Digital Ads campaign as quickly as possible. During the first month of the campaign, the advertising platform and our"
 ---
 
