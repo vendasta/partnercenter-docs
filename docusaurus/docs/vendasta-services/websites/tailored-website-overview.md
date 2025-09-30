@@ -1,12 +1,12 @@
 ---
 title: "Tailored Website Build: Service Expectations"
-sidebar_label: "Tailored Website Build"
+sidebar_label: "Tailored Website Overview"
 description: "An overview of the collaborative, do-it-with-me process for creating a custom website tailored to your business needs, from discovery to launch."
 ---
 
 This guide outlines the process and expectations for the Tailored Website service. This is a collaborative, do-it-with-me solution where our professionals work with you to create a website perfectly suited to your business.
 
-## The website build process
+## Tailored Website build process
 
 The tailored website build is a comprehensive process that moves from initial consultation to final launch in distinct stages. The entire project, from concept to completion, typically requires 3 to 6 months.
 
@@ -24,7 +24,7 @@ Based on the information from the discovery call, our team will build a custom q
 * **Timeline:** The quote will be shared within 5 business days and is valid for 30 days. The project timeline provided is an estimate and may be adapted based on delays or revision requests.
 * **Important:** The quote is based on the agreed-upon services. If the scope of the project increases at any point, an additional quote will be created and require approval to proceed.
 
-### 3. Project Kick-off Call
+### 3. Project kick-off call
 
 Once you have agreed to the proposed Statement of Work, our team will schedule a call to discuss the specific details of the site before the build begins.
 
