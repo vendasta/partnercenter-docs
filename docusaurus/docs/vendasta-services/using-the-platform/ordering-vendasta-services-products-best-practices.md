@@ -6,7 +6,7 @@ description: "Ordering products - General    Ordering Vendasta Services products
 
 ### Ordering products - General
 
-Ordering Vendasta Services products is the same as [ordering any product](https://support.vendasta.com/hc/en-us/articles/4406958134807) in the platform. It's important to know that our teams require additional information after the product has been ordered so they can successfully fulfill the service in line with what you and your customers require.
+Ordering Vendasta Services products is the same as [ordering any product](../../commerce/orders/creating-and-managing-orders.mdx) in the platform. It's important to know that our teams require additional information after the product has been ordered so they can successfully fulfill the service in line with what you and your customers require.
 
 1.  Go to Partner Center > Businesses > Accounts > Click on the account for which you want to place an order
 2.  Click Order Products
@@ -17,7 +17,7 @@ Ordering Vendasta Services products is the same as [ordering any product](https:
 6.  Click Next
 7.  Review and Purchase
 
-After completing the purchase, you will be presented with a [fulfillment form](https://support.vendasta.com/hc/en-us/articles/14951706561559). This form contains necessary details to be completed so that Vendasta Services teams can successfully complete the work that has been purchased.
+After completing the purchase, you will be presented with a [fulfillment form](./important-completing-fulfillment-forms.md). This form contains necessary details to be completed so that Vendasta Services teams can successfully complete the work that has been purchased.
 
 Check out this video for full details on inputting information, sharing, and submitting a fulfillment form.
 

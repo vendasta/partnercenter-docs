@@ -10,7 +10,7 @@ section_id: 18536913508375
 locale: "en-us"
 ---
 
-**Note:** The following video showcases an older workflow from before the implementation of fulfillment forms. The workflow is very similar, with the exception that the ability to upload a content form PDF comes _after_ the purchase. [Learn more about fulfillment forms here.](https://support.vendasta.com/hc/en-us/articles/14951706561559)
+**Note:** The following video showcases an older workflow from before the implementation of fulfillment forms. The workflow is very similar, with the exception that the ability to upload a content form PDF comes _after_ the purchase. [Learn more about fulfillment forms here.](../using-the-platform/important-completing-fulfillment-forms.md)
 
 ## Guide
 
