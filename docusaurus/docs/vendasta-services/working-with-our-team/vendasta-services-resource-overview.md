@@ -17,7 +17,7 @@ This article provides an overview of Vendasta's teams and resources, which will 
     * **Phone:** 1-866-378-8031 (Monday - Friday, 8:00 AM - 5:00 PM CST)
 
 * **Vendasta Sales (for partners only):** For sales-related inquiries, like subscriptions, product recommendations, or discussing opportunities.
-    * [How to find your assigned representative](https://support.vendasta.com/hc/en-us/articles/4406957618711-Partner-Center-Contact-your-assigned-representative)
+    * To find your assigned representative, look in the bottom left corner of the page in Partner Center. 
     * **For agencies with the "Customer Success" team:**
         * **Email:** customersuccess@vendasta.com
         * **Office Hours:** Monday - Friday, 3:00 PM - 4:00 PM ET
@@ -26,8 +26,8 @@ This article provides an overview of Vendasta's teams and resources, which will 
     * **Email:** onboarding@vendasta.com
 
 * **Support on Demand (for partners only):** For questions about the Vendasta platform, including Partner Center, Business App, and Social Marketing.
-    * [Vendasta Help Options](https://support.vendasta.com/hc/en-us/articles/24293302704279-Help-Options)
     * **Email:** support@vendasta.com
+    * **Submit a ticket:** Contact support through Partner Center or via email
 
 ---
 

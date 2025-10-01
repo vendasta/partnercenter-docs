@@ -12,7 +12,7 @@ Welcome to the exciting world of Fulfillment Forms! This article will walk you t
 
 ## Purchasing a Product
 
-For more info, [check out this article.](https://support.vendasta.com/hc/en-us/articles/4406958134807)
+For more info, [check out this article.](../../commerce/orders/creating-and-managing-orders.mdx)
 
 1.  Go to Partner Center > Businesses > Accounts
 2.  Select the account you want to make a purchase for

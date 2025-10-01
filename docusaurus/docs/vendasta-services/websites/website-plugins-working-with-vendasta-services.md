@@ -1,7 +1,7 @@
 ---
 title: "Website Plugins | Working with Vendasta Services"
 sidebar_label: "Website Plugins"
-description: "What are website plugins?  \n A website plugin adds additional functionality to a WordPress website that isn’t provided as a standard setting by the website bu"
+description: "What are website plugins?  \n A website plugin adds additional functionality to a WordPress website that isn't provided as a standard setting by the website bu"
 zendesk_id: 24462249835287
 zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/24462249835287-Website-Plugins-Working-with-Marketing-Services"
 updated_at: "2024-07-02T16:38:25Z"
