@@ -20,7 +20,7 @@ These steps are laid out to help equip you with plenty of resources and informat
 
 ### **Familiarize yourself with the service expectations**
 
-Expectation brochures are unbranded documents provided by Vendasta Services that break down the timelines, details, and deliverables that you and your customers can expect after ordering. You can also check out [this article](https://marketing-services.zendesk.com/hc/en-us/articles/11624544314647) to get a high-level overview and reference for expectations across all product lines. 
+Expectation brochures are unbranded documents provided by Vendasta Services that break down the timelines, details, and deliverables that you and your customers can expect after ordering. You can also check out the [Expectations by Service guide](./expectations-by-service-within-vendasta-services.md) to get a high-level overview and reference for expectations across all product lines. 
 
 You can find expectation brochures inside of the platform:
 

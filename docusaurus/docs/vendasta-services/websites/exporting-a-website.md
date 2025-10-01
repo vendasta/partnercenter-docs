@@ -2,8 +2,6 @@
 title: "Exporting a Website"
 sidebar_label: "Exporting a Website"
 description: "If you have decided you wish to move a website to a new host and discontinue support, we are able to provide you with the file for your website. \n What you nee"
-zendesk_id: 18929436843287
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/18929436843287-Exporting-a-Website"
 updated_at: "2023-11-08T21:50:00Z"
 labels: []
 section_id: 18536913508375

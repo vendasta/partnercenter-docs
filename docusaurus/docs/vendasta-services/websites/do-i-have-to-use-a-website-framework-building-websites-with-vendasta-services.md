@@ -2,8 +2,6 @@
 title: "Do I have to use a website framework? | Building Websites with Vendasta Services"
 sidebar_label: "Do I have to use a website framework? | Building Websites with Vendasta Services"
 description: "When ordering a website with Vendasta Services, a website framework is the baseline from which we build your website. It can be configured and customized to s"
-zendesk_id: 19144758265623
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/19144758265623-Do-I-have-to-use-a-website-framework-Building-Websites-with-Marketing-Services"
 updated_at: "2025-01-14T15:12:32Z"
 labels: []
 section_id: 18536913508375

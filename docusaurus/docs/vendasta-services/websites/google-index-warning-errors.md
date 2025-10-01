@@ -2,8 +2,6 @@
 title: "Google Index Warning Errors"
 sidebar_label: "Google Index Warning Errors"
 description: "Everyone wants to make sure that their website is appearing in Google search results. When a new website is launched or changed, it needs to be indexed by Goog"
-zendesk_id: 18930504706711
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/18930504706711-Google-Index-Warning-Errors"
 updated_at: "2023-11-08T22:22:01Z"
 labels: []
 section_id: 18536913508375
