@@ -1,0 +1,111 @@
+---
+title: Workflow Control Steps
+description: Learn how to use logic, timing, and flow control steps in your automations
+sidebar_position: 3
+---
+
+# Workflow Control Steps
+
+Control the flow and timing of your automations with logic steps, delay steps, and end automation steps. These features give you precise control over when and how your automations execute.
+
+## If/Else Logic
+
+The If/Else step allows conditional execution flow in an automation, enabling you to execute different branches based on whether a condition is met.
+
+### Setting Up an If/Else Step
+
+When adding a new step, select "If/Else" from the options:
+
+![If/Else step setup](./img/automations/ifelse-setup.jpg)
+
+When setting up an If/Else step, you will be prompted to define a filter:
+
+![If/Else filter configuration](./img/automations/ifelse-filter.jpg)
+
+After setting up your if/else condition, the workflow will show two branches:
+- **If branch**: This path is followed when the condition is true
+- **Else branch**: This path is followed when the condition is false
+
+You can add different steps to each branch to create custom pathways based on your filter conditions.
+
+### Common Use Cases for If/Else
+
+1. **Contact Qualification**: Use if/else to determine if a lead meets your qualification criteria and route them to different workflows
+2. **Multi-path Communication**: Send different follow-up emails based on customer responses
+3. **Conditional Actions**: Perform different actions based on product type, account status, or any other criteria
+
+## Delay Until Steps
+
+A **Delay Until** step allows you to introduce a time-based control mechanism within automation workflows. This feature ensures that actions occur at precisely the right moment, improving workflow flexibility, task scheduling, and customer engagement.
+
+### How It Works
+
+The **Delay Until** step allows you to pause an automation workflow for a specified time or until a defined event occurs in the CRM. This can be useful for:
+
+- Scheduling follow-ups after a certain period
+- Ensuring tasks or messages are triggered based on customer activity
+- Streamlining CRM actions without the need for manual intervention
+
+![Delay Until Step illustration](./img/automations/delay-until/delay-until-step-1.jpg)
+
+### Setting Up a Delay Until Step
+
+1. Navigate to the **Automation Workflow Editor** within your CRM.
+2. Add a **Delay Until** step at the appropriate point in the workflow.
+3. Choose a delay period or specify an event that must occur before proceeding to the next step.
+4. Save and activate the workflow.
+
+### Available Delay Options
+
+The **Delay until an event happens** step provides several sub-triggers for contacts:
+
+![Delay Until options](./img/automations/delay-until/delay-until-step-2.jpg)
+
+![Delay Until configuration](./img/automations/delay-until/delay-until-step-3.jpg)
+![Delay Until additional options](./img/automations/delay-until/delay-until-step-4.jpg)
+
+### Benefits of Using Delay Until Steps
+
+- **Improved Workflow Precision** – Ensures that automated tasks happen at the optimal moment
+- **Better Customer Engagement** – Delays help optimize messaging and follow-up timing
+- **Enhanced Sales Process Management** – Enables better tracking of missed sales touch points and notifications
+
+![Delay Until benefits illustration](./img/automations/delay-until/delay-until-step-5.jpg)
+
+### Use Case Example
+
+A business wants to automate follow-ups for new contacts generated via web chat. The workflow includes:
+
+1. AI-generated thank-you email upon contact creation
+2. A plain text email sent to the contact
+3. A CRM sales task created for follow-up
+4. A **Delay Until** step to wait a set period before creating an opportunity
+5. A note added to the contact after the delay period
+
+By implementing a **Delay Until** step, the business ensures timely and meaningful engagement rather than immediate, potentially ineffective, actions.
+
+## End This Automation
+
+The "End This Automation" step allows you to terminate an automation at a specific point. This is useful for scenarios where you've completed the necessary steps for some leads and don't need to continue processing.
+
+![End This Automation step](./img/automations/end-automation.jpg)
+
+Using this step along with if/else conditions gives you significant control over the automation flow. For example, you can terminate the automation early for certain leads while continuing the process for others based on specific criteria.
+
+### Common Use Cases for End Automation
+
+1. **Contact Qualification**: End the automation for unqualified leads while continuing for qualified ones
+2. **Goal Achievement**: End the automation when a desired outcome is achieved (e.g., order placed, task completed)
+3. **Time-sensitive Processes**: End automations for contacts who haven't responded within a specified timeframe
+
+## Best Practices
+
+- **Combine control steps**: Use If/Else with End Automation for powerful filtering
+- **Plan for timing**: Consider when delays make sense in your customer journey
+- **Test thoroughly**: Always test workflows with control steps to ensure they behave as expected
+- **Document your logic**: Use clear names and descriptions for complex conditional flows
+
+## Who Can Use These Features?
+
+Workflow control steps are available to users managing automation workflows within Business App and Partner Center.
+
