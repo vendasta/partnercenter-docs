@@ -288,6 +288,7 @@ Yes, local search ads can show on Google Maps after the owner of the Google Busi
 <details>
 
 <summary>Where should I upload attachments for my order?</summary>
+
 Please upload all attachments in the attachments section within the fulfillment form. Alternatively, you can email your attachments to our team. This ensures our team can access all documents to provide you with excellent service.
 </details>
 

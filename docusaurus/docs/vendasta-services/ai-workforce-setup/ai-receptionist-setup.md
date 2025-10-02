@@ -62,6 +62,7 @@ When a customer interacts with the chat on your website, the AI will reply with 
 <details>
 
 <summary> How much does the chatbot know about the business?</summary>
+
 The chatbot can be given "knowledge" from the business profile to answer basic questions about services, location, and hours. You can also upload additional text to add FAQs, service details, and instructions on how to book appointments so the web chat can converse accurately with website visitors.
 </details>
 
@@ -75,6 +76,7 @@ You will receive an email or SMS notification (or both) when a customer uses the
 <details>
 
 <summary> Can you create custom automations for me?</summary>
+
 We do not currently offer custom automation creation. The setup includes a standardized list of workflows designed to get your business running quickly. During the onboarding call, we will discuss your needs and make adjustments to our pre-built lead-capture automation templates.
 </details>
 
