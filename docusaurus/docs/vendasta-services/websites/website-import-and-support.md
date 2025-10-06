@@ -1,7 +1,7 @@
 ---
 title: "Website Import"
 sidebar_label: "Website Import"
-description: "If you have an existing WordPress website and would like to move it onto Vendasta’s hosting platform (WordPress Hosting Pro), Vendasta Services can help! \n Yo"
+description: "If you have an existing WordPress website and would like to move it onto Vendasta's hosting platform (WordPress Hosting Pro), Vendasta Services can help! \n Yo"
 zendesk_id: 18929271935639
 zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/18929271935639-Importing-Websites-with-Marketing-Services"
 updated_at: "2025-06-03T17:16:27Z"

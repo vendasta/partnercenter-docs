@@ -1,16 +1,12 @@
 ---
 title: "Vendasta Services Website Ordering Guide"
 sidebar_label: "Ordering"
-description: "Walkthrough Video  \n \n Note:  The following video showcases an older workflow from before the implementation of fulfillment forms. The workflow is very simila"
-zendesk_id: 19127162749463
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/19127162749463-Marketing-Services-Website-Ordering-Guide"
+description: "There are a few steps that need to be taken to order a website from Vendasta Services. By following this guide, you will ensure that your client’s website is delivered as quickly as possible." 
 updated_at: "2024-07-02T16:39:52Z"
 labels: []
 section_id: 18536913508375
 locale: "en-us"
 ---
-
-**Note:** The following video showcases an older workflow from before the implementation of fulfillment forms. The workflow is very similar, with the exception that the ability to upload a content form PDF comes _after_ the purchase. [Learn more about fulfillment forms here.](https://support.vendasta.com/hc/en-us/articles/14951706561559)
 
 ## Guide
 

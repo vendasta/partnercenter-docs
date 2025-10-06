@@ -113,16 +113,22 @@ NAP stands for Name, Address, and Phone number. It is one of the most important 
 </details>
 
 <details>
+
 <summary>What business categories cannot use Google Business Profile posts?</summary>
+
 Certain business types do not have access to the posts feature, including Adult Entertainment, Cannabis Shops, Casinos, Conference Centers, Gun/Weapon Shops, Hotels, Vacation Rentals, and Wine Stores (and other alcohol-related categories).
 </details>
 
 <details>
+
 <summary>Why is responding to reviews important?</summary>
+
 Responding to both positive and negative reviews helps establish credibility and fosters trust with customers. It shows that the business is attentive and values its customers. Customers observe how a business manages feedback, especially negative reviews.
 </details>
 
 <details>
+
 <summary>Where should I upload attachments for my order?</summary>
+
 Please upload all attachments in the fulfillment form. Alternatively, you can email them to our team.
 </details>
