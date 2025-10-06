@@ -1,18 +1,12 @@
 ---
-title: "Website Support"
+title: "Vendasta Services Website Support"
 sidebar_label: "Website Support"
-description: "This article details the inclusions of Vendasta Services’   Website Support   product and the process/best practices for submitting requests to our Website Su"
-zendesk_id: 18930123215127
-zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/18930123215127-Marketing-Services-Website-Support-Service-Inclusions-Process"
-updated_at: "2025-06-03T17:15:23Z"
-labels: []
-section_id: 18536913508375
-locale: "en-us"
+description: "This article details the inclusions of Vendasta Services’ Website Support product and the process/best practices for submitting requests to our Website Support team."
 ---
 
 This article details the inclusions of Vendasta Services’ [Website Support](https://partners.vendasta.com/marketplace/products/MP-9f77626ea38b4e44b044382b50c5f83e) product and the process/best practices for submitting requests to our Website Support team.
 
-**What is Included in Website Support?**
+**What is Included in Vendasta Services Website Support?**
 
 Website Support is a fulfillment service offered by Vendasta Services for WordPress websites hosted on Vendasta’s WordPress Hosting Pro platform. Website Support includes the following:
 
@@ -31,7 +25,7 @@ Website Support is a fulfillment service offered by Vendasta Services for WordPr
 
 **How to Submit a Website Support Request to Vendasta Services:**
 
-1.  Send an email to our team at [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com) 
+1.  Send an email to our team at [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com) 
     1.  Sending edits via email ensures that your request is properly documented, as our teams use a ticketing system. This is the best forum to communicate with us.  
           
         
@@ -56,7 +50,7 @@ Vendasta Services’ Website Support Team has automations in place that will fla
 _If you notice your website is down, first:_
 
 1.  Check if your website is still hosted on WordPress Hosting Pro/if the WordPress Hosting Pro product is active on the account in Partner Center.
-    1.  If you deactivate WordPress Hosting Pro while the DNS records point towards WordPress Hosting Pro (the hosting platform) this will cause the website to go down, as websites need a place to “live.” 
+    1.  If you deactivate WordPress Hosting Pro while the DNS records point towards WordPress Hosting Pro (the hosting platform) this will cause the website to go down, as websites need a place to “live.” 
     2.  If you move the website to another hosting platform, you need to update the DNS records prior to deactivating WordPress Hosting Pro.  
           
         
@@ -67,7 +61,7 @@ _If you notice your website is down, first:_
       
     _Contact Us:_
 4.  Please email us with the details at [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com)  
-    Include answers to the above questions and, if possible, the error message you receive to assist us in determining the root cause. 
+    Include answers to the above questions and, if possible, the error message you receive to assist us in determining the root cause. 
     1.  There are times when websites appear to be down for specific users, and so replication can sometimes be inconsistent. Providing details about your specific experience will help our team troubleshoot and resolve the issue.  
           
         

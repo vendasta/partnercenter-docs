@@ -1,6 +1,6 @@
 ---
-title: "Order Forms"
-sidebar_label: "Order Forms"
+title: "Advertising Order Forms"
+sidebar_label: "Advertising Order Forms"
 description: "When working on our digital ads order form, the accuracy and detail you provide are crucial for us to build the best possible campaign in alignment with your v"
 ---
 
