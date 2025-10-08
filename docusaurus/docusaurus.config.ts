@@ -141,6 +141,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               label: 'Community',
               href: 'https://www.facebook.com/groups/vendasta',
             },
+            {
+              label: 'Status Page',
+              href: 'https://status.vendasta.com/',
+            },
           ],
         },
         {
