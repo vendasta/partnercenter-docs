@@ -107,7 +107,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           type: 'docSidebar',
           sidebarId: 'mainSidebar',
           position: 'left',
-          label: 'Overview',
+          label: 'Documentation',
         },
         {
           type: 'html',
@@ -140,6 +140,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             {
               label: 'Community',
               href: 'https://www.facebook.com/groups/vendasta',
+            },
+            {
+              label: 'Service Status',
+              href: 'https://status.vendasta.com/',
             },
           ],
         },
