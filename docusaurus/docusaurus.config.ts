@@ -91,6 +91,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         docsRouteBasePath: '/',
       },
     ],
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          { from: '/business-app/administration/integrations-overview', to: '/business-app/administration/integrations' },
+          { from: '/business-app/administration/connect-quickbooks', to: '/business-app/administration/integrations/quickbooks' },
+          { from: '/business-app/administration/quickbooks-integration', to: '/business-app/administration/integrations/quickbooks' },
+          { from: '/business-app/administration/connecting-google-analytics', to: '/business-app/administration/integrations/google-analytics' },
+          { from: '/business-app/administration/api-key-based-integrations', to: '/business-app/administration/integrations/authentication-and-connections' },
+          { from: '/business-app/administration/setting-up-sso-integrations', to: '/business-app/administration/integrations/authentication-and-connections' },
+          { from: '/business-app/administration/setting-up-vendor-managed-integrations', to: '/business-app/administration/integrations/authentication-and-connections' },
+          { from: '/business-app/administration/using-data-sync-and-automated-review-requests', to: '/business-app/administration/integrations/automation' },
+          { from: '/business-app/administration/setting-up-triggers-for-closed-matters-in-clio', to: '/business-app/administration/integrations/automation' },
+        ],
+      },
+    ],
   ],
 
   themeConfig: {
