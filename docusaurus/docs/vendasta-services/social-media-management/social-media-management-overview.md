@@ -1,5 +1,5 @@
 ---
-title: "Social Media Management Overview"
+title: "Social Media Marketing Overview"
 sidebar_label: "Overview"
 description: "Overview of Vendasta Services Social Media Marketing services"
 sidebar_position: 1
@@ -26,10 +26,9 @@ The service can create profiles for you on Facebook, X, Instagram, LinkedIn, and
 
 Read more about Social Media Management onboarding **[here](./social-media-management-onboarding.md)**
 
-
 ## What’s included
 
-The service is available in two tiers with different deliverables. Posts can be shared across any supported platform with no extra charge. 
+The service is available in two tiers with different deliverables. Posts can be shared across any supported platform with no extra charge.
 
 ### Social Media Management Standard
 * **12 Unique posts and stories per month:** The posting schedule is tailored to your content needs and may vary week to week, such as posting more during a campaign or event.
@@ -45,7 +44,7 @@ This service includes all Standard features plus additional deliverables for a m
 * **3 addiitonal story highlights (reposts)** (5 total)
 * **An additional $25 USD for post boosting** ($50 USD total)
 * **2 Additional SEO-enhanced blogs per quarter** (1 a month)
-* **Quarterly strategy calls:** These sessions review key metrics, post performance, and gather feedback. 
+* **Quarterly strategy calls:** These sessions review key metrics, post performance, and gather feedback.
 * **Optional monthly check-ins:** You can book optional monthly meetings for feedback or to address urgent updates.
 
 ## The content delivery and review process
@@ -58,11 +57,9 @@ The content creation and review process follows a clear monthly cycle.
 4.  **Review and revisions:** You are asked to provide all revision requests in a single, consolidated round to ensure the calendar is delivered on time.
 5.  **Automatic publishing:** Content is automatically published 5 business days after the calendar has been sent to you for review. This is to ensure your service continues without interruption. Be sure to submit edit requests in a timely manner.
 
-
 ## Managing your content
 
 You have full access to the scheduled content in the social media platform. You are welcome and encouraged to make quick tweaks or changes directly in the platform at any time.
-
 
 ## Frequently asked questions (FAQs)
 
@@ -70,7 +67,7 @@ You have full access to the scheduled content in the social media platform. You 
 <summary>What is the difference between the Standard and Plus service?</summary>
 
 The Standard service creates and posts content to all requested platforms. The Plus service adds a strategic layer, including an initial proposal for the best posting times and platforms for your industry and optional quarterly performance reports with suggestions for improvement.
-</details> 
+</details>
 
 <details>
 <summary>What platforms do you post to?</summary>
@@ -131,9 +128,9 @@ Posts are scheduled with a five-business-day review period. If no feedback is re
 
 To ensure the best results, you should:
 <ul>
-    <li>Connect all your social media accounts promptly when you sign up.</li>
-    <li>Fill out the onboarding questionnaire as completely as possible.</li>
-    <li>Provide any specific content or brand images you want to be used at the beginning of the process.</li>
+<li>Connect all your social media accounts promptly when you sign up.</li>
+<li>Fill out the onboarding questionnaire as completely as possible.</li>
+<li>Provide any specific content or brand images you want to be used at the beginning of the process.</li>
 </ul>
 </details>
 
