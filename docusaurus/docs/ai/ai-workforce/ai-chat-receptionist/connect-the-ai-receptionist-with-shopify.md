@@ -327,8 +327,7 @@ This means customers can ask about products through phone calls, SMS, WhatsApp, 
 
 While this guide is specific to Shopify, you can create similar integrations with any e-commerce platform that offers an API—including WooCommerce, BigCommerce, Magento, or custom-built stores.
 
- The [Custom Capabilities framework](../ai-capabilities/creating-custom-capabilities) allows you to connect to virtually any system that has an API. You can also explore other pre-built integrations in [Connections](../../administration/connections/) or create workflows with external platforms using [Zapier](../../automations/zapier.md).
-</details>
+ The Custom Capabilities Framework allows you to connect to virtually any system that has an API. You can also explore other pre-built integrations in Connections or create workflows with external platforms using Zapier.
 
 ### AI & Knowledge Questions
 
@@ -346,7 +345,7 @@ Your AI will use the Shopify API to answer "Do you have this product?" and the K
 <details>
 <summary>What if customers ask about Shopify-related questions the API can't answer?</summary>
 
-Great question! The Shopify API provides product and inventory data, but customers often need additional information. Add these topics to your [Knowledge Base](../../knowledge-base.md):
+Great question! The Shopify API provides product and inventory data, but customers often need additional information. Add these topics to your Knowledge Base:
 
 - Shipping costs and delivery times
 - Return and exchange policies  
@@ -367,8 +366,8 @@ This ensures your AI can provide complete, helpful answers by combining real-tim
 Yes! Custom Capabilities work across all communication channels supported by your AI Employees. Customers can ask about products through:
 
 - [Web chat](/business-app/conversations/web-chat/)
-- [SMS messaging](/business-app/conversations/sms/) (Conversations Pro required)
-- [WhatsApp](/business-app/conversations/whatsapp/)
+- SMS Messaging (Conversations Pro required)
+- WhatsApp
 - Phone calls (with [AI Voice Receptionist](/ai/ai-workforce/ai-voice-receptionist))
 - [Facebook Messenger](/business-app/conversations/facebook/)
 - [Instagram DMs](/business-app/conversations/instagram/)
@@ -406,7 +405,6 @@ Absolutely! You can create multiple tools within the same Custom Capability or s
 - Inventory lookup for existing customers
 - New arrivals showcase for marketing
 
-Learn more about structuring multiple tools in [Creating Custom Capabilities](../ai-capabilities/creating-custom-capabilities).
 </details>
 
 <details>
@@ -418,7 +416,7 @@ You can monitor product inquiry patterns through several methods:
 
 2. **AI Explanation Feature:** Click "Explanation" on AI responses to see exactly which tools were called and what products were searched
 
-3. **Automation Tracking:** Set up [automations](../../automations/index.md) to log product inquiries or notify your team about trending searches
+3. **Automation Tracking:** Set up automations to log product inquiries or notify your team about trending searches
 
 This data helps you understand customer demand, optimize your inventory, and identify opportunities for targeted marketing campaigns.
 </details>
@@ -435,9 +433,9 @@ Your AI provides product information and links, but purchase completion depends 
 - Provide clear checkout instructions and support contact information
 
 **Follow-up Workflows:**
-- Create [automations](../../automations/index.md) to notify your sales team about purchase-intent conversations
+- Create automations to notify your sales team about purchase-intent conversations
 - Set up lead scoring to prioritize high-value product inquiries
-- Use [Zapier](../../automations/zapier.md) to create tasks in your CRM when specific products are discussed
+- Use Zapier to create tasks in your CRM when specific products are discussed
 
 The AI captures the lead and interest; your business processes handle the conversion.
 </details>
@@ -451,13 +449,13 @@ Yes! You can customize out-of-stock responses in your Custom Capability prompt. 
 **Restock notifications:** "I can have our team notify you when it's back in stock."  
 **Substitute suggestions:** "Based on your interest, you might also like [alternative products]."
 
-You can also modify the tool logic to suggest related products or connect to your inventory system for restock dates. See [Creating Custom Capabilities](../empower-your-ai-employee-custom-capabilities.md) for prompt customization best practices.
+You can also modify the tool logic to suggest related products or connect to your inventory system for restock dates.
 </details>
 
 <details>
 <summary>How do I handle customer questions about multiple products or complex comparisons?</summary>
 
-For complex product comparisons, combine your Shopify integration with [Knowledge Base](../knowledge-base.md) resources:
+For complex product comparisons, combine your Shopify integration with knowledge base resources:
 
 **Add to Knowledge Base:**
 - Product comparison charts
@@ -509,7 +507,7 @@ Yes—update the GraphQL body in the tool definition to include any product fiel
 
 Shopify's API evolves over time, so monitor their [API documentation](https://shopify.dev/docs/api/storefront) for changes. If query formats change:
 
-1. Update the tool definition in your [Custom Capability](../ai-capabilities/creating-custom-capabilities)
+1. Update the tool definition in your Custom Capability
 2. Test the new query format using the troubleshooting tools mentioned above
 3. Adjust your AI prompt if the response structure changes
 
