@@ -33,7 +33,7 @@ Unfortunately, these external initiations are out of our control. To maintain ac
 - Aggregated by campaign step
     - [Campaign step overview](#campaign-step-overview)
     - [Campaign step bar](#campaign-step-bar)
-    - [Email performance card](#email-performance)
+    - [Email performance overview](#email-performance-overview)
 
 ### Campaigns page
 ![Campaigns page](./img/marketing-campaigns/track-email-campaign-performance/campaigns-page.png)
@@ -73,8 +73,16 @@ Unfortunately, these external initiations are out of our control. To maintain ac
 You can find these stats by hovering over the bar below each of the campaign step overview panels.
 ![Campaign step bar](./img/marketing-campaigns/track-email-campaign-performance/campaign-step-bar.png)
 
-### Email performance
-You can find this stat card by clicking on the three dots on any of the step panels. These stats are also grouped by step.
+- **Delivered** - how many emails in that step were successfully delivered to the recipient's email server.
+- **Pending** - how many recipients haven't received an email for that step.
+- **Bounced** - how many emails were rejected from the recipient's email server.
+- **Unsubscribed** - how many recipients clicked on the 'Opt Out of All Emails' link.
+- **Spam** - how many emails were marked as spam by the recipient.
+- **Dropped** - how many emails were rejected by SendGrid.
+- **Stopped** - how many campaigns have been manually paused. This includes campaigns whose recipient has unsubscribed from. 
+
+### Email performance overview
+You can find these cards by clicking on the three dots on any of the step panels. These stats are also grouped by step.
 ![Email performance](./img/marketing-campaigns/track-email-campaign-performance/email-performance.png)
 
 - **Opened** - the percentage of how many emails were opened, divided by how many emails were delivered. This matches Open rate in the Campaign step overview.
