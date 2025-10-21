@@ -328,6 +328,7 @@ This means customers can ask about products through phone calls, SMS, WhatsApp, 
 While this guide is specific to Shopify, you can create similar integrations with any e-commerce platform that offers an API—including WooCommerce, BigCommerce, Magento, or custom-built stores.
 
  The Custom Capabilities Framework allows you to connect to virtually any system that has an API. You can also explore other pre-built integrations in Connections or create workflows with external platforms using Zapier.
+</details>
 
 ### AI & Knowledge Questions
 
