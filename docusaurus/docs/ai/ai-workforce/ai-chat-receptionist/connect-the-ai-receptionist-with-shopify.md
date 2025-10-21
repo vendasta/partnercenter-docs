@@ -22,7 +22,7 @@ When a customer visits a Shopify store they might might have a general idea of a
 While this guide has been written primarily for your AI Chat Receptionist, you can use the Tools created in this guide with you AI Voice Receptionist, or any other AI Employee!
 :::
 
-## Prerequisites & Setup
+## Prerequisites & setup
 
 Before you connect your AI Receptionist to Shopify, you need to gather the following items from your Shopify store’s admin. You’ll only need to do this once.
 
@@ -33,7 +33,7 @@ Before you connect your AI Receptionist to Shopify, you need to gather the follo
 | **Storefront API Access Token** | <p>1. Click <code>Enable Storefront API</code> (turn on the permission listed in “Scopes / Notes” and click Save)</p><p>2. Click <code>Install / Update</code> → <code>Reveal token</code></p> | <ul><li>`unauthenticated_read_product_listings`</li></ul> |
 | *(Optional)* **GraphQL Familiarity** | Review [Shopify Admin GraphQL API docs](https://shopify.dev/docs/api/admin-graphql) | — |
 
-#### Shopify Help Resources
+#### Shopify help resources
 
 > You can get more detailed help on gathering this information from the Shopify help links below:
 > - Getting your store domain ([Shopify general settings](https://help.shopify.com/en/manual/intro-to-shopify/initial-setup/general-settings))
@@ -43,7 +43,7 @@ Before you connect your AI Receptionist to Shopify, you need to gather the follo
 
 ---
 
-## Step 1: Add a Shopify Custom Capability for your AI Receptionist
+## Step 1: Add a Shopify custom capability for your AI Receptionist
 
 This step creates the capability your AI Receptionist will reference when someone asks about items or stock. These are the "instructions" given to your AI Receptionist that help it know what it can do and when it should do it.
 
@@ -58,11 +58,11 @@ This step creates the capability your AI Receptionist will reference when someon
 You will come back to this screen in [Step 3: Write the Prompt](#step-3-write-the-prompt).
 :::
 
-## Step 2: Configure Shopify API Tools for the AI Receptionist
+## Step 2: Configure Shopify API tools for the AI Receptionist
 
 For your AI Receptionist to be able to get information from Shopify, they will need to be able to call Shopify APIs using Tools. In this step you will configure a single tool your AI Receptionist can use to search for products and report whether they are available for sale.
 
-### Shopify Tool: getProductList
+### Shopify tool: getProductList
 
 `getProductList` is your AI Receptionist's product‑search tool. We are using it to send a keyword to Shopify’s Storefront API and returns up to five matching products with title, handle, price range, and availability. 
 Use the values below (replacing any placeholders) to create your version of this tool.
@@ -115,7 +115,7 @@ query {
 :::
 
 
-## Step 3: Write the Prompt
+## Step 3: Write the prompt
 
 In this step, you’ll write the AI Receptionist’s prompt. These are the instructions that tells the AI Receptionist **when** to use the tool `getProductList`, **how** to use the tool based on information from the conversation, and **what** to respond to the customer with.
 
@@ -123,7 +123,7 @@ You can copy and paste this whole example prompt below, but you will first have 
 -  swap out the `Category`  placeholders with a few examples of product categories in your Shopify store 
 - swap out the `Item` placeholders with examples of products that belong to the prodcut categores in your Shopify store
 
-### Example AI Receptionist Shopify Prompt
+### Example AI Receptionist Shopify prompt
 
 ````
 ## **Inventory Lookup Trigger & Query Instructions**
@@ -215,7 +215,7 @@ Would you like more details or help placing an order?
 
 
 
-## Testing & Troubleshooting
+## Testing & troubleshooting
 
 This section walks you through diagnosing the most common issues with connecting Shopify with  the AI Receptionist: from authentication errors and query mistakes, to empty results and rate limiting. Select the tab that matches your symptom to learn what the error looks like and how to fix it.
 
@@ -310,7 +310,7 @@ Shopify returned a `429 Too Many Requests` error, indicating you are hitting the
 
 ## FAQ: Connecting the AI Receptionist with Shopify
 
-### Integration & Setup
+### Integration & setup
 
 <details>
 <summary>Can I use this Shopify integration with other AI Employees besides the Chat Receptionist?</summary>
@@ -318,8 +318,6 @@ Shopify returned a `429 Too Many Requests` error, indicating you are hitting the
 Absolutely! While this guide focuses on the AI Chat Receptionist, the Custom Capability and tools you create here work with any AI Employee, including your [AI Voice Receptionist](../ai-voice-receptionist.md). 
 
 This means customers can ask about products through phone calls, SMS, WhatsApp, or any other channel your AI Employees support. The same Shopify product data will be available regardless of how customers choose to interact with your business. 
-
- For more details on setting up Custom Capabilities across different AI Employees, see [Creating Custom Capabilities](../ai-capabilities/creating-custom-capabilities).
 </details>
 
 <details>
@@ -330,7 +328,7 @@ While this guide is specific to Shopify, you can create similar integrations wit
  The Custom Capabilities Framework allows you to connect to virtually any system that has an API. You can also explore other pre-built integrations in Connections or create workflows with external platforms using Zapier.
 </details>
 
-### AI & Knowledge Questions
+### AI & knowledge questions
 
 <details>
 <summary>How does the Shopify integration work with my AI's Knowledge Base?</summary>
@@ -359,7 +357,7 @@ Great question! The Shopify API provides product and inventory data, but custome
 This ensures your AI can provide complete, helpful answers by combining real-time product data with your business policies and procedures.
 </details>
 
-### Channel & Communication Questions
+### Channel & communication questions
 
 <details>
 <summary>Can customers use this Shopify integration through SMS or WhatsApp?</summary>
@@ -388,7 +386,7 @@ Your AI adapts product recommendations to each communication channel:
  Your AI automatically optimizes the presentation for each channel. For more details on channel setup, see [Conversations Overview](/business-app/conversations/).
 </details>
 
-### Advanced Configuration Questions
+### Advanced configuration questions
 
 <details>
 <summary>Can I create multiple Shopify tools for different store sections or purposes?</summary>
@@ -413,27 +411,27 @@ Absolutely! You can create multiple tools within the same Custom Capability or s
 
 You can monitor product inquiry patterns through several methods:
 
- 1. **Conversation Reviews:** Check the [Conversations](/business-app/conversations/) tab to see which products customers mention most frequently
+ 1. **Conversation reviews:** Check the [Conversations](/business-app/conversations/) tab to see which products customers mention most frequently
 
-2. **AI Explanation Feature:** Click "Explanation" on AI responses to see exactly which tools were called and what products were searched
+2. **AI explanation feature:** Click "Explanation" on AI responses to see exactly which tools were called and what products were searched
 
-3. **Automation Tracking:** Set up automations to log product inquiries or notify your team about trending searches
+3. **Automation tracking:** Set up automations to log product inquiries or notify your team about trending searches
 
 This data helps you understand customer demand, optimize your inventory, and identify opportunities for targeted marketing campaigns.
 </details>
 
-### Business Process Questions
+### Business process questions
 
 <details>
 <summary>What happens when a customer wants to purchase a product the AI recommends?</summary>
 
 Your AI provides product information and links, but purchase completion depends on your business process. Consider setting up:
 
-**Immediate Actions:**
+**Immediate actions:**
 - Direct customers to your Shopify store via the product links generated by the AI
 - Provide clear checkout instructions and support contact information
 
-**Follow-up Workflows:**
+**Follow-up workflows:**
 - Create automations to notify your sales team about purchase-intent conversations
 - Set up lead scoring to prioritize high-value product inquiries
 - Use Zapier to create tasks in your CRM when specific products are discussed
@@ -473,7 +471,7 @@ For complex product comparisons, combine your Shopify integration with knowledge
 This approach gives customers both real-time data and expert guidance for complex decisions.
 </details>
 
-### Technical & Troubleshooting Questions
+### Technical & troubleshooting questions
 
 <details>
 <summary>What's the difference between the Storefront API and the Admin API?</summary>
@@ -520,11 +518,11 @@ The platform's Custom Capabilities are designed to be easily updated as external
 
 Absolutely! Use these testing methods:
 
-**AI Employee Testing:** Use the "Try it" button in [AI Workforce](../index.mdx) to test your AI Employee with sample product questions
+**AI employee testing:** Use the "Try it" button in [AI Workforce](../index.mdx) to test your AI Employee with sample product questions
 
-**Tool Testing:** Review the "Explanation" feature in conversations to see raw API calls and responses
+**Tool testing:** Review the "Explanation" feature in conversations to see raw API calls and responses
 
-**Channel Testing:** Test across different channels using the methods described in [AI Chat Receptionist setup](./index.md#test-and-monitor-your-ai-chat-receptionist) and [AI Voice Receptionist testing](../ai-voice-receptionist.md#test-and-monitor-your-ai-voice-receptionist)
+**Channel testing:** Test across different channels using the methods described in [AI Chat Receptionist setup](./index.md#test-and-monitor-your-ai-chat-receptionist) and [AI Voice Receptionist testing](../ai-voice-receptionist.md#test-and-monitor-your-ai-voice-receptionist)
 
 Always test thoroughly before enabling the capability for customer-facing interactions.
 </details>
