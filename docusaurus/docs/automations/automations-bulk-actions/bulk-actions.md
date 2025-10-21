@@ -1,0 +1,83 @@
+---
+title: Bulk Actions – CRM Automations on Demand  
+sidebar_label: Bulk Actions  
+description: Trigger predefined automation actions directly from CRM views without setup or workflow creation.  
+tags: [crm, automations, bulk-actions, productivity]  
+keywords: [crm bulk actions, run automations, assign leads, send campaign, create follow-up task]  
+---
+
+## What is Bulk Actions?
+
+Bulk Actions provides instant access to automation powered actions directly within the CRM interface. It enables you to trigger predefined actions across multiple records — such as contacts or companies — without building or configuring a workflow.  
+
+Say hello to speed, simplicity, and zero setup automations.
+
+## Why is Bulk Actions Important?
+
+While automations and workflows are powerful, they can feel excessive for quick, one-off tasks. Bulk Actions bridges this gap by allowing you to perform automation-powered tasks instantly, with no setup required.  
+
+You can complete actions like sending follow-up emails, assigning leads, or creating reminder tasks directly from CRM views — without opening the automation builder.
+
+## What You Can Do with Bulk Actions
+
+- Run targeted, one-time automations from CRM tables  
+- Select multiple records and apply an action at once  
+- Use context-aware actions specific to the entity type (Contacts or Companies)  
+- Execute the action without creating or maintaining a full automation  
+
+## How to Set Up
+
+There’s no setup required — Bulk Actions are ready to run directly from CRM tables.
+
+### How to Use Bulk Actions
+
+1. Go to your CRM and open a view for **Contacts** or **Companies**.  
+2. Select one or more records.  
+3. Click **Run Action**.  
+4. Choose a predefined action that fits your current entity type (e.g., `Send campaign to contacts`).  
+5. Confirm and execute the action.
+
+That’s it — your selected automation runs instantly.
+
+:::tip
+Bulk Actions are context-aware. You’ll only see actions that are relevant to the records you’ve selected.
+:::
+
+## Common Use Cases
+
+| Scenario | Action | Result |
+|-----------|---------|---------|
+| **Email Follow-up** | Select contacts and run `Send Promo Campaign` | Campaign emails are sent automatically |
+| **Assign Leads** | Filter unassigned companies and run `Assign to Salesperson` | Companies are assigned based on predefined logic |
+| **Reminder Task Creation** | Select overdue accounts and run `Create Follow-up Task` | Tasks are automatically created for each account owner |
+
+## Benefits
+
+- **No setup required** – Skip the builder and act instantly  
+- **Context-aware simplicity** – Only see actions that make sense for your view  
+- **Lightweight automation** – One-time actions that don’t persist or require maintenance  
+- **Familiar workflows** – Use automation power without learning a new tool  
+
+## FAQs
+
+<details>
+<summary>Can I customize or add new Bulk Actions?</summary>
+
+Bulk Actions use predefined automation actions. Customization options depend on available action templates configured within the CRM.
+</details>
+
+<details>
+<summary>Do Bulk Actions appear in the Automations list?</summary>
+
+No. These actions are ephemeral — they execute once and do not persist in your automation library.
+</details>
+
+<details>
+<summary>Where can I access Bulk Actions?</summary>
+
+Bulk Actions are available in CRM entity views such as **Contacts** and **Companies**.
+</details>
+
+## Demo
+
+<iframe src="https://www.loom.com/embed/1953b1474ba14fa583e63eda94ef0204?sid=bf2b0874-b5fd-4d4d-a042-7a63c1324382" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style={{width: '100%', height: '500px'}}></iframe>
