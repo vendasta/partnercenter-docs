@@ -20,7 +20,7 @@ This article provides an overview of Vendasta's teams and resources, which will 
     * To find your assigned representative, look in the bottom left corner of the page in Partner Center. 
     * **For agencies with the "Customer Success" team:**
         * **Email:** customersuccess@vendasta.com
-        * **Office Hours:** Monday - Friday, 3:00 PM - 4:00 PM ET
+        * **Office Hours:** Monday - Friday, meetings can be booked through the booking link available in bottom left corner of Partner Center by clicking on Talk to Sales > Book.
 
 * **Onboarding Specialist:** To get in touch with your assigned specialist.
     * **Email:** onboarding@vendasta.com
