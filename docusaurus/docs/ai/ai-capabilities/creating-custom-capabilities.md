@@ -208,12 +208,95 @@ This structure is easier to scan and helps the AI understand exactly what to do.
 - **Updating:** Any saved changes are applied the next time the AI considers the capability during chat.
 - **Disabling:** Deleting tools is not supported yet; to disable a tool, un-assign it from the AI Employee.
 
-## Testing and troubleshooting Custom Capabilities
+## Testing and Troubleshooting Custom Capabilities
+
+### Basic Testing Steps
 
 1. Chat with your AI Employee and try different phrasings to trigger the capability.
 2. Verify the AI requests any required information and calls the appropriate tool.
-3. In *Conversations*, click **Explanation** under a message to view the AI’s reasoning and raw API call.
+3. In *Conversations*, click **Explanation** under a message to view the AI's reasoning and raw API call.
 4. If the API call fails, test it separately using tools like Postman, adjust as needed, and re-import the cURL command.
+
+### Advanced Testing Techniques
+
+**Test with Fresh Conversations**
+- Use incognito/private browsing windows for clean test sessions
+- Or clear cookies between tests to ensure no context carryover
+- This helps verify your capability works consistently for new visitors
+
+**Test Multiple Phrasings**
+- Try different ways customers might ask for the same thing
+- Test with incomplete requests to see how the AI gathers missing information
+- Verify the capability doesn't trigger when it shouldn't
+
+**Review AI Explanations Systematically**
+- Check if the AI considered your capability and why it did or didn't use it
+- Examine the exact API call parameters to verify correct data mapping
+- Look at the API response and how the AI interpreted it
+- Compare multiple conversations to identify patterns in behavior
+
+### Iteration Best Practices
+
+When refining custom capabilities, follow this systematic approach:
+
+**Step 1: Start Simple**
+- Create a minimal capability prompt with just the basics
+- Test that the core functionality works
+- Add complexity incrementally
+
+**Step 2: Identify Specific Issues**
+- Document exactly what went wrong (with examples)
+- Note the customer's input and the AI's response
+- Review the explanation to understand the AI's decision-making
+
+**Step 3: Make One Change at a Time**
+- Adjust only one aspect (prompt wording, tool parameter, or response template)
+- Save and test immediately
+- If it doesn't work, revert and try a different approach
+
+**Step 4: Test the Change**
+- Use the same customer input that previously failed
+- Verify the issue is resolved
+- Test edge cases to ensure no unintended side effects
+
+**Step 5: Document Your Changes**
+- Keep notes on what you changed and why
+- Record which changes improved performance
+- Build a reference for future capabilities
+
+:::tip When to Adjust What
+- **Prompt issues**: The AI doesn't know when to use the capability or how to handle responses
+- **Tool configuration issues**: API calls fail, wrong parameters are sent, or authentication fails
+- **Knowledge issues**: The AI needs context it doesn't have (add to knowledge base, not capability)
+- **Purpose issues**: The AI's overall behavior conflicts with the capability (adjust AI Employee purpose)
+
+Start with the most specific fix (tool configuration) before adjusting broader elements (prompts or purpose).
+:::
+
+### Performance Monitoring
+
+After deploying custom capabilities, monitor their performance:
+
+**Track Success Rates**
+- Review conversations where the capability was used
+- Identify common failure patterns
+- Look for scenarios you didn't test
+
+**Monitor API Performance**
+- Check API response times in explanations
+- Watch for API rate limits or timeout issues
+- Track error rates and common error types
+
+**Customer Experience Indicators**
+- Note when customers express frustration or confusion
+- Look for repeated clarifying questions
+- Check if customers achieve their goals
+
+**Optimization Signals**
+- The AI frequently asks for the same missing information (add to prompt)
+- The capability triggers incorrectly (refine trigger conditions)
+- Customers rephrase requests multiple times (improve prompt clarity)
+- API calls fail frequently (check tool configuration or API stability)
 
 ## Example Custom Capability: Product information lookup
 
