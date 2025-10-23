@@ -74,4 +74,3 @@ For custom capabilities, tools define the technical implementation:
 
 - **Configure Built-in Capabilities**: [How to Configure AI Capabilities](./configuring-capabilities)
 - **Create Custom Capabilities**: [Creating Custom Capabilities](./creating-custom-capabilities)
-- **Advanced Configuration**: Learn about prompt engineering and capability optimization

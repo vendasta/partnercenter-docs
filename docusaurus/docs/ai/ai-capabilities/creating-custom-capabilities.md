@@ -138,12 +138,70 @@ Check this box if your tool doesn’t actually call an outside API but works int
 
 ## Writing Effective Capability Prompts
 
-When creating your **Prompt**, be sure to:
+A well-written capability prompt has four key parts. Think of it like training instructions for a new employee:
 
-- Clearly specify when to call the tool (e.g., "ONLY call `CheckCustomerOrderStatus` when the user asks about their order status").
-- List the information the AI must gather before calling the tool (e.g., "You MUST have `order_number` before calling").
-- Guide how the AI should use the tool’s response when replying to the user.
-- Explain how to handle errors or cases when the API returns no results.
+### 1. When to Use This Capability
+Clearly specify the trigger conditions:
+```
+ONLY call CheckCustomerOrderStatus when the user asks about their order status, 
+tracking, or delivery. Do NOT use this for general product questions.
+```
+
+### 2. What Information You Need First
+List required information before the AI can act:
+```
+You MUST have the order_number before calling this tool.
+If the customer doesn't provide it, ask: "Could you share your order number? 
+You can find it in your confirmation email."
+```
+
+### 3. How to Use the Response
+Guide the AI on presenting results to customers:
+```
+If successful: "I found your order! It's currently [status] and expected to 
+arrive on [date]."
+
+If the order is delayed: Apologize and provide the new estimated delivery date.
+```
+
+### 4. How to Handle Errors
+Explain what to do when things go wrong:
+```
+If the API returns no results: "I couldn't find an order with that number. 
+Could you double-check it? Order numbers are typically 8-10 digits."
+
+If the API fails: "I'm having trouble accessing order information right now. 
+Would you like me to take your contact info so we can follow up?"
+```
+
+### Formatting Tips for Better Results
+
+Use markdown formatting to make your prompts clear for both humans and AI:
+
+- **Use headers** (`#`, `##`) to organize different sections
+- **Use bullets** to list multiple items or steps
+- **Use bold** to emphasize critical instructions or field names
+- **Use code formatting** for specific examples or API field names
+
+**Example with good formatting:**
+```markdown
+# Order Status Lookup
+
+## When to Use
+- ONLY when customer asks about order status or tracking
+- NOT for product availability or general questions
+
+## Required Information
+Before calling the tool, you MUST have:
+- **order_number** (8-10 digit number)
+- Ask if missing: "What's your order number?"
+
+## Response Format
+- Success: "Your order #[number] is [status]."
+- Not found: "I couldn't locate that order. Please verify the number."
+```
+
+This structure is easier to scan and helps the AI understand exactly what to do.
 
 ## Managing Custom Capabilities
 
@@ -176,25 +234,50 @@ When creating your **Prompt**, be sure to:
 
 - `X-API-Key: YOUR_SECURE_API_KEY`
 
-### Prompt snippet
+### Prompt snippet (annotated)
 
 ```markdown
 # Product Lookup Assistant
-## When to use
-- ONLY call `LookupProductDetails` when the user asks about a product's price, description, or features.
-- Do NOT call this unless the user has provided a specific product name **or** ID.
 
+## When to use
+- ONLY call `LookupProductDetails` when the user asks about a product's 
+  price, description, or features.
+- Do NOT call this unless the user has provided a specific product name **or** ID.
+```
+👉 **Why this works:** Clear boundaries prevent the AI from calling the tool unnecessarily, saving API calls and improving response speed.
+
+```markdown
 ## Information Needed
 - Before calling the tool, you MUST identify `product_id`.
 - If the user only gives a name, ask for the ID.
+```
+👉 **Why this works:** Explicit requirements ensure the AI gathers necessary information before attempting the API call.
 
+```markdown
 ## Tool Parameters
 - Set `product_id` to the user-provided ID.
-
-## How to respond
-- If successful: "I found **[Product Name]**. The price is **$[Price]**. Description: **[Description]**."
-- If not found: Apologize and suggest the user double-check the ID or browse products online.
 ```
+👉 **Why this works:** Simple, direct mapping between conversation data and API parameters.
+
+```markdown
+## How to respond
+- If successful: "I found **[Product Name]**. The price is **$[Price]**. 
+  Description: **[Description]**."
+- If not found: Apologize and suggest the user double-check the ID or browse 
+  products online.
+```
+👉 **Why this works:** Providing exact response templates (with bold formatting for variables) ensures consistent, professional customer communication.
+
+#### Before/After Comparison
+
+**❌ Vague prompt:**
+```
+Look up products when customers ask about them.
+```
+**Problems:** When should it look up? What info is needed? How should it respond?
+
+**✅ Detailed prompt (above):**
+Clear trigger conditions, required information, response templates, and error handling.
 
 ### Sample conversation
 
