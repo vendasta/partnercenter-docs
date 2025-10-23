@@ -66,6 +66,10 @@ For custom capabilities, tools define the technical implementation:
 - Integration workflows
 - Response processing logic
 
+:::tip Learn More About Tools
+Tools enable AI Employees to interact with external systems and retrieve real-time data. To understand the fundamentals of how tools work with APIs, see the [Tools & Integrations Overview](./tools-overview).
+:::
+
 ## Testing and Optimizing Capabilities
 
 Effective capabilities require iterative testing and refinement. Use these strategies to ensure your capabilities perform as expected:
@@ -126,5 +130,6 @@ Use the conversation Explanations feature to understand:
 
 ## Next Steps
 
+- **Understand Tools & APIs**: [Tools & Integrations Overview](./tools-overview) - Learn the fundamentals of tools and APIs
 - **Configure Built-in Capabilities**: [How to Configure AI Capabilities](./configuring-capabilities)
 - **Create Custom Capabilities**: [Creating Custom Capabilities](./creating-custom-capabilities)
