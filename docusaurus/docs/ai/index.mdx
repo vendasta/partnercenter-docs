@@ -10,36 +10,68 @@ keywords: [AI employees, AI workforce, AI capabilities, chat receptionist, voice
 
 AI tools provide intelligent automation for customer interactions and sales processes. Deploy AI employees that handle inquiries 24/7, configure custom capabilities for specific business needs, and maintain a knowledge base that ensures accurate responses.
 
-## **AI Employees & Automation**
+## Understanding AI Employee Components
 
-### **[AI Workforce](./ai-workforce/)**
-Deploy specialized AI employees for different business functions:
-- **[AI Chat Receptionist](./ai-workforce/ai-chat-receptionist/)** - Handle website chat and messaging channels
-- **[AI Voice Receptionist](./ai-workforce/ai-voice-receptionist.md)** - Answer phone calls and route inquiries  
-- **[AI Sales Assistant](./ai-workforce/ai-sales-assistant.mdx)** - Support sales processes and lead qualification
+Understanding the distinction between these three concepts is essential for building effective AI employees:
 
-### **[AI Capabilities](./ai-capabilities/)**
-Configure specialized skills and behaviors for AI employees:
-- **Standard capabilities** for common business tasks
-- **Custom capabilities** tailored to specific business processes
-- **Integration options** with external systems and APIs
+### Knowledge Base
 
-## **Knowledge Management**
+The knowledge base contains factual content your AI can reference when answering questions. The AI searches this information and includes relevant pieces in its responses.
 
-### **[Knowledge Base](./knowledge-base.md)**
-Centralize information that powers AI responses:
-- **Website content** integration for accurate business information
-- **Custom documents** like FAQs, policies, and procedures
-- **Manual knowledge entries** for specific business details
-- **Best practices** for maintaining current, effective knowledge
+**Example scenario: Booking appointments**
+- Your knowledge base contains the URL to your booking page (from your website)
+- When a customer asks "How do I book a meeting?", the AI searches for related information
+- The AI responds with: "Here's the booking link you can use: [link]"
 
-## **Getting Started with AI**
+**What it's for:**
+- Business hours, location, contact information
+- Pricing, product specifications, service details
+- FAQs, policies, procedures
+- Any factual information customers might ask about
 
-1. **Choose your AI employee** based on primary customer interaction channels
-2. **Set up knowledge base** with essential business information and FAQs
-3. **Configure capabilities** to match your business processes
-4. **Test interactions** to ensure accurate responses and proper routing
-5. **Monitor performance** and refine knowledge based on customer interactions
+[Learn more about Knowledge Base ›](./knowledge-base/)
+
+### Capabilities
+
+Capabilities tell your AI employee **how to act** and **when** to take specific actions in conversations. Think of these as process instructions you'd give to a human employee.
+
+**Example scenario: Booking appointments**
+- Your capability says: "Whenever someone asks a question, ask if they'd like to book an appointment"
+- This makes your AI proactive, not just reactive
+- The AI now consistently offers to book appointments, even when not explicitly asked
+
+**What it's for:**
+- Conversation flows and processes (when to capture leads, how to qualify customers)
+- Tone and communication style
+- Conditional logic (if customer asks X, do Y)
+- Business rules and priorities
+
+[Learn more about AI Capabilities ›](./ai-capabilities/)
+
+### Tools
+Actions the AI can take in other systems:
+
+Tools connect your AI employee to external systems via APIs, allowing them to actually *do things* instead of just talking about them.
+
+**Example scenario: Booking appointments**
+- Your tool connects to an external calendar system via API
+- Instead of sharing a booking link, the AI can directly create an appointment
+- The customer gets "I've booked your appointment for Tuesday at 2pm" instead of a link to click
+
+**What it's for:**
+- Creating appointments in calendar systems
+- Checking live inventory or product availability
+- Looking up order status in real-time
+- Creating records in your CRM
+- Any action that requires connecting to another system
+
+[Learn more about creating custom tools ›](./ai-capabilities/creating-custom-capabilities)
+
+:::tip Quick Reference
+- **Knowledge** = Information to reference (reactive, fact-based)
+- **Capability** = Instructions on how to behave (proactive, process-based)
+- **Tool** = Ability to take action in external systems (integration-based)
+:::
 
 ## Frequently Asked Questions
 

@@ -17,7 +17,7 @@ Each capability contains instructions that guide the AI on:
 - What outcomes to prioritize
 - How to respond to different types of requests
 
-Multiple capabilities can work together to create AI Employees that can handle complex, multi-step interactions while maintaining consistency with your business processes. When the AI employee handles a request, it combines all the Capabilities into the prompt the governs its behaviour. 
+Multiple capabilities can work together to create AI Employees that can handle complex, multi-step interactions while maintaining consistency with your business processes. When the AI employee handles a request, it combines all the Capabilities into the prompt the governs its behaviour.
 
 ### Types of AI Capabilities
 
