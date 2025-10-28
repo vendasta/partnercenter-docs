@@ -53,7 +53,6 @@ Clear understanding of fees and options helps you:
 
 #### Additional Supported Countries
 Contact sales for setup assistance in:
-- **United Arab Emirates** (AED currency)
 - **Germany** (EUR currency)
 - **Belgium** (EUR currency)
 - **Netherlands** (EUR currency)
