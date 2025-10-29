@@ -26,7 +26,7 @@ The Vendasta platform provides pre-configured capabilities for common business f
 
 - **Lead Capture**: Automatically collect and qualify lead information (name, email, phone, budget)
 - **Appointment Booking**: Schedule meetings using your connected calendar systems
-- **Transfer Call** : Live-transfer callers to other numbers based on intent and rules. See [Transfer calls to other numbers](../ai-workforce/ai-voice-receptionist.md#transfer-calls-to-other-numbers).
+- **Transfer Call** : Live-transfer callers to other numbers based on intent and rules. See [Transfer calls to other numbers](../ai-workforce/ai-voice-receptionist.md#transfer-calls-to-other-numbers-from-your-ai-voice-receptionist).
 
 #### Custom Capabilities
 For specialized workflows, you can create your own custom capabilities that:

@@ -1,197 +1,257 @@
 ---
-title: AI Tools
-sidebar_label: AI Tools Overview
+title: AI Tools  
+sidebar_label: AI Tools 
+sidebar_position: 1
 ---
 
 Tools enable your AI Employees to interact with external systems, retrieve real-time information, and automate workflows across different platforms. Understanding how tools work is essential for building powerful AI capabilities that go beyond simple conversation.
 
 ## What Are Tools?
 
-A **tool** is a function or API that your AI Employee can use during conversations. Tools act as bridges between your AI and other software systems, allowing the AI to:
+A **Tool** is a function or API that an AI Employee can use. Tools connect AI to software systems for:
 
-- Retrieve external information (like weather data, inventory levels, or account details)
-- Create, update, or delete records in your business systems
-- Automate actions across multiple platforms
-- Access real-time data to make informed decisions
+- Real-time data retrieval
+- Automated actions across platforms
+- Dynamic responses based on external information
 
-Tools can accept both **static inputs** (values you configure once) and **dynamic inputs** (values the AI determines based on conversation context).
+AI can use these Tools with **static inputs** (pre-configured values) to get information the same way every time or use **dynamic inputs** (context-determined values) to get information that is specific to the interaction..
 
-### Tools in Action: A Real Example
+**Example:** An AI receptionist for a handyman service uses a weather API tool when booking "gutter cleaning anytime this week" to check if outdoor conditions are suitable before confirming appointments.
 
-Consider an AI receptionist for a handyman service. When a customer asks to book gutter cleaning "anytime this week," the AI can:
 
-1. Use a weather API tool to check the forecast
-2. Determine if outdoor work conditions are suitable
-3. Respond with an appropriate booking recommendation
+## APIs and Tools
 
-This natural interaction would be impossible without tools; the AI needs real-time weather data that doesn't exist in its training or knowledge base.
+Tools and APIs work together to enable AI Employees to interact with software systems. While APIs provide the raw functionality to connect systems, Tools provide the intelligence layer that tells AI when and how to use those APIs effectively.
 
-## Understanding APIs
+### API Basics
 
-To work with tools effectively, it's helpful to understand what an API is and how it works.
-
-### What Is an API?
-
-An **API** (Application Programming Interface) is like a messenger that lets programs share information and actions. APIs are built and provided by software companies to let you interact with their systems programmatically.
-
-Think of an API as a way for one piece of software to talk to another piece of software, just like how you might use a phone to call someone—the phone is the tool that connects you.
-
-### CRUD Operations
-
-Most APIs support four basic types of operations, commonly called **CRUD**:
+An **API** (Application Programming Interface) enables software systems to communicate. Most APIs support CRUD operations:
 
 | Operation | Description | Example |
 |-----------|-------------|---------|
-| **Create** | Adding new data | Add a new contact to your CRM |
-| **Read/Retrieve** | Getting data | Look up a customer's order history |
-| **Update** | Editing existing data | Change an appointment time |
-| **Delete** | Removing data | Remove a canceled subscription |
+| **Create** | Add new data | New CRM contact |
+| **Read** | Retrieve data | Order history lookup |
+| **Update** | Modify data | Change appointment time |
+| **Delete** | Remove data | Cancel subscription |
 
-When you build tools for your AI Employees, you'll configure them to perform these operations based on what your AI needs to accomplish.
+### Tools vs. APIs
 
-## The Relationship Between Tools and APIs
+**APIs** provide functionality; **Tools** instruct AI how to use APIs by defining:
+- When to use the API
+- How to format requests
+- Authentication handling
 
-While APIs provide the underlying functionality, **tools** provide the instructions that tell your AI Employee how to use those APIs.
+## Tool Components
 
-### What a Tool Contains
+Every tool consists of four key components that configure how AI uses APIs:
 
-A complete tool configuration includes:
+### Description
+Instructions telling AI when to use the tool and what it accomplishes. Be specific about triggers and business outcomes.
 
-**1. Description**
-- Explains what the tool does and when to use it
-- Helps the AI understand which tool to select for different situations
-- Example: "Use this tool when booking appointments outdoors to check if weather conditions are suitable for the work"
+> **Example:** "Use when booking outdoor appointments to check weather conditions for safety."
 
-**2. API Endpoint (Method & URL)**
-- The specific API location your tool will call
-- Provided by the software you're integrating with
-- Example: `GET https://api.open-meteo.com/v1/forecast`
+### Method & URL
+The specific API endpoint (web address) and HTTP method that tells the API what action to perform.
 
-**3. Authentication/Headers**
-- Security information that proves you have permission to use the API
-- Often includes API keys or authentication tokens
-- Keeps your integrations secure and tied to your specific account
+| Method | Standard purpose | Example use case |
+|--------|----------------|------------------|
+| **GET** | Retrieve resources | Looking up customer information |
+| **POST** | Create new resources | Creating a new customer |
+| **PUT/PATCH** | Update existing resources | Updating customer information |
+| **DELETE** | Remove resources | Deleting a customer |
 
-**4. Parameters**
-- The specific details that tell the API exactly what to do
-- Can be static (always the same) or dynamic (determined by the AI based on context)
-- Where most of the "magic" happens in tool configuration
-
-### Static vs. Dynamic Parameters
-
-**Static Parameters:**
-- Always contain the same value
-- Useful when you want consistent, predictable behavior
-- *Example:* Always retrieve temperature and precipitation data from a weather API
-
-**Dynamic Parameters:**
-- The AI determines the value based on conversation context
-- Provides flexibility and natural interactions
-- *Example:* Use the customer's address to determine which latitude/longitude to check weather for
-
-## Use Cases for Tools
-
-Tools unlock powerful capabilities for your AI Employees:
-
-### Retrieving External Context
-
-**Example:** A weather API that helps determine if outdoor work is feasible
-
-- The AI doesn't "know" tomorrow's weather
-- The tool fetches real-time forecast data
-- The AI uses this data to make booking recommendations
-
-### Automating Workflows
-
-**Example:** Creating a lead in your CRM after capturing contact information
-
-- Customer provides their details in chat
-- AI uses a CRM API tool to create the lead record
-- Follow-up workflows trigger automatically in your business systems
-
-### Real-Time Data Lookup
-
-**Example:** Checking inventory before confirming product availability
-
-- Customer asks if an item is in stock
-- AI queries your inventory system via API
-- Provides accurate, up-to-date information instantly
-
-### Enhancing Decision-Making
-
-**Example:** Checking appointment availability before booking
-
-- Customer requests a specific time
-- AI checks your calendar system via API
-- Only offers times that are actually available
-
-## How AI Employees Use Tools
-
-Your AI Employee evaluates the conversation context and decides when to use tools:
-
-1. **Identifies the need** - Recognizes when information or action requires external data
-2. **Selects the right tool** - Chooses from available tools based on descriptions
-3. **Gathers required information** - Ensures it has all necessary details before calling the tool
-4. **Calls the API** - Executes the tool with appropriate parameters
-5. **Processes the response** - Interprets the API result and incorporates it into the conversation
-6. **Responds naturally** - Answers the customer using the retrieved information
-
-### Example Flow: Weather-Checking Tool
-
-```
-Customer: "Can we schedule the gutter cleaning for tomorrow?"
-
-AI thinks: I need to check if tomorrow's weather is suitable for outdoor work
-         ↓
-AI identifies: The appointment address is in Saskatoon
-         ↓
-AI calls tool: get_weather_forecast(latitude: 52.13, longitude: -106.67)
-         ↓
-API returns: Temperature: 15°C, Precipitation: 0mm, Wind: 12km/h
-         ↓
-AI responds: "The forecast looks clear tomorrow with no rain expected. 
-              Outdoor gutter cleaning should be no problem. What time works best?"
-```
-
-## Building Effective Tools
-
-When creating custom tools for your AI Employees, follow these guidelines:
-
-### Start with Clear Requirements
-
-- Identify which CRUD operations you need
-- Understand what information the AI needs to gather before using the tool
-- Define when the tool should and shouldn't be used
-
-### Use Source Documentation
-
-- Refer to the official API documentation for the system you're integrating
-- Follow their specifications for endpoints, parameters, and authentication
-- Keep documentation handy for troubleshooting
-
-### Write Clear Tool Descriptions
-
-- Be specific about when the AI should use this tool
-- Explain what the tool accomplishes
-- Include any important conditions or constraints
-
-### Test Thoroughly
-
-- Verify the tool works with various inputs
-- Check edge cases (missing data, API errors, unexpected responses)
-- Monitor real conversations to see how the tool performs
-
-:::tip Best Practice
-The tool description is the most important part you shouldn't outsource to AI assistants. While AI can help you format parameters or understand API documentation, you need to clearly define when and how your AI Employee should use each tool based on your business logic.
+:::info
+The method and URL you use are determined by the API creator. While knowing the common methods and their purposes will help you understand how to set-up a tool and confirm it's accurately configured, you will need to refer to the API documentation for the specific method and URL to use.
 :::
+
+### Headers
+Headers provide essential metadata for API requests, including authentication and content type information. They're sent with every API call and ensure secure, properly formatted communication.
+
+**Common headers include:**
+- `Authorization: Bearer YOUR_API_KEY` - Proves your identity and permissions
+- `Content-Type: application/json` - Specifies the data format being sent
+
+### Parameters
+Parameters define the specific data sent to the API. Each parameter needs a clear description defining how AI should fill it based on the conversation context.
+
+#### Location (where the value is sent)
+
+| Location | What it means | Typical use | Example |
+|----------|----------------|-------------|---------|
+| **Body** | Included in the request payload | Most POST/PUT/PATCH requests | JSON body like `{ "email": "user@example.com" }` |
+| **Query** | Appended to the URL as a query string | Filtering, paging, searching | `/contacts?limit=25&sort=createdAt` |
+
+Choose the location that matches the API’s documentation. If unsure, POST/PUT data usually goes in the Body; GET filters commonly use Query.
+
+#### Type (the shape of the value)
+
+| Type | What the API expects | Example value | Notes |
+|------|----------------------|---------------|-------|
+| **String** | Text | `"gafdads1!"` |
+| **Number** | Decimal/float | `12.5` | For prices, measurements |
+| **Integer** | Whole number | `42` | For counts, IDs when numeric |
+| **Boolean** | True/false | `true` | Feature flags, toggles |
+| **Enum** | One of allowed strings | `"open"` | Define the allowed options |
+| **Object** | Key/value structure | `{ "id": "123", "name": "Acme" }` | Add fields below the parameter |
+| **Array** | Ordered list | `["a", "b"]` or `[{...},{...}]` | Choose the item type (String, Object, etc.) |
+
+For Objects and Arrays, you’ll be prompted to define the inner structure so AI can fill each field correctly.
+
+#### Who sets the value?
+
+- **Set by AI**: The AI fills the value dynamically based on your description and the conversation. Use this for values that come from the user or context (e.g., appointment date, email, address).
+- **Fixed value (toggle off Set by AI)**: You provide a constant in the `Value` box. Use this for API-required constants, feature switches, or default modes.
+- **Required**: If checked, the tool won’t run until AI has a value (or a fixed value is provided). Use this for parameters the API requires.
+
+#### Writing effective descriptions
+
+Give AI clear guidance for dynamic values. A useful pattern:
+
+```
+Purpose: what the API uses this for
+Source: where AI should get it (user message, account profile, default)
+Rules: validation/range/format and fallbacks
+```
+
+Examples:
+
+```
+Parameter: latitude (Query, Number)
+Description: Infer from appointment location; if city provided, geocode; else ask user to confirm.
+
+Parameter: hourly (Query, String, Fixed)
+Value: temperature_2m,precipitation
+Description: Always include weather and precipitation series.
+```
+
+#### Arrays and Objects
+
+When `Type = Array`:
+- Choose the array item type (e.g., Object).
+- If items are Objects, add fields for each property (e.g., `id` as String, `quantity` as Integer). Each field can be Set by AI or fixed.
+
+When `Type = Object`:
+- Add fields such as `firstName` (String), `lastName` (String), `newsletterOptIn` (Boolean).
+- Mark critical fields as Required to force AI to obtain them before calling the API.
+
+Example Body with an array of objects:
+
+```json
+{
+  "operations": [
+    { "type": "create", "id": "123", "note": "from web chat" },
+    { "type": "update", "id": "124" }
+  ]
+}
+```
+
+Configure this by creating a Body parameter `operations` with `Type = Array`, `array item = Object`, then add fields `type` (Enum: create|update), `id` (String, Required), and `note` (String, optional).
+
+#### Enums (restricting choices)
+
+Use `Type = Enum` when the API accepts only specific strings. Define the allowed options so AI will pick one safely.
+
+| Parameter | Allowed values | Guidance |
+|-----------|----------------|----------|
+| `status` | `open`, `closed`, `pending` | Choose based on user request; default `open` if unclear. |
+
+This reduces errors and keeps requests aligned with API expectations.
+
+## Building Custom Tools
+
+### Prerequisites
+- Access to external system API documentation
+- Valid API credentials
+- Understanding of business process to automate
+
+### When to Build Custom Tools
+Create custom tools when AI Employees need to:
+- Check real-time inventory or product availability
+- Schedule appointments in external calendars
+- Look up order status from e-commerce platforms
+- Access customer account information
+
+### Step-by-Step Process
+
+1. **Find API Documentation**
+   - Locate official API docs for target service
+   - Identify required endpoints and authentication
+   - Note available parameters and data formats
+
+2. **Access Tool Configuration**
+   - Navigate to AI Workforce > Configure
+   - Add capability > Custom Capabilities
+   - Select "Add Tool"
+
+3. **Use cURL Import**
+   - Copy API endpoint as cURL command
+   - Ask AI assistant to convert if needed
+   - Paste into "Import from cURL" field
+   - Auto-fills method, URL, and parameters
+
+4. **Configure Tool Details**
+   - **ID**: Unique descriptive name (no spaces)
+   - **Description**: When to use and what it accomplishes
+   - **Parameters**: Add descriptions for dynamic/static filling
+
+5. **Work with AI Assistance**
+   - Use AI to understand complex API docs
+   - Generate parameter descriptions
+   - Test configurations before deployment
+
+6. **Test and Iterate**
+   - Test with different conversation scenarios
+   - Use fresh browser sessions to avoid context carryover
+   - Review AI explanations for API call details
+   - Refine based on testing results
+
+7. **Deploy and Monitor**
+   - Enable for live interactions
+   - Monitor performance and error patterns
+   - Iterate based on real-world usage
+
+### Best Practices
+
+**Start Simple**
+- Use static parameters first for reliability
+- Add dynamic parameters gradually
+- Test thoroughly at each step
+
+**Strategic AI Use**
+- Leverage AI for documentation analysis
+- Use AI for parameter description generation
+- Don't outsource business logic decisions
+
+**Documentation**
+- Keep notes on API choices and challenges
+- Document successful parameter descriptions
+- Track testing approaches that reveal issues
+
+### Troubleshooting
+
+**Tool Never Triggers**
+- Check description specificity
+- Ensure capability is enabled
+- Verify AI can access required context
+
+**API Authentication Fails**
+- Confirm API key validity
+- Check header format requirements
+- Test API directly with tools like Postman
+
+**Wrong Data Sent**
+- Review parameter descriptions for clarity
+- Provide specific value options for AI
+- Test with known working values first
 
 ## Next Steps
 
-Now that you understand the fundamentals of tools and integrations:
+- **[Creating Custom Capabilities](./creating-custom-capabilities)** - Complete capability configuration
+- **[Configuring Capabilities](./configuring-capabilities)** - Work with built-in tools
+- **[AI Workforce Overview](../ai-workforce/)** - See tools in the bigger picture
 
-- **Learn to build custom capabilities:** [Creating Custom Capabilities](./creating-custom-capabilities) - Includes step-by-step tool creation
-- **Explore capability configuration:** [Configuring Capabilities](./configuring-capabilities) - Work with built-in tools
-- **Review AI Workforce setup:** [AI Workforce Overview](../ai-workforce/) - See how tools fit into the bigger picture
+## Additional Resources
 
-
-:::
+- **API Testing Tools:** Postman, Insomnia for independent API testing
+- **AI Assistants:** ChatGPT, Claude for documentation help
+- **Community Resources:** Stack Overflow for API troubleshooting

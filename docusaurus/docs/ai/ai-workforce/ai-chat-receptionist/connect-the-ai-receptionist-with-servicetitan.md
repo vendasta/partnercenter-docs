@@ -769,7 +769,7 @@ The ServiceTitan integration provides real-time operational data through API cal
 **ServiceTitan API provides:** Live job status, customer history, technician schedules, real-time availability  
 **Knowledge Base should include:** Service policies, pricing information, service area details, company procedures, emergency protocols
 
-Your AI will use the ServiceTitan API to answer "When is my next appointment?" and the Knowledge Base to answer "What's your service area?" For best results, ensure your [Knowledge Sources](../index.mdx#knowledge-management) include comprehensive business policies and procedures to complement the real-time operational data.
+Your AI will use the ServiceTitan API to answer "When is my next appointment?" and the Knowledge Base to answer "What's your service area?" For best results, ensure your [Knowledge Sources](../index.mdx#knowledge-sources) include comprehensive business policies and procedures to complement the real-time operational data.
 </details>
 
 <details>
