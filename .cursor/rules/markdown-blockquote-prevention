@@ -1,0 +1,49 @@
+---
+description: "Prevents the use of '>' character in markdown files to avoid blockquote formatting issues or unintended markup."
+globs: ["**/*.md", "**/*.mdx"]
+---
+
+CRITICAL: Do NOT use the '>' character in markdown files.
+
+The '>' character creates blockquotes in markdown, which can cause:
+1. Unintended formatting changes
+2. Content to appear as quoted material when it shouldn't be
+3. Inconsistent styling across the documentation
+4. Potential rendering issues in Docusaurus
+
+Instead of using '>':
+- For comparisons: Use "greater than" or "more than" in text
+- For arrows: Use → (right arrow), ➜, or "then" in procedural steps
+- For code examples: Use proper code blocks with ```
+- For emphasis: Use **bold** or *italic* formatting
+- For callouts: Use Docusaurus admonitions (:::note, :::tip, :::warning, etc.)
+
+Examples:
+
+WRONG:
+> This is important information
+> Use version 2.0 or > for best results
+
+CORRECT:
+:::note
+This is important information
+:::
+
+Use version 2.0 or higher for best results
+
+WRONG:
+Click Save > Export > Download
+
+CORRECT:
+Click Save → Export → Download
+or
+Click Save, then Export, then Download
+
+If you absolutely must use the '>' character (e.g., in code examples, mathematical expressions, or literal text):
+- Use it within code blocks: `>`
+- Use it within inline code: `code with > symbol`
+- Escape it with backslash: \> (though this may not render consistently)
+- Use HTML entity: &gt;
+- Use it within HTML comments: <!-- > -->
+
+Always review markdown files to ensure no '>' characters are used outside of proper code blocks, HTML comments, or escaped contexts.
