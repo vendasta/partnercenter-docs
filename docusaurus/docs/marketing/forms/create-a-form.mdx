@@ -65,23 +65,54 @@ Finally, set the default value to the `Yes` option that was created. This helps 
 
 Adding a hidden field to your form allows you to capture information that is not displayed to the user, but is still useful for your business, like knowing the source of the form submission. In this case, we will use a hidden field to set our consent source to the form name.
 
+![hiding form fields](./img/marketing/hiding-form-fields.png)
+
 Click on **Marketing email consent source** to open the properties panel and check off the box  **Make hidden** to hide this field from the user. Enter the name of the form as the **Default value** for the field so that the value is automatically set in the CRM when the form is submitted.
 
-![hiding form fields](./img/marketing/hiding-form-fields.png)
+### Dynamically filling form fields
+
+Form fields can be dynamically filled with the information from the URL using query parameters. Commbined with hidden fields, this can be used to capture information about the source of the form submission. 
+
+For example, if you have a form that is put on a link like this: https://www.example.com/form?campaign=spring-promotion, the value of the `campaign` query parameter will be captured and set on any field that has the **Populate field dynamically** option checked and the query parameter `campaign` selected.
+
+While Forms automatically capture common UTM parameters like `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, and `utm_term`, it can still be helpful to have the ability to capture other query parameters that are specific to your business.
+
+![dynamically filling form fields](./img/marketing/populate-dynamically-using-query.png)
+
+Click on the **Marketing email consent source** field to open the properties panel and check off the box  **Populate field dynamically** to enable this feature. Type in the query parameter `campaign` into the input box.
+
+No, whenever someone consents to receive more emails, the CRM will automatically update to show if they came from a specific campaign. This lets us us know which campaigns are specificlly driving more sign-ups to our email list.
+
+:::tip Tracking form submissions in Google Analytics
+For more detailed information on tracking form submissions, see [Track form submissions in GA4](./tracking-form-submissions-ga4.mdx).
+:::
 
 ## Step 4 — Style your form
 
-You can customize the appearance of match your website's design and branding by clicking the **Design** tab. Simple changes to things like the form width and colors can be made using the interactive controls. More complex changes to other elements can be made by using the **Custom CSS** field,
+You can customize the appearance of the form to    match your website's design and branding by clicking the **Design** tab. Simple changes like the form width and colors can be made using the interactive controls inside of the **Design** tab and will be reflected in the preview on the right.
 
-### Design form with AI
+![An example of simple form design changes](./img/marketing/simple-form-design-example.png)
 
+More complex changes to other elements can be made by using the **Custom CSS** field visible in the **Design** tab. CSS code can be used to style virtually any element of the form to make it look exactly how you want it to look. 
 
+![An example of a more complex form design change using CSS](./img/marketing/custom-css-example-forms.png)
+
+Make note of the CSS class names used from our template that are used to style the form elements. These will be used to target specific elements when styling the form with CSS and are a good starting point for your own CSS code.
+
+### Design and style your form with AI
+
+If you are not familiar with CSS or it takes you a while to get the desired look and feel of your form, you can use our Design with AI feature to generate a starting point for your CSS code!
+
+![Design with AI input example](./img/marketing/design-forms-with-ai-input.png)
 
 1. Go to the **Design** tab
 2. Click **Design with AI**
-3. Upload an image (for example, your website) and add a prompt (for example, “Match form design to my website”)
-4. Add specific instructions if needed (for example, “Put first and last name on the same row”)
-5. Review the generated CSS and fine-tune under **Custom CSS**
+3. Upload an image (for example, your website) and add a prompt with specific instructions if needed (for example, "A modern, clean form design with contact name and business email on the same row")
+4. Review the generated CSS and fine-tune under **Custom CSS**
+
+![Design with AI output example](./img/marketing/design-forms-with-ai-output.png)
+
+Give AI a screenshot of your website and ask it to style the form to match your website's design and branding with any additional formatting or styling you need. The CSS code will automatically be generated and present when you embed the form on your website later.
 
 ## Step 5 — Configure automations
 
