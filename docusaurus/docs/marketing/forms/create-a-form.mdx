@@ -4,7 +4,7 @@ sidebar_label: "Tutorial: Lead generation form"
 description: "Step-by-step tutorial to build a lead generation form from the Lead generation template, add fields and sections, style with AI, connect automations, publish, and test."
 ---
 
-This tutorial will walk you creating a high-converting lead generation form based on the Lead generation template. You will customize fields, optionally add a file upload, organize with sections, style with AI, connect automations, and publish.
+This tutorial will walk you through creating a high-converting lead generation form based on the Lead generation template. You will customize fields, optionally add a file upload, organize with sections, style with AI, connect automations, and publish.
 
 ## Step 1 — Start from the Lead generation template
 
@@ -20,9 +20,9 @@ The lead generation template includes four fields by default:
 - Business Email
 - Phone Number
 
-These fields will be used to automaticaly create a new contact and company record in the CRM with the information provided by the visitor.
+These fields will be used to automatically create a new contact and company record in the CRM with the information provided by the visitor.
 
-## Step 2 — Add additional fields to your form
+## Step 2 — Add and organize additional fields to your form
 
 You can add more fields to your form to capture more information from your visitor by clicking **Add Field** and selecting the field type you need.
 
@@ -41,7 +41,7 @@ Move the marketing consent fields to the bottom of the form by clicking and drag
 
 ## Step 3 — Customize field properties
 
-After adding a field, you can customize its properties. These properties impact the way a field is displayed (or not!) and the information that gets captured when the form is submitted.
+Once your fields are in place, you can customize how they behave and appear using field properties. Field properties control display options, default values, dynamic behaviors, and the information that gets captured when the form is submitted.
 
 ![Customize Field Properties](./img/marketing/customize-form-field-properties.png)
 
@@ -71,7 +71,7 @@ Click on **Marketing email consent source** to open the properties panel and che
 
 ### Dynamically filling form fields
 
-Form fields can be dynamically filled with the information from the URL using query parameters. Commbined with hidden fields, this can be used to capture information about the source of the form submission. 
+Form fields can be dynamically filled with the information from the URL using query parameters. Combined with hidden fields, this can be used to capture information about the source of the form submission. 
 
 For example, if you have a form that is put on a link like this: ```https://www.example.com/form?campaign=spring-promotion```, the value of the `campaign` query parameter will be captured and set on any field that has the **Populate field dynamically** option checked and the query parameter `campaign` selected.
 
@@ -83,13 +83,13 @@ Forms automatically captures common UTM parameters like `utm_source`, `utm_mediu
 
 Click on the **Marketing email consent source** field to open the properties panel and check off the box  **Populate field dynamically** to enable this feature. Type in the query parameter `campaign` into the input box.
 
-Now, whenever someone consents to receive more emails, the CRM will automatically update to show if they came from a specific campaign. This lets us us know which campaigns are specificlly driving more sign-ups to our email list.
+Now, whenever someone consents to receive more emails, the CRM will automatically update to show if they came from a specific campaign. This lets us us know which campaigns are specifically driving more sign-ups to our email list.
 
 :::tip Tracking form submissions in Google Analytics
 For more detailed information on tracking form submissions, see [Track form submissions in GA4](./tracking-form-submissions-ga4.mdx).
 :::
 
-## Step 4 — Style your form
+## Step 4 — Match your form design to your website
 
 You can customize the appearance of the form to    match your website's design and branding by clicking the **Design** tab. Simple changes like the form width and colors can be made using the interactive controls inside of the **Design** tab and will be reflected in the preview on the right.
 
@@ -116,7 +116,7 @@ If you are not familiar with CSS or it takes you a while to get the desired look
 
 Give AI a screenshot of your website and ask it to style the form to match your website's design and branding with any additional formatting or styling you need. The CSS code will automatically be generated and present when you embed the form on your website later.
 
-## Step 5 — Configure automations
+## Step 5 — Configure form automations
 
 Automations can be used to trigger actions when a form is submitted. For example, you can send an email notification to a team member, add the contact to a specific list, assign the contact to a team member, or trigger a workflow.
 
@@ -130,7 +130,7 @@ Forms can either trigger an automation for a **contact** or a **company**. The g
 ![Form Automation Trigger Types](./img/marketing/automation-form-trigger-contact.png)
 :::
 
-You will see an "error" message when you select the template. This automation template requires you to choose an email campaign that will be sent to the contact when the form is submitted. Choose an exisiting campaign from the dropdown and then click **Save automation**.
+You will see an "error" message when you select the template. This automation template requires you to choose an email campaign that will be sent to the contact when the form is submitted. Choose an existing campaign from the dropdown and then click **Save automation**.
 
 ![Form automation error message for automation](./img/marketing/select-campaign-for-form-automation.png)
 
@@ -144,41 +144,71 @@ You can edit existing form automation templates by using the **Advanced mode** t
 For more information on building automations with the automation builder, see [Create a new automation](../automations/my-automations/create-new-automation.mdx).
 :::
 
-## Step 6 — Publish your form
+## Step 6 — Form submission settings and publishing
 
-Once your form is complete, you can embed it on your website:
+With the majority of the form setup complete, you can now configure the form settings and publish it to your website. These aren't directly related to how the form looks itself or the information it captures, but are important for how the form behaves and is used.
 
-1. Click the **Embed** tab
-2. Choose an embed option:
-   - **JavaScript Embed**: Copy the JavaScript code to add to your website
-   - **iFrame Embed**: Copy the iFrame code for platforms that don't support JavaScript
-   - **Direct Link**: Share a direct link to the form
+![Form settings page](./img/marketing/form-settings-page.png)
 
-![Form embed options](./img/marketing/forms/embed-form.jpg)
+The **Redirect link** field lets you send users to another URL after they submit a form. Set this to an appropriate URL if you have one. If you leave this field blank, the user will get a confirmation message after they submit the form. 
+
+The **Conversations integration** makes every new form submission appear as either a new conversation or a new message for an exisiting conversation. This is a great way to see form submissions as part of the holilstic conersation history for a contact or company. Check the box next to **Create a conversation** if it is already not turned on.
+
+![Conversations form submission](./img/marketing/conversations-form-submission.png)
+
+:::tip Stopping spam submissions from forms
+You can protect your forms from spam submissions by enabling reCAPTCHA. This will require users to complete a CAPTCHA challenge before they can submit the form. While this is important, it requires some additional setup and configuration.
+
+For more information on enabling reCAPTCHA, see [reCAPTCHA key configuration](./recaptcha-key.mdx).
+:::
+
+Click on the `Embed` button to view the code you need to embed the form on your website. You can copy the code and paste it into your website's HTML code to embed the form.
+
+![Form embed code](./img/marketing/embed-code-for-forms.png)
 
 ## Step 7 — Test your form
 
+Before turning your form live, you should test it to make sure it is working as expected. For this Tutorial form that means:
+
 - Submit a test lead and verify the contact/company are created
-- Check that automations run as expected (campaigns, notifications, ownership)
-- If using File upload, confirm the file appears on the CRM record with an AI summary
+- Check that the automation send a campaign as expected
+- Verify that a conversation is created as expected
 
-## reCAPTCHA protection
+Once these steps are complete, you can turn your form live and start capturing leads!
 
-Protect your forms from spam submissions:
+:::tip Testing embed code for forms
+You don't have to paste your form embed code into your website to test it! There are many great websites that allow you to test HTML code very simply and quickly. Some examples include:
+- [CodePen](https://codepen.io/)
+- [JSFiddle](https://jsfiddle.net/)
+- [W3Schools](https://www.w3schools.com/html/html_examples.asp)
+:::
 
-1. Click the **Settings** tab
-2. Toggle on **Enable reCAPTCHA**
-3. Choose between invisible reCAPTCHA or checkbox verification
+## Frequently asked questions
 
-![reCAPTCHA settings](./img/marketing/forms/recaptcha.jpg)
+<details>
+<summary>Can I create forms without using templates?</summary>
 
-## Best practices
+Yes! While templates provide a quick starting point, you can create a blank form from scratch. Go to **Marketing > Forms** and click **Create form** to start with a completely empty form and build it exactly as you need.
 
-- Keep forms short and only ask for essential information
-- Use clear labels and helpful placeholder text
-- Make sure required fields are clearly marked
-- Test your form before embedding it on your website
-- Review form analytics to optimize conversion rates
+</details>
 
+<details>
+<summary>How do I make my form mobile-responsive?</summary>
 
- 
+Forms are automatically mobile-responsive by default and the AI design assistant can help ensure your form looks great on all devices. Test your form on different screen sizes using your browser's developer tools.
+
+</details>
+
+<details>
+<summary>Can I integrate forms with other platforms?</summary>
+
+Yes! Forms can integrate with various platforms through automations and webhooks. For example, you can send form data to CRMs, marketing automation tools, or custom applications. Check the [Automations documentation](../automations/my-automations/create-new-automation.mdx) for tips on how to build integrations with other systems.
+
+</details>
+
+<details>
+<summary>How do I prevent spam submissions?</summary>
+
+Enable reCAPTCHA protection in the form settings to prevent automated spam. You can choose between visible checkbox verification or invisible protection. See [reCAPTCHA key configuration](./recaptcha-key.mdx) for setup instructions.
+
+</details>
