@@ -47,10 +47,9 @@ Once your fields are in place, you can customize how they behave and appear usin
 
 ### Creating a dropdown field on forms
 
-Click on the **Marketing email consent** form to open the properties panel. Click on the **Field type** dropdown and change the field type from `Text` to `Dropdown`. This will make it so the user can only select from one of our pre-defined options: `Yes` or `No`.
+Click on the **Marketing email consent** field to open the properties panel. Click on the **Field type** dropdown and change the field type from `Text` to `Dropdown`. This will make it so the user can only select from one of our pre-defined options: `Yes` or `No`.
 
 ![Change field type to Dropdown](./img/marketing/form-field-type-dropdown.png)
-
 The **label** field is what will be displayed above the dropdown. For our field it will make sense to frame it as a question like: "Would you like to receive more emails from us?"
 
 ![setting form field label](./img/marketing/setting-field-label-values.png)
@@ -67,7 +66,7 @@ Adding a hidden field to your form allows you to capture information that is not
 
 ![hiding form fields](./img/marketing/hiding-form-fields.png)
 
-Click on **Marketing email consent source** to open the properties panel and check off the box  **Make hidden** to hide this field from the user. Enter the name of the form as the **Default value** for the field so that the value is automatically set in the CRM when the form is submitted.
+Click on **Marketing email consent source** to open the properties panel and check off the box **Make hidden** to hide this field from the user. Enter the name of the form as the **Default value** for the field so that the value is automatically set in the CRM when the form is submitted.
 
 ### Dynamically filling form fields
 
@@ -76,22 +75,21 @@ Form fields can be dynamically filled with the information from the URL using qu
 For example, if you have a form that is put on a link like this: ```https://www.example.com/form?campaign=spring-promotion```, the value of the `campaign` query parameter will be captured and set on any field that has the **Populate field dynamically** option checked and the query parameter `campaign` selected.
 
 :::info UTM parameters automatically captured by Forms
-Forms automatically captures common UTM parameters like `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, and `utm_term`! If you do not need to capture these  
+Forms automatically capture common UTM parameters like `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, and `utm_term`! If you do not need to capture these  
 :::
 
 ![dynamically filling form fields](./img/marketing/populate-dynamically-using-query.png)
 
 Click on the **Marketing email consent source** field to open the properties panel and check off the box  **Populate field dynamically** to enable this feature. Type in the query parameter `campaign` into the input box.
 
-Now, whenever someone consents to receive more emails, the CRM will automatically update to show if they came from a specific campaign. This lets us us know which campaigns are specifically driving more sign-ups to our email list.
+Now, whenever someone consents to receive more emails, the CRM will automatically update to show if they came from a specific campaign. This lets us know which campaigns are specifically driving more sign-ups to our email list.
 
-:::tip Tracking form submissions in Google Analytics
 For more detailed information on tracking form submissions, see [Track form submissions in GA4](./tracking-form-submissions-ga4.mdx).
 :::
 
 ## Step 4 — Match your form design to your website
 
-You can customize the appearance of the form to    match your website's design and branding by clicking the **Design** tab. Simple changes like the form width and colors can be made using the interactive controls inside of the **Design** tab and will be reflected in the preview on the right.
+You can customize the appearance of the form to match your website's design and branding by clicking the **Design** tab. Simple changes like the form width and colors can be made using the interactive controls inside of the **Design** tab and will be reflected in the preview on the right.
 
 ![An example of simple form design changes](./img/marketing/simple-form-design-example.png)
 
@@ -130,7 +128,7 @@ Forms can either trigger an automation for a **contact** or a **company**. The g
 ![Form Automation Trigger Types](./img/marketing/automation-form-trigger-contact.png)
 :::
 
-You will see an "error" message when you select the template. This automation template requires you to choose an email campaign that will be sent to the contact when the form is submitted. Choose an existing campaign from the dropdown and then click **Save automation**.
+You will see an error message when you select the template. This automation template requires you to choose an email campaign that will be sent to the contact when the form is submitted. Choose an existing campaign from the dropdown and then click **Save automation**.
 
 ![Form automation error message for automation](./img/marketing/select-campaign-for-form-automation.png)
 
@@ -139,7 +137,7 @@ If you do not have an appropriate campaign created, you can save the automation 
 :::
 
 :::info Building more complex automations for forms
-You can edit existing form automation templates by using the **Advanced mode** toggle in Forms The automation builder provides you many more actions and conditional logic you can use to build more complex automations for forms. 
+You can edit existing form automation templates by using the **Advanced mode** toggle in Forms. The automation builder provides you many more actions and conditional logic you can use to build more complex automations for forms. 
 
 For more information on building automations with the automation builder, see [Create a new automation](../automations/my-automations/create-new-automation.mdx).
 :::
@@ -152,7 +150,9 @@ With the majority of the form setup complete, you can now configure the form set
 
 The **Redirect link** field lets you send users to another URL after they submit a form. Set this to an appropriate URL if you have one. If you leave this field blank, the user will get a confirmation message after they submit the form. 
 
-The **Conversations integration** makes every new form submission appear as either a new conversation or a new message for an exisiting conversation. This is a great way to see form submissions as part of the holilstic conersation history for a contact or company. Check the box next to **Create a conversation** if it is already not turned on.
+The **Conversations integration** makes every new form submission appear as either a new conversation or a new message for an existing conversation. This is a great way to see form submissions as part of the holistic conversation history for a contact or company. Check the box next to **Create a conversation** if it is not already turned on.
+
+:::tip Tracking form submissions in Google Analytics
 
 ![Conversations form submission](./img/marketing/conversations-form-submission.png)
 
@@ -168,10 +168,10 @@ Click on the `Embed` button to view the code you need to embed the form on your 
 
 ## Step 7 — Test your form
 
-Before turning your form live, you should test it to make sure it is working as expected. For this Tutorial form that means:
+Before turning your form live, you should test it to make sure it is working as expected. For this tutorial form that means:
 
 - Submit a test lead and verify the contact/company are created
-- Check that the automation send a campaign as expected
+- Check that the automation sends a campaign as expected
 - Verify that a conversation is created as expected
 
 Once these steps are complete, you can turn your form live and start capturing leads!
