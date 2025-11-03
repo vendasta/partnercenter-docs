@@ -7,87 +7,110 @@ tags: [forms, overview, documentation]
 keywords: [forms, lead capture, file upload, automations, design with ai, form templates]
 ---
 
-Forms let you capture information on any website and kick off the right follow‑ups automatically. Start from a template, add the fields you need (including file upload), style with AI, and publish in minutes.
+Forms let you capture leads, qualify prospects, and trigger automated follow-ups from any website that lets you embed HTML code. Start with pre-built templates, customize with AI-generated styling, and connect to your CRM, email campaigns, and more.
 
-## Quick start
+## What you can build
 
-1. Go to Marketing → Forms
-2. Click Create form
-3. Choose a template (for example, Lead Generation) and select "Use template"
-4. Open the Automations tab to review/finish setup (for example, attach a campaign) and toggle it on
-5. Publish by copying the embed or share link
+- **Lead generation forms**: Capture contact information that automatically creates CRM records. Use templates for business leads, newsletter signups, or consultation requests.
+- **Intake and qualification forms**: Collect detailed information with file uploads, conditional logic, and multi-step flows. Perfect for quotes, demos, or document collection.
+- **Interactive forms with automations**: Trigger email campaigns, assign sales reps, create tasks, or start workflows when forms are submitted.
 
-## Key features
+## Quick start guide
 
-- Templates: Start faster with prebuilt options, including a Lead generation template
-- Sections: Organize longer forms into logical groups or steps
-- File upload: Let visitors attach a single file; uploaded files attach to the created CRM record and get AI‑generated summaries
-- Automations: Trigger actions on submit (assign owner, start campaign, create account/snapshot, activate products, notify team)
-- Design with AI: Generate on‑brand styles by uploading a reference and prompting AI, then refine under Custom CSS
+1. Go to **Marketing → Forms**
+2. Click **Create form** and choose a template (Lead Generation works great for most cases)
+3. Add or customize fields using the drag-and-drop builder
+4. Style your form with AI or custom CSS
+5. Set up automations to handle submissions
+6. Embed on your website or share a direct link
 
-## Recommended uses
+## Field types and form building
 
-- Lead capture on marketing sites and landing pages
-- Intake for quotes, demos, or contact requests
-- Document intake via file upload
+Forms support different field types that map to your CRM:
 
-## Learn by doing
+- **Contact fields**: Information that attaches to the contact record (name, email, phone)
+- **Company fields**: Business information (company name, industry, size)
+- **Element fields**: Non-interactive content like instructions or dividers
+- **Generic fields**: Custom data that doesn't map to CRM records
 
-- Tutorial: [Create a lead generation form](./create-a-form.mdx)
+### Advanced field features
+- **Hidden fields**: Capture attribution data without showing to users
+- **Dynamic fields**: Populate from URL parameters (like `?campaign=summer-promo`)
+- **UTM tracking**: Automatically captures standard UTM parameters
+- **File uploads**: Attach documents that get AI-summarized and stored in CRM
 
-## Technical guides
+## Form settings and publishing
 
-- [Styling forms with CSS](./style-form-with-css.mdx)
-- [reCAPTCHA key configuration](./recaptcha-key.mdx)
-- [Track form submissions in GA4](./tracking-form-submissions-ga4.mdx)
+Configure how your form behaves:
+- **Redirect after submit**: Send users to a thank-you page or custom URL
+- **Conversations integration**: Create conversation threads from form submissions
+- **Spam protection**: Enable reCAPTCHA to block automated submissions
+- **Embed options**: Copy HTML code or get shareable links
+
+## Integration and automation
+
+Connect forms to your entire workflow:
+
+- **CRM integration**: Auto-create contacts and companies
+- **Email campaigns**: Trigger welcome sequences or nurture flows
+- **Team assignments**: Auto-assign leads to salespeople
+- **Task creation**: Generate follow-up work items
+- **Webhooks**: Send data to external systems
+- **Analytics**: Track submissions in Google Analytics
+
+## Guides and resources
+
+### Getting started
+- **[Create a lead generation form](./create-a-form.mdx)**: Step-by-step tutorial
+
+### Customization
+- **[Styling forms with CSS](./style-form-with-css.mdx)**: Custom appearance and responsive design
+- **[Design with AI](./style-form-with-css.mdx#design-with-ai)**: Generate styles from website screenshots
+
+### Technical setup
+- **[Use Google reCAPTCHA with Forms](./recaptcha-key.mdx)**: Block spam submissions
+- **[Track form submissions with GA4](./tracking-form-submissions-ga4.mdx)**: Analytics and attribution
 
 ## Frequently asked questions
 
 <details>
-<summary>Where do uploaded files go?</summary>
+<summary>What field types should I use?</summary>
 
-Files are attached to the Contact and Company created from the submission. An AI summary is generated automatically.
-
-</details>
-
-<details>
-<summary>Can I use automations with forms?</summary>
-
-Yes. Use the form’s Automations tab to assign owners, start campaigns, create accounts/snapshots, activate products, and more.
-
-</details>
-
-<details>
-<summary>How do I style forms?</summary>
-
-Use Design with AI for a quick starting point, then refine with Custom CSS. See [Styling forms with CSS](./style-form-with-css.mdx).
-
-</details>
-
-<details>
-<summary>Can I create forms without using templates?</summary>
-
-Yes. Choose **Create form** and start from a blank form to build exactly what you need.
-
-</details>
-
-<details>
-<summary>Are forms mobile‑responsive?</summary>
-
-Yes. Forms are responsive by default. You can further refine layout using Custom CSS or the Design with AI assistant.
-
-</details>
-
-<details>
-<summary>Can I integrate forms with other platforms?</summary>
-
-Yes. Use automations and webhooks to sync data or trigger actions in other systems. See the Automations documentation for details.
+Use **Contact** and **Company** fields for CRM data, **Generic** fields for custom information, and **Element** fields for instructions or organization.
 
 </details>
 
 <details>
 <summary>How do I prevent spam submissions?</summary>
 
-Enable reCAPTCHA in Form settings. See [reCAPTCHA key configuration](./recaptcha-key.mdx) for setup steps.
+Enable reCAPTCHA in Form settings. See [reCAPTCHA setup](./recaptcha-key.mdx) for complete instructions.
+
+</details>
+
+<details>
+<summary>Can I customize the form appearance?</summary>
+
+Yes! Use Design with AI for quick styling, or write custom CSS for full control. Forms are mobile-responsive by default.
+
+</details>
+
+<details>
+<summary>Are forms mobile-responsive?</summary>
+
+Yes. Forms are responsive by default and work great on all devices. You can further refine the mobile layout using Custom CSS or the Design with AI assistant. See [Styling forms with CSS](./style-form-with-css.mdx#mobile-responsiveness) for mobile-specific styling examples.
+
+</details>
+
+<details>
+<summary>What happens to uploaded files?</summary>
+
+Files attach to the created contact/company record and get AI-generated summaries for easy review.
+
+</details>
+
+<details>
+<summary>How do I track form performance?</summary>
+
+Forms auto-capture UTM parameters. For detailed analytics, see [GA4 tracking](./tracking-form-submissions-ga4.mdx).
 
 </details>
