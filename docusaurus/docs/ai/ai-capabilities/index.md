@@ -128,9 +128,4 @@ Use the conversation Explanations feature to understand:
 - How well your trigger conditions are working in practice
 :::
 
-## Next Steps
 
-- **Understand Tools & APIs**: [Tools & Integrations Overview](./tools-overview) - Learn the fundamentals of tools and APIs
-- **Build Custom Tools**: [Building Custom Tools](./tools-overview/building-custom-tools) - Step-by-step tutorial for creating custom tools
-- **Configure Built-in Capabilities**: [How to Configure AI Capabilities](./configuring-capabilities)
-- **Create Custom Capabilities**: [Creating Custom Capabilities](./creating-custom-capabilities)
