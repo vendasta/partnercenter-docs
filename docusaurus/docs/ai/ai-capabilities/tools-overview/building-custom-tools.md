@@ -1,6 +1,6 @@
 ---
 title: Building Custom Tools
-sidebar_label: Tutorial: Building Custom Tools
+sidebar_label: "Tutorial: Building Custom Tools"
 sidebar_position: 2
 description: Step-by-step guide for building custom tools using API documentation, including best practices and troubleshooting tips
 ---
@@ -766,3 +766,87 @@ Follow these principles throughout the tool-building process:
    - Get help writing parameter descriptions
    - Don't outsource business logic decisions
 
+## Frequently Asked Questions (FAQs)
+
+<details>
+<summary>Do I need to be a developer to build custom tools?</summary>
+
+No, you don't need to be a developer. While basic familiarity with API concepts helps, the cURL import feature and AI assistants make it possible to build tools without deep technical knowledge. The most important skill is writing clear parameter descriptions that tell the AI how to use the tool.
+</details>
+
+<details>
+<summary>What if I can't find API documentation for the service I want to integrate?</summary>
+
+If you can't find official API documentation, try:
+- Searching for "[Service Name] API documentation" or "[Service Name] developer docs"
+- Contacting the service's support team for API access
+- Checking if they have a developer portal or community forum
+
+If no API exists, you may need to use a different integration method or contact the service provider.
+</details>
+
+<details>
+<summary>Can I use the same tool for multiple capabilities?</summary>
+
+Yes, you can use the same tool across multiple capabilities. However, each capability should have its own prompt that defines when and how to use the tool in that specific context. This allows the same API endpoint to serve different business purposes.
+</details>
+
+<details>
+<summary>What happens if my API key expires or changes?</summary>
+
+If your API key expires or changes, you'll need to update the authentication header in your tool configuration. Go to the tool settings, find the Authorization header, and update it with the new key. The tool will then work with the new credentials.
+</details>
+
+<details>
+<summary>How do I know if my parameter descriptions are good enough?</summary>
+
+Test your tool with various customer phrasings. If the AI:
+- Correctly extracts parameters from customer messages
+- Asks for missing required information
+- Uses the tool when appropriate
+- Handles edge cases gracefully
+
+Then your descriptions are working well. Review the Explanation feature to see how the AI interprets your descriptions.
+</details>
+
+<details>
+<summary>Can I build tools that use multiple API endpoints?</summary>
+
+Yes, you can add multiple tools to a single capability. Each tool can call a different API endpoint. The AI will use the appropriate tool based on the customer's request and the tool descriptions you've written.
+</details>
+
+<details>
+<summary>What should I do if the cURL import doesn't work?</summary>
+
+If cURL import fails:
+- Verify the cURL command is complete and properly formatted
+- Check that all quotes are properly closed
+- Try generating a fresh cURL using AI or API testing tools like Postman
+- Manually configure the tool if import continues to fail
+
+The manual configuration option gives you full control over all tool settings.
+</details>
+
+<details>
+<summary>How often should I test and refine my tools?</summary>
+
+Test immediately after creating a tool, then monitor real usage. Refine tools based on:
+- Failed API calls or errors
+- Customer confusion or repeated questions
+- Tools not triggering when they should (or triggering incorrectly)
+- Changes in the API or service you're integrating
+
+Regular monitoring helps catch issues before they impact too many customer interactions.
+</details>
+
+<details>
+<summary>Can I share tools I've built with other AI Employees?</summary>
+
+Yes, custom capabilities (including their tools) can be assigned to multiple AI Employees. This allows you to reuse successful tool configurations across different AI Employees without rebuilding them.
+</details>
+
+<details>
+<summary>What's the difference between a tool and a capability?</summary>
+
+A **tool** is the technical API implementation (the "how") - it defines the API endpoint, authentication, and parameters. A **capability** is the business logic (the "when" and "why") - it includes the prompt that tells the AI when to use the tool and how to handle responses. You need both: tools for the API connection, and capabilities for the AI behavior.
+</details>
