@@ -16,7 +16,7 @@ tags:
 
 Tools enable your AI Employees to interact with external systems, retrieve real-time information, and automate workflows across different platforms. Understanding how Tools work is essential for building powerful AI capabilities that go beyond simple conversation.
 
-## What Are Tools?
+## What are Tools?
 
 A **Tool** is a function or API that an AI Employee can use. Tools connect AI to software systems for:
 
@@ -36,7 +36,7 @@ Tools and APIs work together to enable AI Employees to interact with software sy
 - How to format requests
 - Authentication handling
 
-## Tool Components
+## Tool components
 
 Every Tool consists of four key components that tell the AI Employee how to use the API. These components do *not* require extensive understanding of code, but you will need to reference the API documentation to fill them in correctly.
 
@@ -158,7 +158,7 @@ With `Set by AI` toggled off, you will need to fill in the `Value` field with th
 | Set by AI | Dynamic values that come from the user or conversation context | "The appointment date requested by the user. It should be in the format YYYY-MM-DD. You may need to ask the user for the date if it's not provided." |
 | Fixed value | API-required constants, feature switches, or default modes | `"2025-01-01"` |
 
-## When to Build Custom Tools
+## When to build custom tools
 
 Create custom Tools when AI Employees need to:
 - Check real-time inventory or product availability

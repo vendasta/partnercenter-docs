@@ -19,7 +19,7 @@ The AI Chat Receptionist ensures that your business never misses an opportunity 
 
 Beyond capturing leads and answering questions around the clock, the Chat Receptionist reduces friction and drop-off by initiating conversations with context-driven prompts instead of overwhelming forms, handles ambiguity and complex inquiries by understanding free-form requests and adapting in real time without forcing users into rigid menu paths, and fosters trust through natural, empathetic interactions and personalized greetings. It also scales effortlessly with your business as it adapts to new offerings and workflows without rebuilding extensive decision trees, while delivering timely, personalized responses that guide visitors down the sales funnel and drive higher customer satisfaction and conversion rates.
  
-## Set Up the AI Chat Receptionist
+## Set up the AI Chat Receptionist
 
 Follow these simple steps to configure your AI Chat Receptionist so it effectively engages visitors and captures valuable leads.
 
@@ -128,7 +128,7 @@ The Explanation feature is your most valuable debugging tool. Each response expl
 - If wrong knowledge was referenced, consider refining your knowledge base or adding more specific content
 - If the reasoning seems off, your Purpose or capability instructions may need clarification
 
-### Systematic Iteration Workflow
+### Systematic iteration workflow
 
 Improving your AI Chat Receptionist is an iterative process. Follow this workflow for the best results:
 
@@ -173,7 +173,7 @@ Improving your AI Chat Receptionist is an iterative process. Follow this workflo
 If you're unsure, start with the most specific element (capabilities or knowledge) before adjusting the broad Purpose.
 :::
 
-### Testing Across Multiple Channels
+### Testing across multiple channels
 
 If you've enabled your AI Chat Receptionist on multiple channels (web chat, SMS, etc.), test each channel separately:
 
@@ -194,7 +194,7 @@ If you've enabled your AI Chat Receptionist on multiple channels (web chat, SMS,
 3. Test the same conversation flow on each channel to catch formatting issues
 4. Adjust capability prompts to specify different behaviors per channel when appropriate 
 
-## Frequently Asked Questions about Setting Up Your AI Chat Receptionist
+## Frequently asked questions about setting up your AI Chat Receptionist
 
 <details>
 <summary>What should I include in the Purpose prompt?</summary>

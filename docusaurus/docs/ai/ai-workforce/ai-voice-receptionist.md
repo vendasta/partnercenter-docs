@@ -205,9 +205,9 @@ If the AI Voice Receptionist is unable to capture a caller’s contact informati
 
 ---
 
-## Frequently Asked Questions
+## Frequently asked questions
 
-### Getting Started
+### Getting started
 
 <details>
 <summary>What do I need before setting up my AI Voice Receptionist?</summary>

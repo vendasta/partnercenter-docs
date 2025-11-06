@@ -171,7 +171,7 @@ Initiate a ServiceTitan customer search **when**:
 
 ---
 
-### Customer Search Process
+### Customer search process
 
 **Step 1: Search for Customer**
 1. Use the most specific identifier provided (phone number is usually most reliable)
@@ -187,7 +187,7 @@ Initiate a ServiceTitan customer search **when**:
 2. Look for patterns in service frequency, preferred technicians, or recurring issues
 3. Note any upcoming appointments or pending work orders
 
-### Response Guidelines
+### Response guidelines
 
 **When customer is found:**
 - Greet them by name and acknowledge their customer status
@@ -213,7 +213,7 @@ Initiate a ServiceTitan customer search **when**:
 - Ask for verification if there are any concerns about identity
 - Do not share sensitive information like full addresses or payment details
 
-### Example Responses
+### Example responses
 
 **Existing Customer:**
 "Hi [Customer Name]! I found your account in our system. I can see you're one of our valued customers with [X] service history. How can I help you today?"
@@ -309,7 +309,7 @@ Create new appointments in ServiceTitan **when**:
 - Customer needs emergency service but can wait for next available appointment
 - Customer wants to schedule follow-up work or warranty service
 
-### Scheduling Process
+### Scheduling process
 
 **Step 1: Identify Customer Status**
 - Search for existing customer using provided contact information
@@ -336,7 +336,7 @@ Before creating an appointment, collect:
 - Include comprehensive job summary
 - Link to customer ID (whether existing or newly created)
 
-### Service Type Guidelines
+### Service type guidelines
 
 **HVAC Services:**
 - Heating/cooling system repairs
@@ -362,7 +362,7 @@ Before creating an appointment, collect:
 - Warranty work
 - Follow-up visits
 
-### Appointment Confirmation
+### Appointment confirmation
 
 After successfully creating an appointment:
 - Provide confirmation with job number
@@ -371,7 +371,7 @@ After successfully creating an appointment:
 - Provide contact information for changes
 - Send any necessary preparation instructions
 
-### Example Appointment Creation
+### Example appointment creation
 
 "I've successfully scheduled your HVAC maintenance appointment for [Date] at [Time]. Your job number is [Job#]. Our technician will arrive during the scheduled window to perform a complete system inspection and tune-up. You should receive a confirmation call the day before your appointment. Is there anything else I can help you with today?"
 ````
@@ -451,7 +451,7 @@ Retrieve job status information **when**:
 - Customer asks about delays or rescheduling
 - Customer references a specific job or service ticket number
 
-### Status Update Process
+### Status update process
 
 **Step 1: Identify the Job**
 - Ask for job number, appointment date, or service address
@@ -468,7 +468,7 @@ Retrieve job status information **when**:
 - Include relevant timeframes and next steps
 - Offer additional assistance if needed
 
-### Job Status Translations
+### Job status translations
 
 **ServiceTitan Status → Customer-Friendly Message:**
 - "Scheduled" → "Your appointment is confirmed and scheduled"
@@ -478,7 +478,7 @@ Retrieve job status information **when**:
 - "OnHold" → "Your appointment is temporarily on hold"
 - "Cancelled" → "Your appointment has been cancelled"
 
-### Providing Helpful Context
+### Providing helpful context
 
 **For Scheduled Jobs:**
 - Mention appointment window
@@ -495,7 +495,7 @@ Retrieve job status information **when**:
 - Mention any follow-up needed
 - Provide invoice or billing information if requested
 
-### Example Status Updates
+### Example status updates
 
 **Scheduled Appointment:**
 "Your HVAC maintenance appointment is confirmed for tomorrow between 9 AM and 11 AM. Technician John Smith will be handling your service. He'll call about 30 minutes before arrival."

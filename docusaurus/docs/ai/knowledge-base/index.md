@@ -20,7 +20,7 @@ Do not add behavioral instructions to the Knowledge Base. Use **capabilities** f
 
 AI employees rely on the Knowledge Base to answer questions consistently and accurately. Without it, responses may be incomplete or outdated.  
 
-## How Knowledge Base Works
+## How the Knowledge Base works
 
 When a customer asks a question, your AI employee:
 
@@ -79,7 +79,7 @@ You can add or update knowledge in several ways:
 
 ## Knowledge, Capabilities, and Tools: What's the Difference?
 
-## Knowledge Base vs. Capabilities vs. Tools
+## Knowledge base vs. capabilities vs. tools
 
 The knowledge base is one of three key components that make AI employees effective:
 
@@ -117,7 +117,7 @@ Capabilities tell your AI employee **how to act** and **when** to take specific 
 - **Capability** = "After answering questions, always offer to book an appointment" (proactive, behavior-based)
 :::
 
-## Best Practices for Knowledge Base Optimization
+## Best practices for Knowledge Base optimization
 
 ### Start with What You Already Have
 Begin with existing resources rather than creating new content from scratch:
@@ -144,20 +144,20 @@ Don't try to control AI behavior through the knowledge base:
 - ❌ **Wrong:** Knowledge base entry saying "If customer asks about pricing, do X, Y, Z"
 - ✅ **Right:** Add pricing information to knowledge; put the "do X, Y, Z" process in a capability
 
-### Keep Knowledge Relatively Static
+### Keep knowledge relatively static
 The knowledge base works best for information that doesn't change frequently:
 - ✅ **Good:** Service descriptions, product specifications, business policies
 - ✅ **Good:** Pricing (if it changes monthly or less frequently)
 - ❌ **Poor:** Daily specials or promotions (update via capabilities instead)
 - ❌ **Poor:** Live inventory (use a tool/API for real-time data)
 
-### Use Website Auto-Refresh for Dynamic Content
+### Use website auto-refresh for dynamic content
 If you do have website content that changes regularly:
 - Enable the "Automatic refresh" option when adding website knowledge sources
 - The system will check monthly for updates automatically
 - This is great for blogs, menus, or service pages that evolve over time
 
-### Exclude Irrelevant Website Sections
+### Exclude irrelevant website sections
 When retrieving website content, use path exclusions to skip:
 - Blog archives that are more for SEO than customer service
 - Legal pages that aren't commonly asked about
@@ -166,7 +166,7 @@ When retrieving website content, use path exclusions to skip:
 
 **Example:** Exclude `/blog/articles/` if those posts are general content not specific to your business.
 
-### Review What the AI Actually Uses
+### Review what the AI actually uses
 Use the conversation explanation feature to see:
 - Which knowledge sources the AI referenced in responses
 - Whether it found the right information
@@ -174,7 +174,7 @@ Use the conversation explanation feature to see:
 
 This helps you refine what to keep, update, or remove from your knowledge base.
 
-## Frequently Asked Questions (FAQs)
+## Frequently asked questions (FAQs)
 
 <details>
 <summary>How do I update the Business Profile knowledge source?</summary>

@@ -51,7 +51,7 @@ Most services provide API documentation in one of these locations:
 If you can't find the API documentation, search for "[Service Name] API documentation" or "[Service Name] developer docs" in your search engine.
 :::
 
-### Reading API Documentation Effectively
+### Reading API documentation effectively
 
 API documentation can be overwhelming, but focusing on these key sections will help:
 
@@ -96,7 +96,7 @@ Match your needs to the appropriate endpoint:
 | Check order status | GET endpoint that returns order details |
 | Update appointment time | PUT/PATCH endpoint for appointments |
 
-### Understanding Authentication Requirements
+### Understanding authentication requirements
 
 Most APIs require authentication. Common methods include:
 
@@ -149,7 +149,7 @@ Different services organize their documentation differently:
 
 Following these principles will help you build reliable, effective tools:
 
-### Leverage AI Assistants to Help
+### Leverage AI assistants to help
 
 AI assistants like ChatGPT, Claude, or even Vendasta's AI Support:
 
@@ -187,7 +187,7 @@ The cURL import feature automatically fills in:
 
 This saves time and reduces errors. We'll cover this in detail in the next section.
 
-### Manually Review and Write Descriptions (The Most Important Part)
+### Manually review and write descriptions (the most important part)
 
 While cURL import handles the technical setup, **parameter descriptions are critical** for AI to use your tool correctly.
 
@@ -316,7 +316,7 @@ curl -X POST "https://api.example.com/appointments" \
 ![Review auto-filled fields](./img/building-tools/review-auto-filled.jpg)
 -->
 
-### What Gets Auto-Filled and What Needs Manual Work
+### What gets auto-filled and what needs manual work
 
 **Auto-Filled (from cURL import):**
 - ✅ HTTP Method
@@ -349,7 +349,7 @@ Manual enhancement needed:
 - Required: ✓ (check this box)
 ```
 
-### Common Issues and How to Resolve Them
+### Common issues and how to resolve them
 
 **Issue: cURL import fails or shows errors**
 
@@ -377,7 +377,7 @@ Manual enhancement needed:
 
 AI assistants can significantly speed up tool creation by helping you write effective parameter descriptions and understand complex API requirements.
 
-### Using Screenshots as Context for AI
+### Using screenshots as context for AI
 
 Screenshots are powerful tools for getting AI assistance:
 
@@ -404,7 +404,7 @@ where the product isn't found."
 [Attach screenshot of API documentation]
 ```
 
-### Asking AI to Help Write Parameter Descriptions
+### Asking AI to help write parameter descriptions
 
 Good parameter descriptions are critical for AI to use your tool correctly. AI can help you write effective descriptions.
 
@@ -431,7 +431,7 @@ doesn't provide a date, ask: "What date would work best for you?" Format the
 final date as YYYY-MM-DD before sending to the API.
 ```
 
-### Iterative Refinement of Descriptions
+### Iterative refinement of descriptions
 
 Don't expect perfect descriptions on the first try. Refine them based on:
 
@@ -462,7 +462,7 @@ provide an email, ask: 'Could you share your email address so we can send
 you a confirmation?'"
 ```
 
-### Ensuring AI Includes Specific Variable Options (Not Generic Guidance)
+### Ensuring AI includes specific variable options (not generic guidance)
 
 AI assistants sometimes provide generic advice. Push for specific, actionable descriptions.
 
@@ -486,7 +486,7 @@ base. Never guess product IDs."
 - Include instructions for missing information
 - Mention edge cases and how to handle them
 
-### Best Practices for AI-Assisted Tool Creation
+### Best practices for AI-assisted Tool creation
 
 **1. Start with Clear Context**
    - Explain your business use case
@@ -537,7 +537,7 @@ Test 3: "Check order abc123xyz"
 Expected: AI handles invalid order number format gracefully
 ```
 
-### Verifying Correct Parameter Filling
+### Verifying correct parameter filling
 
 **1. Use the Explanation Feature**
    - In Conversations, click **Explanation** under a message
@@ -558,7 +558,7 @@ Expected: AI handles invalid order number format gracefully
    - Compare with API documentation requirements
    - Ensure headers and authentication are correct
 
-### Debugging Common Issues
+### Debugging common issues
 
 **Issue: Tool doesn't trigger**
 
@@ -610,9 +610,9 @@ Expected: AI handles invalid order number format gracefully
 
 Even with careful planning, you may encounter issues. Here's how to resolve common problems.
 
-### Common Issues and Solutions
+### Common issues and solutions
 
-#### Tool Never Triggers
+#### Tool never triggers
 
 **Symptoms:**
 - AI doesn't use the tool when it should
@@ -666,7 +666,7 @@ Even with careful planning, you may encounter issues. Here's how to resolve comm
      - Query parameters (`?api_key=...`)
      - Request body
 
-#### Parameter Mapping Issues
+#### Parameter mapping issues
 
 **Symptoms:**
 - Wrong values sent to API
@@ -696,7 +696,7 @@ Even with careful planning, you may encounter issues. Here's how to resolve comm
      - Body parameters for POST/PUT requests
      - Path parameters in URL
 
-#### Tool Triggers Incorrectly
+#### Tool triggers incorrectly
 
 **Symptoms:**
 - Tool activates when it shouldn't
@@ -714,7 +714,7 @@ Even with careful planning, you may encounter issues. Here's how to resolve comm
    - Make trigger conditions more distinct
    - Prioritize which capability should handle specific requests
 
-### Getting Help and Resources
+### Getting help and resources
 
 **1. Review Documentation**
    - Check this guide and related documentation
@@ -741,7 +741,7 @@ Even with careful planning, you may encounter issues. Here's how to resolve comm
    - Service-specific developer forums
    - Vendasta support channels
 
-## Best Practices Summary
+## Best practices summary
 
 Follow these principles throughout the tool-building process:
 
@@ -770,7 +770,7 @@ Follow these principles throughout the tool-building process:
    - Get help writing parameter descriptions
    - Don't outsource business logic decisions
 
-## Frequently Asked Questions (FAQs)
+## Frequently asked questions (FAQs)
 
 <details>
 <summary>Do I need to be a developer to build custom tools?</summary>

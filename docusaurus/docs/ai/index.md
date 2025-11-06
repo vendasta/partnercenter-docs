@@ -8,7 +8,7 @@ keywords: [AI employees, AI workforce, AI capabilities, chat receptionist, voice
 
 Vendasta's AI platform combines unique business data with AI to automate marketing, sales, and operations — making it easier than ever to attract, convert, and retain customers with less manual work.
 
-## Get Started
+## Get started
 
 Vendasta's AI platform consists of three main components that work together:
 
@@ -16,7 +16,7 @@ Vendasta's AI platform consists of three main components that work together:
 - **[AI Capabilities](./ai-capabilities/)** — Define specialized skills and behaviors that tell your AI employees how to act and when to take specific actions
 - **[Knowledge Base](./knowledge-base/)** — Provide factual information your AI employees can reference when answering customer questions
 
-## Understanding the Core Concepts
+## Understanding the core concepts
 
 Your AI employees are powered by three key components:
 

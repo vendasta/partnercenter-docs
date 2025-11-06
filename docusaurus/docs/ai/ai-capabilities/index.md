@@ -39,21 +39,21 @@ For specialized workflows, you can create your own custom capabilities that:
 - Execute complex business logic
 - Automate unique processes specific to your industry
 
-## How Capabilities Work with AI Employees
+## How capabilities work with AI Employees
 
-### Capability Assignment
+### Capability assignment
 Each AI Employee can have multiple capabilities enabled simultaneously. The AI intelligently decides which capabilities to use based on customer requests and conversation context.
 
-### Contextual Activation
+### Contextual activation
 Your AI Employee evaluates incoming requests and activates the most appropriate capability. For example:
 - A question about store hours triggers knowledge base access
 - A request for pricing information activates product lookup capabilities
 - An interest in services activates lead capture and appointment booking
 
-### Adaptive Behavior
+### Adaptive behavior
 Capabilities can be configured with specific prompts and parameters that modify how the AI behaves. This allows the same capability to work differently across various AI Employees or business contexts.
 
-## Capability Architecture for AI Employees
+## Capability architecture for AI Employees
 
 ### Prompts
 Written instructions that tell the AI when and how to use a capability. Prompts define:
@@ -77,7 +77,7 @@ Tools enable AI Employees to interact with external systems and retrieve real-ti
 
 Effective capabilities require iterative testing and refinement. Use these strategies to ensure your capabilities perform as expected:
 
-### Testing Capability Performance
+### Testing Capability performance
 
 **1. Test Trigger Conditions**
 - Verify the capability activates when it should
@@ -94,7 +94,7 @@ Effective capabilities require iterative testing and refinement. Use these strat
 - Identify when the AI chose one capability over another
 - Use explanations to refine trigger conditions and prompts
 
-### Optimization Techniques
+### Optimization techniques
 
 **Shorter is Better**
 - Keep capability prompts concise and focused

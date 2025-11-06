@@ -104,7 +104,7 @@ For comprehensive step-by-step instructions on finding API documentation, using 
 2. Monitor conversation logs to see how the capability performs.
 3. Iterate on prompts and tool configurations based on real usage.
 
-## Tool Configuration Reference
+## Tool configuration reference
 
 #### Import from cURL  
 cURL is a tool developers use to test APIs by typing commands. Many API docs show example cURL commands. Importing a cURL command here helps you fill in the tool setup automatically—saving time and avoiding mistakes.  
@@ -140,7 +140,7 @@ Headers are extra info sent with the API request, often for security. For exampl
 #### No external processing needed  
 Check this box if your tool doesn’t actually call an outside API but works internally—like formatting dates or text within the AI. This saves unnecessary network calls.
 
-## Writing Effective Capability Prompts
+## Writing effective Capability prompts
 
 A well-written capability prompt has four key parts. Think of it like training instructions for a new employee:
 
@@ -178,7 +178,7 @@ If the API fails: "I'm having trouble accessing order information right now.
 Would you like me to take your contact info so we can follow up?"
 ```
 
-### Formatting Tips for Better Results
+### Formatting tips for better results
 
 Use markdown formatting to make your prompts clear for both humans and AI:
 
@@ -195,12 +195,12 @@ Use markdown formatting to make your prompts clear for both humans and AI:
 - ONLY when customer asks about order status or tracking
 - NOT for product availability or general questions
 
-## Required Information
+## Required information
 Before calling the tool, you MUST have:
 - **order_number** (8-10 digit number)
 - Ask if missing: "What's your order number?"
 
-## Response Format
+## Response format
 - Success: "Your order #[number] is [status]."
 - Not found: "I couldn't locate that order. Please verify the number."
 ```
@@ -212,16 +212,16 @@ This structure is easier to scan and helps the AI understand exactly what to do.
 - **Updating:** Any saved changes are applied the next time the AI considers the capability during chat.
 - **Disabling:** Deleting tools is not supported yet; to disable a tool, un-assign it from the AI Employee.
 
-## Testing and Troubleshooting Custom Capabilities
+## Testing and troubleshooting custom capabilities
 
-### Basic Testing Steps
+### Basic testing steps
 
 1. Chat with your AI Employee and try different phrasings to trigger the capability.
 2. Verify the AI requests any required information and calls the appropriate tool.
 3. In *Conversations*, click **Explanation** under a message to view the AI's reasoning and raw API call.
 4. If the API call fails, test it separately using tools like Postman, adjust as needed, and re-import the cURL command.
 
-### Advanced Testing Techniques
+### Advanced testing techniques
 
 **Test with Fresh Conversations**
 - Use incognito/private browsing windows for clean test sessions
@@ -239,7 +239,7 @@ This structure is easier to scan and helps the AI understand exactly what to do.
 - Look at the API response and how the AI interpreted it
 - Compare multiple conversations to identify patterns in behavior
 
-### Iteration Best Practices
+### Iteration best practices
 
 When refining custom capabilities, follow this systematic approach:
 
@@ -277,7 +277,7 @@ When refining custom capabilities, follow this systematic approach:
 Start with the most specific fix (tool configuration) before adjusting broader elements (prompts or purpose).
 :::
 
-### Performance Monitoring
+### Performance monitoring
 
 After deploying custom capabilities, monitor their performance:
 
@@ -334,14 +334,14 @@ After deploying custom capabilities, monitor their performance:
 👉 **Why this works:** Clear boundaries prevent the AI from calling the tool unnecessarily, saving API calls and improving response speed.
 
 ```markdown
-## Information Needed
+## Information needed
 - Before calling the tool, you MUST identify `product_id`.
 - If the user only gives a name, ask for the ID.
 ```
 👉 **Why this works:** Explicit requirements ensure the AI gathers necessary information before attempting the API call.
 
 ```markdown
-## Tool Parameters
+## Tool parameters
 - Set `product_id` to the user-provided ID.
 ```
 👉 **Why this works:** Simple, direct mapping between conversation data and API parameters.
