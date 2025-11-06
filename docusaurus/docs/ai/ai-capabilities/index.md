@@ -1,6 +1,9 @@
 ---
 title: AI Capabilities Overview
 sidebar_label: AI Capabilities
+description: Learn how AI capabilities work as specialized skills that enable AI employees to handle specific business tasks and automate customer interactions.
+tags: [ai-capabilities, capabilities, ai-employees, custom-capabilities, automation]
+keywords: [AI capabilities, capabilities, custom capabilities, AI employees, automation, tools, integrations, lead capture, appointment booking]
 ---
 
 import { AISparkleIcon } from '@site/src/components/Icons';
@@ -121,11 +124,9 @@ Effective capabilities require iterative testing and refinement. Use these strat
 - Be ready to refine further based on results
 
 :::tip Performance Monitoring
-Use the conversation Explanations feature to understand:
+Use the Explanations feature in Conversations to understand:
 - Which capabilities are being used most frequently
 - Where capabilities might be conflicting with each other
 - When the AI chooses not to use a capability and why
 - How well your trigger conditions are working in practice
 :::
-
-
