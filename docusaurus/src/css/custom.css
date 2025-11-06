@@ -479,3 +479,10 @@ h2 {
   margin-top: 2rem; /* consistent spacing after top cards section */
   margin-bottom: var(--ifm-spacing-vertical); /* consistent spacing before Quick Start Resources */
 }
+
+/* Make code blocks wrap on page load */
+div[class*="language-"] pre {
+  white-space: pre-wrap !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}

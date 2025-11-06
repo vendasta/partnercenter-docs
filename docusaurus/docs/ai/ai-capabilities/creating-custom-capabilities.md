@@ -87,6 +87,10 @@ Consider the prompt as instructions for when you hire an employee. Be specific a
 3. Fill in the required tool fields (see [Tool Configuration Reference](#tool-fields-explained)).
 4. Add multiple tools if your capability requires several API calls.
 
+:::tip Detailed Tool Building Guide
+For comprehensive step-by-step instructions on finding API documentation, using cURL import, working with AI assistants, and testing tools, see [Building Custom Tools](./tools-overview/building-custom-tools).
+:::
+
 ### Step 5: Test and Refine
 
 1. Click **Save** to store your capability configuration.
@@ -100,7 +104,7 @@ Consider the prompt as instructions for when you hire an employee. Be specific a
 2. Monitor conversation logs to see how the capability performs.
 3. Iterate on prompts and tool configurations based on real usage.
 
-## Tool Configuration Reference
+## Tool configuration reference
 
 #### Import from cURL  
 cURL is a tool developers use to test APIs by typing commands. Many API docs show example cURL commands. Importing a cURL command here helps you fill in the tool setup automatically—saving time and avoiding mistakes.  
@@ -136,26 +140,167 @@ Headers are extra info sent with the API request, often for security. For exampl
 #### No external processing needed  
 Check this box if your tool doesn’t actually call an outside API but works internally—like formatting dates or text within the AI. This saves unnecessary network calls.
 
-## Writing Effective Capability Prompts
+## Writing effective Capability prompts
 
-When creating your **Prompt**, be sure to:
+A well-written capability prompt has four key parts. Think of it like training instructions for a new employee:
 
-- Clearly specify when to call the tool (e.g., "ONLY call `CheckCustomerOrderStatus` when the user asks about their order status").
-- List the information the AI must gather before calling the tool (e.g., "You MUST have `order_number` before calling").
-- Guide how the AI should use the tool’s response when replying to the user.
-- Explain how to handle errors or cases when the API returns no results.
+### 1. When to Use This Capability
+Clearly specify the trigger conditions:
+```
+ONLY call CheckCustomerOrderStatus when the user asks about their order status, 
+tracking, or delivery. Do NOT use this for general product questions.
+```
+
+### 2. What Information You Need First
+List required information before the AI can act:
+```
+You MUST have the order_number before calling this tool.
+If the customer doesn't provide it, ask: "Could you share your order number? 
+You can find it in your confirmation email."
+```
+
+### 3. How to Use the Response
+Guide the AI on presenting results to customers:
+```
+If successful: "I found your order! It's currently [status] and expected to 
+arrive on [date]."
+
+If the order is delayed: Apologize and provide the new estimated delivery date.
+```
+
+### 4. How to Handle Errors
+Explain what to do when things go wrong:
+```
+If the API returns no results: "I couldn't find an order with that number. 
+Could you double-check it? Order numbers are typically 8-10 digits."
+
+If the API fails: "I'm having trouble accessing order information right now. 
+Would you like me to take your contact info so we can follow up?"
+```
+
+### Formatting tips for better results
+
+Use markdown formatting to make your prompts clear for both humans and AI:
+
+- **Use headers** (`#`, `##`) to organize different sections
+- **Use bullets** to list multiple items or steps
+- **Use bold** to emphasize critical instructions or field names
+- **Use code formatting** for specific examples or API field names
+
+**Example with good formatting:**
+```markdown
+# Order Status Lookup
+
+## When to Use
+- ONLY when customer asks about order status or tracking
+- NOT for product availability or general questions
+
+## Required information
+Before calling the tool, you MUST have:
+- **order_number** (8-10 digit number)
+- Ask if missing: "What's your order number?"
+
+## Response format
+- Success: "Your order #[number] is [status]."
+- Not found: "I couldn't locate that order. Please verify the number."
+```
+
+This structure is easier to scan and helps the AI understand exactly what to do.
 
 ## Managing Custom Capabilities
 
 - **Updating:** Any saved changes are applied the next time the AI considers the capability during chat.
 - **Disabling:** Deleting tools is not supported yet; to disable a tool, un-assign it from the AI Employee.
 
-## Testing and troubleshooting Custom Capabilities
+## Testing and troubleshooting custom capabilities
+
+### Basic testing steps
 
 1. Chat with your AI Employee and try different phrasings to trigger the capability.
 2. Verify the AI requests any required information and calls the appropriate tool.
-3. In *Conversations*, click **Explanation** under a message to view the AI’s reasoning and raw API call.
+3. In *Conversations*, click **Explanation** under a message to view the AI's reasoning and raw API call.
 4. If the API call fails, test it separately using tools like Postman, adjust as needed, and re-import the cURL command.
+
+### Advanced testing techniques
+
+**Test with Fresh Conversations**
+- Use incognito/private browsing windows for clean test sessions
+- Or clear cookies between tests to ensure no context carryover
+- This helps verify your capability works consistently for new visitors
+
+**Test Multiple Phrasings**
+- Try different ways customers might ask for the same thing
+- Test with incomplete requests to see how the AI gathers missing information
+- Verify the capability doesn't trigger when it shouldn't
+
+**Review AI Explanations Systematically**
+- Check if the AI considered your capability and why it did or didn't use it
+- Examine the exact API call parameters to verify correct data mapping
+- Look at the API response and how the AI interpreted it
+- Compare multiple conversations to identify patterns in behavior
+
+### Iteration best practices
+
+When refining custom capabilities, follow this systematic approach:
+
+**Step 1: Start Simple**
+- Create a minimal capability prompt with just the basics
+- Test that the core functionality works
+- Add complexity incrementally
+
+**Step 2: Identify Specific Issues**
+- Document exactly what went wrong (with examples)
+- Note the customer's input and the AI's response
+- Review the explanation to understand the AI's decision-making
+
+**Step 3: Make One Change at a Time**
+- Adjust only one aspect (prompt wording, tool parameter, or response template)
+- Save and test immediately
+- If it doesn't work, revert and try a different approach
+
+**Step 4: Test the Change**
+- Use the same customer input that previously failed
+- Verify the issue is resolved
+- Test edge cases to ensure no unintended side effects
+
+**Step 5: Document Your Changes**
+- Keep notes on what you changed and why
+- Record which changes improved performance
+- Build a reference for future capabilities
+
+:::tip When to Adjust What
+- **Prompt issues**: The AI doesn't know when to use the capability or how to handle responses
+- **Tool configuration issues**: API calls fail, wrong parameters are sent, or authentication fails
+- **Knowledge issues**: The AI needs context it doesn't have (add to knowledge base, not capability)
+- **Purpose issues**: The AI's overall behavior conflicts with the capability (adjust AI Employee purpose)
+
+Start with the most specific fix (tool configuration) before adjusting broader elements (prompts or purpose).
+:::
+
+### Performance monitoring
+
+After deploying custom capabilities, monitor their performance:
+
+**Track Success Rates**
+- Review conversations where the capability was used
+- Identify common failure patterns
+- Look for scenarios you didn't test
+
+**Monitor API Performance**
+- Check API response times in explanations
+- Watch for API rate limits or timeout issues
+- Track error rates and common error types
+
+**Customer Experience Indicators**
+- Note when customers express frustration or confusion
+- Look for repeated clarifying questions
+- Check if customers achieve their goals
+
+**Optimization Signals**
+- The AI frequently asks for the same missing information (add to prompt)
+- The capability triggers incorrectly (refine trigger conditions)
+- Customers rephrase requests multiple times (improve prompt clarity)
+- API calls fail frequently (check tool configuration or API stability)
 
 ## Example Custom Capability: Product information lookup
 
@@ -176,25 +321,50 @@ When creating your **Prompt**, be sure to:
 
 - `X-API-Key: YOUR_SECURE_API_KEY`
 
-### Prompt snippet
+### Prompt snippet (annotated)
 
 ```markdown
 # Product Lookup Assistant
-## When to use
-- ONLY call `LookupProductDetails` when the user asks about a product's price, description, or features.
-- Do NOT call this unless the user has provided a specific product name **or** ID.
 
-## Information Needed
+## When to use
+- ONLY call `LookupProductDetails` when the user asks about a product's 
+  price, description, or features.
+- Do NOT call this unless the user has provided a specific product name **or** ID.
+```
+👉 **Why this works:** Clear boundaries prevent the AI from calling the tool unnecessarily, saving API calls and improving response speed.
+
+```markdown
+## Information needed
 - Before calling the tool, you MUST identify `product_id`.
 - If the user only gives a name, ask for the ID.
-
-## Tool Parameters
-- Set `product_id` to the user-provided ID.
-
-## How to respond
-- If successful: "I found **[Product Name]**. The price is **$[Price]**. Description: **[Description]**."
-- If not found: Apologize and suggest the user double-check the ID or browse products online.
 ```
+👉 **Why this works:** Explicit requirements ensure the AI gathers necessary information before attempting the API call.
+
+```markdown
+## Tool parameters
+- Set `product_id` to the user-provided ID.
+```
+👉 **Why this works:** Simple, direct mapping between conversation data and API parameters.
+
+```markdown
+## How to respond
+- If successful: "I found **[Product Name]**. The price is **$[Price]**. 
+  Description: **[Description]**."
+- If not found: Apologize and suggest the user double-check the ID or browse 
+  products online.
+```
+👉 **Why this works:** Providing exact response templates (with bold formatting for variables) ensures consistent, professional customer communication.
+
+#### Before/After Comparison
+
+**❌ Vague prompt:**
+```
+Look up products when customers ask about them.
+```
+**Problems:** When should it look up? What info is needed? How should it respond?
+
+**✅ Detailed prompt (above):**
+Clear trigger conditions, required information, response templates, and error handling.
 
 ### Sample conversation
 

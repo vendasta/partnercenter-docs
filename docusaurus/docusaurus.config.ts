@@ -194,7 +194,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-    },
+    } as any,
   } satisfies Preset.ThemeConfig,
 };
 

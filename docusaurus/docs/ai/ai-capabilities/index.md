@@ -1,6 +1,9 @@
 ---
 title: AI Capabilities Overview
 sidebar_label: AI Capabilities
+description: Learn how AI capabilities work as specialized skills that enable AI employees to handle specific business tasks and automate customer interactions.
+tags: [ai-capabilities, capabilities, ai-employees, custom-capabilities, automation]
+keywords: [AI capabilities, capabilities, custom capabilities, AI employees, automation, tools, integrations, lead capture, appointment booking]
 ---
 
 import { AISparkleIcon } from '@site/src/components/Icons';
@@ -17,7 +20,7 @@ Each capability contains instructions that guide the AI on:
 - What outcomes to prioritize
 - How to respond to different types of requests
 
-Multiple capabilities can work together to create AI Employees that can handle complex, multi-step interactions while maintaining consistency with your business processes. When the AI employee handles a request, it combines all the Capabilities into the prompt the governs its behaviour. 
+Multiple capabilities can work together to create AI Employees that can handle complex, multi-step interactions while maintaining consistency with your business processes. When the AI employee handles a request, it combines all the Capabilities into the prompt the governs its behaviour.
 
 ### Types of AI Capabilities
 
@@ -26,7 +29,7 @@ The Vendasta platform provides pre-configured capabilities for common business f
 
 - **Lead Capture**: Automatically collect and qualify lead information (name, email, phone, budget)
 - **Appointment Booking**: Schedule meetings using your connected calendar systems
-- **Transfer Call** : Live-transfer callers to other numbers based on intent and rules. See [Transfer calls to other numbers](../ai-workforce/ai-voice-receptionist.md#transfer-calls-to-other-numbers).
+- **Transfer Call** : Live-transfer callers to other numbers based on intent and rules. See [Transfer calls to other numbers](../ai-workforce/ai-voice-receptionist.md#transfer-calls-to-other-numbers-from-your-ai-voice-receptionist).
 
 #### Custom Capabilities
 For specialized workflows, you can create your own custom capabilities that:
@@ -36,27 +39,21 @@ For specialized workflows, you can create your own custom capabilities that:
 - Execute complex business logic
 - Automate unique processes specific to your industry
 
-## Business Impact
+## How capabilities work with AI Employees
 
-Capabilities transform customer interactions from generic chatbot exchanges into personalized assistance that feels like talking to a capable team member. Instead of customers waiting for business hours or getting generic responses, they receive immediate help with real business tasks like checking live inventory, booking appointments, or getting account information.
-
-This automation allows your human team to focus on high-value activities while ensuring consistent service quality regardless of volume or time of day.
-
-## How Capabilities Work with AI Employees
-
-### Capability Assignment
+### Capability assignment
 Each AI Employee can have multiple capabilities enabled simultaneously. The AI intelligently decides which capabilities to use based on customer requests and conversation context.
 
-### Contextual Activation
+### Contextual activation
 Your AI Employee evaluates incoming requests and activates the most appropriate capability. For example:
 - A question about store hours triggers knowledge base access
 - A request for pricing information activates product lookup capabilities
 - An interest in services activates lead capture and appointment booking
 
-### Adaptive Behavior
+### Adaptive behavior
 Capabilities can be configured with specific prompts and parameters that modify how the AI behaves. This allows the same capability to work differently across various AI Employees or business contexts.
 
-## Capability Architecture for AI Employees
+## Capability architecture for AI Employees
 
 ### Prompts
 Written instructions that tell the AI when and how to use a capability. Prompts define:
@@ -72,6 +69,64 @@ For custom capabilities, tools define the technical implementation:
 - Integration workflows
 - Response processing logic
 
-- **Configure Built-in Capabilities**: [How to Configure AI Capabilities](./configuring-capabilities)
-- **Create Custom Capabilities**: [Creating Custom Capabilities](./creating-custom-capabilities)
-- **Advanced Configuration**: Learn about prompt engineering and capability optimization
+:::tip Learn More About Tools
+Tools enable AI Employees to interact with external systems and retrieve real-time data. To understand the fundamentals of how tools work with APIs, see the [Tools & Integrations Overview](./tools-overview). For a step-by-step guide to building custom tools, see [Building Custom Tools](./tools-overview/building-custom-tools).
+:::
+
+## Testing and Optimizing Capabilities
+
+Effective capabilities require iterative testing and refinement. Use these strategies to ensure your capabilities perform as expected:
+
+### Testing Capability performance
+
+**1. Test Trigger Conditions**
+- Verify the capability activates when it should
+- Ensure it doesn't activate when it shouldn't
+- Try various phrasings of requests to test consistency
+
+**2. Verify Information Gathering**
+- Confirm the AI asks for required information before using tools
+- Test what happens when customers provide incomplete data
+- Ensure the AI handles edge cases gracefully
+
+**3. Review AI Explanations**
+- Check the reasoning behind capability activation decisions
+- Identify when the AI chose one capability over another
+- Use explanations to refine trigger conditions and prompts
+
+### Optimization techniques
+
+**Shorter is Better**
+- Keep capability prompts concise and focused
+- Avoid redundant or contradictory instructions
+- Remove unnecessary details that don't affect behavior
+
+**Use Examples**
+- Include specific examples of when to use the capability
+- Show examples of required information formats
+- Demonstrate desired response patterns
+
+**Format for Clarity**
+- Use markdown headers to organize sections
+- Use bullet points for lists of conditions or steps
+- Use bold to emphasize critical instructions
+- Structure prompts so they're scannable for both humans and AI
+
+**Ask AI for Help**
+- Copy your capability prompt and ask an AI to suggest improvements
+- Request examples of edge cases you should handle
+- Get feedback on clarity and completeness
+
+**Test and Iterate**
+- Make one change at a time
+- Test the specific scenario you're trying to improve
+- Monitor real conversations to verify improvements
+- Be ready to refine further based on results
+
+:::tip Performance Monitoring
+Use the Explanations feature in Conversations to understand:
+- Which capabilities are being used most frequently
+- Where capabilities might be conflicting with each other
+- When the AI chooses not to use a capability and why
+- How well your trigger conditions are working in practice
+:::

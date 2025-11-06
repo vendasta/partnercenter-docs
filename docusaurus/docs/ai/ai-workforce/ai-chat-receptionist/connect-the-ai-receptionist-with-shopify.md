@@ -184,7 +184,7 @@ query {
 - Include the `handle` field so you can build product URLs.
 - Product links should be constructed using the format: `https://cegxnb-y0.myshopify.com/products/HANDLE`
 
-### If No Matching Products Are Found
+### If no matching products are found
 - Politely inform the user that no products matched their query.
 - Suggest other available categories or popular items (e.g., "You could also check out our toys or grooming kits").
 
@@ -338,7 +338,7 @@ The Shopify integration provides real-time product data through API calls, while
 **Shopify API provides:** Live product availability, current prices, product descriptions  
 **Knowledge Base should include:** Shipping policies, return information, size guides, care instructions, warranty details
 
-Your AI will use the Shopify API to answer "Do you have this product?" and the Knowledge Base to answer "What's your return policy?" For best results, ensure your [Knowledge Sources](../index.mdx#knowledge-management) include comprehensive product and policy information to complement the real-time data.
+Your AI will use the Shopify API to answer "Do you have this product?" and the Knowledge Base to answer "What's your return policy?" For best results, ensure your [Knowledge Sources](../index.mdx#knowledge-sources) include comprehensive product and policy information to complement the real-time data.
 </details>
 
 <details>

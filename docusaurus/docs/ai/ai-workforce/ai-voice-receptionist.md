@@ -55,7 +55,7 @@ Once a call reaches your AI Voice Receptionist, there are a number of potential 
    The AI greets callers, answers FAQs using your knowledge base, captures contact details, and can book appointments.
   
 2. **Forward calls**  
-   The call is routed to another phone number automatically. See [Transfer calls to other numbers](#transfer-calls-to-other-numbers) to configure rules and destinations.
+   The call is routed to another phone number automatically. See [Transfer calls to other numbers](#transfer-calls-to-other-numbers-from-your-ai-voice-receptionist) to configure rules and destinations.
   
 3. **End with a custom message**  
    A branded or informational message is played before the call is ended automatically.
@@ -64,7 +64,7 @@ Once a call reaches your AI Voice Receptionist, there are a number of potential 
    A text message is sent to callers, prompting them to leave a voicemail or schedule a callback.
 
 :::note
-While this guide will cover accessing these other options, it will focus on setting up the AI Voice Receptionist answer calls. For more detail on using the other options, see [Conversations Settings](/administration/conversations-settings).
+While this guide will cover accessing these other options, it will focus on setting up the AI Voice Receptionist answer calls. For more detail on using the other options, see [Conversations Settings](/administration/platform-settings/conversations-settings/).
 :::
 
 ### Prerequisites for AI Voice Receptionist Setup
@@ -205,9 +205,9 @@ If the AI Voice Receptionist is unable to capture a caller’s contact informati
 
 ---
 
-## Frequently Asked Questions
+## Frequently asked questions
 
-### Getting Started
+### Getting started
 
 <details>
 <summary>What do I need before setting up my AI Voice Receptionist?</summary>
@@ -237,7 +237,7 @@ For detailed call forwarding setup instructions, see [Conversations Phone Call S
 
 Yes! You can set up call forwarding from your existing business number to your assigned Conversations phone number. This allows customers to keep calling your familiar business line while having your AI Voice Receptionist handle the calls. 
 
-Most mobile carriers support simple star-codes for call forwarding. Check your [Conversations Settings](../../administration/conversations-settings.md) for carrier-specific activation codes and step-by-step instructions.
+Most mobile carriers support simple star-codes for call forwarding. Check your [Conversations Settings](/administration/platform-settings/conversations-settings/) for carrier-specific activation codes and step-by-step instructions.
 </details>
 
 ### Configuration and Customization

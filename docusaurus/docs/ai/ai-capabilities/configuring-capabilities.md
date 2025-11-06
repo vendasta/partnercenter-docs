@@ -39,7 +39,7 @@ For each capability you want to activate:
 2. **Toggle the capability switch** to the "on" position.
 3. **Add specific instructions** (optional) to customize how the capability behaves.
 
-### Common Capability Configurations
+### Common capability configurations
 
 #### Lead Capture
 - **What it does**: Automatically collects contact information from potential customers
@@ -80,7 +80,7 @@ For more precise control over capability behavior:
    - How to respond in different scenarios
    - What to do if something goes wrong
 
-### Writing Effective Instructions
+### Writing effective instructions
 
 **Good example:**
 ```
@@ -93,11 +93,57 @@ Get contact info when needed.
 ```
 
 :::tip Best Practices for Instructions
-- Be specific about trigger conditions
-- Include error handling guidance
-- Use clear, actionable language
-- Test different phrasings to see what works best
+- **Be specific about trigger conditions** - Tell the AI exactly when to act
+- **Include error handling guidance** - What should happen if something goes wrong?
+- **Use clear, actionable language** - Write like you're training a new employee
+- **Show examples, not just rules** - "For example, say: 'I'd be happy to help with that.'"
+- **Keep it concise** - Shorter, specific instructions often work better than long paragraphs
+- **Test and iterate** - Try different phrasings and see what produces better results
 :::
+
+#### Why Examples Matter
+
+Including examples in your instructions helps your AI understand exactly what you want:
+
+**Without examples:**
+```
+Be friendly when greeting customers.
+```
+
+**With examples:**
+```
+Be friendly when greeting customers. For example: "Hi there! Thanks for reaching out. How can I help you today?"
+```
+
+The second version gives the AI a concrete pattern to follow, leading to more consistent results.
+
+### Instruction patterns that work
+
+Use these proven patterns when writing capability instructions:
+
+#### Conditional Logic: "If X, then Y"
+```
+If the customer asks about pricing: Share our standard rates and offer to send a detailed quote.
+If they mention a competitor: Acknowledge their research and focus on our unique benefits.
+```
+
+#### Sequential Steps: "First... Then... Finally..."
+```
+First, greet the customer warmly.
+Then, ask what brings them to our site today.
+Finally, based on their answer, offer relevant help or information.
+```
+
+#### Boundary Setting: "Only... when..." / "Never... unless..."
+```
+Only ask for contact information when the customer shows clear buying interest.
+Never transfer calls unless the customer specifically requests to speak with someone else.
+```
+
+#### Error Handling: "If... can't..."
+```
+If you can't find the answer in the knowledge base, say: "I don't have that specific information, but I'd be happy to connect you with someone who does."
+```
 
 ## Step 5: Save and Test Your Configuration
 
@@ -108,7 +154,7 @@ Get contact info when needed.
    - Express interest in services to test lead capture
    - Request an appointment to test booking functionality
 
-### Testing Checklist
+### Testing checklist
 
 - [ ] Capabilities activate at appropriate times
 - [ ] Required information is collected before proceeding
@@ -125,46 +171,46 @@ After initial setup:
 3. **Adjust instructions** based on what you learn.
 4. **Add or remove capabilities** as your business needs evolve.
 
-## Troubleshooting Common Issues
+## Troubleshooting common issues
 
-### Capability Not Activating
+### Capability not activating
 - **Check trigger conditions**: Ensure customer requests match capability parameters
 - **Review instructions**: Make sure activation criteria are clear
 - **Test with different phrasings**: Try various ways customers might make requests
 
-### Information Not Being Collected
+### Information not being collected
 - **Verify required fields**: Ensure the capability knows what information to gather
 - **Check instruction clarity**: Make collection requirements explicit
 - **Test conversation flow**: Walk through the process as a customer would
 
-### Capabilities Conflicting
+### Capabilities conflicting
 - **Review capability priorities**: Some capabilities may override others
 - **Clarify instructions**: Make trigger conditions more specific
 - **Disable conflicting capabilities**: Temporarily turn off capabilities that interfere
 
-## Advanced Configuration Tips
+## Advanced configuration tips
 
-### Capability Layering
+### Capability layering
 Enable multiple complementary capabilities that work together:
 - Lead Capture + Appointment Booking for service businesses
 - Knowledge Base + Communication Style for support scenarios
 - Product Lookup + Lead Capture for sales interactions
 
-### Gradual Rollout
+### Gradual rollout
 Start with essential capabilities and add more over time:
 1. **Week 1**: Enable basic communication style and knowledge base
 2. **Week 2**: Add lead capture once AI is responding well
 3. **Week 3**: Include appointment booking after testing lead flow
 4. **Week 4+**: Add custom capabilities for specialized needs
 
-### Performance Monitoring
+### Performance monitoring
 Track key metrics to measure capability effectiveness:
 - Activation rate (how often capabilities trigger)
 - Completion rate (successful information collection)
 - Customer satisfaction scores
 - Conversion rates for lead capture
 
-## Next Steps
+## Next steps
 
 - **Create Custom Capabilities**: [Learn how to build custom capabilities](./creating-custom-capabilities) for specialized business needs
 - **Advanced Prompting**: Explore prompt engineering techniques for better capability performance
