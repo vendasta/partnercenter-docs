@@ -31,7 +31,7 @@ Proper Vendasta Payments setup ensures secure, reliable payment collection while
 ### Regional Availability
 Vendasta Payments is available in:
 - USA, Canada, New Zealand, Australia, United Kingdom, Czech Republic
-- Additional countries with sales assistance: UAE, Germany, Belgium, Netherlands, Poland, Switzerland
+- Additional countries with sales assistance: Germany, Belgium, Netherlands, Poland, Switzerland
 
 ## How to Set Up Vendasta Payments
 
