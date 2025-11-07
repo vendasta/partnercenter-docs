@@ -1,0 +1,60 @@
+---
+title: Authentication and connections
+description: Understand API key, SSO, and vendor-managed integrations. Setup, management, and FAQs.
+slug: /business-app/administration/integrations/authentication-and-connections
+---
+
+# Authentication and connections
+
+Learn the three connection models and how to work with each.
+
+## API key integrations
+
+1. Go to **Administration > Integrations > Browse** and open an integration marked "API-Key Based".
+2. Click **Add Connection** and provide the API key or credentials.
+3. Configure settings as needed.
+
+Manage integrations from the **Integrations** page; check status indicators (Connected, Pending, Issue).
+
+## SSO-based integrations
+
+1. Find the app on **Integrations** and click **Connect**.
+2. Complete any pre-connect form.
+3. Follow the SSO flow to create or link an account and authorize data sharing.
+4. Manage settings from the **Manage** tab and connection settings.
+
+## Vendor-managed integrations
+
+Some integrations are configured and maintained by the vendor. Follow the vendor’s setup guide and monitor status in Business App.
+
+## Troubleshooting
+
+- Invalid API keys or missing permissions are common causes of failures.
+- Re-run the SSO flow to reauthorize if access expires.
+- Contact the vendor if setup is vendor-managed.
+
+## FAQ
+
+<details>
+  <summary>Which model should I use?</summary>
+  <div>
+    Use the model required by the specific integration. API key is credential-based, SSO delegates auth, vendor-managed is handled by the provider.
+  </div>
+</details>
+
+<details>
+  <summary>Does SSO support partner impersonation?</summary>
+  <div>
+    No. Users authenticate directly to the third-party during SSO.
+  </div>
+</details>
+
+<details>
+  <summary>Any security best practices?</summary>
+  <div>
+    Limit access to least privilege, rotate API keys, and reauthorize connections when prompted.
+  </div>
+</details>
+
+
+
