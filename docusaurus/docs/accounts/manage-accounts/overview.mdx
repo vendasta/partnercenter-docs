@@ -46,6 +46,14 @@ Manage Accounts is where you add and maintain business accounts. You can create 
 - Change an account’s market when territories change
 - Organize accounts using lists for operations and reporting
 
+## Account status indicators
+
+Manage Accounts displays a vertical status bar next to each row so you can quickly spot accounts that need attention.
+
+- **Blue bar – default / healthy account.** Accounts without alerts or suspensions display a blue indicator. The table falls back to blue whenever there are no product issues or suspension flags.
+- **Red bar – account with an alert.** When `accountGroup.status.hasAlert` is true, the row shows a red bar. This usually means a product activation was rejected, so review the alert and resolve the affected product.
+- **Black bar – suspended account.** When `accountGroup.status.suspended` is true, the component requests a black bar to flag that the Partner ID is suspended for non-payment. This is a partner-level status rather than an issue with an individual account. Update Partner billing information under **Administration** to clear any outstanding balance at the partner or wholesale level, then reactivate impacted products as needed.
+
 ## Frequently Asked Questions (FAQs)
 
 <details>
@@ -96,8 +104,3 @@ Deletion is permanent. User access, products, and related data are removed. See 
 Yes. Use date filters for creation date and product filters for active products. See [Search and Filter Accounts](./search-filter-accounts).
 </details>
 
-<details>
-<summary>What does the black bar next to an account name mean?</summary>
-
-The black vertical bar marks an account that is suspended for non-payment. Suspended accounts have their paid products deactivated until payment issues are resolved. Update the account's payment method, confirm the payment succeeds, and then reactivate any products you need running again.
-</details>
