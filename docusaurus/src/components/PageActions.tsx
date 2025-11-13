@@ -73,6 +73,20 @@ const buildClaudePrompt = ({
   return `${basePrompt}\n\nThe full content could not be embedded automatically. Please reference the page directly if you need additional details.`;
 };
 
+const useOptionalDoc = (): ReturnType<typeof useDoc> | null => {
+  try {
+    return useDoc();
+  } catch (error) {
+    if (process.env.NODE_ENV !== 'production') {
+      console.warn(
+        'PageActions: Docs context is unavailable; continuing without doc metadata.',
+        error
+      );
+    }
+    return null;
+  }
+};
+
 interface PageActionsProps {
   className?: string;
   direction?: 'row' | 'column';
@@ -85,7 +99,7 @@ export default function PageActions({
   align = 'start'
 }: PageActionsProps): ReactNode {
   const [copied, setCopied] = useState(false);
-  const docContext = useDoc();
+  const docContext = useOptionalDoc();
   const claudeSourceInfo = toRepoPathFromSource(docContext?.metadata?.source);
 
   const getPrompt = () => {
