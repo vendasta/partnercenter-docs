@@ -214,3 +214,36 @@ Yes, the system provides comprehensive analytics on processing times, error rate
 :::info
 Detailed configuration guides for specific order management features are continuously updated as new capabilities become available in your system.
 :::
+
+
+##  Common Questions About Order Notifications and Client Communications
+
+
+<details>
+<summary>When a partner activates a product, who receives the activation email?</summary>
+Only Partner Center Admins receive activation or deactivation notifications. Clients (Business App users) do not receive these emails unless the order is specifically sent to them for approval.
+</details>
+
+
+<details>
+<summary>If I send an order to a client for approval, will they get an email?</summary>
+Yes. The selected client will receive an email prompting approval or denial.
+</details>
+
+
+<details>
+<summary>What happens if an order is auto-activated (without client approval)?</summary>
+If a Partner Admin approves an order directly, clients will not receive activation or deactivation notifications. Only Partner Center Admins are notified.
+</details>
+
+
+<details>
+<summary>If I manually activate or deactivate a product, will clients be notified?</summary>
+No. Clients do not receive emails or in-app notifications for manual activations or deactivations. These notifications are internal messages for fulfillment teams. Clients can still see status changes in Business App.
+</details>
+
+
+<details>
+<summary>How can I confirm whether a client received a specific order-related email?</summary>
+You can contact Vendasta Support to review email notification logs and confirm whether a message was sent or delivered.
+</details>
