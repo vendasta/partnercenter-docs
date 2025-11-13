@@ -66,7 +66,6 @@ This includes all features of the Standard service, plus tools for generating ne
 * **Net Promoter Score (NPS) Requests:** The review request process uses an NPS email to gauge customer loyalty. 
 * **Email and SMS templates:** The team will create a review request template for your approval. If you have SMS credits with the required reputation software, an SMS template can also be created.
 * **Customer list uploads:** The team will upload your list of customer contacts and send them review requests within 2 business days. Lists cannot exceed 500 customers per upload.
-* **Google Q&A responses:** The team will also respond to questions that come through the Google Q&A feature for your business.
 
 ## How we respond to reviews
 
@@ -139,13 +138,6 @@ You can share a new list of customers whenever you are ready. The team will uplo
 <summary>Will you flag negative reviews with the review site?</summary>
 
 The team will flag negative reviews with the review site if the review clearly violates the platform's terms of service (e.g., it contains hate speech or is posted by a competitor). However, we cannot guarantee that the review site will remove the flagged review.
-</details>
-
-<details>
-
-<summary>Do you respond to Google Q&A questions?</summary>
-
-For Review Responses Plus, yes of course! Our team will respond to any questions that come through Google Q&A. With Review Responses Standard, this is not included.
 </details>
 
 <details>
