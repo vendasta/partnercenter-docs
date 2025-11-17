@@ -107,7 +107,7 @@ You can:
 - Add new custom capabilities to expand their skills.
 
 :::info Learn more about Capabilities
-For more detailed information on Capabilities, see the [AI Workforce Overview](./index.mdx#ai-employee-configuration).
+For more detailed information on Capabilities, see the [AI Workforce Overview](./index.mdx#ai-employee-elements).
 :::
 
 #### Default voice lead capture for AI Voice Receptionist
