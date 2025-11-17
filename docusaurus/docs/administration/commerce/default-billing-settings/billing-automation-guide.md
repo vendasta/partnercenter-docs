@@ -102,7 +102,7 @@ Whether or not an account is already using **Default billing automation** settin
 
 This flexibility allows you to accommodate special billing requirements for specific customers while maintaining consistency for most accounts.
 
-To learn more about configuring the billing settings of individual accounts, read our article on [invoicing and product subscriptions](/administration/administration-platform-settings/default-billing-settings/invoicing-and-product-subscriptions).
+To learn more about configuring the billing settings of individual accounts, read our article on [subscription management](/commerce/subscriptions/subscription-management).
 
 ### Market-Specific Configuration
 

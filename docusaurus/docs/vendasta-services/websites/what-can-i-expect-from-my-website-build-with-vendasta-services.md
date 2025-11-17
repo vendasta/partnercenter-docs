@@ -47,7 +47,7 @@ Once you receive the first version of your site, it is important to review every
 
 ### 5. Ongoing website support
 
-Ongoing support is available to assist with changes after the website is live. A 3-month commitment for website support is required once the website is set live. View [this resource](./vendasta-services-website-support-service-inclusions-process.md) to learn what’s included with our Website Support service and how to make a website support request.
+Ongoing support is available to assist with changes after the website is live. A 3-month commitment for website support is required once the website is set live. View [this resource](./vendasta-services-website-support.md) to learn what’s included with our Website Support service and how to make a website support request.
 
 This includes:
 * Making updates to existing sections (images, text, colors, contact form fields).

@@ -8,7 +8,7 @@ One of the reputation management services Vendasta Services offers is responding
 
 This service includes an (optional) approval process for [responding to negative reviews](../review-management/approval-process-options-for-responses-to-negative-reviews.md), where users can receive notifications with our proposed responses to negative reviews.
 
-To receive these email notifications, you must [add the respective person as a user to the account in Partner Center](../accounts/manage-users/add-a-user-to-an-account.mdx) and configure the applicable user notifications.
+To receive these email notifications, you must [add the respective person as a user to the account in Partner Center](../../accounts/manage-users/add-a-user-to-an-account.mdx) and configure the applicable user notifications.
 
 ## Configuring User Notifications:
 

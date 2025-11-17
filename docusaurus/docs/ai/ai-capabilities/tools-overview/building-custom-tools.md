@@ -719,7 +719,7 @@ Even with careful planning, you may encounter issues. Here's how to resolve comm
 **1. Review Documentation**
    - Check this guide and related documentation
    - Review API documentation for the service you're integrating
-   - Consult [Tools Overview](./index) for conceptual understanding
+   - Consult [Tools Overview](./index.md) for conceptual understanding
 
 **2. Use AI Assistants**
    - Ask AI to help debug specific issues

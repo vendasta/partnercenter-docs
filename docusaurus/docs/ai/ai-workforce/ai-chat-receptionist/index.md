@@ -48,7 +48,7 @@ Capabilities are like instructions that guide how your AI Chat Receptionist beha
   Connect your calendar to let the AI help customers schedule meetings. It will offer available time slots and collect all necessary booking details automatically. 
 
  - **Custom Capabilities**  
-   Expand your AI Chat Receptionist's skills by adding custom capabilities tailored to your unique business needs. You can learn more about [Custom Capabilities](../ai-capabilities/creating-custom-capabilities) in depth.
+   Expand your AI Chat Receptionist's skills by adding custom capabilities tailored to your unique business needs. You can learn more about [Custom Capabilities](../../ai-capabilities/creating-custom-capabilities.md) in depth.
 
 ### Step 3: Add Purpose and Business Knowledge to the AI Chat Receptionist
 
