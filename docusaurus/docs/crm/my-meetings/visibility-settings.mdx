@@ -1,0 +1,186 @@
+---
+title: Visibility Settings – Overview
+sidebar_label: Visibility Settings
+description: Manage access, privacy, and CRM logging for meeting recordings, transcripts, summaries, and AI insights.
+tags: [visibility-settings, meeting-recordings, ai-insights, notetaker]
+keywords: [private meetings, meeting visibility, recording settings]
+---
+
+##
+
+Visibility Settings enable you to manage access to and control the privacy of sensitive content, including recordings, transcripts, summaries, and AI insights. These settings help safeguard sensitive discussions by applying privacy rules based on whether meetings are internal or external.
+
+This feature lets you categorize meetings as private or publicly accessible within the CRM. This flexibility accommodates various meeting recording needs, including one-on-ones, confidential discussions, product meetings, HR meetings, and training sessions that require privacy.
+
+It supports trust and enables use cases beyond sales, such as HR, product, and training meetings.
+
+### Key benefits
+
+- Balance privacy and collaboration for recorded meetings and summaries.  
+- Protect confidential discussions while preserving CRM automation for non-private discussions.  
+- Empower you to configure, override, and reverse privacy decisions at any time.
+
+### Key Concepts & Definitions
+
+| Term | Definition |
+|------|------------|
+| **Notetaker** | A bot that joins meetings (via Google Meet) to record and transcribe sessions. |
+| **Meeting Summary Page** | Centralized page showing the meeting recording, transcript, summary, and AI insights. |
+| **Internal meeting** | A meeting is considered internal when all invitees have the same email domain. |
+| **External meeting** | A meeting is considered external when at least one invitee has a different email domain. |
+| **Visibility Settings** | Refers to the degree to which meeting recordings and summaries are accessible. |
+| **Invitees** | People invited to the Google Calendar event by the Organizer. |
+| **Host and Co-hosts** | The Organizer is automatically the main Host of the Meet call. |
+| **Ad-hoc Meeting** | A meeting where a Notetaker was not scheduled automatically. These are typically meetings created by external meeting owners. |
+
+## How Visibility Settings Work
+
+1. When you connect your Google Calendar via BookMeNow, the platform scans for upcoming calendar events. Notetakers are automatically scheduled for these meetings so they can join at the appropriate time.
+
+2. Once the Notetaker is approved in Google Meet, the meeting is recorded and transcribed.
+
+3. The platform uses AI infrastructure to summarize the meeting and log activities in the CRM based on your default Visibility Settings.
+
+4. All recordings and summaries are accessible on the My Meetings Page, subject to accessibility for the meeting.
+
+## Visibility Settings Options
+
+### The 3 Visibility Settings
+
+**Private**  
+Only meeting invitees to the Calendar event in the same namespace/Partner ID can view the Meeting Recording or Meeting Summary Page.
+
+**All**  
+Anyone in the same namespace/Partner ID can view the Meeting Recording or Meeting Summary Page. A CRM activity is logged.
+
+**Anyone with the link**  
+Anyone in the same namespace/Partner ID with access to the Meeting Summary Page link can view it. The meeting will not appear in the CRM.
+
+### Configure Default Visibility Settings for Recorded Meetings
+
+You can configure default settings for your recorded meetings. Defaults can be applied to two meeting types:
+
+- **Internal meetings** (all invitees share the same email domain)  
+- **External meetings** (at least one invitee has a different email domain)
+
+Visibility Settings for any specific meeting can be adjusted at any time.
+
+You can configure defaults under:
+
+**My Meetings → Meeting Settings → Recording Settings**
+
+This is a user-level setting and does not affect others in the same namespace/Partner ID.
+
+> **Note:** Meetings marked *Private* on Google Calendar are still recorded. Future updates may allow preventing Notetaker scheduling for these calls.
+
+### Default logic
+
+| Meeting type | Visibility Settings | CRM logging |
+|--------------|---------------------|-------------|
+| External meeting | All | Logged |
+| Internal meeting | Private | Not Logged |
+| Ad-hoc meeting | Private | Not Logged |
+
+You can override these defaults anytime—from either the Meeting Summary Page or the My Meetings Page.
+
+## Overriding Default Visibility Settings
+
+You can update Visibility Settings before or after a meeting.
+
+### Before the meeting
+
+1. Navigate to **My Meetings → Recordings → Upcoming**.  
+2. Select the meeting and choose the preferred Visibility Setting: **Use default** or **Override defaults**.  
+3. The platform indicates whether the meeting will be recorded and logged.
+
+**Demo:**
+
+<div style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+  <iframe 
+    src="https://www.loom.com/embed/31f465c7127645969c796507ca19bb36" 
+    frameBorder="0" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true" 
+    allowFullScreen 
+    style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}>
+  </iframe>
+</div>
+
+### After the meeting
+
+- In the **Recorded Meetings** tab, switch between grid and table views to adjust settings.  
+- On the **Meeting Summary Page**, change Visibility Settings as needed.
+
+**Demo:**
+
+<div style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+  <iframe 
+    src="https://www.loom.com/embed/c59d4ee82f4a446789fe03c317cf8cff" 
+    frameBorder="0" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true" 
+    allowFullScreen 
+    style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}>
+  </iframe>
+</div>
+
+## Retroactive Changes & CRM Logging Logic
+
+When Visibility Settings are changed retroactively, CRM logging updates automatically.
+
+| Transition | System behavior |
+|-----------|------------------|
+| **Private → All** | Meeting logged retroactively in CRM |
+| **All → Private** | CRM activity deleted |
+| **All → Anyone with the link** | CRM activity deleted |
+
+## The Recordings Tab
+
+### Upcoming meetings
+
+Displays all meetings from your Google Calendar, **including meetings not booked via BookMeNow.** These are meetings where a Notetaker has been scheduled to join.
+
+Includes indicators for:
+
+- Visibility Settings with ability to modify before the meeting starts  
+- Additional Google Calendar meeting information  
+
+### Past meetings
+
+Shows all meeting recordings where you are an organizer or invitee. This is the default view for reviewing your recorded meetings.
+
+**Please use the CRM Activity Feed for team-related activities.**
+
+> **Note:** For meetings created by someone outside your namespace/Partner ID, you must manually add the Notetaker.
+
+Includes indicators for:
+
+- Meeting title, date, and Visibility Setting  
+- Ability to change Visibility Settings  
+- Link to the Meeting Summary Page  
+
+## FAQs
+
+<details>
+  <summary>Who can see a private meeting?</summary>
+  
+  Only invitees within the same Partner ID, if any.
+</details>
+
+<details>
+  <summary>Can sales managers see private meetings of team members?</summary>
+  
+  Currently not supported.
+</details>
+
+<details>
+  <summary>Do private meetings still generate AI summaries?</summary>
+  
+  Yes—only visible to the meeting participants or invitees with that Partner ID.
+</details>
+
+<details>
+  <summary>What if a meeting is accidentally made public?</summary>
+  
+  If a meeting is accidentally made public, change it to Private. The CRM activity will be deleted automatically.
+</details>
