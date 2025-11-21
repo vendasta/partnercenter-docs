@@ -1,10 +1,10 @@
 ---
-title: "How do I get set up for my Digital Ad Campaign?"
-sidebar_label: "How do I get set up for my Digital Ad Campaign?"
+title: "Tips for a Successful Campaign"
+sidebar_label: "Campaign Tips"
 description: "You want to get started with a successful Digital Ads campaign as quickly as possible. During the first month of the campaign, the advertising platform and our"
 ---
 
-You want to get started with a successful Digital Ads campaign as quickly as possible. During the first month of the campaign, the advertising platform and our specialists are going through a learning phase to understand and optimize your ad. What can you do to ensure your ad is successful as quickly as possible?
+You want to get started with a successful MatchCraft Managed Ads Campaign as quickly as possible. During the first month of the campaign, the advertising platform and our specialists are going through a learning phase to understand and optimize your ad. What can you do to ensure your ad is successful as quickly as possible?
 
 ### Consider doing a promotion
 

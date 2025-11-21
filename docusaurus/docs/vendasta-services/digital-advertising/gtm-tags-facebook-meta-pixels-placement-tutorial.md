@@ -1,6 +1,6 @@
 ---
-title: "GTM Tags & Facebook Meta Pixels + Placement Tutorial"
-sidebar_label: "GTM Tags & Facebook Meta Pixels + Placement Tutorial"
+title: "Google Tag Manager & Facebook Meta Pixels Overview"
+sidebar_label: "GTM Tags & Facebook Meta Pixels"
 description: "This article will guide you through the essentials of Google Tag Manager (GTM) tags and Facebook Meta Pixels. Understanding and implementing these tools is cru"
 ---
 
@@ -8,21 +8,21 @@ This article will guide you through the essentials of Google Tag Manager (GTM) t
 
 **Table of Contents:**
 
-*   [**What is a GTM?**](https://marketing-services.zendesk.com/hc/en-us/articles/25119048322327-GTM-Tags-Facebook-Meta-Pixels-Placement-Tutorial#h_01J3GT06PW0BKBTX4NPD6MSBSF)
+*   **What is a GTM?**
     *   How GTM Works
     *   Why You Need GTM on Your Website
-*   [**What is a Facebook Meta Pixel?**](https://marketing-services.zendesk.com/hc/en-us/articles/25119048322327-GTM-Tags-Facebook-Meta-Pixels-Placement-Tutorial#h_01J3GT4FS5A5W8FGF4GABK5T16)
+*   **What is a Facebook Meta Pixel?**
     *   How Facebook Meta Pixel Works
     *   Why You Need Facebook Meta Pixel on Your Website
-*   [**Obtaining the GTM Code or Facebook Meta Pixel Code**](https://marketing-services.zendesk.com/hc/en-us/articles/25119048322327-GTM-Tags-Facebook-Meta-Pixels-Placement-Tutorial#h_01J3GT8RSKPM8RGW052T9NPHPA)
+*   **Obtaining the GTM Code or Facebook Meta Pixel Code**
     *   Finding the GTM Code
     *   Finding the Facebook Meta Pixel Code
-*   [**Checking Your Website for Existing Code**](https://marketing-services.zendesk.com/hc/en-us/articles/25119048322327-GTM-Tags-Facebook-Meta-Pixels-Placement-Tutorial#h_01J3JXN33DHYS2NVW5W4TAHWMQ)
-*   [**Adding a GTM or Facebook Meta Pixel to Your Website**](https://marketing-services.zendesk.com/hc/en-us/articles/25119048322327-GTM-Tags-Facebook-Meta-Pixels-Placement-Tutorial#h_01J3JXPARXE3H152M7GAE5S85X)
+*   **Checking Your Website for Existing Code**
+*   **Adding a GTM or Facebook Meta Pixel to Your Website**
     *   Access the Backend of the Website
     *   Adding the GTM Code to the Website
     *   Adding the Facebook Meta Pixel Code to the Website
-*   [**Verifying Correct Installation & Functionality of GTM or Facebook Meta Pixel on Website**](https://marketing-services.zendesk.com/hc/en-us/articles/25119048322327-GTM-Tags-Facebook-Meta-Pixels-Placement-Tutorial#h_01J3JXSZNDG20NKFKY9G1XSQ2Z)
+*   **Verifying Correct Installation & Functionality of GTM or Facebook Meta Pixel on Website**
     *   Verify Your GTM Installation
     *   Verify Your Facebook Meta Pixel Installation
 

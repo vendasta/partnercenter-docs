@@ -1,0 +1,128 @@
+---
+title: Website Knowledge Source
+sidebar_label: Website source
+slug: website-source
+description: Learn how to set up and manage a website as a knowledge source for AI employees, including scraping, training, and refresh options.
+tags: [knowledge-base, knowledge-sources, website, refresh]
+keywords: [website knowledge source, website scrape, auto refresh, conversations ai, ai employees]
+---
+
+## What is a Website Knowledge Source?
+
+A **website knowledge source** lets AI employees pull information directly from a business’ website.  
+When added, the system scrapes the site and trains the AI on the content it finds, ensuring that answers reflect live business information.  
+
+## Why Use a Website Knowledge Source?
+
+- Keeps AI responses aligned with published website content.  
+- Reduces the need to manually re-enter FAQs or product details.  
+- Supports multiple pages, blogs, and structured business content.  
+- Ensures consistency across channels such as chat, SMS, and website widgets.  
+
+## Add a Website Knowledge Source
+
+To add a website as a knowledge source:  
+
+1. Open the AI employee’s **Knowledge Sources** section.  
+2. Select **Add knowledge → Website**.  
+3. Enter the **URL**.  
+   - The URL must be publicly accessible (test it in incognito or private browsing mode without logging in).  
+4. Give the source a **Name** (e.g., `Business Website`).  
+5. Choose a **Mode**:  
+   - **Single page** – Scrape only the given page.  
+   - **Follow links** – Start at the given URL and follow internal links (up to 100 pages).  
+   - **Sitemap** – Use a sitemap file for precise control.  
+6. (Optional) Configure **Excluded paths** to skip sections of the site.  
+7. Save your changes.  
+
+The system will begin scraping and training the AI on the website content.  
+
+### When to use a Sitemap for Training
+
+Providing a sitemap gives you more control over which pages the AI will train on. Unlike **Follow links** mode, which automatically discovers up to 100 pages from the starting URL, a sitemap is an explicit list of URLs you want included. This is especially helpful for large websites, blogs with many archives, or sites where you only want certain sections (like services or FAQs). To provide a sitemap, enter the full URL of your sitemap file (e.g., `https://example.com/sitemap.xml`). Most modern websites generate one automatically—try adding `/sitemap.xml` to the end of your domain to check.  
+
+
+## Edit a Website Knowledge Source
+
+When editing, you can:  
+
+- View the **last refreshed date** and how many pages were trained.  
+- Run a **manual refresh** to update content immediately.  
+- Change the **mode** (single page, follow links, sitemap).  
+- Add or update **excluded paths** (e.g., `/blog` or `/category/uncategorized/`).  
+- Rename the source for clarity.  
+
+:::tip
+If the website is used by multiple AI employees, changes apply across all of them.  
+:::
+
+## Train on Pages
+
+After scraping, you can review and select which pages to include:  
+
+- Use **Select all** or **Select none**.  
+- Manually check or uncheck specific pages.  
+- Confirm the list before finalizing training.  
+
+This gives you control over which content the AI will reference.  
+
+## Automatic and Manual Refresh
+
+Keeping website content current is critical for accurate responses.  
+
+- **Automatic refresh**  
+  - Enable this option when adding or editing a website knowledge source.  
+  - The system re-crawls the site **monthly** to keep data fresh.  
+
+- **Manual refresh**  
+  - Trigger a new crawl at any time.  
+  - Useful if important updates were just published to the website.  
+
+## Best Practices
+
+- Ensure the website is **publicly accessible** without login.  
+- Use **excluded paths** to avoid scraping irrelevant sections (e.g., archives).  
+- Combine website knowledge with other sources (e.g., **Business Profile** or **files**) for comprehensive coverage.  
+- Refresh after major website changes to keep responses aligned.  
+
+## Frequently Asked Questions (FAQs)
+
+<details>
+<summary>How many website pages can be scraped with "Follow links" mode?</summary>
+
+When using **Follow links** mode, the system can crawl and train on up to 100 pages, starting from the provided URL.
+</details>
+
+<details>
+  <summary>Why use a sitemap?</summary>
+
+  A **sitemap** gives you precise control over which pages the AI will train on.  
+  - It ensures only the pages you want are included, such as services, pricing, or FAQs.  
+  - This is especially useful for large or structured websites where **Follow links** may capture too many pages (like blog archives or category listings).  
+  - To use a sitemap, enter its full URL (e.g., `https://example.com/sitemap.xml`). Most websites generate one automatically—try adding `/sitemap.xml` to the end of your domain to check.  
+
+</details>
+
+<details>
+<summary>How often does automatic refresh update the website knowledge source?</summary>
+
+By default, website data does **not refresh automatically**. When you enable **automatic refresh**, the system re-crawls the website **once per month**. You can also run a **manual refresh** at any time for urgent updates.
+</details>
+
+<details>
+<summary>Do website knowledge source edits apply across multiple AI employees?</summary>
+
+Yes. If the same website knowledge source is linked to multiple AI employees, any edits or refreshes will apply across all of them.
+</details>
+
+<details>
+<summary>What happens if my website requires login to access content?</summary>
+
+The website must be **publicly accessible** without login. Test your URL in incognito or private browsing mode to ensure the AI can access the content.
+</details>
+
+## Related Resources
+
+- [Knowledge Base Overview](./index.md)
+- [AI Workforce Overview](../ai-workforce/)
+- [Conversations](../../conversations/)

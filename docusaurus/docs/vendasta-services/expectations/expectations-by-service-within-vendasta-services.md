@@ -4,7 +4,7 @@ sidebar_label: "Expectations by Service within Vendasta Services"
 description: "With Vendasta's Vendasta Services, you have access to a team of digital marketing experts. Leveraging our team, you can claim and optimize your customers' onl"
 ---
 
-With Vendasta's Vendasta Services, you have access to a team of digital marketing experts. Leveraging our team, you can claim and optimize your customers' online listings, boost their reputation, engage their followers with content on social and blogs, build their website, and drive awareness of their business with digital advertising. All the while, our team will communicate with you and your clients to help set service expectations, inform them about updates, and respond to questions related to their service.
+With Vendasta Services, you have access to a team of AI and marketing experts. Leveraging our team, you can claim and optimize your customers' online listings, boost their reputation, engage their followers with content on social and blogs, build their website, and drive awareness of their business with digital advertising. All the while, our team will communicate with you and your clients to help set service expectations, inform them about updates, and respond to questions related to their service.
 
 With so many services available, it's important to understand what to expect from each one. This article will break down what you and your clients can expect based on each product line.
 
@@ -18,9 +18,9 @@ With so many services available, it's important to understand what to expect fro
 | **Direct-to-customer communication is available** | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | **Project tracking in Business App** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | **Business App connections required** | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ |
-| **External credentials (passwords) required** | ❌ | ✅ | ✅ | ❌ | ✅[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNSZXGATFMA6XKMG0B38KVX) | ❌ |
-| **Digital Agents access required** | ✅ | ✅ | ✅ | ❌ | ✅[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNT07KYFS0Y5JSTEDQ4QEAK) | ✅[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNT07KYFS0Y5JSTEDQ4QEAK) |
-| **Business days to launch after assets received** | **3**[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNT2PA61DE430WNW2XXBEPT) | **1-2** | **5** | **5** | **5-10** | **3-10** |
+| **External credentials (passwords) required** | ❌ | ✅ | ✅ | ❌ | ✅[\*](#external-credentials-passwords-required) | ❌ |
+| **Digital Agents access required** | ✅ | ✅ | ✅ | ❌ | ✅[\*](#digital-agency-access-required) | ✅[\*](#digital-agency-access-required) |
+| **Business days to launch after assets received** | **3**[\*](#business-days-to-launch-after-assets-received) | **1-2** | **5** | **5** | **5-10** | **1-10** |
 
 \*See more in definitions below.
 
@@ -34,7 +34,7 @@ If you would only like specific people to be contacted in relation to the order 
 
 This is what an order confirmation email looks like:
 
-[![Confirmation_Email.png](./img/19299630230423-ab1a66875a.png)](https://marketing-services.zendesk.com/hc/article_attachments/19299621999255)
+![Confirmation_Email.png](./img/19299630230423-ab1a66875a.png)
 
 ## Pre-launch call
 
@@ -42,7 +42,7 @@ This call happens before the launch or completion of a service and in many cases
 
 ## Post-launch call
 
-This is unique to Digital Ads orders. All work is completed and the ads are made ready to launch, after which a post-launch call is set up with the partner contact to discuss expectations around campaign performance, optimizations, and future strategy calls (when applicable).
+This is unique to MatchCraft Managed Ads orders. All work is completed and the ads are made ready to launch, after which a post-launch call is set up with the partner contact to discuss expectations around campaign performance, optimizations, and future strategy calls (when applicable).
 
 ## Direct-to-customer communication
 
@@ -50,15 +50,13 @@ For all services, with the exception of Digital Ads, partners have the option of
 
 ## Project tracking in Business App
 
-All services will showcase a tracker found in Business App > Projects that showcases the tasks to be completed, expected completion dates, and notes. Learn more about this feature [**here**](https://support.vendasta.com/hc/en-us/articles/9756214213015).
+All services will showcase a tracker found in Business App > Projects that showcases the tasks to be completed, expected completion dates, and notes.
 
 ![MS-Project-Notes.png](./img/19299630230423-96eb40105b.png)
 
 ## Business App connections required
 
 Several services require connections for Google Business Profile, Facebook, or other accounts inside of Business App and the products accessed inside of it. While our teams typically will provide instruction or help your customers to make these connections, any connections that can be completed by the business or the partner in advance of the service being fulfilled will ensure quick delivery of the services.
-
-For information on how to connect accounts, check out [this article with video](https://support.vendasta.com/hc/en-us/articles/9817333695639).
 
 ## External credentials (passwords) required
 
@@ -80,4 +78,4 @@ _\*Note that for Website services, either credentials are required or delegate a
 
 Timelines for delivery can vary depending on additional services ordered and project complexity. If you are concerned that a business may require complex services (eg. a high volume of social posts, a listing claim requiring intervention from the source’s support team, or a highly customized website), reach out to your account contact with Vendasta for more information and assistance.
 
-_\*Note that complex listing claims, including Google Business Profile claims and optimization, may take up to 90 days to complete. The standard for a basic claim is 72 hours: 48 hours for processing and 24 hours to claim._
+_\*Note that complex listing claims, including Google Business Profile claims and optimization, may take up to 90 days to complete._

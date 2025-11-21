@@ -1,7 +1,7 @@
 ---
-title: "How to Request a Budget Change on MatchCraft Ad Servcies Spend"
-sidebar_label: "How to Request a Budget Change on MatchCraft Ad Servcies Spend"
-description: "Budget Changes for Future Months \n The  Request Spend Change  feature makes it easy for you to make changes to your monthly digital ads budgets.  \n \n Note:  Th"
+title: "Request a Budget Change on MatchCraft Ad Services Spend"
+sidebar_label: "Request a budget change"
+description: "Budget Changes for Future Months \n The  Request Spend Change  feature makes it easy for you to make changes to your monthly digital ads budgets.  \n \n Note:  Th"
 zendesk_id: 19299887344535
 zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/19299887344535-How-to-Request-a-Budget-Change-on-MatchCraft-Ad-Servcies-Spend"
 updated_at: "2025-06-13T15:55:02Z"

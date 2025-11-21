@@ -474,8 +474,15 @@ h2 {
   font-size: 0.9rem;
 }
 
-/* Adjust spacing before Explore by Product to match intro text spacing */
+/* Adjust spacing for Explore by Product section in its new position */
 .explore-by-product-section {
-  margin-top: -0.25rem; /* slight reduction while maintaining some breathing room */
-  margin-bottom: var(--ifm-spacing-vertical);
+  margin-top: 2rem; /* consistent spacing after top cards section */
+  margin-bottom: var(--ifm-spacing-vertical); /* consistent spacing before Quick Start Resources */
+}
+
+/* Make code blocks wrap on page load */
+div[class*="language-"] pre {
+  white-space: pre-wrap !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
