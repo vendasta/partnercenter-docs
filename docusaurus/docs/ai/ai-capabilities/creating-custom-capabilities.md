@@ -71,7 +71,7 @@ You can now create entirely custom AI Employees with specialized capabilities:
 
 1. In the **Prompt** field, define when and how the AI should use this capability.
 2. You can start with placeholder text ("TBD") and refine it after setting up tools.
-3. For detailed guidance, see [Writing Effective Capability Prompts](#writing-a-good-capability-prompt).
+3. For detailed guidance, see [Writing Effective Capability Prompts](#writing-effective-capability-prompts).
 
 :::tip
 Consider the prompt as instructions for when you hire an employee. Be specific about when they should use this skill and how to handle different scenarios.
@@ -84,7 +84,7 @@ Consider the prompt as instructions for when you hire an employee. Be specific a
    - **Import from cURL**: Import existing API configurations
    - **Manual configuration**: Set up custom API calls
    - **MCP Connection**: Connect to external systems via Model Context Protocol
-3. Fill in the required tool fields (see [Tool Configuration Reference](#tool-fields-explained)).
+3. Fill in the required tool fields (see [Tool Configuration Reference](#tool-configuration-reference)).
 4. Add multiple tools if your capability requires several API calls.
 
 :::tip Detailed Tool Building Guide

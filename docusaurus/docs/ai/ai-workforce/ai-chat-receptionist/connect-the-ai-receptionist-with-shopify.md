@@ -333,7 +333,7 @@ While this guide is specific to Shopify, you can create similar integrations wit
 <details>
 <summary>How does the Shopify integration work with my AI's Knowledge Base?</summary>
 
-The Shopify integration provides real-time product data through API calls, while your [Knowledge Base](../../knowledge-base.md) contains static business information. These work together perfectly:
+The Shopify integration provides real-time product data through API calls, while your [Knowledge Base](../../knowledge-base/index.md) contains static business information. These work together perfectly:
 
 **Shopify API provides:** Live product availability, current prices, product descriptions  
 **Knowledge Base should include:** Shipping policies, return information, size guides, care instructions, warranty details

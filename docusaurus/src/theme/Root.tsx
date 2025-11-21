@@ -11,6 +11,8 @@ declare global {
 }
 
 const COOKIE_SETTINGS_SELECTOR = '[data-cookie-settings-link]';
+const FAQ_SCHEMA_SCRIPT_ID = 'faq-schema-script';
+const FAQ_OBSERVER_TIMEOUT = 5000;
 
 type CookieSettingsEvent = MouseEvent | React.MouseEvent<HTMLAnchorElement> | undefined;
 
@@ -23,6 +25,68 @@ function openCookieSettings(event?: CookieSettingsEvent) {
     // eslint-disable-next-line no-console
     console.warn('Cookiebot not available yet.');
   }
+}
+
+type FAQEntry = {
+  question: string;
+  answer: string;
+};
+
+function sanitizeText(text: string | null | undefined): string {
+  return text?.replace(/\s+/g, ' ').trim() ?? '';
+}
+
+function extractFAQs(): FAQEntry[] {
+  if (typeof document === 'undefined') return [];
+
+  return Array.from(document.querySelectorAll('details'))
+    .map((detail) => {
+      const summary = detail.querySelector('summary');
+      const question = sanitizeText(summary?.textContent ?? '');
+      if (!summary || !question) return undefined;
+
+      const clone = detail.cloneNode(true) as HTMLElement;
+      clone.querySelector('summary')?.remove();
+      const answer = sanitizeText(clone.textContent);
+      if (!answer) return undefined;
+
+      return {question, answer};
+    })
+    .filter((entry): entry is FAQEntry => Boolean(entry));
+}
+
+function applyFaqSchema(): boolean {
+  if (typeof document === 'undefined') return false;
+
+  const faqs = extractFAQs();
+  const existingScript = document.getElementById(FAQ_SCHEMA_SCRIPT_ID);
+
+  if (faqs.length === 0) {
+    existingScript?.remove();
+    return false;
+  }
+
+  const script = existingScript ?? document.createElement('script');
+  script.id = FAQ_SCHEMA_SCRIPT_ID;
+  script.type = 'application/ld+json';
+  script.text = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  });
+
+  if (!existingScript) {
+    document.head.appendChild(script);
+  }
+
+  return true;
 }
 
 export default function Root({children}: {children: React.ReactNode}): React.ReactElement {
@@ -67,6 +131,49 @@ export default function Root({children}: {children: React.ReactNode}): React.Rea
       listeners.forEach(({element, handler}) => {
         element.removeEventListener('click', handler);
       });
+    };
+  }, [location.pathname, location.search]);
+
+  useEffect(() => {
+    if (typeof document === 'undefined' || typeof window === 'undefined') return undefined;
+
+    let observer: MutationObserver | undefined;
+    let timeoutId: number | undefined;
+
+    const stopObserver = () => {
+      observer?.disconnect();
+      observer = undefined;
+      if (typeof timeoutId === 'number') {
+        window.clearTimeout(timeoutId);
+        timeoutId = undefined;
+      }
+    };
+
+    const watchForFaqs = () => {
+      if (applyFaqSchema()) return;
+
+      observer = new MutationObserver(() => {
+        if (applyFaqSchema()) {
+          stopObserver();
+        }
+      });
+
+      observer.observe(document.getElementById('__docusaurus') ?? document.body, {
+        childList: true,
+        subtree: true,
+      });
+
+      timeoutId = window.setTimeout(() => {
+        stopObserver();
+        applyFaqSchema();
+      }, FAQ_OBSERVER_TIMEOUT);
+    };
+
+    watchForFaqs();
+
+    return () => {
+      stopObserver();
+      document.getElementById(FAQ_SCHEMA_SCRIPT_ID)?.remove();
     };
   }, [location.pathname, location.search]);
   return (

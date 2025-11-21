@@ -738,7 +738,7 @@ Absolutely! While this guide focuses on the AI Chat Receptionist, the Custom Cap
 
 This means customers can get ServiceTitan information and schedule appointments through phone calls, SMS, web chat, or any other channel your AI Employees support. The same ServiceTitan data will be available regardless of how customers choose to interact with your business.
 
- For more details on setting up Custom Capabilities across different AI Employees, see [Creating Custom Capabilities for your AI Employees](../empower-your-ai-employee-custom-capabilities.md).
+ For more details on setting up Custom Capabilities across different AI Employees, see [Creating Custom Capabilities for your AI Employees](../../ai-capabilities/creating-custom-capabilities.md).
 </details>
 
 <details>
@@ -764,7 +764,7 @@ You can create additional Custom Capabilities for features like inventory lookup
 <details>
 <summary>How does the ServiceTitan integration work with my AI's Knowledge Base?</summary>
 
-The ServiceTitan integration provides real-time operational data through API calls, while your [Knowledge Base](../../knowledge-base.md) contains static business information. These work together as follows:
+The ServiceTitan integration provides real-time operational data through API calls, while your [Knowledge Base](../../knowledge-base/index.md) contains static business information. These work together as follows:
 
 **ServiceTitan API provides:** Live job status, customer history, technician schedules, real-time availability  
 **Knowledge Base should include:** Service policies, pricing information, service area details, company procedures, emergency protocols
@@ -775,7 +775,7 @@ Your AI will use the ServiceTitan API to answer "When is my next appointment?" a
 <details>
 <summary>What if customers ask about ServiceTitan-related information the API can't provide?</summary>
 
-Great question! The ServiceTitan API provides operational and customer data, but customers often need additional business information. Add these topics to your [Knowledge Base](../../knowledge-base.md):
+Great question! The ServiceTitan API provides operational and customer data, but customers often need additional business information. Add these topics to your [Knowledge Base](../../knowledge-base/index.md):
 
 - Service area boundaries and travel charges
 - Emergency service policies and after-hours rates
@@ -869,7 +869,7 @@ Monitor customer service patterns through several methods:
 
 3. **Custom Capability Analytics:** Monitor which API calls are made most frequently through the "Explanation" feature
 
- 4. **Business Intelligence:** Set up [automations](../../automations/index.md) to log AI-generated appointments and analyze trends
+ 4. **Business Intelligence:** Set up [automations](../../../automations/my-automations/index.mdx) to log AI-generated appointments and analyze trends
 
 This data can inform staffing, inventory, and service offerings based on customer demand patterns.
 </details>

@@ -107,7 +107,7 @@ You can:
 - Add new custom capabilities to expand their skills.
 
 :::info Learn more about Capabilities
-For more detailed information on Capabilities, see the [AI Workforce Overview](./index.mdx#ai-employee-configuration).
+For more detailed information on Capabilities, see the [AI Workforce Overview](./index.mdx#ai-employee-elements).
 :::
 
 #### Default voice lead capture for AI Voice Receptionist
@@ -174,7 +174,7 @@ Essential details like services, hours, and contact information that you provide
 If you need to add more detailed information for your AI Receptionist, you can use the `Add knowledge` bar to `+ Add new knowledge`. From here you can add text, website, or file information to your Knowledge Base and immediately have it available to your AI Voice Receptionist.
 
 :::tip Learn more about Knowledge Sources
-For more details on knowledge sources and adding them to the Knowledge Base, see the [Knowledge Base Overview](../knowledge-base.md).
+For more details on knowledge sources and adding them to the Knowledge Base, see the [Knowledge Base Overview](../knowledge-base/index.md).
 :::
 ---
 
@@ -275,7 +275,7 @@ To add more detailed information:
 2. Click "Add knowledge" to add text, website pages, or file uploads
 3. Organize information by topic for better AI understanding
 
-For more details, see the [Knowledge Base Overview](../knowledge-base.md).
+For more details, see the [Knowledge Base Overview](../knowledge-base/index.md).
 </details>
 
 <details>
