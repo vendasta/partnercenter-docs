@@ -1,7 +1,8 @@
 ---
 title: "Vendasta Services Website Support"
 sidebar_label: "Website Support"
-description: "This article details the inclusions of Vendasta Services’ Website Support product and the process/best practices for submitting requests to our Website Support team."
+sidebar_position: 6
+description: "This article details the inclusions of Vendasta Services' Website Support product and the process/best practices for submitting requests to our Website Support team."
 ---
 
 This article details the inclusions of Vendasta Services’ [Website Support](https://partners.vendasta.com/marketplace/products/MP-9f77626ea38b4e44b044382b50c5f83e) product and the process/best practices for submitting requests to our Website Support team.

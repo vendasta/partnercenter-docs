@@ -1,6 +1,7 @@
 ---
 title: "Accelerated Templated Website: Service Expectations"
 sidebar_label: "Accelerated Templated Website"
+sidebar_position: 3
 description: "As a valued partner, we understand how important it is to provide your clients with fast, professional, and functional websites. With our Duda Website offering"
 ---
 

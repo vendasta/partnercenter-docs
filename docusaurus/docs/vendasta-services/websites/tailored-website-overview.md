@@ -1,6 +1,7 @@
 ---
 title: "Tailored Website Build: Service Expectations"
 sidebar_label: "Tailored Website"
+sidebar_position: 4
 description: "An overview of the collaborative, do-it-with-me process for creating a custom website tailored to your business needs, from discovery to launch."
 ---
 

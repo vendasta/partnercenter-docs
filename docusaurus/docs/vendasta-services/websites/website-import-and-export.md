@@ -1,7 +1,8 @@
 ---
-title: "Website Import"
-sidebar_label: "Website Import"
-description: "If you have an existing WordPress website and would like to move it onto Vendasta's hosting platform (WordPress Hosting Pro), Vendasta Services can help! \n Yo"
+title: "Website Import and Export"
+sidebar_label: "Website Import and Export"
+sidebar_position: 7
+description: "If you have an existing WordPress website and would like to move it onto Vendasta's hosting platform (WordPress Hosting Pro), Vendasta Services can help! You can also export your website if you need to move it to a new host."
 zendesk_id: 18929271935639
 zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/18929271935639-Importing-Websites-with-Marketing-Services"
 updated_at: "2025-06-03T17:16:27Z"
@@ -106,3 +107,18 @@ If your site is already hosted on WordPress Hosting Pro, activate the standalone
 Website support requests can be sent to [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com)
 
 </details>
+
+## Exporting a Website
+
+If you have decided you wish to move a website to a new host and discontinue support, we are able to provide you with the file for your website.
+
+### What you need
+
+1.  A hosting environment with a Wordpress Installation.
+2.  The All In One Import/Export plugin installed on your new Wordpress host.
+3.  Reach out to our team to provide you with the file for your existing website.
+4.  Check to ensure that your website is working correctly in your new environment before discontinuing service.
+
+Our team can provide you with the necessary file and credentials for the existing website, but we are not able to access your new hosting nor are we able to perform the import to your new host on your behalf. 
+
+**Important Note:** Once you have discontinued your hosting with us, we will only have access to the website on our servers for six months, after which it will be permanently deleted.
