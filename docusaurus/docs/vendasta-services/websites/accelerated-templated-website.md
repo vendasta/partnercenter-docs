@@ -1,6 +1,6 @@
 ---
-title: "Accelerated Templated Website Overview"
-sidebar_label: "Accelerated Templated Website Overview"
+title: "Accelerated Templated Website: Service Expectations"
+sidebar_label: "Accelerated Templated Website"
 description: "As a valued partner, we understand how important it is to provide your clients with fast, professional, and functional websites. With our Duda Website offering"
 ---
 
