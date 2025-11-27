@@ -1,6 +1,6 @@
 ---
-title: Vendasta Payments Setup Guide
-sidebar_label: Vendasta Payments Setup
+title: Vendasta payments and payouts setup guide
+sidebar_label: Vendasta Payments and Payouts Setup
 sidebar_position: 1
 description: Set up Vendasta Payments, connect Stripe accounts, and manage account verification and settings
 tags: [vendasta-payments, setup, stripe, account-management]
@@ -35,16 +35,82 @@ Vendasta Payments is available in:
 
 ## How to Set Up Vendasta Payments
 
+### Prerequisites: My Billing Setup
+
+Before setting up Vendasta Payments, ensure your billing information is properly configured in **Partner Center > Administration > My Billing**. The following settings must be complete:
+
+- **Billing Contact**: Your business contact information
+- **Payment Method**: Credit card on file (not required if currently billed by Vendasta via invoice)
+
+These settings are necessary to be billed the wholesale costs associated with activating products and services.
+
 ### Standard Vendasta Payments Account Setup
+
+<iframe src="https://www.loom.com/embed/df6a770f5aef4db2935b81683559f7e9" frameborder="0" width="100%" height="400px" allowfullscreen></iframe>
+
+Before beginning the setup process, partners must review and agree to the additional [Terms of Service](https://www.vendasta.com/terms/terms-of-service/) associated with using Vendasta Payments.
+
+![Terms of Service](./img/setup-terms-of-service.jpg)
+
+To create a new Vendasta Payments account:
+
 1. Navigate to `Administration` > `Vendasta Payments`
-2. Complete the account application with business information
-3. Provide required documentation for verification
-4. Configure banking details for payouts
-5. Wait for account approval (typically 1-2 business days)
+2. Click **Set up Vendasta Payments** to create your Stripe account
+3. Provide the following required information:
+   - **Legal business name** (must exactly match the name associated with your tax ID)
+   - **Business Number**
+     - For US companies: Employer Identification Number (EIN)
+     - For Canadian companies: Canada Revenue Agency (CRA) Business Number
+     - [Learn more about identity verification](https://stripe.com/docs/connect/identity-verification)
+   - **Operating name** of your company (your "Doing business as" name, if different from legal name)
+   - **Registered business address** or home address (if you don't have a business address)
+   - **Account representative information**:
+     - Legal name
+     - Home address
+     - ID verification (Full Social Security number for U.S., and Government-issued ID via webcam, phone, or file upload)
+4. Complete the account application with all required documentation
+5. Configure banking details for payouts
+6. Wait for account approval (typically 1-2 business days)
 
 :::warning
 Vendasta Payments is not available for Free or Trial subscription tiers. This restriction applies to new users and current non-users on these tiers due to fraud prevention measures.
 :::
+
+#### Accept Online Payments
+
+![Accept online payments](./img/accept-online-payments.jpg)
+
+By default, the currency that you accept for online payments is the currency that you use in your billing relationship with Vendasta (your contract currency).
+
+Vendasta Payments can currently accept payments from Visa, Mastercard, American Express, and Discover credit cards.
+
+Payments that you have received will be displayed under the **Partner Center > Commerce > Payments** tab.
+
+![Payments tab](./img/payments-tab.jpg)
+
+After your first payment has been received, Stripe will hold the payments you receive for up to a week. At the end of this period, Stripe will begin paying out a portion of the balance you've accumulated, on a 7-day rolling basis, into the bank account that you add in the payout settings.
+
+If payment has failed, partners can hover their cursor over the ⓘ **Information** icon next to the status for more information.
+
+#### Transaction Fees
+
+Vendasta Payments charges a 2.9% + $0.30 USD transaction fee per successful credit card transaction. This fee will be applied on all transactions as follows:
+
+- Transactions in USD, CAD, AUD, NZD all pay 2.9% + $0.30 in the local currency
+- Transactions in GBP pay 2.9% + £0.20
+- Transactions in CZK pay 2.9% + 8.00 Kč
+
+Allowing international credit cards for payments may result in additional fees for cross-border rates and currency conversion rates. Please visit [Stripe Docs](https://stripe.com/docs/international-pricing) for more information.
+
+Transactions processed through Vendasta Payments are reflected on Partner statements as non-taxable items. Partners can view their fees on their **Wholesale invoice** in Snapshot each month.
+
+#### Customer Statement Description
+
+The customer statement description that you set when setting up Vendasta Payments is shown on your customers' credit card statements and is used to clarify a payment they have made for your products or services.
+
+Using a clear, accurate, and recognizable statement descriptor reduces the likelihood of chargebacks and disputes, as it helps your customers to remember where a particular charge or payment originated from.
+
+By default, "Vendasta" appears on customer credit card statements when they make a payment. Partners can replace this statement descriptor with their own business name by entering this information when setting up Vendasta Payments. You may use up to 22 characters for your statement description.
 
 ### Connect Your Existing Stripe Account
 
@@ -81,6 +147,60 @@ If you're a Partner with an existing Stripe Standard account, you can connect it
 This feature is currently only available for new users who haven't completed transactions with platform-generated accounts.
 :::
 
+## How to Set Up Payouts
+
+To access your payout settings, navigate to `Partner Center` > `Commerce` > `Payouts` or `Administration` > `Vendasta Payments`.
+
+### How to Set Up Bank Accounts
+
+![Receive payouts](./img/receive-payouts.jpg)
+
+Partners can receive payouts from online credit card payments in one or more bank accounts by entering their account details in Stripe.
+
+If you do not have a banking relationship in every country where you operate, but you'd like to add a bank account in a different country, contact [support@vendasta.com](mailto:support@vendasta.com) for more information.
+
+When configuring your first bank account for payouts:
+
+1. Go to the `Administration` tab
+2. Navigate to `Vendasta Payments`
+3. Click on `Add Bank Account` under Receiving Payout
+4. Enter your bank account details:
+   - Account holder type (Individual or Company)
+   - Individual's name (if Individual is selected) or company name (if Company is selected)
+   - Bank account number
+   - Bank routing number
+5. Set this account as your default for payouts
+
+:::tip
+If you already have one bank account connected and want to replace it, you must add a new bank account first. Once the new account is added, you can set it as the default, then remove the old bank account.
+:::
+
+![Adding a bank account for payouts](./img/bank-account-for-payouts.png)
+
+### Setting a Default Bank Account
+
+If you add more than one bank account to receive payouts, you need to select a default account to specify which account receives your payouts. You can change your default bank account at any time within the Stripe dashboard.
+
+![Set default bank account](./img/set-default-bank-account.jpg)
+
+### How to Set Up Multiple Currency Bank Accounts
+
+In supported countries, you can add multiple bank accounts to receive payouts in different currencies without conversion fees:
+
+1. Add one bank account per supported settlement currency
+2. Select a default settlement currency (which you can change at any time)
+3. Payments received in configured currencies settle without conversion
+4. Payments in unconfigured currencies automatically convert to your default currency
+
+**Example:** A UK-based account with both GBP and USD bank accounts (GBP as default):
+- USD payments go to the USD account without conversion
+- GBP payments go to the GBP account
+- All other currencies convert to GBP and go to the GBP account
+
+### Changing Your Payout Currency
+
+By default, payouts will be made to your bank account in your default currency. However, you can add a new payout destination and choose to convert your funds to a different currency before the funds are deposited into a bank account. Stripe may charge a fee for currency conversion; visit the [Stripe Docs](https://stripe.com/docs/payouts) to learn more.
+
 ## Managing Account Information
 
 ### Update Ownership Information
@@ -108,6 +228,14 @@ To change the address appearing on customer invoices:
 
 Updated addresses will appear on all future customer invoices.
 
+## Customer-Facing Terms of Service for Payment Processing
+
+Your customers need to accept the Terms of Service that apply to payment processing when they pay for a Service Order. These terms explain that Vendasta is facilitating payment collection on your behalf, and provides information about how refunds, disputes, and other payment-specific details are handled.
+
+This helps limit your liability in case of payment disputes with your customers. In most jurisdictions, you are legally required to have terms that apply specifically to payment processing when accepting payments.
+
+The Terms have been created with partner protection and minimizing your liability in mind. All partners using Vendasta Payments should leave this setting switched on so that these Terms will be displayed when the customer makes a payment. Disabling these Terms is not recommended, as it may increase your liability.
+
 ## Troubleshooting Setup Issues
 
 ### "Unsupported in Your Area" Error
@@ -125,6 +253,54 @@ If you don't see Vendasta Payments setup options, this typically indicates:
 - Your account is on a Free or Trial tier (upgrade required)
 - You're in an unsupported geographic region
 - Your account has restrictions that prevent Vendasta Payments
+
+## Video Walkthrough Guides
+
+This section contains two sets of videos to help you get set up with Vendasta Payments and understand how the different components work.
+
+### Setup Walkthrough Videos
+
+Watch the following videos for a step-by-step guide to setting up all components of Vendasta Payments:
+
+#### 1. Set Up Payments
+
+<iframe src="//fast.wistia.com/embed/iframe/6ar0gt02w5" width="560" height="315" frameBorder="0" allowFullScreen></iframe>
+
+#### 2. Set Currency & Retail Price
+
+<iframe src="//fast.wistia.com/embed/iframe/1v9ge9w7cy" width="560" height="315" frameBorder="0" allowFullScreen></iframe>
+
+#### 3. Update Existing Packages
+
+<iframe src="//fast.wistia.com/embed/iframe/sbzyunnepn" width="560" height="315" frameBorder="0" allowFullScreen></iframe>
+
+#### 4. Configure Packages for Buy-It-Yourself
+
+<iframe src="//fast.wistia.com/embed/iframe/zz1xdea7bj" width="560" height="315" frameBorder="0" allowFullScreen></iframe>
+
+#### 5. Apply Taxes
+
+<iframe src="//fast.wistia.com/embed/iframe/57z3ynyeba" width="560" height="315" frameBOrder="0" allowFullScreen></iframe>
+
+### Understanding Vendasta Payments Components
+
+These videos help explain how different elements within Vendasta Payments work:
+
+#### How does BIY work with Business App?
+
+<iframe src="//fast.wistia.com/embed/iframe/7fh8sbaf2e" width="560" height="315" frameBorder="0" allowFullScreen></iframe>
+
+#### How does BIY work with the Store?
+
+<iframe src="//fast.wistia.com/embed/iframe/7nyr2st4i0" width="560" height="315" frameBorder="0" allowFullScreen></iframe>
+
+#### How does Invoicing work?
+
+<iframe src="//fast.wistia.com/embed/iframe/dpkqrtbr41" width="560" height="315" frameBorder="0" allowFullScreen></iframe>
+
+#### How do Payments and Payouts work?
+
+<iframe src="//fast.wistia.com/embed/iframe/23ixlvylkr" width="560" height="315" frameBorder="0" allowFullScreen></iframe>
 
 ## Common Questions About Vendasta Payments Setup
 
