@@ -80,6 +80,21 @@ If our Website Support team is unable to support the website in question, we wil
 
 **See also:** [Website Import & Support Vetting Expectations Brochure](https://examples.yourdigitalagents.com/wp-content/uploads/2023/05/Website-Import-Support-Vetting_-Expectations-Guide.pdf)
 
+## Exporting a Website
+
+If you have decided you wish to move a website to a new host and discontinue support, we are able to provide you with the file for your website.
+
+### What you need
+
+1.  A hosting environment with a Wordpress Installation.
+2.  The All In One Import/Export plugin installed on your new Wordpress host.
+3.  Reach out to our team to provide you with the file for your existing website.
+4.  Check to ensure that your website is working correctly in your new environment before discontinuing service.
+
+Our team can provide you with the necessary file and credentials for the existing website, but we are not able to access your new hosting nor are we able to perform the import to your new host on your behalf. 
+
+**Important Note:** Once you have discontinued your hosting with us, we will only have access to the website on our servers for six months, after which it will be permanently deleted.
+
 ## **Frequently asked questions (FAQs):**
 
 <details>
@@ -107,18 +122,3 @@ If your site is already hosted on WordPress Hosting Pro, activate the standalone
 Website support requests can be sent to [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com)
 
 </details>
-
-## Exporting a Website
-
-If you have decided you wish to move a website to a new host and discontinue support, we are able to provide you with the file for your website.
-
-### What you need
-
-1.  A hosting environment with a Wordpress Installation.
-2.  The All In One Import/Export plugin installed on your new Wordpress host.
-3.  Reach out to our team to provide you with the file for your existing website.
-4.  Check to ensure that your website is working correctly in your new environment before discontinuing service.
-
-Our team can provide you with the necessary file and credentials for the existing website, but we are not able to access your new hosting nor are we able to perform the import to your new host on your behalf. 
-
-**Important Note:** Once you have discontinued your hosting with us, we will only have access to the website on our servers for six months, after which it will be permanently deleted.

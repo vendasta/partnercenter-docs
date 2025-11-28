@@ -2,7 +2,7 @@
 title: "Accelerated Templated Website: Service Expectations"
 sidebar_label: "Accelerated Templated Website"
 sidebar_position: 3
-description: "We understand how important it is to provide you with fast, professional, and functional websites. With our Duda Website offering"
+description: "We understand how important it is to provide your clients with fast, professional, and functional websites. With our Duda Website offering"
 ---
 
 We understand how important it is to provide you with fast, professional, and functional websites. With our Duda Website offerings, you have access to two powerful solutions: [**Accelerated Templated Website**](https://partners.vendasta.com/marketplace/products/MP-JPG6QNZHBQPKRX7KZ28XPM8X5BRZHJ3W) and [**Accelerated Templated Website Plus**](https://partners.vendasta.com/marketplace/products/MP-JPG6QNZHBQPKRX7KZ28XPM8X5BRZHJ3W/addon/A-DCFRQP8VHB). Whether you are just starting out or need advanced capabilities, this guide will help you understand each option and how they can meet your unique needs.
