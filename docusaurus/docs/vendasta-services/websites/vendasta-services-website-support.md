@@ -46,7 +46,7 @@ Please keep an eye out for our emails. Our team may request further clarificatio
 
 **In the event that your website goes down:**
 
-Vendasta Services’ Website Support Team has automations in place that will flag when websites go down. Our goal is to be aware of website downtime and get the website back up and running as soon as possible. However, there may be times when you or your client notices an issue before we have been able to resolve the issue.  
+Vendasta Services' Website Support Team has automations in place that will flag when websites go down. Our goal is to be aware of website downtime and get the website back up and running as soon as possible. However, there may be times when you notice an issue before we have been able to resolve the issue.  
   
 _If you notice your website is down, first:_
 
