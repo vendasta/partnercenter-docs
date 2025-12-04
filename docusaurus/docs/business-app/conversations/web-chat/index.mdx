@@ -82,6 +82,90 @@ Choose your installation method in the **Installation** section:
 
 **Test Installation**: Always verify the widget appears and functions correctly on the live site
 
+## Widget Actions
+
+Widget actions allow you to create direct links that automatically open the web chat widget with predefined messages. This feature is perfect for email campaigns, landing pages, support pages, or any scenario where you want to direct visitors to start a chat with a specific message.
+
+:::note
+The web chat widget must be installed on the page for these actions to work.
+:::
+
+### Action Types
+
+There are two types of widget actions you can configure:
+
+- **Prefill message**: Opens the widget and pre-fills the message field with your predefined text. The visitor must click send to actually send the message. Use this when you want to give visitors control over when to send the message.
+- **Send message**: Opens the widget and automatically sends the predefined message without requiring any user interaction. Use this for immediate engagement and when you want the message sent automatically.
+
+### Implementation Methods
+
+You can trigger widget actions using two methods:
+
+**Anchor link listener**:
+- Best for: Direct links, email campaigns, navigation from external sources
+- Uses URL hash format that the widget automatically detects
+- Format: `#webchat-send-message?webchat-widgetId={widget-id}` or `#webchat-prefill-message?webchat-widgetId={widget-id}`
+- The widget detects the hash when the page loads or when the hash changes
+- Example: `https://example.com#webchat-send-message?webchat-widgetId=fedf2e7a-30fb-11f0-941a-ea112a20`
+
+**JavaScript API**:
+- Best for: Custom integrations, dynamic content, programmatic triggering
+- Allows you to trigger actions programmatically from your own JavaScript code
+- Useful when you need to trigger actions based on user interactions or dynamic conditions
+
+### Configuration Steps
+
+1. Navigate to **Business App > Conversations AI > Conversations AI Settings > Configure Web Chat > Widget Actions**
+2. **Select an action**: Choose **Prefill message** or **Send message**
+3. **Select an implementation method**: Choose **Anchor link listener** or **JavaScript API**
+4. **Enter a message** (optional): Type the message that will be used when the action is triggered. If left empty, the action will open the Web Chat only.
+5. **Copy the generated code**: Use the provided code as an anchor link or redirect target
+
+The generated code will look like: `#webchat-send-message?webchat-widgetId=fedf2e7a-30fb-11f0-941a-ea112a20`
+
+### Code Examples
+
+**Anchor Link Example** (Send message):
+```html
+<a href="#webchat-send-message?webchat-widgetId=fedf2e7a-30fb-11f0-941a-ea112a20">Chat with us about pricing</a>
+```
+
+**Anchor Link Example** (Prefill message):
+```html
+<a href="#webchat-prefill-message?webchat-widgetId=fedf2e7a-30fb-11f0-941a-ea112a20">Ask about our services</a>
+```
+
+**JavaScript API Example**:
+```javascript
+// Trigger send message action programmatically
+window.location.hash = '#webchat-send-message?webchat-widgetId=fedf2e7a-30fb-11f0-941a-ea112a20';
+```
+
+### Use Cases
+
+- **Email campaigns**: Include a "Chat with us" link that opens the widget with a message like "I'm interested in your services"
+- **Landing pages**: Add CTAs that open chat with context-specific messages
+- **Support pages**: Create links that open chat with pre-filled support questions
+- **Product pages**: Enable visitors to ask about specific products with pre-filled inquiries
+- **External navigation**: Link from external sites or apps directly to your chat with context
+
+### Troubleshooting Widget Actions
+
+**Widget not opening when link is clicked**:
+- Verify the widget is properly installed on the page
+- Check that the widget ID in the link matches your configured widget
+- Ensure the hash format is correct (starts with `#webchat-`)
+
+**Message not appearing**:
+- Verify you entered a message in the configuration
+- Check that you selected the correct action type (send vs prefill)
+- Clear browser cache and test again
+
+**Hash not being detected**:
+- Ensure the widget loads before the hash is set
+- Check browser console for JavaScript errors
+- Verify the page URL structure supports hash navigation
+
 ## Managing Conversations
 
 ### When AI Employee Hands Off to Humans

@@ -172,6 +172,48 @@ Installing your complimentary AI chat widget is straightforward:
 The widget will immediately start capturing leads and delivering them to your Conversations panel.
 </details>
 
+<details>
+<summary>How do I create a link that opens the web chat with a predefined message?</summary>
+
+You can create widget action links that automatically open the chat widget with predefined messages:
+
+1. Navigate to **Partner Center > Conversations > Settings > Web Chat Configuration > Widget Actions**
+2. Select an action type (**Prefill message** or **Send message**)
+3. Choose **Anchor link listener** as the implementation method
+4. Enter an optional message
+5. Copy the generated code (e.g., `#webchat-send-message?webchat-widgetId=...`)
+6. Use this code as an anchor link on your website, in emails, or as a redirect target
+
+The widget will automatically detect the hash and trigger the action when the page loads or when the hash changes.
+</details>
+
+<details>
+<summary>What's the difference between prefill message and send message actions?</summary>
+
+**Prefill message**: Opens the widget and pre-fills the message field with your predefined text. The visitor must click send to actually send the message. This gives visitors control over when to send the message and allows them to edit it if needed.
+
+**Send message**: Opens the widget and automatically sends the predefined message without requiring any user interaction. This is ideal for immediate engagement and when you want the message sent automatically.
+
+Choose **prefill message** when you want visitors to review or edit the message before sending. Choose **send message** when you want immediate, automatic engagement.
+</details>
+
+<details>
+<summary>Can I trigger web chat actions programmatically with JavaScript?</summary>
+
+Yes! You can use the **JavaScript API** implementation method to trigger widget actions programmatically:
+
+1. Navigate to **Partner Center > Conversations > Settings > Web Chat Configuration > Widget Actions**
+2. Select **JavaScript API** as the implementation method
+3. Configure your action and copy the provided code
+4. Use JavaScript to trigger the action, for example:
+
+```javascript
+window.location.hash = '#webchat-send-message?webchat-widgetId=your-widget-id';
+```
+
+This is useful for custom integrations, dynamic content, or triggering actions based on user interactions or conditions.
+</details>
+
 ### **Templates & automation**
 
 <details>
