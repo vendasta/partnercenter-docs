@@ -37,27 +37,48 @@ If an action can be performed via an API, it can likely become a custom capabili
 ### Step 1: Access Custom Capability Settings
 
 1. Navigate to <AISparkleIcon /> **AI** › **AI Workforce** in your Business App dashboard.
-2. Select the AI Employee you want to enhance (or create a new Custom AI Employee).
+2. Select the AI Employee you want to enhance (this can be a pre-built AI Employee like Chat Receptionist or Voice Receptionist, or a Custom AI Employee you've created).
 3. Click the **Configure** button.
 4. Use the **Capabilities** tab to view and manage all available capabilities.
 5. Scroll down to the **Custom Capabilities** section.
 6. Click **Add a capability** to begin.
 
-#### Creating Custom AI Employees
+:::tip Custom Capabilities Work Across All AI Employees
+Custom capabilities can be used with both pre-built AI Employees (Chat Receptionist, Voice Receptionist) and Custom AI Employees you create. This means you can build a custom capability once and use it across multiple AI Employees.
+:::
 
-You can now create entirely custom AI Employees with specialized capabilities:
+### Creating Custom AI Employees
 
-1. In the AI Workforce section, click **Create Custom AI Employee**
+You can create entirely custom AI Employees with specialized capabilities. Custom AI Employees use the same framework as pre-built AI Employees, giving you complete control over their configuration.
+
+**When to Create Custom AI Employees:**
+- You need an AI Employee specialized for a specific business function (e.g., job estimator, project manager)
+- Pre-built AI Employees don't fit your exact use case
+- You want complete control over conversation flows and responses
+- You need industry-specific knowledge and capabilities
+
+**Basic Steps:**
+1. In the AI Workforce section, click **Create** 
 2. Set up the basic profile (name, avatar, purpose)
-3. Configure communication channels (web chat, SMS, etc.)
-4. Add both built-in and custom capabilities
-5. Test your custom AI Employee before deploying
+3. Configure communication channels (web chat, SMS, phone, etc.)
+4. Add knowledge sources (website, documents, custom text)
+5. Add both built-in and custom capabilities
+6. Test your custom AI Employee before deploying
 
 **Benefits of Custom AI Employees:**
 - Specialized for specific business functions
 - Tailored conversation flows and responses
 - Industry-specific knowledge and capabilities
 - Complete control over behavior and appearance
+- Can be deployed across multiple channels (web chat, in-platform chat, automations)
+
+**Using Custom Capabilities with Custom AI Employees:**
+Custom capabilities work seamlessly with Custom AI Employees. You can:
+- Create custom capabilities specifically for your Custom AI Employee
+- Reuse custom capabilities across multiple AI Employees (both pre-built and custom)
+- Build specialized workflows that combine multiple custom capabilities
+
+For comprehensive guidance on creating Custom AI Employees, see the [Custom AI Employees guide](../ai-workforce/custom-ai-employees.md).
 
 ### Step 2: Define Basic Capability Information
 
