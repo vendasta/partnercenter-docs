@@ -51,7 +51,7 @@ _\*Defender Pro is not added to websites automatically but can be added free of 
 _\*\* Divi Plus is only added when needed, as determined by Vendasta Services’ website fulfillment team._
 
 **Premium Plugins**  
-For all premium plugins, you will need to purchase the license and provide the necessary information (ie. licenses) and credentials to our team for integration. Integration costs are subject to hourly fees. We will not purchase premium plugins on behalf of you/your clients.
+For all premium plugins, you will need to purchase the license and provide the necessary information (ie. licenses) and credentials to our team for integration. Integration costs are subject to hourly fees. We will not purchase premium plugins on your behalf.
 
 ##   
 **Plugin Caveats to Keep in Mind**
@@ -68,4 +68,4 @@ If there’s a plugin request that we haven’t used before, we need time to res
 Plugins interact with one another, and so while a plugin may be intended for one purpose, it may conflict with other plugins on a specific site and thus not be usable. This is the case whether you build a website with us or another vendor or website developer. Unfortunately, we may not know about the plugins' negative impact until they are installed.
 
 **Setting Expectations**  
-Understanding the above points and helping your clients understand these is crucial to setting strong expectations and allowing for conversations to explore alternative options in those scenarios to achieve their goals within their website project.
+Understanding the above points is crucial to setting strong expectations and allowing for conversations to explore alternative options in those scenarios to achieve your goals within your website project.
