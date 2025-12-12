@@ -45,8 +45,6 @@ _What is an update?_ It consists of one of the two:
 Please keep an eye out for our emails. Our team may request further clarification or need additional assistance (access to a link you shared, etc.). Our goal is to complete this work to your satisfaction in a timely manner, and your responsiveness is appreciated.
 
 **In the event that your website goes down:**
-
-Vendasta Services' Website Support Team has automations in place that will flag when websites go down. Our goal is to be aware of website downtime and get the website back up and running as soon as possible. However, there may be times when you notice an issue before we have been able to resolve the issue.  
   
 _If you notice your website is down, first:_
 

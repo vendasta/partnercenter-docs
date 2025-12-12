@@ -1,7 +1,7 @@
 ---
 title: Contacts
 description: Comprehensive contact management in Vendasta's CRM system including importing/exporting, campaign management, and contact field customization
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Contacts
@@ -28,15 +28,17 @@ The Contacts section eliminates manual processes through bulk import/export capa
 2. **Import existing contacts**
    - Use bulk import to add multiple contacts at once
    - Map fields during import process for accurate data transfer
+   - Contact will be deduplicated based on contact ID, external ID, email or phone number during the import
 
 3. **Set up contact fields**
    - Review default contact fields available
    - Customize fields based on your business requirements
 
-4. **Schedule your first campaign**
+4. **Send your first marketing email**
    - Select contacts for campaign targeting
    - Navigate to `Partner Center` > `Contacts` > Select contacts
    - Click `Actions` > `Add to Campaign`
+   - Learn more about [sending marketing emails](../../marketing/campaigns/send-marketing-emails.mdx)
 
 ## Importing and exporting contacts and companies
 
@@ -49,6 +51,30 @@ Before initiating an import:
 - Ensure you have permission to manage CRM contacts and companies
 - Confirm that each contact entry includes at least one of the following: First name, last name, email, or phone number
 - Ensure each company entry includes a company name
+- **Import limits**: Maximum file size is 5 MB, which typically allows for up to 35,000 contacts per import
+- Prepare your data with unique identifiers for bulk updates (Contact ID, External ID, or email)
+
+### Deduplication and matching logic
+
+The CRM uses intelligent deduplication to prevent duplicate records during import:
+
+**Contact matching hierarchy** (checked in this order):
+1. **Contact ID** - Exact match on existing CRM Contact ID (highest priority)
+2. **External ID** - Match on External ID field if provided
+3. **Email address** - Match on primary email address (most common method)
+4. **Phone number** - Match on primary phone number if email not available
+
+**How deduplication works:**
+- If a match is found using any of these criteria, the system will **update the existing contact** rather than create a duplicate
+- If no match is found, a **new contact record** is created
+- The system processes matches in the order listed above (Contact ID first, phone number last)
+- You can choose whether to update existing records or skip them during the import process
+
+**Best practices for deduplication:**
+- Include Contact ID in your CSV for guaranteed exact matches during bulk updates
+- Use consistent email formatting to ensure proper matching
+- Clean phone number formatting before import (remove spaces, dashes, parentheses)
+- Include External ID if you're syncing with another system
 
 ### How to import CRM records
 
@@ -56,11 +82,14 @@ To import records, follow these steps:
 
 **Step 1: Upload CSV**
 
-Click `Import` in the top right corner of the contact table. You'll be guided through a three-step process to complete the import.
+To import CRM records, go to CRM > Contacts in Partner Center. In the top-right corner of the Contacts table, click Import. This opens the Import History page, where all previous uploads are displayed.
 
-Upload a CSV file containing the data you want to import, then click `Next`. You can use the optional CSV template to ensure your file is correctly formatted.
+At the top of the page, you will see the option Import from a CSV with a button that says Start an import. Click this to begin.
 
+Upload your CSV file containing the contacts or companies you want to import. You may use the optional CSV template to ensure your file is formatted correctly. After uploading the file, click Next and follow the steps to map your fields and complete the import.
 ![CSV Upload Screen](./img/crm/contacts/csv-upload.jpg)
+
+![CSV Upload Screen](./img/crm/contacts/start-an-import.png)
 
 **Step 2: Map fields**
 
@@ -71,18 +100,42 @@ Upload a CSV file containing the data you want to import, then click `Next`. You
 
 **Step 3: Review import**
 
-- Review the records to be imported. You can choose to update existing contacts if a match is found based on ID, external ID, or email
+- Review the records to be imported and deduplication settings
+- **Choose update behavior**: 
+  - "Update existing records" - Overwrites existing contact data when matches are found
+  - "Skip existing records" - Leaves existing contacts unchanged, only imports new ones
 - After confirming your settings, click `Finish`
 
 After completing the import, you can return to the contact or company table to view the newly created records. Records added through this process will be created with the record source "Bulk import" and record source drill down 1 with the bulk import ID for easy reference.
 
+### Bulk update process
+
+To perform bulk updates of existing contacts:
+
+1. **Export existing contacts**
+   - Navigate to `CRM` > `Contacts`
+   - Select contacts you want to update (or use "Select All")
+   - Click `Export` to download current contact data
+
+2. **Prepare update file**
+   - **Important**: Keep the `Contact ID` column from your export - this ensures exact matching
+   - Modify only the fields you want to update
+   - Do not change Contact ID, Created Date, or other system fields
+   - Save as CSV format
+
+3. **Import with updates**
+   - Use the import process described above
+   - The system will match on Contact ID for precise updates
+   - Choose "Update existing records" in Step 3
+   - Select which fields to update to avoid overwriting important data
+
+**Pro tip**: For large bulk updates, you can export specific contact segments using filters, update only those records, and import them back for targeted updates.
+ 
 ### How to export contacts and companies
 
 To export Contacts or Companies from the CRM, click the checkbox in the top-left corner of the table, then click `select all...` > `Export`.
 
 ![Export Contacts Interface](./img/crm/contacts/export-contacts.jpg)
-
-**Import limitations**: The maximum file size is 5 MB, which typically allows for up to 35,000 contacts per import.
 
 ## Campaign management
 
@@ -174,6 +227,53 @@ Learn more about [file uploads](../file/crm-file-upload.mdx) and supported file 
 ## Contact field management
 
 The CRM provides comprehensive default contact fields that help you store and track important information about your contacts. These fields can be customized to match your specific business needs and ensure you capture all relevant prospect information throughout your sales process.
+
+### Creating custom contact fields
+
+Beyond the default contact fields, you can create custom fields to capture information specific to your business:
+
+**Available custom field types:**
+- **Text**: Single line or multi-line text for names, descriptions, or notes. You can also define a list of predefined options to maintain data integrity (e.g., "Hot", "Warm", "Cold" for lead temperature)
+- **Number**: Whole numbers like employee count, scores, or quantities
+- **Decimal number**: Numbers with decimal places for revenue, percentages, or precise measurements
+- **Email**: Additional email addresses for different purposes
+- **Phone number**: Additional phone numbers for various contact methods
+- **Date**: Important dates like contract renewal, follow-up dates, or anniversaries
+- **Date and time**: Specific timestamps for appointments, deadlines, or scheduled events
+- **True or false**: Yes/No or boolean data points for qualification criteria or status flags
+
+**How to create custom fields:**
+1. Navigate to `Administration` > `CRM objects`
+2. Select "Contact" from the sidebar
+3. Click "Create field"
+4. Choose the field type that matches your data needs
+5. Configure field properties:
+     - **Field label**: Display name shown in the interface
+     - **External Identifier**: System identifier (Cannot be changed after saved)
+     - **Description**: Additional information about the field's purpose
+     - **Read only**: Whether the field can be updated through the UI
+     - **Field options** (Text fields only): Define a list of predefined values to ensure data consistency
+
+**Custom field best practices:**
+- Plan your custom fields before creating them - external identifiers cannot be changed after saving
+- Use clear, descriptive labels that your team will understand
+- Group related fields logically (e.g., all qualification fields together)
+- For Text fields, use predefined options when you want consistent data entry (e.g., "Industry" field with options like "Healthcare", "Technology", "Retail")
+- Consider making important qualification fields required
+- Test custom fields with a few sample contacts before rolling out to your team
+- Document custom field purposes and usage for team training
+
+**Text field options examples:**
+- **Lead Source**: "Website", "Referral", "Cold Call", "Trade Show", "Social Media"
+- **Industry**: "Healthcare", "Technology", "Retail", "Manufacturing", "Financial Services"
+- **Company Size**: "1-10 employees", "11-50 employees", "51-200 employees", "200+ employees"
+- **Lead Temperature**: "Hot", "Warm", "Cold"
+- **Decision Timeline**: "Immediate", "1-3 months", "3-6 months", "6+ months"
+
+**Field visibility:**
+- Custom fields appear in contact records alongside default fields
+- Custom fields are available in imports/exports, reporting, and automation workflows
+- All custom fields are searchable and can be used in list filtering
 
 ## Frequently asked questions
 
