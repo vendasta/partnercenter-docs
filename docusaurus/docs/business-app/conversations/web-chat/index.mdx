@@ -82,6 +82,39 @@ Choose your installation method in the **Installation** section:
 
 **Test Installation**: Always verify the widget appears and functions correctly on the live site
 
+## Widget Types and Widget Actions
+
+### Floating chat widget
+This is the default method of adding the AI Receptionist to your website. It places a floating button on the bottom left or right corner of your website that allows users to start chatting with the AI Employee.
+
+### Embedded Chat Widget
+This is a more advanced version of the chat widget that places a chat box anywhere you want on your website. To make this work, you will need to add a placeholder space on your website (a container) and load the embedded chat widget code into that space. 
+
+- The code can be copied from the web chat configuration page
+- Make sure to give your container enough height to properly display the chat (eg. 400-600)
+- Test on both desktop and mobile
+
+### Widget actions
+When a chat widget is loaded onto a website, you can add widget actions--links that will populate the chat with a message on behalf of your user. These are great when you want to help your users engage with your AI Receptionist in a specific way. Eg. Clicking a button that pre-fills "I want to book an appointment" so your AI Receptionist can start guiding a user along that particular workflow.
+
+Under the widget actions section of web chat configuration, you will find the types of actions, implementation options, and instructions for using the code that is generated based on your selections which you can then copy and add to your site. Here is a breakdown of the configuration options:
+
+#### Select an action
+1. **Prefill message** - Use this option if you want to suggest a message but don't want to force your users to send it.
+2. **Send message** - Use this option if you want the message sent to the AI employee; useful for initiating specific workflows.
+
+#### Select an implementation method
+1. **Anchor link listener** - Triggers the action via a URL. Best for direct links, email campaigns, or navigating to a page with the web chat from an external source.
+2. **JavaScript API** - Triggers the action programatically. Best for dynamic interactions, custom triggers, or on-page buttons.
+
+#### Enter a message
+Enter a message that will be used in selected action when the link is clicked. If left empty, the action will open the Web Chat only.
+
+#### Code
+The code changes depending on the action, implementation, and message set. You can configure these multiple times to create multiple snippets of code and have many different actions. Instructions for using the code vary depending on implementation method.
+1. **For anchor link listener:** Use the code in a URL as an anchor link or redirect target. The widget will automatically detect the hash and trigger the action when the page loads or when the hash changes.
+2. **For JavaScript API:** Use the code in your button's onClick handler or any JavaScript event. The webchatAPI is automatically available once the widget script loads.
+
 ## Managing Conversations
 
 ### When AI Employee Hands Off to Humans
