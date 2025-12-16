@@ -89,91 +89,38 @@ Choose your installation method in the **Installation** section:
 
 **Test Installation**: Always verify the widget appears and functions correctly on the live site
 
-## Widget Actions
+## Widget Types and Widget Actions
 
-Widget actions allow you to create direct links that automatically open the web chat widget with predefined messages. This feature is perfect for email campaigns, landing pages, support pages, or any scenario where you want to direct visitors to start a chat with a specific message.
+### Floating chat widget
+This is the default method of adding the AI Receptionist to your website. It places a floating button on the bottom left or right corner of your website that allows users to start chatting with the AI Employee.
 
-:::note
-The web chat widget must be installed on the page for these actions to work.
-:::
+### Embedded Chat Widget
+This is a more advanced version of the chat widget that places a chat box anywhere you want on your website. To make this work, you will need to add a placeholder space on your website (a container) and load the embedded chat widget code into that space. 
 
-### Action Types
+- The code can be copied from the web chat configuration page
+- Make sure to give your container enough height to properly display the chat (eg. 400-600)
+- Test on both desktop and mobile
 
-There are two types of widget actions you can configure:
+### Widget actions
+When a chat widget is loaded onto a website, you can add widget actions--links that will populate the chat with a message on behalf of your user. These are great when you want to help your users engage with your AI Receptionist in a specific way. Eg. Clicking a button that pre-fills "I want to book an appointment" so your AI Receptionist can start guiding a user along that particular workflow.
 
-- **Prefill message**: Opens the widget and pre-fills the message field with your predefined text. The visitor must click Send to actually send the message. Use this when you want to give visitors control over when to send the message.
-- **Send message**: Opens the widget and automatically sends the predefined message without requiring any user interaction. Use this for immediate engagement and when you want the message sent automatically.
+Under the widget actions section of web chat configuration, you will find the types of actions, implementation options, and instructions for using the code that is generated based on your selections which you can then copy and add to your site. Here is a breakdown of the configuration options:
 
-### Implementation methods
+#### Select an action
+1. **Prefill message** - Use this option if you want to suggest a message but don't want to force your users to send it.
+2. **Send message** - Use this option if you want the message sent to the AI employee; useful for initiating specific workflows.
 
-You can trigger widget actions using two methods:
+#### Select an implementation method
+1. **Anchor link listener** - Triggers the action via a URL. Best for direct links, email campaigns, or navigating to a page with the web chat from an external source.
+2. **JavaScript API** - Triggers the action programatically. Best for dynamic interactions, custom triggers, or on-page buttons.
 
-**Anchor link listener**:
-- Best for: Direct links, email campaigns, navigation from external sources
-- Uses URL hash format that the widget automatically detects
-- Format: `#webchat-send-message?webchat-widgetId={widget-id}` or `#webchat-prefill-message?webchat-widgetId={widget-id}`
-- The widget detects the hash when the page loads or when the hash changes
-- Example: `https://example.com#webchat-send-message?webchat-widgetId=fedf2e7a-30fb-11f0-941a-ea112a20`
+#### Enter a message
+Enter a message that will be used in selected action when the link is clicked. If left empty, the action will open the Web Chat only.
 
-**JavaScript API**:
-- Best for: Custom integrations, dynamic content, programmatic triggering
-- Allows you to trigger actions programmatically from your own JavaScript code
-- Useful when you need to trigger actions based on user interactions or dynamic conditions
-
-### Configuration steps
-
-![Widget Actions configuration interface](../img/inbox/widget-actions-configuration.png)
-
-1. Navigate to **Business App > Conversations AI > Conversations AI Settings > Configure Web Chat > Widget Actions**
-2. **Select an action**: Choose **Prefill message** or **Send message**
-3. **Select an implementation method**: Choose **Anchor link listener** or **JavaScript API**
-4. **Enter a message** (optional): Type the message that will be used when the action is triggered. If left empty, the action will open the Web Chat only.
-5. **Copy the generated code**: Use the provided code as an anchor link or redirect target
-
-The generated code will look like: `#webchat-send-message?webchat-widgetId=fedf2e7a-30fb-11f0-941a-ea112a20`
-
-### Code examples
-
-**Anchor Link Example** (Send message):
-```html
-<a href="#webchat-send-message?webchat-widgetId=fedf2e7a-30fb-11f0-941a-ea112a20">Chat with us about pricing</a>
-```
-
-**Anchor Link Example** (Prefill message):
-```html
-<a href="#webchat-prefill-message?webchat-widgetId=fedf2e7a-30fb-11f0-941a-ea112a20">Ask about our services</a>
-```
-
-**JavaScript API Example**:
-```javascript
-// Trigger send message action programmatically
-window.location.hash = '#webchat-send-message?webchat-widgetId=fedf2e7a-30fb-11f0-941a-ea112a20';
-```
-
-### Use cases
-
-- **Email campaigns**: Include a "Chat with us" link that opens the widget with a message like "I'm interested in your services"
-- **Landing pages**: Add CTAs that open chat with context-specific messages
-- **Support pages**: Create links that open chat with pre-filled support questions
-- **Product pages**: Enable visitors to ask about specific products with pre-filled inquiries
-- **External navigation**: Link from external sites or apps directly to your chat with context
-
-### Troubleshooting widget actions
-
-**Widget not opening when link is clicked**:
-- Verify the widget is properly installed on the page
-- Check that the widget ID in the link matches your configured widget
-- Ensure the hash format is correct (starts with `#webchat-`)
-
-**Message not appearing**:
-- Verify you entered a message in the configuration
-- Check that you selected the correct action type (send vs prefill)
-- Clear browser cache and test again
-
-**Hash not being detected**:
-- Ensure the widget loads before the hash is set
-- Check browser console for JavaScript errors
-- Verify the page URL structure supports hash navigation
+#### Code
+The code changes depending on the action, implementation, and message set. You can configure these multiple times to create multiple snippets of code and have many different actions. Instructions for using the code vary depending on implementation method.
+1. **For anchor link listener:** Use the code in a URL as an anchor link or redirect target. The widget will automatically detect the hash and trigger the action when the page loads or when the hash changes.
+2. **For JavaScript API:** Use the code in your button's onClick handler or any JavaScript event. The webchatAPI is automatically available once the widget script loads.
 
 ## Managing Conversations
 
