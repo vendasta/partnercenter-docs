@@ -101,9 +101,7 @@ MatchCraft advertising campaigns can be run across a diverse range of platforms,
 <details>
   <summary>Do you support Facebook Marketplace inventory ads?</summary>
 
-  Yes. While Facebook Marketplace doesn't have a standalone ad type, Marketplace delivery is supported when we use a product catalog (Commerce Manager) and run an Advantage+ Catalog / Dynamic Ads Sales campaign. If Marketplace is enabled as a sales channel in your catalog, Meta will automatically deliver products to eligible placements—including Marketplace, Facebook Feed, and Instagram Feed. 
-  
-</details>
+  Yes. While Facebook Marketplace doesn't have a standalone ad type, Marketplace delivery is supported when we use a product catalog (Commerce Manager) and run an Advantage+ Catalog / Dynamic Ads Sales campaign. If Marketplace is enabled as a sales channel in your catalog, Meta will automatically deliver products to eligible placements—including Marketplace, Facebook Feed, and Instagram Feed. </details>
 
 <details>
   <summary>What do we manage for Facebook Marketplace campaigns?</summary>
