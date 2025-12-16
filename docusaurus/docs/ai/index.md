@@ -3,7 +3,7 @@ title: AI Overview
 description: Configure AI employees and capabilities to automate customer interactions, enhance sales processes, and provide 24/7 support.
 sidebar_position: 11
 tags: [ai, ai-workforce, ai-capabilities, automation, partner-center]
-keywords: [AI employees, AI workforce, AI capabilities, chat receptionist, voice receptionist, sales assistant, knowledge base]
+keywords: [AI employees, AI workforce, AI capabilities, chat receptionist, voice receptionist, sales assistant, custom AI employees, knowledge base]
 ---
 
 Vendasta's AI platform combines unique business data with AI to automate marketing, sales, and operations — making it easier than ever to attract, convert, and retain customers with less manual work.
@@ -12,7 +12,7 @@ Vendasta's AI platform combines unique business data with AI to automate marketi
 
 Vendasta's AI platform consists of three main components that work together:
 
-- **[AI Workforce](./ai-workforce/)** — Configure AI employees (Chat Receptionist, Voice Receptionist, Sales Assistant) to interact with customers across multiple channels
+- **[AI Workforce](./ai-workforce/)** — Configure AI employees (Chat Receptionist, Voice Receptionist, Sales Assistant, or create Custom AI Employees) to interact with customers across multiple channels
 - **[AI Capabilities](./ai-capabilities/)** — Define specialized skills and behaviors that tell your AI employees how to act and when to take specific actions
 - **[Knowledge Base](./knowledge-base/)** — Provide factual information your AI employees can reference when answering customer questions
 
