@@ -486,3 +486,35 @@ div[class*="language-"] pre {
   word-break: break-word;
   overflow-wrap: anywhere;
 }
+
+/* Normalize Table of Contents styling to match default Docusaurus */
+/* Ensure all TOC links have uniform font-weight (normal, not bold) */
+/* Target all possible TOC class variations used by Docusaurus/Infima */
+.table-of-contents a,
+.table-of-contents__link,
+.table-of-contents li > a,
+[class*="table-of-contents"] a {
+  font-weight: normal !important;
+}
+
+/* Ensure nested TOC items also have normal font-weight */
+.table-of-contents ul a,
+.table-of-contents li ul a,
+.table-of-contents ul ul a,
+[class*="table-of-contents"] ul a {
+  font-weight: normal !important;
+}
+
+/* Remove any bold styling from TOC headings that might be inherited from markdown */
+.table-of-contents strong,
+.table-of-contents b,
+.table-of-contents a strong,
+.table-of-contents a b {
+  font-weight: normal !important;
+}
+
+/* Target the TOC body wrapper if it exists */
+.tocBody .table-of-contents a,
+.tocBody [class*="table-of-contents"] a {
+  font-weight: normal !important;
+}
