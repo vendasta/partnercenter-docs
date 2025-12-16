@@ -239,5 +239,6 @@ For any other channel that the chat receptionist can respond to, the AI is confi
 
 :::info 
 This only applies to conversations where messages have been sent from Conversations AI. For example, the chat receptionist would respond instantly to an SMS message from a new contact if it was assigned to monitor the SMS channel.
+:::
 
 </details>
