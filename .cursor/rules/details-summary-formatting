@@ -1,0 +1,13 @@
+---
+description: "Keep <details> FAQ sections MDX-safe by enforcing spacing around <summary> and </details> tags."
+globs: ["docusaurus/docs/**/*.md", "docusaurus/docs/**/*.mdx"]
+---
+
+When editing FAQ or expandable sections:
+
+1) Place `<details>` and `</details>` on their own lines.
+2) Insert a blank line between the `<summary>...</summary>` line and the body text.
+3) Insert a blank line before `</details>`.
+4) Avoid nesting block-level Markdown on the same line as HTML tags.
+
+This spacing keeps MDX compilation stable and prevents the end-tag-mismatch error from missing closing tags.
