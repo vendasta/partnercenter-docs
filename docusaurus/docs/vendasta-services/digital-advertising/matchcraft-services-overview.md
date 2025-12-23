@@ -298,3 +298,14 @@ Please upload all attachments in the attachments section within the fulfillment 
 
 We do not provide direct access to the Ad Manager accounts used for advertising on platforms such as Google, Microsoft, and Meta. These accounts are owned and managed by our team to maintain compliance, performance optimization, and operational efficiency. While we do not grant direct access to our managed accounts, we will provide historical reporting and campaign setup details to help you rebuild campaigns independently in the future.
 </details>
+
+<details>
+
+<summary>What products are required for MatchCraft advertising Services?</summary>
+
+The required products depend on the MatchCraft advertising solution being used:
+
+- **MatchCraft Express Ads:** Advertising Intelligence  
+- **MatchCraft Managed Ads Campaign:** Advertising Intelligence  
+- **MatchCraft Managed AI AdVantage:** Advertising Intelligence, Conversations AI | Pro
+</details>
