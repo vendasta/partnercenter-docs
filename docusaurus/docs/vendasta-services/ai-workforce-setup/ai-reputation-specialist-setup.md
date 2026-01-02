@@ -6,25 +6,26 @@ description: "An overview of the AI Reputation Specialist Setup service, detaili
 
 **Note:** Reputation AI Premium is required to receive this service.
 
+The AI Reputation Specialist Setup is a done-for-you service where our experts configure, train, and launch the AI Reputation Specialist for your business. Our team handles all the technical configuration and customization, tailoring the setup to your specific business needs. The service focuses on configuring automated review responses, requesting new reviews, and managing reputation workflows.
+
 ## What's included?
 
 ### One-time setup
 
-Our team will provide an onboarding and training call to help you understand how the AI Reputation Specialist works and how to customize it for your business. We will configure and train your AI Reputation Specialist using your website content, branding guidelines, and examples of past review responses to ensure it responds authentically and on-brand.
-
-We will set up automated review requests via SMS and email that can be personalized to match your brand, tone, and messaging. These templates can request reviews directly on Google, Facebook, or another preferred platform. We can also build these templates using Net Promoter Score (NPS) to help you better understand customer sentiment before asking for a public review.
-
-Your AI Reputation Specialist will be enabled to automatically respond to reviews on Google and Facebook using your branded tone and custom instructions. The AI is trained to respond differently to positive and negative reviews—celebrating 5-star reviews with warm, appreciative responses while handling negative reviews with empathy and professionalism, inviting conversations offline to limit public exposure.
-
-We can install a review display widget on your website to showcase your reviews. We will also align your brand voice, templates, and messaging across all review response and request communications to ensure consistency.
+* Onboarding and training call
+* Configure & train the AI Reputation Specialist
+* Set up automated review requests (SMS + email)
+* Enable automated AI-powered review responses
+* Install review display widgets
+* Align brand voice, templates, and messaging
 
 ### Monthly service
 
-With monthly support, we make ongoing refinements to your AI Reputation Specialist as your business evolves. This includes adjustments to prompts, automations, and any AI employee feature updates to improve performance, accuracy, and consistency over time.
+* Adjustments to prompts, automations, and any AI employee feature updates
+* Responding to platforms outside of Google & Facebook*
+* Negative review approval workflow
 
-Our team can manually respond to reviews on additional platforms beyond Google and Facebook, helping ensure your online presence stays consistent and well-managed. You may select up to five external platforms for us to support on your behalf, such as Yelp, YellowPages, Better Business Bureau, TripAdvisor, OpenTable, CarGuru, DealerRater, Expedia, CarFax, Zillow, and more. **Please note:** At this time, we're unable to respond to reviews on Indeed or Glassdoor.
-
-If you'd like, we can set up a negative review approval workflow so you can review responses before they're published. Once a response is drafted, you'll receive a notification to review it, and if we don't hear back within 24 hours, the response will be posted automatically to ensure timely engagement.
+**Please note:** For reviews outside of Google and Facebook, you may select up to five external platforms for us to support on your behalf, such as Yelp, YellowPages, Better Business Bureau, TripAdvisor, OpenTable, CarGuru, DealerRater, Expedia, CarFax, Zillow, and more. At this time, we're unable to respond to reviews on Indeed or Glassdoor.
 
 ## The setup process
 
@@ -63,6 +64,22 @@ This call will be used to look at the review responses generated, determine what
 ### 5. Monthly support
 
 With monthly support, we make ongoing refinements to your AI Reputation Specialist as your business evolves. This includes updates to prompts, branding, automations, templates, integrations, and review management beyond Google and Facebook, with an optional approval workflow for negative reviews.
+
+For reviews outside of Google and Facebook, you may select up to five external platforms below for us to support on your behalf. 
+
+* Yelp
+* YellowPages
+* Better Business Bureau
+* TripAdvisor
+* OpenTable
+* CarGuru
+* DealerRater
+* Expedia
+* CarFax
+* Zillow
+* and more. 
+
+**Please note:** At this time, we're unable to respond to reviews on Indeed or Glassdoor.
 
 ## Frequently asked questions (FAQs)
 
