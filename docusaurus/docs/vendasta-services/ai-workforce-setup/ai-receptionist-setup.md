@@ -84,6 +84,16 @@ We do not currently offer custom automation creation. The setup includes a stand
 
 <summary> Can the AI Receptionist create a quote or book an appointment?</summary>
 
-Using the knowledge base, we can give the chatbot the information it needs to create a basic quote or estimate. If you use the platform's calendar, the AI Receptionist can book
+Using the knowledge base, we can give the chatbot the information it needs to create a basic quote or estimate. If you use the platform's calendar, the AI Receptionist can book appointments on your behalf.
+
+</details>
+
+<details>
+
+<summary> Is the AI Receptionist HIPAA compliant?</summary>
+
+The AI Receptionist is not HIPAA compliant, which means it should not handle **PHI**. PHI (Protected Health Information) is any personal information about someone's health that can identify them, such as medical conditions, treatments, test results, insurance details, or a name combined with a medical question.
+
+The AI Receptionist is HIPAA-pursuant, which means it can be used in a way that supports HIPAA rules **as long as no PHI is shared**. It's safe to use for simple tasks like answering general questions, sharing office hours, or helping book appointments without medical details. Healthcare organizations are responsible for making sure the AI is used this way.
 
 </details>
