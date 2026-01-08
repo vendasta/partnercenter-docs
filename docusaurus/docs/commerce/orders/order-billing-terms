@@ -1,0 +1,98 @@
+---
+title: Billing Terms – Line Item Scheduling
+sidebar_label: Billing Terms
+description: Configure start dates and renewal limits on line items to automate product activation and billing.
+tags: [billing, payments, orders, retail-subscriptions]
+keywords: [billing terms, start date, end date, contract duration, line item, retail subscriptions]
+---
+
+## What are Billing Terms?
+
+Billing terms let you define the start date and number of renewals for individual line items in an order. This ensures products are automatically activated on the scheduled start date and deactivated at the end of their defined term.
+
+Billing terms also integrate with **Vendasta Payments**, enabling automatic collection and cessation of retail payments. This removes the need to manually schedule activations, reminders, or multiple orders.
+
+## What You Can Do with Billing Terms
+
+- Schedule product activation for a future date
+- Set fixed durations by limiting the number of renewals
+- Automate billing and deactivation
+- View billing schedules through the **Retail Subscriptions** table
+
+## How to Set Up
+
+You can set billing terms on a line item in two ways:
+
+### Option 1: Use the `Automatically Renews` Hyperlink
+
+1. In an order, click the blue `Automatically Renews` hyperlink below the product name.
+2. A modal will open with configuration options for start date and renewals.
+
+### Option 2: Use the Kebab Menu
+
+1. Click the kebab icon (`⋮`) on the line item.
+2. Select `Edit Billing Terms` from the menu.
+3. The same modal will open to adjust billing terms.
+
+
+Once applied, billing terms appear under the line item.
+
+## What Happens When You Set Billing Terms?
+
+### Setting a Start Date on a Line Item
+
+- The product will **not activate** until the defined start date.
+- When the order is processed:
+  - Retail subscriptions are created in a **pending** state.
+  - Activation occurs automatically on the scheduled date.
+
+#### If using Vendasta Payments:
+
+- The product will be charged or invoiced (based on account billing settings).
+- The product will activate.
+
+#### If **not** using Vendasta Payments:
+
+- The product will still activate, but no automatic billing occurs.
+
+### Setting a Fixed Number of Renewals (End Date)
+
+- A set number of renewals defines the **end date** of a product.
+- After the final renewal:
+  - The product is deactivated.
+  - Retail subscriptions end.
+  - All associated billing stops (if applicable).
+
+## FAQs
+
+<details>
+<summary>When do other items on an order become active if there is no set date?</summary>
+
+Any items without a set start date will activate upon the order’s **contract start date** or at the time the order is processed.
+</details>
+
+<details>
+<summary>Can I change a start date after the order is processed?</summary>
+
+No, the order cannot be edited after processing. However, you can **unschedule the activation** and submit a new order with updated billing terms.
+</details>
+
+<details>
+<summary>What happens to products on their end date?</summary>
+
+The product is **deactivated**. It becomes inaccessible, and data associated with it is removed.
+</details>
+
+<details>
+<summary>How can I see when items are scheduled to start or end?</summary>
+
+Use **Retail Subscriptions**. The Subscriptions table shows scheduled activations and end dates across all accounts. This is also visible on the **Products** and **Retail Subscriptions** tabs within each account.
+</details>
+
+<details>
+<summary>What is a contract start date and duration, and how are they different?</summary>
+
+- **Contract start date** schedules when an order—and all its items—begin.
+- **Contract duration** is for internal record keeping and does **not** affect product deactivation.
+- You can create automations to notify when an order nears its contract expiry.
+</details>

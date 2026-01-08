@@ -1,0 +1,113 @@
+---
+title: Working with Packages – Orders & Subscriptions
+sidebar_label: Working with Packages
+description: Create, price, and manage packages in orders and retail subscriptions, including visibility and multifrequency support.
+tags: [orders, packages, subscriptions, pricing]
+keywords: [package pricing, add item to package, package visibility, multifrequency, setup fee]
+---
+
+## What is working with packages?
+
+Packages allow you to bundle multiple products or services together under a single price within an order or retail subscription. Each item in the package retains its own billing frequency, while pricing is automatically distributed based on item value and frequency.
+
+## Why is working with packages important?
+
+Packages simplify selling and invoicing by grouping related items, enabling flexible pricing strategies, and offering customizable visibility for your customers. They support multifrequency billing, reducing the need for multiple separate orders.
+
+## What you can do with packages
+
+- Automatically distribute pricing across package items
+- Adjust package and item-level pricing
+- Manage setup fees within packages
+- Add or remove items from packages
+- Set customer visibility for package contents and prices
+- Create packages with mixed billing frequencies
+
+## How to set up
+
+### Add an item to a package
+
+1. In the order or retail subscription, open the kebab menu on the item line.
+2. Hover over `Add to Package`.
+3. Select the desired package from the list.
+4. Confirm the addition.
+
+The package total will increase by the item's retail total.
+
+### Remove an item from a package
+
+1. Select the kebab menu on the line item.
+2. Choose `Remove Item`.
+
+The item will be removed from both the order and the package. The package total will decrease by that item's retail value.
+
+### Create a new package
+
+1. Open the kebab menu on an item line.
+2. Hover over `Add to Package`.
+3. Select `+ Create new package`.
+4. In the modal, enter a name and set the pricing.
+5. Use the `Add to Package` flow to include additional items.
+
+### Change item pricing
+
+- Click the blue pricing input on any item in the package.
+
+The package total will update to reflect the new combined price of all items.
+
+### Change package pricing
+
+- Click the blue pricing input on the package total.
+
+All item prices will be recalculated using a weighted distribution model based on each item's original retail value.
+
+## Customize package details
+
+To rename a package or adjust visibility:
+
+1. Open the `kebab` menu on the package line.
+2. Select `Edit package details`.
+3. Update the name and choose from the following visibility settings:
+
+   - `Customers cannot see contents or prices`
+   - `Customers can see contents but not prices`
+   - `Customers can see contents and prices`
+
+By default, package contents are hidden. Customers will see only the package name and total price.
+
+Note:
+Changes to package details affect only the current order or new retail subscription. They do not impact versions of the package sold to other customers.
+
+## Multifrequency support in packages
+
+Packages support mixed billing frequencies, allowing you to include:
+
+- Monthly items
+- Yearly items
+- One-time billed items
+
+Retail subscriptions will automatically reflect each item’s respective billing cycle.
+
+## Automatic pricing logic
+
+- Package pricing is distributed across all items based on their retail price and billing frequency.
+- If a setup fee is present, it will be allocated to any one-time billed items in the package.
+- If no one-time billed items exist, the setup fee will apply to the first item in the package.
+
+## FAQs
+
+<details>
+<summary>How are setup fees handled in packages?</summary>
+Setup fees are distributed across any one-time billed items in the package. If none exist, the fee is applied to the first item.
+</details>
+
+<details>
+<summary>Can I change a package name after it's been created?</summary>
+Yes. Use the `Edit package details` option in the package's `Options` menu. This change only applies to the current order or subscription.
+</details>
+
+<details>
+<summary>Will package changes affect other customers?</summary>
+No. Edits to a package in one order or subscription do not affect other instances of that package.
+</details>
+
