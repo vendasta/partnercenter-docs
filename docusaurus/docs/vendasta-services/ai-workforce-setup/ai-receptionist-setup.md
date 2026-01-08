@@ -82,6 +82,14 @@ We do not currently offer custom automation creation. The setup includes a stand
 
 <details>
 
+<summary> Is there a simpler option for web chat installation?</summary>
+
+If you are looking for a simple code installation and have our [Website Support](../websites/vendasta-services-website-support.md) service active, our Website Support team can install the web chat code. This does not offer a full end-to-end configuration of the web chat, and is only for basic code installation.
+
+</details>
+
+<details>
+
 <summary> Can the AI Receptionist create a quote or book an appointment?</summary>
 
 Using the knowledge base, we can give the chatbot the information it needs to create a basic quote or estimate. If you use the platform's calendar, the AI Receptionist can book appointments on your behalf.

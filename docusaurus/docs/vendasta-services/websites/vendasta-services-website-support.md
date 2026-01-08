@@ -23,6 +23,11 @@ Website Support is a fulfillment service offered by Vendasta Services for WordPr
 *   Updates to plugins and themes upon request
 *   Health checks to website upon request
 *   Uptime monitoring and urgent support if your website goes offline
+*   Installation of [Conversations AI Standard](https://docs.vendasta.com/business-app/conversations/conversations-ai/) web chat code (if Conversations AI Standard is active on the account)
+
+**Conversations AI Standard web chat installation**
+
+If you have [Conversations AI Standard](https://docs.vendasta.com/business-app/conversations/conversations-ai/) active on the account, our Website Support team can install the web chat code on your website. This installation includes adding the web chat code to your site but does not offer a full end-to-end configuration of the web chat. If you are looking for more advanced features, such as full brand configuration, SMS messaging, or voice calls, please explore our [AI Receptionist Setup & Support](../ai-workforce-setup/ai-receptionist-setup.md) service.
 
 **How to Submit a Website Support Request to Vendasta Services:**
 
@@ -131,5 +136,13 @@ There is no control over when Google indexes a website. That said, we include a 
 Also note that you do not need every page of your website indexed in order to be found by Google. So long as your homepage is indexed, then it can start to populate into search results.
 
 If you have received an email from Google regarding an indexing error, forward it to our team at [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com) and we can investigate and take any appropriate actions from there.
+
+</details>
+
+<details>
+
+<summary>Can you install Conversations AI Standard web chat on my website?</summary>
+
+Yes! If you have [Conversations AI Standard](https://docs.vendasta.com/business-app/conversations/conversations-ai/) active on the account, our Website Support team can install the web chat code on your website. This installation includes adding the web chat code to your site but does not offer a full end-to-end configuration of the web chat. If your client is looking for more advanced features, such as voice and SMS messaging, please explore our [AI Receptionist Setup & Support](../ai-workforce-setup/ai-receptionist-setup.md) service.
 
 </details>
