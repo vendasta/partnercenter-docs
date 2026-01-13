@@ -1,28 +1,29 @@
 ---
 title: "Accelerated Templated Website: Service Expectations"
 sidebar_label: "Accelerated Templated Website"
-description: "As a valued partner, we understand how important it is to provide your clients with fast, professional, and functional websites. With our Duda Website offering"
+sidebar_position: 3
+description: "We understand how important it is to provide your clients with fast, professional, and functional websites. With our Duda Website offering"
 ---
 
-As a valued partner, we understand how important it is to provide your clients with fast, professional, and functional websites. With our Duda Website offerings, you have access to two powerful solutions: [**Accelerated Templated Website**](https://partners.vendasta.com/marketplace/products/MP-JPG6QNZHBQPKRX7KZ28XPM8X5BRZHJ3W) and [**Accelerated Templated Website Plus**](https://partners.vendasta.com/marketplace/products/MP-JPG6QNZHBQPKRX7KZ28XPM8X5BRZHJ3W/addon/A-DCFRQP8VHB). Whether your clients are just starting out or need advanced capabilities, this guide will help you understand each option and how they can meet your client’s unique needs.
+We understand how important it is to provide you with fast, professional, and functional websites. With our Duda Website offerings, you have access to two powerful solutions: [**Accelerated Templated Website**](https://partners.vendasta.com/marketplace/products/MP-JPG6QNZHBQPKRX7KZ28XPM8X5BRZHJ3W) and [**Accelerated Templated Website Plus**](https://partners.vendasta.com/marketplace/products/MP-JPG6QNZHBQPKRX7KZ28XPM8X5BRZHJ3W/addon/A-DCFRQP8VHB). Whether you are just starting out or need advanced capabilities, this guide will help you understand each option and how they can meet your unique needs.
 
 ## Key Features:
 
-*   **10-page website based on Duda templates** Build a professional website for your clients using the powerful Duda platform. Each site includes 10 pages, giving businesses the space they need to showcase their services, products, or company information.
+*   **10-page website based on Duda templates** Build a professional website using the powerful Duda platform. Each site includes 10 pages, giving you the space you need to showcase services, products, or company information.
 
-* **Mix & match two templates** Customize the site further by mixing two Duda templates to get the perfect look and feel for your client’s brand. This offers greater flexibility in achieving a unique design that stands out.
+* **Mix & match two templates** Customize the site further by mixing two Duda templates to get the perfect look and feel for your brand. This offers greater flexibility in achieving a unique design that stands out.
 
 *   **Onboarding call with our design team** Every client gets personal attention with an onboarding call with our design team. During this call, we gather information about their goals, preferences, and business needs to ensure the final product reflects their vision.
 
 *   **AI-written web copy for 10 pages** Save time with AI-powered copywriting. Our team fills in all 10 pages with relevant, professional content, which can be customized further based on client input.
 
-*   **Use of stock images where needed** If you don’t have images our team can use, our service includes the use of high-quality stock images to make your client’s website stand out.
+*   **Use of stock images where needed** If you don't have images our team can use, our service includes the use of high-quality stock images to make your website stand out.
 
 *   **One major round of edits** Clients can provide feedback after the initial design, and we’ll accommodate one major round of edits to ensure the website meets their expectations.
 
-*   **Annual redesign for up to 10 pages** Keep your clients' websites up to date with trends and business needs. Each year, we offer a redesign for up to 10 pages, allowing businesses to keep their online presence fresh. It’s an ideal solution for businesses that want to keep their site looking modern without the cost of a full rebuild.
+*   **Annual redesign for up to 10 pages** Keep your website up to date with trends and business needs. Each year, we offer a redesign for up to 10 pages, allowing you to keep your online presence fresh. It's an ideal solution for businesses that want to keep their site looking modern without the cost of a full rebuild.
 
-*   **Hosting, support & maintenance** With **Duda Website** and **Duda Website Plus**, we’ve included hosting & support. As part of this, your clients get **monthly minor edits** to text and images, ensuring their site remains current. Our technical support team is also available for any issues that may arise.
+*   **Hosting, support & maintenance** With **Duda Website** and **Duda Website Plus**, we've included hosting & support. As part of this, you get **monthly minor edits** to text and images, ensuring your site remains current. Our technical support team is also available for any issues that may arise.
 
 ## Accelerated Templated Website Plus: Ecommerce and Advanced Functionality
 
@@ -34,11 +35,11 @@ For clients looking to add more advanced features, **Accelerated Templated Websi
 
 *   **Booking links and appointment scheduling** Ideal for service-based businesses, Accelerated Templated Website Plus includes booking functionality, allowing customers to schedule appointments directly on the website. This feature streamlines the client’s business operations and improves the customer experience.
 
-*   **Custom forms** Need more than the standard contact form? Accelerated Templated Website Plus allows you to create fully customized forms tailored to your clients’ specific needs, helping them capture leads, collect feedback, or process information more efficiently.
+*   **Custom forms** Need more than the standard contact form? Accelerated Templated Website Plus allows you to create fully customized forms tailored to your specific needs, helping you capture leads, collect feedback, or process information more efficiently.
 
 *   **Cookie consent** Ensuring compliance with privacy regulations, Accelerated Templated Website Plus includes cookie consent functionality, allowing businesses to inform and get consent from visitors regarding data collection.
 
-*   **And over 60 design enhancements!** Accelerated Templated Website Plus comes packed with over 60 design features such as animated number counters, 3D cards, countdown bars, age verification, feeds, charts, graphs, audio players, restaurant menu flip cards, product blobs and more. These elements allow your clients to create a truly engaging and interactive experience for their visitors. For more information on exactly what features are available, please reach out!
+*   **And over 60 design enhancements!** Accelerated Templated Website Plus comes packed with over 60 design features such as animated number counters, 3D cards, countdown bars, age verification, feeds, charts, graphs, audio players, restaurant menu flip cards, product blobs and more. These elements allow you to create a truly engaging and interactive experience for your visitors. For more information on exactly what features are available, please reach out!
 
 ## Frequently asked questions (FAQs)
 
@@ -68,7 +69,7 @@ Once the website is live, we provide ongoing hosting, technical support, and mon
 
 <summary>Can I upgrade my clients from Accelerated Templated Website to Accelerated Templated Website Plus later?</summary>
 
-Yes! You can upgrade your clients from **Accelerated Templated Website** to **Accelerated Templated Website Plus** at any time. This allows them to start with a basic site and scale as their business needs grow.
+Yes! You can upgrade from **Accelerated Templated Website** to **Accelerated Templated Website Plus** at any time. This allows you to start with a basic site and scale as your business needs grow.
 </details>
 
 <details>
@@ -103,7 +104,7 @@ Our monthly fee includes hosting and ongoing support. Additionally, we include o
 
 <summary>Can you help create custom written content for my client’s website?</summary>
 
-Every website will be populated with AI-generated copy to fill each page, but if your client would like custom copy, we are happy to oblige. Check out the product called Website Copy for all the details related to this service.
+Every website will be populated with AI-generated copy to fill each page, but if you would like custom copy, we are happy to oblige. Check out the product called Website Copy for all the details related to this service.
 </details>
 
 <details>
@@ -138,7 +139,7 @@ We currently only offer website builds and support on WordPress and Duda, no oth
 
 <summary>Can you install any website analytics or tracking on my client’s website?</summary>
 
-Of course! If you provide the credentials or the codes for Google Tag Manager or Google Analytics Manager, we are happy to install it on your client’s website.
+Of course! If you provide the credentials or the codes for Google Tag Manager or Google Analytics Manager, we are happy to install it on your website.
 </details>
 
 <details>
@@ -152,14 +153,14 @@ Domains are not included in this product and need to be purchased separately. Yo
 
 <summary>How is Accelerated Templated Website different from purchasing a Duda subscription directly?</summary>
 
-A direct Duda subscription provides access to the website builder and hosting but requires partners to handle everything—design, development, setup, and ongoing maintenance. Accelerated Templated Website (ATW) is a fully managed service that includes expert-built websites, hosting, ongoing support, and sales enablement, eliminating the need for partners to do the work themselves.
+A direct Duda subscription provides access to the website builder and hosting but requires you to handle everything—design, development, setup, and ongoing maintenance. Accelerated Templated Website is a fully managed service that includes expert-built websites, hosting, ongoing support, and sales enablement, eliminating the need for you to do the work yourself.
 </details>
 
 <details>
 
 <summary>Why does Accelerated Templated Website cost more than a direct Duda subscription?</summary>
 
-While Duda’s direct hosting is lesser price, it does not include website setup, design, customizations, content uploads, or expert support. ATW is a done-for-you service that includes website creation, managed hosting, premium support—allowing partners to sell more without the operational burden of building and managing websites.
+While Duda's direct hosting is lesser price, it does not include website setup, design, customizations, content uploads, or expert support. This service is a done-for-you service that includes website creation, managed hosting, premium support—allowing you to focus on your business without the operational burden of building and managing websites.
 </details>
 
 <details>

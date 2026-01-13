@@ -148,7 +148,7 @@ Most interface changes, including page visibility and branding updates, take eff
 <details>
 <summary>Can I customize the interface differently for different clients?</summary>
 
-Yes, many interface settings can be configured per client or client group. You can show different pages and features based on client needs and service packages.
+Yes, many interface settings can be configured per client or client group. You can show different pages and features based on client needs and service packages. This can be done at a user level from **Partner Center > Accounts > Manage Users > Click on the three dots next to the user you want to edit > Edit Permissions**. 
 </details>
 
 <details>

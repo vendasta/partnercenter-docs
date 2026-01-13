@@ -4,7 +4,7 @@ sidebar_label: "Fulfillment Forms"
 description: "After submitting an order, it's crucial to complete the in-platform Fulfillment Form. Failure to do so can result in service delays. Fulfillment Forms can be c"
 ---
 
-After submitting an order, it's crucial to complete the in-platform Fulfillment Form. Failure to do so can result in service delays. Fulfillment Forms can be completed before or after placing an order and they can be shared with your customer to receive their input.
+After submitting an order, it's crucial to complete the in-platform Fulfillment Form. Failure to do so can result in service delays. Fulfillment Forms can be completed before or after placing an order and they can be shared with others to receive their input.
 
 # Fulfillment Form Overview
 
@@ -39,8 +39,8 @@ For more info, [check out this article.](../../commerce/orders/creating-and-mana
 ![Share_Fulfillment.png](./img/18948592252567-35bcf8e61b.png)
 
 1.  **Sharing the Form:** When in Partner Center, the fulfillment form has a share option in the top right corner. This feature allows you to share the form with a Business App user. This way, they can help provide the correct information needed to complete the services.
-2.  **Customer Involvement:** Once you share the form, your customer receives an email and can access the form to help you fill it out. They can also save progress in case they need to consult other stakeholders at their business or complete it at a later time.
-3.  **Updates from Customers:** From your end, you can see the updates your customer makes.
+2.  **Collaboration:** Once you share the form, the recipient receives an email and can access the form to help you fill it out. They can also save progress in case they need to consult other stakeholders or complete it at a later time.
+3.  **Updates:** From your end, you can see the updates that are made to the form.
 4.  **Business App Access:** Any Business App user with permission to view the Orders tab will be able to view and edit the fulfillment form regardless of whether or not it has been shared with them.
 
 **Note:**  Sharing can only be done by Partner Center Admins and Salespeople.  Business App users will not be able to share the form.

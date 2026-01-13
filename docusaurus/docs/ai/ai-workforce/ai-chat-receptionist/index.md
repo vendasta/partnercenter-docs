@@ -229,3 +229,16 @@ You know your business best! To improve your AI's accuracy, take a moment to wri
 Use this info to write clear Purpose prompts and add any relevant content to your AI's knowledge base that might be missing.
 
 </details>
+
+<details>
+<summary>How long does the AI chat receptionist wait for a response before taking over the chat from a human?</summary>
+
+When the chat receptionist (or any AI Employee) is assigned to a web chat widget, the AI will respond automatically on the web chat.
+
+For any other channel that the chat receptionist can respond to, the AI is configured with a 60-minute inactivity timeout. If a human response is not detected in the conversation within this timeframe, the AI will automatically generate a follow-up response. The system strictly bases the timeout countdown on the most recent human message only.
+
+:::info 
+This only applies to conversations where messages have been sent from Conversations AI. For example, the chat receptionist would respond instantly to an SMS message from a new contact if it was assigned to monitor the SMS channel.
+:::
+
+</details>

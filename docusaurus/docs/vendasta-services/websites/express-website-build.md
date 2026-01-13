@@ -1,6 +1,7 @@
 ---
 title: "Express Website Build: Service Expectations"
 sidebar_label: "Express Website Build"
+sidebar_position: 1
 description: "An overview of the Express Website Build service, a do-it-for-me solution for creating an affordable, AI-generated website with a same-day first draft."
 ---
 

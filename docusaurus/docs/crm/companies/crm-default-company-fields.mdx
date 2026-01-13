@@ -15,116 +15,169 @@ description: Learn about the default company fields available in the CRM to help
 
 Company fields store information about a company that you work with, such as their name, or the last time you have reached out to one of their contacts. Default properties are created in each company to store some important information. Some of the properties, such as the last engagement date, are automatically populated.
 
-## Company information
+:::info Field Extensions
+Beyond the default fields listed below, your CRM may include additional company fields depending on:
 
-1. **ID:** Unique identifier assigned to each company.
-2. **External ID:** An identifier used by external systems or databases to reference the company.
-3. **Company name:** The official name of the company.
-4. **Website:** The URL address of the company's website.
-5. **Street address line 1:** First line of the company's physical street address.
-6. **Street address line 2:** Second line of the company's physical street address.
-7. **City/locality:** The city or locality where the company is located.
-8. **State/province/region:** The state, province, or region where the company is located.
-9. **Zip/postal code:** The postal code or ZIP code of the company's location.
-10. **Country:** The country where the company is located.
-11. **Phone number:** The contact phone number for the company.
-12. **Tags:** Keywords or labels used to categorize or classify the company. The character limit is 50 characters per tag, and you have a maximum limit of 25 tags.
-13. **Fax number:** The fax number for the company (if applicable).
-14. **Number of employees:** The total count of employees working in the company.
-15. **Legal structure:** The legal form or structure of the company.
-16. **Lifecycle stage:** The stage of the company in the customer lifecycle (Including Visitors, Lead, Marketing qualified lead, Sales accepted lead, Sales qualified lead, Prospect, Customer, and Former customer).
-17. **Record Source:** This tells you how the records were originally created within your CRM system. It may refer to manual data entry, data import, or capture through web forms, among other sources.
-18. **Record Source Drill Down 1:** This provides a more detailed breakdown of the primary record source, offering additional insights into specific methods or channels within the main source category.
-19. **Record Source Drill Down 2:** This offers even further detail about the record source, giving granular insights into the processes or sub-channels that contribute to the creation of records in the CRM.
-20. **Original Source:** This tells you the source where a contact interacted with your business, such as a website visit, a social media interaction, or a direct contact through email. This is currently not captured automatically, you will need to set up automation to infer this field from the UTM parameters.
-21. **Original Source Drill Down 1:** This provides a more specific look into the original source, detailing the particular platform or medium within the original source where the contact first interacted with your business (e.g., a specific social media platform or search engine).
-22. **Original Source Drill Down 2:** This goes deeper into the specifics of the original source, offering detailed insights about the specific activity or interaction that brought the contact to your business (e.g., a specific campaign or advertisement).
-23. **Source name:** The name of the source or channel through which the company was acquired.
-24. **Timezone:** The timezone in which the company operates or is located.
-25. **Category IDs:** Unique identifiers assigned to categorize the company.
-26. **Facebook URL:** The URL of the company's Facebook page.
-27. **X URL:** The URL of the company's X profile.
-28. **Instagram URL:** The URL of the company's Instagram profile.
-29. **LinkedIn URL:** The URL of the company's LinkedIn page.
-30. **UTM Campaign:** The name or identifier of the campaign associated with the company.
-31. **UTM Medium:** The medium or channel of the campaign associated with the company.
-32. **UTM Source:** The specific source of the campaign associated with the company.
-33. **UTM Content:** The content or variant of the campaign associated with the company.
-34. **UTM Term:** The specific keyword or term associated with the campaign for the company.
-35. **GCLID:** Google Click Identifier associated with the company.
-36. **FBCLID:** Facebook Click Identifier associated with the company.
-37. **MSCLKID:** Microsoft Click Identifier associated with the company.
-38. **Created date:** The date when the company record was created.
-39. **Google Place ID:** The unique identifier assigned to the company on Google Maps.
-40. **Google review score:** The overall review score of the company on Google. This is filled in when the company is created from the "Find nearby businesses" process.
-41. **Group:** Indicates the group to which the company belongs.
-42. **Next task ID:** The identifier of the next task associated with the company.
-43. **Next task due date:** The due date for the next task associated with the company.
-44. **Owner ID:** The unique identifier for the user who created the company record.
-45. **Parent company:** The parent company to which the company belongs.
+- **Product integrations** - Different Vendasta products may add specialized fields
+- **Third-party integrations** - Connected services (Google Ads, Facebook, etc.) can extend available fields
+- **Custom field configurations** - Your organization may have added custom company fields
+- **Feature enablements** - Certain features unlock additional data fields when activated
 
-## Engagement information
+The fields shown here represent the core default set available to all accounts.
+:::
 
-1. **Last activity date:** The date of the last recorded activity associated with the company.
-2. **Last campaign email clicked date:** The date when the last campaign email was clicked by any of the company's contact
-3. **Last campaign email open date:** The date when the last campaign email was opened by any of the company's contact
-4. **Last campaign email sent date:** The date when the last campaign email was sent to any of the company's contact
-5. **Last campaign email sent name:** The name or identifier of the last campaign email sent to any of the company's contact
-6. **Last campaign email bounced date:** The date when the last campaign email was bounced by any of the company's contact
-7. **Last contact date:** The date of the last contact made with any of the company's contacts by any user.
-8. **Last sales email received date:** The date when the last sales email was sent by any of the company's contacts to any salesperson in your account. This requires auto-forwarding to be set up. Learn more [here](../../index.mdx).
-9. **Last sales email sent date:** The date when the last email was sent to any of the company's contacts from your email inbox. This requires auto bcc to be set up. Learn more [here](../../index.mdx).
+## Basic Company Information
 
-## Partner-specific information (Does not exist in the Business App)
+1. **ID:** Unique identifier assigned to each company
+2. **External ID:** An identifier used by external systems or databases to reference the company
+3. **Company name:** The official name of the company
+4. **Website:** The URL address of the company's website
+5. **Phone number:** The contact phone number for the company
+6. **Fax number:** The fax number for the company (if applicable)
+7. **Number of employees:** The total count of employees working in the company
+8. **Legal structure:** The legal structure of the company, such as 'private', 'public', 'non-profit', etc.
+9. **Industry:** The industry or sector in which the company operates
+10. **Annual revenue:** The total revenue generated by the company annually
+11. **Description:** A text field for storing additional information about the company
 
-1. **Platform account group ID:** The identifier for the account group.
-2. **Salesperson:** The individual responsible for managing sales activities for the company.
-3. **Additional salespeople:** Other individuals involved in sales activities for the company.
+## Address & Location Information
 
-## Snapshot information (Does not exist in the Business App)
+12. **Street address line 1:** First line of the company's physical street address
+13. **Street address line 2:** Second line of the company's physical street address
+14. **City/locality:** City or locality of the company's primary location
+15. **State/province/region:** State, province, or region of the company's primary location
+16. **Zip/postal code:** The postal code or ZIP code of the company's location
+17. **Country:** The country where the company is located
+18. **Latitude/longitude:** Latitude and Longitude of the company's primary location
+19. **Timezone:** The timezone in which the company operates or is located
 
-1. **Last review data updated date:** The date when the last review data was updated for the company.
-2. **Review performance grade:** A grade or rating assigned to evaluate the performance of reviews associated with the company, typically based on criteria such as review quantity and review quality.
-3. **Average number of reviews per month:** The average count of reviews received by the company per month.
-4. **Average review score:** The average score or rating received by the company based on reviews.
-5. **Number of review sources:** The count of distinct sources from which reviews of the company are gathered or collected.
-6. **Number of reviews:** The total count of reviews received by the company across all review sources.
-7. **Review data updated date:** The date when the review data for the company was last updated by the Snapshot Report.
-8. **Social Performance Grade:** A composite rating that assesses the overall effectiveness and engagement of an individual or organization's social media presence based on various metrics like likes, shares, and follower counts.
-9. **Total Number of Facebook Likes:** The number of likes on the company's Facebook page.
-10. **Average Number of Facebook Likes per Post:** The average number of likes on the company post on Facebook.
-11. **Average Number of Facebook Posts per Month:** The average number of posts published on the company's Facebook page per month
-12. **Average Number of Facebook Shares per Post:** The average number of times the company's Facebook post is shared.
-13. **Total Number of X Posts:** The total number of posts made on the social media platform "X".
-14. **Total Number of Followers on X:** The total number of individuals who follow the company's profile on the social media platform "X".
-15. **Total Number of Following on X:** The total number of profiles that the company follows on the social media platform "X".
-16. **Total Number of Instagram Followers:** The total number of followers on an Instagram account.
-17. **Total Number of Instagram Posts:** The total number of posts published on an Instagram account.
-18. **Last Social Performance Grade Updated Date:** The most recent date when the Social Performance Grade was calculated.
-19. **Instagram Data Last Updated Date:** The most recent date when the data regarding Instagram was updated.
-20. **Facebook Data Last Updated Date:** The most recent date when the data regarding Facebook was updated.
-21. **X Data Last Updated Date:** The most recent date when the data for "X" was updated.
-22. **Google Business Profile claimed:** Indicates whether the company has claimed or verified its Google Business Profile.
-23. **SEO local search grade:** A grade or rating indicating the effectiveness of the company's SEO strategy specifically in local search results, assessing factors like local listings, citations, and geographical relevance.
-24. **SEO daily organic traffic value:** The estimated value of organic traffic received by the company's website daily as a result of SEO efforts.
-25. **SEO number of organic keywords:** The total count of keywords for which the company's website ranks organically in search engine results pages (SERPs), excluding paid advertisements.
-26. **SEO organic clicks per month:** The total number of clicks received by the company's website from organic search results in a given month.
-27. **SEO organic domain ranking:** The ranking or position of the company's domain in organic search engine results, often based on factors like domain authority, relevance, and backlink profile.
-28. **SEO data updated date:** The date when search engine optimization (SEO) data for the company was last updated by the Snapshot Report.
-29. **Technology IDs:** Unique identifiers assigned to categorize or classify the technologies used by the company on its website, such as software platforms, programming languages, or IT infrastructure.
-30. **Technology IDs updated date:** The date when the list of technology identifiers associated with the company was last updated.
-31. **Snapshot latest expiry date:** The expiration date of the most recent Snapshot report created for the company.
-32. **Snapshot latest created date:** The date when the most recent Snapshot report was created for the company.
-33. **Snapshot latest snapshot ID:** The unique identifier assigned to the most recent Snapshot report created for the company.
-34. **Website data last updated date**: The most recent date on which the website's data was updated.
-35. **Website grade**: An overall rating of the website based on various factors by Snapshot.
-36. **Website mobile speed**: The speed at which the website loads and performs on mobile devices.
-37. **Website desktop speed**: The speed at which the website loads and performs on desktop computers.
-38. **Website is secure**: Indicates whether the website has security measures in place, such as an SSL certificate, to protect user data and ensure safe browsing.
-39. **Website is mobile friendly**: Indicates whether the website is optimized for use on mobile devices, ensuring a good user experience on smartphones and tablets.
-40. **Website has video**: Indicates whether the website contains video content.
-41. **Website has phone number**: Indicates whether the website displays a phone number for contact purposes.
-42. **Website has physical address**: Indicates whether the website displays a physical address for contact or location purposes.
-43. **Website link to Instagram**: Indicates whether the website has a link to its Instagram profile.
-44. **Website links to X (formerly Twitter)**: Indicates whether the website has a link to its X (formerly Twitter) profile.
-45. **Website links to Facebook**: Indicates whether the website has a link to its Facebook profile.
+## Lead Management & Classification
+
+20. **Lifecycle stage:** The stage of the company in the customer lifecycle
+21. **Lead score:** The calculated lead score of the company based on engagement and behavior
+22. **Lead quality:** The customizable lead quality assessment of the company
+23. **Lead status:** The current status of the company in the sales pipeline
+24. **Lead source:** The original source that brought the company into your system
+25. **Priority:** Priority level assigned to the company for sales and marketing activities
+26. **Tags:** User-defined keywords or labels that can be used to categorize companies
+
+## Social Media URLs
+
+27. **Facebook URL:** The URL of the company's Facebook page
+28. **Instagram URL:** The URL of the company's Instagram profile
+29. **LinkedIn URL:** The URL of the company's LinkedIn page
+30. **X URL:** The URL of the company's X profile
+
+## Engagement & Activity Tracking
+
+31. **Last activity date:** The date of the last recorded activity associated with the company
+32. **Last contact date:** The date of the last contact made with any of the company's contacts
+33. **Last campaign email sent date:** Last campaign email sent to the company
+34. **Last campaign email sent name:** Name of last campaign email sent for the company
+35. **Last campaign email open date:** The date when the last campaign email was opened by any of the company's contacts
+36. **Last campaign email clicked date:** The date when the last campaign email was clicked by any of the company's contacts
+37. **Last campaign email bounced date:** The date when the last campaign email bounced for any of the company's contacts
+38. **Last sales email sent date:** Date of last sales email sent to the company
+39. **Last sales email received date:** Date of last sales email received for the company
+40. **Next task ID:** The identifier of the next task associated with the company
+41. **Next task due date:** The due date for the next task associated with the company
+
+## Attribution & Source Tracking
+
+42. **Record source:** Name of the app or external system that created the company (e.g., 'Salesforce', 'Hubspot', 'Gmail')
+43. **Record source drill down 1:** Record source drill down level 1 of the company
+44. **Record source drill down 2:** Record source drill down level 2 of the company
+45. **Original source:** Original source of the company
+46. **Original source drill down 1:** Original source drill down level 1 of the company
+47. **Original source drill down 2:** Original source drill down level 2 of the company
+
+## UTM & Campaign Attribution
+
+48. **UTM campaign:** The name or identifier of the campaign associated with the company
+49. **UTM medium:** The medium or channel of the campaign associated with the company
+50. **UTM source:** The specific source of the campaign associated with the company
+51. **UTM content:** The content or variant of the campaign associated with the company
+52. **UTM term:** The specific keyword or term associated with the campaign for the company
+
+## Click Tracking IDs
+
+53. **GCLID:** Google click ID used to create the company
+54. **FBCLID:** Facebook click ID used to create the company
+55. **MSCLKID:** Microsoft click ID used to create the company
+
+## System Fields
+
+56. **Created date:** The date when the company record was created
+57. **Updated date:** The date when the company record was last updated
+58. **Owner ID:** The unique identifier for the user who created the company record
+59. **Parent company:** The parent company to which this company belongs, used to establish corporate hierarchies and track relationships between subsidiary companies, franchise locations, or multi-location businesses
+
+## Platform-Specific Information (Partner Center Only)
+
+60. **Platform account group ID:** Identifier for an account group inside of the platform
+61. **Salesperson:** The salesperson in the platform
+62. **Additional salespeople:** Additional salespeople in the platform
+
+## Snapshot & Analytics Data (When Available)
+
+### Review Performance
+63. **Review performance grade:** Grade of the companies overall review performance
+64. **Number of reviews:** Total number of reviews across all sources for the company
+65. **Number of review sources:** Number of sources where the company has been reviewed
+66. **Average review score:** Average score or rating received by the company based on reviews
+67. **Review data updated date:** The date when the review data was last updated by the Snapshot Report
+68. **Google review score:** The overall review score of the company on Google
+
+### Social Media Performance
+69. **Social performance grade:** Grade of the company's overall social media performance
+70. **Facebook data last updated date:** Date when Facebook data was last updated
+71. **Total number of Facebook likes:** Total number of likes on the company's Facebook page
+72. **Average number of Facebook likes per post:** Average number of likes per Facebook post
+73. **Average number of Facebook posts per month:** Average number of Facebook posts made each month
+74. **Instagram data last updated date:** Date when Instagram data was last updated
+75. **Total number of Instagram followers:** Total number of followers on Instagram account
+76. **Total number of Instagram posts:** Total number of posts published on Instagram account
+77. **X data last updated date:** Date when X (Twitter) data was last updated
+78. **Total number of X posts:** Total number of posts made on X
+79. **Total number of followers on X:** Total number of accounts following the company on X
+80. **Total number of following on X:** Total number of profiles the company follows on X
+
+### SEO & Website Performance
+81. **SEO local search grade:** Grade of the company's local search performance
+82. **SEO daily organic traffic value:** Estimated value of the company's organic traffic per day
+83. **SEO number of organic keywords:** Number of keywords for which the company's website ranks in organic search results
+84. **SEO organic clicks per month:** Number of organic clicks per month for the company's website
+85. **SEO organic domain ranking:** Ranking of the company's website in organic search results
+86. **SEO data updated date:** Date when the SEO data were last updated
+87. **Website grade:** Overall rating of the website based on various factors by Snapshot
+88. **Website mobile speed:** The speed at which the website loads on mobile devices
+89. **Website desktop speed:** The speed at which the website loads on desktop computers
+90. **Website is secure:** Indicates whether the website has security measures in place (SSL certificate)
+91. **Website is mobile friendly:** Indicates whether the website is optimized for mobile devices
+92. **Website has video:** Indicates whether the website contains video content
+93. **Website has phone number:** Indicates whether the website displays a phone number
+94. **Website has physical address:** Indicates whether the website displays a physical address
+95. **Website links to Facebook:** Indicates if the company's website homepage links to its Facebook page
+96. **Website links to Instagram:** Indicates if the company's website homepage links to its Instagram page
+97. **Website links to X:** Indicates if the company's website homepage links to its X account
+98. **Website data last updated date:** Date when website data was last updated
+
+### Technology & Business Intelligence
+99. **Technology IDs:** IDs of technologies used by the company
+100. **Technology IDs updated date:** Date when the technology IDs were last updated
+101. **Active products:** The list of active products/editions for the company
+102. **GBP claimed:** Whether the company has claimed their Google Business Profile listing
+
+### Listings Performance
+103. **Listings performance grade:** Grade of the company's overall listings performance
+104. **Incorrect address count:** The number of listings with incorrect addresses found for the company
+105. **Incorrect website count:** The number of listings with incorrect websites found for the company
+
+### Snapshot Reports
+106. **Snapshot latest created date:** Creation date of the most recently generated Snapshot report
+107. **Snapshot latest expiry date:** Expiration date of the most recently generated Snapshot report
+108. **Snapshot latest snapshot ID:** Snapshot ID of the most recently generated Snapshot report
+
+:::tip Viewing All Available Fields
+To see the complete list of company fields available in your specific CRM instance, navigate to any company record and click the "View all properties" or "More fields" option. This will show both default and integration-specific fields enabled for your account.
+:::

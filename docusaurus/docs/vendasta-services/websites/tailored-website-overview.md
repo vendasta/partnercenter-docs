@@ -1,6 +1,7 @@
 ---
 title: "Tailored Website Build: Service Expectations"
 sidebar_label: "Tailored Website"
+sidebar_position: 4
 description: "An overview of the collaborative, do-it-with-me process for creating a custom website tailored to your business needs, from discovery to launch."
 ---
 
@@ -88,14 +89,7 @@ The Tailored Website Quote is a service that provides a custom pricing estimate 
 
 <summary>When should I request a Tailored Website instead of using a Templated or Accelerated Templated Website?</summary>
 
-If your client needs a fully custom design, advanced features (like booking systems, integrations, eCommerce, etc.), or a large multi-page site, a Tailored Website is the best option.
-</details>
-
-<details>
-
-<summary>How do I request a quote?</summary>
-
-Simply submit a request through your Partner Center or contact your Account Manager. Include as many details as possible about the client’s requirements, branding, functionality, and content needs.
+If you need a fully custom design, advanced features (like booking systems, integrations, eCommerce, etc.), or a large multi-page site, a Tailored Website is the best option.
 </details>
 
 <details>

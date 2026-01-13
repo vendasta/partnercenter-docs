@@ -4,7 +4,7 @@ sidebar_label: "Where to find resources, expectations, and forms"
 description: "Building a new website, taking over your customers' social posting, and setting up a successful digital ads campaign comes with a lot of moving parts.  These s"
 ---
 
-Building a new website, taking over your customers' social posting, and setting up a successful digital ads campaign comes with a lot of moving parts.
+Building a new website, taking over your social posting, and setting up a successful digital ads campaign comes with a lot of moving parts.
 
 These steps are laid out to help equip you with plenty of resources and information to get even more out of your fulfilled services!
 
@@ -20,7 +20,7 @@ These steps are laid out to help equip you with plenty of resources and informat
 
 ### **Familiarize yourself with the service expectations**
 
-Expectation brochures are unbranded documents provided by Vendasta Services that break down the timelines, details, and deliverables that you and your customers can expect after ordering. You can also check out the [Expectations by Service guide](./expectations-by-service-within-vendasta-services.md) to get a high-level overview and reference for expectations across all product lines. 
+Expectation brochures are documents provided by Vendasta Services that break down the timelines, details, and deliverables that you can expect after ordering. You can also check out the [Expectations by Service guide](./expectations-by-service-within-vendasta-services.md) to get a high-level overview and reference for expectations across all product lines. 
 
 You can find expectation brochures inside of the platform:
 
@@ -33,7 +33,7 @@ Or you can access them on the Vendasta Services [unbranded website](https://exam
 
 ### Review the fulfillment forms
 
-An important step in ensuring a quick turnaround for your fulfillment is providing a completed fulfillment form. The information in these forms help the Vendasta Services teams to complete the ordered services in alignment with what you and your customer wants.
+An important step in ensuring a quick turnaround for your fulfillment is providing a completed fulfillment form. The information in these forms help the Vendasta Services teams to complete the ordered services in alignment with what you want.
 
 Fulfillment form information is available in Partner Center > Marketplace > Discover Products by visiting any of the product pages. On the right, you will find a section for Required Forms and clicking into it will show you the form.
 

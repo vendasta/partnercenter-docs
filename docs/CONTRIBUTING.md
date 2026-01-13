@@ -4,7 +4,16 @@ Thanks for helping improve our documentation!
 Before you start, please follow these quick guidelines to keep our docs consistent, clear, and error-free.
 
 This cheat sheet is for **all contributors** working in GitHub/Cursor on our Docusaurus site.  
-For the full writing guide, see the internal documentation resources.
+For technical details (redirects, JSON-LD, etc.), see the **[Architecture Guide](./ARCHITECTURE.md)**.
+
+---
+
+## Content Organization
+
+All documentation content is located in the `docusaurus/docs` directory.
+*   **Folders**: Group related pages (e.g., `accounts/`, `marketing/`).
+*   **Index Pages**: Use `index.mdx` for category landing pages.
+*   **Sidebar**: Controlled by `_category_.json` files in each folder (see Architecture Guide for details).
 
 ---
 
@@ -94,3 +103,4 @@ Use Docusaurus callouts:
    sidebar_position: 1
    description: Short description
    ---
+
