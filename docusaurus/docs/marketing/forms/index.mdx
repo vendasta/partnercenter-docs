@@ -1,5 +1,5 @@
 ---
-title: Forms Overview
+title: Forms overview
 description: Build, publish, and automate forms. Start quickly with templates, style with AI, and attach files that get summarized automatically.
 sidebar_label: Forms
 sidebar_position: 1
@@ -7,37 +7,53 @@ tags: [forms, overview, documentation]
 keywords: [forms, lead capture, file upload, automations, design with ai, form templates]
 ---
 
-Forms let you capture leads, qualify prospects, and trigger automated follow-ups from any website that lets you embed HTML code. Start with pre-built templates, customize with AI-generated styling, and connect to your CRM, email campaigns, and more.
+Forms let you capture leads, qualify prospects, and trigger automated follow-ups from any website that lets you embed HTML code. Start with ready-to-use templates (including an Acquisition Widget template), customize with AI-generated styling, organize with sections, and connect to your CRM, email campaigns, and automation workflows.
 
 ## What you can build
 
-- **Lead generation forms**: Capture contact information that automatically creates CRM records. Use templates for business leads, newsletter signups, or consultation requests.
-- **Intake and qualification forms**: Collect detailed information with file uploads, conditional logic, and multi-step flows. Perfect for quotes, demos, or document collection.
-- **Interactive forms with automations**: Trigger email campaigns, assign sales reps, create tasks, or start workflows when forms are submitted.
+- **Lead generation forms**: Capture contact information that automatically creates CRM records. Start with ready-to-use templates including Lead Generation, Newsletter Signup, or the new Acquisition Widget template for complex lead workflows.
+- **Multi-step forms with sections**: Organize longer forms into sections for better user experience. Perfect for detailed intake forms, qualification questionnaires, or multi-part applications.
+- **File upload forms**: Collect documents, images, or proofs of work directly through your forms. Files automatically attach to contact and company records with AI-generated summaries.
+- **Automated workflow forms**: Trigger complete automation sequences when forms are submitted - create accounts, generate snapshot reports, start campaigns, assign salespeople, and activate products automatically.
 
 ## Quick start guide
 
+### Create from Template
 1. Go to **Marketing → Forms**
-2. Click **Create form** and choose a template (Lead Generation works great for most cases)
-3. Add or customize fields using the drag-and-drop builder
-4. Style your form with AI or custom CSS
-5. Set up automations to handle submissions
-6. Embed on your website or share a direct link
+2. Click **Create form** and browse available templates
+3. Select **Use template** to generate a form with pre-configured fields and automations
+4. Complete setup by configuring the linked automation (add campaigns, assign salespeople, etc.)
+
+### Design and Customize
+1. Add or customize fields using the drag-and-drop builder
+2. Use **Design with AI** - upload a website screenshot and describe your needs
+3. Organize complex forms using **Sections** for better user flow
+4. Add **File Upload** fields for document collection
+
+### Automate and Publish
+1. Configure automations in the **Automations tab** to handle submissions automatically
+2. Toggle the automation **on** to activate your workflow
+3. Embed on your website or share a direct link
 
 ## Field types and form building
 
 Forms support different field types that map to your CRM:
 
 - **Contact fields**: Information that attaches to the contact record (name, email, phone)
-- **Company fields**: Business information (company name, industry, size)
+- **Company fields**: Business information (company name, industry, size) with Google Place lookup for auto-enrichment
+- **Section fields**: Organize your form into multiple steps or logical groups for better user experience
+- **File upload fields**: Allow users to upload documents, images, or proofs of work with automatic AI summarization
 - **Element fields**: Non-interactive content like instructions or dividers
-- **Generic fields**: Information that doesn't map directly to CRM fields. This includes all common field types (eg. Text, Number...) and also allows you to add file upload fields.
+- **Generic fields**: Information that doesn't map directly to CRM fields (text, number, dropdown, etc.)
 
-### Advanced field features
+### Advanced features
+- **Form templates**: Start with ready-to-use templates including Lead Generation, Newsletter Signup, and Acquisition Widget configurations
+- **AI Design**: Upload a website screenshot and let AI generate matching form styles automatically
+- **Sections**: Create multi-step or organized forms that guide users through longer submissions
+- **File uploads**: Attach documents that get AI-summarized and stored in CRM records
 - **Hidden fields**: Capture attribution data without showing to users
 - **Dynamic fields**: Populate from URL parameters (like `?campaign=summer-promo`)
 - **UTM tracking**: Automatically captures standard UTM parameters
-- **File uploads**: Attach documents that get AI-summarized and stored in CRM
 
 ## Form settings and publishing
 
@@ -47,16 +63,21 @@ Configure how your form behaves:
 - **Spam protection**: Enable reCAPTCHA to block automated submissions
 - **Embed options**: Copy HTML code or get shareable links
 
-## Integration and automation
+## Automation and workflows
 
-Connect forms to your entire workflow:
+Forms now include powerful automation capabilities that activate automatically when forms are submitted:
 
-- **CRM integration**: Auto-create contacts and companies
-- **Email campaigns**: Trigger welcome sequences or nurture flows
-- **Team assignments**: Auto-assign leads to salespeople
-- **Task creation**: Generate follow-up work items
-- **Webhooks**: Send data to external systems
-- **Analytics**: Track submissions in Google Analytics
+- **Complete lead workflows**: Create accounts, generate snapshot reports, and start campaigns in one flow
+- **CRM automation**: Auto-create contacts and companies with enriched data
+- **Email sequences**: Trigger welcome campaigns, nurture flows, or follow-up sequences
+- **Sales automation**: Auto-assign leads to salespeople and create tasks
+- **Product activation**: Automatically activate products for new customers
+- **Admin notifications**: Alert your team about new high-value submissions
+- **External integrations**: Send data to external systems via webhooks
+- **Analytics tracking**: Monitor performance in Google Analytics
+
+### Acquisition Widget replacement
+The new **Acquisition Widget template** provides the same powerful functionality as the legacy Acquisition Widget but with simpler setup and more flexibility. It includes pre-configured automations for lead capture, company enrichment, and follow-up sequences.
 
 ## Guides and resources
 
@@ -64,7 +85,7 @@ Connect forms to your entire workflow:
 - **[Create a lead generation form](./create-a-form.mdx)**: Step-by-step tutorial
 
 ### Customization
-- **[Styling forms with CSS](./style-form-with-css.mdx)**: Custom appearance and responsive design
+- **[Style forms with CSS](./style-form-with-css.mdx)**: Custom appearance and responsive design
 - **[Design with AI](./style-form-with-css.mdx#design-with-ai)**: Generate styles from website screenshots
 
 ### Technical setup
@@ -74,9 +95,30 @@ Connect forms to your entire workflow:
 ## Frequently asked questions
 
 <details>
-<summary>What field types should I use?</summary>
+<summary>Can I add these new features to my existing forms?</summary>
 
-Use **Contact** and **Company** fields for CRM data, **Generic** fields for custom information, and **Element** fields for instructions or organization.
+Yes! You can update any existing form to include file uploads, sections, automations, or AI design without starting from scratch.
+
+</details>
+
+<details>
+<summary>Where do uploaded files go?</summary>
+
+Files are automatically attached to the contact and company profiles generated from the form submission, along with an AI summary for quick reference.
+
+</details>
+
+<details>
+<summary>What file types can users upload?</summary>
+
+Common formats like PDFs, images (JPG/PNG), and documents are supported. You can customize allowed file types and size limits.
+
+</details>
+
+<details>
+<summary>Can I connect my existing automations with these forms?</summary>
+
+Absolutely. Any automation trigger using the form submission from the specific form will appear under that form's Automation tab, where you can manage or expand it.
 
 </details>
 
@@ -90,21 +132,21 @@ Enable reCAPTCHA in Form settings. See [reCAPTCHA setup](./recaptcha-key.mdx) fo
 <details>
 <summary>Can I customize the form appearance?</summary>
 
-Yes! Use Design with AI for quick styling, or write custom CSS for full control. Forms are mobile-responsive by default.
+Yes! Use **Design with AI** for quick styling by uploading a website screenshot, or write custom CSS for full control. Forms are mobile-responsive by default.
 
 </details>
 
 <details>
-<summary>Are forms mobile-responsive?</summary>
+<summary>What's the difference between the Acquisition Widget template and other templates?</summary>
 
-Yes. Forms are responsive by default and work great on all devices. You can further refine the mobile layout using Custom CSS or the Design with AI assistant. See [Styling forms with CSS](./style-form-with-css.mdx#7-mobile-responsiveness) for mobile-specific styling examples.
+The Acquisition Widget template provides a setup similar to the original Acquisition Widget, with pre-configured automations for lead capture, company enrichment, and follow-up campaigns. It's perfect for users migrating from Acquisition Widgets.
 
 </details>
 
 <details>
-<summary>What happens to uploaded files?</summary>
+<summary>How do sections work in forms?</summary>
 
-Files attach to the created contact/company record and get AI-generated summaries for easy review.
+Sections let you organize forms into logical groups or create multi-step flows. Users can navigate through sections for better user experience with longer or more detailed submissions.
 
 </details>
 

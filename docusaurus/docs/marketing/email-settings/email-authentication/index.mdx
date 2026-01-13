@@ -1,0 +1,72 @@
+---
+title: Email authentication
+sidebar_label: Email Authentication
+description: Learn how to set up email authentication for your marketing emails
+sidebar_position: 1
+---
+
+# Email Authentication
+
+Email authentication is a way to tell receiving mail servers that emails sent from your domain are legitimate. This helps prevent your emails from being marked as spam or rejected. 
+
+To set up email authentication, you need to add specific DNS records to the domain you're using to send emails. This guide will walk you through the process.
+
+## Understanding Email Authentication
+
+Email authentication consists of three main protocols:
+
+1. **SPF (Sender Policy Framework)**: Specifies which mail servers are authorized to send email on behalf of your domain
+2. **DKIM (DomainKeys Identified Mail)**: Adds a digital signature to your emails that verifies they were sent by an authorized sender
+3. **DMARC (Domain-based Message Authentication, Reporting & Conformance)**: Tells receiving mail servers what to do with emails that fail SPF or DKIM checks
+
+## Domain Provider Setup Guides
+
+Choose your domain provider for step-by-step setup instructions:
+
+- **[Add SPF, DKIM, DMARC Records (GoDaddy)](./adding-spf-dkim-dmarc-records-godaddy.mdx)** - Configuration guide for GoDaddy domains
+- **[Add SPF, DKIM, DMARC Records (cPanel/Namecheap)](./adding-spf-dkim-dmarc-records-cpanel-namecheap.mdx)** - Step-by-step guide for cPanel/Namecheap
+
+## Why Email Authentication Matters
+
+### Improved Deliverability
+Proper authentication significantly increases the likelihood that your emails will reach recipients' inboxes instead of being filtered into spam folders.
+
+### Protection Against Spoofing
+Authentication prevents malicious actors from sending emails that appear to come from your domain, protecting your brand reputation.
+
+### Compliance Requirements
+Many email providers now require proper authentication, and some will automatically reject emails from domains without proper SPF, DKIM, and DMARC records.
+
+## Before You Begin
+
+Before setting up email authentication, make sure you have:
+
+1. **Access to your DNS provider** - This is typically where you purchased your domain (GoDaddy, Namecheap, etc.) or where your DNS is managed
+2. **Your domain name** - The domain you want to send emails from (e.g., yourbusiness.com)
+3. **Administrative access** - You'll need permission to modify DNS records for your domain
+
+## Getting Your DNS Records
+
+To get the specific DNS records you need to add:
+
+1. Go to **Partner Center > Marketing > Email Settings**
+2. Find your domain in the Email Domains section
+3. Copy the SPF, DKIM, and DMARC values shown
+4. Follow the setup guide for your specific domain provider
+
+:::tip
+DNS changes can take up to 48 hours to fully propagate across the internet. Be patient if your authentication doesn't show as verified immediately.
+:::
+
+## Troubleshooting
+
+If you're having trouble with email authentication:
+
+- **Double-check your DNS records** - Make sure you've copied the values exactly as shown in Partner Center
+- **Wait for propagation** - DNS changes can take time to take effect
+- **Contact your DNS provider** - They can help verify that records were added correctly
+- **Check for existing records** - Some domains may already have SPF records that need to be modified rather than replaced
+
+## Need Help?
+
+If you encounter issues during setup, contact Vendasta support for assistance with your specific configuration.

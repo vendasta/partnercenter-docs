@@ -1,15 +1,103 @@
 ---
-title: What are the requirements for Email Settings?
-description: Learn about the requirements for configuring Email Settings in Vendasta Partner Center.
-sidebar_position: 10
+title: Email settings requirements
+description: Learn about the requirements for configuring Email Settings in Vendasta Partner Center, including domain requirements and CAN-SPAM compliance.
+sidebar_label: Email Settings Requirements  
+sidebar_position: 2
 ---
 
-# What are the requirements for Email Settings?
+# Email settings requirements
 
-Under **Partner Center > Marketing > Email Settings** are DNS settings to help make sure your emails are sent without error from the system.
+To successfully send marketing emails through the Vendasta platform, you must meet several technical and legal requirements.
 
-These records can only be applied to your DNS settings for your email provider if you have a custom domain email.
+## Technical Requirements
 
-You will be unable to add these records to an email that is from a free (non-custom) provider (such as emails from gmail.com, yahoo.com, hotmail.com, outlook.com, etc.)
+### Custom Domain Email Required
 
-If you do not own a custom domain, consider purchasing one through a domain registrar such as GoDaddy. You can use your custom domain to create and maintain a professional email address.
+Under **Partner Center > Marketing > Email Settings** are DNS authentication settings that help ensure your emails are delivered successfully and avoid spam filters.
+
+**Domain Requirements:**
+- **Custom Domain Required** - You must have a custom domain email address (e.g., yourname@yourbusiness.com)
+- **DNS Access** - You need administrative access to your domain's DNS settings to add authentication records
+- **Domain Ownership** - You must own or control the domain you want to send emails from
+
+**Cannot Use Free Email Providers:**
+You cannot use authentication records with free email providers such as:
+- Gmail.com addresses
+- Yahoo.com addresses  
+- Hotmail.com addresses
+- Outlook.com addresses
+- Other free email services
+
+If you don't own a custom domain, consider purchasing one through a domain registrar such as GoDaddy, Namecheap, or your hosting provider. A custom domain allows you to create professional email addresses and implement proper email authentication.
+
+### DNS Authentication Records
+
+You must configure these authentication records in your DNS:
+- **SPF (Sender Policy Framework)** - Authorizes Vendasta to send emails on behalf of your domain
+- **DKIM (DomainKeys Identified Mail)** - Adds digital signatures to verify email authenticity  
+- **DMARC (Domain-based Message Authentication)** - Specifies how to handle emails that fail authentication
+
+Learn how to set up these records in [Email Authentication](/marketing/email-settings/email-authentication).
+
+## Legal Compliance Requirements
+
+### CAN-SPAM Law Compliance
+
+All commercial emails sent through the platform must comply with CAN-SPAM Act requirements:
+
+**Physical Mailing Address (Required)**
+- **Valid Business Address** - Include a legitimate physical postal address for your business
+- **Complete Address** - Must include street address, city, state, and ZIP code
+- **Current Address** - Address must be current and where you can receive postal mail
+- **Visible in Emails** - Address is automatically included in email footers when configured
+
+**Additional CAN-SPAM Requirements:**
+- **Clear Sender Identification** - Emails must clearly identify who is sending them
+- **Truthful Subject Lines** - Subject lines must accurately reflect email content  
+- **Unsubscribe Option** - Every email must include a working unsubscribe mechanism
+- **Honor Opt-Outs** - Unsubscribe requests must be processed within 10 business days
+
+### Required Business Information
+
+Configure your business information in **Partner Center > Administration > Customize > Partner Defaults**:
+
+- **Business Name** - Legal business name or DBA
+- **Complete Mailing Address** - Street address, city, state, ZIP code, country
+- **Contact Information** - Business phone number and email address
+- **Sender Details** - Default "From" name and email address for campaigns
+
+## User Verification Requirements
+
+All users sending emails must have verified email addresses:
+- **Email Verification** - All platform users must verify their email addresses
+- **Account Access** - Unverified users may have limited platform access
+- **Security** - Verification helps maintain platform security and sender reputation
+
+Learn more about [Email Verification](/administration/my-account/my-team/email-verification) requirements.
+
+## Email Content Requirements
+
+### Size Limitations
+- **HTML Character Limit** - Email templates cannot exceed 32,000 characters of HTML source code
+- **Template Optimization** - Keep content concise and optimize images for faster loading
+- **Error Handling** - Emails exceeding the limit will fail to send with a character count error
+
+### Content Best Practices
+- **Professional Design** - Use clean, professional email templates
+- **Mobile Optimization** - Ensure emails display properly on mobile devices
+- **Clear Call-to-Actions** - Include clear, compelling calls-to-action
+- **Relevant Content** - Send targeted, valuable content to your audience
+
+## Getting Started Checklist
+
+Before sending your first campaign:
+
+- [ ] **Purchase Custom Domain** (if you don't have one)
+- [ ] **Configure DNS Records** - Add SPF, DKIM, and DMARC records
+- [ ] **Set Up Business Address** - Add complete mailing address in Partner Center
+- [ ] **Verify Email Address** - Ensure your sender email is verified
+- [ ] **Test Authentication** - Verify all DNS records are properly configured
+- [ ] **Create Email Template** - Design your first marketing email
+- [ ] **Send Test Emails** - Always test before sending to your audience
+
+For step-by-step setup instructions, see [Update Email Settings](/marketing/email-settings/update-email-settings).
