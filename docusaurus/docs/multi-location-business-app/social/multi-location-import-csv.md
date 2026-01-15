@@ -1,0 +1,162 @@
+---
+
+title: Import CSV – Multi-Location Social
+sidebar_label: Import CSV in Multi-Location Social
+sidebar_position: 2
+description: Bulk upload and schedule social posts using CSV in Multi-Location Social
+tags: [social, multi-location, import-csv, bulk-upload]
+keywords: [social media, multi-location social, import csv, schedule posts]
+---------------------------------------------------------------------------
+
+## What is Import CSV?
+
+The Import CSV feature in Multi-Location Social allows you to upload and manage multiple social media posts in bulk. You can schedule posts across various social networks and locations using a single CSV file.
+
+## Why is Import CSV important?
+
+Previously, you could only schedule one social post at a time. This feature removes that limitation, making it faster to plan and publish content across multiple locations and networks. It's especially useful when managing high volumes of content.
+
+## What’s Included with Import CSV?
+
+* CSV template for post formatting
+* Bulk upload of text, images, and videos
+* Multi-network selection (e.g., Facebook, Instagram, LinkedIn, Google Business Profile)
+* Scheduling options for each post
+* Optional draft mode for saving posts
+* In-line editing and deletion after upload
+
+## How to Import Posts Using CSV
+
+1. Go to `Multi Location Social → Overview`
+![Manage Posts Overview](./img/multi-location-manage-posts.png)
+2. Click `Create`, then select `Import CSV`
+![Import CSV](./img/multi-location-import-CSV.png)
+3. In the composer, click `Download CSV template`
+![Download CSV Template](./img/multi-location-download-CSV-template.png)
+4. Open the template and add your content, including:
+
+   * Text
+   * Image URLs
+   * Video URLs
+   * Scheduled date and time
+
+    ![CSV Template Preview](./img/multi-location-CSV-template.png)
+5. Save and upload your updated CSV
+![CSV Upload](./img/multi-location-CSV-upload.png)
+6. If the upload is successful, you’ll see options to select locations and social networks
+![CSV Upload Success](./img/multi-location-CSV-upload-success.png)
+7. Choose the desired locations and platforms
+![CSV Upload Location Selection](./img/multi-location-CSV-location.png)
+8. (Optional) Enable `Upload as drafts` to save posts without scheduling
+![CSV Upload Location Drafts](./img/multi-location-CSV-drafts.png)
+9. Follow on-screen formatting guidance as needed
+![CSV Upload Formatting](./img/multi-location-CSV-formatting.png)
+10. Click `Next` to proceed
+![CSV Upload Next](./img/multi-location-CSV-next.png)
+11. Use `Edit` to modify individual posts
+![CSV Upload Edit](./img/multi-location-CSV-edit.png)
+12. Use `Delete` to remove unwanted posts
+![CSV Upload Delete](./img/multi-location-CSV-delete.png)
+13. Adjust the scheduled date and time as needed in the preview
+![CSV Upload Date](./img/multi-location-CSV-date.png)
+14. Click `Save` to save across selected groups
+![CSV Upload Save](./img/multi-location-CSV-save.png)
+
+## Formatting Requirements and Guidelines
+
+### Mandatory Fields
+
+* **Locations**: Required when saving as a draft
+* **Social Networks**: Optional for drafts, required to publish
+
+### Facebook Story Media
+
+**Images:**
+
+* Max size: 10 MB
+* Formats: JPEG, BMP, PNG, GIF, TIFF
+* Limit: 1 image per story
+
+**Videos:**
+
+* Format: MP4 (recommended)
+* Limit: 1 video
+* Duration: 3–90 seconds (Story max: 60 seconds)
+* Aspect Ratio: 9:16
+* Frame Rate: 24–60 fps
+* Resolution: 1080×1920 (recommended), 540×960 (minimum)
+
+### Facebook Reel Media
+
+**Videos:**
+
+* Max size: 1 GB
+* Formats: MP4 (recommended), QuickTime
+* Limit: 1 video
+* Duration: Up to 1 hour (90 seconds recommended)
+* Aspect Ratio: 9:16 to 16:9
+
+## Frequently Asked Questions (FAQs)
+
+<details>
+<summary>Where do I find the Import CSV option?</summary>
+
+Navigate to `Multi Location Social → Overview`, then click `Create → Import CSV`.
+
+</details>
+
+<details>
+<summary>Can I post to multiple networks at once?</summary>
+
+Yes. You can select multiple platforms like Facebook, Instagram, LinkedIn, and Google Business Profile.
+
+</details>
+
+<details>
+<summary>Do I need to choose a network when uploading a draft?</summary>
+
+No. You only need to select locations. Networks can be added later before publishing.
+
+</details>
+
+<details>
+<summary>What happens if I upload a video post?</summary>
+
+If a video is uploaded and Facebook is selected, it will be published as a Facebook Reel by default.
+
+</details>
+
+<details>
+<summary>Can I edit posts after uploading the CSV?</summary>
+
+Yes. Use the `Edit` option in the post preview screen to make changes.
+
+</details>
+
+<details>
+<summary>Is there a character or size limit for posts?</summary>
+
+Limits depend on the platform. Follow each platform’s content guidelines for best results.
+
+</details>
+
+<details>
+<summary>Can I remove posts before publishing?</summary>
+
+Yes. Use the `Delete` option to remove any unwanted posts before scheduling.
+
+</details>
+
+<details>
+<summary>Is scheduling required for all posts?</summary>
+
+No. You can save posts as drafts without setting a schedule.
+
+</details>
+
+<details>
+<summary>Can I change the schedule time after uploading?</summary>
+
+Yes. Use the preview screen to adjust dates and times before publishing.
+
+</details>
