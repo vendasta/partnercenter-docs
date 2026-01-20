@@ -2,18 +2,18 @@
 title: Import CSV – Multi-Location Social
 sidebar_label: Import CSV in Multi-Location Social
 sidebar_position: 2
-description: Bulk upload and schedule social posts using CSV in Multi-Location Social
+description: Bulk upload, localize, and schedule social posts using CSV in Multi-Location Social
 tags: [social, multi-location, import-csv, bulk-upload]
 keywords: [social media, multi-location social, import csv, schedule posts]
 ---
 
 ## What is Import CSV?
 
-The Import CSV feature in Multi-Location Social allows you to upload and manage multiple social media posts in bulk. You can schedule posts across various social networks and locations using a single CSV file.
+The Import CSV feature in Multi-Location Social allows you to upload and manage multiple social media posts in bulk. You can schedule posts across various social networks and locations using a single CSV file. With AI-powered localization, you can now personalize these posts for each location.
 
 ## Why is Import CSV important?
 
-Previously, you could only schedule one social post at a time. This feature removes that limitation, making it faster to plan and publish content across multiple locations and networks. It's especially useful when managing high volumes of content.
+Previously, you could only schedule one social post at a time. This feature removes that limitation, making it faster to plan and publish content across multiple locations and networks. AI-powered localization enhances this further by tailoring each post to reflect local context, improving relevance without extra manual effort.
 
 ## What’s Included with Import CSV?
 
@@ -23,6 +23,7 @@ Previously, you could only schedule one social post at a time. This feature remo
 * Scheduling options for each post
 * Optional draft mode for saving posts
 * In-line editing and deletion after upload
+* AI-powered localization for personalized posts by location
 
 ## How to Import Posts Using CSV
 
@@ -48,25 +49,38 @@ Previously, you could only schedule one social post at a time. This feature remo
 ![CSV Upload Location Selection](./img/multi-location-CSV-location.png)
 8. (Optional) Enable `Upload as drafts` to save posts without scheduling
 ![CSV Upload Location Drafts](./img/multi-location-CSV-drafts.png)
-9. Follow on-screen formatting guidance as needed
+9. Enable the toggle `Let AI personalize content by location` to generate localized versions for each location.
+![CSV Upload AI Personalization](./img/multi-location-AI-Personlization.png)
+10. Follow on-screen formatting guidance as needed
 ![CSV Upload Formatting](./img/multi-location-CSV-formatting.png)
-10. Click `Next` to proceed
+11. Click `Next` to proceed
 ![CSV Upload Next](./img/multi-location-CSV-next.png)
-11. Use `Edit` to modify individual posts
+12. Use `Edit` to modify individual posts
 ![CSV Upload Edit](./img/multi-location-CSV-edit.png)
-12. Use `Delete` to remove unwanted posts
+13. Use `Delete` to remove unwanted posts
 ![CSV Upload Delete](./img/multi-location-CSV-delete.png)
-13. Adjust the scheduled date and time as needed in the preview
+14. Adjust the scheduled date and time as needed in the preview
 ![CSV Upload Date](./img/multi-location-CSV-date.png)
-14. Click `Save` to save across selected groups
+15. Click `Save` to save across selected groups
 ![CSV Upload Save](./img/multi-location-CSV-save.png)
+
+## AI-Powered Localization Overview
+
+When the `Let AI personalize content by location` toggle is enabled:
+
+* AI generates tailored versions of your post for each selected location.
+* During processing, a gray tag `Personalization in progress` is shown.
+![CSV Personlization in progress](./img/multi-location-AI-Personlization-in-progress.png)
+* Once ready, a blue tag `Personalized for location` appears.
+![CSV Personlized](./img/multi-location-AI-Personlized.png)
+* You can edit each localized post individually using `Edit`.
 
 ## Formatting Requirements and Guidelines
 
 ### Mandatory Fields
 
 * **Locations**: Required when saving as a draft
-* **Social Networks**: Optional for drafts, required to publish
+* **Social Networks**: Optional for drafts, required to schedule
 
 ### Facebook Story Media
 
@@ -100,7 +114,7 @@ Previously, you could only schedule one social post at a time. This feature remo
 <details>
 <summary>Where do I find the Import CSV option?</summary>
 
-Navigate to `Multi Location Social → Overview`, then click `Create → Import CSV`.
+Navigate to `Multi-Location Social → Overview`, then click `Create → Import CSV`.
 
 </details>
 
@@ -157,5 +171,19 @@ No. You can save posts as drafts without setting a schedule.
 <summary>Can I change the schedule time after uploading?</summary>
 
 Yes. Use the preview screen to adjust dates and times before publishing.
+
+</details>
+
+<details>
+<summary>What does the "Let AI personalize content by location" toggle do?</summary>
+
+It enables automatic localization of posts per location using AI Knowledge and Social Post Instructions.
+
+</details>
+
+<details>
+<summary>What if a location doesn’t have AI configuration?</summary>
+
+The original multi-location content will be used without personalization.
 
 </details>
