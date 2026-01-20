@@ -104,6 +104,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/business-app/administration/setting-up-vendor-managed-integrations', to: '/business-app/administration/integrations/authentication-and-connections' },
           { from: '/business-app/administration/using-data-sync-and-automated-review-requests', to: '/business-app/administration/integrations' },
           { from: '/business-app/administration/setting-up-triggers-for-closed-matters-in-clio', to: '/business-app/administration/integrations' },
+          { from: '/vendasta-products', to: '/legacy-products' },
+          { from: '/vendasta-products/**', to: '/legacy-products/**' },
         ],
       },
     ],

@@ -15,6 +15,14 @@ All documentation content is located in the `docusaurus/docs` directory.
 *   **Index Pages**: Use `index.mdx` for category landing pages.
 *   **Sidebar**: Controlled by `_category_.json` files in each folder (see Architecture Guide for details).
 
+**Naming Conventions**
+*   **Directories**: Use lowercase kebab-case (hyphens) with no spaces. Replace spaces with hyphens.
+  *   ✅ Correct: `legacy-products/`, `getting-started/`, `vendor-center/`
+  *   ❌ Incorrect: `Legacy Products/`, `Getting Started/`, `Vendor Center/`
+*   **Git Branches**: Use lowercase kebab-case (hyphens) with no spaces. Replace spaces with hyphens.
+  *   ✅ Correct: `feature/legacy-products-rename`, `fix/update-links`, `docs/add-new-section`
+  *   ❌ Incorrect: `feature/Legacy Products Rename`, `fix/Update Links`, `docs/Add New Section`
+
 ---
 
 ## Voice & Tone
