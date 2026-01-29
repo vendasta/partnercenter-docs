@@ -6,7 +6,7 @@ description: "We have a host of information and marketing assets available in th
 
 We have a host of information and marketing assets available in the Marketplace. Go to *Screenshots and Files* at the top of each page to find valuable resources. For quick access and easy reference, here is a list of the main product pages here:
 
-*   [Local Listings Mangement](https://partners.vendasta.com/marketplace/products/MP-5DVQX5R8JBTD2RHWZLZ5BD56RTHJPW84)
+*   [Local Listings Management](https://partners.vendasta.com/marketplace/products/MP-5DVQX5R8JBTD2RHWZLZ5BD56RTHJPW84)
     
 *   [Social Media Management Standard](https://partners.vendasta.com/marketplace/products/MP-GKVMGQFB5HBKXNNKDX7SFVQPK7364FB7)
     
