@@ -91,7 +91,7 @@ Use the values below (replacing any placeholders) to create your version of this
 | `query` | `Body` | `string` | `Generate a full GraphQL query string using Shopify Storefront API with this format: query { products(first: 5, query: "KEYWORD") { edges { node { title handle availableForSale priceRange { minVariantPrice { amount currencyCode } } descriptionHtml } } } }, replacing KEYWORD with the user's term. Do not return just a keyword—return the entire query string exactly as shown.` |
 
 :::info
-If an API call is failing, compare the API call created by your AI Employeee with this example succesful GraphQL body. You can inspect AI Employee raw API calls in the `Conversations` tab.
+If an API call is failing, compare the API call created by your AI Employee with this example successful GraphQL body. You can inspect AI Employee raw API calls in the `Conversations` tab.
 
 <details>
 <summary>Example AI Receptionist generated GraphQL body</summary>
@@ -121,7 +121,7 @@ In this step, you’ll write the AI Receptionist’s prompt. These are the instr
 
 You can copy and paste this whole example prompt below, but you will first have to:
 -  swap out the `Category`  placeholders with a few examples of product categories in your Shopify store 
-- swap out the `Item` placeholders with examples of products that belong to the prodcut categores in your Shopify store
+- swap out the `Item` placeholders with examples of products that belong to the product categories in your Shopify store
 
 ### Example AI Receptionist Shopify prompt
 
