@@ -79,7 +79,7 @@ Headers provide essential metadata for API requests, including authentication an
 
 ### Parameters
 
-Parameters define the specific data sent to the API. There are a number of fields you will need to fill in to configure a parameter so that AI can use it correctly, but many of the, do not require extensive understanding of code.
+Parameters define the specific data sent to the API. There are a number of fields you will need to fill in to configure a parameter so that AI can use it correctly, but many of them do not require extensive understanding of code.
 
 ![Tool parameters example](./img/tool-parameter-example.png)
 
