@@ -26,9 +26,9 @@ The process involves a series of calls and configuration steps to get your AI Re
 
 ### 1. Initial training call
 
-Our experts will lead an onboard call to understand your business needs and adjust pre-built lead capture workflows to suit you. We will come to the call with your chat receptionist already set up with your branding and a customized communication style to demonstrate. During this call, we will refine any additional knowledge sources and communication instructions together.
+Our experts will lead an onboarding call to understand your business needs and adjust pre-built lead capture workflows to suit you. We will come to the call with your chat receptionist already set up with your branding and a customized communication style to demonstrate. During this call, we will refine any additional knowledge sources and communication instructions together.
 
-* **Timeline:** An onboard call can be booked in as little as one business day, depending on availability.
+* **Timeline:** An onboarding call can be booked in as little as one business day, depending on availability.
 * **For U.S. Businesses:** A2P registration is required to validate the use of SMS. Please be ready with your legal business information for this process, which can take up to two weeks to complete.
 
 ### 2. AI Receptionist configuration

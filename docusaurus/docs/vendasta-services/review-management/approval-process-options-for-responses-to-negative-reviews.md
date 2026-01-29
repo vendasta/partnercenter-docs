@@ -33,6 +33,6 @@ During the project onboarding call, we'll discuss which approach works best for 
 2.  Typically, our responses to negative reviews will be apologetic, frame the business in a positive light, and invite the reviewer to take the conversation offline. This avoids any further comments on a public review site.  
       
     
-3.  You can specify a contact for offline conversations during the project onboard call.
+3.  You can specify a contact for offline conversations during the project onboarding call.
 
 For more insight into our fulfillment process for our review response services, you can view the expectation brochures **[here](https://examples.yourdigitalagents.com/expectation-brochures/#:~:text=Local%20Listings%20Management-,Review%20Management,-Review%20Requests%0AReview)**.
