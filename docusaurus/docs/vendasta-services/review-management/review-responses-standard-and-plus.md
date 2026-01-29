@@ -88,7 +88,7 @@ The Plus service includes a proactive system for generating new reviews. This pr
 The process follows these steps:
 1.  **Template creation:** The service team creates an email and/or SMS template for you to approve.
 2.  **Customer list submission:** You provide a list of customer contacts (up to 500 per list). You can submit a new list at any time.
-3.  **Net Promoter Score template:** This email a Net Promoter Score (NPS), where they are asked how likely they are to recommend your business on a scale of 0-10.
+3.  **Net Promoter Score template:** This email contains a Net Promoter Score (NPS), where they are asked how likely they are to recommend your business on a scale of 0-10.
 4.  **Directing feedback:** Based on the customer's score, the system directs them to the next step:
     * **Promoters (score 9-10):** These happy customers are directed to your chosen public review sites (like Google or Facebook) to leave a public review.
     * **Passives (score 7-8):** These customers are sent to a private feedback form to share their experience directly with you without posting a public review.
@@ -151,7 +151,7 @@ The service team can only respond to reviews on sites where access has been gran
 
 <summary>Can I customize the Review Request emails that will be sent to my customers?</summary>
 
-During your onboard with our team, you’ll be able to choose from set email templates or upload your own.
+During your onboarding with our team, you’ll be able to choose from set email templates or upload your own.
 </details>
 
 <details>
