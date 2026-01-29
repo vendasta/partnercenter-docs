@@ -295,7 +295,7 @@ There's no hard limit to the number of Custom AI Employees you can create. You c
 
 A Custom AI Employee can work across multiple channels simultaneously. For example, you can deploy the same Custom AI Employee to web chat, automations, and in-platform chat. The AI Employee will maintain consistent behavior and knowledge across all channels.
 
-:::note Assigning to multipe web chat widgets
+:::note Assigning to multiple web chat widgets
 While you can assign an AI Employee to multiple web chat widgets, you can't assign multiple AI Employees to the same web chat widget.
 :::
 
