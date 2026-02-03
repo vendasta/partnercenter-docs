@@ -111,7 +111,7 @@ The Templated Website solution is best for simpler websites without extensive cu
 
 <summary> Do I have to host the website with you?</summary>
 
-The website must be built in our WeordPress Hosting environment. After that, you are free to move it to any host. However, please note that sites outside our hosting environment will no longer be supported by our team.
+The website must be built in our WordPress Hosting environment. After that, you are free to move it to any host. However, please note that sites outside our hosting environment will no longer be supported by our team.
 </details>
 
 ---

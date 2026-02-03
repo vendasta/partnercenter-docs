@@ -83,7 +83,7 @@ Choose where your Custom AI Employee will work:
 
 
 :::note In-platform chat assignment
-You do *not* need to assign an AI Employee to in-platform chat; the Chat buton will appear automatically on AI Employees that you can chat with
+You do *not* need to assign an AI Employee to in-platform chat; the Chat button will appear automatically on AI Employees that you can chat with
 :::
 
 For detailed information on channels, see the [AI Workforce Overview](./index.mdx#channels) section.

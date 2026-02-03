@@ -86,8 +86,8 @@ If you have decided you wish to move a website to a new host and discontinue sup
 
 ### What you need
 
-1.  A hosting environment with a Wordpress Installation.
-2.  The All In One Import/Export plugin installed on your new Wordpress host.
+1.  A hosting environment with a WordPress Installation.
+2.  The All In One Import/Export plugin installed on your new WordPress host.
 3.  Reach out to our team to provide you with the file for your existing website.
 4.  Check to ensure that your website is working correctly in your new environment before discontinuing service.
 

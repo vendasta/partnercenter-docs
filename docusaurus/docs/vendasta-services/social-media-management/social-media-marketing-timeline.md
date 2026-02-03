@@ -9,7 +9,7 @@ sidebar_position: 2
 
 Content refers to topics, specials/sales, pictures, and other assets that you want to ensure is shared with your customers as part of your managed social posting. 
 
-Typically, we need to receive content for the next month of by the 10th of the current month. (For example, for social posts going out in June, our team needs any requests submitted by May 10th.)
+Typically, we need to receive content for the next month by the 10th of the current month. (For example, for social posts going out in June, our team needs any requests submitted by May 10th.)
 
 Our writing deadline is the 25th of each month, and ensuring that we have received everything we need by the 10th ensures we have enough time to incorporate that content in the next month of posts.
 
