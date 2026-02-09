@@ -1,5 +1,6 @@
 ---
 title: "Connect the AI Chat Receptionist with ServiceTitan"
+sidebar_label: Connect with ServiceTitan
 ---
 
 import {AISparkleIcon} from '@site/src/components/Icons'
