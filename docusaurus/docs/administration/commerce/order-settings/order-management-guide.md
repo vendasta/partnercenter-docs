@@ -59,7 +59,7 @@ Set the terms of service that appear on an order when it’s sent for customer a
 
 You can configure the following customer facing emails:
 
-- **Contract awaiting approval** - 
+- **Contract awaiting approval**
 - **Order processed**  
 - **Order declined**
 

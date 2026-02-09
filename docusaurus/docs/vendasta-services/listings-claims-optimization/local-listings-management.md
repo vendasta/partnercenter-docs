@@ -4,7 +4,7 @@ sidebar_label: "Local Listings Management"
 description: "An overview of the fully managed Local Listings Management service, detailing the process for claiming, optimizing, and monitoring your business listings on Google, Apple, and Bing."
 ---
 
-This guide outlines the process and expectations for the Local Listings Management service. This is a a fully managed solution where a team of specialists will claim, optimize, and monitor your business listings on Google Business Profile, Apple Business Connect, and Bing Places.
+This guide outlines the process and expectations for the Local Listings Management service. This is a fully managed solution where a team of specialists will claim, optimize, and monitor your business listings on Google Business Profile, Apple Business Connect, and Bing Places.
 
 ## The setup process
 

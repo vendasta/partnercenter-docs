@@ -1,0 +1,174 @@
+---
+title: Understanding lead capture notifications
+description: Learn when leads are captured from web chat, what notifications you receive, and how duplicate contacts are handled.
+---
+
+# Understanding lead capture notifications
+
+When visitors chat with your business through the web chat widget, your AI Receptionist (or custom AI) can automatically capture their contact information and notify you about new leads. This requires the **Capture leads** capability to be active on your AI Receptionist.
+
+This guide explains when leads are captured, what notifications you'll receive, and how to interpret them.
+
+> **Note:** For lead capture to work, your AI Receptionist must be active on the channel the customer is using—whether that's an enabled web chat widget, SMS responses enabled, or a connected voice number.
+
+## When a lead is captured
+
+A lead is captured when **all** of the following conditions are met:
+
+| Condition | Requirement |
+|-----------|-------------|
+| Visitor shares contact info | The visitor mentions their name, email, or phone number in the conversation |
+| AI Receptionist is connected | Your web chat widget has an AI Receptionist (or custom AI) with the **Capture leads** capability enabled |
+| Conversation has activity | The visitor has sent at least one message |
+
+### Examples of lead capture
+
+**Lead IS captured:**
+- Visitor says "Hi, I'm John Smith. My email is john@email.com. I'd like a quote for landscaping."
+- Visitor provides phone number: "You can reach me at 555-123-4567"
+- Visitor shares partial info: "My name is Sarah" (name is captured, other fields left empty)
+
+**Lead is NOT captured:**
+- Visitor only asks a question without sharing any contact info: "What are your hours?"
+- Visitor leaves before sharing any identifying information
+- AI Receptionist doesn't have the **Capture leads** capability enabled
+
+## Types of notifications
+
+### New lead notification
+
+**What it means:** A brand new contact has been created in your CRM.
+
+**When you see it:** First time a visitor shares their contact information and no matching contact exists in your CRM.
+
+**Notification title:** "New Lead: [Name/Email/Phone]"
+
+**What's included:**
+- Contact information (name, phone, email)
+- AI-generated conversation summary
+- Link to view the full conversation in Inbox
+
+**Action to take:** Review the lead and follow up based on their inquiry.
+
+### Conversation update notification
+
+**What it means:** An existing contact has started a new conversation or returned to chat.
+
+**When you see it:**
+- A known contact messages you again
+- A duplicate contact situation (see below)
+
+**Notification title:** "Conversation Update: [Name/Email/Phone]"
+
+**What's included:**
+- Contact information
+- Summary of the new conversation
+- Link to view the conversation
+
+**Action to take:** Review what the returning customer needs and continue the relationship.
+
+## Understanding duplicate contacts and anonymous conversations
+
+### What is a duplicate contact?
+
+A duplicate contact occurs when someone who is already in your CRM starts a **new conversation** from a **different entry point**. The system recognizes them as an existing contact rather than creating a new one.
+
+### What is an anonymous conversation?
+
+An anonymous conversation occurs when a visitor chats without providing any contact information. These conversations appear in the "Anonymous" section of your Inbox until the visitor shares identifying details.
+
+Additionally, when a [duplicate conversation](#how-duplicate-conversations-are-handled) is detected, the new conversation remains in Anonymous while being linked to the original contact's conversation.
+
+### Common duplicate contact scenarios
+
+| Scenario | What happens |
+|----------|--------------|
+| Same person, different browser | Visitor clears cookies or uses a new device, starts chatting again |
+| Same person, different channel | Contact who previously chatted now texts you via SMS |
+| Returning visitor | Someone who chatted months ago returns to ask a new question |
+
+### How duplicate conversations are handled
+
+When the system detects that a new conversation is from someone already in your CRM:
+
+1. **No duplicate CRM contact is created** - The system recognizes the existing contact
+2. **You receive a "Conversation Update"** instead of "New Lead"
+3. **The new conversation stays in Anonymous** - The duplicate conversation remains in the Anonymous section of your Inbox
+4. **The original conversation links to the new one** - An event is added to the contact's original conversation with a link to the new anonymous conversation
+5. **Contact info is NOT overwritten** - The existing contact record is preserved (only missing postal code may be added)
+
+### Viewing duplicate conversations
+
+When a duplicate is detected:
+- The new conversation remains in the **Anonymous** section with a link to the original conversation
+- The original conversation (under the contact) shows "A new conversation has occurred" with a summary and a link to the anonymous conversation
+- A conversation summary also appears on the CRM contact record
+- To find the new conversation, check the Anonymous section or follow the link from the original conversation
+
+## Notification summary
+
+| Notification type | When it appears | What it means |
+|-------------------|-----------------|---------------|
+| **New Lead** | First-time visitor shares contact info | Brand new contact added to CRM |
+| **Conversation Update** | Existing contact returns | Known contact started new conversation |
+| **Conversation Update** (Duplicate) | Same person, new conversation thread | System linked conversations together |
+
+## What information is captured
+
+By default, the following information is extracted from the conversation when a lead is captured:
+
+| Field | Example |
+|-------|---------|
+| First Name | "John" |
+| Last Name | "Smith" |
+| Email | "john@email.com" |
+| Phone | "555-123-4567" |
+| Address | "123 Main St, City, State 12345" |
+
+> **Note:** Only information the visitor explicitly shares is captured. If they only provide their name, only the name field is filled in.
+
+> **Tip:** You can customize which fields are captured by modifying the **Capture leads** capability settings on your AI Receptionist.
+
+## Conversation summary
+
+Every notification includes an AI-generated conversation summary. This summary:
+
+- Highlights what the visitor is looking for
+- Captures key details from the conversation
+- Helps you prepare before following up
+
+**Example summary:**
+> "Visitor is interested in getting a quote for backyard landscaping. They have a 500 sq ft area and want low-maintenance plants. Prefers to be contacted by phone in the afternoon."
+
+## Frequently asked questions
+
+**Q: Why didn't I get a "New Lead" notification?**
+- The visitor may not have shared any contact information
+- They might be an existing contact (you'd get "Conversation Update" instead)
+- Check that your AI Receptionist has the **Capture leads** capability enabled
+
+**Q: Why am I getting "Conversation Update" instead of "New Lead"?**
+- The visitor is already in your CRM
+- This is normal for returning customers
+
+**Q: Where is this conversation? Why is it in anonymous?**
+- Conversations appear in "Anonymous" when the visitor hasn't shared any contact information yet
+- Once the visitor provides their name, email, or phone, the conversation will be linked to a contact
+- [Duplicate conversations](#how-duplicate-conversations-are-handled) also remain in Anonymous—the original contact's conversation will have a link to the new anonymous conversation
+- Check the Anonymous section in your Inbox to find these conversations
+
+**Q: Can I see all conversations from the same contact?**
+- There should only be one conversation per contact
+- Duplicate conversations show events linking them together
+
+**Q: How quickly will I be notified?**
+- Notifications are sent after the visitor stops messaging for a few minutes
+- This ensures the full conversation is captured before notifying you
+
+**Q: What if the visitor provides wrong information?**
+- You can still manually update the contact record in your CRM
+
+**Q: If a returning visitor provides updated contact info, will it update their record?**
+- For duplicate contacts (recognized by email/phone match), the existing record is preserved
+- Only missing postal code may be added automatically
+- You can manually update other fields in the CRM if needed

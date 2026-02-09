@@ -14,7 +14,7 @@ When purchasing an ad campaign, an ad spend amount is chosen and agreed upon bet
 
 All spend change requests and cancellations must have a **5-business****\-day** notice period. If the change request is submitted at the last minute and the renewal happens, we will run the campaign for the amount that was renewed, and the spend change request will be in effect for the following month. If there is an emergency pause due to a situation, for example, the seasonality of a campaign, we will hold the unspent amount in the form of a credit, and use it upon re-activation. 
 
-If you would like to learn more about ad spend changes, see [this](https://docs.vendasta.com/vendasta-services/digital-advertising/how-to-request-a-budget-change-on-matchcraft-ad-servcies-spend) resource article.
+If you would like to learn more about ad spend changes, see [this](https://docs.vendasta.com/vendasta-services/digital-advertising/how-to-request-a-budget-change-on-matchcraft-ad-services-spend) resource article.
 
 ### Promotional Campaigns
 

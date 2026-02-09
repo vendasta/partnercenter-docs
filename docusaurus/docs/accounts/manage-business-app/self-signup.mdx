@@ -1,0 +1,236 @@
+---
+title: Self-Signup Workflow – Enable Customer Self-Registration
+sidebar_label: Self-Signup
+description: Configure self-signup to allow customers to create their own Business App accounts and onboard themselves.
+tags:
+  - business-app
+  - self-signup
+  - onboarding
+  - customer-acquisition
+keywords:
+  - self signup
+  - self-signup
+  - customer registration
+  - add your clients
+  - create account
+---
+
+## Intro
+
+Self-signup lets your customers create their own Business App accounts without manual intervention. Share a signup link or enable registration on your login page, and new customers can onboard themselves any time.
+
+## What is self-signup?
+
+Self-signup is a feature that allows end users to register for a Business App account on their own. When a customer signs up, a new company record is created in your CRM with the Record Source set to "Self Signup," making it easy to identify and automate follow-up for these customers.
+
+You can share the signup link directly, embed it in marketing materials, or enable a **Create Account** option on your Business App login page.
+
+## What information is captured during self-signup?
+
+Self-signup is designed to reduce friction and get customers into Business App as quickly as possible. The signup form captures minimal required information:
+
+- **Contact email**: The email address for the primary user
+- **Company name**: Used to look up the business via Google Places
+
+### Automatic business data enrichment
+
+When a customer enters their company name, the system searches Google Places to find their business:
+
+- **If found via Google Places**: Business data is automatically populated, including address, phone number, business hours, and other profile information
+- **If not found via Google**: The customer can optionally provide their website URL
+
+This approach balances ease of signup with capturing valuable business information.
+
+### Immediate AI onboarding
+
+When business data is captured from Google Places or a website is provided, the system automatically:
+
+- Adds **Business Profile** information to the AI Knowledge Base
+- Adds **Website Knowledge** by crawling the provided website
+- Enables the **AI Receptionist** with this knowledge immediately
+
+This means customers can start interacting with their AI Receptionist right away, finding value faster and experiencing your services from the moment they sign up.
+
+:::tip
+The automatic AI onboarding helps demonstrate value immediately. Customers can test their AI Receptionist in Business App as soon as they complete signup.
+:::
+
+## Why is self-signup important?
+
+Self-signup enables:
+
+- **Automated customer acquisition**: Customers can sign up without waiting for you to create their account
+- **Reduced manual work**: No need to manually add accounts for every new customer
+- **24/7 availability**: Customers can register any time, even outside business hours
+- **Scalable growth**: Handle increased signups without additional administrative overhead
+- **Immediate engagement**: Customers can start exploring your offerings right away
+
+## What you can do with self-signup
+
+With self-signup, you can:
+
+- Share a unique signup link via email, social media, or your website
+- Enable a **Create Account** option on the Business App login page
+- Configure different signup experiences per market
+- Automate onboarding workflows for self-signup customers
+- Track self-signup conversions using the Record Source field
+- Present [Featured Packages](./featured-packages) to drive upgrades during onboarding
+
+## How to set up self-signup
+
+### Get your signup link
+
+1. In Partner Center, go to **Accounts** > **Manage Business App**.
+2. Select **Customize Business App**.
+3. Scroll to the **Add Your Clients** section.
+4. Find the **Self Sign-Up** area.
+5. Copy the **Sign-Up Link** displayed.
+
+The signup link follows this format:
+```
+{your-business-app-url}/public/business/{partner-id}/{market-id}/sign-up
+```
+
+:::tip
+You can navigate directly to this page at [partners.vendasta.com/customize-business-app/add-your-customers](https://partners.vendasta.com/customize-business-app/add-your-customers).
+:::
+
+### Enable Create Account on the login page
+
+To let customers register directly from your Business App login page:
+
+1. Navigate to **Partner Center** > **Accounts** > **Manage Business App** > **Customize Business App**.
+2. Scroll to the **Add Your Clients** section.
+3. Enable the **Show Create Account** checkbox.
+4. Save your changes.
+
+When enabled, customers visiting your Business App login page will see a **Create Account** option alongside the login form.
+
+:::info
+The **Show Create Account** option is configured at the partner level and applies to your default market. For market-specific configurations, select the appropriate market before making changes.
+:::
+
+## Automating onboarding for self-signup customers
+
+Create an automation to welcome and engage customers who sign up on their own.
+
+### Set up the automation
+
+1. In Partner Center, go to **Automations**.
+2. Click **Create Automation**.
+3. Select the trigger **A company is created**.
+4. Add a condition to filter by **Record Source** equals **Self Signup**.
+5. Add your desired actions.
+
+### Recommended automation actions
+
+Consider including these steps in your self-signup automation:
+
+- **Send a welcome email**: Introduce your services and provide getting-started guidance
+- **Assign a salesperson**: Route the new customer to the appropriate team member
+- **Create a follow-up task**: Schedule a check-in call or demo
+- **Add to a list**: Organize self-signup customers for targeted campaigns
+- **Start an email campaign**: Begin a nurture sequence with helpful content
+
+For detailed instructions, see [Getting Started with Automations](/docs/automations/getting-started-with-automations) and the [Automation Triggers Reference](/docs/automations/automation-triggers-reference).
+
+## Tips and best practices
+
+### Send onboarding email campaigns
+
+Create an email campaign that helps new self-signup customers get started:
+
+- Welcome them and confirm their registration
+- Explain what they can do in Business App
+- Highlight key features and benefits
+- Provide links to help resources or tutorials
+- Include contact information for support
+
+### Configure Featured Packages to drive upgrades
+
+When customers sign up but have no active products, you can present them with [Featured Packages](./featured-packages) to encourage upgrades:
+
+1. Set up Featured Packages in **Customize Business App** > **Add Your Clients**.
+2. Select packages relevant to self-signup customers.
+3. Customers without active products will see these packages on their Business App homepage.
+
+This creates a clear path from signup to purchase.
+
+### Use market-specific configurations
+
+If you serve different customer segments, configure self-signup settings per market:
+
+- Different signup links for each market
+- Market-specific Featured Packages
+- Tailored automation workflows based on market
+
+### Track self-signup performance
+
+Use the **Record Source** field to monitor self-signup effectiveness:
+
+- Filter your account list by Record Source = "Self Signup"
+- Create reports on self-signup conversion rates
+- Compare self-signup customers to other acquisition channels
+- Identify which marketing efforts drive the most signups
+
+## FAQs
+
+<details>
+<summary>Where do I find the self-signup link?</summary>
+
+Navigate to **Partner Center** > **Accounts** > **Manage Business App** > **Customize Business App** > **Add Your Clients**. The signup link is displayed in the **Self Sign-Up** section.
+</details>
+
+<details>
+<summary>Can customers sign up without a direct link?</summary>
+
+Yes. Enable the **Show Create Account** option to add a registration link to your Business App login page. Customers can then click **Create Account** to register.
+</details>
+
+<details>
+<summary>How do I identify customers who signed up on their own?</summary>
+
+Self-signup customers have their Record Source set to "Self Signup" in the CRM. You can filter accounts or create automations based on this field.
+</details>
+
+<details>
+<summary>Can I have different signup links for different markets?</summary>
+
+Yes. Each market has its own signup link. Select the market in **Customize Business App** to see its specific signup URL.
+</details>
+
+<details>
+<summary>What happens when a customer completes self-signup?</summary>
+
+A new company and user are created in your CRM. The company's Record Source is set to "Self Signup." If you have automations configured for this trigger, they will run automatically.
+</details>
+
+<details>
+<summary>Can I customize what customers see after signing up?</summary>
+
+Yes. Configure [Featured Packages](./featured-packages) to present upgrade options. You can also customize the Business App experience in **Customize Business App** settings.
+</details>
+
+<details>
+<summary>What information does the self-signup form collect?</summary>
+
+The form collects contact email and company name. If the business is found via Google Places, additional business data (address, phone, hours) is automatically populated. If not found, the customer can optionally provide their website URL.
+</details>
+
+<details>
+<summary>Why does self-signup only ask for minimal information?</summary>
+
+Reducing form fields minimizes friction and increases signup completion rates. Business data is enriched automatically through Google Places lookup, so customers don't need to enter it manually.
+</details>
+
+<details>
+<summary>Does self-signup set up AI features automatically?</summary>
+
+Yes. When business data is captured from Google Places or a website is provided, the system automatically adds this information to the AI Knowledge Base and enables the AI Receptionist. Customers can start using AI features immediately after signup.
+</details>
+
+<details>
+<summary>What if the customer's business isn't found on Google Places?</summary>
+
+If the business isn't found via Google Places, the customer can optionally enter their website URL. The system will use the website to populate the AI Knowledge Base instead.
+</details>

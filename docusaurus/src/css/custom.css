@@ -518,3 +518,120 @@ div[class*="language-"] pre {
 .tocBody [class*="table-of-contents"] a {
   font-weight: normal !important;
 }
+
+/* ===========================================
+   Sidebar Visual Hierarchy Styles
+   =========================================== */
+
+/* ------------------------------------------------------------ */
+/*  Section header styling (kebab-case class)                   */
+/* ------------------------------------------------------------ */
+
+/* Target top-level <li> items that act as section headers.
+ * We scope typography styles to the direct link element so that the
+ * rules do NOT cascade down to child <li> elements that represent
+ * actual doc links (e.g., "Getting Started With Business App").       */
+
+/* Visual treatment for the label text */
+.menu__list-item.sidebar-section-header > .menu__link {
+  font-size: 1rem;                /* Slightly larger than links */
+  font-weight: 700;               /* Bold */
+  color: #222c3c;                 /* Darker for emphasis */
+  text-transform: uppercase;      /* All caps for headers */
+  letter-spacing: 0.05em;         /* Space out the letters */
+  cursor: default;                /* No pointer hand */
+}
+
+/* Optional: Subtle divider for extra clarity */
+.menu__list-item.sidebar-section-header:not(:first-child) {
+  border-top: 1px solid #ececec;
+  padding-top: 1em;
+  margin-top: 1.25em;             /* Space above section */
+  margin-bottom: 0.4em;           /* Tighten below header */
+  padding-left: 1em;              /* Align with menu items if indented */
+}
+
+/* --------------------------------------------- */
+/* Guides divider and link styling in sidebar    */
+/* --------------------------------------------- */
+
+/* Make the Guides category look like a divider/section header */
+.theme-doc-sidebar-item-category.sidebar-guides-divider {
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+.theme-doc-sidebar-item-category.sidebar-guides-divider .menu__list-item-collapsible > .menu__link {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-700);
+  cursor: default;
+}
+
+/* Distinct style for guide links */
+.theme-doc-sidebar-item-link.sidebar-guide-link > .menu__link {
+  font-style: italic;
+  color: var(--ifm-color-emphasis-800);
+}
+
+[data-theme='dark'] .theme-doc-sidebar-item-link.sidebar-guide-link > .menu__link {
+  color: var(--ifm-color-emphasis-200);
+}
+
+/* Background shading and left border for nested sections - level 2 */
+.menu__list .menu__list {
+  background-color: var(--ifm-color-emphasis-100);
+  border-left: 2px solid #3F9B63;
+  border-radius: 0 4px 4px 0;
+  margin-left: 0.5rem;
+  padding: 0.25rem 0 0.25rem 0.5rem;
+  font-size: 0.95em;
+}
+
+/* Deeper nesting - level 3 */
+.menu__list .menu__list .menu__list {
+  background-color: var(--ifm-color-emphasis-200);
+  font-size: 0.95em;
+}
+
+/* Deeper nesting - level 4 */
+.menu__list .menu__list .menu__list .menu__list {
+  font-size: 0.95em;
+}
+
+/* Hover state for child items */
+.menu__list .menu__list .menu__link:hover {
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+/* Active item highlighting */
+.menu__link--active {
+  font-weight: 600;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .menu__list .menu__list {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left-color: #3F9B63;
+}
+
+[data-theme='dark'] .menu__list .menu__list .menu__list {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .menu__list .menu__list .menu__link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .menu__link--active {
+  font-weight: 600;
+}
+
+/* Hide docs that opt-in via frontmatter `sidebar_class_name: hide-from-sidebar` */
+.theme-doc-sidebar-item-link.hide-from-sidebar,
+.theme-doc-sidebar-item-category-link.hide-from-sidebar {
+  display: none !important;
+}

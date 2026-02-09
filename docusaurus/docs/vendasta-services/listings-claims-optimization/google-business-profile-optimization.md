@@ -20,7 +20,7 @@ The team will review the order and start the process within 2 business days. Ini
 
 Our team will work to claim and verify the listing using the information you provided. This step can take two weeks or more to complete, depending on Google's requirements and how quickly requested information is provided.
 
-You may be required to comply with one of of Google’s allowed verification methods, which can include:
+You may be required to comply with one of Google's allowed verification methods, which can include:
 * **Video Verification:** Providing a video of the physical location, equipment, or assets used by the business. In some cases, this may be a live video call.
 * **Phone Call/Text Message:** Google sends an automated call or text with a PIN to the business phone number.
 * **Postcard:** A physical postcard with a PIN is mailed to the business's physical address, which can take two weeks or more. P.O. boxes cannot be used.

@@ -1,5 +1,6 @@
 ---
 title: "Connect the AI Chat Receptionist with Shopify"
+sidebar_label: Connect with Shopify
 ---
 
 import {AISparkleIcon} from '@site/src/components/Icons'
@@ -16,10 +17,10 @@ By connecting the AI Chat Receptionist with Shopify, you'll be able to integrate
 
 ### Why is connecting the AI Receptionist with Shopify important?
 
-When a customer visits a Shopify store they might might have a general idea of a product they want but aren't sure exactly how to find it on the store website. Similarly, a customer might be able to find it in search but miss out on some key product details if they don't know where to look. This integration lets a customer ask general questions using chat and get helpful, personalized responses from the AI Receptionist that directs them where they want to go.
+When a customer visits a Shopify store they might have a general idea of a product they want but aren't sure exactly how to find it on the store website. Similarly, a customer might be able to find it in search but miss out on some key product details if they don't know where to look. This integration lets a customer ask general questions using chat and get helpful, personalized responses from the AI Receptionist that directs them where they want to go.
 
 :::tip
-While this guide has been written primarily for your AI Chat Receptionist, you can use the Tools created in this guide with you AI Voice Receptionist, or any other AI Employee!
+While this guide has been written primarily for your AI Chat Receptionist, you can use the Tools created in this guide with your AI Voice Receptionist, or any other AI Employee!
 :::
 
 ## Prerequisites & setup
@@ -78,7 +79,7 @@ Use the values below (replacing any placeholders) to create your version of this
 
 #### Required headers
 
-| Header | Example value | Required |mini
+| Header | Example value | Required |
 |--------|---------------|:-------:|
 | `X-Shopify-Storefront-Access-Token` | `YOUR_STOREFRONT_ACCESS_TOKEN` | ✓ |
 | `Content-Type` | `application/json` | ✓ |
@@ -91,7 +92,7 @@ Use the values below (replacing any placeholders) to create your version of this
 | `query` | `Body` | `string` | `Generate a full GraphQL query string using Shopify Storefront API with this format: query { products(first: 5, query: "KEYWORD") { edges { node { title handle availableForSale priceRange { minVariantPrice { amount currencyCode } } descriptionHtml } } } }, replacing KEYWORD with the user's term. Do not return just a keyword—return the entire query string exactly as shown.` |
 
 :::info
-If an API call is failing, compare the API call created by your AI Employeee with this example succesful GraphQL body. You can inspect AI Employee raw API calls in the `Conversations` tab.
+If an API call is failing, compare the API call created by your AI Employee with this example successful GraphQL body. You can inspect AI Employee raw API calls in the `Conversations` tab.
 
 <details>
 <summary>Example AI Receptionist generated GraphQL body</summary>
@@ -121,7 +122,7 @@ In this step, you’ll write the AI Receptionist’s prompt. These are the instr
 
 You can copy and paste this whole example prompt below, but you will first have to:
 -  swap out the `Category`  placeholders with a few examples of product categories in your Shopify store 
-- swap out the `Item` placeholders with examples of products that belong to the prodcut categores in your Shopify store
+- swap out the `Item` placeholders with examples of products that belong to the product categories in your Shopify store
 
 ### Example AI Receptionist Shopify prompt
 
@@ -191,7 +192,7 @@ query {
 When sharing links, hyperlink it over the name of the product.
 ````
 
-## Example conversation wih AI Receptionist connected to Shopify
+## Example conversation with AI Receptionist connected to Shopify
 
 <ChatUserMessage>
 Hey, do you have any hoodies for sale?

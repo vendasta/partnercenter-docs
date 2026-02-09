@@ -39,11 +39,11 @@ To ensure a smooth and efficient process, please fill out the fulfillment form w
 
 ### 2. Onboarding & training call
 
-Our team of experts will lead an onboard call to understand your business needs and how to adjust our reputation workflows to suit you. We will come to the call with your initial Reputation Specialist setup with your branding and customized review response style to adjust during the call. We will refine any additional knowledge sources and/or review response instructions together.
+Our team of experts will lead an onboarding call to understand your business needs and how to adjust our reputation workflows to suit you. We will come to the call with your initial Reputation Specialist setup with your branding and customized review response style to adjust during the call. We will refine any additional knowledge sources and/or review response instructions together.
 
 We will also train and walk you through the new workflow. Our team of experts will show you where you can find your reviews, review request emails and SMS templates, and where to modify the AI's review response instructions.
 
-* **Timeline:** An onboard call can be booked in as little as 1 business day, depending on availability.
+* **Timeline:** An onboarding call can be booked in as little as 1 business day, depending on availability.
 * **For U.S. Businesses:** A2P registration is required to validate the business' use of SMS. Please be ready with your business legal information if you'd like to use SMS. Registration for A2P can take up to two weeks to complete.
 
 ### 3. AI Reputation Specialist setup

@@ -16,7 +16,7 @@ A website plugin adds additional functionality to a WordPress website that isn�
 
 For WooCommerce (eCommerce) stores on WordPress, for example, a plugin may be needed to enable specific product sorting options for customers browsing through your store.
 
-For simplicity’s sake, we can group website plugins can be thought of as one of two formats:
+For simplicity’s sake, website plugins can be thought of as one of two formats:
 
 *   Performance—These plugins assist with site functionalities such as speed, security, etc., and aren’t typically visible to site visitors on the front end.
 *   Functional—These plugins, such as appointment booking widgets and event calendars, can be viewed/interacted with by visitors on the site.

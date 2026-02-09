@@ -93,7 +93,7 @@ Test the same prompt multiple times to see if you get consistent results. AI res
 
 ### Monitor and Improve the AI Chat Receptionist
 
-Regularly review the `Conversations` and `Anonymous Visitors` tabs in Conversations to make sure your Chat Receptionist is having interacting with visitors like you expected. 
+Regularly review the `Conversations` and `Anonymous Visitors` tabs in Conversations to make sure your Chat Receptionist is interacting with visitors like you expected. 
 
 :::note
 Conversations are placed in the `Anonymous Visitors` tab when the AI Chat Receptionist was unable to identify their contact information during the conversation.

@@ -4,7 +4,7 @@ sidebar_label: "Approval Process Options for Responses to Negative Reviews"
 description: "One of the reputation management services Vendasta Services offers is fully managed and drafted responses to online reviews for the business, via products lik"
 ---
 
-Some of the reputation services that Vendasta Services offers are fully managed and drafted responses to online reviews for a business, via products like [Review Resposes Standard](https://partners.vendasta.com/marketplace/products/MP-K8LLNZBS5DTVCHQ4J54C463F3HWGJCQP) or [Review Responses Plus](https://partners.vendasta.com/marketplace/products/MP-K8LLNZBS5DTVCHQ4J54C463F3HWGJCQP/addon/A-NCSGCP37R4). 
+Some of the reputation services that Vendasta Services offers are fully managed and drafted responses to online reviews for a business, via products like [Review Responses Standard](https://partners.vendasta.com/marketplace/products/MP-K8LLNZBS5DTVCHQ4J54C463F3HWGJCQP) or [Review Responses Plus](https://partners.vendasta.com/marketplace/products/MP-K8LLNZBS5DTVCHQ4J54C463F3HWGJCQP/addon/A-NCSGCP37R4). 
 
 With this service, when our system finds a positive review, we will respond on behalf of the business with a personalized, tailored response. These responses are posted within 2 business days of the review being pulled into our system.
 
@@ -33,6 +33,6 @@ During the project onboarding call, we'll discuss which approach works best for 
 2.  Typically, our responses to negative reviews will be apologetic, frame the business in a positive light, and invite the reviewer to take the conversation offline. This avoids any further comments on a public review site.  
       
     
-3.  You can specify a contact for offline conversations during the project onboard call.
+3.  You can specify a contact for offline conversations during the project onboarding call.
 
 For more insight into our fulfillment process for our review response services, you can view the expectation brochures **[here](https://examples.yourdigitalagents.com/expectation-brochures/#:~:text=Local%20Listings%20Management-,Review%20Management,-Review%20Requests%0AReview)**.
