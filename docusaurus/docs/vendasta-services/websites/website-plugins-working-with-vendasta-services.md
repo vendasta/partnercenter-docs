@@ -30,7 +30,7 @@ Feel free to send us an email at [marketingservices@yourdigitalagents.com](mailt
 
 ## **Plugins/Widgets Vendasta Services Can Integrate**
 
-When you build a website with us via one of our _[Templated Website](https://partners.vendasta.com/marketplace/products/MP-XQC6XC2VMV3B4ZJZLD6Z6ZDXKN2VTC86)_ or _[Tailored Website](https://partners.vendasta.com/marketplace/products/MP-K3KB3DNTX5HTFDKPJB8BF54B5PSMNNDK)_ products these include the integration of some Standard plugins where the integration cost is included in the price of the website build.
+When you build a website with us via our _[Templated Website](https://partners.vendasta.com/marketplace/products/MP-XQC6XC2VMV3B4ZJZLD6Z6ZDXKN2VTC86)_ product, these include the integration of some Standard plugins where the integration cost is included in the price of the website build.
 
 **Standard Plugins:**
 

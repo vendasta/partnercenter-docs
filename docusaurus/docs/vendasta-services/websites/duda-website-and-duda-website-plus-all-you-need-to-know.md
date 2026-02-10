@@ -110,7 +110,7 @@ Every website will be populated with AI-generated copy to fill each page, but if
 
 <summary>What if my client needs more functional customizations to be made on the website?</summary>
 
-The Accelerated templated Website solution is best-suited for simpler websites that don’t require much customization. However, if you’d like to discuss a Tailored WordPress website option, we’re happy to chat! Please reach out to your Vendasta sales representative for assistance and determining the right solution for you.
+The Accelerated templated Website solution is best-suited for simpler websites that don’t require much customization. However, if you’d like to discuss more advanced customization options, we’re happy to chat! Please reach out to your Vendasta sales representative for assistance and determining the right solution for you.
 </details>
 
 <details>
