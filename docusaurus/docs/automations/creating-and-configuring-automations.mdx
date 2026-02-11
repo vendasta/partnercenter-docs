@@ -1,0 +1,172 @@
+---
+title: Creating and Configuring Automations
+description: Learn how to create, configure, and manage automation settings including entry settings, error handling, and duplication.
+sidebar_position: 2
+---
+
+# Creating and Configuring Automations
+
+This guide covers the complete process of creating automations and configuring their advanced settings to ensure they work exactly as you need them to.
+
+## Automation Settings
+
+Several settings can be configured for each automation you create. You can access these settings in the **Settings** tab in your automation.
+
+![Automation Settings Tab](./img/automations/automation-settings-tab.jpg)
+
+### Entry Settings
+
+Many trigger events and conditions can be met multiple times. For example, **A customer makes a payment** trigger with the trigger options set to **Succeeds or fails** will fire each time a customer attempts to pay for an invoice or shopping cart purchase. The entry settings allow you to specify whether you want the automation workflow to start only the first time the trigger criterion is met or every time.
+
+**Options:**
+- **Run once per account**: The automation will only run the first time the trigger conditions are met for each account
+- **Run every time**: The automation will run each time the trigger conditions are met, regardless of previous runs
+
+### Error Handling Settings
+
+You can have many steps in an automation workflow. If at any point a step fails to complete, you can choose to have your automation ignore the error and continue with the following steps, or stop that specific automation run.
+
+**Options:**
+- **Ignore the error and continue the automation**: If a step fails, the automation will log an error (viewable in the Activity table) and move on to the next step of the workflow.
+- **Stop that specific automation run**: If a step fails, the automation run will completely stop for that account. The automation will not move on to the next step of the workflow. You may manually resume the run from any step in the workflow from the automation activity section.
+
+### Timezone Configuration
+
+Set your preferred timezone for time-based automation steps and scheduling.
+
+### Notification Settings
+
+Subscribe to error notifications to be alerted when automations encounter issues.
+
+## Duplicating Automations
+
+There may be times when you want to copy an automation you've created. You can do this from the main Automations page, or from a specific automation.
+
+:::note
+**Important Notes:**
+- Duplicated automations are off by default. Remember to turn on the automation when you're ready.
+- If you have markets enabled, the new automation will be copied into the same market as the original.
+:::
+
+### From the Automations Page
+
+To copy an automation from **Partner Center** > [**Automations**](https://partners.vendasta.com/automations):
+
+1. Find the automation you want to copy in the table. Then, click the **Menu** icon at the end of the row.
+2. Click **Duplicate**.
+
+![Duplicate automation from automations page](./img/automations/duplicating-automations/duplicate_from_automations_page.jpg)
+
+### From a Specific Automation
+
+To copy an automation from a specific automation:
+
+1. Click **Menu** in the top right corner of the screen.
+2. Click **Duplicate**.
+
+![Duplicate from a specific automation](./img/automations/duplicating-automations/duplicate_from_specific_automation.jpg)
+
+## Organizing Automations with Tags
+
+Tired of scrolling through your long list of automations? You can now add tags to your automations to group them into categories and find them more easily.
+
+### Common Tag Examples
+
+Here are some commonly used tags:
+- Leads
+- Onboarding
+- Sales
+- Retention
+- Marketing
+- Trial
+- Pipeline
+
+You can enter any tag you like, so the options are endless!
+
+### Adding Tags
+
+To add tags to an automation:
+
+1. Go to **Partner Center** > [**Automations**](https://partners.vendasta.com/automations)
+2. Create new automation by clicking **Create automation** and selecting a template, or selecting an existing automation.
+3. Click the **Edit Details.**
+4. In the **Tags** field, enter one or more tags. To use a new tag, enter the text for the tag, then press **Enter**.
+5. Click **Save**. 
+
+![Adding tags to automation](./img/automations/add-tags.png)
+
+### Removing Tags
+
+To remove tags from an automation:
+
+1. Repeat steps 1-3 in the **Add tags section**.
+2. In the **Tags** field, click the **Remove** icon on the tag(s) you want to remove. 
+3. Click **Save**.
+
+### Filtering by Tags
+
+To filter the automation table by tags:
+
+1. Go to **Partner Center** > My [**Automations**](https://partners.vendasta.com/automations)
+2. Click the **Filter** icon ![filter icon](./img/automations/filter-icon.png) on the table.
+3. In the **Tags** section, select a tag to filter the table by.
+
+The table should now be filtered by the selected tag.
+
+![Filtering automations by tags](./img/automations/filter-by-tags.png)
+
+## Turning Off Automations
+
+You can turn off automation from the Workflow page, or from the main Automations page.
+
+### Drain vs Stop
+
+When you turn off an automation, you can stop it immediately or set it to drain. Automation draining allows you to stop an automation that is running but lets the existing runs finish rather than halting their progress. No new automation runs are started once the automation is stopped.
+
+**Stop immediately**: All scheduled steps will be stopped immediately and canceled.
+**Drain**: Allow remaining steps to complete for accounts currently in progress, but no new runs will start.
+
+### How to Turn Off an Automation
+
+**Method 1: From the Automations List**
+
+Go to **Partner Center > Automations**. Choose the automation you would like to turn off or allow to drain before it completely stops. **Click the kebab icon > Turn off the automation.**
+
+![Turn off automation from kebab menu](./img/automations/turn-off-automation/turn_off_automation_1.jpg)
+
+**Method 2: From Within the Automation**
+
+You can also click into the automation and stop it from there by toggling from 'On' to 'Off'.
+
+![Toggle automation off](./img/automations/turn-off-automation/toggle_automation_off.jpg)
+
+### Choosing Stop or Drain
+
+You will be prompted to either "Stop automation runs in progress" or "drain automation runs". By selecting to stop runs in progress, all scheduled steps will be stopped immediately.
+
+By choosing to drain the automation, you are allowing the remaining steps of the automation to run for any account still in progress, however, no new runs will be activated.
+
+![Drain automation dialog](./img/automations/turn-off-automation/drain_automation_dialog.jpg)
+
+:::warning
+When you turn off automation without selecting the "drain automation runs" option, all scheduled steps are canceled and will not resume if the automation is turned on again. For example, if you have an automation running that sends an email 5 days after a new account is created, any currently running workflows to send emails to the accounts triggered in the last 5 days will be canceled.
+:::
+
+## Best Practices for Configuration
+
+1. **Test Entry Settings**: Carefully consider whether your automation should run once or multiple times per account
+2. **Plan Error Handling**: Decide upfront how your automation should handle errors based on the criticality of each step
+3. **Use Descriptive Tags**: Implement a consistent tagging strategy to keep your automations organized
+4. **Monitor Performance**: Regularly check automation activity to ensure settings are working as expected
+5. **Document Changes**: When duplicating automations, clearly name and document what changes you're making
+
+<div style={{textAlign: 'center', paddingBottom: '15px'}}>
+  <a 
+    style={{fontSize: '16px', fontWeight: 'bold', color: '#ffffff', backgroundColor: '#33ace2', textDecoration: 'none', borderRadius: '5px', padding: '10px 30px 9px 30px', border: '1px solid #33ACE2', display: 'inline-block', textAlign: 'center'}}
+    href="https://partners.vendasta.com/automations"
+    target="_blank"
+    rel="noopener"
+  >
+    Configure Your Automations
+  </a>
+</div>

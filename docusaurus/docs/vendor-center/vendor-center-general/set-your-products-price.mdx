@@ -1,5 +1,6 @@
 ---
 title: "Set your product's price"
+sidebar_label: Set product price
 sidebar_position: 2
 ---
 
@@ -83,6 +84,12 @@ If your product doesn't require multiple pricing options, you can leave the Edit
 
 #### Allow multiple purchases per account (disables add-on support)
 
-By default, only a single instance of a product can be active on an account at any time. Enable this setting to allow your customers to purchase this product multiple times on a single account. Note that add-ons cannot be used with products that can be purchased multiple times.
+By default, only a single instance of a product can be active on an account at any time. 
+
+**For base products (top-level products):** Even if this setting is enabled, the system will not allow quantity adjustments during order activation. The quantity field in the order cannot be modified due to custom integrations with certain products and their associated forms, such as GoDaddy. Note that add-ons cannot be used with products that have this setting enabled.
+
+**For add-ons:** If this setting is enabled, the quantity can be adjusted in the order. However, this is not recommended for high-volume quantities (such as hundreds of units). Partner Center is designed primarily for SaaS products and is not optimized for high-volume physical item sales. Processing large quantities may result in slow load times or cause orders to crash.
+
+**Best practice for high-volume orders:** If you need to fulfill orders with large quantities, use Order forms to specify the quantities needed for fulfillment. You will need to manually calculate the total cost and enter it into the order.
 
 Once set, hit **Save** to save the pricing for your product.

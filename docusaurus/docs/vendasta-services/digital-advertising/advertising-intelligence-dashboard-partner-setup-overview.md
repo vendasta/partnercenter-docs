@@ -1,10 +1,10 @@
 ---
 title: "Advertising Intelligence Dashboard"
 sidebar_label: "Advertising Intelligence Dashboard"
-description: "This guide provides an overview of setting up and using the Advertising Intelligence Dashboard for the first time. The dashboard s designed to help users effic"
+description: "This guide provides an overview of setting up and using the Advertising Intelligence Dashboard for the first time. The dashboard is designed to help users effic"
 ---
 
-This guide provides an overview of setting up and using the Advertising Intelligence Dashboard for the first time. The dashboard s designed to help users efficiently view their ad campaigns' performance. The video below takes you through some of the key features.
+This guide provides an overview of setting up and using the Advertising Intelligence Dashboard for the first time. The dashboard is designed to help users efficiently view their ad campaigns' performance. The video below takes you through some of the key features.
 
 ### 1\. Connecting Accounts
 

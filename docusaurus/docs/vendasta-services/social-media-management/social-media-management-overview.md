@@ -42,7 +42,7 @@ The service is available in two tiers with different deliverables. Posts can be 
 This service includes all Standard features plus additional deliverables for a more robust strategy.
 * **8 Additional unique posts and stories per month** (20 total)
 * **6 Additional custom images per month** (10 total)
-* **3 addiitonal story highlights (reposts)** (5 total)
+* **3 additional story highlights (reposts)** (5 total)
 * **An additional $25 USD for post boosting** ($50 USD total)
 * **2 Additional SEO-enhanced blogs per quarter** (1 a month)
 * **Quarterly strategy calls:** These sessions review key metrics, post performance, and gather feedback. 

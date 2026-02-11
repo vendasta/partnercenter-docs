@@ -1,42 +1,56 @@
-# Website
+# Vendasta Partner Center Documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This repository contains the source code for the [Vendasta Partner Center Documentation](https://docs.vendasta.com), built with [Docusaurus](https://docusaurus.io/).
 
-### Installation
+## 🚀 Quick Start
 
-```
-$ yarn
-```
-
-### Local Development
-
-```
-$ yarn start
+### 1. Clone the Repository
+```bash
+git clone https://github.com/vendasta/partnercenter-docs.git
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+### 2. Install Dependencies
+The Docusaurus project is located in the `docusaurus` subdirectory. You must navigate there first.
+
+```bash
+cd partnercenter-docs/docusaurus
+npm install
+```
+
+### 3. Run Locally
+Start the local development server. This will open a browser window at `http://localhost:3000`.
+
+```bash
+npm run start
+```
+Most changes are reflected live without having to restart the server.
+
+## 🛠 Build & Deployment
 
 ### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
+Generate static content into the `build` directory.
+```bash
+npm run build
 ```
 
-Not using SSH:
+### Deploy
+To deploy the documentation website:
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
+```bash
+# Ensure you are in the docusaurus directory
+cd docusaurus
+
+# Deploy with your GitHub username
+GIT_USER=<Your GitHub username> npm run deploy
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
-# Cache Bust Fri Aug  8 14:27:45 CST 2025
+If you are using SSH for Git authentication:
+```bash
+USE_SSH=true GIT_USER=<Your GitHub username> npm run deploy
+```
+
+## 📚 Documentation Guides
+
+*   **[Contributing Guide](docs/CONTRIBUTING.md)**: For content writers. Learn about voice, tone, formatting, and how to add new pages.
+*   **[Architecture Guide](docs/ARCHITECTURE.md)**: For maintainers. Learn about technical conventions like redirects, categories, and JSON-LD.
+

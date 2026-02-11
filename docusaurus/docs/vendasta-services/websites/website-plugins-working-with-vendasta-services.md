@@ -1,7 +1,7 @@
 ---
 title: "Website Plugins | Working with Vendasta Services"
 sidebar_label: "Website Plugins"
-description: "What are website plugins?  \n A website plugin adds additional functionality to a WordPress website that isn’t provided as a standard setting by the website bu"
+description: "What are website plugins?  \n A website plugin adds additional functionality to a WordPress website that isn't provided as a standard setting by the website bu"
 zendesk_id: 24462249835287
 zendesk_url: "https://marketing-services.zendesk.com/hc/en-us/articles/24462249835287-Website-Plugins-Working-with-Marketing-Services"
 updated_at: "2024-07-02T16:38:25Z"
@@ -16,7 +16,7 @@ A website plugin adds additional functionality to a WordPress website that isn�
 
 For WooCommerce (eCommerce) stores on WordPress, for example, a plugin may be needed to enable specific product sorting options for customers browsing through your store.
 
-For simplicity’s sake, we can group website plugins can be thought of as one of two formats:
+For simplicity’s sake, website plugins can be thought of as one of two formats:
 
 *   Performance—These plugins assist with site functionalities such as speed, security, etc., and aren’t typically visible to site visitors on the front end.
 *   Functional—These plugins, such as appointment booking widgets and event calendars, can be viewed/interacted with by visitors on the site.
@@ -51,7 +51,7 @@ _\*Defender Pro is not added to websites automatically but can be added free of 
 _\*\* Divi Plus is only added when needed, as determined by Vendasta Services’ website fulfillment team._
 
 **Premium Plugins**  
-For all premium plugins, you will need to purchase the license and provide the necessary information (ie. licenses) and credentials to our team for integration. Integration costs are subject to hourly fees. We will not purchase premium plugins on behalf of you/your clients.
+For all premium plugins, you will need to purchase the license and provide the necessary information (ie. licenses) and credentials to our team for integration. Integration costs are subject to hourly fees. We will not purchase premium plugins on your behalf.
 
 ##   
 **Plugin Caveats to Keep in Mind**
@@ -68,4 +68,4 @@ If there’s a plugin request that we haven’t used before, we need time to res
 Plugins interact with one another, and so while a plugin may be intended for one purpose, it may conflict with other plugins on a specific site and thus not be usable. This is the case whether you build a website with us or another vendor or website developer. Unfortunately, we may not know about the plugins' negative impact until they are installed.
 
 **Setting Expectations**  
-Understanding the above points and helping your clients understand these is crucial to setting strong expectations and allowing for conversations to explore alternative options in those scenarios to achieve their goals within their website project.
+Understanding the above points is crucial to setting strong expectations and allowing for conversations to explore alternative options in those scenarios to achieve your goals within your website project.

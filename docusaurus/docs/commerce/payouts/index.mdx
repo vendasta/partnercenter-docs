@@ -1,13 +1,93 @@
 ---
 sidebar_position: 1
-title: Payouts
-description: Information about Commerce payouts, bank accounts, and payout status
+title: Managing Payouts
+sidebar_label: Payouts
+description: Manage your payout settings, bank accounts, and track payout status in Partner Center Commerce.
+tags: [commerce, payouts, bank-accounts, payments]
+keywords: [payouts, bank account, stripe, commerce, payments, payout status, currency]
 ---
 
-# Payouts
+# Managing Payouts
 
-Manage your payout settings, bank accounts, and track payout status in Partner Center Commerce.
+## What are Payouts?
 
-## Article in this section
+Payouts automatically transfer your earned revenue from Partner Center Commerce to your designated bank account. When customers pay for your services through Vendasta Payments, those funds are processed and then paid out to you according to your configured payout schedule and bank account settings.
 
-- [Managing Payouts](./managing-payouts.mdx)
+## Why are Payouts important?
+
+Payouts ensure you receive your earned revenue in a timely and reliable manner. The system handles currency conversions, manages multiple bank accounts for different currencies, and provides transparency into when you can expect to receive your funds. This automated process eliminates the need for manual payment collection and provides predictable cash flow for your business.
+
+## What you can do with Payouts
+
+With the Payouts system, you can:
+
+- Configure one or multiple bank accounts for receiving payments
+- Set up bank accounts for different currencies to avoid conversion fees
+- Track the status of current and past payouts
+- Monitor upcoming payout schedules
+- View detailed payout history and transaction breakdowns
+- Update bank account information when needed
+
+## How to check Payout status
+
+To check your payout status:
+
+1. Navigate to **Partner Center > Commerce > Payouts**
+2. View upcoming payouts and funds in transit at the top of the page
+3. Review the breakdown of all payouts and their status below
+
+![Payout Status Overview](./img/payout-status.jpg)
+
+Your payout status will show:
+- **Upcoming payouts** - Scheduled future transfers
+- **In transit** - Payments currently being processed
+- **Completed** - Successfully deposited payments
+- **Processing** - Payments being handled by your bank
+
+## Payout schedule
+
+Your payout schedule is determined by Stripe based on:
+- Your location
+- Currency used
+- Frequency of transactions
+- Other risk assessment criteria
+
+**Timeline expectations:**
+- **First payout:** Within 7 business days of your first payment
+- **Regular payouts:** Between 2 and 7 business days, depending on your account criteria
+
+<details>
+<summary>What if my payout is delayed or missing?</summary>
+
+If a payout hasn't arrived by its expected delivery date, several factors could be involved:
+
+**Payout date changed and postponed:** Your next expected payout date has been updated due to account verification issues. Check your [Stripe dashboard](https://dashboard.stripe.com/account/verifications) and email for any requested additional information.
+
+**Payout missing (less than 5 business days):** Your payout has left Stripe and is being processed by your bank. Banks may add extra processing days, including weekends and holidays.
+
+**Payout missing (more than 5 business days):** Contact your bank with the following information: bank account details, expected date, exact amount, and payor (Stripe). See [How to check the status of a payout with your bank](https://support.stripe.com/questions/payouts-being-processed-at-your-bank).
+
+If your bank cannot locate the missing payout after 5 business days, contact [Stripe support](https://support.stripe.com/contact/login).
+</details>
+
+<details>
+<summary>What if my bank account details are incorrect?</summary>
+
+**Bank account updated during transit:** If you update your bank account while a payout is in transit, it will [go to your old bank account](https://support.stripe.com/questions/updating-your-bank-account-while-a-payout-is-in-transit).
+
+**Incorrect details entered:** You can [update your bank account details](https://support.stripe.com/questions/update-existing-bank-account-information) from your Stripe Dashboard.
+
+**Closed bank account:** If your payout is sent to a closed account, it will [return to your Stripe account automatically](https://support.stripe.com/questions/payout-sent-to-a-closed-bank-account).
+</details>
+
+<details>
+<summary>What is a reserve on my account?</summary>
+
+A [reserve](https://support.stripe.com/topics/reserves) is a portion of your funds that Stripe temporarily holds to mitigate potential risks. This can affect your payout schedule and amounts. Check your Stripe dashboard for details about any reserves on your account.
+</details>
+
+<details>
+<summary>Which countries support Vendasta Payments?</summary>
+
+Vendasta Payments currently supports these countries: US, CA, AU, GB, NZ, CZ. If your billing contact country setting is outside these six, you will see "Vendasta Payments is currently unsupported in your area."
+</details>

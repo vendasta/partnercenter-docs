@@ -16,7 +16,9 @@ Companies in the CRM enables you to maintain comprehensive records, score leads 
 
 - **Activity logging**: Track sales communications and create detailed activity records
 - **Lead scoring**: Automated lead prioritization based on buyer profile and intention (configured in `Administration` > `Score`)
-- **Find accounts & leads**: Discover and identify potential business opportunities
+- **Find leads**: Discover and identify potential business opportunities using local business search
+- **Advanced filtering & search**: Filter companies by various criteria and search across multiple fields
+- **Parent-child company relationships**: Manage corporate hierarchies and filter child companies by their parent company
 - **[CRM default company fields](./crm-default-company-fields.mdx)**: Standard fields available for tracking company information
 - Company vs account management: Understanding the relationship between billing accounts and CRM companies
 
@@ -75,6 +77,71 @@ To log an activity for a contact, click into a contact profile page:
 
 You can also set up automations/Zapier to get activities logged automatically.
 
+## Upload files to companies
+
+You can upload files directly to company records to maintain organized documentation:
+
+1. Open a company profile page
+2. Navigate to the `Files` section
+3. Click `Add a file` to upload documents, images, or other files
+4. View AI-generated summaries for better file organization
+
+Learn more about [file uploads](../file/crm-file-upload.mdx) and supported file types.
+
+## Filtering and searching companies
+
+The Companies interface provides powerful filtering and search capabilities to help you manage large numbers of prospects effectively:
+
+### **Quick Search**
+- **Company name**: Search by full or partial company names
+- **Website URL**: Find companies by their website domains
+- **Phone numbers**: Search using full or partial phone numbers
+- **Address information**: Filter by city, state, or zip code
+
+### **Advanced Filters**
+- **Lead scoring**: Filter by lead score ranges (high, medium, low priority)
+- **Activity dates**: Find companies based on last contact date or activity timeline
+- **Assigned salesperson**: View companies assigned to specific team members
+- **Lifecycle stage**: Filter by prospect stage (lead, qualified, customer, etc.)
+- **Parent company**: Filter to show child companies that belong to a specific parent company
+- **Tags**: Filter by applied company tags for categorization
+- **Creation date**: Find recently added or historical companies
+- **Record source**: Filter by how companies entered your CRM (form, import, manual)
+
+## Managing company hierarchies
+
+The CRM supports parent-child company relationships, allowing you to organize and manage corporate hierarchies effectively. This feature is particularly useful for tracking multi-location businesses, franchise operations, or corporate structures with subsidiary companies.
+
+### Setting up parent-child relationships
+
+**To establish a parent company relationship:**
+1. Navigate to a company's profile page
+2. Edit the company information
+3. Set the **Parent company** field to link the company to its parent organization
+4. Save the changes to establish the hierarchy
+
+**Common use cases:**
+- **Franchise operations**: Link individual franchise locations to the main franchise company
+- **Corporate subsidiaries**: Connect subsidiary companies to their parent corporation
+- **Multi-location businesses**: Organize branch offices under a central headquarters company
+- **Business groups**: Group related companies under a parent holding company
+
+### Finding child companies
+
+Once parent-child relationships are established, you can easily find all companies within a corporate hierarchy:
+
+**Using the Parent company filter:**
+1. Go to `CRM` > `Companies`
+2. Click `Add filter` and select **Parent company**
+3. Choose the parent company from the dropdown
+4. View all child companies that belong to the selected parent organization
+
+This filtering capability helps you:
+- **Manage corporate accounts**: View all locations or subsidiaries at once
+- **Track business relationships**: Understand the full scope of corporate partnerships
+- **Coordinate sales efforts**: Ensure consistent messaging across all company entities
+- **Analyze performance**: Compare metrics across different parts of the same organization
+
 ## Understanding companies vs accounts
 
 <iframe 
@@ -119,7 +186,7 @@ A Company is a newer concept introduced with the updated CRM system, designed to
   allowFullScreen
 ></iframe>
 
-## Find accounts & leads
+## Find leads
 
 <iframe 
   src="//www.youtube-nocookie.com/embed/HIX19D6jWM4" 
@@ -129,29 +196,54 @@ A Company is a newer concept introduced with the updated CRM system, designed to
   allowFullScreen
 ></iframe>
 
-Identifying and qualifying potential clients within your local market is crucial for any salesperson focused on local businesses. The "Find Accounts" feature allows you to look for the digital performance of local businesses, including their Google Business Profile claimed status, Google reviews, website, and allows you to create local businesses in bulk.
+Identifying and qualifying potential clients within your local market is crucial for any salesperson focused on local businesses. The "Find Leads" feature allows you to discover potential prospects by searching for local businesses and analyzing their digital performance, including their Google Business Profile claimed status, Google reviews, website performance, and other key indicators. This tool enables you to create new company records in bulk for businesses that show potential.
 
-### How to use the "Find Accounts" feature
+### How to use the "Find Leads" feature
 
-1. **Search for businesses**
+1. **Access the lead finder**
    - Go to `CRM` > `Companies`
-   - Click `Find Accounts`
+   - Click `Find Leads` (previously "Find Accounts")
 
-2. **Enter search criteria**
-   - Type in a type of business with a location
-   - Any companies that already exist in your CRM will be indicated
-   - To add new companies, click the box at the top to select all
+2. **Search for potential prospects**
+   - Enter a business type and location (e.g., "restaurants in Denver, CO")
+   - Use specific search terms for better targeting:
+     - **Industry terms**: "dental offices", "auto repair shops", "law firms"
+     - **Geographic areas**: City, state, zip codes, or neighborhoods
+     - **Business names**: Search for specific businesses or competitors
 
-3. **Create companies**
-   - Select the local businesses you want to work with
-   - Click `Create companies`
-   - Only new companies will be added (no duplication occurs)
+3. **Review search results**
+   - Browse up to 20 results per search (Google API limitation)
+   - Companies already in your CRM are clearly indicated
+   - View key business information:
+     - Business name and address
+     - Google Business Profile claim status
+     - Google review score and count
+     - Website availability
+     - Phone number
 
-4. **View and manage**
-   - Continue to look for other businesses
-   - Click `View companies` to go to the company table and start working on the businesses you just created
+4. **Select and create companies**
+   - Check individual businesses or use "select all" for bulk selection
+   - Click `Create companies` to add selected prospects to your CRM
+   - Automatic deduplication prevents adding existing companies
 
-**Note**: The table can list up to 20 results due to Google API limitations.
+5. **Start prospecting**
+   - Click `View companies` to access the newly created records
+   - Begin outreach and relationship building activities
+
+### Advanced Search Tips
+
+**Effective search strategies:**
+- **Broad searches**: "restaurants" or "retail stores" for market exploration
+- **Niche targeting**: "vegan restaurants" or "luxury car dealers" for specialized markets
+- **Geographic precision**: Include specific neighborhoods or zip codes
+- **Competitive research**: Search for businesses similar to your existing clients
+
+**Search result indicators:**
+- ✅ **Green checkmark**: Company already exists in your CRM
+- ⭐ **Star rating**: Google review score and number of reviews
+- 🌐 **Globe icon**: Website presence detected
+- 📞 **Phone icon**: Phone number available
+- 🏢 **Building icon**: Google Business Profile claimed status
 
 ## Lead scoring capabilities
 

@@ -66,7 +66,6 @@ This includes all features of the Standard service, plus tools for generating ne
 * **Net Promoter Score (NPS) Requests:** The review request process uses an NPS email to gauge customer loyalty. 
 * **Email and SMS templates:** The team will create a review request template for your approval. If you have SMS credits with the required reputation software, an SMS template can also be created.
 * **Customer list uploads:** The team will upload your list of customer contacts and send them review requests within 2 business days. Lists cannot exceed 500 customers per upload.
-* **Google Q&A responses:** The team will also respond to questions that come through the Google Q&A feature for your business.
 
 ## How we respond to reviews
 
@@ -89,7 +88,7 @@ The Plus service includes a proactive system for generating new reviews. This pr
 The process follows these steps:
 1.  **Template creation:** The service team creates an email and/or SMS template for you to approve.
 2.  **Customer list submission:** You provide a list of customer contacts (up to 500 per list). You can submit a new list at any time.
-3.  **Net Promoter Score template:** This email a Net Promoter Score (NPS), where they are asked how likely they are to recommend your business on a scale of 0-10.
+3.  **Net Promoter Score template:** This email contains a Net Promoter Score (NPS), where they are asked how likely they are to recommend your business on a scale of 0-10.
 4.  **Directing feedback:** Based on the customer's score, the system directs them to the next step:
     * **Promoters (score 9-10):** These happy customers are directed to your chosen public review sites (like Google or Facebook) to leave a public review.
     * **Passives (score 7-8):** These customers are sent to a private feedback form to share their experience directly with you without posting a public review.
@@ -143,13 +142,6 @@ The team will flag negative reviews with the review site if the review clearly v
 
 <details>
 
-<summary>Do you respond to Google Q&A questions?</summary>
-
-For Review Responses Plus, yes of course! Our team will respond to any questions that come through Google Q&A. With Review Responses Standard, this is not included.
-</details>
-
-<details>
-
 <summary>What if I get a negative review on a site that you don't have access to?</summary>
 
 The service team can only respond to reviews on sites where access has been granted. If you receive a review on a site we cannot access, we will be unable to respond until you provide the necessary access.
@@ -159,7 +151,7 @@ The service team can only respond to reviews on sites where access has been gran
 
 <summary>Can I customize the Review Request emails that will be sent to my customers?</summary>
 
-During your onboard with our team, you’ll be able to choose from set email templates or upload your own.
+During your onboarding with our team, you’ll be able to choose from set email templates or upload your own.
 </details>
 
 <details>

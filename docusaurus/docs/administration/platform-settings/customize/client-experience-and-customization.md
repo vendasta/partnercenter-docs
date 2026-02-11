@@ -120,7 +120,7 @@ The Listing Management app allows you to select which listing and review sites a
 
 ### Accessing Listing Sources Settings
 
-You can view and edit the sources that appear in Reputation Management and Local SEO for your clients:
+You can view and edit the sources that appear in Reputation AI and Local SEO for your clients:
 
 1. Navigate to **Partner Center > Administration > Customize**
 2. Under **Product Settings**, select **Listing Sources**

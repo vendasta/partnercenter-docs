@@ -1,12 +1,12 @@
 ---
 title: "Expectations by Service within Vendasta Services"
 sidebar_label: "Expectations by Service within Vendasta Services"
-description: "With Vendasta's Vendasta Services, you have access to a team of digital marketing experts. Leveraging our team, you can claim and optimize your customers' onl"
+description: "With Vendasta's Vendasta Services, you have access to a team of digital marketing experts. Leveraging our team, you can claim and optimize your online listings"
 ---
 
-With Vendasta Services, you have access to a team of AI and marketing experts. Leveraging our team, you can claim and optimize your customers' online listings, boost their reputation, engage their followers with content on social and blogs, build their website, and drive awareness of their business with digital advertising. All the while, our team will communicate with you and your clients to help set service expectations, inform them about updates, and respond to questions related to their service.
+With Vendasta Services, you have access to a team of AI and marketing experts. Leveraging our team, you can claim and optimize your online listings, boost your reputation, engage your followers with content on social and blogs, build your website, and drive awareness of your business with digital advertising. All the while, our team will communicate with you to help set service expectations, inform you about updates, and respond to questions related to your service.
 
-With so many services available, it's important to understand what to expect from each one. This article will break down what you and your clients can expect based on each product line.
+With so many services available, it's important to understand what to expect from each one. This article will break down what you can expect based on each product line.
 
 # Expectation by Managed Service
 
@@ -18,9 +18,9 @@ With so many services available, it's important to understand what to expect fro
 | **Direct-to-customer communication is available** | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | **Project tracking in Business App** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | **Business App connections required** | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ |
-| **External credentials (passwords) required** | ❌ | ✅ | ✅ | ❌ | ✅[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNSZXGATFMA6XKMG0B38KVX) | ❌ |
-| **Digital Agents access required** | ✅ | ✅ | ✅ | ❌ | ✅[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNT07KYFS0Y5JSTEDQ4QEAK) | ✅[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNT07KYFS0Y5JSTEDQ4QEAK) |
-| **Business days to launch after assets received** | **3**[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNT2PA61DE430WNW2XXBEPT) | **1-2** | **5** | **5** | **5-10** | **1-10** |
+| **External credentials (passwords) required** | ❌ | ✅ | ✅ | ❌ | ✅[\*](#external-credentials-passwords-required) | ❌ |
+| **Digital Agents access required** | ✅ | ✅ | ✅ | ❌ | ✅[\*](#digital-agency-access-required) | ✅[\*](#digital-agency-access-required) |
+| **Business days to launch after assets received** | **3**[\*](#business-days-to-launch-after-assets-received) | **1-2** | **5** | **5** | **5-10** | **1-10** |
 
 \*See more in definitions below.
 
@@ -34,15 +34,15 @@ If you would only like specific people to be contacted in relation to the order 
 
 This is what an order confirmation email looks like:
 
-[![Confirmation_Email.png](./img/19299630230423-ab1a66875a.png)](https://marketing-services.zendesk.com/hc/article_attachments/19299621999255)
+![Confirmation_Email.png](./img/19299630230423-ab1a66875a.png)
 
 ## Pre-launch call
 
-This call happens before the launch or completion of a service and in many cases will gather the information that is necessary for service work to begin. A Pre-Launch call includes three main elements: welcome & expectations, connections & account authorizations, and a content questionnaire. Your client will be given a rundown of what to expect and when, will be helped to connect relevant accounts in Business App and be asked to provide required credentials and authorizations, and then go through a content questionnaire for any information that fulfillment teams require to complete the service.
+This call happens before the launch or completion of a service and in many cases will gather the information that is necessary for service work to begin. A Pre-Launch call includes three main elements: welcome & expectations, connections & account authorizations, and a content questionnaire. You will be given a rundown of what to expect and when, will be helped to connect relevant accounts in Business App and be asked to provide required credentials and authorizations, and then go through a content questionnaire for any information that fulfillment teams require to complete the service.
 
 ## Post-launch call
 
-This is unique to MatchCraft Managed Ads orders. All work is completed and the ads are made ready to launch, after which a post-launch call is set up with the partner contact to discuss expectations around campaign performance, optimizations, and future strategy calls (when applicable).
+This is unique to MatchCraft Managed Ads orders. All work is completed and the ads are made ready to launch, after which a post-launch call is set up with you to discuss expectations around campaign performance, optimizations, and future strategy calls (when applicable).
 
 ## Direct-to-customer communication
 
@@ -56,11 +56,11 @@ All services will showcase a tracker found in Business App > Projects that showc
 
 ## Business App connections required
 
-Several services require connections for Google Business Profile, Facebook, or other accounts inside of Business App and the products accessed inside of it. While our teams typically will provide instruction or help your customers to make these connections, any connections that can be completed by the business or the partner in advance of the service being fulfilled will ensure quick delivery of the services.
+Several services require connections for Google Business Profile, Facebook, or other accounts inside of Business App and the products accessed inside of it. While our teams typically will provide instruction or help you to make these connections, any connections that can be completed in advance of the service being fulfilled will ensure quick delivery of the services.
 
 ## External credentials (passwords) required
 
-Our Review Responses and Website creation products will often require additional credentials. These will vary, but typically it will be user names and passwords for review sources that will allow our team to respond on the customer’s behalf or gain access for a domain registrar to be able to set the business’s website live. 
+Our Review Responses and Website creation products will often require additional credentials. These will vary, but typically it will be user names and passwords for review sources that will allow our team to respond on your behalf or gain access for a domain registrar to be able to set your website live. 
 
 Our Social Posting products will need credentials for Pinterest posting if requested. 
 
@@ -68,9 +68,9 @@ _\*Note that for Website services, either credentials are required or delegate a
 
 ## Digital Agency access required
 
-Almost all services may require your customer to provide access to our team under the Digital Agency name. This typically comes up for Google Business Profile listing claims, Facebook access (for services like Review Responses, Social Posting, and Facebook Digital Ads Campaigns), or delegate access for a domain registar. 
+Almost all services may require you to provide access to our team under the Digital Agency name. This typically comes up for Google Business Profile listing claims, Facebook access (for services like Review Responses, Social Posting, and Facebook Digital Ads Campaigns), or delegate access for a domain registrar. 
 
-This means that your customer may see a request coming from an @yourdigitalagents.com email address or an account called Digital Agency. This cannot be changed, even if you are leveraging our white-label communications. We often recommend that partners make new customers aware that they will be seeing these requests come through before ordering the product to ensure a clear understanding and an expedient onboarding process.
+This means that you may see a request coming from an @yourdigitalagents.com email address or an account called Digital Agency. This cannot be changed, even if you are leveraging our white-label communications. We recommend that you be aware that you will be seeing these requests come through before ordering the product to ensure a clear understanding and an expedient onboarding process.
 
 _\*Note that for Website services, either credentials are required or delegate access provided to Digital Agency, not both._
 

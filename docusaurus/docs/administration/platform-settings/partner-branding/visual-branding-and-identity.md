@@ -273,4 +273,4 @@ The branding configuration interface provides real-time preview of changes. Test
 
 ![Partner Branding Overview](./img/administration/partner-branding/customize-branding-overview.jpg)
 
-If you need assistance with visual branding and identity setup, please [submit a ticket](https://support.vendasta.com/hc/en-us/requests/new) to our support team.
+If you need assistance with visual branding and identity setup, please [contact support](../../../partner-center/overview.mdx#submitting-a-support-ticket) or email support@vendasta.com.

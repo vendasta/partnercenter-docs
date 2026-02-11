@@ -1,0 +1,371 @@
+---
+title: Controlling Page Visibility in Business App
+sidebar_label: Page Visibility Settings
+description: Control which pages and features customers see in their Business App dashboard, with per-page configuration options.
+tags:
+  - business-app
+  - page-visibility
+  - customization
+  - navigation
+keywords:
+  - show page
+  - hide page
+  - page visibility
+  - business app pages
+  - customize navigation
+---
+
+The Pages section in Customize Business App controls which pages customers see in their Business App navigation and configures page-specific features. You can show or hide entire pages and fine-tune individual page settings.
+
+![Page visibility settings in Customize Business App](./img/page-visibility-home.png)
+
+## How do I access page settings?
+
+Navigate to **Partner Center** > **Accounts** > **Manage Business App** > **Customize Business App** > **Pages**, then select the page you want to configure.
+
+## Understanding "Show This Page"
+
+Most pages have a **Show this page** toggle that controls whether the page appears in customers' Business App navigation.
+
+**What happens when you hide a page:**
+- The page is removed from the customer's navigation menu
+- Customers cannot access the page directly
+- Underlying features may continue to work (e.g., automations run even if the Automations page is hidden)
+
+**Partner defaults vs. market settings:**
+- Configure defaults at the partner level using "All Markets"
+- Override for specific markets by selecting that market from the dropdown
+- Market-specific settings take precedence over partner defaults
+
+**When to hide pages:**
+- The feature isn't part of your service offering
+- You want to simplify the interface for certain customer segments
+- The page shows features customers haven't purchased
+
+---
+
+## Home Page Settings
+
+The Home page is the main dashboard customers see when they log into Business App.
+
+**Show this page** (`showDashboard`)
+Controls whether customers see the Home dashboard.
+
+### What is the Marketing Funnel and should I show it?
+
+The Marketing Funnel summarizes key metrics from the Executive Report as Impressions, Engagement, and Leads in a visual funnel display.
+
+**When to show:** Customers want a quick visual overview of their marketing performance
+**When to hide:** You don't use Executive Report metrics or want a simpler dashboard
+
+### How do I change the default time range for Home page reports?
+
+The **Default reporting period** dropdown sets what time range is initially selected for Home page data.
+
+**Options:** Last 7 days, 30 days, 90 days, 6 months, or 12 months
+
+### Should I show WordPress Sales/Orders?
+
+The **Sales** setting displays a summary of ecommerce orders from WordPress Hosting sites using WooCommerce.
+
+**When to show:** Customers have WordPress Hosting with WooCommerce
+**When to hide:** Customers don't use WordPress ecommerce
+
+### Should I show Recent Activity?
+
+The **Recent Activity** section shows a feed of recent actions and events across the customer's account.
+
+**When to show:** Customers want to see what's happening across their business
+**When to hide:** You want a cleaner, more focused dashboard
+
+---
+
+## Get Started Page Settings
+
+The Get Started page guides new customers through initial setup steps.
+
+**Show this page** (`showGetStarted`)
+Controls whether customers see the Get Started onboarding page.
+
+### When should I show the Get Started page?
+
+Show this page when:
+- You want to guide customers through initial setup
+- Customers need help connecting accounts and configuring features
+- You're onboarding new customers who need orientation
+
+Hide this page when:
+- Customers are already set up and don't need onboarding guidance
+- You provide onboarding through other channels (calls, custom training)
+
+### How do I add a custom onboarding video?
+
+1. Enable the **Onboarding video** checkbox.
+2. Enter a YouTube video URL in the **Custom onboarding video** field.
+3. Click **Save**.
+
+The custom video replaces the default onboarding video shown to customers.
+
+:::tip
+Create a video that introduces your brand and explains how customers should use your customized Business App experience.
+:::
+
+### What is the Customer Journey section?
+
+The **Customer Journey** section displays an interactive diagram showing key stages that people go through to become your customer's customer. Users can select stages to access tailored growth strategies.
+
+**When to show:** Customers benefit from understanding and optimizing their customer acquisition funnel
+**When to hide:** The customer journey concept doesn't align with your service offering
+
+---
+
+## Inbox/Messages Page Settings
+
+The Inbox page (also called Conversations Messages) shows customer communications.
+
+**Show this page** (`showInboxMessage`)
+Controls whether customers see the Inbox/Messages page.
+
+### Should I let customers chat with my team?
+
+The **Customers can start conversations with you** setting controls whether customers can initiate messages to you (the partner) via the Contact Us link in Business App navigation.
+
+**When enabled:** Customers can message you; conversations appear in their Inbox
+**When disabled:** Customers can only respond after you start a conversation with them
+
+:::info
+Even when disabled, customers can still message you after you've initiated a conversation with them. The setting only controls whether they can start new conversations.
+:::
+
+---
+
+## CRM Page Settings
+
+The CRM page provides customer relationship management features. Multiple sub-features can be independently shown or hidden.
+
+### Which CRM features should I show customers?
+
+Configure visibility for each CRM feature:
+
+| Setting | What it shows |
+|---------|---------------|
+| **Show CRM contacts page** | Contact records and management |
+| **Show CRM companies page** | Company/organization records |
+| **Show CRM tasks page** | Task management and to-dos |
+| **Show CRM forms page** | Custom forms for data collection |
+| **Show CRM opportunities page** | Sales pipeline and deals |
+
+### Advanced CRM features
+
+These features may require specific feature flags to be enabled for your account:
+
+| Setting | What it shows |
+|---------|---------------|
+| **Show CRM custom objects pages** | Custom data objects you've created |
+| **Show CRM lists page** | Dynamic lists and segmentation |
+| **Show CRM activity leaderboard page** | Team activity rankings |
+| **Show CRM lead scoring settings** | Lead scoring configuration |
+
+### When to hide specific CRM features
+
+- **Hide Contacts/Companies**: Customer doesn't need CRM functionality
+- **Hide Tasks**: Customer manages tasks elsewhere
+- **Hide Forms**: No custom forms are configured
+- **Hide Opportunities**: Customer doesn't track sales pipeline
+- **Hide advanced features**: Features aren't part of your offering or aren't set up
+
+---
+
+## AI Assistant Page Settings
+
+**Show this page** (`showAiAssistant`)
+Controls whether customers see the AI Assistant page.
+
+Show this page when customers have AI features enabled and would benefit from AI-assisted tools.
+
+---
+
+## Executive Report Page Settings
+
+The Executive Report provides comprehensive marketing performance analytics.
+
+For detailed configuration of Executive Report sections, grades, and ordering, see the dedicated [Customize Executive Report documentation](/accounts/reports/customize-executive-report).
+
+---
+
+## My Products Page Settings
+
+**Show this page** (`showMyProducts`)
+Controls whether customers see the My Products page listing their active products.
+
+**When to show:** Customers manage their own products or need to see what they have
+**When to hide:** You manage products for customers and don't want them making changes
+
+---
+
+## Store Page Settings
+
+**Show this page** (`showStore`)
+Controls whether customers see the Store page for purchasing additional products.
+
+**When to show:** You want customers to self-serve and purchase products
+**When to hide:** All purchases go through your sales team
+
+For store configuration, navigate to **Partner Center** > **Marketplace** > **Manage Store**.
+
+---
+
+## Business Profile Page Settings
+
+The Business Profile page shows and optionally allows editing of the customer's business information.
+
+### Should I let customers edit their own profile?
+
+The **Customers can edit** setting controls whether customers can modify their business profile information.
+
+**When enabled:** All fields in the Business Profile are editable by customers
+**When disabled:** All fields are read-only; customers must contact you for changes
+
+**What customers can edit when enabled:**
+- Business name and contact information
+- Address and location details
+- Business hours
+- Categories and descriptions
+
+---
+
+## Projects Page Settings
+
+**Show this page** (`showFulfillment`)
+Controls whether customers see the Projects page for tracking fulfillment and project work.
+
+**When to show:** You deliver services that involve project tracking or fulfillment workflows
+**When to hide:** Your services don't include project-based deliverables
+
+---
+
+## My Meetings Page Settings
+
+**Show this page** (`meetingSchedulerBusinessApp`)
+Controls whether customers see the My Meetings page with meeting scheduling features.
+
+**When to show:** You use the meeting scheduler and want customers to book or view meetings
+**When to hide:** You don't use the meeting scheduler feature
+
+---
+
+## Guides Page Settings
+
+**Show this page** (`showContentLibrary`)
+Controls whether customers see the Guides page with educational content.
+
+For custom guides configuration including WordPress blog integration, see the [Custom Content documentation](/docs/business-app/administration/custom-content-advanced-configuration).
+
+---
+
+## Files Page Settings
+
+**Show this page** (`showFiles`)
+Controls whether customers see the Files page for document storage and sharing.
+
+**When to show:** You share files with customers or want them to upload documents
+**When to hide:** You don't use file sharing with customers
+
+---
+
+## Orders Page Settings
+
+**Show this page** (`showOrderPage`)
+Controls whether customers see the Orders page showing their purchase history.
+
+**When to show:** Customers purchase products and need to view order history
+**When to hide:** You manage all purchasing and customers don't need order visibility
+
+---
+
+## Invoices Page Settings
+
+**Show this page** (`showInvoices`)
+Controls whether customers see the Invoices page for billing information.
+
+**When to show:** Customers manage their own billing and need invoice access
+**When to hide:** You handle all billing externally or don't want customers viewing invoices
+
+For billing configuration, navigate to **Partner Center** > **Billing**.
+
+---
+
+## Automations Page Settings
+
+**Show this page** (`showAutomations`)
+Controls whether customers see the Automations page.
+
+**When to show:** Customers create and manage their own automations
+**When to hide:** You manage automations for customers or don't offer this feature
+
+:::info
+Automations continue to run even when the Automations page is hidden. Hiding the page only removes customer access to view and manage automations.
+:::
+
+For automation templates, navigate to **Partner Center** > **Automations** > **Templates**.
+
+---
+
+## FAQs
+
+<details>
+<summary>If I hide a page, does the feature still work?</summary>
+
+In most cases, yes. Hiding a page removes it from navigation but doesn't disable the underlying feature. For example:
+- Hidden Automations still run when triggered
+- Hidden CRM features still store data
+- Hidden Inbox still receives messages
+
+The page visibility setting controls customer access, not feature functionality.
+</details>
+
+<details>
+<summary>Can I show different pages to different customers?</summary>
+
+Page visibility is configured at the partner or market level, not per customer. To show different pages to different customer segments:
+1. Create separate markets for each segment
+2. Configure page visibility per market
+3. Assign customers to the appropriate market
+</details>
+
+<details>
+<summary>How do I preview what customers see?</summary>
+
+Use the **View as Customer** feature:
+1. Navigate to a customer's account
+2. Click the three-dot menu
+3. Select **View as Customer**
+
+This shows you the Business App exactly as that customer sees it.
+</details>
+
+<details>
+<summary>What's the minimum set of pages I should show?</summary>
+
+There's no required minimum. However, most implementations include at least:
+- **Home**: Main dashboard and entry point
+- **Inbox/Messages**: Communication capability
+- One or more feature pages relevant to your offering
+
+The right pages depend on your services and customer needs.
+</details>
+
+<details>
+<summary>Can customers request access to hidden pages?</summary>
+
+Hidden pages are not visible to customers, so they won't know to request them. If a customer needs access to a hidden feature, you would need to either:
+- Enable the page for their market
+- Move them to a different market with that page enabled
+- Enable the page at the partner level for all customers
+</details>
+
+<details>
+<summary>Do hidden pages affect billing or product access?</summary>
+
+No. Page visibility only controls the navigation interface. Product access, billing, and feature functionality are managed separately through product assignments and account settings.
+</details>

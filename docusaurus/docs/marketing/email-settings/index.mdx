@@ -1,28 +1,185 @@
 ---
-title: Email Settings
-description: Configure and manage email authentication, deliverability and settings
+title: Email settings
+description: Configure email authentication, deliverability, and settings for reliable campaign delivery
+sidebar_label: Email Settings
 sidebar_position: 5
 ---
 
 # Email Settings
 
-This section contains guides and information about configuring email settings, authentication methods like SPF, DKIM, and DMARC, and best practices for improving email deliverability.
+Email settings are crucial for ensuring your email campaigns reach recipients' inboxes successfully. Proper configuration of authentication protocols, sender information, and deliverability settings helps avoid spam filters and maintain your sender reputation.
 
-## Articles in this section
+## Overview
 
-- [Should I Add the Exact DMARC Record Provided by the Platform?](./exact-dmarc-record.mdx)
-- [Email Authentication](./email-authentication.mdx)
-- [Best Practices for Improving Email Deliverability](./email-deliverability-improvement.mdx)
-- [Email Verification](./email-verification.mdx)
-- [Update email settings](./update-email-settings.mdx)
-- [Adding SPF, DKIM, DMARC Records: Cpanel/Namecheap](./adding-spf-dkim-dmarc-records-cpanel-namecheap.mdx)
-- [Does the platform have limits to email size?](./email-size-limits.mdx)
-- [Email Domain Settings: Notifications and Auto-Rollback](./email-domain-settings.mdx)
-- [Can I customize which users on an account receive an email campaign?](./customize-users-email-campaign.mdx)
-- [Are we able to verify SPF, DMARC, DKIM values for multiple locations?](./spf-dmarc-dkim-multiple-locations.mdx)
-- [Do I need to register my domain on the Postmaster tool?](./register-domain-on-postmaster-tool.mdx)
-- [What are the requirements for Email Settings?](./email-settings-requirements.mdx)
-- [Connecting Domains](./connecting-domains.mdx)
-- [Email Deliverability Errors](./email-deliverability-errors.mdx)
-- [How Vendasta helps improve your email deliverability](./email-deliverability.mdx)
-- [Troubleshooting emails sent to spam - how to get email headers](./troubleshooting-emails-sent-to-spam.mdx)
+Email settings encompass all the technical and policy configurations needed for successful email delivery. This includes domain authentication (SPF, DKIM, DMARC), sender verification, deliverability optimization, and compliance requirements.
+
+## Why Email Settings Matter
+
+Proper email configuration is essential because:
+
+- **Deliverability** - Ensures emails reach inboxes instead of spam folders
+- **Authentication** - Proves you're authorized to send emails from your domain
+- **Reputation** - Maintains positive sender reputation with email providers  
+- **Compliance** - Meets legal requirements for commercial email
+- **Trust** - Recipients trust properly authenticated emails
+
+## Core Requirements
+
+Before sending email campaigns, you must configure:
+
+1. **Domain Authentication** - SPF, DKIM, and DMARC records
+2. **Sender Information** - From name and email address
+3. **Mailing Address** - Required business address for compliance
+4. **User Verification** - Email verification for all platform users
+
+## Main Configuration Areas
+
+### Sender Setup and Authentication
+
+Configure your domain and authentication settings:
+
+- **[Connect Domains](./connecting-domains.mdx)** - Link your business domain for email sending
+- **[Update email settings](./update-email-settings.mdx)** - Configure sender information and authentication
+- **[Email Authentication](./email-authentication/index.mdx)** - Understand SPF, DKIM, and DMARC protocols
+
+### DNS and Domain Configuration
+
+Set up DNS records for email authentication:
+
+- **[Add SPF, DKIM, and DMARC Records (cPanel Namecheap)](./email-authentication/adding-spf-dkim-dmarc-records-cpanel-namecheap.mdx)** - Step-by-step guide for cPanel/Namecheap
+- **[Guide - Add SPF, DKIM, & DMARC Records (GoDaddy)](./email-authentication/adding-spf-dkim-dmarc-records-godaddy.mdx)** - Configuration guide for GoDaddy
+
+### Email Deliverability and Optimization
+
+Ensure your emails reach recipients successfully:
+
+- **[Email Deliverability](./email-deliverability.mdx)** - Complete guide including platform features, best practices, troubleshooting, authentication setup, and common delivery error codes
+
+### User Management and Verification
+
+For user access and email verification, see the [My Team](/administration/my-account/my-team) section under Administration.
+
+### Technical Requirements and Compliance
+
+Understand platform requirements, limitations, and legal compliance:
+
+- **[Email Settings Requirements](./email-settings-requirements.mdx)** - Complete setup requirements, CAN-SPAM compliance, custom domain requirements, and email size limitations
+
+## Getting Started Checklist
+
+### 1. Domain Setup
+- [ ] Connect your business domain
+- [ ] Verify domain ownership
+- [ ] Configure DNS settings
+
+### 2. Authentication Setup
+- [ ] Add SPF record to DNS
+- [ ] Configure DKIM signing
+- [ ] Set up DMARC policy
+- [ ] Verify all records are valid
+
+### 3. Sender Configuration
+- [ ] Set sender name and email address  
+- [ ] Configure business mailing address
+- [ ] Test email sending functionality
+
+### 4. User Management
+- [ ] Verify all user email addresses
+- [ ] Set up appropriate permissions
+- [ ] Configure user notification preferences
+
+### 5. Deliverability Optimization
+- [ ] Review deliverability best practices
+- [ ] Set up monitoring and alerts
+- [ ] Configure rate limiting if needed
+
+## Email Authentication Explained
+
+### SPF (Sender Policy Framework)
+Specifies which servers are authorized to send emails from your domain. This prevents email spoofing by allowing recipients to verify that emails actually come from your authorized servers.
+
+### DKIM (DomainKeys Identified Mail)  
+Adds a digital signature to your emails that proves they haven't been tampered with during transit. This helps establish authenticity and improves deliverability.
+
+### DMARC (Domain-based Message Authentication, Reporting & Conformance)
+Tells receiving email servers what to do with emails that fail SPF or DKIM checks. It also provides reports on email authentication activity for your domain.
+
+## Common Issues and Solutions
+
+### Authentication Problems
+- **Invalid SPF record** - Check DNS configuration and syntax
+- **DKIM signature failure** - Verify DKIM keys are properly configured
+- **DMARC policy violations** - Review and adjust DMARC settings
+
+### Deliverability Issues  
+- **High bounce rates** - Clean email lists and verify addresses
+- **Spam folder delivery** - Review content and authentication
+- **Rate limiting** - Adjust sending frequency and volume
+
+### Configuration Errors
+- **Domain verification failure** - Confirm DNS records are published
+- **Sender authentication** - Verify sender information matches domain
+- **User access issues** - Check email verification status
+
+## Frequently Asked Questions
+
+<details>
+<summary>Should I add the exact DMARC record provided by the platform?</summary>
+
+No, the DMARC record provided is a recommendation, not a requirement. Any valid DMARC record will work, even if provided by another service. The key requirement is that the record must be valid for verification to succeed.
+</details>
+
+<details>
+<summary>Does the platform have limits to email size?</summary>
+
+Yes, the platform has a limit of 32,000 characters of HTML source code per email. If an email exceeds this limit, you'll receive an error message asking you to reduce the content length.
+</details>
+
+<details>
+<summary>Do I need to register my domain on Google Postmaster Tools?</summary>
+
+While not required, registering your domain with Google Postmaster Tools provides valuable insights into your email deliverability and reputation with Gmail users, which can help optimize your email performance.
+</details>
+
+## Best Practices
+
+### Domain Management
+
+**Automatic Domain Monitoring:**
+To ensure your emails reach inboxes rather than spam folders, Vendasta automatically monitors and manages your email domain settings:
+
+- **Every 2 weeks** - Partner Center admins receive notifications when Email Settings use an unverified domain
+- **After 8 weeks** - Email Settings automatically roll back to send from Vendasta's grey-label domain (with notification)
+
+Notifications are sent both as in-platform alerts and email messages to Partner Center administrators.
+
+**Best Practices:**
+- Use a dedicated subdomain for email marketing (e.g., mail.yourbusiness.com)
+- Complete domain verification promptly to prevent automatic rollback
+- Keep DNS records up to date
+- Monitor domain reputation regularly
+- Respond to verification notifications quickly
+
+### Authentication Setup
+- Implement all three authentication protocols (SPF, DKIM, DMARC)
+- Start with a permissive DMARC policy and gradually strengthen it
+- Regularly review authentication reports
+
+### Deliverability Optimization
+- Maintain clean email lists
+- Monitor bounce rates and remove invalid addresses
+- Follow email marketing best practices
+- Test emails across different clients and devices
+
+### Security and Compliance
+- Keep authentication records secure
+- Regularly audit user access and permissions
+- Stay informed about email regulations and requirements
+- Implement proper unsubscribe mechanisms
+
+## Need More Help?
+
+- **Campaign Creation** - Learn to create effective campaigns with [CRM field personalization](/marketing/campaigns) using [contact fields](/crm/contacts/crm-default-contact-fields) and [company fields](/crm/companies/crm-default-company-fields)
+- **Technical Support** - Contact support for advanced DNS or authentication issues
+- **Deliverability Consulting** - Get expert help with complex deliverability challenges
+- **Training Resources** - Access additional training materials and best practices guides

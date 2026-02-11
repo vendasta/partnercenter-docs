@@ -1,7 +1,8 @@
 ---
-sidebar_position: 6
-title: Email Deliverability
-description: Tips and best practices for improving email deliverability in Campaigns.
+sidebar_position: 5
+title: Email deliverability
+sidebar_label: Email Deliverability
+description: Complete guide to email deliverability including Vendasta platform features, best practices, troubleshooting, and technical configuration.
 ---
 
 # Email Deliverability
@@ -12,28 +13,42 @@ Sending emails is a crucial part of digital marketing. However, ensuring that yo
 
 Email deliverability refers to the ability to successfully deliver emails to recipients' inboxes. It is affected by numerous factors including sender reputation, email content, technical setup, and recipient engagement.
 
-## How to Check Email Campaign Performance
+## How Vendasta Helps Improve Your Email Deliverability
 
-The Campaign Activity Dashboard provides insights into your email campaign performance:
+Spam laws and regulations are becoming more complex, and precautions are needed to prevent emails from being flagged as spam. To help deliver your emails successfully, Vendasta makes automatic adjustments to optimize your email delivery.
 
-![Campaign Activity Board](./img/marketing/email-deliverability/campaign-activity-board.jpg)
+### Automatic Domain Management
 
-Key metrics include:
+We start with the email you used to sign up for Vendasta, but we update the address domain portion to a verified domain. For example, if you sign up with john@gmail.com, we'll send emails from john@smblogin.com by default.
 
-- **Delivered**: The number of emails successfully delivered to recipients' inboxes.
-- **Opens**: How many recipients opened your email.
-- **Clicks**: The number of clicks on links within your email.
-- **Bounces**: Emails that couldn't be delivered (broken into hard and soft bounces).
+**Why do we change the domain?**
 
-## Understanding Recipients' Engagement
+We change the domain portion of your sender email address to help send your emails properly. If the platform tried to send emails from john@gmail.com (for example), the emails wouldn't pass spam filters and wouldn't get delivered to your clients.
 
-The Recipient Engagement section shows how your audience interacted with your campaign:
+There are restrictions associated with sending marketing emails using free email service providers:
 
-![Recipient Engagement](./img/marketing/email-deliverability/recipient-engagement.jpg)
+- **Free email addresses** (john@gmail.com) can't be verified since you don't own these domains
+- **Free email services** have DMARC policies in place that can disrupt your email deliverability, even though they're intended to prevent spam
 
-This data helps you understand which recipients are most engaged with your content.
+### Using Your Own Domain
 
-## Best Practices for Improving Email Deliverability
+If you own a custom domain, you can update your sender address to use your domain instead of our grey-label domain. However, until you update your SPF, DKIM, and DMARC records in your Domain Name System (DNS), there's a high chance your emails will land in spam folders.
+
+**Setting up your custom domain:**
+1. Update your DNS records with proper authentication (SPF, DKIM, DMARC)
+2. Go to **Partner Center** > **Marketing** > **Email Settings** > **Sender and Reply Settings**
+3. Update your sender address to use your custom domain
+4. Allow up to 72 hours for DNS changes to propagate
+
+:::note
+**Important:** You can only use custom email addresses. Free email addresses from gmail.com, outlook.com, yahoo.com will not save.
+:::
+
+### Reply Handling
+
+All replies are automatically forwarded to the email address you used to sign up for the platform. An email may be sent from john@smblogin.com, but when someone replies, it will be sent to john@gmail.com.
+
+## Best Practices to Improve Email Deliverability
 
 ### 1. Avoid Spam Triggers in Your Content
 
@@ -104,15 +119,130 @@ Use merge tags to personalize:
 - Check how emails appear on different devices and email clients
 - Use email testing tools to check for spam triggers
 
-## Technical Considerations
+## Technical Configuration
 
-### Authentication Setup
+### Platform Authentication
 
-Proper email authentication is already configured when using Campaigns. This includes:
+Vendasta automatically handles email authentication for improved deliverability. When using our grey-label domain or properly configured custom domains, this includes:
 
-- **SPF (Sender Policy Framework)**: Verifies that the sending server is authorized to send emails on behalf of your domain.
-- **DKIM (DomainKeys Identified Mail)**: Adds a digital signature to verify that emails haven't been tampered with.
-- **DMARC (Domain-based Message Authentication, Reporting & Conformance)**: Tells receiving servers what to do with emails that fail authentication checks.
+- **SPF (Sender Policy Framework)**: Verifies that the sending server is authorized to send emails on behalf of your domain
+- **DKIM (DomainKeys Identified Mail)**: Adds a digital signature to verify that emails haven't been tampered with
+- **DMARC (Domain-based Message Authentication, Reporting & Conformance)**: Tells receiving servers what to do with emails that fail authentication checks
+
+### Setting Up Your Custom Domain
+
+To authenticate your custom domain and use it for sending emails:
+
+1. **Access your DNS provider** - Log into your domain registrar (GoDaddy, Namecheap, etc.)
+2. **Configure DNS records** - Follow our domain-specific guides:
+   - [Add SPF, DKIM, DMARC Records (GoDaddy)](/marketing/email-settings/email-authentication/adding-spf-dkim-dmarc-records-godaddy)
+   - [Add SPF, DKIM, DMARC Records (cPanel/Namecheap)](/marketing/email-settings/email-authentication/adding-spf-dkim-dmarc-records-cpanel-namecheap)
+3. **Update sender settings** - Go to **Partner Center** > **Marketing** > **Email Settings** > **Sender and Reply Settings**
+4. **Verify configuration** - Allow up to 72 hours for DNS changes to propagate
+
+:::tip Quick Access
+You can directly access your email settings at [partners.vendasta.com/campaign-settings](https://partners.vendasta.com/campaign-settings)
+:::
+
+## Frequently Asked Questions
+
+<details>
+<summary>Do I need to register my domain on Google Postmaster Tools?</summary>
+
+While not required, registering your domain on Google Postmaster Tools is highly recommended to improve email deliverability and monitor performance with Gmail users.
+
+**Benefits of Google Postmaster Tools:**
+- **Improved email deliverability** - Monitor how emails from your domain are being received by Gmail users
+- **Identify issues** - Detect potential problems affecting your email delivery
+- **Track authentication** - See SPF, DKIM, and DMARC authentication results
+- **Monitor reputation** - Keep track of your domain's reputation with Gmail
+
+**How to register:**
+1. Go to [Google Postmaster Tools](https://postmaster.google.com/)
+2. Sign in with your Google account
+3. Click "Add a domain" and enter your domain name
+4. Verify domain ownership by creating a DNS TXT record
+5. Add the provided TXT record to your DNS settings
+6. Return to Google Postmaster Tools and click "Verify"
+
+**Available insights:**
+- Domain reputation and IP reputation
+- Authentication success rates (SPF, DKIM, DMARC)
+- Spam rate and delivery errors
+- TLS encryption usage statistics
+</details>
+
+<details>
+<summary>My emails are going to spam - how do I troubleshoot this?</summary>
+
+If your domain's SPF, DMARC, and DKIM records are verified but emails still land in spam folders, you can troubleshoot by examining email headers.
+
+**Steps to troubleshoot:**
+
+1. **Get Email Headers** - Ask the recipient to provide the email headers from the spam email
+2. **Extract Headers** - Email headers contain detailed delivery information including authentication results
+3. **Analyze Results** - Headers show why emails may have been flagged as spam
+
+**How to get email headers:**
+- **Gmail**: Open the email → Click three dots → Show original
+- **Outlook**: Right-click email → View source
+- **Apple Mail**: View → Message → Raw Source
+
+**Helpful resources:**
+- [MX Toolbox Email Headers Guide](https://mxtoolbox.com/public/content/emailheaders/)
+- [IONOS Email Headers Guide](https://www.ionos.com/help/email/general-topics/what-are-email-headers-and-how-can-i-view-them/)
+
+**Note:** Save the email headers in a text file and share them with the Vendasta support team for detailed analysis.
+
+**Common causes of spam delivery:**
+- Content triggers (spam words, excessive caps, misleading subject lines)
+- Poor sender reputation
+- Authentication failures
+- High bounce or complaint rates
+- Poor list hygiene
+</details>
+
+<details>
+<summary>What do common email deliverability error codes mean?</summary>
+
+If you encounter email delivery errors, here are the most common issues and their meanings:
+
+**Blacklist-Related Rejections:**
+
+If your message is rejected with any of these reasons, it means your IP or domain has been flagged:
+
+| Rejection Reason | Meaning |
+|---|---|
+| Listed on spamrl.com as a source of spam | Multiple verified spam emails originating from your IP(s) |
+| Listed on spamrl.com as a source of viruses | Multiple automatically classified virus emails from your IP(s) |
+| Listed on spamrl.com as a source of phishing | Multiple verified phishing emails OR large amounts of failing auth (SPF/DKIM/DMARC) reports |
+| Listed on spamrl.com as a source of dictionary attacks | Significant traffic to non-existing mailboxes from your IP(s) |
+| Domain IP listed on spamrl.com | Multiple spam/virus/phishing emails OR trusted third-party blacklisting |
+
+**SMTP Error Codes:**
+
+| Error Code | Error Message | Meaning |
+|:---:|---|---|
+| **550 5.1.1** | User unknown | Recipient email address doesn't exist or is invalid |
+| **550 5.4.1** | Recipient address rejected | Receiving server rejected email due to policy restrictions |
+| **554 5.7.1** | Message rejected due to content | Email content triggered spam filters or violates content policies |
+| **421 4.7.0** | IP address temporarily deferred | IP address temporarily blocked, usually due to rate limiting |
+| **550 5.7.1** | Authentication failed | SPF, DKIM, or DMARC authentication failed for your domain |
+| **552 5.2.2** | Mailbox full | Recipient's mailbox is full and cannot accept new messages |
+| **550 5.1.8** | Domain of sender address does not exist | Sending domain cannot be found or lacks proper DNS records |
+| **451 4.3.0** | Temporary server error | Temporary issue with the receiving mail server |
+| **550 5.7.606** | Access denied, banned sending IP | IP address permanently banned by the receiving server |
+| **550 5.7.1** | Relaying denied | Mail server doesn't allow relaying from your IP address |
+
+**What should I do if I encounter these errors?**
+
+1. **Check external blacklists** - Use [MX Toolbox](http://mxtoolbox.com/blacklists.aspx) to check for blacklist listings and request delisting
+2. **Request delisting** - If listed on spamrl.com, request delisting [here](https://spamrl.com/delist/)
+3. **Review content** - Ensure your email content doesn't trigger spam filters
+4. **Verify authentication** - Check that your SPF, DKIM, and DMARC records are properly configured
+5. **Monitor sending practices** - Review your sending volume, frequency, and list hygiene
+
+</details>
 
 ## Need More Help?
 

@@ -1,7 +1,8 @@
 ---
 title: "Vendasta Services Website Support"
 sidebar_label: "Website Support"
-description: "This article details the inclusions of Vendasta Services’ Website Support product and the process/best practices for submitting requests to our Website Support team."
+sidebar_position: 6
+description: "This article details the inclusions of Vendasta Services' Website Support product and the process/best practices for submitting requests to our Website Support team."
 ---
 
 This article details the inclusions of Vendasta Services’ [Website Support](https://partners.vendasta.com/marketplace/products/MP-9f77626ea38b4e44b044382b50c5f83e) product and the process/best practices for submitting requests to our Website Support team.
@@ -22,6 +23,11 @@ Website Support is a fulfillment service offered by Vendasta Services for WordPr
 *   Updates to plugins and themes upon request
 *   Health checks to website upon request
 *   Uptime monitoring and urgent support if your website goes offline
+*   Installation of [Conversations AI Standard](https://docs.vendasta.com/business-app/conversations/conversations-ai/) web chat code (if Conversations AI Standard is active on the account)
+
+**Conversations AI Standard web chat installation**
+
+If you have [Conversations AI Standard](https://docs.vendasta.com/business-app/conversations/conversations-ai/) active on the account, our Website Support team can install the web chat code on your website. This installation includes adding the web chat code to your site but does not offer a full end-to-end configuration of the web chat. If you are looking for more advanced features, such as full brand configuration, SMS messaging, or voice calls, please explore our [AI Receptionist Setup & Support](../ai-workforce-setup/ai-receptionist-setup.md) service.
 
 **How to Submit a Website Support Request to Vendasta Services:**
 
@@ -44,8 +50,6 @@ _What is an update?_ It consists of one of the two:
 Please keep an eye out for our emails. Our team may request further clarification or need additional assistance (access to a link you shared, etc.). Our goal is to complete this work to your satisfaction in a timely manner, and your responsiveness is appreciated.
 
 **In the event that your website goes down:**
-
-Vendasta Services’ Website Support Team has automations in place that will flag when websites go down. Our goal is to be aware of website downtime and get the website back up and running as soon as possible. However, there may be times when you or your client notices an issue before we have been able to resolve the issue.  
   
 _If you notice your website is down, first:_
 
@@ -74,3 +78,71 @@ _If you notice your website is down, first:_
         2.  Click **Live Chat** at the bottom of the pop-up window:  
             ![](./img/18930123215127-95f3f6e7f2.png)  
             This live chat is monitored 24/7, and they can assist with downed websites outside of Vendasta Services' operating hours.
+
+## Frequently asked questions (FAQs)
+
+<details>
+
+<summary>What type of changes are included with this service?</summary>
+
+The following customizations are all included with website support at no additional cost:
+
+* Fonts
+* Colors
+* Media (Images, videos, icons)
+* Text
+* Contact form fields and settings
+* Reorganization or duplication of existing sections
+* Access to the team for technical support
+* Updates to plugins, themes etc upon request
+* Health checks to your website upon request
+* Uptime monitoring and urgent support if your website goes offline
+* Upload up to 3 blogs per month (if the content is provided)
+
+Any plugin not added by our team will have limited support and if a plugin is no longer supported, we will do our best to correct the issue if possible or recommend a new solution at our hourly rate.
+
+For any other type of customization, please reach out to [websites@yourdigitalagents.com](mailto:websites@yourdigitalagents.com) for a quote for the custom work needed.
+
+**Note:** Any additional images/product changes beyond the included will be charged at a per product/image rate. Any new functionality changes to sites will need to be scoped out and charged at a per hour rate. The monthly charge does not include maintaining or integrating emails.
+
+</details>
+
+<details>
+
+<summary>What is the turn-around for monthly changes?</summary>
+
+Website Support Requests for image and text changes, information updates, uploading blogs and setting websites live on custom domains have a turn around time of 3 business days.
+
+Larger edits such as larger lists of edits including Adobe XD files, plug-in integrations, changes to website functionality and additional services requiring hourly charges have a turn around time of up to 5 business days.
+
+</details>
+
+<details>
+
+<summary>How will you provide support for Duda websites?</summary>
+
+In order for us to provide support on your Duda website, we will need you to create a user for our team and provide us access to your site in the Duda dashboard. A user can be created with the following email: [websites@yourdigitalagents.com](mailto:websites@yourdigitalagents.com).
+
+</details>
+
+<details>
+
+<summary>What should I do if I receive a Google indexing warning or error?</summary>
+
+Everyone wants to make sure that their website is appearing in Google search results. When a new website is launched or changed, it needs to be indexed by Google.
+
+There is no control over when Google indexes a website. That said, we include a WordPress plugin on each website that we create that automatically submits changes from your site to Google and other major search engines.
+
+Also note that you do not need every page of your website indexed in order to be found by Google. So long as your homepage is indexed, then it can start to populate into search results.
+
+If you have received an email from Google regarding an indexing error, forward it to our team at [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com) and we can investigate and take any appropriate actions from there.
+
+</details>
+
+<details>
+
+<summary>Can you install Conversations AI Standard web chat on my website?</summary>
+
+Yes! If you have [Conversations AI Standard](https://docs.vendasta.com/business-app/conversations/conversations-ai/) active on the account, our Website Support team can install the web chat code on your website. This installation includes adding the web chat code to your site but does not offer a full end-to-end configuration of the web chat. If your client is looking for more advanced features, such as voice and SMS messaging, please explore our [AI Receptionist Setup & Support](../ai-workforce-setup/ai-receptionist-setup.md) service.
+
+</details>

@@ -26,9 +26,9 @@ The process involves a series of calls and configuration steps to get your AI Re
 
 ### 1. Initial training call
 
-Our experts will lead an onboard call to understand your business needs and adjust pre-built lead capture workflows to suit you. We will come to the call with your chat receptionist already set up with your branding and a customized communication style to demonstrate. During this call, we will refine any additional knowledge sources and communication instructions together.
+Our experts will lead an onboarding call to understand your business needs and adjust pre-built lead capture workflows to suit you. We will come to the call with your chat receptionist already set up with your branding and a customized communication style to demonstrate. During this call, we will refine any additional knowledge sources and communication instructions together.
 
-* **Timeline:** An onboard call can be booked in as little as one business day, depending on availability.
+* **Timeline:** An onboarding call can be booked in as little as one business day, depending on availability.
 * **For U.S. Businesses:** A2P registration is required to validate the use of SMS. Please be ready with your legal business information for this process, which can take up to two weeks to complete.
 
 ### 2. AI Receptionist configuration
@@ -82,8 +82,26 @@ We do not currently offer custom automation creation. The setup includes a stand
 
 <details>
 
+<summary> Is there a simpler option for web chat installation?</summary>
+
+If you are looking for a simple code installation and have our [Website Support](../websites/vendasta-services-website-support.md) service active, our Website Support team can install the web chat code. This does not offer a full end-to-end configuration of the web chat, and is only for basic code installation.
+
+</details>
+
+<details>
+
 <summary> Can the AI Receptionist create a quote or book an appointment?</summary>
 
-Using the knowledge base, we can give the chatbot the information it needs to create a basic quote or estimate. If you use the platform's calendar, the AI Receptionist can book
+Using the knowledge base, we can give the chatbot the information it needs to create a basic quote or estimate. If you use the platform's calendar, the AI Receptionist can book appointments on your behalf.
+
+</details>
+
+<details>
+
+<summary> Is the AI Receptionist HIPAA compliant?</summary>
+
+The AI Receptionist is not HIPAA compliant, which means it should not handle **PHI**. PHI (Protected Health Information) is any personal information about someone's health that can identify them, such as medical conditions, treatments, test results, insurance details, or a name combined with a medical question.
+
+The AI Receptionist is HIPAA-pursuant, which means it can be used in a way that supports HIPAA rules **as long as no PHI is shared**. It's safe to use for simple tasks like answering general questions, sharing office hours, or helping book appointments without medical details. Healthcare organizations are responsible for making sure the AI is used this way.
 
 </details>

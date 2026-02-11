@@ -1,6 +1,6 @@
 ---
 title: AI-assisted web chat widget for Vendasta Partners
-description: As a Vendasta Partner, you have access to a complimentary AI-powered lead capture widget for your website. Learn how to install it...
+description: As a Vendasta Partner, you have access to a complimentary AI-powered lead capture widget for your website. Learn how to install it.
 sidebar_position: 3
 ---
 
@@ -16,6 +16,53 @@ As a Vendasta Partner, you have access to a complimentary AI-powered lead captur
   allowfullscreen=""
 ></iframe>
 
-This powerful widget is similar to the [Conversations AI](../../../marketplace/products/marketplace-products) version you can sell to your customers. Once installed on your web site, the AI assistant acts as a helpful first responder to website visitors, answers questions, gathers contact information and delivers new leads into your CRM.
+This powerful widget is similar to the Conversations AI version you can sell to your customers. Once installed on your web site, the AI assistant acts as a helpful first responder to website visitors, answers questions, gathers contact information and delivers new leads into your CRM.
 
 ![AI-assisted web chat widget interface](img/partner-center-inbox/ai-web-chat-widget.jpg)
+
+## Widget Actions
+Widget actions allow you to create direct links that automatically open the web chat widget with predefined messages. This is perfect for email campaigns, landing pages, support pages, or any scenario where you want to direct visitors to start a chat with a specific message.
+
+:::note
+The web chat widget must be installed on the page for these actions to work.
+:::
+
+
+### Action Types
+
+There are two types of widget actions you can configure:
+
+- **Prefill message**: Opens the widget and pre-fills the message field with your predefined text. The visitor must click Send to actually send the message.
+- **Send message**: Opens the widget and automatically sends the predefined message without requiring any user interaction. This is ideal for immediate engagement.
+
+### Implementation methods
+
+You can trigger widget actions using two methods:
+
+**Anchor link listener** (recommended for most use cases):
+- Best for: Direct links, email campaigns, navigation from external sources
+- Uses URL hash format: `#webchat-send-message?webchat-widgetId={widget-id}` or `#webchat-prefill-message?webchat-widgetId={widget-id}`
+- The widget automatically detects the hash when the page loads or when the hash changes
+
+**JavaScript API**:
+- Best for: Custom integrations, dynamic content, programmatic triggering
+- Allows you to trigger actions programmatically from your own JavaScript code
+
+### Configuration steps
+
+![Widget Actions configuration interface](img/partner-center-inbox/widget-actions-configuration.png)
+
+1. Navigate to **Partner Center > Conversations > Settings > Web Chat Configuration > Widget Actions**
+2. Select an action type: **Prefill message** or **Send message**
+3. Select an implementation method: **Anchor link listener** or **JavaScript API**
+4. Enter an optional message that will be used when the link is clicked
+5. Copy the generated code and use it as an anchor link or redirect target
+
+The generated code will look like: `#webchat-send-message?webchat-widgetId=fedf2e7a-30fb-11f0-941a-ea112a20`
+
+### Use cases
+
+- **Email campaigns**: Include a "Chat with us" link that opens the widget with a message like "I'm interested in your services"
+- **Landing pages**: Add CTAs that open chat with context-specific messages
+- **Support pages**: Create links that open chat with pre-filled support questions
+- **Product pages**: Enable visitors to ask about specific products with pre-filled inquiries

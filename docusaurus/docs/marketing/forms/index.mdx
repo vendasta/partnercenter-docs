@@ -1,16 +1,158 @@
 ---
-title: Forms
-description: Documentation for Vendasta's form features and integrations
+title: Forms overview
+description: Build, publish, and automate forms. Start quickly with templates, style with AI, and attach files that get summarized automatically.
+sidebar_label: Forms
 sidebar_position: 1
+tags: [forms, overview, documentation]
+keywords: [forms, lead capture, file upload, automations, design with ai, form templates]
 ---
 
-# Forms
+Forms let you capture leads, qualify prospects, and trigger automated follow-ups from any website that lets you embed HTML code. Start with ready-to-use templates (including an Acquisition Widget template), customize with AI-generated styling, organize with sections, and connect to your CRM, email campaigns, and automation workflows.
 
-This section contains information about Vendasta's form features, integrations, and related tools.
+## What you can build
 
-## Articles in this section
+- **Lead generation forms**: Capture contact information that automatically creates CRM records. Start with ready-to-use templates including Lead Generation, Newsletter Signup, or the new Acquisition Widget template for complex lead workflows.
+- **Multi-step forms with sections**: Organize longer forms into sections for better user experience. Perfect for detailed intake forms, qualification questionnaires, or multi-part applications.
+- **File upload forms**: Collect documents, images, or proofs of work directly through your forms. Files automatically attach to contact and company records with AI-generated summaries.
+- **Automated workflow forms**: Trigger complete automation sequences when forms are submitted - create accounts, generate snapshot reports, start campaigns, assign salespeople, and activate products automatically.
 
-- [Form Builder Overview](./form-builder-overview.mdx)
-- [Create a Form](./create-a-form.mdx)
-- [reCAPTCHA Key Configuration](./recaptcha-key.mdx)
-- [Tracking Form Submissions in GA4](./tracking-form-submissions-ga4.mdx)
+## Quick start guide
+
+### Create from Template
+1. Go to **Marketing → Forms**
+2. Click **Create form** and browse available templates
+3. Select **Use template** to generate a form with pre-configured fields and automations
+4. Complete setup by configuring the linked automation (add campaigns, assign salespeople, etc.)
+
+### Design and Customize
+1. Add or customize fields using the drag-and-drop builder
+2. Use **Design with AI** - upload a website screenshot and describe your needs
+3. Organize complex forms using **Sections** for better user flow
+4. Add **File Upload** fields for document collection
+
+### Automate and Publish
+1. Configure automations in the **Automations tab** to handle submissions automatically
+2. Toggle the automation **on** to activate your workflow
+3. Embed on your website or share a direct link
+
+## Field types and form building
+
+Forms support different field types that map to your CRM:
+
+- **Contact fields**: Information that attaches to the contact record (name, email, phone)
+- **Company fields**: Business information (company name, industry, size) with Google Place lookup for auto-enrichment
+- **Section fields**: Organize your form into multiple steps or logical groups for better user experience
+- **File upload fields**: Allow users to upload documents, images, or proofs of work with automatic AI summarization
+- **Element fields**: Non-interactive content like instructions or dividers
+- **Generic fields**: Information that doesn't map directly to CRM fields (text, number, dropdown, etc.)
+
+### Advanced features
+- **Form templates**: Start with ready-to-use templates including Lead Generation, Newsletter Signup, and Acquisition Widget configurations
+- **AI Design**: Upload a website screenshot and let AI generate matching form styles automatically
+- **Sections**: Create multi-step or organized forms that guide users through longer submissions
+- **File uploads**: Attach documents that get AI-summarized and stored in CRM records
+- **Hidden fields**: Capture attribution data without showing to users
+- **Dynamic fields**: Populate from URL parameters (like `?campaign=summer-promo`)
+- **UTM tracking**: Automatically captures standard UTM parameters
+
+## Form settings and publishing
+
+Configure how your form behaves:
+- **Redirect after submit**: Send users to a thank-you page or custom URL
+- **Conversations integration**: Create conversation threads from form submissions
+- **Spam protection**: Enable reCAPTCHA to block automated submissions
+- **Embed options**: Copy HTML code or get shareable links
+
+## Automation and workflows
+
+Forms now include powerful automation capabilities that activate automatically when forms are submitted:
+
+- **Complete lead workflows**: Create accounts, generate snapshot reports, and start campaigns in one flow
+- **CRM automation**: Auto-create contacts and companies with enriched data
+- **Email sequences**: Trigger welcome campaigns, nurture flows, or follow-up sequences
+- **Sales automation**: Auto-assign leads to salespeople and create tasks
+- **Product activation**: Automatically activate products for new customers
+- **Admin notifications**: Alert your team about new high-value submissions
+- **External integrations**: Send data to external systems via webhooks
+- **Analytics tracking**: Monitor performance in Google Analytics
+
+### Acquisition Widget replacement
+The new **Acquisition Widget template** provides the same powerful functionality as the legacy Acquisition Widget but with simpler setup and more flexibility. It includes pre-configured automations for lead capture, company enrichment, and follow-up sequences.
+
+## Guides and resources
+
+### Getting started
+- **[Create a lead generation form](./create-a-form.mdx)**: Step-by-step tutorial
+
+### Customization
+- **[Style forms with CSS](./style-form-with-css.mdx)**: Custom appearance and responsive design
+- **[Design with AI](./style-form-with-css.mdx#design-with-ai)**: Generate styles from website screenshots
+
+### Technical setup
+- **[Use Google reCAPTCHA with Forms](./recaptcha-key.mdx)**: Block spam submissions
+- **[Track form submissions with GA4](./tracking-form-submissions-ga4.mdx)**: Analytics and attribution
+
+## Frequently asked questions
+
+<details>
+<summary>Can I add these new features to my existing forms?</summary>
+
+Yes! You can update any existing form to include file uploads, sections, automations, or AI design without starting from scratch.
+
+</details>
+
+<details>
+<summary>Where do uploaded files go?</summary>
+
+Files are automatically attached to the contact and company profiles generated from the form submission, along with an AI summary for quick reference.
+
+</details>
+
+<details>
+<summary>What file types can users upload?</summary>
+
+Common formats like PDFs, images (JPG/PNG), and documents are supported. You can customize allowed file types and size limits.
+
+</details>
+
+<details>
+<summary>Can I connect my existing automations with these forms?</summary>
+
+Absolutely. Any automation trigger using the form submission from the specific form will appear under that form's Automation tab, where you can manage or expand it.
+
+</details>
+
+<details>
+<summary>How do I prevent spam submissions?</summary>
+
+Enable reCAPTCHA in Form settings. See [reCAPTCHA setup](./recaptcha-key.mdx) for complete instructions.
+
+</details>
+
+<details>
+<summary>Can I customize the form appearance?</summary>
+
+Yes! Use **Design with AI** for quick styling by uploading a website screenshot, or write custom CSS for full control. Forms are mobile-responsive by default.
+
+</details>
+
+<details>
+<summary>What's the difference between the Acquisition Widget template and other templates?</summary>
+
+The Acquisition Widget template provides a setup similar to the original Acquisition Widget, with pre-configured automations for lead capture, company enrichment, and follow-up campaigns. It's perfect for users migrating from Acquisition Widgets.
+
+</details>
+
+<details>
+<summary>How do sections work in forms?</summary>
+
+Sections let you organize forms into logical groups or create multi-step flows. Users can navigate through sections for better user experience with longer or more detailed submissions.
+
+</details>
+
+<details>
+<summary>How do I track form performance?</summary>
+
+Forms auto-capture UTM parameters. For detailed analytics, see [GA4 tracking](./tracking-form-submissions-ga4.mdx).
+
+</details>

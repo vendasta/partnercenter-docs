@@ -4,7 +4,7 @@ sidebar_label: "Fulfillment Forms"
 description: "After submitting an order, it's crucial to complete the in-platform Fulfillment Form. Failure to do so can result in service delays. Fulfillment Forms can be c"
 ---
 
-After submitting an order, it's crucial to complete the in-platform Fulfillment Form. Failure to do so can result in service delays. Fulfillment Forms can be completed before or after placing an order and they can be shared with your customer to receive their input.
+After submitting an order, it's crucial to complete the in-platform Fulfillment Form. Failure to do so can result in service delays. Fulfillment Forms can be completed before or after placing an order and they can be shared with others to receive their input.
 
 # Fulfillment Form Overview
 
@@ -12,7 +12,7 @@ Welcome to the exciting world of Fulfillment Forms! This article will walk you t
 
 ## Purchasing a Product
 
-For more info, [check out this article.](https://support.vendasta.com/hc/en-us/articles/4406958134807)
+For more info, [check out this article.](../../commerce/orders/creating-and-managing-orders.mdx)
 
 1.  Go to Partner Center > Businesses > Accounts
 2.  Select the account you want to make a purchase for
@@ -39,34 +39,22 @@ For more info, [check out this article.](https://support.vendasta.com/hc/en-us/a
 ![Share_Fulfillment.png](./img/18948592252567-35bcf8e61b.png)
 
 1.  **Sharing the Form:** When in Partner Center, the fulfillment form has a share option in the top right corner. This feature allows you to share the form with a Business App user. This way, they can help provide the correct information needed to complete the services.
-2.  **Customer Involvement:** Once you share the form, your customer receives an email and can access the form to help you fill it out. They can also save progress in case they need to consult other stakeholders at their business or complete it at a later time.
-3.  **Updates from Customers:** From your end, you can see the updates your customer makes.
+2.  **Collaboration:** Once you share the form, the recipient receives an email and can access the form to help you fill it out. They can also save progress in case they need to consult other stakeholders or complete it at a later time.
+3.  **Updates:** From your end, you can see the updates that are made to the form.
 4.  **Business App Access:** Any Business App user with permission to view the Orders tab will be able to view and edit the fulfillment form regardless of whether or not it has been shared with them.
 
 **Note:**  Sharing can only be done by Partner Center Admins and Salespeople.  Business App users will not be able to share the form.
 
 ## Sales Team Interaction
 
-**Fulfillment Form Drafts:** If you prefer, your salesperson can start filling out the fulfillment form before activating the product. In Sales & Success Center, a draft order can be created, which will create a draft fulfillment form as well.
+**Fulfillment Form Drafts:** If you prefer, your salesperson can start filling out the fulfillment form before activating the product. 
 
-1.  Go to Sales & Success Center > Accounts
-2.  Select the account for which you want to create a draft order/draft fulfillment form.
-3.  Click **Actions** and select **Create order**
-4.  Click **\+ Add items** and select the Vendasta Services product(s) you wish to include in the order
-5.  Click **Continue** then click **Save as draft**
-6.  Your salesperson will then be directed to the fulfillment form which will exist as a draft and can be saved as progress is made.
+1.  Select the account for which you want to create a draft order/draft fulfillment form.
+2.  Select **Create order**
+3.  Click **\+ Add items** and select the Vendasta Services product(s) you wish to include in the order
+4. If the product(s) have an associated fulfillment form, the fulfillment form tab will be available to fill in details and can be saved by clicking the **Save progress** button.
 
-When ready, your salesperson can submit the order for admin approval and activation.
-
-1.  Go to Sales & Success Center > Accounts
-2.  Select the account
-3.  Go to the Orders card on the left
-4.  Select the Order you want to submit
-5.  Click **Submit Order** in the top right.
-
-From this point, Partner Center admins can approve and activate the order and the fulfillment form will already have all of the details that the salesperson had entered during the drafting stage.
-
-For more information on managing orders between Sales & Success Center and Partner Center, [learn more here.](../../commerce/orders/creating-and-managing-orders.mdx)
+For more information on managing orders Partner Center, [learn more here.](../../commerce/orders/creating-and-managing-orders.mdx)
 
 ## Notifications and Tracking
 

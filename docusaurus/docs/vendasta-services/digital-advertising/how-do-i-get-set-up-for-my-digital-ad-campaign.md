@@ -8,7 +8,7 @@ You want to get started with a successful MatchCraft Managed Ads Campaign as qui
 
 ### Consider doing a promotion
 
-Adding a promotion or a sale can incentivize your potential customers to click on your add and check you out. Let us know if your promotions change so that we can incorporate them into an ongoing campaign.
+Adding a promotion or a sale can incentivize your potential customers to click on your ad and check you out. Let us know if your promotions change so that we can incorporate them into an ongoing campaign.
 
 ### Add the Google Tag Manager code to your website.
 
@@ -28,7 +28,7 @@ Once switched, you should appear on Manage Page. 
 
 Click Settings. 
 
-![Settiings.png](./img/17693803882519-8c12c3feee.png)
+![Settings.png](./img/17693803882519-8c12c3feee.png)
 
 Now click on New Page Experiences
 

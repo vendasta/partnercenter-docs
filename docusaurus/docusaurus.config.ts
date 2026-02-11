@@ -91,6 +91,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         docsRouteBasePath: '/',
       },
     ],
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          { from: '/business-app/administration/integrations-overview', to: '/business-app/administration/integrations' },
+          { from: '/business-app/administration/connect-quickbooks', to: '/business-app/administration/integrations/quickbooks' },
+          { from: '/business-app/administration/quickbooks-integration', to: '/business-app/administration/integrations/quickbooks' },
+          { from: '/business-app/administration/connecting-google-analytics', to: '/business-app/administration/integrations/google-analytics' },
+          { from: '/business-app/administration/api-key-based-integrations', to: '/business-app/administration/integrations/authentication-and-connections' },
+          { from: '/business-app/administration/setting-up-sso-integrations', to: '/business-app/administration/integrations/authentication-and-connections' },
+          { from: '/business-app/administration/setting-up-vendor-managed-integrations', to: '/business-app/administration/integrations/authentication-and-connections' },
+          { from: '/business-app/administration/using-data-sync-and-automated-review-requests', to: '/business-app/administration/integrations' },
+          { from: '/business-app/administration/setting-up-triggers-for-closed-matters-in-clio', to: '/business-app/administration/integrations' },
+          { from: '/vendasta-products', to: '/category/legacy-products' },
+          { from: '/vendasta-products/general', to: '/legacy-products/general' },
+          { from: '/vendasta-products/general/getting-started', to: '/legacy-products/general/getting-started' },
+          { from: '/vendasta-products/calendarhero', to: '/legacy-products/calendarhero' },
+          { from: '/getting-started/intro-to-vendasta/vendasta-platform-overview', to: '/getting-started' },
+          { from: '/getting-started/intro-to-vendasta/partner-onboarding', to: '/getting-started/partner-onboarding' },
+          { from: '/getting-started/intro-to-vendasta/partner-troubleshooting-guide', to: '/getting-started/partner-troubleshooting-guide' },
+          { from: '/getting-started/intro-to-vendasta/vendasta-affiliate-program', to: '/getting-started/vendasta-affiliate-program' },
+          { from: '/partner-center/partner-center-getting-started-guide', to: '/partner-center' },
+          { from: '/partner-center/AI-receptionist-features-by-plan', to: '/ai/ai-workforce/ai-receptionist-features-by-plan' },
+        ],
+      },
+    ],
   ],
 
   themeConfig: {
@@ -107,7 +133,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           type: 'docSidebar',
           sidebarId: 'mainSidebar',
           position: 'left',
-          label: 'Overview',
+          label: 'Documentation',
         },
         {
           type: 'html',
@@ -140,6 +166,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             {
               label: 'Community',
               href: 'https://www.facebook.com/groups/vendasta',
+            },
+            {
+              label: 'Service Status',
+              href: 'https://status.vendasta.com/',
             },
           ],
         },
@@ -190,7 +220,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-    },
+    } as any,
   } satisfies Preset.ThemeConfig,
 };
 

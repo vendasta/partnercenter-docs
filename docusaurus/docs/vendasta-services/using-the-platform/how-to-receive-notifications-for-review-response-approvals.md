@@ -8,11 +8,11 @@ One of the reputation management services Vendasta Services offers is responding
 
 This service includes an (optional) approval process for [responding to negative reviews](../review-management/approval-process-options-for-responses-to-negative-reviews.md), where users can receive notifications with our proposed responses to negative reviews.
 
-To receive these email notifications, you must [add the respective person as a user to the account in Partner Center](../accounts/manage-users/add-a-user-to-an-account.mdx) and configure the applicable user notifications.
+To receive these email notifications, you must [add the respective person as a user to the account in Partner Center](../../accounts/manage-users/add-a-user-to-an-account.mdx) and configure the applicable user notifications.
 
 ## Configuring User Notifications:
 
-(Reputation Management will need to be active on the account)  
+(Reputation AI will need to be active on the account)  
   
 
 1.  In Partner Center, click on **Accounts** > **Manage Users**.  
@@ -24,7 +24,7 @@ To receive these email notifications, you must [add the respective person as a u
       
     
 3.  You will be displayed a list of accounts that the user has been added to. Click on the drop-down arrow next to the applicable account to expand the notifications list.
-    1.  Click on “**Reputation Management**” to display the notifications associated with the Reputation Management platform.  
+    1.  Click on "**Reputation AI**" to display the notifications associated with the Reputation AI platform.  
         ![PC User Notifications Rep Man.png](./img/23186071999127-1139105d2a.png)  
           
         

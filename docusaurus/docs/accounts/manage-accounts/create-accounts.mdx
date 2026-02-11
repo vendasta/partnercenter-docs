@@ -9,11 +9,11 @@ keywords: [create-account, add-business, account-setup, bulk-import]
 
 # Create Accounts
 
-## What is Account Creation?
+## What is account creation?
 
 Account creation is the process of adding new business locations to your Business App system. Each account represents an individual business or business location that you serve, containing their complete business profile, contact information, and service settings.
 
-## Why is Account Creation Important?
+## Why is account creation important?
 
 Creating accurate business accounts is essential because:
 
@@ -22,23 +22,23 @@ Creating accurate business accounts is essential because:
 - **Customer Experience**: Complete profiles enable personalized dashboards and communications
 - **Integration Success**: Accurate data improves integration with third-party services and platforms
 
-## What's Included with Account Creation?
+## What's included with account creation?
 
-### Individual Account Creation
+### Individual account Creation
 - Business search and automatic data population
 - Manual business profile entry
 - Required and optional field configuration
 - Category and market assignment
 
-### Bulk Account Import
+### Bulk account import
 - CSV template-based import system
 - Data validation and error checking
 - Batch processing for multiple accounts
 - Default settings application
 
-## How to Create Individual Accounts
+## How to create individual accounts
 
-### Using Business Search
+### Using business search
 
 The fastest way to create accounts for known businesses:
 
@@ -59,7 +59,7 @@ The fastest way to create accounts for known businesses:
 Business search automatically populates address, phone, and category information when businesses are found in public directories.
 :::
 
-### Manual Account Creation
+### Manual account creation
 
 When businesses don't appear in search results:
 
@@ -71,6 +71,10 @@ When businesses don't appear in search results:
    - **Country/Region**: Business location country
    - **Phone Number**: Primary business contact number
    - **Business Categories**: Select up to 3 relevant categories
+
+:::info Business Categories Reference  
+For a complete list of available business categories and guidance on proper classification, see [Business Categories](../../directory/business-categories.mdx). Proper categorization ensures optimal product features and integration capabilities.
+:::
 
 :::warning
 If no suitable category exists, select "Other" - but note that some product features may be limited.
@@ -87,7 +91,7 @@ If no suitable category exists, select "Other" - but note that some product feat
    - **Business Hours**: Operating schedule information
 5. Click `Create Account` to save
 
-### Handling Special Business Types
+### Handling special business types
 
 **Service Area Businesses** (no physical storefront):
 - Select "Service Area Business" checkbox
@@ -101,7 +105,7 @@ If no suitable category exists, select "Other" - but note that some product feat
 - Plan to group using Multi-Location Groups later
 - Ensure each location has unique address information
 
-## How to Import Multiple Accounts
+## How to import multiple accounts
 
 ### Preparing for Bulk Import
 
@@ -116,7 +120,7 @@ Before importing accounts:
    - Business categories and classifications
    - Market assignments (if applicable)
 
-### CSV File Preparation
+### CSV file preparation
 
 **Required columns:**
 - Business Name
@@ -125,7 +129,7 @@ Before importing accounts:
 - State/Province
 - ZIP/Postal Code
 - Phone Number
-- Business Category
+- Business Category (see [Business Categories guide](../../directory/business-categories.mdx) for valid options or [download the complete list](../../directory/downloads/business-categories-list.csv))
 
 **Optional columns:**
 - Customer Identifier
@@ -139,7 +143,7 @@ Before importing accounts:
 Use consistent formatting for phone numbers, addresses, and categories to ensure successful import processing.
 :::
 
-### Executing the Import
+### Executing the import
 
 1. **Upload your prepared CSV file**
 2. **Review import preview**:
@@ -156,7 +160,7 @@ Use consistent formatting for phone numbers, addresses, and categories to ensure
    - Resolve address conflicts
 5. Click `Import Accounts` to process
 
-### Post-Import Tasks
+### Post-import tasks
 
 After successful import:
 
@@ -166,9 +170,9 @@ After successful import:
 4. **Configure products and services** for new accounts
 5. **Set up user access** for customer dashboard access
 
-## How to Handle Account Creation Issues
+## How to handle account creation issues
 
-### Business Not Found in Search
+### Business not found in search
 
 **Common causes and solutions:**
 
@@ -187,20 +191,20 @@ After successful import:
 - Verify current address with mapping services
 - Check for recent relocations or closures
 
-### Import Error Resolution
+### Import error resolution
 
 **Data validation errors:**
 - **Missing required fields**: Complete all required columns in CSV
 - **Invalid phone formats**: Use consistent formatting (e.g., (555) 123-4567)
 - **Address validation failures**: Verify addresses exist and are properly formatted
-- **Category assignment errors**: Use exact category names from the system
+- **Category assignment errors**: Use exact category names from the system (refer to [Business Categories](../../directory/business-categories.mdx) or [download the complete list](../../directory/downloads/business-categories-list.csv) for all valid category options)
 
 **Duplicate business handling:**
 - **Similar names**: Review carefully for legitimate duplicates vs. similar businesses
 - **Same addresses**: Check for businesses sharing locations (like shopping centers)
 - **Phone number conflicts**: Verify which business currently uses the number
 
-### Best Practices for Account Creation
+### Best practices for account creation
 
 **Data Quality:**
 - Always verify business information before creating accounts
@@ -219,7 +223,7 @@ After successful import:
 - Set up initial user access promptly after account creation
 - Configure appropriate notification settings
 
-## Bulk Import Settings (Users and Notifications)
+## Bulk import settings (users and notifications)
 
 When importing via CSV, you can configure user access and notifications for newly created users:
 
@@ -233,7 +237,7 @@ You’ll see these options during the import wizard after mapping fields.
 You can adjust user permissions later from Manage Users if needed.
 :::
 
-## Troubleshooting Business Search
+## Troubleshooting business search
 
 If a business doesn’t appear in the `Create account` search:
 
@@ -243,7 +247,7 @@ If a business doesn’t appear in the `Create account` search:
 This ensures you can still create the account even when search doesn’t return the business.
 - Schedule onboarding activities for complex accounts
 
-## Frequently Asked Questions (FAQs)
+## Frequently asked questions (FAQs)
 
 <details>
 <summary>What's the difference between searching for a business and manual creation?</summary>
@@ -293,3 +297,8 @@ Select "Service Area Business" during creation and use the owner's address or ma
 While creating accounts, you can configure default user settings for bulk imports. For individual accounts, add users separately after account creation for better control over permissions.
 </details>
 
+<details>
+<summary>Where is the information gathered when creating an account by search?</summary>
+
+The Google Locations API is used to gather the Name, Address, Phone Number, Website, geo-location, Business Category and Hours of Operation.  The social profile URLs are gathered from the business website.
+</details>

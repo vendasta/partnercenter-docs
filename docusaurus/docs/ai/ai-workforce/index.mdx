@@ -1,202 +1,236 @@
 ---
-title: AI Workforce
-description: Discover Vendasta's AI-powered workforce tools designed to enhance sales and business operations
-sidebar_position: 1
+title: AI Workforce Overview
+description: Overview of AI Employees — configure AI Workforce, capabilities, tools, and channels to automate conversations, capture leads, and handle customer interactions.
+tags: [ai-workforce, ai, ai-employees, capabilities]
+keywords: [AI workforce, AI employees, capabilities, tools, lead capture, web chat, automations]
 ---
 
-# AI Workforce
+AI Employees are digital team members you can configure to automate conversations, answer customer questions, capture leads, book appointments, and more. Each works well out of the box, but can be tailored to fit your business needs.
 
-Vendasta's AI Workforce provides intelligent tools and assistants designed to streamline your sales processes, improve productivity, and enhance customer interactions. These AI-powered solutions integrate seamlessly with your existing workflows to provide automated support and insights.
+All AI Employees share a common structure, with configurable elements like their name, purpose, communication channels, capabilities, and knowledge sources. Specific roles (like Chat Receptionist or Voice Receptionist) may include additional options, but the basics are always the same.
 
-## What is AI Workforce?
+See these guides for step-by-step setup or details on specific AI Employees:
+- [Set up the AI Chat Receptionist](./ai-chat-receptionist/)
+- [Set up the AI Voice Receptionist](./ai-voice-receptionist)
+- [Create Custom AI Employees](./custom-ai-employees) - Build specialized AI employees for specific business functions
 
-AI Workforce represents a collection of intelligent tools that work alongside your team to:
+For more detail on setup:
+- [AI Capabilities Overview](../ai-capabilities/)
+- [Creating Custom Capabilities](../ai-capabilities/creating-custom-capabilities)
+- [Building Custom Tools](../ai-capabilities/tools-overview/building-custom-tools) - Step-by-step tutorial for creating API integrations
 
-- **Automate routine tasks** - Let AI handle repetitive work so your team can focus on high-value activities
-- **Enhance decision making** - Get AI-powered insights and recommendations based on data analysis
-- **Improve customer interactions** - Leverage AI to provide better, more personalized customer experiences
-- **Streamline workflows** - Integrate AI capabilities directly into your existing business processes
+If you're just getting started, review the sections below for an overview of the main elements you'll configure for any AI Employee.
 
-## Available AI Employees
+---
 
-### Customer Communication AI
+## AI Employee elements
 
-AI-powered employees that handle customer interactions across multiple channels:
+AI Employees all share a similar structure—no matter what role they play in your business. This applies to pre-built AI Employees (eg. Chat Receptionist, Voice Receptionist) and Custom AI Employees you create. Each one comes with common parts you can review and configure, such as their name, purpose, communication channels, capabilities, and what knowledge they use to answer questions. 
 
-- [AI Chat Receptionist](./ai-chat-receptionist/) - Handle website chat, lead capture, and customer inquiries 24/7
-- [AI Voice Receptionist](./ai-voice-receptionist.md) - Answer phone calls, capture leads, and book appointments automatically
+### Profile
 
-### Sales & CRM Integration
+The **Profile** section is where you set the basics for your AI Employee—how they appear to your team and how they introduce themselves to customers.
 
-AI-powered tools designed to enhance your sales processes and customer relationship management:
+- **Name & Avatar:**  
+  **What this is:** The display name and image used for your AI Employee across your channels.  
+  **What to do:** Choose a friendly, memorable name and a profile image (like your logo or a custom avatar) that fits the role or your brand. This helps customers and your team instantly recognize who they're interacting with.
 
-- [AI Sales Assistant](./ai-sales-assistant.mdx) - Capture, transcribe, and log sales meetings automatically with CRM integration
+- **Purpose:**  
+  **What this is:** The job description and behavioral "guidelines" for your AI Employee. This sets the tone, goals, and important instructions for every conversation.  
+  **What to do:** Write a clear, short summary of what your AI Employee should do. Be specific about their tone, greeting, and key tasks.  
+  
+  :::tip Writing Better Instructions
+  Use bullets or numbered lists to make instructions clear and scannable. Be specific about what you want, not just general goals.
+  
+  **Good example:**
+  - "Introduce yourself as the business receptionist."
+  - "Speak in a friendly, concise way."
+  - "Always collect name, email, and phone before ending the conversation."
+  - "If someone asks about pricing, direct them to our website pricing page."
+  
+  **Avoid vague instructions:**
+  - ❌ "Be helpful and professional."
+  - ✅ "Greet customers warmly by name and ask how you can help them today."
+  :::
 
-## AI Employee Configuration
+---
 
-### Capabilities & Skills
-Your AI Employees can be enhanced with various capabilities to handle specific business tasks:
+### Channels
 
-- [AI Capabilities Overview](../ai-capabilities/) - Learn about built-in and custom capabilities
-- [Configuring AI Capabilities](../ai-capabilities/configuring-capabilities.md) - Set up lead capture, appointment booking, and more
-- [Creating Custom Capabilities](../ai-capabilities/creating-custom-capabilities.md) - Build custom integrations and workflows
+The **Channels** section lets you choose where your AI Employee will work for you.
 
-### Knowledge Management  
-Ensure your AI Employees have the right information to help your customers:
+**What this is:** Channels are the different places or platforms where your AI Employee can interact with your customers—like website chat, SMS, phone calls, or even Google Meet.
 
-- [Knowledge Base Overview](../knowledge-base.md) - Centralize business information for your AI team
+**What to do:**  
+Review the available channels for your AI Employee's role. Turn on only the channels that make sense for your business right now. For example, you might want your AI to respond on your website's chat widget, via text messages, or answer phone calls.
 
-## AI Employees + Automations Integration
+- Website chat Widget  
+- SMS (text messages)  
+- Phone calls (voice)  
+- WhatsApp
+- Facebook
+- Instagram
 
-Take your AI Employees to the next level by integrating them with Automations. This powerful combination allows you to create intelligent, automated workflows that leverage your AI's knowledge and capabilities.
+You can enable or disable channels at any time.  
 
-### Use AI Employees within Automations
-
-The "Send request to an AI Employee" step in Automations allows you to send a prompt to any of your AI Employees and use their response within your automation workflow. This opens up countless possibilities for intelligent automation.
-
-**How it works:**
-1. **Trigger an automation** - Any automation trigger (form submission, time-based, etc.)
-2. **Send a request to your AI Employee** - The automation prompts your AI with context and instructions
-3. **AI processes the request** - Your AI Employee uses their full knowledge base and capabilities to generate a response
-4. **Use the response** - The AI's response can be used in subsequent automation steps (send emails, SMS, create tasks, etc.)
-
-### Featured Use Case: Instant Form Response
-
-**The Challenge:** When potential customers submit forms on your website, they want immediate acknowledgment and answers to their questions. Manual responses are slow and inconsistent.
-
-**The Solution:** Use the "Form submission – AI Chat Receptionist automatically replies with a custom message" automation template.
-
-**What happens:**
-1. **Customer submits a form** on your website
-2. **Automation triggers** and sends the form data to your AI Chat Receptionist
-3. **AI crafts a personalized response** using the form information and your business knowledge
-4. **Instant reply sent** via SMS and/or email to the customer
-5. **Follow-up actions** can be triggered based on the inquiry type
-
-### Setting Up AI + Automations
-
-**In Partner Center:**
-1. Go to **Automations** in your dashboard
-2. Click **"Create automation"**
-3. Choose **"Form submission – AI Chat Receptionist automatically replies with a custom message"** template
-4. **Customize the automation:**
-   - Select which AI Employee to use
-   - Adjust the prompt/instructions for your AI
-   - Choose whether to send SMS, email, or both (SMS available in Partner Center)
-   - Set up any additional follow-up actions
-5. **Enable the automation** and set it to run multiple times
-
-**Benefits of this integration:**
-- **Instant customer engagement** - No delay between inquiry and response
-- **Personalized responses** - AI uses form data and business knowledge for relevant replies
-- **24/7 availability** - Works even when your team is offline
-- **Consistent quality** - AI maintains professional tone and accurate information
-- **Scalable solution** - Handles any volume of form submissions
-
-:::tip Pro Tip
-You can customize the AI's instructions to handle different types of forms differently. For example, service inquiries might get different responses than contact forms or quote requests.
+:::info Channel Assignment Requirements
+Some channels require specific products to unlock. For example, assigning a Custom AI Employee to web chat requires Conversations AI Standard, Pro, or Premium. Pre-built AI Employees may have different channel availability based on their role.
 :::
 
-## Getting Started
+> **Tip:** Start with just one or two channels while you get comfortable, then expand as you see results!
 
-Each AI Workforce tool is designed to integrate seamlessly with your existing Vendasta platform setup. Click on any tool above to learn more about its specific capabilities, setup requirements, and how to get started.
+---
 
-## Benefits of AI Workforce
+### Capabilities
 
-- **Increased Productivity** - Automate time-consuming tasks to free up your team for strategic work
-- **Better Data Capture** - Ensure no important information is lost with automated logging and transcription
-- **Improved Accuracy** - Reduce human error with AI-powered data processing and analysis
-- **Enhanced Insights** - Get actionable intelligence from your business data with AI analysis
-- **Seamless Integration** - Works within your existing Vendasta platform and tools
+The **Capabilities** section is where you decide what your AI Employee can actually do for your business.
 
-## Frequently Asked Questions
+**What this is:**  
+Capabilities are like "skills" or "tasks" you can turn on or off, depending on the role of your AI Employee. Each capability tells your AI which actions it should take or what outcomes to prioritize—such as capturing leads, booking appointments, answering FAQs, or performing a role-specific function.
 
-<details>
-<summary>What is AI Workforce and how does it work?</summary>
+**What to do:**  
+Review the available capabilities for your chosen AI Employee.
+- **Turn on** the capabilities that are most important for your workflow and customer experience.
+- **Add or adjust capabilities** as your business needs evolve.
+- Use the additional instructions/goals field to give extra context or specific directions.
+- **Create your own custom capabilities:** You can design custom tasks for your AI Employee to perform, using the Custom Capabilities builder. This is great for advanced workflows or unique business needs. [Learn more ›](../ai-capabilities/creating-custom-capabilities)
 
-AI Workforce is a collection of intelligent AI Employees that work alongside your team to automate routine tasks, improve customer interactions, and streamline business processes. These AI Employees can handle customer inquiries, capture leads, book appointments, and integrate with your existing workflows through Automations.
-</details>
+**Examples of capabilities you might enable:**
+- Capture lead information (e.g., name, email, phone)
+- Book appointments using your connected calendar
+- Answer common customer questions (FAQs)
+- Follow your specific instructions or goals
 
-<details>
-<summary>What's the difference between AI Chat Receptionist and AI Voice Receptionist?</summary>
+:::tip Writing Capability Instructions
+When adding instructions to capabilities, be specific about when and how to use them:
 
-The **AI Chat Receptionist** handles text-based conversations through your website chat widget, capturing leads and answering questions 24/7. The **AI Voice Receptionist** answers phone calls, can book appointments using your calendar, and handles voice interactions with callers. Both use the same knowledge base but are optimized for their respective communication channels.
-</details>
+**Good:** "Only ask for contact information after the customer shows clear interest in our services. If they're just browsing, answer their questions first."
 
-<details>
-<summary>Do AI Employees work 24/7?</summary>
+**Too vague:** "Get contact info when appropriate."
+:::
 
-Yes! AI Employees are available 24/7, 365 days a year. They never take breaks, sick days, or vacations. This means your customers can get instant responses to their questions and inquiries even when your human team is offline, helping you capture leads and provide support around the clock.
-</details>
+> **Tip:** You can experiment with different capabilities to see what works best, and update them any time as your business grows.
 
-<details>
-<summary>How do AI Employees learn about my business?</summary>
+---
 
-AI Employees learn through your **Knowledge Base**, which includes website content, custom documents (like FAQs and price lists), and business information you provide. You can continuously add and update knowledge sources to improve their responses. The more relevant information you provide, the more helpful and accurate your AI Employees become.
-</details>
+### Tools
 
-<details>
-<summary>Can I customize what my AI Employees say and do?</summary>
+The **Tools** section enables your AI Employee to interact with external systems and retrieve real-time information during conversations.
 
-Absolutely! You can customize AI Employee behavior through **Capabilities** and **Additional Instructions**. You can enable or disable specific skills (like appointment booking or lead capture), write custom prompts to guide their responses, and even create custom capabilities that integrate with your business tools and processes.
-</details>
+**What this is:**  
+Tools are connections to APIs (external software systems) that your AI Employee can use to perform actions or retrieve information that goes beyond their built-in knowledge. For example, tools can check weather forecasts, look up inventory, create records in your CRM, or verify appointment availability in real-time.
 
-<details>
-<summary>What happens if an AI Employee doesn't know the answer to a question?</summary>
+**What to do:**  
+Tools are typically configured as part of custom capabilities. When you need your AI Employee to:
+- Access real-time information (weather, inventory, account details)
+- Create or update records in external systems
+- Automate workflows across multiple platforms
+- Make decisions based on live data
 
-When an AI Employee encounters a question they can't answer from their knowledge base, they'll acknowledge that they don't have that specific information and offer to take a message or connect the customer with a human team member. This ensures customers never feel abandoned and all inquiries are properly handled.
-</details>
+You'll create a custom capability with an integrated tool. The tool acts as a bridge, letting your AI fetch or send information to other software.
 
-<details>
-<summary>Can AI Employees integrate with my existing business tools?</summary>
+**Examples of what tools can do:**
+- Check weather conditions before scheduling outdoor work
+- Look up customer order history from your e-commerce platform
+- Verify product availability in your inventory system
+- Create new leads in your CRM after capturing contact information
+- Check calendar availability before booking appointments
 
-Yes! AI Employees can integrate with various business systems through **Custom Capabilities**. We provide detailed guides for popular integrations like Shopify and ServiceTitan, and you can create custom integrations with any system that has an API. Plus, the **Automations integration** allows AI Employees to work within automated workflows.
-</details>
+:::tip Learning More About Tools
+Tools require some understanding of APIs (how software systems communicate). If you're new to this concept, start with the [Tools & Integrations Overview](../ai-capabilities/tools-overview) to learn the fundamentals before building your first tool.
+:::
 
-<details>
-<summary>Will AI Employees replace my human staff?</summary>
+> **Note:** Most standard business needs (like appointment booking or lead capture) are handled by built-in capabilities that already have tools configured. Custom tools are for specialized integrations specific to your business.
 
-No, AI Employees are designed to **augment** your human team, not replace them. They handle routine inquiries and repetitive tasks, freeing up your human staff to focus on more complex, high-value activities that require human judgment, creativity, and relationship building. Think of them as your most reliable team members who handle the basics so humans can focus on what they do best.
-</details>
+---
 
-<details>
-<summary>How accurate are AI Employee responses?</summary>
+### Knowledge sources
 
-AI Employee accuracy depends on the quality and completeness of your knowledge base. When provided with comprehensive, up-to-date information, AI Employees are highly accurate and consistent. They don't have "off days" and always follow the instructions and knowledge you've provided. You can monitor conversations and continuously improve their knowledge base for even better performance.
-</details>
+The **Knowledge Sources** section is where you teach your AI Employee about your business, so it can give accurate, up-to-date answers to customers.
 
-<details>
-<summary>Can AI Employees handle multiple languages?</summary>
+**What this is:**  
+Knowledge sources are collections of business information your AI can refer to during conversations—such as website pages, FAQs, or uploaded documents. The AI uses this info only when it needs to answer a relevant question.
 
-Yes! AI Employees can detect and respond in over 40 languages, including English, French, Spanish, and many others. This makes them valuable for businesses serving diverse customer bases or operating in multiple markets. The language capabilities vary by voice selection for the AI Voice Receptionist.
-</details>
+**What to do:**  
+Add any information that would help your AI answer questions or provide better service:
+- **Add your website:** Let the AI "read" your site to answer questions about your offerings, prices, or policies.
+- **Upload documents or custom text:** Share menus, price lists, terms, or answers to frequently asked questions.
+- **Provide basic business information:** Include essentials like your address, hours, services, and contact info.
+- **Review and update regularly:** Make sure your knowledge sources are current, so your AI never gives outdated info.
 
-<details>
-<summary>How do I monitor and improve my AI Employees' performance?</summary>
+> **Tip:** The more up-to-date and specific your knowledge sources, the more helpful and accurate your AI Employee will be!
 
-You can review all AI Employee interactions through the **Conversations** tab in your Business App. This includes call recordings, chat transcripts, and conversation summaries. Use these insights to identify areas for improvement, update your knowledge base, and refine your AI Employee instructions for better performance over time.
-</details>
+---
 
-<details>
-<summary>How secure is AI Workforce and my customer data?</summary>
+### Save & test
 
-AI Workforce follows enterprise-level security practices to protect your data and customer information. All conversations are processed securely, and the system only accesses the knowledge you explicitly provide. Customer data is handled according to privacy regulations, and you maintain full control over what information your AI Employees can access and share.
-</details>
+- **Save your configuration:**  
+  Don't forget to save changes before leaving the page!
+- **Test your AI:**  
+  Most AI Employees let you simulate conversations or actions, so you can preview how they'll interact with real customers.
 
-<details>
-<summary>Can AI Employees book appointments and manage my calendar?</summary>
+---
 
-Yes! The AI Voice Receptionist and AI Chat Receptionist can both book appointments when you connect your calendar. They can check real-time availability, collect booking details, and automatically create calendar events. You can configure which types of appointments they can book and set specific instructions for the booking process.
-</details>
+## Testing and optimizing your AI Employees
 
-<details>
-<summary>How quickly can I set up AI Employees for my business?</summary>
+After initial setup, regularly test and optimize your AI Employees to ensure they're performing effectively.
 
-Basic AI Employee setup can be completed in under 30 minutes. This includes configuring their name, selecting capabilities like lead capture and appointment booking, and adding initial knowledge sources. For more advanced configurations like custom capabilities or complex integrations, setup may take longer but comprehensive documentation guides you through each step.
-</details>
+### Testing strategies
 
-<details>
-<summary>What types of businesses benefit most from AI Workforce?</summary>
+**Test Systematically**
+- Ask the same question in different ways to verify consistency
+- Test what happens when customers provide incomplete information
+- Try scenarios that should trigger specific capabilities
+- Verify the AI's tone and behavior match your brand
 
-AI Workforce is particularly valuable for service-based businesses, e-commerce stores, healthcare practices, real estate agencies, home services companies, and any business that receives frequent customer inquiries. Companies that want to improve lead capture, provide 24/7 customer support, or automate appointment booking see immediate benefits from AI Employees.
-</details>
+**Clear Cookies for Fresh Tests**
+- For advanced testing, clear cookies between test conversations
+- This ensures each test starts without previous context
+- Helps verify the AI works correctly for new visitors
+
+### Monitoring performance
+
+**Review Conversation Logs**
+- Check both identified conversations and anonymous visitors
+- Look for patterns in successful vs. problematic interactions
+- Identify common customer questions that need better responses
+
+**Use AI Explanations**
+- Click "Explanation" on any AI response to see:
+  - The reasoning behind the AI's decisions
+  - Which knowledge sources were used
+  - What tools were called and their API responses
+- Use this information to identify areas for improvement
+
+### Iterative improvement process
+
+**1. Identify Issues**
+- Specific responses that miss the mark
+- Capabilities that trigger incorrectly or not at all
+- Knowledge gaps where the AI can't answer questions
+- Tone or behavior that doesn't match expectations
+
+**2. Determine the Root Cause**
+- **Purpose issue**: Adjust if it affects overall behavior across all conversations
+- **Capability issue**: Refine when specific actions aren't working correctly
+- **Knowledge issue**: Update when facts are missing or incorrect
+- **Tool issue**: Fix when API calls fail or return wrong data
+
+**3. Make Focused Changes**
+- Change only one thing at a time
+- Document what you changed and why
+- Test immediately to verify the change worked
+
+**4. Monitor Results**
+- Watch real conversations for the impact of your changes
+- Verify the issue is resolved without creating new problems
+- Continue iterating based on ongoing performance
+
+:::tip Testing Best Practices
+- Test after every configuration change
+- Monitor live conversations regularly (weekly is a good starting point)
+- Keep notes on what works and what doesn't
+- Be patient—optimizing AI Employees is an iterative process that improves over time
+:::
+
+---
