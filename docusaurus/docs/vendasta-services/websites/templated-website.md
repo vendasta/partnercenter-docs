@@ -104,7 +104,7 @@ For payments, we use a free plugin called Gravity Forms. For donations, we recom
 
 <summary> What if I need more customizations?</summary>
 
-The Templated Website solution is best for simpler websites without extensive customization. If you require a more customized solution, please reach out or look at our [Tailored Website](https://partners.vendasta.com/marketplace/products/MP-JPG6QNZHBQPKRX7KZ28XPM8X5BRZHJ3W) option.
+The Templated Website solution is best for simpler websites without extensive customization. If you require a more customized solution, please reach out to our team and we will be happy to find the best solution for you.
 </details>
 
 <details>

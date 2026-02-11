@@ -13,20 +13,28 @@ locale: "en-us"
 
 If you have an existing WordPress website and would like to move it onto Vendasta’s hosting platform (WordPress Hosting Pro), Vendasta Services can help!
 
-You will also gain access to Vendasta Services’ Website Support team when we import a site with Website Support activated _(12-month commitment for imported sites)_.
+You will also gain access to Vendasta Services’ Website Support+ team when we import a site with Website Support+ activated _(3-month commitment for imported sites)_.
 
-## **Website Support includes:**
+## **Website Support+ includes:**
 
-*   Access to the team for tech support
-*   Website revisions to images, text, and minor change requests
+*   Access to the team for technical support
+*   Minor changes to the website's appearance, such as:
+    *   Fonts
+    *   Colors
+    *   Media (images, videos, icons)
+    *   Text updates
+    *   Contact form fields and settings
+    *   Reorganization or duplication of existing sections
 *   Backend updates are completed quarterly to ensure WordPress stability
 *   Updates to plugins and themes upon request
 *   Health checks to website upon request
 *   Uptime monitoring and urgent support if your website goes offline
+*   Upload up to 3 blog posts per month (content must be provided)
+*   AI Chat Receptionist installation and setup
 
 ## **What benefits are there when importing a site through Vendasta Services?**
 
-With Vendasta Services, your website is in trusted hands! To import the site, our Website Support team will:
+With Vendasta Services, your website is in trusted hands! To import the site, our Website Support+ team will:
 
 *   Package and download the website from the original hosting platform
 *   Upload and set up the site in our WordPress Hosting Pro hosting platform
@@ -35,9 +43,9 @@ With Vendasta Services, your website is in trusted hands! To import the site, ou
 
 _\*Plugins or themes may require a license key to update._
 
-Additionally, upon importing your site with us, you'll receive 12 months of ongoing Website Support. This includes access to our dedicated Website Support team for updates and technical assistance tailored to your WordPress website.
+Additionally, upon importing your site with us, you'll receive ongoing Website Support+. This includes access to our dedicated Website Support+ team for updates and technical assistance tailored to your WordPress website, including AI Chat Receptionist installation.
 
-Website Support is provided as part of our commitment to your website's success. While there is a 12-month commitment, the support is billed monthly for your convenience.
+Website Support+ is provided as part of our commitment to your website's success. While there is a 3-month commitment, the support is billed monthly for your convenience.
 
 Before we can import the site (and offer support for it), we need to vet it to ensure this is feasible. Each site can have its own complexities that affect the import capabilities.
 
@@ -56,7 +64,7 @@ Before we can import the site (and offer support for it), we need to vet it to e
 
 **Importing:**
 
-1.  If approved, we will activate WordPress Hosting [Pro](https://partners.vendasta.com/marketplace/products/MP-ee4ea04e553a4b1780caf7aad7be07cd) and the [Website Import & Support](https://partners.vendasta.com/marketplace/products/MP-1751871d98cf4e7f95d55c7d2b2ff293/addon/A-7JLBR47NLD) add-on (one-time setup fee + 12-month monthly support free).
+1.  If approved, we will activate WordPress Hosting [Pro](https://partners.vendasta.com/marketplace/products/MP-ee4ea04e553a4b1780caf7aad7be07cd) and the [Website Import & Support](https://partners.vendasta.com/marketplace/products/MP-1751871d98cf4e7f95d55c7d2b2ff293/addon/A-7JLBR47NLD) add-on (one-time setup fee + 3-month monthly support free).
 2.  Import completed within 3 business days post-vetting.
 3.  Website hosted on a temporary domain. _(ex: business-name.websitepro.hosting)_
 
@@ -76,7 +84,7 @@ _Please note that a site can take up to 72 hours to fully propagate. During this
 *   Built using an unsupported builder or method
 *   Compatibility issues with WordPress Hosting Pro
 
-If our Website Support team is unable to support the website in question, we will email you to let you know that we are unable to support this site and explain why we had to reject it.
+If our Website Support+ team is unable to support the website in question, we will email you to let you know that we are unable to support this site and explain why we had to reject it.
 
 **See also:** [Website Import & Support Vetting Expectations Brochure](https://examples.yourdigitalagents.com/wp-content/uploads/2023/05/Website-Import-Support-Vetting_-Expectations-Guide.pdf)
 
@@ -91,7 +99,7 @@ If you have decided you wish to move a website to a new host and discontinue sup
 3.  Reach out to our team to provide you with the file for your existing website.
 4.  Check to ensure that your website is working correctly in your new environment before discontinuing service.
 
-Our team can provide you with the necessary file and credentials for the existing website, but we are not able to access your new hosting nor are we able to perform the import to your new host on your behalf. 
+Our team can provide you with the necessary file and credentials for the existing website, but we are not able to access your new hosting nor are we able to perform the import to your new host on your behalf.
 
 **Important Note:** Once you have discontinued your hosting with us, we will only have access to the website on our servers for six months, after which it will be permanently deleted.
 
@@ -99,15 +107,15 @@ Our team can provide you with the necessary file and credentials for the existin
 
 <details>
 
-<summary>Is my site eligible for Website Support?</summary>
+<summary>Is my site eligible for Website Support+?</summary>
 
-We support the following for Website Support:
+We support the following for Website Support+:
 
 *   WordPress websites built by our Vendasta Services Websites team
 *   Most WordPress websites built with approved visual builders
     *   I.e., Divi, Elementor, WPBakery, etc.
 
-Websites not built by Vendasta Services (or with significant changes done externally after being built by us) will need to be vetted before being approved for Website Support.
+Websites not built by Vendasta Services (or with significant changes done externally after being built by us) will need to be vetted before being approved for Website Support+.
 
 Website support requests can be sent to [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com)
 
@@ -117,8 +125,23 @@ Website support requests can be sent to [marketingservices@yourdigitalagents.com
 
 <summary>My site is already on WordPress Hosting Pro, can you support it?</summary>
 
-If your site is already hosted on WordPress Hosting Pro, activate the standalone Website Support product. If the site is rejected for Website Support, once we vet it, we will reject the product, and you will be automatically refunded. Rejected sites can be rebuilt with our website design team.
+If your site is already hosted on WordPress Hosting Pro, activate the standalone Website Support+ product. If the site is rejected for Website Support+, once we vet it, we will reject the product, and you will be automatically refunded. Rejected sites can be rebuilt with our website design team.
 
 Website support requests can be sent to [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com)
+
+</details>
+
+<details>
+
+<summary>Can you install the AI Chat Receptionist on my imported website?</summary>
+
+Yes! Website Support+ includes installation of the AI Chat Receptionist on your imported website. Our Website Support+ team will:
+
+*   Add the web chat code to the site
+*   Confirm the widget loads properly on the website
+*   Perform a basic test (open chat, confirm a message can be sent)
+*   Add brand colours to the AI Chat Receptionist
+
+If you need advanced features such as full brand configuration beyond basic brand colours, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce-setup/ai-receptionist-setup.md) service.
 
 </details>
