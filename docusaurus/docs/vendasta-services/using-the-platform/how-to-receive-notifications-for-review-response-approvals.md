@@ -1,12 +1,10 @@
 ---
 title: "How to Receive Notifications for Review Response Approvals"
 sidebar_label: "Configuring User Notifications"
-description: "One of the reputation management services Vendasta’s Vendasta Services offers is responding to reviews via products such as  Review Responses Standard  ."
+description: "How to configure user notifications to receive review response approval emails for reputation management services."
 ---
 
-One of the reputation management services Vendasta Services offers is responding to reviews via products such as [Review Responses Standard](https://partners.vendasta.com/marketplace/products/MP-K8LLNZBS5DTVCHQ4J54C463F3HWGJCQP)_._
-
-This service includes an (optional) approval process for [responding to negative reviews](../review-management/approval-process-options-for-responses-to-negative-reviews.md), where users can receive notifications with our proposed responses to negative reviews.
+Vendasta Services offers reputation management services that can include an optional approval process for responses to negative reviews. Users can receive notifications with proposed responses to negative reviews.
 
 To receive these email notifications, you must [add the respective person as a user to the account in Partner Center](../../accounts/manage-users/add-a-user-to-an-account.mdx) and configure the applicable user notifications.
 

@@ -13,7 +13,7 @@ locale: "en-us"
 
 If you have an existing WordPress website and would like to move it onto Vendasta’s hosting platform (WordPress Hosting Pro), Vendasta Services can help!
 
-You will also gain access to Vendasta Services’ Website Support+ team when we import a site with Website Support+ activated _(3-month commitment for imported sites)_.
+You will also gain access to Vendasta Services’ Website Support team when we import a site with Website Support+ activated _(3-month commitment)_.
 
 ## **Website Support+ includes:**
 
@@ -30,7 +30,18 @@ You will also gain access to Vendasta Services’ Website Support+ team when we 
 *   Health checks to website upon request
 *   Uptime monitoring and urgent support if your website goes offline
 *   Upload up to 3 blog posts per month (content must be provided)
-*   AI Chat Receptionist installation and setup
+*   AI Chat Receptionist installation
+
+
+### **AI Chat Receptionist**
+
+At no additional cost, our team will install the AI Chat Receptionist on your new website build or with an imported website. This includes:
+*   Web chat code added to the website
+*   Basic test (open chat, confirm a message can be sent)
+*   Add brand colours to the AI Chat Receptionist
+
+This service is not a full end-to-end configuration of the AI Chat Receptionist, and is only for basic code installation. If you need advanced features such as full brand configuration beyond basic brand colours, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce-setup/ai-receptionist-setup.md) service.
+
 
 ## **What benefits are there when importing a site through Vendasta Services?**
 
@@ -43,11 +54,7 @@ With Vendasta Services, your website is in trusted hands! To import the site, ou
 
 _\*Plugins or themes may require a license key to update._
 
-Additionally, upon importing your site with us, you'll receive ongoing Website Support+. This includes access to our dedicated Website Support+ team for updates and technical assistance tailored to your WordPress website, including AI Chat Receptionist installation.
 
-Website Support+ is provided as part of our commitment to your website's success. While there is a 3-month commitment, the support is billed monthly for your convenience.
-
-Before we can import the site (and offer support for it), we need to vet it to ensure this is feasible. Each site can have its own complexities that affect the import capabilities.
 
 ## **Vetting Process for Importing & Support:**
 
@@ -64,7 +71,7 @@ Before we can import the site (and offer support for it), we need to vet it to e
 
 **Importing:**
 
-1.  If approved, we will activate WordPress Hosting [Pro](https://partners.vendasta.com/marketplace/products/MP-ee4ea04e553a4b1780caf7aad7be07cd) and the [Website Import & Support](https://partners.vendasta.com/marketplace/products/MP-1751871d98cf4e7f95d55c7d2b2ff293/addon/A-7JLBR47NLD) add-on (one-time setup fee + 3-month monthly support free).
+1.  If approved, we will activate [WordPress Hosting Pro](https://partners.vendasta.com/marketplace/products/MP-ee4ea04e553a4b1780caf7aad7be07cd) and the [Website Import & Support](https://partners.vendasta.com/marketplace/products/MP-1751871d98cf4e7f95d55c7d2b2ff293/addon/A-7JLBR47NLD) add-on (one-time setup fee + 3-month monthly support free).
 2.  Import completed within 3 business days post-vetting.
 3.  Website hosted on a temporary domain. _(ex: business-name.websitepro.hosting)_
 

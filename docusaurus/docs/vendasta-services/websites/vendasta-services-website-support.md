@@ -5,31 +5,58 @@ sidebar_position: 6
 description: "This article details the inclusions of Vendasta Services' Website Support product and the process/best practices for submitting requests to our Website Support team."
 ---
 
-This article details the inclusions of Vendasta Services’ [Website Support](https://partners.vendasta.com/marketplace/products/MP-9f77626ea38b4e44b044382b50c5f83e) product and the process/best practices for submitting requests to our Website Support team.
+This article details the inclusions of Vendasta Services’ [Website Support](https://partners.vendasta.com/marketplace/products/MP-5FTSXB8XVSDRJW4RFQ84B8H3SGKG56JC) product and the process/best practices for submitting requests to our Website Support team.
 
-**What is Included in Vendasta Services Website Support?**
+**What is Included in Vendasta Services Website Support+?**
 
-Website Support is a fulfillment service offered by Vendasta Services for WordPress websites hosted on Vendasta’s WordPress Hosting Pro platform. Website Support includes the following:
+Website Support+ is a fulfillment service offered by Vendasta Services for WordPress websites hosted on Vendasta’s WordPress Hosting Pro platform. Website Support+ includes the following:
 
-*   Access to Vendasta Services’ Website Support team for technical support
-*   Minor changes to the website’s appearance, such as:
+**Website Support+ includes:**
+
+*   Access to the team for technical support
+*   Minor changes to the website's appearance, such as:
     *   Fonts
-    *   Colours
+    *   Colors
     *   Media (images, videos, icons)
-    *   Text
+    *   Text updates
     *   Contact form fields and settings
     *   Reorganization or duplication of existing sections
 *   Backend updates are completed quarterly to ensure WordPress stability
 *   Updates to plugins and themes upon request
 *   Health checks to website upon request
 *   Uptime monitoring and urgent support if your website goes offline
-*   Installation of [Conversations AI Standard](https://docs.vendasta.com/business-app/conversations/conversations-ai/) web chat code (if Conversations AI Standard is active on the account)
+*   Upload up to 3 blog posts per month (content must be provided)
+*   AI Chat Receptionist installation
 
-**Conversations AI Standard web chat installation**
 
-If you have [Conversations AI Standard](https://docs.vendasta.com/business-app/conversations/conversations-ai/) active on the account, our Website Support team can install the web chat code on your website. This installation includes adding the web chat code to your site but does not offer a full end-to-end configuration of the web chat. If you are looking for more advanced features, such as full brand configuration, SMS messaging, or voice calls, please explore our [AI Receptionist Setup & Support](../ai-workforce-setup/ai-receptionist-setup.md) service.
+**AI Chat Receptionist**
 
-**How to Submit a Website Support Request to Vendasta Services:**
+At no additional cost, our team will install the AI Chat Receptionist on your new website build or with an imported website. This includes:
+*   Web chat code added to the website
+*   Basic test (open chat, confirm a message can be sent)
+*   Add brand colours to the AI Chat Receptionist
+
+This service is not a full end-to-end configuration of the AI Chat Receptionist, and is only for basic code installation. If you need advanced features such as full brand configuration beyond basic brand colours, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce-setup/ai-receptionist-setup.md) service.
+
+**What's not included in monthly support**
+
+Website Support is designed for ongoing maintenance and scoped updates—not full rebuilds or complex custom development.
+
+The monthly charge does not include:
+
+*   Maintaining or integrating emails
+*   New functionality or complex development (scoped and billed hourly)
+*   Adding plugins or code to add a new feature to the website
+*   Integrating booking calendars, calculators, etc.
+*   Bulk uploads of documents or images
+*   Additional images/product changes beyond the included scope of 25 a month (charged per product/image rate)
+*   Supporting custom coded themes or templates
+*   Creating additional sections or website pages
+*   Integrating payments outside of Square, Stripe and PayPal
+
+If you need help with any of these features, please reach out and our team can provide you a quote for how many hours of custom work it might take.
+
+**How to submit a website support request to Vendasta Services:**
 
 1.  Send an email to our team at [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com) 
     1.  Sending edits via email ensures that your request is properly documented, as our teams use a ticketing system. This is the best forum to communicate with us.  
