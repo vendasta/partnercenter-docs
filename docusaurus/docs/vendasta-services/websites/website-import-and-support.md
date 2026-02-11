@@ -29,7 +29,7 @@ You will also gain access to Vendasta Services’ Website Support+ team when we 
 *   Health checks to website upon request
 *   Uptime monitoring and urgent support if your website goes offline
 *   Upload up to 3 blog posts per month (content must be provided)
-*   AI Chat Receptionist installation
+*   AI Chat Receptionist installation and setup
 
 ## **What benefits are there when importing a site through Vendasta Services?**
 
@@ -105,17 +105,18 @@ The AI Chat Receptionist is an AI-powered assistant that:
 
 Website Support+ includes installation of the AI Chat Receptionist on your imported website. Our Website Support+ team will:
 
-*   Install the AI Chat Receptionist web chat code on your site
-*   Add the brand colours to the AI Chat Receptionist
-*   Ensure the AI Chat Receptionist is properly integrated with your website
+*   Add the web chat code to the site
+*   Confirm the widget loads properly on the website
+*   Perform a basic test (open chat, confirm a message can be sent)
+*   Add brand colours to the AI Chat Receptionist
 
 This installation provides the core functionality needed for the AI Chat Receptionist to engage with your website visitors and capture leads.
 
 ### **Advanced AI Chat Receptionist Features**
 
-If you're looking for more advanced AI Chat Receptionist features, such as:
+If you're looking for more advanced AI Chat Receptionist features beyond what's included with Website Support+, such as:
 
-*   Full brand configuration and customization
+*   Full brand configuration and customization beyond basic brand colours
 *   SMS messaging capabilities
 *   Voice call integration
 *   Advanced knowledge base training
@@ -156,8 +157,13 @@ Website support requests can be sent to [marketingservices@yourdigitalagents.com
 
 <summary>Can you install the AI Chat Receptionist on my imported website?</summary>
 
-Yes! Website Support+ includes installation of the AI Chat Receptionist on your imported website. Our Website Support+ team will install the web chat code and configure it to work with your site, enabling visitors to interact with the AI Chat Receptionist and capture leads.
+Yes! Website Support+ includes installation of the AI Chat Receptionist on your imported website. Our Website Support+ team will:
 
-If you need advanced features such as full brand configuration, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce-setup/ai-receptionist-setup.md) service.
+*   Add the web chat code to the site
+*   Confirm the widget loads properly on the website
+*   Perform a basic test (open chat, confirm a message can be sent)
+*   Add brand colours to the AI Chat Receptionist
+
+If you need advanced features such as full brand configuration beyond basic brand colours, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce-setup/ai-receptionist-setup.md) service.
 
 </details>
