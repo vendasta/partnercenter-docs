@@ -40,7 +40,7 @@ This service is not a full end-to-end configuration of the AI Chat Receptionist,
 
 **What's not included in monthly support**
 
-Website Support is designed for ongoing maintenance and scoped updates—not full rebuilds or complex custom development.
+Website Support+ is designed for ongoing maintenance and scoped updates, not full rebuilds or complex custom development.
 
 The monthly charge does not include:
 
@@ -48,7 +48,6 @@ The monthly charge does not include:
 *   New functionality or complex development (scoped and billed hourly)
 *   Adding plugins or code to add a new feature to the website
 *   Integrating booking calendars, calculators, etc.
-*   Bulk uploads of documents or images
 *   Additional images/product changes beyond the included scope of 25 a month (charged per product/image rate)
 *   Supporting custom coded themes or templates
 *   Creating additional sections or website pages
@@ -168,8 +167,13 @@ If you have received an email from Google regarding an indexing error, forward i
 
 <details>
 
-<summary>Can you install Conversations AI Standard web chat on my website?</summary>
+<summary>Can you install AI Chat Receptionist on my website?</summary>
 
-Yes! If you have [Conversations AI Standard](https://docs.vendasta.com/business-app/conversations/conversations-ai/) active on the account, our Website Support team can install the web chat code on your website. This installation includes adding the web chat code to your site but does not offer a full end-to-end configuration of the web chat. If your client is looking for more advanced features, such as voice and SMS messaging, please explore our [AI Receptionist Setup & Support](../ai-workforce-setup/ai-receptionist-setup.md) service.
+Yes! Website Support+ includes installation of the AI Chat Receptionist on your new website build or with an imported website. This includes:
+*   Web chat code added to the website
+*   Basic test (open chat, confirm a message can be sent)
+*   Add brand colours to the AI Chat Receptionist
+
+This service is not a full end-to-end configuration of the AI Chat Receptionist, and is only for basic code installation. If you need advanced features such as full brand configuration beyond basic brand colours, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce-setup/ai-receptionist-setup.md) service.
 
 </details>
