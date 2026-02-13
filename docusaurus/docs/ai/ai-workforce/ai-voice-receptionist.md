@@ -64,7 +64,7 @@ Once a call reaches your AI Voice Receptionist, there are a number of potential 
    A text message is sent to callers, prompting them to leave a voicemail or schedule a callback.
 
 :::note
-While this guide will cover accessing these other options, it will focus on setting up the AI Voice Receptionist answer calls. For more detail on using the other options, see [Conversations Settings](/administration/platform-settings/conversations-settings/).
+While this guide will cover accessing these other options, it will focus on setting up the AI Voice Receptionist to answer calls. For more detail on using the other options, see [Conversations Settings](/administration/platform-settings/conversations-settings/).
 :::
 
 ### Prerequisites for AI Voice Receptionist Setup

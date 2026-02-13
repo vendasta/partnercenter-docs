@@ -1,13 +1,13 @@
 ---
 title: "Social Media Management Timeline"
 sidebar_label: "Timeline"
-description: "Providing content for our team \n Content refers to topics, specials/sales, pictures, and other assets that you want to ensure is shared with your customers as"
+description: "Providing content for our team \n Content refers to topics, specials/sales, pictures, and other assets that you want to ensure are shared with your customers as"
 sidebar_position: 2
 ---
 
 ### Providing content for our team
 
-Content refers to topics, specials/sales, pictures, and other assets that you want to ensure is shared with your customers as part of your managed social posting. 
+Content refers to topics, specials/sales, pictures, and other assets that you want to ensure are shared with your customers as part of your managed social posting. 
 
 Typically, we need to receive content for the next month by the 10th of the current month. (For example, for social posts going out in June, our team needs any requests submitted by May 10th.)
 

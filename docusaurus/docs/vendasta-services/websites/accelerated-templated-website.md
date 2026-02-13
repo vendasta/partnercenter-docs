@@ -160,7 +160,7 @@ A direct Duda subscription provides access to the website builder and hosting bu
 
 <summary>Why does Accelerated Templated Website cost more than a direct Duda subscription?</summary>
 
-While Duda's direct hosting is lesser price, it does not include website setup, design, customizations, content uploads, or expert support. This service is a done-for-you service that includes website creation, managed hosting, premium support—allowing you to focus on your business without the operational burden of building and managing websites.
+While Duda's direct hosting is a lower price, it does not include website setup, design, customizations, content uploads, or expert support. This service is a done-for-you service that includes website creation, managed hosting, premium support—allowing you to focus on your business without the operational burden of building and managing websites.
 </details>
 
 <details>

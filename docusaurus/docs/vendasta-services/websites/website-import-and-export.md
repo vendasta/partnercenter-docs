@@ -71,7 +71,7 @@ _\*Plugins or themes may require a license key to update._
 
 **Importing:**
 
-1.  If approved, we will activate [WordPress Hosting Pro](https://partners.vendasta.com/marketplace/products/MP-ee4ea04e553a4b1780caf7aad7be07cd) and the [Website Import & Support](https://partners.vendasta.com/marketplace/products/MP-1751871d98cf4e7f95d55c7d2b2ff293/addon/A-7JLBR47NLD) add-on (one-time setup fee + 3-month monthly support free).
+1.  If approved, we will activate [WordPress Hosting Pro](https://partners.vendasta.com/marketplace/products/MP-ee4ea04e553a4b1780caf7aad7be07cd) and the [Website Import & Support](https://partners.vendasta.com/marketplace/products/MP-1751871d98cf4e7f95d55c7d2b2ff293/addon/A-7JLBR47NLD) add-on (one-time setup fee + 3-month monthly support fee).
 2.  Import completed within 3 business days post-vetting.
 3.  Website hosted on a temporary domain. _(ex: business-name.websitepro.hosting)_
 
