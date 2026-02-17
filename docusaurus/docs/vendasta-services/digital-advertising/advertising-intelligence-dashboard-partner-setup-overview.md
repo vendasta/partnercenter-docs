@@ -35,4 +35,4 @@ This guide provides an overview of setting up and using the Advertising Intellig
 *   If multiple ad platforms are connected, users can view data for each platform separately.
 *   You can adjust the timeline view and delve into specific metrics for detailed insights.
 *   The displayed metrics, like client spend and cost per click, are adjusted based on the previously set management fee.
-*   All campaigns are listed. For campaigns running on multiple networks, users can hover to see the networks. Clicking on a campaign provides more detailed information, including its current status (eg. if it's live or paused).
+*   All campaigns are listed. For campaigns running on multiple networks, users can hover to see the networks. Clicking on a campaign provides more detailed information, including its current status (e.g. if it's live or paused).

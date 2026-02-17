@@ -118,7 +118,7 @@ query {
 
 ## Step 3: Write the prompt
 
-In this step, you’ll write the AI Receptionist’s prompt. These are the instructions that tells the AI Receptionist **when** to use the tool `getProductList`, **how** to use the tool based on information from the conversation, and **what** to respond to the customer with.
+In this step, you’ll write the AI Receptionist’s prompt. These are the instructions that tell the AI Receptionist **when** to use the tool `getProductList`, **how** to use the tool based on information from the conversation, and **what** to respond to the customer with.
 
 You can copy and paste this whole example prompt below, but you will first have to:
 -  swap out the `Category`  placeholders with a few examples of product categories in your Shopify store 

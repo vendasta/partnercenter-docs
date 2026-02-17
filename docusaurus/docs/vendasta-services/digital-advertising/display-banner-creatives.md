@@ -47,7 +47,7 @@ This service provides your choice of **one** of the following sets of static or 
 
 This service provides a set of six HTML animated banners, designed to capture attention with subtle motion.
 * **Animation:** Up to 15 seconds with one loop.
-* **Deliverables:** You will receive the html files, static backup images (JPEG or PNG), and a preview link to view the animation.
+* **Deliverables:** You will receive the HTML files, static backup images (JPEG or PNG), and a preview link to view the animation.
 * **Standard Sizes:**
     * 728x90 (Leaderboard)
     * 300x250 (Medium Rectangle)

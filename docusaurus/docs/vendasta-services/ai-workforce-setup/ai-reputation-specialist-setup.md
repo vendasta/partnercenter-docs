@@ -135,7 +135,7 @@ We will also need the following information for an Authorized Business Represent
 
 <summary> I don't have an EIN for my business. Can you still set up A2P?</summary>
 
-Unfortunately, this is a limitation of our SMS provider and we are unable to use a SIN/SSN instead of the EIN at this time. Our team is aware of this limitation and are looking into solutions to ensure you are still able to manage SMS conversations with your customers.
+Unfortunately, this is a limitation of our SMS provider and we are unable to use a SIN/SSN instead of the EIN at this time. Our team is aware of this limitation and is looking into solutions to ensure you are still able to manage SMS conversations with your customers.
 
 </details>
 
@@ -159,7 +159,7 @@ After ordering, you'll complete a fulfillment form and then book an onboarding c
 
 <summary> Which review platforms does the AI employee respond to automatically?</summary>
 
-The AI Reputation Specialist can automatically respond to Google and Facebook reviews using your branded tone and custom instructions. Outside of these platforms, you may choose up to five external sources and our team will respond to on your behalf.
+The AI Reputation Specialist can automatically respond to Google and Facebook reviews using your branded tone and custom instructions. Outside of these platforms, you may choose up to five external sources and our team will respond on your behalf.
 
 </details>
 

@@ -94,7 +94,7 @@ To add a GTM or Facebook Meta Pixel to your website, you will need to add the co
 
 ## Checking Your Website for Existing Code:
 
-In case the code has been already placed on the site, it’s a good idea to check for it first.
+In case the code has already been placed on the site, it’s a good idea to check for it first.
 
 1.  Open the homepage (or any page) of your website on a desktop computer.
 2.  Right-click on the page and click “Inspect” from the drop-down menu.  
@@ -132,7 +132,7 @@ In case the code has been already placed on the site, it’s a good idea to chec
 **Adding the Facebook Meta Pixel Code to the Site:**
 
 1.  Copy the entire pixel code provided by Facebook.
-2.  Paste the pixel code into your website’s HTML within the header (ie. the `<head>`) section.
+2.  Paste the pixel code into your website’s HTML within the header (i.e. the `<head>`) section.
     1.  (You will need to access the backend of your website to do this.)
 3.  Paste the entire pixel code just before the closing `</head>` tag.  
     ![](./img/25119048322327-a9b3470729.png)
@@ -145,7 +145,7 @@ Now that the GTM code and/or the Facebook Meta Pixel codes have been added to th
 **Verify Your GTM Installation:**
 
 To verify that you’ve installed the GTM and that it’s functioning correctly, you can use a browser extension tool, like Google’s [Tag Assistant Legacy](https://chromewebstore.google.com/detail/deprecated-tag-assistant/kejbdjndbnbjgmefkgdddjlbokphdefk) from the Chrome Web Store.  
-_Note: This extension is deprecated however, we find it is more straightforward to use than Google’s [Tag Assistant Companion](https://chromewebstore.google.com/detail/tag-assistant-companion/jmekfmbnaedfebfnmakmokmlfpblbfdm) extension. With this extension no longer being maintained, keep in mind that the information may be inaccurate._
+_Note: This extension is deprecated; however, we find it is more straightforward to use than Google’s [Tag Assistant Companion](https://chromewebstore.google.com/detail/tag-assistant-companion/jmekfmbnaedfebfnmakmokmlfpblbfdm) extension. With this extension no longer being maintained, keep in mind that the information may be inaccurate._
 
 1.  Install and enable the Tag Assistant Legacy browser extension from the Chrome Web Store.
 2.  Visit your website homepage on the front end. Click on the Tag Legacy browser extension. In the pop-up window, click the blue **Enable** button.

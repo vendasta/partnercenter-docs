@@ -34,7 +34,7 @@ The service is available in two tiers with different deliverables. Posts can be 
 ### Social Media Management Standard
 * **12 Unique posts and stories per month:** The posting schedule is tailored to your content needs and may vary week to week, such as posting more during a campaign or event.
 * **4 Custom images per month:** Unique images are created to align with your brand for specific content like promotions or new product launches.
-* **2 story highlights (reposts)** High-engagement content is strategically reposted as a story highlight
+* **2 story highlights (reposts):** High-engagement content is strategically reposted as a story highlight
 * **$25 USD in Facebook post boosting:** One post per month is chosen by the team to boost, though you can request a specific post be chosen.
 * **1 Quarterly SEO blog:** Includes one blog of up to 1000-1500 words per quarter, with social posts designed to promote it and drive traffic.
 

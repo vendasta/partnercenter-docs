@@ -33,7 +33,7 @@ To prepare, please have the following ready:
 Timelines may vary, and the delivery date for the first version of your website will be provided after the onboarding call. Missing information on the fulfillment form will cause delays.
 
 * **Initial Review:** The process begins within 2 business days of the order being received.
-* **Homepage Mock:** You will receive the homepage for review within 5 business days from the completion of your onboard call. If you are not happy with it, you have the right to one do-over with a different template.
+* **Homepage Mock:** You will receive the homepage for review within 5 business days from the completion of your onboarding call. If you are not happy with it, you have the right to one do-over with a different template.
 * **Full Website Delivery:** After you provide feedback on the homepage, the rest of the 3-page website will be delivered within 5 business days. Sites with up to 10 pages will be delivered within 10 business days.
 
 > Additional add-ons like extra pages, eCommerce functionality, and plugins will require more time. An updated timeline will be provided after the onboarding process is complete.

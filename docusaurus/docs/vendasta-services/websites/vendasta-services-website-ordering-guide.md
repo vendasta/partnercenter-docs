@@ -46,7 +46,7 @@ This section will request the contact information for the main point of contact 
 
 The emails that you supply in the Account Representative Email and the Primary Contact Email fields will receive copies of the form after submission.
 
-**Note:** One of the questions will ask “What is the AGID for this Website?” The AGID is the account’s unique identification code inside of the Vendasta platform. We receive many forms that may contain similar business names, and so this code allows our team to tie your Website Creation & Content Form to the correct account and product activation. The AGID be found on your client's Account page under their Business Details. (Navigation: _Partner Center > Businesses > Accounts > Client account_) ![Screen_Shot_2022-09-16_at_10.53.36_AM.png](./img/19127162749463-de8c3b1267.png) 
+**Note:** One of the questions will ask “What is the AGID for this Website?” The AGID is the account’s unique identification code inside of the Vendasta platform. We receive many forms that may contain similar business names, and so this code allows our team to tie your Website Creation & Content Form to the correct account and product activation. The AGID can be found on your client's Account page under their Business Details. (Navigation: _Partner Center > Businesses > Accounts > Client account_) ![Screen_Shot_2022-09-16_at_10.53.36_AM.png](./img/19127162749463-de8c3b1267.png) 
 
 ### Domain
 
@@ -61,7 +61,7 @@ This section refers to the different pages that you want (eg. About, Services, B
 
 ### Design
 
-In this section, you can choose your template, fonts, colour palette, and images.
+In this section, you can choose your template, fonts, color palette, and images.
 
 **The template is the most important choice for your website.** Select from one of our [templates](https://1l.ink/LJZQDWL)
 

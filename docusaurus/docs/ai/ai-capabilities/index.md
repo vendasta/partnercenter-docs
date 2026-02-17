@@ -20,7 +20,7 @@ Each capability contains instructions that guide the AI on:
 - What outcomes to prioritize
 - How to respond to different types of requests
 
-Multiple capabilities can work together to create AI Employees that can handle complex, multi-step interactions while maintaining consistency with your business processes. When the AI employee handles a request, it combines all the Capabilities into the prompt that governs its behaviour.
+Multiple capabilities can work together to create AI Employees that can handle complex, multi-step interactions while maintaining consistency with your business processes. When the AI employee handles a request, it combines all the Capabilities into the prompt that governs its behavior.
 
 ### Types of AI Capabilities
 
@@ -29,7 +29,7 @@ The Vendasta platform provides pre-configured capabilities for common business f
 
 - **Lead Capture**: Automatically collect and qualify lead information (name, email, phone, budget)
 - **Appointment Booking**: Schedule meetings using your connected calendar systems
-- **Transfer Call** : Live-transfer callers to other numbers based on intent and rules. See [Transfer calls to other numbers](../ai-workforce/ai-voice-receptionist.md#transfer-calls-to-other-numbers-from-your-ai-voice-receptionist).
+- **Transfer Call**: Live-transfer callers to other numbers based on intent and rules. See [Transfer calls to other numbers](../ai-workforce/ai-voice-receptionist.md#transfer-calls-to-other-numbers-from-your-ai-voice-receptionist).
 
 #### Custom Capabilities
 For specialized workflows, you can create your own custom capabilities that:

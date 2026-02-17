@@ -33,7 +33,7 @@ Or you can access them on the Vendasta Services [unbranded website](https://exam
 
 ### Review the fulfillment forms
 
-An important step in ensuring a quick turnaround for your fulfillment is providing a completed fulfillment form. The information in these forms help the Vendasta Services teams to complete the ordered services in alignment with what you want.
+An important step in ensuring a quick turnaround for your fulfillment is providing a completed fulfillment form. The information in these forms helps the Vendasta Services teams to complete the ordered services in alignment with what you want.
 
 Fulfillment form information is available in Partner Center > Marketplace > Discover Products by visiting any of the product pages. On the right, you will find a section for Required Forms and clicking into it will show you the form.
 

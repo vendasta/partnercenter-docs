@@ -57,7 +57,7 @@ Set the terms of service that appear on an order when it’s sent for customer a
 
 ## Email templates
 
-You can configure the following customer facing emails:
+You can configure the following customer-facing emails:
 
 - **Contract awaiting approval**
 - **Order processed**  
