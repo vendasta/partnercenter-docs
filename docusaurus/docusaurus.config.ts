@@ -95,6 +95,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
+          // Administration index removed; redirect to My Account
+          { from: '/administration', to: '/administration/my-account/' },
+          { from: '/administration/', to: '/administration/my-account/' },
           { from: '/business-app/administration/integrations-overview', to: '/business-app/administration' },
           { from: '/business-app/administration/integrations', to: '/business-app/administration' },
           { from: '/business-app/administration/connect-quickbooks', to: '/business-app/administration' },
