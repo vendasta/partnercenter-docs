@@ -101,6 +101,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/marketplace/marketplace-overview', to: '/marketplace/' },
           // Products: products-overview-management merged into index
           { from: '/marketplace/products/products-overview-management', to: '/marketplace/products/' },
+          // Packages: packages-overview-creation merged into index
+          { from: '/marketplace/packages/packages-overview-creation', to: '/marketplace/packages/' },
+          // Manage Store: store-setup-configuration merged into index
+          { from: '/marketplace/manage-store/store-setup-configuration', to: '/marketplace/manage-store/' },
+          // Automations: getting-started-with-automations merged into index
+          { from: '/automations/getting-started-with-automations', to: '/automations/' },
           { from: '/business-app/administration/integrations-overview', to: '/business-app/administration' },
           { from: '/business-app/administration/integrations', to: '/business-app/administration' },
           { from: '/business-app/administration/connect-quickbooks', to: '/business-app/administration' },
