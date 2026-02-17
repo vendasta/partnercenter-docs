@@ -1,18 +1,65 @@
 ---
+id: invoices
 title: Invoices
-description: Documentation for managing invoices in Vendasta Commerce platform
+description: Create, send, and manage invoices; apply tax rates and discounts in Vendasta Commerce
 sidebar_position: 3
 ---
 
 # Invoices
 
-This section provides comprehensive guidance on managing invoices within the Vendasta Commerce platform. Learn how to create, customize, and handle invoices efficiently.
+Create, send, and manage invoices from **Partner Center** → **Commerce** → **Invoices**. Invoices let you request and collect payment for products and services—either as one-off bills or from recurring subscriptions. You can create invoices manually, from an account's invoice tab, or from an order; subscription renewals can also generate invoices automatically. How invoices behave (including whether customers can pay online) depends on whether you have [Vendasta Payments](/commerce/payments/setting-up-vendasta-payments) set up.
 
-## Available guides
+## Why use Invoices?
 
-- [Discounts in Invoices and Subscriptions](./discounts-in-invoices-and-subscriptions.mdx)
-- [Create and Manage Invoices](./create-and-send-invoices.mdx)
-- [Create and Apply Tax Rates](./create-and-apply-tax-rates.mdx)
+- **One place for billing** – Create and send invoices from Commerce or from an account, apply tax and discounts, and track status (Draft, Due, Paid, Void) in one table.
+- **Flexible creation** – Add line items from your Marketplace or custom text, set due dates and recipients, and charge a payment method on file or send the invoice for the customer to pay.
+- **Tied to subscriptions** – Invoices can be generated from subscription renewals; apply discounts at the subscription level so they flow to future invoices.
+- **Tax and discount control** – Create tax rates by region in **Administration** → **Tax Rates**, apply them per line item on invoices, and apply percentage or fixed-amount discounts to individual invoices or recurring subscriptions.
+
+## What's in this section
+
+- **[Create and Manage Invoices](./create-and-send-invoices.mdx)** – Create draft invoices from Commerce or an account, add items and set due date and recipient, send or charge the invoice, and manage status. Covers invoice numbers, email settings, statuses (Draft, Due, Paid, Void), and how behavior differs with or without Vendasta Payments.
+- **[Create and Apply Tax Rates](./create-and-apply-tax-rates.mdx)** – Create tax rates by country and state/province in **Administration** → **Tax Rates**, then apply them to invoice line items (and to Shopping Cart and sales orders). Includes when tax applies and video walkthroughs.
+- **[Discounts in Invoices and Subscriptions](./discounts-in-invoices-and-subscriptions.mdx)** – Apply one-time discounts to an invoice (percentage or fixed amount) or recurring discounts to a subscription (forever, limited time, or once). Edit or remove discounts; notes on one discount per invoice/subscription and tax-after-discount behavior.
+
+## Get started
+
+1. **Open Invoices** – Go to **Partner Center** → **Commerce** → **Invoices** to view all invoices and create new ones.
+2. **Create an invoice** – Click **New** → **Invoice**, select an account, set due date and recipient, then **Add Item** (or **Add Custom Item**) to build the invoice. Use the line-item **⋮** menu to set tax or remove items.
+3. **Send or charge** – Review subtotal and total, then **Send Invoice** to email it to the recipient (or **Charge invoice** if you have "Automatically charge a payment method on file" enabled and the customer has a saved payment method).
+4. **Set up tax and discounts** – Create tax rates in **Administration** → **Tax Rates** so you can apply them on invoice line items. Use the **Discount** button on an invoice or subscription to apply percentage or fixed-amount discounts.
+
+## Frequently asked questions
+
+<details>
+<summary>Can I create an invoice without Vendasta Payments?</summary>
+
+Yes. You can create, edit, and send invoices without Vendasta Payments. Without it, customers cannot pay directly from the invoice email; they pay you outside the platform and you can mark the invoice as **Paid** manually (Options **⋮** → **Change invoice status** → **Paid**). With Vendasta Payments, customers can click **Pay this invoice** and pay by card. See [Create and Manage Invoices](./create-and-send-invoices.mdx).
+</details>
+
+<details>
+<summary>Can I edit an invoice after sending it?</summary>
+
+No. Once an invoice is sent, it can't be edited. You can **Resend Invoice** to the same or a different recipient, or void it (Options **⋮** → **Change invoice status** → **Void**) if it was sent in error. For corrections, create and send a new invoice. See [Create and Manage Invoices](./create-and-send-invoices.mdx).
+</details>
+
+<details>
+<summary>Where do invoices come from?</summary>
+
+Invoices can be created manually from **Commerce** → **Invoices** or from an account's invoice tab, or from an order (**Create Invoice** on the order). They can also be generated automatically from [subscription renewals](/commerce/subscriptions/subscription-management). See [Create and Manage Invoices](./create-and-send-invoices.mdx).
+</details>
+
+<details>
+<summary>How do I apply a discount to an invoice or subscription?</summary>
+
+On an invoice: open the invoice, click **Discount**, choose Percentage or Fixed Amount and the value, add an optional reason, then **Apply**. On a subscription: open the subscription, click **Discount**, set type and value, choose duration (Forever, For a limited time, or Once), then **Apply**. Only one discount per invoice or subscription at a time. See [Discounts in Invoices and Subscriptions](./discounts-in-invoices-and-subscriptions.mdx).
+</details>
+
+<details>
+<summary>Where do I create and apply tax rates?</summary>
+
+Create tax rates in **Partner Center** → **Administration** → **Tax Rates** → **Create Tax Rate** (country, state/province, name, rate, optional description). On an invoice, use the **⋮** menu on a line item and choose **Set Item Tax** (or **Set Item Tax rate**) to apply a rate. See [Create and Apply Tax Rates](./create-and-apply-tax-rates.mdx).
+</details>
 
 ## Need more help?
 

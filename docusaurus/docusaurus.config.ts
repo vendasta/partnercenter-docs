@@ -97,6 +97,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         redirects: [
           // Administration index removed; redirect to My Account (one redirect only to avoid EEXIST on build/administration/index.html)
           { from: '/administration/', to: '/administration/my-account/' },
+          // My Plan: subpages merged into one page
+          { from: '/administration/my-account/my-plan/view-your-subscription-plan-details', to: '/administration/my-account/my-plan/' },
+          { from: '/administration/my-account/my-plan/cancelling-your-subscription', to: '/administration/my-account/my-plan/' },
+          // My Billing: billing-overview-and-model is now the index
+          { from: '/administration/my-account/my-billing/billing-overview-and-model', to: '/administration/my-account/my-billing/' },
+          // Affiliate Program: terms merged into index
+          { from: '/administration/my-account/affiliate-program/vendasta-affiliate-program-terms-and-conditions', to: '/administration/my-account/affiliate-program/' },
+          // Marketplace: single overview page (marketplace-overview merged into index)
+          { from: '/marketplace/marketplace-overview', to: '/marketplace/' },
+          // Products: products-overview-management merged into index
+          { from: '/marketplace/products/products-overview-management', to: '/marketplace/products/' },
+          // Packages: packages-overview-creation merged into index
+          { from: '/marketplace/packages/packages-overview-creation', to: '/marketplace/packages/' },
+          // Manage Store: store-setup-configuration merged into index
+          { from: '/marketplace/manage-store/store-setup-configuration', to: '/marketplace/manage-store/' },
+          // Automations: getting-started-with-automations merged into index
+          { from: '/automations/getting-started-with-automations', to: '/automations/' },
+          // Fulfillment: open-task-manager and flat paths now under task-manager folder
+          { from: '/fulfillment/open-task-manager', to: '/fulfillment/' },
+          { from: '/fulfillment/open-task-manager/get-started', to: '/fulfillment/task-manager/task-manager-getting-started' },
+          { from: '/fulfillment/open-task-manager/accounts', to: '/fulfillment/task-manager/accounts/' },
+          { from: '/fulfillment/open-task-manager/projects', to: '/fulfillment/task-manager/projects/' },
+          { from: '/fulfillment/open-task-manager/tasks', to: '/fulfillment/task-manager/tasks/' },
+          { from: '/fulfillment/open-task-manager/settings', to: '/fulfillment/task-manager/settings/' },
+          { from: '/fulfillment/open-task-manager/templates', to: '/fulfillment/task-manager/templates/' },
+          { from: '/fulfillment/getting-started', to: '/fulfillment/task-manager/task-manager-getting-started' },
+          { from: '/fulfillment/accounts', to: '/fulfillment/task-manager/accounts/' },
+          { from: '/fulfillment/projects', to: '/fulfillment/task-manager/projects/' },
+          { from: '/fulfillment/tasks', to: '/fulfillment/task-manager/tasks/' },
+          { from: '/fulfillment/settings', to: '/fulfillment/task-manager/settings/' },
+          { from: '/fulfillment/templates', to: '/fulfillment/task-manager/templates/' },
+          // Task Manager: projects/tasks overviews merged into index (one page per section)
+          { from: '/fulfillment/task-manager/projects/projects-overview', to: '/fulfillment/task-manager/projects/' },
+          { from: '/fulfillment/task-manager/tasks/tasks-overview', to: '/fulfillment/task-manager/tasks/' },
           { from: '/business-app/administration/integrations-overview', to: '/business-app/administration' },
           { from: '/business-app/administration/integrations', to: '/business-app/administration' },
           { from: '/business-app/administration/connect-quickbooks', to: '/business-app/administration' },
