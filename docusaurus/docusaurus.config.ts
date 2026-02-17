@@ -97,6 +97,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         redirects: [
           // Administration index removed; redirect to My Account (one redirect only to avoid EEXIST on build/administration/index.html)
           { from: '/administration/', to: '/administration/my-account/' },
+          // My Plan: subpages merged into one page
+          { from: '/administration/my-account/my-plan/view-your-subscription-plan-details', to: '/administration/my-account/my-plan/' },
+          { from: '/administration/my-account/my-plan/cancelling-your-subscription', to: '/administration/my-account/my-plan/' },
+          // My Billing: billing-overview-and-model is now the index
+          { from: '/administration/my-account/my-billing/billing-overview-and-model', to: '/administration/my-account/my-billing/' },
+          // Affiliate Program: terms merged into index
+          { from: '/administration/my-account/affiliate-program/vendasta-affiliate-program-terms-and-conditions', to: '/administration/my-account/affiliate-program/' },
           // Marketplace: single overview page (marketplace-overview merged into index)
           { from: '/marketplace/marketplace-overview', to: '/marketplace/' },
           // Products: products-overview-management merged into index
