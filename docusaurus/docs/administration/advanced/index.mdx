@@ -1,72 +1,48 @@
 ---
+id: administration-advanced
 title: Advanced
-description: Advanced settings and configurations for the Vendasta platform including APIs, integrations, and customization
+description: "APIs, integrations, service accounts, SSO, and translation for power users and developers."
+sidebar_position: 0
 ---
 
 # Advanced
 
-Advanced features and configurations for power users who need deep platform integration, automation, and customization capabilities. These tools extend your platform's functionality and enable sophisticated workflows.
+Advanced in **Administration** gives you APIs, integrations, service accounts, single sign-on, and translation tools. Use them to connect external systems, automate workflows, and tailor the platform for your organization.
 
-## What it is
+## What you can do
 
-The Advanced section provides enterprise-level tools for developers, system integrators, and power users who need to connect Vendasta with external systems, automate complex workflows, and customize the platform for specialized use cases.
-
-## What you can do with it
-
-- **Connect External Systems**: Use public APIs to integrate Vendasta with your existing business tools and workflows
-- **Automate Workflows**: Set up Zapier integrations and webhooks to automate data synchronization between platforms
-- **Integrate Third-Party Tools**: Connect QuickBooks for accounting, Google Meet/Zoom for video conferencing, and other business applications
-- **Customize User Experience**: Translate interface elements and customize platform language for different markets
-- **Manage System Access**: Configure service accounts for automated integrations and API access
-- **Enable Single Sign-On**: Implement SSO for seamless authentication across your organization's systems
+- **Use public APIs** – Integrate with Vendasta programmatically; sandbox available for testing
+- **Connect third-party tools** – QuickBooks, Google Meet, Zoom, Zapier; authentication and connection setup in one place
+- **Manage service accounts** – Create accounts for system-to-system access; API keys and permissions
+- **Configure SSO** – Single sign-on with your identity provider for centralized authentication
+- **Translate and customize** – Use Weblate to translate and customize platform language and UI for your markets
 
 ## How it works
 
-Advanced features operate through secure API connections, authentication protocols, and integration frameworks. The platform provides sandbox environments for safe testing before production deployment. All integrations maintain data security while enabling seamless information flow between systems.
+APIs and integrations use secure connections and depend on your subscription; a sandbox is available for testing before production. Service accounts provide machine access for automated integrations; SSO delegates user sign-in to your identity provider. Connection types (API key, SSO, vendor-managed) are set per integration under **Partner Center** → **Administration** → **Integrations**.
+
+## Articles in this section
+
+- **[Developer APIs](./developer-apis/index.mdx)** – Public APIs, sandbox environment, API products, and Zapier integration
+- **[Integrations](./integrations/index.mdx)** – Authentication and connections, Google Meet and Zoom, QuickBooks, and Zapier contact actions
+- **[Service Accounts](./service-accounts/index.mdx)** – Automated access, permissions, API keys, and usage monitoring
+- **[Single Sign-On](./single-sign-on/index.mdx)** – SSO setup, identity providers, and user access
+- **[Translate & Customize](./translate-customize/index.mdx)** – Translate and customize with Weblate
 
 ## Get started
 
-1. **Review API Documentation** - Visit [developers.vendasta.com](https://developers.vendasta.com/platform) for complete API reference and capabilities
-2. **Check Subscription Requirements** - Ensure your plan includes the advanced features you need
-3. **Request Sandbox Access** - Contact support for integration testing environment setup
-4. **Plan Your Integration** - Determine which APIs, integrations, or customizations meet your specific needs
-5. **Test Before Production** - Use sandbox environments to validate integrations before going live
+1. **APIs** – Go to [Developer APIs](./developer-apis/index.mdx) and [developers.vendasta.com](https://developers.vendasta.com/platform); confirm your plan includes API access and request sandbox if needed.
+2. **Integrations** – Go to **Partner Center** → **Administration** → **Integrations**. Start with [Authentication and connections](./integrations/authentication-and-connections.mdx), then add QuickBooks, Google Meet/Zoom, or Zapier as needed.
+3. **SSO or service accounts** – Go to [Single Sign-On](./single-sign-on/index.mdx) for user authentication or [Service Accounts](./service-accounts/index.mdx) for automated integrations.
 
-## Key functionality
+:::tip
+Use the sandbox environment to test API and integration changes before going live. Contact support for sandbox access if needed.
+:::
 
-### [Developer APIs](./developer-apis/index.mdx)
-Access Vendasta's public APIs for programmatic integration. Includes comprehensive API documentation, sandbox testing environments, product-specific API access, and Zapier automation capabilities for workflow integration.
+## Error handling and troubleshooting
 
-### [Integrations](./integrations/index.mdx) 
-Connect with popular third-party platforms including QuickBooks for accounting synchronization, Google Meet and Zoom for video conferencing integration, and Zapier for contact management and workflow automation.
+- **API or integration failures** – Check API keys, subscription API access, and endpoint URLs; confirm webhook URLs and data formats for integrations.
+- **SSO issues** – Verify identity provider configuration, certificate validity, and user attribute mapping.
+- **Permission errors** – Ensure service accounts have the right access and that API permissions are configured correctly.
 
-### [Service Accounts](./service-accounts/index.mdx)
-Manage automated access for system-to-system integrations. Configure service account permissions, generate API keys for authentication, and monitor usage for security and compliance.
-
-### [Single Sign On](./single-sign-on/index.mdx)
-Configure SSO integrations for seamless authentication. Support for popular identity providers, SAML and OAuth protocols, and centralized user management across your organization's systems.
-
-### [Translate & Customize](./translate-customize/index.mdx)
-Customize platform language and interface elements using Weblate translation tools. Localize your platform experience for different markets and languages to better serve diverse client bases.
-
-## Error handling or troubleshooting
-
-- **API Connection Issues**: Verify API keys, check subscription plan API access, and confirm endpoint URLs
-- **Integration Failures**: Review authentication settings, validate webhook URLs, and check data format requirements
-- **SSO Problems**: Confirm identity provider configuration, verify certificate validity, and check user attribute mapping
-- **Permission Errors**: Ensure service accounts have proper access levels and API permissions are correctly configured
-
-If you encounter persistent issues with advanced configurations, contact [support@vendasta.com](mailto:support@vendasta.com) with specific error messages and integration details.
-
-## Learn more
-
-- Developer APIs
-  - See: [Developer APIs](./developer-apis/index.mdx)
-- Third-party integrations
-  - See: [Integrations](./integrations/index.mdx)
-- Automated access management
-  - See: [Service Accounts](./service-accounts/index.mdx)
-- Authentication and SSO
-  - See: [Single Sign On](./single-sign-on/index.mdx)
-- Platform localization
-  - See: [Translate & Customize](./translate-customize/index.mdx)
+If you run into persistent issues, contact [support@vendasta.com](mailto:support@vendasta.com) with error details and integration context.

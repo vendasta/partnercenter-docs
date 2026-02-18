@@ -118,6 +118,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/administration/platform-settings/partner-branding/customize-your-branding', to: '/administration/platform-settings/partner-branding/' },
           // Conversations Settings: how-to-turn-off-inbox-messages-tab merged into index
           { from: '/administration/platform-settings/conversations-settings/how-to-turn-off-inbox-messages-tab', to: '/administration/platform-settings/conversations-settings/' },
+          // Administration Commerce: default billing automation guide merged into index
+          { from: '/administration/commerce/default-billing-settings/billing-automation-guide', to: '/administration/commerce/default-billing-settings/' },
+          // Administration Commerce: order management guide merged into index
+          { from: '/administration/commerce/order-settings/order-management-guide', to: '/administration/commerce/order-settings/' },
+          // Administration Commerce: tax-rates and tax-configuration-guide merged into index
+          { from: '/administration/commerce/tax-rates/tax-rates', to: '/administration/commerce/tax-rates/' },
+          { from: '/administration/commerce/tax-rates/tax-configuration-guide', to: '/administration/commerce/tax-rates/' },
+          // Administration Advanced: translate-and-customize-with-weblate merged into index
+          { from: '/administration/advanced/translate-customize/translate-and-customize-with-weblate', to: '/administration/advanced/translate-customize/' },
+          // Administration Advanced: vendasta-sso-integrations merged into index
+          { from: '/administration/advanced/single-sign-on/vendasta-sso-integrations', to: '/administration/advanced/single-sign-on/' },
           // Marketplace: single overview page (marketplace-overview merged into index)
           { from: '/marketplace/marketplace-overview', to: '/marketplace/' },
           // Products: products-overview-management merged into index

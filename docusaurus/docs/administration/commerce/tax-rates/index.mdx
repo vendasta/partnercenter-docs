@@ -1,18 +1,121 @@
 ---
+id: tax-rates
 title: Tax Management
-description: Configure tax rates, manage exemptions, and handle tax calculations for invoices and sales orders
+description: "Configure tax rates, manage item and account exemptions, and ensure accurate tax calculations for invoices and sales orders."
 sidebar_position: 4
+tags: [tax, configuration, exemptions, rates]
+keywords: [tax-rates, tax-exemptions, tax-configuration, sales-tax, invoice-tax]
 ---
 
 # Tax Management
 
-Tax management enables you to configure tax rates, apply exemptions, and ensure accurate tax calculations on invoices, sales orders, and subscription billing. The system handles complex tax rules and automatically applies them to transactions.
+Configure tax rates, apply exemptions, and ensure accurate tax calculations on invoices, sales orders, subscription billing, and [shopping cart](/marketplace/manage-store/shopping-cart-payment-processing) purchases. The system applies tax rules automatically based on customer addresses and exemption status.
 
-## Available Articles
+## What you can configure
 
-- [Tax Rates](./tax-rates) - Step-by-step guide to editing tax rates on the platform
-- [Tax Rates and Exemption Management](./tax-configuration-guide.md) - Complete guide to configuring tax rates, managing exemptions, and handling tax calculations
+- **Tax rates** – Set and edit rates by region; system applies them from customer addresses
+- **Item exemptions** – Exclude specific products or packages from selected tax rates
+- **Account exemptions** – Exempt entire accounts (e.g. government, tribal, NGO, education, religious)
+- **Address-based logic** – Tax is determined by postal code; no address/postal code means no tax shown in opportunities
 
-This comprehensive suite covers all tax management functionality, including rate editing, configuration, exemptions, and address-based tax logic with integrated frequently asked questions.
+## Edit tax rates
 
-If you need additional assistance with tax configuration, please contact support through your account dashboard.
+1. Go to **Partner Center** → **Administration** → **Tax Rates**
+2. Find the tax rate to change and open the **kebab menu** (three dots)
+3. Choose **Edit**, update the fields, then click **Save**
+
+![Administration tab in navigation](./img/tax-rates/administration-tab.jpg)
+
+![Tax Rate tile location](./img/tax-rates/tax-rate-tile.jpg)
+
+![Kebab menu for editing](./img/tax-rates/kebab-menu.jpg)
+
+![Edit tax rate option](./img/tax-rates/edit-tax-rate.jpg)
+
+![Tax rate editing fields](./img/tax-rates/edit-tax-rate-fields.jpg)
+
+![Save button location](./img/tax-rates/save-button.jpg)
+
+Changes apply to new transactions only; existing invoices keep their original tax.
+
+## Address requirements for tax
+
+Tax calculations require a complete customer address with postal code. If an account has no address with postal code, the system will not show any tax rate in opportunities. Keep addresses complete and up to date so the correct jurisdiction and rates apply.
+
+## Item exemptions
+
+Exclude specific products or packages from selected tax rates:
+
+1. Go to **Partner Center** → **Administration** → **Tax Rates**
+2. Open **Item Exemptions** and click **Add Items**
+3. Select the products or packages to exempt and choose which tax rates they are exempt from
+4. Click **Save**
+
+Exempted items automatically skip those taxes on sales orders and subscription billing.
+
+![Item exemptions page](./img/tax-exemptions/tax-exemptions-item-exemptions.jpg)
+
+![Add items for exemption](./img/tax-exemptions/tax-exemptions-add-items.jpg)
+
+![Select tax rates for exemption](./img/tax-exemptions/tax-exemptions-select-rates.jpg)
+
+## Account exemptions
+
+For tax-exempt customers (e.g. government agencies, tribal councils, NGOs):
+
+1. Go to **Partner Center** → **Administration** → **Tax Rates**
+2. Open **Account Exemptions** and click **Add Account**
+3. Select the account and choose which tax rates to exempt (only rates applicable to the account’s location are shown)
+4. Click **Save**
+
+The account is then exempt from the selected taxes on all products and services.
+
+![Account exemptions configuration](./img/tax-exemptions/tax-exemptions-account.jpg)
+
+## Complex scenarios
+
+- **Digital products** – Rules can differ by product type, delivery method, and jurisdiction; configure rates and exemptions to match your rules.
+- **Multiple jurisdictions** – Use different rates and exemption rules per region; keep exemption certificates where required.
+- **Tax-exempt organizations** – Use account exemptions for government, tribal, NGO, education, and religious entities as appropriate.
+
+## Frequently asked questions
+
+<details>
+<summary>What if a customer account has no address?</summary>
+
+Without an address that includes a postal code, the system does not display any tax rates in opportunities, so no tax is applied until the address is complete.
+</details>
+
+<details>
+<summary>Can I exempt specific products from all taxes?</summary>
+
+Yes. Use **Item Exemptions** to select products or packages and choose which tax rates they are exempt from.
+</details>
+
+<details>
+<summary>How do I handle tax-exempt customers like government agencies?</summary>
+
+Use **Account Exemptions** under **Tax Rates**. Add the account and select which tax rates to exempt based on their status and location.
+</details>
+
+<details>
+<summary>Do exemptions apply to recurring billing?</summary>
+
+Yes. Item and account exemptions apply automatically to sales orders and subscription billing once configured.
+</details>
+
+<details>
+<summary>Can I change tax rates after invoices exist?</summary>
+
+Yes. Edits apply only to new transactions; existing invoices keep their original tax calculations.
+</details>
+
+<details>
+<summary>What if tax rates change in my jurisdiction?</summary>
+
+Edit the rate under **Administration** → **Tax Rates** (kebab menu → **Edit**). New rates apply to future transactions only.
+</details>
+
+## Video: Apply tax exemptions
+
+<iframe src="https://www.youtube-nocookie.com/embed/zEUKJFFfh1k" width="560" height="315" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
