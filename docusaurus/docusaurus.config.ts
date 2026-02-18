@@ -134,8 +134,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/legacy/customer-voice/overview/sms-performance-metrics', to: '/legacy/customer-voice/' },
           { from: '/legacy/customer-voice/overview/a2p-10dlc-registration', to: '/legacy/customer-voice/' },
           { from: '/legacy/customer-voice/overview/product-details', to: '/legacy/customer-voice/' },
-          { from: '/legacy/customer-voice/overview', to: '/legacy/customer-voice/' },
-          { from: '/legacy/customer-voice/overview/', to: '/legacy/customer-voice/' },
+          // Omit overview/ redirect to avoid EEXIST: docs build may create overview/index.html for the folder
           // Legacy Customer Voice customers: index removed, dropdown only
           { from: '/legacy/customer-voice/customers/', to: '/legacy/customer-voice/customers/customer-table' },
           // Legacy Customer Voice templates: index removed, dropdown only
