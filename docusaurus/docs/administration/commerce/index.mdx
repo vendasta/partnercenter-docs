@@ -1,91 +1,52 @@
 ---
+id: administration-commerce
 title: Commerce
-description: Manage payment processing, billing settings, orders, and tax configurations
+description: "Manage payment processing, billing settings, orders, and tax configurations in Administration."
 sidebar_position: 2
 ---
 
-Commerce management provides the tools needed to handle payments, billing automation, and tax configurations for your business. Set up payment processing, automate billing for recurring subscriptions, and manage tax rates to ensure compliant financial operations.
+# Commerce
 
-## What you can do with Commerce
+Commerce in **Administration** lets you set up payment processing, default billing automation, order settings, and tax rates. These apply across your platform so new accounts get consistent billing, tax, and order behavior.
 
-- Set up Vendasta Payments with new accounts or connect existing Stripe Standard accounts
-- Configure default billing automation that applies to all new customer accounts automatically
-- Edit tax rates and manage tax exemptions for accounts and specific products
-- Process payments through credit/debit cards, ACH transfers, and Pre-Authorized Debits (PADs)
-- Automate invoice generation and payment collection for recurring subscriptions
+## What you can do
+
+- **Set up Vendasta Payments** – Create new payment accounts or connect existing Stripe Standard accounts; support for cards, ACH, and PADs in multiple countries
+- **Configure default billing** – Choose automatic charging or invoice generation for all new accounts; settings apply only to accounts created after you save
+- **Manage order settings** – Configure order workflows, fulfillment, and order management
+- **Edit tax rates** – Change tax rates and manage exemptions; rates apply by customer postal code
 
 ## How it works
 
-Commerce features work together to streamline your financial operations:
+- **Payment processing** – Vendasta Payments (or connected Stripe) handles processing; 0.75% platform fee when connecting Stripe. Available in USA, Canada, New Zealand, Australia, UK, Czech Republic (and more with sales support).
+- **Billing automation** – Defaults apply to new accounts only; you can override per account under **Accounts** → **Manage Accounts** → account → **Products**.
+- **Tax** – Tax applies automatically when customer addresses include postal codes; used on invoices, line items, cart, and sales orders.
 
-- **Payment Processing**: Vendasta Payments supports multiple countries (USA, Canada, New Zealand, Australia, UK, Czech Republic) with competitive processing fees. You can create new payment accounts or connect existing Stripe accounts with a 0.75% platform fee.
-- **Billing Automation**: Default settings apply automatically to all new accounts, choosing between automatic charging or invoice generation. Settings only affect accounts created after configuration—existing accounts retain their current settings.
-- **Tax Management**: Tax rates apply automatically based on customer postal codes. Accounts without complete addresses will not display tax rates or have taxes applied to transactions.
+## Articles in this section
+
+- **[Vendasta Payments](./vendasta-payments/index.mdx)** – New account creation, Stripe connection, verification, banking, payment methods, and regional support
+- **[Default Billing Settings](./default-billing-settings/index.mdx)** – Default collection method and timing for new accounts; market-specific defaults
+- **[Order Settings](./order-settings/index.mdx)** – Order workflows, fulfillment, and order management
+- **[Tax Management](./tax-rates/index.mdx)** – Tax rates, exemptions, and address-based tax calculation
 
 ## Get started
 
-1. Configure payment processing at `Administration` > `Vendasta Payments` 
-   - Create new Vendasta Payments account or connect existing Stripe Standard account
-   - Complete business verification and banking setup
-2. Set up default billing automation at `Administration` > `Default Billing Settings`
-   - Choose collection method (automatic charging vs. invoice generation)
-   - Select collection timing and apply to specific markets if needed
-3. Configure tax rates at `Administration` > `Tax Rates`
-   - Edit existing tax rates using the kebab menu
-   - Ensure customer addresses include postal codes for automatic tax calculation
+1. **Payment processing** – Go to **Partner Center** → **Administration** → **Vendasta Payments**. Create a new account or connect Stripe; complete verification and banking.
+2. **Default billing** – Go to **Administration** → **Default Billing Settings**. Choose collection method (auto charge vs invoice) and timing; apply to markets if needed.
+3. **Tax** – Go to **Administration** → **Tax Rates**. Edit rates (kebab menu); ensure customer addresses have postal codes so tax applies.
 
 :::tip
-Vendasta Payments is not available for Free or Trial subscription tiers due to fraud prevention measures.
+Vendasta Payments is not available on Free or Trial tiers (fraud prevention). Complete billing contact details at **Administration** → **My Billing**; missing address can block activation in supported regions.
 :::
-
-## Key Commerce Settings
-
-### Payment Processing Configuration
-- **New Account Creation**: Complete business information and identity verification for new Vendasta Payments accounts
-- **Stripe Connection**: Connect existing Stripe Standard accounts to take advantage of Vendasta's billing features while keeping your negotiated rates
-- **Regional Support**: Available in multiple countries with additional sales assistance in UAE, Germany, Belgium, Netherlands, Poland, Switzerland
-- **Payment Methods**: Support for credit/debit cards, ACH transfers, and Pre-Authorized Debits (PADs)
-
-### Default Billing Automation
-- **Collection Methods**: Choose between automatic credit card charging and invoice generation for manual payment
-- **Market-Specific Settings**: Configure different defaults for different markets if applicable
-- **Automatic Application**: Settings apply to billing configurations of all new accounts created after saving
-- **Individual Overrides**: Modify billing settings for specific accounts through `Accounts` > `Manage Accounts` > account's Products section
-
-### Tax Rate Management
-- **Rate Editing**: Modify existing tax rates through the kebab menu in `Administration` > `Tax Rates`
-- **Address Requirements**: Accounts must have complete addresses with postal codes for tax calculation
-- **Automatic Application**: Tax rates apply to invoices, invoice line items, shopping cart purchases, and sales orders
-- **Exemption Management**: Configure tax exemptions for specific accounts or products through tax exemption settings
 
 ## Error handling and troubleshooting
 
-### Payment Processing Issues
-- **"Unsupported in Your Area" Error**: Check that billing contact information is complete at `Administration` > `My Billing`, especially the billing address with postal code
-- **No Setup Option Available**: Indicates account is on Free/Trial tier, in unsupported region, or has account restrictions
-- **Card Declined**: Verify payment method details, available funds, and business verification status
-
-### Billing Automation Problems
-- **Settings Not Applying**: Remember that default billing automation only affects new accounts created after saving settings
-- **Manual Pricing Required**: You must manually set retail prices for each product to enable automatic billing based on active products
-- **Market Configuration**: Ensure correct market is selected when configuring default settings for specific regions
-
-### Tax Calculation Issues
-- **No Tax Applied**: Verify that customer account has complete address with postal code
-- **Incorrect Rates**: Check that tax rates are properly configured and address matches intended jurisdiction
+- **Payment: "Unsupported in Your Area"** – Complete billing contact and address (with postal code) at **Administration** → **My Billing**.
+- **Payment: No setup option** – Account may be Free/Trial, in an unsupported region, or restricted.
+- **Billing defaults not applying** – Defaults affect only accounts created *after* you save; existing accounts keep current settings.
+- **No tax applied** – Customer account must have a full address with postal code.
+- **Incorrect tax** – Check tax rate setup and that the address matches the intended jurisdiction.
 
 :::warning
-Missing billing address information prevents Vendasta Payments activation even in supported regions. Complete all billing contact details before attempting setup.
+Missing billing address information can prevent Vendasta Payments activation. Complete all billing contact details before setup.
 :::
-
-## Learn more
-
-- Payment processing setup
-  - See: [Payment Processing](./vendasta-payments/index.mdx)
-- Billing automation configuration
-  - See: [Default Billing Settings](./default-billing-settings/index.mdx)
-- Order management workflows
-  - See: [Order Settings](./order-settings/index.mdx)
-- Tax rate configuration
-  - See: [Tax Management](./tax-rates/index.mdx)
-

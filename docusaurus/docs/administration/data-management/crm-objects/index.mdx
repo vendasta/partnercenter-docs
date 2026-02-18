@@ -1,25 +1,72 @@
 ---
+id: crm-objects
 title: CRM Objects
-description: Manage CRM objects and data structures in Vendasta's platform
+description: Manage CRM objects and custom fields for accounts, users, orders, and products in Vendasta's platform.
 sidebar_position: 1
 ---
 
 # CRM Objects
 
-This section covers the management and configuration of CRM objects within Vendasta's data management system.
+CRM objects and custom fields let you store and use business-specific data on accounts, users, orders, and products. Define fields once, then use them to segment marketing, automate sales, and manage data via imports or the API.
 
-## CRM Object Management
+## What are custom fields?
 
-- Object Configuration - Set up and configure custom CRM objects
-- Field Management - Create and manage custom fields for your objects
-- Data Relationships - Define relationships between different CRM objects
-- Object Permissions - Control access and permissions for CRM objects
-- Data Validation - Set up validation rules for your CRM data
+<iframe src="//fast.wistia.com/embed/iframe/3vkidhas6i" width="560" height="315" frameborder="0" allowfullscreen=""></iframe>
 
-## Available Articles
+Custom fields let you create unique fields for the information that matters to you on accounts, users, orders, and products. You can then segment and personalize marketing, automate sales processes, and fulfill work with less effort.
 
-- [Custom Fields](./custom-fields.mdx) - Learn how to create and manage custom fields for your CRM objects
+## Why custom fields matter
 
-*Note: Additional guides for CRM object management will be added here.*
+Different businesses need different data. Custom fields let you define only what you use day to day. For example:
 
-If you need assistance with CRM objects or have questions about data management, please contact our support team.
+- Send a "starter" campaign to dental offices with fewer than 100 patients and an "established" campaign to those with more
+- Store a user's favorite football team for sales icebreakers
+- Automatically assign a salesperson or team to an account based on estimated revenue
+
+![Custom Fields Example](../img/administration/data-management/custom-fields-example.jpg)
+
+## How custom fields work
+
+**Define fields first**
+
+Before you can store data, define the field in **Partner Center** → **Administration** → **Custom Fields**. Choose which object type the data belongs to (account, user, order, or product). For example, "number of hotel rooms" fits on an account, not on individual users.
+
+![Creating a Custom Field](../img/administration/data-management/custom-fields-create.jpg)
+
+After you click **Create Custom Field**, enter a **Name** and **Field Type**. Field type determines what values can be stored and how the field can be filtered and sorted in automations.
+
+![Custom Field Types](../img/administration/data-management/custom-fields-type.jpg)
+
+## Field types
+
+| Field type | Example names | Example values | Automation filter types |
+| --- | --- | --- | --- |
+| Text | favorite dog breed, last event type, first content download | golden retriever, basketball, rule book | Is any value, Is missing, Contains, Does not contain, Is one of, Is not one of |
+| Integer | number of employees, customer touchpoint score, number of locations | 4, -2, 100 | Less than or equal to, Equals, Greater than |
+| Date | birthday, best single-day sales date, manually remove-by | Aug 13, 1991, Feb 14, 2022, Mar 22, 2233 | After, Before |
+| Dropdown | service level, initially purchased package, call priority | Silver, Gold, Platinum | Is, Is not |
+| Currency | preferred monthly budget, average revenue per customer, external spend | USD 1000, CAD 10.50, THB 50000 | Less than or equal to, Greater than |
+
+## Entering custom data
+
+You can fill custom fields:
+
+- In bulk by importing an account list
+- Via Vendasta's public API
+- By editing records manually where the fields appear
+
+![Data Entry for Custom Fields](../img/administration/data-management/custom-fields-data-entry.jpg)
+
+## Frequently asked questions
+
+<details>
+<summary>Can custom fields created in Partner Center be used in Business App?</summary>
+
+No. Custom fields created in Partner Center are for use in Partner Center only. To have custom fields on accounts in Business App, create them in **Business App** → **Administration** → **CRM Objects** for each account.
+</details>
+
+<details>
+<summary>Is there a character limit for the field description?</summary>
+
+Yes. The limit is 4000 characters.
+</details>

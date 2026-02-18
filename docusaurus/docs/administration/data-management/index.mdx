@@ -5,70 +5,56 @@ description: Learn about Data Management in Vendasta's platform including CRM ob
 
 # Data Management
 
-Data management provides tools for organizing your business data through custom fields, sales pipelines, and scoring systems. These features help you capture business-specific information, track sales processes, and implement systematic approaches to lead management.
+Data management provides tools for organizing your business data through custom fields, sales pipelines, and scoring systems. Use them to capture business-specific information, track sales processes, and prioritize leads.
 
 ## What it is
 
-Data management consists of three core components: custom fields for storing unique business information, sales pipelines for tracking opportunity progression, and scoring systems for prioritizing leads and opportunities. These tools work together to structure and organize your business data for better decision-making.
+Data management has three core parts:
 
-## What you can do with it
+- **Custom fields** – Store unique business information on accounts, users, orders, and products
+- **Sales pipelines** – Track opportunity progression and revenue forecasts
+- **Scoring** – Prioritize leads and opportunities with automated rules and weightings
 
-- **Create Custom Fields**: Define unique fields for accounts, users, orders, and products with five field types (text, integer, date, dropdown, currency) that affect filtering and sorting capabilities
-- **Leverage Advanced Filtering**: Use custom fields with automation filter types like "Contains," "Does not contain," "Is one of," "Less than or equal to," "After," "Before," and more based on field type
-- **Build Sales Pipelines**: Use the default four-stage pipeline or create custom pipelines with your own stages and probability percentages for revenue forecasting
-- **Segment Marketing Efforts**: Send targeted campaigns based on custom field data (e.g., "starter" campaigns for dental offices with less than 100 patients, "established" campaigns for those with more)
-- **Automate Sales Processes**: Automatically assign salespeople or sales teams to accounts based on criteria like estimated revenue stored in custom fields
-- **Store Business-Specific Information**: Capture unique data points like "favorite football team" for sales icebreakers, "number of hotel rooms" for hotels, or "service level" preferences
-- **Manage Lead and Opportunity Scoring**: Set up automated scoring with custom rules, weightings, and analytics to track performance trends and trigger actions based on score thresholds
-- **Import and Manage Data**: Fill custom fields through bulk account imports, Vendasta's public API, or manual entry
+Together they structure your data for better segmentation, automation, and decision-making.
+
+## What you can do
+
+- **Create custom fields** – Define fields with five types (text, integer, date, dropdown, currency) that drive filtering and sorting in automations
+- **Use advanced filters** – In automations, filter by custom field values (e.g. Contains, Does not contain, Is one of, Before, After) depending on field type
+- **Build sales pipelines** – Use the default four-stage pipeline or create custom pipelines with your own stages and forecast percentages
+- **Segment marketing** – Send targeted campaigns using custom field data (e.g. "starter" vs "established" by size or type)
+- **Automate assignments** – Assign salespeople or teams to accounts based on criteria such as estimated revenue in custom fields
+- **Store business-specific data** – Capture things like "favorite football team," "number of hotel rooms," or "service level"
+- **Manage lead and opportunity scoring** – Configure scoring rules, weightings, and analytics; trigger actions when scores cross thresholds
+- **Import and manage data** – Populate custom fields via bulk imports, the Vendasta API, or manual entry
 
 ## How it works
 
-The default pipeline includes four stages: "Lead," "Contact," "Qualified," and "Proposal" with corresponding forecast percentages of 0%, 20%, 40%, and 60% respectively. These stages show revenue forecasts based on the probability percentages assigned to each stage.
+The default pipeline has four stages: **Lead**, **Contact**, **Qualified**, and **Proposal**, with forecast percentages of 0%, 20%, 40%, and 60%. Revenue forecasts use the probability you set for each stage.
 
-Custom fields must be defined before data can be stored, requiring you to choose which object type (account, user, order, product) will be associated with the data. Field type selection significantly affects how data can be stored, filtered, and sorted in automation rules.
+Custom fields must be defined before you can store data. You choose an object type (account, user, order, or product) and a field type. The field type controls what values you can store and how the field can be filtered and sorted in automation rules.
+
+## Articles in this section
+
+- **[CRM Objects](./crm-objects/index.mdx)** – Custom fields and data structures; object types, field types, and automation filters
+- **[Pipelines](./pipelines/index.mdx)** – Sales pipeline management, stages, and templates
+- **[Score](./score/index.mdx)** – Lead and opportunity scoring, criteria, and CRM display
 
 ## Get started
 
-1. **Define Custom Fields** at Administration > Custom Fields
-   - Choose appropriate object type (account, user, order, product) based on where the information logically belongs
-   - Select field type (text, integer, date, dropdown, currency) based on your data needs
-   - Consider what information is specific to your business before creating fields
+1. **Define custom fields** – Go to **Partner Center** → **Administration** → **Custom Fields**. Choose object type and field type (text, integer, date, dropdown, currency). Field type affects how data is stored and used in automations.
 
-2. **Create or Customize Pipelines** at Partner Center > Administration > Pipelines
-   - Edit the existing default pipeline or create new custom pipelines by clicking "Create pipeline" 
-   - Define forecast percentages for each stage based on probability of success
-   - Pipeline stages appear in order of the probability of success you assign them
+2. **Create or customize pipelines** – Go to **Partner Center** → **Administration** → **Pipelines**. Edit the default pipeline or click **Create pipeline**. Set forecast percentages per stage; order stages by probability of success.
 
-3. **Configure Scoring Systems** for leads and opportunities through the scoring section
+3. **Configure scoring** – Go to **Partner Center** → **Administration** → **Score**. Set up lead and opportunity scoring criteria; scores appear on the company table in CRM.
 
-## Key functionality
+## Error handling and troubleshooting
 
-### [CRM Objects](./crm-objects/index.mdx)
-Manage custom fields and data structures for accounts, users, orders, and products. Create fields with descriptive names using five field types: Text (for data like "favorite dog breed," "last event type"), Integer ("number of employees," "customer touchpoint score"), Date ("birthday," "best single-day sales date"), Dropdown ("service level," "call priority"), and Currency ("preferred monthly budget," "average revenue per customer"). Each field type provides specific automation filter capabilities for segmentation and workflow automation.
-
-### [Pipelines](./pipelines/index.mdx) 
-Sales pipeline creation and customization with comprehensive management features. Use the default four-stage structure (Lead, Contact, Qualified, Proposal) with preset percentages or create custom pipelines with your own stages, progression rules, automation triggers, analytics tracking, and reusable templates. Stages are ordered by probability of success for accurate revenue forecasting.
-
-### [Score](./score/index.mdx)
-Lead and opportunity scoring configuration with advanced automation capabilities. Set up automated scoring for incoming leads, configure custom scoring criteria for sales opportunities, create custom rules with specific weightings, view performance analytics and trends, and establish automated actions triggered by score thresholds for systematic lead management.
-
-## Error handling or troubleshooting
-
-- **Field Type Selection**: Choose carefully as field type significantly affects how data can be stored and filtered in automation rules
-- **Object Assignment**: Verify fields are assigned to the correct object type (account vs. user vs. order vs. product)
-- **Data Import Issues**: Ensure field mapping matches your custom field definitions when importing account lists
-- **Pipeline Configuration**: Review that stages are ordered correctly by probability of success and percentages reflect realistic conversion rates
+- **Field type** – Choose carefully; it affects how data is stored and which automation filters are available. Changing it later can impact existing data.
+- **Object assignment** – Confirm each field is on the right object type (account, user, order, or product).
+- **Data import** – When importing account lists, map columns to the correct custom field definitions.
+- **Pipelines** – Check that stages are ordered by probability of success and that percentages match your conversion expectations.
 
 :::warning
-Field type significantly affects how data can be stored and filtered in automation rules. Choose carefully as changes after creation may impact existing data.
+Field type significantly affects how data can be stored and filtered in automation rules. Choose carefully; changes after creation may impact existing data.
 :::
-
-## Learn more
-
-- Custom fields and data structures
-  - See: [CRM Objects](./crm-objects/index.mdx)
-- Sales pipeline management
-  - See: [Pipelines](./pipelines/index.mdx)
-- Lead and opportunity scoring
-  - See: [Score](./score/index.mdx)

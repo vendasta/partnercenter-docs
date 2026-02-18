@@ -104,6 +104,56 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/administration/my-account/my-billing/billing-overview-and-model', to: '/administration/my-account/my-billing/' },
           // Affiliate Program: terms merged into index
           { from: '/administration/my-account/affiliate-program/vendasta-affiliate-program-terms-and-conditions', to: '/administration/my-account/affiliate-program/' },
+          // Data Management: CRM Objects and Custom Fields merged into one page
+          { from: '/administration/data-management/crm-objects/custom-fields', to: '/administration/data-management/crm-objects/' },
+          // Data Management: Pipelines and Create a new Pipeline merged into one page
+          { from: '/administration/data-management/pipelines/create-a-new-pipeline', to: '/administration/data-management/pipelines/' },
+          // Platform Settings: overview merged into index
+          { from: '/administration/platform-settings/platform-settings-overview', to: '/administration/platform-settings/' },
+          // Customize: client-experience-and-customization is now the index
+          { from: '/administration/platform-settings/customize/client-experience-and-customization', to: '/administration/platform-settings/customize/' },
+          // Customize Business App: interface customization overview merged into index
+          { from: '/administration/platform-settings/customize-business-app/business-app-interface-customization', to: '/administration/platform-settings/customize-business-app/' },
+          // Partner Branding: customize-your-branding is now the index
+          { from: '/administration/platform-settings/partner-branding/customize-your-branding', to: '/administration/platform-settings/partner-branding/' },
+          // Conversations Settings: how-to-turn-off-inbox-messages-tab merged into index
+          { from: '/administration/platform-settings/conversations-settings/how-to-turn-off-inbox-messages-tab', to: '/administration/platform-settings/conversations-settings/' },
+          // Administration Commerce: default billing automation guide merged into index
+          { from: '/administration/commerce/default-billing-settings/billing-automation-guide', to: '/administration/commerce/default-billing-settings/' },
+          // Administration Commerce: order management guide merged into index
+          { from: '/administration/commerce/order-settings/order-management-guide', to: '/administration/commerce/order-settings/' },
+          // Administration Commerce: tax-rates and tax-configuration-guide merged into index
+          { from: '/administration/commerce/tax-rates/tax-rates', to: '/administration/commerce/tax-rates/' },
+          { from: '/administration/commerce/tax-rates/tax-configuration-guide', to: '/administration/commerce/tax-rates/' },
+          // Administration Advanced: translate-and-customize-with-weblate merged into index
+          { from: '/administration/advanced/translate-customize/translate-and-customize-with-weblate', to: '/administration/advanced/translate-customize/' },
+          // Administration Advanced: vendasta-sso-integrations merged into index
+          { from: '/administration/advanced/single-sign-on/vendasta-sso-integrations', to: '/administration/advanced/single-sign-on/' },
+          // Legacy: proposal-builder-overview merged into proposals index
+          { from: '/legacy/proposals/proposal-builder-overview', to: '/legacy/proposals/' },
+          // Legacy Customer Voice: FAQs merged into index
+          { from: '/legacy/customer-voice/faqs', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/activate-sms-addons', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/can-i-customize-buttons', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/can-i-hide-business-address', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/can-the-link-in-sms-template-be-changed', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/character-limit-for-sms-message', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/create-custom-email-review-request-template', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/customer-voice-sms-credits-reset', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/edit-review-request-email-template', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/embed-review-widget-wordpress', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/inbox-and-customer-voice-phone-number', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/preferred-sources', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/products-needed-for-customer-voice', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/review-generation-widget', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/send-emails-from-custom-domain', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/send-review-requests-to-multiple-customers', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/send-sms-review-requests', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/upload-multiple-customers-at-once', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/where-does-a-review-go-once-submitted', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/which-sources-can-i-request-reviews-on', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/why-is-first-name-not-displayed-in-review-requests-via-sms', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/faqs/why-is-my-custom-template-failing', to: '/legacy/customer-voice/' },
           // Marketplace: single overview page (marketplace-overview merged into index)
           { from: '/marketplace/marketplace-overview', to: '/marketplace/' },
           // Products: products-overview-management merged into index

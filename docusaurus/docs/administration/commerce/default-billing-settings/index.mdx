@@ -1,17 +1,109 @@
 ---
+id: default-billing-settings
 title: Default Billing Settings
-description: Configure default billing automation settings for consistent customer billing across all new accounts
+description: "Configure default billing automation for new accounts: collection method, timing, and market-specific settings."
 sidebar_position: 2
+tags: [billing, automation, subscriptions, configuration]
+keywords: [billing-automation, default-settings, recurring-billing, invoice-automation, collection-methods]
 ---
 
 # Default Billing Settings
 
-Configure default billing automation settings that apply to all new accounts you create. These settings help streamline your billing processes and ensure consistent practices across all your customer accounts.
+Default billing automation applies your chosen billing settings to every new account you create. You set collection method and timing once; new accounts get those settings automatically. Existing accounts are unchanged.
 
-## Available Articles
+## What it is
 
-- [Default Billing Automation and Configuration](./billing-automation-guide.md) - Complete guide to configuring default billing automation settings for consistent customer billing, including how defaults apply to new accounts and how to override per account
+Billing automation creates and sends invoices or charges saved payment methods for recurring subscriptions. Default settings in **Administration** → **Default Billing Settings** apply to all new accounts so you don’t configure billing for each account manually.
 
-This comprehensive guide covers all aspects of default billing configuration, including collection methods, timing settings, market-specific configurations, and common questions with integrated FAQ sections.
+## Why it matters
 
-If you need additional assistance with billing automation, please contact support through your account dashboard.
+- **Less manual work** – New accounts get your preferred billing method and schedule automatically
+- **Consistency** – Same billing practices across new customers
+- **Flexibility** – Override any account’s billing under **Accounts** → **Manage Accounts** → account → **Products**
+
+## What you can configure
+
+- **Collection method** – Automatic charging (saved card) or invoice generation (manual payment)
+- **Collection timing** – Which day(s) of the month to bill
+- **Per market** – Different defaults per market if you use multiple markets
+
+Defaults apply only to accounts created **after** you save. Existing accounts keep their current settings.
+
+## How to configure default billing
+
+1. Go to **Partner Center** → **Administration** → **Default Billing Settings**
+2. Select a **Market** if you use multiple markets
+3. Turn the toggle **On** (default is Off)
+4. Set **Collection method** (how you collect: auto charge vs invoice) and **Collect on** (day or days)
+5. Review the summary and click **Save**
+
+![Default billing settings configuration page](./img/administration/default-billing-settings/default-billing-settings.png)
+
+New accounts will get these settings in their **Billing** configuration automatically.
+
+:::warning
+Default billing settings do not change existing accounts. Only accounts created after you save will use these defaults.
+:::
+
+## Override for a single account
+
+You can change billing for any account at any time:
+
+1. Go to **Partner Center** → **Accounts** → **Manage Accounts**
+2. Open the account
+3. Open the **Products** section and adjust **Billing** settings for that account
+
+For more on per-account billing, see [Subscription management](/commerce/subscriptions/subscription-management).
+
+## Market-specific defaults
+
+With multiple markets, set different default billing automation per market (e.g. different collection days or methods). Use the market selector on the Default Billing Settings page.
+
+## Product pricing requirement
+
+For automation to bill correctly:
+
+- **Retail prices** must be set for each product
+- **Subscription settings** must be correct for recurring products
+
+:::info
+To automatically bill based on active products, you must set retail prices for each product. Without pricing, the automation cannot calculate amounts.
+:::
+
+## Frequently asked questions
+
+<details>
+<summary>Do default billing settings affect existing accounts?</summary>
+
+No. They apply only to accounts created after you save. Existing accounts keep their current billing settings.
+</details>
+
+<details>
+<summary>Can I change billing for one account after applying defaults?</summary>
+
+Yes. Go to **Accounts** → **Manage Accounts** → account → **Products** and change that account’s billing settings.
+</details>
+
+<details>
+<summary>Do I need to set product prices for automation to work?</summary>
+
+Yes. Set retail prices for each product so automatic billing can calculate amounts.
+</details>
+
+<details>
+<summary>Can I have different defaults per market?</summary>
+
+Yes. Select each market on the Default Billing Settings page and save different collection method and timing per market.
+</details>
+
+<details>
+<summary>What collection methods are available?</summary>
+
+You can use automatic credit card charging, invoice generation for manual payment, or different approaches per market or account.
+</details>
+
+<details>
+<summary>Can I turn off default billing automation later?</summary>
+
+Yes. Go to **Default Billing Settings**, set the toggle to **Off**, and save. New accounts will no longer get defaults; existing accounts are unchanged.
+</details>
