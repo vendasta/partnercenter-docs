@@ -127,6 +127,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/administration/commerce/tax-rates/tax-configuration-guide', to: '/administration/commerce/tax-rates/' },
           // Administration Advanced: translate-and-customize-with-weblate merged into index
           { from: '/administration/advanced/translate-customize/translate-and-customize-with-weblate', to: '/administration/advanced/translate-customize/' },
+          // Legacy Customer Voice: overview merged into main index
+          { from: '/legacy/customer-voice/overview/what-is-customer-voice', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/overview/customer-voice-walkthrough', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/overview/overview-page-and-performance-metrics', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/overview/sms-performance-metrics', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/overview/a2p-10dlc-registration', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/overview/product-details', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/overview', to: '/legacy/customer-voice/' },
+          { from: '/legacy/customer-voice/overview/', to: '/legacy/customer-voice/' },
+          // Legacy Customer Voice customers: index removed, dropdown only
+          { from: '/legacy/customer-voice/customers/', to: '/legacy/customer-voice/customers/customer-table' },
+          // Legacy Customer Voice templates: index removed, dropdown only
+          { from: '/legacy/customer-voice/templates/', to: '/legacy/customer-voice/templates/alternate-email-templates' },
+          // Legacy Customer Voice tools: index removed, dropdown only
+          { from: '/legacy/customer-voice/tools/', to: '/legacy/customer-voice/tools/email-signature-widget' },
           // Administration Advanced: vendasta-sso-integrations merged into index
           { from: '/administration/advanced/single-sign-on/vendasta-sso-integrations', to: '/administration/advanced/single-sign-on/' },
           // Legacy: proposal-builder-overview merged into proposals index
