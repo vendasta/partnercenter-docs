@@ -127,6 +127,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/administration/commerce/tax-rates/tax-configuration-guide', to: '/administration/commerce/tax-rates/' },
           // Administration Advanced: translate-and-customize-with-weblate merged into index
           { from: '/administration/advanced/translate-customize/translate-and-customize-with-weblate', to: '/administration/advanced/translate-customize/' },
+          // Legacy Customer Voice overview: all overview pages merged into one
+          { from: '/legacy/customer-voice/overview/what-is-customer-voice', to: '/legacy/customer-voice/overview/' },
+          { from: '/legacy/customer-voice/overview/customer-voice-walkthrough', to: '/legacy/customer-voice/overview/' },
+          { from: '/legacy/customer-voice/overview/overview-page-and-performance-metrics', to: '/legacy/customer-voice/overview/' },
+          { from: '/legacy/customer-voice/overview/sms-performance-metrics', to: '/legacy/customer-voice/overview/' },
+          { from: '/legacy/customer-voice/overview/a2p-10dlc-registration', to: '/legacy/customer-voice/overview/' },
+          { from: '/legacy/customer-voice/overview/product-details', to: '/legacy/customer-voice/overview/' },
           // Administration Advanced: vendasta-sso-integrations merged into index
           { from: '/administration/advanced/single-sign-on/vendasta-sso-integrations', to: '/administration/advanced/single-sign-on/' },
           // Legacy: proposal-builder-overview merged into proposals index
