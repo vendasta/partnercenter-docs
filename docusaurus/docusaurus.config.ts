@@ -104,6 +104,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/administration/my-account/my-billing/billing-overview-and-model', to: '/administration/my-account/my-billing/' },
           // Affiliate Program: terms merged into index
           { from: '/administration/my-account/affiliate-program/vendasta-affiliate-program-terms-and-conditions', to: '/administration/my-account/affiliate-program/' },
+          // Data Management: CRM Objects and Custom Fields merged into one page
+          { from: '/administration/data-management/crm-objects/custom-fields', to: '/administration/data-management/crm-objects/' },
+          // Data Management: Pipelines and Create a new Pipeline merged into one page
+          { from: '/administration/data-management/pipelines/create-a-new-pipeline', to: '/administration/data-management/pipelines/' },
+          // Platform Settings: overview merged into index
+          { from: '/administration/platform-settings/platform-settings-overview', to: '/administration/platform-settings/' },
+          // Customize: client-experience-and-customization is now the index
+          { from: '/administration/platform-settings/customize/client-experience-and-customization', to: '/administration/platform-settings/customize/' },
+          // Customize Business App: interface customization overview merged into index
+          { from: '/administration/platform-settings/customize-business-app/business-app-interface-customization', to: '/administration/platform-settings/customize-business-app/' },
+          // Partner Branding: customize-your-branding is now the index
+          { from: '/administration/platform-settings/partner-branding/customize-your-branding', to: '/administration/platform-settings/partner-branding/' },
+          // Conversations Settings: how-to-turn-off-inbox-messages-tab merged into index
+          { from: '/administration/platform-settings/conversations-settings/how-to-turn-off-inbox-messages-tab', to: '/administration/platform-settings/conversations-settings/' },
           // Marketplace: single overview page (marketplace-overview merged into index)
           { from: '/marketplace/marketplace-overview', to: '/marketplace/' },
           // Products: products-overview-management merged into index
