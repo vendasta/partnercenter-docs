@@ -1,0 +1,244 @@
+---
+description: Follow this rule whenever asked to create or edit a Getting Started guide in the partnercenter-docs repository.
+---
+
+# Getting Started Guides — Authoring Rule
+
+Apply this rule whenever you are asked to create or edit a Getting Started guide in this repository.
+
+## Where guides live
+
+All Getting Started guides belong in:
+```
+docusaurus/docs/getting-started/getting-started-guides/
+```
+
+Reference the existing guide as a canonical example:
+[getting-started-with-branding-and-customization.mdx](mdc:docusaurus/docs/getting-started/getting-started-guides/getting-started-with-branding-and-customization.mdx)
+
+---
+
+## File naming
+
+Use lowercase kebab-case, always prefixed with `getting-started-with-`:
+```
+getting-started-with-[topic].mdx
+```
+
+Examples:
+- `getting-started-with-your-team.mdx`
+- `getting-started-with-accounts-and-product-activation.mdx`
+- `getting-started-with-vendasta-payments.mdx`
+
+---
+
+## Frontmatter
+
+Every guide must include the following frontmatter fields:
+
+```mdx
+---
+title: "Getting Started: [Topic Name]"
+sidebar_label: [Short Label]
+description: "[One sentence describing what the guide helps the reader accomplish — no em dashes.]"
+sidebar_position: [number]
+tags: [getting-started, relevant-tag, another-tag]
+keywords: [keyword one, keyword two, keyword three]
+---
+```
+
+- `title` always follows the pattern `"Getting Started: [Topic]"`
+- `sidebar_label` is a short version of the topic (2-4 words max)
+- `description` must not contain em dashes
+- `sidebar_position` should follow the order in the planned guide series (1 = first guide)
+
+---
+
+## Document structure
+
+Every guide must follow this structure in order:
+
+### 1. H1 Title
+Matches the frontmatter `title`.
+
+### 2. Intro paragraph
+1-3 sentences. Explain what the topic is, why it matters to a beginner, and what the guide covers. Write for a new partner who is just getting started with the platform.
+
+### 3. Plan restriction note (if applicable)
+If any feature in the guide requires a paid or higher-tier plan, add a `:::note` immediately after the intro:
+
+```mdx
+:::note
+Some features covered in this guide are only available on certain plans. [View plan details](https://www.vendasta.com/pricing)
+:::
+```
+
+**Never name specific plan tiers** (e.g., do not write "Growth", "Scale", "Starter"). Always use generic language like "certain plans", "select plans", or "paid plans" and link to the pricing page.
+
+### 4. Getting Started Checklist
+A numbered list linking to each major step in the guide. Use colons, not em dashes, to separate the step name from its description:
+
+```mdx
+## Getting Started Checklist
+
+1. [Step One Title](#step-1-step-one-title): brief description of what this step covers
+2. [Step Two Title](#step-2-step-two-title): brief description
+3. [Step Three Title](#step-3-step-three-title): brief description
+```
+
+### 5. Steps (H2 sections)
+Each step is a `##` section. Open with 1-2 sentences of context, then a navigation path if relevant, then H3 sub-sections for each sub-task.
+
+Navigation paths use this format:
+```
+Navigate to **Partner Center** > **Section** > **Page**.
+```
+
+End every step section with:
+```mdx
+[Back to checklist](#getting-started-checklist)
+
+---
+```
+
+### 6. What's next
+Close every guide with a `## What's next` section. Link only to pages that actually exist in the repo. Do not link to guides that haven't been created yet — use plain text or link to the closest relevant existing doc instead.
+
+```mdx
+## What's next
+
+Brief sentence about what the reader is ready to do now.
+
+- **[Page Title](/path/to/existing/doc/)**: One-line description
+- **[Page Title](/path/to/existing/doc/)**: One-line description
+```
+
+---
+
+## Writing style rules
+
+### Em dashes — NEVER use them
+Em dashes (`—`) are not allowed anywhere in the document, including the frontmatter description. Replace them with:
+- A colon (`:`) when introducing a list or expansion
+- A comma (`,`) when used as a parenthetical
+- A period (`.`) to start a new sentence
+- Parentheses `( )` for asides
+
+**Wrong:** `This is a white-label platform — meaning you can brand it as your own.`
+**Right:** `This is a white-label platform, meaning you can brand it as your own.`
+
+**Wrong:** `— your company name, logo, and colors`
+**Right:** `: your company name, logo, and colors`
+
+### Plan tier names — never use specific names
+Never reference specific Vendasta plan names (Growth, Scale, Starter, Pro, etc.). Instead use:
+- "certain plans"
+- "select plans"
+- "paid plans"
+- "some subscription tiers"
+
+Always follow with a link to `https://www.vendasta.com/pricing`.
+
+### Heading casing
+Use sentence case for all headings. Only capitalize the first word and any proper nouns or Vendasta product names. Do not title-case every word.
+
+**Wrong:** `### Add Your Company Name And Logo`
+**Wrong:** `## Step 1: Set Up Partner Branding And Customization Options`
+**Right:** `### Add your company name and logo`
+**Right:** `## Step 1: Set up Partner Branding and customization options`
+
+Proper nouns and product names that should always be capitalized as written:
+- Vendasta, Partner Center, Business App, Task Manager, Marketplace
+- Vendasta Payments, Snapshot Report, Executive Report
+- Any named Vendasta product (e.g., Reputation AI, Social Marketing, LocalSEO)
+
+### Tone
+- Write for a **beginner partner** who is brand new to the platform
+- Use "you" and "your clients" (not "the user" or "the partner")
+- Be direct and instructional
+- Use numbered lists for sequential steps, bullet lists for non-sequential info
+
+### Step instructions
+Each individual action in a step should be a numbered list item. Bold all UI element names (buttons, field labels, menu items, tab names):
+
+```mdx
+1. Go to **Partner Center** > **Administration** > **My Team**.
+2. Click **Invite team member**.
+3. Enter a name and email address.
+4. Click **Send**.
+```
+
+---
+
+## Admonitions
+
+Use Docusaurus admonitions to call out important information. Choose the right type:
+
+| Type | Use for |
+|---|---|
+| `:::note` | Plan restrictions, behavior caveats, things that may vary |
+| `:::tip` | Best practices, recommendations, time-saving advice |
+| `:::warning` | File format requirements, things that will cause errors if wrong |
+| `:::info` | Prerequisites, related settings the reader should know about |
+
+---
+
+## Links
+
+### Internal links
+- Always verify a link resolves to a real page before including it
+- Check that the target file exists under `docusaurus/docs/`
+- Use root-relative paths starting with `/` (e.g., `/administration/my-account/my-team/`)
+- To link to a specific section on a page, append the anchor (e.g., `/partner-center/#customize-your-domains`)
+- Never link to a Getting Started guide that does not yet exist — use plain text instead
+
+### External links
+- Use full URLs for Vendasta platform links (e.g., `https://partners.vendasta.com/customize-branding`)
+- Pricing page: `https://www.vendasta.com/pricing`
+- Always open in the same tab (no `target="_blank"` needed in MDX)
+
+---
+
+## Tables
+
+Use tables for comparison or decision-making content (e.g., "show vs. hide" decisions). Avoid em dashes in table cells — use "N/A" or rephrase the cell instead.
+
+```mdx
+| Column A | Column B | Column C |
+|---|---|---|
+| **Item** | When to use | When not to use |
+```
+
+---
+
+## Before creating a guide — research checklist
+
+Before writing a new guide, always:
+
+1. **Read the existing source docs** for the topic. The relevant docs live in `docusaurus/docs/` under the corresponding section (e.g., `administration/`, `commerce/`, `accounts/`, `marketplace/`, `crm/`).
+2. **Verify all links** resolve to real files in the repo before including them.
+3. **Check `_category_.json`** in the `getting-started-guides/` folder to understand the current sidebar position and set `sidebar_position` accordingly.
+4. **Do not duplicate** content that already exists in a referenced doc — summarize it and link to the full reference instead.
+5. **Target audience**: guides are for beginner partners setting up the platform for the first time, not experienced users or Vendasta employees.
+
+---
+
+## Planned guide series (for reference)
+
+The following guides have been planned for the getting-started-guides section. Use this list to set `sidebar_position` values and to avoid duplicating topics:
+
+| # | sidebar_position | Guide title | Status |
+|---|---|---|---|
+| 1 | 1 | Getting Started: Branding & Customization | Created |
+| 2 | 2 | Getting Started: Your Team | Planned |
+| 3 | 3 | Getting Started: Accounts & Product Activation | Planned |
+| 4 | 4 | Getting Started: Vendasta Payments | Planned |
+| 5 | 5 | Getting Started: Subscriptions & Client Billing | Planned |
+| 6 | 6 | Getting Started: Your Store & Marketplace | Planned |
+| 7 | 7 | Getting Started: CRM & Sales Pipeline | Planned |
+| 8 | 8 | Getting Started: Marketing & Email Campaigns | Planned |
+| 9 | 9 | Getting Started: Automations | Planned |
+
+Existing guides in the section (created before this series):
+- `getting-started-with-vendasta-services.mdx` (sidebar_position: 2 — may need renumbering)
+- `getting-started-with-projects-in-task-manager.mdx` (sidebar_position: 8 — may need renumbering)
