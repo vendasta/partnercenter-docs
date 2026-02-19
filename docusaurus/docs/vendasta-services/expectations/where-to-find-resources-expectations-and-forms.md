@@ -1,6 +1,6 @@
 ---
 title: "Where to find resources, expectations, and forms"
-sidebar_label: "Where to find resources, expectations, and forms"
+sidebar_label: "Resources and forms"
 description: "Building a new website, taking over your customers' social posting, and setting up a successful digital ads campaign comes with a lot of moving parts.  These s"
 ---
 

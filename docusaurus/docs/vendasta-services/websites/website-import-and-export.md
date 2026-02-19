@@ -1,6 +1,6 @@
 ---
 title: "Website Import and Export"
-sidebar_label: "Website Import and Export"
+sidebar_label: "Import and Export"
 sidebar_position: 7
 description: "If you have an existing WordPress website and would like to move it onto Vendasta's hosting platform (WordPress Hosting Pro), Vendasta Services can help! You can also export your website if you need to move it to a new host."
 zendesk_id: 18929271935639
