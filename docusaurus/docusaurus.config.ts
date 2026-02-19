@@ -125,6 +125,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           // Administration Commerce: tax-rates and tax-configuration-guide merged into index
           { from: '/administration/commerce/tax-rates/tax-rates', to: '/administration/commerce/tax-rates/' },
           { from: '/administration/commerce/tax-rates/tax-configuration-guide', to: '/administration/commerce/tax-rates/' },
+          // Social Media Management: overview merged into index
+          { from: '/vendasta-services/social-media-management/social-media-management-overview', to: '/vendasta-services/social-media-management/' },
           // Administration Advanced: translate-and-customize-with-weblate merged into index
           { from: '/administration/advanced/translate-customize/translate-and-customize-with-weblate', to: '/administration/advanced/translate-customize/' },
           // Legacy Customer Voice: overview merged into main index
@@ -219,7 +221,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/vendasta-products', to: '/category/legacy-products' },
           { from: '/vendasta-products/general', to: '/legacy-products/general' },
           { from: '/vendasta-products/general/getting-started', to: '/legacy-products/general/getting-started' },
-          { from: '/vendasta-products/calendarhero', to: '/legacy-products/calendarhero' },
+          { from: '/vendasta-products/calendarhero', to: '/legacy/calendarhero' },
+          { from: '/legacy-products/calendarhero', to: '/legacy/calendarhero' },
           { from: '/getting-started/intro-to-vendasta/vendasta-platform-overview', to: '/getting-started' },
           { from: '/getting-started/intro-to-vendasta/partner-onboarding', to: '/getting-started/partner-onboarding' },
           { from: '/getting-started/intro-to-vendasta/partner-troubleshooting-guide', to: '/getting-started/partner-troubleshooting-guide' },

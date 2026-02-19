@@ -1,6 +1,6 @@
 ---
 title: "Expectation Brochures"
-sidebar_label: "Expectation Brochures"
+sidebar_label: "Brochures"
 description: "Our Expectation Brochures are a great way to explore the timelines and step-by-step insights into our products. These are a helpful reference point that can be"
 ---
 

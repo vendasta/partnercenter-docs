@@ -1,6 +1,6 @@
 ---
 title: "Expectations by Service within Vendasta Services"
-sidebar_label: "Expectations by Service within Vendasta Services"
+sidebar_label: "By service (Vendasta)"
 description: "With Vendasta's Vendasta Services, you have access to a team of digital marketing experts. Leveraging our team, you can claim and optimize your online listings"
 ---
 

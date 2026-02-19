@@ -1,6 +1,6 @@
 ---
 title: "Templated Website: Service Expectations"
-sidebar_label: "Templated Website"
+sidebar_label: "Templated"
 sidebar_position: 2
 description: "You're either thinking of getting a new website, or you've decided to go ahead with a new website build. Congratulations! Follow this article as we set you up"
 ---
