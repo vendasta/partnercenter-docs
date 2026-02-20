@@ -150,6 +150,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           // Legacy Customer Voice: FAQs merged into index
           { from: '/legacy/customer-voice/faqs', to: '/legacy/customer-voice/' },
           { from: '/legacy/customer-voice/faqs/activate-sms-addons', to: '/legacy/customer-voice/' },
+          // Executive Report (multi-location): configure, citation tracking, and why not receiving merged into FAQ
+          { from: '/multi-location-business-app/executive-report/configure-multi-location-executive-report', to: '/multi-location-executive-report' },
+          { from: '/multi-location-business-app/executive-report/citation-tracking', to: '/multi-location-executive-report' },
+          { from: '/multi-location-business-app/executive-report/why-multi-location-users-not-receiving-executive-report', to: '/multi-location-executive-report' },
+          // Campaigns: Day 0 FAQ merged into index
+          { from: '/marketing/campaigns/what-is-day-0-in-a-campaign', to: '/marketing/campaigns/' },
+          // Premium Reports: overview merged into index
+          { from: '/reports/premium-reports/overview', to: '/reports/premium-reports/' },
+          // Metrics: SaaS Metrics dashboard merged into index
+          { from: '/reports/metrics/saas-metrics-dashboard', to: '/reports/metrics/' },
           { from: '/legacy/customer-voice/faqs/can-i-customize-buttons', to: '/legacy/customer-voice/' },
           { from: '/legacy/customer-voice/faqs/can-i-hide-business-address', to: '/legacy/customer-voice/' },
           { from: '/legacy/customer-voice/faqs/can-the-link-in-sms-template-be-changed', to: '/legacy/customer-voice/' },
