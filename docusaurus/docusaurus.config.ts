@@ -113,24 +113,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     // Vendasta's social card
     image: 'img/vendasta-social-card.jpg',
     navbar: {
-      title: 'Partner Center',
+      title: '',
       logo: {
         alt: 'Vendasta Logo',
-        src: 'img/vendasta-logo.png',
+        src: 'img/vendasta_logo_full.png',
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'mainSidebar',
           position: 'left',
-          label: 'Documentation',
+          label: 'DOCUMENTATION',
         },
         {
           type: 'html',
           position: 'right',
           value: `<a href="https://docs.businessapp.io/" target="_blank" rel="noopener noreferrer" class="business-app-navbar-button">
-            <span class="button-text">Business App Docs</span>
-            <span class="diagonal-arrow">↗</span>
+            <span class="diagonal-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13" fill="none">
+  <path d="M13.3333 0L10 3.33333H12.5V9.16667C12.5 10.0833 11.75 10.8333 10.8333 10.8333C9.91667 10.8333 9.16667 10.0833 9.16667 9.16667V3.33333C9.16667 1.49167 7.675 0 5.83333 0C3.99167 0 2.5 1.49167 2.5 3.33333V9.16667H0L3.33333 12.5L6.66667 9.16667H4.16667V3.33333C4.16667 2.41667 4.91667 1.66667 5.83333 1.66667C6.75 1.66667 7.5 2.41667 7.5 3.33333V9.16667C7.5 11.0083 8.99167 12.5 10.8333 12.5C12.675 12.5 14.1667 11.0083 14.1667 9.16667V3.33333H16.6667L13.3333 0Z" fill="white"/>
+</svg></span>
+            <span class="button-text"> Switch to Business App docs </span>
+            
           </a>`,
         },
       ],
