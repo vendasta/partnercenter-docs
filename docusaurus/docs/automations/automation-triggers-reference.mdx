@@ -60,6 +60,7 @@ Some triggers are simple and are ready out-of-the-box, while other triggers may 
 | A user on an account makes a payment | Starts the workflow when a customer makes a payment. The payment can succeed or fail. | None | When a payment fails, begin a Dunning process (i.e. using multiple actions) to ensure payment is collected. |
 | A sales task status is changed | Starts the workflow when a sales task has its status changed to a specified status. The task's assignee and task name can also be specified for the event. | The corresponding "Delay until an event happens" action that uses this trigger doesn't currently allow assignee and task name filters, due to the task event being a resource that is fetched and used as output data on the trigger but similar infrastructure doesn't currently exist on the "delay" action. | When a task named "follow up" and assigned to "Joe Smith" changes its status to waiting on the customer, send an email letting the customer know. |
 | A Snapshot Report is created | Starts the workflow when a Snapshot Report is created | All snapshots generally start as F ratings. This is because web scraping takes time. Users are advised to add delay steps after this trigger to ensure more accurate ratings are available. | When a Snapshot Report is created, create a task to schedule a follow-up call. Assign a fulfillment agent to that task. |
+| An invoice status is changed | Starts the workflow when an invoice status changes (e.g., to Past Due or Paid). | This trigger is ideal for automated reminders but cannot dynamically include invoice PDFs or payment links. | When an invoice becomes past due, send a reminder email and create a follow-up task. |
 
 ### Manual
 
@@ -107,6 +108,7 @@ Some triggers are simple and are ready out-of-the-box, while other triggers may 
 3. **Follow-up Workflows**: Use "campaign activity" or "task status changed" triggers
 4. **Payment Processing**: Use "payment made" triggers with success/failure options
 5. **Lead Nurturing**: Use "contact created" or "lead stage changed" triggers
+6. **Billing Follow-ups**: Use "invoice status changed" for dunning and reminders.
 
 ### Trigger Conditions Best Practices
 
