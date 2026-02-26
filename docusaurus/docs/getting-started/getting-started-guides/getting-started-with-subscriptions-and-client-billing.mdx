@@ -1,5 +1,5 @@
 ---
-title: Subscriptions & Client Billing
+title: Subscriptions & client billing
 sidebar_label: Subscriptions & Client Billing
 description: "Learn how to manage subscriptions and client billing in the Vendasta platform."
 sidebar_position: 5
@@ -7,6 +7,155 @@ tags: [getting-started, subscriptions, billing]
 keywords: [subscriptions, client billing, billing]
 ---
 
-# Subscriptions & Client Billing
+# Subscriptions & client billing
 
-*Content coming soon.*
+When you activate a product for a client, Vendasta automatically creates a **subscription** to track that recurring service. Subscriptions are the engine behind client billing: they determine when invoices are generated, how much clients are charged, and how you collect payment. This guide walks you through how subscriptions work, how to configure billing for your clients, and how to manage invoices over time.
+
+## Getting started checklist
+
+1. [Understand how subscriptions work](#step-1-understand-how-subscriptions-work): learn the difference between wholesale and retail subscriptions
+2. [Configure your billing settings](#step-2-configure-your-billing-settings): set default billing rules and customize them per client
+3. [Send and manage invoices](#step-3-send-and-manage-invoices): create, send, and track invoices for your clients
+4. [Apply discounts and tax rates](#step-4-optional-apply-discounts-and-tax-rates) *(optional)*: add discounts and configure tax for professional invoicing
+
+---
+
+## Step 1: Understand how subscriptions work
+
+Every time you activate a product for a client account, Vendasta creates two subscriptions automatically:
+
+- **Wholesale subscription**: what you pay Vendasta for the product
+- **Retail subscription**: what you charge your client for the product
+
+As a partner, you primarily work with **retail subscriptions**. These control what your client is billed and when. You can view, edit, and cancel retail subscriptions from the client's account page.
+
+### Where to find subscriptions
+
+Navigate to **Partner Center** > **Accounts** > **Manage Accounts**, open a client account, and click the **Subscriptions** tab. You'll see all active retail subscriptions for that account, along with their prices, renewal dates, and billing status.
+
+:::note
+Activating a product creates a subscription to track the service, but it does not automatically charge your client. Billing only occurs when you have subscription billing configured and turned on. See Step 2 below to set this up.
+:::
+
+### Subscription renewal and invoicing
+
+Subscriptions renew on a set date (monthly, yearly, or one time, depending on the product). When a renewal occurs, the platform generates an invoice for your client based on the billing settings you've configured. Subscriptions that share the same renewal date are consolidated into a single invoice.
+
+[Learn more about subscriptions](/commerce/subscriptions/)
+
+[Back to checklist](#getting-started-checklist)
+
+---
+
+## Step 2: Configure your billing settings
+
+You can configure billing at two levels: **default settings** that apply to all new accounts, and **account-level settings** that override the defaults for individual clients.
+
+### Set your default billing settings
+
+Default billing settings are applied automatically to every new account you create, saving you from configuring each one manually.
+
+Navigate to **Partner Center** > **Administration** > **Default Billing Settings**.
+
+1. Turn the billing toggle **On**.
+2. Choose a **Collection method**:
+   - **Create a draft invoice**: generates an invoice and saves it as a draft for you to review and send manually
+   - **Email payable invoice to billing recipient**: automatically emails the invoice to your client on renewal
+   - **Automatically charge payment method on file**: charges your client's saved card automatically (requires Vendasta Payments and a saved payment method)
+3. Set the **Collect on** day to control when invoices are generated each month.
+4. Click **Save**.
+
+:::info
+Default settings apply only to accounts created after you save. Existing accounts keep their current billing configuration. To update an existing account, use the account-level settings below.
+:::
+
+### Configure billing for an individual client
+
+To override the defaults for a specific client:
+
+1. Open the client account in **Manage Accounts**.
+2. Click the **Subscriptions** tab, then click **Billing Settings** in the top right corner.
+3. Toggle **Retail Subscriptions** and **Subscription Billing** on.
+4. Choose a collection method and timing, just as you would in default settings.
+5. Optionally add an **Account Memo** that will appear on every invoice sent to this client.
+6. Click **Save**.
+
+:::tip
+Use the **Same day of the month** collection timing option to consolidate all of a client's renewals into one invoice per month, regardless of when individual products renew.
+:::
+
+[Learn more about default billing settings](/administration/commerce/default-billing-settings/)
+
+[Back to checklist](#getting-started-checklist)
+
+---
+
+## Step 3: Send and manage invoices
+
+Invoices are how you formally request and collect payment from your clients. They can be generated automatically from subscription renewals, or created manually for one-off charges.
+
+Navigate to **Partner Center** > **Commerce** > **Invoices**.
+
+### Create an invoice manually
+
+1. Click **New** > **Invoice** and select the client account.
+2. Set a **Due date** and choose a **User** (the recipient at the client's account).
+3. Click **Add Item** to add products from your Marketplace, or **Add Custom Item** to enter a custom line item.
+4. Review the subtotal and total, then click **Send Invoice** to email it to the recipient.
+
+:::tip
+Draft invoices can be edited as many times as needed before sending. Once sent, an invoice cannot be edited. If you need to correct a sent invoice, void it and create a new one.
+:::
+
+### Collect payment
+
+How you collect payment depends on your setup:
+
+| Method | How it works |
+|---|---|
+| **Email invoice** | Client receives an email and pays online (requires Vendasta Payments) |
+| **Charge on file** | Client's saved card is automatically charged on renewal |
+| **Manual** | You collect payment outside the platform and mark the invoice as **Paid** |
+
+To mark an invoice as paid manually: go to **Commerce** > **Invoices**, click the options menu (⋮) on the invoice, select **Change invoice status**, and choose **Paid**.
+
+### Invoice statuses
+
+| Status | Meaning |
+|---|---|
+| **Draft** | Created but not yet sent; can still be edited |
+| **Due** | Sent to the client; no longer editable |
+| **Paid** | Payment has been collected |
+| **Void** | Cancelled; no longer actionable |
+
+[Learn more about invoices](/commerce/invoices/)
+
+[Back to checklist](#getting-started-checklist)
+
+---
+
+## Step 4: (Optional) Apply discounts and tax rates
+
+### Apply a discount
+
+You can apply a discount to a one-off invoice or to a recurring subscription:
+
+- **Invoice discount**: open the invoice, click **Discount**, choose a percentage or fixed amount, and click **Apply**. This applies to that invoice only.
+- **Subscription discount**: open the subscription, click **Discount**, set the type and value, and choose how long it applies (ongoing, a limited time, or once). This carries forward to future invoices generated from that subscription.
+
+:::note
+Only one discount can be applied per invoice line item.
+:::
+
+### Set up tax rates
+
+If you need to charge tax on your invoices, create tax rates first in **Partner Center** > **Administration** > **Tax Rates**.
+
+1. Click **Create Tax Rate** and enter the country, state/province, name, and rate.
+2. Click **Save**.
+
+Once created, tax rates can be applied to individual line items on any invoice. Open the invoice, click the options menu (⋮) on a line item, and select **Set Item Tax**.
+
+[Learn more about discounts and tax rates](/commerce/invoices/discounts-in-invoices-and-subscriptions)
+
+[Back to checklist](#getting-started-checklist)
