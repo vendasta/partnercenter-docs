@@ -1,0 +1,50 @@
+---
+title: Automation workflows for invoices
+description: Learn how to use automations to manage invoice follow-ups, reminders, and notifications, and understand the limitations of dynamic invoice content in automations.
+sidebar_position: 8
+---
+
+# Automation workflows for invoices
+
+Automations can streamline your billing processes by triggering actions based on invoice status changes. While automations are powerful for follow-ups and internal notifications, it is important to understand the differences between system-generated invoice emails and custom automation emails.
+
+## Common use cases
+
+The most common use case for invoice-related automation is the **Invoice status changed to past due** trigger. This allows you to:
+
+*   **Send a custom reminder email**: Automatically email a client when their invoice is overdue.
+*   **Create a follow-up task**: Assign a task to a salesperson or fulfillment agent to reach out to the client.
+*   **Notify your team**: Send an in-app or email notification to internal staff about the overdue payment.
+*   **Update CRM data**: Tag the account or move an opportunity to a specific stage based on payment status.
+
+## Limitations and "Gotchas"
+
+When building invoice automations, keep the following limitations in mind:
+
+### Automation emails vs. System emails
+The **Send Email** step in automations allows you to send custom, branded emails. However, unlike the system-generated emails sent directly from the **Commerce > Invoices** section, automation emails:
+*   **Cannot automatically attach the invoice PDF.**
+*   **Cannot automatically generate a dynamic invoice payment link.**
+
+Official invoices, including the PDF attachment and the unique "Pay this invoice" link, are sent automatically by the platform when an invoice is first issued or when you use the **Resend Invoice** option in Partner Center.
+
+### Dynamic payment links
+Currently, there is no built-in automation variable (e.g., `{{invoice_payment_link}}`) that dynamically pulls the unique payment link for a specific invoice into an automation "Send Email" step.
+
+**Workaround**: If you wish to include a payment link in an automated reminder email, you can:
+1.  **Use a static link**: Direct clients to the **Invoices** tab in their Business App (e.g., `https://business.app/invoices`), where they can view and pay all outstanding invoices.
+2.  **Manual intervention**: Use the automation to create a **Fulfillment Task** for your team. The team member can then copy the unique payment link from the invoice in Partner Center and send a personalized message.
+
+## How to set up an invoice reminder
+
+1.  In Partner Center, go to **Automations** and click **Create**.
+2.  **Trigger**: Select **An invoice status is changed**.
+3.  **Trigger Options**: Set the status to **Past Due**.
+4.  **Step**: Add a **Send Email** step.
+5.  **Content**: Write a friendly reminder. Instead of a dynamic invoice link, include a button or link directing the user to their Business App to pay: `https://business.app/invoices`.
+6.  **Step (Optional)**: Add a **Create a fulfillment task** step to ensure a team member follows up if the invoice remains unpaid after a certain period.
+
+## Related Resources
+*   [Automation Triggers Reference](./automation-triggers-reference.mdx)
+*   [Automation Steps Reference](./automation-steps-reference.mdx)
+*   [Create and Manage Invoices](../commerce/invoices/create-and-send-invoices.mdx)
