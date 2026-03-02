@@ -154,6 +154,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/multi-location-business-app/executive-report/configure-multi-location-executive-report', to: '/multi-location-business-app/executive-report/' },
           { from: '/multi-location-business-app/executive-report/citation-tracking', to: '/multi-location-business-app/executive-report/' },
           { from: '/multi-location-business-app/executive-report/why-multi-location-users-not-receiving-executive-report', to: '/multi-location-business-app/executive-report/' },
+          // Business App: mobile-app and sso-integrations moved to businessapp-docs
+          { from: '/business-app/mobile-app', to: '/business-app/' },
+          { from: '/business-app/sso-integrations', to: '/business-app/' },
+          // Business App: get-started moved to customize-business-app/setup-guide
+          { from: '/business-app/get-started', to: '/administration/platform-settings/customize-business-app/setup-guide' },
           // My Meetings: create-booking-links merged into index
           { from: '/crm/my-meetings/create-booking-links', to: '/crm/my-meetings/' },
           // Campaigns: Day 0 FAQ merged into index
