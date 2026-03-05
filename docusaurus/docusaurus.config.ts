@@ -257,26 +257,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     // Vendasta's social card
     image: 'img/vendasta-social-card.jpg',
     navbar: {
-      title: 'Partner Center',
+      title: '',
       logo: {
         alt: 'Vendasta Logo',
-        src: 'img/vendasta-logo.png',
+        src: 'img/vendasta_logo_full.png',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'mainSidebar',
-          position: 'left',
-          label: 'Documentation',
-        },
-        {
-          type: 'html',
-          position: 'right',
-          value: `<a href="https://docs.businessapp.io/" target="_blank" rel="noopener noreferrer" class="business-app-navbar-button">
-            <span class="button-text">Business App Docs</span>
-            <span class="diagonal-arrow">↗</span>
-          </a>`,
-        },
+        // Moved to DocSidebar swizzle (src/theme/DocSidebar/index.tsx)
       ],
     },
     footer: {
