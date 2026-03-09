@@ -155,51 +155,20 @@ ul.theme-doc-sidebar-menu.menu__list li.theme-doc-sidebar-item-link-level-1:firs
   .navbar-sidebar {
     background: linear-gradient(90deg, var(--Vendasta-Navy, #072337) 0%, var(--Platform-Blue-Shade, #0D3B69) 100%) !important;
   }
-}
 
-/* ===========================================
-   Sidebar Visual Hierarchy Styles
-   =========================================== */
-
-.menu__list-item.sidebar-section-header > .menu__link {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #222c3c;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  cursor: default;
-}
-
-.menu__list-item.sidebar-section-header:not(:first-child) {
-  border-top: 1px solid #ececec;
-  padding-top: 1em;
-  margin-top: 1.25em;
-  margin-bottom: 0.4em;
-  padding-left: 1em;
-}
-
-.theme-doc-sidebar-item-category.sidebar-guides-divider {
-  border-top: 1px solid var(--ifm-color-emphasis-200);
-  margin-top: 0.75rem;
-  padding-top: 0.5rem;
-}
-
-.theme-doc-sidebar-item-category.sidebar-guides-divider .menu__list-item-collapsible > .menu__link {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--ifm-color-emphasis-700);
-  cursor: default;
-}
-
-.theme-doc-sidebar-item-link.sidebar-guide-link > .menu__link {
-  font-style: italic;
-  color: var(--ifm-color-emphasis-800);
-}
-
-[data-theme='dark'] .theme-doc-sidebar-item-link.sidebar-guide-link > .menu__link {
-  color: var(--ifm-color-emphasis-200);
+  /* Sidebar close (X) button: white on navy */
+  .navbar-sidebar__close,
+  button.navbar-sidebar__close {
+    color: white !important;
+  }
+  .navbar-sidebar__close svg,
+  .navbar-sidebar__close svg path,
+  .navbar-sidebar__close svg rect,
+  .navbar-sidebar__close svg line {
+    fill: white !important;
+    stroke: white !important;
+    color: white !important;
+  }
 }
 
 .menu__list .menu__list {
@@ -384,18 +353,26 @@ button[title*="theme"] {
   }
 }
 
+/* Hamburger toggle: white on navy navbar */
+.navbar__toggle {
+  color: white !important;
+}
+.navbar__toggle svg {
+  fill: white !important;
+}
+
 /* ========================  End of Navbar Layout ======================== */
 
-/* ========================  Search Bar (restored) ======================== */
+/* ========================  Search Bar ======================== */
 
 .navbar__search-local,
 .search-local-container,
 div[class*="searchBox"],
 form[role="search"],
 .navbar__search {
-  position: relative !important;
-  width: 400px !important;
-  max-width: 400px !important;
+  position: relative;
+  width: 500px !important;
+  max-width: 500px !important;
 }
 
 .navbar__search-local input,
@@ -404,32 +381,22 @@ div[class*="searchBox"] input,
 form[role="search"] input,
 .navbar__search input {
   width: 100% !important;
-  min-width: 500px !important;
-  padding: 8px 16px 8px 40px !important;
-  font-size: 14px !important;
-  border-radius: 4px !important;
-  margin-top: 0 !important;
+  min-width: 0;
+  padding: 8px 16px 8px 40px;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-top: 0;
+  /* Prevent Infima's width transition from animating on hover/load */
+  transition: none !important;
 }
 
-.navbar__search-local input::placeholder,
-.search-local-container input::placeholder,
-div[class*="searchBox"] input::placeholder,
-form[role="search"] input::placeholder,
-.navbar__search input::placeholder {
-  padding-left: 0 !important;
-  text-indent: 0 !important;
-}
-
-.navbar__search-local::before,
-.search-local-container::before,
-div[class*="searchBox"]::before,
-form[role="search"]::before,
-.navbar__search::before {
-  position: absolute !important;
-  left: 12px !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  z-index: 1 !important;
+/* When autocomplete.js initialises on first hover, it wraps the input in a <span>
+   with a hashed "searchBar_xxx" class. That span defaults to inline-block with no
+   width, causing the input's width:100% to resolve against a zero-width parent.
+   Force it to block so the input fills the 500px container correctly. */
+.navbar__search span[class*="searchBar"] {
+  display: block !important;
+  width: 100% !important;
 }
 
 /* Hide keyboard shortcuts */
@@ -446,8 +413,6 @@ span[class*="key-hint"],
 div[class*="searchBox"] span:last-child,
 form[role="search"] span:last-child {
   display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
 }
 
 @media screen and (max-width: 996px) {
@@ -465,28 +430,31 @@ form[role="search"] span:last-child {
   div[class*="searchBox"] input,
   form[role="search"] input,
   .navbar__search input {
-    min-width: 200px !important;
-    padding: 8px 16px 8px 32px !important;
+    min-width: 0;
+    padding: 8px 16px 8px 32px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
+  /* Container and autocomplete wrapper: shrink to content */
   .navbar__search-local,
   .search-local-container,
   div[class*="searchBox"],
   form[role="search"],
-  .navbar__search {
-    width: 150px !important;
-    max-width: 150px !important;
+  .navbar__search,
+  .navbar__search span[class*="searchBar"] {
+    width: auto !important;
+    max-width: none !important;
   }
 
-  .navbar__search-local input,
-  .search-local-container input,
-  div[class*="searchBox"] input,
-  form[role="search"] input,
-  .navbar__search input {
-    min-width: 150px !important;
-    padding: 8px 12px 8px 28px !important;
+  /* Collapsed: show only the magnifying glass icon */
+  .navbar__search input:not(:focus) {
+    width: 2rem !important;
+  }
+
+  /* Expanded: on tap, fill most of the navbar */
+  .navbar__search input:focus {
+    width: calc(100vw - 120px) !important;
   }
 }
 
@@ -1292,227 +1260,6 @@ article header h1 {
 
 
 
-/* Restructure navbar layout to center search bar * /
-.navbar__inner {
-  display: grid !important;
-  grid-template-columns: 1fr auto 1fr !important;
-  align-items: center !important;
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
-/* Left side: Logo and Overview navigation * /
-.navbar__items--left {
-  display: flex !important;
-  align-items: center !important;
-  justify-self: start !important;
-}
-
-/* Center: Search bar (moves from right to center) * /
-.navbar__items--right {
-  justify-self: center !important;
-  display: flex !important;
-  justify-content: center !important;
-}
-
-/* Right side container for Business App Docs + Theme toggle * /
-.navbar__items--right::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-/* Create a right-side container for buttons * /
-.navbar__items--right::after {
-  content: '';
-  position: absolute !important;
-  right: 0.5rem !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.5rem !important;
-  z-index: 10 !important;
-}
-
-/* Completely hide the theme toggle * /
-.navbar__items--right .navbar__item:last-child,
-.navbar__items--right button[class*="colorModeToggle"],
-.navbar__items--right button[class*="darkToggle"],
-.navbar__items--right button[class*="lightToggle"],
-.navbar__items--right .clean-btn,
-.navbar [aria-label*="Switch between dark and light mode"],
-.navbar [title*="Switch between dark and light mode"],
-button[title*="dark"],
-button[title*="light"],
-button[title*="theme"] {
-  display: none !important;
-  visibility: hidden !important;
-}
-
-/* Move Business App Docs button to far right * /
-.business-app-navbar-button {
-  position: absolute !important;
-  right: 0.5rem !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  z-index: 10 !important;
-}
-
-/* Theme toggle is completely hidden - no styling needed * /
-
-/* Search bar styling - target the local search plugin classes * /
-.navbar__search-local,
-.search-local-container,
-div[class*="searchBox"],
-form[role="search"],
-.navbar__search {
-  width: 400px !important;
-  max-width: 400px !important;
-}
-
-.navbar__search-local input,
-.search-local-container input,
-div[class*="searchBox"] input,
-form[role="search"] input,
-.navbar__search input {
-  width: 100% !important;
-  min-width: 500px !important;
-  padding: 8px 16px 8px 40px !important; /* Add left padding for search icon * /
-  font-size: 14px !important;
-  border-radius: 4px !important;
-  margin-top: 13px;
-}
-
-/* Fix search placeholder positioning to avoid overlap with magnifying glass * /
-.navbar__search-local input::placeholder,
-.search-local-container input::placeholder,
-div[class*="searchBox"] input::placeholder,
-form[role="search"] input::placeholder,
-.navbar__search input::placeholder {
-  padding-left: 0 !important;
-  text-indent: 0 !important;
-}
-
-/* Search icon positioning * /
-.navbar__search-local::before,
-.search-local-container::before,
-div[class*="searchBox"]::before,
-form[role="search"]::before,
-.navbar__search::before {
-  position: absolute !important;
-  left: 12px !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  z-index: 1 !important;
-}
-
-/* Ensure search input has proper positioning context * /
-.navbar__search-local,
-.search-local-container,
-div[class*="searchBox"],
-form[role="search"],
-.navbar__search {
-  position: relative !important;
-  width: 400px !important;
-  max-width: 400px !important;
-}
-
-/* Hide keyboard shortcuts completely * /
-.search-local-container kbd,
-div[class*="searchBox"] kbd,
-form[role="search"] kbd,
-.navbar__search kbd,
-span[class*="shortcut"],
-span[class*="key-hint"],
-.search-shortcut,
-[aria-label*="shortcut"],
-[title*="shortcut"] {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-}
-
-/* Target specific keyboard shortcut patterns * /
-span:contains("⌘"),
-span:contains("Ctrl"),
-span:contains("⌘K"),
-span:contains("Ctrl K"),
-*[data-key="cmd"],
-*[data-key="ctrl"],
-*[data-key="k"] {
-  display: none !important;
-}
-
-/* Hide any trailing spans that might contain shortcuts * /
-.search-local-container span:last-child,
-div[class*="searchBox"] span:last-child,
-form[role="search"] span:last-child {
-  display: none !important;
-}
-
-/* Mobile responsiveness * /
-@media screen and (max-width: 996px) {
-  .navbar__inner {
-    grid-template-columns: 1fr auto !important;
-  }
-  
-  .navbar__items--right {
-    justify-self: end !important;
-  }
-  
-  .business-app-navbar-button {
-    position: relative !important;
-    right: auto !important;
-    top: auto !important;
-    transform: none !important;
-    margin-right: 0 !important;
-  }
-  
-  .navbar__search-local,
-  .search-local-container,
-  div[class*="searchBox"],
-  form[role="search"],
-  .navbar__search {
-    width: 200px !important;
-    max-width: 200px !important;
-  }
-  
-  .navbar__search-local input,
-  .search-local-container input,
-  div[class*="searchBox"] input,
-  form[role="search"] input,
-  .navbar__search input {
-    min-width: 200px !important;
-    padding: 8px 16px 8px 32px !important; /* Adjust padding for smaller mobile search * /
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .navbar__search-local,
-  .search-local-container,
-  div[class*="searchBox"],
-  form[role="search"],
-  .navbar__search {
-    width: 150px !important;
-    max-width: 150px !important;
-  }
-  
-  .navbar__search-local input,
-  .search-local-container input,
-  div[class*="searchBox"] input,
-  form[role="search"] input,
-  .navbar__search input {
-    min-width: 150px !important;
-    padding: 8px 12px 8px 28px !important; /* Further adjust padding for small mobile search * /
-  }
-}
-
 /* Fix letter spacing for headings * /
 h2 {
   letter-spacing: normal;
@@ -1753,71 +1500,9 @@ div[class*="language-"] pre {
   font-weight: normal !important;
 }
 
-/* ===========================================
-   Sidebar Visual Hierarchy Styles
-   =========================================== * /
-
-/* ------------------------------------------------------------ * /
-/*  Section header styling (kebab-case class)                   * /
-/* ------------------------------------------------------------ * /
-
-/* Target top-level <li> items that act as section headers.
- * We scope typography styles to the direct link element so that the
- * rules do NOT cascade down to child <li> elements that represent
- * actual doc links (e.g., "Getting Started With Business App").       * /
-
-/* Visual treatment for the label text * /
-.menu__list-item.sidebar-section-header > .menu__link {
-  font-size: 1rem;                /* Slightly larger than links * /
-  font-weight: 700;               /* Bold * /
-  color: #222c3c;                 /* Darker for emphasis * /
-  text-transform: uppercase;      /* All caps for headers * /
-  letter-spacing: 0.05em;         /* Space out the letters * /
-  cursor: default;                /* No pointer hand * /
-}
-
-/* Optional: Subtle divider for extra clarity * /
-.menu__list-item.sidebar-section-header:not(:first-child) {
-  border-top: 1px solid #ececec;
-  padding-top: 1em;
-  margin-top: 1.25em;             /* Space above section * /
-  margin-bottom: 0.4em;           /* Tighten below header * /
-  padding-left: 1em;              /* Align with menu items if indented * /
-}
-
-/* --------------------------------------------- * /
-/* Guides divider and link styling in sidebar    * /
-/* --------------------------------------------- * /
-
-/* Make the Guides category look like a divider/section header * /
-.theme-doc-sidebar-item-category.sidebar-guides-divider {
-  border-top: 1px solid var(--ifm-color-emphasis-200);
-  margin-top: 0.75rem;
-  padding-top: 0.5rem;
-}
-
-.theme-doc-sidebar-item-category.sidebar-guides-divider .menu__list-item-collapsible > .menu__link {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--ifm-color-emphasis-700);
-  cursor: default;
-}
-
-/* Distinct style for guide links * /
-.theme-doc-sidebar-item-link.sidebar-guide-link > .menu__link {
-  font-style: italic;
-  color: var(--ifm-color-emphasis-800);
-}
-
-[data-theme='dark'] .theme-doc-sidebar-item-link.sidebar-guide-link > .menu__link {
-  color: var(--ifm-color-emphasis-200);
-}
-
 /* Background shading and left border for nested sections - level 2 * /
 .menu__list .menu__list {
-  background-color: var(--ifm-color-emphasis-100);
+  background-color: transparent;
   border-left: 2px solid rgb(5, 93, 149);
   border-radius: 0 4px 4px 0;
   margin-left: 0.5rem;
@@ -1827,7 +1512,7 @@ div[class*="language-"] pre {
 
 /* Deeper nesting - level 3 * /
 .menu__list .menu__list .menu__list {
-  background-color: var(--ifm-color-emphasis-200);
+  background-color: rgba(255, 255, 255, 0.05);
   font-size: 0.95em;
 }
 
@@ -1838,7 +1523,7 @@ div[class*="language-"] pre {
 
 /* Hover state for child items * /
 .menu__list .menu__list .menu__link:hover {
-  background-color: var(--ifm-color-emphasis-200);
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 /* Active item highlighting * /
