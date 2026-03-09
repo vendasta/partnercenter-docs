@@ -752,6 +752,80 @@ div[class*="language-"] pre {
 
 /* ========================  End of Homepage & Cards ======================== */
 
+/* ========================  Footer  ======================== */
+
+.footer {
+  background: transparent !important;
+  padding: 0 !important;
+  height: 62px !important;
+  border: none !important;
+}
+
+.footer__links {
+  display: none !important;
+}
+
+.footer > .container,
+.footer > .container-fluid {
+  height: 100% !important;
+  padding: 0 24px !important;
+  max-width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.footer__bottom {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.footer__copyright {
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.footer-slim-inner {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 32px !important;
+  height: 50px;
+  white-space: nowrap;
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+}
+
+.footer-slim-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.footer-slim-links a {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 13px;
+  text-decoration: none !important;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+
+.footer-slim-links a:hover {
+  color: #fff !important;
+}
+
+/* ========================  Sidebar separators  ======================== */
+
+ul.theme-doc-sidebar-menu.menu__list > li:nth-child(3),
+ul.theme-doc-sidebar-menu.menu__list > li:nth-child(21) {
+  border-top: 1px solid #245A7D;
+  padding-top: 10px;
+}
+
 /*
 
 
@@ -1790,10 +1864,8 @@ div[class*="language-"] pre {
   font-weight: 600;
 }
 
-/* Hide docs that opt-in via frontmatter `sidebar_class_name: hide-from-sidebar` * /
+/* Hide docs that opt-in via frontmatter `sidebar_class_name: hide-from-sidebar` */
 .theme-doc-sidebar-item-link.hide-from-sidebar,
 .theme-doc-sidebar-item-category-link.hide-from-sidebar {
   display: none !important;
 }
-
-*/

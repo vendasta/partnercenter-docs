@@ -267,76 +267,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       ],
     },
     footer: {
-      style: 'light',
-      links: [
-        {
-          title: 'RESOURCES',
-          items: [
-            {
-              label: 'Vendasta Website',
-              href: 'https://www.vendasta.com/ai/',
-            },
-            {
-              label: 'Blog',
-              href: 'https://www.vendasta.com/blog/',
-            },
-            {
-              label: 'Content Library',
-              href: 'https://www.vendasta.com/content-library/',
-            },
-            {
-              label: 'Community',
-              href: 'https://www.facebook.com/groups/vendasta',
-            },
-            {
-              label: 'Service Status',
-              href: 'https://status.vendasta.com/',
-            },
-          ],
-        },
-        {
-          title: 'COMPANY',
-          items: [
-            {
-              label: 'About Us',
-              href: 'https://www.vendasta.com/company/',
-            },
-            {
-              label: 'Contact',
-              href: 'https://www.vendasta.com/contact/',
-            },
-            {
-              label: 'Newsroom',
-              href: 'https://www.vendasta.com/newsroom/',
-            },
-          ],
-        },
-        {
-          title: 'LEGAL',
-          items: [
-            {
-              label: 'Terms of Service',
-              href: 'https://www.vendasta.com/terms/',
-            },
-            {
-              label: 'Privacy Policy',
-              href: 'https://www.vendasta.com/privacy/',
-            },
-            {
-              label: 'Cookie Policy',
-              to: '/legal/cookie-policy',
-            },
-            {
-              html: '<a href="#cookie-settings" data-cookie-settings-link>Cookie Settings</a>',
-            },
-            {
-              label: 'GDPR',
-              href: 'https://www.vendasta.com/gdpr/',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Vendasta Technologies Inc.`,
+      style: 'dark',
+      links: [],
+      copyright: `
+        <div class="footer-slim-inner">
+          <span class="footer-copyright">© Vendasta ${new Date().getFullYear()}</span>
+          <nav class="footer-slim-links">
+            <a href="/getting-started">Getting Started</a>
+            <a href="https://www.vendasta.com/terms/" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+            <a href="https://www.vendasta.com/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+            <a href="https://www.vendasta.com/gdpr/" target="_blank" rel="noopener noreferrer">GDPR</a>
+          </nav>
+        </div>
+      `,
     },
     prism: {
       theme: prismThemes.github,
