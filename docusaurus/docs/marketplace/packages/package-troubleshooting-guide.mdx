@@ -127,6 +127,24 @@ Solution: Review user configuration and access rights
 Check: Confirm package is available in the customer's target market
 Solution: Review market assignments and availability settings
 
+### Issue 4: Package pricing changed after editing
+
+Symptoms
+- Package pricing looks different after opening and saving an existing package
+- Line items now show individual prices that weren't visible before
+- Total price appears redistributed across items
+
+Root cause
+Existing packages automatically migrate to the line-item pricing model the first time they are edited and saved in the package constructor. This migration distributes the package's total price across individual line items using a weighted breakdown based on each item's retail value and billing frequency.
+
+Resolution
+1. Open the package in **Marketplace > Packages**
+2. Review the individual line-item prices to confirm they look correct
+3. Adjust any item-level prices as needed, or set a new total package price to trigger smart price allocation
+4. Save the package
+
+This migration is a one-time conversion. After saving, the package uses the new pricing model going forward. The overall package price is preserved during migration — only the per-item breakdown is new.
+
 ## Advanced troubleshooting scenarios
 
 ### Multi‑market package synchronization
