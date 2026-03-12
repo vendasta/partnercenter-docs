@@ -158,15 +158,17 @@ Compatible settings
 - **Purchase Behavior** - Set to "Add to Shopping Cart"
 - **Standard Pricing** - Fixed pricing without "Starting at" options
 - **No Contact Sales** - Direct purchase capability enabled
-- **Current Package Format** - Using updated package pricing settings
+- **Line-Item Pricing Model** - Package uses the current line-item pricing model
 
 Incompatible configurations
 Packages with the following settings cannot be purchased through shopping cart:
 - **Starting Price Options** - Packages showing "Starting at" pricing
 - **Contact Sales Settings** - Packages requiring sales consultation
-- **Legacy Package Settings** - Packages using older pricing configurations
+- **Not Yet Migrated** - Packages that have not been opened and saved in the package constructor since the line-item pricing model was introduced. To migrate, edit the package in the constructor, review the pricing, and save. The migration happens automatically on save.
 
-> If any item in the cart is incompatible with direct purchase, checkout switches to sales order submission (no credit card).
+:::tip
+If any item in the cart is incompatible with direct purchase, checkout switches to sales order submission (no credit card).
+:::
 
 ### Purchase behavior impact
 

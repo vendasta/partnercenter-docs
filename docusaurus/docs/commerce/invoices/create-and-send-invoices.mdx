@@ -26,7 +26,7 @@ Note that it is possible to invoice a customer for any product you're selling or
 Invoices can be used most effectively when the following criteria are met:
 
 - You have set retail prices and added the product/package to your Store
-- Your Store uses packages that are priced using the new package pricing model
+- Your Store uses packages with line-item pricing (existing packages are automatically migrated when edited and saved in the package constructor)
 - An account exists for the business that you intend to invoice
 - You have set up Vendasta Payments and are capable of accepting payments and receiving payouts
 - You have created [tax rates](/administration/commerce/tax-rates/) (if applicable)
@@ -217,11 +217,9 @@ If you create a new invoice from scratch, the default currency will be **CAD**, 
 <details>
 <summary>Why isn't my package appearing when I try to add it to an invoice?</summary>
 
-If a package is not using the new package pricing model based on the retail prices of the individual products contained in the package, it cannot be added to an invoice.
+Packages must use the line-item pricing model to be added to an invoice. If your package was created before this model was available, open it in the package constructor, review the pricing, and save. The package will automatically migrate to the line-item pricing model on save.
 
-Partners can update their packages to use the new pricing model at any time.
-
-**Note:** Packages using the old pricing model also cannot be purchased through the Shopping Cart.
+**Note:** Packages that have not yet been migrated also cannot be purchased through the Shopping Cart.
 
 </details>
 
@@ -270,9 +268,7 @@ If your invoice is showing as past due before the actual due date, this could be
 <details>
 <summary>Why does my package product have an unexpected price when I add it to an invoice?</summary>
 
-If a package shows an unexpected price when added to an invoice, it may be using the old package pricing model. Packages need to use the new package pricing model based on the retail prices of individual products to work properly with invoicing.
-
-Partners can update their packages to use the new pricing model at any time through their Store settings.
+If a package shows an unexpected price when added to an invoice, it may not have been migrated to the line-item pricing model yet. Open the package in the package constructor, review the pricing, and save to trigger the automatic migration. Once migrated, the invoice will reflect the correct line-item pricing based on each product's retail price and billing frequency.
 
 </details>
 

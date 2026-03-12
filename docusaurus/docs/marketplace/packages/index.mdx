@@ -115,6 +115,10 @@ Navigate to **Partner Center** → **Marketplace** → **Packages** and select t
 
 Custom package creation gives you complete control over product combinations, pricing strategies, and customer experience design.
 
+:::info Automatic migration for existing packages
+Existing packages automatically convert to the new line-item pricing model the first time they are edited and saved in the package constructor. No manual migration is required — simply open, review, and save your package.
+:::
+
 ### Workflow
 
 #### Step 1: Initial setup
@@ -137,11 +141,14 @@ Market selection: if you use Markets, select the target market in the Packages t
 4. **Remove Items:** Click the X icon to remove unwanted products
 5. **Product Availability:** Ensure all included products are enabled for sale
 
+Packages support multi-frequency billing, so you can combine items with different billing cycles — monthly, yearly, and one-time — into a single package. Each item retains its own frequency, and retail subscriptions automatically reflect the correct cycle for each line item.
+
 **Selection strategy**
 - Group complementary products that solve related problems
 - Consider customer workflow and implementation order
 - Balance package value with price point accessibility
 - Plan for natural upgrade paths to higher-tier packages
+- Mix billing frequencies when it makes sense (e.g., a monthly service with a one-time setup product)
 
 #### Step 4: Purchase behavior
 Package purchase behavior determines customer interaction with your packages and significantly impacts conversion rates.
@@ -172,20 +179,32 @@ Once completed, your store will display **Contact Sales** for that package, prom
 
 #### Step 5: Pricing and cost analysis
 **Overview**
-The package creation interface provides real-time financial analysis displayed on the right side of the screen.
+The package constructor provides real-time financial analysis displayed on the right side of the screen. You have two flexible approaches to pricing your package — use them independently or together.
 
-**Retail price management**
-- **Default Pricing:** Uses Manufacturer's Suggested Retail Price (MSRP)
-- **Custom Pricing:** Override default with market-optimized pricing
-- **Dynamic Updates:** Pricing adjusts automatically as you add/remove products
-- **Price Display Options:**
-  - **Show as Starting at price** – Indicates variable pricing based on customization
-  - **Show Contact Sales instead of price** – Hides specific pricing for consultation-based sales
+**Item-level pricing control**
+Set a specific price and billing frequency for each line item in the package. This gives you complete control over how every item is priced.
+
+- Click the price on any line item to set a custom price
+- Each item can have its own billing frequency (monthly, yearly, or one-time)
+- The package total updates automatically as you adjust individual item prices
+
+**Smart price allocation**
+Prefer to set a single package price and let the system handle the rest? Enter a total package price and the system automatically distributes it across all items using a weighted breakdown based on each item's retail value and billing frequency.
+
+- Click the package total to enter your desired price
+- The system recalculates each line item's share proportionally
+- Useful when you want to offer a bundled discount without manually adjusting every item
+
+You can combine both approaches — set the total first using smart allocation, then fine-tune individual items as needed.
+
+**Price display options**
+- **Show as Starting at price** – Indicates variable pricing based on customization
+- **Show Contact Sales instead of price** – Hides specific pricing for consultation-based sales
 
 **Setup fees**
 - Add one-time implementation or setup charges
 - Separate recurring costs from initial investment
-- Account for onboarding and configuration services
+- If a setup fee is present, it is allocated to any one-time billed items in the package; if none exist, it applies to the first item
 
 **Cost analysis**
 - **Wholesale Cost:** Your total cost for all package components
@@ -205,10 +224,14 @@ Marketing materials appear when customers view packages in your Public Store or 
 - **Tagline** – Compelling value proposition summary
 - **Description** – Detailed explanation of package benefits and included services
 
-**Product display options**
-- **Show Product Icons and Names** – Display individual product components
-- **Show Product Details** – Include detailed product information
-- **Invoice Impact:** When product display is disabled, invoices show only package name and total price rather than individual line items
+**Preset visibility settings**
+Control what customers see by default when viewing a package. Choose one of the following presets:
+
+- **Package name only** – Customers see the package name and total price. Individual contents and item pricing are hidden.
+- **Show contents** – Customers see the package name and the list of included products, but individual item prices are hidden.
+- **Show contents and pricing** – Customers see the package name, included products, and the price for each individual line item.
+
+These presets apply to how the package appears in your Store, Business App, and on invoices.
 
 **Best practices**
 - Focus on customer outcomes rather than product features

@@ -49,17 +49,17 @@ The item will be removed from both the order and the package. The package total 
 4. In the modal, enter a name and set the pricing.
 5. Use the `Add to Package` flow to include additional items.
 
-### Change item pricing
+### Change item pricing (item-level pricing control)
 
-- Click the blue pricing input on any item in the package.
+- Click the blue pricing input on any item in the package to set a specific price for that line item.
 
 The package total will update to reflect the new combined price of all items.
 
-### Change package pricing
+### Change package pricing (smart price allocation)
 
-- Click the blue pricing input on the package total.
+- Click the blue pricing input on the package total to set a single price for the entire package.
 
-All item prices will be recalculated using a weighted distribution model based on each item's original retail value.
+All item prices will be automatically recalculated using a weighted breakdown based on each item's retail value and billing frequency.
 
 ## Customize package details
 
@@ -90,7 +90,8 @@ Retail subscriptions will automatically reflect each item’s respective billing
 
 ## Automatic pricing logic
 
-- Package pricing is distributed across all items based on their retail price and billing frequency.
+- **Item-level pricing control:** Set a specific price and frequency for each line item in the package for complete control.
+- **Smart price allocation:** Set a total package price and the system automatically distributes it across items using a weighted breakdown based on retail value and billing frequency.
 - If a setup fee is present, it will be allocated to any one-time billed items in the package.
 - If no one-time billed items exist, the setup fee will apply to the first item in the package.
 
