@@ -8,7 +8,7 @@ keywords: [package pricing, add item to package, package visibility, multifreque
 
 ## What is working with packages?
 
-Packages allow you to bundle multiple products or services together under a single price within an order or retail subscription. Each item in the package retains its own billing frequency, while pricing is automatically distributed based on item value and frequency.
+Packages allow you to bundle multiple products or services together within an order or retail subscription. Each item in the package retains its own billing frequency and individual price. When you add a package to an order, the line-item prices configured in the [package constructor](/marketplace/packages/) carry through directly, so the pricing you set at the package level is preserved in every order.
 
 ## Why is working with packages important?
 
@@ -16,8 +16,8 @@ Packages simplify selling and invoicing by grouping related items, enabling flex
 
 ## What you can do with packages
 
-- Automatically distribute pricing across package items
-- Adjust package and item-level pricing
+- Use prices from the package constructor as-is, or adjust them at the order level
+- Set individual line-item prices or use smart price allocation for a total package price
 - Manage setup fees within packages
 - Add or remove items from packages
 - Set customer visibility for package contents and prices
@@ -49,17 +49,19 @@ The item will be removed from both the order and the package. The package total 
 4. In the modal, enter a name and set the pricing.
 5. Use the `Add to Package` flow to include additional items.
 
-### Change item pricing (item-level pricing control)
+### Adjust item pricing in an order
 
-- Click the blue pricing input on any item in the package to set a specific price for that line item.
+Prices from the package constructor carry through automatically, but you can override them for a specific order:
 
-The package total will update to reflect the new combined price of all items.
+- Click the blue pricing input on any item in the package to set a different price for that line item.
 
-### Change package pricing (smart price allocation)
+The package total will update to reflect the new combined price of all items. This change applies only to the current order.
+
+### Adjust total package pricing in an order
 
 - Click the blue pricing input on the package total to set a single price for the entire package.
 
-All item prices will be automatically recalculated using a weighted breakdown based on each item's retail value and billing frequency.
+All item prices will be automatically recalculated using a weighted breakdown based on each item's retail value and billing frequency. This change applies only to the current order.
 
 ## Customize package details
 
@@ -90,8 +92,9 @@ Retail subscriptions will automatically reflect each item’s respective billing
 
 ## Automatic pricing logic
 
-- **Item-level pricing control:** Set a specific price and frequency for each line item in the package for complete control.
-- **Smart price allocation:** Set a total package price and the system automatically distributes it across items using a weighted breakdown based on retail value and billing frequency.
+- **Price pass-through:** When a package is added to an order, the individual line-item prices from the package constructor carry through directly. The order reflects the exact pricing configured in the package.
+- **Item-level pricing control:** You can override any line item's price at the order level. Click the blue pricing input on any item to set a custom price for that specific order.
+- **Smart price allocation:** Set a total package price at the order level and the system automatically distributes it across items using a weighted breakdown based on retail value and billing frequency.
 - If a setup fee is present, it will be allocated to any one-time billed items in the package.
 - If no one-time billed items exist, the setup fee will apply to the first item in the package.
 
