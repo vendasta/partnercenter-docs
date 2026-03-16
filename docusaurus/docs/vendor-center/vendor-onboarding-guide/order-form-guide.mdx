@@ -4,11 +4,11 @@ sidebar_label: Order form guide
 description: This article guides Marketplace Vendors through creating custom order forms to gather essential information from partners during product activation.
 ---
 
-*This article guides Marketplace Vendors through creating custom order forms to gather essential information from partners during product activation. While helpful for creating custom products for your clients, it is specifically designed to support official Marketplace Vendor integrations.*
+This article guides Marketplace Vendors through creating custom order forms to gather essential information from partners during product activation. While helpful for creating custom products for your clients, it is specifically designed to support official Marketplace Vendor integrations.
 
-## Order Form Overview
+## Order form overview
 
-**What is the purpose of an Order Form?**
+**What is the purpose of an order form?**
 
 Order forms allow you to request specific business information from partners when activating the app. There are also Fulfillment Forms, that allow for information to continue to be collected after the purchase is made. Both the standard Order Form, and Fulfillment Form utilize the same form builder.
 
@@ -21,11 +21,13 @@ You should use an order form if you need any additional information upon activat
 - Content gathering for digital advertising products etc.
 - Baseline configuration settings you **require** to set up a digital product.
 
-**It's best practice to avoid having an order form if at all possible, as it adds purchase friction. If you absolutely require certain data up front, then try to limit the length of the order form.**
+:::tip Best practice
+Avoid using an order form when possible, since it adds purchase friction. If you need certain data up front, keep the form short.
+:::
 
-## Creating an Order Form
+## Creating an order form
 
-1. Navigate to **Vendor Center > Product Name > Product Info > Product Activation > Order Form**, toggle the **Use a custom order form**.
+1. Navigate to **Vendor Center** → **Product Name** → **Product Info** → **Product Activation** → **Order Form**, then toggle **Use a custom order form**.
 2. Choose any necessary **Basic Information. AccountID** and **Company Name** are recommended.
    - These are **optional** by default to avoid completed order forms from containing irrelevant information. If you require any of this information check them off.
 
@@ -37,13 +39,13 @@ You should use an order form if you need any additional information upon activat
 4. To add a custom field, click **Add Form Field** and expand the New Form Field item that will have appeared.
 5. The **Order Form Footer** should be used to include information regarding the order itself such as service level agreements and is displayed to both the Reseller and their client.
 
-### Types of Form Fields
+### Types of form fields
 
 There are various types of form fields available. Underneath each is an example of that field as it would appear in Partner Center when activating a product:
 
 - **Files** – Used to request specific files.
 - **Drop Down** – A multi-option field where you can add options by selecting Add Option.
-- **Check Box** –Allows you to present the user with a single option in the form of a checkbox.
+- **Check Box** — Allows you to present the user with a single option in the form of a checkbox.
 - **Text Area** – An open-ended input that allows users to type long answers. This is especially useful when requesting a description.
 - **Text Box** – An input box that allows users to enter text for simple answers. You can add a prefix and suffix to this, as well as add regex validation (answers must be in a specific format).
   - One example might be that you want users to enter their website. You may start with a prefix of 'www.' and a suffix of '.com'.
@@ -55,19 +57,21 @@ There are various types of form fields available. Underneath each is an example 
 
 Form Fields can either be left as optional or Required. Requirements are often used for contact information, domains, digital advertising collateral, or shipping information for example.
 
-**Which Persona Will See the Order Form?**
+**Which persona will see the order form?**
 
-Each Form Field requires you to choose whether or not the form field is Hidden from end users or Office editable only.
+Each form field requires you to choose whether it is **Hidden from end users** or **Office editable only**.
 
-**Hidden from end users** will hide your question from the reseller's client, therefore the Reseller must provide a response to the form field. If you require specific Reseller contact information, this option should be selected.
+**Hidden from end users** hides your question from the reseller's client, so the Reseller must provide a response. Select this option if you need specific Reseller contact information.
 
-**Office Editable Only** means end users can see your order form field, but cannot provide a response. Making this selection means you may want the end user to be informed of certain configurations, but not be able to change them.
+**Office editable only** lets end users see the form field but not provide a response. Making this selection means you may want the end user to be informed of certain configurations, but not be able to change them.
 
-### Asking for Contact Information
+### Asking for contact information
 
 You may need to get in touch with either the Reseller or their client if you provide an initial onboarding or the SKU is a service. 
 
-**NOTE: Selecting the Primary Contact possibly will not result in obtaining the required contact information. The Primary Contact will automatically populate a random User from the account. You must identify and obtain contact information through a custom order form field. This will also allow you**
+:::warning Primary Contact does not provide required contact info
+Selecting the Primary Contact may not give you the contact information you need. The Primary Contact field automatically populates a user from the account. Use custom order form fields to capture the required contact information.
+:::
 
 ![](./img/partner-center/vendor-onboarding-guide/order-form-contact-info.png)
 
@@ -79,7 +83,9 @@ Start with a question for the Reseller to identify who you are able to communica
 
 ![](./img/partner-center/vendor-onboarding-guide/order-form-dropdown.png)
 
-**It's best practice to include a Check Box that is Required and Hidden from end users, for the Reseller to acknowledge that by choosing "End user", you will contact their customer directly, and this will not be a white labelled product.**
+:::tip Best practice
+Include a **Check Box** that is **Required** and **Hidden from end users** for the Reseller to acknowledge that by choosing "End user", you will contact their customer directly and this will not be a white-labelled product.
+:::
 
 Lastly, ensure you ask for the contact's name and contact information as **Required** and **Hidden from end users** Form Fields. Here's an example of the full order form requesting contact information if you don't have a preference for which persona you interact with on the project:
 
@@ -91,6 +97,8 @@ Your questions should be **Required** and **Hidden from end users** and include 
 
 ![](./img/partner-center/vendor-onboarding-guide/order-form-reseller-only.png)
 
-### Asking for Passwords
+### Asking for passwords
 
-The Sales and Fulfillment Order Forms are displayed in plain text all over the platform. These fields are not a suitable avenue for collecting sensitive data such as Passwords, or certain Account information etc.  The best way to obtain this type of information is through an encrypted email inbox or onboarding call.
+:::warning Avoid sensitive data in order forms
+Sales and Fulfillment order forms appear in plain text across the platform. Avoid using them for sensitive data such as passwords or account information. Collect that information through an encrypted email inbox or an onboarding call instead.
+:::
