@@ -30,9 +30,11 @@ Before setting up Vendasta Payments, make sure the following are in place.
 
 ### Complete your billing contact information
 
-Navigate to **Partner Center** > **Administration** > **My Billing**.
+Navigate to **Partner Center** → **Administration** → **My Billing**.
 
 Confirm that your **Billing Contact** information is complete, including a full address with postal code. Incomplete billing information is the most common reason setup fails, even in supported regions.
+
+<img src={require('./img/administration-my-billing.png').default} alt="Administration page showing My Billing option" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 ### Confirm your region is supported
 
@@ -52,9 +54,11 @@ If you see an "Unsupported in Your Area" error during setup, go back to **My Bil
 
 ## Step 2: Create your Vendasta Payments account
 
-Navigate to **Partner Center** > **Administration** > **Vendasta Payments**.
+Navigate to **Partner Center** → **Administration** → **Vendasta Payments**.
 
-1. Click **Set up Vendasta Payments**.
+<img src={require('./img/administration-vendasta-payments.png').default} alt="Administration page showing Vendasta Payments under Commerce settings" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+1. Click **Set up Stripe Account**.
 2. Review and accept the Vendasta Payments Terms of Service.
 3. Fill in your business information:
    - **Legal business name**: must match the name on your tax ID exactly
@@ -95,16 +99,19 @@ Fees are automatically deducted after each payment is collected. For full refund
 
 Once your Vendasta Payments account is approved, you need to add a bank account to receive client payments.
 
-Navigate to **Partner Center** > **Commerce** > **Payouts**, or go to **Administration** > **Vendasta Payments**.
+Navigate to **Partner Center** → **Commerce** → **Payouts**, or **Partner Center** → **Administration** → **Vendasta Payments**.
 
 1. Click **Add Bank Account** under the **Receiving Payout** section.
 2. Enter your bank account details:
-   - Account holder type (Individual or Company)
-   - Account holder name
-   - Bank account number
-   - Bank routing number
+   - **Country of bank account**
+   - **Currency**
+   - **Transit number**
+   - **Institution number**
+   - **Account number**
 3. Set this account as your **default** for payouts.
-4. Click **Save**.
+4. Click **Save bank account**.
+
+<img src={require('./img/receiving-bank-account.png').default} alt="Receiving bank account form with transit, institution, and account number fields" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 :::tip
 If you need to replace an existing bank account, add the new one first, set it as default, then remove the old one. You cannot remove a bank account while it is set as the default.
@@ -112,7 +119,7 @@ If you need to replace an existing bank account, add the new one first, set it a
 
 ### How payouts work
 
-After your first payment is received, Stripe holds the funds for up to one week. After that initial period, payouts are released on a 7-day rolling basis into your bank account. You can view all received payments under **Partner Center** > **Commerce** > **Payments**.
+After your first payment is received, Stripe holds the funds for up to one week. After that initial period, payouts are released on a 7-day rolling basis into your bank account. You can view all received payments under **Partner Center** → **Commerce** → **Payments**.
 
 ### Multi-currency payouts
 
@@ -128,7 +135,7 @@ If you operate in multiple countries, you can add separate bank accounts for eac
 
 If you already use Stripe to collect payments, you can connect your existing Stripe Standard account to Vendasta Payments instead of creating a new one.
 
-Navigate to **Partner Center** > **Administration** > **Vendasta Payments** and select **Connect Stripe Account**.
+Navigate to **Partner Center** → **Administration** → **Vendasta Payments** and select **Connect an existing account**.
 
 ### Requirements
 
