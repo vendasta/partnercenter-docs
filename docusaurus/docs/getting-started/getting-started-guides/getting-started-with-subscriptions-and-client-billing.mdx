@@ -33,6 +33,8 @@ As a partner, you primarily work with **retail subscriptions**. These control wh
 
 Navigate to **Partner Center** → **Accounts** → **Manage Accounts**, open a client account, and click the **Subscriptions** tab. You'll see all active retail subscriptions for that account, along with their prices, renewal dates, and billing status.
 
+<img src={require('./img/subscriptions-and-client-billing/subscriptions-tab.png').default} alt="Subscriptions tab in Manage Accounts" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
 :::note
 Activating a product creates a subscription to track the service, but it does not automatically charge your client. Billing only occurs when you have subscription billing configured and turned on. See Step 2 below to set this up.
 :::
@@ -57,13 +59,18 @@ Default billing settings are applied automatically to every new account you crea
 
 Navigate to **Partner Center** → **Administration** → **Default Billing Settings**.
 
-1. Turn the billing toggle **On**.
-2. Choose a **Collection method**:
-   - **Create a draft invoice**: generates an invoice and saves it as a draft for you to review and send manually
-   - **Email payable invoice to billing recipient**: automatically emails the invoice to your client on renewal
-   - **Automatically charge payment method on file**: charges your client's saved card automatically (requires Vendasta Payments and a saved payment method)
-3. Set the **Collect on** day to control when invoices are generated each month.
-4. Click **Save**.
+1. Turn the **Subscriptions** toggle **On**.
+2. Under **Subscription scheduling**, choose when subscriptions renew:
+   - **Use subscription start date**: each subscription renews based on when it was originally created.
+   - **Use a specific renewal date**: all new subscriptions renew on the same day of each month.
+3. Set the **Payment collection** method to **Automatic** or **Manual**.
+4. Under **Subscription renewal**, choose how invoices are handled:
+   - **Email payable invoice to billing recipient**: automatically emails the invoice to your client on renewal. Set the **Invoice due date** (e.g., within 7 days).
+   - **Automatically charge payment method on file**: charges your client's saved card automatically. If no payment method is on file, the invoice is emailed instead.
+5. Optionally, add a **Memo** to appear at the bottom of every subscription invoice.
+6. Click **Save**.
+
+<img src={require('./img/subscriptions-and-client-billing/default-billing-settings.png').default} alt="Default billing settings for subscriptions" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 :::info
 Default settings apply only to accounts created after you save. Existing accounts keep their current billing configuration. To update an existing account, use the account-level settings below.
