@@ -4,7 +4,7 @@ description: Learn how to create, send, and manage invoices, customize invoice s
 sidebar_position: 2
 ---
 
-![Create and send invoices](./img/commerce/invoices/create-send-invoices-header.jpg)
+<img src={require('./img/commerce/invoices/create-send-invoices-header.jpg').default} alt="Create and send invoices" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 Partners can use invoices to request and collect payment for the products and services that they provide their customers. Invoices can be manually created or can be [automatically generated](/commerce/subscriptions/subscription-management) according to an account's subscriptions and product renewal dates.
 
@@ -33,9 +33,9 @@ Invoices can be used most effectively when the following criteria are met:
 
 ### Creating an invoice
 
-Invoices can be created at any time from the **Commerce > Invoices** tab in Partner Center, or by simply going into the account you wish to create an invoice for and clicking on the invoice tab. 
+Invoices can be created at any time from the **Commerce → Invoices** tab in Partner Center, or by simply going into the account you wish to create an invoice for and clicking on the invoice tab. 
 
-- Click **New > Invoice** and select an account to create a draft invoice
+- Click **New → Invoice** and select an account to create a draft invoice
 - Select a **Due date** for the invoice 
 - Select a **User** (recipient) for the invoice
 - Click **Add Item** to add an individual product to the invoice. You can add any product that you're currently selling in your Marketplace, or type any text into the text box to represent a line item that does not exist in your Marketplace
@@ -46,13 +46,13 @@ Invoices can be created at any time from the **Commerce > Invoices** tab in Part
 - Use the Options **⋮** menu to remove an item from the invoice or [apply a tax rate](/administration/commerce/tax-rates/) to a line item.
 - If necessary, add additional information to the invoice using the **Memo** field at the bottom of the invoice
 
-Invoices can also be created at any time when viewing an individual account in **Partner Center > Manage Accounts** by clicking the Options **⋮** menu next to the **Open Business App** button.
+Invoices can also be created at any time when viewing an individual account in **Partner Center → Manage Accounts** by clicking the Options **⋮** menu next to the **Open Business App** button.
 
-Invoices can be generated from an order in **Partner Center > Sales > Orders** by viewing an order and clicking the **Create Invoice** button.
+Invoices can be generated from an order in **Partner Center → Sales → Orders** by viewing an order and clicking the **Create Invoice** button.
 
 ### Sending or charging an invoice
 
-![Sending an invoice](./img/commerce/invoices/send-invoice.jpg)
+<img src={require('./img/commerce/invoices/send-invoice.jpg').default} alt="Sending an invoice" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 Before sending an invoice, we recommend reviewing the Subtotal, Discount, and Total fields to ensure that the invoice was properly assembled. A draft invoice can be edited as many times as necessary, but once an invoice has been sent, it cannot be edited.
 
@@ -60,40 +60,41 @@ When your invoice is ready, click **Send Invoice** to choose one or more recipie
 
 Alternatively, you may instantly charge your customer for the contents of the invoice by selecting **Automatically charge a payment method on file** under the **Collection** section. This will change the **Send Invoice** button at the top-right of the page to **Charge invoice**. After a successful charge, your customer will receive a receipt via email. This requires your customer to have at least one payment method saved in Vendasta Payments. Your customer will have a payment method saved if they have previously paid an invoice or made a purchase using the Shopping Cart. If your customer does not have a saved payment method, it is possible to enter a payment method on behalf of your customer by clicking **Edit** next to the payment method field in the **Collection** section.
 
-Sent invoices can be viewed at any time from the table on **Partner Center > Commerce > Invoices**.
+Sent invoices can be viewed at any time from the table on **Partner Center → Commerce → Invoices**.
 
 If an invoice has been missed or misplaced by its recipient, it can be sent again at any time. Clicking **Resend Invoice** while viewing a Due invoice will allow you to choose any recipient on the account to resend the invoice.
 
 ### Paying an invoice
 
-![Invoice email](./img/commerce/invoices/paying-invoice-email.jpg)
-
 After sending an invoice, the recipient that you've chosen will be emailed a digital copy of the invoice. Invoices sent to an account will also appear under the **Invoices** tab in Business App.
 
 If Vendasta Payments is enabled when the invoice is sent, the recipient will have the option to pay the invoice directly by clicking **Pay this invoice** while viewing the invoice. This will direct the recipient to a landing page that displays all line items on the invoice and allows them to pay via credit card.
 
-![Invoice payment page](./img/commerce/invoices/invoice-payment-page.jpg)
+<div style={{display: 'flex', gap: '16px', alignItems: 'flex-start'}}>
+<img src={require('./img/commerce/invoices/paying-invoice-email.jpg').default} alt="Invoice email" style={{width: '55%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+<img src={require('./img/commerce/invoices/invoice-payment-page.jpg').default} alt="Invoice payment page" style={{width: '40%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+</div>
 
 After an invoice has been paid, the recipient can click **Download as PDF** to save a receipt in PDF format.
 
 ### Managing invoices
 
-All invoices can be viewed at any time from the table on **Partner Center > Commerce > Invoices**. Clicking the Options **⋮** menu on an invoice allows users to edit or delete a draft invoice, download a copy of an invoice in PDF format, or download a receipt for a paid invoice in PDF format.
+All invoices can be viewed at any time from the table on **Partner Center → Commerce → Invoices**. Clicking the Options **⋮** menu on an invoice allows users to edit or delete a draft invoice, download a copy of an invoice in PDF format, or download a receipt for a paid invoice in PDF format.
 
 Business App users can view the complete list of invoices they have received using the **Invoices** tab in the Business App.
 
-Partners can download a complete table of all sent non-voided invoices by clicking the ☁ **Download** button in the top right corner of the Invoices table.
+Partners can download a complete table of all sent non-voided invoices by clicking the **Export as CSV** button in the top right corner of the Invoices table.
 
 ### Invoice statuses
 
-An invoice's status is displayed in the Status column on the table in **Partner Center > Commerce > Invoices**. An invoice can have one of the following statuses.
+An invoice's status is displayed in the Status column on the table in **Partner Center → Commerce → Invoices**. An invoice can have one of the following statuses.
 
 - **Draft**: A draft invoice can be edited, and has not yet been sent to a recipient.
 - **Due**: A Due invoice has been sent to a recipient and can no longer be edited. Clicking **Resend Invoice** allows you to reselect a recipient and send the invoice again.
 - **Paid**: A Due invoice will be marked as Paid when its recipient pays for it via the **Pay this invoice** button. Alternately, if payment was collected outside of Vendasta Payments, an invoice can be marked as Paid by clicking the Options **⋮** menu, selecting **Change invoice status**, and selecting **Paid**.
 - **Void**: If an invoice has been sent in error or is no longer relevant, an invoice can be marked as Void by clicking the Options **⋮** menu, selecting **Change invoice status**, and selecting **Void**.
 
-Note that an account's **Invoicing settings** are all off by default. To edit these settings for a particular account, go to the **Products** section on the account's page under **Partner Center > Accounts > Manage Accounts > Select account** and click **Invoices.**
+Note that an account's **Invoicing settings** are all off by default. To edit these settings for a particular account, go to the **Products** section on the account's page under **Partner Center → Accounts → Manage Accounts → Select account** and click **Invoices.**
 
 ### Customize invoice numbers
 
@@ -106,11 +107,11 @@ Next invoice number customization allows new and existing partners to define the
 
 **To customize the next invoice number:**
 
-1. Navigate to **Partner Center > Commerce > Invoices**
+1. Navigate to **Partner Center → Commerce → Invoices**
 2. To access the setting, select the **three dots** in the top right hand corner of the page, and click **Set new invoice number**
 3. Input the desired **next invoice number**. **Note:** The number must be greater than any previously used invoice number
 
-![Setting a new invoice number](./img/commerce/invoices/set-new-invoice-number.png)
+<img src={require('./img/commerce/invoices/set-new-invoice-number.png').default} alt="Setting a new invoice number" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 4. Click **Confirm**, and your next invoice generated will follow the new number sequence
 
@@ -122,13 +123,13 @@ Next invoice number customization allows new and existing partners to define the
 
 ### Change invoice email settings
 
-The email address showing at the bottom of the invoice sent to clients can be changed by going to **Partner Center > Administration > Customize >** Under partner defaults tab; click on **Email Settings > Sender Email > Change it and then apply the changes.**
+The email address showing at the bottom of the invoice sent to clients can be changed by going to **Partner Center → Administration → Customize →** Under partner defaults tab; click on **Email Settings → Sender Email → Change it and then apply the changes.**
 
-![Email settings screenshot](./img/commerce/invoices/change-email-invoice.jpg)
+<img src={require('./img/commerce/invoices/change-email-invoice.jpg').default} alt="Email settings screenshot" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 This is also the email address from which the platform will send reports, to which recipients can reply.
 
-For Partners with multiple markets, repeat the same steps under the '**Markets**' heading > click the pencil icon to select market and update email accordingly or simply apply the Partner branding configurations to the additional market(s).
+For Partners with multiple markets, repeat the same steps under the '**Markets**' heading → click the pencil icon to select market and update email accordingly or simply apply the Partner branding configurations to the additional market(s).
 
 ## Frequently asked questions
 
@@ -137,7 +138,7 @@ For Partners with multiple markets, repeat the same steps under the '**Markets**
 
 **No** - Once an invoice has been marked as "paid," it cannot be adjusted to another status (such as "due" or "past due.") If an invoice needs to be sent to a client again, recreate the original invoice and send it again.
 
-![Invoice status cannot be changed after marked as paid](./img/commerce/invoices/invoice-status-paid.jpg)
+<img src={require('./img/commerce/invoices/invoice-status-paid.jpg').default} alt="Invoice status cannot be changed after marked as paid" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 </details>
 
@@ -150,15 +151,15 @@ If you have sent an incorrect invoice, create and send a new invoice to your cus
 
 If you have sent an invoice to the incorrect recipient, an invoice can be sent to a different recipient at any time by clicking **Send Invoice** and choosing a different recipient.
 
-![Send invoice option](./img/commerce/invoices/send-invoice-option.jpg)
+<img src={require('./img/commerce/invoices/send-invoice-option.jpg').default} alt="Send invoice option" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 If the invoice is still under the status 'due,' it can also be voided.
 
-To void the invoice, navigate to **Partner Center > Commerce > Invoices > Click the 3 dots next to the invoice and select Change Invoice Status.** Select the **void** status, and **save.**
+To void the invoice, navigate to **Partner Center → Commerce → Invoices → Click the 3 dots next to the invoice and select Change Invoice Status.** Select the **void** status, and **save.**
 
-![Change invoice status option](./img/commerce/invoices/change-invoice-status-option.jpg)
+<img src={require('./img/commerce/invoices/change-invoice-status-option.jpg').default} alt="Change invoice status option" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-![Void invoice status selection](./img/commerce/invoices/void-invoice-status.jpg)
+<img src={require('./img/commerce/invoices/void-invoice-status.jpg').default} alt="Void invoice status selection" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 </details>
 
@@ -167,11 +168,11 @@ To void the invoice, navigate to **Partner Center > Commerce > Invoices > Click 
 
 If you want to generate an invoice on an account but do not want to send it to your client, or the client has already paid, you can mark the invoice status as "Paid" for your records:
 
-In **Partner Center > Commerce > Invoices > Select the invoice** (any invoice that is Past Due, or Due status) > **Click the three dots at the end of the row > Change invoice status > Paid:**
+In **Partner Center → Commerce → Invoices → Select the invoice** (any invoice that is Past Due, or Due status) → **Click the three dots at the end of the row → Change invoice status → Paid:**
 
-![Mark invoice as paid step 1](./img/commerce/invoices/mark-invoice-paid-1.png)
+<img src={require('./img/commerce/invoices/mark-invoice-paid-1.png').default} alt="Mark invoice as paid step 1" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-![Mark invoice as paid step 2](./img/commerce/invoices/mark-invoice-paid-2.png)
+<img src={require('./img/commerce/invoices/mark-invoice-paid-2.png').default} alt="Mark invoice as paid step 2" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 ***Please note that invoices with the status "Paid" or "Void" do not have the option to change the invoice status.***
 
@@ -180,9 +181,9 @@ In **Partner Center > Commerce > Invoices > Select the invoice** (any invoice th
 <details>
 <summary>Can invoices and receipts from Vendasta be sent to multiple users?</summary>
 
-**Yes** - a comma-separated list of email addresses can be added to the Billing Contact Information card in **Partner Center > Administration > My Billing**. Addresses listed here will receive invoices and email notifications regarding successful and failed payments, etc.
+**Yes** - a comma-separated list of email addresses can be added to the Billing Contact Information card in **Partner Center → Administration → My Billing**. Addresses listed here will receive invoices and email notifications regarding successful and failed payments, etc.
 
-![Billing Contact Information in Partner Center](./img/commerce/invoices/billing-contact-information.png)
+<img src={require('./img/commerce/invoices/billing-contact-information.png').default} alt="Billing Contact Information in Partner Center" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 </details>
 
@@ -191,13 +192,13 @@ In **Partner Center > Commerce > Invoices > Select the invoice** (any invoice th
 
 **Yes!** You will receive an email every time an invoice is generated and sent to your customer.
 
-![Invoice notification email sent to merchant](./img/commerce/invoices/invoice-notification-email-1.jpg)
+<img src={require('./img/commerce/invoices/invoice-notification-email-1.jpg').default} alt="Invoice notification email sent to merchant" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 The customer will also receive an email invoice (if you have chosen the payment option to **Email Invoice**). Otherwise, the customer will receive an email receipt for the charge to their Credit Card.
 
-![Invoice email sent to customer](./img/commerce/invoices/invoice-notification-email-2.jpg)
+<img src={require('./img/commerce/invoices/invoice-notification-email-2.jpg').default} alt="Invoice email sent to customer" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-![Invoice receipt email sent to customer](./img/commerce/invoices/invoice-notification-email-3.jpg)
+<img src={require('./img/commerce/invoices/invoice-notification-email-3.jpg').default} alt="Invoice receipt email sent to customer" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 </details>
 
@@ -254,7 +255,7 @@ A recurring invoice template can be used to repeatedly invoice a customer for pr
 
 The processes will run continuously according to your set schedule in the template.
 
-![Recurring invoice template](./img/commerce/invoices/recurring-invoice-template.jpg)
+<img src={require('./img/commerce/invoices/recurring-invoice-template.jpg').default} alt="Recurring invoice template" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 </details>
 
@@ -275,6 +276,6 @@ If a package shows an unexpected price when added to an invoice, it may not have
 <details>
 <summary>Where can I find the payment link for an invoice?</summary>
 
-The payment link can be found for any sent invoice from **Partner Center > Commerce > Click the three dots to the left of the desired invoice > Copy payment link**. Draft invoices do not have a payment link.
+The payment link can be found for any sent invoice from **Partner Center → Commerce → Click the three dots to the left of the desired invoice → Copy payment link**. Draft invoices do not have a payment link.
 
 </details>
