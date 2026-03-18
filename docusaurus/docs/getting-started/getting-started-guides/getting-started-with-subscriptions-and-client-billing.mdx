@@ -106,33 +106,22 @@ Invoices are how you formally request and collect payment from your clients. The
 
 Navigate to **Partner Center** → **Commerce** → **Invoices**.
 
+<img src={require('./img/subscriptions-and-client-billing/invoices-page.png').default} alt="Invoices page in Partner Center" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
 ### Create an invoice manually
 
 1. Click **New** → **Invoice** and select the client account.
 2. Set a **Due date** and choose a **User** (the recipient at the client's account).
 3. Click **Add Item** to add products from your Marketplace, or **Add Custom Item** to enter a custom line item.
 4. Optionally, add a **Memo** to include additional context such as terms, conditions, or a thank-you note.
-5. Review the subtotal and total, then click **Charge Invoice** to email it to the recipient.
-
-<img src={require('./img/subscriptions-and-client-billing/invoices-page.png').default} alt="Invoices page in Partner Center" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+5. Choose a **Collection method**: select **Email the invoice to the customer to pay** or **Charge a payment method on file**.
+6. Review the subtotal and total, then click **Send Invoice** or **Charge Invoice** (the button changes based on your collection method).
 
 <img src={require('./img/subscriptions-and-client-billing/create-invoice.png').default} alt="Create a new invoice in Partner Center" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 :::tip
 Draft invoices can be edited as many times as needed before sending. Once sent, an invoice cannot be edited. If you need to correct a sent invoice, void it and create a new one.
 :::
-
-### Collect payment
-
-How you collect payment depends on your setup:
-
-| Method | How it works |
-|---|---|
-| **Email invoice** | Client receives an email and pays online (requires Vendasta Payments) |
-| **Charge on file** | Client's saved card is automatically charged on renewal |
-| **Manual** | You collect payment outside the platform and mark the invoice as **Paid** |
-
-To mark an invoice as paid manually: go to **Commerce** → **Invoices**, click the options menu (⋮) on the invoice, select **Change invoice status**, and choose **Paid**.
 
 ### Invoice statuses
 
@@ -142,6 +131,13 @@ To mark an invoice as paid manually: go to **Commerce** → **Invoices**, click 
 | **Due** | Sent to the client; no longer editable |
 | **Paid** | Payment has been collected |
 | **Void** | Cancelled; no longer actionable |
+
+To mark an invoice as paid manually: go to **Commerce** → **Invoices**, click the options menu (⋮) on the invoice, select **Change invoice status**, and choose **Paid**.
+
+<div style={{display: 'flex', gap: '16px', alignItems: 'flex-start'}}>
+<img src={require('./img/subscriptions-and-client-billing/invoice-options-menu.png').default} alt="Invoice options menu" style={{width: '23%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+<img src={require('./img/subscriptions-and-client-billing/change-invoice-status.png').default} alt="Change invoice status dialog" style={{width: '60%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+</div>
 
 [Learn more about invoices](/commerce/invoices/)
 
@@ -156,7 +152,18 @@ To mark an invoice as paid manually: go to **Commerce** → **Invoices**, click 
 You can apply a discount to a one-off invoice or to a recurring subscription:
 
 - **Invoice discount**: open the invoice, click **Discount**, choose a percentage or fixed amount, and click **Apply**. This applies to that invoice only.
+
+<div style={{display: 'flex', gap: '16px', alignItems: 'flex-start', marginBottom: '24px'}}>
+<img src={require('./img/subscriptions-and-client-billing/invoice-item-options-menu.png').default} alt="Invoice item options menu showing Add to package, Set item tax, Add discount, and Remove item" style={{width: '73%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+<img src={require('./img/subscriptions-and-client-billing/edit-discount-dialog.png').default} alt="Edit discount dialog with name, type, and amount fields" style={{width: '22%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+</div>
+
 - **Subscription discount**: open the subscription, click **Discount**, set the type and value, and choose how long it applies (ongoing, a limited time, or once). This carries forward to future invoices generated from that subscription.
+
+<div style={{display: 'flex', gap: '16px', alignItems: 'flex-start', marginBottom: '24px'}}>
+<img src={require('./img/subscriptions-and-client-billing/subscription-add-discount.png').default} alt="Subscription detail panel showing Add discount link" style={{width: '69%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+<img src={require('./img/subscriptions-and-client-billing/subscription-edit-discount-dialog.png').default} alt="Subscription edit discount dialog with name, type, duration, and date fields" style={{width: '26%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+</div>
 
 :::note
 Only one discount can be applied per invoice line item.
