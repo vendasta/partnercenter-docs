@@ -81,14 +81,17 @@ Default settings apply only to accounts created after you save. Existing account
 To override the defaults for a specific client:
 
 1. Open the client account in **Manage Accounts**.
-2. Click the **Subscriptions** tab, then click **Billing Settings** in the top right corner.
-3. Toggle **Retail Subscriptions** and **Subscription Billing** on.
-4. Choose a collection method and timing, just as you would in default settings.
-5. Optionally add an **Account Memo** that will appear on every invoice sent to this client.
-6. Click **Save**.
+2. Click the **Billing settings** tab.
+3. Turn the **Subscriptions** toggle **On**.
+4. Configure **Subscription scheduling**, **Payment collection**, and **Subscription renewal** options, just as you would in default settings.
+5. On the right side, set the **Billing recipient** and configure **Payment methods** for the account.
+6. Optionally add a **Memo** that will appear on every invoice sent to this client.
+7. Click **Save**.
+
+<img src={require('./img/subscriptions-and-client-billing/account-billing-settings.png').default} alt="Account-level billing settings in Manage Accounts" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 :::tip
-Use the **Same day of the month** collection timing option to consolidate all of a client's renewals into one invoice per month, regardless of when individual products renew.
+Use **Use a specific renewal date** under Subscription scheduling to consolidate all of a client's renewals into one invoice per month, regardless of when individual products were activated.
 :::
 
 [Learn more about default billing settings](/administration/commerce/default-billing-settings/)
@@ -108,7 +111,12 @@ Navigate to **Partner Center** → **Commerce** → **Invoices**.
 1. Click **New** → **Invoice** and select the client account.
 2. Set a **Due date** and choose a **User** (the recipient at the client's account).
 3. Click **Add Item** to add products from your Marketplace, or **Add Custom Item** to enter a custom line item.
-4. Review the subtotal and total, then click **Send Invoice** to email it to the recipient.
+4. Optionally, add a **Memo** to include additional context such as terms, conditions, or a thank-you note.
+5. Review the subtotal and total, then click **Charge Invoice** to email it to the recipient.
+
+<img src={require('./img/subscriptions-and-client-billing/invoices-page.png').default} alt="Invoices page in Partner Center" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+<img src={require('./img/subscriptions-and-client-billing/create-invoice.png').default} alt="Create a new invoice in Partner Center" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 :::tip
 Draft invoices can be edited as many times as needed before sending. Once sent, an invoice cannot be edited. If you need to correct a sent invoice, void it and create a new one.
@@ -158,8 +166,13 @@ Only one discount can be applied per invoice line item.
 
 If you need to charge tax on your invoices, create tax rates first in **Partner Center** → **Administration** → **Tax Rates**.
 
-1. Click **Create Tax Rate** and enter the country, state/province, name, and rate.
-2. Click **Save**.
+1. Click **Create Tax Rate**.
+2. Select a **Country** and optionally a **State/Prov**.
+3. Enter a **Tax name** and the **Rate (%)**.
+4. Optionally add a **Description/Tax number** and an **Accounting code**.
+5. Click **Save**.
+
+<img src={require('./img/subscriptions-and-client-billing/create-tax-rate.png').default} alt="Create a tax rate dialog" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 Once created, tax rates can be applied to individual line items on any invoice. Open the invoice, click the options menu (⋮) on a line item, and select **Set Item Tax**.
 
