@@ -73,21 +73,32 @@ Here are the main sections to be aware of:
 ### Basic template
 
 1. Go to **Task Manager → Templates.**
-2. Click **+ Add New Template**.
-   - Click **Select from library** to create a template from one of the pre-made library options.
-   - Click **Create new template** to create one from scratch.
+2. Click **+ Add New Template** and select the type of template you want to create:
+   - **Project** – A multi-step project template.
+   - **Task** – A single task template.
+   - **Select from library** – Choose from pre-made library options.
 
-3. Fill in the general template details. These include the following:
-   - **Template Name** - What your template will be called.
-     - This field is required.
-   - **Project Assignee** - Who the template will be assigned to by default.
-   - **Due __ days from creation** - The number of days the entire project will be due after its creation.
-   - **Recurrence** - How often the project recurs.
+<img src={require('./img/projects-in-task-manager/create-new-template.png').default} alt="Create new template dialog with Project, Task, and Select from library options" style={{width: '50%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+3. Fill in the project details:
+   - **Template Name** (required) – The name of your template.
+   - **Tags** (optional) – Admins and managers can manage tags in Settings.
+   - **Template Type** – Choose from the available template types (e.g. Custom).
+   - **Project Assignee** – Who the template will be assigned to by default.
+   - **Due __ days from creation** – The number of days the project is due after creation.
+   - **Recurrence** – How often the project recurs (e.g. Does not recur).
+   - **Project details** – A rich text field for additional project information.
+   - **Advanced settings** – Expand for additional configuration options.
+
+<img src={require('./img/projects-in-task-manager/create-project-template.png').default} alt="Create project template page showing project details fields" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
 4. Create the tasks associated with the project. Here, you can set the following fields:
    - **Task Name** - What the task is called.
    - **Assignee** - Who the task will be assigned to when created.
-   - **Due __ days from project creation** - How soon after the project is created the task is due.
-   
+   - **Due __ days from creation** - How soon after the project is created the task is due.
+
+<img src={require('./img/projects-in-task-manager/create-task-template.png').default} alt="Tasks section showing task name, assignee, due days, and project visibility options" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
    :::note
    You can add new tasks by selecting **Add Another Task**. You can delete tasks by selecting **Delete Task**.
    :::
@@ -102,23 +113,23 @@ Here are the main sections to be aware of:
 
 There are several advanced features available when creating a template.
 
-**Advanced Settings for Projects**
+#### Advanced settings for projects
 
-Clicking into the advanced settings in the main project configuration section while creating a template reveals two settings:
+Clicking into the advanced settings in the main project configuration section while creating a template reveals:
 
-1. **Project details:** This rich text box allows you to add information that will be generated each time that a project is created from this template.
-2. **Associate with items in Marketplace:** This will allow you to choose a product. Every time that you activate the chosen product, the templated project will be generated.
+1. **Custom fields:** Click **+ Add custom fields** to create additional fields for your template.
 
-**Advanced Settings for Tasks**
+<img src={require('./img/projects-in-task-manager/advanced-settings.png').default} alt="Advanced settings showing Associate with items in Marketplace and Custom fields options" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-When adding tasks to a project, there are advanced settings available here as well:
+#### Advanced settings for tasks
 
-1. **Task notes**: There is a rich text field to add public and private task notes that will be generated inside of the task every time that a project is created from this template.
-2. **Product**: You can select one of Vendasta's core marketplace products (eg. Reputation AI, Website Pro, etc). This will create a link to the product inside of the task that will allow your team to access that product inside of your customer's Business App.
+When adding tasks to a project, there are advanced settings available as well. Expand **Advanced settings** on a task to access:
 
-**Locking Tasks/Task Dependency**
+1. **Lock the next task until this one is completed** – When you have two or more tasks in a project template, check this option to prevent the next task from being acted upon until the current one is completed. When a task is locked, its due date is based on when it is unlocked rather than when the project is created.
+2. **Product** – Link a Vendasta Marketplace product (e.g. Reputation AI, Website Pro) to the task. This creates a shortcut inside the task so your team can access the product directly in your customer's Business App.
+3. **Custom fields** – Click **+ Add custom fields** to create additional fields for the task.
 
-When you create two or more tasks, an option will become available to you to "Lock the next task until this one is completed." This allows you to prevent the task from being completed or acted upon until the previous one is completed. Note that when a task becomes locked, rather than setting a due date from the task's creation, you set a due date based on when the task is unlocked instead.
+<img src={require('./img/projects-in-task-manager/task-advanced-settings-full.png').default} alt="Task advanced settings showing lock task, product, and custom fields options" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 [Back to top.](#getting-started-checklist)
 
@@ -128,36 +139,46 @@ There are three ways that you can create a project from a template: **manually, 
 
 ### Manual
 
-1. Go to **Task Manager → Projects**.
-2. Click **Add…** in the top right corner.
-3. Click **Project** from the dropdown menu.
-4. You will be taken to a Create project screen.
-5. Use the **Import template** search bar and type in the name of your project template.
-6. Select the project template from the dropdown menu.
-7. Search and select an account from the **Account** search bar in the form.
-8. At this point, you may make any adjustments to the project or tasks that you wish.
-9. Scroll to the bottom and click **Create project**.
+1. Go to **Task Manager** → **Projects**.
+2. Click **Create project** in the top right corner.
+3. From here you can either:
+   - **Create a one-off project** by filling in the fields directly (Account, Name, Assignee, Due date, Project tags, Type, and Project details).
+   - **Use a project template** by clicking **Use project template** in the top right corner and selecting a saved template.
+4. Search and select an account from the **Account** field.
+5. Make any adjustments to the project or tasks as needed.
+6. Scroll to the bottom and click **Create project**.
+
+<img src={require('./img/projects-in-task-manager/create-project.png').default} alt="Create project screen showing fields and Use project template button" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 ### Product activation
 
-You can generate a project from a template every time that you activate a Marketplace product of your choosing. When creating or editing a project template, you can follow these steps:
+You can generate a project from a template every time that you activate a Marketplace product of your choosing. When creating or editing a task within a project template, you can follow these steps:
 
-1. In the project template, click **Advanced settings**.
+1. On a task, click **Advanced settings**.
 2. Under **Associate with items in the Marketplace**, search and select the product of your choice.
 3. Scroll down to the bottom and save or update the template.
+
+<img src={require('./img/projects-in-task-manager/advanced-settings.png').default} alt="Advanced settings showing Associate with items in Marketplace and Custom fields options" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 With a Marketplace product selected, every time that you activate this product for an account, the project will be launched in Task Manager for that account.
 
 ### Automation
 
-1. Go to **Partner Center** → **Automations**.
-2. Click **Create Automation**.
-3. Select **From a template** or **Create a new automation**.
-   - If selecting **From a template**, choose **Create a new fulfillment project** as the template.
+1. Go to **Partner Center** → **Automations** → **My automations**.
+2. Click **Create automation** in the top right corner.
+
+<img src={require('./img/projects-in-task-manager/create-automation-button.png').default} alt="Create automation button in Partner Center" style={{width: '50%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+3. You'll be redirected to the **Automation templates** page, where you can browse templates organized by:
+   - **Recommended for you**, **Recently added**, and **Popular** sections.
+   - **Function**, **Objective** and **Feature**categories in the left sidebar.
+   - To create a new automation from scratch, click **Blank**.
+
+<img src={require('./img/projects-in-task-manager/automation-templates.png').default} alt="Automation templates page showing recommended, recently added, and popular templates" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
 4. Select whatever trigger condition you desire to start the automation.
 5. Within the automation, choose **Create a fulfillment project for the account**.
-6. Select your template.
-7. Turn the automation on.
+6. Turn the automation on.
 
 [Back to top.](#getting-started-checklist)
 
@@ -168,23 +189,20 @@ With a Marketplace product selected, every time that you activate this product f
 
 Once you have projects created, there are several powerful ways to track them. The video above walks through several of these. Here are the main points to take away:
 
-**Projects page:** This is the main way to view your projects. Here you can create views (eg. "Overdue by assigned to", "Upcoming due projects for account X", etc) to easily group and monitor the status and due dates of your projects. 
-
 **Account view:** When accessing an account, you'll be able to see all projects and tasks associated with that account. This allows you to quickly see everything happening for a specific customer.
+
+**Projects page:** This is the main way to view your projects. Here you can create views (eg. "Overdue by assigned to", "Upcoming due projects for account X", etc) to easily group and monitor the status and due dates of your projects. 
 
 **Inside projects:** Adding comments, attachments, updating statuses, and using the Due Date Estimator are all ways to efficiently manage your projects once they're created.
 
 ### Sharing projects in Business App
 
-Projects can be shared to Business App, so your customers can be kept up to date on the active projects that are being worked on for them. To enable this feature, take the following steps:
+Projects can be shared to Business App, so your customers can be kept up to date on the active projects that are being worked on for them. When editing or creating a project, check **Show project in Business App** under **Project visibility** in the Tasks section.
 
-1. Go to **Task Manager** → **Settings**.
-2. Go to the **General** tab.
-3. Under **Projects in Business App**, select **Enable projects in Business App**.
-4. Click **Add Project Type**.
-5. Add a name and (optionally) a description for your Project Type.
-6. Now, when editing or creating a project, you can select your Project Type, which will allow you to display the project in Business App.
+<img src={require('./img/projects-in-task-manager/show-project-in-business-app.png').default} alt="Show project in Business App checkbox under Project visibility" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginBottom: '24px'}} />
 
-Note that if you select a project to be displayed in Business App, your customer will be able to see the entire project timeline including all tasks in the project, as well as any public comments in the tasks. Take care to ensure all information is appropriate to be shared with your customer.
+:::warning
+If you enable this, your customer will be able to see the entire project timeline including all tasks in the project, as well as any public comments in the tasks. Take care to ensure all information is appropriate to be shared with your customer.
+:::
 
 [Back to top.](#getting-started-checklist)
