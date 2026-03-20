@@ -11,14 +11,14 @@ jobs:
       
       # Config scan
       - name: Trivy config scan
-        uses: aquasecurity/trivy-action@0.20.0
+        uses: aquasecurity/trivy-action@v0.35.0
         with:
           scan-type: config
           severity: CRITICAL,HIGH
 
       # Filesystem scan (secrets, sensitive files)
       - name: Trivy secret scan
-        uses: aquasecurity/trivy-action@0.20.0
+        uses: aquasecurity/trivy-action@v0.35.0
         with:
           scan-type: fs
           scanners: secret
