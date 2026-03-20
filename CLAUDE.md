@@ -97,7 +97,9 @@ Content here with blank line above.
 ### Media
 
 - **Images go in an `img/` folder alongside the documentation files** (not in `static/img/`)
-- Use relative paths: `![Alt text](./img/image-name.png)`
+- Use Docusaurus `<img>` tags with `require()` instead of plain markdown `![]()`
+- Standard style on every image: `border: '1px solid #e0e0e0'`, `borderRadius: '8px'`, `boxShadow: '0 2px 8px rgba(0,0,0,0.08)'`
+- Always set `width` explicitly (`'100%'` for full-page screenshots, smaller for partial UI)
 - Example structure:
   ```
   docs/section/feature/
@@ -106,6 +108,10 @@ Content here with blank line above.
   └── img/
       ├── settings-screenshot.png
       └── feature-diagram.png
+  ```
+- Example usage:
+  ```jsx
+  <img src={require('./img/image-name.png').default} alt="Description" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
   ```
 - Always include alt text describing image purpose
 - Blur or replace sensitive data (PII) in screenshots
