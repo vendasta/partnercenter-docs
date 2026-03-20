@@ -1,0 +1,34 @@
+---
+description: "Enforce consistent image styling in MDX documentation files using Docusaurus <img> tags with standard border, radius, and shadow properties."
+globs: ["docusaurus/docs/**/*.md", "docusaurus/docs/**/*.mdx"]
+---
+
+When adding or editing images in documentation files, use Docusaurus `<img>` tags with `require()` instead of plain markdown `![]()` syntax.
+
+Every `<img>` tag must include these base style properties:
+
+```jsx
+style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}}
+```
+
+Rules:
+
+1) Use `require('./img/filename.png').default` for the `src` attribute.
+2) Always include descriptive `alt` text.
+3) Always explicitly set `width`. Use `'100%'` for full-page screenshots. Use smaller values (e.g. `'75%'`, `'50%'`) for partial UI elements, dialogs, or narrow screenshots.
+4) Always include `border: '1px solid #e0e0e0'`, `borderRadius: '8px'`, and `boxShadow: '0 2px 8px rgba(0,0,0,0.08)'`.
+5) When spacing is needed before subsequent content (e.g. before a callout, heading, or another image), wrap the `<img>` in a `<div>` with `marginBottom: '24px'`.
+
+Full example:
+
+```jsx
+<img src={require('./img/example-screenshot.png').default} alt="Example screenshot showing the settings page" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+```
+
+With spacing wrapper:
+
+```jsx
+<div style={{marginBottom: '24px'}}>
+<img src={require('./img/example-screenshot.png').default} alt="Example screenshot" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+</div>
+```
