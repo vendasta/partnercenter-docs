@@ -248,9 +248,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/getting-started/intro-to-vendasta/vendasta-affiliate-program', to: '/getting-started/vendasta-affiliate-program' },
           { from: '/partner-center/partner-center-getting-started-guide', to: '/partner-center' },
           { from: '/partner-center/AI-receptionist-features-by-plan', to: '/ai/ai-workforce/ai-receptionist-features-by-plan' },
-          // Snapshot Report: old "what is" page now lives at section index
-          { from: '/snapshot-report/what-is-a-snapshot-report', to: '/snapshot-report/' },
-          { from: '/docs/snapshot-report/what-is-a-snapshot-report', to: '/snapshot-report/' },
         ],
       },
     ],
