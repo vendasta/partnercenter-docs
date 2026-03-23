@@ -16,13 +16,13 @@ This article provides a complete reference of all automation steps that can acco
 
 | Step | Overview | Special Cases | Example Use Cases |
 | --- | --- | --- | --- |
-| Set account lifecycle stage* | Sets an account's Lifecycle stage to a specific stage, i.e.: Lead, Prospect, Customer | | When an opportunity is created on an account, set its Lifecycle stage to Prospect |
+| Set account lifecycle stage* | Sets an account's Lifecycle stage to a specific stage, i.e.: Lead, Prospect, Customer | A valid lifecycle stage (Lead, Prospect, or Customer) must be selected. The account must exist. | When an opportunity is created on an account, set its Lifecycle stage to Prospect |
 
 ### AI
 
 | Step | Overview | Special Cases | Example Use Cases |
 | --- | --- | --- | --- |
-| Send a request to an AI employee | Send a prompt to a selected AI employee. | | When a company is created, prompt the AI agent to research the company, and create a summary note. |
+| Send a request to an AI employee | Send a prompt to a selected AI employee. | An AI employee must be selected. The prompt is rendered with template variables before being sent — if it renders to empty, an error occurs. | When a company is created, prompt the AI agent to research the company, and create a summary note. |
 
 ### Campaigns
 
@@ -85,8 +85,8 @@ This article provides a complete reference of all automation steps that can acco
 
 | Step | Overview | Special Cases | Example Use Cases |
 | --- | --- | --- | --- |
-| Assign a sales team | Assigns a random salesperson from the indicated sales team to the account. If the account already has a salesperson, they can optionally be replaced. | | When a trial product is activated, assign a salesperson from the team responsible for that product. |
-| Assign a salesperson | Assigns a specific salesperson to the account. Multiple individuals from across multiple teams can be selected, in which case, one will be randomly assigned. If the account already has a salesperson, they can optionally be replaced. | | When a highly technical product is activated, assign a highly knowledgeable salesperson. |
+| Assign a sales team | Assigns a random salesperson from the indicated sales team to the account. If the account already has a salesperson, they can optionally be replaced. | If reassign is not enabled, accounts with an existing salesperson are skipped. Fails if the team has no members. | When a trial product is activated, assign a salesperson from the team responsible for that product. |
+| Assign a salesperson | Assigns a specific salesperson to the account. Multiple individuals from across multiple teams can be selected, in which case, one will be randomly assigned. If the account already has a salesperson, they can optionally be replaced. | If reassign is not enabled, accounts with an existing salesperson are skipped. Fails if no matching salesperson is found. | When a highly technical product is activated, assign a highly knowledgeable salesperson. |
 | Log activity and hotness rating | Logs a business activity and increases the hotness rating (if the existing rating is lower than the new level). | Hotness ratings cannot be decreased using this step. This is to ensure that manually assigned high-hotness ratings are not accidentally downgraded. | When an email campaign is clicked, mark the account as a hot lead. |
 
 ### Wait
