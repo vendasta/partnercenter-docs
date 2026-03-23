@@ -8,7 +8,7 @@ description: "Ordering products - General    Ordering Vendasta Services products
 
 Ordering Vendasta Services products is the same as [ordering any product](../../commerce/orders/creating-and-managing-orders.mdx) in the platform. It's important to know that our teams require additional information after the product has been ordered so they can successfully fulfill the service in line with what you and your customers require.
 
-1.  Go to Partner Center > Businesses > Accounts > Click on the account for which you want to place an order
+1.  Go to Partner Center → Accounts → Manage Accounts → Click on the account for which you want to place an order
 2.  Click Order Products
 3.  Select the package(s) or product(s) you wish to order
     *   You may be prompted to activate additional products that are needed to fulfill services (eg. Social Marketing is needed for our team to post as part of our social posting services)
