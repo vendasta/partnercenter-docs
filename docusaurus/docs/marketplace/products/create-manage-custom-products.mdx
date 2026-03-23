@@ -33,43 +33,34 @@ The marketplace includes 250+ curated solutions you can resell, and also robust 
 
 The fastest way to get your product into the marketplace with essential features configured.
 
-Access: `Marketplace > Products` > **Create Product**.
+Access: **Marketplace** → **Products** → **Create Product**.
 
 #### Step 1: Basic information
-**Product Name:**
-- Clear, descriptive name displayed to admins, salespeople, and customers
-- Should reflect the core value proposition
-- Consider SEO and searchability
 
-**Product Type:**
-- **Product** - Tangible or digital goods with specific features
-- **Service** - Ongoing services or consulting offerings
-- Choose based on how customers will perceive and use your solution
-
-**Icon Image:**
-- First impression customers have of your product
-- Keep design simple and professional
-- Avoid text in images for better scalability
-- Ensure design works well in circular format
-- Recommended size: 512x512 pixels minimum
+- **Product Name** (required) — A clear, descriptive name displayed to admins, salespeople, and customers (max 75 characters).
+- **Product Type** (required) — Choose **Product** or **Service** based on what you're offering.
+- **Icon** — Upload a product icon. Recommended format: 240x240px (1:1 aspect ratio), JPG or PNG, displayed as a circle. Max file size 5 MB.
+- **Short description** — Describe your product in 200 characters or fewer.
+- **Vendor contact email** — Add one or more contact emails for vendor communication.
 
 #### Step 2: Pricing configuration
-**Billing Structure:**
-- **Recurring Subscription** - Monthly or yearly recurring payments
-  - Customer maintains access during active subscription period
-  - Automatic renewal unless canceled
-  - Product remains active until end of billing cycle after cancellation
-- **One-Time Fee** - Single payment for permanent access
-  - No recurring billing or subscription management
-  - Suitable for setup fees, one-time services, or perpetual licenses
 
-**Cost and Retail Pricing:**
-- **Cost** - Your direct costs for delivering the product
-  - Include all expenses: development, support, third-party licenses
-  - Used for margin calculations and business intelligence
-- **Retail Price** - Customer-facing price
-  - For subscriptions: charged at specified frequency
-  - Consider market positioning and competitive landscape
+**Pricing**
+- **Pricing model** (required) — Select a pricing model (e.g. Fixed price).
+- **Wholesale price** — What resellers are charged for each activation of this product.
+- **Retail price** — What customers are charged for this product.
+
+All prices are set in USD.
+
+**Setup fee** — Charge an optional one-time fee when a customer purchases this product.
+- **Wholesale setup fee** — The setup fee charged to resellers for an activation.
+- **Suggested setup fee** — The default setup fee used by resellers.
+
+**Billing period** — How often customers are billed for their subscription (e.g. Monthly).
+
+**Subscription term** — How long customers are committed to their subscription, set in billing periods. At the end of the subscription term, choose:
+- *Renew with same term* — The subscription renews with the same commitment length.
+- *Renew with a different subscription term* — The subscription renews with a different term length.
 
 #### Step 3: Marketing content
 **Marketing Description:**
@@ -99,247 +90,145 @@ Access: `Marketplace > Products` > **Create Product**.
 
 For comprehensive product setup with full feature access, use Vendor Center for advanced configuration options.
 
-Access: Through Vendor Center for advanced configuration.
+Access: Through **Vendor Center** for advanced configuration.
 
-#### Advanced configuration options
 
-**Product categories**
-- Organize products for better customer discovery
-- Align with marketplace category structure
-- Support multiple category assignments
-- Enable better filtering and search results
+## Product info
 
-**Integration capabilities**
-- **Webhooks** - Real-time notifications for product events
-  - Order notifications, activation/deactivation events
-  - Custom endpoint configuration for your systems
-  - Payload customization for specific data needs
-- **Single Sign-On (SSO)** - Seamless customer authentication
-  - Integrate with customer's existing authentication systems
-  - Reduce friction in customer experience
-  - Support multiple SSO protocols
+The **Product info** tab contains your product's core settings.
 
-**Advanced marketing pages**
-- **Full HTML Support** - Complete control over presentation
-  - Custom styling and branding
-  - Interactive elements and media
-  - Advanced layout and design options
-- **Rich Media Integration** - Videos, images, downloads
-- **SEO Optimization** - Meta tags, structured data
-- **A/B Testing** - Multiple page versions for optimization
+### Editions
 
-**Custom order forms**
-- **Tailored Data Collection** - Capture specific customer information
-- **Multi-Step Workflows** - Complex ordering processes
-- **Conditional Logic** - Dynamic forms based on customer selections
-- **Integration Fields** - Connect to external systems
+Toggle **Offer editions** to create multiple pricing plans, feature sets, or tiers of service for your product. Each edition has a name, cost (wholesale), and retail price. Use **+ Add edition** to add more.
 
-**Unlimited add‑ons**
-- **Revenue Expansion** - Additional services and features
-- **Modular Pricing** - Let customers customize their solution
-- **Upselling Opportunities** - Increase average order value
-- **Feature Segmentation** - Different tiers of service
+Under **Advanced settings**, you can check **Allow multiple purchases per account**, which disables add-on support.
 
-## Product management and optimization
+<img src={require('./img/editions.png').default} alt="Editions settings showing name, cost, and retail price columns with advanced settings" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-### Manage product details
+### Product activation
 
-Once your product is created, comprehensive management tools help you optimize performance and customer experience.
+Configure the steps taken when provisioning your product:
 
-**Information management**
-- Update descriptions and marketing content
-- Modify pricing and billing structures
-- Adjust product categories and tags
-- Manage availability and market restrictions
+- **Activation message** — A message displayed to the customer upon activation (e.g. "Thank you for your purchase, enjoy!").
+- **Notifications** — Add one or more recipient email addresses to receive notifications when the product is activated, canceled, or deactivated.
+- **Required products** — Select products that must be purchased before your product can be activated.
 
-**Performance monitoring**
-- Track activation and usage metrics
-- Monitor customer satisfaction scores
-- Analyze revenue and growth trends
-- Identify optimization opportunities
+### Order form
 
-### Retail price management
+Build a custom order form to collect information when customers purchase your product. The form includes:
 
-**Dynamic pricing strategies**
-- Adjust pricing based on market conditions
-- Implement promotional pricing campaigns
-- Test different price points for optimization
-- Configure market-specific pricing
+- **Basic information** — Automatically submitted based on the account's saved Business Information. You can select which fields to include across Business (Account ID, Company Name, Address, Company Phone, Website), Primary Contact (Name, Email, Phone), and Salesperson (Name, Email, Phone) categories.
+- **Additional information** — Fields that are not submitted automatically. Information submitted in these fields will update the account's saved Business Information. Options include Short Description, Long Description, Hours of Operation, Services Offered, and Brands Carried.
+- **Form Fields** — Add custom form fields to collect any additional information you need.
+- **Order Form Footer** — A rich text field that appears at the bottom of the order form. Use this to include information regarding the order or its fulfillment.
 
-**Billing configuration**
-- Modify billing frequency without affecting core product
-- Add setup fees or implementation charges
-- Configure trial periods and promotional offers
-- Manage subscription lifecycle events
+<img src={require('./img/order-form.png').default} alt="Order form showing basic information, additional information, and form fields sections" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-### White‑label branding
+### Fulfillment form
 
-**Brand customization for custom products**
-- Full control over product name and presentation
-- Custom icon and visual identity
-- Branded marketing materials and documentation
-- Consistent brand experience across customer touchpoints
+Build a fulfillment form for internal use when provisioning the product:
 
-**Implementation process**
-1. Navigate to Product Info tab in product management
-2. Enable white-label branding options
-3. Upload custom branding assets
-4. Preview changes before publishing
-5. Apply branding across all customer touchpoints
+- **Form Fields** — Add custom form fields for fulfillment-specific information.
+- **Fulfillment form footer** — A rich text field that appears at the bottom of the fulfillment form. Use this to include information regarding the order or its fulfillment.
 
-### Advanced configuration features
+<img src={require('./img/fulfillment-form.png').default} alt="Fulfillment form showing form fields and fulfillment form footer" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-#### Automatic price updates
-- **Integration Provider Sync** - Automatic updates from your systems
-- **Scheduled Updates** - Regular price adjustments based on business rules
-- **Market-Based Pricing** - Different pricing for different markets
-- **Competitive Pricing** - Automatic adjustments based on market analysis
+### Country availability
 
-#### Auto‑activation settings
-- **Immediate Deployment** - Instant access upon purchase
-- **Conditional Activation** - Based on payment confirmation or other triggers
-- **Staged Rollout** - Gradual activation for complex implementations
-- **Custom Workflows** - Integration with your fulfillment processes
+Set which countries your product is available in. By default, products are available in all countries.
 
-#### Upgrade path configuration
-**Self‑serve upgrades**
-- Automatic processing of customer upgrade requests
-- Immediate access to enhanced features
-- Streamlined billing transitions
-- Reduced support overhead
+### Free trial management
 
-**Sales‑assisted upgrades**
-- Route upgrade requests to sales team
-- Personalized upgrade consultation
-- Custom package creation
-- Relationship building opportunities
+You can offer a trial period to let customers try your product before buying. Toggle **Offer a trial period** to enable trials and configure the following:
 
-**Custom package upgrades**
-- Pre-configured upgrade packages
-- Bundle complementary services
-- Maximize revenue per customer
-- Simplified decision-making for customers
+- **Duration** — Set the number of days for the trial period.
+- **At end of trial** — Choose what happens when the trial expires:
+  - *Do nothing* — The product remains active with no automatic action.
+  - *Deactivate* — The product is automatically deactivated when the trial ends.
 
-#### Free trial management
-**Trial configuration**
-- Set trial duration and terms
-- Define trial feature limitations
-- Configure automatic conversion settings
-- Customize trial experience messaging
+<img src={require('./img/trial-settings.png').default} alt="Trial settings showing duration and end-of-trial options" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-**Trial optimization**
-- Monitor trial conversion rates
-- A/B test different trial lengths
-- Analyze trial user behavior
-- Optimize onboarding experience
+## Marketing
 
-### Team access and permissions
+You can fully customize how your product appears to customers by editing the **Marketing** tab within a product in Vendor Center. Hover over any element to see what it controls. The following elements are available for customization:
 
-**Internal team configuration**
-- Control which team members can access product
-- Set different permission levels for different roles
-- Enable product demonstration capabilities
-- Support training and customer service activities
+- **Banner image** — The hero image displayed at the top of your product listing.
+- **Categories** — Assign your product to relevant store categories.
+- **Description** — The main product overview shown to customers.
+- **Key selling points** — Highlight the core benefits and value propositions.
+- **FAQs** — Add common questions and answers about the product.
+- **Video content** — Embed videos to demonstrate or promote the product.
+- **Contact information** — Provide support or sales contact details.
 
-**Customer team management**
-- Configure customer user permissions
-- Set up role-based access control
-- Manage feature access by user type
-- Enable self-service user management
+There is also a separate tab for **Screenshots and more files**, where you can upload additional images and documents.
 
-## Best practices for custom products
+A **Reseller** tab is also available, allowing you to customize all of the same elements specifically for how the product appears to resellers.
 
-### Product development strategy
-**Market research**
-- Identify gaps in current marketplace offerings
-- Understand customer needs and pain points
-- Analyze competitive landscape
-- Validate demand before full development
+Use the **Preview** toggle at the top of the Marketing tab to see how your product listing will look to your clients before publishing.
 
-**Feature prioritization**
-- Start with core value proposition
-- Add features based on customer feedback
-- Maintain focus on primary use cases
-- Plan feature roadmap for future development
+All of these elements can be tailored to match your branding guidelines, giving you a consistent brand experience across your product listings.
 
-### Marketing and positioning
-**Value proposition**
-- Clearly articulate unique benefits
-- Focus on customer outcomes rather than features
-- Use customer language and terminology
-- Provide concrete examples and use cases
+<img src={require('./img/marketing-tab.png').default} alt="Marketing tab showing the preview of a product listing with product information, screenshots, and pricing tabs" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-**Content strategy**
-- Create comprehensive product documentation
-- Develop case studies and success stories
-- Produce educational content and tutorials
-- Maintain current and accurate information
+## Integration
 
-### Pricing optimization
-**Pricing research**
-- Analyze comparable solutions in marketplace
-- Consider customer budget constraints
-- Factor in your costs and desired margins
-- Test different pricing models
+The **Integration** tab contains three sections for connecting your product with external systems and automating workflows.
 
-**Revenue optimization**
-- Implement tiered pricing for different customer segments
-- Create add-on opportunities for revenue expansion
-- Configure optimal upgrade paths
-- Monitor and adjust based on performance data
+### Integration settings
 
-### Integration and technical management
-**System integration**
-- Plan for seamless integration with customer systems
-- Implement robust API and webhook functionality
-- Ensure reliable performance and uptime
-- Provide comprehensive technical documentation
+Configure settings and webhooks related to Vendasta API authentication, purchase and activation workflow automation, and user account modification. Toggle **Enable integration** to activate.
 
-**Support infrastructure**
-- Establish customer support processes
-- Create troubleshooting guides and FAQs
-- Implement monitoring and alerting systems
-- Plan for scaling support as customer base grows
+- **API Authentication** — Enter your RSA Public Key, used for decoding payloads from Vendor that have been encoded by Vendor Private Key.
+- **Purchasing, Activation and Cancellation**:
+  - **Purchase URL** — Sent when the product is activated or deactivated.
+  - **Add-on Purchase URL** — Sent when any of the product's add-ons are activated or deactivated. Messages are sent individually for multi-activate add-ons.
+  - **Cancellation URL** — Sent when the product or any of its add-ons are canceled. Messages are sent individually for multi-activate add-ons.
+- **Manually Approve Purchases via API** — Configures your product to use the Pending Purchase Workflow (requires Public Key).
+- **Reseller's users** — Allow the reseller's users to access your product.
+- **Other Webhooks** — Expand to configure additional webhook endpoints.
 
-## Advanced features and integrations
+### Access and SSO
 
-### Webhook configuration
-**Event management**
-- Configure real-time notifications for product events
-- Set up custom endpoints for your systems
-- Customize payload structure for specific needs
-- Implement retry logic and error handling
+Choose a basic access URL for your product, or allow users to SSO from the Vendasta platform using OAuth2 and Open ID Connect.
 
-**Use cases**
-- Order processing and fulfillment automation
-- Customer provisioning and de-provisioning
-- Usage monitoring and billing integration
-- Custom reporting and analytics
+- **Access type** — Select how users launch your product:
+  - *Public webpage* — Redirect users to a public URL.
+  - *Activation-specific URL* — Redirect to a URL unique to each activation.
+  - *OAuth2* — Authenticate users via OAuth2.
+  - *SAML* — Authenticate users via SAML.
+- **Product access URL** — The URL users are redirected to when launching your product. You can optionally include `<accountId>` as a placeholder in the URL.
 
-### SSO implementation
-**Authentication integration**
-- Support multiple SSO protocols (SAML, OAuth, OpenID Connect)
-- Integrate with customer identity systems
-- Reduce login friction for end users
-- Maintain security and compliance requirements
+### Task Manager integration
 
-**Configuration process**
-- Set up SSO endpoints and certificates
-- Configure attribute mapping and user provisioning
-- Test authentication flows thoroughly
-- Provide customer configuration guidance
+Standardize your fulfillment process by automating project and task creation in Task Manager. Toggle **Integrate with Task Manager** to activate.
 
-### Custom marketing pages
-**HTML development**
-- Full creative control over product presentation
-- Integration with your brand guidelines
-- Interactive elements and rich media
-- Mobile-responsive design requirements
+- **Projects** — Automatically create a project in Task Manager each time this product is purchased. Select a project template and choose who fulfills it:
+  - *Vendor* — Create projects in your Task Manager.
+  - *Reseller* — Create projects in the reseller's Task Manager.
+- **Event-generated tasks and projects** — Automatically create a task or project when an event occurs in a different product:
+  - *Reviews* — When a customer review is left for businesses.
+  - *Mentions* — When the business is mentioned across the web.
+  - *Listings* — When a listing is missing or inaccurate.
+  - *Google Q&A* — When a question is asked on Google about the business.
+  - Choose whether these are fulfilled by *Vendor* or *Reseller*.
 
-**SEO optimization**
-- Meta tags and structured data implementation
-- Keyword optimization for product discovery
-- Performance optimization for fast loading
-- Analytics and tracking implementation
+## Add-ons
 
-Creating and managing your own products in the Vendasta Marketplace provides tremendous opportunities to leverage the platform's powerful infrastructure while maintaining complete control over your solutions. Success comes from thoughtful planning, customer-focused development, and continuous optimization based on performance data and customer feedback.
+Add-ons let you create additional features or services that customers can purchase alongside your product. Each add-on is essentially its own product attached to the parent product. Click **Create Add-on** to get started.
+
+## Compare product
+
+The **Compare product** tab shows the activation status of your product and lets you compare your published product against your current draft. If you've made edits, the differences will appear here so you can review changes before publishing.
+
+- **Suspend new activations** — Prevent new customers from activating the product while keeping it available for existing users.
+- **Open** — Open the product (and all of its add-ons) to the marketplace so it can be activated.
+
+## Best practices
+
+- Start with a clear product name and short description that communicate value quickly.
+- Set competitive wholesale and retail pricing — review comparable marketplace offerings for reference.
+- Use the Marketing tab to create compelling product listings with banners, selling points, and FAQs.
+- Configure order forms to collect only the information you need to fulfill the product.
+- Set up notification emails so your team is alerted when products are activated or canceled.
+- If offering editions, keep tier names and pricing differences clear for customers.
+- Test your product's purchase flow end-to-end before publishing.
