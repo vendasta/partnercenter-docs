@@ -14,7 +14,7 @@ Welcome to the exciting world of Fulfillment Forms! This article will walk you t
 
 For more info, [check out this article.](../../commerce/orders/creating-and-managing-orders.mdx)
 
-1.  Go to Partner Center > Businesses > Accounts
+1.  Go to **Partner Center** → **Accounts** → **Manage Accounts**
 2.  Select the account you want to make a purchase for
 3.  Click **Order Products**
 4.  Select the product(s) that you wish to activate
