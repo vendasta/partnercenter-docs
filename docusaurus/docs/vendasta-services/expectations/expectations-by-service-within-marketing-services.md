@@ -74,6 +74,6 @@ _\*Note that for Website services, either credentials are required or delegate a
 
 ## Business days to launch after assets received
 
-Timelines for delivery can vary depending on additional services ordered and project complexity. If you are concerned that a business may require complex services (eg. a high volume of social posts, a listing claim requiring intervention from the source’s support team, or a highly customized website), reach out to your account contact with Vendasta for more information and assistance.
+Timelines for delivery can vary depending on additional services ordered and project complexity. If you are concerned that a business may require complex services (e.g., a high volume of social posts, a listing claim requiring intervention from the source’s support team, or a highly customized website), reach out to your account contact with Vendasta for more information and assistance.
 
 _\*Note that complex listing claims, including Google Business Profile claims and optimization, may take up to 90 days to complete._

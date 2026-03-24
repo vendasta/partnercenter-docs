@@ -218,7 +218,7 @@ Would you like more details or help placing an order?
 
 ## Testing & troubleshooting
 
-This section walks you through diagnosing the most common issues with connecting Shopify with  the AI Receptionist: from authentication errors and query mistakes, to empty results and rate limiting. Select the tab that matches your symptom to learn what the error looks like and how to fix it.
+This section walks you through diagnosing the most common issues with connecting Shopify with the AI Receptionist: from authentication errors and query mistakes, to empty results and rate limiting. Select the tab that matches your symptom to learn what the error looks like and how to fix it.
 
 
 :::note

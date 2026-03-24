@@ -65,7 +65,7 @@ _\*Plugins or themes may require a license key to update._
     1.  While we can vet the website without access to the domain registrar, we cannot vet the site without the WordPress admin login credentials.
 3.  Upon receiving the completed fulfillment form, our team will vet the website, which includes reviewing, but not limited to:
     1.  Plugins actively running on the website
-    2.  How the website is built (ie. Divi, Elementor, WPBakery, etc.)
+    2.  How the website is built (i.e., Divi, Elementor, WPBakery, etc.)
     3.  If there are any custom-coded themes or elements that our team cannot support
 4.  Once the website has been vetted, you will receive an email update with our findings, either acknowledging that it is approved for import & support or that it’s denied (in which case we would recommend rebuilding the site with our design team).
 

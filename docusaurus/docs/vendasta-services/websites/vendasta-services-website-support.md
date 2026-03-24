@@ -71,7 +71,7 @@ If you need help with any of these features, please reach out and our team can p
 _What is an update?_ It consists of one of the two:
 
 *   The request is completed and you are informed of the work done.
-*   If not complete, the update will provide information on the current status of the request and insights on any delays (eg. complexity, volume of requests received, additional assets/clarification required, etc.)
+*   If not complete, the update will provide information on the current status of the request and insights on any delays (e.g., complexity, volume of requests received, additional assets/clarification required, etc.)
 
 Please keep an eye out for our emails. Our team may request further clarification or need additional assistance (access to a link you shared, etc.). Our goal is to complete this work to your satisfaction in a timely manner, and your responsiveness is appreciated.
 

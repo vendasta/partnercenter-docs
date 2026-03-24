@@ -50,14 +50,14 @@ The emails that you supply in the Account Representative Email and the Primary C
 
 ### Domain
 
-In this section, you will be able to provide the login credentials for your domain registrar (eg. GoDaddy, NameCheap, etc). If you do not have a domain, you will need to purchase one before we set the website live. To purchase a domain, you can purchase it directly from the domain registrar of choice, or via one of the following products within the product Marketplace:
+In this section, you will be able to provide the login credentials for your domain registrar (e.g., GoDaddy, NameCheap, etc.). If you do not have a domain, you will need to purchase one before we set the website live. To purchase a domain, you can purchase it directly from the domain registrar of choice, or via one of the following products within the product Marketplace:
 
 *   [Domains](https://partners.vendasta.com/marketplace/products/MP-L3DHRP5Z2RP4QVWLLTQGJLLVSH232WR5?tab=0)
 *   [GoDaddy Domains](https://partners.vendasta.com/marketplace/products/MP-https://partners.vendasta.com/marketplace/products/MP-4TMLZSQ5FMJQX5T75TPC43FQBWD2VXLB)
 
 ### Navigation
 
-This section refers to the different pages that you want (eg. About, Services, Blog) and how you want them arranged (for example, subpages for additional services that will nest underneath the Services header). You can provide additional notes and assets (any images/icons/etc) that you want to be used.
+This section refers to the different pages that you want (e.g., About, Services, Blog) and how you want them arranged (for example, subpages for additional services that will nest underneath the Services header). You can provide additional notes and assets (any images/icons/etc) that you want to be used.
 
 ### Design
 
@@ -79,7 +79,7 @@ If you plan to sell products or services through your website, we will need info
 
 ### Additional functionality
 
-In this section, you can include/upload files like terms & conditions and policy documentation, embed codes (eg. a third-party calendar booking code), and additional information about the site. We recommend reviewing any specific notes about the website during your onboarding call with our team.
+In this section, you can include/upload files like terms & conditions and policy documentation, embed codes (e.g., a third-party calendar booking code), and additional information about the site. We recommend reviewing any specific notes about the website during your onboarding call with our team.
 
 ### Saving, submitting, and downloading your form
 
