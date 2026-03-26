@@ -49,6 +49,22 @@ Capabilities are like instructions that guide how your AI Chat Receptionist beha
 - **Book Appointments**  
   Connect your calendar to let the AI help customers schedule meetings. It will offer available time slots and collect all necessary booking details automatically. 
 
+#### Book multiple services in one session
+
+When configuring **Book Appointments**, you can enable **Book Multiple Services** and choose the service menu/group the AI can book from.
+
+With multi-service booking enabled, the AI can:
+
+- Identify and confirm multiple services in one request, and ask follow-up clarification questions when a service request is ambiguous
+- Suggest related add-on services from the same menu/group when they fit the request
+- Find available back-to-back time slots for the full service sequence; if no combined slot is available, offer alternatives such as a different date, a different provider, or split bookings
+- Apply scheduling rules across the full session by enforcing:
+  - the longest advance notice requirement across selected services
+  - the shortest future booking window across selected services
+- Prioritize one provider for the whole session when `Any Provider` is selected, or confirm provider handoffs when multiple providers are required
+- Collect and deduplicate required contact and intake fields across selected services, including phone validation and confirmation
+- Send one consolidated confirmation flow (email, SMS, or both based on requirements) and create one CRM activity for the multi-service booking
+
  - **Custom Capabilities**  
    Expand your AI Chat Receptionist's skills by adding custom capabilities tailored to your unique business needs. You can learn more about [Custom Capabilities](../../ai-capabilities/creating-custom-capabilities.md) in depth.
 
