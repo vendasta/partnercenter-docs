@@ -1,13 +1,13 @@
 ---
-title: "Google Workspace - Complete Integration Guide"
-sidebar_label: "Google Workspace Guide"
+title: "Google Workspace complete integration guide"
+sidebar_label: "Google Workspace guide"
 sidebar_position: 3
 description: "Complete guide to setting up, transferring, and managing Google Workspace integration with the Vendasta platform"
 tags: [marketplace, google-workspace, setup, transfer, sso, integration]
 keywords: [Google Workspace setup, Google Workspace transfer, SSO configuration, domain setup, user management, Business App integration]
 ---
 
-# Google Workspace - Complete Integration Guide
+# Google Workspace - complete integration guide
 
 This comprehensive guide covers everything you need to know about integrating Google Workspace with the Vendasta platform, including initial setup, transferring existing subscriptions, and managing SSO configurations.
 
@@ -15,7 +15,7 @@ This comprehensive guide covers everything you need to know about integrating Go
 
 Google Workspace integration with the Vendasta platform provides seamless productivity solutions for your clients while maintaining centralized management through Partner Center. This integration supports both new Google Workspace setups and transfers of existing subscriptions.
 
-**Key integration benefits:**
+**Key integration benefits**
 - Centralized billing and management through Partner Center
 - Seamless user authentication with Business App
 - Automated provisioning and deprovisioning
@@ -47,21 +47,21 @@ Before beginning any Google Workspace configuration, ensure you have the followi
 
 ### Business App user configuration
 
-**Creating new users:**
-1. Navigate to **Partner Center > Accounts > Manage Users**
-2. Click **Create User**
-   - Alternative path: **Partner Center > Accounts > Manage Accounts > [Account Name] > Users**
-3. Complete user form ensuring email domain matches Google Workspace domain
-4. Add user to target account:
-   - Select edit icon > **Edit Permissions > Add Account**
+**Creating new users**
+1. In **Partner Center** → **Accounts**, start a new user from **Manage Users** → **Create User**, or open **Manage Accounts** → **[Account Name]** → **Users** if you are already working inside that account.
+2. Complete user form ensuring email domain matches Google Workspace domain
+3. Add user to target account:
+   - Select the edit icon → **Edit Permissions** → **Add Account**
    - Locate target account and select checkbox
    - Click **Add Accounts**
-5. Repeat for all Google Workspace users
+4. Repeat for all Google Workspace users
 
-**Using Existing Users:**
+**Using existing users**
+
 If users already exist with matching domain:
-1. Navigate to **Partner Center > Accounts > Manage Users**
-2. Select edit icon next to target user > **Edit Permissions**
+
+1. Navigate to **Partner Center** → **Accounts** → **Manage Users**
+2. Select the edit icon next to the target user → **Edit Permissions**
 3. Click **Add Account**
 4. Locate target account and select checkbox
 5. Click **Add Accounts**
@@ -71,10 +71,10 @@ Skip to activation if users are already assigned to the target account.
 
 ### Google Workspace activation
 
-**Initial activation process:**
-1. Navigate to **Partner Center > Accounts > Manage Accounts**
+**Initial activation process**
+1. Navigate to **Partner Center** → **Accounts** → **Manage Accounts**
 2. Select target account
-3. Click **Create Order > Add Google Workspace**
+3. Click **Create Order** → **Add Google Workspace**
 4. Click **Continue**
 5. Check both "I understand..." acknowledgment boxes
 
@@ -82,7 +82,7 @@ Skip to activation if users are already assigned to the target account.
 
 Choose the scenario that best matches your deployment strategy:
 
-#### Scenario A: Client-managed setup
+#### Scenario A: client-managed setup
 **Use case:** Client handles all Google Workspace configuration independently
 
 **Configuration:**
@@ -91,13 +91,13 @@ Choose the scenario that best matches your deployment strategy:
 - **Business App user:** Select corresponding Business App user
 - **Admin email address:** Client's alternative email (different domain required)
 
-**Process Flow:**
+**Process flow**
 - Client receives **Welcome to Google Workspace** email
 - Client completes domain verification and DNS configuration
 - Client configures Google Workspace settings independently
 - Partner maintains billing and administrative oversight
 
-#### Scenario B: Partner setup, client administration
+#### Scenario B: partner setup, client administration
 **Use case:** Partner performs initial setup, client takes over administration
 
 **Configuration:**
@@ -112,7 +112,7 @@ Choose the scenario that best matches your deployment strategy:
 - Client assumes ongoing administrative responsibilities
 - Partner maintains billing relationship
 
-#### Scenario C: Partner setup and administration
+#### Scenario C: partner setup and administration
 **Use case:** Partner maintains ongoing administrative control
 
 **Configuration:**
@@ -134,7 +134,7 @@ Choose the scenario that best matches your deployment strategy:
 3. Click **Purchase** to begin activation
 4. **Allow up to 10 minutes** for product activation
 
-### Administrative configuration (for Partner-managed setups)
+### Administrative configuration (for partner-managed setups)
 
 **Terms of Service acceptance:**
 1. Monitor admin email inbox for "Google Workspace Admin User for..." message
@@ -148,7 +148,7 @@ Choose the scenario that best matches your deployment strategy:
 ### Domain verification and DNS configuration
 
 **Final setup steps:**
-1. Navigate to **Partner Center > Accounts > Manage Accounts > [Account Name]**
+1. Navigate to **Partner Center** → **Accounts** → **Manage Accounts** → **[Account Name]**
 2. Click **Google Workspace**
 3. Select **Setup** from sidebar
 4. Follow verification instructions:
@@ -164,7 +164,7 @@ Choose the scenario that best matches your deployment strategy:
 ### Additional user provisioning
 
 **Adding extra seats:**
-1. Navigate to **Partner Center > Accounts > Manage Accounts > [Account Name]**
+1. Navigate to **Partner Center** → **Accounts** → **Manage Accounts** → **[Account Name]**
 2. Click **Google Workspace** under Products section
 3. Locate "Seat Available For Use" rows
 4. Click **Create User** for each available seat
@@ -199,8 +199,8 @@ Repeat for all additional purchased seats.
 ### Partner transfer processing
 
 **Partner Center configuration:**
-1. Navigate to **Partner Center > Accounts > Manage Accounts > [Account Name]**
-2. Click **Create Order > Add Google Workspace Transfer**
+1. Navigate to **Partner Center** → **Accounts** → **Manage Accounts** → **[Account Name]**
+2. Click **Create Order** → **Add Google Workspace Transfer**
 3. Enter client-provided **Transfer Token**
 4. Check **I understand...** acknowledgment
 5. Click **Purchase**
@@ -215,24 +215,25 @@ Repeat for all additional purchased seats.
 4. Allow several minutes for processing and seat activation
 5. Verify client agreement to Google Workspace terms and conditions
 
-![Google Workspace Activate Products Screen](./img/google-workspace/activate-products.jpg)
-![Google Workspace Purchase Screen](./img/google-workspace/purchase-screen.jpg)
+<img src={require('./img/google-workspace/activate-products.jpg').default} alt="Activate products screen showing Google Workspace transfer option" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-## Transferring Google Workspace **out of Vendasta**
+<img src={require('./img/google-workspace/purchase-screen.jpg').default} alt="Purchase screen for confirming Google Workspace transfer details" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## Transferring Google Workspace out of Vendasta
 
 You can transfer Google Workspace account(s) **out of the Vendasta platform** by cancelling the product.
 
 ### What happens after cancellation?
-- The client’s Google Workspace **emails and data remain intact**.  
-- The account simply stops being managed by Vendasta and **transfers back to Google**.  
-- The **Google Workspace admin** will receive an email prompting them to access the **Google Admin Console** and set up billing directly with Google.  
+
+- The client’s Google Workspace **emails and data remain intact**.
+- The account simply stops being managed by Vendasta and **transfers back to Google**.
+- The **Google Workspace admin** will receive an email prompting them to access the **Google Admin Console** and set up billing directly with Google.
 
 To avoid any service interruption, the client **must set up payment with Google within 7 days** of cancelling the product. This process is **not automatic** or managed by Vendasta.
 
-
 ### Cancelling individual seats
-If you are cancelling specific seat(s) rather than the full product, please also contact **support@vendasta.com**, as **backend adjustments** may be required to complete the process.
 
+If you are cancelling specific seat(s) rather than the full product, please also contact **support@vendasta.com**, as **backend adjustments** may be required to complete the process.
 
 ## SSO management and configuration
 
@@ -249,14 +250,14 @@ Single Sign-On (SSO) integration allows users to access Google Workspace through
 2. Open account with active Google Workspace
 3. Access Google Workspace from Partner Center
 
-![Google Workspace in Partner Center](./img/google-workspace/workspace-sso-1.jpg)
+<img src={require('./img/google-workspace/workspace-sso-1.jpg').default} alt="Google Workspace product view in Partner Center for an account" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 4. Open Workspace dashboard
 5. Select **Settings** from left panel
 6. Locate SSO (Single Sign-On) toggle
 7. Toggle SSO on or off as needed
 
-![SSO toggle in Google Workspace settings](./img/google-workspace/workspace-sso-2.jpg)
+<img src={require('./img/google-workspace/workspace-sso-2.jpg').default} alt="Google Workspace settings with the SSO toggle visible" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 **Impact of disabling SSO:**
 - Users can access Google products directly through Google login
