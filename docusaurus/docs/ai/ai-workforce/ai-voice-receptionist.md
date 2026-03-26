@@ -113,7 +113,9 @@ For more detailed information on Capabilities, see the [AI Workforce Overview](.
 #### Default voice lead capture for AI Voice Receptionist
 The **default voice lead capture** capability guides your AI Employee to offer to help customers by answering questions and then gathering their contact information. This capability is turned on by default. 
 
-> **Note:** If this is turned off, the Voice Receptionist will not be able to capture caller information but *will* still answer questions to the best of their ability.
+::::note
+If this is turned off, the Voice Receptionist will not be able to capture caller information but *will* still answer questions to the best of their ability.
+::::
 
 
 #### Book appointments with your calendar
@@ -121,6 +123,22 @@ The **default voice lead capture** capability guides your AI Employee to offer t
 The **Book appointments with calendar** capability connects to your integrated calendar, enabling the AI Voice Receptionist to offer real-time availability to callers, collect all necessary booking details, and automatically create events on your calendar. 
 
 On the `Book appointments with calendar` panel, use the `Select event link to book with` dropdown to choose which calendar your receptionist should use to determine availability as well as which kind of appointments they can offer.
+
+#### Book multiple services in one session
+
+When configuring **Book appointments with calendar**, you can enable **Book Multiple Services** and choose the service menu/group the AI can book from.
+
+With multi-service booking enabled, the AI can:
+
+- Detect and confirm multiple service intents in one conversation, and ask clarification questions for ambiguous requests
+- Suggest related add-on services from the selected menu/group when relevant
+- Find available back-to-back slots for the full service sequence; if no combined slot is available, offer alternatives such as a different date, a different provider, or split bookings
+- Apply booking constraints across the full session by enforcing:
+  - the longest advance notice requirement across selected services
+  - the shortest future booking window across selected services
+- Prefer one provider for the full session when `Any Provider` is selected, or confirm provider handoffs when multiple providers are required
+- Collect and deduplicate mandatory contact and intake fields across selected services, including phone validation and confirmation
+- Send one consolidated confirmation flow (email, SMS, or both based on requirements) and create one CRM activity for the multi-service booking
 
 #### Additional Instructions for AI Voice Receptionist
 
