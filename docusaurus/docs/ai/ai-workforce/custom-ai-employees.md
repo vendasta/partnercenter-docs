@@ -94,7 +94,7 @@ Teach your Custom AI Employee about your business:
 
 **Knowledge Sources Available:**
 
-- **Business Profile**: Automatically included (business hours, services, contact info)
+- **Business Profile**: Automatically included (business hours, services, contact info, and supported Google and Bing listing attributes)
 - **Website**: Fetch your website for product/service information
 - **File Upload**: Upload PDFs, spreadsheets, documents (pricing sheets, service catalogs, policies)
 - **Text**: Add custom Q&A or specific information manually
