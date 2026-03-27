@@ -51,11 +51,14 @@ You can add or update knowledge in several ways:
   - Categories  
   - Hours  
   - Services offered  
+  - Business attributes from supported Google and Bing listings (for example, wheelchair accessible, free Wi-Fi, or outdoor seating)  
   - Short description  
   - Long description  
   - Social media URLs  
   - Booking URL  
+- Attribute names use source display labels when available. If a display label is unavailable, a cleaned readable name is used.  
 - Updated by editing the Business Profile.  
+- Updates to Google and Bing listing attributes trigger a Business Profile knowledge sync when listing profile data changes.  
 
 ### Text  
 - Add FAQs or custom information manually.  
@@ -179,7 +182,13 @@ This helps you refine what to keep, update, or remove from your knowledge base.
 <details>
 <summary>How do I update the Business Profile knowledge source?</summary>
 
-Edit the Business Profile in Business App. Changes automatically sync to AI employees.
+Edit the Business Profile in Business App. Changes automatically sync to AI employees, including updates to supported Google and Bing listing attributes.
+</details>
+
+<details>
+<summary>Which listing attributes are included in the Business Profile knowledge source?</summary>
+
+Supported Google and Bing listing attributes are included when available in listing profile data. This includes attributes such as accessibility, amenities, and service options.
 </details>
 
 <details>
