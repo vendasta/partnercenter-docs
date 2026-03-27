@@ -2,14 +2,14 @@
 title: "Package Troubleshooting & Advanced Guide"
 sidebar_label: "Troubleshooting & Advanced Guide"
 sidebar_position: 3
-description: "Comprehensive troubleshooting guide for package visibility, duplicate issues, and advanced package management scenarios"
+description: "Troubleshooting steps for package visibility, duplicates, links, pricing, multi-market sync, and support escalation"
 tags: [marketplace, packages, troubleshooting, package-visibility, duplicates]
 keywords: [package troubleshooting, package visibility, duplicate packages, package problems, marketplace issues, store problems]
 ---
 
 # Package Troubleshooting & Advanced Guide
 
-This guide addresses common package issues with step‑by‑step solutions, and offers advanced guidance for complex scenarios. Use it for visibility problems, duplicates, link issues, and multi‑market challenges.
+This guide addresses common package issues with step‑by‑step solutions for visibility problems, duplicates, links, pricing, multi‑market sync, and when to escalate.
 
 ## Common package visibility issues
 
@@ -17,12 +17,13 @@ Package visibility problems are among the most frequent issues encountered in ma
 
 ### Issue 1: Packages not appearing in Business App Store
 
-Symptoms
+Symptoms:
+
 - Published packages missing from customer-facing store
 - Packages visible in Partner Center but not in Business App
 - Customers cannot find or purchase packages
 
-Root causes
+Root causes:
 1. **Missing Category Assignment** - Package created without store category selection
 2. **Category Display Settings** - Categories not configured to show in store
 3. **Market Assignment Problems** - Package not properly assigned to target markets
@@ -68,12 +69,14 @@ For multi‑market configurations
 
 ### Issue 2: Duplicate packages in Public Store
 
-Symptoms
+Symptoms:
+
 - Same package appearing multiple times in customer store
 - Duplicate listings with identical content and pricing
 - Customer confusion due to repeated package options
 
-Root cause
+Root cause:
+
 Duplicate packages typically occur when both **Business App** and **Public Store** options are enabled for the same product, causing the system to display multiple instances.
 
 Complete resolution
@@ -104,7 +107,8 @@ Prevention strategy
 
 ### Issue 3: Package links not working
 
-Symptoms
+Symptoms:
+
 - Direct package links return errors or don't load
 - Buy it Now links redirect to incorrect pages
 - Customers cannot access packages through shared links
@@ -113,28 +117,34 @@ Common causes and solutions
 
 #### Cause 1: Package publication status
 Check: Ensure package is published and not in draft status
+
 Solution: Navigate to package management and confirm publication status
 
 #### Cause 2: Purchase behavior configuration
 Check: Verify package purchase behavior is set to **Add to Shopping Cart**
+
 Solution: Edit package settings and configure appropriate purchase behavior
 
 #### Cause 3: User access permissions
 Check: For Buy it Now links, verify the target user exists and has appropriate permissions
+
 Solution: Review user configuration and access rights
 
 #### Cause 4: Market restrictions
 Check: Confirm package is available in the customer's target market
+
 Solution: Review market assignments and availability settings
 
 ### Issue 4: Package pricing changed after editing
 
-Symptoms
+Symptoms:
+
 - Package pricing looks different after opening and saving an existing package
 - Line items now show individual prices that weren't visible before
 - Total price appears redistributed across items
 
-Root cause
+Root cause:
+
 Existing packages automatically migrate to the line-item pricing model the first time they are edited and saved in the package constructor. This migration distributes the package's total price across individual line items using a weighted breakdown based on each item's retail value and billing frequency.
 
 Resolution
@@ -163,133 +173,50 @@ Resolution strategy
 3. **Synchronization Process** - Use copy functionality to maintain consistency
 4. **Ongoing Monitoring** - Regular audits to prevent configuration drift
 
-### Complex package dependencies
+**Considerations**
 
-Scenario: Packages with intricate product dependencies cause activation or billing issues.
+- **Localized pricing** - Adjust package pricing for regional markets
+- **Product availability** - Ensure all package components are available in target markets
+- **Regulatory compliance** - Consider local regulations and requirements
+- **Cultural adaptation** - Modify messaging and positioning for local audiences
 
-Analysis framework
-1. **Dependency Mapping** - Document all product relationships and requirements
-2. **Activation Sequence** - Understand proper order for product enablement
-3. **Billing Coordination** - Ensure pricing and billing cycles align properly
-4. **Integration Points** - Identify system integration requirements
+**Cross-market strategy**
 
-Resolution approach
-1. **Simplify Dependencies** - Reduce complexity where possible
-2. **Clear Documentation** - Provide detailed setup and activation guides
-3. **Testing Protocols** - Implement thorough testing before publication
-4. **Support Preparation** - Train support team on complex package scenarios
-
-### Performance optimization issues
-
-Scenario: Packages with poor conversion or adoption.
-
-Performance analysis
-1. **Conversion Metrics** - Track package-to-purchase conversion rates
-2. **Customer Feedback** - Gather insights on package appeal and value perception
-3. **Competitive Analysis** - Compare package positioning against market alternatives
-4. **Pricing Analysis** - Evaluate pricing strategy effectiveness
-
-Optimization strategies
-1. **Package Restructuring** - Modify product combinations based on customer needs
-2. **Pricing Adjustments** - Test different pricing models and strategies
-3. **Marketing Enhancement** - Improve package descriptions and value propositions
-4. **Customer Education** - Develop better educational content and sales support
-
-## Preventive maintenance and best practices
-
-### Regular package audits
-
-Monthly review checklist
-- **Visibility Verification** - Confirm all packages appear correctly in customer stores
-- **Link Testing** - Verify all shared links function properly
-- **Performance Review** - Analyze package sales and conversion data
-- **Customer Feedback** - Review support tickets and customer comments
-- **Market Consistency** - Ensure consistent package availability across markets
-
-### Configuration documentation
-
-Essential documentation
-- **Package Configurations** - Detailed records of all package settings
-- **Market Assignments** - Clear mapping of packages to target markets
-- **Dependency Relationships** - Documentation of product interdependencies
-- **Change History** - Log of all configuration changes and reasons
-
-### Team training and support
-
-**Training Components:**
-- **Basic Package Management** - Core skills for package creation and editing
-- **Troubleshooting Procedures** - Systematic approach to problem resolution
-- **Customer Communication** - Effective methods for explaining package issues
-- **Escalation Procedures** - When and how to escalate complex problems
-
-## Advanced configuration scenarios
-
-### Enterprise package management
-
-Large‑scale considerations
-- **Package Portfolio Strategy** - Systematic approach to large package catalogs
-- **Automated Testing** - Systematic validation of package configurations
-- **Performance Monitoring** - Advanced analytics and reporting
-- **Change Management** - Controlled processes for package updates
-
-### Integration with external systems
-
-System integration points
-- **CRM Integration** - Connecting packages with customer relationship management
-- **Billing System Coordination** - Ensuring accurate billing and invoicing
-- **Inventory Management** - Managing product availability and dependencies
-- **Marketing Automation** - Automated package promotion and customer targeting
-
-### Compliance and regulatory considerations
-
-Compliance framework
-- **Regional Regulations** - Ensuring packages meet local requirements
-- **Pricing Regulations** - Compliance with pricing and discount rules
-- **Data Protection** - Customer data handling in package transactions
-- **Accessibility Standards** - Ensuring packages are accessible to all customers
-
-## Emergency response procedures
-
-### Critical issues response
-
-Immediate actions
-1. **Impact Assessment** - Quickly determine scope and severity
-2. **Customer Communication** - Notify affected customers if necessary
-3. **Temporary Workarounds** - Implement quick fixes to restore functionality
-4. **Escalation Process** - Engage appropriate technical support resources
-
-### Recovery procedures
-
-Post‑issue recovery
-1. **Root Cause Analysis** - Thorough investigation of problem causes
-2. **Preventive Measures** - Implement safeguards against recurrence
-3. **Documentation Updates** - Revise procedures based on lessons learned
-4. **Team Training** - Update training materials and procedures
+- **Standardization** - Maintain consistent core offerings across markets
+- **Localization** - Adapt pricing, messaging, and product mix for regional needs
+- **Performance monitoring** - Track package performance across different markets
+- **Optimization** - Continuously improve packages based on market-specific data
 
 ## Support resources and escalation
 
-### Internal support escalation
+If nothing in this guide fixes the issue, use the options below.
 
-When to escalate
-- Configuration issues that cannot be resolved through standard procedures
+### When to escalate
+
+Escalate or open a support thread when you see any of the following:
+
+- Configuration issues that cannot be resolved after following the steps above
 - System-wide problems affecting multiple packages or customers
-- Technical integration problems requiring developer assistance
-- Performance issues that impact business operations
+- Technical integration problems that need API or engineering help (start with [Developer APIs and integrations](../../administration/advanced/developer-apis/index.mdx) when relevant)
+- Performance or outage-like behavior that blocks sales or fulfillment
 
-### External support resources
+Before you assume a bug, check **[Vendasta system status](https://status.vendasta.com/)** for platform-wide incidents.
 
-Vendor support channels
-- **Technical Documentation** - Comprehensive guides and API documentation
-- **Support Tickets** - Direct technical support for complex issues
-- **Community Forums** - Peer support and knowledge sharing
-- **Training Resources** - Educational materials and best practices
+### Contact Vendasta support
+
+- **Conversations** — In Partner Center, open the contact card in the lower left and choose **Send Message**. See [Contacting Vendasta Support](../../conversations/conversations-in-partner-center.mdx#contacting-vendasta-support).
+- **Email** — [support@vendasta.com](mailto:support@vendasta.com)
+
+### More help in the docs
+
+- **[Partner Troubleshooting Guide](../../getting-started/partner-troubleshooting-guide.mdx)** — guidance on **when** to contact different teams, and **what to put in a ticket** (Partner ID, replication steps, screenshots, and so on).
+- **[Package Management & Store Integration](./package-management-store-integration.mdx)** — normal setup for packages, store categories, and sharing (many “issues” trace back to configuration on that page).
 
 ### Customer communication
 
-**Effective Customer Communication:**
-- **Proactive Updates** - Inform customers of issues before they discover them
-- **Clear Explanations** - Provide understandable explanations of problems and solutions
-- **Timeline Expectations** - Set realistic expectations for resolution timeframes
-- **Follow-Up** - Ensure customer satisfaction after issue resolution
+When you need to update **your** customers about a package or store problem:
 
-This comprehensive troubleshooting guide provides the foundation for maintaining a reliable, high-performing package system that delivers consistent value to both partners and customers. Regular application of these procedures and preventive measures will minimize issues and maximize package effectiveness.
+- **Proactive updates** — Tell affected customers what you know before they all hit support
+- **Clear explanations** — Describe impact and what you are doing in plain language
+- **Timeline expectations** — Give a realistic window when you have one; say when you will follow up if not
+- **Follow-up** — Confirm the issue is resolved or the workaround still works for them

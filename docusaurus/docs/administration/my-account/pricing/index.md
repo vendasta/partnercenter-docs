@@ -118,5 +118,5 @@ Use the search bar at the top of the Pricing page to filter products by name. Yo
 </details>
 
 :::tip More questions about pricing?
-If you have other questions about pricing or need assistance understanding your wholesale costs, please contact [support](../../../partner-center/overview.mdx#submitting-a-support-ticket) or email billingsupport@vendasta.com.
+If you have other questions about pricing or need assistance understanding your wholesale costs, contact [support@vendasta.com](mailto:support@vendasta.com) or email billingsupport@vendasta.com. For what to include in a request, see [Best practice: Submitting a Support Ticket](../../../getting-started/partner-troubleshooting-guide.mdx#best-practice-submitting-a-support-ticket).
 :::
