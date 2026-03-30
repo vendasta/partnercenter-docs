@@ -110,11 +110,94 @@ When enabled, customers visiting your Business App login page will see a **Creat
 The **Show Create Account** option is configured at the partner level and applies to your default market. For market-specific configurations, select the appropriate market before making changes.
 :::
 
-## Automating onboarding for self-signup customers
+## How to turn on self-signup for small business customers
 
-Create an automation to welcome and engage customers who sign up on their own.
+Follow these steps to set up a complete self-serve signup and purchase flow. This guide walks you through the platform's built-in automation templates and recommended email campaigns so you can get up and running quickly.
 
-### Set up the automation
+### Step 1: Configure Featured Packages
+
+Before driving signups, make sure new customers have something to buy. [Featured Packages](./featured-packages) appear on the Business App homepage for customers without active products, giving them a clear path from signup to purchase.
+
+1. In Partner Center, go to **Accounts** > **Manage Business App** > **Customize Business App**.
+2. Scroll to **Add Your Clients** and configure your **Featured Packages**.
+3. Select packages that are relevant to self-signup customers — start with your most popular or entry-level offerings.
+
+### Step 2: Place your signup link
+
+Get your signup link from **Customize Business App** > **Add Your Clients** > **Self Sign-Up** (see [How to set up self-signup](#how-to-set-up-self-signup) above), then add it where prospects will find it:
+
+- **Your website**: Add a CTA button on your homepage, footer, or a dedicated landing page
+- **Email signatures**: Include the link in your team's email signatures
+- **Social media**: Add to your bio links on LinkedIn, Facebook, or Google Business Profile
+- **Marketing campaigns**: Use in ads, newsletters, or partner directories
+- **Login page**: Enable the **Show Create Account** toggle so visitors to your Business App login page can register directly
+
+:::tip
+Create a dedicated landing page that explains your services and includes the signup link as the primary call to action. This gives you a single URL to promote across all channels.
+:::
+
+### Step 3: Activate the signup campaign automation
+
+The platform includes a pre-built automation template that handles new self-signup customers automatically.
+
+1. In Partner Center, go to **Automations**.
+2. Click **Automation Templates**.
+3. Find the **Signup campaign | Drive self-serve revenue** template and click **Use template**.
+4. Configure the template:
+   - **Owner assignment**: Choose which salesperson or team should be assigned to new self-signup customers
+   - **Email campaign**: Select the **Self Signup - Welcome** campaign (see Step 5) or choose your own
+5. Save and activate the automation.
+
+This automation triggers when a company is created with the source **Self Signup**. It assigns an owner/salesperson and sends your chosen welcome email campaign — giving every new signup immediate attention without manual work.
+
+### Step 4: Activate the purchases and abandoned carts automation
+
+A second automation template handles what happens after a self-signup customer interacts with your store.
+
+1. In **Automations**, click **Automation Templates**.
+2. Find the **Purchases & abandoned carts for self serve** template and click **Use template**.
+3. Configure the template:
+   - **Purchased branch**: Select an onboarding campaign to send after a successful purchase. Use **Purchase Complete - Generic** or **Purchase - Conversations AI Setup** from Recommended Campaigns, or create your own.
+   - **Not purchased branch**: Select an abandoned cart campaign. Use **Purchase Incomplete - Generic** from Recommended Campaigns, or create your own.
+4. Save and activate the automation.
+
+This automation triggers when a user adds, removes, or updates an item in their shopping cart. It waits 30 minutes to see if the purchase completes, then sends the appropriate campaign based on the outcome.
+
+:::tip
+Add notifications on each branch to alert your sales and success teams. This way, your team knows when a customer completes a purchase or abandons their cart and can follow up personally if needed.
+:::
+
+### Step 5: Set up email campaigns
+
+The platform provides recommended email campaigns designed for the self-serve flow. Find them in **Partner Center** > **Email Campaigns** > **Recommended Campaigns** tab.
+
+| Campaign | Purpose | Use with |
+|----------|---------|----------|
+| **Self Signup - Welcome** | Welcomes new self-signup customers, introduces your services, and guides them to get started | Signup campaign automation (Step 3) |
+| **Purchase Complete - Generic** | Onboards customers after a successful purchase | Purchases automation — purchased branch (Step 4) |
+| **Purchase - Conversations AI Setup** | Guides customers through setting up AI-powered conversations after purchase | Purchases automation — purchased branch (Step 4) |
+| **Purchase Incomplete - Generic** | Re-engages customers who added items to their cart but didn't complete the purchase | Purchases automation — not purchased branch (Step 4) |
+
+To use a recommended campaign:
+
+1. Go to **Email Campaigns** > **Recommended Campaigns**.
+2. Click the campaign name to preview it.
+3. Use it as-is, or clone it to customize the content for your brand.
+
+### Step 6: Monitor and optimize
+
+Once your self-serve flow is live, track performance and adjust:
+
+- **Signup volume**: Filter your account list by **Record Source** = "Self Signup" to see how many customers are coming in
+- **Cart and purchase activity**: Review automation run history in **Automations** to see how many customers are purchasing vs. abandoning carts
+- **Email performance**: Check open rates and click rates on your campaigns in **Email Campaigns**
+- **Featured Packages**: Adjust your package selection based on what converts — try different offerings or pricing to improve uptake
+
+## Building custom automations
+
+If you need more control beyond the pre-built templates, you can create automations from scratch.
+
+### Set up a custom automation
 
 1. In Partner Center, go to **Automations**.
 2. Click **Create Automation**.
@@ -122,39 +205,15 @@ Create an automation to welcome and engage customers who sign up on their own.
 4. Add a condition to filter by **Record Source** equals **Self Signup**.
 5. Add your desired actions.
 
-### Recommended automation actions
+### Additional automation actions to consider
 
-Consider including these steps in your self-signup automation:
-
-- **Send a welcome email**: Introduce your services and provide getting-started guidance
-- **Assign a salesperson**: Route the new customer to the appropriate team member
 - **Create a follow-up task**: Schedule a check-in call or demo
 - **Add to a list**: Organize self-signup customers for targeted campaigns
-- **Start an email campaign**: Begin a nurture sequence with helpful content
+- **Create an opportunity**: Track the potential revenue from each self-signup customer
 
 For detailed instructions, see [Automations overview](/automations/) and the [Automation Triggers Reference](/automations/automation-triggers-reference).
 
 ## Tips and best practices
-
-### Send onboarding email campaigns
-
-Create an email campaign that helps new self-signup customers get started:
-
-- Welcome them and confirm their registration
-- Explain what they can do in Business App
-- Highlight key features and benefits
-- Provide links to help resources or tutorials
-- Include contact information for support
-
-### Configure Featured Packages to drive upgrades
-
-When customers sign up but have no active products, you can present them with [Featured Packages](./featured-packages) to encourage upgrades:
-
-1. Set up Featured Packages in **Customize Business App** > **Add Your Clients**.
-2. Select packages relevant to self-signup customers.
-3. Customers without active products will see these packages on their Business App homepage.
-
-This creates a clear path from signup to purchase.
 
 ### Use market-specific configurations
 
@@ -163,15 +222,6 @@ If you serve different customer segments, configure self-signup settings per mar
 - Different signup links for each market
 - Market-specific Featured Packages
 - Tailored automation workflows based on market
-
-### Track self-signup performance
-
-Use the **Record Source** field to monitor self-signup effectiveness:
-
-- Filter your account list by Record Source = "Self Signup"
-- Create reports on self-signup conversion rates
-- Compare self-signup customers to other acquisition channels
-- Identify which marketing efforts drive the most signups
 
 ## FAQs
 
