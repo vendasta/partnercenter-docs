@@ -177,3 +177,15 @@ Yes! Website Support+ includes installation of the AI Chat Receptionist on your 
 This service is not a full end-to-end configuration of the AI Chat Receptionist, and is only for basic code installation. If you need advanced features such as full brand configuration beyond basic brand colours, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce-setup/ai-receptionist-setup.md) service.
 
 </details>
+
+<details>
+
+<summary>Can I reset staging from a template for premium multisite websites?</summary>
+
+Yes. For premium multisite websites, you can use **Reset from a template** in the staging reset options.
+
+After the template is applied to staging, the environment is configured as a multisite network so it loads correctly for multisite use.
+
+This reset option is available for both single-site and multisite websites.
+
+</details>
