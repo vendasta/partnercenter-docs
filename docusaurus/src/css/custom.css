@@ -468,6 +468,67 @@ form[role="search"] span:last-child {
 
 /* ========================  End of Search Bar ======================== */
 
+/* ========================  Search Results Page ======================== */
+
+/* Give the search page the same white card look as doc pages */
+[class*="searchPage"] .container,
+.main-wrapper > .container.margin-vert--lg {
+  background: white;
+  border-radius: 10px 10px 0 0;
+  padding: 2rem 2.5rem;
+  min-height: calc(100vh - 60px);
+}
+
+/* Page heading */
+.main-wrapper > .container.margin-vert--lg h1 {
+  color: #1c1e21;
+}
+
+/* Search input on the results page */
+.main-wrapper > .container.margin-vert--lg input[type="search"] {
+  background: #f5f6f7;
+  color: #1c1e21;
+  border: 1px solid #d1d5db;
+}
+
+/* Result item titles (links) */
+.main-wrapper > .container.margin-vert--lg article h2 a {
+  color: var(--ifm-color-primary);
+}
+
+/* Breadcrumb path below each result */
+.main-wrapper > .container.margin-vert--lg article p[class*="searchResultItemPath"] {
+  color: #6b7280;
+}
+
+/* Result summary/snippet text */
+.main-wrapper > .container.margin-vert--lg article p[class*="searchResultItemSummary"] {
+  color: #4b5563;
+}
+
+/* Result dividers */
+.main-wrapper > .container.margin-vert--lg article[class*="searchResultItem"] {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Highlighted search terms */
+.main-wrapper > .container.margin-vert--lg mark {
+  background: none;
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--ifm-color-primary);
+  text-underline-offset: 2px;
+  text-decoration-thickness: 2px;
+}
+
+/* "No results" and other text */
+.main-wrapper > .container.margin-vert--lg p {
+  color: #4b5563;
+}
+
+/* ========================  End of Search Results Page ======================== */
+
 /* ========================  404 Page ======================== */
 
 /* Page Not Found: white text on navy background */
