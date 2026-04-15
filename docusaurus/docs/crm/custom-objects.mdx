@@ -23,6 +23,7 @@ Custom objects now support the full CRM toolkit:
 - **Automations**: trigger workflows on object create, update, list entry, or list exit — and update custom object fields from automation actions
 - **Smart lists**: segment custom object records with the same filter power as contacts and companies
 - **API support**: programmatically create, update, and sync custom object records from external systems
+- **AI Sales Assistant**: automatically update custom object fields based on sales conversations — for example, vehicle year and model updated after a meeting (requires CRM AI)
 
 ## Why use custom objects?
 
@@ -111,6 +112,22 @@ A partner creates a **Demo** object linked to opportunities with fields like:
 - Who researched
 
 Automations can then update demo records or move opportunities forward based on booking events.
+
+## Auto-update custom object fields with AI
+
+With a CRM AI subscription, the AI Sales Assistant can automatically update custom object fields based on what happens in your sales conversations — no manual entry required.
+
+For example, an automotive business can have the AI populate **vehicle year** and **model** fields after a meeting where the customer discussed their vehicle. You choose which fields the AI can update and whether it should always overwrite existing values or only fill in empty ones.
+
+To configure AI updates for custom object fields:
+
+1. Go to **Business App** > **CRM** > **AI Sales Assistant** > **Configure**
+2. In the **Update CRM** capability, find your custom object fields
+3. Set the overwrite preference for each field (**always overwrite** or **overwrite if empty**)
+
+The AI respects any field restrictions you have set — it will never populate a field with a value outside its defined options.
+
+See [AI Sales Assistant](/ai/ai-workforce/ai-sales-assistant) for full setup details.
 
 ## API support
 
