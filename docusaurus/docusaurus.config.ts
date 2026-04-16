@@ -199,6 +199,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/automations/getting-started-with-automations', to: '/automations/' },
           // Automations: category page redirects to linked doc
           { from: '/category/automations', to: '/automations/' },
+          // Automations: history content merged into managing
+          { from: '/automations/automation-history', to: '/automations/managing-your-automations' },
           // Fulfillment: open-task-manager and flat paths now under task-manager folder
           { from: '/fulfillment/open-task-manager', to: '/fulfillment/' },
           { from: '/fulfillment/open-task-manager/get-started', to: '/fulfillment/task-manager/task-manager-getting-started' },
