@@ -1,22 +1,22 @@
 ---
-title: Advanced Automation Features
-description: Learn about advanced automation features including logic steps, delay until steps, grouping, action sets, and AI Employee integration to create sophisticated workflows.
+title: Advanced automation features
+description: Learn about advanced automation features including logic steps, delay until steps, grouping, action sets, and AI employee integration to create sophisticated workflows.
 sidebar_position: 6
 ---
 
-# Advanced Automation Features
+# Advanced automation features
 
 This guide covers advanced automation features that allow you to create sophisticated, conditional workflows with precise timing and reusable components.
 
-## Logic Steps
+## Logic steps
 
 Logic steps provide if/else functionality and the ability to end automations in Automations V2. These features enable conditional execution flow in your automations.
 
-### If/Else Step
+### If/else step
 
 The If/Else step allows conditional execution flow in an automation, enabling you to execute different branches based on whether a condition is met.
 
-#### Setting Up an If/Else Step
+#### Set up an if/else step
 
 When adding a new step, select "If/Else" from the options:
 
@@ -32,7 +32,7 @@ After setting up your if/else condition, the workflow will show two branches:
 
 You can add different steps to each branch to create custom pathways based on your filter conditions.
 
-### End This Automation
+### End this automation
 
 The "End This Automation" step allows you to terminate an automation at a specific point. This is useful for scenarios where you've completed the necessary steps for some leads and don't need to continue processing.
 
@@ -40,17 +40,17 @@ The "End This Automation" step allows you to terminate an automation at a specif
 
 Using this step along with if/else conditions gives you significant control over the automation flow. For example, you can terminate the automation early for certain leads while continuing the process for others based on specific criteria.
 
-#### Common Use Cases for Logic Steps
+#### Common use cases for logic steps
 
 1. **Contact Qualification**: Use if/else to determine if a lead meets your qualification criteria and end the automation for unqualified leads
 2. **Multi-path Communication**: Send different follow-up emails based on customer responses and end the automation when a desired outcome is achieved
 3. **Time-sensitive Processes**: End automations for contacts who haven't responded within a specified timeframe
 
-## Delay Until Steps
+## Delay until steps
 
 A **Delay Until** step allows users to introduce a time-based control mechanism within CRM automation workflows. This feature ensures that actions occur at precisely the right moment, improving workflow flexibility, task scheduling, and customer engagement.
 
-### How Delay Until Works
+### How delay until works
 
 The **Delay Until** step allows users to pause an automation workflow for a specified time or until a defined event occurs in the CRM. This can be useful for:
 
@@ -60,14 +60,14 @@ The **Delay Until** step allows users to pause an automation workflow for a spec
 
 ![Delay Until Step illustration](./img/automations/delay-until/delay-until-step-1.jpg)
 
-### Setting Up a Delay Until Step
+### Set up a delay until step
 
 1. Navigate to the **Automation Workflow Editor** within your CRM
 2. Add a **Delay Until** step at the appropriate point in the workflow
 3. Choose a delay period or specify an event that must occur before proceeding to the next step
 4. Save and activate the workflow
 
-### Available Delay Until Options
+### Available delay until options
 
 - Name of the action: **Delay until an event happens**
 - List of sub-triggers currently available for a contact:
@@ -77,7 +77,7 @@ The **Delay Until** step allows users to pause an automation workflow for a spec
 ![Delay Until configuration](./img/automations/delay-until/delay-until-step-3.jpg)
 ![Delay Until additional options](./img/automations/delay-until/delay-until-step-4.jpg)
 
-### Benefits of Using Delay Until Steps
+### Benefits of using delay until steps
 
 - **Improved Workflow Precision** – Ensures that automated tasks happen at the optimal moment
 - **Better Customer Engagement** – Delays help optimize messaging and follow-up timing
@@ -85,7 +85,7 @@ The **Delay Until** step allows users to pause an automation workflow for a spec
 
 ![Delay Until benefits illustration](./img/automations/delay-until/delay-until-step-5.jpg)
 
-### Use Case Example
+### Use case example
 
 A business wants to automate follow-ups for new contacts generated via web chat. The workflow includes:
 
@@ -97,11 +97,11 @@ A business wants to automate follow-ups for new contacts generated via web chat.
 
 By implementing a **Delay Until** step, the business ensures timely and meaningful engagement rather than immediate, potentially ineffective, actions.
 
-## Grouping of Automation Steps
+## Grouping automation steps
 
 Grouping simplifies the user experience by consolidating multiple actions in automation into an easily accessible set of actions. This feature is the foundation for Action Sets, which allow you to save and reuse groups of steps.
 
-### How to Use Automation Grouping
+### How to use automation grouping
 
 **Step 1:** Navigate to **Partner Center > Automations > My Automations.**
 
@@ -131,11 +131,11 @@ Grouping simplifies the user experience by consolidating multiple actions in aut
 
 <iframe src="//www.loom.com/embed/f07430494fb2428aaa39dc68e32d3a89" width="560" height="315" frameborder="0" allowfullscreen></iframe>
 
-## Action Sets
+## Action sets
 
 Are you still duplicating entire automations to reuse only a few steps? With Action Sets, you can effortlessly start reusing automation steps. With saved Action Sets, you can easily integrate the saved Action Sets into a new automation. This powerful feature reduces redundancy, saving you time and effort by eliminating the need to recreate similar steps.
 
-### How to Use Action Sets
+### How to use action sets
 
 **Step 1 -** Navigate to **Partner Center > Automations > My Automations.**
 
@@ -147,7 +147,7 @@ Are you still duplicating entire automations to reuse only a few steps? With Act
 
 ![Use an Action Set](./img/automations/my-automations/action-set-use.jpg)
 
-### Action Sets Q&A
+### Action sets Q&A
 
 **Q: Why can't I add an Action Set inside a Group?**
 
@@ -169,11 +169,11 @@ Are you still duplicating entire automations to reuse only a few steps? With Act
 
 **A:** Yes, this feature is available in Business App as well.
 
-## AI Employee Integration
+## AI employee integration
 
 You can integrate AI Employees (including Custom AI Employees) into your automation workflows using the "Send a prompt to an AI Employee" step. This adds LLM-powered intelligence and decision-making capabilities to your automations.
 
-### How AI Employee Integration Works
+### How AI employee integration works
 
 The "Send a prompt to an AI Employee" step allows you to:
 - Send contextual prompts to your AI Employees within automation workflows
@@ -181,7 +181,7 @@ The "Send a prompt to an AI Employee" step allows you to:
 - Generate dynamic responses or perform actions based on AI Employee capabilities
 - Leverage your AI Employee's knowledge base and capabilities in automated processes
 
-### Setting Up AI Employee Integration
+### Set up AI employee integration
 
 1. Navigate to your automation workflow editor
 2. Add a new step and select **"Send a prompt to an AI Employee"**
@@ -189,7 +189,7 @@ The "Send a prompt to an AI Employee" step allows you to:
 4. Configure the prompt with context from your automation (contact data, previous steps, etc.)
 5. Define how to use the AI Employee's response in subsequent steps
 
-### Use Cases for AI Employees in Automations
+### Use cases for AI employees in automations
 
 **Intelligent Lead Qualification:**
 - Use an AI Employee to analyze lead information and qualify prospects
@@ -212,14 +212,14 @@ The "Send a prompt to an AI Employee" step allows you to:
 - **Sales Enablement**: Provide product recommendations in sales automations
 - **Payment Coordinator**: Handle payment-related decisions in billing workflows
 
-### Benefits of AI Employee Integration
+### Benefits of AI employee integration
 
 - **Enhanced Intelligence**: Add AI-powered decision-making to your automations
 - **Contextual Responses**: Leverage business knowledge and customer context
 - **Reduced Manual Work**: Automate complex decision-making processes
 - **Consistent Quality**: Use trained AI Employees for reliable, consistent outputs
 
-### Best Practices for AI Employee Integration
+### Best practices for AI employee integration
 
 1. **Provide Clear Context**: Include relevant customer data and business context in your prompts
 2. **Test Thoroughly**: Test AI Employee responses in your automation before deploying
@@ -232,7 +232,7 @@ For more information on creating and configuring AI Employees, see:
 - [Creating Custom AI Employees](../ai/ai-workforce/custom-ai-employees.md)
 - [Creating Custom Capabilities](../ai/ai-capabilities/creating-custom-capabilities.md)
 
-## Best Practices for Advanced Features
+## Best practices for advanced features
 
 1. **Plan Logic Flow**: Before implementing if/else steps, map out all possible paths your automation might take
 2. **Use Meaningful Delays**: Choose delay periods that make sense for your customer journey and business processes
@@ -241,6 +241,6 @@ For more information on creating and configuring AI Employees, see:
 5. **Test Complex Workflows**: Always test advanced automations thoroughly before deploying to production
 6. **Document Complex Logic**: Add clear descriptions to groups and action sets to help team members understand their purpose
 
-## Who Can Use These Features?
+## Who can use these features?
 
 These advanced features are available to users managing CRM automation workflows within Business App and Partner Center. Action Sets and grouping features are available to any Admin with permission to create automations.

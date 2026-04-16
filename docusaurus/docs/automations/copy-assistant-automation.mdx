@@ -1,5 +1,5 @@
 ---
-title: Copy Assistant Automation
+title: Copy assistant automation
 description: The guide to use the Copy AI Employee Configuration automation action to replicate AI employee settings from one account to multiple companies automatically.
 sidebar_position: 15
 ---
@@ -14,7 +14,7 @@ When this automation runs, it takes the complete configuration of an AI employee
 
 
 ## Overview
-### What Gets Copied
+### What gets copied
 
 The automation performs a comprehensive copy of the AI employee's configuration, including:
 - **Basic Information**: Name, avatar, and core configuration settings
@@ -23,51 +23,51 @@ The automation performs a comprehensive copy of the AI employee's configuration,
 - **Prompt Modules**
 - **Personality**
 
-#### What Gets Preserved
+#### What gets preserved
 When updating an existing AI employee, the automation preserves:
 - Global goal overrides in the target account
 - Additional local goals not in the source
 - Non-managed resources
 
-### What Happens When The Automation Runs
+### What happens when the automation runs
 
 The automation behaves differently depending on whether the target company already has an AI employee:
 
 - **If the company has an existing AI employee with the same ID**: The automation updates that employee with the configuration from your source account. Any custom capabilities or modifications the company added will be preserved.
 
 - **If the company doesn't have an AI employee with that ID**: The automation creates a brand new AI employee with the source configuration.
-## Choosing the Right Trigger
+## Choosing the right trigger
 
 Before you can add the "Copy AI Employee Configuration" action, you need to create an automation with an appropriate trigger. The trigger determines when and for which companies the automation will run.
 
-### Recommended Triggers for This Action
+### Recommended triggers for this action
 This automation action works with **account/company-level triggers** because it operates on companies. Make sure your trigger provides:
 - An account group ID (the company to receive the AI employee)
 - The ability to run on multiple companies (for bulk operations)
 
-#### For Onboarding New Companies
+#### For onboarding new companies
 - **Account Created** - Automatically runs when a new company is added to the system
 - **Company Created** (CRM) - Runs when a new company is created in CRM
 
-#### For Bulk Deployment
+#### For bulk deployment
 - **Triggered manually for an account** - Allows you to select multiple companies and run the automation on demand
 - **Triggered manually for a company** (CRM) - Manual trigger for CRM companies
 
-#### For Product-Based Provisioning
+#### For product-based provisioning
 - **Product purchased** - Runs when a company purchases a specific product
 
-#### For Event-Based Updates
+#### For event-based updates
 - **Account custom data fields are updated** - Runs when specific account data changes
 - **A Salesperson assigned to account** - Runs when a salesperson is assigned
 
-#### For API/Integration Scenarios
+#### For API/integration scenarios
 - **Triggered via API for an account** - Allows external systems to trigger the automation
 
 **Note**: Triggers that work with contacts, orders, or other entity types won't work well with this action since it needs to know which company to update.
 
-## Step-by-Step Configuration
+## Step-by-step configuration
 
-### Step 1: Select an Automation with a Trigger
+### Step 1: Select an automation with a trigger
 
 1. Navigate to the Automations section on Partner Center
 2. Click **"Create Automation"**
@@ -75,14 +75,14 @@ This automation action works with **account/company-level triggers** because it 
 4. Configure the trigger settings if needed (e.g., which product, which list, etc.)
 5. Save the trigger configuration
 
-### Step 2: Add the Action to Your Automation
+### Step 2: Add the action to your automation
 
 1. In the automation editor, locate the workflow area
 2. Click the **"+"** button where you want to add this action (typically right after the trigger or any filters)
 3. Search for **"Copy AI employee configuration to another company"**
 4. Click to add it to your workflow
 
-### Step 3: Select the Source Account
+### Step 3: Select the source account
 
 1. In the configuration panel, locate the **"Source account"** field
 2. Click the field to open the account selector
@@ -91,7 +91,7 @@ This automation action works with **account/company-level triggers** because it 
 
 **Important**: You must select a source account before you can select an AI employee.
 
-### Step 4: Select the AI Employee
+### Step 4: Select the AI employee
 
 1. After selecting a source account, the **"AI employee"** field will become available
 2. Click the field to see all AI employees available in the source account
@@ -100,12 +100,12 @@ This automation action works with **account/company-level triggers** because it 
 
 **Note**: If you see "No employees available for this account group", it means the selected source account doesn't have any AI employees configured yet.
 
-### Step 5: Save the Configuration
+### Step 5: Save the configuration
 
 1. Click the **"Save"** button to save your configuration
 2. The automation node will now display: "Copy **[Employee Name]** AI employee from the **[Account Name]** account to the company"
 
-### Step 6: Turn On and Test Your Automation
+### Step 6: Turn on and test your automation
 
 Before turning on your automation for all companies:
 
