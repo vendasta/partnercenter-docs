@@ -1,0 +1,184 @@
+---
+title: Data expressions in automations
+description: Learn how to use data expressions to extract and transform data between automation steps, enabling dynamic workflows that pass information from one step to the next.
+sidebar_position: 4
+tags: [automations, data-expressions, jq, workflows, data-mapping]
+keywords: [data expressions, jq expressions, data mapping, automation data, step data, transform data, extract data, workflow data]
+---
+
+# Data expressions in automations
+
+Data expressions let you extract and transform data from one automation step and pass it into the next. Instead of working with raw JSON responses, you can pull out exactly the fields you need — a contact name, an email address, a count of items — and use them downstream in your workflow.
+
+<iframe src="https://drive.google.com/file/d/1cN06t0CWuROSuaqehFczIHg61DVN4lSP/preview" width="700" height="393.75" frameborder="0" allowfullscreen></iframe>
+
+## Where you can use data expressions
+
+Data expressions are available in **trigger steps** and **action steps** within a regular automation. You can place them in any text field within the step's configuration — for example, an email address field, a message body, or a filter value.
+
+| Step type | Supported | Notes |
+| --- | --- | --- |
+| **Trigger** | Yes | Can reference trigger output data |
+| **Action (workflow step)** | Yes | Can reference any previous step's output |
+| **Goal** | No | Goal steps do not process data expressions |
+
+:::info
+Data expressions are not available in **snippets**. Because snippets are reusable fragments that get inserted into different automations, step IDs from the original context would not resolve correctly.
+:::
+
+## Adding a data expression
+
+When you configure an action step in the automation builder, you can pull in data from a previous step using the **Add dynamic content** dialog.
+
+1. Open an action step in the automation builder and click into a configurable text field
+2. Select **Add dynamic content**
+3. Under **Category**, choose **From a previous step**
+4. Under **From a previous step**, select which step to pull data from (e.g., **Trigger**)
+5. Select the output field you want (e.g., **Form content**)
+6. Optionally, enter a path expression in the **Extract value** field to pull a specific piece of data from the response
+
+The **Extract value** field uses JQ syntax. If you leave it blank, the entire output of the selected field is used. If you enter an expression like `.data.contact.first_name`, only that specific value is extracted.
+
+:::tip
+The **Extract value** field shows example expressions as placeholder text. Common patterns include `.data.name`, `.results[0].id`, and `.items | length`.
+:::
+
+## Expression syntax
+
+Expressions use [JQ syntax](https://jqlang.github.io/jq/manual/) — a lightweight language for extracting and transforming JSON data. Here are the patterns you will use most often.
+
+### Extract a field
+
+Pull a single value from a step's JSON output.
+
+| Expression | Input | Result |
+| --- | --- | --- |
+| `.name` | `{"name": "Alice", "role": "admin"}` | `Alice` |
+| `.email` | `{"email": "alice@example.com"}` | `alice@example.com` |
+
+### Access nested data
+
+Reach into nested objects or arrays.
+
+| Expression | Input | Result |
+| --- | --- | --- |
+| `.data.results[0].name` | `{"data": {"results": [{"name": "Alice"}]}}` | `Alice` |
+| `.address.city` | `{"address": {"city": "Toronto"}}` | `Toronto` |
+
+### Count items
+
+Use the pipe operator to pass data through functions.
+
+| Expression | Input | Result |
+| --- | --- | --- |
+| `.items \| length` | `{"items": ["a", "b", "c"]}` | `3` |
+| `.contacts \| length` | `{"contacts": [{"id": 1}, {"id": 2}]}` | `2` |
+
+### Format strings
+
+Combine multiple fields into a single string.
+
+| Expression | Input | Result |
+| --- | --- | --- |
+| `"\(.first) \(.last)"` | `{"first": "Alice", "last": "Smith"}` | `Alice Smith` |
+
+### Work with arrays
+
+Select, sort, and filter array data.
+
+| Expression | Description |
+| --- | --- |
+| `.[0].name` | Get the name from the first item |
+| `.items \| sort_by(.date)` | Sort items by date |
+| `.items \| map(.name)` | Extract all names into a list |
+| `.items \| map(select(.active == true))` | Filter to only active items |
+| `.items \| unique` | Remove duplicate values |
+
+### Convert types
+
+Change data types when a downstream step expects a specific format.
+
+| Expression | Description |
+| --- | --- |
+| `.count \| tostring` | Convert a number to text |
+| `.amount \| tonumber` | Convert text to a number |
+| `.data \| tojson` | Convert an object to a JSON string |
+| `.data \| keys` | Get all field names from an object |
+
+## Supported functions
+
+Data expressions support a curated set of functions for safe, predictable execution. Here are the most useful categories:
+
+| Category | Functions |
+| --- | --- |
+| **String** | `ascii_downcase`, `ascii_upcase`, `split`, `join`, `ltrimstr`, `rtrimstr`, `startswith`, `endswith`, `test`, `gsub`, `sub` |
+| **Math** | `add`, `floor`, `ceil`, `round`, `min`, `max`, `sqrt`, `pow` |
+| **Array** | `length`, `sort_by`, `group_by`, `unique_by`, `flatten`, `reverse`, `first`, `last`, `map`, `select` |
+| **Type** | `type`, `tostring`, `tonumber`, `tojson`, `fromjson`, `keys`, `values`, `has` |
+| **Object** | `to_entries`, `from_entries`, `with_entries`, `contains`, `inside` |
+| **Format** | `@base64`, `@base64d`, `@html`, `@uri`, `@csv`, `@json` |
+
+:::warning
+Functions that access the environment or system (`env`, `debug`, `input`, `halt`) are not available. Expressions are limited to 500 characters. Custom function definitions (`def`) and imports are not supported.
+:::
+
+## Graceful error handling
+
+Data expressions are designed to fail safely. If an expression encounters an error — invalid JSON, a missing field, or a syntax issue — it returns the original value unchanged. Your automation continues running without interruption.
+
+This means:
+- A missing field returns an empty string, not an error
+- Non-JSON input is passed through as-is
+- An invalid expression returns the original value
+
+:::tip
+Even though expressions fail gracefully at runtime, we recommend testing your expressions before deploying an automation to production. Invalid expressions are caught during save-time validation so you will see an error if the syntax is wrong.
+:::
+
+## Use case example
+
+### Create a contact from a third-party app via webhook
+
+A third-party app (e.g., a booking platform or lead gen tool) sends a webhook to Vendasta when a new customer signs up. The webhook payload contains nested contact data. Use data expressions to extract the fields you need and create a contact automatically.
+
+**Trigger:** Webhook received
+
+**Example webhook payload:**
+```json
+{
+  "event": "new_signup",
+  "data": {
+    "contact": {
+      "first_name": "Alice",
+      "last_name": "Smith",
+      "email": "alice@example.com",
+      "phone": "+14165551234"
+    },
+    "source": "booking-app",
+    "signed_up_at": "2026-04-21T14:30:00Z"
+  }
+}
+```
+
+**Action:** Create a contact — use **Add dynamic content** → **From a previous step** → **Trigger** for each field:
+
+| Contact field | Extract value |
+| --- | --- |
+| First name | `.data.contact.first_name` |
+| Last name | `.data.contact.last_name` |
+| Email | `.data.contact.email` |
+| Phone | `.data.contact.phone` |
+
+Each expression reaches into the nested webhook payload and pulls out exactly the value needed — no manual data entry, no raw JSON.
+
+## Best practices
+
+1. **Start simple** — Use basic field extraction (`.name`, `.email`) before reaching for complex expressions
+2. **Test in stages** — Verify each expression works before combining multiple in one step
+3. **Use descriptive step IDs** — Clear step names make data expression tags easier to read and maintain
+4. **Stay under the limit** — Expressions have a 500-character maximum, so keep them focused on one transformation
+5. **Combine with logic steps** — Pair data expressions with if/else steps for powerful conditional workflows based on extracted data
+
+## Learn more
+
+- [JQ syntax reference](https://jqlang.github.io/jq/manual/) — Full documentation for the JQ query language
