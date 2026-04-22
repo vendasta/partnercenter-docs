@@ -1,0 +1,180 @@
+---
+title: Sort text with AI
+description: Learn how to use the Sort text with AI action to automatically classify text into categories you define, creating branching paths in your automation.
+sidebar_position: 5
+tags: [automations, ai, classification, workflows, branching]
+keywords: [sort text, ai classification, classify text, automation branching, ai action, categorize text, automation categories]
+---
+
+# Sort text with AI
+
+**Sort text with AI** lets you drop an AI classification step into any automation. Give it text — a chat summary, a form submission, a webhook payload — and define your categories. The AI reads the input, picks the best match, and the automation branches accordingly. No code, no rules engine, no manual routing. Set it up in minutes and every inbound message, lead, or support request goes to the right team automatically.
+
+<iframe src="https://www.loom.com/embed/31a71f1626264e68827397a05b785aea" width="700" height="393.75" frameborder="0" allowfullscreen></iframe>
+
+## How it works
+
+1. You provide **input text** — the content the AI should read (a message, form response, note, etc.)
+2. You define **categories** — each with a name and an optional description that helps the AI decide when to pick it
+3. When the automation runs, the AI reads the input and picks the best matching category
+4. The automation continues down that category's branch
+
+If the AI determines that none of your categories match, it returns an empty result and the automation follows the default path.
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Advanced**, select **Sort text with AI**
+3. Configure the two sections:
+
+### 1. Choose what to sort
+
+In the **Input text** field, enter or insert the text the AI should classify. Select **Add dynamic content** to insert data from a previous step — for example, a customer message from a trigger, a form response, or a webhook payload.
+
+:::tip
+Dynamic content values are resolved before the AI reads the text, so the AI always sees the actual data — not the placeholder.
+:::
+
+### 2. Define the categories
+
+Add at least one category. For each category, provide:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Category display name** | Yes | A short label that identifies this category (e.g., "Billing", "Support", "Sales"). This becomes the branch name in your workflow. |
+| **Description** | No | A sentence explaining when the AI should choose this category. The more specific, the better. |
+
+- Click **Add another category** to add more (up to 20)
+- Drag categories to reorder them
+- Click the **x** button to remove a category
+
+:::info
+Each category you define creates a separate branch in the automation. After classification, the automation continues down the matching branch only.
+:::
+
+### Example configuration
+
+**Scenario:** Route Web Chat messages by intent so the right team follows up.
+
+**Trigger:** Web Chat captures a lead
+
+**Input text:** The lead's message, inserted via **Add dynamic content** → **From a previous step** → **Trigger**
+
+| Category display name | Description |
+| --- | --- |
+| Pricing | The visitor is asking about cost, plans, or a quote |
+| Support | The visitor needs help with a product issue or something that is broken |
+| General inquiry | The visitor has a general question that does not fit the other categories |
+
+When a Web Chat message comes in, the AI reads it and picks the best match. A message like "How much does your SEO package cost?" goes down the "Pricing" branch. "My website dashboard won't load" goes down "Support." Everything else follows "General inquiry."
+
+## Outputs
+
+After the step runs, two values are available to downstream steps:
+
+| Output | Description |
+| --- | --- |
+| **Classification key** | The name of the matched category. Empty if none matched. |
+| **Reason** | A one-sentence explanation of why the AI chose that category. |
+
+You can reference these outputs in later steps using **Add dynamic content** → **From a previous step**.
+
+## Tips for writing good categories
+
+- **Be specific in descriptions** — "Customer is asking about an invoice or payment" works better than "Money stuff"
+- **Keep categories distinct** — Overlapping descriptions make it harder for the AI to choose. If two categories sound similar, combine them or sharpen the descriptions.
+- **Use 2 to 10 categories** — The action supports up to 20, but fewer well-defined categories produce more consistent results
+- **Test with real text** — Run your automation with sample data to verify the AI sorts as expected before going live
+
+## Use case examples
+
+### Route AI employee responses
+
+Automatically sort AI employee conversation outcomes so resolved chats get logged and unresolved ones reach a human.
+
+**Step 1 — Set the trigger**
+
+Select **A contact communication summary is created** (under Contacts). This fires whenever an AI employee finishes a conversation and a summary is generated.
+
+**Step 2 — Add the Sort text with AI step**
+
+- Under **Advanced**, select **Sort text with AI**
+- **Input text**: select **Add dynamic content** → **From a previous step** → **Trigger** → **Chat Summary**
+- Add three categories:
+
+| Category display name | Description |
+| --- | --- |
+| Resolved | The conversation was fully handled and the customer's question was answered |
+| Needs human follow-up | The AI could not fully resolve the issue or the customer asked to speak with a person |
+| Escalation required | The conversation involves a complaint, urgent issue, or potential churn risk |
+
+**Step 3 — Configure each branch**
+
+- **Resolved** → Add a **Create a CRM note** step to log the resolution on the contact
+- **Needs human follow-up** → Add a **Create a CRM sales task for the contact** step assigned to the contact's owner
+- **Escalation required** → Add a **Notify a salesperson** step targeting the team lead
+
+:::tip
+The trigger also outputs a **Chat Link Path**. Include it in the task or notification body so the person following up can jump straight to the conversation.
+:::
+
+### Triage support requests
+
+Route form submissions to the right team based on what the customer is asking about.
+
+**Step 1 — Set the trigger**
+
+Select **A form is submitted for a contact** (under Contacts). This fires when a contact submits a form linked to a company.
+
+**Step 2 — Add the Sort text with AI step**
+
+- Under **Advanced**, select **Sort text with AI**
+- **Input text**: select **Add dynamic content** → **From a previous step** → **Trigger** and choose the form field that contains the customer's message
+- Add four categories:
+
+| Category display name | Description |
+| --- | --- |
+| Billing | Customer is asking about an invoice, payment, or subscription |
+| Technical support | Customer needs help with a product issue or something that is broken |
+| Account access | Customer cannot log in or needs their credentials reset |
+| Feature request | Customer is suggesting a new feature or improvement |
+
+**Step 3 — Configure each branch**
+
+- **Billing** → Add a **Create a CRM sales task for the contact** step assigned to the billing team
+- **Technical support** → Add a **Start a campaign for the contact** step that sends a troubleshooting guide
+- **Account access** → Add a **Create a CRM sales task for the contact** step with a note to reset credentials
+- **Feature request** → Add a **Create a CRM note** step to log the request on the contact
+
+### Qualify inbound leads
+
+Sort new contacts by intent level and respond accordingly — high-intent leads get a salesperson, everyone else enters a nurture flow.
+
+**Step 1 — Set the trigger**
+
+Select **A contact is created or modified** (under Contacts). Add a trigger condition to filter for newly created contacts only (e.g., lifecycle stage equals "Lead").
+
+**Step 2 — Add the Sort text with AI step**
+
+- Under **Advanced**, select **Sort text with AI**
+- **Input text**: select **Add dynamic content** → **From a previous step** → **Trigger** and choose the field that contains the lead source or inquiry message
+- Add three categories:
+
+| Category display name | Description |
+| --- | --- |
+| High intent | The lead is ready to buy, requesting a demo, or asking about pricing |
+| Medium intent | The lead is researching options or comparing products |
+| Low intent | The lead is browsing, signed up for a newsletter, or has no clear buying signal |
+
+**Step 3 — Configure each branch**
+
+- **High intent** → Add an **Assign a contact owner** step to route to a salesperson, then a **Notify a salesperson** step so they follow up immediately
+- **Medium intent** → Add a **Start a campaign for the contact** step that enrolls them in a nurture email sequence
+- **Low intent** → Add a **Start a campaign for the contact** step that sends a single welcome email
+
+## Related resources
+
+- [Automation steps reference](./automation-steps-reference.mdx) — Full list of available actions
+- [Advanced automation features](./advanced-automation-features.mdx) — Logic steps, delays, and branching
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows
+- [Data expressions in automations](./data-expressions.mdx) — Extract and transform data between steps
