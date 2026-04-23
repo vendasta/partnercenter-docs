@@ -1,14 +1,14 @@
 ---
-title: Sort text with AI
-description: Learn how to use the Sort text with AI action to automatically classify text into categories you define, creating branching paths in your automation.
+title: Categorize text with AI
+description: Learn how to use the Categorize text with AI action to automatically classify text into categories you define, creating branching paths in your automation.
 sidebar_position: 5
 tags: [automations, ai, classification, workflows, branching]
-keywords: [sort text, ai classification, classify text, automation branching, ai action, categorize text, automation categories]
+keywords: [categorize text, ai classification, classify text, automation branching, ai action, sort text, automation categories]
 ---
 
-# Sort text with AI
+# Categorize text with AI
 
-**Sort text with AI** lets you drop an AI classification step into any automation. Give it text — a chat summary, a form submission, a webhook payload — and define your categories. The AI reads the input, picks the best match, and the automation branches accordingly. No code, no rules engine, no manual routing. Set it up in minutes and every inbound message, lead, or support request goes to the right team automatically.
+**Categorize text with AI** lets you drop an AI classification step into any automation. Give it text — a chat summary, a form submission, a webhook payload — and define your categories. The AI reads the input, picks the best match, and the automation branches accordingly. No code, no rules engine, no manual routing. Set it up in minutes and every inbound message, lead, or support request goes to the right team automatically.
 
 <iframe src="https://www.loom.com/embed/31a71f1626264e68827397a05b785aea" width="700" height="393.75" frameborder="0" allowfullscreen></iframe>
 
@@ -24,10 +24,10 @@ If the AI determines that none of your categories match, it returns an empty res
 ## Set up the action
 
 1. Open the automation builder and add a new step
-2. Under **Advanced**, select **Sort text with AI**
+2. Under **Advanced**, select **Categorize text with AI**
 3. Configure the two sections:
 
-### 1. Choose what to sort
+### 1. Choose what to categorize
 
 In the **Input text** field, enter or insert the text the AI should classify. Select **Add dynamic content** to insert data from a previous step — for example, a customer message from a trigger, a form response, or a webhook payload.
 
@@ -84,21 +84,21 @@ You can reference these outputs in later steps using **Add dynamic content** →
 - **Be specific in descriptions** — "Customer is asking about an invoice or payment" works better than "Money stuff"
 - **Keep categories distinct** — Overlapping descriptions make it harder for the AI to choose. If two categories sound similar, combine them or sharpen the descriptions.
 - **Use 2 to 10 categories** — The action supports up to 20, but fewer well-defined categories produce more consistent results
-- **Test with real text** — Run your automation with sample data to verify the AI sorts as expected before going live
+- **Test with real text** — Run your automation with sample data to verify the AI categorizes as expected before going live
 
 ## Use case examples
 
 ### Route AI employee responses
 
-Automatically sort AI employee conversation outcomes so resolved chats get logged and unresolved ones reach a human.
+Automatically categorize AI employee conversation outcomes so resolved chats get logged and unresolved ones reach a human.
 
 **Step 1 — Set the trigger**
 
 Select **A contact communication summary is created** (under Contacts). This fires whenever an AI employee finishes a conversation and a summary is generated.
 
-**Step 2 — Add the Sort text with AI step**
+**Step 2 — Add the Categorize text with AI step**
 
-- Under **Advanced**, select **Sort text with AI**
+- Under **Advanced**, select **Categorize text with AI**
 - **Input text**: select **Add dynamic content** → **From a previous step** → **Trigger** → **Chat Summary**
 - Add three categories:
 
@@ -126,9 +126,9 @@ Route form submissions to the right team based on what the customer is asking ab
 
 Select **A form is submitted for a contact** (under Contacts). This fires when a contact submits a form linked to a company.
 
-**Step 2 — Add the Sort text with AI step**
+**Step 2 — Add the Categorize text with AI step**
 
-- Under **Advanced**, select **Sort text with AI**
+- Under **Advanced**, select **Categorize text with AI**
 - **Input text**: select **Add dynamic content** → **From a previous step** → **Trigger** and choose the form field that contains the customer's message
 - Add four categories:
 
@@ -148,15 +148,15 @@ Select **A form is submitted for a contact** (under Contacts). This fires when a
 
 ### Qualify inbound leads
 
-Sort new contacts by intent level and respond accordingly — high-intent leads get a salesperson, everyone else enters a nurture flow.
+Categorize new contacts by intent level and respond accordingly — high-intent leads get a salesperson, everyone else enters a nurture flow.
 
 **Step 1 — Set the trigger**
 
 Select **A contact is created or modified** (under Contacts). Add a trigger condition to filter for newly created contacts only (e.g., lifecycle stage equals "Lead").
 
-**Step 2 — Add the Sort text with AI step**
+**Step 2 — Add the Categorize text with AI step**
 
-- Under **Advanced**, select **Sort text with AI**
+- Under **Advanced**, select **Categorize text with AI**
 - **Input text**: select **Add dynamic content** → **From a previous step** → **Trigger** and choose the field that contains the lead source or inquiry message
 - Add three categories:
 
