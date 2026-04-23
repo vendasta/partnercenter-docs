@@ -5,7 +5,7 @@ description: "An overview of the AI Data Analyst Setup service, detailing the pr
 ---
 
 :::info Requirements
-**Conversations AI** and **all Premium editions** must be active on your account to receive this service. At least one of **CRM AI**, **Reputation AI**, or **Social Marketing** is also required as a data source. See the full [requirements](#requirements) below.
+**Conversations AI** and at least one of **CRM AI**, **Reputation AI**, or **Social Marketing** is also required as a data source. See the full [requirements](#requirements) below.
 :::
 
 The AI Data Analyst Setup is a do-it-with-me service where our experts configure, train, and launch the AI Data Analyst for your business. Our team handles the technical setup, connects your active data sources (CRM, Reviews/NPS, Social), and configures the AIR Analysis Framework so every response delivers a clear finding, a plain-language interpretation, and a recommended next step.
@@ -146,7 +146,7 @@ AIR stands for Analyze, Interpret, Recommend. Every response from the AI Data An
 
 <summary>What premium editions are required?</summary>
 
-All Premium editions must be active on your account to receive this service. Additionally, at least one of the following must be active: CRM AI or Reputation AI. These editions unlock the data access and platform capabilities the AI Data Analyst relies on to generate insights. If you are unsure which editions are currently active on your account, please check with your account manager before the onboarding call.
+All Premium editions must be active on your account to receive this service. Additionally, at least one of the following must be active: **CRM AI**, **Reputation AI**, or **Social Marketing**. These editions unlock the data access and platform capabilities the AI Data Analyst relies on to generate insights. If you are unsure which editions are currently active on your account, please check with your account manager before the onboarding call.
 
 </details>
 
