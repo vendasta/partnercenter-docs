@@ -43,7 +43,7 @@ We connect all channels requested during the onboarding call. Supported channels
 * Web chat
 * SMS
 * Facebook Messenger
-* Instagram Direct
+* Instagram Direct Messages
 * WhatsApp
 * Email
 
@@ -55,7 +55,7 @@ SMS for U.S. businesses requires A2P registration before it can be activated. Se
 
 ### Chat widget installation
 
-For web chat, we will install the chat widget directly on your website, typically in the global footer or homepage, so it is visible to customers across all pages. We will need website login credentials or access to your CMS to complete this step.
+For web chat, we will install the chat widget directly on your website, typically in the global footer or homepage, so it is visible to customers across all pages. We will need login access to the place where you edit your website (for example, WordPress, Wix, Squarespace, or whichever platform you use to manage your site).
 
 :::note
 If you are unable to provide website access, we will provide the embed code and installation instructions for your team or web developer to install independently.
@@ -118,7 +118,7 @@ To set your business up for success, the following requirements must be met to d
 
 ### Website access
 
-To install the chat widget on your website, we will need login access to your website or content management system (CMS). If you use a website builder (for example, WordPress, Wix, or Squarespace), please be ready to provide access or have your web developer available.
+To install the chat widget on your website, we will need login access to the place where you edit your website, such as WordPress, Wix, Squarespace, or any other website builder you use. If you don't manage your website yourself, please have your web developer available to provide access on your behalf.
 
 :::note
 If you are unable to provide website access, we will provide the embed code and installation instructions for your team to install independently.
