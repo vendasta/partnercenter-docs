@@ -14,7 +14,7 @@ The AI Support Agent Setup is a done-for-you service where our experts configure
 
 ### AI Employee profile
 
-We create a custom AI Employee with a name and avatar that represents your business. Customers interact with a professional support persona rather than a generic bot. The profile is configured within the **AI Workforce** section of Business App.
+We configure the AI Employee with a name and avatar that represents your business. Customers interact with a professional support persona rather than a generic bot. The profile is configured within the **AI Workforce** section of Business App.
 
 ### HEARD Support Framework
 
