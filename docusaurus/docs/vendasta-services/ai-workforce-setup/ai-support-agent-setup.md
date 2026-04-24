@@ -8,7 +8,7 @@ description: "An overview of the AI Support Agent Setup service, detailing the p
 **Conversations AI** must be active on your account. The edition that is active will affect which channels our team is able to connect. See the full [requirements](#requirements) below.
 :::
 
-The AI Support Agent Setup is a do-it-with-me service where our experts configure, train, and launch the AI Support Agent for your business. Our team handles the technical setup, configures the HEARD support framework, connects your requested channels (web chat, SMS, Facebook, Instagram, WhatsApp, and email), installs the chat widget on your website, and builds out the knowledge base so the AI can resolve customer inquiries without fabricating information.
+The AI Support Agent Setup is a done-for-you service where our experts configure, train, and launch the AI Support Agent for your business. Our team handles the technical setup, configures the HEARD support framework, connects your requested channels (web chat, SMS, Facebook, Instagram, WhatsApp, and email), installs the chat widget on your website, and builds out the knowledge base so the AI can resolve customer inquiries without fabricating information.
 
 ## What's included?
 

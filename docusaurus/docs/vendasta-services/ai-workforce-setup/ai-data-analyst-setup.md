@@ -8,7 +8,7 @@ description: "An overview of the AI Data Analyst Setup service, detailing the pr
 **Conversations AI** (any edition) must be active, plus at least one of **CRM AI**, **Reputation AI**, **Social Marketing**, or **Local SEO** as a data source. See the full [requirements](#requirements) below.
 :::
 
-The AI Data Analyst Setup is a do-it-with-me service where our experts configure, train, and launch the AI Data Analyst for your business. Our team handles the technical setup, connects your active data sources (CRM, Reviews/NPS, Social), and configures the AIR Analysis Framework so every response delivers a clear finding, a plain-language interpretation, and a recommended next step.
+The AI Data Analyst Setup is a done-for-you service where our experts configure, train, and launch the AI Data Analyst for your business. Our team handles the technical setup, connects your active data sources (CRM, Reviews/NPS, Social), and configures the AIR Analysis Framework so every response delivers a clear finding, a plain-language interpretation, and a recommended next step.
 
 ## What's included?
 
