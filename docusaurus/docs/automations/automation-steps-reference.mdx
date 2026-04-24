@@ -57,7 +57,7 @@ Steps marked **(draft)** are in development and may change or be removed before 
 | Get custom object from company | Retrieves a custom object record linked to a company. | Available on company-scoped triggers. | |
 | Get custom object from contact | Retrieves a custom object record linked to a contact. | Available on contact-scoped triggers. | |
 | Get the associated company | Gets the company associated with the account in scope. | Available on account-scoped triggers. | When an account is updated, get the associated company so you can run company-scoped steps. |
-| Find company | Searches for an existing company record in your CRM based on specified criteria, and brings it into scope for downstream steps. | | |
+| Find company | Searches for an existing company record in your CRM based on specified criteria, and brings it into scope for downstream steps. Also outputs "Found" and "Multiple Found" for use in branching. See [Find company](./find-company.mdx). | If multiple companies match, the most recently created record is used. | When a webhook delivers a lead, find the matching company by name so you can create a sales task on it. |
 | Find contact | Searches for an existing contact record in your CRM based on specified criteria, and brings it into scope for downstream steps. | | |
 | Set account lifecycle stage | Sets an account's lifecycle stage (Lead, Prospect, or Customer). | Available on account-scoped triggers. A valid lifecycle stage must be selected. | When an opportunity is created on an account, set its lifecycle stage to **Prospect**. |
 | Update company | Updates one or more fields on an existing company record. | Available on company-scoped triggers. | When a company's details change upstream, sync the updates to the CRM record. |
