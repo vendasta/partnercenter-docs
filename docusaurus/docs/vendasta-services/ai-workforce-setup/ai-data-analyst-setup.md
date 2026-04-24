@@ -5,7 +5,7 @@ description: "An overview of the AI Data Analyst Setup service, detailing the pr
 ---
 
 :::info Requirements
-**Conversations AI** and at least one of **CRM AI**, **Reputation AI**, or **Social Marketing** is also required as a data source. See the full [requirements](#requirements) below.
+**Conversations AI** (any edition) must be active, plus at least one of **CRM AI**, **Reputation AI**, **Social Marketing**, or **Local SEO** as a data source. See the full [requirements](#requirements) below.
 :::
 
 The AI Data Analyst Setup is a do-it-with-me service where our experts configure, train, and launch the AI Data Analyst for your business. Our team handles the technical setup, connects your active data sources (CRM, Reviews/NPS, Social), and configures the AIR Analysis Framework so every response delivers a clear finding, a plain-language interpretation, and a recommended next step.
@@ -32,15 +32,12 @@ The AI will never surface raw data dumps or vague summaries. If it cannot produc
 
 ### Data source connections
 
-We connect every active data source available in your account:
+The AI Data Analyst requires Conversations AI (any edition) and at least one of the following data sources to be active: **CRM AI**, **Reputation AI**, **Social Marketing**, or **Local SEO**. The quality and depth of insights depend directly on how much data is available in each connected source. Once we determine what is active, we connect the data sources available in your account:
 
 * **CRM data:** contacts, companies, activities, and pipeline information
 * **Reviews and NPS:** customer feedback from connected review platforms
 * **Social engagement:** post performance and engagement metrics from connected social accounts
 
-:::info
-The AI Data Analyst requires at least one of the following premium editions to be active: **CRM AI, Reputation AI or Social Marketing**. The quality and depth of insights depend directly on how much data is available in each connected source.
-:::
 
 ### Knowledge base setup
 
@@ -96,17 +93,13 @@ Prior to this call, our team will run a set of sample queries to validate that t
 
 To set your business up for success, the following requirements must be met to deliver this service efficiently.
 
-### All Premium editions required
+### Conversations AI (any edition)
 
-All Premium editions must be active on your account to receive this service. This ensures the AI Data Analyst has access to the full range of data sources and capabilities required to deliver meaningful insights.
+Conversations AI must be active on your account. Any edition of Conversations AI is supported. This is the platform requirement for deploying the AI Data Analyst.
 
-### Conversations AI
+### CRM AI, Reputation AI, Social Marketing, or Local SEO (at least one required)
 
-Conversations AI must be active on your account. This is the platform requirement for deploying the AI Data Analyst.
-
-### CRM AI, Reputation AI or Social Marketing (at least one required)
-
-At least one of the following must be active: **CRM AI**, **Reputation AI**, or **Social Marketing**. These are the data sources the AI uses to generate insights. Without at least one active data source, the AI cannot perform meaningful analysis.
+At least one of the following must be active: **CRM AI**, **Reputation AI**, **Social Marketing**, or **Local SEO**. These are the data sources the AI uses to generate insights. Without at least one active data source, the AI cannot perform meaningful analysis.
 
 :::tip
 The more data sources that are active and populated, the richer and more actionable the AI's insights will be. We recommend having CRM data, connected review sources (Google, Facebook), and social accounts active before the onboarding call.
@@ -144,9 +137,9 @@ AIR stands for Analyze, Interpret, Recommend. Every response from the AI Data An
 
 <details>
 
-<summary>What premium editions are required?</summary>
+<summary>What editions are required?</summary>
 
-All Premium editions must be active on your account to receive this service. Additionally, at least one of the following must be active: **CRM AI**, **Reputation AI**, or **Social Marketing**. These editions unlock the data access and platform capabilities the AI Data Analyst relies on to generate insights. If you are unsure which editions are currently active on your account, please check with your account manager before the onboarding call.
+**Conversations AI** must be active (any edition is supported). In addition, at least one of the following data-source editions must be active: **CRM AI**, **Reputation AI**, **Social Marketing**, or **Local SEO**. These editions unlock the data access and platform capabilities the AI Data Analyst relies on to generate insights. If you are unsure which editions are currently active on your account, please check with your account manager before the onboarding call.
 
 </details>
 
