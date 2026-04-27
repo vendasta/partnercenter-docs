@@ -9,6 +9,10 @@ keywords: [Vibe, AI app builder, web application, React, natural language, no-co
 
 Vibe is Vendasta's AI-powered application builder. Describe what you want in plain English, and Vibe generates a fully functional web application — complete with components, routing, styling, and a live preview.
 
+:::tip Learn more about Vibe
+For a deeper dive into Vibe, visit the [Vibe documentation in Business App Help Center](https://docs.businessapp.io/business-app/ai/vibe/).
+:::
+
 ## What is Vibe?
 
 Vibe turns natural language prompts into real, deployable web applications. Instead of hiring a developer or writing code from scratch, your team describes what they want to build and Vibe's multi-agent AI system handles the rest:
@@ -46,8 +50,11 @@ When a request is ambiguous, Vibe asks clarifying questions before proceeding. T
 ### Multi-modal input
 Attach images to prompts to show Vibe what you want. Use the microphone button to dictate changes using voice — Vibe transcribes speech into a prompt.
 
+### URL cloning
+Paste any public URL into Vibe and it will scaffold a new application inspired by that site's layout and structure. This gives you a head start when you want to recreate or remix an existing design without starting from a blank canvas.
+
 ### Integrations
-Vibe connects to Vendasta platform services like Forms. You can build applications that embed contact forms for lead capture, feedback, and more. A platform-native option keeps forms and apps in your instance and already connected — no manual embed or connection step — which simplifies governance and reuse.
+Vibe connects to Vendasta platform services including Forms, analytics, and authentication. You can build applications that embed contact forms for lead capture, feedback, and more — all platform-native, already connected to your instance with no manual embed or configuration step.
 
 ### AI image generation
 Generate custom images directly within the application using Gemini. Describe the image you want, and Vibe creates and embeds it in the project.
@@ -70,3 +77,13 @@ When you send a prompt, Vibe's orchestrator coordinates multiple AI agents:
 6. **Iteration** — Review the result and send follow-up prompts to refine it
 
 All of this happens through a streaming interface — you see status updates, file changes, and the live preview updating in real-time.
+
+## Technical stack
+
+Every application Vibe generates is built on a modern, production-ready stack:
+
+- **React 18+** with TypeScript
+- **Vite** for fast builds
+- **Tailwind CSS** for styling
+- **shadcn/ui** component library
+- **Lucide** icons
