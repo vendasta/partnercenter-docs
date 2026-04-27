@@ -87,7 +87,7 @@ For reviews outside of Google and Facebook, you may select up to five external p
 
 <summary> What is the AI Reputation Specialist Setup service?</summary>
 
-The AI Reputation Specialist Setup is a done-with-you service where our experts configure, train, and launch our AI Reputation Specialist for your business. The service focuses on automating review responses, requesting new reviews, and managing reputation workflows with minimal effort from your team.
+The AI Reputation Specialist Setup is a done-for-you service where our experts configure, train, and launch our AI Reputation Specialist for your business. The service focuses on automating review responses, requesting new reviews, and managing reputation workflows with minimal effort from your team.
 
 </details>
 
