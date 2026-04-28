@@ -205,8 +205,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/automations/email-campaign-automations', to: '/automations/' },
           // Automations: sales-and-crm-integration walkthrough merged into templates overview
           { from: '/automations/sales-and-crm-integration', to: '/automations/automation-templates-overview' },
-          // Automations: sort-text-with-ai renamed to categorize-text-with-ai
-          { from: '/automations/sort-text-with-ai', to: '/automations/categorize-text-with-ai' },
+          // Automations: sort-text-with-ai → categorize-text-with-ai → categorize-with-ai (now canonical)
+          { from: '/automations/sort-text-with-ai', to: '/automations/categorize-with-ai' },
+          { from: '/automations/categorize-text-with-ai', to: '/automations/categorize-with-ai' },
           // Fulfillment: open-task-manager and flat paths now under task-manager folder
           { from: '/fulfillment/open-task-manager', to: '/fulfillment/' },
           { from: '/fulfillment/open-task-manager/get-started', to: '/fulfillment/task-manager/task-manager-getting-started' },
