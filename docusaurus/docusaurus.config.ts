@@ -95,6 +95,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
+          // Web chat GA4 article moved from business-app/conversations to conversations
+          { from: '/business-app/conversations/track-web-chat-events-google-analytics', to: '/conversations/track-web-chat-events-google-analytics' },
           // Administration index removed; redirect to My Account (one redirect only to avoid EEXIST on build/administration/index.html)
           { from: '/administration/', to: '/administration/my-account/' },
           // My Plan: subpages merged into one page
