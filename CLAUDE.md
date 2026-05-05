@@ -50,12 +50,22 @@ URL redirects are managed in `docusaurus.config.ts` via `@docusaurus/plugin-clie
 
 ## Content Guidelines
 
+### Voice & Tone
+
+- **Fun, not silly** | **Professional, not formal** | **Helpful, not overbearing** | **Expert, not bossy**
+- Active voice: "Admins can change these settings"
+- Present tense: "View your invoices"
+- Avoid internal jargon in Partner-facing docs
+
 ### Markdown Rules
 
 - **CRITICAL: Never use `>` character in markdown** - creates unintended blockquotes. Use "greater than" in text or `→` for UI paths
-- Use Docusaurus callouts: `:::tip`, `:::info`, `:::warning` (not blockquotes)
+- Use Docusaurus callouts: `:::tip` (green, best practices), `:::info` (blue, extra info), `:::warning` (yellow, cautions)
 - Sentence case headings: `## Set up a domain`
-- **Bold** for UI elements, `code` for commands and filenames
+- Heading hierarchy: `##` for sections, `###` for subsections
+- **Bold** for UI elements, *italics* for foreign words only, `code` for commands and filenames
+- Numbered lists for sequences, bullets for options
+- Navigation paths: `**Partner Center** > **Accounts** > **Manage Accounts**`
 
 ### Frontmatter
 
@@ -115,6 +125,34 @@ Content here with blank line above.
   ```
 - Always include alt text describing image purpose
 - Blur or replace sensitive data (PII) in screenshots
+
+### Naming Conventions
+
+- **Directories**: lowercase kebab-case, no spaces (e.g., `getting-started/`, `vendor-center/`)
+- **Git branches**: lowercase kebab-case (e.g., `feature/add-new-section`, `fix/update-links`)
+
+### Product & UI Naming
+
+- Capitalize branded products: Vendasta Payments, Marketplace
+- Lowercase generic objects: accounts, invoices
+- Match UI labels exactly
+- Material UI terms: hamburger menu, kebab menu
+
+### Linking
+
+- Internal links: `[Text](./file-name.md)` (relative path)
+- External links: `[Text](https://example.com)`
+- Avoid "click here" — use descriptive link text
+- Check all links before committing
+
+### Grammar & Mechanics
+
+- Acronyms: spell out on first use — Google Business Profile (GBP)
+- Numbers: numerals for 10+, spell out 1–9
+- Dates: October 15, 2025
+- Time: 3:00 pm–4:00 pm
+- Units: 20 GB
+- File extensions: PDF, CSV
 
 ## Deployment
 
