@@ -259,8 +259,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/partner-center/AI-receptionist-features-by-plan', to: '/ai/ai-workforce/ai-receptionist-features-by-plan' },
           // AI Workforce Optimization Plan content is now on every service page
           { from: '/vendasta-services/ai-workforce-setup/ai-workforce-optimization-plan', to: '/vendasta-services/ai-workforce-setup/ai-data-analyst-setup' },
-          // AI Workforce Setup index merged into individual service pages
-          { from: '/vendasta-services/ai-workforce-setup', to: '/vendasta-services/ai-workforce-setup/ai-data-analyst-setup' },
         ],
       },
     ],
