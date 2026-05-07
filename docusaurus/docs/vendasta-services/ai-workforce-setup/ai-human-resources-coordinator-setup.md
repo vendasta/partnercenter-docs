@@ -4,6 +4,10 @@ sidebar_label: "AI Human Resources Coordinator Setup"
 description: "An overview of the AI Human Resources Coordinator Setup service, detailing the process from the fulfillment form through onboarding, HR Coordinator configuration, training, and the 30-day check-in."
 ---
 
+import OptimizationPlanSection from './_optimization-plan-section.mdx';
+import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
+
+
 :::info Requirements
 **Conversations AI** must be active on your account. See the full [requirements](#requirements) below.
 :::
@@ -47,6 +51,8 @@ If your HR team uses a connected Google, Outlook, or Microsoft calendar in Busin
 ### Optional: Google Drive sync
 
 If your HR policies are stored and maintained in Google Drive, we can configure an automated sync so that policy updates in your Drive folder are automatically reflected in the AI's knowledge base. This requires brief access to your Google Drive folder structure.
+
+<OptimizationPlanSection />
 
 ## The setup process
 
@@ -217,3 +223,5 @@ If we are unable to reach you after our follow-up process (4 emails and 4 phone 
 A shared document or FAQ page requires employees to know it exists, find it, and search through it themselves. The AI HR Coordinator responds conversationally in real time — employees ask a question and get a direct answer, often with a link to the relevant policy, without needing to search. It is also available at any hour, reduces repetitive questions to your HR team, and consistently applies the same routing logic for sensitive or out-of-scope inquiries.
 
 </details>
+
+<OptimizationPlanFaq />

@@ -4,6 +4,10 @@ sidebar_label: "AI Data Analyst Setup"
 description: "An overview of the AI Data Analyst Setup service, detailing the process from the fulfillment form through data source configuration, training, and the 30-day check-in."
 ---
 
+import OptimizationPlanSection from './_optimization-plan-section.mdx';
+import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
+
+
 :::info Requirements
 **Conversations AI** (any edition) must be active, plus at least one of **CRM AI**, **Reputation AI**, **Social Marketing**, or **Local SEO** as a data source. See the full [requirements](#requirements) below.
 :::
@@ -46,6 +50,8 @@ We connect your business profile and website, and upload any supplementary docum
 :::note
 The AI Data Analyst is an internal tool. No chat widget or website installation is required, and there are no customer-facing components in this setup.
 :::
+
+<OptimizationPlanSection />
 
 ## The setup process
 
@@ -216,3 +222,5 @@ If we are unable to reach you after our follow-up process (4 emails and 4 phone 
 Yes. Any team member with access to Business App can interact with the AI Data Analyst directly. There is no limit on how many people can use it, and it is available to your whole team simultaneously. Each person can ask their own questions and receive their own AIR-structured responses based on the same underlying data.
 
 </details>
+
+<OptimizationPlanFaq />

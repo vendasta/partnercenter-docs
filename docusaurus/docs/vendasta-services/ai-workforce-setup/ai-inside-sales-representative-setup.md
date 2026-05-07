@@ -4,6 +4,10 @@ sidebar_label: "AI Inside Sales Representative Setup"
 description: "An overview of the AI Inside Sales Representative Setup service, detailing the process from the fulfillment form through onboarding, ISR configuration, training, and the 30-day check-in."
 ---
 
+import OptimizationPlanSection from './_optimization-plan-section.mdx';
+import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
+
+
 :::info Requirements
 **Conversations AI** must be active on your account. See the full [requirements](#requirements) below.
 :::
@@ -41,6 +45,8 @@ Appointment booking requires a connected Google, Outlook, or Microsoft calendar 
 ### Knowledge base setup
 
 We connect your business profile, website, services list, and any FAQs to the ISR's knowledge base. This allows the ISR to answer questions about your services, pricing, hours, and location accurately — without fabricating information.
+
+<OptimizationPlanSection />
 
 ## The setup process
 
@@ -251,3 +257,5 @@ If we are unable to reach you after our follow-up process (4 emails and 4 phone 
 Yes. The AI Inside Sales Representative can be configured to operate through web chat, SMS, or both — depending on your preferences. Please let our team know during the onboarding call which channels you'd like to activate. If you're a U.S.-based business, A2P registration is required before SMS can be enabled.
 
 </details>
+
+<OptimizationPlanFaq />

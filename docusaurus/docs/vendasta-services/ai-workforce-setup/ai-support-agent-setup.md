@@ -4,6 +4,10 @@ sidebar_label: "AI Support Agent Setup"
 description: "An overview of the AI Support Agent Setup service, detailing the process from the fulfillment form through channel configuration, knowledge base setup, training, and the 30-day check-in."
 ---
 
+import OptimizationPlanSection from './_optimization-plan-section.mdx';
+import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
+
+
 :::info Requirements
 **Conversations AI** must be active on your account. The edition that is active will affect which channels our team is able to connect. See the full [requirements](#requirements) below.
 :::
@@ -64,6 +68,8 @@ If you are unable to provide website access, we will provide the embed code and 
 ### Knowledge base setup
 
 We connect your business profile, website, and any FAQs, policies, or help documentation to the AI's knowledge base. This allows the Support Agent to answer questions about your services, hours, policies, and more without fabricating information.
+
+<OptimizationPlanSection />
 
 ## The setup process
 
@@ -264,3 +270,5 @@ If we are unable to reach you after our follow-up process (4 emails and 4 phone 
 Yes. The AI Support Agent can be configured to handle conversations that come in through Facebook Messenger and Instagram Direct, in addition to web chat and SMS. During the onboarding call, let our team know which social channels you'd like to activate. We will connect them to your AI Support Agent so every conversation, regardless of the channel, is handled consistently.
 
 </details>
+
+<OptimizationPlanFaq />
