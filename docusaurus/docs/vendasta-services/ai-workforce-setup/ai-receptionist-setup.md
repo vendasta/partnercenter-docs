@@ -4,6 +4,12 @@ sidebar_label: "AI Receptionist Setup"
 description: "An overview of the AI Receptionist Setup service, detailing the process from the initial call to the final configuration and ongoing support."
 ---
 
+:::info Requirements
+**Conversations AI** must be active on your account (any edition — Standard, Pro, or Premium).
+:::
+
+The AI Receptionist Setup is a done-for-you service where our experts configure, train, and launch the AI Receptionist for your business. Our team handles the technical setup, installs the chat widget on your website, builds out your CRM pipeline and lead management, configures booking and service-area connections, and sets up automations so you never miss a lead.
+
 ## What's included?
 
 ### CRM pipeline and lead management

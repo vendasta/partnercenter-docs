@@ -257,6 +257,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/getting-started/intro-to-vendasta/vendasta-affiliate-program', to: '/getting-started/vendasta-affiliate-program' },
           { from: '/partner-center/partner-center-getting-started-guide', to: '/partner-center' },
           { from: '/partner-center/AI-receptionist-features-by-plan', to: '/ai/ai-workforce/ai-receptionist-features-by-plan' },
+          // AI Workforce Optimization Plan merged into AI Workforce Setup index
+          { from: '/vendasta-services/ai-workforce-setup/ai-workforce-optimization-plan', to: '/vendasta-services/ai-workforce-setup' },
         ],
       },
     ],

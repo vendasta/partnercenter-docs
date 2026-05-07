@@ -4,7 +4,9 @@ sidebar_label: "AI Reputation Specialist Setup"
 description: "An overview of the AI Reputation Specialist Setup service, detailing the process from the fulfillment form to the final configuration and ongoing support."
 ---
 
-**Note:** Reputation AI Premium is required to receive this service.
+:::info Requirements
+**Reputation AI Premium** must be active on your account to receive this service.
+:::
 
 The AI Reputation Specialist Setup is a done-for-you service where our experts configure, train, and launch the AI Reputation Specialist for your business. Our team handles all the technical configuration and customization, tailoring the setup to your specific business needs. The service focuses on configuring automated review responses, requesting new reviews, and managing reputation workflows.
 
