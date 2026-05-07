@@ -4,6 +4,10 @@ sidebar_label: "AI Reputation Specialist Setup"
 description: "An overview of the AI Reputation Specialist Setup service, detailing the process from the fulfillment form to the final configuration and ongoing support."
 ---
 
+import OptimizationPlanSection from './_optimization-plan-section.mdx';
+import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
+
+
 :::info Requirements
 **Reputation AI Premium** must be active on your account to receive this service.
 :::
@@ -28,6 +32,8 @@ The AI Reputation Specialist Setup is a done-for-you service where our experts c
 * Negative review approval workflow
 
 **Please note:** For reviews outside of Google and Facebook, you may select up to five external platforms for us to support on your behalf, such as Yelp, YellowPages, Better Business Bureau, TripAdvisor, OpenTable, CarGuru, DealerRater, Expedia, CarFax, Zillow, and more. At this time, we're unable to respond to reviews on Indeed or Glassdoor.
+
+<OptimizationPlanSection />
 
 ## The setup process
 
@@ -213,3 +219,4 @@ Monthly support includes adjustments to prompts, workflow refinements and new fe
 
 </details>
 
+<OptimizationPlanFaq />
