@@ -1,7 +1,7 @@
 ---
-title: "AI Reputation Specialist Setup: Service Expectations"
-sidebar_label: "AI Reputation Specialist Setup"
-description: "An overview of the AI Reputation Specialist Setup service, detailing the process from the fulfillment form to the final configuration and ongoing support."
+title: "AI Reputation Specialist: Service Expectations"
+sidebar_label: "AI Reputation Specialist"
+description: "An overview of the AI Reputation Specialist service, detailing the process from the fulfillment form to the final configuration and ongoing support."
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';

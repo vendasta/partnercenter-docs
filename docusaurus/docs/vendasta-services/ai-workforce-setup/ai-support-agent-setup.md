@@ -1,7 +1,7 @@
 ---
-title: "AI Support Agent Setup: Service Expectations"
-sidebar_label: "AI Support Agent Setup"
-description: "An overview of the AI Support Agent Setup service, detailing the process from the fulfillment form through channel configuration, knowledge base setup, training, and the 30-day check-in."
+title: "AI Support Agent: Service Expectations"
+sidebar_label: "AI Support Agent"
+description: "An overview of the AI Support Agent service, detailing the process from the fulfillment form through channel configuration, knowledge base setup, training, and the 30-day check-in."
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';

@@ -1,7 +1,7 @@
 ---
-title: "AI Inside Sales Representative Setup: Service Expectations"
-sidebar_label: "AI Inside Sales Representative Setup"
-description: "An overview of the AI Inside Sales Representative Setup service, detailing the process from the fulfillment form through onboarding, ISR configuration, training, and the 30-day check-in."
+title: "AI Inside Sales Representative: Service Expectations"
+sidebar_label: "AI Inside Sales Representative"
+description: "An overview of the AI Inside Sales Representative service, detailing the process from the fulfillment form through onboarding, ISR configuration, training, and the 30-day check-in."
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';
