@@ -1,7 +1,7 @@
 ---
-title: "AI Receptionist Setup: Service Expectations"
-sidebar_label: "AI Receptionist Setup"
-description: "An overview of the AI Receptionist Setup service, detailing the process from the initial call to the final configuration and ongoing support."
+title: "AI Receptionist: Service Expectations"
+sidebar_label: "AI Receptionist"
+description: "An overview of the AI Receptionist service, detailing the process from the initial call to the final configuration and ongoing support."
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';

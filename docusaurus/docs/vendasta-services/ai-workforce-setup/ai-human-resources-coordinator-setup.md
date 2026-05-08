@@ -1,7 +1,7 @@
 ---
-title: "AI Human Resources Coordinator Setup: Service Expectations"
-sidebar_label: "AI Human Resources Coordinator Setup"
-description: "An overview of the AI Human Resources Coordinator Setup service, detailing the process from the fulfillment form through onboarding, HR Coordinator configuration, training, and the 30-day check-in."
+title: "AI Human Resources Coordinator: Service Expectations"
+sidebar_label: "AI Human Resources Coordinator"
+description: "An overview of the AI Human Resources Coordinator service, detailing the process from the fulfillment form through onboarding, HR Coordinator configuration, training, and the 30-day check-in."
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';

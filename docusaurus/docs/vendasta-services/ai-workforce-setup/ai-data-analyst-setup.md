@@ -1,7 +1,7 @@
 ---
-title: "AI Data Analyst Setup: Service Expectations"
-sidebar_label: "AI Data Analyst Setup"
-description: "An overview of the AI Data Analyst Setup service, detailing the process from the fulfillment form through data source configuration, training, and the 30-day check-in."
+title: "AI Data Analyst: Service Expectations"
+sidebar_label: "AI Data Analyst"
+description: "An overview of the AI Data Analyst service, detailing the process from the fulfillment form through data source configuration, training, and the 30-day check-in."
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';
