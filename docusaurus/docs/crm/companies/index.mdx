@@ -252,3 +252,45 @@ Lead scoring empowers customer-facing representatives with precise and customiza
 **Configuration**: Lead scoring is configured in `Partner Center` > `Administration` > `Score`. See the [Score documentation](../../administration/data-management/score/index.mdx) for detailed setup instructions.
 
 **Availability**: Lead scoring works out of the box for all users on the Professional subscription or above.
+
+## Bulk deleting companies
+
+You can delete multiple company records at once to clean up CRM data.
+
+:::warning
+Bulk deletion is **permanent and cannot be undone**. Any notes attached to deleted companies are lost and cannot be recovered, even if you recreate the company later. Export any records you may need before deleting.
+:::
+
+**Limits:** Companies are deleted in batches of **100 records** at a time.
+
+**Steps:**
+
+1. Go to **Partner Center** > **CRM** > **Companies**.
+2. Increase the items-per-page setting to show more records (up to 100).
+3. Use filters or search to narrow to the records you want to delete.
+4. Click the top-left checkbox to select all visible records.
+5. Click **Actions** > **Delete**.
+6. Confirm the deletion.
+
+Repeat for additional batches if you need to delete more than 100 companies.
+
+## Recreating a deleted company
+
+If a company was accidentally deleted, you can trigger the system to recreate it — as long as the associated account still exists in Partner Center.
+
+**What gets recovered:**
+- The Company record (with a new Company ID)
+- Business profile information synced from the account
+
+**What is NOT recovered:**
+- Notes and activity history from the deleted company record
+- The original Company ID (a new one is assigned)
+
+**How to recreate:**
+
+1. Go to the associated account in **Partner Center** > **Accounts** > **Manage Accounts**.
+2. Open the account and click **Edit Account**.
+3. Make a minor change to the Business Profile — the recommended approach is to add a tag and then remove it.
+4. Save the account.
+
+Saving triggers a sync that recreates the Company record linked to that account. The recreated company will have a fresh activity timeline with no previous notes.
