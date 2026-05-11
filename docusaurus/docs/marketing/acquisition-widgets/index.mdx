@@ -140,3 +140,52 @@ Copy the widget code and paste it into the HTML section of [CodePen](http://code
 
 If nothing appears, the widget may be broken. Contact Support on Demand at support@vendasta.com.
 </details>
+
+<details>
+<summary>How do I view and track leads from the Acquisition Widget?</summary>
+
+When a visitor submits the widget, a new account is created and the lead appears in **Partner Center** → **Sales** → **Prospects**. Look for the **Last Activity** column — leads created through the widget are labeled **Account Created via Acquisition Widget**, so you can identify exactly which leads came from it.
+
+**Notifications:** If only one salesperson is assigned to the widget, that salesperson receives a hot lead notification when a new lead submits. If multiple salespeople are assigned, leads are distributed among them and notifications go to the assigned salesperson.
+
+**Salesperson assignment:** You set the assigned salesperson(s) in the **Configure** step when creating or editing the widget. You can assign one salesperson or multiple. If you assign multiple, leads are distributed in round-robin order.
+
+**Common questions:**
+- *How do I know which leads came from the widget?* Filter Prospects by the **Last Activity** label, or assign a unique tag to the widget — all accounts created through it will have that tag.
+- *Why didn't I get a notification?* Notifications only fire when a single salesperson is assigned. If multiple salespeople are configured, check the assigned salesperson's notification settings.
+
+</details>
+
+<details>
+<summary>Why didn't my campaign trigger when a lead submitted the widget?</summary>
+
+Campaigns in Vendasta are **contact-based** — they require a contact record to fire. The Acquisition Widget creates an **account-level** record, not a contact, so campaigns don't trigger automatically when a lead submits.
+
+**Recommended workaround using Automations:**
+
+1. Add a unique **tag** to your widget (in the **Configure** step). Every account created through the widget will receive this tag.
+2. Go to **Partner Center** → **Automations** → **My Automations** and create a new automation.
+3. Set the trigger to **An account is created**, then add a condition: **Account data** → **Tags** → **Include any** → select the widget tag.
+4. Add a step to enroll the account in the campaign of your choice.
+5. Save and turn on the automation.
+
+:::tip
+Using a unique tag per widget lets you run different campaigns for leads from different widgets.
+:::
+
+</details>
+
+<details>
+<summary>What's the difference between the Acquisition Widget and a Customer Voice contact form?</summary>
+
+These two tools are designed for different audiences and different purposes — leads land in different places depending on which one you use.
+
+| | Acquisition Widget | Customer Voice contact form |
+|---|---|---|
+| **Designed for** | Channel Partners capturing leads for their own sales pipeline | SMBs collecting inquiries from their own customers |
+| **Leads land in** | **Partner Center** → **Sales** → **Prospects** | **Business App** (Customer Voice inbox) |
+| **Use when** | You want website visitors to become leads in your CRM | Your SMB client wants a contact form on their website |
+
+**Bottom line for Channel Partners:** Use the Acquisition Widget (or [CRM Forms](/marketing/forms)) to capture leads into your sales pipeline. If leads are appearing in Customer Voice instead of Sales Center, your site is using a Customer Voice contact form rather than an Acquisition Widget.
+
+</details>
