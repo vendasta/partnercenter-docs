@@ -1,0 +1,72 @@
+---
+title: Customizing the welcome email
+sidebar_label: Welcome email
+description: Learn what the Business App welcome email contains, what can be customized, and how to use Marketing Campaigns as the recommended workaround for custom onboarding content.
+tags: [users, welcome-email, campaigns, onboarding]
+keywords: [welcome email, customize, onboarding, marketing campaigns, white label]
+---
+
+# Customizing the welcome email
+
+## What is the welcome email?
+
+When a Business App user is created, the platform automatically sends them a welcome email with a link to set their password and access their dashboard. This email uses the white-label settings from the market the account is assigned to (logo, brand colors, sender name).
+
+## What you can and cannot customize
+
+| Element | Customizable? |
+|---------|--------------|
+| Logo and brand colors | Yes — via market white-label settings |
+| Sender name and email domain | Yes — via email domain settings |
+| Subject line | No — hard-coded |
+| Email body content | No — hard-coded |
+| Custom introductory message | Yes — a short message can be added at user creation time |
+
+The body of the welcome email is fixed and cannot be edited directly. The most common workaround is to use a **Marketing Campaign** to send a fully custom onboarding email after the user logs in for the first time.
+
+## Recommended workaround: Marketing Campaigns
+
+Most partners use a Marketing Campaign to deliver custom onboarding content. This lets you control the message completely and send a series of emails rather than a single welcome note.
+
+**How to set this up:**
+
+1. Go to **Partner Center** > **Marketing** > **Campaigns** > **Product Adoption**.
+2. Create a new campaign with the welcome content you want your customers to receive.
+3. Go to **Partner Center** > **Accounts** > **Manage Business App** > **Customize Business App** > **Notifications**.
+4. Enable the **Onboarding campaign** checkbox and select your campaign from the dropdown.
+5. Click **Save**.
+
+New customers will be automatically enrolled in the campaign when they log in for the first time.
+
+## Which market's white label is used
+
+The welcome email uses the white-label settings of the market the account is assigned to, with one exception:
+
+- **Resending from Account Details**: uses the account's assigned market branding
+- **Resending from the Users page**: uses the default market branding
+- **Initial creation email**: always uses the default market branding, regardless of the account's market assignment
+
+If your markets have different branding, make sure the correct market is assigned to the account before sending or resending the welcome email.
+
+## Frequently asked questions
+
+<details>
+<summary>Can I resend the welcome email?</summary>
+
+Yes. From the account's user list, click the three-dot menu next to the user and select **Resend Welcome Email**. You can also resend from **Accounts** > **Manage Users**.
+</details>
+
+<details>
+<summary>A user didn't receive their welcome email — what should I check?</summary>
+
+1. Confirm the email address on the user account is correct.
+2. Ask the user to check their spam or junk folder.
+3. Verify that notifications are enabled under **Customize Business App** > **Notifications** > **Allow sending of notifications**.
+4. Check that your email domain is configured correctly under **Marketing** > **Email Settings**.
+</details>
+
+<details>
+<summary>Can I add a custom message to the welcome email?</summary>
+
+Yes, a brief custom introductory message can be added when creating or editing a user. This appears in the welcome email above the login link. For fully custom content, use a Marketing Campaign as described above.
+</details>

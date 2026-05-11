@@ -93,17 +93,23 @@ If no suitable category exists, select "Other" - but note that some product feat
 
 ### Handling special business types
 
-**Service Area Businesses** (no physical storefront):
-- Select "Service Area Business" checkbox
-- Use owner's address or main office location
-- Define service radius in business settings
-- Focus on service categories rather than location-based categories
+**Service Area Businesses (SABs)** — businesses that serve customers at the customer's location and have no fixed public storefront (plumbers, landscapers, mobile pet groomers, etc.):
+
+SABs commonly don't appear in the account creation search bar. This is expected — the search uses Google's Locations API, which only surfaces businesses with a verified physical address. An SAB that doesn't list a street address publicly won't appear in results.
+
+**To create an account for an SAB:**
+
+1. In the **Create Account** search, type the business name. If it doesn't appear, click **Skip to Account Creation** (or **Go to Account Creation**).
+2. Fill in the business name and a valid street address. If the SAB has no public address, use the owner's address or a city/ZIP placeholder.
+3. Once the account is created, update the listing to define a service area radius and remove or hide the public street address if needed.
+
+:::warning
+Creating an account with **no street address** limits Listing Sync and other listing-dependent products. Those products require a physical address to sync data. Add a valid street address before activating listing products.
+:::
 
 **Multi-Location Businesses**:
-- Create separate accounts for each physical location
-- Use consistent naming convention (e.g., "Business Name - Location")
-- Plan to group using Multi-Location Groups later
-- Ensure each location has unique address information
+
+**Multi-Location Businesses** — create separate accounts for each physical location, use a consistent naming convention (e.g., "Business Name - Location"), and plan to group them using Multi-Location Groups later.
 
 ## How to import multiple accounts
 
@@ -138,9 +144,16 @@ Before importing accounts:
 - Market Assignment
 - Additional Contact Information
 - Business Hours
+- `ServiceAreaBusiness` — set to `TRUE` if the account is a Service Area Business; `FALSE` or blank otherwise. This field is **case-sensitive**: only `TRUE` and `FALSE` (uppercase) are valid. Using `true`, `True`, `yes`, or any other value will cause the row to fail validation.
+
+**Save format:** Save your file as **CSV UTF-8** (not standard CSV or Excel format) to avoid character encoding errors during import.
 
 :::info
 Use consistent formatting for phone numbers, addresses, and categories to ensure successful import processing.
+:::
+
+:::warning
+Automatic product activation **does not run on CSV-uploaded accounts**. Products you want activated for imported accounts must be bulk-activated separately after import using account lists or the Activate Product action.
 :::
 
 ### Executing the import
@@ -170,6 +183,17 @@ After successful import:
 4. **Configure products and services** for new accounts
 5. **Set up user access** for customer dashboard access
 
+### Enrichment after import
+
+After import, the system attempts to enrich each account with data from Google (address, phone, categories, hours). Some accounts are skipped and won't be enriched:
+
+- The business's country or state doesn't match what's on Google
+- The company name or address on the CSV is significantly different from the Google listing (low similarity score)
+- No Google listing exists for the business
+- The account has no street address (SABs without an address are not enriched)
+
+Accounts that aren't enriched still import successfully — they just retain only the data from your CSV.
+
 ## How to handle account creation issues
 
 ### Business not found in search
@@ -198,6 +222,7 @@ After successful import:
 - **Invalid phone formats**: Use consistent formatting (e.g., (555) 123-4567)
 - **Address validation failures**: Verify addresses exist and are properly formatted
 - **Category assignment errors**: Use exact category names from the system (refer to [Business Categories](../../directory/business-categories.mdx) or [download the complete list](../../directory/downloads/business-categories-list.csv) for all valid category options)
+- **`ServiceAreaBusiness` validation error**: This field only accepts `TRUE` or `FALSE` (uppercase). Using any other value — including `true`, `yes`, `1`, or leaving it as a non-blank non-`TRUE`/`FALSE` value — will cause the row to fail. Blank is treated as `FALSE`.
 
 **Duplicate business handling:**
 - **Similar names**: Review carefully for legitimate duplicates vs. similar businesses
@@ -241,11 +266,11 @@ You can adjust user permissions later from Manage Users if needed.
 
 If a business doesn’t appear in the `Create account` search:
 
-- It may be a Service Area Business (businesses without a storefront might not appear in the search results)
-- Click `Skip to account creation` to add the business manually
+- **Service Area Business** — SABs without a public address are not returned by Google’s Locations API, which powers the search. This is expected, not a bug. Click **Skip to Account Creation** to add the account manually.
+- **New or recently listed businesses** — New businesses may not yet appear in Google’s database. Use manual creation.
+- **Name variations** — Try shortened names (drop "LLC", "Inc.", etc.) or search by address instead.
 
-This ensures you can still create the account even when search doesn’t return the business.
-- Schedule onboarding activities for complex accounts
+Clicking **Skip to Account Creation** always lets you create the account manually regardless of whether it appears in search results.
 
 ## Frequently asked questions (FAQs)
 
@@ -288,7 +313,13 @@ Review the error messages, correct data formatting issues in your CSV file, and 
 <details>
 <summary>How do I create accounts for service area businesses without addresses?</summary>
 
-Select "Service Area Business" during creation and use the owner's address or main office location. Configure the service area radius in the account settings after creation.
+SABs often won't appear in the Create Account search because Google's Locations API doesn't surface businesses without a verified public address. To create the account:
+
+1. Type the business name in the search bar. If it doesn't appear, click **Skip to Account Creation**.
+2. Enter the business name and a street address (use the owner's address or a placeholder city/ZIP if there's no public address).
+3. After the account is created, update the listing to define a service area and hide the street address if needed.
+
+Creating an account with no street address will limit Listing Sync and other listing products until an address is added.
 </details>
 
 <details>
