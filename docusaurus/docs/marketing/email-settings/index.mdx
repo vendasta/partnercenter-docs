@@ -130,6 +130,30 @@ Tells receiving email servers what to do with emails that fail SPF or DKIM check
 ## Frequently Asked Questions
 
 <details>
+<summary>Can I send campaigns from multiple domains or under a different brand?</summary>
+
+Yes — there are two approaches depending on what you're trying to do.
+
+**Option 1: Authorize an additional sender domain**
+
+If you want to send campaigns from a second domain (for example, a sub-brand or a different business unit), you can authenticate that domain in **Marketing** → **Email Settings** → **[Connect Domains](./connecting-domains.mdx)**. Each domain requires SPF, DKIM, and DMARC DNS records. DNS changes can take up to 72 hours to propagate, and verification won't complete until all records are published correctly.
+
+Once verified, you can select the domain as your sender in Email Settings.
+
+**Option 2: Create a separate market**
+
+If you need fully separate branding — different logo, name, and sender identity — you can create a new market in Partner Center. Each market can have its own email settings and branding. When you create a campaign, selecting the right market ensures it sends with that market's branding.
+
+:::note
+Creating additional markets requires a Custom plan. Contact your Vendasta representative to discuss plan options.
+:::
+
+**Troubleshooting:**
+- *Gmail shows "via yourdomain.com" in the sender line* — This appears when the sending domain doesn't match the from address domain. Ensure the domain you're sending from is the one authenticated in Email Settings.
+- *Domain stuck in "Pending"* — Check that all three DNS records (SPF, DKIM, DMARC) are published at your DNS provider and allow up to 72 hours for propagation.
+</details>
+
+<details>
 <summary>Should I add the exact DMARC record provided by the platform?</summary>
 
 No, the DMARC record provided is a recommendation, not a requirement. Any valid DMARC record will work, even if provided by another service. The key requirement is that the record must be valid for verification to succeed.
