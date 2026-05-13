@@ -239,7 +239,48 @@ Yes, there is a daily email quota for partner-level email sending based on your 
 
 The quota resets daily. If you need a higher email limit, consider upgrading your subscription tier.
 
-Note: Businesses sending emails through their own Campaigns have a separate quota that is not affected by the partner-level limit.
+**Campaign sending throughput:** Campaigns send at approximately **4 emails per minute** regardless of list size. This rate is fixed to protect domain reputation and deliverability. For large lists, this means a campaign to 1,000 contacts takes roughly 4 hours to complete. To work around this for time-sensitive sends, split your list into smaller segments and schedule them across multiple days.
+
+**SMB sending allowance:** Businesses (SMBs) sending emails through their own Campaigns have a separate daily allowance — up to 100,000 emails per day — once the SMB domain is configured for Campaigns in Email Settings. This allowance is independent of the partner-level quota above.
+
+</details>
+
+<details>
+<summary>My campaign appears stuck while sending or is loading indefinitely. What should I do?</summary>
+
+Campaigns go through a queue before emails start sending. The processing window is typically **10–15 minutes** before the first batch goes out. If the campaign is still stuck after 15 minutes:
+
+1. **Confirm all required fields are filled in** — Missing sender information, mailing address, or required campaign fields can prevent sending. Check **Partner Center > Administration > Partner Defaults** to verify your mailing address is configured.
+2. **Check for invalid contact addresses** — Invalid or malformed email addresses in your audience can stall the sending queue. Remove any contacts with clearly invalid addresses and retry.
+3. **Retry the campaign** — Go to **Marketing > Campaigns**, find the campaign, and check whether a retry option is available.
+
+If the campaign remains stuck after these steps, contact Vendasta support.
+
+</details>
+
+<details>
+<summary>Some contacts didn't receive the campaign email. How do I check and retry?</summary>
+
+1. Go to **Marketing > Campaigns** and open the campaign
+2. Check the **Campaign Reports** tab to see delivery status by contact — look for drops, bounces, or undelivered entries
+3. For contacts who were dropped rather than bounced, you may be able to re-add them and resend
+4. For very large lists, consider splitting into smaller batches on future sends to make it easier to identify and retry any drops
+
+Hard-bounced addresses (permanent delivery failures) cannot be automatically resubscribed. Contact Vendasta support if you need to reinstate a contact that hard-bounced.
+
+</details>
+
+<details>
+<summary>What do common bounce codes in Campaign Reports mean?</summary>
+
+| Code | Meaning | What to do |
+|------|---------|-----------|
+| `550 Blocked` | The receiving server rejected the email | Check whether your IP or domain is on a blacklist at [MXToolbox](https://mxtoolbox.com/blacklists.aspx) |
+| `550 5.7.509` (DMARC) | Email failed DMARC alignment | Verify your SPF and DKIM records are correctly configured and aligned — see [Email Authentication](/marketing/email-settings/email-authentication) |
+| `550 5.7.606 Access denied` | IP address banned by the receiving server | This requires delisting; contact Vendasta support |
+| `550 5.1.1 User unknown` | The recipient email address doesn't exist | Remove the address from your list |
+
+For a full list of error codes, see [Email Deliverability](/marketing/email-settings/email-deliverability).
 
 </details>
 
