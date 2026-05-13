@@ -41,6 +41,39 @@ By unifying the SMS number for both review requests and Conversations AI communi
 
 <iframe src="//www.loom.com/embed/af8eae1a260e4b5b93879c91fc09f16f" width="560" height="315" frameBorder="0" allowFullScreen></iframe>
 
+## Finding your assigned SMS phone number
+
+After activating Conversations AI Pro, your business is automatically assigned an SMS number based on the business profile address. To find it:
+
+1. Go to **Business App > Administration > Conversation Settings**
+2. Look for **Your SMS number**
+
+If a local number is unavailable for your area code, a neighboring area number is assigned. Contact support to request a different area code or a toll-free number as an alternative.
+
+## Responding via SMS: Partner Center vs. Business App
+
+Conversations AI in **Business App** supports two-way SMS with customers. **Partner Center** does not support replying via SMS to customer messages — if you receive an SMS lead in Partner Center, open Business App to reply.
+
+## SMS campaign failures
+
+SMS campaigns will fail to send if the account's mailing address is incomplete. The following fields are required:
+
+- Street address
+- City
+- Postal / ZIP code
+
+Update the business profile address to resolve the issue before resending.
+
+## SMS automation delivery timing
+
+SMS automations deliver more slowly than email because each message undergoes carrier verification and rate-limiting. This is expected behavior — the **"Sent"** status in automation logs reflects when the message was queued, not when it was delivered.
+
+For large automations, batch no more than **250 contacts per trigger** to avoid queue congestion and ensure timely delivery.
+
+## Messaging Templates and the "SMS Configuration" label
+
+The **Messaging Templates** section in Inbox Settings includes a label called "SMS Configuration," but the templates created there are not SMS-only. They are available across **all messaging channels** in Conversations AI, including web chat, email, and SMS. You can use any template regardless of which channel the conversation is on.
+
 ## FAQs
 
 <details>
@@ -146,4 +179,16 @@ Registration is only available for US-based businesses, with Conversations AI Pr
 <summary><strong>There was a mistake on the registration form I submitted - can I cancel it?</strong></summary>
 
 No, the form cannot be edited or canceled once submitted. If information was missing or incorrect, the registration will eventually move to a 'failed' status. Once registration fails, the form can be resubmitted.
+</details>
+
+<details>
+<summary><strong>Can I restart the registration process if it's taking too long?</strong></summary>
+
+No. Do not attempt to restart or resubmit a registration that is still in progress. Restarting creates a duplicate submission and makes things worse — it can extend the wait time or cause the original registration to be rejected. Wait for the current submission to reach an approved or failed status before taking any action.
+</details>
+
+<details>
+<summary><strong>The webchat SMS function has been suspended — what does "forbidden industry" mean?</strong></summary>
+
+US phone carriers block SMS registration for certain industries regardless of whether the business is legal in their state. If a business's registration is suspended for "forbidden industry," SMS messaging cannot be enabled for that account. The business can still use web chat, email, WhatsApp, Facebook, and Instagram channels through Conversations AI. See the "Why was the registration rejected?" section above for the full list of restricted industries.
 </details>
