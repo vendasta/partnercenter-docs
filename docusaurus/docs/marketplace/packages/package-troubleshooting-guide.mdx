@@ -11,6 +11,34 @@ keywords: [package troubleshooting, package visibility, duplicate packages, pack
 
 This guide addresses common package issues with step‑by‑step solutions for visibility problems, duplicates, links, pricing, multi‑market sync, and when to escalate.
 
+## Product visibility and activation constraints
+
+### "Available in store" is set to Yes but the product isn't appearing
+
+Setting a product to **Available in store** makes it eligible for the store, but customers cannot find or purchase it until it is added to a **published package** that is assigned to a visible store category. Without that package step, the product remains invisible to customers regardless of the availability setting.
+
+### Custom product missing from Order Products
+
+If your custom product doesn't appear in the **Order Products** list when creating an order for an account, the most likely cause is that the account has **no address on file**. Custom products use the account's business profile address to determine availability. Add an address to the account's business profile and the product should appear.
+
+### Country-specific product activation
+
+Some Marketplace products are restricted to specific countries. If an account could previously activate a product but can no longer do so, check whether the **business profile country** on the account has changed. The account's country must match the country availability configured on the product. Update the business profile address if needed.
+
+### Review Widget Carousel requires Review Widget Pro
+
+The Carousel display option in the Review Widget is not available on the standard Review Widget — it requires the **Review Widget Pro** add-on. Activate Review Widget Pro on the account to unlock the Carousel option.
+
+### Finding a product's SKU
+
+Every product in the Vendasta Marketplace has a SKU identifier. To find it:
+
+1. Go to **Marketplace > Discover Products** (or **My Products**)
+2. Click into the product
+3. Look at the URL in your browser — the SKU is the string of characters at the end (e.g. `MP-XXXXXXXXXXXXXXXX`)
+
+SKUs follow the format `MP-` followed by alphanumeric characters. When contacting Support about a specific product, including the SKU speeds up identification.
+
 ## Common package visibility issues
 
 Package visibility problems are among the most frequent issues encountered in marketplace management. Understanding the root causes and systematic solutions ensures your packages reach customers effectively.
@@ -170,6 +198,25 @@ Resolution
 4. Save the package
 
 This migration is a one-time conversion. After saving, the package uses the new pricing model going forward. The overall package price is preserved during migration — only the per-item breakdown is new.
+
+### Package Profit showing as unavailable
+
+If the **Package Profit** field shows as unavailable, the most common cause is a **currency mismatch** — the package currency does not match the currency configured for your market. Go to **Manage Store > Currency** and confirm the market currency matches the currency used in the package.
+
+### Retail price not updating after editing a package
+
+In the new package editor, updating the retail price of an item inside a package does not automatically recalculate and display the updated total in the list and grid views immediately. This is a known behavior. To apply the updated price:
+
+1. Open the package in **Marketplace > Packages**
+2. Remove the affected product from the package
+3. Re-add the product and set the correct retail price
+4. Save and publish the package
+
+Note: bulk pricing updates across multiple packages are not currently supported. Each package must be updated individually.
+
+### Package not appearing when adding it to an invoice
+
+Packages must use the **new line-item pricing model** to be compatible with invoices and the Shopping Cart checkout. If a package was created with the legacy pricing model, open and save it in the package editor — it will automatically migrate to the new model. After saving, the package should appear as an option when creating invoices.
 
 ## Advanced troubleshooting scenarios
 
