@@ -55,6 +55,12 @@ Understanding order statuses is crucial for managing your sales process effectiv
 
 ## Approval Workflows
 
+### Manual vendor approval
+
+Some marketplace products require the vendor to manually approve the order before it can be activated. When this is the case, the order will show a **"Manual vendor approval required"** indicator on the relevant line item. No action is required from you — the vendor is notified automatically. Activation proceeds once the vendor approves on their end.
+
+If an order has been waiting on vendor approval for longer than expected, contact the vendor directly through **Marketplace > [Product] > Contact Us**.
+
 ### Where Orders Go After Submission
 
 Based on partner configuration, orders can be sent to one of two places:
@@ -85,6 +91,40 @@ Some partners prefer to collect payment before activating products — for examp
 :::info
 Products remain in **Approved** status until a Partner Center admin explicitly agrees to billing and activates them. Approval alone — without the billing agreement — does not trigger activation.
 :::
+
+## Post-activation: notifications, refunds, and SMB-initiated orders
+
+### Activation email notifications
+
+Activation emails to clients are **off by default**. To notify clients when a product activates, set up an Automation:
+
+1. Go to **Automations > Create Automation**
+2. Set the trigger to an order or product activation event
+3. Add a **Send Email** or **Send Notification** action targeting the client contact
+
+This replaces the legacy activation email behavior and gives you full control over the message content and timing.
+
+### Rejected-order refunds are automatic
+
+If an order fails to activate and is rejected, any payment collected for that order is automatically refunded as a **credit note**. You do not need to request a refund manually.
+
+To find the credit note:
+- Go to **Administration > My Billing** to see the credit applied to your account
+- Go to **Commerce > Financial Documents > Credit Notes** for the formal credit note document
+
+### Reviewing SMB-initiated orders before activation
+
+If your clients can place orders themselves (through the store), those orders activate automatically by default. To hold SMB-initiated orders for Partner review before activation:
+
+1. Go to **Administration > Order Settings > Default Content**
+2. Add a custom form with an **Administrative Questions** section to every order
+3. Mark a required field as hidden from the customer — the order cannot activate until an admin fills in that field
+
+This effectively gates activation on an admin completing the internal field, giving you a review step before products go live.
+
+### Stair-step pricing and bulk activations
+
+If your products use stair-step pricing (where the first tier is free and the price increases with volume), activating large batches of accounts at once can trigger the higher tier unexpectedly. **Recommendation:** use a **free-unit discount** instead of a free first tier to avoid unintended charges during bulk activations.
 
 ## Product Activation Process
 
@@ -227,4 +267,44 @@ Once you've agreed to billing terms and selected activation timing, you cannot c
 <summary>What's the difference between Canceled and Archived orders?</summary>
 
 Canceled orders are specifically marked as canceled (useful for tracking churn), while Archived orders are simply moved out of active view for historical purposes. Neither status cancels existing subscriptions.
+</details>
+
+<details>
+<summary>Can I disable auto-activation when a customer pays during approval?</summary>
+
+No. When a customer pays during the approval step, product activation triggers automatically — this cannot be disabled. If you need to delay activation after payment, use one of these workarounds:
+
+- **Set a future contract start date** on the order line items so products activate on that date instead of immediately
+- **Use a manual invoice flow** instead of the customer-approval payment flow, then activate manually when ready
+</details>
+
+<details>
+<summary>The MatchCraft Ads Express order form shows a timeout page — what do I do?</summary>
+
+This happens when MatchCraft Ads Express is not yet activated on the account before the order form is accessed. To resolve it:
+
+1. Activate **MatchCraft Ads Express** on the account first
+2. Then submit the order — the order form will load correctly
+</details>
+
+<details>
+<summary>"Proceed to next step" is grayed out for an add-on product — why?</summary>
+
+This usually means the parent product is **suspended** in Vendor Center. To resolve it:
+
+1. Go to **Vendor Center > Products** and check if the parent product is suspended
+2. Resume activations on that product
+3. Return to the order — the "Proceed to next step" button should become active
+</details>
+
+<details>
+<summary>An order shows "Deferred" status — what does that mean?</summary>
+
+**Deferred** means the order approval email failed to deliver to the recipient. This is typically an email deliverability issue. To resolve it:
+
+- Check that the recipient email address is correct and reachable
+- Confirm your sending domain has valid **SPF** and **DMARC** records configured
+- Try resending the order to a different contact or email address
+
+If deliverability is confirmed but the issue persists, contact support.
 </details>
