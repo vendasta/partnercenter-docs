@@ -64,6 +64,12 @@ The system evaluates whether key business information is found on the website's 
 
 ![Snapshot Report Homepage Content](./img/snapshot-report/website-homepage-content.jpg)
 
+### Website section limitations
+
+- **Password-protected websites**: If the business's website requires a login to access, the Snapshot Report cannot crawl it. Homepage content analysis (phone number, address, video) will be limited or unavailable.
+- **Phone number "not on homepage"**: This check uses NAPW matching. If the phone number format on the website doesn't match the account's phone number exactly, the report will show "not found" even if a phone number is visible. Standardize the phone format in the account details.
+- **Homepage video detection**: The system detects embedded videos on the homepage, but **YouTube videos loaded via lazy-loading are not detected**. A YouTube video embedded in a way that delays loading may not register as a video on the homepage.
+
 ### Detailed performance metrics
 
 The Snapshot Report assesses 10 speed metrics in total:
@@ -98,7 +104,13 @@ PageSpeed scores can vary as they are estimates of website performance, not exac
 
 ### SEO grade components
 
-The SEO grade is determined by multiple factors:
+The SEO grade is primarily driven by **organic click value** — an estimate of how much paid advertising traffic the business's organic search presence is worth, based on data from SEMrush and Spyfu. This is not a direct measure of search ranking position.
+
+:::info
+A business can rank #1 on Google for its own brand name but still receive a low SEO grade if that keyword has minimal search volume or low click value. The grade reflects the estimated dollar value of organic traffic, not position alone.
+:::
+
+Other factors that contribute to the SEO grade:
 
 - **Keyword Usage**: How well the website uses relevant keywords
 - **Meta Data**: Title tags, meta descriptions, and structured data
@@ -107,6 +119,8 @@ The SEO grade is determined by multiple factors:
 - **Links**: Internal and external link strategies
 - **Social Signals**: Social media integration and signals
 - **Trust Factors**: Security, authority, and credibility indicators
+
+**Note on currency**: SEO section data is sourced from SEMrush and is displayed in **USD** only. There is no option to change the currency displayed in this section.
 
 ### Search results visibility
 
@@ -144,6 +158,22 @@ The system identifies the top 5 keywords that the prospect is currently ranking 
 - **Competition Level**: Difficulty of ranking for each term
 
 ![Organic Keyword Ranking](./img/snapshot-report/organic-keyword-ranking.jpg)
+
+### Local Search Results (NAPW matching)
+
+The Local Search Results section shows whether the business appears in local search results. The system matches the business using **NAPW** — Name, Address, Phone, and Website — with phone number weighted at **40%** of the match score.
+
+The overall match threshold is **60%**. If the business's listing data does not meet this threshold (for example, due to a phone number format mismatch), the report may show "not found" even if the business does appear in Google results.
+
+**Common cause of "not found in top 100"**: The phone number in the business profile does not match the format Google has on file (e.g., dashes vs. parentheses, or missing/extra digits). Correcting the phone number in the account details and refreshing the report typically resolves this.
+
+### Near-Me search
+
+The **Near-Me** search section shows how the business ranks across a grid of geographic search points. The system runs searches from **9 hotspot locations** around the business address and averages the results to produce the Near-Me ranking.
+
+Because rankings are averaged across these 9 points, a business may rank #1 in its immediate area but receive a lower Near-Me score if it does not appear consistently across all hotspot locations.
+
+**Service Area Businesses (SABs)**: Google hides the physical address of Service Area Businesses from its API, which prevents the Snapshot Report from generating Near-Me results for SABs. As a workaround, connect the business to **Reputation Management** in Partner Center — this provides an address reference point the system can use.
 
 ### Local SEO assessment
 
@@ -194,6 +224,27 @@ The system cannot perform localized searches and searches from a centralized loc
 - Implement local SEO strategies for geographic targeting
 
 ## Frequently asked questions (FAQs)
+
+<details>
+<summary>I rank #1 on Google but the SEO grade is F — why?</summary>
+
+The SEO grade is based on **organic click value**, not search position. A business can rank #1 for its own brand name, but if that keyword has low search volume or low click value (as estimated by SEMrush), the grade will be low. The report is measuring the estimated value of all organic traffic, not whether the business ranks well for a single term.
+
+</details>
+
+<details>
+<summary>The report shows "not found in top 100" but the business appears in Google — why?</summary>
+
+This is most commonly caused by a **phone number mismatch**. The Local Search Results section uses NAPW matching with phone number weighted at 40%. If the phone number in the account profile differs from what Google has on file (formatting, area code, etc.), the business may not reach the 60% match threshold. Correct the phone number in the account and refresh the report.
+
+</details>
+
+<details>
+<summary>Why is Near-Me search not appearing for a Service Area Business?</summary>
+
+Google hides the physical address of Service Area Businesses from its API. Without an address, the system cannot run the Near-Me hotspot searches. Connect the business via **Reputation Management** in Partner Center to provide an address reference, which allows the Near-Me section to generate results.
+
+</details>
 
 <details>
 <summary>Why does the SEO score seem inaccurate for my business?</summary>
