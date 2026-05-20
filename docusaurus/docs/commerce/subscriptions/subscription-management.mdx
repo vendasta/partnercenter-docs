@@ -37,6 +37,7 @@ Configure default settings that apply to all accounts created after saving. Exis
 1. **Enable Retail Subscriptions**: Toggle the Retail Subscriptions button to ON to ensure a subscription is created every time you activate a product
 2. **Enable Subscription Billing**: Toggle the Subscription billing button to ON to turn on customer invoicing (optional)
 3. **Setup Payment Collection**:
+   - **Don't bill — just track revenue**: Creates subscriptions and tracks revenue without generating customer invoices
    - **Create a draft invoice**: Creates the invoice and saves it as a draft for manual sending
    - **Email payable invoice to billing recipient**: Generates and emails the invoice to the customer for payment
 
@@ -60,9 +61,14 @@ Configure billing settings for individual customer accounts:
 4. **Enable Retail Subscriptions**: Toggle ON to create subscriptions when activating products
 5. **Enable Subscription Billing**: Toggle ON to turn on customer invoicing
 6. **Setup Payment Collection Options**:
+   - **Don't bill — just track revenue**: Tracks recurring revenue without generating customer invoices
    - **Create a draft invoice**: Manual invoice sending
    - **Email payable invoice to billing recipient**: Automatic email to customer
-   - **Automatically charge payment method on file**: Automatic credit card charging (requires saved payment method)
+   - **Automatically charge payment method on file**: Automatic credit card charging (requires a saved payment method — if none is on file, invoices default to email only)
+
+:::note
+A payment method must be added to the account **before** enabling automatic charging. If no payment method is on file, invoices will default to email-only delivery.
+:::
 
 7. **Configure Collection Timing**:
    - **Each subscription renewal**: Invoice on product renewal day
@@ -263,6 +269,54 @@ Follow the subscription cancellation steps in the management section above.
 
 </details>
 
+<details>
+<summary>When does the first billing charge occur for a new subscription?</summary>
+
+Subscriptions do not charge in the creation month. The first automatic charge occurs on the next renewal date after the subscription is created.
+
+For example, if you create a subscription on March 15 with a monthly renewal, the first automatic charge will be on April 15.
+
+To bill your customer immediately in the creation month, manually issue an invoice from the subscription.
+
+</details>
+
+<details>
+<summary>What happens when a subscription trial ends?</summary>
+
+Trial subscriptions do not automatically convert to paid subscriptions when the trial period ends. Once the trial expires, services will no longer be available to the customer unless you manually upgrade to a paid plan.
+
+To continue service after a trial, upgrade the subscription before or when the trial ends.
+
+:::tip
+Creating a trial subscription does not require a credit card on file, making it easy to start a trial without payment information.
+:::
+
+</details>
+
+<details>
+<summary>Are there limits on subscription quantities?</summary>
+
+Subscriptions support quantities from 1 to 99 units per subscription. For larger orders, adjust the unit price to reflect the full order value and create a single subscription.
+
+</details>
+
+<details>
+<summary>What are the Free tier limitations for subscriptions?</summary>
+
+Partners on the Free tier have limited access to subscription features:
+
+- **Pricing**: Retail pricing only — no wholesale discount pricing available
+- **SMS messaging**: Not available on the Free tier
+- **White-label customization**: Not available on the Free tier
+
+To access premium features, upgrade to a paid subscription tier.
+
+:::note
+If your account has been suspended or sent to collections, it may have been automatically downgraded to the Free tier. Contact Vendasta support to discuss reinstatement.
+:::
+
+</details>
+
 ## Important Notes
 
 - Subscription renewal invoices are sent at 3:00 PM UTC on renewal days
@@ -272,3 +326,5 @@ Follow the subscription cancellation steps in the management section above.
 - Product removals follow the same timing rules as subscription cancellation
 - Default settings apply only to newly created accounts after saving
 - Account-level settings override default settings for specific accounts
+- New subscriptions do not charge in the creation month — the first automatic charge occurs on the next renewal date
+- If no payment method is on file, invoices default to email-only delivery
