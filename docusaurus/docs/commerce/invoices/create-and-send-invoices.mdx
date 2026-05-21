@@ -279,3 +279,19 @@ If a package shows an unexpected price when added to an invoice, it may not have
 The payment link can be found for any sent invoice from **Partner Center → Commerce → Click the three dots to the left of the desired invoice → Copy payment link**. Draft invoices do not have a payment link.
 
 </details>
+
+<details>
+<summary>I'm seeing "Failed to charge invoice: An invalid request occurred" — how do I fix this?</summary>
+
+This error is caused by an invoice that contains an empty line item — a line with no product description and a $0.00 value. To resolve it:
+
+1. Open the invoice showing the error
+2. Review all line items and look for a line with a blank description and a $0.00 amount
+3. **Duplicate the invoice** using the Options **⋮** menu
+4. On the duplicate, delete the empty line item
+5. Charge the duplicate invoice
+6. Void the original invoice
+
+To prevent this in future, ensure every line item has a product description and a value greater than $0.00 before saving.
+
+</details>
