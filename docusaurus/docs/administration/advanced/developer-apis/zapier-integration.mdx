@@ -56,6 +56,8 @@ Once you're on the Zapier website, you can start creating automations (Zaps) bet
 
 First, select the app and event that will trigger your automation.
 
+If you want your Zap to start from Vendasta data, select **Business App** as the trigger app in Zapier, choose the available trigger event, connect your account, and complete the **Setup instructions** shown in Zapier before testing the trigger.
+
 ![Zapier Setup Trigger](../img/administration/zapier/zapier_setup_trigger.jpg)
 
 #### Step 2: Connect to Vendasta
@@ -214,7 +216,11 @@ An account will be created as a copy of the company data the first time that an 
 3. Review the Zap History in Zapier to identify where failures might be occurring
 
 **App Greyed Out**
-You may be trying to add the app as a trigger instead of an action! We do not currently support any Vendasta-built triggers. (You can use Zapier's catch a webhook trigger to send data from Vendasta to other systems.)
+Use the correct app for your workflow:
+
+- **Vendasta app**: use this as an **action** app
+- **Business App app**: use this as a **trigger** app, then complete the **Setup instructions** shown in Zapier
+- **Webhooks by Zapier**: use this when you want to trigger from Vendasta Automations webhook events
 
 ![Zapier app greyed out](../img/administration/administration-advanced/zapier-app-faq/zapier-app-greyed-out.png)
 
@@ -284,7 +290,11 @@ Once automations are released in Business App, users will be able to set up an a
 <details>
 <summary>Why is the app greyed out when I try to add it?</summary>
 
-You may be trying to add the app as a trigger instead of an action. We don't currently support Vendasta-built triggers. Use Zapier's "catch a webhook" trigger to send data from Vendasta to other systems.
+You're likely using the wrong app type for the step:
+
+- Use **Vendasta** when configuring Zap **actions**
+- Use **Business App** when configuring Zap **triggers** and follow the in-app **Setup instructions**
+- Use **Webhooks by Zapier** when triggering from Vendasta Automations webhooks
 </details>
 
 <details>

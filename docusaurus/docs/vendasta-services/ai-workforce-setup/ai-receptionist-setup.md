@@ -1,8 +1,18 @@
 ---
-title: "AI Receptionist Setup: Service Expectations"
-sidebar_label: "AI Receptionist Setup"
-description: "An overview of the AI Receptionist Setup service, detailing the process from the initial call to the final configuration and ongoing support."
+title: "AI Receptionist: Service Expectations"
+sidebar_label: "AI Receptionist"
+description: "An overview of the AI Receptionist service, detailing the process from the initial call to the final configuration and ongoing support."
 ---
+
+import OptimizationPlanSection from './_optimization-plan-section.mdx';
+import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
+
+
+:::info Requirements
+**Conversations AI** must be active on your account (any edition — Standard, Pro, or Premium).
+:::
+
+The AI Receptionist Setup is a done-for-you service where our experts configure, train, and launch the AI Receptionist for your business. Our team handles the technical setup, installs the chat widget on your website, builds out your CRM pipeline and lead management, configures booking and service-area connections, and sets up automations so you never miss a lead.
 
 ## What's included?
 
@@ -19,6 +29,8 @@ To properly manage your leads, we will create a smart list and a sales pipeline 
 ### Automation creation
 
 Our team will set up 3-5 automations depending on your business needs. These automations will send you notifications for new leads and also send follow-ups to your leads to ensure they have a way to reach you.
+
+<OptimizationPlanSection />
 
 ## The setup process
 
@@ -105,3 +117,5 @@ The AI Receptionist is not HIPAA compliant, which means it should not handle **P
 The AI Receptionist is HIPAA-pursuant, which means it can be used in a way that supports HIPAA rules **as long as no PHI is shared**. It's safe to use for simple tasks like answering general questions, sharing office hours, or helping book appointments without medical details. Healthcare organizations are responsible for making sure the AI is used this way.
 
 </details>
+
+<OptimizationPlanFaq />

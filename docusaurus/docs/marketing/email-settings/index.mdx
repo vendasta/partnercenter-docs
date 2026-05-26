@@ -130,6 +130,30 @@ Tells receiving email servers what to do with emails that fail SPF or DKIM check
 ## Frequently Asked Questions
 
 <details>
+<summary>Can I send campaigns from multiple domains or under a different brand?</summary>
+
+Yes — there are two approaches depending on what you're trying to do.
+
+**Option 1: Authorize an additional sender domain**
+
+If you want to send campaigns from a second domain (for example, a sub-brand or a different business unit), you can authenticate that domain in **Marketing** → **Email Settings** → **[Connect Domains](./connecting-domains.mdx)**. Each domain requires SPF, DKIM, and DMARC DNS records. DNS changes can take up to 72 hours to propagate, and verification won't complete until all records are published correctly.
+
+Once verified, you can select the domain as your sender in Email Settings.
+
+**Option 2: Create a separate market**
+
+If you need fully separate branding — different logo, name, and sender identity — you can create a new market in Partner Center. Each market can have its own email settings and branding. When you create a campaign, selecting the right market ensures it sends with that market's branding.
+
+:::note
+Creating additional markets requires a Custom plan. Contact your Vendasta representative to discuss plan options.
+:::
+
+**Troubleshooting:**
+- *Gmail shows "via yourdomain.com" in the sender line* — This appears when the sending domain doesn't match the from address domain. Ensure the domain you're sending from is the one authenticated in Email Settings.
+- *Domain stuck in "Pending"* — Check that all three DNS records (SPF, DKIM, DMARC) are published at your DNS provider and allow up to 72 hours for propagation.
+</details>
+
+<details>
 <summary>Should I add the exact DMARC record provided by the platform?</summary>
 
 No, the DMARC record provided is a recommendation, not a requirement. Any valid DMARC record will work, even if provided by another service. The key requirement is that the record must be valid for verification to succeed.
@@ -145,6 +169,37 @@ Yes, the platform has a limit of 32,000 characters of HTML source code per email
 <summary>Do I need to register my domain on Google Postmaster Tools?</summary>
 
 While not required, registering your domain with Google Postmaster Tools provides valuable insights into your email deliverability and reputation with Gmail users, which can help optimize your email performance.
+</details>
+
+<details>
+<summary>Can I use a different domain for Marketing Email Settings vs. Partner Branding Email Settings?</summary>
+
+No. Marketing Email Settings and Partner Branding Email Settings are tied — they share the same sending domain. You cannot configure a separate domain for campaign sends versus brand notifications (such as Daily Digests or Executive Reports). If you change the domain in one place, it affects both.
+
+</details>
+
+<details>
+<summary>Why does the reply-to address always match my sender email?</summary>
+
+The reply-to address is automatically set to match the market's sender email. This is intentional — it prevents white-label breaks on automated emails like Daily Digests and Executive Reports, which need to reply back to the configured sender identity rather than a different address.
+
+If you need different reply-to addresses across audiences, the supported approach is to create separate markets, each with its own sender email. The platform natively supports up to two authenticated sending domains.
+
+</details>
+
+<details>
+<summary>I'm getting an "Invalid DNS zone file" error when adding a CNAME record. How do I fix this?</summary>
+
+This error typically means there is a conflicting A record at the same hostname where you're trying to add a CNAME. DNS does not allow a CNAME and an A record to coexist at the same name.
+
+To fix this:
+
+1. Log in to your DNS provider (GoDaddy, Namecheap, etc.)
+2. Look for an existing A record at the same hostname as the CNAME you're trying to add
+3. Delete the A record, then add the CNAME
+
+If you're unsure which record is conflicting, use a DNS lookup tool like [MXToolbox](https://mxtoolbox.com/DNSLookup.aspx) to see all existing records for the hostname before making changes.
+
 </details>
 
 ## Best Practices
