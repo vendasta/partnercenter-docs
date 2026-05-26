@@ -46,6 +46,9 @@ jobs:
           # Fetch full history so git log dates are accurate for all files
           fetch-depth: 0
 
+      - name: Fix git directory ownership
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
