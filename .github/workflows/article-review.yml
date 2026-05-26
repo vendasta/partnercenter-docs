@@ -1,45 +1,71 @@
-name: Article Review
+# .github/workflows/article-review.yml
+#
+# Automatically flags help center articles for review based on how long
+# it has been since they were last updated in git.
+#
+# Runs every Monday at 9:00 AM UTC by default.
+# You can also trigger it manually from the Actions tab in GitHub.
+
+name: Help Center Article Review
 
 on:
   schedule:
-    - cron: '0 9 * * 1-5'  # 9 AM UTC, Monday–Friday
+    # Every weekday (Mon–Fri) at 9:00 AM UTC — up to 5 articles per day
+    # Adjust the time using https://crontab.guru if needed
+    - cron: "0 9 * * 1-5"
+
+  # Allow manual runs from the GitHub Actions tab
   workflow_dispatch:
     inputs:
       dry_run:
-        description: 'Dry run (log actions without creating issues or sending notifications)'
-        type: boolean
-        default: false
+        description: "Dry run (log only — no issues created, no notifications sent)"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
       threshold_days:
-        description: 'Days since last update before an article is flagged'
-        type: number
-        default: 180
-
-permissions:
-  issues: write
-  contents: read
+        description: "Days since last update before flagging (leave blank to use default)"
+        required: false
+        default: ""
 
 jobs:
-  flag-stale-articles:
+  flag-articles:
+    name: Flag stale articles for review
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read    # To read the git history
+      issues: write     # To create and read GitHub Issues
+
     steps:
-      - name: Checkout repository (full history)
+      - name: Check out repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Required so git log can find the true last-commit date for every file
+          # Fetch full history so git log dates are accurate for all files
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
-      - name: Run article flag script
+      - name: Run article review script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           GOOGLE_CHAT_WEBHOOK: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
-          REVIEW_THRESHOLD_DAYS: ${{ inputs.threshold_days || 180 }}
-          MAX_ARTICLES_PER_RUN: 5
-          ARTICLE_DIRS: .
-          DRY_RUN: ${{ inputs.dry_run || false }}
-        run: python scripts/flag_articles.py
+          # Change ARTICLE_DIRS to target a specific folder, e.g. "docs,articles"
+          # Leave as "." to scan the entire repo
+          ARTICLE_DIRS: "."
+          # How many days without an update before an article is flagged
+          # Override here or via workflow_dispatch input
+          REVIEW_THRESHOLD_DAYS: ${{ inputs.threshold_days || '180' }}
+          # Max new issues to create per daily run (oldest articles first)
+          MAX_ARTICLES_PER_RUN: "5"
+          # Label applied to review issues in GitHub
+          ARTICLE_LABEL: "review-due"
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+        run: |
+          python scripts/flag_articles.py
