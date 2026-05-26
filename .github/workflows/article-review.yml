@@ -1,0 +1,45 @@
+name: Article Review
+
+on:
+  schedule:
+    - cron: '0 9 * * 1-5'  # 9 AM UTC, Monday–Friday
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (log actions without creating issues or sending notifications)'
+        type: boolean
+        default: false
+      threshold_days:
+        description: 'Days since last update before an article is flagged'
+        type: number
+        default: 180
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  flag-stale-articles:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Required so git log can find the true last-commit date for every file
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run article flag script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GOOGLE_CHAT_WEBHOOK: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
+          REVIEW_THRESHOLD_DAYS: ${{ inputs.threshold_days || 180 }}
+          MAX_ARTICLES_PER_RUN: 5
+          ARTICLE_DIRS: .
+          DRY_RUN: ${{ inputs.dry_run || false }}
+        run: python scripts/flag_articles.py
