@@ -141,6 +141,40 @@ Every notification includes an AI-generated conversation summary. This summary:
 **Example summary:**
 > "Visitor is interested in getting a quote for backyard landscaping. They have a 500 sq ft area and want low-maintenance plants. Prefers to be contacted by phone in the afternoon."
 
+## Notification timing: new leads vs. follow-ups
+
+New lead notifications fire **only when a brand-new contact is created**. If the same person messages again — from a known number, email, or device — you receive a "Conversation Update" instead of a "New Lead."
+
+Follow-up messages from existing contacts do not trigger a notification by default. To get alerted on follow-ups, set up an Automation:
+
+1. Go to **Automations** and create a new automation
+2. Set the trigger to **"A contact communication summary is created"**
+3. Add the action **"Send notification"** to the appropriate team member(s)
+
+This fires after each conversation summary is generated, covering both new leads and returning contacts.
+
+## Reply-to on new lead notification emails
+
+When you receive a "New Lead from Web Chat" email notification, the reply-to address is `noreply@<your-domain>`. Replying to that email will not reach your customer. Instead:
+
+- **Forward the notification** to share it with a colleague
+- **Click the link in the notification** to open the conversation in Conversations AI and reply from there
+
+## Auto-follow and unfollowing conversations
+
+You are automatically set to follow a conversation when:
+
+- You **send a message** in that conversation
+- You are **assigned as Salesperson** to the account (follows all past and future conversations for that account)
+
+Auto-following means you will receive notifications for that conversation even when "Only my events" is selected. To stop receiving notifications for a conversation you don't need to track, click the **star (★)** in the conversation header to unfollow it.
+
+If someone other than the intended Salesperson is receiving Inbox notifications, check whether they participated in a conversation (and were auto-followed) or were assigned as Salesperson to the account.
+
+## Closed conversations reopening
+
+When a customer sends a new inbound message on a number or channel tied to a conversation that was previously marked as closed, the conversation automatically **reopens**. This is expected behavior — there is no separate notification type for a reopened conversation; it appears as a new inbound message in the conversation thread.
+
 ## Frequently asked questions
 
 **Q: Why didn't I get a "New Lead" notification?**
@@ -173,3 +207,13 @@ Every notification includes an AI-generated conversation summary. This summary:
 - For duplicate contacts (recognized by email/phone match), the existing record is preserved
 - Only missing postal code may be added automatically
 - You can manually update other fields in the CRM if needed
+
+**Q: Someone other than the Salesperson is getting Inbox notifications — why?**
+- Any user who sends a message in a conversation is automatically set to follow it
+- Users assigned as Salesperson to an account follow all conversations for that account
+- To stop receiving notifications, the user can unfollow the conversation by clicking the ★ in the conversation header
+
+**Q: I'm not getting any notifications at all — what should I check?**
+- Confirm your user account exists and is active in Partner Center
+- Verify Conversations AI is activated for the account
+- Check that notification preferences are enabled (bell icon > gear icon > enable "All events" or "Only my events")

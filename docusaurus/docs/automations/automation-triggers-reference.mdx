@@ -1,125 +1,174 @@
 ---
-title: Automation Triggers Reference
-description: Complete reference guide for all available automation triggers that can start your workflows in Vendasta's platform.
-sidebar_position: 5
+title: Automation triggers reference
+description: Complete reference for every trigger that can start an automation workflow, organized by category.
+sidebar_position: 3
 ---
 
-# Automation Triggers Reference
+# Automation triggers reference
 
-Automation triggers are specific actions that start your workflows. There are numerous triggers to choose from, and we're frequently adding more. This comprehensive reference covers all available triggers, their options, special cases, and example use cases.
+Triggers are the events that start an automation workflow. This page lists every available trigger, organized by the category you'll find it under in the automation builder.
 
-## Understanding Triggers
+Some triggers work out of the box; others require you to specify **trigger options**. For example, **A sales order status is changed** requires you to specify the order origin and the status it's changing to.
 
-Some triggers are simple and are ready out-of-the-box, while other triggers may require specifying **trigger options**. For example, the **A sales order status is changed** trigger requires that you specify the sales order origin and status that it's changed to.
+Triggers marked **(draft)** are in development and may change or be removed before general release.
 
-## Complete Triggers List
-
-### Businesses
+## Companies
 
 | Trigger | Overview | Special Cases | Example Use Cases |
 | --- | --- | --- | --- |
-| An account is created | Starts the workflow when an account is created. | The trigger is not able to detect likely duplicates (e.g. Jim's Mowing and Jim's mowing) | When an account in Quebec is added, tag the account as possibly needing a salesperson fluent in French. |
-| An account is added to a list | Starts the workflow when an account is added to a specified list. | The trigger will not fire if the account begins on a list. | When an SMB is added to the High Touch Client list, assign an experienced salesperson. |
-| An account is charged for a product | Starts the workflow when a client account has been charged for a product | | When a product, for instance, Reputation AI, is added to an account, an invoice is sent to the client. |
-| A user is active in Business App | Starts the workflow when a user logs into Business App | | When a user logs into Business App, a notification is sent to the assigned Salesperson |
-| A customer asked a question | Starts the workflow when someone sends a message through here in the Business App. | This was an original hot lead that has been migrated into built-in automation. | When a user clicks the help button, assign a fulfillment agent to follow up. |
-| A user is added to an account | Starts the workflow when a user is added to an account. | If a user is removed from the account and then re-added, the automation may fire a second time. | An SMB wanted a staff member added to their account to help administrate purchased products. When the partner adds the staff member to the account, an email campaign with helpful information is started. |
-| A company is created | Starts the workflow when a company is created. | | When a company is created with missing data, assign a task to a salesperson to reach out and acquire that information. |
-| A contact is created | Starts the workflow when a contact is created. | | When a contact is created with missing data, assign a task to a salesperson to reach out and acquire that information. |
-| Get the associated account | Given a company, get the account associated with it. | If there's no account, it will create one. | I have a company and I want to start a campaign on it, so I get the account first since campaign actions are only available on accounts currently. |
+| A call activity is created or modified for a company | Starts the workflow when a call activity is logged or updated on a company. | | When a discovery call is logged, notify the assigned salesperson to prepare follow-up materials. |
+| A company is added to a list | Starts the workflow when a company is added to a specified list. | | When a company is added to the **Enterprise Prospects** list, assign it to the enterprise sales team. |
+| A company is created or modified | Starts the workflow when a company is created or its details change. | | When a company's industry field is updated, re-evaluate its segmentation tags. |
+| A company is created *(draft)* | Starts the workflow when a company is created. | | |
+| A form is submitted for a company | Starts the workflow when a form is submitted in association with a company. | | When a company submits a pricing-request form, create a follow-up task for the account owner. |
+| A company is removed from a list | Starts the workflow when a company is removed from a specified list. | | When a company is removed from the **Active Trials** list, log the drop in the CRM. |
+| A form is submitted for a contact | Starts the workflow when a form is submitted by a contact associated with a company. | | When a contact submits a demo-request form, alert the assigned salesperson. |
+| An email activity is created or modified for a company | Starts the workflow when an email activity is logged or updated on a company. | | When an inbound reply is logged, mark the company as engaged. |
+| A meeting activity is created or modified for a company | Starts the workflow when a meeting activity is logged or updated on a company. | | When a meeting is logged, advance the associated opportunity to the next pipeline stage. |
+| A note activity is created or modified for a company | Starts the workflow when a note is added or modified on a company. | | |
+| A CRM sales task is created or modified for a company | Starts the workflow when a sales task is created or updated on a company. | | When a sales task is completed, create the next task in the sequence. |
+| A CRM sales task is overdue for a company | Starts the workflow when a sales task on a company becomes overdue. | | When a task is overdue, notify the assignee's manager. |
 
-### Campaigns
-
-| Trigger | Overview | Special Cases | Example Use Cases |
-| --- | --- | --- | --- |
-| There's activity on a campaign email | Starts the workflow when a campaign email is opened or clicked. Open and click can be differentiated. | Only CTA clicks are counted. It is not possible to differentiate which link is clicked. There may be multiple users within the account, but the trigger only fires for the first user to click (unless the "run multiple times per account" setting is checked). | A campaign has been sent to prospective leads. When a lead clicks the email, assign a task, a salesperson, and mark as a hot lead. |
-
-### Fulfillment
+## Contacts
 
 | Trigger | Overview | Special Cases | Example Use Cases |
 | --- | --- | --- | --- |
-| A fulfillment project status is changed | Starts the workflow when a user changes the status on a fulfillment project. | | A fulfillment manager changes the status of a client fulfillment project from 'open' to 'in progress'; the assigned Salesperson receives an email updating them on the project status. |
-| A fulfillment project for an order changes status | Starts the workflow when a user changes the status on a fulfillment project order. | | |
-| A fulfillment task status is changed | Starts the workflow when a user changes the status of a fulfillment task. | | A fulfillment manager changes the status of a client fulfillment task from 'in progress' to 'complete'; the assigned Salesperson receives an email updating them on the task status. |
+| A call activity is created or modified for a contact | Starts the workflow when a call activity is logged or updated on a contact. | | |
+| A contact is added to a list | Starts the workflow when a contact is added to a specified list. | | When a contact is added to the **VIP** list, start a personalized onboarding campaign. |
+| A contact is created or modified | Starts the workflow when a contact is created or their details change. | | When a contact's lifecycle stage changes to **Lead**, route them to the qualification workflow. |
+| A contact is created *(draft)* | Starts the workflow when a contact is created. | | |
+| A contact is removed from a list | Starts the workflow when a contact is removed from a specified list. | | |
+| An email activity is created or modified for a contact | Starts the workflow when an email activity is logged or updated on a contact. | | |
+| A meeting activity is created or modified for a contact | Starts the workflow when a meeting activity is logged or updated on a contact. | | |
+| A note activity is created or modified for a contact | Starts the workflow when a note is added or modified on a contact. | | |
+| A CRM sales task is created or modified for a contact | Starts the workflow when a sales task is created or updated on a contact. | | |
+| A CRM sales task is overdue for a contact | Starts the workflow when a sales task on a contact becomes overdue. | | |
 
-### Products
-
-| Trigger | Overview | Special Cases | Example Use Cases |
-| --- | --- | --- | --- |
-| A user on the account views a package | Starts the workflow when an SMB views a package in the store in Business App. | This was an original hot lead that has been migrated into built-in automation. | When an SMB shows interest in Website Pro, send a promotional email with a discount. |
-| A product is activated | Starts the workflow when a product is activated. (This includes custom products enabled by the partner) | A product may be activated multiple times, but automation settings may mean the trigger is fired only once. | When a website trial product is activated, send an email advertising web development services. |
-| A product is deactivated | Starts the workflow when a product is deactivated. (This includes custom products enabled by the partner) | A product may be deactivated multiple times, but automation settings may mean the trigger is fired only once. | When a high-profit product is canceled, notify a salesperson to follow up and investigate. |
-| A shopping cart is updated | Starts the workflow when someone updates a shopping cart in the marketplace. | The shopping cart only includes the product marketplace. | When a shopping cart is updated, wait until an order is placed. If no order is placed after three days, send a follow-up email. |
-
-### Sales
+## Custom objects
 
 | Trigger | Overview | Special Cases | Example Use Cases |
 | --- | --- | --- | --- |
-| An opportunity is created or status changed | Starts the workflow when an opportunity is created, moves into a new pipeline stage and/or is closed. | If an opportunity begins in the indicated pipeline stage the automation won't run. | When an opportunity is identified, upgrade the hotness level of an account. |
-| A sales order status is changed | Starts the workflow when a sales order status changes. The sales order may originate from one or any source. | If the sales order begins with the indicated status, the automation may not fire. | When an order is drafted, wait up to 24 hours for the order status to move to pending. If it hasn't been issued after this time, create a task to investigate why the order wasn't completed. |
-| A user on an account makes a payment | Starts the workflow when a customer makes a payment. The payment can succeed or fail. | None | When a payment fails, begin a Dunning process (i.e. using multiple actions) to ensure payment is collected. |
-| A sales task status is changed | Starts the workflow when a sales task has its status changed to a specified status. The task's assignee and task name can also be specified for the event. | The corresponding "Delay until an event happens" action that uses this trigger doesn't currently allow assignee and task name filters, due to the task event being a resource that is fetched and used as output data on the trigger but similar infrastructure doesn't currently exist on the "delay" action. | When a task named "follow up" and assigned to "Joe Smith" changes its status to waiting on the customer, send an email letting the customer know. |
-| A Snapshot Report is created | Starts the workflow when a Snapshot Report is created | All snapshots generally start as F ratings. This is because web scraping takes time. Users are advised to add delay steps after this trigger to ensure more accurate ratings are available. | When a Snapshot Report is created, create a task to schedule a follow-up call. Assign a fulfillment agent to that task. |
+| A custom object is added to a list | Starts the workflow when a custom object record is added to a specified list. | | |
+| A custom object is created or modified | Starts the workflow when a custom object record is created or updated. | | |
+| A custom object is removed from a list | Starts the workflow when a custom object record is removed from a specified list. | | |
 
-### Manual
+## Accounts
 
 | Trigger | Overview | Special Cases | Example Use Cases |
 | --- | --- | --- | --- |
-| Triggered Manually | Automations can also be triggered manually, much like shortcuts, whenever needed. Currently, manual automation triggers are available for Account Groups, Companies, Contacts, and Orders. | When managing customer interactions and data, users need a way to quickly initiate automations for specific accounts, companies, contacts, or orders on demand, so they can streamline repetitive tasks without waiting for scheduled triggers, allowing for greater flexibility and efficiency in managing their workflows. | When managing orders, I need the ability to manually add and remove tags through automation, so I can quickly update order information and keep it organized in real-time. When a new order is created, I need a manual automation to check the order status and, based on an inputted number of days, automatically add a tag if the order remains in drafts and archive it if it exceeds the specified timeline, ensuring timely follow-up and efficient order management. |
+| An account is created | Starts the workflow when an account is created. | Can't detect likely duplicates (e.g. Jim's Mowing vs. Jim's mowing). | When an account in Quebec is added, tag it as possibly needing a French-fluent salesperson. |
+| An account is updated | Starts the workflow when an account's details change. | | |
+| An account is added to a list | Starts the workflow when an account is added to a specified list. | Won't fire for accounts that are already on the list when the trigger is set up. | When an SMB is added to the **High Touch Client** list, assign an experienced salesperson. |
+| Account custom data fields are updated | Starts the workflow when one or more custom data fields on an account change. | | When the **Renewal Risk** field changes to **High**, notify the account manager. |
 
-### Time-based
-
-| Trigger | Overview | Special Cases | Example Use Cases |
-| --- | --- | --- | --- |
-| On a schedule | Starts the workflow automatically at scheduled times - daily, weekly, or monthly. Configure the time of day, days of week/month, and optional start/end dates. | The schedule respects your automation's timezone setting. For monthly schedules, selecting day 31 only runs in months with 31 days. Use "End of month" for consistent month-end execution. | Notify your team every Monday morning to review the weekly pipeline. Send a monthly reminder to follow up on outstanding invoices. See [Time-based triggers](./time-based-triggers.mdx) for full details. |
-
-### Advanced
+## Users
 
 | Trigger | Overview | Special Cases | Example Use Cases |
 | --- | --- | --- | --- |
-| It's triggered via API for an account | | [API Documentation](https://docs.apigateway.co/docs/openapi-specs/docs/Guides/Automate/TriggerAutomation.md) | |
-| A webhook is received | Starts the automation when the user POSTs to the given URL with the user-defined payload. | | I want to integrate Vendasta into a third party system. |
-| Triggered via Zapier | Starts the automation when the "Run Automation" action is used in our Zapier app. | Trigger an automation using Zapier | I want to make an automation that I can trigger from Zapier, to update contacts in the CRM, and send along the data as Zapier provides it. |
+| An account group user is claimed *(draft)* | Starts the workflow when a user claims an account group. | | |
+| A user on an account asked a question | Starts the workflow when a user sends a message through Business App. | | When a user clicks the help button, assign a fulfillment agent to follow up. |
+| A user verifies their email address | Starts the workflow when a user verifies the email address on their account. | | When a user verifies their email, send a welcome campaign. |
+| A user is added to an account | Starts the workflow when a user is added to an account. | If a user is removed and re-added, the automation may fire again. | When a staff member is added to an SMB account, start an email campaign with onboarding info. |
+| A user is active in Business App | Starts the workflow when a user logs into Business App. | | When a user logs in, notify the assigned salesperson. |
 
-
-### Contacts
-
-| Trigger | Overview | Special Cases | Example Use Cases |
-| --- | --- | --- | --- |
-| A persona is added to a Business | Starts the workflow when a user adds a Persona to a business manually or via API. | | I need to follow up with a business owner who has been invited as a user to the portal. |
-| A contact is added to a Business | Starts the workflow when a user imports a Contact into a Business. | If a contact becomes a Lead when added, if a Persona has been converted to a Contact, or if a Contact has been added to the CRM. | I want to qualify all contacts in the CRM for potential lead conversion. |
-| A contact (Lead) in a Business changes stage | Starts the workflow when a user changes the stage on a Lead. | | I need to create an automation to add a follow-up task whenever a contact moves to "Contacted" stage. |
-
-### Companies
+## Campaigns and emails
 
 | Trigger | Overview | Special Cases | Example Use Cases |
 | --- | --- | --- | --- |
-| A business is created | Starts the workflow when the business is created. | | I want to update new customer information to track their progress through an onboarding initiative. |
-| A product is changed on a business | Starts the workflow when a product or service is either added, updated, or removed from a business. | | When Listings Management is purchased, I need to welcome my customer to the product. |
+| There's activity on a campaign email | Starts the workflow when a campaign email is opened or clicked. Open and click events can be differentiated. | Only CTA clicks are counted — you can't differentiate which specific link was clicked. If the account has multiple users, the trigger fires only for the first user to click unless **Run multiple times per account** is enabled. | When a lead clicks an email in a cold-outreach campaign, assign a salesperson and mark the account as a hot lead. |
 
-## Trigger Configuration Tips
+## Fulfillment
 
-### Choosing the Right Trigger
+| Trigger | Overview | Special Cases | Example Use Cases |
+| --- | --- | --- | --- |
+| A fulfillment project status is changed | Starts the workflow when the status changes on a fulfillment project. | | When a project moves from **Open** to **In Progress**, email the assigned salesperson with an update. |
+| A fulfillment project for an order changes status | Starts the workflow when the status changes on a fulfillment project tied to an order. | | |
+| A fulfillment task status is changed | Starts the workflow when the status changes on a fulfillment task. | | When a task moves from **In Progress** to **Complete**, email the assigned salesperson with an update. |
 
-1. **Be Specific**: Choose the most specific trigger that matches your use case
-2. **Consider Frequency**: Think about how often the trigger will fire
-3. **Plan for Scale**: Consider what happens if the trigger fires many times simultaneously
-4. **Test Thoroughly**: Always test triggers with real data before going live
+## Products
 
-### Common Trigger Patterns
+| Trigger | Overview | Special Cases | Example Use Cases |
+| --- | --- | --- | --- |
+| A user shows interest in a package | Starts the workflow when a user views a package in the Business App store. | | When an SMB shows interest in Website Pro, send a promotional email with a discount. |
+| A product is activated | Starts the workflow when a product is activated (including custom products enabled by the partner). | A product may be activated multiple times, but the trigger can be configured to fire only once. | When a website trial is activated, send an email advertising web-development services. |
+| A product is deactivated | Starts the workflow when a product is deactivated (including custom products enabled by the partner). | A product may be deactivated multiple times, but the trigger can be configured to fire only once. | When a high-margin product is cancelled, notify a salesperson to follow up. |
+| A shopping cart is updated | Starts the workflow when a shopping cart is updated in the marketplace. | Only the product marketplace is supported. | When a cart is updated but no order is placed within three days, send a follow-up email. |
 
-1. **Welcome Sequences**: Use "account created" or "user added" triggers
-2. **Product Onboarding**: Use "product activated" triggers
-3. **Follow-up Workflows**: Use "campaign activity" or "task status changed" triggers
-4. **Payment Processing**: Use "payment made" triggers with success/failure options
-5. **Lead Nurturing**: Use "contact created" or "lead stage changed" triggers
+## Sales
 
-### Trigger Conditions Best Practices
+| Trigger | Overview | Special Cases | Example Use Cases |
+| --- | --- | --- | --- |
+| An opportunity is created or changed | Starts the workflow when an opportunity is created, moves into a new pipeline stage, or is closed. | Won't fire if an opportunity begins in the indicated pipeline stage. | When an opportunity is identified, raise the hotness level of the account. |
+| A sales activity is created | Starts the workflow when a sales activity is created. | | |
+| A salesperson is assigned to an account | Starts the workflow when a salesperson is assigned to an account. | | When a salesperson is assigned, send them an in-app notification with the account summary. |
+| A sales task status is changed *(legacy)* | Starts the workflow when a legacy sales task changes to a specified status. You can filter on assignee and task name. | The **Delay until an event happens** step that uses this trigger doesn't currently support assignee or task-name filters. | When a task named **Follow up** assigned to Joe Smith changes to **Waiting on customer**, email the customer a status update. |
+| A Snapshot Report is created/refreshed | Starts the workflow when a Snapshot Report is created or refreshed. | Snapshots typically start as F ratings because web scraping takes time. Add a delay step after this trigger to ensure accurate ratings are available. | When a Snapshot is created, create a task to schedule a follow-up call and assign it to a fulfillment agent. |
+| A Snapshot Report is opened *(draft)* | Starts the workflow when a Snapshot Report is opened by the recipient. | | |
 
-- Use AND conditions when all criteria must be met
-- Use OR conditions when any criteria can trigger the automation
-- Keep conditions simple and testable
-- Document complex condition logic
-- Regularly review and update conditions as your business changes
+## Billing
 
-For more information about implementing these triggers, see [Automations overview](./index.mdx) and [Creating and Configuring Automations](./creating-and-configuring-automations.mdx).
+| Trigger | Overview | Special Cases | Example Use Cases |
+| --- | --- | --- | --- |
+| You are billed wholesale for a product | Starts the workflow when you're billed the wholesale cost of a product. | | When a partner is billed for a product, log the wholesale cost for margin tracking. |
+| An invoice is created *(draft)* | Starts the workflow when an invoice is created. | | |
+| An invoice status changes to past due | Starts the workflow when an invoice's status changes to **Past due**. | | When an invoice goes past due, start a dunning sequence of reminder emails. |
+| A user on an account makes a payment | Starts the workflow when a customer makes a payment. You can filter on success, failure, or both. | | When a payment fails, start a dunning process to ensure payment is collected. |
+
+## Inbox
+
+| Trigger | Overview | Special Cases | Example Use Cases |
+| --- | --- | --- | --- |
+| A contact communication summary is created | Starts the workflow when an AI-generated communication summary is created for a contact. | | When a summary is created, attach it as a note to the associated opportunity. |
+| Web Chat captures a lead | Starts the workflow when Web Chat captures a new lead. | | When Web Chat captures a lead, create a contact and notify the assigned salesperson. |
+| A contact requests a follow up (AI conversation event) *(draft)* | Starts the workflow when an AI conversation flags a follow-up request from a contact. | | |
+| An Inbox message is sent to (or received from) an account | Starts the workflow when an Inbox message is sent or received on an account. | | When a message is received, log the interaction as an activity on the account. |
+
+## Manual
+
+Manual triggers let you run an automation on demand from a specific record — similar to a shortcut. Useful for one-off tasks that don't warrant a scheduled or event-based trigger.
+
+| Trigger | Overview | Special Cases | Example Use Cases |
+| --- | --- | --- | --- |
+| Triggered manually for an account | Run the automation on demand from an account's detail page. | | Re-enroll a selected account in an onboarding sequence after a process change. |
+| Triggered manually for a company | Run the automation on demand from a company's detail page. | | Bulk-tag a list of target companies with a single action. |
+| Triggered manually for a contact | Run the automation on demand from a contact's detail page. | | Send a custom follow-up campaign to a selected contact. |
+| Triggered manually for a custom object *(draft)* | Run the automation on demand from a custom object record. | | |
+| Triggered manually for an order | Run the automation on demand from an order's detail page. | | Archive an order and add a tag if it has been in **Draft** for more than 30 days. |
+
+## Sales orders
+
+| Trigger | Overview | Special Cases | Example Use Cases |
+| --- | --- | --- | --- |
+| A sales order status is changed | Starts the workflow when a sales order's status changes. You can filter on the order's origin. | Won't fire if the order begins in the indicated status. | When an order is drafted, wait up to 24 hours for the status to move to **Pending**. If it hasn't moved, create a task to investigate. |
+| A sales order is expiring | Starts the workflow when a sales order is approaching its expiration date. | | When an order is expiring, notify the assigned salesperson to follow up with the customer. |
+
+## Advanced
+
+| Trigger | Overview | Special Cases | Example Use Cases |
+| --- | --- | --- | --- |
+| Triggered via API for an account | Starts the workflow when your API call invokes it for a specified account. | See the [API documentation](https://docs.apigateway.co/docs/openapi-specs/docs/Guides/Automate/TriggerAutomation.md). | Integrate Vendasta with a third-party system that runs account-scoped workflows. |
+| A webhook is received | Starts the workflow when a `POST` arrives at the trigger's unique URL with a user-defined payload. | | Integrate Vendasta with a third-party system. |
+| Triggered via API for an order | Starts the workflow when your API call invokes it for a specified order. | | Integrate Vendasta with a third-party system that runs order-scoped workflows. |
+| A connection is changed *(draft)* | Starts the workflow when a connection is added, modified, or removed. | | |
+| Triggered via Zapier | Starts the workflow when the **Run Automation** action is used in the Vendasta Zapier app. | See [Trigger an automation using Zapier](./trigger-automation-using-zapier.mdx). | Trigger an automation from Zapier to update CRM contacts with data from another system. |
+
+## Integrations
+
+| Trigger | Overview | Special Cases | Example Use Cases |
+| --- | --- | --- | --- |
+| A QuickBooks invoice is created or modified for a contact | Starts the workflow when a QuickBooks invoice is created or updated for a linked contact. | | When a QuickBooks invoice is created, log it as an activity on the contact's timeline. |
+| A QuickBooks payment is created or modified for a contact | Starts the workflow when a QuickBooks payment is created or updated for a linked contact. | | When a payment is received, update the contact's payment status and notify the salesperson. |
+| A QuickBooks sales receipt is created or modified for a contact | Starts the workflow when a QuickBooks sales receipt is created or updated for a linked contact. | | |
+| A ServiceMonster invoice is created for a contact | Starts the workflow when a ServiceMonster invoice is created for a linked contact. | | When a ServiceMonster invoice is created, start a billing follow-up campaign. |
+
+## Time-based
+
+| Trigger | Overview | Special Cases | Example Use Cases |
+| --- | --- | --- | --- |
+| On a schedule | Runs the automation at scheduled times — daily, weekly, or monthly. Configure the time of day, days of week/month, and optional start and end dates. | Respects the automation's timezone setting. For monthly schedules, selecting day 31 only runs in months with 31 days. Use **End of month** for consistent month-end execution. | Every Monday at 9:00 AM, notify your team to review the weekly pipeline. On the 1st of each month, send a reminder to follow up on outstanding invoices. See [Time-based triggers](./time-based-triggers.mdx). |
+
+## Related resources
+
+- [Automations overview](./index.mdx) — concepts and your first automation
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — entry settings, error handling, and more
+- [Automation steps reference](./automation-steps-reference.mdx) — what can happen after a trigger fires

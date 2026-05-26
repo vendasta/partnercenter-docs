@@ -44,13 +44,27 @@ The Contacts section eliminates manual processes through bulk import/export capa
 
 In the Vendasta CRM, you can efficiently add or update multiple contacts and companies at once by importing them in a single file. This powerful feature streamlines contact management and ensures data accuracy through proper field mapping during the import process.
 
+### Partner Center vs. Business App imports
+
+The import rules differ depending on where you import:
+
+| | Partner Center import | Business App import |
+|---|---|---|
+| Flow | B2B — contacts are linked to companies | B2C — contacts can stand alone |
+| Company name required? | Yes, on the first contact row | No |
+| Use case | Sales CRM, account management | Consumer/client-facing lists |
+
+If you're importing contacts for B2B sales work, import through **Partner Center > CRM > Contacts**. If you're managing consumer contacts for a Business App client, import through Business App.
+
 ### Before you begin
 
 Before initiating an import:
 
 - Ensure you have permission to manage CRM contacts and companies
 - Confirm that each contact entry includes at least one of the following: First name, last name, email, or phone number
-- Ensure each company entry includes a company name
+- **Company name (first-row rule)**: In Partner Center imports, company name must be populated on the **first** contact row. It does not need to appear on every subsequent row — but the first row requires it or the import will fail with "Company name is required."
+- **Business categories**: If your CSV includes a business category, select it from the dropdown during field mapping — do not type it as free text. Free-text categories do not map to the CRM's category list and will silently break downstream syncing.
+- **No blank rows**: Blank rows in your CSV cause "No company or contact found" errors. Remove all empty rows before importing.
 - **Import limits**: Maximum file size is 5 MB, which typically allows for up to 35,000 contacts per import
 - Prepare your data with unique identifiers for bulk updates (Contact ID, External ID, or email)
 
@@ -144,6 +158,33 @@ To perform bulk updates of existing contacts:
 To export Contacts or Companies from the CRM, click the checkbox in the top-left corner of the table, then click `select all...` > `Export`.
 
 ![Export Contacts Interface](./img/crm/contacts/export-contacts.jpg)
+
+### Common import errors
+
+| Error | Most likely cause | Fix |
+|-------|-------------------|-----|
+| "Company name is required" | The first contact row in the CSV has no company name | Add a company name to the first row. Subsequent rows don't require it. |
+| "No company or contact found" | Blank rows in the CSV, or the file is malformed | Remove all empty rows. Open in a text editor to check for hidden characters. |
+| CSV parsing failures | File saved in the wrong format or encoding | Save as **CSV UTF-8** and ensure no merged cells or special formatting. |
+| Category not syncing | Category entered as free text instead of selected from dropdown | Re-import and select the category from the dropdown during field mapping. |
+
+### Bulk-assigning salespeople during import
+
+You can assign salespeople to companies during a CSV import by including a `SalespersonID` column. This avoids manual reassignment after the import.
+
+**How to find a salesperson's ID:**
+
+1. Go to **Partner Center** > **Administration** > **My Team**.
+2. Click the three dots next to the salesperson and select **Edit Salesperson**.
+3. The salesperson's UID appears in the browser URL bar — copy the value after `/salespeople/`.
+
+**How to use it in your CSV:**
+
+1. Add a column named `SalespersonID` to your import CSV.
+2. Paste each salesperson's UID into the column for the rows (companies) they should own.
+3. During import, map the `SalespersonID` column to the **Salesperson** CRM field.
+
+To assign multiple salespeople to a single company, add additional columns named `AdditionalSalespersonID1`, `AdditionalSalespersonID2`, etc., and map them during import.
 
 ## Campaign management
 

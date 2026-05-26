@@ -45,6 +45,37 @@ Effective package management drives better results:
 
 ## How to Manage Package Lifecycle
 
+### Adding multiple instances of a product to a package
+
+You cannot add the same product more than once to a package directly. To sell multiple units of a product, use **add-ons** instead:
+
+1. In Vendor Center, create an add-on for the product
+2. Enable **Allow multiple purchases per account** on the add-on if needed
+3. Add the base product plus the add-on to the package
+
+Alternatively, if the product has **Allow multiple purchases per account** enabled (under Advanced settings in Editions), customers can purchase it multiple times — but note this disables add-on support for that product.
+
+### New package pricing model and invoice/Shopping Cart compatibility
+
+Packages must use the **new line-item pricing model** to work with invoices and Shopping Cart checkout. Legacy packages (created before the pricing model update) are automatically migrated when first opened and saved in the package editor. If a package is not appearing as an option when creating an invoice, open it in **Marketplace > Packages**, save it, and try again.
+
+### Price visibility in the store preview
+
+For package pricing to display to customers in the store, the package's **Purchase behaviour** must be set to **Add to Shopping Cart**. If another option (Contact Sales, External URL) is selected, the price is intentionally hidden from the preview and store listing.
+
+### Copy a package across markets
+
+To make a package available in a different market:
+
+1. Go to **Marketplace > Packages**
+2. Switch to the market containing the package you want to copy
+3. Click the **options menu (⋮)** on the package
+4. Select **Copy**
+5. Choose the target market from the dropdown
+6. Click **Save and Publish**
+
+The copied package appears in the target market. Adjust pricing or contents as needed for that market.
+
 ### Edit packages
 1. Navigate to **Partner Center** → **Marketplace** → **Packages**
 2. Select target market (if using Markets)
@@ -212,6 +243,37 @@ Direct links are automatically available for all published packages with **Add t
 - Same campaign editor and workflow as the rest of **Marketing**
 - Performance tracking and analytics
 - Automated customer segmentation and targeting
+
+#### Buy It Now link workflow
+
+When a customer clicks a Buy It Now link, the current flow is:
+
+1. Customer is prompted to log in (or create an account)
+2. After login, they are directed to **Business App > Store** where the package is pre-loaded
+3. They complete checkout from there
+
+The link does not take customers directly to a checkout page — it routes through Business App.
+
+#### Adding a Contact Sales button to a package
+
+For the **Contact Sales** button to appear on a package in the store, the package must have a **salesperson assigned via a Contact Form**. Without a salesperson configured, the Contact Sales option will not display even if "Contact Sales" is selected as the Purchase option. Set this up in **Manage Store > [package] > Purchase behaviour > Contact Sales**.
+
+#### Upgrade Path and Call to Action text
+
+The **Upgrade Path** setting (which product to upsell to) and the **Call to Action** button text are configured independently. Changing the Upgrade Path does not automatically update the CTA text — update the button label manually to match.
+
+#### Draft package preview URLs
+
+Preview links for draft (unpublished) packages are accessible to anyone who has the URL, even though the package is not in the public Store. This is intentional — it lets you share a preview with stakeholders for review before publishing. The package will not appear in the store or be purchasable until it is published.
+
+#### Business App "Check out" button prerequisites
+
+The **Check out** button in Business App Store requires two things to be active:
+
+- **Orders** must be enabled for the partner
+- **Vendasta Payments** must be configured
+
+If either is missing, the Check out button will not function or will not appear.
 
 ### Package sharing best practices
 

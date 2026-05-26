@@ -119,6 +119,15 @@ Use merge tags to personalize:
 - Check how emails appear on different devices and email clients
 - Use email testing tools to check for spam triggers
 
+### 8. Gmail-specific considerations
+
+Gmail applies stricter filtering than many other providers, particularly for:
+
+- **Links that collect user information** — Gmail flags emails containing links to pages that gather user data, even if the content is legitimate. If campaigns are consistently filtered only on Gmail accounts, review your links and replace any that point to data-collection pages with safer alternatives.
+- **Linked-page content** — Gmail evaluates not just the email content but also the content of linked pages. Pages with spam signals can cause the email to be filtered even if the email itself looks clean.
+
+If Gmail-only filtering persists after reviewing links and content, register your domain on [Google Postmaster Tools](https://postmaster.google.com/) to monitor your domain reputation and authentication results with Gmail.
+
 ## Technical Configuration
 
 ### Platform Authentication
@@ -241,6 +250,74 @@ If your message is rejected with any of these reasons, it means your IP or domai
 3. **Review content** - Ensure your email content doesn't trigger spam filters
 4. **Verify authentication** - Check that your SPF, DKIM, and DMARC records are properly configured
 5. **Monitor sending practices** - Review your sending volume, frequency, and list hygiene
+
+</details>
+
+<details>
+<summary>Links in my emails are being blocked or rewritten by Microsoft Defender Safe Links. How do I fix this?</summary>
+
+Microsoft Defender Safe Links is a security feature in Microsoft 365 that rewrites URLs in incoming emails and scans them before allowing them to open. This can cause campaign links — including links sent through `sendgrid.net` — to be blocked or display an error page.
+
+There are two resolution paths depending on whether the affected user is on a personal Outlook.com account or a managed Microsoft 365 organization.
+
+**For organizations with Microsoft Defender Premium (IT admin required):**
+
+1. Sign in to the [Microsoft 365 Defender portal](https://security.microsoft.com)
+2. Go to **Email and collaboration > Policies and rules > Threat policies > Safe Links**
+3. Edit the applicable Safe Links policy
+4. Under **Do not rewrite the following URLs**, add:
+   - `*.sendgrid.net/*`
+   - `*.<your-partner-domain>.com/*`
+   - `*.<your-business-app-url>.com/*`
+5. Save the policy
+
+Use wildcard syntax as shown. Changes take effect for new emails after the policy is saved.
+
+**For individual users on Outlook.com:**
+
+1. Sign in to [Outlook.com](https://outlook.com)
+2. Go to **Settings > Mail > Junk email**
+3. Under **Safe Links**, disable the link-rewriting option
+
+Note that this only applies to future messages — previously received emails with rewritten links are not affected.
+
+If the issue persists after updating the policy, confirm the correct Safe Links policy was edited and that the wildcard syntax matches your domains exactly.
+
+</details>
+
+<details>
+<summary>How do I help a recipient whitelist my sender address so emails don't go to spam?</summary>
+
+Ask recipients to add your sender address to their safe senders list using the steps for their email client.
+
+**Outlook 365:**
+1. Go to **Settings > View all Outlook settings > Mail > Junk email**
+2. Under **Safe senders and domains**, click **Add**
+3. Enter your sender email address or domain and save
+
+**Gmail:**
+1. Open a previous email from your sender address
+2. Click the three dots in the top right of the email
+3. Select **Filter messages like these**
+4. Click **Create filter**
+5. Check **Never send it to Spam** and click **Create filter**
+
+Alternatively, the recipient can drag the email from Spam to their inbox — Gmail treats this as a "Not spam" signal and learns from it over time.
+
+</details>
+
+<details>
+<summary>Calendar invitation emails are going to spam in Gmail. How do I fix this?</summary>
+
+Gmail sometimes routes calendar invitation emails to spam, even when the sender is trusted. This is a Gmail-side behavior related to how it handles calendar events from unknown senders.
+
+Ask the recipient to:
+
+1. Find the calendar invitation email in their **Spam** folder
+2. Open the email and click **Add to Calendar**
+3. Click **Report as Not Spam** (or drag the email to the inbox)
+
+Once the recipient marks the email as Not Spam, future calendar invitations from the same sender are more likely to land in the inbox.
 
 </details>
 

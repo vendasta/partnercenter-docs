@@ -78,7 +78,7 @@ Choose where your Custom AI Employee will work:
 
 **Available Channels:**
 
-- **Website chat**: Deploy on one or multiple website chat widgets
+- **Website chat**: Deploy on one or multiple website chat widgets. Custom AI Employees on Web Chat receive the visitor's current page URL with every message — see [Make responses page-aware with the visitor's URL](./ai-chat-receptionist/index.md#make-responses-page-aware-with-the-visitors-url) for how to tune prompts to use it.
 - **In-platform chat**: Chat directly in Partner Center (automatically available after creation)
 
 

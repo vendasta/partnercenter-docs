@@ -26,8 +26,11 @@ NPS exports include a page-level filter so you can export data for the same page
 Like review exports, NPS exports support filters to narrow the dataset before exporting.
 
 The exported CSV includes NPS-specific columns, such as score classification (promoter, passive, detractor), score value, feedback details, and related location data.
+# Data Exporter
 
-![Data Exporter Interface](../img/multi-location/data-exporter/data-exporter-interface.png)
+Users of the Multi-Location Business App can export review, listing, or Google Business Profile data to a CSV, allowing flexibility in workflows, auditing, and internal reporting across many locations.
+
+## Exporting data
 
 ## Configuration
 
@@ -37,5 +40,17 @@ The Data Exporter can be enabled or disabled on a group-by-group basis for all u
 2. Select a group.
 3. Open **Features**.
 4. Toggle **Data Exporter** on or off.
+1. In the Multi-Location Business App, navigate to **Data Exporter** in the left-hand navigation menu.
+2. Click the **data source** drop-down and choose from:
+   - All reviews
+   - Review summary by source
+   - Google Business Profile summary
+   - Listing data
+3. Use the filter options to customize the data you want to export.
+4. Click **Export data to CSV**.
 
-(Note: The configuration screen image was not available.)
+<img src={require('../img/multi-location/data-exporter/data-exporter-interface.png').default} alt="Data Exporter interface" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## Configuration
+
+The Data Exporter can be enabled or disabled on a group-by-group basis by navigating to **Partner Center → Accounts → Multi-location Groups → choose a group → Features**, then toggling the feature on or off.

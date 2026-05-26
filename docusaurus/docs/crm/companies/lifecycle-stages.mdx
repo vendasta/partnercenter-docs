@@ -1,0 +1,69 @@
+---
+title: CRM lifecycle stages explained
+sidebar_label: Lifecycle stages
+description: The full definition of each CRM lifecycle stage, how automatic transitions work, and how to manually change a stage.
+tags: [crm, lifecycle, leads, pipeline]
+keywords: [lifecycle stages, lead, MQL, SQL, prospect, customer, CRM stages]
+---
+
+# CRM lifecycle stages explained
+
+## What are lifecycle stages?
+
+Lifecycle stages represent where a contact or company is in your sales and customer relationship process — from initial awareness through active customer. Stages affect lead scoring, automation triggers, filtering, and pipeline reporting, so understanding them is essential for using the CRM correctly.
+
+## The stages, defined
+
+| Stage | Definition |
+|-------|-----------|
+| **Visitor** | Someone who has interacted with your content or website but has not yet been identified as a potential buyer. |
+| **Lead** | A contact or company that has shown interest and entered the CRM. **This is the default stage for new records.** |
+| **MQL** (Marketing Qualified Lead) | A lead that marketing has determined is a good fit based on engagement or profile criteria. |
+| **SAL** (Sales Accepted Lead) | A lead that the sales team has reviewed and accepted for follow-up. |
+| **SQL** (Sales Qualified Lead) | A lead that sales has engaged with and confirmed is ready for the sales process. |
+| **Prospect** | An SQL that has an active Opportunity in the CRM. **Set automatically when an Opportunity is created on the record.** |
+| **Customer** | A company that has a closed-won Opportunity. **Set automatically when an Opportunity is marked Closed Won.** |
+| **Former Customer** | A company that was previously a customer but is no longer active. |
+
+## Automatic stage transitions
+
+Three stage transitions happen automatically based on CRM activity:
+
+1. **Lead** — Assigned to all new contacts and companies by default.
+2. **Prospect** — Set automatically when an Opportunity is created on the record.
+3. **Customer** — Set automatically when an Opportunity on the record is marked **Closed Won**.
+
+You do not need to manually move records through these transitions — the CRM updates them when the associated action occurs.
+
+## Manually changing a stage
+
+You can manually set or override a lifecycle stage from a contact or company record:
+
+1. Open the contact or company profile.
+2. Find the **Lifecycle stage** field in the sidebar or details panel.
+3. Select the new stage from the dropdown.
+4. Save the record.
+
+:::warning
+If automations are configured to manage lifecycle stages (for example, an automation that sets a stage based on activity), your manual change may be overridden the next time the automation runs. Check your active automations before making manual stage changes at scale.
+:::
+
+## Frequently asked questions
+
+<details>
+<summary>Why did a contact's stage change automatically?</summary>
+
+The most common causes are: an Opportunity was created (moves to Prospect) or closed won (moves to Customer). An automation may also be configured to update stages based on activity or criteria. Check the activity feed on the record to see when the stage changed.
+</details>
+
+<details>
+<summary>Can I add custom lifecycle stages?</summary>
+
+The default lifecycle stages are fixed. You cannot add or rename stages. For additional segmentation, use Tags or custom fields.
+</details>
+
+<details>
+<summary>Can I filter contacts and companies by lifecycle stage?</summary>
+
+Yes. In **CRM** > **Companies** or **Contacts**, use **Add filter** > **Lifecycle stage** to view records in a specific stage.
+</details>

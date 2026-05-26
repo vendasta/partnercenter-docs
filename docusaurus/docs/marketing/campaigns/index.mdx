@@ -193,6 +193,38 @@ This prevents disruption to ongoing campaigns and maintains data integrity for r
 </details>
 
 <details>
+<summary>Can I edit a recommended campaign directly, or save it as an email template?</summary>
+
+Recommended campaigns are read-only — you can't edit them in place or save them as a standalone email template. To use one:
+
+1. Go to **Marketing** → **Campaigns** → **Recommended Campaigns**.
+2. Click the campaign name, then click **Actions** → **Copy**.
+3. Open the copy and edit it freely — it's now your own campaign in Draft status.
+
+The copy-first model means your edits never affect the original recommended campaign.
+
+**Why do CTAs give a 404 error when I test a recommended campaign?**
+
+If you preview or test a recommended campaign using a generic test account, any CTA buttons that link to the recipient's Business App (such as product activation or report buttons) will return a 404 error — because those links require a real account with a real user. To test CTAs, use a real account and add yourself as a user, then send the campaign to that account.
+</details>
+
+<details>
+<summary>Where did the Acquisition, Adoption, and Upsell campaign sections go?</summary>
+
+These campaign types were previously displayed as separate sections in the Campaigns view. They're now organized using **tags** in the main Campaigns list — the content is all still there, just accessed differently.
+
+**To find your old campaigns:**
+1. Go to **Marketing** → **Campaigns**.
+2. Use the tag filter to filter by **Acquisition**, **Adoption**, or **Upsell**.
+
+**To create and apply tags to any campaign:**
+1. Open a campaign.
+2. Click **Manage Tags** (or the tag icon) to create a new tag or apply an existing one.
+
+Tags let you organize campaigns any way you like — you're not limited to the three default types. Consider creating tags for your own naming conventions, such as by market, product line, or funnel stage.
+</details>
+
+<details>
 <summary>Is there a limit on how many emails partners can send from the platform?</summary>
 
 Yes, there is a daily email quota for partner-level email sending based on your subscription tier. This limit applies to emails sent by partners on behalf of their clients, such as review requests and partner-initiated campaigns.
@@ -207,7 +239,48 @@ Yes, there is a daily email quota for partner-level email sending based on your 
 
 The quota resets daily. If you need a higher email limit, consider upgrading your subscription tier.
 
-Note: Businesses sending emails through their own Campaigns have a separate quota that is not affected by the partner-level limit.
+**Campaign sending throughput:** Campaigns send at approximately **4 emails per minute** regardless of list size. This rate is fixed to protect domain reputation and deliverability. For large lists, this means a campaign to 1,000 contacts takes roughly 4 hours to complete. To work around this for time-sensitive sends, split your list into smaller segments and schedule them across multiple days.
+
+**SMB sending allowance:** Businesses (SMBs) sending emails through their own Campaigns have a separate daily allowance — up to 100,000 emails per day — once the SMB domain is configured for Campaigns in Email Settings. This allowance is independent of the partner-level quota above.
+
+</details>
+
+<details>
+<summary>My campaign appears stuck while sending or is loading indefinitely. What should I do?</summary>
+
+Campaigns go through a queue before emails start sending. The processing window is typically **10–15 minutes** before the first batch goes out. If the campaign is still stuck after 15 minutes:
+
+1. **Confirm all required fields are filled in** — Missing sender information, mailing address, or required campaign fields can prevent sending. Check **Partner Center > Administration > Partner Defaults** to verify your mailing address is configured.
+2. **Check for invalid contact addresses** — Invalid or malformed email addresses in your audience can stall the sending queue. Remove any contacts with clearly invalid addresses and retry.
+3. **Retry the campaign** — Go to **Marketing > Campaigns**, find the campaign, and check whether a retry option is available.
+
+If the campaign remains stuck after these steps, contact Vendasta support.
+
+</details>
+
+<details>
+<summary>Some contacts didn't receive the campaign email. How do I check and retry?</summary>
+
+1. Go to **Marketing > Campaigns** and open the campaign
+2. Check the **Campaign Reports** tab to see delivery status by contact — look for drops, bounces, or undelivered entries
+3. For contacts who were dropped rather than bounced, you may be able to re-add them and resend
+4. For very large lists, consider splitting into smaller batches on future sends to make it easier to identify and retry any drops
+
+Hard-bounced addresses (permanent delivery failures) cannot be automatically resubscribed. Contact Vendasta support if you need to reinstate a contact that hard-bounced.
+
+</details>
+
+<details>
+<summary>What do common bounce codes in Campaign Reports mean?</summary>
+
+| Code | Meaning | What to do |
+|------|---------|-----------|
+| `550 Blocked` | The receiving server rejected the email | Check whether your IP or domain is on a blacklist at [MXToolbox](https://mxtoolbox.com/blacklists.aspx) |
+| `550 5.7.509` (DMARC) | Email failed DMARC alignment | Verify your SPF and DKIM records are correctly configured and aligned — see [Email Authentication](/marketing/email-settings/email-authentication) |
+| `550 5.7.606 Access denied` | IP address banned by the receiving server | This requires delisting; contact Vendasta support |
+| `550 5.1.1 User unknown` | The recipient email address doesn't exist | Remove the address from your list |
+
+For a full list of error codes, see [Email Deliverability](/marketing/email-settings/email-deliverability).
 
 </details>
 
