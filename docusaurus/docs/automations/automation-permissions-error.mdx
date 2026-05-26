@@ -1,0 +1,54 @@
+---
+id: automation-permissions-error
+title: Fixing "Automation requires valid permissions to run"
+description: What the permissions banner on an automation means and how to clear it.
+sidebar_position: 11
+---
+
+# Fixing "Automation requires valid permissions to run"
+
+## What you're seeing
+
+A yellow banner at the top of your automation says:
+
+:::info
+Automation requires valid permissions to run. Transfer permissions to your user profile in the settings tab to authorize this automation.
+:::
+
+While this banner is showing, the automation still accepts new triggers, but every run fails. Nothing will send, create, or update until you re-authorize it.
+
+## Why it happened
+
+An automation runs on behalf of whoever turned it on. If that person's access changes, the automation loses its ability to act. The most common reasons:
+
+- The person who turned it on was deactivated or removed.
+- Their role or permissions changed, and they no longer have access to something the automation uses.
+- They or an admin revoked the consent that was granted when the automation was turned on.
+
+## How to fix it
+
+1. Open the automation showing the banner.
+2. Go to the **Settings** tab.
+3. Click **Transfer Permissions**.
+4. Sign in and approve the requested permissions.
+
+The automation starts processing new triggers right away.
+
+## Who can do this
+
+The person re-authorizing needs access to everything the automation does. If an automation sends email, updates a CRM, and posts to a calendar, you need permission for all three. If you don't, the last step will fail and the banner will stay up. Hand it off to a teammate who does, or ask an admin for the missing access.
+
+## What to expect after you fix it
+
+- New triggers start running immediately.
+- Triggers that failed while the banner was up are **not** replayed automatically. If something important was missed, handle it manually.
+
+## How to avoid this next time
+
+- Before offboarding a teammate, check whether they own any running automations and transfer them.
+- If an automation doesn't need to be tied to a person, have an admin turn it on using a shared service account instead.
+- Treat the permissions banner as urgent — the longer it sits, the more triggers are lost.
+
+## Still stuck?
+
+If you've re-authorized and the banner won't clear, or the sign-in step fails, contact support with the automation name and a screenshot of the error.

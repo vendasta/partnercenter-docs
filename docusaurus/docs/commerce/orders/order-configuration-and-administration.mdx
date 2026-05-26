@@ -30,12 +30,39 @@ With order configuration and administration, you can:
 - Manage Terms of Service for customer approvals
 - Control salesperson actions and capabilities
 
+:::info Orders experience refresh — July 2025
+The Orders workflow in Partner Center was redesigned in July 2025. If you see references to the older "Sales Orders" or "Sales and Success Center" flow, the steps may differ from your current interface.
+:::
+
 ## How to Set Up Order Configuration
 
 ### Accessing Order Configuration
 
 To access order configuration settings:
 **Partner Center > Administration > Order Settings**
+
+### Standalone products vs. packages-only
+
+By default, salespeople can add individual (standalone) products to orders. To restrict salespeople to selling only packages:
+
+1. Go to **Administration > Order Settings**
+2. Under **For Salespeople**, enable **"Prevent salespeople from selling standalone products on opportunities and orders"**
+
+When this is on, salespeople can only add pre-configured packages to orders. Admins are not affected by this restriction.
+
+### Company category limit for order submission
+
+Orders created from a **CRM Company** profile require the company to have **10 or fewer business categories** assigned. If you cannot submit an order from a Company, check the company's category count:
+
+1. Open the Company record in **CRM > Companies**
+2. Review the categories listed on the profile
+3. Remove categories until 10 or fewer remain, then retry submitting the order
+
+### Ad spend (variable pricing) in packages
+
+Products with variable pricing — such as ad spend for digital advertising products — **cannot have their amount adjusted when bundled inside a package**. The ad spend amount is locked to whatever value was set when the package was configured.
+
+**Workaround:** If you need to set a custom ad spend amount, order the product as a standalone item outside of the package. Standalone orders allow the variable amount to be set per order.
 
 ### Workflow Configuration Options
 

@@ -95,6 +95,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
+          // Web chat GA4 article moved from business-app/conversations to conversations
+          { from: '/business-app/conversations/track-web-chat-events-google-analytics', to: '/conversations/track-web-chat-events-google-analytics' },
           // Administration index removed; redirect to My Account (one redirect only to avoid EEXIST on build/administration/index.html)
           { from: '/administration/', to: '/administration/my-account/' },
           // My Plan: subpages merged into one page
@@ -199,6 +201,55 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/automations/getting-started-with-automations', to: '/automations/' },
           // Automations: category page redirects to linked doc
           { from: '/category/automations', to: '/automations/' },
+          // Automations: history content merged into managing
+          { from: '/automations/automation-history', to: '/automations/managing-your-automations' },
+          // Automations: email-campaign-automations deleted (feature removed from Marketing)
+          { from: '/automations/email-campaign-automations', to: '/automations/' },
+          // Automations: sales-and-crm-integration walkthrough merged into templates overview
+          { from: '/automations/sales-and-crm-integration', to: '/automations/automation-templates-overview' },
+          // Automations: step deep-dives moved under /automations/steps/
+          { from: '/automations/categorize-with-ai', to: '/automations/steps/categorize-with-ai' },
+          { from: '/automations/find-company', to: '/automations/steps/find-company' },
+          { from: '/automations/find-custom-object', to: '/automations/steps/find-custom-object' },
+          { from: '/automations/copy-assistant-automation', to: '/automations/steps/copy-assistant-automation' },
+          // Automations: sort-text-with-ai → categorize-text-with-ai → categorize-with-ai (now canonical, under steps/)
+          { from: '/automations/sort-text-with-ai', to: '/automations/steps/categorize-with-ai' },
+          { from: '/automations/categorize-text-with-ai', to: '/automations/steps/categorize-with-ai' },
+          // Automations: deleted /my-automations/* sub-pages — map each to its content's current home
+          { from: '/automations/my-automations', to: '/automations/' },
+          { from: '/automations/my-automations/index', to: '/automations/' },
+          { from: '/automations/my-automations/getting-started-with-automations', to: '/automations/' },
+          { from: '/automations/my-automations/create-new-automation', to: '/automations/creating-and-configuring-automations' },
+          { from: '/automations/my-automations/automation-settings', to: '/automations/creating-and-configuring-automations' },
+          { from: '/automations/my-automations/available-automation-steps', to: '/automations/automation-steps-reference' },
+          { from: '/automations/my-automations/available-automations-triggers-list', to: '/automations/automation-triggers-reference' },
+          { from: '/automations/my-automations/what-are-automation-triggers', to: '/automations/automation-triggers-reference' },
+          { from: '/automations/my-automations/manually-triggered-automations', to: '/automations/automation-triggers-reference' },
+          { from: '/automations/my-automations/form-submission-trigger', to: '/automations/automation-triggers-reference' },
+          { from: '/automations/my-automations/web-chat-lead-capture-trigger', to: '/automations/automation-triggers-reference' },
+          { from: '/automations/my-automations/logic-steps', to: '/automations/advanced-automation-features' },
+          { from: '/automations/my-automations/action-sets-in-automations', to: '/automations/advanced-automation-features' },
+          { from: '/automations/my-automations/delay-until-steps-in-automation-workflows', to: '/automations/advanced-automation-features' },
+          { from: '/automations/my-automations/grouping-of-automation-steps', to: '/automations/advanced-automation-features' },
+          { from: '/automations/my-automations/automation-activity', to: '/automations/managing-your-automations' },
+          { from: '/automations/my-automations/turn-off-an-automation', to: '/automations/managing-your-automations' },
+          { from: '/automations/my-automations/duplicating-automations', to: '/automations/managing-your-automations' },
+          { from: '/automations/my-automations/organize-your-automations-with-tags', to: '/automations/managing-your-automations' },
+          { from: '/automations/my-automations/automations-data-passing', to: '/automations/data-expressions' },
+          { from: '/automations/my-automations/automations-api-action', to: '/automations/automation-steps-reference' },
+          { from: '/automations/my-automations/automatically-assign-salespeople', to: '/automations/automation-templates-overview' },
+          { from: '/automations/my-automations/start-campaign-snapshot-report', to: '/automations/automation-templates-overview' },
+          { from: '/automations/my-automations/set-up-automation-when-a-user-shows-interest-in-a-package', to: '/automations/automation-templates-overview' },
+          { from: '/automations/my-automations/add-email-campaign-automations', to: '/automations/' },
+          { from: '/automations/my-automations/partner-center-admin-notifications', to: '/automations/' },
+          { from: '/automations/my-automations/reputation-management-premium-scheduling-logic', to: '/automations/' },
+          // Automations: deleted /templates/* sub-pages — all merged into automation-templates-overview
+          { from: '/automations/templates', to: '/automations/automation-templates-overview' },
+          { from: '/automations/templates/index', to: '/automations/automation-templates-overview' },
+          { from: '/automations/templates/automation-templates-in-partner-center', to: '/automations/automation-templates-overview' },
+          { from: '/automations/templates/create-sales-opportunity-form-submission', to: '/automations/automation-templates-overview' },
+          { from: '/automations/templates/start-a-campaign-when-a-contact-is-added-to-a-specific-list', to: '/automations/automation-templates-overview' },
+          { from: '/automations/templates/system-automations', to: '/automations/automation-templates-overview' },
           // Fulfillment: open-task-manager and flat paths now under task-manager folder
           { from: '/fulfillment/open-task-manager', to: '/fulfillment/' },
           { from: '/fulfillment/open-task-manager/get-started', to: '/fulfillment/task-manager/task-manager-getting-started' },
@@ -237,9 +288,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/business-app/administration/email-history', to: '/business-app/administration' },
           { from: '/business-app/administration/files', to: '/accounts/manage-business-app/files' },
           { from: '/business-app/administration/projects', to: '/accounts/manage-business-app/projects' },
-          { from: '/vendasta-products', to: '/category/legacy-products' },
-          { from: '/vendasta-products/general', to: '/legacy-products/general' },
-          { from: '/vendasta-products/general/getting-started', to: '/legacy-products/general/getting-started' },
+          { from: '/vendasta-products', to: '/legacy/calendarhero' },
           { from: '/vendasta-products/calendarhero', to: '/legacy/calendarhero' },
           { from: '/legacy-products/calendarhero', to: '/legacy/calendarhero' },
           { from: '/getting-started/intro-to-vendasta/vendasta-platform-overview', to: '/getting-started' },
@@ -248,6 +297,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/getting-started/intro-to-vendasta/vendasta-affiliate-program', to: '/getting-started/vendasta-affiliate-program' },
           { from: '/partner-center/partner-center-getting-started-guide', to: '/partner-center' },
           { from: '/partner-center/AI-receptionist-features-by-plan', to: '/ai/ai-workforce/ai-receptionist-features-by-plan' },
+          // AI Workforce Optimization Plan content is now on every service page
+          { from: '/vendasta-services/ai-workforce-setup/ai-workforce-optimization-plan', to: '/vendasta-services/ai-workforce-setup/ai-data-analyst-setup' },
         ],
       },
     ],

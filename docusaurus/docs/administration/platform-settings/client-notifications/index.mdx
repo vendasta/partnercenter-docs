@@ -1,32 +1,80 @@
 ---
-title: Client Notifications
-description: Configure client notification settings and communication preferences
-sidebar_position: 3
+id: client-notifications
+title: Partner Center notification settings
+description: Configure Partner Center notification preferences, including the master toggle, Platform vs. User scope, and app vs. email delivery.
+sidebar_position: 1
 ---
 
-## Global Notification Settings
+# Partner Center notification settings
 
-### Access Partner Center
-- Go to Partner Center → Administration → Client Notification.
-### Check Global Notification Settings
-- If a user's Global Notification setting is disabled, they will not receive notifications from any product.
-- Individual product notifications will not function unless the global switch is enabled.
+Partner Center notifications keep you and your team informed about activity across orders, tasks, products, and more. Before any individual notification can fire, the master toggle must be enabled.
 
-### Enable Global Notifications
-- Turn on Global Settings.
-Once the global notification toggle is enabled, the notification settings for each area of the platform and each product become available. You can then enable or disable notifications for each product independently, such as Business App, Social Marketing, Advertising Intelligence, and others.
-# Client Notifications
+## The master notification toggle
 
-This section provides settings for managing client notifications and communication preferences within your Vendasta platform.
+The master toggle controls all notifications. When it is off, no notifications are sent — regardless of individual settings.
 
-## Notification Settings
+To enable it:
 
-- Email Notifications - Configure automated email notifications for clients
-- SMS Notifications - Set up text message notifications and alerts
-- Notification Templates - Create and customize notification message templates
-- Delivery Settings - Configure notification timing and frequency preferences
-- Client Preferences - Allow clients to manage their own notification settings
+1. Go to **Partner Center** → **Administration** → **Client Notifications**
+2. Find **Global Settings** (also labelled **All Notifications** in some views)
+3. Turn the toggle **on**
 
-*Note: Detailed guides for client notification configuration will be added here.*
+Once the master toggle is on, the notification settings for each product and platform area become available to configure individually.
 
-If you need assistance with client notifications or have questions about communication settings, please contact our support team.
+:::warning
+If you have enabled notifications for specific products but are not receiving anything, check the master toggle first — it is the most common cause.
+:::
+
+## Platform Settings vs. User Settings
+
+Notifications can be configured at two different scopes:
+
+| Scope | Who configures it | What it controls |
+|---|---|---|
+| **Platform Settings** | Partner Center admin | Notifications for the entire partner account (e.g., all sales orders, regardless of who placed them) |
+| **User Settings** | Individual user | Notifications relevant only to that user (e.g., only sales orders where they are involved) |
+
+**When to use Platform Settings:** Use this scope for team-wide visibility — for example, alerting your whole sales team when any order is placed.
+
+**When to use User Settings:** Use this scope for personal relevance — for example, a salesperson who only wants to be notified about their own accounts or tasks.
+
+:::info
+Platform Settings are managed by administrators and apply across the team. Users can adjust their own User Settings without affecting others.
+:::
+
+## App vs. email delivery
+
+For each notification, you can choose how it is delivered:
+
+- **App** — Notification appears in the Partner Center notification panel
+- **Email** — Notification is sent to the user's email address
+- Both options can be enabled simultaneously
+
+Configure delivery for each notification type in **Administration** → **Client Notifications**, then expand the relevant product or area.
+
+## Configuring notifications per product
+
+After enabling the master toggle, expand each product section to configure its notifications:
+
+- **Business App** — activity within your clients' Business App
+- **Review Management** — new reviews and responses
+- **Social Marketing** — post publishing and campaign activity
+- **Website Pro** — website changes and alerts
+- **Orders and Commerce** — order placements, fulfillments, and billing events
+- **Task Manager** — task assignments, updates, and completions
+
+Enable or disable individual notification types within each section, and set App and/or Email delivery per type.
+
+## Common questions
+
+**I enabled a notification but I'm not receiving it.**
+Check the master toggle in **Administration** → **Client Notifications** → **Global Settings**. If it is off, no notifications fire regardless of individual settings.
+
+**I'm receiving too many notifications.**
+Switch from Platform Settings to User Settings so you only receive notifications relevant to your own activity, rather than all activity across the account.
+
+**A teammate's notifications aren't working.**
+Confirm the master toggle is on, then check whether the specific notification type is enabled under Platform Settings. The individual user can also check their own User Settings.
+
+**Notifications are enabled but email isn't arriving.**
+Confirm email delivery is toggled on for that notification type. Also check spam or junk folders, and verify the user's email address in their profile.

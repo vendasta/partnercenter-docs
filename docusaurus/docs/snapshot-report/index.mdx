@@ -115,6 +115,35 @@ Snapshot Reports will be created for accounts added to campaigns. If an existing
 
 ### Sending Snapshot Reports
 
+#### Why the Email Report button might not appear
+
+The **Email Report** button (paper-plane icon) is only visible when you are in **Edit Report** mode, not in **View Full Report** mode. If you can't find the send option:
+
+1. Open the Snapshot Report
+2. Make sure you are in **Edit Report** mode, not **View Full Report**
+3. The email/send icon will appear in Edit mode
+
+A salesperson must be assigned to the account for the Email Report button to function. Without an assigned salesperson, the send option may not appear.
+
+#### Changing the sender email address
+
+By default, Snapshot Reports are sent from `noreply@snapshotreport.biz`. To change the sender address:
+
+1. Open the Snapshot Report in **Edit Report** mode
+2. Find the email settings within the send workflow
+3. Update the sender email to your preferred address
+
+#### AI-generated suggested content
+
+When sending a Snapshot Report via **Edit Report** mode, the platform can generate suggested email copy using AI. This feature is only available in Edit Report mode and generates suggested subject lines and body text based on the report data. You can edit the suggestions before sending.
+
+#### Finding a previous Snapshot Report URL
+
+If you need to locate the URL of a previously sent Snapshot Report:
+
+1. Check the **email notification history** for the prospect — the original send email contains the report link
+2. Go to **CRM** → **Companies** → select the company → **Reports** section to find existing reports
+
 #### Snapshot Report URL
 1. Go to **Partner Center > Accounts > Manage > Select the desired account**
 2. Click **Snapshot Report > View Snapshot**
@@ -132,6 +161,45 @@ Or create custom campaigns that include Snapshot Reports.
 - For the most accurate results, wait up to **24 hours** before checking the report to ensure all data has been gathered.
 - Reports continue gathering data for up to **7 days** for maximum accuracy
 - The most accurate time to present is at the **7-day mark**
+
+## Business category and competitors
+
+### How the business category is set
+
+The Snapshot Report pulls the business category from the **Account Group's primary category** in Partner Center. This drives the industry benchmarks used throughout the report — a wrong category leads to inaccurate grades.
+
+To check or update the category:
+
+1. Go to **Partner Center** → **Accounts** → **Manage Accounts**
+2. Open the account and edit the business details
+3. Update the **Primary Category** to the most accurate business type
+
+:::warning
+Avoid setting the category to **"Other"**. When "Other" is selected, the Local Search Results section cannot retrieve meaningful data and will produce inaccurate results.
+:::
+
+### Why your report might auto-fill "Marketing Agency"
+
+If the Snapshot Report keeps defaulting to "Marketing Agency" as the business category, the likely cause is a default **Local SEO keyword** set on the template. To fix it:
+
+1. Go to **Administration** → **Customize** → **Sales** → **Edit Default Snapshot Template**
+2. Find the **Local SEO** section
+3. Clear or update the default keyword
+
+Once cleared, new reports will use the correct business category from the account.
+
+### Adding competitors
+
+You can add competitors to the Snapshot Report so prospects can see how they compare:
+
+- **Account-based competitors**: The competitor must share the **same primary business category** as the prospect to appear in the comparison. Competitors created as Accounts in Partner Center follow this rule.
+- **Google-pulled competitors**: When the system automatically pulls competitors from Google, the same-category restriction does not apply.
+
+To add competitors manually, open the Snapshot Report in **Edit Report** mode and add competitor names or URLs in the Competitors section.
+
+### Industry Average and Industry Leader benchmarks
+
+The **Industry Average** and **Industry Leader** benchmarks shown throughout the report use a **6-month lookback period**. This means the benchmarks reflect aggregate data from the past 6 months, not real-time comparisons.
 
 ## How to customize Snapshot Reports
 
@@ -160,6 +228,41 @@ Change report language for international clients:
 - **For specific markets**: **Partner Center > Customize > Markets > Select Market > Sales > Edit Default Snapshot Template** > Check boxes to remove
 
 ## Frequently asked questions (FAQs)
+
+<details>
+<summary>How do I deactivate a Snapshot Report?</summary>
+
+Snapshot Reports are tied to the **Reputation Management** product on an account. To deactivate a Snapshot Report, deactivate Reputation Management for that account. This stops the report from being active and accessible. If you need to remove a report without deactivating the product, contact support.
+
+</details>
+
+<details>
+<summary>How do I get notified when a Snapshot Report is ready?</summary>
+
+Set up **Snapshot Ready** notifications in **Administration** → **Client Notifications**. Enable the Snapshot Report notification type to receive an alert when a report finishes generating — typically within 24 hours of creation.
+
+</details>
+
+<details>
+<summary>Does the automation trigger "a Snapshot report was created" fire when I refresh a report?</summary>
+
+No. The **Snapshot Report Created** automation trigger fires only when a new Snapshot Report is created — not when an existing report is refreshed. If you need to trigger an automation after a refresh, you will need a separate workflow or manual follow-up.
+
+</details>
+
+<details>
+<summary>Can I combine multiple clients' Snapshot Reports into one?</summary>
+
+No. Snapshot Reports are generated per business and cannot be merged or combined across multiple clients. Each report is specific to a single business's online presence data.
+
+</details>
+
+<details>
+<summary>Can I customize the grade descriptions in the Snapshot Report?</summary>
+
+No. The letter grade descriptions (A–F) and their explanations are system-controlled and cannot be customized or edited.
+
+</details>
 
 <details>
 <summary>How long does a Snapshot Report take to be ready?</summary>

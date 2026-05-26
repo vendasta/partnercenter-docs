@@ -1,0 +1,115 @@
+---
+title: Integrate Salesforce with Partner Center
+sidebar_label: Salesforce
+sidebar_position: 3
+description: Connect Salesforce to Partner Center and Business App for two-way sync of Contacts and Companies.
+---
+
+# Integrate Salesforce with Partner Center
+
+The Salesforce integration enables two-way data sync for Contacts and Companies between Business App / Partner Center and Salesforce. Once connected, updates made in either system automatically sync to the other, keeping records aligned across platforms.
+
+## Why use the Salesforce integration
+
+Many teams rely on both Salesforce and Business App to manage customer relationships. Without automation, keeping data aligned requires manual work and often leads to errors. This integration:
+
+- Eliminates manual data entry across systems
+- Keeps Contact and Company information accurate and up to date
+- Reduces duplicate or conflicting records
+- Helps sales, marketing, and fulfillment teams work from a consistent source of truth
+
+## Who can use it
+
+Both Partners and their SMB clients. Partners manage the connection in **Partner Center**, while SMBs benefit from synced data inside **Business App**.
+
+## What syncs
+
+| Object | Direction |
+| --- | --- |
+| Contacts | Two-way (Salesforce ↔ Business App / Partner Center) |
+| Companies | Two-way (Salesforce ↔ Business App / Partner Center) |
+
+:::info
+Currently, only Contacts and Companies are included. Future updates may expand sync to additional data types.
+:::
+
+## Salesforce access for AI Employees
+
+A **Salesforce MCP** is also available under [AI Capabilities](../../../ai/ai-capabilities/index.md). Add it to any AI Employee to give them direct access to Salesforce CRM data (Contacts, Companies, and Leads), so the AI Employee can look up records during a conversation, reference recent activity, or answer questions grounded in live Salesforce data.
+
+### What the MCP can do
+
+The MCP exposes Salesforce search tools that the AI Employee uses on demand. It can:
+
+- **Search contacts** and return name, email, and phone.
+- **Search companies** and return name, industry, and website.
+- **Search leads** and return name, email, company, and status.
+- **Apply filters** (name, email, industry, etc.) to narrow results when the user provides specific criteria.
+
+### MCP vs. two-way sync
+
+The MCP is independent of the two-way sync described above:
+
+- The **two-way sync** keeps Contact and Company records aligned across both systems automatically.
+- The **MCP** lets an AI Employee query Salesforce on demand, and also covers Leads, which the sync does not.
+
+You can use either, or both together.
+
+### Add the MCP to an AI Employee
+
+Open your AI Employee, add a new capability, and choose the **Salesforce MCP** connection. See [Creating custom capabilities](../../../ai/ai-capabilities/creating-custom-capabilities.md) for the full setup flow.
+
+## Connect Salesforce
+
+1. In Partner Center, navigate to **Administration** → **Connections** → **Browse**.
+2. Select **Salesforce**, then click **Connect Salesforce**.
+3. In the pre-connect form, choose the sync options you want enabled, then click **Continue**.
+4. Authorize the connection using **Salesforce OAuth**. Sign in to your Salesforce account and grant the requested permissions.
+5. On the **Connection Configuration** page, confirm that sync is enabled for **Customers** and **Companies**.
+
+After the connection is established, records begin syncing automatically.
+
+## Verify the sync
+
+Test the connection in both directions:
+
+- Create or update a **Customer** or **Company** in Salesforce, then confirm the record appears in Business App / Partner Center.
+- Create or update a **Contact** or **Company** in Business App / Partner Center, then confirm the record appears in Salesforce.
+
+Changes typically sync within a few minutes.
+
+## Important notes
+
+:::warning Deletions do not sync
+Deleting a record in one system does **not** automatically delete the matching record in the other. Remove records manually in each platform if you want them removed from both.
+:::
+
+## Frequently asked questions
+
+<details>
+<summary>What does the Salesforce integration do?</summary>
+
+It enables a two-way sync of Contact and Company information between Salesforce, Partner Center, and Business App, keeping data consistent across platforms.
+
+</details>
+
+<details>
+<summary>Who can use this integration?</summary>
+
+Both Partners and their SMB clients. Partners manage it in Partner Center, while SMBs benefit from synced data inside Business App.
+
+</details>
+
+<details>
+<summary>What data is included in the sync?</summary>
+
+Currently, Contacts and Companies. Future updates may expand to additional data types.
+
+</details>
+
+<details>
+<summary>How do I disconnect Salesforce?</summary>
+
+Go to **Administration** → **Connections**, open the Salesforce connection, and choose to disconnect. After disconnecting, no further changes will sync between the two systems.
+
+</details>
