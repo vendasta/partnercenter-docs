@@ -163,11 +163,51 @@ You can protect your forms from spam submissions by enabling reCAPTCHA. This wil
 For more information on enabling reCAPTCHA, see [reCAPTCHA key configuration](./recaptcha-key.mdx).
 :::
 
+## Step 7 - Add code to your website page
+
 Click on the `Embed` button to view the code you need to embed the form on your website. You can copy the code and paste it into your website's HTML code to embed the form.
 
 ![Form embed code](./img/marketing/embed-code-for-forms.png)
 
-## Step 7 — Test your form
+Place the `<script>` tag where you want the form to appear on a page in your website.
+
+```html
+<script
+  id="__custom_form_widget"
+  src="https://www.cdnstyles.com/static/custom_form_widget/v1/custom_form.widget.js"
+  data="...<base64-encoded-config>...">
+</script>
+```
+
+The widget renders immediately after the script tag.
+
+### Multiple forms on the same page
+
+To embed more than one form on the same page, load the widget bundle **once** in `<head>` and then place a lightweight marker tag — without a `src` attribute — wherever each form should appear.
+
+```html
+<head>
+  <!-- Load the bundle once — do NOT add a second src script for additional forms -->
+  <script src="https://www.cdnstyles.com/static/custom_form_widget/v1/custom_form.widget.js"></script>
+</head>
+
+<body>
+  <!-- Form 1 -->
+  <script data-crm-form-widget data="...<base64-config-form-1>..."></script>
+
+  <!-- Form 2 (different config, same page) -->
+  <script data-crm-form-widget data="...<base64-config-form-2>..."></script>
+</body>
+```
+
+Each `<base64-config-form-N>` value comes from the **Embed** dialog — open it for each form and copy its unique `data` attribute. 
+The marker tags have no `src`, so the browser will not load the bundle a second time; the single script already on the page picks up every marker tag and renders the correct form in each spot.
+
+:::warning Do not load the bundle more than once
+Adding a second `<script src="...">` tag for a different form will cause both forms to initialize twice, which leads to duplicate submissions and broken behavior.
+:::
+
+## Step 8 — Test your form
 
 Before turning your form live, you should test it to make sure it is working as expected. For this tutorial form that means:
 
