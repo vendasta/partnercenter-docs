@@ -16,11 +16,17 @@ Several settings can be configured for each automation you create. You can acces
 
 ### Entry settings
 
-Many trigger events and conditions can be met multiple times. For example, **A customer makes a payment** trigger with the trigger options set to **Succeeds or fails** will fire each time a customer attempts to pay for an invoice or shopping cart purchase. The entry settings allow you to specify whether you want the automation workflow to start only the first time the trigger criterion is met or every time.
+Many trigger events and conditions can be met multiple times. For example, **A customer makes a payment** trigger with the trigger options set to **Succeeds or fails** will fire each time a customer attempts to pay for an invoice or shopping cart purchase. The entry settings allow you to specify how often the automation should run when the trigger fires.
 
 **Options:**
-- **Run once per account**: The automation will only run the first time the trigger conditions are met for each account
-- **Run every time**: The automation will run each time the trigger conditions are met, regardless of previous runs
+
+- **Only once per account** — The automation runs a maximum of one time per account, ever. Once it has run for an account, that account is excluded from all future runs, even if the trigger fires again. Use this for one-time onboarding flows or welcome sequences.
+- **One at a time per account** — Prevents concurrent runs for the same account. If a second trigger fires while a run is already in progress for that account, the second trigger is dropped. Once the first run completes, new triggers will start fresh runs normally. Use this when overlapping runs would cause duplicate actions.
+- **Multiple times per account** — The automation runs every time the trigger conditions are met, with no frequency or concurrency limits. Use this for ongoing notifications, recurring task creation, or any scenario where re-triggering is intentional.
+
+:::warning Common misconception
+**One at a time per account** does not limit the automation to running once total. It only prevents two runs from overlapping simultaneously. If the trigger fires again after the first run finishes, a new run will start. To run only once ever, use **Only once per account**.
+:::
 
 ### Error handling settings
 
@@ -65,6 +71,19 @@ To copy an automation from a specific automation:
 2. Click **Duplicate**.
 
 ![Duplicate from a specific automation](./img/automations/duplicating-automations/duplicate_from_specific_automation.jpg)
+
+## Automation market scope
+
+Automations apply to **all markets** by default. Single-market automation creation is no longer supported — if you duplicate an automation, the copy will be scoped to all markets regardless of how the original was configured.
+
+To restrict an automation to a specific market, add a market condition to the trigger:
+
+1. In the trigger step, click **Add conditions for starting this automation**.
+2. Set **Condition type** to **Account data**.
+3. Select **Market** → **Is** → choose the market from the dropdown.
+4. Save the trigger.
+
+The automation will only fire for accounts in that market. To target multiple specific markets, add additional market conditions using **OR** logic.
 
 ## Organizing automations with tags
 

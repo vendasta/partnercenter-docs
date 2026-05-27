@@ -188,7 +188,7 @@ Steps marked **(draft)** are in development and may change or be removed before 
 | Log a call activity to the contact | Logs a call record on the contact's activity timeline. | Available on contact-scoped triggers. | When an outbound call is detected via integration, log the call on the contact. |
 | Add a note to the contact | Adds a note to a contact record. | Available on contact-scoped triggers. | When a contact hits a milestone, log it as a note for the next touchpoint. |
 | Create a CRM sales task for the contact | Creates a CRM sales task on the contact. | Available on contact-scoped triggers. | When a contact is created, create a follow-up task on the new contact. |
-| Send a webhook | Sends an HTTP POST request with custom data to an external URL. | | When a key event happens, notify an external system via webhook. |
+| Send a webhook | Sends an HTTP POST request with custom data to an external URL. Data must be sent as JSON in the request body — sending as headers is the most common misconfiguration. Cannot send file attachments. | Not available on all contact-based triggers. All mapped values must be strings; passing integers causes a runtime error. | When a key event happens, notify an external system or trigger a Zapier Zap. |
 | Trigger a webhook *(draft)* | Triggers an existing webhook configuration with data from the workflow. | Available on account-scoped triggers. | |
 
 ## Integrations
