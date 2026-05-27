@@ -42,6 +42,10 @@ Create manual tasks for:
 - Account-specific work
 - Tasks not covered by auto-generation
 
+:::info Due dates and timezones
+Task Manager stores all due dates as midnight UTC−6. When you view a task, the due date is displayed in your local timezone — so the same deadline may appear as a different calendar day for team members in timezones significantly ahead of UTC−6. This is expected behavior, not a bug. The actual deadline is the same for everyone; only the displayed calendar date differs.
+:::
+
 ## How to Set Up Auto-Generated Tasks
 
 Auto-generated tasks streamline your fulfillment process by automatically creating tasks based on account activity and configured settings.
@@ -178,5 +182,12 @@ Mentions and Reviews tasks require Reputation AI to be active. Social Posts and 
 <summary>Can I set different auto-generation settings for different accounts?</summary>
 
 Yes, you can configure task generation settings individually for each account in Account Settings > Task generation, or set defaults for all new accounts in the main Settings area.
+
+</details>
+
+<details>
+<summary>Why does a task's due date look different for team members in different timezones?</summary>
+
+Task Manager stores all due dates as midnight UTC−6. When a team member in a timezone significantly ahead of UTC−6 views the task, their local time conversion may shift the displayed date by one day. The underlying deadline is identical for everyone — only the calendar date shown in the UI differs by timezone.
 
 </details>
