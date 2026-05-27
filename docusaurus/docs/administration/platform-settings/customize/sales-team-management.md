@@ -113,22 +113,6 @@ This enables salespeople to create and send email marketing campaigns directly t
 Look for the "Salespeople can send campaigns" toggle in the Sales section of the customization settings. This control determines whether your sales team can access campaign features within Partner Center.
 :::
 
-### Disable Standalone Product Sales
-
-To require salespeople to sell complete packages rather than individual products:
-
-1. Go to `Administration` > `Customize` > `Sales`
-2. Click **Sales Processes**
-3. Select **Configure orders and sales processes**
-4. Disable standalone product sales for salespeople
-5. Apply the changes
-
-![Configure orders and sales processes](./img/administration-platform-settings/disable-salespeople-standalone-1.png)
-
-![Disable salespeople from selling standalone products](./img/administration-platform-settings/disable-salespeople-standalone-2.png)
-
-This ensures salespeople focus on selling comprehensive solutions rather than individual components.
-
 ## How to Manage Snapshot Report Limits
 
 ### Set Monthly Report Limits
@@ -256,19 +240,6 @@ Yes, you can configure different monthly limits for each market. While there's n
 4. Set the **snapshot creation limit** for salespeople in that market
 
 Remember: If multiple salespeople work in a market, the limit applies to each individual salesperson, not as a combined market total.
-</details>
-
-<details>
-<summary>How do I disable salespeople from selling standalone products on opportunities and orders?</summary>
-
-To prevent salespeople from selling standalone products and require them to sell only complete packages or bundles:
-
-1. Go to **Partner Center > Administration > Customize**
-2. Click **Sales**
-3. Under **Sales Processes**, click **Configure orders and sales processes**
-4. Look for the standalone products setting and disable it
-
-When standalone product sales are disabled, salespeople must sell products as part of complete packages or bundles rather than individual products separately. This helps maintain consistent package offerings and pricing strategies.
 </details>
 
 <details>
