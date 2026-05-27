@@ -61,7 +61,7 @@ jobs:
           GOOGLE_CHAT_WEBHOOK: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
           # Change ARTICLE_DIRS to target a specific folder, e.g. "docs,articles"
           # Leave as "." to scan the entire repo
-          ARTICLE_DIRS: "."
+          ARTICLE_DIRS: "docusaurus/docs"
           # How many days without an update before an article is flagged
           # Override here or via workflow_dispatch input
           REVIEW_THRESHOLD_DAYS: ${{ inputs.threshold_days || '180' }}
