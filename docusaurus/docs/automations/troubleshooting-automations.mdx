@@ -49,6 +49,27 @@ Some steps can only run once per account regardless of settings. For example, an
 
 Design around these limits by using different campaigns or by using pause/resume campaign steps instead.
 
+## Webhook action isn't sending data correctly
+
+### External system receives no data
+
+The most common cause is that fields were mapped as **request headers** instead of in the **request body**. Webhook data must be sent as JSON in the request body.
+
+Open the **Send Webhook** step and verify that your field mappings are in the **Body** section as JSON key–value pairs, not in a headers section. Remove any header mappings and re-add the fields to the body.
+
+### `id.trim is not a function` error
+
+This error means a mapped field value is an integer rather than a string. All webhook body values must be strings. Re-map the affected field as text, or use the `toString()` expression to convert the value before passing it.
+
+### Webhook URL is not responding
+
+Confirm the URL is reachable from outside your network and accepts HTTP POST requests. Test it with a tool like [webhook.site](https://webhook.site) before connecting it to the automation.
+
+### Limitations
+
+- File attachments (PDFs, images, etc.) cannot be sent via webhook. Pass a URL to the file instead.
+- The Send Webhook step is not available on all contact-based triggers.
+
 ## Campaign failed to start
 
 When starting an email campaign from an automation, you may see this error:
