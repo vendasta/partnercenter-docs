@@ -23,16 +23,21 @@ type CardProps = {
   title: string;
   children?: React.ReactNode;
   icon?: string; // static path under /img or external
+  badge?: string;
+  className?: string;
 };
 
-export function Card({ href, title, children, icon }: CardProps) {
+export function Card({ href, title, children, icon, badge, className }: CardProps) {
   return (
-    <a className="vs-card" href={href} target="_blank" rel="noopener noreferrer">
+    <a className={`vs-card${className ? ` ${className}` : ''}`} href={href} target="_blank" rel="noopener noreferrer">
       {icon && (
         <img className="vs-card-icon" src={icon} alt="" loading="lazy" />
       )}
       <div className="vs-card-content">
-        <div className="vs-card-title">{title}</div>
+        <div className="vs-card-title">
+          {title}
+          {badge && <span className="vs-card-badge">{badge}</span>}
+        </div>
         {children && <div className="vs-card-desc">{children}</div>}
       </div>
     </a>

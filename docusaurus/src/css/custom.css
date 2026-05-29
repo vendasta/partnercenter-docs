@@ -711,6 +711,8 @@ h2 {
 .vs-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+  text-decoration: none;
+  color: inherit;
 }
 .vs-card-icon {
   width: 28px;
@@ -723,6 +725,58 @@ h2 {
 .vs-card-desc {
   color: var(--ifm-color-content-secondary);
   font-size: 0.9rem;
+}
+
+.vs-card-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, #1a237e, #7c3aed);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  vertical-align: middle;
+}
+
+.vs-card.vibe-card {
+  position: relative;
+  overflow: hidden;
+}
+.vs-card.vibe-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1a237e 0%, #5b21b6 60%, #7c3aed 100%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.vs-card.vibe-card:hover {
+  box-shadow: 0 8px 32px rgba(109, 40, 217, 0.4);
+}
+.vs-card.vibe-card:hover::after {
+  opacity: 1;
+}
+.vs-card.vibe-card:hover .vs-card-title,
+.vs-card.vibe-card:hover .vs-card-desc {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.vs-card.vibe-card:hover .vs-card-badge {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  position: relative;
+  z-index: 1;
+}
+.vs-card.vibe-card .vs-card-icon {
+  position: relative;
+  z-index: 1;
 }
 
 .explore-by-product-section {
