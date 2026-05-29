@@ -12,7 +12,7 @@ tags:
   - social-ads
 ---
 
-With the [MatchCraft Managed Ads Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN), [MatchCraft Managed AI AdVantage](https://partners.vendasta.com/marketplace/products/MP-23KNRJZRP2HZDXQHRSNV775DDKDPCC5D) and [MatchCraft Express Ads](https://partners.vendasta.com/marketplace/products/MP-8MS2CFPW6TM2WW4RZK3D4JZGKM6LF6MZ), Vendasta Services offers advertising across a diverse range of platforms for advertising, catering to different needs and budgets.
+With the [MatchCraft Managed Ads Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN) and [MatchCraft Express Ads](https://partners.vendasta.com/marketplace/products/MP-8MS2CFPW6TM2WW4RZK3D4JZGKM6LF6MZ), Vendasta Services offers advertising across a diverse range of platforms for advertising, catering to different needs and budgets.
 
 ## Search Ads - Google & Bing
 
@@ -22,14 +22,14 @@ Search campaigns on Google and Bing are among the most popular formats. These te
 
 The setup is quick since no creatives are needed. These ads are pay-per-click, meaning you only pay when someone clicks on your ad. Depending on your monthly ad spend budget, we can run these ads on either Google or both Google and Bing. This is beneficial as we often yield high conversions on Bing. Running ads across both platforms maximizes reach and potential results.
 
-* **Supported by:** [MatchCraft Managed Ads Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN), [MatchCraft Managed AI AdVantage](https://partners.vendasta.com/marketplace/products/MP-23KNRJZRP2HZDXQHRSNV775DDKDPCC5D) and [MatchCraft Express Ads](https://partners.vendasta.com/marketplace/products/MP-8MS2CFPW6TM2WW4RZK3D4JZGKM6LF6MZ)
+* **Supported by:** [MatchCraft Managed Ads Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN) and [MatchCraft Express Ads](https://partners.vendasta.com/marketplace/products/MP-8MS2CFPW6TM2WW4RZK3D4JZGKM6LF6MZ)
 
 ## Display Ads - Google
 
 Display ads are image-based banners shown on websites alongside the website’s regular content. They help increase brand awareness by targeting users as they browse online. You can also retarget users who have previously interacted with your ads or website.
 
 Unlike search ads, display ads are great for promoting niche products or services that people might not be searching for. They use visuals to familiarize potential customers with your product. These ads are not pay-per-click; you pay for impressions, meaning your ad gets seen regardless of clicks. This exposure helps build unconscious brand familiarity, increasing the likelihood of future conversions.
-* **Supported by:** [MatchCraft Managed Ads Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN) and [MatchCraft Managed AI AdVantage](https://partners.vendasta.com/marketplace/products/MP-23KNRJZRP2HZDXQHRSNV775DDKDPCC5D)
+* **Supported by:** [MatchCraft Managed Ads Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN)
 
 ## Facebook & Instagram (Meta) Social Ads
 
@@ -40,7 +40,7 @@ Facebook and Instagram ads are better for demand creation, similar to display ad
 The most effective ads on these platforms resemble social posts rather than traditional ads. For example, an ad for dog dental products might feature a cute picture of a dog, making it look like a regular post that users might share, like, or engage with. This approach increases the likelihood of users pausing to read and interact with the ad.
 
 When creating ads, choose high-quality images and videos that blend seamlessly into users' feeds, ensuring they look like natural social media content. This strategy enhances engagement and makes your ads more effective on these visually-driven platforms.
-* **Supported by:** [MatchCraft Managed Ads Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN) and [MatchCraft Managed AI AdVantage](https://partners.vendasta.com/marketplace/products/MP-23KNRJZRP2HZDXQHRSNV775DDKDPCC5D)
+* **Supported by:** [MatchCraft Managed Ads Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN)
 
 ## YouTube Video Ads
 
@@ -67,7 +67,6 @@ A key consideration is that LinkedIn ads cannot be white-labeled. Ads must be ma
 Amazon Display ads allow businesses to reach shoppers with image-based banners on and off Amazon, across a network of sites and apps. This helps increase brand and product awareness by targeting users based on their shopping behaviors.
 
 *Please note*: This platform is currently available only for businesses located in the United States.
-* **Supported by:** [MatchCraft Managed AI AdVantage](https://partners.vendasta.com/marketplace/products/MP-23KNRJZRP2HZDXQHRSNV775DDKDPCC5D)
 
 ## Request a Proposal
 

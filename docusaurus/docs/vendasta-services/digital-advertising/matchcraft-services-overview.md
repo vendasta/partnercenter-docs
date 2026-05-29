@@ -1,10 +1,10 @@
 ---
 title: "MatchCraft Ads Services"
 sidebar_label: "Service Overview"
-description: "A guide to choosing between MatchCraft Express Ads, Managed Ads Campaign, and Managed AI AdVantage for different needs."
+description: "A guide to choosing between MatchCraft Express Ads and Managed Ads Campaign for different needs."
 ---
 
-You have three powerful MatchCraft advertising services at your disposal — now let's figure out which one fits best for your goals, budgets, and level of digital maturity.
+You have two powerful MatchCraft advertising services at your disposal — now let's figure out which one fits best for your goals, budgets, and level of digital maturity.
 
 
 ## MatchCraft Ad Service Options
@@ -13,7 +13,6 @@ You have three powerful MatchCraft advertising services at your disposal — now
 |--------|----------|--------------|
 | **Express Ads** | Small local businesses, startups, minimal effort | Fast AI campaign setup, search-only focus, low budget, hands-off |
 | **Managed Ads Campaign** | Growing SMBs ready to scale and convert | Multi-platform flexibility, expert monthly optimization, conversion-driven |
-| **Managed AI AdVantage** | Businesses starting from scratch, hands-off full digital launch | End-to-end package (landing page, webchat, call tracking, multi-channel ads), full-service execution |
 
 
 ## 1. MatchCraft Express Ads
@@ -66,50 +65,24 @@ You have three powerful MatchCraft advertising services at your disposal — now
 - Scaling ad spend sensibly with ongoing optimization  
 
 
-## 3. MatchCraft Managed AI AdVantage
-
-**Best for:** If you have minimal to no digital presence and want a full-service advertising startup package.
-
-### Ideal profile:
-- New businesses, consultants, or traditional offline businesses going digital  
-- Little or no existing website, landing page, or chat presence  
-- Want a hands-off solution to launch digital marketing and lead capture  
-- Monthly ad spend budget of **$700+**  
-
-### Why you’d choose AI AdVantage:
-- Everything is bundled together: landing page or website, AI-powered webchat, call tracking, plus ad campaigns across channels  
-- The provider handles nearly all execution end-to-end — strategy, setup, launch, optimizations  
-- AI-powered tools drive efficiency in campaign creation and budget allocation  
-- Excellent if you don’t want to manage the technical details yourself  
-
-### Typical use cases:
-- Launching a brand-new online presence or transitioning a traditional business online  
-- Generating leads for high-value services  
-- Simultaneously launching awareness and conversion campaigns  
-- Providing a smooth, low-stress onboarding experience for solopreneurs or time-strapped businesses  
-
-
 ## Choosing the Right Service
 
 Here are a few quick decision prompts to help you match service to situation:
 
 1. **Budget & effort threshold:**  
    - If ad spend is low and you want minimal involvement → consider *Express Ads*.  
-   - If ad spend is moderate to high, and you want ongoing results → lean toward *Managed Ads Campaign*.  
-   - If you want someone else to “just get it done” and are okay investing in a full launch → *Managed AI AdVantage* is a solid pick.
+   - If ad spend is moderate to high, and you want ongoing results → lean toward *Managed Ads Campaign*.
 
 2. **Digital maturity:**  
-   - Just getting started → *AI AdVantage*  
    - Solid web presence and social profiles, now wanting growth → *Managed Campaign*  
    - Existing presence and occasional promotional needs → *Express Ads*  
 
 3. **Desired outcome:**  
    - Brand visibility, awareness, fast launches → *Express Ads*  
    - Lead generation, conversions, scalable growth → *Managed Campaign*  
-   - Full-stack lead generation and online launch → *AI AdVantage*
 
 4. **Management preference:**  
-   - Hands-off, almost-zero effort → *Express Ads* or *AI AdVantage*  
+   - Hands-off, almost-zero effort → *Express Ads*  
    - Some involvement, collaboration preferred → *Managed Campaign*
 
 
@@ -118,8 +91,7 @@ Here are a few quick decision prompts to help you match service to situation:
 Whichever MatchCraft ads path you choose, you’re leveraging powerful AI-driven automation with the flexibility to match your goals, budget, and digital readiness.  
 
 - **Express Ads** are fast and affordable — ideal when speed and awareness matter more than fine-tuned customization.  
-- **Managed Ads Campaign** is for growth-minded businesses ready to scale across channels and focus on conversions.  
-- **Managed AI AdVantage** is the all-in-one launchpad for businesses with minimal online presence who want a hands-off but high-impact approach.
+- **Managed Ads Campaign** is for growth-minded businesses ready to scale across channels and focus on conversions.
 
 Always review your budget, current digital presence, and appetite for campaign management before selecting the right service.  
 

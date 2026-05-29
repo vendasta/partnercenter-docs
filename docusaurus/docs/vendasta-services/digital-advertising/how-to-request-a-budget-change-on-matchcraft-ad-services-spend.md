@@ -14,7 +14,7 @@ The **Request Spend Change** feature makes it easy for you to make changes to yo
 
 **Note:** The method described below will only apply to future ad spend and not the current month's spend. To add additional funds to the current month, use the One-Time Boost add-on.
 
-Head to [Partner Center](https://partners.vendasta.com/)​ → [Manage Accounts](https://partners.vendasta.com/manage-accounts) and select the account with the live digital ads campaign. Below the "Products" section, click on the three dots next to the active _MatchCraft Managed Ads Campaign_ or _MatchCraft Managed AI AdVantage_ product.
+Head to [Partner Center](https://partners.vendasta.com/)​ → [Manage Accounts](https://partners.vendasta.com/manage-accounts) and select the account with the live digital ads campaign. Below the "Products" section, click on the three dots next to the active _MatchCraft Managed Ads Campaign_ product.
 
 ![spend change.png](./img/19299887344535-f6aa08e5f6.png)
 
