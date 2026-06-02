@@ -186,7 +186,7 @@ def main():
     # Collect all markdown files
     markdown_files = []
     for directory in ARTICLE_DIRS:
-        for path in Path(directory).rglob("*.md"):
+        for path in sorted(Path(directory).rglob("*.md")) + sorted(Path(directory).rglob("*.mdx")):
             # Skip README, changelog, and hidden files
             if path.name.lower() in ("readme.md", "changelog.md", "contributing.md"):
                 continue
