@@ -57,6 +57,27 @@ You can fill custom fields:
 
 ![Data Entry for Custom Fields](../img/administration/data-management/custom-fields-data-entry.jpg)
 
+## Account fields vs. company fields: sync behavior
+
+Custom fields can be created for different object types. When working with **accounts** and **companies**, sync behavior differs in an important way:
+
+- **Account fields** sync bidirectionally with linked company records — updates on the account appear on the company, and vice versa.
+- **Company fields** do not sync down to accounts — data entered on a company's custom fields will not appear on linked account records.
+
+If you need data to flow between accounts and companies, define the field as an **account** field.
+
+### Archive a duplicate field
+
+If you have created duplicate custom fields, archive the extras to keep your field list clean:
+
+1. Go to **Partner Center** → **Administration** → **Custom Fields**
+2. Select **Account** from the tabs at the top
+3. Search for the duplicate field
+4. Click **⋮** next to the field name
+5. Select **Archive**
+
+Archived fields are hidden from new records but their data is retained.
+
 ## Frequently asked questions
 
 <details>
@@ -69,4 +90,10 @@ No. Custom fields created in Partner Center are for use in Partner Center only. 
 <summary>Is there a character limit for the field description?</summary>
 
 Yes. The limit is 4000 characters.
+</details>
+
+<details>
+<summary>Why don't my company-level custom fields appear on accounts?</summary>
+
+Company fields and account fields sync differently. Company fields do not sync down to account records. If you need data to appear on both the account and the company, create the field as an **account** field — account fields sync bidirectionally with linked companies.
 </details>
