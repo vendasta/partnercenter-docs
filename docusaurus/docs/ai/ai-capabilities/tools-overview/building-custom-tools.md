@@ -60,10 +60,6 @@ API documentation can be overwhelming, but focusing on these key sections will h
 - Where to include authentication (headers, query parameters, etc.)
 - Token expiration and renewal processes
 
-<!--
-![API authentication example](./img/building-tools/api-authentication.jpg)
--->
-
 **2. Endpoints/Resources**
 - List of available API endpoints
 - HTTP methods (GET, POST, PUT, DELETE) for each endpoint
@@ -272,32 +268,20 @@ curl -X POST "https://api.example.com/appointments" \
 ### Step-by-Step: Importing a cURL into Vendasta
 
 **1. Access Tool Configuration**
-   - Navigate to <AISparkleIcon /> **AI** › **AI Workforce** in your Business App dashboard
+   - Navigate to <AISparkleIcon /> **AI** → **AI Workforce** in your Business App dashboard
    - Select the AI Employee you want to enhance
-   - Click **Configure** › **Capabilities** tab
+   - Click **Configure** → **Capabilities** tab
    - Scroll to **Custom Capabilities** section
    - Click **Add a capability**
-
-<!--
-![Access custom capabilities](./img/building-tools/access-custom-capabilities.jpg)
--->
 
 **2. Add a Tool**
    - Click **Add Tool** within your capability
    - Select **Import from cURL**
 
-<!--
-![Import from cURL option](./img/building-tools/import-curl-option.jpg)
--->
-
 **3. Paste Your cURL Command**
    - Copy the cURL command from API documentation or AI-generated example
    - Paste it into the "Import from cURL" field
    - Replace placeholder values (like `YOUR_API_KEY`) with actual values or variables
-
-<!--
-![Paste cURL command](./img/building-tools/paste-curl-command.jpg)
--->
 
 **4. Review Auto-Filled Fields**
    - The system automatically extracts:
@@ -311,10 +295,6 @@ curl -X POST "https://api.example.com/appointments" \
    - Fill in the **ID** field (unique name, no spaces)
    - Write a clear **Description** of when to use this tool
    - Review and enhance parameter descriptions (critical step!)
-
-<!--
-![Review auto-filled fields](./img/building-tools/review-auto-filled.jpg)
--->
 
 ### What gets auto-filled and what needs manual work
 
@@ -385,10 +365,6 @@ Screenshots are powerful tools for getting AI assistance:
    - Take screenshots of endpoint documentation
    - Include parameter tables and examples
    - Capture authentication setup instructions
-
-<!--
-![API documentation screenshot](./img/building-tools/api-docs-screenshot.jpg)
--->
 
 **2. Provide Context to AI**
    - Upload screenshots along with your questions
@@ -544,10 +520,6 @@ Expected: AI handles invalid order number format gracefully
    - Review the AI's reasoning for using the tool
    - Check the actual parameter values sent to the API
 
-<!--
-![Review explanation](./img/building-tools/review-explanation.jpg)
--->
-
 **2. Verify Parameter Values**
    - Check that parameters are extracted correctly from customer messages
    - Ensure data types match API requirements
@@ -626,7 +598,7 @@ Even with careful planning, you may encounter issues. Here's how to resolve comm
 
 **2. Capability not enabled**
    - **Solution:** Verify the capability is assigned to your AI Employee
-   - Check: AI Workforce > Configure > Capabilities tab
+   - Check: AI Workforce → Configure → Capabilities tab
 
 **3. Conflicting capabilities**
    - **Solution:** Review other capabilities that might be handling the same request
@@ -776,6 +748,7 @@ Follow these principles throughout the tool-building process:
 <summary>Do I need to be a developer to build custom tools?</summary>
 
 No, you don't need to be a developer. While basic familiarity with API concepts helps, the cURL import feature and AI assistants make it possible to build tools without deep technical knowledge. The most important skill is writing clear parameter descriptions that tell the AI how to use the tool.
+
 </details>
 
 <details>
@@ -787,18 +760,21 @@ If you can't find official API documentation, try:
 - Checking if they have a developer portal or community forum
 
 If no API exists, you may need to use a different integration method or contact the service provider.
+
 </details>
 
 <details>
 <summary>Can I use the same tool for multiple capabilities?</summary>
 
 Yes, you can use the same tool across multiple capabilities. However, each capability should have its own prompt that defines when and how to use the tool in that specific context. This allows the same API endpoint to serve different business purposes.
+
 </details>
 
 <details>
 <summary>What happens if my API key expires or changes?</summary>
 
 If your API key expires or changes, you'll need to update the authentication header in your tool configuration. Go to the tool settings, find the Authorization header, and update it with the new key. The tool will then work with the new credentials.
+
 </details>
 
 <details>
@@ -811,12 +787,14 @@ Test your tool with various customer phrasings. If the AI:
 - Handles edge cases gracefully
 
 Then your descriptions are working well. Review the Explanation feature to see how the AI interprets your descriptions.
+
 </details>
 
 <details>
 <summary>Can I build tools that use multiple API endpoints?</summary>
 
 Yes, you can add multiple tools to a single capability. Each tool can call a different API endpoint. The AI will use the appropriate tool based on the customer's request and the tool descriptions you've written.
+
 </details>
 
 <details>
@@ -829,6 +807,7 @@ If cURL import fails:
 - Manually configure the tool if import continues to fail
 
 The manual configuration option gives you full control over all tool settings.
+
 </details>
 
 <details>
@@ -841,16 +820,19 @@ Test immediately after creating a tool, then monitor real usage. Refine tools ba
 - Changes in the API or service you're integrating
 
 Regular monitoring helps catch issues before they impact too many customer interactions.
+
 </details>
 
 <details>
 <summary>Can I share tools I've built with other AI Employees?</summary>
 
 Yes, custom capabilities (including their tools) can be assigned to multiple AI Employees. This allows you to reuse successful tool configurations across different AI Employees without rebuilding them.
+
 </details>
 
 <details>
 <summary>What's the difference between a tool and a capability?</summary>
 
 A **tool** is the technical API implementation (the "how") - it defines the API endpoint, authentication, and parameters. A **capability** is the business logic (the "when" and "why") - it includes the prompt that tells the AI when to use the tool and how to handle responses. You need both: tools for the API connection, and capabilities for the AI behavior.
+
 </details>
