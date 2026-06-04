@@ -4,7 +4,7 @@ sidebar_label: "Service Overview"
 description: "A guide to choosing between MatchCraft Express Ads and Managed Ads Campaign for different needs."
 ---
 
-You have two powerful MatchCraft advertising services at your disposal — now let's figure out which one fits best for your goals, budgets, and level of digital maturity.
+You have two powerful MatchCraft advertising services at your disposal. Let's figure out which one fits best for your goals, budgets, and level of digital maturity.
 
 
 ## MatchCraft Ad Service Options
@@ -26,11 +26,11 @@ You have two powerful MatchCraft advertising services at your disposal — now l
 - Already have a basic website or social presence  
 - Prefer simplicity over deep customization  
 
-### Why you’d choose Express Ads:
+### Why you'd choose Express Ads:
 - Campaigns launch almost instantly via AI-powered automation  
 - Focuses on **search ads only**, targeting people actively looking  
 - Low cost of entry, minimal ongoing maintenance  
-- Very hands-off — the service does the heavy lifting  
+- Very hands-off, the service does the heavy lifting  
 
 ### Typical use cases:
 - Promoting seasonal specials, limited-time offers, or local events  
@@ -38,12 +38,14 @@ You have two powerful MatchCraft advertising services at your disposal — now l
 - Boosting foot traffic during specific times (e.g. brunch hours, happy hour)  
 - Hiring campaigns for local talent  
 
-> Note: this service may currently only be available for certain billing currencies, with broader availability coming later.
+:::note
+This service may currently only be available for certain billing currencies, with broader availability coming later.
+:::
 
 
 ## 2. MatchCraft Managed Ads Campaign
 
-**Best for:** When you’ve moved past “get noticed” and are now focused on **growth and conversions**.
+**Best for:** When you've moved past "get noticed" and are now focused on **growth and conversions**.
 
 ### Ideal profile:
 - Businesses with growing marketing needs (e.g. boutique fitness studios, restaurants expanding services, professional services)  
@@ -51,7 +53,7 @@ You have two powerful MatchCraft advertising services at your disposal — now l
 - Some online presence and marketing experience  
 - Want to run campaigns across multiple channels and optimize performance  
 
-### Why you’d choose the Managed Campaign:
+### Why you'd choose the Managed Campaign:
 - Flexibility to advertise across **search, social, display, and video**  
 - A specialist continuously oversees and optimizes the campaign  
 - Strategies are conversion-focused (leads, signups, purchases)  
@@ -88,26 +90,27 @@ Here are a few quick decision prompts to help you match service to situation:
 
 ## Summary
 
-Whichever MatchCraft ads path you choose, you’re leveraging powerful AI-driven automation with the flexibility to match your goals, budget, and digital readiness.  
+Whichever MatchCraft ads path you choose, you're leveraging powerful AI-driven automation with the flexibility to match your goals, budget, and digital readiness.
 
-- **Express Ads** are fast and affordable — ideal when speed and awareness matter more than fine-tuned customization.  
+- **Express Ads** are fast and affordable, ideal when speed and awareness matter more than fine-tuned customization.  
 - **Managed Ads Campaign** is for growth-minded businesses ready to scale across channels and focus on conversions.
 
-Always review your budget, current digital presence, and appetite for campaign management before selecting the right service.  
+Always review your budget, current digital presence, and appetite for campaign management before selecting the right service.
 
-*Note: Pricing thresholds, features, and availability may vary by currency or geographic region. Always double-check local availability before selecting a specific MatchCraft ads service.*
+:::note
+Pricing thresholds, features, and availability may vary by currency or geographic region. Always double-check local availability before selecting a specific MatchCraft ads service.
+:::
 
 ## Frequently asked questions (FAQs)
 
 <details>
+<summary>How is the "Expert's choice" platform decided?</summary>
 
-<summary>How is the “Expert’s choice” platform decided?</summary>
+The platform(s) for "Expert's choice" will be selected by our digital ads analyst and specialist teams based on expert opinion and research to best achieve the goals/KPIs laid out by you. We'll take into account the vertical, budget, and the product or service being advertised.
 
-The platform(s) for “Expert’s choice” will be selected by our digital ads analyst and specialist teams based on expert opinion and research to best achieve the goals/KPIs laid out by you. We'll take into account the vertical, budget, and the product or service being advertised.
 </details>
 
 <details>
-
 <summary>How am I billed for these campaigns?</summary>
 
 All campaigns are billed for Month 1 at the time of order and will automatically renew monthly on the anniversary date of the order. For example:
@@ -117,36 +120,38 @@ All campaigns are billed for Month 1 at the time of order and will automatically
     <li><b>February 1st:</b> You are charged for the second month of the campaign and the monthly management fee.</li>
 </ul>
 Campaigns will aim to spend the full amount for the month once the campaign launches. However, any unused spend will be rolled over to the next month.
+
 </details>
 
 <details>
-
 <summary>How are campaigns optimized?</summary>
 
 Automated bidding, built-in budget management, and smart optimizations allow for campaigns to be edited and optimized as they progress, making the most of your ad spend within the platform. Campaigns will be optimized according to their goals, budget, and platform needs.
+
 </details>
 
 <details>
 <summary>What are audience segments and how many can I have?</summary>
 
 An audience segment narrows the target audience into subgroups to deliver more tailored messaging. They can be based on geographic location, gender identity, income, and more. Depending on the ad spend tier, you will get 4-6 audience segments. The highest tier level receives a custom number of segments depending on the product/service and platform chosen.
+
 </details>
 
 <details>
 <summary>How is reporting delivered?</summary>
 
 Reporting will be shared via a live link accessible through your dashboard. The reporting will be connected to your campaigns 1-5 business days after the campaign launches.
+
 </details>
 
 <details>
-
 <summary>What is the cancellation or refund policy?</summary>
 
 All cancellations must have a 5 business day notice period. If the cancellation is submitted at the last minute and the renewal happens, we will run the campaign for the amount that was renewed until the end of the month. When that request is made, the digital ads team will spend the remainder of the ad dollars for that cycle, and they will not run the campaign the following month. You will need to cancel this product in the platform to ensure you are not charged again the following month. Read **[this](matchcraft-ad-services-refund-policy.md)** article for more information.
+
 </details>
 
 <details>
-
 <summary>What is the one-time setup fee and what is included in the charge?</summary>
 
 The setup fee is the one-time cost of creating and launching the campaign. It includes the following:
@@ -157,116 +162,117 @@ The setup fee is the one-time cost of creating and launching the campaign. It in
     <li>Audience research (keyword and competitor)</li>
     <li>Campaign audit & launch</li>
 </ul>
+
 </details>
 
 <details>
-
 <summary>What is the management fee and why am I charged a management fee for my campaign?</summary>
 
 The management fee is a percentage charged on top of the monthly wholesale ad spend. This fee ensures our team can optimize, analyze, and report on the campaign each month.
+
 </details>
 
 <details>
-
 <summary>How does the management fee work when I increase ad spend or add a Boost?</summary>
 
 The management fee is a percentage based on the wholesale ad spend and is added on top of the spend. If the ad spend increases, you will see the exact dollar amount you will be charged for the management fees, whether this change comes from a Boost or additional spend.
+
 </details>
 
 <details>
-
 <summary>Will I be able to see my campaign within my own Ads Manager?</summary>
 
 No, all campaigns will be run through our Ads Manager. Doing so allows us to ensure control of all aspects of the campaign and maintain white labeling.
+
 </details>
 
 <details>
-
 <summary>If I am already using a Meta Pixel, are we able to continue using this?</summary>
 
 To use your Meta Pixel, you will have to add our Business Manager ID to the Pixel. This ID number will be provided by our team upon request.
+
 </details>
 
 <details>
-
 <summary>What price will be shown on the advertising reporting dashboard?</summary>
 
 The dashboard will show the wholesale ad spend being spent on the campaign unless you change that by going into the "settings" feature and manually calculating the "Management Markup Fees."
+
 </details>
 
 <details>
-
 <summary>Do you provide stock images for Meta & Instagram?</summary>
 
 Stock images can be provided if required. However, using professional images of the business is recommended for a more authentic and engaging campaign. Additional custom graphics are available through the [Digital Ads: Creative service](https://partners.vendasta.com/marketplace/products/MP-2JB3LB2H8N77R325X84KBNP4XDTTMRGC), which is sold separately.
+
 </details>
 
 <details>
-
 <summary>How often can I make changes to my campaign?</summary>
 
 Campaigns running on $500-$2999 or $3000+ budgets may get 1 or 2 rounds of free revisions, respectively. After launching the campaign, we recommend waiting 3 months before making any edits to the promotion, goals, or creatives, as those changes can impact the progress of the campaign. During this time, our specialists will be optimizing the campaign and may make minor adjustments to the ad copy, targeting, and bids. For creative edits that fall outside of this realm, you may purchase the Hourly Charge add-on to make adjustments.
+
 </details>
 
 <details>
-
 <summary>Why is my retail markup no longer displayed on the reporting dashboard?</summary>
 
 To meet compliance requirements for advertising vendors (Meta/Instagram and Google/Bing), we will no longer be responsible for configuring and implementing a markup on the data within our reporting platform. You have the ability to set the appropriate markup on the setting level of all advertising reports for your business.
+
 </details>
 
 <details>
-
 <summary>What do we need to do to get started on a YouTube campaign?</summary>
 
 You will need to provide a URL link to the video hosted on your existing YouTube channel, as well as the URL to the landing page for the ad (the page that you would want people to be directed to when they click on the ad).
+
 </details>
 
 <details>
-
 <summary>What happens if I don't use all of my ad spend? Will I get a refund?</summary>
 
 No. Unused ad spend will not be refunded. When agreeing to a certain amount, we will always work to exhaust the entire campaign budget.
+
 </details>
 
 <details>
-
 <summary>What information do I need to provide?</summary>
 
 For Meta Ads, we will need access to the local business's Meta Page through Meta Business Manager. Please ensure you have the necessary access to approve Meta Business Manager Requests. If you have Google Tag Manager & Google Analytics, we will need you to provide us access. You can do so by adding the provided email address as an admin user.
+
 </details>
 
 <details>
-
 <summary>Do you have any examples of digital ads your team has done before?</summary>
 
 Of course! [Visit this website](https://examples.yourdigitalagents.com/) to find a variety of examples of projects we've worked on before.
+
 </details>
 
 <details>
-
 <summary>Will I be required to complete any verification?</summary>
 
 All Google Search campaigns will be required to complete Google's Advertiser Verification to run ads on their platform. Please use [this link](https://support.google.com/adspolicy/answer/9872280?sjid=5470708600397400684-NC) to find the documents required by location and provide them at your earliest convenience. Any ads being run for an unverified advertiser account are subject to suspension by Google until the verification process is completed.
+
 </details>
 
 <details>
-
 <summary>Do you support ads on Google Maps?</summary>
 
 Yes, local search ads can show on Google Maps after the owner of the Google Business Profile (GBP) authorizes access to the platform.
+
 </details>
 
 <details>
-
 <summary>Where should I upload attachments for my order?</summary>
 
 Please upload all attachments in the attachments section within the fulfillment form. Alternatively, you can email your attachments to our team. This ensures our team can access all documents to provide you with excellent service.
+
 </details>
 
 <details>
-
 <summary>Do you provide direct access to the ad account in Google, Microsoft, or Meta?</summary>
 
 We do not provide direct access to the Ad Manager accounts used for advertising on platforms such as Google, Microsoft, and Meta. These accounts are owned and managed by our team to maintain compliance, performance optimization, and operational efficiency. While we do not grant direct access to our managed accounts, we will provide historical reporting and campaign setup details to help you rebuild campaigns independently in the future.
+
 </details>

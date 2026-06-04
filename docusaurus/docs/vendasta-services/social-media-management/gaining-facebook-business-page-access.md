@@ -1,32 +1,28 @@
 ---
 title: "Gaining Facebook business page access"
 sidebar_label: "Facebook page access"
-description: "You want to build up your social following and ensure you're staying top-of-mind by providing continuous content to your customers. By partnering with our team"
+description: "How to accept a Facebook page access request from Vendasta Services so our team can post on your customer's behalf."
 sidebar_position: 4
 ---
 
-You want to build up your social following and ensure you're staying top-of-mind by providing continuous content to your customers. By partnering with our team, we'll help save you the hassle of keeping up on your social presence so you can focus more on running your business.
+Before Vendasta Services can begin posting on a customer's Facebook page, the customer will need to accept an access request from our team. Share these steps with your customer to get them set up.
 
-### Accept the Facebook access request
+## Accept the Facebook access request
 
 For our team to post on your behalf, we will need access to your Facebook page. You retain full ownership and control over the page; this access request simply allows us to operate on your behalf and post to your page.
 
 Log in to Facebook and switch your profile to your business page.
 
-<img src="/img/17694178489495-001c1be351.png" alt="Facebook Access" width="80%"/>
+<img src={require('./img/17694178489495-001c1be351.png').default} alt="Switching to a Facebook business page profile" style={{width: '80%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-Once switched, you should appear on Manage Page. 
+Once switched, click **Settings** from your Page menu.
 
-Click Settings. 
+<img src={require('./img/17694178489495-a9c18c0dca.png').default} alt="Facebook Page Settings menu" style={{width: '80%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-<img src="/img/17694178489495-a9c18c0dca.png" alt="Settings" width="80%"/>
+In the left panel, click **Page setup**, then select **Page access**.
 
-Now click on New Page Experiences
+<img src={require('./img/17694178489495-cc8f91030c.png').default} alt="Page access section in Facebook Page settings" style={{width: '80%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-<img src="/img/17694178489495-cc8f91030c.png" alt="New Page Experiences" width="80%"/>
+You will see a pending access request from Vendasta Services or Digital Agency. Accept the request.
 
-You'll see a section for Page Access and inside of it you may see an access request from Vendasta Services or Digital Agency.
-
-Accept the request.
-
-<img src="/img/17694178489495-9417c9d805.png" alt="Facebook Page Access request" width="80%"/>
+<img src={require('./img/17694178489495-9417c9d805.png').default} alt="Accepting the Facebook page access request from Vendasta Services" style={{width: '80%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
