@@ -60,6 +60,47 @@ The base Campaigns Pro plan includes email (e.g. 10,000 emails/month). To send S
 
 - **[SMS campaigns](./sms-campaigns.mdx)**: SMS add-on, creating and setting up SMS campaigns (one-time or recurring), audience selection, scheduling, and compliance.
 
+## Troubleshooting campaigns
+
+### "Some contacts cannot be added to this campaign"
+
+This error occurs when a campaign uses **dynamic fields** (e.g., a personalization variable like `{{first_name}}`) and one or more contacts are missing a value for that field. Contacts with missing values are excluded.
+
+**How to fix it:**
+- Remove or make optional the dynamic field from the email step, or
+- Update the affected contacts in the CRM to fill in the missing field values before adding them to the campaign.
+
+### Campaign shows "Ongoing" but no emails are being delivered
+
+1. Confirm that recipients were actually added — open the campaign and check the **Contacts** tab to verify the contact list is populated.
+2. Check that contact email addresses are valid (no obvious formatting errors).
+3. Confirm the campaign has at least one published email step.
+
+### Email delivery delays (deferred emails)
+
+Emails may be **deferred** rather than sent immediately if the receiving mail server temporarily rejects them. This is a normal part of email delivery — the sending system retries automatically. Deferred emails are not failures; they typically deliver within a few hours. No action is needed unless an email remains undelivered for more than 24 hours.
+
+### Featured templates not loading
+
+If the templates gallery appears blank or fails to load, check whether the account has complete **business profile information**, particularly the business name, address, and phone number (NAP). Missing NAP data can prevent template rendering.
+
+**How to fix:** Go to **Business App** → **Administration** → **Business Profile** and ensure all required fields are filled in.
+
+### Image upload errors
+
+Supported image formats for campaigns are **JPEG** and **PNG**. If an upload fails:
+- Confirm the file is a `.jpg` or `.png` (not `.webp`, `.gif`, `.heic`, etc.)
+- Keep file size under 5 MB
+- Try re-saving the image in an image editor and re-uploading
+
+### Restarting a published campaign with the same contact list
+
+Published campaigns cannot be re-sent to the same list directly. To send again:
+
+1. Open the campaign and click **Duplicate** (or use the three-dot menu → **Copy campaign**).
+2. Add your contacts to the new copy.
+3. Publish the copy.
+
 ## Frequently asked questions
 
 <details>

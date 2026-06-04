@@ -175,6 +175,48 @@ Connecting your business accounts is one of the most critical steps to maximize 
    - **Comprehensive View**: Complete customer interaction history
    - **Improved Reputation**: Consistent review collection process
 
+### How to Connect Facebook
+
+**Requirements:**
+- The Business App user must be an **Admin** on the Facebook page they are connecting.
+- The user must log in directly to Business App — partners cannot complete this connection via impersonation.
+
+**Steps:**
+1. In Business App, go to **Administration** → **Connections** → **Browse**.
+2. Find the **Facebook** card and click **Connect**.
+3. Sign in to Facebook and grant the requested permissions.
+
+**How to remove a Facebook connection:**
+
+You cannot remove a Facebook connection from within the Connections settings directly. To remove it:
+
+1. Go to the product powered by the Facebook connection (e.g., **Reputation Management**).
+2. Find the connected Facebook page listing.
+3. Select **Remove this match** to disconnect the page.
+
+### How to Connect WhatsApp
+
+**Requirements:**
+- The business must have a **payment method on file in Meta Business Platform** before WhatsApp can be connected.
+- WhatsApp uses the same Meta Business account as Facebook.
+
+**Steps:**
+1. Go to **Administration** → **Connections** → **Browse** and find the **WhatsApp** card.
+2. Click **Connect** and follow the Meta authorization flow.
+3. If the connection drops, go to the same card and click **Reconnect**, then re-authorize through Meta.
+
+### How to Connect LinkedIn
+
+**Requirements:**
+- The Business App user must have **Superadmin (Admin) privileges** on the LinkedIn Page they want to connect — Page Admin access is not sufficient.
+
+**Steps:**
+1. Go to **Administration** → **Connections** → **Browse** and find the **LinkedIn** card.
+2. Click **Connect** and sign in to LinkedIn.
+3. Select the page to connect and authorize.
+
+If the connection fails, verify that the user holds Superadmin-level access on the LinkedIn Page in LinkedIn's settings.
+
 ### How to Set Up Google Analytics Connection
 
 <img src={require('./img/business-app/google-analytics/ga4-connection-1.jpg').default} alt="GA4 connection process" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
@@ -243,6 +285,43 @@ Connecting your business accounts is one of the most critical steps to maximize 
 <summary>Why can't I connect QuickBooks when impersonating a user?</summary>
 
 QuickBooks integration requires the actual Business App user to log in directly. Partners cannot impersonate users to complete this connection. Only the user who connects QuickBooks can see and interact with the QuickBooks data in Business App.
+</details>
+
+<details>
+<summary>Why is the Facebook connection failing or showing a loading error?</summary>
+
+Facebook connection issues are most often caused by insufficient page permissions. The Business App user must be a **Facebook Page Admin** — not just an editor or analyst. Try the following:
+1. Confirm Admin access on the Facebook page in Facebook Business Settings.
+2. Clear your browser cache and cookies, or try connecting in an incognito window.
+3. Disconnect any existing Facebook connection, then reconnect.
+</details>
+
+<details>
+<summary>How do I remove a Facebook connection from Business App?</summary>
+
+You cannot remove a Facebook connection from the Connections settings directly. Instead, go to the product that uses the Facebook connection (e.g., Reputation Management), find the Facebook page listing, and select **Remove this match** to disconnect it.
+</details>
+
+<details>
+<summary>Why can't I connect WhatsApp in Business App?</summary>
+
+WhatsApp requires a **payment method on file in Meta Business Platform** before the connection can be authorized. If payment is not set up, the Meta authorization flow will block the connection. Add a payment method in Meta Business Manager, then retry the WhatsApp connection.
+</details>
+
+<details>
+<summary>What permissions do I need to connect a LinkedIn account?</summary>
+
+The user connecting LinkedIn must hold **Superadmin (Admin)** privileges on the LinkedIn Page — standard Page Admin access is not sufficient. Verify the permission level in LinkedIn's Page settings before attempting to connect.
+</details>
+
+<details>
+<summary>General tips for fixing a connection that won't complete</summary>
+
+If a social or third-party connection fails to load or authorize:
+- **Clear browser cache and cookies**, then retry.
+- **Use an incognito/private window** to rule out cached session issues.
+- **Verify permissions** — many connections require specific admin roles on the external platform (see the platform-specific sections above).
+- **Disconnect and reconnect** — remove the existing connection in the Manage tab, then reconnect fresh.
 </details>
 
 <details>
