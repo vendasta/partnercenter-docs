@@ -173,7 +173,13 @@ Use AskUserQuestion:
 
 **After all items for an article are complete**, move straight to the next article without a summary — keep momentum going.
 
-**After all articles are complete**, output a short closing summary. If issues were fetched from GitHub, include a ready-to-use PR closing block:
+**After all articles are complete**, if any articles had items in their **Needs verification** section, print a compact checklist before the closing summary:
+
+> **Before creating your PR, verify these manually in the live product:**
+> - [Article title]: [the specific thing to check]
+> - [Article title]: [the specific thing to check]
+
+Then output the closing summary. If issues were fetched from GitHub, include a ready-to-use PR closing block:
 
 ```
 ## Approval flow complete
@@ -187,8 +193,7 @@ Use AskUserQuestion:
 **Still needs follow-up** — [N] item(s)
 - [Article title]: [what's outstanding and why — SME review, manual rename, etc.]
 
-**PR closing keywords**
-Add this to your PR description to link and auto-close the verified issues on merge:
+**Add to your PR description to auto-close the verified issues on merge:**
 Closes #NNN
 Closes #NNN
 Closes #NNN
@@ -196,7 +201,7 @@ Closes #NNN
 
 Use one `Closes #NNN` per line — GitHub only reliably parses one issue per closing keyword, so comma-separated lists on a single line may only close the first issue.
 
-Only include issues that reached **Pass** or **Needs Update** (i.e. all fixes applied) in the closing keywords block. Leave **Needs SME Review** issues out — they should stay open until the SME question is resolved.
+Only include issues that reached **Pass** or **Needs Update** (i.e. all fixes applied). Leave **Needs SME Review** issues out — they should stay open until the SME question is resolved.
 
 ### Step 9: Comment on GitHub issues
 
@@ -221,64 +226,6 @@ Verified by Claude Code on [today's date]. Changes will be included in an upcomi
 Post a comment for every issue — including SME review ones. For SME review issues, note what question still needs answering so it is clear why the issue remains open.
 
 Do this automatically without asking — it is just a log entry, not a destructive action.
-
-### Step 10: Create pull request
-
-**Only run this step if issues were fetched from GitHub in Step 1.**
-
-After posting comments, offer to create the PR. Give the user a brief summary of what will be in it before asking:
-
-> "Ready to open a PR with all the changes from this verification run. It will include `Closes #NNN, #NNN` in the description to auto-close the linked issues on merge."
-
-Use AskUserQuestion:
-- Question: `Create the PR now?`
-- Option 1: `Yes — create it`
-- Option 2: `No — I'll create it manually`
-
-If the user confirms, first ensure all changes are committed on a branch:
-
-```bash
-git status
-```
-
-If there are uncommitted changes, commit them:
-
-```bash
-git add -A
-git commit -m "docs: verify articles — [brief summary of articles covered]
-
-Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>"
-```
-
-Then push and create the PR:
-
-```bash
-git push -u origin HEAD
-gh pr create \
-  --title "docs: verify flagged articles — [date]" \
-  --body "$(cat <<'EOF'
-## Summary
-[Bullet list of what was verified and what changed per article]
-
-## Issues resolved
-Closes #NNN
-Closes #NNN
-Closes #NNN
-
-## Still needs follow-up
-[Any Needs SME Review items, or "None"]
-
-🤖 Generated with [Claude Code](https://claude.com/claude-code)
-EOF
-)"
-```
-
-Only include `Closes #NNN` for issues with status **Pass** or **Needs Update** (all fixes applied). Leave SME review issues out of the closing keywords so they remain open.
-
-If the user declines, remind them to add the closing keywords to their PR description manually and show the block again:
-
-> "When you create the PR, add this to the description to link the issues:
-> `Closes #NNN, #NNN`"
 
 ---
 
@@ -359,16 +306,6 @@ Read each sentence and flag:
 
 **Callout blocks:**
 - `:::info`, `:::warning`, `:::note`, `:::tip` must be closed. Flag unclosed blocks.
-
-**Images:**
-- Every image must have alt text describing what is shown — not just "screenshot" or "image"
-- Images must use the `<img>` tag with `require()`, not plain markdown `![]()` syntax:
-  ```jsx
-  <img src={require('./img/image-name.png').default} alt="Description" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
-  ```
-- Every `<img>` tag must include the standard style: `border: '1px solid #e0e0e0'`, `borderRadius: '8px'`, `boxShadow: '0 2px 8px rgba(0,0,0,0.08)'`, and an explicit `width`
-- Image filenames should be kebab-case: `connect-facebook.png` not `ConnectFacebook.png`
-- Images should live in `./img/` inside the article's folder
 
 ---
 
@@ -470,16 +407,8 @@ Produce one block per article. Use this exact structure:
 - https://example.com/guide — 404 Not Found (broken)
 - ../accounts/connect-profile.md — file not found (broken internal link)
 
-**Product/UI references to confirm**
-[List of UI element names, navigation paths, or product references that may need verification against the live product. Use "None" if nothing stands out.]
-
-**Potentially outdated content**
-[List of anything that sounds like it may not reflect the current product, even if not definitively outdated. Flag for SME review rather than asserting incorrectness.]
-
-**Suggested next action**
-Pass → No action needed.
-Needs Update → [Summarize what remains after auto-fixes were applied. Note any pending-approval items still outstanding.]
-Needs SME Review → [What specific question needs SME input?]
+**Needs verification**
+[UI element names, navigation paths, product references, or content claims to spot-check against the live product. Use "None" if nothing stands out.]
 
 ---
 ```
@@ -519,14 +448,8 @@ The article is mostly clear and well-structured. Two audience-language issues an
 **Link check**
 - https://partners.vendasta.com/accounts — 301 Redirect to https://partners.vendasta.com/client-accounts (redirect acceptable, destination valid)
 
-**Product/UI references to confirm**
+**Needs verification**
 - Step 3: "Locations" tab under Account settings — verify this tab name is current in the live product.
-
-**Potentially outdated content**
-- None identified.
-
-**Suggested next action**
-Needs Update → Auto-fixes applied. One product/UI reference outstanding — confirm the "Locations" tab name before closing.
 
 ---
 ```
