@@ -273,6 +273,39 @@ You can upload files directly to contact records to maintain organized documenta
 
 Learn more about [file uploads](../file/crm-file-upload.mdx) and supported file types.
 
+## Bulk deleting contacts
+
+You can delete multiple contact records at once to clean up CRM data.
+
+:::warning
+Bulk deletion is **permanent and cannot be undone**. Export any records you may need before deleting.
+:::
+
+**Limits:** Contacts are deleted in batches of **100 records** at a time.
+
+**Steps:**
+
+1. Go to **Partner Center** > **CRM** > **Contacts**.
+2. Increase the items-per-page setting to show more records (up to 100).
+3. Use filters or search to narrow to the records you want to delete.
+4. Click the top-left checkbox to select all visible records.
+5. Click **Actions** > **Delete**.
+6. Confirm the deletion.
+
+Repeat for additional batches if you need to delete more than 100 contacts.
+
+## Tag formatting rules
+
+Tags help you organize and filter contact records. To work correctly in filters and search, tags must follow these formatting rules:
+
+- **Character limit**: 50 characters maximum
+- **Allowed characters**: Letters (A–Z, a–z), numbers (0–9), dashes (`-`), spaces, and underscores (`_`)
+- **Special characters**: Not supported — tags containing characters such as `@`, `#`, `&`, `!`, or `%` may appear to save but will not work correctly in filters or search
+
+:::warning
+Tags with unsupported characters may appear to save successfully but will silently fail in filtering and search. If a tag filter isn't returning expected results, check the tags on those records for special characters.
+:::
+
 ## Contact field management
 
 The CRM provides comprehensive default contact fields that help you store and track important information about your contacts. These fields can be customized to match your specific business needs and ensure you capture all relevant prospect information throughout your sales process.
