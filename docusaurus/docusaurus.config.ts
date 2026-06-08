@@ -302,6 +302,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           // AI Workforce Optimization Plan content is now on every service page
           { from: '/vendasta-services/ai-workforce-setup/ai-workforce-optimization-plan', to: '/vendasta-services/ai-workforce-setup/ai-data-analyst-setup' },
           { from: '/vendasta-services/working-with-our-team/white-labeling-communications-with-vendasta-services', to: '/vendasta-services/working-with-our-team' },
+          { from: '/administration/platform-settings/ai-workforce', to: '/ai/ai-workforce' },
+          { from: '/administration/platform-settings/ai-knowledge-base', to: '/ai/knowledge-base' },
+          { from: '/administration/my-account/reports', to: '/reports' },
+          { from: '/administration/my-account/financial-documents', to: '/administration/my-account/my-billing' },
+          { from: '/administration/my-account/company-profile', to: '/administration/my-account' },
         ],
       },
     ],
