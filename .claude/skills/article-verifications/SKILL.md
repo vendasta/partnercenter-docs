@@ -98,7 +98,7 @@ Work through pending items **one article at a time**, in the order they appeared
 
 > "**[Article title]** ([path/to/file.mdx](path/to/file.mdx)) — [N] item(s) need your input."
 
-**For each individual pending item**, present the proposal clearly before asking. Always include the filename as a clickable link so the user can jump to the file:
+**For each individual pending item**, output the context block as plain text first — before calling AskUserQuestion. Do not put this content inside the option descriptions. Always include the filename as a clickable link so the user can jump to the file:
 
 ```
 **Issue:** [One plain sentence — no jargon — describing what was found and why it matters]
@@ -107,10 +107,12 @@ Work through pending items **one article at a time**, in the order they appeared
 **Proposed:** "[exact replacement text]"
 ```
 
-Then use AskUserQuestion with:
+Output that block as text, then immediately call AskUserQuestion with:
 - Question: `Apply this change?`
 - Option 1: `Yes — apply it`
 - Option 2: `No — skip it`
+
+Keep the option descriptions brief (one short sentence max) — all the detail the user needs is in the text block above. Do not repeat the Issue/Current/Proposed content inside the option descriptions.
 
 The question automatically includes an "Other" free-text field. If the user types their own version there, apply their text instead of the proposed change — do not apply the original proposed text.
 
@@ -118,7 +120,7 @@ Apply, apply-custom, or skip based on the response, then immediately move to the
 
 ---
 
-**Special cases — use these instead of the standard format when the item doesn't have an obvious proposed change:**
+**Special cases — use these instead of the standard format when the item doesn't have an obvious proposed change. As with the standard format, output the context block as text first, then call AskUserQuestion:**
 
 **Prohibited term with no obvious replacement:**
 
