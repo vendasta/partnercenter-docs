@@ -146,7 +146,7 @@ Reporting will be shared via a live link accessible through your dashboard. The 
 
 <summary>What is the cancellation or refund policy?</summary>
 
-All cancellations must have a 5 business day notice period. If the cancellation is submitted at the last minute and the renewal happens, we will run the campaign for the amount that was renewed until the end of the month. When that request is made, the digital ads team will spend the remainder of the ad dollars for that cycle, and they will not run the campaign the following month. You will need to cancel this product in the platform to ensure you are not charged again the following month. Read **[this](matchcraft-ad-services-refund-policy.md)** article for more information.
+All cancellations must have a 5 business day notice period. If the cancellation is submitted at the last minute and the renewal happens, we will run the campaign for the amount that was renewed until the end of the month. When that request is made, the digital ads team will spend the remainder of the ad dollars for that cycle, and they will not run the campaign the following month. You will need to cancel this product in Partner Center to ensure you are not charged again the following month. See the refund policy in the [Digital Advertising FAQ](./index.mdx) for more information.
 </details>
 
 <details>

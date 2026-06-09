@@ -95,6 +95,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
+          // Vendasta Services digital advertising: short articles merged into the section FAQ
+          { from: '/vendasta-services/digital-advertising/matchcraft-ad-services-refund-policy', to: '/vendasta-services/digital-advertising/' },
+          { from: '/vendasta-services/digital-advertising/criteria-for-unskippable-youtube-ads', to: '/vendasta-services/digital-advertising/' },
+          { from: '/vendasta-services/digital-advertising/how-to-request-a-budget-change-on-matchcraft-ad-services-spend', to: '/vendasta-services/digital-advertising/' },
           // Payment fees: duplicate article removed, redirect to vendasta-payments index
           { from: '/administration/commerce/vendasta-payments/payment-fees-and-options', to: '/administration/commerce/vendasta-payments/' },
           // Web chat GA4 article moved from business-app/conversations to conversations
