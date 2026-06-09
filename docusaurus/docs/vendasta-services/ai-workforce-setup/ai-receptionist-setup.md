@@ -14,19 +14,24 @@ import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
 
 The AI Receptionist Setup is a done-for-you service where our experts configure, train, and launch the AI Receptionist for your business. Our team handles the technical setup, installs the chat widget on your website, builds out your CRM pipeline and lead management, configures booking and service-area connections, and sets up automations so you never miss a lead.
 
-## What's included?
+There are two ways to get the AI Receptionist, and you choose one or the other:
 
-### CRM pipeline and lead management
+- **Setup**: a **one-time fee**. Our experts configure, train, and launch your AI Receptionist (everything in "What's included with setup" below).
+- **AI Workforce Optimization Plan**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
+
+## What's included with setup
+
+### 1. CRM pipeline and lead management
 
 To properly manage your leads, we will create a smart list and a sales pipeline for you in the CRM. The smart list automatically pulls all web chat and form leads into a single contact list, while the pipeline tracks new opportunities and can show the dollar value of each lead. You will also receive tasks and notifications for new leads.
 
-### Booking, inventory, and service area connections
+### 2. Booking, inventory, and service area connections
 
 * **Appointment Booking:** We can connect your calendar to the AI Receptionist to book appointments on your behalf. If a direct connection via API is not possible, the receptionist will provide a booking link to your customers instead.
 * **Service Area Lookup:** For service-based businesses, we can configure a custom capability that handles zip code lookups to ensure leads are within your service area.
 * **Inventory Connection:** For retail stores with an e-commerce website, we can set up a custom capability (through an open API) to look up inventory information and provide real-time updates.
 
-### Automation creation
+### 3. Automation creation
 
 Our team will set up 3-5 automations depending on your business needs. These automations will send you notifications for new leads and also send follow-ups to your leads to ensure they have a way to reach you.
 

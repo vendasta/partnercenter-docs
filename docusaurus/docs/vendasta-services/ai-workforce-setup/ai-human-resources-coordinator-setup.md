@@ -14,13 +14,18 @@ import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
 
 The AI Human Resources Coordinator Setup is a do-it-with-me service where our experts configure, train, and launch the AI Human Resources Coordinator for your business. Our team handles the technical setup, configures the PolicyScope framework, sets up your escalation contacts, uploads all HR policy documents and handbooks to the knowledge base, and connects optional capabilities such as appointment booking.
 
-## What's included?
+There are two ways to get the AI Human Resources Coordinator, and you choose one or the other:
 
-### AI Employee profile
+- **Setup**: a **one-time fee**. Our experts configure, train, and launch your AI Human Resources Coordinator (everything in "What's included with setup" below).
+- **AI Workforce Optimization Plan**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
+
+## What's included with setup
+
+### 1. AI Employee profile
 
 We create a custom AI Employee with a name and avatar that represents your HR team. Employees interact with a professional HR persona that is warm, accurate, and appropriately cautious with sensitive topics. The profile is configured within the **AI Workforce** section of Business App.
 
-### PolicyScope framework
+### 2. PolicyScope framework
 
 We configure the PolicyScope framework — a three-level routing system that governs how the AI handles every HR inquiry:
 
@@ -32,11 +37,11 @@ We configure the PolicyScope framework — a three-level routing system that gov
 The AI will never guess or fabricate answers to personal questions — it is designed to redirect before it over-reaches.
 :::
 
-### Escalation contact configuration
+### 3. Escalation contact configuration
 
 We populate the Level 2 redirect language with your actual HR contact's name, role, phone, and email — so employees receive a clear, specific direction rather than a generic "speak to HR" message. Additional escalation contacts for Level 3 (IT, Finance, Legal) can be added at any time.
 
-### Knowledge base setup
+### 4. Knowledge base setup
 
 We upload every policy document, employee handbook, benefit guide, onboarding checklist, and FAQ provided during setup. This is the most critical step — the AI can only answer questions it has been given the information to answer.
 
@@ -44,11 +49,11 @@ We upload every policy document, employee handbook, benefit guide, onboarding ch
 The AI HR Coordinator is an internal tool and does not require a chat widget or website installation. No code will be added to your public website.
 :::
 
-### Optional: Appointment booking
+### 5. Optional: Appointment booking
 
 If your HR team uses a connected Google, Outlook, or Microsoft calendar in Business App, we can enable the AI to schedule meetings with HR team members directly in the conversation.
 
-### Optional: Google Drive sync
+### 6. Optional: Google Drive sync
 
 If your HR policies are stored and maintained in Google Drive, we can configure an automated sync so that policy updates in your Drive folder are automatically reflected in the AI's knowledge base. This requires brief access to your Google Drive folder structure.
 

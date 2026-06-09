@@ -14,13 +14,18 @@ import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
 
 The AI Support Agent Setup is a done-for-you service where our experts configure, train, and launch the AI Support Agent for your business. Our team handles the technical setup, configures the HEARD support framework, connects your requested channels (web chat, SMS, Facebook, Instagram, WhatsApp, and email), installs the chat widget on your website, and builds out the knowledge base so the AI can resolve customer inquiries without fabricating information.
 
-## What's included?
+There are two ways to get the AI Support Agent, and you choose one or the other:
 
-### AI Employee profile
+- **Setup**: a **one-time fee**. Our experts configure, train, and launch your AI Support Agent (everything in "What's included with setup" below).
+- **AI Workforce Optimization Plan**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
+
+## What's included with setup
+
+### 1. AI Employee profile
 
 We configure the AI Employee with a name and avatar that represents your business. Customers interact with a professional support persona rather than a generic bot. The profile is configured within the **AI Workforce** section of Business App.
 
-### HEARD Support Framework
+### 2. HEARD Support Framework
 
 We configure the HEARD framework, a structured support methodology that guides every conversation through five stages:
 
@@ -32,7 +37,7 @@ We configure the HEARD framework, a structured support methodology that guides e
 
 For simple questions, the AI answers immediately. For complaints or unresolved issues, it follows the full sequence.
 
-### Escalation logic
+### 3. Escalation logic
 
 We configure your escalation rules so the AI hands off to your team only when it genuinely can't help, not for every inquiry it receives. Escalation is triggered when the AI cannot find an answer in the knowledge base, or when the issue requires human judgment. At that point, the AI smoothly transitions the conversation and captures the customer's contact information.
 
@@ -40,7 +45,7 @@ We configure your escalation rules so the AI hands off to your team only when it
 The quality and completeness of your knowledge base directly affects how often escalations are triggered. A well-documented FAQ reduces unnecessary handoffs to your team.
 :::
 
-### Channel setup
+### 4. Channel setup
 
 We connect all channels requested during the onboarding call. Supported channels include:
 
@@ -57,7 +62,7 @@ Each channel routes conversations to your AI Support Agent automatically, so cus
 SMS for U.S. businesses requires A2P registration before it can be activated. See the [requirements](#requirements) below for details.
 :::
 
-### Chat widget installation
+### 5. Chat widget installation
 
 For web chat, we will install the chat widget directly on your website, typically in the global footer or homepage, so it is visible to customers across all pages. We will need login access to the place where you edit your website (for example, WordPress, Wix, Squarespace, or whichever platform you use to manage your site).
 
@@ -65,7 +70,7 @@ For web chat, we will install the chat widget directly on your website, typicall
 If you are unable to provide website access, we will provide the embed code and installation instructions for your team or web developer to install independently.
 :::
 
-### Knowledge base setup
+### 6. Knowledge base setup
 
 We connect your business profile, website, and any FAQs, policies, or help documentation to the AI's knowledge base. This allows the Support Agent to answer questions about your services, hours, policies, and more without fabricating information.
 

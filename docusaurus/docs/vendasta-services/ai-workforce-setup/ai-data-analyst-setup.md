@@ -14,13 +14,18 @@ import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
 
 The AI Data Analyst Setup is a done-for-you service where our experts configure, train, and launch the AI Data Analyst for your business. Our team handles the technical setup, connects your active data sources (CRM, Reviews/NPS, Social), and configures the AIR Analysis Framework so every response delivers a clear finding, a plain-language interpretation, and a recommended next step.
 
-## What's included?
+There are two ways to get the AI Data Analyst, and you choose one or the other:
 
-### AI Employee profile
+- **Setup**: a **one-time fee**. Our experts configure, train, and launch your AI Data Analyst (everything in "What's included with setup" below).
+- **AI Workforce Optimization Plan**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
+
+## What's included with setup
+
+### 1. AI Employee profile
 
 We create a custom AI Employee with a name and avatar that represents your analytical team. Business owners and managers interact directly with the Data Analyst through Business App to ask questions and receive structured insights. The profile is configured within the **AI Workforce** section of Business App.
 
-### AIR Analysis Framework
+### 2. AIR Analysis Framework
 
 We configure the AIR framework, the structured methodology that guides every AI response:
 
@@ -34,7 +39,7 @@ Every response follows this structure automatically, so you receive a clear find
 The AI will never surface raw data dumps or vague summaries. If it cannot produce a structured AIR response, it will say so clearly rather than generating an unhelpful answer.
 :::
 
-### Data source connections
+### 3. Data source connections
 
 The AI Data Analyst requires Conversations AI (any edition) and at least one of the following data sources to be active: **CRM AI**, **Reputation AI**, **Social Marketing**, or **Local SEO**. The quality and depth of insights depend directly on how much data is available in each connected source. Once we determine what is active, we connect the data sources available in your account:
 
@@ -43,7 +48,7 @@ The AI Data Analyst requires Conversations AI (any edition) and at least one of 
 * **Social engagement:** post performance and engagement metrics from connected social accounts
 
 
-### Knowledge base setup
+### 4. Knowledge base setup
 
 We connect your business profile and website, and upload any supplementary documents (price lists, service catalogs, or team structure information) that provide context the AI can use when interpreting your data.
 
