@@ -205,7 +205,11 @@ Your customer will also receive an automated message (email or SMS) letting them
 
 SMS is available for all Canadian and U.S. businesses. Please let our team know during the onboarding call if you'd like to utilize email, SMS, or both.
 
-**Note:** If you're located in the U.S., please be prepared to supply your legal business information for A2P registration.
+:::note
+
+If you're located in the U.S., please be prepared to supply your legal business information for A2P registration.
+
+:::
 
 </details>
 

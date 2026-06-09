@@ -129,7 +129,11 @@ Any plugin not added by our team will have limited support and if a plugin is no
 
 For any other type of customization, please reach out to [websites@yourdigitalagents.com](mailto:websites@yourdigitalagents.com) for a quote for the custom work needed.
 
-**Note:** Any additional images/product changes beyond the included will be charged at a per product/image rate. Any new functionality changes to sites will need to be scoped out and charged at a per hour rate. The monthly charge does not include maintaining or integrating emails.
+:::note
+
+Any additional images/product changes beyond the included will be charged at a per product/image rate. Any new functionality changes to sites will need to be scoped out and charged at a per hour rate. The monthly charge does not include maintaining or integrating emails.
+
+:::
 
 </details>
 

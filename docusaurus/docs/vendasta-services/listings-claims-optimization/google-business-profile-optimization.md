@@ -26,10 +26,13 @@ You may be required to comply with one of Google's allowed verification methods,
 * **Postcard:** A physical postcard with a PIN is mailed to the business's physical address, which can take two weeks or more. P.O. boxes cannot be used.
 * **Email:** Google sends a PIN to an email address at the business’s domain.
 
-> **Please note:**
->*   You may need to verify with more than one method.
->*   The available methods depend on a variety of factors (Google cites business category, public information, region, and more).
->*   We do not have visibility on the method that Google will select for any given business, nor can we control or change the methods available when claiming and verifying a business.
+:::note Please note
+
+*   You may need to verify with more than one method.
+*   The available methods depend on a variety of factors (Google cites business category, public information, region, and more).
+*   We do not have visibility on the method that Google will select for any given business, nor can we control or change the methods available when claiming and verifying a business.
+
+:::
 
 
 ### 3. Initial profile optimization

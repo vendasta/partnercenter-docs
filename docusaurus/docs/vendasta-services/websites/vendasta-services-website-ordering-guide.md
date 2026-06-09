@@ -32,7 +32,11 @@ Product activation must be completed in the platform before any work is started.
 
 This page will dynamically request all of the information that our team needs to complete your website. That means that sections will expand to collect more information if required, based on previous answers. Some fields are required to begin, while others provide us with additional details that will help with the website's construction but could be provided later.
 
-**Tip:** The more information we have early on, the better! With copy, images, and products to include in the store (for an e-commerce website), we can include them early. However, we don't need everything at once. For example, if you don't have a photo of your team for your About Us page, we can include a stock photo as a placeholder on the live site until the real photo is ready.
+:::tip
+
+The more information we have early on, the better! With copy, images, and products to include in the store (for an e-commerce website), we can include them early. However, we don't need everything at once. For example, if you don't have a photo of your team for your About Us page, we can include a stock photo as a placeholder on the live site until the real photo is ready.
+
+:::
 
 The following sections break down important information and details about each section in the Website Creation & Content Form. You can refer back to this as you complete the form for the first time. 
 
@@ -46,7 +50,13 @@ This section will request the contact information for the main point of contact 
 
 The emails that you supply in the Account Representative Email and the Primary Contact Email fields will receive copies of the form after submission.
 
-**Note:** One of the questions will ask “What is the AGID for this Website?” The AGID is the account’s unique identification code inside of the Vendasta platform. We receive many forms that may contain similar business names, and so this code allows our team to tie your Website Creation & Content Form to the correct account and product activation. The AGID can be found on your client's Account page under their Business Details. (Navigation: _Partner Center > Businesses > Accounts > Client account_) ![Screen_Shot_2022-09-16_at_10.53.36_AM.png](./img/19127162749463-de8c3b1267.png) 
+:::note
+
+One of the questions will ask “What is the AGID for this Website?” The AGID is the account’s unique identification code inside of the Vendasta platform. We receive many forms that may contain similar business names, and so this code allows our team to tie your Website Creation & Content Form to the correct account and product activation. The AGID can be found on your client's Account page under their Business Details. (Navigation: **Partner Center** → **Businesses** → **Accounts** → **Client account**)
+
+![Finding the AGID on the Account page](./img/19127162749463-de8c3b1267.png)
+
+:::
 
 ### Domain
 
@@ -65,7 +75,11 @@ In this section, you can choose your template, fonts, color palette, and images.
 
 **The template is the most important choice for your website.** Select from one of our [templates](https://1l.ink/LJZQDWL)
 
-**Note:**  The template is key for any web development work to start. If you do not have a template selected, then our team will not be able to start building the website, but we can set up an "Under Construction" branded landing page until you are ready to begin.
+:::note
+
+The template is key for any web development work to start. If you do not have a template selected, then our team will not be able to start building the website, but we can set up an "Under Construction" branded landing page until you are ready to begin.
+
+:::
 
 Our team uses [123rf.com](https://www.123rf.com/) for stock images and [Flaticon.com](https://www.flaticon.com/) for icons. You can provide Image IDs from these sources and/or links to a Google Drive or Dropbox folder with assets you want to be included on your website. If you have not selected or provided assets, our team will choose them on your behalf.
 
@@ -93,7 +107,11 @@ When you submit your form, you will be taken to a confirmation page that include
 
 The PDF and a text copy of the form are sent to the email addresses that were included in the Account Representative Email and the Primary Contact Email fields.
 
-**Tip:** While a copy of the form is sent to our team and the specified emails provided, downloading the form will ensure you have a copy and will allow you to upload it in the next step. This makes it easier for our team to connect the right Website Content & Creation Form to the activation.
+:::tip
+
+While a copy of the form is sent to our team and the specified emails provided, downloading the form will ensure you have a copy and will allow you to upload it in the next step. This makes it easier for our team to connect the right Website Content & Creation Form to the activation.
+
+:::
 
 ## Activate the product
 

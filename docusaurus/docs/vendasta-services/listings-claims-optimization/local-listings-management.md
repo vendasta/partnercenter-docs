@@ -35,9 +35,11 @@ Each listing site has its own methods for verifying a business. You may be prese
 * Video verification
 * Postcard verification
 
-> **Postcard verification**
->
- > If a physical postcard is the only option, it will be mailed to the business address. This postcard contains a PIN that must be entered to complete the claim. These PINs expire within 30 days, so it is critical to provide the PIN to our team as soon as it is received.
+:::warning Postcard verification
+
+If a physical postcard is the only option, it will be mailed to the business address. This postcard contains a PIN that must be entered to complete the claim. These PINs expire within 30 days, so it is critical to provide the PIN to our team as soon as it is received.
+
+:::
 
 
 * **Timeline:** Verification timelines can range from minutes to weeks, depending on the platform and method. A final confirmation email will be sent once the work is complete.

@@ -38,7 +38,11 @@ You have two powerful MatchCraft advertising services at your disposal — now l
 - Boosting foot traffic during specific times (e.g. brunch hours, happy hour)  
 - Hiring campaigns for local talent  
 
-> Note: this service may currently only be available for certain billing currencies, with broader availability coming later.
+:::note
+
+this service may currently only be available for certain billing currencies, with broader availability coming later.
+
+:::
 
 
 ## 2. MatchCraft Managed Ads Campaign

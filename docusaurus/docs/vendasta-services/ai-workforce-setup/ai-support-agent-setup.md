@@ -210,7 +210,11 @@ When a lead is captured or an escalation occurs, you will receive a notification
 
 SMS is available for all Canadian and U.S. businesses. Email is also available as a support channel. Please let our team know during the onboarding call which channels you'd like to utilize.
 
-**Note:** If you're located in the U.S., please be prepared to supply your legal business information for A2P registration.
+:::note
+
+If you're located in the U.S., please be prepared to supply your legal business information for A2P registration.
+
+:::
 
 </details>
 
