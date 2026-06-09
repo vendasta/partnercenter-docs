@@ -1,6 +1,7 @@
 ---
 title: "Website Plugins | Working with Vendasta Services"
 sidebar_label: "Plugins"
+sidebar_position: 8
 description: "What are website plugins?  \n A website plugin adds additional functionality to a WordPress website that isn't provided as a standard setting by the website bu"
 updated_at: "2024-07-02T16:38:25Z"
 labels: []

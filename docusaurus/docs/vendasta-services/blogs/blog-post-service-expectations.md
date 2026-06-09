@@ -1,6 +1,6 @@
 ---
 title: "Blog post service expectations"
-sidebar_label: "Blog Post One-Time & Monthly"
+sidebar_label: "Blog Posts"
 sidebar_position: 1
 description: "Service expectations for Vendasta Services blog posts—one-time and monthly. Learn about timelines, revisions, SEO features, and publishing."
 ---
