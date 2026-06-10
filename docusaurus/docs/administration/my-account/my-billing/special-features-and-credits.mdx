@@ -99,7 +99,7 @@ A Credit note is a receipt issued by Vendasta to a Partner who has canceled a pr
 
 ### How to Access Credit Notes
 
-Your credit note history can be found in **Partner Center > Administration > Financial Documents > Credit notes**.
+Your credit note history can be found in `Partner Center` → `Administration` → `Financial Documents` → `Credit notes`.
 
 ![Credit notes screen in Partner Center](./img/credit-notes.jpg)
 
@@ -127,7 +127,7 @@ Credit notes represent:
 
 ### How to Check Your vCash Balance
 
-If you have vCash, you can find your balance by browsing [Partner Center > Administration > My Billing > Billing & Payments](https://partners.vendasta.com/billing/by-purchase).
+If you have vCash, you can find your balance by browsing [Partner Center → Administration → My Billing → Billing & Payments](https://partners.vendasta.com/billing/by-purchase).
 
 ![vCash balance screen](./img/vcash-balance.jpg)
 
@@ -145,6 +145,36 @@ Your vCash balance will be automatically applied to the purchase. If you do not 
 - If your vCash balance is less than the purchase amount, the remaining balance will be charged to your payment method
 - vCash can be used for any product or service in the Vendasta ecosystem
 - Credits are applied in the order they were issued
+
+## Discounts and volume commitments
+
+### What is a volume commitment?
+
+A volume commitment is a contractual agreement to activate a minimum number of products per month. If you don't reach that minimum by month-end, you are billed for the shortfall — regardless of whether the products were actively used. Volume commitments are a contractual obligation, not usage-based billing.
+
+### Why you may see a charge even if you didn't use a product
+
+If you have a volume commitment for a product and your activations fall short of the minimum, the platform bills the difference at month-end. This charge is not a billing error — it reflects the committed volume you agreed to.
+
+### How discounts work (seat-based logic)
+
+Discounts on Vendasta products are allocated as a fixed number of seats per billing period. These seats are assigned on a **first-come, first-served** basis to the accounts that activate or renew the discounted product earliest in the month.
+
+- If all discount seats are filled early in the month, later activations are charged at the standard rate.
+- Discounts are not account-specific by default — they apply to whichever accounts use the product first.
+
+### Timing rule for discounts
+
+The Vendasta platform operates on **UTC**. Discount expiry occurs at **6:00 PM CST on the last day of the billing period**. Activations processed after that cutoff will not qualify for the expiring discount, even if they appear to fall within the same calendar day in your local time zone.
+
+### How to view your discounts
+
+To see the discounts currently applied to your account:
+
+1. Navigate to `Partner Center` → `Administration` → `My Billing`
+2. Click the **Discounts** tab
+
+This shows your active discount agreements, including the number of committed seats and the discount rate.
 
 ## Managing Credits and Fees
 
@@ -175,13 +205,13 @@ Management fees are additional charges that apply to certain Vendasta products. 
 <details>
 <summary>How do I access my credit notes?</summary>
 
-Your credit note history can be found in **Partner Center > Administration > Financial Documents > Credit notes**. Credit notes are issued when you cancel products or services and receive credits for future use.
+Your credit note history can be found in `Partner Center` → `Administration` → `Financial Documents` → `Credit notes`. Credit notes are issued when you cancel products or services and receive credits for future use.
 </details>
 
 <details>
 <summary>What is vCash and how do I use it?</summary>
 
-vCash is virtual credit that can be used for any purchase in the Vendasta ecosystem. It's automatically applied to eligible purchases, and you can check your balance in **Partner Center > Administration > My Billing > Billing & Payments**.
+vCash is virtual credit that can be used for any purchase in the Vendasta ecosystem. It's automatically applied to eligible purchases, and you can check your balance in `Partner Center` → `Administration` → `My Billing` → `Billing & Payments`.
 </details>
 
 <details>
@@ -212,4 +242,16 @@ Yes, vCash can be used for any purchase in the Vendasta ecosystem, including sub
 <summary>Do credit notes expire?</summary>
 
 Credit note terms may vary. Check your specific credit note details or contact support for information about expiration dates and usage terms.
+</details>
+
+<details>
+<summary>Why am I being charged for a volume commitment if I didn't activate the product?</summary>
+
+Volume commitments are billed at month-end based on the number of activations you contracted for — not the number you used. If your activations fall below the committed minimum, you are charged for the difference. This is a contractual obligation. Review your commitment details in the **Discounts** tab under `Administration` → `My Billing`.
+</details>
+
+<details>
+<summary>Why was I charged full price for a product that should have been discounted?</summary>
+
+Discounts are seat-based and assigned on a first-come, first-served basis. If all available discount seats were filled by other activations earlier in the billing period, your activation received no discount. Additionally, activations processed after 6:00 PM CST on the last day of the billing period will not qualify for a discount expiring that period, even if they fall within the same calendar day in your local time zone.
 </details>

@@ -1,40 +1,31 @@
 ---
-title: "Ordering Vendasta Services Products: Best Practices"
-sidebar_label: "Ordering Vendasta Services Products: Best Practices"
+title: "Ordering Vendasta Services products: best practices"
+sidebar_label: "Ordering Vendasta Services products: best practices"
 description: "Ordering products - General    Ordering Vendasta Services products is the same as  ordering any product  in the platform. It's important to know that our team"
 ---
 
-### Ordering products - General
+## Ordering products - general
 
 Ordering Vendasta Services products is the same as [ordering any product](../../commerce/orders/creating-and-managing-orders.mdx) in the platform. It's important to know that our teams require additional information after the product has been ordered so they can successfully fulfill the service in line with what you and your customers require.
 
-1.  Go to Partner Center > Businesses > Accounts > Click on the account for which you want to place an order
-2.  Click Order Products
+1.  Go to `Partner Center` → `Businesses` → `Accounts` and click on the account for which you want to place an order
+2.  Click `Order Products`
 3.  Select the package(s) or product(s) you wish to order
     *   You may be prompted to activate additional products that are needed to fulfill services (eg. Social Marketing is needed for our team to post as part of our social posting services)
-4.  Click Proceed to Next Step
+4.  Click `Proceed to Next Step`
 5.  Review and fill in any contact information
-6.  Click Next
-7.  Review and Purchase
+6.  Click `Next`
+7.  `Review and Purchase`
 
 After completing the purchase, you will be presented with a [fulfillment form](./important-completing-fulfillment-forms). This form contains necessary details to be completed so that Vendasta Services teams can successfully complete the work that has been purchased.
 
-Check out this video for full details on inputting information, sharing, and submitting a fulfillment form.
-
-### Ordering - Website Services
+## Ordering - website services
 
 Website services in particular require a lot of information about a business in order to successfully create their website and web copy with expedient turnaround times. Check out our [website ordering guide](../websites/vendasta-services-website-ordering-guide.md) and the video below for more info.
 
-:::note
+## Ordering - digital ads
 
-The following video showcases an older workflow from before the implementation of fulfillment forms. The workflow is very similar, with the exception that the ability to upload a content form pdf comes _after_ the purchase.
-
-:::
-
-### Ordering - Digital Ads
-
-When ordering Digital Ads, you will be required to choose the ad spend for the campaign. This is the amount specific to the ad spend and then the system will calculate the ad management fee for you. You will be prompted to do this between steps 4 and 5 in the workflow noted above. 
+When ordering Digital Ads, you are required to choose the ad spend for the campaign. This is the amount specific to the ad spend and the system calculates the ad management fee for you. You will be prompted to do this between steps 4 and 5 in the workflow noted above. 
 
 Note that the ad spend, management fee, and setup fees are all a part of the wholesale cost.
 
-Check out this video to learn more:
