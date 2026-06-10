@@ -1,5 +1,5 @@
 ---
-title: "AI Inside Sales Representative: Service Expectations"
+title: "AI Inside Sales Representative: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Inside Sales Representative"
 description: "An overview of the AI Inside Sales Representative service, detailing the process from the fulfillment form through onboarding, ISR configuration, training, and the 30-day check-in."
 ---
@@ -14,17 +14,26 @@ import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
 
 The AI Inside Sales Representative (ISR) Setup is a do-it-with-me service where our experts configure, train, and launch the AI Inside Sales Representative for your business. Our team handles the technical setup, configures a sales-qualified persona, sets up lead discovery and qualification logic, enables lead capture and appointment booking capabilities, and connects your knowledge sources — including your services list, website, and FAQs.
 
-## What's included?
+:::info Two ways to get the AI Inside Sales Representative
 
-### AI Employee profile
+Choose one or the other:
+
+- **Setup**: a **one-time fee**. Our experts configure, train, and launch your AI Inside Sales Representative (everything in "What's included with setup" below).
+- **AI Workforce Optimization Plan**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
+
+:::
+
+## What's included with setup
+
+### 1. AI Employee profile
 
 We create a custom AI Employee with a name and avatar that represents your business. Customers interact with a professional sales persona rather than a generic bot. The profile is configured within the **AI Workforce** section of Business App.
 
-### Sales role prompt
+### 2. Sales role prompt
 
 We configure a confident, empathetic inbound sales consultant persona for your ISR. The prompt is designed to guide customers toward a solution — an appointment or consultation — rather than simply collecting a message. Every conversation is kept moving forward with qualifying questions and clear next steps.
 
-### Lead discovery and qualification
+### 3. Lead discovery and qualification
 
 We set up a custom capability that defines the qualification logic: the ISR confirms your business can actually serve the customer's need before capturing their contact information. If a customer asks about a service you do not offer, the ISR politely informs them and stops the lead capture process — no wasted time for your sales team.
 
@@ -32,7 +41,7 @@ We set up a custom capability that defines the qualification logic: the ISR conf
 The quality of your services list directly affects qualification accuracy. A specific services list — for example, 'furnace repair, AC installation, duct cleaning' rather than 'HVAC services' — allows the ISR to make faster, more accurate qualification decisions.
 :::
 
-### Lead capture and appointment booking
+### 4. Lead capture and appointment booking
 
 Built-in capabilities manage the full lead capture sequence: Name → Phone → Email. Phone number validation and objection handling are included — if a customer says 'just email me,' the ISR acknowledges their preference, explains the value of a quick call, and pivots. If they object a second time, the ISR accepts email as a fallback.
 
@@ -42,7 +51,7 @@ When a calendar is connected, the ISR checks availability and books appointments
 Appointment booking requires a connected Google, Outlook, or Microsoft calendar in Business App. Without it, the ISR qualifies and captures leads but cannot schedule meetings.
 :::
 
-### Knowledge base setup
+### 5. Knowledge base setup
 
 We connect your business profile, website, services list, and any FAQs to the ISR's knowledge base. This allows the ISR to answer questions about your services, pricing, hours, and location accurately — without fabricating information.
 
@@ -205,7 +214,11 @@ Your customer will also receive an automated message (email or SMS) letting them
 
 SMS is available for all Canadian and U.S. businesses. Please let our team know during the onboarding call if you'd like to utilize email, SMS, or both.
 
-**Note:** If you're located in the U.S., please be prepared to supply your legal business information for A2P registration.
+:::note
+
+If you're located in the U.S., please be prepared to supply your legal business information for A2P registration.
+
+:::
 
 </details>
 

@@ -1,5 +1,5 @@
 ---
-title: "AI Reputation Specialist: Service Expectations"
+title: "AI Reputation Specialist: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Reputation Specialist"
 description: "An overview of the AI Reputation Specialist service, detailing the process from the fulfillment form to the final configuration and ongoing support."
 ---
@@ -14,9 +14,18 @@ import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
 
 The AI Reputation Specialist Setup is a done-for-you service where our experts configure, train, and launch the AI Reputation Specialist for your business. Our team handles all the technical configuration and customization, tailoring the setup to your specific business needs. The service focuses on configuring automated review responses, requesting new reviews, and managing reputation workflows.
 
-## What's included?
+:::info Two ways to get the AI Reputation Specialist
 
-### One-time setup
+Choose one or the other:
+
+- **Setup**: a **one-time fee**. Our experts configure, train, and launch your AI Reputation Specialist (everything in "What's included with setup" below).
+- **AI Workforce Optimization Plan**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
+
+:::
+
+## What's included with setup
+
+### 1. One-time setup
 
 * Onboarding and training call
 * Configure & train the AI Reputation Specialist
@@ -25,7 +34,7 @@ The AI Reputation Specialist Setup is a done-for-you service where our experts c
 * Install review display widgets
 * Align brand voice, templates, and messaging
 
-### Monthly service
+### 2. Monthly service
 
 * Adjustments to prompts, automations, and any AI employee feature updates
 * Responding to platforms outside of Google & Facebook*

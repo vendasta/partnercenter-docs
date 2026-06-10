@@ -11,7 +11,11 @@ This guide provides an overview of setting up and using the Advertising Intellig
 *   To get started, ensure relevant accounts are connected under the settings section.
 *   Once an account is connected, admins can edit and adjust management fees to be applied to the ad spend. 
 
-**Note:** Our Ads team does not update ad management fees. These must be updated by a partner administrator.
+:::note
+
+Our Ads team does not update ad management fees. These must be updated by a partner administrator.
+
+:::
 
 ### 2\. Metrics Control
 

@@ -72,12 +72,6 @@ LinkedIn ads have a higher minimum ad spend, but the value of conversions can be
 A key consideration is that LinkedIn ads cannot be white-labeled. Ads must be managed through personal LinkedIn accounts, which are publicly searchable. This limitation means you may want to adjust how you present LinkedIn ad campaign processes to your clients. If you’d like recommendations on how to pivot this approach, we recommend reaching out to your Vendasta sales rep for their insight.
 * **Supported by:** [MatchCraft Managed Ads Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN)
 
-## Amazon Display Ads
-
-Amazon Display ads allow businesses to reach shoppers with image-based banners on and off Amazon, across a network of sites and apps. This helps increase brand and product awareness by targeting users based on their shopping behaviors.
-
-*Please note*: This platform is currently available only for businesses located in the United States.
-
 ## Request a Proposal
 
 To have our strategists review your campaign goals and provide platform, budget, and strategy recommendations, you can [request a digital ads proposal](https://digital-ads-proposal.websitepro.hosting/) prior to ordering.
