@@ -23,6 +23,24 @@ MatchCraft Managed Ads Campaign is a **do-it-with-me** solution where our advert
 * **Advertising Intelligence reporting** connected in Business App, available throughout the campaign period.
 * **Audience segments:** depending on the ad spend tier, you'll get **4–6 audience segments** (subgroups based on geographic location, gender identity, income, and more).
 
+### Spend tiers and features
+
+What's included scales with your monthly ad spend. Management fees are added on top of the ad spend amount—see the product pricing for your management fee percentage.
+
+| Feature | $500–$999/mo | $1,000–$2,999/mo | $3,000+/mo |
+|---|---|---|---|
+| **Ad channels** | 1 | Up to 2 | Up to 3 |
+| **Ad types** | Google/Bing Search, Meta | Google/Bing Search, Google Display, PMax, Meta, YouTube Video | Google/Bing Search, Google Display, PMax, Meta, YouTube Video, LinkedIn |
+| **Strategy call with an Ads Specialist** | — | Every quarter | Every month |
+| **Campaign edits** | 1 round per month | 1 round per month | 2 rounds per month |
+| **Advertising Intelligence reporting** | ✅ | ✅ | ✅ |
+| **Custom optimization** | Ongoing and as needed based on performance | Ongoing and as needed based on performance | Ongoing and as needed; recent major updates reviewed on the strategy call |
+| **Conversion setup** | 1 call tracking line | 1 call tracking line, GA4 setup | 1 call tracking line, GA4 setup |
+
+:::note
+This service is not white-labeled, and our team will not work directly with your clients. Reach out to your business representative for more information.
+:::
+
 <details>
 <summary>Key terms</summary>
 
