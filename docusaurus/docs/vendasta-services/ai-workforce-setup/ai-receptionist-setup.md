@@ -1,5 +1,5 @@
 ---
-title: "AI Receptionist: Service Expectations"
+title: "AI Receptionist: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Receptionist"
 description: "An overview of the AI Receptionist service, detailing the process from the initial call to the final configuration and ongoing support."
 ---
@@ -14,10 +14,14 @@ import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
 
 The AI Receptionist Setup is a done-for-you service where our experts configure, train, and launch the AI Receptionist for your business. Our team handles the technical setup, installs the chat widget on your website, builds out your CRM pipeline and lead management, configures booking and service-area connections, and sets up automations so you never miss a lead.
 
-There are two ways to get the AI Receptionist, and you choose one or the other:
+:::info Two ways to get the AI Receptionist
+
+Choose one or the other:
 
 - **Setup**: a **one-time fee**. Our experts configure, train, and launch your AI Receptionist (everything in "What's included with setup" below).
 - **AI Workforce Optimization Plan**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
+
+:::
 
 ## What's included with setup
 

@@ -1,5 +1,5 @@
 ---
-title: "AI Data Analyst: Service Expectations"
+title: "AI Data Analyst: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Data Analyst"
 description: "An overview of the AI Data Analyst service, detailing the process from the fulfillment form through data source configuration, training, and the 30-day check-in."
 ---
@@ -14,10 +14,14 @@ import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
 
 The AI Data Analyst Setup is a done-for-you service where our experts configure, train, and launch the AI Data Analyst for your business. Our team handles the technical setup, connects your active data sources (CRM, Reviews/NPS, Social), and configures the AIR Analysis Framework so every response delivers a clear finding, a plain-language interpretation, and a recommended next step.
 
-There are two ways to get the AI Data Analyst, and you choose one or the other:
+:::info Two ways to get the AI Data Analyst
+
+Choose one or the other:
 
 - **Setup**: a **one-time fee**. Our experts configure, train, and launch your AI Data Analyst (everything in "What's included with setup" below).
 - **AI Workforce Optimization Plan**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
+
+:::
 
 ## What's included with setup
 

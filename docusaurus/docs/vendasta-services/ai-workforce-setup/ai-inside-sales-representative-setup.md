@@ -1,5 +1,5 @@
 ---
-title: "AI Inside Sales Representative: Service Expectations"
+title: "AI Inside Sales Representative: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Inside Sales Representative"
 description: "An overview of the AI Inside Sales Representative service, detailing the process from the fulfillment form through onboarding, ISR configuration, training, and the 30-day check-in."
 ---
@@ -14,10 +14,14 @@ import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
 
 The AI Inside Sales Representative (ISR) Setup is a do-it-with-me service where our experts configure, train, and launch the AI Inside Sales Representative for your business. Our team handles the technical setup, configures a sales-qualified persona, sets up lead discovery and qualification logic, enables lead capture and appointment booking capabilities, and connects your knowledge sources — including your services list, website, and FAQs.
 
-There are two ways to get the AI Inside Sales Representative, and you choose one or the other:
+:::info Two ways to get the AI Inside Sales Representative
+
+Choose one or the other:
 
 - **Setup**: a **one-time fee**. Our experts configure, train, and launch your AI Inside Sales Representative (everything in "What's included with setup" below).
 - **AI Workforce Optimization Plan**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
+
+:::
 
 ## What's included with setup
 

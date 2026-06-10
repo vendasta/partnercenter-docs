@@ -1,5 +1,5 @@
 ---
-title: "AI Human Resources Coordinator: Service Expectations"
+title: "AI Human Resources Coordinator: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Human Resources Coordinator"
 description: "An overview of the AI Human Resources Coordinator service, detailing the process from the fulfillment form through onboarding, HR Coordinator configuration, training, and the 30-day check-in."
 ---
@@ -14,10 +14,14 @@ import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
 
 The AI Human Resources Coordinator Setup is a do-it-with-me service where our experts configure, train, and launch the AI Human Resources Coordinator for your business. Our team handles the technical setup, configures the PolicyScope framework, sets up your escalation contacts, uploads all HR policy documents and handbooks to the knowledge base, and connects optional capabilities such as appointment booking.
 
-There are two ways to get the AI Human Resources Coordinator, and you choose one or the other:
+:::info Two ways to get the AI Human Resources Coordinator
+
+Choose one or the other:
 
 - **Setup**: a **one-time fee**. Our experts configure, train, and launch your AI Human Resources Coordinator (everything in "What's included with setup" below).
 - **AI Workforce Optimization Plan**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
+
+:::
 
 ## What's included with setup
 

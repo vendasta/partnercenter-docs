@@ -1,5 +1,5 @@
 ---
-title: "AI Support Agent: Service Expectations"
+title: "AI Support Agent: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Support Agent"
 description: "An overview of the AI Support Agent service, detailing the process from the fulfillment form through channel configuration, knowledge base setup, training, and the 30-day check-in."
 ---
@@ -14,10 +14,14 @@ import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
 
 The AI Support Agent Setup is a done-for-you service where our experts configure, train, and launch the AI Support Agent for your business. Our team handles the technical setup, configures the HEARD support framework, connects your requested channels (web chat, SMS, Facebook, Instagram, WhatsApp, and email), installs the chat widget on your website, and builds out the knowledge base so the AI can resolve customer inquiries without fabricating information.
 
-There are two ways to get the AI Support Agent, and you choose one or the other:
+:::info Two ways to get the AI Support Agent
+
+Choose one or the other:
 
 - **Setup**: a **one-time fee**. Our experts configure, train, and launch your AI Support Agent (everything in "What's included with setup" below).
 - **AI Workforce Optimization Plan**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
+
+:::
 
 ## What's included with setup
 
