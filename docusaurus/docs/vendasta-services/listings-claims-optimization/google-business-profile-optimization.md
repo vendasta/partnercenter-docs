@@ -4,23 +4,63 @@ sidebar_label: "Google Business Profile Optimization"
 description: "An overview of the fully managed Google Business Profile Optimization service, including the setup process, monthly maintenance, and what to expect"
 ---
 
-This guide outlines the process and expectations for the Google Business Profile (GBP) Optimization service. This is a fully managed solution where a team of listing specialists will claim, maintain, and optimize your business listing on a monthly basis.
+# Google Business Profile Optimization
 
-## The setup process
+## Overview
+
+Google Business Profile (GBP) Optimization is a fully managed solution where a team of listing specialists claims, maintains, and optimizes your business listing on a monthly basis.
+
+## What's Included
+
+The service includes a one-time initial optimization once the listing is claimed, plus an ongoing monthly service with two main components: monthly profile updates and content posting.
+
+### Initial profile optimization
+
+Once the listing is successfully claimed, the team performs an initial optimization to ensure the profile is accurate and complete. This includes:
+
+* Confirming the accuracy of the business name, address, phone number, website, hours, and category.
+* Adding a logo, cover photo, up to 5 videos, and up to 5 photos.
+* Adding attributes like Highlights, Amenities, and Service Options where applicable.
+
+You will receive a confirmation email within 2 business days after this work is completed.
+
+### Monthly profile updates
+
+Once per month, our team logs into the Google Business Profile to:
+
+* Ensure all information remains accurate.
+* Manage any edits you provide, including uploading new photos and videos.
+* Work to lift any listing suspensions that may occur to maintain your online presence.
+
+### Monthly content posting
+
+One service-based post is published to the listing each month. These posts provide general information about your business to potential customers.
+
+* Posts feature a call to action, such as `Book`, `Learn More`, or `Call Now`.
+* Content is based on relevant information and links from the business website.
+* Images are sourced from stock photo websites or the business website.
+* You can provide specific images or content you would like to see posted.
+
+## Prerequisites
+
+* **Eligibility:** Businesses that conduct in-person business with customers, either from a storefront or in a service area, are eligible. Not eligible: rental or for-sale properties, lead generation companies, brands/organizations/artists, and online-only businesses (including eCommerce). See [Google's guidelines](https://support.google.com/business/answer/3038177) for representing your business online.
+* **Business details for the fulfillment form:** Business name, address, phone number, website, hours, and category, plus a logo, cover photo, and any photos/videos.
+* **A physical address:** P.O. boxes cannot be used when claiming GBP listings.
+
+## Getting Started
 
 The initial setup involves submitting your business information, claiming and verifying the listing, and performing an initial optimization.
 
 ### 1. Submitting your information
 
-The process begins when you complete and submit a fulfillment form with your business details. To avoid delays, please provide as much detail as possible.
-
-The team will review the order and start the process within 2 business days. Initial fulfillment work will be completed within two business days of receiving the completed form.
+The process begins when you complete and submit a fulfillment form with your business details. To avoid delays, provide as much detail as possible. The team reviews the order and starts the process within 2 business days; initial fulfillment work is completed within two business days of receiving the completed form.
 
 ### 2. Listing claim and verification
 
-Our team will work to claim and verify the listing using the information you provided. This step can take two weeks or more to complete, depending on Google's requirements and how quickly requested information is provided.
+Our team works to claim and verify the listing using the information you provided. This step can take two weeks or more to complete, depending on Google's requirements and how quickly requested information is provided.
 
 You may be required to comply with one of Google's allowed verification methods, which can include:
+
 * **Video Verification:** Providing a video of the physical location, equipment, or assets used by the business. In some cases, this may be a live video call.
 * **Phone Call/Text Message:** Google sends an automated call or text with a PIN to the business phone number.
 * **Postcard:** A physical postcard with a PIN is mailed to the business's physical address, which can take two weeks or more. P.O. boxes cannot be used.
@@ -34,38 +74,11 @@ You may be required to comply with one of Google's allowed verification methods,
 
 :::
 
-
 ### 3. Initial profile optimization
 
-Once the listing is successfully claimed, the team will perform an initial optimization to ensure the profile is accurate and complete.
+Once the listing is claimed, the team performs the initial optimization (see [What's Included](#whats-included)) and sends a confirmation email within 2 business days, after which the monthly optimized service begins.
 
-This includes:
-* Confirming the accuracy of the business name, address, phone number, website, hours, and category.
-* Adding a logo, cover photo, up to 5 videos, and up to 5 photos.
-* Adding attributes like Highlights, Amenities, and Service Options where applicable.
-
-You will receive a confirmation email within 2 business days after this work is completed.
-
-## What's included in the monthly service?
-
-The ongoing service consists of two main components: monthly profile updates and content posting.
-
-### Monthly profile updates
-
-Once per month, our team will log into the Google Business Profile to:
-* Ensure all information remains accurate.
-* Manage any edits you provide, including uploading new photos and videos.
-* Work to lift any listing suspensions that may occur to maintain your online presence.
-
-### Monthly content posting
-
-One service-based post will be published to the listing each month. These posts are designed to provide general information about your business to potential customers.
-* Posts will feature a call to action, such as `Book`, `Learn More`, or `Call Now`.
-* Content is based on relevant information and links from the business website.
-* Images are sourced from stock photo websites or the business website.
-* You can provide specific images or content you would like to see posted.
-
-## Frequently Asked Questions (FAQs)
+## FAQ
 
 <details>
 
@@ -175,4 +188,3 @@ Making edits to a profile can sometimes trigger a re-verification requirement or
 * Vacation Rental
 * Wine Store (and other alcohol-related categories)
 </details>
-

@@ -4,104 +4,105 @@ sidebar_label: "Service Overview"
 description: "A guide to choosing between MatchCraft Express Ads and Managed Ads Campaign for different needs."
 ---
 
-You have two powerful MatchCraft advertising services at your disposal — now let's figure out which one fits best for your goals, budgets, and level of digital maturity.
+# MatchCraft Ads Services
 
+## Overview
 
-## MatchCraft Ad Service Options
+You have two powerful MatchCraft advertising services at your disposal—Express Ads and Managed Ads Campaign. This guide helps you figure out which one fits best for your goals, budget, and level of digital maturity.
 
 | Service | Best For | Key Benefits |
 |--------|----------|--------------|
 | **Express Ads** | Small local businesses, startups, minimal effort | Fast AI campaign setup, search-only focus, low budget, hands-off |
 | **Managed Ads Campaign** | Growing SMBs ready to scale and convert | Multi-platform flexibility, expert monthly optimization, conversion-driven |
 
+Whichever path you choose, you're leveraging powerful AI-driven automation with the flexibility to match your goals, budget, and digital readiness. **Express Ads** are fast and affordable—ideal when speed and awareness matter more than fine-tuned customization. **Managed Ads Campaign** is for growth-minded businesses ready to scale across channels and focus on conversions.
 
-## 1. MatchCraft Express Ads
+## What's Included
+
+### MatchCraft Express Ads
 
 **Best for:** Startup businesses, local shops, promotional campaigns, or if you have a limited budget and little time to invest.
 
-### Ideal profile:
-- Solo business owners or very small teams  
-- Monthly ad spend of **$100–$500+**  
-- Need quick brand visibility or event promotion  
-- Already have a basic website or social presence  
-- Prefer simplicity over deep customization  
+**Ideal profile:**
+- Solo business owners or very small teams
+- Monthly ad spend of **$100–$500+**
+- Need quick brand visibility or event promotion
+- Already have a basic website or social presence
+- Prefer simplicity over deep customization
 
-### Why you’d choose Express Ads:
-- Campaigns launch almost instantly via AI-powered automation  
-- Focuses on **search ads only**, targeting people actively looking  
-- Low cost of entry, minimal ongoing maintenance  
-- Very hands-off — the service does the heavy lifting  
+**Why you'd choose Express Ads:**
+- Campaigns launch almost instantly via AI-powered automation
+- Focuses on **search ads only**, targeting people actively looking
+- Low cost of entry, minimal ongoing maintenance
+- Very hands-off—the service does the heavy lifting
 
-### Typical use cases:
-- Promoting seasonal specials, limited-time offers, or local events  
-- Advertising a grand opening or promotional weekend  
-- Boosting foot traffic during specific times (e.g. brunch hours, happy hour)  
-- Hiring campaigns for local talent  
+**Typical use cases:**
+- Promoting seasonal specials, limited-time offers, or local events
+- Advertising a grand opening or promotional weekend
+- Boosting foot traffic during specific times (e.g. brunch hours, happy hour)
+- Hiring campaigns for local talent
 
 :::note
-
-this service may currently only be available for certain billing currencies, with broader availability coming later.
-
+This service may currently only be available for certain billing currencies, with broader availability coming later.
 :::
 
+### MatchCraft Managed Ads Campaign
 
-## 2. MatchCraft Managed Ads Campaign
+**Best for:** When you've moved past "get noticed" and are now focused on **growth and conversions**.
 
-**Best for:** When you’ve moved past “get noticed” and are now focused on **growth and conversions**.
+**Ideal profile:**
+- Businesses with growing marketing needs (e.g. boutique fitness studios, restaurants expanding services, professional services)
+- Monthly ad budgets starting around **$500–$3,000+**
+- Some online presence and marketing experience
+- Want to run campaigns across multiple channels and optimize performance
 
-### Ideal profile:
-- Businesses with growing marketing needs (e.g. boutique fitness studios, restaurants expanding services, professional services)  
-- Monthly ad budgets starting around **$500–$3,000+**  
-- Some online presence and marketing experience  
-- Want to run campaigns across multiple channels and optimize performance  
+**Why you'd choose the Managed Campaign:**
+- Flexibility to advertise across **search, social, display, and video**
+- A specialist continuously oversees and optimizes the campaign
+- Strategies are conversion-focused (leads, signups, purchases)
+- Ad spend is scaled and monitored over time
+- Adding call tracking ensures direct lead follow-up
 
-### Why you’d choose the Managed Campaign:
-- Flexibility to advertise across **search, social, display, and video**  
-- A specialist continuously oversees and optimizes the campaign  
-- Strategies are conversion-focused (leads, signups, purchases)  
-- Ad spend is scaled and monitored over time  
-- Adding call tracking ensures direct lead follow-up  
+**Typical use cases:**
+- Promoting memberships, services, or acquisition offers
+- Launching new service lines or seasonal promotions
+- Retargeting audiences or boosting engagement and signups
+- Scaling ad spend sensibly with ongoing optimization
 
-### Typical use cases:
-- Promoting memberships, services, or acquisition offers  
-- Launching new service lines or seasonal promotions  
-- Retargeting audiences or boosting engagement and signups  
-- Scaling ad spend sensibly with ongoing optimization  
+## Prerequisites
 
+* **Budget:** Express Ads suits roughly **$100–$500+/month**; Managed Ads Campaign starts around **$500–$3,000+/month**.
+* **Account access you'll provide:** For Meta Ads, access to the local business's Meta Page through Meta Business Manager (be ready to approve requests). If you use Google Tag Manager and Google Analytics, add our provided email as an admin. For YouTube campaigns, a URL to the hosted video plus the landing page URL. For Google Maps local search ads, the Google Business Profile owner must authorize access.
+* **Google Advertiser Verification:** All Google Search campaigns require Google's Advertiser Verification. Provide the documents required for your location promptly—unverified accounts are subject to suspension until verification is complete.
 
-## Choosing the Right Service
+*Pricing thresholds, features, and availability may vary by currency or geographic region. Always double-check local availability before selecting a specific MatchCraft ads service.*
 
-Here are a few quick decision prompts to help you match service to situation:
+## Getting Started
 
-1. **Budget & effort threshold:**  
-   - If ad spend is low and you want minimal involvement → consider *Express Ads*.  
-   - If ad spend is moderate to high, and you want ongoing results → lean toward *Managed Ads Campaign*.
+### Choosing the right service
 
-2. **Digital maturity:**  
-   - Solid web presence and social profiles, now wanting growth → *Managed Campaign*  
-   - Existing presence and occasional promotional needs → *Express Ads*  
+A few quick decision prompts to match service to situation:
 
-3. **Desired outcome:**  
-   - Brand visibility, awareness, fast launches → *Express Ads*  
-   - Lead generation, conversions, scalable growth → *Managed Campaign*  
-
-4. **Management preference:**  
-   - Hands-off, almost-zero effort → *Express Ads*  
+1. **Budget and effort threshold:**
+   - Low ad spend and minimal involvement → consider *Express Ads*.
+   - Moderate to high ad spend with ongoing results → lean toward *Managed Ads Campaign*.
+2. **Digital maturity:**
+   - Existing presence and occasional promotional needs → *Express Ads*
+   - Solid web presence and social profiles, now wanting growth → *Managed Campaign*
+3. **Desired outcome:**
+   - Brand visibility, awareness, fast launches → *Express Ads*
+   - Lead generation, conversions, scalable growth → *Managed Campaign*
+4. **Management preference:**
+   - Hands-off, almost-zero effort → *Express Ads*
    - Some involvement, collaboration preferred → *Managed Campaign*
 
+### Billing and launch
 
-## Summary
+* Campaigns are billed for Month 1 at the time of order and automatically renew monthly on the order anniversary. The Month 1 charge includes a one-time setup fee, the monthly management fee, and wholesale ad spend.
+* The one-time setup fee covers ad proofing, tracking code setup and verification, creative creation (when required), audience research (keyword and competitor), and campaign audit and launch.
+* Once launched, reporting is shared via a live link in your dashboard, connected 1–5 business days after the campaign launches.
 
-Whichever MatchCraft ads path you choose, you’re leveraging powerful AI-driven automation with the flexibility to match your goals, budget, and digital readiness.  
-
-- **Express Ads** are fast and affordable — ideal when speed and awareness matter more than fine-tuned customization.  
-- **Managed Ads Campaign** is for growth-minded businesses ready to scale across channels and focus on conversions.
-
-Always review your budget, current digital presence, and appetite for campaign management before selecting the right service.  
-
-*Note: Pricing thresholds, features, and availability may vary by currency or geographic region. Always double-check local availability before selecting a specific MatchCraft ads service.*
-
-## Frequently asked questions (FAQs)
+## FAQ
 
 <details>
 
