@@ -23,6 +23,19 @@ MatchCraft Managed Ads Campaign is a **do-it-with-me** solution where our advert
 * **Advertising Intelligence reporting** connected in Business App, available throughout the campaign period.
 * **Audience segments:** depending on the ad spend tier, you'll get **4–6 audience segments** (subgroups based on geographic location, gender identity, income, and more).
 
+### Platforms
+
+Your campaign can run across a range of platforms. The platforms available depend on your goals and spend level—see [Advertising platforms](./what-digital-ad-platforms-are-available-to-advertise-on-digital-ads-campaign.md) for full details.
+
+* **Search — Google & Bing:** Text ads shown when people actively search for your services (pay-per-click).
+* **Display — Google:** Image banners across websites to build awareness and retarget (pay-per-impression).
+* **Performance Max — Google:** Goal-based campaigns that run across Google's full inventory (Search, Display, YouTube, Gmail, and Maps).
+* **Meta — Facebook & Instagram:** Social ads for demand creation with precise audience targeting.
+* **YouTube:** Video ads before, during, or after videos, for reach and awareness.
+* **TikTok:** Short-form vertical (9:16) video in the For You feed and other placements; a TikTok creatives add-on can produce platform-native video.
+* **LinkedIn:** Business-focused ads for recruitment, lead generation, and visibility (higher minimum ad spend).
+* **Amazon Display:** Image banners on and off Amazon (currently US only).
+
 ### Spend tiers and features
 
 What's included scales with your monthly ad spend. Management fees are added on top of the ad spend amount—see the product pricing for your management fee percentage.
