@@ -236,7 +236,3 @@ The practice should be ready for **phone verification** when the listing site re
 
 Most listings can be reclaimed using **phone** or **postcard** verification. If a medical listing is already claimed or unclaimable, the **practitioner** may need to contact the site's Support for access, as the Listings Fulfillment team may not be permitted to make the request on their behalf.
 </details>
-
----
-
-*This document is provided for general information only and does not constitute an agreement. Information is provided without guarantee; the publisher disclaims liability arising from the use of this information.*
