@@ -95,6 +95,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
+          // Vendasta Services digital advertising: MatchCraft overview split into Express Ads + Managed Ads Campaign
+          { from: '/vendasta-services/digital-advertising/matchcraft-services-overview', to: '/vendasta-services/digital-advertising/' },
           // Vendasta Services digital advertising: short articles merged into the section FAQ
           { from: '/vendasta-services/digital-advertising/matchcraft-ad-services-refund-policy', to: '/vendasta-services/digital-advertising/' },
           { from: '/vendasta-services/digital-advertising/criteria-for-unskippable-youtube-ads', to: '/vendasta-services/digital-advertising/' },
