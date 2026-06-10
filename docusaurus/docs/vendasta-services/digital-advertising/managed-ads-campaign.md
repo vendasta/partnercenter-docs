@@ -34,7 +34,6 @@ Your campaign can run across a range of platforms. The platforms available depen
 * **YouTube:** Video ads before, during, or after videos, for reach and awareness.
 * **TikTok:** Short-form vertical (9:16) video in the For You feed and other placements; a TikTok creatives add-on can produce platform-native video.
 * **LinkedIn:** Business-focused ads for recruitment, lead generation, and visibility (higher minimum ad spend).
-* **Amazon Display:** Image banners on and off Amazon (currently US only).
 
 ### Spend tiers and features
 
