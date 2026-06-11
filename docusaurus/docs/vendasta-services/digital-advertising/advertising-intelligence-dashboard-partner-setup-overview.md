@@ -29,6 +29,18 @@ Our Ads team does not update ad management fees. These must be updated by a part
 *   You can designate certain actions as conversions. For example, anything marked as a lead can be counted as a conversion.
 *   Different platforms offer specific metrics. E.g., Facebook pixels can track conversion metrics, while Google Ads can track calls as a separate metric.
 
+#### Meta Ads conversion reporting
+
+Advertising Intelligence only ingests Lead-classified conversions from Meta. A campaign result is counted as a conversion when the campaign uses the **Lead Generation** objective (with an instant form), or when the Lead standard event is tracked via **Meta Pixel** or **Conversions API**.
+
+Campaigns using other objectives — such as Calls Placed, Link Clicks, or Engagement — will show zero conversions in Advertising Intelligence, even if Meta Ads Manager records results for those campaigns.
+
+:::note
+
+For campaigns not optimized for Lead Generation, export data directly from Meta Ads Manager to supplement Advertising Intelligence reports.
+
+:::
+
 ### 4\. ROI Calculation
 
 *   This feature helps estimate the return on investment.
