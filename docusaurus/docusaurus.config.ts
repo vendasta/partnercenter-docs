@@ -95,6 +95,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
+          // Vendasta Services: AI Workforce section renamed (dropped "setup" from URLs)
+          { from: '/vendasta-services/ai-workforce-setup', to: '/vendasta-services/ai-workforce/' },
+          { from: '/vendasta-services/ai-workforce-setup/ai-receptionist-setup', to: '/vendasta-services/ai-workforce/ai-receptionist' },
+          { from: '/vendasta-services/ai-workforce-setup/ai-reputation-specialist-setup', to: '/vendasta-services/ai-workforce/ai-reputation-specialist' },
+          { from: '/vendasta-services/ai-workforce-setup/ai-inside-sales-representative-setup', to: '/vendasta-services/ai-workforce/ai-inside-sales-representative' },
+          { from: '/vendasta-services/ai-workforce-setup/ai-support-agent-setup', to: '/vendasta-services/ai-workforce/ai-support-agent' },
+          { from: '/vendasta-services/ai-workforce-setup/ai-data-analyst-setup', to: '/vendasta-services/ai-workforce/ai-data-analyst' },
+          { from: '/vendasta-services/ai-workforce-setup/ai-human-resources-coordinator-setup', to: '/vendasta-services/ai-workforce/ai-human-resources-coordinator' },
           // Vendasta Services: social media onboarding + timeline folded into the section index
           { from: '/vendasta-services/social-media-management/social-media-management-onboarding', to: '/vendasta-services/social-media-management/' },
           { from: '/vendasta-services/social-media-management/social-media-marketing-timeline', to: '/vendasta-services/social-media-management/' },

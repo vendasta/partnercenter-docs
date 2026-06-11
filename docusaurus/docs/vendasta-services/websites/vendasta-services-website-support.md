@@ -36,7 +36,7 @@ At no additional cost, our team will install the AI Chat Receptionist on your ne
 *   Basic test (open chat, confirm a message can be sent)
 *   Add brand colours to the AI Chat Receptionist
 
-This service is not a full end-to-end configuration of the AI Chat Receptionist, and is only for basic code installation. If you need advanced features such as full brand configuration beyond basic brand colours, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce-setup/ai-receptionist-setup.md) service.
+This service is not a full end-to-end configuration of the AI Chat Receptionist, and is only for basic code installation. If you need advanced features such as full brand configuration beyond basic brand colours, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce/ai-receptionist.md) service.
 
 **What's not included in monthly support**
 
@@ -178,6 +178,6 @@ Yes! Website Support+ includes installation of the AI Chat Receptionist on your 
 *   Basic test (open chat, confirm a message can be sent)
 *   Add brand colours to the AI Chat Receptionist
 
-This service is not a full end-to-end configuration of the AI Chat Receptionist, and is only for basic code installation. If you need advanced features such as full brand configuration beyond basic brand colours, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce-setup/ai-receptionist-setup.md) service.
+This service is not a full end-to-end configuration of the AI Chat Receptionist, and is only for basic code installation. If you need advanced features such as full brand configuration beyond basic brand colours, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce/ai-receptionist.md) service.
 
 </details>

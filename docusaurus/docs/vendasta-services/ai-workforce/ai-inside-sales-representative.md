@@ -154,7 +154,7 @@ We will also need the following information for an Authorized Business Represent
 
 <summary>How is the AI Inside Sales Representative different from the AI Chat Receptionist?</summary>
 
-The [AI Chat Receptionist](./ai-receptionist-setup.md) is designed to capture leads from anyone who contacts your business through web chat. The AI Inside Sales Representative goes further — it qualifies leads first by confirming your business can actually serve the customer's need before asking for any contact information. If a customer asks about a service you don't offer, the ISR politely informs them and stops the process. This means your sales team only receives leads that are genuinely a fit.
+The [AI Chat Receptionist](./ai-receptionist.md) is designed to capture leads from anyone who contacts your business through web chat. The AI Inside Sales Representative goes further — it qualifies leads first by confirming your business can actually serve the customer's need before asking for any contact information. If a customer asks about a service you don't offer, the ISR politely informs them and stops the process. This means your sales team only receives leads that are genuinely a fit.
 
 </details>
 

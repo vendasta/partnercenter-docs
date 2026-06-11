@@ -262,7 +262,7 @@ Unfortunately, this is a limitation of our SMS provider and we are unable to use
 
 <summary>What's the difference between the AI Support Agent and the AI Receptionist?</summary>
 
-The [AI Receptionist](./ai-receptionist-setup.md) is designed to capture leads from website visitors. It collects contact information and routes inquiries to your sales team. The AI Support Agent is built for customer support: it resolves issues, answers questions, handles complaints using the HEARD framework, and only escalates to your team when it cannot help. If your primary goal is support resolution rather than lead capture, the AI Support Agent is the right fit.
+The [AI Receptionist](./ai-receptionist.md) is designed to capture leads from website visitors. It collects contact information and routes inquiries to your sales team. The AI Support Agent is built for customer support: it resolves issues, answers questions, handles complaints using the HEARD framework, and only escalates to your team when it cannot help. If your primary goal is support resolution rather than lead capture, the AI Support Agent is the right fit.
 
 </details>
 
