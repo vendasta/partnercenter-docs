@@ -319,7 +319,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/partner-center/partner-center-getting-started-guide', to: '/partner-center' },
           { from: '/partner-center/AI-receptionist-features-by-plan', to: '/ai/ai-workforce/ai-receptionist-features-by-plan' },
           // AI Workforce Optimization Plan content is now on every service page
-          { from: '/vendasta-services/ai-workforce-setup/ai-workforce-optimization-plan', to: '/vendasta-services/ai-workforce-setup/ai-data-analyst-setup' },
+          { from: '/vendasta-services/ai-workforce-setup/ai-workforce-optimization-plan', to: '/vendasta-services/ai-workforce/' },
           { from: '/vendasta-services/working-with-our-team/white-labeling-communications-with-vendasta-services', to: '/vendasta-services/working-with-our-team' },
           { from: '/administration/platform-settings/ai-workforce', to: '/ai/ai-workforce' },
           { from: '/administration/platform-settings/ai-knowledge-base', to: '/ai/knowledge-base' },
