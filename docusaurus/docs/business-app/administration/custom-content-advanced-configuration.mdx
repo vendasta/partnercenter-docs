@@ -2,128 +2,18 @@
 title: Custom Content & Advanced Configuration
 sidebar_label: Custom Content & Configuration
 sidebar_position: 9
-description: Complete guide to custom guides management, WordPress integration, and advanced configuration options including specialized triggers and workflows.
-tags: [custom-content, guides-management, wordpress-integration, advanced-configuration, clio-integration, custom-triggers]
-keywords: [custom guides, WordPress integration, Business App guides, Clio triggers, advanced configuration, custom content management]
+description: Advanced configuration options for Business App, including specialized triggers and workflows for industry-specific systems like Clio.
+tags: [advanced-configuration, clio-integration, custom-triggers]
+keywords: [Clio triggers, advanced configuration, custom fields, data sync, opt-in opt-out]
 ---
 
-## What is Custom Content & Advanced Configuration?
+## Advanced Configuration
 
-Custom Content & Advanced Configuration provides businesses with advanced customization capabilities for Business App, including custom guide management, WordPress blog integration, and specialized workflow configurations. These features enable businesses to provide tailored content experiences, integrate their own marketing materials, and configure advanced triggers for specialized business management systems like legal practice management tools.
+Advanced configuration options allow you to set up specialized workflow triggers for industry-specific software. These configurations are particularly valuable for businesses using tools like Clio (legal practice management) that require custom data sync behavior.
 
-## Why is Custom Content & Advanced Configuration Important?
+## How to Set Up Clio Integration Triggers
 
-Advanced configuration options allow businesses to customize Business App to match their specific needs and branding requirements. These features are particularly valuable for businesses with unique workflows or those wanting to provide custom educational content to their clients. Key benefits include:
-
-- **Brand consistency** - Display your own content and messaging within Business App
-- **Client education** - Provide custom guides and resources tailored to your industry
-- **Workflow automation** - Configure specialized triggers for industry-specific software
-- **Content control** - Choose between pre-written content or your own custom materials
-- **Professional presentation** - Seamlessly integrate your expertise and knowledge base
-- **Specialized integrations** - Advanced configurations for legal, medical, and other professional services
-
-## What You Can Do with Custom Content & Advanced Configuration
-
-### Custom Guides Management
-- Enable or disable the Guides section in Business App
-- Choose between Vendasta's white-label content or your own WordPress blog
-- Filter content by WordPress tags to show specific articles
-- Customize guide presentation with embedded titles and images
-- Provide industry-specific educational content to clients
-
-### WordPress Integration Features
-- Connect your WordPress blog directly to Business App
-- Display WordPress articles as guides within Business App
-- Use WordPress tags to filter and organize content
-- Customize how blog content appears to clients
-- Maintain your own content publishing workflow
-
-### Advanced Trigger Configuration
-- Set up specialized triggers for legal practice management systems
-- Configure opt-in and opt-out workflows for data syncing
-- Create custom fields for triggering automated processes
-- Manage complex business workflow requirements
-- Handle compliance and privacy requirements
-
-## How to Set Up Custom Content & Advanced Configuration
-
-### How to Configure Guides in Business App
-
-<img src={require('./img/business-app/guides/guides-location.jpg').default} alt="Guides location in Business App navigation" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
-
-1. **Enable Guides Section**
-   - Navigate to **Partner Center > Administration > Customize Business App**
-   - Select the **Guides** tab
-   - Check **'Show this page'** to enable Guides for Business App users
-   - Click **Save** to apply changes
-
-<img src={require('./img/business-app/guides/enable-guides.jpg').default} alt="Enabling Guides in Business App settings" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
-
-2. **Choose Content Source**
-   - **Option 1**: Use Vendasta's pre-written white-label content (default)
-   - **Option 2**: Connect your own WordPress blog for custom content
-
-3. **Access Guides** (for Business App users)
-   - Navigate to **Business App > Administration > Guides**
-   - Browse available guides and educational content
-   - Access industry-specific information and best practices
-
-<img src={require('./img/business-app/guides/guides-section.jpg').default} alt="Guides section in Business App" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
-
-### How to Set Up WordPress Blog Integration
-
-1. **Access WordPress Configuration**
-   - Go to **Partner Center > Administration > Customize Business App**
-   - Select the **Guides** tab
-
-2. **Connect Your WordPress Blog**
-   - Check **Use your own WordPress blog**
-   - Enter your **WordPress blog URL**
-   - **Important**: Use the actual blog URL (e.g., `https://www.yoursite.com/blog`), not your homepage URL
-
-<img src={require('./img/business-app/guides/wordpress-blog-url.jpg').default} alt="WordPress blog URL configuration" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
-
-3. **Configure Content Filtering** (Optional)
-   - Enter WordPress **tag IDs** to filter content
-   - Only articles with specified tags will display in Business App
-   - Leave blank to show all blog posts
-
-4. **Customize Presentation** (Optional)
-   - Check **Embed title in the first article image** to showcase titles on images
-   - This adds visual appeal to your guide listings
-
-5. **Save Configuration**
-   - Click **Save** to apply WordPress integration
-   - Test Business App to ensure guides display correctly
-
-### How to Find WordPress Tag IDs
-
-1. **Access WordPress Admin Panel**
-   - Log in to your WordPress dashboard
-   - Navigate to the administration interface
-
-2. **Navigate to Tags Section**
-   - Hover over **Posts** in the side panel
-   - Click **Tags** from the dropdown menu
-
-3. **Create or Select Tags**
-   - If tags don't exist, create new tags on the left side
-   - Existing tags appear on the right side of the page
-
-4. **Get Tag ID**
-   - Click on the tag you want to use for filtering
-   - In the browser URL, find the number after **tag_ID=**
-   - Example: In `https://website.com/wp-admin/term.php?taxonomy=post_tag&tag_ID=4&post_type=post`, the tag ID is **4**
-
-<img src={require('./img/business-app/guides/wordpress-tag-id.jpg').default} alt="WordPress tag ID in browser URL" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
-
-5. **Use Multiple Tag IDs**
-   - Enter multiple tag IDs separated by commas
-   - Example: `4,7,12` to show articles with any of these tags
-
-### How to Set Up Clio Integration Triggers
-
-#### Setting Up Closed Matter (Opt Out) Trigger
+### Setting Up Closed Matter (Opt Out) Trigger
 
 1. **Access Clio Dashboard**
    - Log in to your Clio practice management system
@@ -148,7 +38,7 @@ Advanced configuration options allow businesses to customize Business App to mat
    - When checkbox is **unchecked**: Customer data will sync normally
    - System references this field when Matters are marked as Closed
 
-#### Setting Up Closed Matter (Opt In) Trigger
+### Setting Up Closed Matter (Opt In) Trigger
 
 1. **Access Clio Matter Custom Fields**
    - Navigate to **Settings > Custom Fields**
@@ -169,90 +59,14 @@ Advanced configuration options allow businesses to customize Business App to mat
    - Field name must be exactly **SendBroadlyThankYou**
    - Default checked setting allows syncing unless manually unchecked
 
-## Advanced Configuration Best Practices
-
-### WordPress Integration Optimization
-- **Content Quality**: Ensure blog content is relevant and professional
-- **Regular Updates**: Keep WordPress blog current with fresh content
-- **Tag Organization**: Use consistent tagging strategy for easy filtering
-- **Mobile Optimization**: Ensure WordPress content displays well on mobile devices
-- **SEO Considerations**: Optimize blog content for search engines
-
-### Custom Guides Strategy
-- **Industry Focus**: Create content specific to your client's industries
-- **Educational Value**: Provide actionable advice and best practices
-- **Brand Voice**: Maintain consistent tone and messaging across all guides
-- **Update Schedule**: Regularly refresh content to keep it current
-- **Client Feedback**: Use client input to improve guide content
-
-### Advanced Trigger Management
-- **Field Naming**: Use exact field names as specified for trigger functionality
-- **Testing**: Thoroughly test triggers in development environment
-- **Documentation**: Maintain records of custom field configurations
-- **Staff Training**: Ensure team understands trigger implications
-- **Compliance**: Consider legal and privacy requirements for data handling
-
-### Content Validation
-- **Preview Testing**: Always preview changes in Business App before going live
-- **URL Verification**: Ensure WordPress URLs are accessible and correct
-- **Tag Validation**: Verify tag IDs correspond to intended content
-- **Fallback Planning**: Have backup content strategy if WordPress integration fails
-
-## Troubleshooting Common Issues
-
-### WordPress Integration Problems
-- **No Guides Displaying**: Verify WordPress blog URL is correct and accessible
-- **Invalid URL Error**: Ensure URL points to blog section, not homepage
-- **Content Not Updating**: Check WordPress blog for new posts and tag assignments
-- **Tag Filtering Issues**: Verify tag IDs are correct and posts have appropriate tags
+## Troubleshooting
 
 ### Clio Integration Issues
 - **Trigger Not Working**: Verify field names match exactly (case-sensitive)
 - **Data Not Syncing**: Check custom field configuration and default settings
 - **Permission Problems**: Ensure Clio user has appropriate field creation permissions
 
-### Guides Display Problems
-- **Guides Not Visible**: Verify **'Show this page'** is checked in Partner Center
-- **Content Formatting**: Check WordPress content for compatibility with Business App display
-- **Image Display**: Ensure images are properly sized and accessible
-
 ## Frequently Asked Questions
-
-<details>
-<summary>What's the difference between Vendasta's content and WordPress integration?</summary>
-
-Vendasta provides pre-written, white-label content that covers general business topics. WordPress integration allows you to display your own custom content, providing more control over messaging and the ability to create industry-specific guides.
-</details>
-
-<details>
-<summary>Can I use both Vendasta content and WordPress content?</summary>
-
-No, you must choose one content source. You can either use Vendasta's white-label content or connect your WordPress blog, but not both simultaneously.
-</details>
-
-<details>
-<summary>What happens if my WordPress blog URL doesn't work?</summary>
-
-If you enter an invalid WordPress blog URL or the URL becomes inaccessible, no guides will display in Business App. Always test the integration and have a backup plan.
-</details>
-
-<details>
-<summary>How do I find my WordPress blog URL?</summary>
-
-Your blog URL is typically different from your homepage. Look for URLs like `https://www.yoursite.com/blog`. Navigate to your blog section on your website to find the correct URL.
-</details>
-
-<details>
-<summary>Can I filter WordPress content by categories instead of tags?</summary>
-
-The current integration only supports filtering by WordPress tag IDs. You cannot filter by categories, so ensure your content strategy uses tags for organization.
-</details>
-
-<details>
-<summary>What if I don't have WordPress tag IDs?</summary>
-
-If you don't enter any tag IDs, all blog posts from your WordPress site will display in Business App. Tag IDs are only needed if you want to filter and show specific content.
-</details>
 
 <details>
 <summary>Are the Clio field names case-sensitive?</summary>
@@ -265,16 +79,3 @@ Yes, the field names must be exactly **BroadlyOptOut** and **SendBroadlyThankYou
 
 No, the field names are fixed and must match exactly as specified. The system looks for these specific field names to trigger data sync and review request workflows.
 </details>
-
-<details>
-<summary>How often does WordPress content update in Business App?</summary>
-
-WordPress content typically updates in Business App within a few hours of publishing new posts. The exact timing depends on system sync schedules and caching.
-</details>
-
-<details>
-<summary>Can I see preview of how my WordPress content will look in Business App?</summary>
-
-The best way to preview is to test the integration in Business App after configuration. Ensure your WordPress content is mobile-friendly and displays well in the Business App interface.
-</details>
-
