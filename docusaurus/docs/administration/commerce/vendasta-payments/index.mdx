@@ -230,6 +230,34 @@ If you selected the wrong business type when setting up Vendasta Payments (for e
 
 ## Managing account information
 
+### Update your business name
+
+There are two separate business name settings for Vendasta Payments, and they control different things:
+
+| Setting | What it controls | Where to change it |
+|---|---|---|
+| **Stripe legal business name** | Your legal name for payouts, compliance, and tax reporting | Stripe Dashboard > Settings > Account details |
+| **Partner Center display name** | The name shown to clients on invoice payment screens and credit card statements | `Partner Center` > `Administration` > `Business Profile` |
+
+Keeping these two settings aligned avoids confusion where clients see a different name when paying an invoice than they expect.
+
+**To update your legal business name in Stripe:**
+
+1. Log in to your Stripe account via the link in `Administration` > `Vendasta Payments` > `Manage Account`
+2. Go to **Settings > Account details**
+3. Update the **Legal business name** field
+4. Save your changes
+
+:::warning
+Changing your legal business name in Stripe may trigger an identity re-verification review. Payouts may be briefly paused while Stripe reviews the change.
+:::
+
+**To update the name shown on client invoice payment screens:**
+
+1. Navigate to `Partner Center` > `Administration` > `Business Profile`
+2. Update the **Business name** field
+3. Save your changes
+
 ### Update ownership information
 To replace ownership details in your payment account:
 

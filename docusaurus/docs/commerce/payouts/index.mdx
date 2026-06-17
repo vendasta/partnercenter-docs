@@ -95,3 +95,26 @@ A [reserve](https://support.stripe.com/topics/reserves) is a portion of your fun
 
 Vendasta Payments currently supports these countries: US, CA, AU, GB, NZ, CZ. If your billing contact country setting is outside these six, you will see "Vendasta Payments is currently unsupported in your area."
 </details>
+
+<details>
+<summary>Why is my payout amount lower than expected?</summary>
+
+Your payout represents the net amount after the following are deducted from your Stripe balance:
+
+- **Stripe processing fees** — Charged per transaction (e.g., credit card fees, ACH fees). These are deducted before funds are added to your balance.
+- **Refunds issued** — Any refunds you have issued to clients reduce your available balance.
+- **Chargebacks** — Disputed payments that were decided in the client's favor are deducted, along with any associated dispute fees.
+- **Reserves** — Stripe may hold a portion of your funds temporarily as a reserve to cover potential risk. Check your Stripe dashboard for details.
+
+To review the breakdown of a specific payout, navigate to **Partner Center > Commerce > Payouts** and click the payout to see its transaction details.
+
+</details>
+
+<details>
+<summary>What happens to my payouts if my account is suspended?</summary>
+
+If your Vendasta Payments account is suspended, payouts are paused until the suspension is resolved. Funds already in your Stripe balance are held and will be released once the account is back in good standing.
+
+To resolve a suspension, contact [billingsupport@vendasta.com](mailto:billingsupport@vendasta.com) for assistance.
+
+</details>
