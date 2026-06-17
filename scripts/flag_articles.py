@@ -238,35 +238,33 @@ def main():
     already_open = get_open_review_issues()
     print(f"  {len(already_open)} article(s) already have open issues.\n")
 
-    # Create issues for newly stale articles — cap at MAX_ARTICLES_PER_RUN
+    # Always work with the MAX_ARTICLES_PER_RUN oldest articles
+    top_articles = stale[:MAX_ARTICLES_PER_RUN]
+
     created = 0
     skipped = 0
-    for item in stale:
-        if created >= MAX_ARTICLES_PER_RUN:
-            print(f"  ⏸️  Daily cap of {MAX_ARTICLES_PER_RUN} reached — remaining articles queued for tomorrow.")
-            break
+    for item in top_articles:
         if item["filepath"] in already_open:
-            print(f"  ↩️  Skipping (issue already open): {item['filepath']}")
+            print(f"  ↩️  Issue already open: {item['filepath']}")
             skipped += 1
-            continue
-        print(f"  📋 Creating issue for: {item['filepath']} ({item['age_days']} days old)")
-        url = create_github_issue(item["filepath"], item["last_updated"], item["age_days"])
-        if url:
-            item["issue_url"] = url
-            print(f"     ✓ {url}")
-            created += 1
         else:
-            print(f"     ⚠️  Failed to create issue.")
+            print(f"  📋 Creating issue for: {item['filepath']} ({item['age_days']} days old)")
+            url = create_github_issue(item["filepath"], item["last_updated"], item["age_days"])
+            if url:
+                item["issue_url"] = url
+                print(f"     ✓ {url}")
+                created += 1
+            else:
+                print(f"     ⚠️  Failed to create issue.")
 
-    print(f"\nSummary: {created} issue(s) created, {skipped} already existed.\n")
+    print(f"\nSummary: {created} issue(s) created, {skipped} already had open issues.\n")
 
-    # Send Google Chat notification (only for newly created issues)
-    newly_flagged = [item for item in stale if item.get("issue_url")]
-    if newly_flagged:
+    # Notify about all top articles (including those with existing issues)
+    if top_articles:
         print("Sending Google Chat notification...")
-        send_gchat_notification(newly_flagged)
+        send_gchat_notification(top_articles)
     else:
-        print("No new issues created — skipping notification.")
+        print("No stale articles found — skipping notification.")
 
     print("\n✅ Done.")
 
