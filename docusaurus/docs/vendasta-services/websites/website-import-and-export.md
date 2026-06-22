@@ -13,34 +13,7 @@ If you have an existing WordPress website and would like to move it onto Vendast
 
 You will also gain access to Vendasta Services’ Website Support team when we import a site with Website Support+ activated _(3-month commitment)_.
 
-## **Website Support+ includes:**
-
-*   Access to the team for technical support
-*   Minor changes to the website's appearance, such as:
-    *   Fonts
-    *   Colors
-    *   Media (images, videos, icons)
-    *   Text updates
-    *   Contact form fields and settings
-    *   Reorganization or duplication of existing sections
-*   Change a third-party contact form to a CRM form so submissions flow into your CRM as leads
-*   Backend updates are completed quarterly to ensure WordPress stability
-*   Updates to plugins and themes upon request
-*   Health checks to website upon request
-*   Uptime monitoring and urgent support if your website goes offline
-*   Upload up to 3 blog posts per month (content must be provided)
-*   AI Chat Receptionist installation
-
-
-### **AI Chat Receptionist**
-
-At no additional cost, our team will install the AI Chat Receptionist on your new website build or with an imported website. This includes:
-*   Web chat code added to the website
-*   Basic test (open chat, confirm a message can be sent)
-*   Add brand colours to the AI Chat Receptionist
-
-This service is not a full end-to-end configuration of the AI Chat Receptionist, and is only for basic code installation. If you need advanced features such as full brand configuration beyond basic brand colours, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce/ai-receptionist.md) service.
-
+For the full list of what Website Support+ covers, see the [Website Support](./vendasta-services-website-support.md) article.
 
 ## **What benefits are there when importing a site through Vendasta Services?**
 
@@ -102,8 +75,6 @@ _Please note that a site can take up to 72 hours to fully propagate. During this
 *   Compatibility issues with WordPress Hosting Pro
 
 If our Website Support+ team is unable to support the website in question, we will email you to let you know that we are unable to support this site and explain why we had to reject it.
-
-**See also:** [Website Import & Support Vetting Expectations Brochure](https://examples.yourdigitalagents.com/wp-content/uploads/2023/05/Website-Import-Support-Vetting_-Expectations-Guide.pdf)
 
 ## Custom add-on delivery times
 
