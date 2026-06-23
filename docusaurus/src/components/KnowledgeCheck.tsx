@@ -189,6 +189,66 @@ function WhichAreaWidget({ question, onAnswer, showFeedback, correct }: { questi
   );
 }
 
+function SortWidget({
+  question,
+  onAnswer,
+  showFeedback,
+  userAnswer,
+}: {
+  question: SortQuestion;
+  onAnswer: (a: Record<string, string>) => void;
+  showFeedback: boolean;
+  correct: boolean;
+  userAnswer: string | number | Record<string, string> | null;
+}) {
+  const [assignments, setAssignments] = useState<Record<string, string>>({});
+  const correctPairs = Object.fromEntries(question.items.map((i) => [i.label, i.correctBucket]));
+  const displayed = showFeedback && typeof userAnswer === 'object' ? userAnswer as Record<string, string> : assignments;
+  const allAssigned = question.items.every((item) => assignments[item.label]);
+
+  return (
+    <div className={styles.question}>
+      <p><strong>{question.instruction}</strong></p>
+      <p className={styles.matchHint}>Assign each item to the correct category, then click Check.</p>
+      <div className={styles.sortGrid}>
+        {question.items.map((item) => {
+          const selected = displayed[item.label];
+          return (
+            <div key={item.label} className={styles.sortItem}>
+              <span className={styles.sortItemLabel}>{item.label}</span>
+              <div className={styles.sortBuckets}>
+                {question.buckets.map((bucket) => {
+                  const isSelected = selected === bucket.id;
+                  const isCorrectChoice = showFeedback && correctPairs[item.label] === bucket.id;
+                  const isWrongChoice = showFeedback && isSelected && !isCorrectChoice;
+                  return (
+                    <button
+                      key={bucket.id}
+                      onClick={() => !showFeedback && setAssignments((prev) => ({ ...prev, [item.label]: bucket.id }))}
+                      disabled={showFeedback}
+                      className={[
+                        styles.sortBucketBtn,
+                        isSelected && !showFeedback ? styles.sortSelected : '',
+                        isCorrectChoice ? styles.sortCorrect : '',
+                        isWrongChoice ? styles.sortIncorrect : '',
+                      ].filter(Boolean).join(' ')}
+                    >
+                      {bucket.label}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <button className={styles.checkBtn} disabled={showFeedback || !allAssigned} onClick={() => onAnswer(assignments)}>
+        Check
+      </button>
+    </div>
+  );
+}
+
 function MatchWidget({
   question,
   onAnswer,
@@ -353,17 +413,7 @@ function QuestionRenderer({ question, onAnswer, showFeedback, userAnswer, correc
 
     case 'sort':
       return (
-        <div className={styles.question}>
-          <p><strong>{question.instruction}</strong></p>
-          <ul>
-            {question.items.map((i, idx) => (
-              <li key={idx}>{i.label} → {i.correctBucket}</li>
-            ))}
-          </ul>
-          <button className={styles.checkBtn} disabled={showFeedback} onClick={() => onAnswer(Object.fromEntries(question.items.map((i) => [i.label, i.correctBucket])))}>
-            I've sorted them
-          </button>
-        </div>
+        <SortWidget question={question} onAnswer={onAnswer} showFeedback={showFeedback} correct={correct} userAnswer={userAnswer} />
       );
 
     default:
