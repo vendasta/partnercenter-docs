@@ -1,0 +1,63 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.card {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  min-height: 120px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped .cardInner {
+  transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  width: 100%;
+  min-height: 120px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardFront {
+  background: var(--vendasta-accent, var(--ifm-color-primary));
+  color: white;
+}
+
+.cardBack {
+  background: var(--vendasta-card, var(--ifm-background-surface-color));
+  border: 1px solid var(--vendasta-border, var(--ifm-color-emphasis-300));
+  transform: rotateY(180deg);
+}
+
+.frontText {
+  font-weight: 600;
+  flex: 1;
+}
+
+.backText {
+  font-size: 0.9em;
+  color: var(--ifm-font-color-base);
+}
+
+.subtext {
+  font-size: 0.75em;
+  opacity: 0.9;
+  margin-top: 0.5rem;
+}

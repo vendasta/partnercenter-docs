@@ -74,6 +74,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ],
   plugins: [
     [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'training',
+        path: 'training',
+        routeBasePath: 'platform-training',
+        sidebarPath: './sidebars-training.ts',
+      },
+    ],
+    [
       '@easyops-cn/docusaurus-search-local',
       {
         // Index docs and don't index blog (since blog is disabled)

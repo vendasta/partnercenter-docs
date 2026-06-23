@@ -1,0 +1,147 @@
+---
+sidebar_position: 7
+title: CRM 2.0 — closing opportunities
+description: The final course in CRM 2.0. Create and manage opportunities, close them out, log activities, and create orders.
+---
+
+import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CommentBox from "@site/src/components/CommentBox";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+
+<InlineHighlighter courseId="crm20-closing-opportunities" site="vendasta_learn">
+
+<CourseProgressBar courseId="crm20-closing-opportunities" site="vendasta_learn" />
+
+This is the final course to understand how to use CRM 2.0. Through Closing Opportunities, you will learn how to create and manage opportunities, close them out, log and find activities, and create orders. By the end, you'll be able to make sure your efforts are properly tracked and reported.
+
+:::tip What you'll cover
+- How to create and manage opportunities from the pipeline and company profile
+- How to update contacts, companies, and opportunity stages
+- How to log activities and create timeline views
+- How to create orders from an opportunity or company profile
+:::
+
+:::tip Forum
+Feel free to ask questions and share comments in the course forum! All questions will be acknowledged by a Subject Matter Expert within 48 hours.
+:::
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">🎯</span>Creating and Managing Opportunities</div>
+
+As customers go through the journey to learn more and consider buying, you help them overcome concerns and become customers. The best tool to track this is **Opportunity**.
+
+### Where to find
+
+**Pipeline page** — Partner Center → Sales. Create and manage opportunities (same as Sales Center). **Company profile page** — Manage opportunities in the association panel. Click **Opportunities** to see existing ones or create new.
+
+### Creating
+
+On the company profile page, click **Opportunities** → create new. Add products, select a contract end date, and you've created an opportunity.
+
+### Managing
+
+Edit directly from the company profile. Click the opportunity name to edit details and **MEDDPICC notes**.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">✏️</span>Updating Contacts, Companies, and Opportunities</div>
+
+### Edit contact/company
+
+Click **Edit Contact** or **Edit Company** to update buyer information. Keep the buyer's information up to date throughout the buyer stages.
+
+### Update the opportunity
+
+When working through Opportunity Stages, adjust the **Expected Close date** and update the **MEDDPICC framework**. Each section should be fully scored—complete 2 points each. Refer to the guidance link for detailed MEDDPICC instructions.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">📋</span>Capture Your Interactions</div>
+
+### Logging activities
+
+If you schedule a demo, go to the company profile, open the opportunity sidebar, and log a **Meeting** activity with accurate meeting status and outcome. **Activities logged from the opportunity sidebar also appear on the associated company's timeline.**
+
+### Notes with tags
+
+Log a note with a tag for important information you want others to quickly glance through. Change the view in the timeline to find tagged notes easily.
+
+### Creating a timeline view
+
+Apply filters, then click **Views** → **Create view**. Specify the name—you'll have a shortcut to see the activities that matter to you. Delete a view via the Trash icon.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">🏢</span>Creating a Partner and Capturing Information</div>
+
+### Partner association
+
+To create a partner for the company, go to **Partner Information** on the company's profile page. If no partner exists, click **Create partner**. If linked, you'll see partner ID and subscription tier. **Partner ID** is found in the Partner Information section—not in Activity timeline, next to company name, or Associated account.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">🛒</span>Creating Orders</div>
+
+After closing an opportunity and ready to submit an order:
+
+### Method 1: from opportunity
+
+Company profile → **Opportunities** → open existing opportunity → **Create order**. The order copies all items from the opportunity—saving you from filling in details manually.
+
+### Method 2: from company profile
+
+If you don't have an opportunity, click **Orders** → **Create sales orders** on the company profile page. All existing orders can also be found here.
+
+<div className="in-practice">
+  <span className="in-practice__icon">💬</span>
+  <div className="in-practice__body">
+    <span className="in-practice__label">In Practice</span>
+    <p>A rep has an opportunity in "Proposal" stage. They log a Meeting activity with outcome "Demo completed—positive." They update MEDDPICC notes, score each section, and adjust Expected Close date. The customer says yes. The rep goes to the opportunity, clicks Create order—products and terms copy over. They submit for approval. The deal is closed and the order is in the system.</p>
+  </div>
+</div>
+
+---
+
+<SectionFeedback courseId="crm20-closing-opportunities" site="vendasta_learn" section="content" />
+
+## Key Resources
+
+<FlipCardGrid>
+  <FlipCard front="Pipeline" back="Partner Center → Sales. Create and manage opportunities." subtext="Location" />
+  <FlipCard front="Create Order" back="From opportunity (copies items) or from Orders on company profile." subtext="Two ways" />
+  <FlipCard front="Partner Info" back="Company profile. Partner ID, subscription tier." subtext="Section" />
+</FlipCardGrid>
+
+---
+
+## Knowledge Check
+
+<KnowledgeCheck courseId="crm20-closing-opportunities" site="vendasta_learn"
+  sessionSize={5}
+  questions={[
+    { type: "truefalse", statement: "Opportunities can be created from both the Sales pipeline and a company record.", correct: true, explanation: "The UI allows pipeline-first or account-first creation paths." },
+    { type: "truefalse", statement: "Notes and meetings logged on an opportunity also surface on the parent company feed.", correct: true, explanation: "Opportunity activities inherit up to the company timeline for full context." },
+    { type: "mcq", question: "Where is the partner ID displayed for an account?", options: ["Partner Information card on the company profile", "Only inside exported CSV files", "Inline next to the company legal name", "Associated Accounts tab exclusively"], correctIndex: 0, explanation: "Partner Information houses PID details and subscription metadata." },
+    { type: "whicharea", principle: "Where would you learn about creating orders from an opportunity or company profile?", correctArea: "🛒 Creating Orders", explanation: "Order placement from open opportunities is spelled out there." },
+    { type: "match", instruction: "Match the action to its location.", pairs: [{ term: "Edit company", definition: "Edit Company button" }, { term: "Create partner", definition: "Partner Information section" }, { term: "Log meeting", definition: "Opportunity sidebar" }, { term: "Create order", definition: "Opportunities or Orders" }], explanation: "Each workflow maps to the button or panel referenced in the lesson." }
+  ]}
+/>
+
+---
+
+## Share a Reflection
+
+<CommentBox variant="reflection" prompt="Think about your current pipeline. Is there an opportunity where you could apply the MEDDPICC framework or log an activity you've been meaning to track? What's one step you'll take today?" />
+
+---
+
+Create and manage opportunities. Log activities. Update MEDDPICC. Create orders from opportunities or the company profile. Make sure your efforts are properly tracked and reported.
+
+</InlineHighlighter>
+
+<MarkComplete courseId="crm20-closing-opportunities" site="vendasta_learn" />

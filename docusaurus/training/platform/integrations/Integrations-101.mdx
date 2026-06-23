@@ -1,0 +1,218 @@
+---
+sidebar_position: 1
+title: Integrations 101
+description: Learn how Business System Integrations automatically send review requests from your clients' existing software—and why integrated clients churn significantly less.
+---
+
+import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CommentBox from "@site/src/components/CommentBox";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+
+<InlineHighlighter courseId="integrations-101" site="vendasta_learn">
+
+<CourseProgressBar courseId="integrations-101" site="vendasta_learn" />
+
+Business System Integrations allow Vendasta's platform to automatically obtain customer names, phone numbers, and emails directly from the business systems your clients already use—CRMs, booking, invoicing, accounting, and email marketing software—specifically for the purpose of sending a review request.
+
+:::tip Learning Goals
+- Understand what Business System Integrations are and why they matter for retention
+- Identify native and Zapier integrations and how their triggers differ
+- Determine whether a client's workflow is compatible with an available integration
+:::
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">📉</span>Why Are Integrations Important?</div>
+
+**Clients with integrations churn less.** Which makes sense when you compare the steps required to send a review request.
+
+### Without an integration
+
+1. Open Vendasta's Reputation Management
+2. Navigate to Contacts and add a new contact
+3. Enter the customer's name, phone number, and email
+4. Save the contact record
+5. Navigate to the contact and send a review request
+
+### With an integration
+
+1. Mark the job as complete in the business system—or invoice the customer as usual
+
+That's it. Kind of a no-brainer.
+
+The more time that passes from when the job is complete to when the review request goes out, the less likely you are to get a review. When does a business find time to add customers without an integration? End of day? End of week? Either way—delays hurt results.
+
+### Two key benefits
+
+| Benefit | What It Means |
+|---------|---------------|
+| **It's AUTOMATED** | Runs in the background as the business goes through their normal flow |
+| **It's FAST** | Review requests can go out as soon as 15 minutes after the job is marked complete or invoice paid |
+
+:::tip Retention
+Clients with integrations churn less—like a whole lot less.
+:::
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">✨</span>More Benefits</div>
+
+- **No duplicated data entry** — If the client already enters customer emails in their business system, no need to enter it again in the platform. Saves hours each week.
+- **Better results** — The platform works best when ALL clients get Thank You texts or emails, not just the happy ones.
+- **Higher retention** — Almost all cancellations have one thing in common: the business never sent enough review requests to see the product work.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">🔌</span>Types of Integrations</div>
+
+| Type | Definition |
+|------|-------------|
+| **Native integrations** | Built by the Vendasta Engineering team (online or desktop) |
+| **Zapier integrations** | Third-party "middleware" that connects two systems together. Allows the platform to connect to a wide range of business systems |
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">📚</span>Common Integration Terms</div>
+
+| Term | Definition |
+|------|-------------|
+| **Trigger** | Something that happens in a business system that starts a workflow (e.g., New invoice created) |
+| **Action** | Something that happens after a trigger occurs (e.g., Thank You message sent to customer) |
+| **Native Integration** | Any integration built by the Vendasta Engineering team |
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">⚡</span>Triggers</div>
+
+To determine if you can integrate with a business system, it's critical to understand the **triggers**—something that happens in a business system that starts a workflow. For Vendasta integrations, that workflow is sending a review request.
+
+**Key question:** Does the timing of this trigger make sense for when a review request should ideally go out?
+
+Native integrations are built to send review requests at the ideal time—for example, when an invoice is sent. With Zapier, you work within the triggers they have available. Sometimes a business system may be listed in Zapier but integration may not work if the triggers don't make sense. **Always confirm that the triggers make sense.**
+
+### Triggers that don't make sense
+
+Triggers like **New Estimate**, **New Account**, **New Customer**, **New Expense**, **New Vendor** do NOT indicate job completion—so they don't make sense for a review request. Triggers like **New Payment**, **New Invoice**, **New Sales Receipt** do make sense.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">🔧</span>Determine if You Can Integrate: Native Integrations</div>
+
+With native integrations, triggers are set up to send review requests at the ideal time. The key is to determine **HOW** the client uses the system.
+
+**Example:** Vendasta integrates with QuickBooks, but integration may not work if the client doesn't **invoice** out of QuickBooks. It's not only important to ask WHICH business system they use, but also HOW they use it.
+
+### Where to find native integrations
+
+- Vendasta Support center (integrations documentation)
+
+### How to determine if their workflow works
+
+Use the triggers to form a question:
+
+**Mitchell 1 (Automotive):** Trigger = Completed Repair Orders. Ask: *"You're using Mitchell 1—so I assume you mark all your repair orders as complete in the system?"* → If yes, you can integrate.
+
+**QuickBooks Online:** Trigger = New Invoice or New Sales Receipt. Ask: *"You're using QuickBooks Online—do you also invoice out of QuickBooks?"* → If no (e.g., they invoice out of Service Monster), you cannot integrate through QuickBooks. Dig deeper to find their other software.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">🔗</span>Determine if You Can Integrate: Zapier Integrations</div>
+
+With Zapier, first determine if there is a trigger available that makes sense, then confirm the client uses that trigger in their normal workflow. Some integrations may be available in Zapier but have no trigger that makes sense.
+
+### Where to find Zapier integrations
+
+- Zapier website (bookmark it)
+
+### How to determine if there's a sensible trigger
+
+1. Go to Zapier → search for the software or app
+2. On the app profile page, scroll to **Supported Actions & Triggers**
+3. Look for triggers that indicate job completion (e.g., New Invoice, Completed Job)
+
+### Example: Square
+
+Go to Zapier and determine if there is a trigger that makes sense for Square.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">📋</span>Learning Triggers for Your Vertical</div>
+
+You'll only need to become familiar with the handful of CRMs that come up repeatedly in your vertical. For instance, in auto, about 60% of aftermarket auto repair shops use Mitchell 1.
+
+**Familiarize yourself with the triggers in the most common business systems in your vertical.**
+
+- **Automotive:** Mitchell 1, Shop-Ware, and others
+- **Home Services:** ServiceTitan, Jobber, and others
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">❓</span>FAQ</div>
+
+**Q: What if I'm still unclear whether integration is possible after checking Zapier and Vendasta Support?**
+
+A: Contact Vendasta Support directly. They can confirm trigger compatibility and which integration method applies.
+
+**Q: Is this a two-way integration? Do customers added in the platform automatically sync to the business system?**
+
+A: There are some two-way integrations, but only with specific systems and specific features:
+- **QuickBooks:** Only related to payments. When a payment is made via the platform, that revenue is accounted for in QuickBooks.
+- **Shop-Ware:** Only related to appointment reminders. When a customer confirms an appointment, that confirmation shows up in Shop-Ware.
+
+**Q: Does the integration pull the business's current customer database into the platform?**
+
+A: In general, the integration works for new customers moving forward from when the system is connected. For certain native integrations, a "look back" can pull recent customers. Check Vendasta Support documentation to see which integrations support this.
+
+<div className="in-practice">
+  <span className="in-practice__icon">💬</span>
+  <div className="in-practice__body">
+    <span className="in-practice__label">In Practice</span>
+    <p>A prospect uses QuickBooks for accounting but invoices out of Service Monster. QuickBooks won't work—no invoice trigger. You check Zapier for Service Monster. You find a "Job Completed" trigger. You ask: "Do you mark jobs complete in Service Monster when you're done?" They say yes. You confirm the integration will work via Zapier. They sign up. Review requests go out 15 minutes after job completion. Churn risk drops.</p>
+  </div>
+</div>
+
+---
+
+<SectionFeedback courseId="integrations-101" site="vendasta_learn" section="content" />
+
+## Key Resources
+
+<FlipCardGrid>
+  <FlipCard front="Vendasta Support" back="Native integrations documentation and trigger reference." subtext="Resource" />
+  <FlipCard front="Zapier" back="Supported Actions & Triggers by app." subtext="Resource" />
+  <FlipCard front="Triggers" back="Confirm timing makes sense before recommending an integration." subtext="Key Concept" />
+  <FlipCard front="Native vs Zapier" back="Native = Vendasta-built. Zapier = third-party middleware." subtext="Types" />
+</FlipCardGrid>
+
+---
+
+## Knowledge Check
+
+<KnowledgeCheck courseId="integrations-101" site="vendasta_learn"
+  sessionSize={5}
+  questions={[
+    { type: "mcq", question: "Which group of triggers does the course say are poor fits for review-request timing because they do not indicate job completion?", options: ["New Estimate, New Account, New Customer, New Expense, or New Vendor", "New Invoice, New Sales Receipt, or New Payment", "Completed repair orders when marked complete in the shop system", "New invoice created in QuickBooks when that is how the business bills"], correctIndex: 0, explanation: "Triggers explains that New Estimate, New Account, New Customer, New Expense, and New Vendor do not indicate completion—unlike invoice- or payment-style triggers." },
+    { type: "truefalse", statement: "Clients with integrations churn less.", correct: true, explanation: "Clients with integrations churn significantly less—it's one of the core reasons to set up an integration for every eligible client." },
+    { type: "mcq", question: "With QuickBooks, what must you confirm to know if integration is possible?", options: ["That they use QuickBooks", "That they invoice out of QuickBooks", "That they have a paid QuickBooks plan", "That they use QuickBooks for payroll"], correctIndex: 1, explanation: "Integration with QuickBooks requires that the client actually invoices out of QuickBooks. If they invoice from a different system, QuickBooks integration won't work." },
+    { type: "whicharea", principle: "Where would you learn about whether two-way integration syncs data back to the business system?", correctArea: "❓ FAQ", explanation: "The FAQ section covers two-way integration behavior and which specific systems support it." },
+    { type: "truefalse", statement: "Review requests with an integration can go out as soon as 15 minutes after the job is marked complete or invoice paid.", correct: true, explanation: "It's fast—one of the key benefits of integrations over manual data entry." }
+  ]}
+/>
+
+---
+
+## Share a Reflection
+
+<CommentBox variant="reflection" prompt="Think about the clients you work with most. Which business systems do they use, and are any of them integration-ready? What would change for your clients if review requests went out automatically?" />
+
+---
+
+Congratulations 🎉 You now understand how Business System Integrations work, how to identify the right triggers, and how to determine whether a client's workflow is compatible. Set up integrations for eligible clients and watch retention improve.
+
+</InlineHighlighter>
+
+<MarkComplete courseId="integrations-101" site="vendasta_learn" />

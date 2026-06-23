@@ -1,0 +1,144 @@
+---
+sidebar_position: 4
+title: CRM 2.0 — identifying your customers
+description: The first course in CRM 2.0. Find customers with the information that matters, create contacts and companies, filter and sort for interests.
+---
+
+import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CommentBox from "@site/src/components/CommentBox";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+
+<InlineHighlighter courseId="crm20-identifying-your-customers" site="vendasta_learn">
+
+<CourseProgressBar courseId="crm20-identifying-your-customers" site="vendasta_learn" />
+
+This is the first course to understand how to use CRM 2.0. Through Identifying Your Customers, you will find your customers with the information that matters, create contacts and companies and associations, and filter and sort for interests. By the end, you'll be able to identify the customers you want to work on in CRM 2.0.
+
+:::tip What you'll cover
+- An introduction to CRM 2.0 and its key benefits
+- How to navigate the Contact and Company pages
+- How to create contacts, detect duplicates, and build associations
+- How to filter and sort to prioritize your best opportunities
+:::
+
+:::tip Forum
+Feel free to ask questions and share comments in the course forum! All questions will be acknowledged by a Subject Matter Expert within 48 hours.
+:::
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">📖</span>An Introduction to CRM 2.0</div>
+
+CRM 2.0 creates a cohesive, single-platform experience for all Vendasta users. It aims to eliminate fragmented experiences and reduce developmental redundancy. The new infrastructure paves the way for a comprehensive CRM system and integration with industry leaders.
+
+### Immediate benefits
+
+- **Enhanced Prospecting** — Simplified capture and storage of contact details. Reduces operational overhead and enriches the sales team with pre-engagement insights.
+- **Easier to find contacts** — Search by name, email, phone number, and other contact information. Duplication identification is more straightforward.
+- **Improved segmentation** — Custom field filters enable sales teams to efficiently target prospects with higher sales potential.
+- **Better reporting** — Enhanced data capture on sales activities allows for more detailed reporting, including call connectivity and meeting outcomes.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">🏢</span>The Contact and Company Page</div>
+
+Go to Partner Center and click **Customer**. You'll find two options: **Contact** and **Company**. Contacts are the individual people you work with; companies are the organizations those people are associated with. The **Company** page is where all information about a business is located.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">⚙️</span>Setting Up Your View</div>
+
+Ask yourself: what information matters to you? There's a lot of data—set up your view by enabling, displaying, and reordering columns. For example, enable address, disable website, add Google My Business claimed status (if you've created a Snapshot Report).
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">🔍</span>Searching and Filtering</div>
+
+**Filter by assigned salesperson:** Click "Add filter" and search for "Salesperson". Find yourself by name or email.
+
+**Search bar:** Search for a company by name, phone number, partner ID, account group ID, and other information.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">🆕</span>Creating a Contact</div>
+
+Click **Create contact** (top right). Fill in name, email, or phone number. If possible, ensure you have the email address.
+
+### Duplicate detection
+
+The CRM checks for **email** to prevent duplicates. If the email exists, the CRM surfaces that record and **prevents** you from creating the contact—you can go to the existing record instead. The CRM also checks **phone numbers** and surfaces a **warning** if identical—but it **does not block** creation for duplicate phone numbers.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">🔗</span>Creating an Association Between Contact and Company</div>
+
+After creating a contact, go to **Associated contact** → **Add contact** and find the contact you created. You can specify a label to indicate the relationship between the company and the contact.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">📊</span>Applying Filters and Sorting</div>
+
+### Advanced filtering
+
+Filter by industry, employee size, technology ID (from Snapshot Report), Google My Business claimed status. For example: find all restaurants that don't have a website.
+
+### Sorting by last activity
+
+Sort by **Last activity date** to see customers you haven't touched base with recently. Filter on **Last activity date** to prioritize. Keep old flames alive—keep the conversation fresh.
+
+### Snapshot Report data
+
+After running a Snapshot Report, you can discover: **technologies they are using on their website** and **Google My Business claimed status**—not financial data or company history.
+
+<div className="in-practice">
+  <span className="in-practice__icon">💬</span>
+  <div className="in-practice__body">
+    <span className="in-practice__label">In Practice</span>
+    <p>A rep sets up their view to show address, industry, and GMB claimed status. They filter by "Salesperson = me" and "Last activity date" older than 30 days. They find 20 restaurants without websites. They create a new contact for a decision-maker, associate them with the company, and add a task to follow up. The CRM prevents a duplicate when they try to add the same email again.</p>
+  </div>
+</div>
+
+---
+
+<SectionFeedback courseId="crm20-identifying-your-customers" site="vendasta_learn" section="content" />
+
+## Key Resources
+
+<FlipCardGrid>
+  <FlipCard front="Partner Center" back="Customers → Contact or Company." subtext="Entry point" />
+  <FlipCard front="Duplicate" back="Email blocks creation. Phone warns only." subtext="Detection" />
+  <FlipCard front="Last Activity" back="Filter and sort. Keep customers close." subtext="Prioritization" />
+</FlipCardGrid>
+
+---
+
+## Knowledge Check
+
+<KnowledgeCheck courseId="crm20-identifying-your-customers" site="vendasta_learn"
+  sessionSize={5}
+  questions={[
+    { type: "mcq", question: "If you try to create a contact and the CRM already has that email address, what happens?", options: ["The CRM blocks creating a new contact and points you to the existing record.", "The CRM saves a duplicate and only flags the email after the fact.", "The CRM blocks creation only when the phone number also matches.", "The CRM merges the new entry into the older record without asking."], correctIndex: 0, explanation: "Duplicate detection uses email: if it exists, the CRM surfaces that record and prevents creating the contact." },
+    { type: "mcq", question: "Where is consolidated information about a business stored in CRM 2.0?", options: ["On the Company page", "On the Contact page only", "In the Pipeline view only", "Only inside Premium Report exports"], correctIndex: 0, explanation: "The Contact and Company Page states the Company page is where all information about a business is located." },
+    { type: "truefalse", statement: "You can filter on Last activity date to prioritize companies you have not engaged with recently.", correct: true, explanation: "Applying Filters and Sorting describes filtering on Last activity date to prioritize follow-up." },
+    { type: "truefalse", statement: "A matching phone number blocks creating a new contact the same way a matching email does.", correct: false, explanation: "Creating a Contact explains the CRM warns on duplicate phone numbers but does not block creation; duplicate email blocks creation." },
+    { type: "sort", instruction: "Sort into Snapshot Report reveals vs does not reveal.", items: [{ label: "Technologies they use on their website", correctBucket: "reveals" }, { label: "Google My Business claim status", correctBucket: "reveals" }, { label: "Financial data (revenue, profit margins)", correctBucket: "not" }, { label: "Company history (founding date)", correctBucket: "not" }], buckets: [{ id: "reveals", label: "Snapshot Report Reveals" }, { id: "not", label: "Does Not Reveal" }], explanation: "Snapshot Report Data says you can see technologies and GMB claimed status—not financial data or company history." }
+  ]}
+/>
+
+---
+
+## Share a Reflection
+
+<CommentBox variant="reflection" prompt="What's one filter combination you'd use in CRM 2.0 right now to find a high-priority segment you haven't targeted yet? What would you look for?" />
+
+---
+
+Find your customers with the information that matters. Create contacts, companies, and associations. Filter and sort for interests. Identify the customers you want to work on.
+
+</InlineHighlighter>
+
+<MarkComplete courseId="crm20-identifying-your-customers" site="vendasta_learn" />

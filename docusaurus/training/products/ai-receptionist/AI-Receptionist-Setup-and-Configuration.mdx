@@ -1,0 +1,237 @@
+---
+sidebar_position: 1
+title: AI Receptionist setup & configuration
+description: "Step-by-step setup for your first AI Employee: the AI Receptionist. Configure name, tone, knowledge sources, and test safely with the My Listing demo."
+---
+
+import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CommentBox from "@site/src/components/CommentBox";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+
+<InlineHighlighter courseId="ai-receptionist-setup-and-configuration" site="vendasta_learn">
+
+<CourseProgressBar courseId="ai-receptionist-setup-and-configuration" site="vendasta_learn" />
+
+This module walks you step-by-step through the essential setup journey for your first AI Employee: the AI Receptionist. You'll configure key elements like name, tone, and knowledge sources—and learn where to get help when you're ready for advanced features.
+
+:::tip Learning Goals
+- Complete platform prerequisites.
+- Locate and launch the AI Receptionist configuration panel.
+- Personalize name, tone, and autonomy.
+- Add core knowledge sources.
+- Activate the My Listing demo for safe testing.
+- Know where to go for automations, booking tools, and voice setup.
+:::
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">✅</span>Getting Ready to Configure</div>
+
+Before jumping into the configuration panel, confirm prerequisites are in place and know where to find the AI Receptionist inside the Business App.
+
+### Check your prerequisites
+
+To ensure the AI can be configured and trained properly, a few items must be active inside the Business App:
+
+- **Conversations AI** is active
+- **Setup details** are gathered from the fulfillment form and/or onboarding call
+- For U.S. clients using Voice or SMS: **A2P verification** must be set up in Administration → SMS configuration
+
+### Where to find it
+
+**Navigation path:** Business App → AI → AI Workforce → AI Chat Receptionist
+
+1. Log in to the Business App
+2. In the left-hand menu, click **AI**
+3. Select **AI Workforce**
+4. Look for the card titled **AI Chat Receptionist**
+5. Click **Configure** to open the setup panel
+
+There are two cards—Chat and Voice. This course focuses on the AI Chat Receptionist; the Voice Receptionist has similar settings.
+
+**If you don't see Configure:** Ensure you have the right admin permissions, Conversations AI is activated, and you're inside the correct Business App account.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">👤</span>Persona Setup — Name, Tone, Autonomy</div>
+
+Give your AI a name, tone, and autonomy level that fits your business. The purpose prompt defines how your AI shows up to customers.
+
+### Give your AI a name and photo
+
+In the **Profile** section:
+
+- Enter a name that fits your brand (e.g., "Jordan" or "Sophie")
+- (Optional) Upload a profile image or avatar—this shows in the chat bubble
+
+A relatable name and friendly image help customers feel more comfortable.
+
+### Set autonomy level
+
+Still in Profile, below the Name field:
+
+- Choose the **Autonomy Level**
+- Default is **Level 3: Autonomous**—enables the AI to manage full conversations, collect leads, and book appointments
+- You can still review all conversations and adjust behavior at any time
+
+### Write your purpose prompt
+
+This is where your AI learns its job. In the **Instructions** panel, customize your prompt. Example format:
+
+You are the receptionist for [Business Name].
+
+Greet visitors warmly and let them know you're here to help.
+
+Speak in a [friendly/professional/casual] tone that matches the business.
+
+Always collect name, phone number, and email—ask one at a time.
+
+Keep the conversation moving by asking follow-up questions.
+
+If unsure, let the customer know someone will follow up soon.
+
+**Best practices:** Use short sentences and bullet-style formatting. Be specific about tone (e.g., "warm and caring, not robotic"). Mention how to respond if the AI is unsure. Hit **Save** before continuing.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">📚</span>Adding Knowledge Sources</div>
+
+Your AI Receptionist pulls answers from specific, trusted sources—not guesses. Without knowledge sources, it will say "I don't know."
+
+### Add business knowledge sources
+
+From the Configure panel, go to the **Knowledge Sources** tab.
+
+| Source | Action |
+|--------|--------|
+| **Business Profile** | Toggle ON. Auto-filled with business name, hours, address, contact info. |
+| **Website Scrape** | Add your website URL. Use **Follow Links** mode to capture multiple pages (Services, About, FAQs). Avoid privacy policy or login pages. |
+| **Uploaded Documents** | Optional. Upload FAQs, service menus, or internal info in PDF or DOCX. Label clearly (e.g., "Spa Menu – 2024 Pricing"). |
+| **Auto-Refresh** | Turn ON for websites that update often (pricing, hours). Keeps your AI up-to-date without manual changes. |
+
+**Best practices:** Start with services and FAQs. Skip social media links, login pages, and outdated files. Revisit and refresh monthly if your business changes often.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">🔌</span>Connecting Capabilities and Channels</div>
+
+Capabilities combine AI prompts with API tools to give the AI specific functionality—connecting with third-party tools, platform areas, or additional instructions.
+
+### Channel setup overview
+
+| Channel | Configuration | Setup Location |
+|---------|---------------|----------------|
+| **Chat** | Enable Web Chat, install on website | AI Workforce → Chat Receptionist |
+| **SMS** | Enable SMS, complete A2P verification if needed | AI Workforce → Chat Receptionist + Administration → SMS Settings (USA) |
+| **WhatsApp, Facebook, Instagram** | Connect Facebook Business Account | Administration → Conversations Settings |
+| **Voice** | Forward business phone to number in Business App | AI Workforce → Voice Receptionist |
+
+### Web chat installation options
+
+- **Floating chat widget:** Appears in bottom right, toggles open/closed. Default for most setups.
+- **Embedded web chat:** Added to any section of a page. Configure Widget Actions for initial message or prefilled composer.
+
+### Voice receptionist options
+
+- **Answer with AI:** AI answers and converses. Most common.
+- **End Call:** Text-to-speech message + follow-up SMS. Not recommended.
+- **Forward the Call:** Forward to another line. Used for Missed Call Text Back (MCTB) and voicemail.
+
+Enable "Follow up with an SMS message" for MCTB. Set "When you receive an SMS" to **Reply with AI** so customers chat with the AI over SMS.
+
+<div className="in-practice">
+  <span className="in-practice__icon">💬</span>
+  <div className="in-practice__body">
+    <span className="in-practice__label">In Practice</span>
+    <p>You configure an AI Chat Receptionist for a local spa. You name it "Sophie," set a warm tone, add the business profile and website with Follow Links, and upload the 2024 service menu. You enable the floating web chat widget and grab the code for the client's site. Before going live, you click Try It on My Listing and ask "What services do you offer?" and "Do you take appointments?" to verify responses. Once satisfied, you install the widget and activate.</p>
+  </div>
+</div>
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">🧪</span>Demo Setup</div>
+
+Test your AI Receptionist without going live. Use the **My Listing** preview environment.
+
+### How to test
+
+1. In the Business App, go to **AI → AI Workforce**
+2. Under AI Chat Receptionist, click **Configure**
+3. Click the **Try It** button
+4. A My Listing preview page opens—start chatting like a customer would
+
+### Sample test questions
+
+- "What services do you offer?"
+- "Do you take appointments?"
+- "How late are you open on weekends?"
+
+**Pro tip:** Use an incognito browser window for a clean session.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">📬</span>Managing Conversations & Lead Capture</div>
+
+### Conversations tab
+
+- **Inbox:** Conversations where the lead provided at least one piece of contact info (name, phone, email)
+- **Closed:** Deleted or manually closed conversations
+- **Anonymous Web Visitors:** Web Chat conversations with no contact info
+
+### Review AI behavior
+
+Read chats, listen to call recordings, or view transcripts. Click **Explanation** on any message to see why the AI responded that way—links to website sources, knowledge base quotes, or tool calls.
+
+### Associated contacts
+
+When a user provides contact info, a contact is automatically created in the CRM. From the conversation, click the kabob menu → **View contact**. The Contact view includes a conversation summary block you can click to jump back to the full conversation.
+
+---
+
+<SectionFeedback courseId="ai-receptionist-setup-and-configuration" site="vendasta_learn" section="content" />
+
+## Key Resources
+
+<FlipCardGrid>
+  <FlipCard front="AI Conversations Docs" back="Install widget, customize tone, manage Inbox." subtext="Reference" />
+  <FlipCard front="AI Automations Docs" back="Follow-up messages, booking workflows, after-hours." subtext="Advanced" />
+  <FlipCard front="Purpose Prompts" back="Example prompts by business type." subtext="Templates" />
+</FlipCardGrid>
+
+---
+
+## Knowledge Check
+
+<KnowledgeCheck
+  courseId="ai-receptionist-setup-and-configuration"
+  site="vendasta_learn"
+  sessionSize={5}
+  questions={[
+    { type: "mcq", question: "Where is the Chat Receptionist configured in-product?", options: ["Partner Center → Billing", "Business App → AI → AI Workforce", "Administration → Marketplace only", "Vendasta Store checkout"], correctIndex: 1, explanation: "Navigation maps chat persona, autonomy, and channels inside AI Workforce." },
+    { type: "truefalse", statement: "If no knowledge sources are attached, the assistant cannot ground answers in the business's facts.", correct: true, explanation: "Knowledge Sources is required content; empty states fall back to disclaimers instead of guesses." },
+    { type: "whicharea", principle: "Where do you add the business website URL and enable Follow Links mode?", correctArea: "📚 Adding Knowledge Sources", explanation: "Website crawl settings, follow-link depth, and uploads live under Knowledge Sources." },
+    { type: "mcq", question: "Which autonomy preset ships as the default out of the box?", options: ["Level 1 Guided", "Level 2 Assisted", "Level 3 Autonomous", "Level 4 Full"], correctIndex: 2, explanation: "Product defaults start at Level 3 so capture, booking, and dialog work end-to-end." },
+    { type: "truefalse", statement: "Preview mode lets you rehearse chats before embedding widgets on production pages.", correct: true, explanation: "Try It / preview surfaces mirror production behavior without public traffic." },
+    { type: "fillblank", principle: "For U.S. clients using Voice or SMS, ___ verification must be set up in Administration.", before: "For U.S. clients using Voice or SMS, ", answer: "A2P", after: " verification must be set up in Administration.", hint: "Anti-spam for texts.", explanation: "Regulatory guidance requires A2P registration before high-volume SMS or voice SMS bridges." },
+    { type: "match", instruction: "Match the channel to its setup location.", pairs: [{ term: "Web Chat", definition: "AI Workforce → Chat Receptionist" }, { term: "SMS (USA)", definition: "Administration → SMS Settings" }, { term: "Voice", definition: "AI Workforce → Voice Receptionist" }], explanation: "Chat, SMS compliance, and PSTN stacks each have their own admin surface." },
+    { type: "mcq", question: "Which inbound call handling option is recommended for Voice Receptionist?", options: ["Hang up with TTS only", "Answer with AI", "Send straight to voicemail", "Silence the line"], correctIndex: 1, explanation: "Default guidance routes calls into the AI voice model for conversational handling." }
+  ]}
+/>
+
+---
+
+## Share a Reflection
+
+<CommentBox variant="reflection" prompt="Think about a business type you work with or plan to configure. What purpose prompt tone and knowledge sources would you prioritize first, and what test questions would you use to verify the setup?" />
+
+---
+
+You've walked through the setup path from platform preparation to persona setup, knowledge sources, and safe demo testing. Your AI Receptionist is almost ready to go live. Use the linked guides whenever you need them—you're not expected to memorize every detail. Your AI Receptionist is a partner designed to help businesses respond faster, serve customers better, and grow stronger. Share feedback via the forum—your input helps us improve future trainings!
+
+</InlineHighlighter>
+
+<MarkComplete courseId="ai-receptionist-setup-and-configuration" site="vendasta_learn" />
