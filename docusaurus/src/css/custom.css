@@ -1707,3 +1707,58 @@ div[class*="language-"] pre {
 .theme-doc-sidebar-item-category-link.hide-from-sidebar {
   display: none !important;
 }
+/* ── Training: section-label bars and in-practice callouts ── */
+.principle-area {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin: 1.5rem 0 1rem;
+  background: var(--ifm-color-primary);
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.principle-area__icon {
+  font-size: 1.25rem;
+}
+
+.in-practice {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background: rgba(46, 133, 85, 0.1);
+  border-left: 4px solid var(--ifm-color-primary);
+  border-radius: 0 10px 10px 0;
+}
+
+.in-practice__icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.in-practice__label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.in-practice__body p {
+  margin: 0;
+}
+
+[data-theme='dark'] .in-practice {
+  background: rgba(37, 194, 160, 0.1);
+  border-left-color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .in-practice__label {
+  color: var(--ifm-color-primary);
+}
