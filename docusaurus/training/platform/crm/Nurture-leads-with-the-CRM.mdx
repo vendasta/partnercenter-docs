@@ -1,0 +1,136 @@
+---
+sidebar_position: 1
+title: Nurture Leads with the CRM
+description: Uncover the marketing capabilities of Vendasta's CRM to generate and nurture leads—forms, webchat, and targeted email campaigns.
+---
+
+import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CommentBox from "@site/src/components/CommentBox";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+
+<InlineHighlighter courseId="nurture-leads-with-the-crm" site="vendasta_learn">
+
+<CourseProgressBar courseId="nurture-leads-with-the-crm" site="vendasta_learn" />
+
+Uncover the marketing capabilities of Vendasta's CRM to generate and nurture leads effectively. This course covers everything from creating forms and setting up the webchat to running targeted email campaigns, ensuring you can attract and engage prospects seamlessly.
+
+:::tip Learning Goals
+- Create, style, and embed forms to capture lead information
+- Set up the AI-assisted webchat widget for real-time engagement
+- Develop and send email campaigns, monitor lead scores, and understand email deliverability and sender reputation
+:::
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">📝</span>Create a Form in the Vendasta CRM</div>
+
+Create, style, and embed forms in Vendasta's CRM to capture lead information efficiently. The form is built to integrate easily with reCaptcha, which helps protect your form from spam and ensure you're only dealing with genuine leads, maintaining the quality of your marketing data.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">⚡</span>Automate Your Lead Generation</div>
+
+### Send a Follow-Up Email When a Form Is Submitted
+
+This automation triggers a campaign to be sent to a contact every time a new contact is created from a form submission.
+
+To use this automation, you'll need to have a published email campaign that has been activated. Check out our recommended campaigns to find the one that will work best for you or build your own.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">💬</span>Set Up the Webchat</div>
+
+### Automatically Capture Lead Information
+
+The AI will automatically work to capture contact information and add it to the CRM as a new contact. If you want to use the AI assistant as a help-bot and not as a lead capture tool, you can uncheck the **capture lead information** box to disable this feature.
+
+In Partner Center, messages exchanged with customers can be reviewed in the **Inbox Messages** section.
+
+### Add Additional Knowledge for the AI Assistant
+
+You can give your AI assistant additional knowledge from any source. Click **Add Knowledge** and choose between adding your own custom text knowledge (such as frequently asked questions) or enter a website address to scrape the website for business information.
+
+:::tip Full Walkthrough
+For a complete walkthrough of the webchat setup, visit the Vendasta Support center.
+:::
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">📧</span>Send a Campaign</div>
+
+### Authenticate Your Custom Email Domain
+
+To update the sender address to use your custom domain instead of smblogin.com, you'll first need to update the SPF record in your Domain Name System (DNS). Log in to your DNS provider (e.g., GoDaddy if you bought your domain there) to authenticate your domain.
+
+It's important to update your DNS before adding your custom email address. Until you update your SPF records, there's a high chance your emails will land in the spam folder. This applies even if you sign up for Vendasta with a custom-domain email address. Grey-label your sender address until you own a custom domain and update the SPF records.
+
+You can only update the sender address with a custom email. Free email addresses (gmail.com, outlook.com, yahoo.com) will not save.
+
+Authenticating your custom domain allows you to build a reputation under your brand's domain, minimizing any negative impacts from other senders on the shared domain.
+
+### Personalize with Dynamic Content
+
+Personalizing emails with dynamic content allows you to tailor your messages, making them more engaging and informative.
+
+### Improve Your Email Deliverability
+
+| Best Practice | Why It Matters |
+|---------------|----------------|
+| **Write trustworthy subject lines** | Subject lines should convey real value. Aggressive statements like "Urgent" or "Act now" are associated with spam and can affect whether your email lands in the inbox at all. |
+| **Keep your email list clean** | Regularly remove inactive contacts to maintain list health and improve deliverability. |
+| **Avoid spam traps** | Spam traps are addresses created by providers to catch unwanted senders. Maintain a list of active users and never purchase an email list. |
+| **Send emails your contacts love** | High open and click rates show valuable content. Monitor performance to discover what appeals and who to focus on in future campaigns. |
+
+<div className="in-practice">
+  <span className="in-practice__icon">💬</span>
+  <div className="in-practice__body">
+    <span className="in-practice__label">In Practice</span>
+    <p>An agency embeds a form with reCaptcha on their landing page. When a prospect submits, an automation sends a welcome email from their authenticated custom domain. They also run the AI webchat on their site with custom knowledge from their FAQ page. Leads captured via form or webchat appear in the CRM. They monitor lead scores, remove inactive contacts monthly, and use trustworthy subject lines—their deliverability stays strong and their campaigns perform well.</p>
+  </div>
+</div>
+
+---
+
+<SectionFeedback courseId="nurture-leads-with-the-crm" site="vendasta_learn" section="content" />
+
+## Key Resources
+
+<FlipCardGrid>
+  <FlipCard front="Forms + reCaptcha" back="Capture leads. Protect from spam." subtext="Quality" />
+  <FlipCard front="Form → Email" back="Automation triggers campaign on form submit." subtext="Workflow" />
+  <FlipCard front="Webchat + Inbox" back="AI captures leads. Review in Inbox Messages." subtext="Engagement" />
+  <FlipCard front="Custom Domain" back="SPF records. Build sender reputation." subtext="Deliverability" />
+</FlipCardGrid>
+
+---
+
+## Knowledge Check
+
+<KnowledgeCheck courseId="nurture-leads-with-the-crm" site="vendasta_learn"
+  sessionSize={5}
+  questions={[
+    { type: "mcq", question: "What is the purpose of integrating reCaptcha with the form?", options: ["To track user behavior on the website", "To analyze marketing campaign performance", "To protect the form from spam and ensure genuine leads", "To automate lead follow-up actions"], correctIndex: 2, explanation: "reCaptcha helps protect your form from spam and ensure you're only dealing with genuine leads, maintaining the quality of your marketing data." },
+    { type: "mcq", question: "Where can you find the messages exchanged with customers through the AI Webchat Widget?", options: ["Under CRM > Contacts", "In the Inbox Messages section", "Under AI Assistant settings", "In your clients Business App"], correctIndex: 1, explanation: "In Partner Center, messages exchanged with customers can be reviewed in the Inbox Messages section." },
+    { type: "mcq", question: "What can be added as additional knowledge for the AI assistant?", options: ["Custom text knowledge and website address to scrape for business information", "YouTube video content", "Custom images", "Only pre-built templates"], correctIndex: 0, explanation: "Click Add Knowledge and choose between custom text (e.g., FAQs) or a website address to scrape for business information." },
+    { type: "mcq", question: "What is a key benefit of authenticating your own custom email domain for sending?", options: ["It lets you use free webmail addresses like Gmail or Yahoo as the saved sender", "It builds sender reputation under your brand and limits cross-sender impact on the shared domain", "It is only needed so you can add dynamic content to campaigns", "It removes the need to update SPF records in DNS"], correctIndex: 1, explanation: "Authenticating your custom domain helps you build reputation under your brand and minimize impacts from other senders on the shared domain." },
+    { type: "truefalse", statement: "Personalizing emails with dynamic content makes them more engaging to your audience.", correct: true, explanation: "Personalizing emails with dynamic content allows you to tailor your messages, making them more engaging and informative." }
+  ]}
+/>
+
+---
+
+## Share a Reflection
+
+<CommentBox variant="reflection" prompt="Have you authenticated a custom email domain for your campaigns? What's one email deliverability practice from this course you'd implement right away?" />
+
+---
+
+Congratulations 🎉 Use forms, webchat, and email campaigns to attract and engage prospects. For additional feedback about the training, share your thoughts in the course forum.
+
+</InlineHighlighter>
+
+<MarkComplete courseId="nurture-leads-with-the-crm" site="vendasta_learn" />

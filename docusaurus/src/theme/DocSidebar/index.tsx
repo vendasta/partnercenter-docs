@@ -1,12 +1,27 @@
 import React, {type ReactElement} from 'react';
 import OriginalDocSidebar from '@theme-original/DocSidebar';
 import type {Props} from '@theme/DocSidebar';
+import {useLocation} from '@docusaurus/router';
 
 export default function DocSidebarWrapper(props: Props): ReactElement {
+  const {pathname} = useLocation();
+  const isTraining = pathname.startsWith('/platform-training');
+
   return (
     <div className="custom-sidebar-wrapper">
       <div className="sidebar-pill-placeholder">
-        <span className="sidebar-pill">DOCUMENTATION</span>
+        <a
+          href="/"
+          className={`sidebar-pill${!isTraining ? ' sidebar-pill--active' : ''}`}
+        >
+          DOCUMENTATION
+        </a>
+        <a
+          href="/platform-training"
+          className={`sidebar-pill${isTraining ? ' sidebar-pill--active' : ''}`}
+        >
+          TRAINING
+        </a>
       </div>
       <div className="sidebar-menu-container">
         <OriginalDocSidebar {...props} />
