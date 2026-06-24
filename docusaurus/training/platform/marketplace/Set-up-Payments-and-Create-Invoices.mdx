@@ -6,30 +6,65 @@ description: Make your Store payment-ready with Vendasta Payments, create and se
 
 import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
-import CourseProgressBar from "@site/src/components/CourseProgressBar";
-import SectionFeedback from "@site/src/components/SectionFeedback";
-import InlineHighlighter from "@site/src/components/InlineHighlighter";
-import MarkComplete from "@site/src/components/MarkComplete";
 
-<InlineHighlighter courseId="set-up-payments-and-create-invoices" site="vendasta_learn">
+# Set up payments and create invoices
 
-<CourseProgressBar courseId="set-up-payments-and-create-invoices" site="vendasta_learn" />
+<div style={{display: 'flex', gap: '0.5rem', flexWrap: 'wrap', margin: '0.5rem 0 1.25rem'}}>
+<span style={{background: '#fff3cd', color: '#664d03', borderRadius: '6px', padding: '0.25rem 0.75rem', fontSize: '0.8rem', fontWeight: '700'}}>Intermediate</span>
+<span style={{background: '#cfe2ff', color: '#084298', borderRadius: '6px', padding: '0.25rem 0.75rem', fontSize: '0.8rem', fontWeight: '700'}}>Self-Paced</span>
+</div>
 
-Market, sell, bill, and fulfill—all from the platform. This course walks you through setting up Vendasta Payments, creating and sending invoices, configuring automated collection methods, and applying taxes. Learn the step-by-step process from start to finish.
+<div style={{display: 'flex', gap: '1.5rem', background: 'var(--ifm-color-emphasis-100)', borderLeft: '4px solid #2e8555', borderRadius: '0 8px 8px 0', padding: '0.875rem 1.25rem', margin: '0 0 0.75rem', flexWrap: 'wrap', fontSize: '0.875rem', color: 'var(--ifm-color-emphasis-700)'}}>
+<span><strong>Estimated time</strong> · 20 minutes</span>
+<span style={{color: 'var(--ifm-color-emphasis-400)'}}>|</span>
+<span><strong>Prerequisites</strong> · Partner Center access, Marketplace enabled</span>
+</div>
 
-:::tip Learning Goals
-- Set up Vendasta Payments with Stripe Connect to accept client card payments
-- Create, configure, and send invoices including packages and tax rates
-- Automate recurring billing with subscription billing settings and invoice templates
+<div style={{background: 'var(--ifm-color-emphasis-100)', borderRadius: '0 0 8px 8px', padding: '1.25rem', margin: '0 0 1.5rem', fontSize: '0.85rem'}}>
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem'}}>
+
+<div>
+<p style={{margin: '0 0 0.5rem', fontWeight: 700, fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ifm-color-emphasis-600)'}}>Outcomes</p>
+<div style={{lineHeight: '1.8'}}>
+<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Set up Vendasta Payments with Stripe Connect<br/>
+<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Configure package pricing and retail prices<br/>
+<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Create, configure, and send invoices<br/>
+<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Automate recurring billing and subscription collection<br/>
+<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Create and apply tax rates<br/>
+</div>
+</div>
+
+<div>
+<p style={{margin: '0 0 0.5rem', fontWeight: 700, fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ifm-color-emphasis-600)'}}>Required Access</p>
+<div style={{lineHeight: '1.8'}}>
+Partner Center admin access<br/>
+Vendasta Payments (paid subscription)
+</div>
+</div>
+
+<div>
+<p style={{margin: '0 0 0.5rem', fontWeight: 700, fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ifm-color-emphasis-600)'}}>Related Docs</p>
+<div style={{lineHeight: '1.8'}}>
+<span style={{color: 'var(--ifm-color-emphasis-500)', marginRight: '0.4rem'}}>&#8594;</span> <a href="/billing/invoices">Invoices</a><br/>
+<span style={{color: 'var(--ifm-color-emphasis-500)', marginRight: '0.4rem'}}>&#8594;</span> <a href="/administration/vendasta-payments">Vendasta Payments</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+
+:::note
+Market, sell, bill, and fulfill—all from the platform. This lab walks you through setting up Vendasta Payments, creating and sending invoices, configuring automated collection methods, and applying taxes so you can run end-to-end billing without leaving Partner Center.
 :::
 
 :::note Feature Availability
 Public Store, Shopping Cart, and Invoices are available worldwide (limited outside US, Canada, NZ, Australia, UK, Czech Republic). Full payments coverage and payouts: US, Canada, NZ, Australia, UK, Czech Republic. Vendasta Payments requires a paid subscription.
 :::
 
----
 
-<div className="principle-area"><span className="principle-area__icon">💳</span>Set Up Vendasta Payments</div>
+## Step 1: Set up Vendasta Payments (5 min)
+
+**Do**
 
 To accept credit card payments via invoices and the Shopping Cart, set up Vendasta Payments and a Stripe Connect account. Your process differs slightly based on whether you already have wholesale billing with Vendasta.
 
@@ -41,7 +76,7 @@ Partner Center → Administration → Vendasta Payments → **Complete Account S
 
 Partner Center → Administration → Vendasta Payments → **Manage Account**. You will be redirected to the Stripe Connect workflow.
 
-### Enter Stripe connect information
+### Enter Stripe Connect information
 
 Verify your information in the Stripe workflow. Every country has Know Your Customer (KYC) requirements. US: Employer Identification Number (EIN). Canada: CRA Business Number.
 
@@ -53,9 +88,10 @@ After Stripe, return to Partner Center and add bank account details. Funds colle
 
 White-label the credit card statements your customers receive. Add a customer statement description so charges appear under your brand.
 
----
 
-<div className="principle-area"><span className="principle-area__icon">📦</span>Package Pricing Model</div>
+## Step 2: Configure package pricing model (4 min)
+
+**Read**
 
 Package pricing is automatically calculated from the sum of each packaged product's retail price (minus % discount where applicable). This gives you insight into unit economics across sales orders, invoices, and Shopping Cart.
 
@@ -70,6 +106,8 @@ Package pricing is automatically calculated from the sum of each packaged produc
 Packages using the old pricing model cannot be added to invoices or purchased through the Shopping Cart.
 :::
 
+**Do**
+
 ### Set store currency
 
 Partner Center → Marketplace → Manage Store → Currency tab. Ensure currency matches Vendasta Payments. Changing currency affects all product and package prices—review before changing.
@@ -82,9 +120,10 @@ Partner Center → Marketplace → Manage Products → select product → Produc
 
 Partner Center → Marketplace → Manage Store → select package. Save & Publish = Store-ready (Shopping Cart, invoices). Save as Draft = invoices only. Click "I don't want to use the new package pricing" to retain old model.
 
----
 
-<div className="principle-area"><span className="principle-area__icon">📄</span>Create and Send Invoices</div>
+## Step 3: Create and send invoices (5 min)
+
+**Do**
 
 Partner Center → Billing → Invoices → Create Invoice. Without Vendasta Payments, you can create and send invoices but cannot collect payments directly within the invoice.
 
@@ -102,11 +141,14 @@ Partner Center → Billing → Invoices → Create Invoice. Without Vendasta Pay
 - **Send** — Click Send Invoice. Preview email, add recipients. Auto-charged invoices send a receipt instead.
 - **Resend** — Billing → Invoices. View sent invoices. Resend Invoice for missed or misplaced invoices.
 
-**Reminder:** Draft invoices can be edited; sent invoices cannot be edited.
+**Verify**
 
----
+Draft invoices can be edited; sent invoices cannot be edited.
 
-<div className="principle-area"><span className="principle-area__icon">🔄</span>Recurring Invoices and Collection Methods</div>
+
+## Step 4: Set up recurring billing and collection methods (3 min)
+
+**Do**
 
 Automatically generate, send, and charge invoices for recurring subscriptions. Set default billing automation for new accounts, or configure per account.
 
@@ -130,17 +172,14 @@ Partner Center → Businesses → Accounts → select account → New → Recurr
 
 Account → Subscriptions → kebab on retail subscription → Cancel Subscription. Cancel at end of current cycle or custom date. Stops billing that client; other subscriptions continue.
 
-<div className="in-practice">
-  <span className="in-practice__icon">💬</span>
-  <div className="in-practice__body">
-    <span className="in-practice__label">In Practice</span>
-    <p>You set up Vendasta Payments with Stripe and your US bank account. You set retail prices on your core products and update packages to the new pricing model. You create an invoice for a new client with a bundled package, add GST, and choose to email it. For an existing client with a yearly subscription, you enable subscription billing with auto-charge on the 1st of each month. Invoices generate and charge automatically—you review them in Billing → Invoices.</p>
-  </div>
-</div>
+:::tip
+You set up Vendasta Payments with Stripe and your US bank account. You set retail prices on your core products and update packages to the new pricing model. You create an invoice for a new client with a bundled package, add GST, and choose to email it. For an existing client with a yearly subscription, you enable subscription billing with auto-charge on the 1st of each month. Invoices generate and charge automatically—you review them in Billing → Invoices.
+:::
 
----
 
-<div className="principle-area"><span className="principle-area__icon">📋</span>Set Up Taxes</div>
+## Step 5: Set up taxes (3 min)
+
+**Do**
 
 Partner Center → Administration → Tax Rates. If you invoice or accept Shopping Cart purchases with Vendasta Payments, tax rates ensure you collect appropriate taxes from customers.
 
@@ -156,13 +195,10 @@ Partners are responsible for creating and maintaining tax rates for their region
 
 Billing → Invoices → Edit invoice → Options menu on line item → Set Item Tax → choose rate.
 
-### Shopping cart and sales orders
+### Shopping Cart and sales orders
 
 Tax rates apply automatically to Shopping Cart purchases and sales orders based on the account's address and defined regions. If no tax rate exists for a region, no tax is applied.
 
----
-
-<SectionFeedback courseId="set-up-payments-and-create-invoices" site="vendasta_learn" section="content" />
 
 ## Key Resources
 
@@ -173,7 +209,6 @@ Tax rates apply automatically to Shopping Cart purchases and sales orders based 
   <FlipCard front="Tax Rates" back="Administration → Tax Rates." subtext="Compliance" />
 </FlipCardGrid>
 
----
 
 ## Knowledge Check
 
@@ -194,7 +229,3 @@ Tax rates apply automatically to Shopping Cart purchases and sales orders based 
 ---
 
 Set up Vendasta Payments in Partner Center → Administration. Create your first invoice via Billing → Invoices → Create Invoice. In the next Merchant Services module, explore the Shopping Cart and Public Store.
-
-</InlineHighlighter>
-
-<MarkComplete courseId="set-up-payments-and-create-invoices" site="vendasta_learn" />
