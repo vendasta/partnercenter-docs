@@ -316,6 +316,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/business-app/administration/email-configuration-notifications-management', to: '/business-app/administration' },
           { from: '/business-app/administration/email-configuration', to: '/business-app/administration' },
           { from: '/business-app/administration/email-history', to: '/business-app/administration' },
+          { from: '/bulk-import-business-app-accounts', to: '/accounts/manage-accounts/create-accounts' },
           { from: '/business-app/administration/files', to: '/accounts/manage-accounts/files' },
           { from: '/accounts/manage-business-app/files', to: '/accounts/manage-accounts/files' },
           { from: '/business-app/administration/projects', to: '/accounts/manage-business-app/projects' },
