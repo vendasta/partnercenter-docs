@@ -6,31 +6,63 @@ description: Learn how Acquisition Widgets and Automations work together — fro
 
 import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
-import CourseProgressBar from "@site/src/components/CourseProgressBar";
-import SectionFeedback from "@site/src/components/SectionFeedback";
-import InlineHighlighter from "@site/src/components/InlineHighlighter";
-import MarkComplete from "@site/src/components/MarkComplete";
 
-<InlineHighlighter courseId="acquisition-automation-ai" site="vendasta_learn">
+# Acquisition + automation + AI
 
-<CourseProgressBar courseId="acquisition-automation-ai" site="vendasta_learn" />
+<div style={{display: 'flex', gap: '0.5rem', flexWrap: 'wrap', margin: '0.5rem 0 1.25rem'}}>
+<span style={{background: '#fff3cd', color: '#664d03', borderRadius: '6px', padding: '0.25rem 0.75rem', fontSize: '0.8rem', fontWeight: '700'}}>Intermediate</span>
+<span style={{background: '#cfe2ff', color: '#084298', borderRadius: '6px', padding: '0.25rem 0.75rem', fontSize: '0.8rem', fontWeight: '700'}}>Self-Paced</span>
+</div>
 
-This is an intermediate-level course on Acquisition Widgets and Automations. Before starting, you should know: what an Acquisition Widget is and where to set one up, what Automation triggers and steps are, and where to set up an Automation. By the end, you'll create an Acquisition Widget for use in Automations, set up a basic automation to make workflows easier, and get a peek into advanced automations to supercharge your efficiency.
+<div style={{display: 'flex', gap: '1.5rem', background: 'var(--ifm-color-emphasis-100)', borderLeft: '4px solid #2e8555', borderRadius: '0 8px 8px 0', padding: '0.875rem 1.25rem', margin: '0 0 0.75rem', flexWrap: 'wrap', fontSize: '0.875rem', color: 'var(--ifm-color-emphasis-700)'}}>
+<span><strong>Estimated time</strong> · 15 minutes</span>
+<span style={{color: 'var(--ifm-color-emphasis-400)'}}>|</span>
+<span><strong>Prerequisites</strong> · Partner Center access · Familiarity with Acquisition Widgets and Automations</span>
+</div>
 
-:::tip What you'll cover
-- **Hidden Power of the Acquisition Widget** — what it can automate without extra configuration
-- **Widget + Automation Connection** — when and how to combine them for maximum efficiency
-- **Creating an Acquisition Widget** — configure it for lead capture and activation
-- **Basic to Advanced Automations** — triggers, steps, and conditional logic
+<div style={{background: 'var(--ifm-color-emphasis-100)', borderRadius: '0 0 8px 8px', padding: '1.25rem', margin: '0 0 1.5rem', fontSize: '0.85rem'}}>
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem'}}>
+
+<div>
+<p style={{margin: '0 0 0.5rem', fontWeight: 700, fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ifm-color-emphasis-600)'}}>Outcomes</p>
+<div style={{lineHeight: '1.8'}}>
+<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Describe the built-in automation capabilities of an Acquisition Widget<br/>
+<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Decide when to use a widget alone vs. paired with an Automation<br/>
+<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Configure an Acquisition Widget for lead capture and activation<br/>
+<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Build basic and advanced automations using triggers and steps<br/>
+</div>
+</div>
+
+<div>
+<p style={{margin: '0 0 0.5rem', fontWeight: 700, fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ifm-color-emphasis-600)'}}>Required Access</p>
+<div style={{lineHeight: '1.8'}}>
+Partner Center admin access
+</div>
+</div>
+
+<div>
+<p style={{margin: '0 0 0.5rem', fontWeight: 700, fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ifm-color-emphasis-600)'}}>Related Docs</p>
+<div style={{lineHeight: '1.8'}}>
+<span style={{color: 'var(--ifm-color-emphasis-500)', marginRight: '0.4rem'}}>&#8594;</span> <a href="https://support.vendasta.com/hc/en-us/categories/360001550951-Automations">Automations documentation</a><br/>
+<span style={{color: 'var(--ifm-color-emphasis-500)', marginRight: '0.4rem'}}>&#8594;</span> <a href="https://support.vendasta.com/hc/en-us/categories/360001550941-Acquisition">Acquisition Widgets documentation</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+
+:::note
+This intermediate-level lab explores how Acquisition Widgets and Automations work together. Before starting, you should know what an Acquisition Widget is, where to set one up, and what automation triggers and steps are.
 :::
 
----
 
-<div className="principle-area"><span className="principle-area__icon">⚡</span>The Hidden Power of the Acquisition Widget</div>
+## Step 1: Discover the hidden power of the Acquisition Widget (3 min)
+
+**Read**
 
 You might already be familiar with basic automations and have used an Acquisition Widget to capture new leads on your website. What some may not realize is the hidden power inside an Acquisition Widget — it can do many things an automation can do without any special configuration steps.
 
-### Acquisition widgets can automate
+### What Acquisition Widgets can automate
 
 When a new account is created from an Acquisition Widget, that widget can automatically:
 
@@ -43,17 +75,14 @@ When a new account is created from an Acquisition Widget, that widget can automa
 
 The Acquisition Widget handles these actions out of the box. You don't need to build a separate automation for basic lead capture and activation — the widget does it for you.
 
-<div className="in-practice">
-  <span className="in-practice__icon">💬</span>
-  <div className="in-practice__body">
-    <span className="in-practice__label">In Practice</span>
-    <p>A vendor embeds an Acquisition Widget on their landing page. When a reseller signs up, the widget automatically activates a 7-day Reputation Management trial, adds the tag "Landing Page Lead," starts a 5-email onboarding sequence, and assigns the lead to the regional sales rep. All of this happens without a single automation — just widget configuration.</p>
-  </div>
-</div>
+:::tip In Practice
+A vendor embeds an Acquisition Widget on their landing page. When a reseller signs up, the widget automatically activates a 7-day Reputation Management trial, adds the tag "Landing Page Lead," starts a 5-email onboarding sequence, and assigns the lead to the regional sales rep. All of this happens without a single automation — just widget configuration.
+:::
 
----
 
-<div className="principle-area"><span className="principle-area__icon">🔗</span>Connect Widgets to Automations</div>
+## Step 2: Connect widgets to automations (3 min)
+
+**Read**
 
 The Acquisition Widget does a lot on its own — but there are powerful actions that Automations can take to improve your workflows even more.
 
@@ -67,9 +96,10 @@ Use the **Acquisition Widget** for: lead capture, immediate activation of freemi
 
 Use **Automations** for: follow-up sequences, conditional branching, integrations with CRM or other tools, and advanced workflows that respond to triggers over time.
 
----
 
-<div className="principle-area"><span className="principle-area__icon">📋</span>Creating an Acquisition Widget</div>
+## Step 3: Create an Acquisition Widget (4 min)
+
+**Do**
 
 Create an Acquisition Widget that can be used in Automations. Know where to set one up and how to configure it for maximum impact.
 
@@ -85,9 +115,10 @@ Before creating a widget, you should know:
 
 Configure your widget to capture the right information, activate the right products, and — when connected to an Automation — trigger the right workflow. A well-configured widget is the first step in a streamlined lead-to-customer journey.
 
----
 
-<div className="principle-area"><span className="principle-area__icon">🤖</span>Basic to Advanced Automations</div>
+## Step 4: Build basic to advanced automations (5 min)
+
+**Do**
 
 Automations use triggers and steps to run workflows automatically. Start with the basics, then explore advanced options to handle more complex scenarios.
 
@@ -106,9 +137,6 @@ Set up a basic automation to make your workflows easier. Example: when a new acc
 
 Get a peek into more advanced automations: conditional logic (if/else), multi-step sequences, wait steps, integrations, and branching. These supercharge your efficiency by handling complex scenarios without manual intervention.
 
----
-
-<SectionFeedback courseId="acquisition-automation-ai" site="vendasta_learn" section="content" />
 
 ## Key Resources
 
@@ -118,7 +146,6 @@ Get a peek into more advanced automations: conditional logic (if/else), multi-st
   <FlipCard front="Triggers & Steps" back="Triggers start it. Steps execute actions. Build from there." subtext="Foundation" />
 </FlipCardGrid>
 
----
 
 ## Knowledge Check
 
@@ -133,11 +160,3 @@ Get a peek into more advanced automations: conditional logic (if/else), multi-st
     { type: "sort", instruction: "Sort these into Acquisition Widget (built-in) vs Automation (additional).", items: [{ label: "Activate freemium products", correctBucket: "widget" }, { label: "Conditional branching", correctBucket: "automation" }, { label: "Add tags to account", correctBucket: "widget" }, { label: "Multi-step wait sequences", correctBucket: "automation" }], buckets: [{ id: "widget", label: "Acquisition Widget" }, { id: "automation", label: "Automation" }], explanation: "Widget actions are single-purpose toggles; branching and timed sequences belong to the automation builder." }
   ]}
 />
-
----
-
-Create an Acquisition Widget, set up a basic automation, and explore advanced automations to supercharge your agency's efficiency. For questions, reach out to your Subject Matter Expert or post in the course forum.
-
-</InlineHighlighter>
-
-<MarkComplete courseId="acquisition-automation-ai" site="vendasta_learn" />

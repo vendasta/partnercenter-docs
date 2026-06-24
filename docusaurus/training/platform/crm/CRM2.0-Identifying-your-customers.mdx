@@ -6,31 +6,58 @@ description: The first course in CRM 2.0. Find customers with the information th
 
 import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
-import CourseProgressBar from "@site/src/components/CourseProgressBar";
-import SectionFeedback from "@site/src/components/SectionFeedback";
-import InlineHighlighter from "@site/src/components/InlineHighlighter";
-import MarkComplete from "@site/src/components/MarkComplete";
 
-<InlineHighlighter courseId="crm20-identifying-your-customers" site="vendasta_learn">
+# CRM 2.0 — identifying your customers
 
-<CourseProgressBar courseId="crm20-identifying-your-customers" site="vendasta_learn" />
+<div style={{display: 'flex', gap: '0.5rem', flexWrap: 'wrap', margin: '0.5rem 0 1.25rem'}}>
+<span style={{background: '#d1e7dd', color: '#0a3622', borderRadius: '6px', padding: '0.25rem 0.75rem', fontSize: '0.8rem', fontWeight: '700'}}>Beginner</span>
+<span style={{background: '#cfe2ff', color: '#084298', borderRadius: '6px', padding: '0.25rem 0.75rem', fontSize: '0.8rem', fontWeight: '700'}}>Self-Paced</span>
+</div>
 
-This is the first course to understand how to use CRM 2.0. Through Identifying Your Customers, you will find your customers with the information that matters, create contacts and companies and associations, and filter and sort for interests. By the end, you'll be able to identify the customers you want to work on in CRM 2.0.
+<div style={{display: 'flex', gap: '1.5rem', background: 'var(--ifm-color-emphasis-100)', borderLeft: '4px solid #2e8555', borderRadius: '0 8px 8px 0', padding: '0.875rem 1.25rem', margin: '0 0 0.75rem', flexWrap: 'wrap', fontSize: '0.875rem', color: 'var(--ifm-color-emphasis-700)'}}>
+<span><strong>Estimated time</strong> · 20 minutes</span>
+<span style={{color: 'var(--ifm-color-emphasis-400)'}}>|</span>
+<span><strong>Prerequisites</strong> · Partner Center access, CRM 2.0 access</span>
+</div>
 
-:::tip What you'll cover
-- An introduction to CRM 2.0 and its key benefits
-- How to navigate the Contact and Company pages
-- How to create contacts, detect duplicates, and build associations
-- How to filter and sort to prioritize your best opportunities
+<div style={{background: 'var(--ifm-color-emphasis-100)', borderRadius: '0 0 8px 8px', padding: '1.25rem', margin: '0 0 1.5rem', fontSize: '0.85rem'}}>
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem'}}>
+
+<div>
+<p style={{margin: '0 0 0.5rem', fontWeight: 700, fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ifm-color-emphasis-600)'}}>Outcomes</p>
+<div style={{lineHeight: '1.8'}}>
+<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Understand CRM 2.0 and its key benefits<br/>
+<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Navigate the Contact and Company pages<br/>
+<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Create contacts, detect duplicates, and build associations<br/>
+<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Filter and sort to surface your best opportunities<br/>
+</div>
+</div>
+
+<div>
+<p style={{margin: '0 0 0.5rem', fontWeight: 700, fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ifm-color-emphasis-600)'}}>Required Access</p>
+<div style={{lineHeight: '1.8'}}>
+Partner Center access, CRM 2.0 access
+</div>
+</div>
+
+<div>
+<p style={{margin: '0 0 0.5rem', fontWeight: 700, fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ifm-color-emphasis-600)'}}>Related Docs</p>
+<div style={{lineHeight: '1.8'}}>
+<span style={{color: 'var(--ifm-color-emphasis-500)', marginRight: '0.4rem'}}>&#8594;</span> <a href="https://support.vendasta.com">Vendasta Support</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+
+:::note
+This is the first lab in the CRM 2.0 series. By the end, you'll know how to find and organize the customers you want to work on—using filters, views, and associations to keep your pipeline focused.
 :::
 
-:::tip Forum
-Feel free to ask questions and share comments in the course forum! All questions will be acknowledged by a Subject Matter Expert within 48 hours.
-:::
 
----
+## Step 1: Introduction to CRM 2.0 (3 min)
 
-<div className="principle-area"><span className="principle-area__icon">📖</span>An Introduction to CRM 2.0</div>
+**Read**
 
 CRM 2.0 creates a cohesive, single-platform experience for all Vendasta users. It aims to eliminate fragmented experiences and reduce developmental redundancy. The new infrastructure paves the way for a comprehensive CRM system and integration with industry leaders.
 
@@ -41,29 +68,27 @@ CRM 2.0 creates a cohesive, single-platform experience for all Vendasta users. I
 - **Improved segmentation** — Custom field filters enable sales teams to efficiently target prospects with higher sales potential.
 - **Better reporting** — Enhanced data capture on sales activities allows for more detailed reporting, including call connectivity and meeting outcomes.
 
----
 
-<div className="principle-area"><span className="principle-area__icon">🏢</span>The Contact and Company Page</div>
+## Step 2: Navigate the Contact and Company pages (3 min)
+
+**Do**
 
 Go to Partner Center and click **Customer**. You'll find two options: **Contact** and **Company**. Contacts are the individual people you work with; companies are the organizations those people are associated with. The **Company** page is where all information about a business is located.
 
----
-
-<div className="principle-area"><span className="principle-area__icon">⚙️</span>Setting Up Your View</div>
+### Set up your view
 
 Ask yourself: what information matters to you? There's a lot of data—set up your view by enabling, displaying, and reordering columns. For example, enable address, disable website, add Google My Business claimed status (if you've created a Snapshot Report).
 
----
-
-<div className="principle-area"><span className="principle-area__icon">🔍</span>Searching and Filtering</div>
+### Search and filter
 
 **Filter by assigned salesperson:** Click "Add filter" and search for "Salesperson". Find yourself by name or email.
 
 **Search bar:** Search for a company by name, phone number, partner ID, account group ID, and other information.
 
----
 
-<div className="principle-area"><span className="principle-area__icon">🆕</span>Creating a Contact</div>
+## Step 3: Create a contact and detect duplicates (4 min)
+
+**Do**
 
 Click **Create contact** (top right). Fill in name, email, or phone number. If possible, ensure you have the email address.
 
@@ -71,15 +96,17 @@ Click **Create contact** (top right). Fill in name, email, or phone number. If p
 
 The CRM checks for **email** to prevent duplicates. If the email exists, the CRM surfaces that record and **prevents** you from creating the contact—you can go to the existing record instead. The CRM also checks **phone numbers** and surfaces a **warning** if identical—but it **does not block** creation for duplicate phone numbers.
 
----
 
-<div className="principle-area"><span className="principle-area__icon">🔗</span>Creating an Association Between Contact and Company</div>
+## Step 4: Create an association between contact and company (3 min)
+
+**Do**
 
 After creating a contact, go to **Associated contact** → **Add contact** and find the contact you created. You can specify a label to indicate the relationship between the company and the contact.
 
----
 
-<div className="principle-area"><span className="principle-area__icon">📊</span>Applying Filters and Sorting</div>
+## Step 5: Apply filters and sort to prioritize (4 min)
+
+**Do**
 
 ### Advanced filtering
 
@@ -93,17 +120,10 @@ Sort by **Last activity date** to see customers you haven't touched base with re
 
 After running a Snapshot Report, you can discover: **technologies they are using on their website** and **Google My Business claimed status**—not financial data or company history.
 
-<div className="in-practice">
-  <span className="in-practice__icon">💬</span>
-  <div className="in-practice__body">
-    <span className="in-practice__label">In Practice</span>
-    <p>A rep sets up their view to show address, industry, and GMB claimed status. They filter by "Salesperson = me" and "Last activity date" older than 30 days. They find 20 restaurants without websites. They create a new contact for a decision-maker, associate them with the company, and add a task to follow up. The CRM prevents a duplicate when they try to add the same email again.</p>
-  </div>
-</div>
+:::tip In Practice
+A rep sets up their view to show address, industry, and GMB claimed status. They filter by "Salesperson = me" and "Last activity date" older than 30 days. They find 20 restaurants without websites. They create a new contact for a decision-maker, associate them with the company, and add a task to follow up. The CRM prevents a duplicate when they try to add the same email again.
+:::
 
----
-
-<SectionFeedback courseId="crm20-identifying-your-customers" site="vendasta_learn" section="content" />
 
 ## Key Resources
 
@@ -113,7 +133,6 @@ After running a Snapshot Report, you can discover: **technologies they are using
   <FlipCard front="Last Activity" back="Filter and sort. Keep customers close." subtext="Prioritization" />
 </FlipCardGrid>
 
----
 
 ## Knowledge Check
 
@@ -127,11 +146,3 @@ After running a Snapshot Report, you can discover: **technologies they are using
     { type: "sort", instruction: "Sort into Snapshot Report reveals vs does not reveal.", items: [{ label: "Technologies they use on their website", correctBucket: "reveals" }, { label: "Google My Business claim status", correctBucket: "reveals" }, { label: "Financial data (revenue, profit margins)", correctBucket: "not" }, { label: "Company history (founding date)", correctBucket: "not" }], buckets: [{ id: "reveals", label: "Snapshot Report Reveals" }, { id: "not", label: "Does Not Reveal" }], explanation: "Snapshot Report Data says you can see technologies and GMB claimed status—not financial data or company history." }
   ]}
 />
-
----
-
-Find your customers with the information that matters. Create contacts, companies, and associations. Filter and sort for interests. Identify the customers you want to work on.
-
-</InlineHighlighter>
-
-<MarkComplete courseId="crm20-identifying-your-customers" site="vendasta_learn" />

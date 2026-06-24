@@ -6,32 +6,65 @@ description: Uncover the marketing capabilities of Vendasta's CRM to generate an
 
 import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
-import CourseProgressBar from "@site/src/components/CourseProgressBar";
-import SectionFeedback from "@site/src/components/SectionFeedback";
-import InlineHighlighter from "@site/src/components/InlineHighlighter";
-import MarkComplete from "@site/src/components/MarkComplete";
 
-<InlineHighlighter courseId="nurture-leads-with-the-crm" site="vendasta_learn">
+# Nurture leads with the CRM
 
-<CourseProgressBar courseId="nurture-leads-with-the-crm" site="vendasta_learn" />
+<div style={{display: 'flex', gap: '0.5rem', flexWrap: 'wrap', margin: '0.5rem 0 1.25rem'}}>
+<span style={{background: '#d1e7dd', color: '#0a3622', borderRadius: '6px', padding: '0.25rem 0.75rem', fontSize: '0.8rem', fontWeight: '700'}}>Beginner</span>
+<span style={{background: '#cfe2ff', color: '#084298', borderRadius: '6px', padding: '0.25rem 0.75rem', fontSize: '0.8rem', fontWeight: '700'}}>Self-Paced</span>
+</div>
 
-Uncover the marketing capabilities of Vendasta's CRM to generate and nurture leads effectively. This course covers everything from creating forms and setting up the webchat to running targeted email campaigns, ensuring you can attract and engage prospects seamlessly.
+<div style={{display: 'flex', gap: '1.5rem', background: 'var(--ifm-color-emphasis-100)', borderLeft: '4px solid #2e8555', borderRadius: '0 8px 8px 0', padding: '0.875rem 1.25rem', margin: '0 0 0.75rem', flexWrap: 'wrap', fontSize: '0.875rem', color: 'var(--ifm-color-emphasis-700)'}}>
+<span><strong>Estimated time</strong> · 15 minutes</span>
+<span style={{color: 'var(--ifm-color-emphasis-400)'}}>|</span>
+<span><strong>Prerequisites</strong> · Partner Center access, CRM enabled</span>
+</div>
 
-:::tip Learning Goals
-- Create, style, and embed forms to capture lead information
-- Set up the AI-assisted webchat widget for real-time engagement
-- Develop and send email campaigns, monitor lead scores, and understand email deliverability and sender reputation
+<div style={{background: 'var(--ifm-color-emphasis-100)', borderRadius: '0 0 8px 8px', padding: '1.25rem', margin: '0 0 1.5rem', fontSize: '0.85rem'}}>
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem'}}>
+
+<div>
+<p style={{margin: '0 0 0.5rem', fontWeight: 700, fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ifm-color-emphasis-600)'}}>Outcomes</p>
+<div style={{lineHeight: '1.8'}}>
+<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Create, style, and embed forms to capture leads<br/>
+<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Set up the AI-assisted webchat widget<br/>
+<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Automate follow-up emails on form submission<br/>
+<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Send email campaigns with strong deliverability<br/>
+</div>
+</div>
+
+<div>
+<p style={{margin: '0 0 0.5rem', fontWeight: 700, fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ifm-color-emphasis-600)'}}>Required Access</p>
+<div style={{lineHeight: '1.8'}}>
+Partner Center admin access, CRM enabled
+</div>
+</div>
+
+<div>
+<p style={{margin: '0 0 0.5rem', fontWeight: 700, fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ifm-color-emphasis-600)'}}>Related Docs</p>
+<div style={{lineHeight: '1.8'}}>
+<span style={{color: 'var(--ifm-color-emphasis-500)', marginRight: '0.4rem'}}>&#8594;</span> <a href="https://support.vendasta.com">Vendasta Support — webchat setup</a><br/>
+</div>
+</div>
+
+</div>
+</div>
+
+:::note
+This lab covers the marketing side of the CRM—capturing leads through forms and webchat, automating follow-up, and running email campaigns that actually reach the inbox.
 :::
 
----
 
-<div className="principle-area"><span className="principle-area__icon">📝</span>Create a Form in the Vendasta CRM</div>
+## Step 1: Create a form to capture leads (3 min)
+
+**Do**
 
 Create, style, and embed forms in Vendasta's CRM to capture lead information efficiently. The form is built to integrate easily with reCaptcha, which helps protect your form from spam and ensure you're only dealing with genuine leads, maintaining the quality of your marketing data.
 
----
 
-<div className="principle-area"><span className="principle-area__icon">⚡</span>Automate Your Lead Generation</div>
+## Step 2: Automate your lead generation (3 min)
+
+**Do**
 
 ### Send a follow-up email when a form is submitted
 
@@ -39,9 +72,10 @@ This automation triggers a campaign to be sent to a contact every time a new con
 
 To use this automation, you'll need to have a published email campaign that has been activated. Check out our recommended campaigns to find the one that will work best for you or build your own.
 
----
 
-<div className="principle-area"><span className="principle-area__icon">💬</span>Set Up the Webchat</div>
+## Step 3: Set up the webchat (4 min)
+
+**Do**
 
 ### Automatically capture lead information
 
@@ -57,9 +91,10 @@ You can give your AI assistant additional knowledge from any source. Click **Add
 For a complete walkthrough of the webchat setup, visit the Vendasta Support center.
 :::
 
----
 
-<div className="principle-area"><span className="principle-area__icon">📧</span>Send a Campaign</div>
+## Step 4: Send a campaign (5 min)
+
+**Do**
 
 ### Authenticate your custom email domain
 
@@ -84,17 +119,10 @@ Personalizing emails with dynamic content allows you to tailor your messages, ma
 | **Avoid spam traps** | Spam traps are addresses created by providers to catch unwanted senders. Maintain a list of active users and never purchase an email list. |
 | **Send emails your contacts love** | High open and click rates show valuable content. Monitor performance to discover what appeals and who to focus on in future campaigns. |
 
-<div className="in-practice">
-  <span className="in-practice__icon">💬</span>
-  <div className="in-practice__body">
-    <span className="in-practice__label">In Practice</span>
-    <p>An agency embeds a form with reCaptcha on their landing page. When a prospect submits, an automation sends a welcome email from their authenticated custom domain. They also run the AI webchat on their site with custom knowledge from their FAQ page. Leads captured via form or webchat appear in the CRM. They monitor lead scores, remove inactive contacts monthly, and use trustworthy subject lines—their deliverability stays strong and their campaigns perform well.</p>
-  </div>
-</div>
+:::tip In Practice
+An agency embeds a form with reCaptcha on their landing page. When a prospect submits, an automation sends a welcome email from their authenticated custom domain. They also run the AI webchat on their site with custom knowledge from their FAQ page. Leads captured via form or webchat appear in the CRM. They monitor lead scores, remove inactive contacts monthly, and use trustworthy subject lines—their deliverability stays strong and their campaigns perform well.
+:::
 
----
-
-<SectionFeedback courseId="nurture-leads-with-the-crm" site="vendasta_learn" section="content" />
 
 ## Key Resources
 
@@ -105,7 +133,6 @@ Personalizing emails with dynamic content allows you to tailor your messages, ma
   <FlipCard front="Custom Domain" back="SPF records. Build sender reputation." subtext="Deliverability" />
 </FlipCardGrid>
 
----
 
 ## Knowledge Check
 
@@ -119,11 +146,3 @@ Personalizing emails with dynamic content allows you to tailor your messages, ma
     { type: "truefalse", statement: "Personalizing emails with dynamic content makes them more engaging to your audience.", correct: true, explanation: "Personalizing emails with dynamic content allows you to tailor your messages, making them more engaging and informative." }
   ]}
 />
-
----
-
-Congratulations 🎉 Use forms, webchat, and email campaigns to attract and engage prospects. For additional feedback about the training, share your thoughts in the course forum.
-
-</InlineHighlighter>
-
-<MarkComplete courseId="nurture-leads-with-the-crm" site="vendasta_learn" />
