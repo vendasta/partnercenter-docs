@@ -75,6 +75,10 @@ Your AI Chat Receptionist is assigned to the **Web Chat** channel by default. Th
 The Web Chat widget isn't automatically added to your website! You'll need to install the widget code or enable it within your site builder before your AI can start engaging visitors. When you are ready to install the widget, refer to [How to install the Conversations Web Chat Widget](/business-app/conversations/web-chat/)
 :::
 
+:::tip
+Managing multiple locations under one brand or franchise? With a [multi-location web chat widget](/multi-location-business-app/conversations/multi-location-web-chat), visitors pick their location on your main website and this AI Chat Receptionist answers for the location they choose.
+:::
+
 ### Step 2: Configure Your AI Chat Receptionist Capabilities
 
 Capabilities are like instructions that guide how your AI Chat Receptionist behaves and what actions it can take. Review these and adjust as needed to make sure your AI performs the way you want.
