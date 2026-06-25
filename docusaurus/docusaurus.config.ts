@@ -78,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       {
         id: 'training',
         path: 'training',
-        routeBasePath: 'platform-training',
+        routeBasePath: 'learn',
         sidebarPath: './sidebars-training.ts',
       },
     ],
