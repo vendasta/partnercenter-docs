@@ -326,7 +326,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/getting-started/intro-to-vendasta/vendasta-platform-overview', to: '/getting-started' },
           { from: '/getting-started/intro-to-vendasta/partner-onboarding', to: '/getting-started/partner-onboarding' },
           { from: '/getting-started/intro-to-vendasta/partner-troubleshooting-guide', to: '/getting-started/partner-troubleshooting-guide' },
-          { from: '/getting-started/intro-to-vendasta/vendasta-affiliate-program', to: '/getting-started/vendasta-affiliate-program' },
+          { from: '/getting-started/intro-to-vendasta/vendasta-affiliate-program', to: '/administration/my-account/affiliate-program/' },
+          { from: '/getting-started/vendasta-affiliate-program', to: '/administration/my-account/affiliate-program/' },
           { from: '/partner-center/partner-center-getting-started-guide', to: '/partner-center' },
           { from: '/partner-center/AI-receptionist-features-by-plan', to: '/ai/ai-workforce/ai-receptionist-features-by-plan' },
           // AI Workforce Optimization Plan content is now on every service page
