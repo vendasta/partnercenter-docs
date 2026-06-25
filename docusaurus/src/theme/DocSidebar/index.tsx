@@ -5,7 +5,7 @@ import {useLocation} from '@docusaurus/router';
 
 export default function DocSidebarWrapper(props: Props): ReactElement {
   const {pathname} = useLocation();
-  const isTraining = pathname.startsWith('/platform-training');
+  const isTraining = pathname.startsWith('/learn');
 
   return (
     <div className="custom-sidebar-wrapper">
@@ -17,7 +17,7 @@ export default function DocSidebarWrapper(props: Props): ReactElement {
           DOCUMENTATION
         </a>
         <a
-          href="/platform-training"
+          href="/learn"
           className={`sidebar-pill${isTraining ? ' sidebar-pill--active' : ''}`}
         >
           TRAINING
