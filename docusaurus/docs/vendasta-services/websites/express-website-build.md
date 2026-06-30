@@ -145,7 +145,7 @@ Yes, we use the GTranslate plugin. The free version provides automatic translati
 
 <summary>How can I get a social media feed on my website?</summary>
 
-We use the free Smash Balloon plugin to display feeds from Instagram, Facebook, Twitter, TikTok, and YouTube. Setup requires your social login credentials, and installation has an additional charge.
+We use the free Smash Balloon plugin to display feeds from Instagram, Facebook, X, TikTok, and YouTube. Setup requires your social login credentials, and installation has an additional charge.
 </details>
 
 <details>
