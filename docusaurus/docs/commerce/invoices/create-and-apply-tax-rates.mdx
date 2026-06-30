@@ -68,28 +68,6 @@ The tax rates that you have defined will be automatically applied to Shopping Ca
 
 Note that if no tax rates for a given region have been created, purchases and sales orders conducted through the Shopping Cart by customers located in the region will not have a tax rate applied to them.
 
-### Taxes on Sales Orders and the invoice gap
-
-Tax rates configured for an account's location will appear in the **Retail Summary** section of a Sales Order. However, when you **create an invoice from a Sales Order**, those taxes do **not** automatically carry over to the invoice.
-
-This happens because the Sales Order stores the tax *rate* (a percentage), but the invoice requires a specific *tax ID* (the named tax rate you created in Administration > Tax Rates). Since the tax ID isn't stored on the order itself, the invoice builder cannot apply it automatically.
-
-**What to do:**
-
-When creating an invoice from a Sales Order:
-
-1. Open the invoice after it is generated
-2. For each taxable line item, click the **⋮** menu and select **Set Item Tax**
-3. Choose the appropriate tax rate from your configured list
-4. Review the total and send or charge the invoice
-
-**If taxes aren't appearing on your Sales Order at all:**
-
-- Confirm the account has a complete address (city, state/province, country, postal code)
-- Confirm you have created a tax rate for that location in **Administration > Tax Rates**
-- Tax rates apply based on the account's address — if the address is missing or in an unconfigured region, no tax is shown 
-
-
 ## Video Walkthrough
 
 <iframe src="//www.loom.com/embed/7a58fd36374a4d4ab706ed9b4f5ac829" width="560" height="315" frameborder="0" allowfullscreen></iframe>
