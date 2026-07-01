@@ -5,9 +5,10 @@ export interface FlipCardProps {
   front: string;
   back: string;
   subtext?: string;
+  href?: string;
 }
 
-export function FlipCard({ front, back, subtext }: FlipCardProps) {
+export function FlipCard({ front, back, subtext, href }: FlipCardProps) {
   const [flipped, setFlipped] = useState(false);
   return (
     <div
@@ -24,6 +25,17 @@ export function FlipCard({ front, back, subtext }: FlipCardProps) {
         </div>
         <div className={styles.cardBack}>
           <span className={styles.backText}>{back}</span>
+          {href && (
+            <a
+              href={href}
+              className={styles.cardLink}
+              onClick={(e) => e.stopPropagation()}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View docs →
+            </a>
+          )}
         </div>
       </div>
     </div>
