@@ -1,10 +1,12 @@
 """
 flag_articles.py
 
-Scans a GitHub repo for Markdown help center articles that haven't been
-updated in a configurable number of days and:
-  1. Creates a GitHub Issue for each flagged article (or skips if one already exists).
-  2. Sends a summary notification to a Google Chat webhook.
+Scans a GitHub repo for Markdown help center articles and, each run:
+  1. Finds the N least-recently-updated articles (a rotating review cadence,
+     not a one-time staleness threshold — reviewing an article resets its
+     own last-updated date, so a fixed threshold would eventually go idle).
+  2. Creates a GitHub Issue for each one that doesn't already have an open issue.
+  3. Sends a summary notification to a Google Chat webhook.
 
 Required environment variables (set as GitHub Actions secrets):
   GITHUB_TOKEN          - Automatically available in GitHub Actions
@@ -12,10 +14,9 @@ Required environment variables (set as GitHub Actions secrets):
   GOOGLE_CHAT_WEBHOOK   - Incoming webhook URL from your Google Chat space
 
 Optional environment variables:
-  REVIEW_THRESHOLD_DAYS - Days since last update before flagging (default: 180)
   ARTICLE_DIRS          - Comma-separated list of directories to scan (default: ".")
   ARTICLE_LABEL         - GitHub Issue label to use (default: "review-due")
-  MAX_ARTICLES_PER_RUN  - Max new issues to create per run, oldest-first (default: 5)
+  MAX_ARTICLES_PER_RUN  - Number of oldest articles to flag per run (default: 5)
   DRY_RUN               - Set to "true" to log actions without creating issues/sending notifications
 """
 
@@ -33,7 +34,6 @@ from pathlib import Path
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 GITHUB_REPOSITORY = os.environ.get("GITHUB_REPOSITORY", "")  # e.g. "org/repo"
 GOOGLE_CHAT_WEBHOOK = os.environ.get("GOOGLE_CHAT_WEBHOOK", "")
-REVIEW_THRESHOLD_DAYS = int(os.environ.get("REVIEW_THRESHOLD_DAYS", "180"))
 ARTICLE_DIRS = [d.strip() for d in os.environ.get("ARTICLE_DIRS", ".").split(",")]
 ARTICLE_LABEL = os.environ.get("ARTICLE_LABEL", "review-due")
 MAX_ARTICLES_PER_RUN = int(os.environ.get("MAX_ARTICLES_PER_RUN", "5"))
@@ -179,7 +179,7 @@ def main():
         print("ERROR: GITHUB_TOKEN and GITHUB_REPOSITORY must be set.")
         sys.exit(1)
 
-    print(f"🔍 Scanning for articles not updated in {REVIEW_THRESHOLD_DAYS}+ days...")
+    print(f"🔍 Finding the {MAX_ARTICLES_PER_RUN} least-recently-updated articles...")
     print(f"   Directories: {ARTICLE_DIRS}")
     print(f"   Dry run: {DRY_RUN}\n")
 
@@ -196,75 +196,62 @@ def main():
 
     print(f"Found {len(markdown_files)} Markdown files to check.\n")
 
-    # Check age of each file
-    stale = []
+    # Determine the last-updated date of each file
+    dated = []
     for filepath in sorted(markdown_files):
         last_updated = get_last_commit_date(filepath)
         if last_updated is None:
             print(f"  ⚠️  Could not determine last commit date for: {filepath}")
             continue
-        age = days_since(last_updated)
-        if age >= REVIEW_THRESHOLD_DAYS:
-            stale.append({
-                "filepath": filepath,
-                "last_updated": last_updated,
-                "age_days": age,
-                "issue_url": None
-            })
+        dated.append({
+            "filepath": filepath,
+            "last_updated": last_updated,
+            "age_days": days_since(last_updated),
+            "issue_url": None
+        })
 
-    # Sort oldest-first so the most overdue articles are always prioritised
-    stale.sort(key=lambda x: x["age_days"], reverse=True)
-
-    print(f"Found {len(stale)} article(s) due for review.\n")
-
-    if not stale:
-        print("✅ No articles flagged. All content is up to date.")
-        return
+    # Oldest last-updated first — this drives a continuous review rotation
+    # rather than a one-time threshold, since verifying an article resets
+    # its own last-updated date and would otherwise never resurface it.
+    dated.sort(key=lambda x: x["last_updated"])
 
     if DRY_RUN:
         print(f"DRY RUN — no issues will be created or notifications sent.")
-        print(f"  Would flag up to {MAX_ARTICLES_PER_RUN} article(s) this run (oldest first):\n")
-        for item in stale[:MAX_ARTICLES_PER_RUN]:
+        print(f"  Would flag the {MAX_ARTICLES_PER_RUN} oldest article(s):\n")
+        for item in dated[:MAX_ARTICLES_PER_RUN]:
             print(f"  Would flag: {item['filepath']} ({item['age_days']} days old)")
-        if len(stale) > MAX_ARTICLES_PER_RUN:
-            print(f"\n  ...{len(stale) - MAX_ARTICLES_PER_RUN} more article(s) queued for future runs.")
         return
 
     # Ensure the label exists in the repo
     ensure_label_exists(ARTICLE_LABEL)
 
-    # Fetch already-open review issues to avoid duplicates
+    # Fetch already-open review issues so we skip past them to the next
+    # oldest article, guaranteeing MAX_ARTICLES_PER_RUN new issues per run
     print("Checking for existing open review issues...")
     already_open = get_open_review_issues()
     print(f"  {len(already_open)} article(s) already have open issues.\n")
 
-    # Always work with the MAX_ARTICLES_PER_RUN oldest articles
-    top_articles = stale[:MAX_ARTICLES_PER_RUN]
+    candidates = [item for item in dated if item["filepath"] not in already_open]
+    top_articles = candidates[:MAX_ARTICLES_PER_RUN]
 
     created = 0
-    skipped = 0
     for item in top_articles:
-        if item["filepath"] in already_open:
-            print(f"  ↩️  Issue already open: {item['filepath']}")
-            skipped += 1
+        print(f"  📋 Creating issue for: {item['filepath']} ({item['age_days']} days old)")
+        url = create_github_issue(item["filepath"], item["last_updated"], item["age_days"])
+        if url:
+            item["issue_url"] = url
+            print(f"     ✓ {url}")
+            created += 1
         else:
-            print(f"  📋 Creating issue for: {item['filepath']} ({item['age_days']} days old)")
-            url = create_github_issue(item["filepath"], item["last_updated"], item["age_days"])
-            if url:
-                item["issue_url"] = url
-                print(f"     ✓ {url}")
-                created += 1
-            else:
-                print(f"     ⚠️  Failed to create issue.")
+            print(f"     ⚠️  Failed to create issue.")
 
-    print(f"\nSummary: {created} issue(s) created, {skipped} already had open issues.\n")
+    print(f"\nSummary: {created} issue(s) created.\n")
 
-    # Notify about all top articles (including those with existing issues)
     if top_articles:
         print("Sending Google Chat notification...")
         send_gchat_notification(top_articles)
     else:
-        print("No stale articles found — skipping notification.")
+        print("No eligible articles found — skipping notification.")
 
     print("\n✅ Done.")
 
