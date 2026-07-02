@@ -1,9 +1,11 @@
 # .github/workflows/article-review.yml
 #
-# Automatically flags help center articles for review based on how long
-# it has been since they were last updated in git.
+# Automatically flags the least-recently-updated help center articles for
+# review, on a rotating cadence (not a one-time staleness threshold —
+# reviewing an article resets its own last-updated date in git, so a fixed
+# threshold would eventually stop finding anything once the backlog clears).
 #
-# Runs every Monday at 9:00 AM UTC by default.
+# Runs every weekday at 9:00 AM UTC by default.
 # You can also trigger it manually from the Actions tab in GitHub.
 
 name: Help Center Article Review
@@ -25,10 +27,6 @@ on:
         options:
           - "false"
           - "true"
-      threshold_days:
-        description: "Days since last update before flagging (leave blank to use default)"
-        required: false
-        default: ""
 
 jobs:
   flag-articles:
@@ -62,10 +60,7 @@ jobs:
           # Change ARTICLE_DIRS to target a specific folder, e.g. "docs,articles"
           # Leave as "." to scan the entire repo
           ARTICLE_DIRS: "docusaurus/docs"
-          # How many days without an update before an article is flagged
-          # Override here or via workflow_dispatch input
-          REVIEW_THRESHOLD_DAYS: ${{ inputs.threshold_days || '180' }}
-          # Max new issues to create per daily run (oldest articles first)
+          # Number of least-recently-updated articles to flag per run
           MAX_ARTICLES_PER_RUN: "5"
           # Label applied to review issues in GitHub
           ARTICLE_LABEL: "review-due"
