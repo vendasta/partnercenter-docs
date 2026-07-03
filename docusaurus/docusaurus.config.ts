@@ -97,7 +97,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         // Add search page that shows all results
         searchResultLimits: 8,
         searchResultContextMaxLength: 50,
-        docsRouteBasePath: '/',
+        // Index both docs instances: main docs at '/' and Learn at '/learn'
+        docsRouteBasePath: ['/', '/learn'],
       },
     ],
     [
