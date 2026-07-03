@@ -104,6 +104,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
+          // Commerce: order processing/activation article merged into Creating and Managing Orders
+          { from: '/commerce/orders/order-processing-and-activation', to: '/commerce/orders/creating-and-managing-orders' },
           // Vendasta Services: AI Workforce section renamed (dropped "setup" from URLs)
           { from: '/vendasta-services/ai-workforce-setup', to: '/vendasta-services/ai-workforce/' },
           { from: '/vendasta-services/ai-workforce-setup/ai-receptionist-setup', to: '/vendasta-services/ai-workforce/ai-receptionist' },
