@@ -1,7 +1,7 @@
 ---
-title: "The platform ecosystem: how it all connects"
-sidebar_position: 2
-description: "One picture of the whole platform: Partner Center, Business App, accounts, CRM, products, AI Employees, and automations."
+title: The Vendasta Platform
+sidebar_position: 1
+description: "The white-label model, who works in the platform, and how it all connects: Partner Center, Business App, accounts, CRM, products, AI Employees, and automations."
 ---
 
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
@@ -9,26 +9,48 @@ import CourseProgressBar from "@site/src/components/CourseProgressBar";
 import SectionFeedback from "@site/src/components/SectionFeedback";
 import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
 
-<InlineHighlighter courseId="ecosystem-map" site="vendasta_learn">
+<InlineHighlighter courseId="the-vendasta-platform" site="vendasta_learn">
 
-<CourseProgressBar courseId="ecosystem-map" site="vendasta_learn" />
+<CourseProgressBar courseId="the-vendasta-platform" site="vendasta_learn" />
 
-There are two main workspaces in the platform, and you will do real work in both: **Partner Center**, where you run your business and build your own AI workforce, and **Business App**, where you build the AI workforce for each of your clients. Let's walk through both so you can see everything at a glance.
+<LessonHeader
+  difficulty="Beginner"
+  time="about 8 minutes"
+  pathName="Get started"
+  step={1}
+  totalSteps={6}
+  outcomes={[
+    "Describe the mental model for the platform: AI does the work, you orchestrate",
+    "Say which workspace any task belongs to: Partner Center or Business App",
+    "Place any AI Employee in the workspace it belongs to, before you configure it",
+  ]}
+/>
 
-:::info Before you start
-**Difficulty:** Beginner &nbsp;|&nbsp; **Time:** about 7 minutes
-:::
+## Your mental model for the platform
 
-:::tip What you will be able to do
-- Say which workspace any task belongs to: Partner Center or Business App
-- Choose the right record for the job: account or CRM company
-- Place any AI Employee in the workspace it belongs to, before you configure it
-:::
+The platform is built around one idea: **AI does the work, you orchestrate.** AI Employees answer calls and messages, capture leads, and book appointments. Automations move work between them. You configure, supervise, and sell the outcomes. That changes what your time is spent on: less of the repetitive work itself, more running the system that does it.
 
-## Two workspaces, one system
+And everything you run is white label: the platform, the products you resell, and the services that fulfill them carry your brand, at the retail prices you set, so your clients see your name throughout. Making all of that yours is its own step later in this path.
 
-One question orients you anywhere in the platform: whose workspace am I in?
+## Who works in the platform, and where
+
+Four kinds of people work in the platform, each in their own space:
+
+| Who | Where they work | What they do there |
+|---|---|---|
+| **You, our partner** | Partner Center, at [partners.vendasta.com](https://partners.vendasta.com) | Run your business: sell, bill, fulfill, and manage everything |
+| **Your clients** | Business App | Use the products you sell them, under your brand |
+| **Your salespeople** | The CRM, inside Partner Center | Work the pipeline, log activity, and send proposals |
+| **Vendors** | Vendor Center | Configure the products distributed through the Marketplace, including your own if you create one |
+
+As our partner, you can access all of these parts of the platform. But let's break down the two most important workspaces in the ecosystem: where you will do real work, and when and why.
+
+## Partner Center versus Business App
+
+**Partner Center** is where you run your business and build your own AI workforce; **Business App** is where you build the AI workforce for each of your clients. One question orients you anywhere in the platform: whose workspace am I in?
 
 <div style={{border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', padding: '8px', background: '#ffffff', marginBottom: '28px'}}>
 
@@ -43,7 +65,7 @@ One question orients you anywhere in the platform: whose workspace am I in?
 The two workspaces stay connected. Products you activate in Partner Center appear in your client's Business App. Everything their business generates after that (leads, conversations, reviews, results) lands in their Business App, where you have full visibility, and the Executive Report turns those results into proof of your value, delivered to them under your brand.
 
 :::tip Try it now
-Open Partner Center and read the left navigation top to bottom. Everything you see there is the Partner Center side of the diagram above.
+Log in at [partners.vendasta.com](https://partners.vendasta.com) and read the left navigation top to bottom. Everything you see there is the Partner Center side of the diagram above.
 :::
 
 ## What you set up in each
@@ -61,21 +83,6 @@ Here is how the split plays out in practice, side by side:
 | **Products** | Choose what to sell and build packages in the Marketplace | Every product you activate appears as a dashboard for them |
 
 Each row on this table becomes hands-on later in this learning path; for now, the pattern is the takeaway: set yourself up once on the left, then repeat the client side of the ritual for every business you bring on.
-
-## Accounts and CRM companies: two records, two jobs
-
-*You are here: Partner Center. Everything in this section happens in your workspace.*
-
-Every business you work with can have two records, and each one has a clear job:
-
-- **Log activity in the CRM company**: calls, notes, deals, follow-ups. This is your sales team's working file.
-- **Activate and bill on the account**: products, subscriptions, Business App access. This is the business's service record with you.
-
-The two stay connected for you. Creating an account automatically creates a linked CRM company. Started from the CRM instead? When the business is ready to buy, create the account right from the company record. Once linked, business information syncs between the two in both directions.
-
-A pattern many partners use: prospect in the CRM, and create the account at the moment a business is ready to receive products. When you are ready to create your first account, [this guide walks you through it](/getting-started/getting-started-guides/getting-started-with-accounts-and-product-activation).
-
-People follow the same pattern. A **CRM contact** is someone you are talking to. A **user** is someone you have invited into Business App. Contacts do not become users on their own: you create the user and send the welcome email when their products are ready for them.
 
 ## Where AI Employees live
 
@@ -98,23 +105,47 @@ Three building blocks, three different jobs:
 
 They compose: a product often unlocks an AI Employee, and automations carry work between them. That composition is "AI does the work, you orchestrate" in miniature.
 
-<SectionFeedback courseId="ecosystem-map" site="vendasta_learn" section="content" />
+<SectionFeedback courseId="the-vendasta-platform" site="vendasta_learn" section="content" />
 
-<KnowledgeCheck
+<KnowledgeCheck courseId="the-vendasta-platform" site="vendasta_learn"
   sessionSize={3}
-  intro="Three quick questions on the two workspaces, the two records, and where AI Employees live."
+  intro="Three quick questions on the model, the two workspaces, and where AI Employees live."
   questions={[
     {
       type: 'mcq',
-      question: 'A prospect filled out your web form and you have been emailing back and forth. They have not bought anything yet. What are they in the platform?',
+      question: 'You resell a product from the Marketplace to a client. What does the client see on it?',
       options: [
-        'A contact in your CRM',
-        'A user with Business App access',
-        'An account with active billing',
-        'A salesperson on your team'
+        'Your brand and the retail price you set',
+        'The Vendasta brand and wholesale price',
+        'The original vendor\'s brand and pricing',
+        'No branding until they upgrade'
       ],
       correctIndex: 0,
-      explanation: 'Someone you are talking to is a CRM contact. They become a user when you invite them into Business App with the welcome email, and their business gets an account when they are ready to receive products.'
+      explanation: 'White-label means the platform and the products you resell carry your brand, at the retail prices you set. Vendasta provides the software; you provide the brand and the relationship.'
+    },
+    {
+      type: 'mcq',
+      question: 'You want to create a product of your own and distribute it through the Marketplace. Where does that configuration happen?',
+      options: [
+        'Business App',
+        'The CRM',
+        'Vendor Center',
+        'The Executive Report'
+      ],
+      correctIndex: 2,
+      explanation: 'Vendor Center is where products are configured for Marketplace distribution, including your own custom products. As the partner, you have access to it.'
+    },
+    {
+      type: 'mcq',
+      question: 'Where do you log in to run your business on the platform?',
+      options: [
+        'Business App, from your client\'s welcome email',
+        'Vendor Center, from the Marketplace',
+        'The Executive Report',
+        'Partner Center, at partners.vendasta.com'
+      ],
+      correctIndex: 3,
+      explanation: 'Partner Center at partners.vendasta.com is your workspace. Business App is where your clients work, under your brand.'
     },
     {
       type: 'mcq',
@@ -127,18 +158,6 @@ They compose: a product often unlocks an AI Employee, and automations carry work
       ],
       correctIndex: 1,
       explanation: 'An AI Employee lives in the workspace of the business it serves. A client-facing receptionist is configured in that client\'s Business App.'
-    },
-    {
-      type: 'mcq',
-      question: 'A prospect you have been tracking as a CRM company is ready to buy. What is your move?',
-      options: [
-        'Nothing, an account already exists',
-        'Create an account from the company record',
-        'Delete the company and start fresh',
-        'Send the prospect a Business App invite'
-      ],
-      correctIndex: 1,
-      explanation: 'CRM companies do not create accounts automatically. Create the account when the business is ready to receive products; once linked, business information syncs between the two records in both directions.'
     },
     {
       type: 'mcq',
@@ -155,9 +174,7 @@ They compose: a product often unlocks an AI Employee, and automations carry work
   ]}
 />
 
----
-
-Now that you have the ecosystem down, let's walk through your side of it: the [Partner Center walkthrough](/learn/getting-started/partner-center-walkthrough).
+<LessonFooter to="/learn/getting-started/partner-center-walkthrough" pathName="Get started" step={1} totalSteps={6} />
 
 </InlineHighlighter>
-<MarkComplete courseId="ecosystem-map" site="vendasta_learn" />
+<MarkComplete courseId="the-vendasta-platform" site="vendasta_learn" />

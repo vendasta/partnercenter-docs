@@ -107,7 +107,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         redirects: [
           // --- Learn restructure (2026-07): TRAINING -> LEARN, paths + lifecycle libraries ---
           // getting-started renames
-          { from: '/learn/getting-started/A-Brief-Introduction-to-the-Vendasta-Platform', to: '/learn/getting-started/the-vendasta-story' },
+          { from: '/learn/getting-started/A-Brief-Introduction-to-the-Vendasta-Platform', to: '/learn/getting-started/the-vendasta-platform' },
           { from: '/learn/getting-started/Organize-Teams-in-the-Platform', to: '/learn/getting-started/organize-your-team' },
           { from: '/learn/getting-started/Add-Your-Customer-Accounts-and-Users', to: '/learn/getting-started/accounts-and-users' },
           { from: '/learn/getting-started/Customize-and-Brand-Your-Platform', to: '/learn/getting-started/customize-and-brand' },

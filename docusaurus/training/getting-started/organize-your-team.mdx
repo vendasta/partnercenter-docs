@@ -1,79 +1,51 @@
 ---
-sidebar_position: 6
-title: Organize teams in the platform
+sidebar_label: Organize your team
+sidebar_position: 5
+title: Organize your team in Partner Center
 description: Learn how Vendasta helps your team work more efficiently with Partner Center for decision-makers and CRM for salespeople.
 ---
 
 import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
 
-# Organize teams in the platform
+# Organize your team in Partner Center
 
-<div style={{display: 'flex', gap: '0.5rem', flexWrap: 'wrap', margin: '0.5rem 0 1.25rem'}}>
-<span style={{background: '#d1e7dd', color: '#0a3622', borderRadius: '6px', padding: '0.25rem 0.75rem', fontSize: '0.8rem', fontWeight: '700'}}>Beginner</span>
-<span style={{background: '#cfe2ff', color: '#084298', borderRadius: '6px', padding: '0.25rem 0.75rem', fontSize: '0.8rem', fontWeight: '700'}}>Self-Paced</span>
-</div>
+<LessonHeader
+  difficulty="Beginner"
+  time="about 10 minutes"
+  required={["Partner Center admin access"]}
+  pathName="Get started"
+  step={5}
+  totalSteps={6}
+  outcomes={[
+    "Describe what Partner Center Admins can do",
+    "Describe what CRM users can do",
+    "Add your team members to the platform with the right roles",
+  ]}
+/>
 
-<div style={{display: 'flex', gap: '1.5rem', background: 'var(--ifm-color-emphasis-100)', borderLeft: '4px solid #2e8555', borderRadius: '0 8px 8px 0', padding: '0.875rem 1.25rem', margin: '0 0 0.75rem', flexWrap: 'wrap', fontSize: '0.875rem', color: 'var(--ifm-color-emphasis-700)'}}>
-<span><strong>Estimated time</strong> · 15 minutes</span>
-<span style={{color: 'var(--ifm-color-emphasis-400)'}}>|</span>
-<span><strong>Prerequisites</strong> · Partner Center access</span>
-</div>
-
-<div style={{background: 'var(--ifm-color-emphasis-100)', borderRadius: '0 0 8px 8px', padding: '1.25rem', margin: '0 0 1.5rem', fontSize: '0.85rem'}}>
-<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem'}}>
-
-<div>
-<p style={{margin: '0 0 0.5rem', fontWeight: 700, fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ifm-color-emphasis-600)'}}>Outcomes</p>
-<div style={{lineHeight: '1.8'}}>
-<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Describe what Partner Center Admins can do<br/>
-<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Describe what CRM users can do<br/>
-<span style={{color: '#2e8555', fontWeight: 700, marginRight: '0.4rem'}}>&#10003;</span> Add your team members to the platform with the right roles<br/>
-</div>
-</div>
-
-<div>
-<p style={{margin: '0 0 0.5rem', fontWeight: 700, fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ifm-color-emphasis-600)'}}>Required Access</p>
-<div style={{lineHeight: '1.8'}}>
-Partner Center admin access
-</div>
-</div>
-
-<div>
-<p style={{margin: '0 0 0.5rem', fontWeight: 700, fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ifm-color-emphasis-600)'}}>Related Docs</p>
-<div style={{lineHeight: '1.8'}}>
-<span style={{color: 'var(--ifm-color-emphasis-500)', marginRight: '0.4rem'}}>&#8594;</span> <a href="/administration/my-account/my-team">Adding team members</a><br/>
-<span style={{color: 'var(--ifm-color-emphasis-500)', marginRight: '0.4rem'}}>&#8594;</span> <a href="/administration/my-account/my-team/permissions">Admin permission controls</a><br/>
-</div>
-</div>
-
-</div>
-</div>
-
-:::note
-The Vendasta platform is designed to serve different people on your team differently — admins get full management controls, salespeople get a focused CRM view. This lab helps you understand who goes where and how to add them.
-:::
+Everyone on your team works in Partner Center, and what they see depends on their role: admins get full management controls, salespeople get a focused CRM view. This step covers who gets which role and how to add each team member.
 
 
-## Step 1: Understand the two interfaces (3 min)
-
-**Read**
+## Step 1: Understand the two team roles (3 min)
 
 Whether it's your sales team tracking leads, your marketing team sending campaigns, or your strategists tracking projects — the Vendasta platform has you covered. All the centers work together so your team always knows what is going on.
 
-:::tip Team of One?
-The Vendasta platform will help you organize and streamline processes so you can understand every facet from set-up to full scale.
+:::tip Team of one?
+Running solo? The same roles still apply: you are the Admin, and the CRM view is where your selling happens.
 :::
 
-The platform has two primary interfaces based on role:
+Both roles work inside Partner Center; the difference is how much of it they see. Flip each one:
 
-- **Partner Center** (`partners.vendasta.com`) — for key decision-makers, managers, and fulfillment teams
-- **CRM** — for salespeople focused on pipeline, prospects, and client communication
+<FlipCardGrid>
+  <FlipCard front="Admin" back="The full Partner Center workspace, for key decision-makers, managers, and fulfillment teams, at partners.vendasta.com." />
+  <FlipCard front="Salesperson" back="The CRM, a focused view inside Partner Center: pipeline, prospects, and client communication." />
+</FlipCardGrid>
 
 
 ## Step 2: Learn what Partner Center Admins can do (5 min)
-
-**Read**
 
 Partner Center Admins access the platform via **partners.vendasta.com**. It's best practice to add all your agency's key decision-makers, managers, and fulfillment team as Admins in Partner Center.
 
@@ -81,49 +53,23 @@ Partner Center Admins access the platform via **partners.vendasta.com**. It's be
 There are controls to grant or restrict access. You can restrict Admins from certain actions: creating additional Admins, accessing billing reports, customizing the platform, customizing the marketplace, and managing salespeople.
 :::
 
-| Action | Description |
-|--------|-------------|
-| Create and upload accounts | Add customer accounts |
-| Activate products | Order and activate products for clients |
-| Set up users | Add users to accounts |
-| Manage lists | Organize contacts and segments |
-| Set up a public-facing store | Configure your storefront |
-| View billing reports | Access financial data |
-| Update billing information | Manage payment details |
-| Manage brands | Configure brand settings |
-| Create marketing campaigns | Launch email and other campaigns |
-| Configure Snapshot Widgets | Set up prospecting tools |
-| Approve orders | Review and approve sales orders |
-| Manage salespeople | Add and configure CRM users |
-| Create sales teams | Organize sales structure |
-| Manage Task Manager users | Assign fulfillment |
-| Customize branding | White-label the platform |
+Admins can run everything: accounts and product activation, billing, branding, campaigns, order approval, and managing salespeople and Task Manager users. For the complete list of admin capabilities, [this guide covers team roles](/getting-started/getting-started-guides/getting-started-with-your-team).
 
 
 ## Step 3: Learn what CRM users can do (4 min)
 
-**Read**
+Salespeople are the primary representatives your clients will communicate with. The CRM, inside Partner Center, gives salespeople everything for direct client communication, but they cannot alter the way the platform functions.
 
-Salespeople are the primary representatives your clients will communicate with. The CRM interface gives salespeople access to functionality for direct client communication — but they cannot alter the way the platform functions.
-
-- Add prospects
-- Manage assigned accounts
+- Add prospects and manage assigned accounts
 - Create, refresh, and configure Snapshot Reports
 - Launch email campaigns
 - Log calls, emails, meetings, and other sales activity
-- Create opportunities
-- Submit orders
-- Add account notes
-- Store contact information
-- View their sales pipeline
-- Access valuable training resources
+- Create opportunities and submit orders
 
 
-## Step 4: Add your team to the platform (3 min)
+## Step 4: Add your team in Partner Center (3 min)
 
-**Do**
-
-Add your admin, salespeople, and digital agents to your platform. See the course materials for the step-by-step video walkthrough.
+Add your admins, salespeople, and digital agents in Partner Center. When you are ready, [this guide walks through adding your team](/getting-started/getting-started-guides/getting-started-with-your-team).
 
 :::tip Subscription Tiers
 Some platform actions may be limited based on subscription tiers.
@@ -136,8 +82,6 @@ You add your agency owner and operations manager as Partner Center Admins — th
 
 ## Step 5: Verify your team setup (2 min)
 
-**Verify**
-
 Confirm your team is correctly configured before moving on:
 
 - All key decision-makers, managers, and fulfillment staff are added as Partner Center Admins
@@ -146,19 +90,9 @@ Confirm your team is correctly configured before moving on:
 - Each team member can log in and access the areas they need
 
 
-## Key Resources
-
-<FlipCardGrid>
-  <FlipCard front="Partner Center" back="Admins. Key decision-makers. partners.vendasta.com" subtext="Management" />
-  <FlipCard front="CRM" back="Salespeople. Pipeline. Snapshot. Orders." subtext="Sales" />
-  <FlipCard front="Permissions" back="Customize. Restrict. Control access." subtext="Security" />
-</FlipCardGrid>
-
-
-## Knowledge Check
-
 <KnowledgeCheck courseId="organize-teams-in-the-platform" site="vendasta_learn"
   sessionSize={5}
+  intro="Five quick questions on who belongs in Partner Center, who belongs in the CRM, and why."
   questions={[
     { type: "truefalse", statement: "When creating a Partner Center user, you can customize their permissions.", correct: true, explanation: "Partner Center is for Key Decision-Makers notes you can grant or restrict Admin actions such as creating Admins, billing access, and marketplace customization." },
     { type: "mcq", question: "Which of the following are functions carried out by salespeople within the CRM?", options: ["Update wholesale billing and payment methods in Partner Center", "Configure Snapshot Widgets and approve marketplace orders", "Launch email campaigns and create or refresh Snapshot Reports", "Customize platform branding and manage Task Manager users"], correctIndex: 2, explanation: "CRM is for Salespeople lists launching campaigns and creating or configuring Snapshot Reports; billing, Snapshot Widget approval, and deep admin tasks sit with Partner Center Admins." },
@@ -167,3 +101,5 @@ Confirm your team is correctly configured before moving on:
     { type: "mcq", question: "Who are the best people to add as Partner Center Admins?", options: ["Only the business owner — no one else should have admin access", "All sales reps, regardless of their role", "Key decision-makers, managers, and fulfillment team members", "Clients who need read-only access to reports"], correctIndex: 2, explanation: "Partner Center is for Key Decision-Makers recommends adding agency decision-makers, managers, and fulfillment team as Admins." }
   ]}
 />
+
+<LessonFooter to="/learn/getting-started/get-set-up-to-get-paid" pathName="Get started" step={5} totalSteps={6} />

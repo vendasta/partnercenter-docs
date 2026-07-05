@@ -1,11 +1,134 @@
 ---
 title: Get set up to get paid
-sidebar_position: 7
-description: The wholesale-retail model, connecting a payment method, and setting your prices - everything you need before your first sale.
+sidebar_position: 6
+description: "The wholesale-retail model, connecting a payment method, and setting your retail prices, so you are ready before your first sale."
 ---
 
-:::info Content coming soon!
-This part of the learning path is being built. Check back shortly.
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+
+<InlineHighlighter courseId="get-set-up-to-get-paid" site="vendasta_learn">
+
+<CourseProgressBar courseId="get-set-up-to-get-paid" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Beginner"
+  time="about 8 minutes"
+  required={["Partner Center admin access"]}
+  pathName="Get started"
+  step={6}
+  totalSteps={6}
+  outcomes={[
+    "Explain the wholesale-to-retail model in one sentence",
+    "Connect Vendasta Payments so clients can pay you inside the platform",
+    "Set the retail price and margin on a product you resell",
+    "Read your Estimated Usage to know what you owe Vendasta this month",
+  ]}
+/>
+
+Getting paid runs on one relationship: you buy products from Vendasta at a wholesale price, and you sell them to your clients at the retail price you set. This step connects your payment method, sets your prices, and shows you the one page in Partner Center where you check what you owe each month.
+
+## Two prices on every product
+
+Every product has two prices, and the difference between them is your margin. Flip each one:
+
+<FlipCardGrid>
+  <FlipCard front="Wholesale price" back="What Vendasta charges you while a product is active on an account. The wholesale billing frequency follows your Vendasta contract." />
+  <FlipCard front="Retail price" back="What you charge your client, at the price and billing frequency you set. The Marketplace suggests a retail price; the decision is yours." />
+</FlipCardGrid>
+
+Each active product creates two matching subscriptions: a wholesale subscription from you to Vendasta, and a retail subscription from your client to you. You manage both from Partner Center.
+
+## Connect a way to get paid
+
+You can collect from clients inside the platform with **Vendasta Payments**, or bill them your own way and collect outside the platform. Connecting Vendasta Payments lets a client pay an order or invoice with a card, and pays that revenue out to your bank account on a schedule.
+
+To collect in-platform, connect Vendasta Payments in Partner Center under **Commerce**, then add the bank account you want revenue paid out to. When a client pays, funds are processed and then transferred to that account. When you are ready to connect, [this guide walks you through Vendasta Payments](/commerce/payments).
+
+:::tip Try it now
+Open **Commerce** → **Payouts** and read the status row at the top: upcoming payouts, funds in transit, and completed. This is where your money shows up once a client pays.
 :::
 
-**What you will learn here:** The wholesale-retail model in one diagram, connecting Vendasta Payments (or choosing manual invoicing), setting retail prices, and the one place to check billing each month.
+## Set your retail prices
+
+Pricing is yours to control. Open a product in the **Marketplace** to see its wholesale cost and a suggested retail price, then set the retail price and billing frequency that fit your market. Adjust pricing any time in **Marketplace** → **Products**.
+
+One fact keeps your numbers clean: a catalog price change applies to new subscriptions from then on. Existing clients keep the price they signed up at unless you edit their subscription directly, and an edit takes effect on the next billing cycle. When you need to change a live subscription, [this guide covers subscription management](/commerce/subscriptions/subscription-management).
+
+## Check what you owe each month
+
+One page answers "what will I pay Vendasta this month?" Open **Administration** → **My Billing** → **Estimated Usage**. It breaks down what you owe at month end based on the products currently active on your accounts.
+
+The **Active Subscriptions** tab beside it shows which products are in the current billing cycle and when any of them expire. Together they are your monthly billing check.
+
+:::tip Try it now
+Open **Administration** → **My Billing** → **Estimated Usage** and find the current month. Even with nothing sold yet, this is the page you will return to first each month.
+:::
+
+<SectionFeedback courseId="get-set-up-to-get-paid" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="get-set-up-to-get-paid" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on the two prices, where you get paid, and where you check what you owe."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'You set a product\'s retail price at $200 and your wholesale cost is $120. A client activates it. What is your position?',
+      options: [
+        'You owe Vendasta $200 for the activation',
+        'You earn $80 of margin on that subscription',
+        'The client pays Vendasta directly and you are not involved',
+        'You earn $200 and pay no wholesale cost'
+      ],
+      correctIndex: 1,
+      explanation: 'Vendasta charges you the $120 wholesale price; your client pays the $200 retail price you set; the $80 difference is your margin.'
+    },
+    {
+      type: 'mcq',
+      question: 'You raise a product\'s retail price from $150 to $180. What happens to a client who bought it last month at $150?',
+      options: [
+        'They are re-billed at $180 on their next renewal',
+        'Their subscription is canceled and must be repurchased',
+        'They keep the $150 price they signed up at',
+        'They are refunded the difference automatically'
+      ],
+      correctIndex: 2,
+      explanation: 'A catalog price change does not automatically update existing active subscriptions; new subscriptions pick up the new price, and you can apply it to an existing client by editing their subscription directly.'
+    },
+    {
+      type: 'mcq',
+      question: 'You want to know what you will owe Vendasta at the end of this month. Where do you look?',
+      options: [
+        'Commerce → Payouts',
+        'The Marketplace product page',
+        'The client\'s Business App billing tab',
+        'Administration → My Billing → Estimated Usage'
+      ],
+      correctIndex: 3,
+      explanation: 'Estimated Usage shows your month-end total based on currently active products. Payouts is where client revenue is paid out to you.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client is ready to pay you with a card inside the platform. What needs to be connected first?',
+      options: [
+        'Vendasta Payments, with a payout bank account',
+        'Only the client\'s Business App user',
+        'A Marketplace store embed on your website',
+        'An Executive Report subscription'
+      ],
+      correctIndex: 0,
+      explanation: 'Vendasta Payments processes the card payment and pays revenue out to your connected bank account.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/ai-workforce" pathName="Get started" step={6} totalSteps={6} nextPathName="Hire your AI Workforce" />
+
+</InlineHighlighter>
+<MarkComplete courseId="get-set-up-to-get-paid" site="vendasta_learn" />
