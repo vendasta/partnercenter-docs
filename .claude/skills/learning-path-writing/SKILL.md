@@ -23,7 +23,7 @@ Confident, factual, concise steps inside sequenced learning paths: open with wha
 1. **The platform is never the problem.** No "confusing," "trips people up," "tricky," "be careful," or any framing that implies mistakes are easy. State rules affirmatively.
 2. **No fear.** Open with what a setup unlocks, never what mistakes cost. Warnings, edge cases, and troubleshooting live in documentation and are linked at the moment of need. (Scripts that help partners address their clients' fears are fine; fear aimed at the partner is not.)
 3. **No mistake stories.** Field stories appear only when they show partners building, improving, and winning. "She did everything right in the wrong workspace" is not a story we tell. Coaching an AI Employee to get better answers is craft, not error.
-4. **Openers are descriptors, not dramas.** State what the learner is looking at and what they will do in it. Never open with "we hear from partners" or any Vendasta-centered framing.
+4. **Openers are descriptors, not dramas, and the copy never narrates the path.** Open with the subject itself, not the step ("AI arrived into businesses that were already partly automated", never "This step covers..."). No touring ("the next five steps...", "the final step returns to this"), no recapping ("the previous step ended on..."), and no naming steps by number in body copy; the sequence is visible in the chrome, and paths are short enough that the story carries itself. Light callbacks by concept ("that old sorting tool") are fine. Never open with "we hear from partners" or any Vendasta-centered framing.
 5. **"It should be apparent."** If a concept needs a story or a metaphor to seem learnable, the explanation is wrong. Rewrite until the fact carries itself.
 6. **Teach the behavior, footnote the mechanism.** Lead with what to do ("log activity in the CRM company; activate and bill on the account"), then the system explanation, briefly.
 7. **No absolutes.** "Everything happens in two places" is false the moment Vendor Center exists. Say "two main workspaces" and survive the exceptions.
@@ -37,13 +37,15 @@ Confident, factual, concise steps inside sequenced learning paths: open with wha
 15. **No community or feedback mentions.** There is no forum, no community, no course feedback channel. Never write "ask in the forum," "share with the community," "provide feedback," "Happy learning!" or any invitation to discuss the course. The step ends with the LessonFooter, nothing after it.
 16. **Scope every "the platform has..." claim.** "Two places/workspaces in the platform" means exactly one thing: Partner Center and Business App. Anything narrower must name its container explicitly: the CRM is "inside Partner Center," roles are "two ways your team sees Partner Center," records live "in Partner Center." Never let a sentence like "the platform has two primary interfaces" resolve to something other than the two workspaces — that conflation is the single most disorienting mistake for a new partner.
 
+17. **Teach the knowledge; never narrate what it does for the learner.** No "worth saying to clients exactly this way," no "this is what makes you sound like an expert," no "this is the pitch." The expert-to-their-SMBs angle is served by the content itself: concrete scenarios ("sooner or later a client asks...") and outcome bullets are fine; coaching commentary about selling or sounding smart is not. If a sentence is about the learner's image rather than the platform, delete it.
+
 ## Facts and sourcing
 
-17. **Verify every platform claim against documentation before writing it.** Canonical sources: this repo's `docusaurus/docs/` for Partner Center, docs.businessapp.io for Business App and Vibe, developers.vendasta.com for APIs. Watch for tier gates: capabilities available only on select paid tiers or to enterprise partners (e.g. white-label product renaming) are never advertised in beginner paths — either scope them explicitly or leave them to documentation.
-18. **Source-tag at draft time** in the review copy (never in published content): `[DOC]` verified with path, `[CALL]` from partner-call evidence, `[SYN]` synthesis or inference, `[INT]` internal signal. Every `[SYN]` is resolved before publish: verify it, soften it ("a pattern many partners use"), or consciously own it as editorial guidance.
-19. **Where documentation and field practice differ, state both in one breath** (design and practice), e.g. Business App is client-facing by design and frequently partner-operated in practice.
-20. **Two-brand clarity.** White-label surfaces involve the partner's brand and the client's brand; whenever both are in play, name where each lives (the workspace wears the partner's brand; the client's brand is data inside it).
-21. **Describe AI Employees by who they serve, never the channel.** "Serving your business," not "on your website" — voice lines and off-platform sites exist.
+18. **Verify every platform claim against documentation before writing it.** Canonical sources: this repo's `docusaurus/docs/` for Partner Center, docs.businessapp.io for Business App and Vibe, developers.vendasta.com for APIs. Watch for tier gates: capabilities available only on select paid tiers or to enterprise partners (e.g. white-label product renaming) are never advertised in beginner paths — either scope them explicitly or leave them to documentation.
+19. **Source-tag at draft time** in the review copy (never in published content): `[DOC]` verified with path, `[CALL]` from partner-call evidence, `[SYN]` synthesis or inference, `[INT]` internal signal. Every `[SYN]` is resolved before publish: verify it, soften it ("a pattern many partners use"), or consciously own it as editorial guidance.
+20. **Where documentation and field practice differ, state both in one breath** (design and practice), e.g. Business App is client-facing by design and frequently partner-operated in practice.
+21. **Two-brand clarity.** White-label surfaces involve the partner's brand and the client's brand; whenever both are in play, name where each lives (the workspace wears the partner's brand; the client's brand is data inside it).
+22. **Describe AI Employees by who they serve, never the channel.** "Serving your business," not "on your website" — voice lines and off-platform sites exist.
 
 ## Structure of a step
 
@@ -59,7 +61,7 @@ Every step, in order:
    - `outcomes`: learner-verb-first bullets (this replaces the old "What you will be able to do" callout).
    - `pathName` / `step` / `totalSteps`: the step's position, e.g. Getting started · Step 4 of 8. Update totalSteps across the path when steps are added or removed.
    - No Related docs block and no note callout in the header — doc links live in the body at the moment of need (rule below).
-4. **Opening descriptor** (one short paragraph, rules 4-5 above), immediately after LessonHeader.
+4. **No standalone opener.** Nothing sits between LessonHeader and the first section heading. The first sentence under the first heading does the descriptor work (rules 4-5 above); orphan paragraphs above the first heading read as filler and get cut.
 5. Getting started steps assume a new partner: no veteran skip lines there; skip affordances belong only to mixed-audience paths.
 6. **Body sections.** Any section specific to one workspace opens with an italic location marker: `*You are here: Partner Center. Everything in this section happens in your workspace.*` Sections that span both stay unmarked.
 7. **At least one `:::tip Try it now`** micro-action, however small.
@@ -69,18 +71,18 @@ Every step, in order:
 
 ## Diagrams
 
-22. **Diagrams show structure; prose explains flow.** The prose never restates the diagram's contents; the diagram never attempts nuanced relationships (that is what sentences are for). If a diagram element needs repeated correction, delete it — the two-box ecosystem diagram lost its arrows for exactly this reason.
-23. **Every arrow must read truthfully in the direction it points.** If the label describes something the other end wants, the arrow is lying.
-24. **The diagram never repeats the heading that introduces it.** The section heading names; the diagram shows.
-25. Mechanics: SVG in `img/` beside the content; reference with a markdown image (renders inline via svgr) wrapped in the standard styled div (`border: '1px solid #e0e0e0'`, `borderRadius: '8px'`, `boxShadow: '0 2px 8px rgba(0,0,0,0.08)'`, `padding: '8px'`, `background: '#ffffff'`, `marginBottom: '28px'`). Trim empty canvas from the viewBox. Descriptive alt text. Brand palette: Vendasta green #3F9B63, navy #072337, platform blue #1976D2.
-26. **Metaphors: commit everywhere or nowhere** — default nowhere. A metaphor that appears only in headings is residue, not a theme.
+23. **Diagrams show structure; prose explains flow.** The prose never restates the diagram's contents; the diagram never attempts nuanced relationships (that is what sentences are for). If a diagram element needs repeated correction, delete it — the two-box ecosystem diagram lost its arrows for exactly this reason.
+24. **Every arrow must read truthfully in the direction it points.** If the label describes something the other end wants, the arrow is lying.
+25. **The diagram never repeats the heading that introduces it.** The section heading names; the diagram shows.
+26. Mechanics: SVG in `img/` beside the content; reference with a markdown image (renders inline via svgr) wrapped in the standard styled div (`border: '1px solid #e0e0e0'`, `borderRadius: '8px'`, `boxShadow: '0 2px 8px rgba(0,0,0,0.08)'`, `padding: '8px'`, `background: '#ffffff'`, `marginBottom: '28px'`). Trim empty canvas from the viewBox. Descriptive alt text. Brand palette: Vendasta green #3F9B63, navy #072337, platform blue #1976D2.
+27. **Metaphors: commit everywhere or nowhere** — default nowhere. A metaphor that appears only in headings is residue, not a theme.
 
 ## Knowledge checks
 
-27. **No heading above the component** — its own "Knowledge Check" header carries the section.
-28. **Use the `intro` prop to name the actual content** ("Three quick questions on the two workspaces, the two records, and where AI Employees live"), never quiz mechanics.
-29. Questions test **placement and decisions**, not recall. All options matched in length and register (length is a tell). Verify distractors against documentation: a "wrong" answer must not accidentally describe a real workflow.
-30. Pool may exceed `sessionSize` for variety (e.g. 3 shown from 4).
+28. **No heading above the component** — its own "Knowledge Check" header carries the section.
+29. **Use the `intro` prop to name the actual content** ("Three quick questions on the two workspaces, the two records, and where AI Employees live"), never quiz mechanics.
+30. Questions test **placement and decisions**, not recall. All options matched in length and register (length is a tell). Verify distractors against documentation: a "wrong" answer must not accidentally describe a real workflow.
+31. Pool may exceed `sessionSize` for variety (e.g. 3 shown from 4).
 
 ## Flip cards
 
@@ -96,6 +98,6 @@ Every step, in order:
 
 ## The review loop (non-negotiable)
 
-31. **Draft → review copy → human approval → commit.** Never commit learning path content without review. The review copy goes to `~/mydev/strategy/docs-learn-revamp/drafts/` as plain markdown: interactive components shown as labeled blocks, source annotations included, and a numbered changelog of what changed each revision.
-32. **Verify the build, then verify the render.** `npm run build` from `docusaurus/`, then check the built page content (grep the HTML, or the JS bundle for SVG text) and eyeball it served locally. Scripts can report success while doing nothing — the rendered output is the only truth. `onBrokenLinks` is 'warn', so grep build output for warnings; CI will not catch content mistakes.
-33. Expect and welcome multiple critique rounds. The reference step took eight. Every correction that generalizes becomes a rule in this file — keep it living.
+32. **Draft → review copy → human approval → commit.** Never commit learning path content without review. The review copy goes to `~/mydev/strategy/docs-learn-revamp/drafts/` as plain markdown: interactive components shown as labeled blocks, source annotations included, and a numbered changelog of what changed each revision.
+33. **Verify the build, then verify the render.** `npm run build` from `docusaurus/`, then check the built page content (grep the HTML, or the JS bundle for SVG text) and eyeball it served locally. Scripts can report success while doing nothing — the rendered output is the only truth. `onBrokenLinks` is 'warn', so grep build output for warnings; CI will not catch content mistakes.
+34. Expect and welcome multiple critique rounds. The reference step took eight. Every correction that generalizes becomes a rule in this file — keep it living.
