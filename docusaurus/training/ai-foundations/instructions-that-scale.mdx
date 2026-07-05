@@ -1,11 +1,139 @@
 ---
-title: "Instructions that scale"
+title: Instructions that scale
 sidebar_position: 4
-description: "Capabilities, the instructions-or-knowledge decision, and why short beats long."
+description: "What a capability is, how instructions shape an AI Employee's behavior, and why short beats long."
 ---
 
-:::info Content coming soon!
-This part of the learning path is being built. Check back shortly.
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+
+<InlineHighlighter courseId="instructions-that-scale" site="vendasta_learn">
+
+<CourseProgressBar courseId="instructions-that-scale" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Beginner"
+  time="about 7 minutes"
+  pathName="AI foundations"
+  step={4}
+  totalSteps={6}
+  outcomes={[
+    "Explain what a capability is by what it does for the business",
+    "Decide whether something belongs in instructions or in knowledge",
+    "Explain why short, specific instructions outperform long ones",
+  ]}
+/>
+
+## Skills you switch on
+
+Instructions are the context source you shape most directly, and the platform organizes them into capabilities: discrete skills you enable for an AI Employee, like capture a lead, book an appointment, or answer from knowledge. Each capability is a set of instructions, sometimes with a tool attached, and an employee can carry several at once. Here is where they sit in the whole:
+
+<div style={{border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', padding: '8px', background: '#ffffff', marginBottom: '28px'}}>
+
+![An AI Employee holds three parts. Knowledge is what it knows: profile, website, documents, and entries. Capabilities are what it does: instructions for each skill. Tools are how it acts: doorways into other systems. The live conversation flows in from outside.](./img/anatomy-of-an-ai-employee.svg)
+
+</div>
+
+The employee reads each situation and applies the capability that fits: a question about hours draws on knowledge, interest in a service activates lead capture, a booking request activates appointment booking. You choose the skills; the employee chooses the moment.
+
+## Ground rules and the moment
+
+If you have used any AI chat tool, you have felt the difference between two layers of communication. There are the ground rules you would set once ("you are a data analyst; keep answers concise and plain") and there is the request of the moment ("summarize this report"). The ground rules stay constant; the requests keep changing.
+
+An AI Employee has exactly this structure. Capabilities are the ground rules, written once and present in every interaction. The customer's message is the request of the moment. This is why instructions are worth real craft: a conversational request is used once, but a capability instruction runs on every conversation, every day, for as long as the employee works. Write it well once and it scales.
+
+## Behavior or facts
+
+A two-question test sorts anything a business wants its employee to handle:
+
+- **Should this govern behavior, or apply every time?** Instructions. "Always collect a name and phone number before booking" is behavior.
+- **Is this a fact to look up when relevant?** Knowledge. The list of services and prices is facts.
+
+Run the test and the pieces land where they work: rules where they are always present, facts where they are retrieved when needed.
+
+## Short beats long
+
+Everything an AI Employee is told, across all of its capabilities, lands in one working memory. Instructions do not queue up politely and wait their turn; they are all present at once, together with the retrieved knowledge and the conversation. Two long capabilities with overlapping instructions compete with each other, and the answers show it. Partners in the field have a phrase for an employee configured this way: it gets its wires crossed.
+
+The practice that follows is simple and reliable: **keep instructions short, specific, and action-oriented.** Every sentence in a capability should change what the employee does. If a sentence repeats another capability, restates the obvious, or narrates background, cut it. A tight capability is easier for the model to follow and easier for the next person to maintain.
+
+## Brief it like a new team member
+
+The instructions themselves have a craft, and it is the same craft as briefing a new hire on a skill. A strong capability instruction answers three questions, in order:
+
+1. **When do you act?** The trigger: "when a visitor expresses interest in a service."
+2. **What must be true first?** The requirements: "collect a name, and a phone number or email, before proceeding."
+3. **What does done look like?** The outcome: "confirm the details back, and let them know someone will follow up within one business day."
+
+Structure helps too: short lines and numbered steps outperform paragraphs, for models and for the humans who maintain them.
+
+:::tip Try it now
+Pick one thing a client's receptionist does every day and write it as a capability brief in three sentences: when to act, what must be true first, and what done looks like. That is instruction-writing, and you just did it.
 :::
 
-**What you will learn here:** What a capability is, how instructions shape behavior, and why short, specific instructions outperform long ones.
+<SectionFeedback courseId="instructions-that-scale" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="instructions-that-scale" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on capabilities, placement, and instruction craft."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A client wants their AI Employee to always offer a callback when it cannot answer a question. Where does that live?',
+      options: [
+        'In a capability, because it is behavior that should apply every time',
+        'In the Knowledge Base, as a document describing the callback policy',
+        'In the conversation, mentioned by the customer when they want one',
+        'In a tool, because offering a callback means acting in another system'
+      ],
+      correctIndex: 0,
+      explanation: '"Always do X" is behavior, and behavior is instructions. The two-question test lands it immediately: it governs how the employee acts, in every conversation.'
+    },
+    {
+      type: 'mcq',
+      question: 'An AI Employee has several capabilities enabled. How does it decide which one to use?',
+      options: [
+        'It uses them in the order they were added to the employee',
+        'It asks the customer to pick from a menu of its skills',
+        'It reads the situation and applies the capability that fits the moment',
+        'It uses all of them at full strength on every single message'
+      ],
+      correctIndex: 2,
+      explanation: 'You choose the skills; the employee chooses the moment. A booking request activates booking, interest activates lead capture, a factual question draws on knowledge.'
+    },
+    {
+      type: 'mcq',
+      question: 'An employee with many long, overlapping capabilities starts giving muddled answers. Why?',
+      options: [
+        'Long instructions expire and stop being applied after a few days',
+        'All instructions share one working memory, and overlapping ones compete',
+        'The employee can only hold one capability at a time',
+        'Knowledge retrieval switches off when instructions pass a set length'
+      ],
+      correctIndex: 1,
+      explanation: 'Everything the employee is told is present at once. Overlapping instructions compete rather than queue, which is why short, specific, action-oriented capabilities win.'
+    },
+    {
+      type: 'mcq',
+      question: 'Which of these is the strongest capability instruction?',
+      options: [
+        '"Be helpful and professional with every customer at all times"',
+        '"Customers are important, so treat their bookings with care"',
+        '"This capability handles the many situations where booking matters"',
+        '"When a caller asks to book: collect a name and phone number, then confirm the time back"'
+      ],
+      correctIndex: 3,
+      explanation: 'It answers the three questions: when to act, what must be true first, and what done looks like. The other options do not change what the employee actually does.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/ai-foundations/taking-action" pathName="AI foundations" step={4} totalSteps={6} />
+
+</InlineHighlighter>
+<MarkComplete courseId="instructions-that-scale" site="vendasta_learn" />

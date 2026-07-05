@@ -1,11 +1,125 @@
 ---
-title: "Taking action"
+title: Taking action
 sidebar_position: 5
-description: "Tools: how an AI Employee reaches into other systems, safely."
+description: "Tools: what they let an AI Employee do that knowledge cannot, and how actions stay safe and scoped."
 ---
 
-:::info Content coming soon!
-This part of the learning path is being built. Check back shortly.
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+
+<InlineHighlighter courseId="taking-action" site="vendasta_learn">
+
+<CourseProgressBar courseId="taking-action" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Beginner"
+  time="about 6 minutes"
+  pathName="AI foundations"
+  step={5}
+  totalSteps={6}
+  outcomes={[
+    "Explain what a tool lets an AI Employee do that knowledge cannot",
+    "Recognize when a job needs a tool instead of more documents",
+    "Explain to a client how AI actions stay safe and scoped",
+  ]}
+/>
+
+## A doorway into another system
+
+Knowledge answers questions; tools take action. A tool is a doorway from an AI Employee into another system, reaching beyond conversation into the places where real work happens. Through one doorway it can check live calendar availability. Through another it can look up an order in a client's online store, or pull a product's current price, or create a ticket in a job tracker. Booking the appointment at the end of a conversation, rather than just chatting about one, is a tool at work.
+
+The division of labor is precise:
+
+- **The AI decides when** to use a doorway: it reads the conversation and recognizes the moment a lookup or an action would help.
+- **The doorway decides what** is possible: a tool does one job in one system, and nothing beyond it.
+
+A tool that checks calendar availability can check calendar availability. It cannot send email, edit the website, or touch the point of sale, because no doorway to those exists unless someone builds one. The employee's reach is exactly the set of doorways it has been given, and that set is a deliberate choice.
+
+## When information wants to be a tool
+
+The Knowledge Base holds facts that hold still: services, policies, descriptions. Some information refuses to hold still: today's open slots, current stock, the status of an order placed yesterday. You could keep re-uploading documents to chase it, and the signal that you are doing so is unmistakable: **if you find yourself updating knowledge constantly, that information wants to be a tool.** A doorway to the live system answers with the current truth every time, with nothing to maintain in between.
+
+That gives you the full sorting picture across the anatomy: rules go in instructions, stable facts go in knowledge, live data and actions go through tools.
+
+## How actions stay safe
+
+Sooner or later a client asks the reasonable question: "so the AI can just do things?" The accurate answer has three parts, and each one is a design fact:
+
+1. **Every action goes through a doorway you chose.** No tool, no action. The employee cannot improvise a connection to a system nobody gave it.
+2. **Each doorway is scoped to one job.** The availability checker checks availability. Adding a second job means deliberately adding a second doorway.
+3. **The AI never holds the keys.** Credentials for connected systems stay outside the conversation and outside the model. The employee uses the doorway; it never sees what unlocks the door.
+
+Judgment stays where it belongs, too: with you. Which doorways exist, and which employees get them, is a configuration decision a person makes, and reviewing how they are used is part of running a workforce. The **Explanation** view covers this side as well: it shows which tools an answer called and what came back, so every action is as auditable as every fact.
+
+:::tip Try it now
+Name one system a client uses every day: their booking software, their point of sale, their online store. Now write the single question a receptionist could answer instantly with a doorway into it. That question is a tool waiting to be configured.
 :::
 
-**What you will learn here:** What a tool lets an AI Employee do that knowledge cannot, and how actions stay safe and scoped.
+Building doorways is builder work: connecting a real system involves its address, its parameters, and its credentials. When you or your technical person are ready, [the tools reference](/ai/ai-capabilities/tools-overview) walks through it. The concept is what matters here: knowledge for what holds still, tools for what moves.
+
+<SectionFeedback courseId="taking-action" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="taking-action" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on what tools do, when to reach for one, and how actions stay scoped."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A client\'s customers keep asking whether specific items are in stock right now. What serves this best?',
+      options: [
+        'A weekly stock spreadsheet uploaded to the Knowledge Base',
+        'A capability instruction listing the most popular items',
+        'A tool: a doorway into the store\'s live inventory',
+        'A written knowledge entry describing how restocking works'
+      ],
+      correctIndex: 2,
+      explanation: 'Stock levels refuse to hold still. Information you would have to re-upload constantly wants to be a tool, which answers with the current truth every time.'
+    },
+    {
+      type: 'mcq',
+      question: 'An AI Employee has one tool: it checks appointment availability. A customer asks it to email them a brochure. What happens?',
+      options: [
+        'It cannot send the email; no doorway to email exists for it',
+        'It sends the email through its calendar connection',
+        'It creates an email account for itself and sends the brochure',
+        'It asks the customer for the business\'s email password'
+      ],
+      correctIndex: 0,
+      explanation: 'The doorway decides what is possible. A calendar tool does one job in one system; an action outside the given doorways simply is not available to the employee.'
+    },
+    {
+      type: 'mcq',
+      question: 'In the division of labor between the AI and its tools, what does the AI decide?',
+      options: [
+        'What each tool is allowed to do inside the connected system',
+        'When to use a tool, based on the moment in the conversation',
+        'Which credentials to present to the connected system',
+        'Which new systems it should connect itself to over time'
+      ],
+      correctIndex: 1,
+      explanation: 'The AI decides when; the doorway decides what. Scope, connections, and credentials are configuration, chosen by a person, outside the conversation.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client asks whether the AI can see the password for their booking system once a tool is connected. What is the accurate answer?',
+      options: [
+        'Yes, briefly, each time it uses the connection',
+        'Yes, but the password is summarized rather than shown in full',
+        'Only if the customer in the conversation asks it to reveal it',
+        'No, credentials stay outside the conversation and outside the model'
+      ],
+      correctIndex: 3,
+      explanation: 'The employee uses the doorway; it never sees what unlocks the door. Credentials live in configuration, not in anything the model reads.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/ai-foundations/agents-and-automations-together" pathName="AI foundations" step={5} totalSteps={6} />
+
+</InlineHighlighter>
+<MarkComplete courseId="taking-action" site="vendasta_learn" />

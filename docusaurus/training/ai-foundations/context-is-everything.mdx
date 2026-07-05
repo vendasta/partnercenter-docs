@@ -1,11 +1,138 @@
 ---
-title: "Context is everything"
+title: Context is everything
 sidebar_position: 3
-description: "The three sources behind every answer, and why business data is the moat."
+description: "The three sources behind every AI Employee answer, what belongs in a Knowledge Base, and why business data is the moat."
 ---
 
-:::info Content coming soon!
-This part of the learning path is being built. Check back shortly.
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+
+<InlineHighlighter courseId="context-is-everything" site="vendasta_learn">
+
+<CourseProgressBar courseId="context-is-everything" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Beginner"
+  time="about 7 minutes"
+  pathName="AI foundations"
+  step={3}
+  totalSteps={6}
+  outcomes={[
+    "Name the three sources every AI Employee answer draws on",
+    "Decide what belongs in a Knowledge Base and what does not",
+    "Explain to a client why their business data is the differentiator, not the AI itself",
+  ]}
+/>
+
+## Three sources, one answer
+
+An AI Employee is only as good as the context it is given, and that context is assembled from the same three places every time. Know them and you can diagnose almost any answer an AI Employee gives. Flip each one:
+
+<FlipCardGrid>
+  <FlipCard front="Its instructions" back="How it behaves: its role, its rules, and the skills it applies. Always present, in every answer." />
+  <FlipCard front="Its knowledge" back="What it knows about the business: the reference library it searches when a question calls for facts." />
+  <FlipCard front="The conversation" back="What is happening right now: the live thread it holds in working memory, from the first message to the current one." />
+</FlipCardGrid>
+
+Instructions set behavior, knowledge supplies facts, and the conversation supplies the moment.
+
+## A library, not a script
+
+The [Knowledge Base](/ai/knowledge-base) is the reference library your AI Employees search when answering. Four kinds of sources live in it:
+
+- **The business profile**: hours, location, services, and attributes
+- **Website content**: the pages that already answer customer questions
+- **Uploaded documents**: price lists, FAQs, policies, procedures
+- **Written entries**: knowledge you type in directly, for exactly the questions customers ask
+
+The word "search" is doing precise work here. The AI does not read the entire library for every message. When a question calls for business facts, it searches by meaning rather than by keyword, retrieves the most relevant pieces, and composes the answer from them. A question about "parking" can surface the entry about the lot behind the building even if the word "parking" never appears in it. General conversation may not touch the library at all.
+
+## Instructions lead, knowledge informs
+
+The two configured sources have a clear order of authority: **instructions lead, knowledge informs.** When the two say different things, the instructions win. That gives you a clean placement rule:
+
+**Rules and behavior go in instructions. Facts go in knowledge.**
+
+"Quote only published prices" is a rule: it belongs in instructions. The price list itself is facts: it belongs in knowledge. Keep each in its place and the two reinforce each other; the employee behaves consistently and quotes accurately. The same logic tells you what stays out of the library entirely: anything the business would not want repeated in a reply. The library is material for answers, so stock it accordingly.
+
+Fresh beats abundant, too. A lean library of current documents outperforms a large one where old and new price lists compete to be retrieved. When information changes, replace it rather than pile on top of it.
+
+## See exactly what an answer used
+
+Every AI Employee answer is auditable. Open any response in Conversations and select **Explanation** to see which knowledge the AI retrieved and referenced for that specific reply. It is the fastest way to tune a library: when an answer misses, the Explanation shows you whether the right knowledge was missing, outdated, or crowded out.
+
+:::tip Try it now
+Open one client's website and write two short lists: three questions their customers ask that the site answers, and three it does not. The second list is the start of that client's written knowledge entries, and it took you two minutes.
 :::
 
-**What you will learn here:** What feeds every AI Employee answer: instructions, knowledge, and the live conversation, plus what belongs in a Knowledge Base.
+## The data is the moat
+
+Generic AI knows the world; an AI Employee knows one business. The model is the same technology everyone has. What makes an AI Employee valuable is the knowledge behind it: the services, the prices, the policies, the voice. Gathering, cleaning, and maintaining that knowledge is real work, and it is the work that makes the difference.
+
+<SectionFeedback courseId="context-is-everything" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="context-is-everything" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on the three sources, the placement rule, and how retrieval works."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A client wants their AI Employee to stop discussing a discontinued service. Where does that belong?',
+      options: [
+        'In the conversation, corrected manually each time it comes up',
+        'In the Knowledge Base, as a document explaining the old service',
+        'In both places, so the AI sees it twice and remembers it better',
+        'In instructions, as a rule, with the service also removed from knowledge'
+      ],
+      correctIndex: 3,
+      explanation: 'Behavior is governed by instructions, and the library should hold only material fit for answers. Set the rule in instructions and retire the outdated content from knowledge.'
+    },
+    {
+      type: 'mcq',
+      question: 'How does an AI Employee use its Knowledge Base when a customer asks a question?',
+      options: [
+        'It searches by meaning and retrieves the most relevant pieces',
+        'It reads the entire library from top to bottom on every message',
+        'It picks the document a human tagged for that question type',
+        'It quotes whichever document was uploaded most recently'
+      ],
+      correctIndex: 0,
+      explanation: 'Retrieval is semantic: the search matches meaning rather than keywords, and only the relevant pieces reach the model. That is why a lean, current library performs so well.'
+    },
+    {
+      type: 'mcq',
+      question: 'The Knowledge Base says a consultation costs $150, but the instructions say to quote only the prices on the published rate card. The rate card says $175. What does the AI quote?',
+      options: [
+        'It refuses to answer pricing questions until the conflict is resolved',
+        '$175, because instructions lead and knowledge informs',
+        '$150, because the Knowledge Base is the more detailed source',
+        'Both numbers, so the customer can choose the one they prefer'
+      ],
+      correctIndex: 1,
+      explanation: 'When configured sources differ, instructions win. The durable fix is to keep facts current in one place so the rule and the library agree.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client asks what actually makes their AI Employee different from a generic chatbot. What is the strongest true answer?',
+      options: [
+        'It runs on a private model trained from scratch on their industry',
+        'It is faster, because it skips the reasoning a generic chatbot does',
+        'It knows their business: their services, prices, policies, and voice',
+        'It is monitored by a human who approves each answer before it sends'
+      ],
+      correctIndex: 2,
+      explanation: 'The differentiator is the business knowledge behind the employee, not the model. Building and maintaining that knowledge is the work that makes the AI valuable.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/ai-foundations/instructions-that-scale" pathName="AI foundations" step={3} totalSteps={6} />
+
+</InlineHighlighter>
+<MarkComplete courseId="context-is-everything" site="vendasta_learn" />
