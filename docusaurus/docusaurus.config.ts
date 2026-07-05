@@ -118,10 +118,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/learn/automations-ai/Acquisition-Automation-AI', to: '/learn/ai-workforce/autopilot' },
           { from: '/learn/platform/integrations/Integrations-101', to: '/learn/builder' },
           // AI Receptionist lessons consolidated into the AI Workforce path
-          { from: '/learn/products/ai-receptionist/Meet-Your-First-AI-Employee-The-AI-Receptionist', to: '/learn/ai-workforce/hire-the-receptionist' },
-          { from: '/learn/products/ai-receptionist/AI-Receptionist-Setup-and-Configuration', to: '/learn/ai-workforce/hire-the-receptionist' },
-          { from: '/learn/products/ai-receptionist/Vendasta-AI-Receptionist-Walkthrough', to: '/learn/ai-workforce/hire-the-receptionist' },
-          { from: '/learn/products/ai-receptionist/AI-Receptionist-Implementation-Essentials', to: '/learn/ai-workforce/hire-the-receptionist' },
+          { from: '/learn/products/ai-receptionist/Meet-Your-First-AI-Employee-The-AI-Receptionist', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
+          { from: '/learn/products/ai-receptionist/AI-Receptionist-Setup-and-Configuration', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
+          { from: '/learn/products/ai-receptionist/Vendasta-AI-Receptionist-Walkthrough', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
+          { from: '/learn/products/ai-receptionist/AI-Receptionist-Implementation-Essentials', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
           // marketplace lessons harvested into paths
           { from: '/learn/platform/marketplace/Package-Digital-Products-with-Vendasta', to: '/learn/ai-workforce/sell-and-manage' },
           { from: '/learn/platform/marketplace/Billing-and-Payment-Basics', to: '/learn/getting-started/get-set-up-to-get-paid' },
