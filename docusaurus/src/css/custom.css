@@ -278,18 +278,33 @@ ul.theme-doc-sidebar-menu.menu__list li.theme-doc-sidebar-item-link-level-1:firs
   flex-shrink: 0;
   display: flex;
   justify-content: center;
+  gap: 6px;
   padding: 0 16px 0px;
 }
 
 .sidebar-pill {
-  background: #3C9A63;
-  color: white;
-  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 11px;
   font-weight: 400;
-  letter-spacing: 1.8px;
+  letter-spacing: 1.6px;
   text-transform: uppercase;
   border-radius: 4px;
   padding: 4px 10px;
+  text-decoration: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.sidebar-pill:hover {
+  color: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(255, 255, 255, 0.4);
+  text-decoration: none !important;
+}
+
+.sidebar-pill--active {
+  background: #3C9A63;
+  color: white !important;
+  border-color: #3C9A63;
 }
 
 .sidebar-menu-container {
@@ -1691,4 +1706,262 @@ div[class*="language-"] pre {
 .theme-doc-sidebar-item-link.hide-from-sidebar,
 .theme-doc-sidebar-item-category-link.hide-from-sidebar {
   display: none !important;
+}
+/* ── Training: section-label bars and in-practice callouts ── */
+.principle-area {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin: 1.5rem 0 1rem;
+  background: var(--ifm-color-primary);
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.principle-area__icon {
+  font-size: 1.25rem;
+}
+
+.in-practice {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background: rgba(46, 133, 85, 0.1);
+  border-left: 4px solid var(--ifm-color-primary);
+  border-radius: 0 10px 10px 0;
+}
+
+.in-practice__icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.in-practice__label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.in-practice__body p {
+  margin: 0;
+}
+
+[data-theme='dark'] .in-practice {
+  background: rgba(37, 194, 160, 0.1);
+  border-left-color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .in-practice__label {
+  color: var(--ifm-color-primary);
+}
+
+/* Learning path roadmap (PathRoadmap component) */
+.path-roadmap {
+  display: grid;
+  /* grid-template-columns set inline by the component: 1fr auto ... per row of 4 */
+  column-gap: 10px;
+  row-gap: 24px;
+  align-items: start;
+  margin: 24px 0 8px;
+}
+
+.path-roadmap__link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.path-roadmap__link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.path-roadmap__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 84px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.path-roadmap__link:hover .path-roadmap__box {
+  box-shadow: 0 3px 12px rgba(7, 35, 55, 0.35);
+}
+
+.path-roadmap__desc {
+  margin: 8px 0 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.path-roadmap__arrow {
+  display: flex;
+  align-items: center;
+  height: 84px;
+  color: var(--ifm-color-emphasis-500);
+  font-size: 1.15rem;
+}
+
+@media screen and (max-width: 768px) {
+  .path-roadmap {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .path-roadmap__arrow {
+    display: none;
+  }
+}
+
+/* Standard lesson header (LessonHeader component) */
+.lesson-header {
+  margin: 0.5rem 0 1.5rem;
+}
+
+.lesson-header__tags {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 0 0 1.25rem;
+}
+
+.lesson-header__tag {
+  border-radius: 6px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.lesson-header__tag--beginner {
+  background: #d1e7dd;
+  color: #0a3622;
+}
+
+.lesson-header__tag--intermediate {
+  background: #fff3cd;
+  color: #664d03;
+}
+
+.lesson-header__tag--advanced {
+  background: #f6d5e5;
+  color: #8a1150;
+}
+
+.lesson-header__tag--video {
+  background: #cfe2ff;
+  color: #084298;
+}
+
+.lesson-header__tag--lab {
+  background: #e2d9f3;
+  color: #432874;
+}
+
+.lesson-header__position {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.lesson-header__bar {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  background: var(--ifm-color-emphasis-100);
+  border-left: 4px solid #2e8555;
+  border-radius: 0 8px 0 0;
+  padding: 0.875rem 1.25rem;
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.lesson-header__divider {
+  color: var(--ifm-color-emphasis-400);
+}
+
+.lesson-header__outcomes {
+  background: var(--ifm-color-emphasis-100);
+  border-left: 4px solid #2e8555;
+  border-radius: 0 0 8px 8px;
+  padding: 0.25rem 1.25rem 1rem;
+  font-size: 0.85rem;
+}
+
+.lesson-header__outcomes-label {
+  margin: 0.5rem 0;
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.lesson-header__outcome {
+  line-height: 1.8;
+}
+
+.lesson-header__check {
+  color: #2e8555;
+  font-weight: 700;
+  margin-right: 0.4rem;
+}
+
+/* End-of-lesson footer (LessonFooter component) */
+.lesson-footer {
+  margin: 2.5rem 0 1rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+}
+
+.lesson-footer__title {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ifm-font-color-base);
+}
+
+.lesson-footer__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.lesson-footer__link:hover {
+  text-decoration: none;
+}
+
+.lesson-footer__link:hover .lesson-footer__arrow {
+  transform: translateX(3px);
+}
+
+.lesson-footer__arrow {
+  font-size: 1.3rem;
+  line-height: 1;
+  transition: transform 0.15s ease;
+}
+
+.lesson-footer__position {
+  margin: -0.35rem 0 0.75rem;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--ifm-color-emphasis-600);
 }

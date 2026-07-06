@@ -32,27 +32,50 @@ Self-signup is designed to reduce friction and get customers into Business App a
 - **Contact email**: The email address for the primary user
 - **Company name**: Used to look up the business via Google Places
 
+### Sign up with Google or Microsoft
+
+Customers can start signup in one of two ways:
+
+- **Enter an email address** directly on the signup form, or
+- **Sign up with Google** or **Sign up with Microsoft** using an existing account
+
+When a customer chooses **Sign up with Google** or **Sign up with Microsoft**, they authorize Business App on Google's or Microsoft's sign-in screen, and their verified email address is used to create the account. Because the account provider has already confirmed the email, the customer skips the separate email verification step and lands in the signup flow right away. They still confirm their company name so the platform can enrich the business profile through Google Places.
+
+:::info
+The email address is the only detail pulled from the Google or Microsoft account — no contacts, calendar, or other data is accessed.
+:::
+
+:::tip
+Social sign-up removes password creation and email verification from the flow, which reduces friction and can improve signup completion. Customers can return later and sign in with the same Google or Microsoft account from your Business App login page.
+:::
+
 ### Automatic business data enrichment
 
 When a customer enters their company name, the system searches Google Places to find their business:
 
 - **If found via Google Places**: Business data is automatically populated, including address, phone number, business hours, and other profile information
-- **If not found via Google**: The customer can optionally provide their website URL
+- **If a website or phone number can't be captured** — the business isn't found, doesn't have a Google Business Profile, or its profile doesn't include those details — the customer is asked to optionally provide their website and phone number
 
 This approach balances ease of signup with capturing valuable business information.
 
 ### Immediate AI onboarding
 
-When business data is captured from Google Places or a website is provided, the system automatically:
+When a customer completes signup, the platform sets up AI in two ways:
+
+**Behind the scenes**, when business data is captured from Google Places or a website is provided, the system automatically:
 
 - Adds **Business Profile** information to the AI Knowledge Base
 - Adds **Website Knowledge** by crawling the provided website
 - Enables the **AI Receptionist** with this knowledge immediately
 
-This means customers can start interacting with their AI Receptionist right away, finding value faster and experiencing your services from the moment they sign up.
+This means the AI is ready to go the moment the customer lands in Business App.
+
+**In the signup flow**, after the customer verifies their email (or signs up with a Google or Microsoft account, which skips verification), they're shown a live preview of their AI Receptionist — already trained on the business profile and website data captured during signup. They can chat with it immediately and see how it responds *as their business* before they even reach the Business App homepage. This gives new customers an instant "wow" moment and demonstrates the value of AI from their very first interaction.
+
+The AI Employee Preview can be turned on or off per market in **Customize Business App** > **Add Your Clients**. See [Add Your Customers Settings](/docs/administration/platform-settings/customize-business-app/add-your-customers-settings#how-do-i-show-new-signups-a-preview-of-their-ai-receptionist) for details.
 
 :::tip
-The automatic AI onboarding helps demonstrate value immediately. Customers can test their AI Receptionist in Business App as soon as they complete signup.
+The automatic AI onboarding helps demonstrate value immediately. Customers can test their AI Receptionist in Business App as soon as they complete signup — and with the AI Employee Preview enabled, they experience AI before they even finish onboarding.
 :::
 
 ## Why is self-signup important?
@@ -75,6 +98,7 @@ With self-signup, you can:
 - Automate onboarding workflows for self-signup customers
 - Track self-signup conversions using the Record Source field
 - Present [Featured Packages](./featured-packages) to drive upgrades during onboarding
+- Show new signups a live preview of their AI Receptionist, trained on their business info, right after email verification
 
 ## How to set up self-signup
 
@@ -238,6 +262,12 @@ Yes. Enable the **Show Create Account** option to add a registration link to you
 </details>
 
 <details>
+<summary>Can customers sign up with a Google or Microsoft account?</summary>
+
+Yes. On the signup form, customers can enter an email address or choose **Sign up with Google** or **Sign up with Microsoft**. When they use a Google or Microsoft account, the verified email address on that account is used to create their Business App account, and they skip the separate email verification step. Only the email address is used — no other account data is accessed. Customers can return later and sign in with the same account from your Business App login page.
+</details>
+
+<details>
 <summary>How do I identify customers who signed up on their own?</summary>
 
 Self-signup customers have their Record Source set to "Self Signup" in the CRM. You can filter accounts or create automations based on this field.
@@ -264,7 +294,7 @@ Yes. Configure [Featured Packages](./featured-packages) to present upgrade optio
 <details>
 <summary>What information does the self-signup form collect?</summary>
 
-The form collects contact email and company name. If the business is found via Google Places, additional business data (address, phone, hours) is automatically populated. If not found, the customer can optionally provide their website URL.
+The form collects contact email and company name. If the business is found via Google Places, additional business data (address, phone, hours) is automatically populated. If a website or phone number can't be captured from the business's Google Business Profile — or the business doesn't have one — the customer is asked to optionally provide their website and phone number.
 </details>
 
 <details>
@@ -276,11 +306,14 @@ Reducing form fields minimizes friction and increases signup completion rates. B
 <details>
 <summary>Does self-signup set up AI features automatically?</summary>
 
-Yes. When business data is captured from Google Places or a website is provided, the system automatically adds this information to the AI Knowledge Base and enables the AI Receptionist. Customers can start using AI features immediately after signup.
+Yes, in two ways:
+
+- **AI Knowledge Base and AI Receptionist:** When business data is captured from Google Places or a website is provided, the system automatically adds this information to the AI Knowledge Base and enables the AI Receptionist. Customers can start using AI features immediately after signup.
+- **AI Employee Preview:** After verifying their email, new signups are shown a live chat preview of their AI Receptionist — already trained on the business profile and website data captured during signup. They can chat with it as their own AI before reaching the Business App homepage. This can be turned on or off per market in **Customize Business App** > **Add Your Clients**.
 </details>
 
 <details>
 <summary>What if the customer's business isn't found on Google Places?</summary>
 
-If the business isn't found via Google Places, the customer can optionally enter their website URL. The system will use the website to populate the AI Knowledge Base instead.
+If a website or phone number can't be captured from the business's Google Business Profile — or the business doesn't have one — the customer is asked to optionally provide their website and phone number. The system uses the website to populate the AI Knowledge Base instead.
 </details>

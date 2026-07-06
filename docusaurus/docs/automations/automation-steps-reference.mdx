@@ -114,7 +114,7 @@ Steps marked **(draft)** are in development and may change or be removed before 
 
 | Step | Overview | Special Cases | Example Use Cases |
 | --- | --- | --- | --- |
-| Notify an admin | Sends an in-app and email notification to a partner admin. | Limited support for template variables in the message body. | When a high-margin product is deactivated, notify partner admins so they can investigate. |
+| Notify a user | Sends an in-app and email notification to one or more users. The **Users** field accepts a dynamic user ID from a previous step (via **Insert dynamic content**), so notifications follow account ownership instead of a hard-coded recipient. | Limited support for template variables in the message body. | In an account template, notify the account owner pulled from an earlier step so the same automation works across every account. |
 | Notify a salesperson | Sends an in-app and email notification to a salesperson. | Available on account-scoped triggers. Limited support for template variables in the message body. | When an opportunity is created for a French-language client, notify French-fluent salespeople. |
 | Notify a digital agent | Sends an in-app and email notification to a fulfillment agent. | Available on account-scoped triggers. Limited support for template variables in the message body. | When a website-design product is activated, notify a fulfillment agent who can design websites. |
 | Notify all account users | Sends an in-app and email notification to every user on the account. | Available on account-scoped triggers. | When a service interruption is scheduled, notify all users on affected accounts. |
@@ -163,6 +163,7 @@ Steps marked **(draft)** are in development and may change or be removed before 
 | Send a public system message | Sends a public system message visible to everyone on the account. | Available on account-scoped triggers. | When an outage is resolved, post an all-clear system message. |
 | Send an SMS message via Conversations | Sends an SMS message via your Conversations inbox to a contact. | Available on contact-scoped triggers. | When a hot lead is flagged, text the contact a link to book a meeting. |
 | Send an SMS message to a phone number | Sends an SMS to any phone number you specify, including numbers not in your CRM. | | When a lead fills out a high-intent form, send an SMS to the on-call salesperson. |
+| Make outbound call with an employee | Places an outbound AI phone call to a contact using a selected AI employee. |  | When a hot lead is flagged, have an AI employee call the contact to qualify them and book a meeting. |
 
 ## Sales orders
 

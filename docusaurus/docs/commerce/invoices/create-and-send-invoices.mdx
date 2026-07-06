@@ -35,20 +35,22 @@ Invoices can be used most effectively when the following criteria are met:
 
 Invoices can be created at any time from the **Commerce → Invoices** tab in Partner Center, or by simply going into the account you wish to create an invoice for and clicking on the invoice tab. 
 
+:::note Minimum invoice amount
+The minimum invoice amount is **$1.00**. Attempting to charge or send an invoice below this threshold will result in an error.
+:::
+
 - Click **New → Invoice** and select an account to create a draft invoice
-- Select a **Due date** for the invoice 
+- Select a **Due date** for the invoice. The due date controls the date displayed to the client on the invoice — it does not determine when payment is collected. If you use automatic charging, payment is collected immediately when the invoice is charged, regardless of the due date.
 - Select a **User** (recipient) for the invoice
 - Click **Add Item** to add an individual product to the invoice. You can add any product that you're currently selling in your Marketplace, or type any text into the text box to represent a line item that does not exist in your Marketplace
   - If the product you select already has a retail price set, it will automatically populate the Unit Price and currency for that item. The price and currency can also be overwritten on an individual invoice (note that invoices can currently only accept payments in USD and CAD)
   - To add a discount as a line item, input the description of the discount and enter a negative dollar amount. The negative value entered will be subtracted from the invoice total
 - You can also click **Add Custom Item** to create your own line item. 
 - If your invoice includes more than one of a certain item, this can be specified using the Quantity column
-- Use the Options **⋮** menu to remove an item from the invoice or [apply a tax rate](/administration/commerce/tax-rates/) to a line item.
+- Use the Options **⋮** menu to remove an item from the invoice or [apply a tax rate](/administration/commerce/tax-rates/) to a line item. **Note:** Tax rates do not apply to invoices automatically — they must be manually added to each line item individually.
 - If necessary, add additional information to the invoice using the **Memo** field at the bottom of the invoice
 
 Invoices can also be created at any time when viewing an individual account in **Partner Center → Manage Accounts** by clicking the Options **⋮** menu next to the **Open Business App** button.
-
-Invoices can be generated from an order in **Partner Center → Sales → Orders** by viewing an order and clicking the **Create Invoice** button.
 
 ### Sending or charging an invoice
 
@@ -144,6 +146,10 @@ For Partners with multiple markets, repeat the same steps under the '**Markets**
 
 <details>
 <summary>Can I delete an invoice?</summary>
+
+**Draft invoices** can be deleted using the Options **⋮** menu on the invoice.
+
+**Sent or paid invoices** cannot be deleted — they are financial records. If you need to reverse the charge on a paid invoice, [issue a credit note](/commerce/credit-notes) instead. If a sent invoice was created in error and has not been paid, void it by selecting **Change invoice status → Void** from the Options **⋮** menu.
 
 Currently, Partners cannot retract or delete an invoice that has already been sent.
 
@@ -277,6 +283,36 @@ If a package shows an unexpected price when added to an invoice, it may not have
 <summary>Where can I find the payment link for an invoice?</summary>
 
 The payment link can be found for any sent invoice from **Partner Center → Commerce → Click the three dots to the left of the desired invoice → Copy payment link**. Draft invoices do not have a payment link.
+
+</details>
+
+<details>
+<summary>Why isn't my invoice email sending to my client?</summary>
+
+If an invoice email is not being received by your client, check the following:
+
+1. **Invoice status** — Only invoices in **Open (Due)** status can be sent. Draft invoices cannot be emailed until they are sent.
+2. **Valid email address** — Confirm the contact on the account has a valid, correctly formatted email address.
+3. **Recipient selection** — When clicking **Send Invoice**, ensure you have selected at least one recipient from the list.
+4. **Spam or junk folder** — Ask the client to check their spam or junk folder, as invoice emails can sometimes be filtered.
+
+If the client has previously unsubscribed from platform emails, their address may be suppressed. In that case, they will need to contact [support@vendasta.com](mailto:support@vendasta.com) to be re-subscribed.
+
+</details>
+
+<details>
+<summary>The date filter seems to be missing invoices from the last day of my selected range</summary>
+
+This is a known behavior. When filtering invoices by date range, the end date is treated as exclusive — meaning invoices dated on the last day of the range may not appear. To work around this, set your end date one day later than your intended range. For example, to see all invoices through June 30, set the end date to July 1.
+
+</details>
+
+<details>
+<summary>Why doesn't the net amount on my invoice report match after issuing a credit note?</summary>
+
+Credit notes are reported separately from invoices. An invoice export from **Commerce > Invoices > Export as CSV** shows gross invoice amounts only — it does not deduct credit notes from the totals.
+
+To calculate accurate net revenue, export both your invoices and your credit notes separately, then subtract the credit note totals from your invoice totals.
 
 </details>
 

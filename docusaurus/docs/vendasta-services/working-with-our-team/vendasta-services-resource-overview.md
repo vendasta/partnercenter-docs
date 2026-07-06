@@ -1,16 +1,16 @@
 ---
-title: "Vendasta Services Resource Overview"
-sidebar_label: "Vendasta Services Resource Overview"
-description: "An overview of Vendasta Services teams, contacts, and resources to help partners work effectively with Vendasta’s in-house fulfillment vendor."
+title: "Vendasta Services resource overview"
+sidebar_label: "Vendasta Services resource overview"
+description: "An overview of Vendasta’s teams, contacts, and resources for partners working with Vendasta Services."
 ---
 
-This article provides an overview of Vendasta's teams and resources, which will be helpful when working with Vendasta Services, the company's in-house fulfillment vendor.
+This article provides an overview of Vendasta's teams and resources, which are helpful when working with Vendasta Services, the company's in-house fulfillment vendor.
 
 ---
 
 ## Contacts
 
-* **Vendasta Services (for partners & clients):** For questions about products, fulfillment, or active projects.
+* **Vendasta Services (for partners and clients):** For questions about products, fulfillment, or active projects.
     * **Email:** marketingservices@yourdigitalagents.com
     * **Phone:** 1-866-378-8031 (Monday - Friday, 8:00 AM - 5:00 PM CST)
 
@@ -18,7 +18,7 @@ This article provides an overview of Vendasta's teams and resources, which will 
     * To find your assigned representative, look in the bottom left corner of the page in Partner Center. 
     * **For agencies with the "Customer Success" team:**
         * **Email:** customersuccess@vendasta.com
-        * **Office Hours:** Monday - Friday, meetings can be booked through the booking link available in bottom left corner of Partner Center by clicking on Talk to Sales → Book.
+        * **Office Hours:** Monday - Friday, meetings can be booked through the booking link available in bottom left corner of Partner Center by clicking `Talk to Sales` → `Book`.
 
 * **Onboarding Specialist:** To get in touch with your assigned specialist.
     * **Email:** onboarding@vendasta.com
@@ -29,13 +29,12 @@ This article provides an overview of Vendasta's teams and resources, which will 
 
 ---
 
-## Vendasta Services Resources Per Product Line
+## Vendasta Services resources per product line
 
-### General Inquiries
+### General inquiries
 * **Phone:** For all inquiries regarding projects managed by the Marketing Services team or to speak with a specific agent, contact **1-866-378-8031**. This line is exclusively for partners with active Marketing Services products and is monitored Monday through Friday from 8:00 AM to 5:00 PM CST.
 * **Presale Questions:** Reach out to [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com) and CC your Vendasta Sales Representative for coordinated assistance.
 * **Examples of Services:**
-    * **Expectation Brochures:** [https://examples.yourdigitalagents.com/expectation-brochures/](https://examples.yourdigitalagents.com/expectation-brochures/)
     * **Social Posts and Websites:** [https://examples.yourdigitalagents.com/](https://examples.yourdigitalagents.com/)
 
 ### Websites
@@ -43,7 +42,7 @@ This article provides an overview of Vendasta's teams and resources, which will 
 * **Website Frameworks:** [https://frameworks.yourdigitalagents.com/](https://frameworks.yourdigitalagents.com/)
 * **Website Content & Creation Form:** [https://websitecreationform.yourdigitalagents.com/e-commerce-csv-help/](https://websitecreationform.yourdigitalagents.com/e-commerce-csv-help/) (to be filled out by the client before the onboard call)
 
-### Digital Ads
+### Digital ads
 * **Request a Digital Ads Proposal:** [https://digital-ads-proposal.websitepro.hosting/](https://digital-ads-proposal.websitepro.hosting/)
 
 ### Social

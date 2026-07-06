@@ -21,6 +21,42 @@ The Chat Receptionist also reduces friction and drop-off by starting conversatio
 
 As your business grows, the AI adapts to new offerings and workflows without needing extensive decision trees. It delivers timely, personalized responses that guide visitors through the sales funnel and can improve both customer satisfaction and conversion rates.
 
+## Supported languages
+
+The AI Chat Receptionist can transcribe and respond in 57 languages. A language is considered supported when it meets our accuracy standard for both transcription (understanding what the visitor typed or said) and translation (generating a reply).
+
+| Language | Language | Language |
+|----------|----------|----------|
+| Afrikaans | Galician | Norwegian |
+| Albanian | Georgian | Occitan |
+| Armenian | German | Pashto |
+| Azerbaijani | Greek | Persian |
+| Basque | Gujarati | Polish |
+| Belarusian | Haitian Creole | Portuguese |
+| Bengali | Hausa | Punjabi |
+| Bosnian | Hebrew | Romanian |
+| Bulgarian | Hindi | Russian |
+| Catalan | Hungarian | Serbian |
+| Chinese (Simplified) | Icelandic | Slovak |
+| Chinese (Traditional) | Indonesian | Slovenian |
+| Croatian | Italian | Spanish |
+| Czech | Japanese | Swahili |
+| Danish | Kannada | Swedish |
+| Dutch | Kazakh | Tagalog |
+| English | Korean | Tamil |
+| Estonian | Latvian | Thai |
+| Finnish | Lithuanian | Turkish |
+| French | Macedonian | Ukrainian |
+| German (Swiss) | Malay | Urdu |
+| | Maltese | Vietnamese |
+| | Marathi | Welsh |
+
+The AI detects the visitor's language automatically from their messages — no configuration is required.
+
+:::info Languages not on this list
+If a visitor writes in a language not listed above, the AI will still attempt to respond, but results may vary. To get the best results for a specific language, check whether it appears in the table above.
+:::
+
 ## Set up the AI Chat Receptionist
 
 Follow these simple steps to configure your AI Chat Receptionist so it effectively engages visitors and captures valuable leads.
@@ -46,8 +82,36 @@ Capabilities are like instructions that guide how your AI Chat Receptionist beha
 - **Capture Lead Information**  
   The AI automatically asks visitors for contact details such as name, phone number, or email and saves captured leads directly to your CRM. This capability is turned on by default.
 
+  :::tip Webchat visitors showing as anonymous?
+  If contacts are appearing under the **Anonymous Visitors** tab instead of being saved to your CRM, check that the Lead Capture capability is enabled. Go to **AI Workforce** and then **Configure** on the Chat Receptionist, then open **Capabilities** and make sure **Lead Capture** is toggled on, then save.
+  :::
+
+  **How phone numbers are stored**
+
+  When a visitor provides a phone number without a country code, the system defaults to +1 (US). When a visitor includes a country code (for example, +44 for the UK), it is stored as provided.
+
+  If your business serves international customers, you can add an instruction to your Q&A or Purpose prompt asking visitors to include their country code when sharing a phone number. For example:
+
+  > Please include your country code when sharing your phone number (for example, +44 for the UK or +61 for Australia).
+
 - **Book Appointments**  
-  Connect your calendar to let the AI help customers schedule meetings. It will offer available time slots and collect all necessary booking details automatically. 
+  Connect your calendar to let the AI help customers schedule meetings. It will offer available time slots and collect all necessary booking details automatically.
+
+  **Setting up a booking link via Q&A instructions**
+
+  If you want the AI to share a booking link rather than book directly, add an instruction to your Q&A or Purpose that includes the link text. For example:
+
+  > When a visitor asks to book a meeting or schedule an appointment, share this link: [your booking link here]
+
+  The AI will provide the link when booking comes up naturally in conversation. It does not book meetings autonomously — it directs the visitor to the link to complete the process.
+
+  **Shared booking for a team**
+
+  If multiple team members need to appear on the same booking link (for example, so visitors can book with any available person), create a team calendar in the Meetings app and use that calendar's booking link in your Q&A instruction. This way, all users share a single link and the AI always sends the same one regardless of who is available.
+
+  :::note Round-robin booking
+  When using a round-robin meeting type, the AI cannot select a specific team member for the visitor. It defaults to the primary meeting type and the visitor completes the selection on the booking page.
+  :::
 
 #### Book multiple services in one session
 
@@ -315,6 +379,21 @@ Two things to check:
 
 1. **Knowledge coverage.** The AI only knows what's in its knowledge base or what a tool returns. Make sure the relevant pages of the SMB's website are crawled and up to date.
 2. **The URL itself.** The AI is given the URL string, not page contents. If the URL doesn't carry useful information (e.g. it's a generic `/page?id=abc123`), the AI may need a custom capability to translate that into something meaningful.
+
+</details>
+
+<details>
+<summary>Why did the AI Chat Receptionist stop responding for an hour?</summary>
+
+When a live agent sends a message in a conversation, the AI Chat Receptionist automatically steps back for **1 hour** to avoid conflicting with the human-handled conversation. This is by design — the AI gives the live agent space to take over without interrupting.
+
+**What triggers the 1-hour pause:**
+- A live agent sends a message in the conversation
+- A Facebook auto-responder sends a message (Facebook's automatic replies are detected the same way as a live agent response)
+
+**What to expect:** The AI resumes automatically after 1 hour. No action is needed if a live agent is handling the conversation.
+
+**Facebook auto-responder note:** If you notice the AI pausing unexpectedly on Facebook conversations, check whether your Facebook Page has an auto-responder configured. If the auto-responder is triggering the delay unintentionally, review your Facebook Page's auto-response settings and disable any automations that aren't needed.
 
 </details>
 

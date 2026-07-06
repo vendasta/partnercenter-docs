@@ -108,3 +108,32 @@ Corporate teams managing multiple locations can open the Multi-location Business
 
 Yes. In Partner Center, go to **Administration** → **My Team**, edit the salesperson, and enter a URL in **Book a meeting link**. Assign that salesperson to the account. The link then appears on their contact card in Business App so clients can schedule time with them. See [Add a booking link to the contact card](./add-booking-link-contact-card.mdx) for step-by-step setup.
 </details>
+
+<details>
+<summary>Why aren't form submissions appearing in the CRM?</summary>
+
+The most common cause is using **Generic fields** instead of **CRM/Contact fields** in the form. Generic fields only export to a CSV download — they do not create or update CRM contact records. To have submissions populate the CRM, use **CRM** or **Contact** field types when building your form. Go to **Business App** → **CRM** → **Contacts** → **Forms**, open the form, and check each field's type.
+</details>
+
+<details>
+<summary>What is the difference between CRM fields and Generic fields in forms?</summary>
+
+When adding fields to a form, there are two categories:
+
+- **CRM/Contact fields** — Mapped directly to contact record properties (name, email, phone, etc.). Submissions create or update a contact in the CRM.
+- **Generic fields** — Freeform fields with no CRM mapping. Data from these fields can only be retrieved by exporting the form submission CSV.
+
+Use CRM or Contact fields for any information you want to appear on the contact record automatically.
+</details>
+
+<details>
+<summary>How do dropdown values work in forms?</summary>
+
+Dropdown fields have two components: a **Label** and a **Value**. The Label is the text the form user sees in the dropdown. The Value is what gets saved to the corresponding CRM field when the user selects that option. Make sure the Value matches exactly what the CRM field expects, otherwise the data may not map correctly.
+</details>
+
+<details>
+<summary>Can I add file attachments to a Business App form?</summary>
+
+File upload fields are not supported in Business App forms. As a workaround, add a **Paragraph** or **Text** field and ask the user to paste a URL to a document hosted elsewhere (e.g., Google Drive, Dropbox). The link is captured in the CRM contact record just like any other text field.
+</details>
