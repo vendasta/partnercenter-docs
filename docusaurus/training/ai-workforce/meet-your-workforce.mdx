@@ -1,0 +1,130 @@
+---
+title: Meet your AI Workforce
+sidebar_position: 1
+description: "The roster of AI Employees, the job each one does, where each one lives, and the three parts they all share."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+
+<InlineHighlighter courseId="meet-your-workforce" site="vendasta_learn">
+
+<CourseProgressBar courseId="meet-your-workforce" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Beginner"
+  time="about 8 minutes"
+  pathName="Hire your AI Workforce"
+  step={1}
+  totalSteps={7}
+  outcomes={[
+    "Name the pre-built AI Employees and the job each one does",
+    "Match a client's problem to the right AI Employee",
+    "Name the three parts every AI Employee shares",
+    "Know which plan unlocks the Voice Receptionist",
+  ]}
+/>
+
+An AI Employee is a digital team member you configure to answer questions, capture leads, and do real work. This step introduces the roster: who is on it, what each one does, and the three parts they all share, so that every configuration screen in this path already looks familiar.
+
+## The roster
+
+Four AI Employees come pre-built, ready to work out of the box and tailored to the business they serve:
+
+| AI Employee | The job |
+|---|---|
+| **Chat Receptionist** | Greets visitors, answers questions from its knowledge, and captures every conversation as a lead, around the clock |
+| **Voice Receptionist** | Answers the phone: covers after hours, rescues missed calls, and books while the line would have rung out |
+| **Reputation Specialist** | Responds to reviews using your rules and knowledge, and answers questions about reviews and NPS in plain conversation |
+| **Sales Assistant** | Keeps the CRM up to date from meetings and records, creates activities, and answers questions about the pipeline |
+
+Beyond the four, you can build **Custom AI Employees** from a blank slate: you define the purpose, capabilities, knowledge, and channels. Partners have built inside sales representatives, data analysts, support employees, and HR coordinators this way; the [custom builds are covered in the lab](/learn/ai-workforce/custom-employee-lab) later in this path.
+
+## Where each one lives
+
+The rule from the ecosystem carries straight over: **an AI Employee lives in the workspace of the business it serves.** Your receptionist, answering for your business, lives in your Partner Center. A client's receptionist lives in their Business App, powered by their business knowledge. Pick the workspace first, and channels, knowledge, and captured leads all land where you expect.
+
+:::tip Try it now
+Open **AI** in Partner Center. The employees you see there are yours, serving your business. Every client gets their own roster inside their Business App.
+:::
+
+## The three parts every AI Employee shares
+
+Pre-built or custom, every AI Employee is configured the same way. Learn these three parts once and every employee in the roster makes sense. Flip each one:
+
+<FlipCardGrid>
+  <FlipCard front="Profile and Purpose" back="Who it is: name, avatar, and the Purpose, the job description that sets its tone and goals for every conversation." />
+  <FlipCard front="Capabilities" back="What it can do and when: capture leads, book appointments, transfer calls, and the rules for using each." />
+  <FlipCard front="Knowledge sources" back="What it knows: the business information it answers from, added as the Business Profile, text, files, or a website." />
+</FlipCardGrid>
+
+## What the plans include
+
+Two gates are worth knowing before you plan a rollout. The **Starter** plan includes the Chat Receptionist; the **Professional** plan and above unlock the Voice Receptionist and social channels (Facebook, Instagram, WhatsApp) as well. The **Sales Assistant** is part of CRM AI and comes with a CRM AI Standard or Pro subscription. When you are scoping a client, [this guide breaks down what each plan includes](/ai/ai-workforce/ai-receptionist-features-by-plan).
+
+<SectionFeedback courseId="meet-your-workforce" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="meet-your-workforce" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on the roster, where AI Employees live, and what the plans include."
+  questions={[
+    {
+      type: 'match',
+      instruction: 'Match each client complaint to the AI Employee that solves it.',
+      pairs: [
+        { term: 'We miss calls every evening', definition: 'Voice Receptionist' },
+        { term: 'Nobody answers our website visitors', definition: 'Chat Receptionist' },
+        { term: 'Reviews sit unanswered for weeks', definition: 'Reputation Specialist' },
+        { term: 'Our CRM is always out of date', definition: 'Sales Assistant' }
+      ],
+      explanation: 'Each pre-built AI Employee owns one job: the Voice Receptionist answers the phone, the Chat Receptionist works the website, the Reputation Specialist handles reviews, and the Sales Assistant keeps the CRM current.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client wants a receptionist answering questions for their business. Where does that AI Employee live?',
+      options: [
+        'In your Partner Center, beside your own receptionist',
+        'In the Marketplace',
+        'In their Business App, powered by their business knowledge',
+        'In the automations builder'
+      ],
+      correctIndex: 2,
+      explanation: 'An AI Employee lives in the workspace of the business it serves. A client\'s receptionist is configured in that client\'s Business App.'
+    },
+    {
+      type: 'mcq',
+      question: 'Which part of an AI Employee holds the instruction "always offer to book a cleaning"?',
+      options: [
+        'Its knowledge sources',
+        'Its Purpose, in the Profile',
+        'Its channels',
+        'Its subscription plan'
+      ],
+      correctIndex: 1,
+      explanation: 'The Purpose is the job description that sets tone and goals for every conversation. Knowledge is what it answers from; capabilities are what it can do.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client on the Starter plan wants their phone answered by AI. What do you check first?',
+      options: [
+        'Whether their website has a chat widget',
+        'Whether their plan is Professional or above, which unlocks the Voice Receptionist',
+        'Whether they have an Executive Report',
+        'Whether their CRM is up to date'
+      ],
+      correctIndex: 1,
+      explanation: 'Starter includes the Chat Receptionist. The Voice Receptionist and social channels unlock from the Professional plan and above.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/ai-workforce/put-a-receptionist-to-work" pathName="Hire your AI Workforce" step={1} totalSteps={7} />
+
+</InlineHighlighter>
+<MarkComplete courseId="meet-your-workforce" site="vendasta_learn" />
