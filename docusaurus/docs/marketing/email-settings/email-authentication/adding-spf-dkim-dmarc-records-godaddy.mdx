@@ -1,45 +1,43 @@
 ---
-title: Guide - add SPF, DKIM, and DMARC records (GoDaddy)
+title: Add SPF, DKIM, and DMARC records (GoDaddy)
 sidebar_label: Add SPF, DKIM, DMARC Records (GoDaddy)
 sidebar_position: 1
 description: Learn how to add SPF, DKIM, and DMARC records on GoDaddy to improve email deliverability
 ---
 
-# Guide - Add SPF, DKIM, & DMARC Records (GoDaddy)
-
 Before proceeding with the instructions below, follow this first and then continue with this guide: [Connect Domain](../connecting-domains)
 
-## Add SPF Record
+## Add SPF record
 
 When adding the verification records to your GoDaddy domain, note that GoDaddy will automatically add .yourdomain.com to the end of any hostnames added. While our records include your domain in the hostname, it should be removed before adding it to your DNS records. 
 
-A hostname in our system that reads **@.yourdimain.com** would sinmply be added as **@** to your DNS records.
+A hostname in our system that reads `@.yourdomain.com` would simply be added as `@` to your DNS records.
 
 1. Go to your GoDaddy account
 2. Navigate to your Domain section
 3. Click on Manage DNS
 4. Look for the DNS records management section
-5. Add the required SPF records found in Partner Center > Marketing > Email Settings > SPF. This will be a TXT record.
+5. Add the required SPF records found in `Partner Center` → `Marketing` → `Email Settings` → `SPF`. This will be a TXT record.
 
-## Adding DKIM Records
-
-1. Go to your GoDaddy account
-2. Navigate to your Domain section
-3. Click on Manage DNS
-4. Look for the DNS records management section
-5. Add the required SPF records found in Partner Center > Marketing > Email Settings > DKIM. There are three seperate records to be added as CNAME records.
-
-## Adding DMARC Record
+## Adding DKIM records
 
 1. Go to your GoDaddy account
 2. Navigate to your Domain section
 3. Click on Manage DNS
 4. Look for the DNS records management section
-5. Add the required SPF records found in Partner Center > Marketing > Email Settings > DMARC. This will be added a TXT record.
+5. Add the required DKIM records found in `Partner Center` → `Marketing` → `Email Settings` → `DKIM`. There are three separate records to be added as CNAME records.
+
+## Adding DMARC record
+
+1. Go to your GoDaddy account
+2. Navigate to your Domain section
+3. Click on Manage DNS
+4. Look for the DNS records management section
+5. Add the required DMARC records found in `Partner Center` → `Marketing` → `Email Settings` → `DMARC`. This will be added as a TXT record.
 
 ## Validate your DNS records
 
 - DNS changes can take up to 48 hours to propagate throughout the internet
-- From Partner Center > Marketing > Email Settings check if the email domain has a green check mark beside it. This will indicate that the records have been successfully validated.
+- From `Partner Center` → `Marketing` → `Email Settings` check if the email domain has a green checkmark beside it. This indicates that the records have been successfully validated.
 - If you're experiencing issues with email deliverability after adding these records, please wait at least 48 hours before troubleshooting further
 - For additional help with email configuration, contact GoDaddy support or refer to their documentation
