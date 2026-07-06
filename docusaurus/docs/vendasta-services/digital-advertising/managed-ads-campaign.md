@@ -143,6 +143,16 @@ Depending on the campaign goals, we may need to install a snippet of code on the
 5. Paste the GTM ID (GTM-XXXXXXX).
 </details>
 
+## Sharing a campaign proposal
+
+When a campaign proposal is ready for client review, you can share a client-facing version of the plan directly from the campaign proposal page in Ad Planner. Proposals can originate from Partner Center or MatchCraft.
+
+The **Preview Shareable Plan** link in the bottom-left of the proposal page footer lets you confirm the client-facing view before sharing. Clicking it opens the client-facing shareable plan in a new tab.
+
+:::note
+**Preview Shareable Plan** is disabled when unsaved changes are present. Save your changes to enable the link.
+:::
+
 ## Getting Started
 
 1. **Fulfillment form** — Complete the order and fulfillment form with as much detail as possible. We review the order and send a confirmation email within **2 business days**.
