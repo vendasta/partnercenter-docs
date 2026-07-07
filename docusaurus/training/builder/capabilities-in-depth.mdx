@@ -1,7 +1,8 @@
 ---
-title: "Capabilities in depth"
-sidebar_position: 2
-description: "Designing a capability from the outcome, writing instructions that stay reliable, and trimming what does not earn its place."
+title: "Capabilities, tools, and triggers"
+sidebar_label: Capabilities, tools, and triggers
+sidebar_position: 3
+description: "The platform vocabulary that connects an AI Employee to other systems: capabilities, tools, triggers, and guardrails, and how they fit together."
 ---
 
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
@@ -18,22 +19,22 @@ import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
 <CourseProgressBar courseId="capabilities-in-depth" site="vendasta_learn" />
 
 <LessonHeader
-  difficulty="Advanced"
+  difficulty="Intermediate"
   time="about 9 minutes"
-  pathName="The builder track"
-  step={2}
-  totalSteps={8}
+  pathName="Wire your AI Workforce to act"
+  step={3}
+  totalSteps={9}
   outcomes={[
-    "Design a capability from the outcome, not the click-by-click steps",
-    "Write capability instructions that stay reliable under real traffic",
-    "Decide what belongs in a capability and what belongs in knowledge",
-    "Trim an over-built capability without losing what it does",
+    "Name the platform pieces that connect an AI Employee to a system: capability, tool, trigger, guardrail",
+    "Tell a capability from knowledge, and behavior from facts",
+    "See how a trigger and a tool are what actually reach through a doorway",
+    "Design a capability from the outcome, and trim what does not earn its place",
   ]}
 />
 
-## What a capability is
+## The vocabulary that connects a system
 
-A capability is a single skill you switch on for an AI Employee: capture a lead, book an appointment, look something up and answer from it. Each one is a set of instructions, sometimes with a tool attached. The AI reads the situation in front of it and reaches for the capability that fits.
+A capability is a single skill you switch on for an AI Employee: capture a lead, book an appointment, look something up and answer from it. Each one is a set of plain instructions, sometimes with a tool attached, and the AI reads the situation in front of it and reaches for the capability that fits. It is where the craft lives, because a vague capability is exactly where an AI Employee's behavior drifts.
 
 That is the line between a capability and knowledge. Knowledge is what the AI Employee knows, the facts it looks up when a question calls for them. A capability is what it does, the behavior you want in a given moment. Facts go in knowledge; behavior goes in a capability. Keeping that split clean is most of what makes an AI Employee predictable.
 
@@ -61,6 +62,8 @@ Every capability worth trusting has the same three parts. Flip each one to see w
 </FlipCardGrid>
 
 Get these three right and the capability behaves. Most capabilities that misfire are missing one of them: no guardrail, so it invents; no clear trigger, so it fires at the wrong moment.
+
+This is also where connecting a system starts. The trigger is the moment the AI decides to reach through a doorway to another system. The tool is the doorway itself. A capability is the wrapper that holds them together: it tells the AI when to reach out (the trigger), what it is allowed to do (the guardrail), and, when a tool is attached, which doorway to walk through.
 
 ## Trim what does not earn its place
 
@@ -135,7 +138,7 @@ Test in a sandbox where nothing is at stake, and try the messy inputs on purpose
   ]}
 />
 
-<LessonFooter to="/learn/builder/custom-tools" pathName="The builder track" step={2} totalSteps={8} />
+<LessonFooter to="/learn/builder/custom-tools" pathName="Wire your AI Workforce to act" step={3} totalSteps={9} />
 
 </InlineHighlighter>
 <MarkComplete courseId="capabilities-in-depth" site="vendasta_learn" />

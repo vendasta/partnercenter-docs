@@ -1,6 +1,6 @@
 ---
 title: "Webhooks and platform events"
-sidebar_position: 5
+sidebar_position: 6
 description: "Push instead of poll: sending data out with an outbound webhook step, receiving events with inbound triggers, and the platform events a product receives."
 ---
 
@@ -19,9 +19,9 @@ import LessonFooter from "@site/src/components/LessonFooter";
 <LessonHeader
   difficulty="Advanced"
   time="about 10 minutes"
-  pathName="The builder track"
-  step={5}
-  totalSteps={8}
+  pathName="Wire your AI Workforce to act"
+  step={6}
+  totalSteps={9}
   outcomes={[
     "Explain the difference between polling and a webhook",
     "Send data out of the platform with an outbound webhook step",
@@ -38,7 +38,7 @@ A webhook is a small message one system sends another the moment an event occurs
 
 ## Send data out: the outbound webhook step
 
-Inside an automation, a webhook step sends data out to any endpoint you name. It posts a small package of JSON, a plain and structured text format, to a URL you control. Three habits keep it working on the first try:
+Inside an automation, a webhook step sends data out to any endpoint you name. It is how a workflow reaches a system the platform has no built-in step for, the way a follow-up automation might ping the team's chat or trigger the next call. It posts a small package of JSON, a plain and structured text format, to a URL you control. Three habits keep it working on the first try:
 
 - Put your data in the body of the request as JSON, not in the headers. Sending it as headers is the single most common mistake.
 - Send values as text. A number sent as a raw number can error; send it as a string.
@@ -54,7 +54,7 @@ The same idea runs in reverse. An automation can start from an inbound webhook: 
 
 When you build a product that others resell, the platform can notify you of events on it: a purchase, a new account, a change to a user or a customer. These are platform events, and they let your product react to what happens across every account that uses it. Use that name, platform events, which is the language the documentation uses too.
 
-You will build products like this in a later step. For now, the point is the shape: your code does not have to watch for these things, because the platform pushes them to you as they happen.
+For now, the point is the shape: your code does not have to watch for these things, because the platform pushes them to you as they happen.
 
 :::tip Try it now
 Create an outbound webhook step in a test automation and point it at a free request-bin URL, like Webhook.site. Test-fire it and read the payload that lands. Seeing the exact shape of what the platform sends is the whole game; everything you build downstream is built to match it.
@@ -117,7 +117,7 @@ Create an outbound webhook step in a test automation and point it at a free requ
   ]}
 />
 
-<LessonFooter to="/learn/builder/advanced-automations" pathName="The builder track" step={5} totalSteps={8} />
+<LessonFooter to="/learn/builder/advanced-automations" pathName="Wire your AI Workforce to act" step={6} totalSteps={9} />
 
 </InlineHighlighter>
 <MarkComplete courseId="webhooks-and-platform-events" site="vendasta_learn" />

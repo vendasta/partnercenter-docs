@@ -1,6 +1,6 @@
 import React from "react";
 
-type Difficulty = "Beginner" | "Intermediate" | "Advanced";
+type Difficulty = "Foundational" | "Beginner" | "Intermediate" | "Advanced";
 
 interface LessonHeaderProps {
   difficulty: Difficulty;
