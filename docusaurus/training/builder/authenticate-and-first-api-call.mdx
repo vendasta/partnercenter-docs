@@ -1,0 +1,137 @@
+---
+title: "Authenticate and make your first API call"
+sidebar_position: 4
+description: "Service accounts, scopes, and your first contact upsert against the CRM API, controlling how records match and update."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+
+<InlineHighlighter courseId="authenticate-and-first-api-call" site="vendasta_learn">
+
+<CourseProgressBar courseId="authenticate-and-first-api-call" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Advanced"
+  time="about 12 minutes"
+  lab
+  pathName="The builder track"
+  step={4}
+  totalSteps={8}
+  outcomes={[
+    "Create a service account and use it as your integration's identity",
+    "Request the right scopes when you generate a token",
+    "Push a contact into the CRM with an upsert",
+    "Control how records match and which fields get overwritten",
+  ]}
+/>
+
+## Your code, reaching in
+
+The last step sent an AI Employee out to other systems. This step is the other direction: your own code reaching into the platform, to push a contact into the CRM or pull data back out. It starts where every real integration starts, at the wall of authentication: proving to the platform that your code is allowed to act.
+
+This is the step most builders get stuck on first, so it is worth going slowly. Nothing here is hard once the pieces have names.
+
+## A service account is your code's identity
+
+When a person signs in, they prove who they are. Your code needs the same thing, and it uses a service account: an identity that belongs to your integration rather than to a person. You create one in the platform, and from then on your code acts as that account.
+
+A service account can hold many permissions, but it does not use them all at once. It asks for the specific ones it needs, when it needs them. Those permissions are called scopes.
+
+## Scopes: ask for exactly what the job needs
+
+A scope is a single permission, like reading contacts or writing contacts. When your code gets its token, it names the scopes that call requires, and nothing more. Pushing a contact needs a contact-write scope; reading one back needs only a read scope, and most products offer a read-only variant for exactly that.
+
+The discipline worth building early: request the narrowest scopes that do the job. It is safer, and it makes what your integration can do obvious to anyone who looks later.
+
+One honest note. The service-account screen inside the platform is spare on its own. You read it next to the API reference at [developers.vendasta.com](https://developers.vendasta.com), which lists the real scope names. Pairing the screen with the reference is how this work is meant to be done, not a sign you are missing something.
+
+## Get a token
+
+An access token is the proof your code carries on every call. You generate it from your service account, naming the scopes you want. If the names are right, the token comes back ready to use. If one is wrong, the response tells you which name it did not recognize, so you correct it and try again. Keep the token where the rest of your code cannot leak it, the same way you would treat any password.
+
+## Your first call: the contact upsert
+
+The most common first call a builder makes is pushing a contact into the CRM, and the platform makes it one call, not two. It is an upsert: create the contact if it is new, update it if it already exists. You do not look first and branch; you send the contact and let the platform decide.
+
+What decides "already exists" is a match key. Email is the common choice, with phone as a fallback. Choose your match key deliberately, because it is what keeps you from creating a second copy of a contact you already have.
+
+Two behaviors are worth knowing before you send anything:
+
+- By default, an update only fills fields that are empty. A value already in the record stays put.
+- When you do want to replace a value, you mark that field to overwrite. Reach for it deliberately, because overwrite is also how good data gets erased by a stale import.
+
+Phone numbers are forgiving: send them in whatever format you have, and the platform normalizes them on the way in, so what lands stays consistent.
+
+The exact request, field by field, lives in the [CRM API reference](https://developers.vendasta.com). This step is the shape of it, so that reference reads like confirmation instead of a foreign language.
+
+:::tip Try it now
+In a sandbox account, generate a token with a contact-write scope and upsert one contact by email. Then send the same contact again with a different phone number, and check the record: did it match the contact you already had instead of creating a second one, and did your overwrite choice behave the way you expected? That one loop is authentication, scopes, and upsert semantics learned in a single sitting.
+:::
+
+<SectionFeedback courseId="authenticate-and-first-api-call" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="authenticate-and-first-api-call" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on scopes, the upsert, and how records match and update."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'What is a scope, and when do you request it?',
+      options: [
+        'A permission, requested when you generate a token',
+        'A user login, requested once when you sign in',
+        'A billing tier, requested from your account manager',
+        'A rate limit, requested per call you make'
+      ],
+      correctIndex: 0,
+      explanation: 'A scope is a single permission. Your code names the scopes it needs at the moment it generates a token, and asks for no more than the job requires.'
+    },
+    {
+      type: 'mcq',
+      question: 'You upsert a contact whose email already matches a contact in the CRM. What happens?',
+      options: [
+        'A second contact is created with the same email',
+        'The existing contact is updated, not duplicated',
+        'The call is rejected as a duplicate',
+        'A merge review is queued for you to approve'
+      ],
+      correctIndex: 1,
+      explanation: 'Upsert means create-or-update in one call. When the match key finds an existing contact, that contact is updated, which is exactly why choosing the match key well matters.'
+    },
+    {
+      type: 'mcq',
+      question: 'You upsert a contact and send a new value for a field that already has one. By default, what happens to the existing value?',
+      options: [
+        'It is replaced with the new value automatically',
+        'The whole record is skipped to be safe',
+        'It stays, unless you mark that field to overwrite',
+        'Both values are kept as a list'
+      ],
+      correctIndex: 2,
+      explanation: 'By default an update only fills empty fields. To replace a value that is already there, you mark that specific field to overwrite, and you do it deliberately.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your token request fails. What is the fastest first thing to check?',
+      options: [
+        'Whether the platform is down for maintenance',
+        'Whether your subscription tier is high enough',
+        'Whether you exceeded a rate limit',
+        'Whether a scope name you requested was recognized'
+      ],
+      correctIndex: 3,
+      explanation: 'A wrong scope name is a common cause, and the token response tells you which name it did not recognize. Fix the name and request again.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/builder/webhooks-and-platform-events" pathName="The builder track" step={4} totalSteps={8} />
+
+</InlineHighlighter>
+<MarkComplete courseId="authenticate-and-first-api-call" site="vendasta_learn" />

@@ -1,11 +1,143 @@
 ---
 title: "The integration landscape"
 sidebar_position: 1
-description: "What is public, what is not, and where every kind of connection lives."
+description: "What makes a system connectable, how far you have to go to use its API, and when a job is really developer work."
 ---
 
-:::info Content coming soon!
-This part of the learning path is being built. Check back shortly.
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+
+<InlineHighlighter courseId="the-integration-landscape" site="vendasta_learn">
+
+<CourseProgressBar courseId="the-integration-landscape" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Intermediate"
+  time="about 8 minutes"
+  pathName="The builder track"
+  step={1}
+  totalSteps={8}
+  outcomes={[
+    "Tell whether an outside system can be connected at all",
+    "Judge how far you have to go to use it, from a setting to custom code",
+    "Reach for the lightest approach that does the job",
+    "Recognize when a task is really developer work, and hand it off well",
+  ]}
+/>
+
+## What makes a system connectable
+
+Sooner or later a client asks you to make the platform work with something they already run: their booking system, their accounting software (or maybe it is your own tools you want to connect). Whether you can comes down to a doorway. Systems talk to each other through doorways, and the doorway the platform uses to reach other software is called an API.
+
+When a system has one, you can almost certainly connect it: read its data, send data to it, or both. When a system keeps everything locked behind its own walls, no integration can reach in, and that is a limit of that system.
+
+So the first move with any integration is to find out whether the system you want to connect to has an open API. Its own documentation will tell you, usually on a page called "API" or "Developers." If it does, you are most of the way there.
+
+## How far you have to go
+
+Knowing a system has an API does not mean you have to write code to use it. How far you go depends on the job, and the skill worth building is reaching for the lightest option that does it.
+
+Often you do not have to connect anything at all. What sounds like "we need an integration" is frequently already a setting, a custom field, or an automation inside the platform. Check there first.
+
+When you do need to reach another system, the options run from light to heavy:
+
+- A no-code glue tool like Zapier or Make passes data between two systems without writing anything. It is the right first reach for one or two connections.
+- A custom tool, or a direct call to the platform's own API, gives you more control, and earns its place when a glue tool would balloon at scale.
+- Custom code comes last, for when data has to be reshaped or reconciled before it fits. That is developer work.
+
+Most jobs sit lighter on that list than they first appear. Start light, and climb only when the job makes you.
+
+## What the platform opens up
+
+The platform is not only something you connect other tools to. It opens its own public APIs, so your code can work with its core records and actions directly, from the CRM to meetings and forms. When you are ready, [developers.vendasta.com](https://developers.vendasta.com) is the reference for all of it.
+
+One distinction saves confusion later: some things you drive by API, and some you build in the platform itself. You can start an automation from an API call or a webhook, but you do not author automations, AI Employees, or Vibe apps through an API. Those are built in the interface. Knowing which is which tells you where to go before you begin.
+
+## When it is developer work, and how to hand it off
+
+Most of this path is work you will do yourself. Custom code is the exception. When a task needs code to reshape data or reconcile records that do not match, that is real development work, and the solution architecture team exists for exactly that.
+
+Handing off well is its own skill. Bring a specific, reproducible example of what you need, confirm a support ticket exists so the request does not get lost, and keep your Customer Success contact in the loop. A clear ask that names the outcome and shows one concrete case moves faster than a general one.
+
+:::tip Try it now
+Pick one system a client uses every day: their booking tool, their point of sale, their accounting software. Take one minute to find out whether it has an open API (check its website for an "API" or "Developers" page). If it does, ask the lighter question next: could a setting or a no-code tool already do what you need, before you reach for anything heavier?
 :::
 
-**What you will learn here:** The real public API surface (CRM, meetings, forms, reputation), what has no public API, and the map of connection options from built-in integrations to custom tools.
+<SectionFeedback courseId="the-integration-landscape" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="the-integration-landscape" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on what makes a system connectable, checking for the lightest option first, and when a job is developer work."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A client wants the platform to work with the accounting software they already use. What decides whether you can connect it?',
+      options: [
+        'Whether Vendasta has published a guide for that exact tool',
+        'Whether that software exposes an open API for other systems',
+        'Whether the software is popular enough to have a native integration',
+        'Whether the client is on a high enough subscription tier'
+      ],
+      correctIndex: 1,
+      explanation: 'Connectability comes down to the other system. If it exposes an open API, you can almost certainly connect it. If it locks its data down, no integration can reach in.'
+    },
+    {
+      type: 'mcq',
+      question: 'You want a follow-up task created every time a new lead arrives, and it can all happen inside the platform. What should you reach for first?',
+      options: [
+        'An automation inside the platform, with no outside connection',
+        'A custom tool that calls an external API',
+        'A glue tool like Zapier between two systems',
+        'Custom code written by a developer'
+      ],
+      correctIndex: 0,
+      explanation: 'Check the lightest option first. A trigger-and-action workflow with no outside system is just an automation inside the platform. No connection or code required.'
+    },
+    {
+      type: 'mcq',
+      question: 'You need to link one external form to the CRM for a single client. What is the sensible first reach?',
+      options: [
+        'Custom code that maps the two systems together',
+        'A request to the solution architecture team',
+        'A glue tool like Zapier or Make between them',
+        'A new product configured in Vendor Center'
+      ],
+      correctIndex: 2,
+      explanation: 'Start light. For one or two connections, a glue tool is fast and needs no code. Direct APIs and custom code earn their place at scale, not at the start.'
+    },
+    {
+      type: 'mcq',
+      question: 'Can you create a brand-new automation through the platform\'s API?',
+      options: [
+        'No: automations are built in the interface, but an API call can start one',
+        'Yes: the automation API creates and edits workflows directly',
+        'Yes, but only on Premium and Custom subscriptions',
+        'No: automations cannot be reached by an API at all'
+      ],
+      correctIndex: 0,
+      explanation: 'You drive some things by API and build others in the platform. You can trigger an existing automation programmatically, but authoring one happens in the interface.'
+    },
+    {
+      type: 'mcq',
+      question: 'A connection needs custom code to reconcile records from two systems that do not match. That work is...',
+      options: [
+        'A quick automation you can configure yourself',
+        'Something a glue tool handles in an afternoon',
+        'Not possible on the platform in any form',
+        'Developer work, best handed to the solution architecture team'
+      ],
+      correctIndex: 3,
+      explanation: 'Reshaping and reconciling mismatched data is real development work. Hand it off with a clear, reproducible example of what you need.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/builder/capabilities-in-depth" pathName="The builder track" step={1} totalSteps={8} />
+
+</InlineHighlighter>
+<MarkComplete courseId="the-integration-landscape" site="vendasta_learn" />
