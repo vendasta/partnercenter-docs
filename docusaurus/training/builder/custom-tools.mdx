@@ -1,6 +1,6 @@
 ---
 title: "Custom tools: connect any API"
-sidebar_position: 3
+sidebar_position: 4
 description: "Turn a working API call into a tool an AI Employee can use: methods, parameters, authentication, and reading what it actually sent."
 ---
 
@@ -20,9 +20,9 @@ import LessonFooter from "@site/src/components/LessonFooter";
   difficulty="Advanced"
   time="about 12 minutes"
   lab
-  pathName="The builder track"
-  step={3}
-  totalSteps={8}
+  pathName="Wire your AI Workforce to act"
+  step={4}
+  totalSteps={9}
   outcomes={[
     "Turn a working API call into a custom tool",
     "Choose the right authentication for the system you are calling",
@@ -33,11 +33,9 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 ## A tool is a doorway out
 
-Knowledge lets an AI Employee answer a question. A tool lets it do something in another system: check a calendar for open times, look up an order, read live inventory before it promises a product is in stock. Knowledge is what it knows; a tool is what it can reach.
+Many tools are already waiting to attach: the CRM lookup, the calendar, the messaging tools. This step is the other case, the one that makes "connect any API" true: building a custom tool to reach a system the platform does not already connect to.
 
-A tool and a capability are two halves of one thing. The tool is the how: the actual call to another system's API. The capability is the when and the why: the instruction that tells the AI to use it. You need both, and the last step covered the capability side. This one is the doorway itself.
-
-The AI decides when to walk through the doorway. The tool defines what is on the other side and what comes back. Build the doorway well and the AI uses it exactly when its capability says to.
+A tool is how a capability reaches another system, the actual call to its API. The AI decides when to walk through the doorway, and the tool defines what is on the other side and what comes back. Build the doorway well and the AI uses it exactly when its capability says to.
 
 ## Start from a working call
 
@@ -86,7 +84,7 @@ When a tool misbehaves, do not guess. After the AI uses it, open the **Explanati
 Test on purpose, not just the happy path: the missing value, the wrong format, the request that names two things at once. If you cannot tell whether the tool or the API is the problem, run the call again on its own outside the platform to isolate it.
 
 :::tip Try it now
-Find any public API you can call without an account, like a weather service or a public directory, and get one request working from the command line or Postman. That single working call is exactly the raw material a custom tool imports. You will build one for real in the lab later in this path.
+Find any public API you can call without an account, like a weather service or a public directory, and get one request working from the command line or Postman. That single working call is exactly the raw material a custom tool imports. You will build one for real in the lab.
 :::
 
 <SectionFeedback courseId="custom-tools" site="vendasta_learn" section="content" />
@@ -146,7 +144,7 @@ Find any public API you can call without an account, like a weather service or a
   ]}
 />
 
-<LessonFooter to="/learn/builder/authenticate-and-first-api-call" pathName="The builder track" step={3} totalSteps={8} />
+<LessonFooter to="/learn/builder/authenticate-and-first-api-call" pathName="Wire your AI Workforce to act" step={4} totalSteps={9} />
 
 </InlineHighlighter>
 <MarkComplete courseId="custom-tools" site="vendasta_learn" />

@@ -1846,6 +1846,11 @@ div[class*="language-"] pre {
   font-weight: 700;
 }
 
+.lesson-header__tag--foundational {
+  background: #e4e9f0;
+  color: #33415c;
+}
+
 .lesson-header__tag--beginner {
   background: #d1e7dd;
   color: #0a3622;
@@ -1964,4 +1969,225 @@ div[class*="language-"] pre {
   font-size: 0.82rem;
   font-style: italic;
   color: var(--ifm-color-emphasis-600);
+}
+
+/* ===========================================
+   Accordion (ported from citizen-developers-docs)
+   Reusable expander for step recaps and worked examples
+   =========================================== */
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.accordion {
+  margin: 2rem 0;
+}
+
+.accordion__controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.accordion__control-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--ifm-color-emphasis-300);
+  background-color: var(--ifm-card-background-color);
+  color: var(--ifm-color-emphasis-800);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.accordion__control-btn:hover {
+  background-color: var(--ifm-color-emphasis-100);
+  border-color: var(--ifm-color-primary);
+}
+
+.accordion__items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.accordion__item {
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  background-color: var(--ifm-card-background-color);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.accordion__item:hover {
+  border-color: var(--ifm-color-primary);
+}
+
+.accordion__item--expanded {
+  border-color: var(--ifm-color-primary);
+}
+
+.accordion__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-align: left;
+}
+
+.accordion__header:hover {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.accordion__item--expanded .accordion__header {
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.accordion__header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.accordion__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 42px;
+  padding: 0 0.5rem;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.accordion__title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.accordion__icon {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.accordion__item--expanded .accordion__icon {
+  transform: rotate(180deg);
+}
+
+.accordion__content {
+  padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+  animation: slideDown 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .accordion__header {
+    padding: 1rem;
+  }
+  .accordion__badge {
+    min-width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+  .accordion__title {
+    font-size: 1rem;
+  }
+  .accordion__controls {
+    flex-direction: column;
+  }
+  .accordion__control-btn {
+    width: 100%;
+  }
+}
+
+[data-theme='dark'] .accordion__item {
+  background-color: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme='dark'] .accordion__item:hover {
+  border-color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .accordion__header:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .accordion__title {
+  color: var(--ifm-color-emphasis-100);
+}
+
+[data-theme='dark'] .accordion__control-btn {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--ifm-color-emphasis-100);
+}
+
+[data-theme='dark'] .accordion__control-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--ifm-color-primary);
+}
+
+/* ===========================================
+   Comparison cards (ported from citizen-developers-docs)
+   Side-by-side bordered columns for contrasting two ideas
+   =========================================== */
+
+.comparison-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.comparison-card {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: var(--ifm-background-surface-color);
+  transition: border-color 0.2s ease;
+}
+
+.comparison-card:hover {
+  border-color: #3F9B63;
+}
+
+.comparison-card h3,
+.comparison-card h4 {
+  margin-top: 0;
+}
+
+.comparison-card hr {
+  margin: 1rem 0;
+  border: none;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+}
+
+@media (max-width: 768px) {
+  .comparison-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+[data-theme='dark'] .comparison-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme='dark'] .comparison-card:hover {
+  border-color: #3F9B63;
 }
