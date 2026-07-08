@@ -224,6 +224,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/administration/platform-settings/customize/client-experience-and-customization', to: '/administration/platform-settings/customize/' },
           // Customize Business App: interface customization overview merged into index
           { from: '/administration/platform-settings/customize-business-app/business-app-interface-customization', to: '/administration/platform-settings/customize-business-app/' },
+          { from: '/business-app/crm/add-booking-link-contact-card', to: '/administration/platform-settings/customize-business-app/branding-settings#how-do-i-customize-the-contact-us-card' },
           // Partner Branding: customize-your-branding is now the index
           { from: '/administration/platform-settings/partner-branding/customize-your-branding', to: '/administration/platform-settings/partner-branding/' },
           // Conversations Settings: how-to-turn-off-inbox-messages-tab merged into index
