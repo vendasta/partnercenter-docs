@@ -49,10 +49,10 @@ This resolves the current conflict between the skill's tag definition ("hands-on
 | Register | Marker | When |
 |---|---|---|
 | Micro-action | `:::tip Try it now` | Observe, navigate, or think; no state change. At least one per step, per the existing rule |
-| Lab block | `:::info Lab: <what you set up or build>` | A state-changing block inside an otherwise conceptual step |
+| Lab block | `:::info Lab: <what you set up or build>` | Every hands-on, state-changing block, in conceptual steps and lab steps alike |
 | Lab step | `lab` on LessonHeader | The step's core motion is the state change; most of the body is the doing |
 
-The learner sees the same word, Lab, on the purple tag and on the callout, so the vocabulary travels from the path overview to the block level. A lab step does not additionally wrap its body in Lab callouts; the tag already made the promise.
+The learner sees the same word, Lab, on the purple tag and on the callout, so the vocabulary travels from the path overview to the block level. **Every hands-on block lives inside a Lab callout, including inside lab steps.** The callout is the go-do-return contract: it opens by naming where in the platform to go, carries the numbered actions, and closes with the confirm signal that sends the learner back to the reading. Per Cal's review (PR, July 8): a step without an explicit marker showing where to go, do the thing, and come back is not a lab, whatever its tag says. [CALL: Cal, PR review]
 
 ## 4. The anatomy of a lab step (the repeatable pattern)
 
@@ -62,26 +62,26 @@ In order:
 
 1. **LessonHeader** carries the promise: `lab` tag, one honest time estimate, and **Required** lists what the doing needs (access level, activations, connected assets), which is stricter for labs than for reading steps.
 2. **The first sentence under the first heading names what you will have built and where you will work.** The practice environment is explicit every time: your own Partner Center, a sandbox account, or a real prospect. ("By the end of this step a real business you choose has an account, a Snapshot Report, and a linked CRM company. You will work in your own Partner Center.")
-3. **Action sections under action-oriented headings.** Headings name the motion ("Create the account", never "Overview" or "Step 3 (4 min)"). Inside each: numbered steps, one action per number, UI names in bold, navigation with `→`. Choices the platform offers are stated affirmatively at the step where they appear.
-4. **A confirm signal ends every action sequence.** One sentence, affirmative, naming what the learner now sees or has: "The account now appears in **Accounts**, and the platform has created its linked CRM company for you." Never phrased as error-checking, never "if this did not work."
+3. **Action sections under action-oriented headings, with the doing inside a Lab callout.** Headings name the motion ("Create the account", never "Overview" or "Step 3 (4 min)"). The hands-on block itself is a `:::info Lab: <what you set up or build>` callout that opens by naming where to go (**Partner Center** → **Accounts**, screenshot if the destination is unfamiliar), then numbered steps, one action per number, UI names in bold. Choices the platform offers are stated affirmatively at the step where they appear. Teaching prose stays outside the callout; the callout is purely go, do, return.
+4. **A confirm signal closes every Lab callout.** One sentence, affirmative, naming what the learner now sees or has: "The account now appears in **Accounts**, and the platform has created its linked CRM company for you." This is the come-back line that returns the learner to the step. Never phrased as error-checking, never "if this did not work."
 5. **Screenshots are minimal and orienting.** One per major destination change, or where the screen is genuinely unfamiliar; reuse current images from the docs guides where they exist; standard image style; PII blurred. API and terminal labs may need none.
 6. **Doc links at the moment of need**, exactly per the existing rule: the lab carries the core motion inline; the linked guide carries every field and edge case.
 7. **A closing "What you now have" section**, directly before the knowledge check: two to four affirmative bullets naming the state the learner created, mirroring the header outcomes. This is the lab's verification, replacing the citizen-dev Verify checkpoint in a form the voice rules allow.
 8. **Knowledge check and LessonFooter** as in every step; questions test the decisions made during the lab, not recall of click paths.
 
-**The anatomy of a lab block (tier 2)** is items 3, 4, and 5 in miniature inside one `:::info Lab: <what you build>` callout: a one-line setup naming where you work, numbered actions, one confirm signal. Screenshots only if the destination is unfamiliar.
+**The anatomy of a lab block (tier 2)** is the same callout standing alone inside a conceptual step: where to go, numbered actions, confirm signal. Screenshots only if the destination is unfamiliar. The two tiers differ only in how much of the step the doing occupies; the callout itself is identical everywhere.
 
 ## 5. Draft skill rules (verbatim, pending sign-off)
 
 To the **Vocabulary** section:
 
-- Three registers of hands-on: `:::tip Try it now` for micro-actions (observe, navigate, think), `:::info Lab: <what you set up or build>` for a state-changing block inside a conceptual step, and the `lab` header tag for steps whose core motion changes real state in the platform. The word "Lab" appears only in these two mechanisms.
+- Three registers of hands-on: `:::tip Try it now` for micro-actions (observe, navigate, think), `:::info Lab: <what you set up or build>` for every hands-on state-changing block (inside conceptual steps and lab steps alike), and the `lab` header tag for steps whose core motion changes real state in the platform. The word "Lab" appears only in these two mechanisms.
 
 New numbered rules:
 
 35. **The state-change test decides the `lab` tag.** A step is a lab when its core motion changes real state in the platform (a record created, a setting applied, a connection made, a build produced). Navigating to look, thinking exercises, and off-platform research stay Try-it-now. When in doubt, ask what exists after the step that did not exist before it.
 36. **Every lab names its ground before the doing starts.** The first sentence under the first heading says what the learner will have built and where they will work: their own Partner Center, a sandbox account, or a real prospect. Required in the header lists what that environment needs.
-37. **Every action sequence ends on a confirm signal.** Numbered steps are one action each under an action-oriented heading; the sequence closes with one affirmative sentence naming what the learner now sees or has. A lab step closes with a "What you now have" section (two to four bullets mirroring the header outcomes) directly before the knowledge check. Never phrase confirmation as error-checking.
+37. **Every hands-on block is a Lab callout with a go, a do, and a return.** The doing lives inside `:::info Lab: <what you set up or build>`, in lab steps and conceptual steps alike: it opens by naming where in the platform to go, carries numbered steps of one action each, and closes with one affirmative confirm sentence naming what the learner now sees or has. Teaching prose stays outside the callout. A step without this go-do-return marker is not a lab, whatever its tag says. A lab step additionally closes with a "What you now have" section (two to four bullets mirroring the header outcomes) directly before the knowledge check. Never phrase confirmation as error-checking.
 38. **Lab screenshots orient, they do not narrate.** One per major destination change or genuinely unfamiliar screen, standard image style, reused from the docs guides when current. No screenshot of a screen the numbered steps already make obvious. No per-section time estimates in headings; the header estimate is the only clock.
 
 ## 6. Retag proposal: every step, every stub
@@ -182,16 +182,22 @@ Before:
 > Open **Accounts** in Partner Center and start creating an account for a business you know. Even if you stop at the form, you will see exactly what the platform asks for.
 > :::
 
-After (the doing is the body, not a tip; the guide keeps the fields and edge cases):
+After (the doing lives in the Lab callout: go, do, return; the guide keeps the fields and edge cases):
 
 > ## Create the account
 >
-> 1. In Partner Center, open **Accounts** → **Manage Accounts** and select **Create account**.
+> :::info Lab: create a real customer account
+> You are going to **Partner Center** → **Accounts** → **Manage Accounts**.
+>
+> 1. Select **Create account**.
 > 2. Enter the business name and address, and confirm the suggested details.
 > 3. Add the primary contact's name and email; this is who you will invite to Business App in a moment.
 > 4. Select **Create**.
 >
-> The account now appears in **Accounts**, and the platform has created its linked CRM company for you. For every field and option along the way, [this guide walks you through it](...).
+> The account now appears in **Accounts**, and the platform has created its linked CRM company for you.
+> :::
+>
+> For every field and option along the way, [this guide walks you through it](...).
 
 **Edit 3 — the close verifies (anatomy item 7).** A new section directly before the knowledge check:
 
@@ -214,4 +220,5 @@ After (the doing is the body, not a tip; the guide keeps the fields and edge cas
 
 ## 9. Changelog
 
+2. v2 (July 8, 2026): Cal's PR review folded in. The go-do-return marker is now baked into both tiers: every hands-on block, including inside lab steps, lives in a `:::info Lab` callout that names where in the platform to go, carries the numbered actions, and closes on the confirm signal (reversing v1's position that the header tag alone made the promise). Rule 37 and anatomy items 3-4 rewritten accordingly; retrofit edit 2 updated to show the callout. Pattern remains provisional pending one or two worked labs for Cal's formatting-and-wording review (run-your-first-snapshot and the full accounts-and-users retrofit proposed).
 1. v1 (July 7, 2026): initial proposal. Decisions pre-made with Shiva: two-tier treatment; convention before component; minimal screenshots reusing current doc images; success criteria always; state-change test; per-lab practice-environment line; `:::info Lab` callout for tier 2; doc-links-only for troubleshooting; header-only time estimates; retrofit of accounts-and-users as proof.
