@@ -4,8 +4,186 @@ sidebar_position: 1
 description: "Create the account (and its linked CRM company), run the Snapshot Report, and see how the platform grades a business."
 ---
 
-:::info Content coming soon!
-This part of the learning path is being built. Check back shortly.
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LabChecklist from "@site/src/components/LabChecklist";
+import SnapshotCreateIcon from "./img/snapshot-create-icon.svg";
+
+<InlineHighlighter courseId="run-your-first-snapshot" site="vendasta_learn">
+
+<CourseProgressBar courseId="run-your-first-snapshot" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Beginner"
+  time="about 10 minutes"
+  required={["Partner Center admin access", "A Snapshot Report create available on your plan"]}
+  lab
+  pathName="Your growth engine"
+  step={1}
+  totalSteps={6}
+  outcomes={[
+    "Choose a real prospect and create its account",
+    "Run a Snapshot Report and know when it is ready to present",
+    "Explain what the eight grades measure and what drives their accuracy",
+    "Turn on the notification that tells you the moment a report is ready",
+  ]}
+/>
+
+## The report that starts the sale
+
+One report starts the sale. The **Snapshot Report** grades a business's online presence into a single page, so your first conversation with a prospect opens on evidence instead of opinion. It is the report for businesses you have not signed yet; once a business becomes a client, the Executive Report takes over as the ongoing proof.
+
+This path follows one prospect through the whole motion: Northside Dental, a clinic whose owner is sure the practice is doing fine and has never seen what patients find online. Choose your own Northside Dental, a local business you know, and by the end of this step it will have an account in your Partner Center and a Snapshot Report on the way. You will work in your own Partner Center throughout.
+
+## Choose your prospect and create the account
+
+*You are here: Partner Center. Everything in this step happens in your workspace.*
+
+The account is the prospect's home in your workspace, and creating it also creates the linked CRM company, so your sales activity and the service record stay connected from the first touch. Two details carry the report: the **primary category**, because every grade is benchmarked against the business's industry, and the **salesperson**, because a report is sent from a person, and that person is you.
+
+:::info Lab: create your prospect's account
+You are going to **Partner Center** → **Accounts** → **Manage Accounts**.
+
+<LabChecklist
+  storageKey="run-your-first-snapshot-lab-1"
+  steps={[
+    <>Select <strong>Create Account</strong>.</>,
+    <>Search for the business by name and location; the search fills in the address, phone, and category from public directories. If the business does not appear, select <strong>Go to Account Creation</strong> and enter its details yourself.</>,
+    <>Set the <strong>Primary Category</strong> to the closest real match for what the business does.</>,
+    <>Select <strong>Create Account</strong>.</>,
+    <>On the new account, open <strong>Business Details</strong> → <strong>Edit</strong> → <strong>Administration</strong> → <strong>Sales</strong>, and assign yourself as the salesperson.</>,
+  ]}
+  confirm={<>The business now appears in <strong>Manage Accounts</strong>, and the platform has created its linked CRM company for you.</>}
+/>
 :::
 
-**What you will learn here:** Creating the account for a prospect, running the Snapshot Report, and what each grade measures.
+For every field and option along the way, [this guide covers creating accounts](/accounts/manage-accounts/create-accounts). And when you want the platform to surface prospects for you instead, [Find Leads searches local businesses from the CRM](/crm/companies) and creates company records in bulk.
+
+## Run the report
+
+:::info Lab: run the Snapshot Report
+You are staying in **Manage Accounts**.
+
+<LabChecklist
+  storageKey="run-your-first-snapshot-lab-2"
+  steps={[
+    <>Find your new account in the list.</>,
+    <>Select the Snapshot Report create icon <SnapshotCreateIcon style={{height: '1.1em', width: 'auto', verticalAlign: 'text-bottom'}} role="img" aria-label="Snapshot Report create icon" /> beside it.</>,
+  ]}
+  confirm={<>The report is now generating on the account.</>}
+/>
+:::
+
+The report gathers data over its first 24 hours and keeps enriching for seven days, so the seven-day mark is the fullest picture of the business. That timing is a selling rhythm: run the report when you pick the prospect, and present it when it has the most to say.
+
+## Hear the moment it is ready
+
+:::info Lab: turn on the Snapshot Ready notification
+You are going to **Partner Center** → **Administration** → **Client Notifications**.
+
+<LabChecklist
+  storageKey="run-your-first-snapshot-lab-3"
+  steps={[
+    <>Find the <strong>Snapshot Report</strong> notification type.</>,
+    <>Enable the <strong>Snapshot Ready</strong> notification.</>,
+  ]}
+  confirm={<>You now get an alert when any report finishes generating, typically within 24 hours of its creation.</>}
+/>
+:::
+
+## What the grades measure
+
+<img src={require('./img/scorecard-overview.jpg').default} alt="The Snapshot Report scorecard: letter grades for each section rolled into an overall Digital Score" style={{width: '480px', maxWidth: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginBottom: '28px'}} />
+
+The report grades eight parts of the business's online presence, each with a letter grade from A to F, rolled into an overall Digital Score:
+
+- **Business listings**: how accurately the business appears across online directories
+- **Reviews**: volume, ratings, frequency, and where they land
+- **Social media**: presence, followers, and posting rhythm
+- **Website performance**: speed and mobile experience, measured with Google's Core Web Vitals
+- **SEO**: how visible the business is in organic search
+- **Advertising**: online advertising presence against its industry's top keywords
+- **Ecommerce**: whether the business can sell, schedule, and take payment online
+- **AI optimization**: whether the business shows up when customers ask AI tools instead of search engines
+
+Every grade is a comparison against the business's own industry, which is what the primary category feeds. Northside Dental came back a B in reviews and a D in listings: patients love the clinic, and the directories cannot find it. A gap like that is where a sale begins.
+
+:::tip Try it now
+While your report generates, open the sample report in [the Snapshot Report guide](/snapshot-report) and skim the scorecard the way an owner would. Notice which grade you would feel first.
+:::
+
+## What you now have
+
+- A real prospect with an account in your Partner Center, and its linked CRM company created for you
+- A Snapshot Report generating, at its fullest at the seven-day mark
+- The Snapshot Ready notification on, so you present on your schedule
+- Yourself assigned as the salesperson, which is what lets the report be emailed to the owner when you are ready
+
+Northside Dental has its grades. Yours are on the way.
+
+<SectionFeedback courseId="run-your-first-snapshot" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="run-your-first-snapshot" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on the two reports, the primary category, and the report's timing."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'You are meeting a business owner for the first time and want to show them where they stand online. Which report do you bring?',
+      options: [
+        'The Executive Report from a similar client',
+        'A Snapshot Report run on their business',
+        'Your own agency\'s Executive Report',
+        'The Marketplace product catalog'
+      ],
+      correctIndex: 1,
+      explanation: 'The Snapshot Report grades a prospect before the relationship exists. The Executive Report is its after-relationship sibling: ongoing proof for businesses that are already clients.'
+    },
+    {
+      type: 'mcq',
+      question: 'A restaurant\'s grades look off, and its account category reads Marketing Agency. What is your move?',
+      options: [
+        'Refresh the report until the grades settle',
+        'Rerun the report from the CRM instead',
+        'Remove the competitors from the report',
+        'Set the primary category to the closest real match, then rerun'
+      ],
+      correctIndex: 3,
+      explanation: 'Every grade is benchmarked against the business\'s industry, and the primary category is what names that industry. An accurate category is what makes the grades mean something.'
+    },
+    {
+      type: 'mcq',
+      question: 'You ran a Snapshot Report this morning and the first conversation is next week. When does the report have the most to say?',
+      options: [
+        'The moment it finishes generating',
+        'After its first 24 hours',
+        'At the seven-day mark',
+        'Only after a paid refresh'
+      ],
+      correctIndex: 2,
+      explanation: 'The report gathers data over its first 24 hours and keeps enriching for seven days. The seven-day mark is the fullest picture, which fits a present-next-week rhythm perfectly.'
+    },
+    {
+      type: 'mcq',
+      question: 'You create an account for a new prospect. What exists alongside it?',
+      options: [
+        'A linked CRM company, created for you',
+        'A Business App user with a welcome email',
+        'An active Executive Report',
+        'A package with suggested retail prices'
+      ],
+      correctIndex: 0,
+      explanation: 'Creating an account also creates the linked CRM company, so sales activity and the service record stay connected from the first touch. Users, reports, and packages come later in the motion.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/growth-engine/read-the-snapshot" pathName="Your growth engine" step={1} totalSteps={6} />
+
+</InlineHighlighter>
+<MarkComplete courseId="run-your-first-snapshot" site="vendasta_learn" />
