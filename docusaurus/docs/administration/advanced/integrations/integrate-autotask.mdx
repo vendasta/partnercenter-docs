@@ -1,0 +1,116 @@
+---
+title: Integrate Autotask with Partner Center
+sidebar_label: Autotask
+sidebar_position: 6
+description: Learn how to integrate Autotask with Partner Center for contact and company syncing
+---
+
+# Integrate Autotask with Partner Center
+
+The Autotask Integration in Partner Center allows users to sync contacts and companies between Autotask and Vendasta's CRM. The integration supports two-way sync so changes made in either system stay in sync.
+
+## Prerequisites
+
+Before connecting, ensure the following in your Autotask account:
+
+### 1. Create a Security Level for API access
+
+1. In Autotask, go to **Admin** → **Account Settings & Users** → **Resources/Users (HR)** → **Security Levels**.
+2. Click **New** to create a new Security Level.
+3. Clone the existing **API User** Security Level as a starting point.
+4. In the cloned Security Level, go to **Other** → **Webhooks**.
+5. Check the box to **enable webhooks** and set a minimum of **5 webhooks**.
+6. Save the new Security Level.
+
+:::warning Required webhook permissions
+The API User's Security Level must have webhook creation enabled with a minimum of 5 webhooks. Without this, the integration cannot receive real-time updates from Autotask.
+:::
+
+### 2. Create an API User
+
+1. Go to **Admin** → **Account Settings & Users** → **Resources/Users (HR)** → **Resources/Users**.
+2. Click **New** → **New API User**.
+3. Assign the Security Level created in the previous step.
+4. Fill in the required details and save.
+5. Copy the **Username** and **Secret** — you will need these to connect in Partner Center.
+
+## Setting up the Autotask Integration
+
+Users can set up a connection with Autotask by navigating to the Integrations page of Partner Center.
+
+- Click on **Administration → Integrations** to navigate to the Integrations page.
+- Click on the Autotask Integration Card.
+- Users will be taken to the Autotask Marketing page, providing them with information on the integration. Click on **Add Connection**.
+- This provides users with a Pre-Connect Form popup where users need to provide:
+  - **User Name** — the API User username from Autotask
+  - **Secret** — the API key from Autotask
+- Optionally configure the sync options:
+  - **Sync back to Autotask** — enables two-way sync so changes in Partner Center reflect in Autotask
+  - **Set as Primary CRM** — designates Autotask as the primary system for newly created contacts
+- Click **Add Connection** to establish the connection.
+
+Upon successful connection, users will be redirected to the Manage tab on the Integrations page where they can confirm the recently created connection with Autotask.
+
+## Manage the Integration
+
+Use the **Manage** tab on the Integrations page to view status and open settings. Clicking the Autotask connection card brings you to the **Connection Settings** page where you can:
+
+| Option | Description |
+|--------|-------------|
+| **Sync back to Autotask** | When enabled, contact and company updates made in Partner Center are pushed back to Autotask. |
+| **Set as Primary CRM** | Newly created contacts in Partner Center are sent to Autotask as the primary CRM. |
+
+## Synced Data
+
+The Autotask integration syncs the following data:
+
+- **Contacts** — Contact records are synced between Autotask and Partner Center CRM.
+- **Companies** — Company records are synced between Autotask and Partner Center CRM.
+
+When two-way sync is enabled, updates made to contacts or companies in Partner Center are reflected back in Autotask.
+
+## Bulk Import Considerations
+
+If you have bulk-imported (or plan to bulk-import) contacts or companies before connecting Autotask, set the **External ID** on each record to prevent duplicates during the next sync:
+
+- **Company External ID**: `autotask:{company_id}` (e.g., `autotask:29683768`)
+- **Contact External ID**: `autotask:{contact_id}` (e.g., `autotask:30684161`)
+
+This ensures records are matched correctly during sync and duplicates are avoided.
+
+## FAQ
+
+<details>
+<summary>What Autotask permissions are required?</summary>
+
+The API User must have a Security Level with webhook creation enabled (minimum 5 webhooks). The Security Level should be cloned from the default API User level and have access to contacts and companies.
+
+</details>
+
+<details>
+<summary>How do I find my API credentials?</summary>
+
+In Autotask, go to **Admin** → **Account Settings & Users** → **Resources/Users (HR)** → **Resources/Users**. Open your API User to find the Username and Secret.
+
+</details>
+
+<details>
+<summary>Can I enable two-way sync after connecting?</summary>
+
+Yes. Open the Autotask integration from **Integrations** → **Manage** and toggle the **Sync back to Autotask** option.
+
+</details>
+
+<details>
+<summary>What happens if I disconnect and reconnect?</summary>
+
+Disconnecting removes the active connection. When you reconnect, a fresh sync begins. Existing records with matching External IDs are updated rather than duplicated.
+
+</details>
+
+<details>
+<summary>How do I avoid duplicate contacts during sync?</summary>
+
+Set the External ID on each contact and company before connecting. Use the format `autotask:{id}` where `{id}` is the Autotask record ID. Records without External IDs may be created as new entries.
+
+</details>
