@@ -70,6 +70,24 @@ ls docusaurus/docs/accounts/connect-profile.md
 
 Flag any link where the target file does not exist.
 
+**If the link includes a `#anchor` fragment**, also verify the anchor resolves. Extract every `## Heading` (and `###`) from the target file and slugify each one the way Docusaurus does (lowercase, spaces → hyphens, strip punctuation). Flag the link if the fragment doesn't match any slug — a valid target file with a dead anchor is still a broken link.
+
+```bash
+grep -n "^#" docusaurus/docs/accounts/connect-profile.md
+```
+
+### Step 4b: Check inbound anchors
+
+A link pointing *into* one of today's flagged articles can go stale the moment you rename or remove a heading in it during this verification — and nothing else will ever check that. For each flagged article, search the rest of the repo for anything that links to it:
+
+```bash
+grep -rln "article-filename-without-extension" docusaurus/docs
+```
+
+For every hit found outside today's batch, open it and check any `#anchor` fragment on that inbound link against the flagged article's current headings (after your Step 5/7 edits are applied), using the same slugify check as Step 4. Flag any inbound link whose anchor no longer resolves — this is a broken link on a page you weren't otherwise going to touch, so it needs its own **Pending approval** item (propose fixing the anchor or the surrounding text on the linking page, scoped narrowly to that link).
+
+This is how a self-referential loop gets caught: Page A defers to Page B for a topic's details ("see Page B for details") while Page B has no content on that topic and defers back to Page A. Anchor resolution surfaces the symptom (a dead fragment) even when the underlying cause (missing content, circular deferral) needs a human judgment call — flag it as a **Needs SME Review** item rather than guessing where the content should live.
+
 ### Step 5: Run qualitative review
 
 Apply every criterion in the **Verification Criteria** section below to each article. Read closely — automated checks catch patterns, but this step catches judgment calls.
@@ -405,9 +423,11 @@ Produce one block per article. Use this exact structure:
 - Line 44: Button labeled `Submit` — confirm this button still exists and has the same label in the live product
 
 **Link check**
-[Results of external and internal link checks. Use "No links found" or "All links verified" if applicable.]
+[Results of external and internal link checks, including anchor resolution (Step 4) and inbound links from elsewhere in the repo (Step 4b). Use "No links found" or "All links verified" if applicable.]
 - https://example.com/guide — 404 Not Found (broken)
 - ../accounts/connect-profile.md — file not found (broken internal link)
+- ../accounts/connect-profile.md#old-heading — file exists but anchor not found (heading was likely renamed)
+- Inbound: `other-article.mdx` links here with `#section-that-no-longer-exists` — broken by this verification's heading changes
 
 **Needs verification**
 [UI element names, navigation paths, product references, or content claims to spot-check against the live product. Use "None" if nothing stands out.]
@@ -463,5 +483,5 @@ The article is mostly clear and well-structured. Two audience-language issues an
 - **Never assert** that content is wrong — use "may be outdated" or "verify with SME" when uncertain.
 - **Never infer functionality** from the article text. If a step or feature claim cannot be verified from other current documentation, flag it for SME review.
 - **Apply auto-fixes immediately, flag the rest** — sentence casing, audience language, UI formatting, and blockquote-to-callout fixes are applied directly without asking. All other changes require explicit approval before editing.
-- **Check every link** — do not skip link checks even if the article looks clean.
+- **Check every link** — do not skip link checks even if the article looks clean. This includes anchor fragments (Step 4) and inbound links from other articles into the ones you're editing (Step 4b) — a heading rename that looks harmless in isolation can silently break a link on a page you never opened.
 - **Report on every article** — even articles that pass should appear in the output with "Status: Pass" and a brief confirmation.

@@ -1,7 +1,7 @@
 ---
 title: "Ordering Vendasta Services products: best practices"
 sidebar_label: "Ordering Vendasta Services products: best practices"
-description: "Ordering products - General    Ordering Vendasta Services products is the same as  ordering any product  in the platform. It's important to know that our team"
+description: "Learn best practices for ordering Vendasta Services products, including how to complete fulfillment forms and ordering tips for website and digital ads services."
 ---
 
 ## Ordering products - general
@@ -21,11 +21,12 @@ After completing the purchase, you will be presented with a [fulfillment form](.
 
 ## Ordering - website services
 
-Website services in particular require a lot of information about a business in order to successfully create their website and web copy with expedient turnaround times. Check out our [website ordering guide](../websites/vendasta-services-website-ordering-guide.md) and the video below for more info.
+Website services in particular require a lot of information about a business in order to successfully create their website and web copy with expedient turnaround times. Check out our [website ordering guide](../websites/vendasta-services-website-ordering-guide.md) for more info.
 
 ## Ordering - digital ads
 
-When ordering Digital Ads, you are required to choose the ad spend for the campaign. This is the amount specific to the ad spend and the system calculates the ad management fee for you. You will be prompted to do this between steps 4 and 5 in the workflow noted above. 
+When ordering Digital Ads, you are required to choose the ad spend for the campaign. This is the amount specific to the ad spend and the system calculates the ad management fee for you. You will be prompted to do this between steps 4 and 5 in the workflow noted above.
 
-Note that the ad spend, management fee, and setup fees are all a part of the wholesale cost.
-
+:::note
+The ad spend, management fee, and setup fees are all a part of the wholesale cost.
+:::
