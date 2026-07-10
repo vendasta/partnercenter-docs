@@ -29,10 +29,10 @@ Before connecting, your Autotask account must be set up with the correct permiss
 You will need:
 - An active Vendasta account
 - An Autotask PSA account
-- Your Autotask API Username, API Secret, and Production Integration Code
+- Your Autotask API Username and API Secret
 
 :::info How to get API credentials
-In Autotask, go to **Admin** → **Resources (Human Resources)** → **API User**. Create a dedicated API-only user. Your Vendasta account team will provide the Production Integration Code.
+In Autotask, go to **Admin** → **Resources (Human Resources)** → **API User**. Create a dedicated API-only user, selecting the integration vendor (AMP) during creation. You do not need a separate Integration Code — it is tied to the API user through the vendor selection.
 :::
 
 ### Step 1 — Create a Security Level in Autotask
@@ -77,16 +77,13 @@ The integration connects with a dedicated API user, not a personal login.
 2. Click **Create New**.
 3. Fill in basic details like Name, Email.
 4. Go to the **Security** tab. Assign the **Vendasta API Access** security level (created in Step 1).
-5. Save the user.
-6. Record the **Username** and **Secret** — you will need these in the next section.
+5. In the **API Tracking Identifier** section, choose **Integration Vendor** and select the vendor (**AMP**). This links the integration code to the API user — you will not need to enter it anywhere.
+6. Save the user.
+7. Record the **Username** and **Secret** — you will need these in the next section.
 
 :::warning
 Store the API username and secret in your organization's approved password manager. Do not share them in email or chat.
 :::
-
-### Step 5 — Get your Integration Code
-
-Your Vendasta account team will provide the Production Integration Code. If you do not have it, contact your Vendasta Account Manager or the Kaseya/AMP onboarding contact.
 
 ## Do you already have records in Vendasta?
 
@@ -94,13 +91,13 @@ Before connecting, answer this question: Do you already have companies and conta
 
 | Your situation | What to do |
 |----------------|-----------|
-| No existing records in Vendasta | Skip ahead to [Setting up the Autotask Integration](#setting-up-the-autotask-integration) below. The initial sync will bring everything in from Autotask. |
+| No existing records in Vendasta | Use [CRM Bulk Import](#bulk-import--preventing-duplicate-records) to bring your existing Autotask companies and contacts into Vendasta, then connect. The integration handles real-time sync from that point forward. |
 | Yes — records exist in both systems | You must import Autotask IDs first to prevent duplicates. Follow the [Bulk Import](#bulk-import--preventing-duplicate-records) section below BEFORE connecting. |
 | Already connected and seeing duplicates | Follow the [Recovery](#recovery--already-have-duplicates) section at the bottom of this page. |
 
 ## Bulk import — preventing duplicate records
 
-If your Vendasta CRM already has companies and contacts that also exist in Autotask, you must link them with Autotask IDs before connecting. Without this, the initial sync creates duplicate records.
+If your Vendasta CRM already has companies and contacts that also exist in Autotask, you must link them with Autotask IDs before connecting. Without this, the sync creates duplicate records as records change in Autotask.
 
 :::warning
 Do this BEFORE connecting Autotask. Order matters — import companies first, then contacts.
@@ -162,7 +159,7 @@ Open a few records in Vendasta CRM. Confirm the **external_id** field is populat
 
 ### Step 7 — Now, connect Autotask
 
-Proceed to the next section. When the initial sync runs, it will match records by external_id — no duplicates.
+Proceed to the next section. When the sync runs, it matches records by external_id — no duplicates.
 
 :::warning
 If you skip this step and connect first, the sync will create duplicate records for every company and contact. See the [Recovery](#recovery--already-have-duplicates) section at the bottom of this page if this has already happened.
@@ -186,13 +183,14 @@ On the Integrations page, locate the Autotask card. Click **Connect**.
 
 ### Step 3 — Enter your credentials
 
-A connection form appears. Fill in three fields:
+A connection form appears. Fill in two fields:
 
 | Field | What to enter | Where to find it |
 |-------|--------------|-----------------|
 | API Username | Your Autotask API user login | Autotask → Admin → API User |
 | API Secret | The secret associated with that user | Same location — generated when the API user was created |
-| Integration Code | Production Integration Code | Provided by your Vendasta account team |
+
+You do not need to enter an Integration Code — it is tied to the API user through the integration vendor (AMP) selected during API user creation.
 
 Click **Add Connection**.
 
@@ -219,9 +217,9 @@ Open the Autotask connection settings. Two toggles control sync behavior:
 
 Toggle your settings. Refresh the page to confirm they saved.
 
-### Step 6 — Initial sync
+### Step 6 — Real-time sync
 
-All companies and contacts from Autotask sync into Vendasta automatically when any changes are made at the company or contact level on the Autotask side. This runs in the background — you do not need to stay on the page. Companies sync first, then contacts.
+Companies and contacts from Autotask sync into Vendasta automatically whenever changes are made at the company or contact level on the Autotask side. This runs in the background — you do not need to stay on the page. Companies sync first, then contacts.
 
 ### Step 7 — Verify the sync
 
