@@ -105,6 +105,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
+          // Commerce: order processing/activation article merged into Creating and Managing Orders
+          { from: '/commerce/orders/order-processing-and-activation', to: '/commerce/orders/creating-and-managing-orders' },
           // --- Learn restructure (2026-07): TRAINING -> LEARN, paths + lifecycle libraries ---
           // getting-started renames
           { from: '/learn/getting-started/A-Brief-Introduction-to-the-Vendasta-Platform', to: '/learn/getting-started/the-vendasta-platform' },
