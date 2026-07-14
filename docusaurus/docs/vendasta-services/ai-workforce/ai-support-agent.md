@@ -24,8 +24,8 @@ The AI Support Agent Setup is a done-for-you service where our experts configure
 
 Choose one or the other:
 
-- **Setup**: a **one-time fee**. Our experts configure, train, and launch your AI Support Agent (everything in "What's included with setup" below).
-- **AI Workforce Optimization Plan**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
+- **[AI Employee Setup](https://partners.vendasta.com/marketplace/products/MP-K48XKQV7DXLGQZ67ZH4MNZDM2FQCK8LM)**: a **one-time fee**. Our experts configure, train, and launch your AI Support Agent (everything in "What's included with setup" below).
+- **[AI Workforce Optimization Plan](https://partners.vendasta.com/marketplace/products/MP-JHLVQX6W4MJFZ8V3V68CWMQ43X6N46TW)**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
 
 :::
 
