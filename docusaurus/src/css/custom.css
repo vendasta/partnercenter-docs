@@ -2191,3 +2191,50 @@ div[class*="language-"] pre {
 [data-theme='dark'] .comparison-card:hover {
   border-color: #3F9B63;
 }
+
+/* External-link icon injected next to the "Vendasta Services" sidebar category
+   (see swizzled src/theme/DocSidebarItem/Category). Points at the grey-labeled docs. */
+.sidebar-category-with-link {
+  position: relative;
+}
+.sidebar-external-link-icon {
+  position: absolute;
+  top: 0;
+  right: 2.75rem; /* sits to the left of the collapse caret */
+  display: flex;
+  align-items: center;
+  height: 37px; /* matches the category header row height */
+  padding: 0 4px;
+  color: white;
+  opacity: 0.6;
+  transition: opacity 0.15s ease;
+}
+.sidebar-external-link-icon:hover {
+  opacity: 1;
+  color: white;
+}
+
+/* Button on the Vendasta Services overview page linking to the grey-labeled docs.
+   Matches the blue "Switch to Business App Docs" sidebar button. */
+.greylabel-docs-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #fff !important;
+  background: rgb(5, 93, 149);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+.greylabel-docs-button:hover {
+  color: #fff !important;
+  background: rgb(4, 75, 120);
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(5, 93, 149, 0.25);
+  transform: translateY(-1px);
+}
