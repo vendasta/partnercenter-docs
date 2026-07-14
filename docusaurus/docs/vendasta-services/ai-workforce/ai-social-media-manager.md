@@ -7,6 +7,12 @@ description: "An overview of the AI Social Media Manager service: how setup work
 import OptimizationPlanSection from './_optimization-plan-section.mdx';
 import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
 
+:::tip Share a client-facing version
+Want to hand this to a client? The **grey-labeled guide** has the same information with no brand or platform names, so it is safe to send directly.
+
+<a className="button button--primary" href="https://servicesdocs.io/ai-workforce/ai-social-media-manager" target="_blank" rel="noopener noreferrer">Open the client-facing AI Social Media Manager guide →</a>
+:::
+
 :::info Requirements
 **Social AI Premium** must be active on the account.
 :::
