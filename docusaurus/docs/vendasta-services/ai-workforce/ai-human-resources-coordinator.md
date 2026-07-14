@@ -7,6 +7,12 @@ description: "An overview of the AI Human Resources Coordinator service, detaili
 import OptimizationPlanSection from './_optimization-plan-section.mdx';
 import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
 
+:::tip Share a client-facing version
+Want to hand this to a client? The **grey-labeled guide** has the same information with no brand or platform names, so it is safe to send directly.
+
+<a className="button button--primary" href="https://servicesdocs.io/ai-workforce/ai-human-resources-coordinator" target="_blank" rel="noopener noreferrer">Open the client-facing AI Human Resources Coordinator guide →</a>
+:::
+
 
 :::info Requirements
 **Conversations AI** must be active on your account. See the full [requirements](#requirements) below.

@@ -7,6 +7,11 @@ description: "An overview of the AI Receptionist service, detailing the process 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';
 import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
 
+:::tip Share a client-facing version
+Want to hand this to a client? The **grey-labeled guide** has the same information with no brand or platform names, so it is safe to send directly.
+
+<a className="button button--primary" href="https://servicesdocs.io/ai-workforce/ai-receptionist" target="_blank" rel="noopener noreferrer">Open the client-facing AI Receptionist guide →</a>
+:::
 
 :::info Requirements
 **Conversations AI** must be active on your account (any edition — Standard, Pro, or Premium).

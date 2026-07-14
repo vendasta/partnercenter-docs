@@ -7,6 +7,12 @@ description: "An overview of the AI Data Analyst service, detailing the process 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';
 import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
 
+:::tip Share a client-facing version
+Want to hand this to a client? The **grey-labeled guide** has the same information with no brand or platform names, so it is safe to send directly.
+
+<a className="button button--primary" href="https://servicesdocs.io/ai-workforce/ai-data-analyst" target="_blank" rel="noopener noreferrer">Open the client-facing AI Data Analyst guide →</a>
+:::
+
 
 :::info Requirements
 **Conversations AI** (any edition) must be active, plus at least one of **CRM AI**, **Reputation AI**, **Social AI**, or **Local SEO** as a data source. See the full [requirements](#requirements) below.
