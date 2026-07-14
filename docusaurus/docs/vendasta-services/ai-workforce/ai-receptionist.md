@@ -23,58 +23,60 @@ The AI Receptionist Setup is a done-for-you service where our experts configure,
 
 Choose one or the other:
 
-- **[AI Employee Setup](https://partners.vendasta.com/marketplace/products/MP-K48XKQV7DXLGQZ67ZH4MNZDM2FQCK8LM)**: a **one-time fee**. Our experts configure, train, and launch your AI Receptionist (everything in "What's included with setup" below).
+- **[AI Employee Setup](https://partners.vendasta.com/marketplace/products/MP-K48XKQV7DXLGQZ67ZH4MNZDM2FQCK8LM)**: a **one-time fee**. Our experts configure, train, and launch your AI Receptionist (everything in "What's included" below).
 - **[AI Workforce Optimization Plan](https://partners.vendasta.com/marketplace/products/MP-JHLVQX6W4MJFZ8V3V68CWMQ43X6N46TW)**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
 
 :::
 
-## What's included with setup
+## Setup
 
-### 1. CRM pipeline and lead management
+### What's included
+
+#### 1. CRM pipeline and lead management
 
 To properly manage your leads, we will create a smart list and a sales pipeline for you in the CRM. The smart list automatically pulls all web chat and form leads into a single contact list, while the pipeline tracks new opportunities and can show the dollar value of each lead. You will also receive tasks and notifications for new leads.
 
-### 2. Booking, inventory, and service area connections
+#### 2. Booking, inventory, and service area connections
 
 * **Appointment Booking:** We can connect your calendar to the AI Receptionist to book appointments on your behalf. If a direct connection via API is not possible, the receptionist will provide a booking link to your customers instead.
 * **Service Area Lookup:** For service-based businesses, we can configure a custom capability that handles zip code lookups to ensure leads are within your service area.
 * **Inventory Connection:** For retail stores with an e-commerce website, we can set up a custom capability (through an open API) to look up inventory information and provide real-time updates.
 
-### 3. Automation creation
+#### 3. Automation creation
 
 Our team will set up 3-5 automations depending on your business needs. These automations will send you notifications for new leads and also send follow-ups to your leads to ensure they have a way to reach you.
 
-<OptimizationPlanSection />
-
-## The setup process
+### The setup process
 
 The process involves a series of calls and configuration steps to get your AI Receptionist running effectively.
 
-### 1. Initial training call
+#### 1. Initial training call
 
 Our experts will lead an onboarding call to understand your business needs and adjust pre-built lead capture workflows to suit you. We will come to the call with your chat receptionist already set up with your branding and a customized communication style to demonstrate. During this call, we will refine any additional knowledge sources and communication instructions together.
 
 * **Timeline:** An onboarding call can be booked in as little as one business day, depending on availability.
 * **For U.S. Businesses:** A2P registration is required to validate the use of SMS. Please be ready with your legal business information for this process, which can take up to two weeks to complete.
 
-### 2. AI Receptionist configuration
+#### 2. AI Receptionist configuration
 
 Using the refinements from the onboarding call, we will finish setting up your AI Receptionist and enable its voice settings. We will also create a lead capture form for your website, set up SMS registration, configure missed-call-text-back or SMS follow-up messaging, and enable AI Voice capabilities to ensure you never miss a lead.
 
 * **Timeline:** Your AI Receptionist will be complete in 1 business day, or 3 business days for workflows with custom integrations.
 * **Requirement:** We require access to the backend of your website to install the chatbot and lead form.
 
-### 3. Onboarding and walkthrough call
+#### 3. Onboarding and walkthrough call
 
 This call will be used to walk you through the newly configured lead capture process. Our experts will show you where to find your leads, how to engage in conversations, and how to create additional tasks for your sales team.
 
 * **Timeline:** This call can be booked in as little as one business day after the AI Receptionist setup is complete.
 
-### 4. 30-day check-in call
+#### 4. 30-day check-in call
 
 This call is scheduled to review your conversations, determine what knowledge or custom instructions need to be updated or refined, and ensure your AI Receptionist is communicating effectively. Before this call, our team will review 5-10 conversations to provide recommendations for improvement.
 
 * **Timeline:** This call will be booked 3-4 weeks after the completion of your AI Receptionist setup.
+
+<OptimizationPlanSection />
 
 ## Frequently asked questions (FAQs)
 

@@ -13,7 +13,6 @@ Want to hand this to a client? The **grey-labeled guide** has the same informati
 <a className="button button--primary" href="https://servicesdocs.io/ai-workforce/ai-reputation-specialist" target="_blank" rel="noopener noreferrer">Open the client-facing AI Reputation Specialist guide →</a>
 :::
 
-
 :::info Requirements
 **Reputation AI Premium** must be active on your account to receive this service.
 :::
@@ -24,14 +23,14 @@ The AI Reputation Specialist Setup is a done-for-you service where our experts c
 
 Choose one or the other:
 
-- **[AI Employee Setup](https://partners.vendasta.com/marketplace/products/MP-K48XKQV7DXLGQZ67ZH4MNZDM2FQCK8LM)**: a **one-time fee**. Our experts configure, train, and launch your AI Reputation Specialist (everything in "What's included with setup" below).
+- **[AI Employee Setup](https://partners.vendasta.com/marketplace/products/MP-K48XKQV7DXLGQZ67ZH4MNZDM2FQCK8LM)**: a **one-time fee**. Our experts configure, train, and launch your AI Reputation Specialist (everything in "What's included" below).
 - **[AI Workforce Optimization Plan](https://partners.vendasta.com/marketplace/products/MP-JHLVQX6W4MJFZ8V3V68CWMQ43X6N46TW)**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
 
 :::
 
-## What's included with setup
+## Setup
 
-### 1. One-time setup
+### What's included
 
 * Onboarding and training call
 * Configure & train the AI Reputation Specialist
@@ -40,27 +39,17 @@ Choose one or the other:
 * Install review display widgets
 * Align brand voice, templates, and messaging
 
-### 2. Monthly service
-
-* Adjustments to prompts, automations, and any AI employee feature updates
-* Responding to platforms outside of Google & Facebook*
-* Negative review approval workflow
-
-**Please note:** For reviews outside of Google and Facebook, you may select up to five external platforms for us to support on your behalf, such as Yelp, YellowPages, Better Business Bureau, TripAdvisor, OpenTable, CarGuru, DealerRater, Expedia, CarFax, Zillow, and more. At this time, we're unable to respond to reviews on Indeed or Glassdoor.
-
-<OptimizationPlanSection />
-
-## The setup process
+### The setup process
 
 The process involves a series of calls and configuration steps to get your AI Reputation Specialist running effectively.
 
-### 1. Fulfillment form
+#### 1. Fulfillment form
 
 To ensure a smooth and efficient process, please fill out the fulfillment form with as much detail as possible. This will help streamline the entire experience.
 
 * **Timeline:** We'll review the order and start the process within 2 business days.
 
-### 2. Onboarding & training call
+#### 2. Onboarding & training call
 
 Our team of experts will lead an onboarding call to understand your business needs and how to adjust our reputation workflows to suit you. We will come to the call with your initial Reputation Specialist setup with your branding and customized review response style to adjust during the call. We will refine any additional knowledge sources and/or review response instructions together.
 
@@ -69,14 +58,14 @@ We will also train and walk you through the new workflow. Our team of experts wi
 * **Timeline:** An onboarding call can be booked in as little as 1 business day, depending on availability.
 * **For U.S. Businesses:** A2P registration is required to validate the business' use of SMS. Please be ready with your business legal information if you'd like to use SMS. Registration for A2P can take up to two weeks to complete.
 
-### 3. AI Reputation Specialist setup
+#### 3. AI Reputation Specialist setup
 
 Using the refinements during the onboarding call, we will finish setting up your AI Reputation Specialist and automations for requesting reviews. We will create a Net Promoter Score (NPS) workflow if desired and we can install a review display widget on your website.
 
 * **Timeline:** Your AI Reputation Specialist will be complete in 1 business day after the call.
 * **Requirement:** We require access to the backend of your website in order to install the review widget if desired.
 
-### 4. 30-day check-in call
+#### 4. 30-day check-in call
 
 This call will be used to look at the review responses generated, determine what knowledge or custom instructions need to be updated or refined, and ensure that your AI Reputation Specialist is responding effectively.
 
@@ -84,25 +73,7 @@ This call will be used to look at the review responses generated, determine what
 
 * **Timeline:** This call is optional and can be booked 3-4 weeks after the completion of your AI Reputation Specialist Setup.
 
-### 5. Monthly support
-
-With monthly support, we make ongoing refinements to your AI Reputation Specialist as your business evolves. This includes updates to prompts, branding, automations, templates, integrations, and review management beyond Google and Facebook, with an optional approval workflow for negative reviews.
-
-For reviews outside of Google and Facebook, you may select up to five external platforms below for us to support on your behalf. 
-
-* Yelp
-* YellowPages
-* Better Business Bureau
-* TripAdvisor
-* OpenTable
-* CarGuru
-* DealerRater
-* Expedia
-* CarFax
-* Zillow
-* and more. 
-
-**Please note:** At this time, we're unable to respond to reviews on Indeed or Glassdoor.
+<OptimizationPlanSection />
 
 ## Frequently asked questions (FAQs)
 
@@ -126,7 +97,7 @@ This service is ideal for local businesses (and agencies serving local businesse
 
 <summary> What languages does the AI Reputation Specialist respond in?</summary>
 
-Any language that the review is left in, the AI employee will respond in the proper corresponding language. For all reviews outside of Google & Facebook, our team can only respond in English.
+Any language that the review is left in, the AI employee will respond in the proper corresponding language.
 
 </details>
 
@@ -182,7 +153,7 @@ After ordering, you'll complete a fulfillment form and then book an onboarding c
 
 <summary> Which review platforms does the AI employee respond to automatically?</summary>
 
-The AI Reputation Specialist can automatically respond to Google and Facebook reviews using your branded tone and custom instructions. Outside of these platforms, you may choose up to five external sources and our team will respond on your behalf.
+The AI Reputation Specialist can automatically respond to Google and Facebook reviews using your branded tone and custom instructions.
 
 </details>
 
@@ -206,7 +177,7 @@ Yes. The service includes automated review request workflows via email and SMS, 
 
 <summary> Can I change how the AI responds to reviews later?</summary>
 
-Yes. You or our team can update instructions, tone, and templates at any time. Our support also includes prompt refinements and ongoing adjustments as needed.
+Yes. You can update instructions, tone, and templates at any time. If you have the AI Workforce Optimization Plan active, our team can make these changes on your behalf.
 
 </details>
 
@@ -228,9 +199,9 @@ Yes. Email is available for all businesses, and SMS is available for Canadian an
 
 <details>
 
-<summary> What kind of support is included after setup?</summary>
+<summary> What kind of optimization is included after setup?</summary>
 
-Monthly support includes adjustments to prompts, workflow refinements and new feature additions, as well as ongoing management of reviews outside Google and Facebook. These updates are intended to refine and improve what's already been set up, focusing on adjustments and enhancements to existing prompts, automations, and templates rather than the creation of entirely new systems.
+If you have the AI Workforce Optimization Plan active, it includes adjustments to prompts, workflow refinements, and configuring new feature additions. These updates are intended to refine and improve what has already been set up, focusing on adjustments and enhancements to existing prompts, automations, and templates.
 
 </details>
 

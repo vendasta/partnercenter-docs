@@ -24,22 +24,24 @@ The AI Inside Sales Representative (ISR) Setup is a do-it-with-me service where 
 
 Choose one or the other:
 
-- **[AI Employee Setup](https://partners.vendasta.com/marketplace/products/MP-K48XKQV7DXLGQZ67ZH4MNZDM2FQCK8LM)**: a **one-time fee**. Our experts configure, train, and launch your AI Inside Sales Representative (everything in "What's included with setup" below).
+- **[AI Employee Setup](https://partners.vendasta.com/marketplace/products/MP-K48XKQV7DXLGQZ67ZH4MNZDM2FQCK8LM)**: a **one-time fee**. Our experts configure, train, and launch your AI Inside Sales Representative (everything in "What's included" below).
 - **[AI Workforce Optimization Plan](https://partners.vendasta.com/marketplace/products/MP-JHLVQX6W4MJFZ8V3V68CWMQ43X6N46TW)**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
 
 :::
 
-## What's included with setup
+## Setup
 
-### 1. AI Employee profile
+### What's included
+
+#### 1. AI Employee profile
 
 We create a custom AI Employee with a name and avatar that represents your business. Customers interact with a professional sales persona rather than a generic bot. The profile is configured within the **AI Workforce** section of Business App.
 
-### 2. Sales role prompt
+#### 2. Sales role prompt
 
 We configure a confident, empathetic inbound sales consultant persona for your ISR. The prompt is designed to guide customers toward a solution — an appointment or consultation — rather than simply collecting a message. Every conversation is kept moving forward with qualifying questions and clear next steps.
 
-### 3. Lead discovery and qualification
+#### 3. Lead discovery and qualification
 
 We set up a custom capability that defines the qualification logic: the ISR confirms your business can actually serve the customer's need before capturing their contact information. If a customer asks about a service you do not offer, the ISR politely informs them and stops the lead capture process — no wasted time for your sales team.
 
@@ -47,7 +49,7 @@ We set up a custom capability that defines the qualification logic: the ISR conf
 The quality of your services list directly affects qualification accuracy. A specific services list — for example, 'furnace repair, AC installation, duct cleaning' rather than 'HVAC services' — allows the ISR to make faster, more accurate qualification decisions.
 :::
 
-### 4. Lead capture and appointment booking
+#### 4. Lead capture and appointment booking
 
 Built-in capabilities manage the full lead capture sequence: Name → Phone → Email. Phone number validation and objection handling are included — if a customer says 'just email me,' the ISR acknowledges their preference, explains the value of a quick call, and pivots. If they object a second time, the ISR accepts email as a fallback.
 
@@ -57,23 +59,21 @@ When a calendar is connected, the ISR checks availability and books appointments
 Appointment booking requires a connected Google, Outlook, or Microsoft calendar in Business App. Without it, the ISR qualifies and captures leads but cannot schedule meetings.
 :::
 
-### 5. Knowledge base setup
+#### 5. Knowledge base setup
 
 We connect your business profile, website, services list, and any FAQs to the ISR's knowledge base. This allows the ISR to answer questions about your services, pricing, hours, and location accurately — without fabricating information.
 
-<OptimizationPlanSection />
-
-## The setup process
+### The setup process
 
 The process involves a fulfillment form, a series of calls, and configuration steps to get your AI Inside Sales Representative running effectively.
 
-### 1. Fulfillment form
+#### 1. Fulfillment form
 
 To ensure a smooth and efficient setup, please fill out the fulfillment form with as much detail as possible. This will help streamline the entire experience.
 
 * **Timeline:** We'll review the order and start the process within 2 business days.
 
-### 2. Onboarding call
+#### 2. Onboarding call
 
 Our team of experts will lead an onboarding call to understand your business needs and configure your AI Inside Sales Representative to reflect your brand, tone, and qualification criteria. We will come to the call with an initial setup ready to demo and refine together.
 
@@ -84,19 +84,19 @@ Our team of experts will lead an onboarding call to understand your business nee
 If you are unable to attend the onboarding call, our team will proceed with setup using the information provided in your fulfillment form and will follow up via email and phone to review and refine. If we are unable to reach you after our follow-up process, the project will be closed — but can be reopened at any time by reaching back out to us.
 :::
 
-### 3. ISR setup
+#### 3. ISR setup
 
 Using the information gathered during the onboarding call, we will configure your AI Employee with a sales-qualified persona, set up lead discovery and qualification logic, enable lead capture and appointment booking capabilities, and connect your knowledge sources — including your services list, website, and FAQs.
 
 * **Timeline:** Your AI Inside Sales Representative will be complete in 1 business day, or 3 business days for setups with custom integrations or complex knowledge bases.
 
-### 4. Training call
+#### 4. Training call
 
 This call will walk you through your new AI Inside Sales Representative: where to find your captured leads, how the qualification logic works, how to manage conversations in Business App, and how appointment notifications are handled.
 
 * **Timeline:** This call can be booked in as little as 1 business day after ISR Setup completion, depending on availability.
 
-### 5. 30-day check-in
+#### 5. 30-day check-in
 
 This call will be used to review your conversations, determine whether the qualification logic or knowledge base needs to be updated, and ensure your ISR is converting inquiries effectively.
 
@@ -105,6 +105,8 @@ Prior to this call, our team will review 5–10 conversations to provide recomme
 :::
 
 * **Timeline:** This call will be booked 3–4 weeks after the completion of your ISR Setup.
+
+<OptimizationPlanSection />
 
 ## Requirements
 
