@@ -2221,7 +2221,7 @@ div[class*="language-"] pre {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0.5rem 1.5rem;
+  padding: 0.55rem 1.5rem;
   font-size: 0.9rem;
   font-weight: 600;
   line-height: 1.2;
@@ -2230,6 +2230,27 @@ div[class*="language-"] pre {
   border-radius: 4px;
   text-decoration: none;
   transition: background 0.2s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+/* MDX wraps the label in a <p>; strip its default margin so the text centers. */
+.greylabel-docs-button p {
+  margin: 0;
+}
+
+/* Header row on the Vendasta Services overview: title left, button vertically
+   centered on the right; button drops below the title on narrow screens. */
+.vs-overview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.vs-overview-header h1 {
+  margin: 0 !important;
+}
+.vs-overview-header .greylabel-docs-button {
+  flex-shrink: 0;
 }
 .greylabel-docs-button:hover {
   color: #fff !important;
