@@ -10,11 +10,11 @@ keywords: [form-widget, jsonform-error, divi, custom-css]
 
 Style forms with custom CSS to modify the appearance of form elements directly on your website. You can target form widgets and specific fields to match your site's branding and layout.
 
-## Why is Styling Forms important?
+## Why is styling forms important?
 
 Customizing form styles improves consistency with your website’s design, enhances user experience, and allows better control over spacing, alignment, and responsiveness.
 
-## What’s Included with Styling Forms?
+## What’s included with styling forms?
 
 You can style:
 
@@ -26,29 +26,29 @@ You can style:
 
 Speed up styling by letting AI generate a starting point for your CSS.
 
-1. Open your form and go to the **Design** tab
-2. Click **Design with AI**
+1. Open your form and go to the `Design` tab
+2. Click `Design with AI`
 3. Upload a reference image (for example, your website) and add a prompt like “Match form design to my website”
 4. Add optional instructions (for example, “Put first and last name on the same row”)
-5. Review the generated CSS and paste/tweak it under **Custom CSS**
+5. Review the generated CSS and paste/tweak it under `Custom CSS`
 
 Tip: Use the CSS selectors below (for example, `.form-widget`, `.form-widget-[FormID]`, `.jsonform-error-[FieldID]`) to target specific areas when refining AI-generated styles.
 
 :::info Where the generated CSS applies
-CSS you generate here is saved on the form under Design → Custom CSS and is automatically applied when you embed or share the form.
+CSS you generate here is saved on the form under `Design` → `Custom CSS` and is automatically applied when you embed or share the form.
 :::
 
-## How to Apply Custom CSS
+## How to apply custom CSS
 
-### 1. Locate the Form or Field ID
+### 1. Locate the form or field ID
 
-Inspect your form elements in the browser (right-click > Inspect) to find:
+Inspect your form elements in the browser (right-click → `Inspect`) to find:
 
 - The `form-widget` class
 - The specific `form-widget-[FormID]`
 - Individual `jsonform-error-[FieldID]` for input fields
 
-### 2. Add Custom CSS
+### 2. Add custom CSS
 
 Example CSS to align two input fields side by side:
 
@@ -68,7 +68,7 @@ Example CSS to align two input fields side by side:
 }
 ```
 
-### 3. Apply Widget Styles
+### 3. Apply widget styles
 
 ```css
 .form-widget {
@@ -91,7 +91,7 @@ Example CSS to align two input fields side by side:
 }
 ```
 
-### 4. Input Field Styling
+### 4. Input field styling
 
 ```css
 .form-widget input:not([type="submit"]):not(.pac-target-input),
@@ -112,7 +112,7 @@ Example CSS to align two input fields side by side:
 }
 ```
 
-### 5. Focus States and Dropdowns
+### 5. Focus states and dropdowns
 
 ```css
 .form-widget input:focus:not(.pac-target-input),
@@ -139,7 +139,7 @@ Example CSS to align two input fields side by side:
 }
 ```
 
-### 6. Button Styling
+### 6. Button styling
 
 ```css
 .form-widget .btn-primary {
@@ -155,7 +155,7 @@ Example CSS to align two input fields side by side:
 }
 ```
 
-### 7. Mobile Responsiveness
+### 7. Mobile responsiveness
 
 ```css
 @media (max-width: 480px) {
@@ -168,7 +168,7 @@ Example CSS to align two input fields side by side:
 ### 8. Save CSS in Divi
 
 1. Navigate to your WordPress Dashboard.
-2. Go to `Divi > Theme Options > Custom CSS`.
+2. Go to `Divi` → `Theme Options` → `Custom CSS`.
 3. Paste the CSS code into the `Custom CSS` field.
 4. Save your changes.
 
@@ -180,53 +180,60 @@ Make sure to use the correct widget and field IDs for your specific form.
 Adjust spacing, widths, and other properties as needed to match your design requirements.
 :::
 
-## Frequently Asked Questions (FAQs)
+## Frequently asked questions (FAQs)
 
 <details>
 <summary>Where do I find the Field ID or Form ID?</summary>
 
 Inspect the form using your browser's Developer Tools. Look for classes like `.form-widget-xxxx` or `.jsonform-error-xxxx`.
+
 </details>
 
 <details>
 <summary>Can I style individual input fields?</summary>
 
 Yes. Use `.jsonform-error-[FieldID]` to target specific input fields.
+
 </details>
 
 <details>
 <summary>Will these styles apply to all pages?</summary>
 
 Yes, if added to a global stylesheet or theme options, the styles will apply site-wide.
+
 </details>
 
 <details>
 <summary>What happens if I don’t use the correct ID?</summary>
 
 The styles won’t apply. Double-check the class names and IDs from your form markup.
+
 </details>
 
 <details>
 <summary>Do I need to use !important?</summary>
 
 Use `!important` only if other styles are overriding yours. Avoid overusing it to prevent conflicts.
+
 </details>
 
 <details>
 <summary>Can I style Google Places inputs?</summary>
 
 No. Inputs with the `pac-target-input` class are excluded from these styles.
+
 </details>
 
 <details>
 <summary>How do I add spacing between form fields?</summary>
 
 Use `margin-bottom` or layout properties like `display: inline-block` or CSS Grid/Flexbox.
+
 </details>
 
 <details>
 <summary>Is this specific to Divi?</summary>
 
-
 This example uses Divi, but the CSS techniques apply to any website development platform with access to custom styles.
+
 </details>

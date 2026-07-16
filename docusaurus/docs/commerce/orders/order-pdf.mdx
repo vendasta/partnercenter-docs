@@ -1,32 +1,46 @@
 ---
+id: order-pdf
 title: Order PDF
 sidebar_label: Order PDF
-description: Download a PDF summary of any sales order, including products, salesperson, and business information.
-tags: [commerce, orders, pdf, export]
-keywords: [order pdf, download order, print order, order export, pdf summary]
+description: Generate and download a PDF summary of any order, including order form answers and fulfillment form responses.
+tags: [commerce, orders, pdf, fulfillment-forms]
+keywords: [order pdf, download order, order export, fulfillment form pdf, order form pdf]
 ---
 
 # Order PDF
 
-Admin users can download a PDF summary of any sales order. The PDF captures the full order at a point in time, making it useful for record-keeping, contract storage, and auditing.
+Admins can generate a downloadable PDF summary of any sales order. The PDF captures the full order record — including product details, order form answers, and fulfillment form responses — in a format suitable for archiving and reference.
 
-:::info Admin only
-Order PDF is available to admin users only.
+:::info
+Order PDF generation is available to admin users only.
 :::
-
-## How to download an order PDF
-
-1. Go to **Partner Center** → **Commerce** → **Orders** and open the order.
-2. Click the **Actions** menu in the order toolbar.
-3. Select **Print**.
-
-The PDF downloads automatically as `order-<orderId>.pdf`.
 
 ## What the PDF includes
 
-- **Order details** — order number, status, salesperson name and email address, and the business name
-- **Line items** — each product and edition with retail price and quantity
-- **Retail summary** — a pricing summary across all line items
-- **Order questions** — answers to any order-level questions, if present
-- **Order form answers** — completed fulfillment form fields for each line item
-- **Customer agreements** — if the order was sent for customer approval, the agreement section includes the approving user's name
+The order PDF contains:
+
+- **Order details** — order ID, products, pricing, and status
+- **Order form answers** — responses submitted for any order form fields (custom, common, and extra) on each product
+- **Fulfillment form answers** — responses submitted through the fulfillment form for each product
+
+Only answered fields appear. Unanswered optional fields are omitted.
+
+## How field answers display
+
+Form answers are formatted to be human-readable:
+
+| Field type | Display format |
+|---|---|
+| Checkbox | Yes or No |
+| File upload | Filename (e.g. `proposal.pdf`) |
+| User picker | Full name and email (e.g. `Jane Smith (jane@example.com)`) |
+| Dropdown | Selected label — applies to both single and multi-select |
+| Text | Text content |
+
+Long text answers are capped at 3,000 characters. Answers exceeding this limit are truncated and end with `… [truncated]`.
+
+## Fulfillment form data
+
+Fulfillment form answers are fetched at the time the PDF is generated. Each product's fulfillment form is retrieved independently.
+
+If a product's fulfillment form data cannot be retrieved, that product's fulfillment section is skipped and the rest of the PDF still generates normally.

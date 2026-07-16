@@ -23,7 +23,7 @@ This article provides an overview of Vendasta's teams and resources, which are h
 * **Onboarding Specialist:** To get in touch with your assigned specialist.
     * **Email:** onboarding@vendasta.com
 
-* **Support on Demand (for partners only):** For questions about the Vendasta platform, including Partner Center, Business App, and Social Marketing.
+* **Support on Demand (for partners only):** For questions about the Vendasta platform, including Partner Center, Business App, and Social AI.
     * **Email:** support@vendasta.com
     * **Submit a ticket:** Contact support through Partner Center or via email
 

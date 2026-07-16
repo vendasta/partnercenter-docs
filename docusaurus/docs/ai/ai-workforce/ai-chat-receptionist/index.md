@@ -75,6 +75,10 @@ Your AI Chat Receptionist is assigned to the **Web Chat** channel by default. Th
 The Web Chat widget isn't automatically added to your website! You'll need to install the widget code or enable it within your site builder before your AI can start engaging visitors. When you are ready to install the widget, refer to [How to install the Conversations Web Chat Widget](/business-app/conversations/web-chat/)
 :::
 
+:::tip Respond differently on each channel
+Your AI Chat Receptionist knows which channel it's replying on, so it can adapt its tone and reply length per channel. To set this up, add channel-specific instructions to the **Purpose** prompt or to a capability's instructions — for example, "When responding on SMS, keep replies to one or two sentences with no formatting; when responding on web chat, you can use short lists and links." Both places work. See [Adjust responses by channel](../index.mdx#adjust-responses-by-channel) for examples.
+:::
+
 ### Step 2: Configure Your AI Chat Receptionist Capabilities
 
 Capabilities are like instructions that guide how your AI Chat Receptionist behaves and what actions it can take. Review these and adjust as needed to make sure your AI performs the way you want.

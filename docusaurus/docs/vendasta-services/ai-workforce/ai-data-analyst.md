@@ -7,9 +7,15 @@ description: "An overview of the AI Data Analyst service, detailing the process 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';
 import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
 
+:::tip Share a client-facing version
+Want to hand this to a client? The **grey-labeled guide** has the same information with no brand or platform names, so it is safe to send directly.
+
+<a className="button button--primary" href="https://servicesdocs.io/ai-workforce/ai-data-analyst" target="_blank" rel="noopener noreferrer">Open the client-facing AI Data Analyst guide →</a>
+:::
+
 
 :::info Requirements
-**Conversations AI** (any edition) must be active, plus at least one of **CRM AI**, **Reputation AI**, **Social Marketing**, or **Local SEO** as a data source. See the full [requirements](#requirements) below.
+**Conversations AI** (any edition) must be active, plus at least one of **CRM AI**, **Reputation AI**, **Social AI**, or **Local SEO** as a data source. See the full [requirements](#requirements) below.
 :::
 
 The AI Data Analyst Setup is a done-for-you service where our experts configure, train, and launch the AI Data Analyst for your business. Our team handles the technical setup, connects your active data sources (CRM, Reviews/NPS, Social), and configures the AIR Analysis Framework so every response delivers a clear finding, a plain-language interpretation, and a recommended next step.
@@ -18,18 +24,20 @@ The AI Data Analyst Setup is a done-for-you service where our experts configure,
 
 Choose one or the other:
 
-- **Setup**: a **one-time fee**. Our experts configure, train, and launch your AI Data Analyst (everything in "What's included with setup" below).
-- **AI Workforce Optimization Plan**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
+- **[AI Employee Setup](https://partners.vendasta.com/marketplace/products/MP-K48XKQV7DXLGQZ67ZH4MNZDM2FQCK8LM)**: a **one-time fee**. Our experts configure, train, and launch your AI Data Analyst (everything in "What's included" below).
+- **[AI Workforce Optimization Plan](https://partners.vendasta.com/marketplace/products/MP-JHLVQX6W4MJFZ8V3V68CWMQ43X6N46TW)**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
 
 :::
 
-## What's included with setup
+## Setup
 
-### 1. AI Employee profile
+### What's included
+
+#### 1. AI Employee profile
 
 We create a custom AI Employee with a name and avatar that represents your analytical team. Business owners and managers interact directly with the Data Analyst through Business App to ask questions and receive structured insights. The profile is configured within the **AI Workforce** section of Business App.
 
-### 2. AIR Analysis Framework
+#### 2. AIR Analysis Framework
 
 We configure the AIR framework, the structured methodology that guides every AI response:
 
@@ -43,16 +51,16 @@ Every response follows this structure automatically, so you receive a clear find
 The AI will never surface raw data dumps or vague summaries. If it cannot produce a structured AIR response, it will say so clearly rather than generating an unhelpful answer.
 :::
 
-### 3. Data source connections
+#### 3. Data source connections
 
-The AI Data Analyst requires Conversations AI (any edition) and at least one of the following data sources to be active: **CRM AI**, **Reputation AI**, **Social Marketing**, or **Local SEO**. The quality and depth of insights depend directly on how much data is available in each connected source. Once we determine what is active, we connect the data sources available in your account:
+The AI Data Analyst requires Conversations AI (any edition) and at least one of the following data sources to be active: **CRM AI**, **Reputation AI**, **Social AI**, or **Local SEO**. The quality and depth of insights depend directly on how much data is available in each connected source. Once we determine what is active, we connect the data sources available in your account:
 
 * **CRM data:** contacts, companies, activities, and pipeline information
 * **Reviews and NPS:** customer feedback from connected review platforms
 * **Social engagement:** post performance and engagement metrics from connected social accounts
 
 
-### 4. Knowledge base setup
+#### 4. Knowledge base setup
 
 We connect your business profile and website, and upload any supplementary documents (price lists, service catalogs, or team structure information) that provide context the AI can use when interpreting your data.
 
@@ -60,19 +68,17 @@ We connect your business profile and website, and upload any supplementary docum
 The AI Data Analyst is an internal tool. No chat widget or website installation is required, and there are no customer-facing components in this setup.
 :::
 
-<OptimizationPlanSection />
-
-## The setup process
+### The setup process
 
 The process involves a fulfillment form, a series of calls, and configuration steps to get your AI Data Analyst running effectively.
 
-### 1. Fulfillment form
+#### 1. Fulfillment form
 
 To ensure a smooth and efficient setup, please fill out the fulfillment form with as much detail as possible. Let us know which data sources are active (CRM, Reviews/NPS, and Social) so we can configure the right capabilities from the start.
 
 * **Timeline:** We'll review the order and start the process within 2 business days.
 
-### 2. Onboarding call
+#### 2. Onboarding call
 
 Our team will lead a structured onboarding call to confirm your active data sources, understand the types of business questions you want the AI to answer, and configure the response framework. The response framework is a structured approach that guides the AI to analyze your data, interpret what it means, and recommend a clear next step in every response. We will come to the call with an initial setup ready to demo and refine together.
 
@@ -82,19 +88,19 @@ Our team will lead a structured onboarding call to confirm your active data sour
 If you are unable to attend the onboarding call, our team will proceed with setup using the information provided in your fulfillment form and will follow up via email and phone to review and refine. If we are unable to reach you after our follow-up process, the project will be closed, but can be reopened at any time by reaching back out to us.
 :::
 
-### 3. Data Analyst setup
+#### 3. Data Analyst setup
 
 Using the information gathered during the onboarding call, we will configure your AI Data Analyst with the AIR Analysis Framework, connect all active data sources (CRM, Reviews/NPS, Social), and upload any supplementary business context documents to the knowledge base.
 
 * **Timeline:** Your AI Data Analyst will be complete in 1 business day, or 3 business days for setups with multiple connected data sources.
 
-### 4. Training call
+#### 4. Training call
 
 This call will walk you through your new AI Data Analyst: how to ask questions, how to interpret the structured AIR responses, and how to act on the recommendations provided. We'll run live examples together using your actual data.
 
 * **Timeline:** This call can be booked in as little as 1 business day after Data Analyst setup completion, depending on availability.
 
-### 5. 30-day check-in
+#### 5. 30-day check-in
 
 This call will be used to review how you've been using the AI Data Analyst, assess whether the AIR framework is delivering useful insights, and refine the data source connections or knowledge base based on real usage.
 
@@ -104,6 +110,8 @@ Prior to this call, our team will run a set of sample queries to validate that t
 
 * **Timeline:** This call will be booked 3-4 weeks after the completion of your AI Data Analyst setup.
 
+<OptimizationPlanSection />
+
 ## Requirements
 
 To set your business up for success, the following requirements must be met to deliver this service efficiently.
@@ -112,9 +120,9 @@ To set your business up for success, the following requirements must be met to d
 
 Conversations AI must be active on your account. Any edition of Conversations AI is supported. This is the platform requirement for deploying the AI Data Analyst.
 
-### CRM AI, Reputation AI, Social Marketing, or Local SEO (at least one required)
+### CRM AI, Reputation AI, Social AI, or Local SEO (at least one required)
 
-At least one of the following must be active: **CRM AI**, **Reputation AI**, **Social Marketing**, or **Local SEO**. These are the data sources the AI uses to generate insights. Without at least one active data source, the AI cannot perform meaningful analysis.
+At least one of the following must be active: **CRM AI**, **Reputation AI**, **Social AI**, or **Local SEO**. These are the data sources the AI uses to generate insights. Without at least one active data source, the AI cannot perform meaningful analysis.
 
 :::tip
 The more data sources that are active and populated, the richer and more actionable the AI's insights will be. We recommend having CRM data, connected review sources (Google, Facebook), and social accounts active before the onboarding call.
@@ -154,7 +162,7 @@ AIR stands for Analyze, Interpret, Recommend. Every response from the AI Data An
 
 <summary>What editions are required?</summary>
 
-**Conversations AI** must be active (any edition is supported). In addition, at least one of the following data-source editions must be active: **CRM AI**, **Reputation AI**, **Social Marketing**, or **Local SEO**. These editions unlock the data access and platform capabilities the AI Data Analyst relies on to generate insights. If you are unsure which editions are currently active on your account, please check with your account manager before the onboarding call.
+**Conversations AI** must be active (any edition is supported). In addition, at least one of the following data-source editions must be active: **CRM AI**, **Reputation AI**, **Social AI**, or **Local SEO**. These editions unlock the data access and platform capabilities the AI Data Analyst relies on to generate insights. If you are unsure which editions are currently active on your account, please check with your account manager before the onboarding call.
 
 </details>
 
