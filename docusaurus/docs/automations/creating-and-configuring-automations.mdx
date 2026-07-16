@@ -1,6 +1,6 @@
 ---
 title: Creating and configuring automations
-description: Learn how to create, configure, and manage automation settings including entry settings, error handling, and duplication.
+description: Learn how to create, configure, and manage automation settings including entry settings, error handling, permissions, and duplication.
 sidebar_position: 2
 ---
 
@@ -10,7 +10,7 @@ This guide covers the complete process of creating automations and configuring t
 
 ## Automation settings
 
-Several settings can be configured for each automation you create. You can access these settings in the **Settings** tab in your automation.
+Several settings can be configured for each automation you create. You can access these settings in the **Advanced** section of the left menu in your automation.
 
 ![Automation Settings Tab](./img/automations/automation-settings-tab.jpg)
 
@@ -35,6 +35,12 @@ You can have many steps in an automation workflow. If at any point a step fails 
 **Options:**
 - **Ignore the error and continue the automation**: If a step fails, the automation will log an error (viewable in the Activity table) and move on to the next step of the workflow.
 - **Stop that specific automation run**: If a step fails, the automation run will completely stop for that account. The automation will not move on to the next step of the workflow. You may manually resume the run from any step in the workflow from the automation activity section.
+
+### Permissions
+
+An automation runs on behalf of whoever turned it on. If that person's access changes — for example, they're deactivated, their role changes, or their consent is revoked — the automation stops processing new triggers until someone re-authorizes it.
+
+To transfer permissions to your own profile, click **Transfer Permissions** and sign in to approve the requested access. See [Fixing "Automation requires valid permissions to run"](./automation-permissions-error.mdx) for the full troubleshooting steps.
 
 ### Timezone configuration
 

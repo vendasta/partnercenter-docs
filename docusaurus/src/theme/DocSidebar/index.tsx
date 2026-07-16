@@ -20,7 +20,7 @@ export default function DocSidebarWrapper(props: Props): ReactElement {
           href="/learn"
           className={`sidebar-pill${isTraining ? ' sidebar-pill--active' : ''}`}
         >
-          TRAINING
+          LEARN
         </a>
       </div>
       <div className="sidebar-menu-container">
