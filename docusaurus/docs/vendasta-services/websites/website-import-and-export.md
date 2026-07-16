@@ -13,33 +13,7 @@ If you have an existing WordPress website and would like to move it onto Vendast
 
 You will also gain access to Vendasta Services’ Website Support team when we import a site with Website Support+ activated _(3-month commitment)_.
 
-## **Website Support+ includes:**
-
-*   Access to the team for technical support
-*   Minor changes to the website's appearance, such as:
-    *   Fonts
-    *   Colors
-    *   Media (images, videos, icons)
-    *   Text updates
-    *   Contact form fields and settings
-    *   Reorganization or duplication of existing sections
-*   Backend updates are completed quarterly to ensure WordPress stability
-*   Updates to plugins and themes upon request
-*   Health checks to website upon request
-*   Uptime monitoring and urgent support if your website goes offline
-*   Upload up to 3 blog posts per month (content must be provided)
-*   AI Chat Receptionist installation
-
-
-### **AI Chat Receptionist**
-
-At no additional cost, our team will install the AI Chat Receptionist on your new website build or with an imported website. This includes:
-*   Web chat code added to the website
-*   Basic test (open chat, confirm a message can be sent)
-*   Add brand colours to the AI Chat Receptionist
-
-This service is not a full end-to-end configuration of the AI Chat Receptionist, and is only for basic code installation. If you need advanced features such as full brand configuration beyond basic brand colours, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce-setup/ai-receptionist-setup.md) service.
-
+For the full list of what Website Support+ covers, see the [Website Support](./vendasta-services-website-support.md) article.
 
 ## **What benefits are there when importing a site through Vendasta Services?**
 
@@ -59,13 +33,20 @@ _\*Plugins or themes may require a license key to update._
 **Vetting:**
 
 1.  Activate the free [Website Import Vetting](https://partners.vendasta.com/marketplace/products/MP-1751871d98cf4e7f95d55c7d2b2ff293) product on the applicable account.
-2.  Complete the fulfillment form with the domain registrar and WordPress admin login credentials.
-    1.  While we can vet the website without access to the domain registrar, we cannot vet the site without the WordPress admin login credentials.
+2.  Complete the fulfillment form with the credentials we need to access and assess your site:
+    1.  Domain registrar login (registrar name, username, and password)
+    2.  Current WordPress site URL
+    3.  WordPress admin username and password
+    4.  While we can vet the website without access to the domain registrar, we cannot vet the site without the WordPress admin login credentials. If a firewall or country restriction is active, you may also need to allowlist our IP address.
 3.  Upon receiving the completed fulfillment form, our team will vet the website, which includes reviewing, but not limited to:
     1.  Plugins actively running on the website
     2.  How the website is built (ie. Divi, Elementor, WPBakery, etc.)
     3.  If there are any custom-coded themes or elements that our team cannot support
 4.  Once the website has been vetted, you will receive an email update with our findings, either acknowledging that it is approved for import & support or that it’s denied (in which case we would recommend rebuilding the site with our design team).
+
+:::note Technical requirements
+To be eligible for import and support, your site must run on **WordPress 6.4 or higher** and **PHP 8.3 or higher**. Sites that cannot be updated to these versions may be rejected.
+:::
 
 **Importing:**
 
@@ -82,16 +63,42 @@ _Please note that a site can take up to 72 hours to fully propagate. During this
 
 **Common Reasons for Import & Support Rejections:**
 
-*   Custom themes
-*   Security concerns
 *   Not a WordPress site
+*   Does not meet the minimum PHP 8.3 or WordPress 6.4 requirements
+*   Fully custom-coded themes, templates, or elements our team cannot support
+*   Built only with native WordPress (Gutenberg) blocks, with no supported theme or builder
+*   Extensive outdated or mixed-version plugins, especially page builders
+*   Heavy reliance on Advanced Custom Fields (ACF) or other complex custom fields (reviewed case by case)
+*   Security concerns
 *   Part of a multi-site
 *   Built using an unsupported builder or method
 *   Compatibility issues with WordPress Hosting Pro
 
 If our Website Support+ team is unable to support the website in question, we will email you to let you know that we are unable to support this site and explain why we had to reject it.
 
-**See also:** [Website Import & Support Vetting Expectations Brochure](https://examples.yourdigitalagents.com/wp-content/uploads/2023/05/Website-Import-Support-Vetting_-Expectations-Guide.pdf)
+## Custom add-on delivery times
+
+If you request work beyond the standard import and support scope, the following are typical delivery timelines once we have everything we need (content, logins, and any paid plugin licenses):
+
+| Add-on | Volume | Delivery time |
+|---|---|---|
+| Additional pages | 1-5 pages | 2 business days |
+| Additional pages | 5-10 pages | 3 business days |
+| Additional pages | 10-15 pages | 4 business days |
+| Additional pages | 15+ pages | 30-minute design consultation first |
+| Hourly work | 1-5 hours | 2 business days |
+| Hourly work | 5+ hours | At the developer's discretion |
+| Website copy | Up to 1,500 words | 5 business days from the content call |
+| Website copy | More than 1,500 words | 10 business days |
+| Products & images | 1-5 | 1 business day |
+| Products & images | 5-25 | 5 business days |
+| Products & images | 25-50 | 7 business days |
+| Products & images | 50-100 | 10 business days |
+| Products & images | Bulk (CSV upload) | Reach out to our team |
+
+:::note
+These timelines pause while we wait on information or assets from you. We will send up to two reminders (about one per week); if we do not hear back, the request is placed on hold. Content, logins, and any paid plugins must be provided before work begins.
+:::
 
 ## Exporting a Website
 
@@ -147,6 +154,35 @@ Yes! Website Support+ includes installation of the AI Chat Receptionist on your 
 *   Perform a basic test (open chat, confirm a message can be sent)
 *   Add brand colours to the AI Chat Receptionist
 
-If you need advanced features such as full brand configuration beyond basic brand colours, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce-setup/ai-receptionist-setup.md) service.
+If you need advanced features such as full brand configuration beyond basic brand colours, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce/ai-receptionist.md) service.
+
+</details>
+
+<details>
+
+<summary>What type of forms will you set up on my site?</summary>
+
+As part of Website Support+, we can convert an existing third-party contact form into a CRM form so that submissions flow directly into your CRM as leads. We set up standard contact and lead-capture forms.
+
+We do not build advanced form functionality, including:
+
+*   Advanced field-level conditional visibility (showing or hiding fields based on input)
+*   Calculated fields
+*   Complex validation rules
+*   Multi-page forms with save-and-resume progress
+*   Native payment fields
+*   Native appointment booking
+*   Fully responsive form previews
+*   Logic-based field prefilling
+
+If you need any of these advanced features, reach out and our team can scope the custom work for you.
+
+</details>
+
+<details>
+
+<summary>What will happen to my existing form and submission data?</summary>
+
+When we convert your form to a CRM form, the legacy form is deactivated and removed from the front end of your site, so visitors only see the new CRM form. We do not remove the legacy form plugin, so any previously collected submissions remain viewable in your WordPress backend. Your existing form entries are also migrated into the CRM.
 
 </details>

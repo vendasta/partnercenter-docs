@@ -23,7 +23,7 @@ This article provides an overview of Vendasta's teams and resources, which are h
 * **Onboarding Specialist:** To get in touch with your assigned specialist.
     * **Email:** onboarding@vendasta.com
 
-* **Support on Demand (for partners only):** For questions about the Vendasta platform, including Partner Center, Business App, and Social Marketing.
+* **Support on Demand (for partners only):** For questions about the Vendasta platform, including Partner Center, Business App, and Social AI.
     * **Email:** support@vendasta.com
     * **Submit a ticket:** Contact support through Partner Center or via email
 
@@ -35,7 +35,6 @@ This article provides an overview of Vendasta's teams and resources, which are h
 * **Phone:** For all inquiries regarding projects managed by the Marketing Services team or to speak with a specific agent, contact **1-866-378-8031**. This line is exclusively for partners with active Marketing Services products and is monitored Monday through Friday from 8:00 AM to 5:00 PM CST.
 * **Presale Questions:** Reach out to [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com) and CC your Vendasta Sales Representative for coordinated assistance.
 * **Examples of Services:**
-    * **Expectation Brochures:** [https://examples.yourdigitalagents.com/expectation-brochures/](https://examples.yourdigitalagents.com/expectation-brochures/)
     * **Social Posts and Websites:** [https://examples.yourdigitalagents.com/](https://examples.yourdigitalagents.com/)
 
 ### Websites

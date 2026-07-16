@@ -21,6 +21,7 @@ Website Support+ is a fulfillment service offered by Vendasta Services for WordP
     *   Text updates
     *   Contact form fields and settings
     *   Reorganization or duplication of existing sections
+*   Change a third-party contact form to a CRM form so submissions flow into your CRM as leads
 *   Backend updates are completed quarterly to ensure WordPress stability
 *   Updates to plugins and themes upon request
 *   Health checks to website upon request
@@ -36,7 +37,7 @@ At no additional cost, our team will install the AI Chat Receptionist on your ne
 *   Basic test (open chat, confirm a message can be sent)
 *   Add brand colours to the AI Chat Receptionist
 
-This service is not a full end-to-end configuration of the AI Chat Receptionist, and is only for basic code installation. If you need advanced features such as full brand configuration beyond basic brand colours, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce-setup/ai-receptionist-setup.md) service.
+This service is not a full end-to-end configuration of the AI Chat Receptionist, and is only for basic code installation. If you need advanced features such as full brand configuration beyond basic brand colours, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce/ai-receptionist.md) service.
 
 **What's not included in monthly support**
 
@@ -118,6 +119,7 @@ The following customizations are all included with website support at no additio
 * Media (Images, videos, icons)
 * Text
 * Contact form fields and settings
+* Convert a third-party contact form to a CRM form
 * Reorganization or duplication of existing sections
 * Access to the team for technical support
 * Updates to plugins, themes etc upon request
@@ -178,6 +180,35 @@ Yes! Website Support+ includes installation of the AI Chat Receptionist on your 
 *   Basic test (open chat, confirm a message can be sent)
 *   Add brand colours to the AI Chat Receptionist
 
-This service is not a full end-to-end configuration of the AI Chat Receptionist, and is only for basic code installation. If you need advanced features such as full brand configuration beyond basic brand colours, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce-setup/ai-receptionist-setup.md) service.
+This service is not a full end-to-end configuration of the AI Chat Receptionist, and is only for basic code installation. If you need advanced features such as full brand configuration beyond basic brand colours, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce/ai-receptionist.md) service.
+
+</details>
+
+<details>
+
+<summary>What type of forms will you set up on my site?</summary>
+
+As part of Website Support+, we can convert an existing third-party contact form into a CRM form so that submissions flow directly into your CRM as leads. We set up standard contact and lead-capture forms.
+
+We do not build advanced form functionality, including:
+
+*   Advanced field-level conditional visibility (showing or hiding fields based on input)
+*   Calculated fields
+*   Complex validation rules
+*   Multi-page forms with save-and-resume progress
+*   Native payment fields
+*   Native appointment booking
+*   Fully responsive form previews
+*   Logic-based field prefilling
+
+If you need any of these advanced features, reach out and our team can scope the custom work for you.
+
+</details>
+
+<details>
+
+<summary>What will happen to my existing form and submission data?</summary>
+
+When we convert your form to a CRM form, the legacy form is deactivated and removed from the front end of your site, so visitors only see the new CRM form. We do not remove the legacy form plugin, so any previously collected submissions remain viewable in your WordPress backend. Your existing form entries are also migrated into the CRM.
 
 </details>
