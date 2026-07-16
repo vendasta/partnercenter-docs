@@ -44,13 +44,27 @@ The Contacts section eliminates manual processes through bulk import/export capa
 
 In the Vendasta CRM, you can efficiently add or update multiple contacts and companies at once by importing them in a single file. This powerful feature streamlines contact management and ensures data accuracy through proper field mapping during the import process.
 
+### Partner Center vs. Business App imports
+
+The import rules differ depending on where you import:
+
+| | Partner Center import | Business App import |
+|---|---|---|
+| Flow | B2B — contacts are linked to companies | B2C — contacts can stand alone |
+| Company name required? | Yes, on the first contact row | No |
+| Use case | Sales CRM, account management | Consumer/client-facing lists |
+
+If you're importing contacts for B2B sales work, import through **Partner Center > CRM > Contacts**. If you're managing consumer contacts for a Business App client, import through Business App.
+
 ### Before you begin
 
 Before initiating an import:
 
 - Ensure you have permission to manage CRM contacts and companies
 - Confirm that each contact entry includes at least one of the following: First name, last name, email, or phone number
-- Ensure each company entry includes a company name
+- **Company name (first-row rule)**: In Partner Center imports, company name must be populated on the **first** contact row. It does not need to appear on every subsequent row — but the first row requires it or the import will fail with "Company name is required."
+- **Business categories**: If your CSV includes a business category, select it from the dropdown during field mapping — do not type it as free text. Free-text categories do not map to the CRM's category list and will silently break downstream syncing.
+- **No blank rows**: Blank rows in your CSV cause "No company or contact found" errors. Remove all empty rows before importing.
 - **Import limits**: Maximum file size is 5 MB, which typically allows for up to 35,000 contacts per import
 - Prepare your data with unique identifiers for bulk updates (Contact ID, External ID, or email)
 
@@ -76,6 +90,19 @@ The CRM uses intelligent deduplication to prevent duplicate records during impor
 - Clean phone number formatting before import (remove spaces, dashes, parentheses)
 - Include External ID if you're syncing with another system
 
+### How to export contacts and companies
+
+To export all contacts or companies from the CRM:
+
+1. Navigate to `CRM` > `Contacts` (or `Companies`)
+2. Click the checkbox in the top-left corner to select the current page's records, then click the blue `select all [N] contacts` link to select all records
+
+![Select all contacts link highlighted](./img/crm/contacts/select-all-contacts.png)
+
+3. Click `Actions` > `Export`
+
+![Actions menu open showing Export option](./img/crm/contacts/export-contacts.jpg)
+
 ### How to import CRM records
 
 To import records, follow these steps:
@@ -91,13 +118,13 @@ Uploaded import files are automatically deleted after 30 days. After this period
 At the top of the page, you will see the option Import from a CSV with a button that says Start an import. Click this to begin.
 
 Upload your CSV file containing the contacts or companies you want to import. You may use the optional CSV template to ensure your file is formatted correctly. After uploading the file, click Next and follow the steps to map your fields and complete the import.
-![CSV Upload Screen](./img/crm/contacts/csv-upload.jpg)
+![Contacts table with Import button highlighted](./img/crm/contacts/csv-upload.jpg)
 
 :::caution Note
 Users will only see the imports their user has actioned.
 :::
 
-![CSV Upload Screen](./img/crm/contacts/start-an-import.png)
+![Import History page with Start an import button](./img/crm/contacts/start-an-import.png)
 
 **Step 2: Map fields**
 
@@ -116,14 +143,30 @@ Users will only see the imports their user has actioned.
 
 After completing the import, you can return to the contact or company table to view the newly created records. Records added through this process will be created with the record source "Bulk import" and record source drill down 1 with the bulk import ID for easy reference.
 
+### Bulk-assigning salespeople during import
+
+You can assign salespeople to companies during a CSV import by including a `SalespersonID` column. This avoids manual reassignment after the import.
+
+**How to find a salesperson's ID:**
+
+1. Go to **Partner Center** > **Administration** > **My Team**.
+2. Click the three dots next to the salesperson and select **Edit Salesperson**.
+3. The salesperson's UID appears in the browser URL bar — copy the value after `/salespeople/`.
+
+**How to use it in your CSV:**
+
+1. Add a column named `SalespersonID` to your import CSV.
+2. Paste each salesperson's UID into the column for the rows (companies) they should own.
+3. During import, map the `SalespersonID` column to the **Salesperson** CRM field.
+
+To assign multiple salespeople to a single company, add additional columns named `AdditionalSalespersonID1`, `AdditionalSalespersonID2`, etc., and map them during import.
+
 ### Bulk update process
 
 To perform bulk updates of existing contacts:
 
 1. **Export existing contacts**
-   - Navigate to `CRM` > `Contacts`
-   - Select contacts you want to update (or use "Select All")
-   - Click `Export` to download current contact data
+   - Follow the steps in [How to export contacts and companies](#how-to-export-contacts-and-companies) above to download your current contact data
 
 2. **Prepare update file**
    - **Important**: Keep the `Contact ID` column from your export - this ensures exact matching
@@ -138,12 +181,15 @@ To perform bulk updates of existing contacts:
    - Select which fields to update to avoid overwriting important data
 
 **Pro tip**: For large bulk updates, you can export specific contact segments using filters, update only those records, and import them back for targeted updates.
- 
-### How to export contacts and companies
 
-To export Contacts or Companies from the CRM, click the checkbox in the top-left corner of the table, then click `select all...` > `Export`.
+### Common import errors
 
-![Export Contacts Interface](./img/crm/contacts/export-contacts.jpg)
+| Error | Most likely cause | Fix |
+|-------|-------------------|-----|
+| "Company name is required" | The first contact row in the CSV has no company name | Add a company name to the first row. Subsequent rows don't require it. |
+| "No company or contact found" | Blank rows in the CSV, or the file is malformed | Remove all empty rows. Open in a text editor to check for hidden characters. |
+| CSV parsing failures | File saved in the wrong format or encoding | Save as **CSV UTF-8** and ensure no merged cells or special formatting. |
+| Category not syncing | Category entered as free text instead of selected from dropdown | Re-import and select the category from the dropdown during field mapping. |
 
 ## Campaign management
 
@@ -231,6 +277,39 @@ You can upload files directly to contact records to maintain organized documenta
 4. View AI-generated summaries for better file organization
 
 Learn more about [file uploads](../file/crm-file-upload.mdx) and supported file types.
+
+## Bulk deleting contacts
+
+You can delete multiple contact records at once to clean up CRM data.
+
+:::warning
+Bulk deletion is **permanent and cannot be undone**. Export any records you may need before deleting.
+:::
+
+**Limits:** Contacts are deleted in batches of **100 records** at a time.
+
+**Steps:**
+
+1. Go to **Partner Center** > **CRM** > **Contacts**.
+2. Increase the items-per-page setting to show more records (up to 100).
+3. Use filters or search to narrow to the records you want to delete.
+4. Click the top-left checkbox to select all visible records.
+5. Click **Actions** > **Delete**.
+6. In the confirmation modal, type `Delete` and confirm.
+
+Repeat for additional batches if you need to delete more than 100 contacts.
+
+## Tag formatting rules
+
+Tags help you organize and filter contact records. To work correctly in filters and search, tags must follow these formatting rules:
+
+- **Character limit**: 50 characters maximum
+- **Allowed characters**: Letters (A–Z, a–z), numbers (0–9), dashes (`-`), spaces, and underscores (`_`)
+- **Special characters**: Not supported — tags containing characters such as `@`, `#`, `&`, `!`, or `%` may appear to save but will not work correctly in filters or search
+
+:::warning
+Tags with unsupported characters may appear to save successfully but will silently fail in filtering and search. If a tag filter isn't returning expected results, check the tags on those records for special characters.
+:::
 
 ## Contact field management
 

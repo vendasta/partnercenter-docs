@@ -1,0 +1,65 @@
+---
+id: notification-behaviors
+title: How specific notifications work
+description: Understand the behavior of Task Assignee Update, Daily Digest, product activation, and abandoned cart notifications in Partner Center.
+sidebar_position: 2
+---
+
+# How specific notifications work
+
+Some Partner Center notifications behave differently than expected. This article explains how four commonly misunderstood notification types work so you can configure them correctly.
+
+## Task Assignee Update
+
+The **Task Assignee Update** notification fires when a task is **reassigned** to a different user — it does not fire when a task is first created and assigned.
+
+- **Triggers:** Changing the assignee on an existing task
+- **Does not trigger:** Initial task creation with an assignee set
+
+If you want to be notified about all task activity including creation, use the broader task notification options available in **Administration** → **Client Notifications** → **Task Manager**.
+
+## Product activation notifications
+
+When a product is activated for a client, a notification is sent to the configured recipients. However, **deactivating a product does not generate a notification**.
+
+- **Triggers notification:** Product activation
+- **Does not trigger notification:** Product deactivation
+
+If your team needs to track deactivations, use the Orders section of Partner Center or set up an automation to log deactivation events.
+
+## Daily Digest email
+
+The Daily Digest email summarizes activity from the previous day. It is only sent **if there was activity** during that period — if nothing happened, no email is sent.
+
+- **Frequency:** Once per day
+- **Condition:** Only sent when there is activity to report
+- **Content:** Summary of previous day's events across configured notification types
+
+If you stop receiving the Daily Digest, it likely means there was no qualifying activity the day before — not that the notification is broken.
+
+## Abandoned shopping cart notifications
+
+When a client leaves items in their shopping cart without completing a purchase, Partner Center sends notifications to help recover the sale:
+
+- **Salesperson notification:** The assigned salesperson is alerted that a cart has been abandoned
+- **Client reminder:** The client receives a follow-up reminder about their cart
+
+**Important:** The salesperson notification does not include the cart contents. Cart contents are private to the cart owner and are not shared with salespeople or partners.
+
+:::info
+Abandoned cart notifications help your team follow up on potential sales, but they do not expose what the client was browsing or purchasing.
+:::
+
+## Common questions
+
+**Why didn't I get a Task Assignee Update notification when the task was created?**
+This notification only fires on reassignment. Initial task creation does not trigger it.
+
+**We deactivated a product but no one was notified.**
+Product deactivations do not generate notifications. Use the Orders section to track deactivation history.
+
+**I haven't received the Daily Digest in a few days.**
+Check whether there was any platform activity those days. The digest is skipped entirely when there is nothing to report.
+
+**Can I see what was in an abandoned cart?**
+No. Cart contents are private to the cart owner. Salespeople see only that a cart was abandoned, not what it contained.

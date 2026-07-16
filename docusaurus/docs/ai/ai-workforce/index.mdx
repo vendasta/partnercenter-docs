@@ -173,6 +173,39 @@ The more up-to-date and specific your knowledge sources, the more helpful and ac
 
 ---
 
+## Adjust responses by channel
+
+Your AI Employee knows which channel a conversation is happening on, so a single employee can respond differently depending on where a customer reaches out. A text message and an email often call for different lengths and tones, and your AI can adapt to each one automatically.
+
+**What this is:**  
+There's no separate menu for per-channel behavior. Instead, you write **channel-specific instructions** in the same places you write your other instructions, and the AI applies them only when it's responding on that channel.
+
+**What to do:**  
+Add channel-specific instructions in either (or both) of these places:
+
+- **The Purpose field** (labeled `Role` on the Chat and Voice Receptionists) — best for behavior that should apply across everything the employee does, such as tone, greeting style, or reply length per channel.
+- **A capability's instructions** — best for shaping a single task, such as how much information to collect for lead capture on SMS versus email.
+
+Reference the channel by name in your instructions and describe how you want the AI to behave there. For example, add lines like these to your Purpose field or a capability's instructions:
+
+```text wrap
+When responding on SMS, keep replies short and conversational. Use plain text only — no bullet points, headings, or markdown, since text messages display them as raw symbols. Aim for one or two sentences.
+
+When responding by email, you can write longer, more detailed replies. Open with a professional greeting and sign off with the business name.
+
+When responding on web chat, keep answers brief and friendly, and offer to continue the conversation or book an appointment.
+```
+
+:::tip
+Only add channel-specific instructions for the channels where the default behavior isn't quite right. For everything else, your AI Employee falls back to its general Purpose and capability instructions.
+:::
+
+:::info Instructions shape communication, not actions
+These instructions change *how* your AI Employee communicates on each channel. They don't change *which* actions it can take — those come from its capabilities and tools. See the [AI Capabilities Overview](../ai-capabilities/).
+:::
+
+---
+
 ## Testing and optimizing your AI Employees
 
 After initial setup, regularly test and optimize your AI Employees to ensure they're performing effectively.

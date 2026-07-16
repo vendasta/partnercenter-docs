@@ -1,117 +1,79 @@
 ---
-title: "Blog post service expectations"
-sidebar_label: "Blog Post One-Time & Monthly"
+title: "Blog Posts"
+sidebar_label: "Blog Posts"
 sidebar_position: 1
-description: "Service expectations for Vendasta Services blog posts—one-time and monthly. Learn about timelines, revisions, SEO features, and publishing."
+description: "Service expectations for Vendasta Services blog posts: one-time and monthly. Learn about timelines, revisions, SEO features, and publishing."
 ---
 
-Our talented team of content writers develops creative, engaging 1,500-word blogs for your business. We offer both **one-time** and **monthly** blog solutions. We choose relevant topics to showcase your brand as an expert in your industry. This article covers what to expect from both options.
+# Blog Posts
 
-## Client requirements
+## Overview
 
-### Order and fulfillment form
+Our team of content writers develops creative, engaging 1,500-word blogs for your business, available as **one-time** or **monthly** orders. We choose relevant topics (or use yours) to position the brand as an expert in its industry, and every blog is built for SEO performance.
 
-To ensure a smooth and efficient process, please fill out the order and fulfillment form with as much detail as possible. This streamlines the entire experience.
+## What's Included
 
-**Timeline:** We review the order and start the process within 2 business days.
+Every blog is a 1,500-word, SEO-optimized post. Each one includes:
 
-:::warning Incomplete forms delay delivery
-If information is missing from the form, this will delay the overall process and delivery of the completed blog.
-:::
-
-### Onboarding call
-
-After receiving your confirmation email, please schedule an optional onboarding call using the provided booking link. The call provides an overview of our service and addresses any questions about your order.
-
-**Timeline:** This call can be booked with our team in as little as 1 business day, depending on client availability.
-
-**Prepare for the call with these details:**
-
-*   Company's background
-*   Blog topic(s)
-*   Desired written tone (formal, informal)
-*   Target audience
-*   Competitors' blogs or websites
-*   Keywords (optional)
-*   Topics to avoid
-*   Images of your business
-
-### Topic submission
-
-Our writers choose industry-relevant topics for you. If you prefer to choose your own topics, submit them to our team via email—prior to or during the onboarding call for one-time orders, or before the 10th of each month for monthly orders.
-
-:::info Default topic selection
-If no topic is provided, we will choose one based on industry trends unless otherwise specified. We start writing based on the topic information in the fulfillment form.
-:::
-
-### Drafting and revisions
-
-If you have edits to make to the first draft, we revise up to 30% of the blog in one round for you. You may edit the document directly or describe the revisions in one email.
-
-**Revisions timeline:**
-
-*   **One-time:** Send all edits within 2 business days for timely delivery.
-*   **Monthly:** Same—send edits in one round to keep delivery on schedule.
-
-**Delivery timeline:**
-
-*   **One-time:** Content writers deliver your blog within 5 business days based on the fulfillment form. We complete revisions and deliver the final draft within 2 business days of receiving the request.
-*   **Monthly:** First blog within 5 business days; all subsequent monthly blogs on or before the 25th of the month. Revisions delivered within 2 business days of receiving the request.
-
-### Publication
-
-You own the creative rights to your blog and can publish it wherever you want. If your site is hosted on **WordPress Hosting**, our team can post the blog to your site 3 business days after approval at no additional charge. Additional charges apply to post to WordPress sites not hosted on WordPress Hosting.
-
-:::warning Approval required
-Your blog will not be posted to your site until it has been approved. We cannot post free of charge to sites we do not host. We do not post to sites that are not built using WordPress or our Accelerated Templated Website.
-:::
-
-## Process expectations
-
-### Onboarding call
-
-The onboarding call is our chance to learn about your business, what you offer, and what written content we can create to engage your customers. It also helps you understand the full process and avoid surprises later.
-
-**Choosing your blog topic:** You can choose your own blog topic or leave it to our professionals. If you choose a specific topic, submit it to our team—during the onboarding call for one-time orders, or before the 10th of each month for monthly orders.
-
-### SEO architecture and elements
+**SEO architecture and elements**
 
 *   **Geo-targeting:** Strategic insertion of city/region keywords (4–5 times naturally) to boost local SEO rankings.
 *   **Header hierarchy:** Professional structure of titles and subheadings to help search engines understand and rank your content.
 *   **Internal/external linking:** Contextual links and authoritative external sources.
 *   **Snippet optimization:** Content formatted with bullet points, bolded lists, and direct answers for Featured Snippets.
 
-### Keyword strategy
+**Keyword strategy**
 
 *   **Primary keyword:** The main high-volume search term (integrated into H1, intro, and conclusion).
 *   **LSI (Latent Semantic) keywords:** Exact phrases your customers type into Google, plus related topics that show search engines you are an authority in your field.
 *   **Long-tail queries:** Specific questions or phrases users type when close to a hiring decision.
 
-### Special features
+**Special features**
 
 *   **FAQ module:** A section with 3–4 questions derived from real user search data. Answers are concise to target Google's PAA (People Also Ask) boxes.
 *   **Metadata and assets table:** Every blog comes with a pre-optimized Meta Title, Meta Description, URL Slug, and Alt Text ready for publishing.
 *   **Visual strategy:** Two high-quality, conceptually relevant stock images with SEO-optimized alt text.
 
-### Making revisions
+**Revisions:** One round of revisions covering up to 30% of the blog. Edit the document directly or describe revisions in one email.
 
-Once the blog is created, it is sent via email for review. We revise up to 30% of the blog. You may edit the document directly or describe revisions in one email. We ask that you complete one major round of revisions, including your change requests, to keep delivery on time.
+**Publishing:** You own the creative rights and can publish anywhere. If your site is hosted on WordPress Hosting or our Accelerated Templated Website, we post within 3 business days after approval at no additional charge.
 
-:::tip Limit revisions for timely delivery
-We recommend limiting the approval process to a single decision-maker so we can publish engaging content in a timely manner. If you need adjustments beyond 30% of the content, reach out to discuss options.
+**One-time vs monthly**
+
+*   **One-time:** A single 1,500-word blog.
+*   **Monthly:** A new blog each month (your topic or an industry-relevant one chosen by our experts), written a month in advance to align with seasons or holidays.
+
+## Prerequisites
+
+Before onboarding, have the following ready:
+
+*   **A completed order and fulfillment form** with as much detail as possible. Missing information delays the overall process and delivery.
+*   **Details for the onboarding call.** Have these ready:
+    *   Company background
+    *   Blog topic(s)
+    *   Desired written tone (formal, informal)
+    *   Target audience
+    *   Competitors' blogs or websites
+    *   Keywords (optional)
+    *   Topics to avoid
+    *   Images of your business
+*   **For free publishing:** WordPress Hosting activated or our Accelerated Templated Website. We can post to other WordPress sites for a fee via the Custom Request add-on (login credentials required); we do not post to non-WordPress/Duda sites.
+
+## Getting Started
+
+1.  **Order and fulfillment form** – Complete the form with as much detail as possible. We review the order and start the process within 2 business days.
+2.  **Optional onboarding call** – Book using the link in your confirmation email (as little as 1 business day out, depending on availability). The call gives an overview of the service, answers questions about your order, and is our chance to learn about your business.
+3.  **Topic submission** – Our writers choose industry-relevant topics, or you can submit your own: prior to or during the onboarding call for one-time orders, or before the 10th of each month for monthly orders. If no topic is provided, we choose one based on industry trends.
+4.  **Drafting and revisions** – We deliver the first draft, then revise up to 30% of the blog in one round. Send all edits in a single email (within 2 business days) or edit the document directly to keep delivery on schedule.
+5.  **Publication** – After approval, we post to your WordPress Hosting or Accelerated Templated Website site within 3 business days. Your blog is not posted until it has been approved.
+
+For **monthly orders**, our team creates a new blog each month. Content for the upcoming month is sent via email on or before the 25th for your review and edit requests.
+
+:::warning Incomplete forms delay delivery
+If information is missing from the form, this will delay the overall process and delivery of the completed blog.
 :::
 
-### Setting your blog live
-
-You own the creative rights and can publish anywhere. If your site is hosted on WordPress Hosting or you have our Accelerated Templated Website, we post the blog free of charge within 3 business days after approval. We do not post until the blog is approved.
-
-**Ongoing requests and support:** You can provide additional feedback to our team via email at any time.
-
-### Monthly orders: next month
-
-For monthly blog orders, our team creates a new blog each month—either with your topic or an industry-relevant topic chosen by our experts. Share topic requests before the 5th of the month for timely content. Blogs are written one month in advance to align with seasons or holidays. If no requests are received by this date, our writers create content based on industry trends. Content for the upcoming month is sent via email on or before the 25th of the month for review and edit requests.
-
-## Timeline summary
+### Timeline summary
 
 | Order type | First blog delivery | Subsequent delivery | Revisions |
 |------------|---------------------|---------------------|-----------|
@@ -122,7 +84,7 @@ For monthly blog orders, our team creates a new blog each month—either with yo
 If you order Blog Post: Monthly on Monday, April 19th, you receive your first blog on Monday, April 26th. Your next blog is delivered on or before May 25th.
 :::
 
-## Frequently asked questions (FAQs)
+## FAQ
 
 ### Basic questions
 

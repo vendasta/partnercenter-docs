@@ -74,7 +74,7 @@ Before beginning the setup process, partners must review and agree to the additi
 
 To create a new Vendasta Payments account:
 
-1. Navigate to `Administration` > `Vendasta Payments`
+1. Navigate to `Administration` > `Commerce Settings` > `Vendasta Payments`
 2. Click **Set up Vendasta Payments** to create your Stripe account
 3. Provide the following required information:
    - **Legal business name** (must exactly match the name associated with your tax ID)
@@ -141,7 +141,7 @@ If you're a Partner with an existing Stripe Standard account, you can connect it
 - **Platform Fee**: 0.75% of the transaction amount
 
 #### Connection process
-1. Navigate to `Administration` > `Vendasta Payments`
+1. Navigate to `Administration` > `Commerce Settings` > `Vendasta Payments`
 2. Select the option to `Connect Stripe Account`
 
 ![Connect Stripe Account option](./img/vendasta-payments/connect-stripe-account-1.jpg)
@@ -159,7 +159,7 @@ This feature is currently only available for new users who haven't completed tra
 
 ## How to set up payouts
 
-To access your payout settings, navigate to `Partner Center` > `Commerce` > `Payouts` or `Administration` > `Vendasta Payments`.
+To access your payout settings, navigate to `Partner Center` > `Commerce` > `Payouts` or `Administration` > `Commerce Settings` > `Vendasta Payments`.
 
 ### How to set up bank accounts
 
@@ -172,7 +172,7 @@ If you do not have a banking relationship in every country where you operate, bu
 When configuring your first bank account for payouts:
 
 1. Go to the `Administration` tab
-2. Navigate to `Vendasta Payments`
+2. Navigate to `Commerce Settings` > `Vendasta Payments`
 3. Click on `Add Bank Account` under Receiving Payout
 4. Enter your bank account details:
    - Account holder type (Individual or Company)
@@ -211,12 +211,57 @@ In supported countries, you can add multiple bank accounts to receive payouts in
 
 By default, payouts will be made to your bank account in your default currency. However, you can add a new payout destination and choose to convert your funds to a different currency before the funds are deposited into a bank account. Stripe may charge a fee for currency conversion; visit the [Stripe Docs](https://stripe.com/docs/payouts) to learn more.
 
+## Understanding your Vendasta Payments Stripe account
+
+When you set up Vendasta Payments, a Stripe account is created and linked to your Vendasta account. This is separate from any personal Stripe account you may already have.
+
+### Vendasta Payments Stripe account vs. personal Stripe account
+
+- Your **Vendasta Payments Stripe account** can only be used within Vendasta. It cannot be used with other platforms.
+- If you have a **personal Stripe account**, that account can be used both inside and outside Vendasta.
+
+### Stripe dashboard access
+
+Partners do not have direct access to the Stripe dashboard. Payment and payout reporting is available in Partner Center under **Commerce > Payments** and **Commerce > Payouts**.
+
+### Changing your business type
+
+If you selected the wrong business type when setting up Vendasta Payments (for example, Company vs. Individual), contact [billingsupport@vendasta.com](mailto:billingsupport@vendasta.com) to have this corrected.
+
 ## Managing account information
+
+### Update your business name
+
+There are two separate business name settings for Vendasta Payments, and they control different things:
+
+| Setting | What it controls | Where to change it |
+|---|---|---|
+| **Stripe legal business name** | Your legal name for payouts, compliance, and tax reporting | Stripe Dashboard > Settings > Account details |
+| **Partner Center display name** | The name shown to clients on invoice payment screens and credit card statements | `Partner Center` > `Administration` > `Business Profile` |
+
+Keeping these two settings aligned avoids confusion where clients see a different name when paying an invoice than they expect.
+
+**To update your legal business name in Stripe:**
+
+1. Log in to your Stripe account via the link in `Administration` > `Commerce Settings` > `Vendasta Payments` > `Manage Account`
+2. Go to **Settings > Account details**
+3. Update the **Legal business name** field
+4. Save your changes
+
+:::warning
+Changing your legal business name in Stripe may trigger an identity re-verification review. Payouts may be briefly paused while Stripe reviews the change.
+:::
+
+**To update the name shown on client invoice payment screens:**
+
+1. Navigate to `Partner Center` > `Administration` > `Business Profile`
+2. Update the **Business name** field
+3. Save your changes
 
 ### Update ownership information
 To replace ownership details in your payment account:
 
-1. Navigate to `Administration` > `Vendasta Payments`
+1. Navigate to `Administration` > `Commerce Settings` > `Vendasta Payments`
 2. In the `Accepting Payments` section, click `Manage Account`
 3. On the Identity Verification page, click `Update` beside the current owner
 4. Complete the new owner information form

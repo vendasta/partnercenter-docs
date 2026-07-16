@@ -21,6 +21,42 @@ The Chat Receptionist also reduces friction and drop-off by starting conversatio
 
 As your business grows, the AI adapts to new offerings and workflows without needing extensive decision trees. It delivers timely, personalized responses that guide visitors through the sales funnel and can improve both customer satisfaction and conversion rates.
 
+## Supported languages
+
+The AI Chat Receptionist can transcribe and respond in 57 languages. A language is considered supported when it meets our accuracy standard for both transcription (understanding what the visitor typed or said) and translation (generating a reply).
+
+| Language | Language | Language |
+|----------|----------|----------|
+| Afrikaans | Galician | Norwegian |
+| Albanian | Georgian | Occitan |
+| Armenian | German | Pashto |
+| Azerbaijani | Greek | Persian |
+| Basque | Gujarati | Polish |
+| Belarusian | Haitian Creole | Portuguese |
+| Bengali | Hausa | Punjabi |
+| Bosnian | Hebrew | Romanian |
+| Bulgarian | Hindi | Russian |
+| Catalan | Hungarian | Serbian |
+| Chinese (Simplified) | Icelandic | Slovak |
+| Chinese (Traditional) | Indonesian | Slovenian |
+| Croatian | Italian | Spanish |
+| Czech | Japanese | Swahili |
+| Danish | Kannada | Swedish |
+| Dutch | Kazakh | Tagalog |
+| English | Korean | Tamil |
+| Estonian | Latvian | Thai |
+| Finnish | Lithuanian | Turkish |
+| French | Macedonian | Ukrainian |
+| German (Swiss) | Malay | Urdu |
+| | Maltese | Vietnamese |
+| | Marathi | Welsh |
+
+The AI detects the visitor's language automatically from their messages — no configuration is required.
+
+:::info Languages not on this list
+If a visitor writes in a language not listed above, the AI will still attempt to respond, but results may vary. To get the best results for a specific language, check whether it appears in the table above.
+:::
+
 ## Set up the AI Chat Receptionist
 
 Follow these simple steps to configure your AI Chat Receptionist so it effectively engages visitors and captures valuable leads.
@@ -39,6 +75,10 @@ Your AI Chat Receptionist is assigned to the **Web Chat** channel by default. Th
 The Web Chat widget isn't automatically added to your website! You'll need to install the widget code or enable it within your site builder before your AI can start engaging visitors. When you are ready to install the widget, refer to [How to install the Conversations Web Chat Widget](/business-app/conversations/web-chat/)
 :::
 
+:::tip Respond differently on each channel
+Your AI Chat Receptionist knows which channel it's replying on, so it can adapt its tone and reply length per channel. To set this up, add channel-specific instructions to the **Purpose** prompt or to a capability's instructions — for example, "When responding on SMS, keep replies to one or two sentences with no formatting; when responding on web chat, you can use short lists and links." Both places work. See [Adjust responses by channel](../index.mdx#adjust-responses-by-channel) for examples.
+:::
+
 ### Step 2: Configure Your AI Chat Receptionist Capabilities
 
 Capabilities are like instructions that guide how your AI Chat Receptionist behaves and what actions it can take. Review these and adjust as needed to make sure your AI performs the way you want.
@@ -46,8 +86,52 @@ Capabilities are like instructions that guide how your AI Chat Receptionist beha
 - **Capture Lead Information**  
   The AI automatically asks visitors for contact details such as name, phone number, or email and saves captured leads directly to your CRM. This capability is turned on by default.
 
+  :::tip Webchat visitors showing as anonymous?
+  If contacts are appearing under the **Anonymous Visitors** tab instead of being saved to your CRM, check that the Lead Capture capability is enabled. Go to **AI Workforce** and then **Configure** on the Chat Receptionist, then open **Capabilities** and make sure **Lead Capture** is toggled on, then save.
+  :::
+
+  **How phone numbers are stored**
+
+  When a visitor provides a phone number without a country code, the system defaults to +1 (US). When a visitor includes a country code (for example, +44 for the UK), it is stored as provided.
+
+  If your business serves international customers, you can add an instruction to your Q&A or Purpose prompt asking visitors to include their country code when sharing a phone number. For example:
+
+  > Please include your country code when sharing your phone number (for example, +44 for the UK or +61 for Australia).
+
 - **Book Appointments**  
-  Connect your calendar to let the AI help customers schedule meetings. It will offer available time slots and collect all necessary booking details automatically. 
+  Connect your calendar to let the AI help customers schedule meetings. It will offer available time slots and collect all necessary booking details automatically.
+
+  **Setting up a booking link via Q&A instructions**
+
+  If you want the AI to share a booking link rather than book directly, add an instruction to your Q&A or Purpose that includes the link text. For example:
+
+  > When a visitor asks to book a meeting or schedule an appointment, share this link: [your booking link here]
+
+  The AI will provide the link when booking comes up naturally in conversation. It does not book meetings autonomously — it directs the visitor to the link to complete the process.
+
+  **Shared booking for a team**
+
+  If multiple team members need to appear on the same booking link (for example, so visitors can book with any available person), create a team calendar in the Meetings app and use that calendar's booking link in your Q&A instruction. This way, all users share a single link and the AI always sends the same one regardless of who is available.
+
+  :::note Round-robin booking
+  When using a round-robin meeting type, the AI cannot select a specific team member for the visitor. It defaults to the primary meeting type and the visitor completes the selection on the booking page.
+  :::
+
+#### Book multiple services in one session
+
+When configuring **Book Appointments**, you can enable **Book Multiple Services** and choose the service menu/group the AI can book from.
+
+With multi-service booking enabled, the AI can:
+
+- Identify and confirm multiple services in one request, and ask follow-up clarification questions when a service request is ambiguous
+- Suggest related add-on services from the same menu/group when they fit the request
+- Find available back-to-back time slots for the full service sequence; if no combined slot is available, offer alternatives such as a different date, a different provider, or split bookings
+- Apply scheduling rules across the full session by enforcing:
+  - the longest advance notice requirement across selected services
+  - the shortest future booking window across selected services
+- Prioritize one provider for the whole session when `Any Provider` is selected, or confirm provider handoffs when multiple providers are required
+- Collect and deduplicate required contact and intake fields across selected services, including phone validation and confirmation
+- Send one consolidated confirmation flow (email, SMS, or both based on requirements) and create one CRM activity for the multi-service booking
 
  - **Custom Capabilities**  
    Expand your AI Chat Receptionist's skills by adding custom capabilities tailored to your unique business needs. You can learn more about [Custom Capabilities](../../ai-capabilities/creating-custom-capabilities.md) in depth.
@@ -59,6 +143,49 @@ To respond accurately to general inquiries, your AI Chat Receptionist needs cont
 - **Knowledge**: This includes detailed business information, such as FAQs, service descriptions, and policies, that the AI uses to answer specific questions. Information from your website homepage is included by default.
 
  For a complete guide on providing your AI Employees with Knowledge, see the [Knowledge Base documentation](../../knowledge-base/).
+
+## Make responses page-aware with the visitor's URL
+
+When a visitor chats through the Web Chat widget, the AI Chat Receptionist receives the URL of the page they're currently on with every message they send. The AI can use this URL to answer vague, context-dependent questions ("is this still available?", "what's the price?", "tell me more") without making the visitor re-explain what they're looking at.
+
+This works automatically — no configuration is required for the AI to receive the URL. To get the most out of it, make sure the relevant pages of the SMB's website are in the AI's knowledge base, and consider tuning the Purpose or a capability prompt to tell the AI how to interpret the URL pattern for that business.
+
+:::info The AI sees the URL, not the page content
+The AI is only given the URL string itself, not a rendered view of the page. To answer detailed questions about what's on a page, the AI needs that page's content in its knowledge base, or a [custom capability](../../ai-capabilities/creating-custom-capabilities.md) that can look up the data (for example, an inventory lookup tool keyed off the URL).
+:::
+
+### Tune a prompt to use the current URL
+
+To teach the AI Chat Receptionist how the SMB's URLs map to specific products, vehicles, or pages, add instructions to the Purpose field or to a capability prompt.
+
+#### Example: Auto dealer inventory pages
+
+```text wrap
+## Using the Current Page URL
+This dealer's vehicle detail pages follow this URL pattern:
+https://www.example.com/inventory/[year-make-model-slug]/[id]
+
+The numeric value at the end of the path is the vehicle's id.
+
+When the customer is on a vehicle detail page:
+- If they ask anything vague — "is this still available", "what's the price", "tell me more", "any photos", "what colour is it", "is it certified" — call GetInventory using that id from the URL. Do not ask which vehicle they mean.
+- Confirm the vehicle naturally in the first line of your reply (e.g. "The 2021 Wrangler Sahara you're looking at...") so they know you understood.
+- If the URL changes between turns, the customer has navigated to a different vehicle. Always use the URL from the most recent message.
+
+When the customer is on the inventory listing page (/inventory with no id):
+- They are browsing, not viewing a specific vehicle. Ask what they're looking for if their question is vague.
+
+When the customer is on a non-inventory page (homepage, /financing, /about, contact, etc.):
+- Do not assume any vehicle context. Handle the question on its own merits.
+
+Customer words always override the URL. If they explicitly reference a different stock number, VIN, or year/make/model than what's on their current page, follow what they said and ignore the URL.
+```
+
+The same pattern works for any business with structured URLs — e-commerce product pages, service pages, real estate listings, menu items, and so on. Pair this with a [custom capability](../../ai-capabilities/creating-custom-capabilities.md) that looks up live data using the ID parsed from the URL.
+
+:::note Web Chat only
+The visitor's current URL is provided on the Web Chat channel. Other channels (SMS, voice, email) don't have a "current page" concept, so this context isn't available there.
+:::
 
 ## Test and Monitor Your AI Chat Receptionist
 
@@ -229,6 +356,48 @@ You know your business best! To improve your AI's accuracy, take a moment to wri
 - The key information the AI should always collect from visitors
 
 Use this info to write clear Purpose prompts and add any relevant content to your AI's knowledge base that might be missing.
+
+</details>
+
+<details>
+<summary>Does the AI see all of the webpage content?</summary>
+
+No. The AI is given the URL of the page the visitor is on, but it does not see the rendered page the way the visitor does. To answer detailed questions about what's on a page, that page's content needs to be in the AI's knowledge base, or the AI needs a custom capability (like an inventory lookup) that can fetch the data using information parsed from the URL.
+
+</details>
+
+<details>
+<summary>Do I need to tune the prompt to take advantage of the current URL?</summary>
+
+It depends on the outcomes the SMB is after.
+
+- If they only want a smoother experience — the AI naturally picks up that the visitor is on a specific page and references it — no tuning is required.
+- If they want specific behavior tied to specific URL patterns (e.g. always look up inventory when the customer is on a `/inventory/[id]` page), add instructions to the Purpose or a capability prompt that explain the URL pattern and how the AI should react.
+
+</details>
+
+<details>
+<summary>The AI didn't seem to know about the page the visitor was on. Why?</summary>
+
+Two things to check:
+
+1. **Knowledge coverage.** The AI only knows what's in its knowledge base or what a tool returns. Make sure the relevant pages of the SMB's website are crawled and up to date.
+2. **The URL itself.** The AI is given the URL string, not page contents. If the URL doesn't carry useful information (e.g. it's a generic `/page?id=abc123`), the AI may need a custom capability to translate that into something meaningful.
+
+</details>
+
+<details>
+<summary>Why did the AI Chat Receptionist stop responding for an hour?</summary>
+
+When a live agent sends a message in a conversation, the AI Chat Receptionist automatically steps back for **1 hour** to avoid conflicting with the human-handled conversation. This is by design — the AI gives the live agent space to take over without interrupting.
+
+**What triggers the 1-hour pause:**
+- A live agent sends a message in the conversation
+- A Facebook auto-responder sends a message (Facebook's automatic replies are detected the same way as a live agent response)
+
+**What to expect:** The AI resumes automatically after 1 hour. No action is needed if a live agent is handling the conversation.
+
+**Facebook auto-responder note:** If you notice the AI pausing unexpectedly on Facebook conversations, check whether your Facebook Page has an auto-responder configured. If the auto-responder is triggering the delay unintentionally, review your Facebook Page's auto-response settings and disable any automations that aren't needed.
 
 </details>
 

@@ -1,51 +1,56 @@
 ---
-title: "Accelerated Templated Website: Service Expectations"
+title: "Accelerated Templated Website"
 sidebar_label: "Accelerated templated"
 sidebar_position: 3
-description: "We understand how important it is to provide your clients with fast, professional, and functional websites. With our Duda Website offering"
+description: "An overview of the Accelerated Templated Website service built on Duda, available in two tiers: Accelerated Templated Website and Accelerated Templated Website Plus."
 ---
 
-We understand how important it is to provide you with fast, professional, and functional websites. With our Duda Website offerings, you have access to two powerful solutions: [**Accelerated Templated Website**](https://partners.vendasta.com/marketplace/products/MP-JPG6QNZHBQPKRX7KZ28XPM8X5BRZHJ3W) and [**Accelerated Templated Website Plus**](https://partners.vendasta.com/marketplace/products/MP-JPG6QNZHBQPKRX7KZ28XPM8X5BRZHJ3W/addon/A-DCFRQP8VHB). Whether you are just starting out or need advanced capabilities, this guide will help you understand each option and how they can meet your unique needs.
+# Accelerated Templated Website
 
-## Key Features:
+## Overview
 
-*   **10-page website based on Duda templates** Build a professional website using the powerful Duda platform. Each site includes 10 pages, giving you the space you need to showcase services, products, or company information.
+The Accelerated Templated Website is a fast, professional, and functional website built on the Duda platform, ideal for delivering sites to your clients. It comes in two tiers: [**Accelerated Templated Website**](https://partners.vendasta.com/marketplace/products/MP-JPG6QNZHBQPKRX7KZ28XPM8X5BRZHJ3W) for a managed 10-page site, and [**Accelerated Templated Website Plus**](https://partners.vendasta.com/marketplace/products/MP-JPG6QNZHBQPKRX7KZ28XPM8X5BRZHJ3W/addon/A-DCFRQP8VHB), which adds eCommerce, booking, custom forms, and 60+ design enhancements. Whether your client is just starting out or needs advanced capabilities, each option is a fully managed, done-for-you build.
 
-* **Mix & match two templates** Customize the site further by mixing two Duda templates to get the perfect look and feel for your brand. This offers greater flexibility in achieving a unique design that stands out.
+## What's Included
 
-*   **Onboarding call with our design team** Every client gets personal attention with an onboarding call with our design team. During this call, we gather information about their goals, preferences, and business needs to ensure the final product reflects their vision.
+*   **10-page website based on Duda templates:** A professional website with 10 pages to showcase services, products, or company information.
+*   **Mix and match two templates:** Combine two Duda templates to get the perfect look and feel for the brand.
+*   **Onboarding call with our design team:** We gather information about the client's goals, preferences, and business needs so the final product reflects their vision.
+*   **AI-written web copy for 10 pages:** Our team fills all 10 pages with relevant, professional content, which can be customized further based on client input.
+*   **Use of stock images where needed:** If the client doesn't have images for us to use, we include high-quality stock images.
+*   **One major round of edits:** Clients can provide feedback after the initial design and we'll accommodate one major round of edits.
+*   **Annual redesign for up to 10 pages:** Each year we offer a redesign for up to 10 pages to keep the site looking modern without the cost of a full rebuild.
+*   **Hosting, support, and maintenance:** Includes hosting and support, plus **monthly minor edits** to text and images. Our technical support team is available for any issues that arise.
 
-*   **AI-written web copy for 10 pages** Save time with AI-powered copywriting. Our team fills in all 10 pages with relevant, professional content, which can be customized further based on client input.
+### Accelerated Templated Website Plus: eCommerce and advanced functionality
 
-*   **Use of stock images where needed** If you don't have images our team can use, our service includes the use of high-quality stock images to make your website stand out.
+For more advanced features, **Accelerated Templated Website Plus** adds:
 
-*   **One major round of edits** Clients can provide feedback after the initial design, and we’ll accommodate one major round of edits to ensure the website meets their expectations.
+*   **eCommerce setup for up to 100 products** (additional setup can be purchased for up to 1,000 products). Our team sets up 100 products if provided in CSV format; clients can manage up to 1,000 products through an easy-to-use interface.
+*   **Booking links and appointment scheduling:** Ideal for service-based businesses, letting customers schedule appointments directly on the website.
+*   **Custom forms:** Fully customized forms to capture leads, collect feedback, or process information.
+*   **Cookie consent:** Inform and get consent from visitors regarding data collection, supporting compliance with privacy regulations.
+*   **Over 60 design enhancements:** Animated number counters, 3D cards, countdown bars, age verification, feeds, charts, graphs, audio players, restaurant menu flip cards, product blobs, and more. Reach out for the full list.
 
-*   **Annual redesign for up to 10 pages** Keep your website up to date with trends and business needs. Each year, we offer a redesign for up to 10 pages, allowing you to keep your online presence fresh. It's an ideal solution for businesses that want to keep their site looking modern without the cost of a full rebuild.
+## Prerequisites
 
-*   **Hosting, support & maintenance** With **Duda Website** and **Duda Website Plus**, we've included hosting & support. As part of this, you get **monthly minor edits** to text and images, ensuring your site remains current. Our technical support team is also available for any issues that may arise.
+*   **Hosting with us:** The site is hosted on our managed Duda environment (unless you have your own Duda account).
+*   **Domain:** Domains are not included and must be purchased separately—through a provider in our marketplace or directly with a domain provider (GoDaddy or Squarespace)—then give our team access.
+*   **Content and assets:** Any images or copy to use (we provide AI-written copy and stock images otherwise). For Plus eCommerce, provide products in CSV format.
 
-## Accelerated Templated Website Plus: Ecommerce and Advanced Functionality
+## Getting Started
 
-For clients looking to add more advanced features, **Accelerated Templated Website Plus** offers additional tools and capabilities designed to help them grow their business online.
+1.  **Onboarding call:** Every build starts with an onboarding call where our design team collects important information about the client's goals and preferences.
+2.  **Design:** We create the site based on the selected Duda templates, with AI-written copy and stock images where needed.
+3.  **One major round of edits:** Review the initial design and request changes—you and your client can leave pins and feedback directly on the site using Duda's platform.
+4.  **Go live:** Once finalized, we set the site live on the custom domain. Let us know if you'd like edit access afterward.
+5.  **Ongoing support:** After launch we provide hosting, technical support, monthly minor edits to text and images, and an annual redesign. Plus tiers also receive support for eCommerce and other enhanced features.
 
-### What’s Included:
-
-*   **Ecommerce setup for up to 100 products (additional set-up can be purchased for up to 1000 products)** Accelerated Templated Website Plus includes full Ecommerce functionality, allowing businesses to sell products online. Our team will set-up 100 products if provided in CSV format. However, with an easy-to-use interface, clients can manage up to 1000 products, offering a seamless shopping experience for their customers.
-
-*   **Booking links and appointment scheduling** Ideal for service-based businesses, Accelerated Templated Website Plus includes booking functionality, allowing customers to schedule appointments directly on the website. This feature streamlines the client’s business operations and improves the customer experience.
-
-*   **Custom forms** Need more than the standard contact form? Accelerated Templated Website Plus allows you to create fully customized forms tailored to your specific needs, helping you capture leads, collect feedback, or process information more efficiently.
-
-*   **Cookie consent** Ensuring compliance with privacy regulations, Accelerated Templated Website Plus includes cookie consent functionality, allowing businesses to inform and get consent from visitors regarding data collection.
-
-*   **And over 60 design enhancements!** Accelerated Templated Website Plus comes packed with over 60 design features such as animated number counters, 3D cards, countdown bars, age verification, feeds, charts, graphs, audio players, restaurant menu flip cards, product blobs and more. These elements allow you to create a truly engaging and interactive experience for your visitors. For more information on exactly what features are available, please reach out!
-
-## Frequently asked questions (FAQs)
+## FAQ
 
 <details>
 
-<summary>What’s included in Accelerated Templated Website vs. Accelerated Templated Website Plus?</summary>
+<summary>What's included in Accelerated Templated Website vs. Accelerated Templated Website Plus?</summary>
 
 *   **Accelerated Templated Website** provides a fully functioning, beautifully designed website with 10 pages, hosting, ongoing support, and an annual redesign.
 *   **Accelerated Templated Website Plus** includes all Standard features plus advanced functionality like Ecommerce, Ecommerce set-up for up to 100 products, appointment booking, custom forms, and over 60 design enhancements.
@@ -69,7 +74,7 @@ Once the website is live, we provide ongoing hosting, technical support, and mon
 
 <summary>Can I upgrade my clients from Accelerated Templated Website to Accelerated Templated Website Plus later?</summary>
 
-Yes! You can upgrade from **Accelerated Templated Website** to **Accelerated Templated Website Plus** at any time. This allows you to start with a basic site and scale as your business needs grow.
+Yes! You can upgrade from **Accelerated Templated Website** to **Accelerated Templated Website Plus** at any time. This allows you to start with a basic site and scale as your client's business needs grow.
 </details>
 
 <details>

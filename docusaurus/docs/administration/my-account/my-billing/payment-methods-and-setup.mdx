@@ -36,13 +36,13 @@ In order to make purchases on the Vendasta platform, you are required to add you
 
 To add your credit card to Partner Center:
 
-1. Navigate to **Administration > My Billing > Add Payment Method**
+1. Navigate to `Administration` → `My Billing` → `Add Payment Method`
 
 ![Add Payment Method screen](./img/add-payment-method.png)
 
 ### Adding Complete Billing Information
 
-If you have not added your billing information, you can do so under **Partner Center > Administration > My Billing**.
+If you have not added your billing information, you can do so under `Partner Center` → `Administration` → `My Billing`.
 
 #### Step 1: Add Billing Contact
 
@@ -74,7 +74,7 @@ If you receive a message saying the card has been declined, the likely cause is 
 
 Should you need to update your billing info after it's been entered:
 
-1. Navigate to **Partner Center > Administration > My Billing**
+1. Navigate to `Partner Center` → `Administration` → `My Billing`
 2. Click **Edit** on the section you wish to update
 
 ![Edit Billing Information](./img/edit-billing-info.jpg)
@@ -87,9 +87,13 @@ If you update your card when confirming an order in Partner Center it will also 
 
 Updating the email address that we send invoices to is as easy as updating the Billing Contact information:
 
-1. Go to **Partner Center > Administration > My Billing > Edit Billing contact**
+1. Go to `Partner Center` → `Administration` → `My Billing` → `Edit Billing contact`
 
 ![Edit Billing Contact screen](./img/edit-billing-contact.jpg)
+
+:::tip Multiple billing contact emails
+You can add more than one email address to receive invoices and billing notifications. In the Billing Contact form, enter multiple addresses separated by a **comma** or **semicolon** (e.g. `billing@yourcompany.com, finance@yourcompany.com`).
+:::
 
 ## How to Manage Payment Issues
 
@@ -97,7 +101,7 @@ Updating the email address that we send invoices to is as easy as updating the B
 
 **Can multiple credit cards be added to Partner Center?**
 
-No, there can only be **one credit card** added to Partner Center. You can add or edit your payment method by going to **Administration > My Billing > Add Payment Method**.
+No, there can only be **one credit card** added to Partner Center. You can add or edit your payment method by going to `Administration` → `My Billing` → `Add Payment Method`.
 
 ![Screenshot showing Administration > My Billing > Add Payment Method](./img/add-payment-method.png)
 
@@ -109,13 +113,39 @@ Any attempt to add a second card will overwrite the previous one.
 
 Yes, you can retry a failed payment:
 
-1. Go to **Partner Center > Administration > My billing**
+1. Go to `Partner Center` → `Administration` → `My Billing`
 2. Click on the three dots next to the purchase you wish to pay for
 3. Select **retry**
 
 :::note
 The system takes some time to update the status to "Succeeded" if the payment succeeds.
 :::
+
+## What happens when a payment fails
+
+### Retry timeline
+
+When a credit card charge fails, the platform automatically retries the payment up to **5 times over approximately 14 days**. You will receive an email notification for each failed attempt.
+
+### Account suspension
+
+If all retry attempts fail:
+
+- **Instant-billed Partners** — After Day 14, access to Partner Center and Business App is blocked for contracted Partners. Partners on Starter/Startup plans are moved to the Free tier.
+- **Invoiced Partners** — Your account is suspended 30 days after the invoice is generated if no payment is received.
+
+### What happens to active products
+
+Products remain active for up to 30 days after a payment failure, but **do not renew automatically** if payment is not made. You will need to reactivate products manually after resolving the failed payment.
+
+### How to resolve a failed payment
+
+1. Go to `Partner Center` → `Administration` → `My Billing`
+2. Click **View Failed Payments**
+3. Update your credit card if needed (see [Updating Billing Information](#updating-billing-information))
+4. Retry the failed purchase using the three dots next to the purchase and selecting **Retry**
+
+Successful payment automatically restores access to your account.
 
 ## Payment Method Requirements
 
@@ -143,7 +173,7 @@ No, Partner Center only supports one credit card at a time. Any new card you add
 <details>
 <summary>What happens if my payment fails?</summary>
 
-If a payment fails, you'll receive a notification. You can manually retry the payment by going to **Partner Center > Administration > My billing**, clicking the three dots next to the failed purchase, and selecting **retry**.
+If a payment fails, you'll receive a notification. You can manually retry the payment by going to `Partner Center` → `Administration` → `My Billing`, clicking the three dots next to the failed purchase, and selecting **retry**.
 </details>
 
 <details>
@@ -155,7 +185,7 @@ Complete billing information includes both a billing contact (company informatio
 <details>
 <summary>Can I change my billing information after setting it up?</summary>
 
-Yes, you can update your billing information at any time by going to **Partner Center > Administration > My Billing** and clicking **Edit** on the section you want to modify.
+Yes, you can update your billing information at any time by going to `Partner Center` → `Administration` → `My Billing` and clicking **Edit** on the section you want to modify.
 </details>
 
 <details>
@@ -167,5 +197,19 @@ The most common reason for card declines is that your credit card company is blo
 <details>
 <summary>How do I change where my invoices are sent?</summary>
 
-To change your invoice email address, update your Billing Contact information by going to **Partner Center > Administration > My Billing > Edit Billing contact**.
+To change your invoice email address, update your Billing Contact information by going to `Partner Center` → `Administration` → `My Billing` → `Edit Billing contact`.
+</details>
+
+<details>
+<summary>Can I send invoices to multiple email addresses?</summary>
+
+Yes. In your Billing Contact information, you can enter multiple email addresses separated by a comma or semicolon. All listed addresses will receive invoices and billing notifications.
+</details>
+
+<details>
+<summary>What happens if my payment fails and I don't resolve it?</summary>
+
+The platform retries your payment up to 5 times over approximately 14 days. If all attempts fail, your account access is suspended — contracted Partners lose access to Partner Center and Business App, while Starter/Startup Partners are moved to the Free tier. Invoiced Partners are suspended 30 days after the invoice date if unpaid.
+
+Active products remain available for up to 30 days but will not renew. To restore access, update your payment method and retry the failed payments from `Partner Center` → `Administration` → `My Billing` → `View Failed Payments`.
 </details>

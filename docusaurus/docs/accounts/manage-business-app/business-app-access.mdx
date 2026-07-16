@@ -107,6 +107,22 @@ You can find the login URL in the customer’s account under the Business App se
 2. **Send via secure method** (email, encrypted message, or phone)
 3. **Follow up** to confirm successful login and initial setup
 
+### Sign-in options on the login page
+
+When customers visit their Business App URL, the login page offers a few ways to sign in:
+
+- **Email and password**
+- **Sign in with Google**
+- **Sign in with Microsoft**
+
+When a customer chooses **Sign in with Google** or **Sign in with Microsoft**, they authenticate on the provider's sign-in screen and are matched to their Business App account by the verified email address — so they don't need to remember a separate Business App password. The same options are available when creating an account, so a customer who signs up with Google or Microsoft can return and sign in the same way.
+
+:::info
+Google and Microsoft sign-in match a customer to an account by email address. The email on the Google or Microsoft account must match the email on the customer's Business App user for sign-in to succeed.
+:::
+
+If **Create Account** is enabled, the login page also shows a **Create an account** option so new customers can self-register. See [Self-Signup](./self-signup.mdx) for details.
+
 ## How to configure business app features
 
 ### Dashboard customization
@@ -234,6 +250,39 @@ Use "View as Customer" functionality responsibly and only for legitimate support
 - **Document user roles** and access levels for future reference
 - **Coordinate with customer** on user management and access changes
 
+## How to invite team members to Business App
+
+Only **Admin users** or existing **Business App users** associated with the account can invite additional team members. Partners cannot send invitations by logging in as a user — the invitation must come from a user who is logged directly into the account.
+
+**Steps to invite a team member:**
+
+1. Open **Business App** and navigate to **Administration** → **Users**.
+2. Click **Invite user** and enter the new user's name and email address.
+3. The invitee receives an email with a link to set their password and access the account.
+
+## How to restrict a user to specific products
+
+By default, users can access all active products in Business App. To limit a user to specific products:
+
+1. In **Partner Center**, go to **Accounts** and open the account.
+2. Navigate to **Manage Users**.
+3. Find the user and click **Edit Permissions**.
+4. On the permissions screen, enable only the products this user should be able to access.
+
+:::info
+For product-level restrictions to take effect, ensure the product is enabled on the account's **My Products** page. If a product is turned off there, it won't appear as an option in Edit Permissions.
+:::
+
+## How to enable notifications for a user
+
+To turn on the notification icon for a specific Business App user:
+
+1. Go to **Partner Center** → **Accounts** → open the account → **Manage Users**.
+2. Click **Edit Permissions** for the user.
+3. Enable the **Notifications** toggle.
+
+The notification bell will then appear in the user's Business App navigation.
+
 ## Frequently asked questions (FAQs)
 
 <details>
@@ -282,5 +331,27 @@ No, customers only see data and features you've configured for their access leve
 <summary>How do I help customers who are having trouble using their Business App?</summary>
 
 Provide training materials, offer screen-sharing sessions to walk through features, create quick-start guides, and ensure they know how to contact support for technical assistance.
+</details>
+
+<details>
+<summary>Who can invite users to a Business App account?</summary>
+
+Only **Admin users** or existing **Business App users** associated with the account can send invitations. Partners logging in as the user (impersonation) cannot send invitations — the user must be logged in directly to their own Business App account to invite others.
+</details>
+
+<details>
+<summary>How do I restrict a Business App user to specific products?</summary>
+
+In Partner Center, go to **Accounts** → open the account → **Manage Users**, then click **Edit Permissions** for the user. Enable only the products they should access. Note that a product must also be active on the account's **My Products** page to appear in the permissions list.
+</details>
+
+<details>
+<summary>Why can't a user access the Business App dashboard or a specific product?</summary>
+
+Check the following in order:
+1. Confirm the user account is active and the correct Business App URL is being used.
+2. Go to **Manage Users** → **Edit Permissions** and verify the user has access to the relevant products enabled.
+3. Check that the product itself is active on the **My Products** page — if it's toggled off there, the user won't see it regardless of permissions.
+4. If the issue is with the dashboard itself, verify the user has the **Dashboard** permission enabled.
 </details>
 

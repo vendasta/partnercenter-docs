@@ -2,17 +2,55 @@
 id: multi-location-business-app-data-exporter
 title: Data Exporter
 sidebar_position: 1
-description: Learn how to export review, listing, or Google Business Profile data to a CSV from the Multi-Location Business App
+description: Learn how to export review, NPS, listing, or Google Business Profile data to a CSV from the Multi-Location Business App
 ---
 
-Users of the Multi-Location Business App can export review, listing, or Google Business Profile data to a CSV, to allow flexibility in their workflows, auditing, and internal reporting for many locations.
+Users of the Multi-Location Business App can export review, NPS, listing, or Google Business Profile data to a CSV, to allow flexibility in workflows, auditing, and internal reporting for many locations.
 
-In the Multi-Location Business App, navigate to "Data Exporter" on the left-hand navigation menu. Once in the data exporter screen, click the data source drop-down to choose between All reviews, Review summary by source, Google Business Profile summary, and Listing data. Once your data source has been selected, click 'export data to CSV.' Filter options allow you to customize the data you want to export.
+In Multi-Location Business App, go to **Data Exporter** in the left navigation menu. In **Data source**, choose one of the available export types:
 
-![Data Exporter Interface](../img/multi-location/data-exporter/data-exporter-interface.png)
+- **All reviews**
+- **Review summary by source**
+- **Net Promoter Score (NPS)**
+- **Google Business Profile summary**
+- **Listing data**
 
-### Configuration
+After you select a data source, set any filters you need and then select **Export data to CSV**.
 
-The Data Exporter can be enabled or disabled on a group-by-group basis for all users, by navigating to Partner Center > Accounts > [Multi-location Groups](https://partners.vendasta.com/brands/manage?marketId=default) > Choose a Group > Features and toggling the feature on or off.
+## Export NPS data
 
-(Note: The configuration screen image was not available.)
+Select **Net Promoter Score (NPS)** in the data source dropdown to export NPS data to CSV.
+
+NPS exports include a page-level filter so you can export data for the same page context used in NPS reporting.
+
+Like review exports, NPS exports support filters to narrow the dataset before exporting.
+
+The exported CSV includes NPS-specific columns, such as score classification (promoter, passive, detractor), score value, feedback details, and related location data.
+# Data Exporter
+
+Users of the Multi-Location Business App can export review, listing, or Google Business Profile data to a CSV, allowing flexibility in workflows, auditing, and internal reporting across many locations.
+
+## Exporting data
+
+## Configuration
+
+The Data Exporter can be enabled or disabled on a group-by-group basis for all users:
+
+1. In Partner Center, go to **Accounts** and open [Multi-location Groups](https://partners.vendasta.com/brands/manage?marketId=default).
+2. Select a group.
+3. Open **Features**.
+4. Toggle **Data Exporter** on or off.
+1. In the Multi-Location Business App, navigate to **Data Exporter** in the left-hand navigation menu.
+2. Click the **data source** drop-down and choose from:
+   - All reviews
+   - Review summary by source
+   - Google Business Profile summary
+   - Listing data
+3. Use the filter options to customize the data you want to export.
+4. Click **Export data to CSV**.
+
+<img src={require('../img/multi-location/data-exporter/data-exporter-interface.png').default} alt="Data Exporter interface" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## Configuration
+
+The Data Exporter can be enabled or disabled on a group-by-group basis by navigating to **Partner Center → Accounts → Multi-location Groups → choose a group → Features**, then toggling the feature on or off.

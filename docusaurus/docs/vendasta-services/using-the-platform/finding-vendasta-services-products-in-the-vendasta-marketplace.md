@@ -1,42 +1,38 @@
 ---
 title: "Finding Vendasta Services Products in the Vendasta Marketplace"
 sidebar_label: "Finding Vendasta Services Products in the Vendasta Marketplace"
-description: "Vendasta Services is Vendasta’s in-house fulfillment vendor. Fulfilling with Vendasta Services allows you to enhance your agency efficiencies by leveraging o"
+description: "Vendasta Services is Vendasta's in-house fulfillment vendor. Fulfilling with Vendasta Services allows you to enhance your agency efficiencies by leveraging o"
 ---
 
-Vendasta Services is Vendasta’s in-house fulfillment vendor. Fulfilling with Vendasta Services allows you to enhance your agency efficiencies by leveraging our skilled teams of digital professionals to do the heavy lifting for you. 
+Vendasta Services is Vendasta's in-house fulfillment team. Partnering with us gives you access to skilled digital professionals who handle the work for you, so your clients maintain a strong online presence, a well-managed reputation, and an active presence across social platforms.
 
-With our team’s expertise and streamlined processes, partnering with us ensures your clients maintain an optimized online presence, a meticulously managed reputation, and an actively engaged customer base across social platforms.
+Our products don't include "Vendasta Services" in the title, so they may not be immediately recognizable. Here are two ways to identify them while browsing the Marketplace.
 
-Our products don’t have “Vendasta Services” in the title, so you may not recognize them at first glance. Below are 2 ways to easily identify our products while searching in the Marketplace alongside other vendors.
+### Filtering by vendor
 
-### Filtering by Vendor
+1.  Open [Partner Center](https://partners.vendasta.com/login) and log in to your account.
 
-1.  On your internet browser, open [Partner Center](https://partners.vendasta.com/login) and log in to your account.  
-      
-    
-2.  Once logged in, seek out the navigation bar on the left side of the page. Click on “**Marketplace**” to expand the menu option. Click “**Discover Products**” from the Marketplace dropdown menu.
-    1.  The Discover Products page shows all of the available products within the Vendasta Marketplace, regardless of whether you’re “Selling” them in your store or not.  
-          
-        
-3.  From the Discover Products page, there is a new navigation menu on the left of this page. Under “Explore,” select “**All**” if it has not already been selected.  
-      
-    
-4.  Within the table, click on the blue “**Add filter**” button and navigate to the following filter to apply it:
-    1.  **Vendor** > **Vendasta Services** 
-    2.  Click “**Apply.**”  
-          
-        
-5.  With this filter applied, the table will now display all of the available products and services fulfilled by Vendasta Services.
+2.  In the left navigation, click **Marketplace** to expand the menu, then click **Discover Products**.
+    1.  The Discover Products page shows all available products in the Vendasta Marketplace, regardless of whether you're selling them in your store.
 
-### Recognizing Product Logos
+3.  On the Discover Products page, use the left navigation menu. Under **Explore**, select **All** if it is not already selected.
 
-Aside from using the product filters, you can recognize Vendasta Services products amidst your search results by our distinct product logos.
+4.  In the table, click the blue **Add filter** button and apply the following filter:
+    1.  **Vendor** > **Vendasta Services**
+    2.  Click **Apply**.
 
-Vendasta Services products feature a distinct grey circular logo, with a colored ring on the border (colors vary) and a white icon in the center.
+5.  The table will now display all products and services fulfilled by Vendasta Services.
 
-![](./img/22350480895511-36ee46b34e.png)
+### Recognizing product logos
 
-Each product page includes crucial information about what’s included in the service, sales resources, and FAQs. 
+Aside from using filters, you can recognize Vendasta Services products by their distinct logos.
 
-_Still have questions? Vendasta Services product-related queries can be directed to us via email at_ [_marketingservices@yourdigitalagents.com,_](mailto:marketingservices@yourdigitalagents.com) _and we’ll be happy to help!_
+Vendasta Services products feature a grey circular logo with a colored ring on the border (colors vary) and a white icon in the center.
+
+![Vendasta Services product logos showing grey circular icons with colored borders](./img/22350480895511-36ee46b34e.png)
+
+Each product page includes details about what's included in the service, sales resources, and FAQs.
+
+:::tip
+Still have questions? Email us at [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com) and we'll be happy to help.
+:::

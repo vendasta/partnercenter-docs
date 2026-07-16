@@ -7,15 +7,68 @@ tags: [multi-location, analytics, reporting]
 keywords: [keyword-reporting, executive-report]
 ---
 
-## Keyword Reporting
+Analytics and reporting in the Multi-Location Business App (MLBA) provide a centralized way to monitor, analyze, and report on performance metrics across multiple business locations from a single interface. Data from individual locations is aggregated into unified dashboards and reports, enabling cross-location comparisons, trend tracking, and proof-of-performance reporting.
+
+Reports are white-labeled, allowing partners to brand them with their own logos and styling for client presentations.
+
+## Executive Report
+
+The Executive Report is the flagship report in MLBA. It consolidates metrics across all locations in a multi-location group and includes trend lines and delta-change numbers to show both short-term changes and long-term performance trends.
+
+**Data sources included:**
+- Google Business Profile
+- Advertising Intelligence
+- Google Analytics (GA4)
+- Reputation (reviews and ratings)
+- Listings data
+- Social Media performance
+
+Reports can be filtered by geography, business category, region, groups of locations, or listing and review sources. Custom date ranges are supported.
+
+## Keyword reporting
 
 View keyword ranking distribution across locations:
 
-1. Go to `Accounts > Multi-Location Groups`
-2. Select a group, then open `Keyword Rankings`
+1. Go to **Accounts** → **Multi-Location Groups**
+2. Select a group, then open **Keyword Rankings**
 3. Use filters for locations, keywords, provider, and geography
 
-## Executive Report (Multi-Location)
+## Google Analytics (GA4) integration
 
-Use executive-level rollups to compare performance across locations with configurable time ranges and filters.
+GA4 data is connected at the single-location level. The Multi-Location Executive Report rolls up GA4 data from each individual location's Business App.
 
+**Setup recommendations:**
+
+- **One shared website:** Connect GA4 to a single headquarters location. The multi-location report will show data for that location only.
+- **Multiple websites or microsites:** Use separate GA4 data streams for each site, each connected to its corresponding single-location Business App.
+
+:::warning
+Do not connect the same GA4 property to multiple accounts. This causes data duplication in the multi-location rollup.
+:::
+
+## Listings and reputation data
+
+Listings data from Google Business Profile and other directories are included in reporting. Note that manual submission of Google listing URLs is not supported in MLBA. Listings must be detected automatically or submitted at the single-location level.
+
+Listing Scores in the multi-location report exclude citations, which can cause discrepancies compared to single-location reports.
+
+Reputation metrics include:
+- Top review sources
+- Recent reviews and average rating
+- Review volume
+- Average time to response
+
+## Social media analytics
+
+Social media data from Facebook, Instagram (Pro accounts only), and Google Business Profile are included. Social posting and engagement metrics can be tracked across multiple locations, and posts can be composed and scheduled for multiple locations with dynamic content customization.
+
+## Access and permissions
+
+Users can switch between individual locations within MLBA using the location switcher. Permissions can be set at the group or location level to control access to analytics and reporting data.
+
+## Limitations and considerations
+
+- Google Business Profile statistics (views, actions, searches) require Google Search Console connections at the location level.
+- The multi-location dashboard does not support custom product names. Generic menu items are shown instead.
+- Daily digest email notifications are sent from individual accounts, not from the multi-location group.
+- There is no native multi-location GA4 integration. Data aggregation relies on the rollup of single-location data.

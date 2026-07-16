@@ -29,15 +29,17 @@ If you don't see the Configure button, verify you have the necessary permissions
 
 1. In the AI Employee configuration panel, scroll down to the **Capabilities** section.
 2. Click to expand the section if it's collapsed.
-3. You'll see a list of available built-in capabilities with toggle switches.
+3. You'll see a list of capabilities already added to the AI Employee.
 
-## Step 3: Enable Desired Capabilities
+## Step 3: Add Desired Capabilities
 
-For each capability you want to activate:
+Capabilities that appear in the Capabilities section are active. To add a new one:
 
-1. **Review the capability description** to understand what it does.
-2. **Toggle the capability switch** to the "on" position.
+1. Click **+ Add a capability**.
+2. **Review the capability description** to understand what it does.
 3. **Add specific instructions** (optional) to customize how the capability behaves.
+
+To remove a capability, click the three-dot menu next to it and select **Remove**.
 
 ### Common capability configurations
 
@@ -100,6 +102,17 @@ Get contact info when needed.
 - **Keep it concise** - Shorter, specific instructions often work better than long paragraphs
 - **Test and iterate** - Try different phrasings and see what produces better results
 :::
+
+### Tailor a capability to specific channels
+
+Your AI Employee knows which channel it's responding on, so a capability's instructions can reference the channel by name. This is useful when a task should behave differently depending on where the customer reaches out — for example, collecting fewer details for lead capture over SMS than by email:
+
+```
+When capturing a lead on SMS, ask for name and phone number only, one question at a time, and keep each message short.
+When capturing a lead by email, you can ask for name, email, phone, and preferred appointment time in a single reply.
+```
+
+For guidance on channel-specific behavior across the whole AI Employee, see [Adjust responses by channel](../ai-workforce/index.mdx#adjust-responses-by-channel).
 
 #### Why Examples Matter
 
@@ -186,7 +199,7 @@ After initial setup:
 ### Capabilities conflicting
 - **Review capability priorities**: Some capabilities may override others
 - **Clarify instructions**: Make trigger conditions more specific
-- **Disable conflicting capabilities**: Temporarily turn off capabilities that interfere
+- **Remove conflicting capabilities**: Remove capabilities that interfere and re-add them once instructions are refined
 
 ## Advanced configuration tips
 
