@@ -6,7 +6,7 @@ description: Learn about Vendasta's ACH payment solutions for billing clients th
 
 ## Overview
 
-Vendasta offers a streamlined solution for billing clients through ACH direct debit payments facilitated by Stripe. This functionality allows you to seamlessly create invoices and facilitate payments using the Automated Clearing House (ACH) network.
+Vendasta offers a streamlined solution for billing clients through ACH direct debit payments facilitated by Stripe. This functionality allows you to create invoices and facilitate payments using the Automated Clearing House (ACH) network.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QxHVZPZ3p5A?si=FzARS_FtFzcig_vA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -15,7 +15,7 @@ Vendasta offers a streamlined solution for billing clients through ACH direct de
 Before leveraging ACH payments with Vendasta, ensure the following:
 
 1. Vendasta Payments are set up.
-2. Your business is based in the US, serving clients also located in the US.
+2. Your agency is based in the US, serving clients also located in the US.
 
 ## Compliance and mandates
 
@@ -43,23 +43,23 @@ Transactions processed via ACH entail the following fees:
 
 ## Requesting ACH payments in an invoice
 
-1. Create an invoice (one-time or recurring invoice) for a client account and select "Email the invoice to the customer to pay" under collection method. Under the payment options, select "Debit or Credit Cards" and or "ACH direct debit transfer". You can select one or both options depending on how you would like your client to pay.
-   - You can also automatically charge a payment method on file. Select **Charge a payment method on file** and select the desired payment method.
+1. Create an invoice (one-time or recurring invoice) for a client account and select `Email the invoice to the customer to pay` under collection method. Under the payment options, select `Debit or Credit Cards` and/or `ACH direct debit transfer`. You can select one or both options depending on how you would like your client to pay.
+   - You can also automatically charge a payment method on file. Select `Charge a payment method on file` and select the desired payment method.
    
    ![](./img/commerce/commerce-payments/23669573127575.png)
    - To get the client's payment method on file, first send them an invoice and ask them to pay and agree to an authorization mandate granting you permission for subsequent automatic charges. 
 
 2. Send the invoice to your client to pay. ![](./img/commerce/commerce-payments/23289897392663.png)
 
-3. Depending on the options you've selected, your client will see one or multiple payment options. With ACH option, they will see "US Bank Account". 
+3. Depending on the options you've selected, your client will see one or multiple payment options. With the ACH option, they will see `US Bank Account`. 
    a. Your client will be prompted to login and accept the mandate agreement which can give you authorization to auto-charge future invoices.
 
 ## Requesting ACH payments in subscription billing
 
-1. Select the client account and go to **Subscriptions > Billing Settings** to enable subscription billing if you haven't already done so. 
+1. Select the client account and go to `Subscriptions` -> `Billing Settings` to enable subscription billing if you haven't already done so. 
 
-2. Select the collection method "Email the invoice to the customer to pay" and under payment options, select "Debit or Credit Cards" and or "ACH direct debit transfer". You can select one or both options depending on how you would like your client to pay. ![](./img/commerce/commerce-payments/23289867418391.png)
-   - You can also automatically charge a payment method on file. Under payment options, select **Automatically charge payment method on file** and choose the default payment method.
+2. Select the collection method `Email the invoice to the customer to pay` and under payment options, select `Debit or Credit Cards` and/or `ACH direct debit transfer`. You can select one or both options depending on how you would like your client to pay. ![](./img/commerce/commerce-payments/23289867418391.png)
+   - You can also automatically charge a payment method on file. Under payment options, select `Automatically charge payment method on file` and choose the default payment method.
    
    ![](./img/commerce/commerce-payments/23669640267799.png)
 
@@ -77,11 +77,11 @@ To set up this process:
 
 1. Enable Subscription Billing:
    - Navigate to the client account.
-   - Go to **Subscriptions > Billing settings** and enable subscription billing if it isn't already active. Refer to [Subscription Management](../subscriptions/subscription-management.mdx) for detailed subscription billing setup if needed.
+   - Go to `Subscriptions` -> `Billing settings` and enable subscription billing if it isn't already active. Refer to [Subscription Management](../subscriptions/subscription-management.mdx) for detailed subscription billing setup if needed.
 
 2. Configure Payment Options:
-   - Select "Email the invoice to the customer to pay" under the collection method.
-   - Choose "Debit or Credit Cards" and/or "ACH direct debit transfer" under payment options, based on your preference for client payments.
+   - Select `Email the invoice to the customer to pay` under the collection method.
+   - Choose `Debit or Credit Cards` and/or `ACH direct debit transfer` under payment options, based on your preference for client payments.
 
 ![](./img/commerce/commerce-payments/24312620043671.png)
 
@@ -104,13 +104,15 @@ ACH payments take up to 5 days to be processed and paid out into your account. U
 - Your client would enter their bank account details and agree to the Authorization agreement that gives you a mandate for future payments.
 - Payment is made.
   - If you choose the auto-charge option, a direct charge is made to the client's bank account. 
-- When an ACH payment is made, a payment entry is created in pending status since the payment takes some time to be fully processed. Go to Billing > Payments to see the payment entry.
+- When an ACH payment is made, a payment entry is created in pending status since the payment takes some time to be fully processed. Go to `Billing` -> `Payments` to see the payment entry.
 - ACH payments may take up to 5 working days. When the funds are received, the payment is marked as successful, if they are not, it marks the payment as failed.
 - The invoice status is also updated.
 
-To learn in detail about how the workflow looks in Stripe, check out their [ACH guide.](https://docs.stripe.com/payments/ach-debit#ach-payments-workflow)
+To learn in detail about how the workflow looks in Stripe, check out their [ACH guide.](https://docs.stripe.com/payments/ach-direct-debit)
 
-**Please Note:** The Vendasta name appears briefly in the SMB payment flow (see sample below). We are working with Stripe to remove any mention of Vendasta in the flow.
+:::note
+The Vendasta name appears briefly in the client payment flow (see sample below).
+:::
 
 ![](./img/commerce/commerce-payments/23289897398551.png)
 
@@ -119,7 +121,7 @@ To learn in detail about how the workflow looks in Stripe, check out their [ACH 
 It should be noted that Vendasta has no contractual relationship with your clients and is not liable for any disputed transactions.
 
 **Disputes**  
-To minimize disputes and chargebacks, always obtain explicit consent from your clients before debiting their cards or bank accounts. It should be noted that Vendasta
+To minimize disputes and chargebacks, always obtain explicit consent from your clients before debiting their cards or bank accounts.
 
 - **Dispute Window:**
   - Clients can dispute a payment through their bank up to 60 calendar days after a debit from a personal account, or up to 2 business days for a business account.
@@ -137,4 +139,4 @@ Refer to Stripe support article [here](https://support.stripe.com/questions/resp
   - Refunds take at least 3 business days to process.
 - **Early Refunds:**
   - If you request a refund for a payment that hasn't completed yet (within a few hours of creating the Payment Intent), Stripe cancels the original payment by not submitting the charge to the bank, effectively voiding the transaction rather than processing a refund.
-  - Refer to [Issue Credit Notes to Clients](../credit-notes/issue-credit-notes-to-clients.mdx) for how to issue a refund.
+  - Refer to [Issue Credit Notes to Clients](../credit-notes/index.mdx#issue-credit-notes) for how to issue a refund.
