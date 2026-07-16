@@ -54,7 +54,7 @@ Attach images to prompts to show Vibe what you want. Use the microphone button t
 Paste any public URL into Vibe and it will scaffold a new application inspired by that site's layout and structure. This gives you a head start when you want to recreate or remix an existing design without starting from a blank canvas.
 
 ### Integrations
-Vibe connects to Vendasta platform services including Forms, analytics, and authentication. You can build applications that embed contact forms for lead capture, feedback, and more — all platform-native, already connected to your instance with no manual embed or configuration step.
+Vibe connects to Vendasta platform services including Forms, analytics, authentication, and CRM. You can build applications that embed contact forms, surface live contacts and pipeline data, gate content behind sign-in, and more — all platform-native, already connected to your instance with no manual embed or configuration step.
 
 ### AI image generation
 Generate custom images directly within the application using Gemini. Describe the image you want, and Vibe creates and embeds it in the project.

@@ -1,0 +1,149 @@
+---
+title: "Turn grades into a conversation"
+sidebar_position: 2
+description: "Read each section of the Snapshot Report and pick the gaps that open the sale."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LabChecklist from "@site/src/components/LabChecklist";
+
+<InlineHighlighter courseId="read-the-snapshot" site="vendasta_learn">
+
+<CourseProgressBar courseId="read-the-snapshot" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Beginner"
+  time="about 8 minutes"
+  required={["A Snapshot Report run on an account"]}
+  pathName="Your growth engine"
+  step={2}
+  totalSteps={6}
+  outcomes={[
+    "Read each grade the way the business owner will",
+    "Prepare a report so every visible grade is one you can act on",
+    "Pick the two gaps and one strength that open the sale",
+    "Answer the owner who says a grade is wrong",
+  ]}
+/>
+
+## A grade only sells when someone reads it aloud
+
+A Snapshot Report reads like a school report card on purpose: letter grades are a language every owner already speaks. Two things make the grades land. First, the report grades hard by design; it is built to find every gap it can, so a rough first page is the report working, not the business failing. Second, the criteria are not your opinion: they mirror what search engines reward, so you and the owner sit on the same side of the table, reading what Google sees together.
+
+Northside Dental's report came back the way most do: a strong grade worth celebrating, a weak one worth fixing, and six others in between. What happens next depends entirely on how it is read.
+
+## Read it alone first
+
+Before an owner ever sees the report, you shape it. Details carry the grades: a wrong address or a stale primary category grades the business against the wrong industry, and every section inherits the mistake.
+
+:::info Lab: prepare the report for the conversation
+You are going to your prospect's account in **Partner Center**.
+
+<LabChecklist
+  storageKey="read-the-snapshot-lab-1"
+  steps={[
+    <>Open the account's Snapshot Report and read every section once, the way the owner will.</>,
+    <>Check the business name, address, and <strong>Primary Category</strong> on the account, and correct anything stale.</>,
+    <>In <strong>Edit Report</strong> mode, add two or three competitors the owner actually watches.</>,
+    <>Uncheck the box beside any section that does not fit the business, like an ecommerce grade for a clinic that should never sell online.</>,
+    <>Select <strong>Configure</strong> → <strong>Rearrange</strong> and order the sections so the conversation starts where you want it to.</>,
+    <>Write down two gaps and one strength. Those three are the meeting.</>,
+  ]}
+  confirm={<>The report now shows a business the owner will recognize, measured against rivals they care about, in the order you plan to walk it.</>}
+/>
+:::
+
+Turning a section off for every report at once happens at the template level, and [the customization guide covers every option](/snapshot-report/snapshot-report-customization).
+
+## Two gaps and a strength
+
+Eight grades recited in a row is an audit, and nobody buys an audit. Pick two gaps and one strength, and give each one a consequence a customer would feel:
+
+- **The gap chain.** Grade, then what a customer experiences, then what that costs. For Northside Dental: patients love this clinic, 4.8 stars across sixty reviews, and the top directories disagree about its address. Search engines read disagreement as doubt, and doubt ranks below the clinic down the street.
+- **The sites nobody has heard of.** The listings section names directories the owner will not recognize. Neither will their customers, and it does not matter: the search engines and AI tools deciding who to recommend check them anyway.
+- **The strength is also an opening.** A section the business aces is worth naming out loud, then asking what it takes to keep it there. What that effort costs each month is a conversation many partners find more productive than any failing grade.
+- **Only raise what you can fix.** Every gap on your shortlist should map to work you can actually turn on. The report is not a diagnosis to hand over; it is the menu for everything the rest of this path delivers.
+
+## When the owner pushes back
+
+- **"This grade is harsh."** It is, by design, and the bar is the top of their industry rather than average. A 4.8-star clinic can still grade a B when the industry's leaders hold straight fives. The grade is the gap to first place, and first place is the goal.
+- **"This grade is wrong."** Check the business details together, starting with the primary category. A stale category grades the business against the wrong rivals, and correcting the profile is itself the first improvement you deliver, before anything is bought.
+- **"What does this technical section mean?"** The detailed findings are for whoever maintains their website; you are there to sell the outcome, and the outcome is customers who find them first.
+
+## Present it, do not send it
+
+A report that arrives alone in an inbox is a page of numbers. Walked through live, it is a conversation that starts where you choose. When you do send it, **Edit Report** mode drafts AI-suggested email copy around the sections you picked, and the [AI Chat on the report itself](/snapshot-report/snapshot-report-ai-chat) answers the owner's follow-up questions and can book the meeting for you.
+
+The report keeps enriching for seven days after you run it. Partners present anywhere from the first day on, and the fullest read comes at the end of that week.
+
+:::tip Try it now
+Open your report from the last step and write your opening sentence: one gap, its consequence, one line. Say it out loud. If it sounds like a chart, rewrite it until it sounds like a conversation.
+:::
+
+<SectionFeedback courseId="read-the-snapshot" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="read-the-snapshot" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on preparing the report, picking the gaps, and handling pushback."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A prospect\'s grades look wrong across every section. What do you check first?',
+      options: [
+        'The business details on the account, starting with the primary category',
+        'Whether the report needs a paid refresh',
+        'The competitors listed in the report',
+        'Whether the website section is toggled on'
+      ],
+      correctIndex: 0,
+      explanation: 'Details carry the grades. A wrong name, address, or primary category grades the business against the wrong industry, and every section inherits the mistake.'
+    },
+    {
+      type: 'mcq',
+      question: 'You are opening the meeting with the report. What is on your shortlist?',
+      options: [
+        'Every section, in the order the report shows them',
+        'Only the single worst grade on the page',
+        'Two gaps and one strength, each with a consequence',
+        'The overall Digital Score and nothing else'
+      ],
+      correctIndex: 2,
+      explanation: 'Eight grades recited in a row is an audit. Two gaps and a strength, each tied to something a customer would feel, is a conversation with a direction.'
+    },
+    {
+      type: 'mcq',
+      question: 'The owner says they have never heard of the directory sites in the listings section. What is the honest answer?',
+      options: [
+        'Those sites are optional and safe to ignore',
+        'Their customers have not either, and the search engines deciding who to recommend check them anyway',
+        'The report only grades sites the owner already uses',
+        'Directories matter only for ecommerce businesses'
+      ],
+      correctIndex: 1,
+      explanation: 'Nobody browses those directories directly. Search engines and AI tools read them anyway, and consistency across them is part of who gets recommended.'
+    },
+    {
+      type: 'mcq',
+      question: 'A clinic holds a 4.8-star average and still grades a B in reviews. Why?',
+      options: [
+        'The report contains an error worth escalating',
+        'Star ratings are not part of the reviews grade',
+        'The clinic has too few photos on its profile',
+        'The bar is the top of the industry, and its leaders hold straight fives'
+      ],
+      correctIndex: 3,
+      explanation: 'Grades are benchmarked against the business\'s own industry, and the reviews bar sits at the top of it. The grade measures the gap to first place, not the distance from failing.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/growth-engine/build-your-package" pathName="Your growth engine" step={2} totalSteps={6} />
+
+</InlineHighlighter>
+<MarkComplete courseId="read-the-snapshot" site="vendasta_learn" />

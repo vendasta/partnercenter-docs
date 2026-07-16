@@ -26,7 +26,7 @@ Connecting your business accounts is one of the most critical steps to maximize 
 
 ### Core Connection Types
 - **Google Services**: Business Profile, Analytics, Search Console
-- **Social Media Platforms**: Facebook, Instagram, LinkedIn, Twitter
+- **Social Media Platforms**: Facebook, Instagram, LinkedIn, X
 - **Business Management Tools**: QuickBooks, HubSpot, various CRM systems
 - **Industry-Specific Software**: Legal practice management, field service tools
 - **API-Based Integrations**: Custom connections using API keys
@@ -190,7 +190,7 @@ Connecting your business accounts is one of the most critical steps to maximize 
 
 You cannot remove a Facebook connection from within Integrations directly. To remove it:
 
-1. Go to the product powered by the Facebook connection (e.g., **Reputation Management**).
+1. Go to the product powered by the Facebook connection (e.g., **Reputation AI**).
 2. Find the connected Facebook page listing.
 3. Select **Remove this match** to disconnect the page.
 
@@ -216,6 +216,22 @@ You cannot remove a Facebook connection from within Integrations directly. To re
 3. Select the page to connect and authorize.
 
 If the connection fails, verify that the user holds Superadmin-level access on the LinkedIn Page in LinkedIn's settings.
+
+### How to Set Up OctoTable Integration
+
+**Requirements:**
+- An OctoTable account with RixAPI enabled.
+
+**Steps:**
+1. In OctoTable, search for **RixAPI** and enable it.
+2. Locate the **Property ID** in OctoTable — it's needed to complete the connection.
+3. In Business App, go to **Administration** → **Integrations** → **Browse** and find the **OctoTable** card.
+4. Click **Connect**, then enter the **Property ID** on the pre-connect form.
+5. Click **Add Connection** to complete setup.
+
+:::note
+OctoTable connections use a shared, pre-configured Client ID and Secret. Only a Property ID is required to connect — there are no separate Client ID or Secret fields to fill in.
+:::
 
 ### How to Set Up Google Analytics Connection
 
@@ -278,6 +294,7 @@ If the connection fails, verify that the user holds Superadmin-level access on t
 - **Social Media**: Facebook, Instagram, LinkedIn
 - **Analytics**: Google Analytics 4, Google Search Console
 - **Review Platforms**: Google Business Profile integration
+- **Restaurant Management**: OctoTable
 
 ## Frequently Asked Questions
 
@@ -299,7 +316,7 @@ Facebook connection issues are most often caused by insufficient page permission
 <details>
 <summary>How do I remove a Facebook connection from Business App?</summary>
 
-You cannot remove a Facebook connection from Integrations directly. Instead, go to the product that uses the Facebook connection (e.g., Reputation Management), find the Facebook page listing, and select **Remove this match** to disconnect it.
+You cannot remove a Facebook connection from Integrations directly. Instead, go to the product that uses the Facebook connection (e.g., Reputation AI), find the Facebook page listing, and select **Remove this match** to disconnect it.
 </details>
 
 <details>
@@ -376,5 +393,17 @@ First, check the connection status in the **Manage** tab. Try disconnecting and 
 <summary>Are there additional costs for integrations?</summary>
 
 Most integrations are included with Business App, but some may require specific subscriptions (like Reputation AI Premium for automated review requests). Check the integration marketing page for pricing details.
+</details>
+
+<details>
+<summary>Do I need a Client ID and Secret to connect OctoTable?</summary>
+
+No. Business App uses a shared, pre-configured connection for all OctoTable accounts. Only a Property ID is required to connect.
+</details>
+
+<details>
+<summary>What is RixAPI?</summary>
+
+RixAPI is the name OctoTable uses for the API that must be enabled in an OctoTable account before connecting to Business App.
 </details>
 

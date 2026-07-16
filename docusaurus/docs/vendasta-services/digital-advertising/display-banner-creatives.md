@@ -34,16 +34,16 @@ If you have an active ad campaign with our team, let us know and we will upload 
 
 We offer both standard and animated display banner options to suit your campaign's needs.
 
-### Standard Display Banners
+### Standard display banners
 
 This service provides your choice of **one** of the following sets of static or minimally animated graphics:
 
-* **Display Static Banners (set of 6):** Non-animated banner ads in the standard web sizes listed above.
+* **Display Static Banners (set of 6):** Non-animated banner ads in standard web sizes.
 * **Facebook GIF (1):** A short, looping animated ad (1200x1200) that uses subtle motion.
 * **Facebook/LinkedIn Static Images (set of 2):** Still-image ads designed for social media (1080x1080 and 1080x1920).
 * **Digital Billboard (1):** A large format static ad (970x250) for brand awareness on desktop.
 
-### Animated Display Banners
+### Animated display banners
 
 This service provides a set of six HTML animated banners, designed to capture attention with subtle motion.
 * **Animation:** Up to 15 seconds with one loop.
@@ -62,13 +62,13 @@ This service provides a set of six HTML animated banners, designed to capture at
 
 A ClickTAG is a piece of code that tracks where users go when they click an ad. Some ad platforms require it to properly record clicks. If your campaign uses ClickTAGs, provide them to us, and we will add them to your HTML banners. If not, your ads will still look and function perfectly.
 
-### Service Limitations
+### Service limitations
 
 * This service provides only the creative design files for your ads, not the setup or management of a campaign within a Demand-Side Platform (DSP).
 * We do not create or set up campaigns within advertising platforms like Google Display & Video 360 or The Trade Desk.
 * If you already use a DSP, simply provide the platform details and ad specifications to our team, and we will ensure the banners meet those requirements.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 <details>
 
