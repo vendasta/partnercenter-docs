@@ -113,7 +113,9 @@ For more detailed information on Capabilities, see the [AI Workforce Overview](.
 #### Default voice lead capture for AI Voice Receptionist
 The **default voice lead capture** capability guides your AI Employee to offer to help customers by answering questions and then gathering their contact information. This capability is turned on by default. 
 
-> **Note:** If this is turned off, the Voice Receptionist will not be able to capture caller information but *will* still answer questions to the best of their ability.
+::::note
+If this is turned off, the Voice Receptionist will not be able to capture caller information but *will* still answer questions to the best of their ability.
+::::
 
 
 #### Book appointments with your calendar
@@ -121,6 +123,22 @@ The **default voice lead capture** capability guides your AI Employee to offer t
 The **Book appointments with calendar** capability connects to your integrated calendar, enabling the AI Voice Receptionist to offer real-time availability to callers, collect all necessary booking details, and automatically create events on your calendar. 
 
 On the `Book appointments with calendar` panel, use the `Select event link to book with` dropdown to choose which calendar your receptionist should use to determine availability as well as which kind of appointments they can offer.
+
+#### Book multiple services in one session
+
+When configuring **Book appointments with calendar**, you can enable **Book Multiple Services** and choose the service menu/group the AI can book from.
+
+With multi-service booking enabled, the AI can:
+
+- Detect and confirm multiple service intents in one conversation, and ask clarification questions for ambiguous requests
+- Suggest related add-on services from the selected menu/group when relevant
+- Find available back-to-back slots for the full service sequence; if no combined slot is available, offer alternatives such as a different date, a different provider, or split bookings
+- Apply booking constraints across the full session by enforcing:
+  - the longest advance notice requirement across selected services
+  - the shortest future booking window across selected services
+- Prefer one provider for the full session when `Any Provider` is selected, or confirm provider handoffs when multiple providers are required
+- Collect and deduplicate mandatory contact and intake fields across selected services, including phone validation and confirmation
+- Send one consolidated confirmation flow (email, SMS, or both based on requirements) and create one CRM activity for the multi-service booking
 
 #### Additional Instructions for AI Voice Receptionist
 
@@ -325,6 +343,35 @@ All call recordings, transcripts, and summaries are automatically saved to:
 This allows your team to review interactions, follow up with callers, and maintain a complete record of customer communications. Note that call recordings and transcripts are available with Premium Conversations AI.
 </details>
 
+### Configuration
+
+<details>
+<summary>Can I change the Interruption Threshold (Voice Activity Detection)?</summary>
+
+The **Interruption Threshold** controls how sensitive the AI is to detecting that a caller has started speaking (voice activity detection). It is set on a scale of **0.6 – 0.75**, with a default of **0.75**.
+
+- **Higher value (0.75)** — the AI waits longer before treating speech as an interruption. Use when callers are in noisy environments or when the AI is cutting off too early.
+- **Lower value (0.6)** — the AI responds more quickly to detected speech. Use when callers feel the AI is not picking up on their words fast enough.
+
+Adjust this setting in your AI Voice Receptionist configuration if callers report being cut off or if the AI is slow to acknowledge them.
+</details>
+
+<details>
+<summary>How do I configure Missed Call Text-Back?</summary>
+
+Missed Call Text-Back sends an SMS to a caller when their call is not answered. To configure it:
+
+1. Go to **AI > AI Workforce > Voice Receptionist > Configure**
+2. Find the **Missed Call Text-Back** toggle and enable it
+3. Choose the timing option:
+   - **Immediately** — sends the text as soon as the call is not answered by a human
+   - **If the forwarded call is missed** — sends the text only if the forwarded-to number also doesn't answer
+
+:::note
+If the forwarded call rings through to voicemail and the voicemail system picks up, the carrier considers the call "connected" — even if no human answered. In this case, the "If the forwarded call is missed" option will not trigger. Use **Immediately** if you want to ensure the text always goes out.
+:::
+</details>
+
 ### Troubleshooting
 
 <details>
@@ -356,6 +403,12 @@ Yes! You can update your AI Voice Receptionist anytime by:
 - **Changing voice settings** in the Profile > Speech section
 
 Changes take effect immediately, so you can continuously improve your AI's performance based on real-world interactions.
+</details>
+
+<details>
+<summary>Can the AI Voice Receptionist receive SMS verification codes or MFA texts?</summary>
+
+No. The Conversations AI phone number assigned to your AI Voice Receptionist is not able to receive SMS verification codes or multi-factor authentication (MFA) texts. If you need to verify an account or receive a one-time code, use a personal mobile number or a separate business phone number for that purpose.
 </details>
 
 <details>

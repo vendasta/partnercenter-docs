@@ -397,3 +397,30 @@ Clear trigger conditions, required information, response templates, and error ha
 **Customer:** "Yes, that's the one."  
 *(AI calls `LookupProductDetails` with `product_id` matching BlueWave Wireless Headphones)*  
 **AI:** "Great! The *BlueWave Wireless Headphones* are priced at **$89.99**. They offer 20 hours of battery life and come with a two-year warranty."
+
+### Variation: pair the lookup with the visitor's current URL
+
+When an AI Employee is responding on **Web Chat**, it receives the URL of the page the visitor is currently on with every message. You can combine this context with a lookup capability so the AI answers vague questions ("is this still available?", "what's the price?") without needing to ask which item the visitor means.
+
+This pattern is especially powerful for businesses with structured URLs — e-commerce product pages, vehicle inventory, real estate listings, service pages, and so on.
+
+**Prompt snippet — extend the lookup capability with URL parsing:**
+
+```markdown
+## Using the Current Page URL
+The product detail pages follow this URL pattern:
+https://www.example.com/products/[slug]/[product_id]
+
+The value at the end of the path is the `product_id`.
+
+## When to use
+- If the visitor's current URL matches the product detail pattern AND they ask a vague product question ("is this in stock", "how much", "any other colors"), parse the `product_id` from the URL and call `LookupProductDetails`.
+- Confirm the product naturally in the first line of your reply so the visitor knows you understood.
+- If the URL changes between turns, the visitor has navigated to a different product. Always use the URL from the most recent message.
+- If the visitor explicitly names a different product than the one in the URL, follow what they said and ignore the URL.
+- On non-product pages (homepage, /about, /contact), do not assume product context.
+```
+
+:::tip
+For the AI Chat Receptionist, see [Make responses page-aware with the visitor's URL](../ai-workforce/ai-chat-receptionist/index.md#make-responses-page-aware-with-the-visitors-url) for the broader feature overview.
+:::

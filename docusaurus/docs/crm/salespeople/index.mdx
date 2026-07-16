@@ -138,6 +138,62 @@ To delete a salesperson:
 All salesperson deletions are permanent. Before clicking `Delete`, make sure you want to delete this salesperson. Any accounts that were assigned to the salesperson before deletion will become unassigned. A `Partner Center` admin can reassign these accounts.
 :::
 
+## Why a salesperson can't see companies assigned to them
+
+Assigning a salesperson to a Company record is not enough for them to see it. Access to companies in the CRM requires **two things to match**:
+
+1. The salesperson must have the appropriate CRM role/permissions.
+2. The Company's market must be one the salesperson is **assigned to**.
+
+If either layer doesn't match, the salesperson won't see the company — even if they're listed as the assigned salesperson on the record.
+
+### How to check and fix a market mismatch
+
+**Check the salesperson's market assignment:**
+
+1. Go to **Partner Center** > **Administration** > **My Team**.
+2. Click the three dots next to the salesperson and select **Edit Salesperson**.
+3. Review the **Markets** field to see which markets they're assigned to.
+
+**Check the Company's market:**
+
+1. Open the Company record in **Partner Center** > **CRM** > **Companies**.
+2. Click **Edit** and go to **Basic Information**.
+3. Check the **Market** field.
+
+**Fix:** Update either the salesperson's market assignments or the Company's market so they match. Once they do, the salesperson will be able to see the Company in their CRM view.
+
+## Find a salesperson ID
+
+Each salesperson has a unique ID that may be needed when working with the Vendasta API or when troubleshooting with Vendasta Support.
+
+To find a salesperson's ID:
+
+1. Go to **Partner Center > Administration > My Team**
+2. Click **⋮** next to the salesperson's name
+3. Select **Edit Salesperson**
+4. Look at the URL in your browser — the salesperson ID appears at the end of the URL
+
+## Add a booking link to Snapshot Reports
+
+You can add a salesperson's meeting booking URL to their Snapshot Reports so prospects can schedule time directly from the report.
+
+:::note
+The salesperson must have a meeting scheduler set up (such as Calendly or Microsoft Bookings) before adding this link.
+:::
+
+1. Go to **Partner Center > Administration > My Team**
+2. Click **⋮** next to the salesperson's name
+3. Select **Edit Salesperson**
+4. Enter the booking URL in the **Book a Meeting** field
+5. Click **Save**
+
+The booking link will appear on any Snapshot Report created or regenerated after saving. It will not appear on previously generated reports.
+
+## Salesperson access to Vendasta support
+
+Salespeople cannot contact Vendasta Support directly. If a salesperson needs to escalate an issue, they must ask a Partner Center admin to contact support on their behalf.
+
 ## Administration and management
 
 Manage your salespeople by going to **Partner Center > Administration > My Team**. This centralized management interface provides all the tools needed to maintain accurate salesperson information and ensure proper system access across your organization.
@@ -183,5 +239,5 @@ Currently, salesperson information must be edited individually through **Partner
 <details>
 <summary>How do I add a booking link to my salesperson's Business App profile?</summary>
 
-Booking links for `Business App` are configured in the salesperson profile under the "Book a meeting link" field. For detailed instructions, see the [Add a booking link in the Business App contact card](../../business-app/crm/add-booking-link-contact-card.mdx) article.
+Booking links for `Business App` are configured in the salesperson profile under the "Book a meeting link" field. For detailed instructions, see the [Add a booking link in the Business App contact card](/administration/platform-settings/customize-business-app/branding-settings#how-do-i-customize-the-contact-us-card) article.
 </details>

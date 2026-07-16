@@ -1,0 +1,207 @@
+---
+title: "How systems talk"
+sidebar_position: 1
+sidebar_label: How systems talk
+description: "The plain-English model behind every integration: an AI Employee reaches other systems through doorways, asks and announces, and hands off to an automation to get the work done."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import Accordion from "@site/src/components/Accordion";
+
+<InlineHighlighter courseId="how-systems-talk" site="vendasta_learn">
+
+<CourseProgressBar courseId="how-systems-talk" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Foundational"
+  time="about 8 minutes"
+  pathName="Wire your AI Workforce to act"
+  step={1}
+  totalSteps={9}
+  outcomes={[
+    "Picture what it takes for an AI Employee to do something, not just answer",
+    "Name the three pieces you switch on: capability, tool, trigger",
+    "Tell the two ways systems talk: ask and announce",
+    "See how an AI Employee and an automation hand off to get work done",
+  ]}
+/>
+
+## When an AI Employee needs to act
+
+AI Employees are wired to know your business: your business profile, your website, the FAQs you train them on. That is enough to answer questions. But the ones that earn their keep do something. Picture a voice receptionist that looks up the caller in your CRM while the phone is still ringing, greets them by name, books the appointment, and then hands off to a follow-up that texts them an hour later.
+
+None of that is code. It is a few pieces you switch on in the employee's setup, plus one automation that picks up where the call leaves off.
+
+## How an AI Employee reaches another system
+
+For the receptionist to greet the caller by name, her setup has to reach into your CRM and pull that caller's record, mid-call. Systems reach each other through a doorway, and the doorway one system opens for another is called an API.
+
+Here is the part that makes this feel out of the box: most of those doorways are already built for you. The CRM, the calendar, the messaging tools all open their doorways to the platform, and you switch them on rather than wire them. You build a new doorway only when you reach a system the platform does not already connect to, and even then you are filling in a form, not writing code.
+
+## The pieces you switch on
+
+Three pieces make an AI Employee act, and you meet all three in its setup:
+
+- A **capability** is a skill you switch on, written as plain instructions: "look up the caller by phone number and greet them by name." The platform calls it exactly that, a capability.
+- A **tool** is how a capability reaches another system through its doorway. The CRM lookup is a tool; so is booking the calendar. Most tools are ready to attach; you add a custom one only for an outside system.
+- A **trigger** is what makes the employee act at all: answering a call, receiving a message.
+
+Switch on a capability, give it the tools it needs, set the trigger, and the employee can do the thing instead of only talking about it.
+
+## Two ways systems talk: ask and announce
+
+Once a doorway is open, a system uses it in one of two ways, and the receptionist uses both.
+
+<div className="comparison-cards">
+
+<div className="comparison-card">
+
+### Ask
+
+<hr />
+
+**How it works:** you send a question, and the system sends an answer back.
+
+**When you use it:** to look something up, create a record, or update one.
+
+**Example:** the receptionist asks your CRM "who is calling from this number?" and gets the caller's record back. This is the API, or request-and-response, pattern.
+
+</div>
+
+<div className="comparison-card">
+
+### Announce
+
+<hr />
+
+**How it works:** something happens, and the system announces it. Whoever cares reacts.
+
+**When you use it:** to kick off follow-up work the moment an event happens.
+
+**Example:** the call ends, and the platform announces it by logging a call activity. It does not know or care who is listening. This is the event, or webhook, pattern.
+
+</div>
+
+</div>
+
+The difference is who goes first. When the receptionist asks, she goes first, because she wants an answer now. When the platform announces the finished call, it goes first, and whoever was waiting for that news gets to act. What travels between them is small: a package of labeled facts, a name, a number, a time. Not a screen, not a file, just the facts the next step needs.
+
+## The hand-off: the employee and the automation
+
+That "whoever was waiting" is an automation, and it is the second half of how work actually gets done.
+
+The receptionist takes the call. The automation does the follow-through. The announcement is the baton passed between them. The moment the call is logged, an automation that was listening for exactly that wakes up and works down its checklist: wait a while, check whether this lead was already contacted, send the text, post a note to the team's chat, and if there is no reply, line up the next touch. Each of those steps reaches another system the same way the receptionist did, through its doorway: the messaging tool to send the text, the team's chat to post the alert, even an outbound-calling tool to try again.
+
+In most businesses, a person is the glue between these steps: someone hangs up, then remembers to text the lead, then updates the account. Here that glue work is automated, so nothing waits on a person remembering. Neither worker does the whole job: the employee handles the live conversation and the judgment inside it; the automation handles the reliable, repeatable follow-through. Together they are the AI Workforce actually doing the thing, not just talking about it.
+
+## Putting it together
+
+Watch the whole thing line up on one caller.
+
+<Accordion
+  items={[
+    {
+      id: 'switches',
+      title: 'Switch on the pieces',
+      badge: '1',
+      content: (
+        <>
+          <p>In the receptionist's setup, you switch on three things: a <strong>capability</strong> ("look up the caller and greet them by name"), the <strong>CRM lookup tool</strong> attached to it, and a <strong>trigger</strong> set to answer calls. Three switches, no code.</p>
+        </>
+      )
+    },
+    {
+      id: 'call',
+      title: 'The call: ask, then announce',
+      badge: '2',
+      content: (
+        <>
+          <p>The phone rings (the <strong>trigger</strong>). The receptionist <strong>asks</strong> your CRM who is calling and greets them by name, then books the appointment. When the call ends, the platform <strong>announces</strong> it by logging a call activity.</p>
+        </>
+      )
+    },
+    {
+      id: 'handoff',
+      title: 'The hand-off: the automation takes over',
+      badge: '3',
+      content: (
+        <>
+          <p>An automation listening for that activity wakes up. It waits an hour, checks the lead was not already texted, sends the follow-up message, and posts a note to the team's chat. The receptionist never did that part. Her teammate did.</p>
+        </>
+      )
+    }
+  ]}
+  showControls={true}
+/>
+
+:::tip Try it now
+Pick one thing you wish an AI Employee could do for a client, start to finish. Name the three pieces: what skill would it need (a capability), what system would it have to reach (a tool), and what would set it off (a trigger)? Then name the one follow-up an automation could handle after. You have just sketched an AI Employee that does the thing, not only talks about it.
+:::
+
+<SectionFeedback courseId="how-systems-talk" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="how-systems-talk" site="vendasta_learn"
+  sessionSize={3}
+  intro="A few quick questions on the pieces you switch on, ask versus announce, and the hand-off to an automation."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'An AI Employee already answers questions well. What makes it able to actually do something, like book an appointment?',
+      options: [
+        'More training documents in its knowledge',
+        'A capability with the tools it needs, and a trigger to set it off',
+        'A faster model and a better voice',
+        'A longer, more detailed set of instructions'
+      ],
+      correctIndex: 1,
+      explanation: 'Knowledge lets it answer. To act, you switch on a capability (the skill), attach the tools it needs to reach other systems, and set a trigger. That is the difference between talking and doing.'
+    },
+    {
+      type: 'mcq',
+      question: 'The receptionist needs to look up a caller in your CRM. What is true about that connection?',
+      options: [
+        'You have to build it from scratch with code',
+        'The CRM doorway is already built; you switch on a tool to use it',
+        'It only works if the caller is already a contact',
+        'It requires a developer every time'
+      ],
+      correctIndex: 1,
+      explanation: 'Most doorways, the CRM, the calendar, the messaging tools, are already built for you. You attach a ready-made tool. You build a custom one only to reach a system the platform does not already connect to.'
+    },
+    {
+      type: 'mcq',
+      question: 'Mid-call, the receptionist looks up the caller in the CRM and gets their record back. Which pattern is that?',
+      options: [
+        'Announce: the CRM tells her whenever a record changes',
+        'Ask: she sends a question and gets an answer back',
+        'Neither: a live call cannot reach the CRM',
+        'A webhook she has to build first'
+      ],
+      correctIndex: 1,
+      explanation: 'Wanting an answer right now, and getting it back, is the ask pattern: request and response. Announce is when a system tells you the instant something happens.'
+    },
+    {
+      type: 'mcq',
+      question: 'After the call, an automation sends the follow-up text on its own. How did it know to run?',
+      options: [
+        'Someone started it by hand after each call',
+        'It was listening for the announcement, the logged call activity',
+        'It runs on a fixed timer all day',
+        'The receptionist called it directly'
+      ],
+      correctIndex: 1,
+      explanation: 'When the call was logged, the platform announced it. The automation was listening for exactly that event, woke up, and worked its follow-up checklist. That hand-off is how the employee and the automation do the job together.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/builder/the-integration-landscape" pathName="Wire your AI Workforce to act" step={1} totalSteps={9} />
+
+</InlineHighlighter>
+<MarkComplete courseId="how-systems-talk" site="vendasta_learn" />

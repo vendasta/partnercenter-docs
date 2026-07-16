@@ -5,18 +5,16 @@ description: Learn how to add SPF, DKIM, and DMARC Records to your domain using 
 sidebar_position: 2
 ---
 
-# Add SPF, DKIM, and DMARC Records (cPanel Namecheap)
-
 This guide will walk you through the process of adding SPF, DKIM, and DMARC records to your domain using cPanel with Namecheap as your domain host.
 
-## Before You Begin
+## Before you begin
 
 To follow this guide, you will need:
 - A domain purchased through Namecheap
 - Access to your cPanel account
 - The SPF, DKIM, and DMARC record values provided by your email service provider
 
-## Adding DNS Records in cPanel
+## Adding DNS records in cPanel
 
 ### Step 1: Log into your Namecheap account
 
@@ -24,52 +22,52 @@ Start by logging into your Namecheap account at [namecheap.com](https://www.name
 
 ### Step 2: Access cPanel
 
-1. Navigate to "Domain List" in your dashboard
-2. Find the domain you want to modify and click "Manage"
-3. Select the "Advanced DNS" tab
+1. Navigate to `Domain List` in your dashboard
+2. Find the domain you want to modify and click `Manage`
+3. Select the `Advanced DNS` tab
 
 ![Navigate to Advanced DNS in Namecheap](../img/cpanel-namecheap-guide/image1.jpg)
 
-### Step 3: Add SPF Record
+### Step 3: Add SPF record
 
 The SPF (Sender Policy Framework) record helps prevent email spoofing by specifying which mail servers are authorized to send email from your domain.
 
-1. In the "Host Records" section, click "Add New Record"
-2. Select "TXT Record" from the dropdown menu
-3. For the "Host" field, enter @ (representing your root domain)
-4. For the "Value" field, enter your SPF record (typically looks like `v=spf1 include:_spf.mailgun.org ~all`)
-5. Set TTL (Time to Live) to "Automatic"
-6. Click "Save Changes"
+1. In the `Host Records` section, click `Add New Record`
+2. Select `TXT Record` from the dropdown menu
+3. For the `Host` field, enter @ (representing your root domain)
+4. For the `Value` field, enter your SPF record (typically looks like `v=spf1 include:_spf.mailgun.org ~all`)
+5. Set TTL (Time to Live) to `Automatic`
+6. Click `Save Changes`
 
 ![Add SPF Record](../img/cpanel-namecheap-guide/image2.jpg)
 
-### Step 4: Add DKIM Record
+### Step 4: Add DKIM record
 
 DKIM (DomainKeys Identified Mail) adds a digital signature to your emails to verify they haven't been tampered with.
 
-1. Click "Add New Record"
-2. Select "TXT Record" from the dropdown menu
-3. For the "Host" field, enter your DKIM selector (often provided by your email service provider, e.g., `mail._domainkey`)
-4. For the "Value" field, enter your DKIM value (typically a long string beginning with `v=DKIM1;`)
-5. Set TTL to "Automatic"
-6. Click "Save Changes"
+1. Click `Add New Record`
+2. Select `TXT Record` from the dropdown menu
+3. For the `Host` field, enter your DKIM selector (often provided by your email service provider, e.g., `mail._domainkey`)
+4. For the `Value` field, enter your DKIM value (typically a long string beginning with `v=DKIM1;`)
+5. Set TTL to `Automatic`
+6. Click `Save Changes`
 
 ![Add DKIM Record](../img/cpanel-namecheap-guide/image3.jpg)
 
-### Step 5: Add DMARC Record
+### Step 5: Add DMARC record
 
 DMARC (Domain-based Message Authentication, Reporting & Conformance) tells receiving servers what to do with emails that fail SPF or DKIM verification.
 
-1. Click "Add New Record"
-2. Select "TXT Record" from the dropdown menu
-3. For the "Host" field, enter `_dmarc`
-4. For the "Value" field, enter your DMARC policy (e.g., `v=DMARC1; p=none; rua=mailto:dmarc@yourdomain.com`)
-5. Set TTL to "Automatic"
-6. Click "Save Changes"
+1. Click `Add New Record`
+2. Select `TXT Record` from the dropdown menu
+3. For the `Host` field, enter `_dmarc`
+4. For the `Value` field, enter your DMARC policy (e.g., `v=DMARC1; p=none; rua=mailto:dmarc@yourdomain.com`)
+5. Set TTL to `Automatic`
+6. Click `Save Changes`
 
 ![Add DMARC Record](../img/cpanel-namecheap-guide/image4.jpg)
 
-### Step 6: Verify Your Records
+### Step 6: Verify your records
 
 After adding all your records, your DNS management page should show all three records (SPF, DKIM, and DMARC) as shown below:
 
@@ -84,7 +82,7 @@ If you encounter issues with your email authentication after setting up these re
 3. Use an online SPF/DKIM validator tool to check your configuration
 4. Contact your email service provider for assistance
 
-## Additional Tips
+## Additional tips
 
 - Start with a cautious DMARC policy (`p=none`) to monitor without affecting email delivery
 - Regularly check your DMARC reports to ensure everything is working correctly
@@ -92,7 +90,7 @@ If you encounter issues with your email authentication after setting up these re
 
 ![Final DNS Configuration](../img/cpanel-namecheap-guide/image6.jpg)
 
-## Next Steps
+## Next steps
 
 After successfully setting up your SPF, DKIM, and DMARC records, you should:
 

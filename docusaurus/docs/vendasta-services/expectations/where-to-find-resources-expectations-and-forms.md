@@ -15,21 +15,12 @@ These steps are laid out to help equip you with plenty of resources and informat
 3.  Check the box for Services
 4.  Click into any service you want to learn more about
 5.  Read through product information, find FAQs, and check out add-ons
-6.  Click Screenshots & Files to find marketing images, sales decks, and expectation brochures
+6.  Click Screenshots & Files to find marketing images and sales decks
 7.  Click the Start Selling button in the top right corner to add to your store
 
 ### **Familiarize yourself with the service expectations**
 
-Expectation brochures are documents provided by Vendasta Services that break down the timelines, details, and deliverables that you can expect after ordering. You can also check out the [Expectations by Service guide](./expectations-by-service-within-vendasta-services.md) to get a high-level overview and reference for expectations across all product lines. 
-
-You can find expectation brochures inside of the platform:
-
-1.  Go to Partner Center > Marketplace > [Discover Products](https://partners.vendasta.com/marketplace/products)
-2.  Go to the product page for the Vendasta Services product for which you want more expectation information
-3.  Click Screenshots & Files
-4.  Look for a file with **Expectation** in the title
-
-Or you can access them on the Vendasta Services [unbranded website](https://examples.yourdigitalagents.com/) and click Expectation Brochures. 
+To understand the timelines, details, and deliverables you can expect after ordering, check out the [Expectations by Service guide](./expectations-by-service-within-vendasta-services.md) for a high-level overview and reference across all product lines.
 
 ### Review the fulfillment forms
 

@@ -870,7 +870,7 @@ Monitor customer service patterns through several methods:
 
 3. **Custom Capability Analytics:** Monitor which API calls are made most frequently through the "Explanation" feature
 
- 4. **Business Intelligence:** Set up [automations](../../../automations/my-automations/index.mdx) to log AI-generated appointments and analyze trends
+ 4. **Business Intelligence:** Set up [automations](../../../automations/index.mdx) to log AI-generated appointments and analyze trends
 
 This data can inform staffing, inventory, and service offerings based on customer demand patterns.
 </details>

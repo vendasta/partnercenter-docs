@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from '@docusaurus/Link';
 
 type CardsProps = {
   children: React.ReactNode;
@@ -23,19 +24,39 @@ type CardProps = {
   title: string;
   children?: React.ReactNode;
   icon?: string; // static path under /img or external
+  badge?: string;
+  className?: string;
 };
 
-export function Card({ href, title, children, icon }: CardProps) {
-  return (
-    <a className="vs-card" href={href} target="_blank" rel="noopener noreferrer">
+export function Card({ href, title, children, icon, badge, className }: CardProps) {
+  const isExternal = /^https?:\/\//.test(href);
+  const content = (
+    <>
       {icon && (
         <img className="vs-card-icon" src={icon} alt="" loading="lazy" />
       )}
       <div className="vs-card-content">
-        <div className="vs-card-title">{title}</div>
+        <div className="vs-card-title">
+          {title}
+          {badge && <span className="vs-card-badge">{badge}</span>}
+        </div>
         {children && <div className="vs-card-desc">{children}</div>}
       </div>
-    </a>
+    </>
+  );
+
+  if (isExternal) {
+    return (
+      <a className={`vs-card${className ? ` ${className}` : ''}`} href={href} target="_blank" rel="noopener noreferrer">
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link className={`vs-card${className ? ` ${className}` : ''}`} to={href}>
+      {content}
+    </Link>
   );
 }
 

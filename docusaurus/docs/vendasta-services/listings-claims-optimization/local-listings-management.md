@@ -1,54 +1,23 @@
 ---
-title: "Local Listings Management: Service Expectations"
+title: "Local Listings Management"
 sidebar_label: "Local Listings Management"
 description: "An overview of the fully managed Local Listings Management service, detailing the process for claiming, optimizing, and monitoring your business listings on Google, Apple, and Bing."
 ---
 
-This guide outlines the process and expectations for the Local Listings Management service. This is a fully managed solution where a team of specialists will claim, optimize, and monitor your business listings on Google Business Profile, Apple Business Connect, and Bing Places.
+# Local Listings Management
 
-## The setup process
+## Overview
 
-The initial phase involves submitting your business information, participating in a required onboarding call, and completing the verification process for each listing platform.
+Local Listings Management is a fully managed solution where a team of specialists claims, optimizes, and monitors your business listings on Google Business Profile, Apple Business Connect, and Bing Places.
 
-### 1. Submitting your information
+## What's Included
 
-The process begins when you complete and submit a fulfillment form with as much detail as possible. To prevent delays, please ensure all information is provided, as missing details will delay the entire process.
-
-* **Timeline:** Our team will review your order and start the process within 2 business days.
-
-### 2. Onboarding call
-
-An onboarding call is required for all customers to verify key business information. During this call, we will discuss your business and the listings process to avoid any surprises. It is common to complete the Apple Business Connect and Bing Places listings during this call.
-
-* **Timeline:** The onboarding call can be booked 3 business days after the initial order is placed.
-* **How to Prepare:** Please have the following information and documents ready for the call:
-    * Business name, address, phone number, and website.
-    * A utility bill or business license with the business name and address visible.
-    * Apple ID credentials if you wish to use an existing Apple account.
-
-### 3. Listing verification
-
-Each listing site has its own methods for verifying a business. You may be presented with one or more of the following options:
-* Phone call verification
-* SMS verification
-* Email verification
-* Video verification
-* Postcard verification
-
-> **Postcard verification**
->
- > If a physical postcard is the only option, it will be mailed to the business address. This postcard contains a PIN that must be entered to complete the claim. These PINs expire within 30 days, so it is critical to provide the PIN to our team as soon as it is received.
-
-
-* **Timeline:** Verification timelines can range from minutes to weeks, depending on the platform and method. A final confirmation email will be sent once the work is complete.
-
-## Monthly management and features
-
-Once your listings are successfully claimed, our team provides ongoing services to keep your profiles accurate and engaging.
+Fully managed listings across Google Business Profile, Apple Business Connect, and Bing Places, plus ongoing monthly monitoring, posting, uploads, and retroactive review responses.
 
 ### Ongoing profile monitoring
 
-Our team will monitor all three listings on a monthly basis to ensure the information stays up to date and accurate.
+Our team monitors all three listings on a monthly basis to ensure the information stays up to date and accurate.
+
 * Monthly data checks are performed for your business name, phone number, and address.
 * Ongoing support is provided in case of a listing suspension.
 
@@ -60,10 +29,56 @@ Our team will monitor all three listings on a monthly basis to ensure the inform
 ### Retroactive review responses
 
 The service includes up to 3 months of retroactive review responses on Google.
+
 * Our process for responding to positive and negative reviews differs to ensure each is handled appropriately.
 * We require a designated contact at the business who can approve drafted responses to negative reviews.
 
-## Frequently asked questions (FAQs)
+## Prerequisites
+
+Have the following ready for your onboarding call and verification:
+
+* Business name, address, phone number, and website
+* A utility bill or business license with the business name and address visible
+* Apple ID credentials if you wish to use an existing Apple account
+* **Someone available at the business** who can answer the primary business phone line for verification steps
+* **Content for the monthly Google Business Profile post** (you supply this each month)
+
+## Getting Started
+
+The initial phase involves submitting your business information, participating in a required onboarding call, and completing the verification process for each listing platform.
+
+### 1. Submitting your information
+
+The process begins when you complete and submit a fulfillment form with as much detail as possible. To prevent delays, ensure all information is provided—missing details will delay the entire process.
+
+* **Timeline:** Our team will review your order and start the process within 2 business days.
+
+### 2. Onboarding call
+
+An onboarding call is required for all customers to verify key business information. During this call, we will discuss your business and the listings process to avoid surprises. It is common to complete the Apple Business Connect and Bing Places listings during this call.
+
+* **Timeline:** The onboarding call can be booked 3 business days after the initial order is placed.
+* See [Prerequisites](#prerequisites) for what to have ready.
+
+### 3. Listing verification
+
+Each listing site has its own methods for verifying a business. You may be presented with one or more of the following options:
+
+* Phone call verification
+* SMS verification
+* Email verification
+* Video verification
+* Postcard verification
+
+:::warning Postcard verification
+
+If a physical postcard is the only option, it will be mailed to the business address. This postcard contains a PIN that must be entered to complete the claim. These PINs expire within 30 days, so it is critical to provide the PIN to our team as soon as it is received.
+
+:::
+
+* **Timeline:** Verification timelines can range from minutes to weeks, depending on the platform and method. A final confirmation email will be sent once the work is complete.
+
+## FAQ
 
 <details>
 <summary> Can someone claim my listings completely on my behalf?</summary>

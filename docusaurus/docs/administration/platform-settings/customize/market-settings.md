@@ -167,6 +167,18 @@ To expand your market structure:
 - **Plan organization**: Consider how accounts will be assigned and managed
 - **Branding preparation**: Prepare market-specific branding elements if needed
 
+### Disabling a market
+
+Disabling a market removes it from active use but does not delete it. Accounts and data associated with the market are preserved. To request a market be disabled, contact [Vendasta Support](https://support.vendasta.com) with the market name and your account details.
+
+### Reactivating a market
+
+A previously disabled or cancelled market can be reactivated. Before requesting reactivation, check with your Vendasta account manager — reactivating a cancelled market may incur an additional cost depending on your contract. To reactivate a market, contact [Vendasta Support](https://support.vendasta.com) with the market name and your account details.
+
+### Renaming a market
+
+Market names can be changed at any time. Contact [Vendasta Support](https://support.vendasta.com) with the current name, the new name, and your account details.
+
 ### Market Management Best Practices
 - **Clear naming**: Use descriptive market names that reflect their purpose
 - **Consistent organization**: Establish clear criteria for account assignment

@@ -6,8 +6,6 @@ tags: [knowledge-base, ai-employees, knowledge-sources, conversations-ai]
 keywords: [knowledge base, knowledge sources, business profile, ai employees, conversations ai]
 ---
 
-# Knowledge Base Overview
-
 ## What is the Knowledge Base?
 
 The **Knowledge Base** is where AI employees access factual information about a business. It ensures that answers are accurate and grounded in real data.  
@@ -16,7 +14,7 @@ The **Knowledge Base** is where AI employees access factual information about a 
 Do not add behavioral instructions to the Knowledge Base. Use **capabilities** for mandatory behavior instructions and use **knowledge base** for facts that can optionally be looked up when needed.
 :::
 
-## Why is the Knowledge Base Important?
+## Why is the Knowledge Base important?
 
 AI employees rely on the Knowledge Base to answer questions consistently and accurately. Without it, responses may be incomplete or outdated.  
 
@@ -35,7 +33,7 @@ This happens automatically for every customer interaction, ensuring your AI alwa
 Behind the scenes, the knowledge base uses **vector embeddings** and **semantic search** to find relevant information based on meaning, not just exact word matches. This means the AI can find answers even when customers phrase questions differently than your documentation.
 :::  
 
-## Types of Knowledge Sources
+## Types of knowledge sources
 
 You can add or update knowledge in several ways:
 
@@ -77,8 +75,6 @@ You can add or update knowledge in several ways:
 - **Code/Data files:** JSON, HTML (great for structured data)
 - **Images:** Common image formats (JPG, PNG, etc.)
 
-## Knowledge, Capabilities, and Tools: What's the Difference?
-
 ## Knowledge base vs. capabilities vs. tools
 
 The knowledge base is one of three key components that make AI employees effective:
@@ -89,6 +85,10 @@ The knowledge base is one of three key components that make AI employees effecti
 
 :::tip Understanding the Difference
 The knowledge base contains **information to reference** (reactive, fact-based). In contrast, capabilities contain **instructions on behavior** (proactive, process-based), and tools provide the **ability to take actions** in other systems (integration-based).
+:::
+
+### Knowledge Base
+**Facts and information to reference**
 
 **What it's for:**
 - Business hours, location, contact information
@@ -111,6 +111,17 @@ Capabilities tell your AI employee **how to act** and **when** to take specific 
 - Tone and communication style
 - Conditional logic (if customer asks X, do Y)
 - Business rules and priorities
+
+### Tools
+**Actions in external systems**
+
+Tools enable your AI employee to **perform actions** in external systems via APIs, such as looking up order status, booking appointments, or checking inventory in real time.
+
+**What it's for:**
+- Looking up real-time data (order status, inventory, appointment availability)
+- Creating or updating records in external systems
+- Triggering actions based on customer requests
+- Any integration requiring live data or system interaction
 
 :::tip Knowledge vs. Capabilities
 - **Knowledge** = "Here's the booking link" (reactive, information-based)
@@ -180,16 +191,19 @@ This helps you refine what to keep, update, or remove from your knowledge base.
 <summary>How do I update the Business Profile knowledge source?</summary>
 
 Edit the Business Profile in Business App. Changes automatically sync to AI employees.
+
 </details>
 
 <details>
 <summary>When should I use text vs. website knowledge?</summary>
 
 Use **text** for short, specific information not on the site. Use **website** for broader content that is already published online.
+
 </details>
 
 <details>
 <summary>Does uploading a file automatically update if the file changes?</summary>
 
 No. You'll need to upload a new version of the file to refresh its content.
+
 </details>
