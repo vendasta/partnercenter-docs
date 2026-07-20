@@ -105,6 +105,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
+          // Security & privacy: convenience aliases to the Security and privacy page
+          { from: '/security', to: '/getting-started/security-and-privacy' },
+          { from: '/trust-center', to: '/getting-started/security-and-privacy' },
+          { from: '/security-and-compliance', to: '/getting-started/security-and-privacy' },
           // Commerce: order processing/activation article merged into Creating and Managing Orders
           { from: '/commerce/orders/order-processing-and-activation', to: '/commerce/orders/creating-and-managing-orders' },
           // --- Learn restructure (2026-07): TRAINING -> LEARN, paths + lifecycle libraries ---
@@ -448,6 +452,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="https://www.vendasta.com/terms/" target="_blank" rel="noopener noreferrer">Terms of Service</a>
             <a href="https://www.vendasta.com/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
             <a href="https://www.vendasta.com/gdpr/" target="_blank" rel="noopener noreferrer">GDPR</a>
+            <a href="/getting-started/security-and-privacy">SOC 2</a>
           </nav>
         </div>
       `,
