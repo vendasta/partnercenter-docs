@@ -794,6 +794,64 @@ h2 {
   z-index: 1;
 }
 
+.vs-card.product-hover-card {
+  position: relative;
+  overflow: hidden;
+}
+.vs-card.product-hover-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--product-hover-gradient);
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.vs-card.product-hover-card:hover {
+  box-shadow: 0 8px 32px var(--product-hover-shadow);
+}
+.vs-card.product-hover-card:hover::after {
+  opacity: 1;
+}
+.vs-card.product-hover-card:hover .vs-card-title,
+.vs-card.product-hover-card:hover .vs-card-desc {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.vs-card.product-hover-card:hover .vs-card-badge {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  position: relative;
+  z-index: 1;
+}
+.vs-card.product-hover-card .vs-card-icon {
+  position: relative;
+  z-index: 1;
+}
+
+.vs-card.reputation-card {
+  --product-hover-gradient: linear-gradient(135deg, #ffd60a 0%, #d4a017 100%);
+  --product-hover-shadow: rgba(212, 160, 23, 0.4);
+}
+.vs-card.social-card {
+  --product-hover-gradient: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+  --product-hover-shadow: rgba(37, 99, 235, 0.4);
+}
+.vs-card.seo-card {
+  --product-hover-gradient: linear-gradient(135deg, #22c55e 0%, #15803d 100%);
+  --product-hover-shadow: rgba(21, 128, 61, 0.4);
+}
+.vs-card.ad-intel-card {
+  --product-hover-gradient: linear-gradient(135deg, #fb923c 0%, #ea580c 100%);
+  --product-hover-shadow: rgba(234, 88, 12, 0.4);
+}
+.vs-card.wordpress-card {
+  --product-hover-gradient: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+  --product-hover-shadow: rgba(124, 58, 237, 0.4);
+}
+
 .explore-by-product-section {
   margin-top: 2rem;
   margin-bottom: var(--ifm-spacing-vertical);
