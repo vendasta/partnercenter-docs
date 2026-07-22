@@ -101,3 +101,33 @@ Each entry below is one source call — do not merge or overwrite prior entries.
 4. **Context for why this came up:** the partner's own reputation-monitoring today is a manual, free-to-them tool bundled with their agency account (aggregate/reply to reviews, no deeper CRM/data integration) — the AI-tone question surfaced specifically while comparing that manual status quo against Vendasta's fully automated Reputation Specialist (auto-requests **and** auto-responds) as a "hands off" upgrade path Vendasta was pitching for the renewed contract.
 
 ---
+
+## Date unknown — Biswarup B (apartments.com Reputation team) with apartment-community property managers (two properties) — Reputation product onboarding: review-response policy and review-generation mechanics
+**Source:** [CALL] `gbp-listing-claiming-reputation-onboarding-apartment-properties.txt` — reputation-specific portion of a combined Reputation + Social onboarding call for two apartment properties (the GBP-listing-claiming portion of this same call is filed in `local-seo-listings.md`; the social-posting portion is filed in `social-marketing.md`).
+
+1. **Standing review-response rule:** the team monitors and responds to reviews across Google, Apartments.com, and Facebook — but any review touching a **legal concern or Fair Housing issue** is escalated to the client for approval before any response is posted, never auto-answered; this carve-out was stated as policy, not something negotiated per-account.
+2. **Review-generation workflow:** within 24 hours of onboarding, the client gets an email with a spreadsheet to fill in current residents' contact information; the team uses that list to send review-request outreach directly.
+3. **Interim-period guidance:** while GBP access/claiming is still pending (a common gap at onboarding for properties with no existing listing access), the client is explicitly told to keep responding to any incoming reviews themselves in the meantime, since Vendasta can't act on a listing it doesn't yet control.
+4. **Bundling context confirmed on the call:** Reputation and Social are sold and onboarded together as one combined product for this apartment-industry vertical (via a reseller relationship with apartments.com/CoStar), with a single shared onboarding script covering both.
+
+---
+
+## Date unknown — Biswarup B (apartments.com Reputation team) with Amabel Arteaga (property client) — second instance of the same apartments.com Reputation + Social onboarding script
+**Source:** [CALL] `reputation-social-onboarding-roberta-apartment-homes.txt` — a near-identical repeat of the onboarding script captured in the entry above, for a different property; logged separately to confirm the script is consistently applied, and to capture two variations worth noting.
+
+1. Same core mechanics confirmed again: property/address/hours confirmation → GBP-access check (claimed directly by Vendasta with Google when the client has no access) → review-response policy with the same legal/Fair-Housing carve-out → 24-hour review-generation spreadsheet request → 4 social posts/month published to Facebook, Instagram, and GBP as a fully managed (not self-serve) service.
+2. **Facebook-page ownership gap, a new wrinkle here:** unlike some other properties in this batch, this client had **no existing Facebook page at all** — Vendasta's team takes on creating it, while the client is expected to create their own Instagram account themselves (a specific division of labor: Facebook creation is Vendasta's job, Instagram account creation is the client's).
+3. **Yelp access gap:** the client confirmed a Yelp listing exists for the property but she has no login for it (created by a predecessor before her time) — logged as a listing Vendasta can't act on until/unless the client is able to track down those credentials herself.
+4. **Support routing:** a shared "social support @ [reseller]" email address given for any future changes, consistent with the sibling call above.
+
+---
+
+## Date unknown — Harikrishnan V (Vendasta) with Paul (insurance agency, client) — review-response and NPS-gated review-request configuration
+**Source:** [CALL] `ai-receptionist-reputation-email-onboarding-paul-insurance.txt` — reputation-configuration portion of a combined AI Workforce + Reputation + Email onboarding call (the AI receptionist/chat setup is filed in `ai-workforce.md`; the email-campaign-automation portion is filed in `crm.md`).
+
+1. **Review-response automation tiers, clarified explicitly:** **4- and 5-star reviews** count as positive and get an automatic AI-drafted response mentioning the business name; **1-3-star reviews** count as negative, and by default the AI-drafted response **omits the business name** specifically so a negative review doesn't compound brand association — client can additionally require his own approval before any negative-review response posts (a configurable gate, not automatic either way).
+2. **Distinction the client initially conflated (worth flagging for any Learn content, since it recurred elsewhere in this batch too):** responding to reviews already posted publicly is a completely separate feature from proactively requesting reviews from customers — the client needed this spelled out explicitly mid-call before the rest of the review-request explanation made sense to him.
+3. **Review-request format options:** a straight **review-request** template, or an **NPS-style** template using a 1-10 rating — a score of roughly 7-10 routes the customer to actually post publicly (Google/Facebook); a lower score instead captures private feedback only, specifically to prevent a dissatisfied customer from posting a public negative review before the business has a chance to hear about the issue directly. Delivery can be email, SMS, or both, and email/SMS can be sent together or separately depending on client preference.
+4. **CRM-sourcing mechanic for review requests:** if the client's contacts live in a third-party CRM (here, the client mentioned evaluating Ricochet360 or Shape CRM as alternatives) rather than Vendasta's own CRM, the workaround is simply exporting contacts to CSV and importing into Vendasta's CRM — described as "pretty simple," not requiring a deeper integration.
+
+---
