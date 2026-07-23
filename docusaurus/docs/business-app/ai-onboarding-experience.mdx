@@ -36,7 +36,7 @@ Both are controlled by you, the partner, and both can be dismissed by the SMB. D
 
 ## The onboarding email
 
-When you create a new Business App user, the platform sends an **onboarding email** in place of the classic welcome email. Rather than a simple "set your password" note, it walks the SMB through what your AI has already accomplished for their business, then invites them in.
+When you create a new Business App user, you can send an **onboarding email** in place of the classic welcome email. Sending it is **optional and entirely your choice** — it's selected by default in the create-user flow, but you decide per user whether to send it, and you can always send the classic welcome email instead. Rather than a simple "set your password" note, the onboarding email walks the SMB through what your AI has already accomplished for their business, then invites them in.
 
 <img src={require('./img/ai-onboarding-email-preview.png').default} alt="The onboarding email, shown in the in-app preview: a subject line, a checklist of the work the AI has completed, and a 'See what's ready for you' call to action" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -103,17 +103,7 @@ Here is exactly what triggers it. A Vibe site is generated **only when all of th
 
 The email waits for the site to finish building (allow **5–15 minutes** for it to arrive). If the build is slow or fails, **the email is still sent** — it just won't include the website line or preview image. Site generation never blocks the rest of the onboarding email beyond that window.
 
-### Making sure a Vibe site is not created
-
-If you don't want a Vibe demo site generated for a particular client, you have direct control:
-
-- **Don't send the onboarding email to that user.** In the create-user flow, clear the **Send Onboarding Email** checkbox (send the classic welcome email instead, or add the user without it). No onboarding email means no Vibe generation.
-- **Don't activate Vibe on the account** before inviting the SMB. With Vibe inactive, the onboarding email sends normally but no site is built.
-- If the account **already has a published Vibe site**, re-sending the onboarding email is safe — it will never create a second one.
-
-:::warning
-Turning off the **"AI has done the work"** card in Customize Business App does **not** stop Vibe sites from being generated. That toggle only controls whether the summary card is *displayed* on Home. Vibe generation is tied to **sending the onboarding email** — so if you want to prevent a site, use one of the controls above.
-:::
+You stay in control: because a site is only ever created by *sending the onboarding email* with Vibe active, you can prevent one for any client — simply don't send them the onboarding email, or don't activate Vibe before inviting them. See the [FAQ](#frequently-asked-questions) for the full details.
 
 ### Turning the email on
 
@@ -122,7 +112,17 @@ The onboarding email is **default-on** in the single-user creation flow, so it's
 - From an account: **Accounts → Manage Accounts →** select the account **→ Add users → Create User**.
 - Or from **Accounts → Manage Users**.
 
-When the onboarding email is enabled, it **replaces** the classic welcome email for that user — the two aren't sent together. You can also send it to an existing user at any time with the **Send Onboarding Email** action on the user (handy for re-triggering the experience).
+When the onboarding email is enabled, it **replaces** the classic welcome email for that user — the two aren't sent together.
+
+### Sending it to an existing user
+
+You don't have to create a brand-new user to use the onboarding email. You can send it to any existing user on an account:
+
+1. Go to the account's users (**Accounts → Manage Accounts →** select the account **→ Users**, or **Accounts → Manage Users**). If the person isn't a user yet, add them to the account first.
+2. Open the **options menu (⋮)** next to the user.
+3. Choose **Send Onboarding Email**, then confirm.
+
+This is handy for re-triggering the experience for someone already set up — and it's also the easiest way to see the real email yourself: add yourself as a user on the account and send it to your own inbox.
 
 <img src={require('./img/ai-onboarding-create-user.png').default} alt="The Create User form with the 'Send Onboarding Email' checkbox selected by default and a Preview button beside it" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -205,7 +205,7 @@ Both are **on by default**. Turning a checkbox off hides that section for all of
 <img src={require('./img/ai-onboarding-customize-home.png').default} alt="Customize Business App → Pages → Home, showing the 'AI has done the work' and 'Recommended for your business cards' toggles at the top of Page Features, both on by default" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 :::info
-These toggles control **display only**. They hide the cards for **all** your SMBs, and individual SMBs can still dismiss cards for themselves even when you leave them on. Turning off the "AI has done the work" card does **not** stop Vibe sites from being generated — see [Making sure a Vibe site is not created](#making-sure-a-vibe-site-is-not-created).
+These toggles control **display only**. They hide the cards for **all** your SMBs, and individual SMBs can still dismiss cards for themselves even when you leave them on.
 :::
 
 ## Benefits and how to get the most out of it
@@ -231,9 +231,15 @@ Only work that was genuinely done for their business. The summary is fully dynam
 </details>
 
 <details>
-<summary>How do I stop the onboarding email from creating a Vibe website?</summary>
+<summary>Can I control whether a Vibe site is created?</summary>
 
-A Vibe site is only ever created as a step of *sending the onboarding email*, and only when Vibe is active and the account has no live site yet. To prevent one: clear the **Send Onboarding Email** checkbox when creating the user, or don't activate Vibe on the account before inviting them. Turning off the "AI has done the work" card does **not** stop generation. See [Making sure a Vibe site is not created](#making-sure-a-vibe-site-is-not-created).
+Yes. A Vibe site is only ever created as a step of *sending the onboarding email*, and only when Vibe is active on the account and it has no live site yet. So you have a few ways to prevent one:
+
+- **Don't send the onboarding email to that user** — clear the **Send Onboarding Email** checkbox when creating them (or send the classic welcome email instead). No onboarding email means no Vibe site.
+- **Don't activate Vibe on the account** before inviting them. With Vibe inactive, the email sends normally but no site is built.
+- If the account **already has a published Vibe site**, re-sending the onboarding email is safe — it never creates a second one.
+
+Note that turning off the "AI has done the work" card in Customize Business App does **not** stop generation — that toggle only controls whether the card is displayed.
 
 </details>
 
