@@ -2,9 +2,9 @@
 title: AI onboarding experience
 sidebar_label: AI onboarding
 sidebar_position: 3
-description: A new onboarding email and set of Business App Home cards that show SMBs the work AI has already done for them, recommend next steps, and surface upgrade options. Currently available to Early Access partners.
+description: An onboarding email and set of Business App Home cards that show SMBs the work AI has already done for them, recommend next steps, and surface upgrade options. Available to Early Access partners.
 tags: [business-app, onboarding, home, ai, early-access, upgrades]
-keywords: [onboarding email, AI work done, home cards, upgrade cards, recommended next steps, early access, activation]
+keywords: [onboarding email, AI work done, home cards, upgrade cards, recommended next steps, Vibe, early access, activation]
 ---
 
 # AI onboarding experience
@@ -14,7 +14,7 @@ The AI onboarding experience gives newly invited SMBs an immediate sense of valu
 The goal is faster activation and more recurring product purchases: the SMB sees results before they lift a finger, understands what to do next, and can add products without leaving Home.
 
 :::info[Early Access only]
-This experience is currently available to **Early Access partners**. To turn it on, join the Early Access program in **Partner Center → Administration → Customize → General Product Settings → Other**, select **Join Early Access Program**, and click **Save**. Broader availability will follow.
+This experience is available to **Early Access partners**. To turn it on, join the Early Access program in **Partner Center → Administration → Customize → General Product Settings → Other**, select **Join Early Access Program**, and click **Save**. Broader availability will follow.
 :::
 
 ## Watch the overview
@@ -30,42 +30,111 @@ This experience is currently available to **Early Access partners**. To turn it 
 The experience has two connected halves:
 
 1. **The onboarding email** — replaces the standard welcome email when you create a user, and shows the work AI has already completed for the business.
-2. **The Business App Home cards** — three new sections on the Home dashboard: a "work your AI has done" card, recommended next steps, and product upgrade cards.
+2. **The Business App Home cards** — new sections on the Home dashboard: a "work your AI has done" card, recommended next steps, and product upgrade cards.
 
 Both are controlled by you, the partner, and both can be dismissed by the SMB. Details below.
 
 ## The onboarding email
 
-When you create a new Business App user, the platform can now send an **onboarding email** in place of the classic welcome email. Rather than a simple "set your password" note, it walks the SMB through what your AI has already accomplished for their business, then invites them in.
+When you create a new Business App user, you can send an **onboarding email** in place of the classic welcome email. Sending it is **optional and entirely your choice** — it's selected by default in the create-user flow, but you decide per user whether to send it, and you can always send the classic welcome email instead. Rather than a simple "set your password" note, the onboarding email walks the SMB through what your AI has already accomplished for their business, then invites them in.
 
 <img src={require('./img/ai-onboarding-email-preview.png').default} alt="The onboarding email, shown in the in-app preview: a subject line, a checklist of the work the AI has completed, and a 'See what's ready for you' call to action" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 ### What the email contains
 
-- A summary of the **work AI has already done**, mirroring the "work your AI has done" card on Home (see below). The content is generated from the business's own information — business name, website, number of pages read, and so on.
-- The list adapts to the **products that are currently active** on the account. For example, the online visibility line only appears when Local SEO is active, and a "built a website with Vibe" line appears when Vibe is active.
+- A subject line of **"We've started working for you – Welcome to \[your Business App name\]"**.
+- A short intro, then a **"We already got to work"** summary — the same checklist of completed work that appears on the SMB's Home page (see [What the work summary shows](#what-the-work-summary-shows)). The content is generated from the business's own information — business name, website, number of pages read, reviews found, active products, and so on.
+- If a Vibe website has been built, a **preview image of that landing page** near the top, linked to the live site.
 - A single call to action — **See what's ready for you** — that takes the SMB to their Business App Home page. The link works whether the user still needs to set a password or can log in directly.
 
-### It can kick off a Vibe site
+The email adapts to the **products that are currently active** on the account, so no two businesses necessarily receive the same checklist. The next section lays out every line it can contain.
 
-When you send the onboarding email and **Vibe is active** on the account with no existing project, the platform automatically starts generating a Vibe website for the business first, then sends the email once the site is ready. This means the SMB's onboarding email can point to a live, AI-built landing page from the very first touch.
+## What the work summary shows
 
-### Turning it on
+This is the heart of the experience, and the part partners ask about most: *what exactly will my client see?* The "We already got to work" summary — shown both in the onboarding email and on the Home page — is **fully dynamic**. Every line is driven by the business's real data and the products active on the account, so the SMB only ever sees work that was genuinely done.
 
-The onboarding email is **default-on** in the new-user creation flow, so it's selected automatically when you add a user. It's available on:
+A few rules govern the whole summary:
 
-- **Single user creation** — from an account (**Accounts → Manage Accounts →** select account **→ Add users → Create User**) or from **Accounts → Manage Users**.
-- **Bulk account create** — the onboarding email is default-on for users created in bulk.
+- **Lines are product-gated.** A product's line only appears when that product is **active** on the account. The website-read and business-profile lines are the exceptions — they always appear (the website line needs a website on file).
+- **Wording adapts to the product edition** (for example, Reputation Standard vs. Pro vs. Premium, or Local SEO Standard vs. Pro).
+- **Brand-new accounts show a "scanning" state.** In the first 24 hours after the account is created, review and visibility work reads as "scanning… results in about 24 hours," then switches to the completed wording once results are in.
+- **The card only shows recent work.** A line drops off roughly 30 days after the work was done, so the card stays relevant to genuinely new accounts.
+- **No access, no link.** If the SMB doesn't have access to a product, the work is still shown, but the associated link is hidden (the Vibe "see it live" link is the one exception — a published site is always linkable).
+
+The table below lists every line the summary can contain, the exact condition for it to appear, and the wording the SMB sees.
+
+| What the SMB sees | Appears when | Link offered |
+|---|---|---|
+| **Built you a free website** so you can see what we can do! | Vibe is active **and** a Vibe site exists for the account | **see it live** (when the site is published), **edit here** (when the SMB has Vibe access) |
+| …**- Ready to connect your domain** (appended to the line above) | The Vibe edition is **Standard** | — |
+| …**- With unlimited projects and potential available** (appended) | The Vibe edition is **Pro** | — |
+| **Scanning your online reviews** - results in about 24 hours | Reputation is active **and** the account is less than 24 hours old | connect your accounts to pull in reviews |
+| **Scanned the web for reviews** | Reputation is active, past the first 24 hours, and no reviews were found yet | connect your accounts to pull in reviews |
+| **Gathered and analyzed your reviews** | Reputation **Standard** is active and reviews were found | check for insights |
+| **Read your \{count\} reviews** and ready to draft responses. | Reputation **Pro** is active and reviews were found | ready to draft responses |
+| **Analyzed your business reputation** | Reputation **Premium** is active and reviews were found (shown *in addition* to the "Read your reviews" line) | ask your AI specialist for a report |
+| **Started your online visibility scan** - results in about 24 hours | Local SEO is active **and** the account is less than 24 hours old | view the dashboard as results come in |
+| **Scanned 40+ directories** and found where you're missing | Local SEO is active, past the first 24 hours | view your results |
+| **Calculated your local visibility and Google search rankings** | Local SEO **Pro/Premium** is active (shown in addition to the directory line) | ask your local search specialist for a report |
+| Read your website (**\{count\} pages** from \{domain\}) and taught your AI everything about your business | The business has a website on file | the website domain |
+| Prefilled your **business profile** | Always | ready for you to review |
+
+:::note
+The onboarding email shows this same checklist. It keeps the fewest inline links — typically just the Vibe **see it live** link and the website domain — because the richer in-app links (drafting responses, opening a specialist chat, and so on) live behind login.
+:::
+
+## How a Vibe website is kicked off
+
+When Vibe is active, sending the onboarding email can automatically build the business a **free Vibe demo website** before the email goes out — so the SMB's very first touch points to a live, AI-built landing page. Partner Center states this directly on the email preview:
+
+:::info
+When Vibe is active, sending this email creates a demo website (one per account).
+:::
+
+Here is exactly what triggers it. A Vibe site is generated **only when all of the following are true**:
+
+1. **You send the onboarding email.** Vibe generation is the first step of the onboarding-email process — it never happens on its own. Sending the email is the only thing that can start it.
+2. **The AI onboarding experience is enabled for you** (you're in the Early Access program).
+3. **Vibe is active** on the account.
+4. **The account has no live Vibe site yet.** One demo site per account:
+   - No Vibe project exists → a new site is generated.
+   - A site is already being built (for example, a teammate just triggered one) → the platform waits for that build instead of starting a second.
+   - A published Vibe site already exists → nothing is generated; the email simply links to it.
+
+The email waits for the site to finish building (allow **5–15 minutes** for it to arrive). If the build is slow or fails, **the email is still sent** — it just won't include the website line or preview image. Site generation never blocks the rest of the onboarding email beyond that window.
+
+You stay in control: because a site is only ever created by *sending the onboarding email* with Vibe active, you can prevent one for any client — simply don't send them the onboarding email, or don't activate Vibe before inviting them. See the [FAQ](#frequently-asked-questions) for the full details.
+
+### Turning the email on
+
+The onboarding email is **default-on** in the single-user creation flow, so it's selected automatically when you add a user to an account:
+
+- From an account: **Accounts → Manage Accounts →** select the account **→ Add users → Create User**.
+- Or from **Accounts → Manage Users**.
+
+When the onboarding email is enabled, it **replaces** the classic welcome email for that user — the two aren't sent together.
+
+### Sending it to an existing user
+
+You don't have to create a brand-new user to use the onboarding email. You can send it to any existing user on an account:
+
+1. Go to the account's users (**Accounts → Manage Accounts →** select the account **→ Users**, or **Accounts → Manage Users**). If the person isn't a user yet, add them to the account first.
+2. Open the **options menu (⋮)** next to the user.
+3. Choose **Send Onboarding Email**, then confirm.
+
+This is handy for re-triggering the experience for someone already set up — and it's also the easiest way to see the real email yourself: add yourself as a user on the account and send it to your own inbox.
+
+<img src={require('./img/ai-onboarding-create-user.png').default} alt="The Create User form with the 'Send Onboarding Email' checkbox selected by default and a Preview button beside it" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 ### Previewing before you send
 
-Just like the welcome email, you can **preview the onboarding email** in Partner Center before it goes out.
+When the **Send Onboarding Email** checkbox is selected, a **Preview** button appears beside it so you can review the email in Partner Center before it goes out.
 
-The preview is a **static example** — it shows the email's branding, layout, and subject line so you can confirm it's on-brand. The email your client actually receives is **generated dynamically** from the real work the AI has done for their business, so the specific checklist items will reflect that business's website, listings, active products, and Vibe site.
+The preview is a **static example** — it shows the email's branding, layout, and subject line so you can confirm it's on-brand. The email your client actually receives is **generated dynamically** from the real work the AI has done for their business, so the specific checklist items reflect that business's website, listings, reviews, active products, and Vibe site. Partner Center notes this on the preview itself:
 
-Because the email is sent only after that background work runs (including generating a Vibe site when Vibe is active), **allow 5–15 minutes for it to arrive** — it is not sent instantly when you create the user.
-
-<img src={require('./img/ai-onboarding-create-user.png').default} alt="The Create User form with the 'Send Onboarding Email' checkbox selected by default and a Preview button beside it" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+:::info
+Sample content – the real email is personalized with the business's branding, products, and completed AI work (allow 5-15 minutes for the email to arrive).
+:::
 
 :::tip
 Want to see the exact email your new client will see? Add yourself as a user on the account and send yourself the onboarding email.
@@ -75,28 +144,15 @@ If you rely on custom onboarding content today, you can still layer a [Marketing
 
 ## The Business App Home cards
 
-When an SMB lands on their Business App Home page, up to three new sections greet them. All three are controlled by you and dismissible by the SMB.
+When an SMB lands on their Business App Home page, new sections greet them. All are controlled by you and dismissible by the SMB.
 
 <img src={require('./img/ai-onboarding-home-cards.png').default} alt="Business App Home showing the 'We already got to work' card above the 'Recommended for your business' upgrade cards" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 ### "We already got to work" card
 
-This card sits at the top of the Home page and shows a checklist of what the AI has already completed for the business. For example:
+This card sits at the top of the Home page and shows the same checklist of completed work described in [What the work summary shows](#what-the-work-summary-shows). It opens with **"We already got to work"** and the line **"While you signed up, your AI got started on \[business name\]. All of this is done."**
 
-- **Built you a free website** so you can see what we can do — with **see it live** and **edit here** links to the Vibe site
-- **Started scanning for reviews**
-- **Scanned 40+ directories** and found where the business is missing — with a **view your results** link
-- **Read your website** (for example, 60 pages from the business's domain) and taught your AI everything about the business
-- **Prefilled your business profile** — ready for the SMB to review
-
-The card is **dynamic**. It reflects the business's real information and updates automatically as products are added or removed:
-
-- The **research** and **business profile** lines are always present (as long as a site or reviews were found).
-- The **online visibility** line appears only when Local SEO is active.
-- The **Vibe website** line appears only when Vibe is active.
-- The card is extensible, so more lines appear as additional Vendasta products become active.
-
-If a user doesn't have access to a given product, the work is still shown, but the associated links are hidden.
+On Home, each line can carry its in-app links — for example **edit here** on the Vibe site, **ready to draft responses** on reviews, or **view your results** on the directory scan — so the SMB can act on the work immediately. If a line's underlying product isn't accessible to that SMB, the work still shows but the link is hidden. The card only appears when there's at least one recent line to show.
 
 ### Recommended next steps
 
@@ -104,9 +160,9 @@ The familiar Getting Started cards are restyled into **recommended next steps** 
 
 ### Product upgrade cards
 
-Below the work-done card, a **Recommended for \[business name\]** section surfaces your core AI products so SMBs can add them without leaving Home. Each card leads with a benefit headline. The four products are:
+Below the work-done card, a **Recommended for \[business name\]** section surfaces your core AI products so SMBs can add them without leaving Home. Each card leads with a benefit headline:
 
-- **Local SEO** — for example, "Get found first when customers search nearby"
+- **Local SEO** — "Get found first when customers search nearby"
 - **Conversations AI** — "Never miss another customer call"
 - **Reputation AI** — "Win more 5-star reviews, reply to every one"
 - **Social AI** — "Stay active on social without the work"
@@ -115,11 +171,11 @@ Each card's button adapts to the account's state:
 
 | Situation | What the card shows |
 |-----------|--------------------|
-| Product available with an upgrade path enabled | **Get started** — opens the upgrade modal for that product |
-| Product not active and upgrades not turned on | **Contact us** — opens the contact card in Business App |
-| Product already active | A link into the product's app |
-| Product currently provisioning | **Activating. This will only take a few moments.** |
-| Product not enabled for the account | The card is not shown |
+| Product available with a self-serve upgrade path | **Get started** — opens the upgrade / checkout flow for that product |
+| Product available, but you route upgrades to your sales team | **Contact us** — opens the contact card in Business App |
+| Product already active (Pro tier or above) | **Open \[product\]** — a link into the product's app |
+| Product currently provisioning | **Activating. This will only take a few moments.** (no button) |
+| Product not in your catalog, or the account is suspended | The card is not shown |
 
 When an SMB completes an upgrade, payment is collected through **Vendasta Payments** if you have it enabled — the SMB enters their card and checks out right from Home. If you don't use Vendasta Payments, the upgrade is sent to you as an **order** to process through your normal flow.
 
@@ -127,28 +183,29 @@ When an SMB completes an upgrade, payment is collected through **Vendasta Paymen
 
 SMBs stay in control of their own dashboard. Both the work-done card and the product upgrade cards can be dismissed:
 
-- Each dismissible section has a small **✕** in line with its header on the right.
-- Dismissing the upgrade cards hides the **whole section**.
-- Dismissals are **per user**. Once an SMB dismisses a section it stays hidden for them. To bring dismissed cards back, the SMB can clear their browser cache and cookies.
+- Each dismissible section has a small **✕** (labeled **Dismiss**) in line with its header.
+- The **work-done card** dismisses as a whole.
+- The **upgrade cards dismiss one at a time** — the section only disappears once the SMB has dismissed (or is ineligible for) every card in it.
+- Dismissals are stored **per browser** (in the browser's local storage), so they don't follow the SMB to another device. To bring dismissed cards back, the SMB can clear their browser's site data for the Business App.
 - Recommended next-steps cards are removed when the SMB dismisses them or completes the underlying task.
 
 This lets returning users clean up and streamline their Business App experience once they no longer need the onboarding content.
 
 ## How partners control what SMBs see
 
-You have full control over whether these cards appear for your SMBs, from **Customize Business App**.
+You have full control over whether the Home cards appear for your SMBs, from **Customize Business App**.
 
-Go to **Partner Center → Administration → Customize Business App → Pages → Home**. The first two items under page features are:
+Go to **Partner Center → Administration → Customize Business App → Pages → Home**. Under **Page Features**:
 
-- **AI has done the work** — toggles the "work your AI has done" card.
-- **"Recommended for your business" cards** — toggles the recommended product upgrade cards.
+- **"AI has done the work" card** — *"A dynamic list of tasks that AI has completed on account setup based on products active and work done."* Toggles the "We already got to work" summary card.
+- **"Recommended for your business" cards** — *"Allows users to access and upgrade some of Business App's top products. Follows your marketplace rules for sales and upgrades."* Toggles the recommended product upgrade cards.
 
 Both are **on by default**. Turning a checkbox off hides that section for all of your SMBs. Remember to click **Save**.
 
 <img src={require('./img/ai-onboarding-customize-home.png').default} alt="Customize Business App → Pages → Home, showing the 'AI has done the work' and 'Recommended for your business cards' toggles at the top of Page Features, both on by default" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 :::info
-Partner-level toggles hide the cards for **all** your SMBs. Individual SMBs can still dismiss cards for themselves even when you leave them on.
+These toggles control **display only**. They hide the cards for **all** your SMBs, and individual SMBs can still dismiss cards for themselves even when you leave them on.
 :::
 
 ## Benefits and how to get the most out of it
@@ -159,7 +216,7 @@ Partner-level toggles hide the cards for **all** your SMBs. Individual SMBs can 
 
 To take full advantage:
 
-1. **Make sure the right products are active or have upgrade paths enabled** so the work-done card is rich and the upgrade cards show **Get started** rather than **Contact us**. Configure product upgrade paths under **Marketplace → Manage Products**.
+1. **Make sure the right products are active or have upgrade paths enabled** so the work-done summary is rich and the upgrade cards show **Get started** rather than **Contact us**. Configure product upgrade paths under **Marketplace → Manage Products**.
 2. **Activate Vibe** on the account before inviting the SMB so the onboarding email can lead with a live, AI-built website.
 3. **Preview the onboarding email** to confirm the branding, and add yourself as a user to see the exact dynamic email a client will receive.
 4. **Leave the Home cards on** for new SMBs during their first weeks, then let them dismiss what they no longer need.
@@ -167,23 +224,43 @@ To take full advantage:
 ## Frequently asked questions
 
 <details>
+<summary>What exactly will my client see in the email and on Home?</summary>
+
+Only work that was genuinely done for their business. The summary is fully dynamic — see [What the work summary shows](#what-the-work-summary-shows) for the complete list of possible lines and the exact condition for each. Lines are driven by the products active on the account and the business's real data, and the wording adapts to the product edition.
+
+</details>
+
+<details>
+<summary>Can I control whether a Vibe site is created?</summary>
+
+Yes. A Vibe site is only ever created as a step of *sending the onboarding email*, and only when Vibe is active on the account and it has no live site yet. So you have a few ways to prevent one:
+
+- **Don't send the onboarding email to that user** — clear the **Send Onboarding Email** checkbox when creating them (or send the classic welcome email instead). No onboarding email means no Vibe site.
+- **Don't activate Vibe on the account** before inviting them. With Vibe inactive, the email sends normally but no site is built.
+- If the account **already has a published Vibe site**, re-sending the onboarding email is safe — it never creates a second one.
+
+Note that turning off the "AI has done the work" card in Customize Business App does **not** stop generation — that toggle only controls whether the card is displayed.
+
+</details>
+
+<details>
 <summary>Do I have to use the onboarding email instead of the welcome email?</summary>
 
-No. In the new-user creation flow the onboarding email is selected by default, and it's the recommended way to bring new SMBs into Business App because it shows value up front. The classic welcome email is still available — you can send it with **Resend welcome email**, which is handy for cases like password resets. For fully custom messaging, you can also use a Marketing Campaign.
+In the create-user flow the onboarding email is selected by default and replaces the classic welcome email for that user. It's the recommended way to bring new SMBs into Business App because it shows value up front. If you'd rather send the classic welcome email, clear the **Send Onboarding Email** checkbox. For fully custom messaging, you can also use a Marketing Campaign.
 
 </details>
 
 <details>
 <summary>What if the business doesn't have a website or Vibe isn't active?</summary>
 
-The work-done card and email adapt to what's actually true for the account. Lines that depend on a specific product (online visibility, Vibe website) only appear when that product is active. The research and business profile lines still show as long as a site or reviews were found.
+The summary adapts to what's actually true for the account. Lines that depend on a specific product (the Vibe website, review analysis, local visibility) only appear when that product is active. The website-read line appears whenever a website is on file, and the business-profile line always appears.
 
 </details>
 
 <details>
 <summary>Can an SMB bring a dismissed card back?</summary>
 
-Yes. Dismissals are stored per user, so an SMB can restore dismissed cards by clearing their browser cache and cookies. If you want the cards to reappear for everyone, you control visibility at the partner level from **Customize Business App → Home**.
+Yes. Dismissals are stored in the browser's local storage, so an SMB can restore dismissed cards by clearing the Business App's site data in that browser — or by opening Business App in a different browser or device. If you want to control visibility for everyone, use the partner-level toggles in **Customize Business App → Home**.
 
 </details>
 
