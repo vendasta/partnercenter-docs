@@ -109,7 +109,40 @@ For each topic identified, write a **detailed, in-your-own-words** account of wh
 
 Match the depth and style of `learn-revamp/partner-call-insights.md` section 4 (the numbered "common jobs, with exact steps" — see that file for the target level of detail) rather than a loose paragraph summary.
 
-### Step 4: File it
+#### Tag every claim by type and by source authority
+
+Provenance says who spoke; these tags say what kind of claim it is and how far to trust it. Append an inline tag to any claim that is not a plain, corroborated product fact:
+
+- `[PRODUCT]` — how the platform actually behaves or what it can do. These are the claims `learning-path-writing` must check against `docusaurus/docs/` before use; a `[PRODUCT]` claim not found in the docs needs live verification before it reaches a lesson.
+- `[VERIFIED IN-PRODUCT — <verifier>, <date>, <evidence>]` — a claim the docs do not cover, checked live in the product by a named person. Use this instead of `[PRODUCT]` when there is no doc to check against. Two rules make it trustworthy:
+  - **The verifier signs it first-person, where a human is on record** — a line in the commit message or a PR comment in their own words ("I checked Level 3 is the default in-product on July 21 — screenshot attached"). An AI may draft the surrounding notes, but it must never author the attestation on the human's behalf. A verification the model claims on someone's behalf is not a verification.
+  - **Name the evidence** — screenshot, screen recording, or at minimum a dated "checked live." The stronger the claim (anything safety- or money-relevant, like an autonomy default), the more it earns a captured artifact rather than a memory.
+  - Any `[VERIFIED IN-PRODUCT]` claim also carries a standing flag to get it into the docs, so it can graduate to a real `[DOC]` citation and stop depending on one person's check.
+- `[COMMERCIAL]` — a price, fee, tier, or billing term stated as general. Use `[COMMERCIAL — partner-specific]` for anything that applies to one partner's negotiated deal (net terms, per-brand rate, one-off onboarding fee).
+- `[FIELD]` — a sales or usage technique, a recommendation, or an opinion. True as "what this person does or believes," not as product truth.
+- `[SPECULATION]` — a roadmap guess, an ETA, a "working theory," or anything the speaker themselves framed as unconfirmed. Carry the hedge verbatim.
+- `[DEMO]` — a value read off a demo, test, or fake account (a sample price, a placeholder business). Never a real figure.
+
+Judge a claim by who is making it (authority ladder, highest first):
+
+1. **Vendasta SME / engineer / product specialist** — authoritative on `[PRODUCT]`.
+2. **Vendasta CS / CSM / account manager / sales engineer** — reliable on workflows; treat their `[COMMERCIAL]` and `[SPECULATION]` as approximate.
+3. **Partner / agency** — authoritative on their own `[FIELD]` experience and their own `[COMMERCIAL — partner-specific]` terms; not authoritative on `[PRODUCT]`.
+4. **Prospect** — lowest; reactions and opinions, not facts.
+
+When a claim's reliability turns on who said it (a `[PRODUCT]` assertion from a partner rather than an SME, say), name the speaker's role right on the claim. Default: a corroborated product fact from a Vendasta SME can stay untagged; tag the exceptions. When in doubt, tag.
+
+### Step 4: Check against what is already filed, and against the published docs (stop and flag)
+
+Before appending, read the existing topic file and compare the new claims to what is there. Also check any `[PRODUCT]`-type claim against the canonical Partner Center documentation under `docusaurus/docs/` (the main docs instance — not `businessapp-docs`, not `developers.vendasta.com`; those are separate canonical sources per the content-source map in `implementation-plan.md`). Three cases are a hard stop — surface them to the user, do not resolve them silently:
+
+- **Contradiction with a filed claim.** A new claim conflicts with a filed one on the same topic (a price, capability, or step disagrees). Do not overwrite, do not quietly keep both. Stop and report: "`<file>` entry from <date/source> says X; this call says Y — needs a human to reconcile." Leave the prior entry intact and hold the new one until told how to file it.
+- **Discrepancy with the published docs.** A `[PRODUCT]` claim from the transcript disagrees with what `docusaurus/docs/` already says, or asserts something the docs don't cover in a way that looks like it should be documented. Never resolve this by silently picking a side — not by trusting the transcript over the docs, and not by trusting the docs over a live speaker. Stop and ask the human doing the extraction to verify directly (check the product, check with the docs owner) before the claim gets filed as settled fact. This is exactly the gap the `[VERIFIED IN-PRODUCT]` tag exists to close once a human actually checks (Step 3) — until then, the claim sits flagged, not filed as fact.
+- **Substantial duplication.** A new claim substantially repeats one already filed from a different call. Stop and ask whether to (a) file it as **corroboration** — a short line under the existing claim noting a second source confirms it, with its `[CALL]` tag, which is how a field claim earns trust across independent calls — or (b) skip it as redundant. Do not paste the full duplicate as a new standalone block.
+
+Everything genuinely new, and every `[PRODUCT]` claim that squares with the docs (or has no doc to check against and gets tagged `[VERIFIED IN-PRODUCT]`, or is left as an explicitly flagged, unverified `[PRODUCT]` claim), gets filed normally in the next step. Only conflicts, doc discrepancies, and duplicates stop the flow.
+
+### Step 5: File it
 
 For each topic, append (create the file if it doesn't exist) to `learn-revamp/transcript-notes/<slug>.md` using this structure:
 
@@ -126,24 +159,30 @@ Each entry below is one source call — do not merge or overwrite prior entries.
 
 **Source:** [CALL] <one-line description of the call, e.g. "Alistair, technical setup walkthrough, screen recording">
 
-<Detailed notes as extracted in Step 3 — steps, terms, gotchas, quotes.>
+1. <Claim in your own words.> [PRODUCT]
+2. <A price that applies only to this partner's deal.> [COMMERCIAL — partner-specific]
+3. <A rep's recommended technique.> [FIELD]
+4. <A roadmap guess the speaker hedged.> [SPECULATION]
+   - Corroborated by [CALL] <other source/date>.  ← added when a later call confirms an existing claim (Step 4)
 
 ---
 ```
 
 New entries always go at the bottom, oldest first, so the file reads as a timeline. Never delete or rewrite a prior entry to make room for a new one.
 
-### Step 5: Update the manifest
+### Step 6: Update the manifest
 
 Update `learn-revamp/transcript-notes/_index.md` — one row per topic slug that has at least one entry: topic, number of source calls filed, date of the most recent entry, and a one-line rollup of what is now covered. Keep slugs with zero entries out of the table (or mark them "no transcripts yet" only if the user asks for the full taxonomy view).
 
-### Step 6: Report back
+**Maintenance note — when a topic file gets large.** Once a topic passes roughly 15–20 entries, the raw timeline gets expensive to re-read and hard to read for consensus. At that point flag the file to the user as a candidate for a synthesis pass: distill the corroborated, stable workflow into one consensus section, keep contested and single-source claims called out, and archive the raw per-call entries below (or into a dated archive) with provenance intact. This is a separate maintenance operation, not part of routine capture — flag it, do not do it inline.
+
+### Step 7: Report back
 
 Tell the user plainly which topic(s) got new notes and which topic was the "primary" one they asked about, e.g.:
 
 > "Filed detailed notes to `snapshot-executive-reports.md` (primary — 6 new steps on running and reading a Snapshot) and `social-marketing.md` (new section — scheduling cadence Alistair mentioned in passing). Nothing else in this call warranted its own section."
 
-If a topic file already had entries, mention that too, so the user knows this is now the Nth call on record for that topic.
+If a topic file already had entries, mention that too, so the user knows this is now the Nth call on record for that topic. Name any contradiction, doc discrepancy, or duplicate you flagged in Step 4 for the user to resolve.
 
 ## Guardrails
 
@@ -153,3 +192,7 @@ If a topic file already had entries, mention that too, so the user knows this is
 - **Append, never overwrite,** existing topic files — multiple calls about the same topic accumulate as a timeline.
 - **Always carry provenance** (who, what kind of call, when) on every entry — notes with no source are hard to trust later and violate the `[CALL]` tagging rule other skills depend on.
 - **Respect copyright limits already in place for this workspace**: at most brief, attributed quotes: no reproducing long verbatim spans of a transcript.
+- **Tag claims, do not flatten them.** Every claim is weighed by type and by who said it (Step 3's tags and authority ladder). A partner asserting product behavior is not an SME stating it, and a demo price is not a real price — mark the difference so the downstream author is not guessing.
+- **Never let a partner-specific or demo value read as general truth.** Negotiated terms carry `[COMMERCIAL — partner-specific]`; sample/test figures carry `[DEMO]`. Neither may reach a lesson as standard pricing or real data.
+- **Contradictions, doc discrepancies, and duplicates are a hard stop for a human (Step 4).** When a new claim conflicts with or substantially repeats a filed one, or disagrees with the published Partner Center docs under `docusaurus/docs/`, surface it and wait — never overwrite, never silently keep both, never paste a full duplicate, and never let the transcript or the docs quietly win by default.
+- **A human signs a `[VERIFIED IN-PRODUCT]` claim, never the model.** The skill may draft the surrounding note, but the first-person attestation — "I checked this live, here's the evidence" — has to be the named person's own words, on record (commit message, PR comment, or equivalent), not the AI relaying that a check happened.
