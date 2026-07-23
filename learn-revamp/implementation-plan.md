@@ -16,6 +16,10 @@ Everything below is grounded in repo recon (July 3): exact files, verified mecha
 
 ## Execution log (read this first in a new session)
 
+**As of July 23, 2026:**
+
+- **PR #796 (train-your-employee.mdx + custom-employee-lab.mdx, steps 3.5/3.7) approved by CalCooper**, non-blocking. Three follow-ups from his review logged as new WI-7 items (5, 6, 7) below — work them after merge, not before.
+
 **As of July 5, 2026:**
 
 - **PATH 2 (AI FOUNDATIONS) IS BUILT** and moved to sidebar position 2 per the spec journey order (ai-workforce → 3, growth-engine → 4; Get started final footer now hands to /learn/ai-foundations). Six steps + three SVG diagrams, written from the approved outline (drafts/OUTLINE-ai-foundations.md), grounded in four repos (cit-dev ai-literacy, businessapp ai docs, partner docs, vendastaapis as backstop) plus a one-time internal platform-services-docs recon (intel note deleted July 5 after use, per Cal; never cited in lessons). Step 1 committed as f07c1f28 then reworked; **everything after f07c1f28 is uncommitted pending Cal's final pass.** Step 1 retitled and renamed to from-work-to-ai-workforce.mdx (no redirect needed; URL never shipped).
@@ -160,6 +164,9 @@ Per outlines production note 8: audit `docs/commerce/` and `docs/administration/
 2. businessapp-docs gaps for phase 2 linking: Vibe Code mode, GitHub sync, dedicated publishing page (only custom-domain.mdx covers publish), standalone tools reference. Either commissioned there or gap-filled in Learn lessons — decide at phase 2 kickoff.
 3. Verify with the Vibe team the current state of Code mode/GitHub sync before Path 4 writing (partner docs claim GitHub sync; Business App docs never mention it).
 4. Confirm the A2P website-audit motion is officially partner-requestable before 3.9 documents it (offered freely on CS calls).
+5. businessapp-docs: the AI Employee autonomy level (Level 3, "Autonomous") isn't documented anywhere in businessapp-docs — currently rests on an in-product check only. **Done (2026-07-23, branch `docs/pr796-autonomy-followups`):** lesson wording in custom-employee-lab.mdx softened to survive a UI change ("Autonomous is the highest level and the usual starting default"); Shivapriya's signed, dated, screenshot-backed `[VERIFIED IN-PRODUCT]` attestation logged in `drafts/OUTLINE-ai-workforce-train-and-custom-lab.md` (Verification log section), per CalCooper's PR #782 tagging proposal. **Still open:** flag the actual docs gap to the businessapp-docs team so this graduates to a real `[DOC]` citation.
+6. Partner Center vs. Business App framing drift: train-your-employee.mdx and custom-employee-lab.mdx say "Partner Center" throughout, but the linked Creating Custom Capabilities guide says "Business App dashboard." Not ours to fix — flag mismatched framing to whoever owns those docs so a learner clicking through doesn't hit inconsistent framing (CalCooper, PR #796 review).
+7. custom-employee-lab.mdx: the Required line promises "use the example in this step," but `CheckOrderStatus` is illustration-only, not a runnable API. Needs a real sample endpoint or softened wording before it's citable as a working example (CalCooper, PR #796 review).
 
 ## 4. File operations table (all 68 lessons + indexes)
 
