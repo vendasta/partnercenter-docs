@@ -4,7 +4,7 @@ sidebar_label: Configuring Capabilities
 sidebar_position: 2
 ---
 
-import { AISparkleIcon } from '@site/src/components/Icons';
+import { AISparkleIcon, GraduationCapIcon } from '@site/src/components/Icons';
 
 This guide walks you through enabling and configuring built-in capabilities for your AI Employees. Follow these steps to set up capabilities that handle common business tasks like lead capture and appointment booking.
 
@@ -230,5 +230,12 @@ Track key metrics to measure capability effectiveness:
 - **Integration Setup**: Connect external systems to enhance capability functionality
 
 Need help with specific capability configurations? Check our [troubleshooting guide](#troubleshooting-common-issues) or contact support for personalized assistance.
+
+<div style={{display: 'flex', alignItems: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px 0'}}>
+  <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
+  <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)'}}>
+    New to how AI Employees work? Take the <a href="/learn/ai-foundations" style={{color: '#3C9A63', fontWeight: 600}}>AI foundations</a> course in Vendasta Learn — Beginner, 6 lessons.
+  </span>
+</div>
 
 

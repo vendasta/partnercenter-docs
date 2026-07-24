@@ -7,7 +7,7 @@ tags: [ai-capabilities, custom-capabilities, ai-workforce, integrations]
 keywords: [custom capabilities, AI capabilities, tools, integrations, API, AI Employees, prompts, testing]
 ---
 
-import { AISparkleIcon } from '@site/src/components/Icons';
+import { AISparkleIcon, GraduationCapIcon } from '@site/src/components/Icons';
 
 This guide walks you through creating custom capabilities that connect your AI Employees to external systems and APIs. Custom capabilities enable specialized business functions like inventory checking, appointment booking, and order tracking.
 
@@ -424,3 +424,10 @@ The value at the end of the path is the `product_id`.
 :::tip
 For the AI Chat Receptionist, see [Make responses page-aware with the visitor's URL](../ai-workforce/ai-chat-receptionist/index.md#make-responses-page-aware-with-the-visitors-url) for the broader feature overview.
 :::
+
+<div style={{display: 'flex', alignItems: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px 0'}}>
+  <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
+  <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)'}}>
+    New to how AI Employees work? Take the <a href="/learn/ai-foundations" style={{color: '#3C9A63', fontWeight: 600}}>AI foundations</a> course in Vendasta Learn — Beginner, 6 lessons.
+  </span>
+</div>
