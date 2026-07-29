@@ -325,13 +325,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           // Automations: sales-and-crm-integration walkthrough merged into templates overview
           { from: '/automations/sales-and-crm-integration', to: '/automations/automation-templates-overview' },
           // Automations: step deep-dives moved under /automations/steps/
-          { from: '/automations/categorize-with-ai', to: '/automations/steps/categorize-with-ai' },
+          { from: '/automations/categorize-with-ai', to: '/automations/ai-actions/categorize-with-ai' },
+          { from: '/automations/steps/categorize-with-ai', to: '/automations/ai-actions/categorize-with-ai' },
           { from: '/automations/find-company', to: '/automations/steps/find-company' },
           { from: '/automations/find-custom-object', to: '/automations/steps/find-custom-object' },
           { from: '/automations/copy-assistant-automation', to: '/automations/steps/copy-assistant-automation' },
           // Automations: sort-text-with-ai → categorize-text-with-ai → categorize-with-ai (now canonical, under steps/)
-          { from: '/automations/sort-text-with-ai', to: '/automations/steps/categorize-with-ai' },
-          { from: '/automations/categorize-text-with-ai', to: '/automations/steps/categorize-with-ai' },
+          { from: '/automations/sort-text-with-ai', to: '/automations/ai-actions/categorize-with-ai' },
+          { from: '/automations/categorize-text-with-ai', to: '/automations/ai-actions/categorize-with-ai' },
           // Automations: deleted /my-automations/* sub-pages — map each to its content's current home
           { from: '/automations/my-automations', to: '/automations/' },
           { from: '/automations/my-automations/index', to: '/automations/' },
