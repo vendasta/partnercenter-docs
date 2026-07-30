@@ -95,3 +95,57 @@ Technical scoping that emerged:
 7. Ownership/process: Dale committed to writing up a formal data-warehouse-access proposal and assigning an internal engineering team to execute it, but explicitly declined to commit to a timeline on the call ("I'll talk to the team, they'll be upset if I give timelines ahead of talking to them first").
 
 ---
+
+## Date unknown — Vendasta onboarding specialist and marketing agency partner (Business App walkthrough)
+
+**Source:** [CALL] Partner onboarding — Business App walkthrough, Executive Report deep dive
+
+The **Executive Report** is a weekly-or-monthly (partner's choice) client-facing summary. Two important framing points from the rep: (1) sections shown are **product-dependent** — a section like "website performance" simply won't render if the client hasn't purchased website hosting through the partner, and reporting only reflects products actually active on that account; (2) sections are also **data-connection-dependent** — connecting sources like Google Analytics 4 (GA4), Google Search Console, or Google Business Profile unlocks materially more detail in the corresponding report sections than an unconnected account would show. Because of this, the rep recommended that account-prep/onboarding checklists for new clients explicitly include a step: "what do we need to connect, what access do we have, vs. what does the client need to self-connect."
+
+Recommended top-priority section: **lead-type reporting** — new messages, new leads, new CRM contacts added in the period, plus a web-chat-specific breakdown (unique visitors and conversations) — framed as the clearest way to show clients the tangible AI-driven value being delivered ("what did we automate on your behalf").
+
+Other standard sections: **listings** (month-over-month view of new listings deployed, corrected information/errors, aiming for "all green" within roughly a month of onboarding), and **Google Business Profile stats**. The pitch line used for listings/GBP consistency, worth reusing: *"you don't have to go to your Google or your Bing and manage it separately — we're giving you all the insights in one place about your online presence."*
+
+**Customization**: sections can be turned on/off and reordered, either globally (Partner Center → Manage Accounts → Manage Business App → Executive Report) or per individual user/client. Customization is described as fairly minimal beyond visibility/ordering — you cannot deeply restructure what a section measures.
+
+**Confirmed limitations raised by a sophisticated partner** (one already building custom dashboards for clients): the Executive Report does **not**, as of this call, let you build the kind of granular custom conversion segmentation the partner's own team does manually (e.g., distinguishing "vanity" metrics like impressions/clicks from "meaningful" conversions defined per client via GA4 + Google Tag Manager + Google Ads). It also does not natively import granular ad-platform data breakdowns from Meta Ads, Google Ads, or LinkedIn Ads beyond a high level. However:
+- **CallRail integration is possible** via CallRail's API, and once integrated, CallRail-sourced calls will show up as new leads in the CRM/Conversations section, which then flows into the report's lead-type numbers.
+- **Ahrefs integration was not confirmed** by the rep on this call (she had not heard of it and took it as a follow-up) — the partner specifically prefers Ahrefs' Domain Rating (DR) metric over an alternative SEO tool's equivalent metric, calling that alternative "a little bit lucy-goosey" (loose/imprecise) by comparison.
+
+The rep's suggested resolution for sophisticated partners who already do deep custom reporting: keep the Executive Report as a lightweight, always-on "day-to-day/week-to-week variance and heads-up" surface (things changed, things to address), while continuing separate deeper strategic business reviews (e.g., monthly) using the partner's own more advanced reporting — i.e., positioning Executive Report as a complement to, not a replacement for, an agency's existing premium reporting process.
+
+---
+
+## Date unknown — a Saskatchewan-based digital marketing agency owner with a Vendasta account manager (billing/subscriptions/invoicing walkthrough)
+
+**Source:** [CALL] Snapshot/acquisition-form automation troubleshooting session
+
+1. **Full acquisition-to-snapshot flow confirmed working, after a duplicate-email false negative was diagnosed** (see `crm.md` for the root cause): submitting the acquisition form with a genuinely new email address correctly created a Company, then an Account, then kicked off a Snapshot report generation (~24-hour turnaround) before a "Digital Success: Snapshot" campaign began sending automatically.
+2. **Framing for why a Snapshot report matters, as a sales tool, stated directly by the account manager:** "a snapshot report is never gonna make a full sale, but it's gonna make that first sale, which is booking a meeting with you." The Snapshot's job in the funnel is to generate a warm reason to get a prospect on a call — not to close business by itself.
+3. The partner had already independently learned this workflow requires deliberate testing — he ran the acquisition automation against test entries repeatedly to confirm what a real customer would actually see and receive before turning it loose publicly, which surfaced the duplicate-email/existing-company gotcha documented in `crm.md`.
+
+---
+
+## Date unknown — a solo prospective reseller (family/friends referral, passive-income motivation) (webchat/reseller demo and pricing walkthrough)
+
+**Source:** [CALL] Reseller demo — Snapshot Report as a sales/needs-analysis tool with a Vendasta sales rep
+
+The **Snapshot Report** is framed explicitly as a "needs analysis tool" for selling, not just an audit: click "create a snapshot report" on any business record and within 24 hours the system generates a rebranded (partner logo/name) report breaking the business's online presence into listings, reviews, social, and website sections, each with specific gaps identified. The rep's suggested sales workflow: run the snapshot on a prospect before ever pitching them directly, then use the report to justify which specific services to recommend, optionally showing a side-by-side comparison against three named competitors.
+
+---
+
+## Date unknown — a marketing manager at a multifamily property management company evaluating a reputation/listings platform (whitelabel reseller product deep-dive)
+
+**Source:** [CALL] Whitelabel partner-led product demo — executive/proof-of-performance reporting with the reseller's account team and a Vendasta partnership manager
+
+An **executive report** is available at both the multi-location (brand-wide) and single-location level, consolidating listings performance, reputation performance, and (if connected) social media performance into one place, explicitly framed as "proof of performance" — i.e., showing where a client's metrics started versus where they are now since onboarding. If the client's account also has the **advertising intelligence** module active (see `advertising.md`), ad performance across Google/Facebook appears in the same executive report. Connecting Google Business Profile, Search Console, and GA4 significantly enriches what the executive report can show; without those connections, reporting is more limited.
+
+---
+
+## Date unknown — a Vendasta account manager with the product leads of a large European telecom/media reseller partner
+
+**Source:** [CALL] Feature request follow-up within a broader AI-credit-system roadmap call
+
+The reseller has an existing **Premium Reports** view for leads, and separately requested a **custom report** that would flag when one of their SMB clients is approaching or has exceeded a monthly usage cap (framed as a "close to running out" alert view for their internal team, distinct from the client-facing usage notifications discussed elsewhere on the same call — see `conversations-ai.md`). Vendasta's response: this isn't an out-of-the-box report — it would need to be scoped as custom work, with cost and feasibility undetermined at call time. Vendasta committed to coming back with a scoping estimate roughly a week later, after internal discussion.
+
+---

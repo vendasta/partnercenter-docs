@@ -111,3 +111,80 @@ Account templates: a Vibe/AI-employee build made once inside a real (non-Partner
 Confirmed limitation: a Vibe project **cannot be exported into WordPress.** It runs entirely in Vibe's own hosting environment — the two systems are architecturally separate, so "prototype in Vibe, then hand off to a developer to actually build the production site in WordPress" remains the pattern for teams that need a WordPress end state.
 
 ---
+
+## Date unknown — Vendasta account manager with an established multi-location digital marketing agency partner
+
+**Source:** [CALL] Partner onboarding/enablement session — Vibe (natural-language site builder) demo plus AI receptionist packaging discussion
+
+1. **Live demo mechanics:** the account manager built a themed novelty website (a movie-character-themed joke site, used purely as a demo prop) in about three minutes using natural language prompts inside Vibe, with the platform's own voice receptionist and chat embedded directly into the generated page (not floating in a corner — deliberately placed inline in an iframe/frame to show layout flexibility).
+2. **Why a Vibe-built site inside the platform has an advantage over building the same thing on an external tool (e.g. Replit):** when you vibe-code inside an existing Vendasta business/account, the AI automatically has access to all of the data already ingested for that business — Google Business Profile data, website content, prior social/SEO history, past conversation history — so you don't have to manually feed the AI every fact about the business (name, years in business, fleet size, pricing, service area) the way you would starting from scratch on a generic external AI app builder.
+3. **Backend/security stack disclosed:** data storage for a Vibe-coded business app uses **Supabase** as the backend (per-client data separation); an OAuth-based **Google Auth** layer is used for access security; the whole system is described as a "closed loop" rather than assembled from open-source parts, specifically for safety/control reasons.
+4. **Content ingestion for a vibe-coded site:** you can ingest an existing website, upload files directly, or type natural-language instructions describing what knowledge to add — all of it gets stored in the account's shared knowledge base, which any of that account's other AI tools (chat, voice, etc.) can also draw on.
+5. **Migrating an existing (non-Vendasta) website:** if a client already has a site on WordPress/Wix/another old CMS and doesn't want a rebuild, the AI chat/voice receptionist widgets can still be added by pulling the embed snippet from the AI Employee's configuration and pasting it into the existing site's code — no requirement to migrate to a Vendasta-built site first.
+6. **Sales technique demonstrated:** find a trusted existing client ("a hero account") to use as a live demo environment — offer them the software free or at cost in exchange for using their real, populated account as a demo when pitching prospects, since a live account with real connected data looks and feels far more convincing than an empty demo shell.
+
+---
+
+## Date unknown — Vendasta customer success manager with a solo digital marketing agency owner (law-firm and other small-business clients)
+
+**Source:** [CALL] CS check-in / product-adoption review touching AI receptionist packaging and Vibe use cases
+
+1. **Vibe credit mechanics:** every prompt/ask inside Vibe consumes credits, regardless of whether the output is "finished" — the CSM's framing: budget for iteration as part of the creative process rather than expecting to get a perfect result in one shot.
+2. **Use cases well outside client marketing work:** Vibe can build small internal/personal tools just as easily as client-facing sites — cited examples were a personal household chores/cleaning-schedule tracker and (suggested on the call) a grocery-list app — illustrating that Vibe isn't limited to "website for a business," it can produce any lightweight natural-language-described app.
+3. **Guidance on trusting Vibe for anything requiring factual accuracy (e.g., legal-adjacent content):** Vibe is well suited to building the *structure/concept* quickly, but for content that must be verified against outside facts, upload your own vetted source documents and instruct it explicitly to use only those sources — don't rely on the model's own general knowledge for anything you can't afford to have it "make up" (drawn from a direct comparison to AI legal-brief hallucination risk raised earlier in the same call).
+4. **Realistic expectation-setting:** Vibe still requires ongoing refinement, the same way any AI employee does — it is not a fully hands-off, one-time build.
+
+---
+
+## Date unknown — Vendasta AI specialist with a multi-location retail-goods partner (furniture/appliance vertical)
+
+**Source:** [CALL] AI Workforce products review — chat takeover/routing automation, new AI agents, and a Vibe custom-dashboard walkthrough
+
+1. **Vibe activation is per-account, not partner-wide,** because the analytics data that feeds a Vibe-built dashboard is stored inside that specific Business App account. To build a dashboard pulling in an account's own Google/advertising/reputation/listings analytics, Vibe needs to be activated on that account specifically (not just once at the partner level).
+2. **External data source integration:** Vibe can connect to a client's own external **Supabase** account/instance to pull in outside data beyond what's native to the Business App.
+3. **CRM integration for Vibe-built sites (in trusted-tester/beta as of this call):** if a form built inside a Vibe-generated site is connected to CRM, submissions create CRM leads directly, giving you a working "form + AI chatbot + CRM" pipeline entirely inside a Vibe build.
+4. **Custom-domain publishing is a Pro-tier feature.** On the free/standard Vibe tiers, a build launches on a shared Vendasta-branded default domain; Vibe Pro unlocks publishing to a fully custom domain for the specific build (e.g., a client-branded dashboard URL), plus more credits and unlimited applications versus the capped free tier.
+5. **Best-fit use case caveat surfaced by the partner:** Vibe-coding a full replacement *website* isn't a good fit for a business with a large product catalog (e.g., a multi-brand furniture/appliance retailer) — the natural-language builder is much stronger for lightweight sites, landing pages, and internal dashboards than for a catalog-heavy storefront rebuild.
+6. **Custom-dashboard example walked through live:** to build something like "a Google Ads performance dashboard with AI commentary/recommendations," the underlying advertising data has to already be flowing in via **Advertising Intelligence** (Google Ads, Search Console, GA4 connected) before Vibe has anything real to visualize — Vibe itself doesn't pull raw Google Ads data directly, it visualizes what's already synced into the account's own analytics/executive-report data layer.
+7. **Real client example cited by the specialist (from a different partner's account):** a fully custom Vibe dashboard was built to show an end customer their entire "journey" in one place — ad spend in, website traffic generated, conversions/leads generated from that traffic, review-requests sent off those conversions, and listings/social performance before-vs-after — a much more narrative, customer-journey-oriented view than the standard Executive Report.
+
+---
+
+## Date unknown — a prospective solo agency owner with a Vendasta sales rep (pre-sale product-fit and demo call)
+
+**Source:** [CALL] Live Vibe landing-page-generation demo during a prospect qualification call
+
+1. **Live demo built a landing page from a single prompt referencing the prospect's own brand assets:** the rep took a screenshot of the prospect's existing social profile page (to capture his brand colors) and wrote a short prompt describing the business, based only on that screenshot and a verbal description (no brand doc was on hand). Vibe generated a landing page from that single prompt in under a couple of minutes while the call continued.
+2. **Iteration model:** once generated, further changes are made by typing plain-language follow-up instructions directly into the same interface (e.g., "change the color scheme") rather than manually editing anything — the tool applies changes live.
+3. **Per-client knowledge base, called out as the key differentiator versus generic AI website builders** (the prospect specifically compared it to Lovable): each client-facing portal has its own knowledge base populated from that business's own website and/or Google Business Profile, so prompting inside Vibe doesn't require re-explaining the business's context each time.
+4. **Publishing path:** once satisfied, the page can be published directly, with the option to attach a custom domain and built-in hosting — no separate hosting step required.
+5. **Embedded chat widget on the generated page** captures leads directly into the same platform/CRM the rest of the account uses.
+6. **Sales incentive used on this call:** a complimentary Vibe website/landing-page build was offered as part of a month-end sign-up promotion, alongside a complimentary embeddable web-chat widget — pitched as a way to get a brand-new prospect something usable to start capturing leads immediately after signing up.
+
+---
+
+## Date unknown — a solo prospective reseller (family/friends referral, passive-income motivation) (webchat/reseller demo and pricing walkthrough)
+
+**Source:** [CALL] Reseller demo — Vendasta Vibe AI site builder with a Vendasta sales rep
+
+Introduced as **Vendasta Vibe**, described by the rep as "a liquid software" for creating landing pages/websites purely by prompting — no manual page-building. Two live examples shown: (1) starting from a client's existing PDF, the rep prompted "create an optimized landing page based on this, add offerings, add a form, add a chatbot, use the same brand colors" and Vibe produced a finished page within a couple of minutes; (2) starting from a client's existing website URL, Vibe pulled in the existing images and business info and generated a new landing page from that content, also within minutes. The rep positioned this as far simpler than building an actual custom website, and as a product the partner can activate for themselves and resell to build client sites (with hosting/domains sellable as add-ons).
+
+---
+
+## Date unknown — a Vendasta product leader, a Vendasta VP of product marketing, a Vendasta product manager (AI monetization), and a Vendasta product specialist, with the product leads of a large European telecom/media reseller partner
+
+**Source:** [CALL] Internal-facing roadmap/feedback call on Vendasta's forthcoming AI credit system, plus a live campaign-builder coupon/QR-code walkthrough for the reseller's upcoming client demo
+
+1. **Vibe's existing credit/add-on model, cited by Vendasta as the template the new Conversations AI credit system will mirror:** Vibe has "two different buckets of add-ons" — a **base amount of usage/credits bundled into the monthly plan, which expires at the end of the month** if unused, and a separate **top-up credit package** that, once purchased, is available for the **full year** rather than expiring monthly.
+2. **Coupon + QR code workflow in the campaign/automation builder, demonstrated live:**
+   - Coupons have their own dedicated **email template** (editable/translatable from the Coupon's own page, not the campaign builder) and a **downloadable QR code**.
+   - **Gotcha:** the downloadable QR code is not scoped to one coupon — it links to a landing page listing **all currently active coupons**. If more than one coupon is active, a customer scanning the code lands on a multi-coupon page rather than the specific offer intended. Workaround used for a live demo: temporarily leave only one coupon active. Flagged to the Vendasta PM as a product-improvement request (a QR code scoped to a single coupon).
+   - **Two ways to actually send a coupon by email today:**
+     a. **Automation-based:** add a step, search "coupon," select **Send Coupon**, choose which coupon — this fires the coupon's own built-in email template automatically (no separate lead-capture/form-fill step needed).
+     b. **Campaign-based:** inside a Campaign Pro email template, click the dynamic-fields icon, search "coupon" (the field is actually labeled **"Promotion"** — the UI overlaps "coupon" and "promotion" terminology, which caused confusion during setup), and insert the Promotion field to merge in the coupon's name/description.
+   - **Confirmed limitation:** the campaign-side dynamic Promotion field can only insert a **static, identical code for every recipient**. It **cannot generate a unique/random code per contact** the way the dedicated coupon-email flow can. This is a real functional gap between the two paths, not a training issue.
+   - **Partner's product ask (unbuilt, logged as feedback):** a first-class "Coupon" content block inside the campaign builder — pick a coupon from a dropdown and drop it in like an image/button block — instead of the current workaround of manually recreating or screenshotting the coupon's own template inside a campaign.
+3. **Mobile browser bug in the automation/campaign builder:** building or editing an automation from a phone browser (tested on both Safari and Chrome on iOS) has a scrolling/tap bug severe enough to block saving — confirmed by the Vendasta PM as a known limitation, since the automation/campaign builder was designed and tested for desktop, not mobile. Recommendation: don't plan to build/edit campaigns or automations live on a phone for a client demo.
+*(The credit-system/messages-to-credits conversion mechanics from this same call are filed in `conversations-ai.md`; the booking multi-operator issue is filed in `business-app.md`; the custom usage-alert report request is filed in `snapshot-executive-reports.md`.)*
+
+---

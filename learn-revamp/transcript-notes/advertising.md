@@ -92,3 +92,39 @@ Scale/credibility point: MatchCraft's system has built out **thousands of pre-ex
 4. This specific SKU is provisioned per reseller "pin" rather than being globally available — a reseller wanting to test the flow on a sandbox/testing pin may need to explicitly request the product be enabled there first.
 
 ---
+
+## Date unknown — Vendasta managed-services leadership team (vendor evaluation call)
+
+**Source:** [CALL] Vendor demo — Vendasta's internal managed-services/AI-services leadership team evaluating a white-label AI-agent SEO/marketing platform, PPC landing-page generation portion
+
+Within the evaluated vendor's AI website generator (see `websites.md` for the full breakdown of modes), the "Generate PPC" mode is specifically built for Google Ads campaign support: you specify the business and the ad campaign/ad group, and the tool builds a "squeeze page" — a stripped-down, conversion-focused landing page with no distracting navigation — whose on-page content is written to reflect the exact keywords being bid on in that ad group (pulled in because the page generation flow can import context from an existing campaign). This is framed as solving the common problem of PPC landing pages that don't tightly match ad-group keyword intent, which hurts Quality Score and conversion rate. Treat as competitive reference, not confirmed Vendasta functionality.
+
+---
+
+## Date unknown — Vendasta senior sales/product executive and account manager (marketplace pitch to a multi-location marketing agency prospect)
+
+**Source:** [CALL] Partner/prospect pitch — marketplace overview call, paid advertising/programmatic portion
+
+Vendasta's paid-advertising fulfillment runs primarily through an in-house-owned company that handles Facebook, Yelp, Bing, and Google ads, plus a newly launched TikTok ads capability. **Yelp** was called out specifically as a platform Vendasta goes **direct** to (rather than through an ad-network aggregator) because Yelp operates its own dedicated business-advertising platform — described colorfully by the prospect as difficult to work with, which the Vendasta exec agreed was fair.
+
+**Programmatic/OTT/CTV** advertising (Connected TV, streaming video ads) currently routes through a single named third-party programmatic/OTT vendor in the marketplace; the prospect explicitly did not want to work with that particular vendor. The Vendasta exec offered an alternative programmatic/CTV vendor as a marketplace alternative, and separately mentioned a mobile-ad-network partnership for pure mobile-space programmatic needs — reinforcing that Vendasta's marketplace model is "bring your own preferred vendor" rather than a single locked-in ad-tech stack. The exec framed Vendasta's core value-add here as **platform integration/normalization**, not exclusivity: "what can your platform connect to, what do you need access into" — their team can build bespoke APIs or code to whatever endpoints/webhooks a given ad vendor exposes rather than requiring a single unified API.
+
+Standard SMB advertising packages sold direct by Vendasta's own consumer-facing division were cited as roughly $299, $499, $699, $999 (up to $1,999/$2,999 mentioned as possible higher tiers) per month, with the $299 tier including paid search — note the transcript's spoken numbers were partially garbled, so treat exact tier boundaries above $699/month as approximate pending verification against current published pricing.
+
+---
+
+## Date unknown — a marketing manager at a multifamily property management company evaluating a reputation/listings platform (whitelabel reseller product deep-dive)
+
+**Source:** [CALL] Whitelabel partner-led product demo — advertising intelligence (ads reporting) module with the reseller's account team and a Vendasta partnership manager
+
+An **advertising intelligence** add-on can display Google/Facebook ad performance inside the single-location dashboard alongside reputation and listings data. Important limitation clarified when the client asked about it (their ad campaigns are run by a separate third-party agency, not managed in-house): the dashboard **is reporting-only, not an ads management platform** — to see ad performance, whoever actually runs the campaigns (even a third-party agency) needs to connect their own ads account into the dashboard; Vendasta doesn't need direct access to run anything. Connecting Google Business Profile, Search Console, and GA4 (which this client already had for all their properties) feeds a good baseline into the executive report even without the deeper advertising-intelligence connection.
+
+---
+
+## Date unknown — a multi-agency owner focused on SEO and AI automations (agency discovery/reseller partnership call)
+
+**Source:** [CALL] Agency discovery call — automated ad-bidding/management engine with a senior Vendasta account executive
+
+The rep described running paid ad campaigns through a dedicated in-house ad-management engine (referenced inconsistently by name in the transcript due to transcript quality, but the functional description is clear) rather than manually managing campaigns directly inside Meta/Google. The distinguishing claim: the system actively bids and adjusts the live campaign 24/7 based on performance, rather than a human setting up a campaign once and hoping the system takes care of it — framed as protecting client ad spend/budget from being wasted through passive management. This was offered as a differentiator/idea for the prospect's agency (which currently runs Google/Facebook ads directly) to consider layering in.
+
+---

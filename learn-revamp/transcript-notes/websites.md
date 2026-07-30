@@ -217,3 +217,42 @@ Each entry below is one source call — do not merge or overwrite prior entries.
 7. **Recurring cadence fix proposed in response:** a short (10-20 minute) monthly check-in call between the agency's project manager and the client, explicitly framed as a lightweight "here's where we're at, here's what we need from you" sync, distinct from deeper working sessions — proposed specifically to keep communication clear after the staffing-transition confusion.
 
 ---
+
+## Date unknown — Vendasta managed-services leadership team (vendor evaluation call)
+
+**Source:** [CALL] Vendor demo — Vendasta's internal managed-services/AI-services leadership team evaluating a white-label AI-agent SEO/marketing platform, AI website-generation module
+
+The evaluated vendor's AI website/page generator (referred to generically here to avoid naming the vendor's branded product) supports several distinct prompt-driven modes, useful as a competitive reference point for any Vendasta website-generation ("Vibe"-adjacent) capability:
+- **Free-form single-page mode**: a simple natural-language prompt produces a complete page in minutes.
+- **Full-site generation mode**: prompt describes a business and the tool builds out a home page plus service and location pages.
+- **Clone mode**: point it at an existing website and it rebuilds equivalent pages/design while letting you redirect it toward a different goal (e.g., matching an existing site's visual design but generating a brand-new service or location page not on the original site).
+- **PPC/"squeeze page" mode**: tell it the business, the ad landing-page destination, and the ad campaign context, and it strips out navigation/extraneous content to build a focused conversion funnel page whose copy reflects the actual keywords being bid on in that ad group (see `advertising.md` for more detail on this mode).
+- Editing options once a page is generated: conversational/"vibe coding" edits via chat, a dictation/voice mode to speak the changes, or a visual point-and-click editor for manual module edits.
+- **Technical/hosting detail (a real gotcha)**: pages generated this way are built 100% as static Next.js sites with **no CMS underneath at all** — they are not hosted inside WordPress, Shopify, etc. Publishing routes the page through the vendor's own hosting via a DNS CNAME record you control — either as a subdomain or a fully separate root domain. Because it's fully static, PageSpeed/performance scores were reported as near-perfect in every case tested.
+- **Explicit limitation raised and confirmed on the call**: as of this call, there was no way to publish a generated page natively *inside* a client's existing CMS (e.g., have it show up as a real WordPress page in the wp-admin). The workaround offered was a manual redirect from the client's existing permalink/URL to the vendor-hosted static page — described by the vendor's own rep as "not the elegant solution we want" — with native CMS-embedded publishing (starting with WordPress) explicitly announced as coming later that month. Files/data for these pages do **not** live in the client's own CMS database even when served under the client's own domain.
+- The feature was described as brand new — released roughly two weeks before this call — so expect rapid iteration and possible gaps.
+- The Vendasta evaluator on the call independently tested the same tool beforehand using a standard prompt they use for internal vibe-coding comparisons, and reported the tool built a functional single-page site within about five minutes, followed instructions correctly, and passed a PageSpeed test — but only produced a single landing page, not a full multi-page site, from that same prompt (contrast worth noting if benchmarking against other AI site builders).
+
+---
+
+## Date unknown — a Saskatchewan-based digital marketing agency owner with a Vendasta account manager (product walkthrough / pricing call)
+
+**Source:** [CALL] Partner asks about Vendasta's WordPress hosting migration and live-chat support access
+
+1. **Vendasta is migrating its WordPress hosting infrastructure to a dedicated WordPress-specialized hosting provider.** The account manager's stated rationale for expecting it to be **cheaper**, not more expensive, despite likely being higher quality: Vendasta's overall scale gives it better hosting rates than an individual partner or small hosting vendor could get.
+2. **Partner's stated blocker for ever using Vendasta hosting: lack of live support during a real outage.** He described a recent incident on a self-hosted WordPress site (a PHP version bump causing a critical error) that he had to fix himself in real time via a separate hosting vendor's support, and said he'd never move a client site to Vendasta hosting if the only support path were submitting a ticket and waiting.
+3. **Live chat support access confirmed to already exist:** click the **question-mark/help icon** in the black toolbar (top of Partner Center) → "Chat with Vendasta," which also surfaces a phone number to call. The account manager positioned this as staffed by a support team "trained on pretty much everything," including hosting-specific issues — not routed to a generic sales-only queue. This directly addressed the partner's stated concern, though he had previously only found a path to sales/tickets and hadn't located the chat icon.
+
+---
+
+## Date unknown — a solo prospective reseller (family/friends referral, passive-income motivation) (webchat/reseller demo and pricing walkthrough)
+
+**Source:** [CALL] Reseller demo — website product tiers and pricing with a Vendasta sales rep
+
+Per-product website SKUs, all wholesale (partner marks up to retail, hosting/support/domains available):
+- **Landing page**: $149 wholesale.
+- **Templated 3-page website**: $299 wholesale, built on WordPress, "SEO-friendly," templates and resources provided.
+- **AI-built 5-page website**: $149 wholesale, described as buildable within roughly 24 hours; commonly resold at $500–$600 retail.
+- **Custom website build**: a separate marketplace SKU for clients needing bespoke work; a developer from that team can join the partner's sales call directly if needed.
+
+---
