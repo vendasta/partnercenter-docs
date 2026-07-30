@@ -12,6 +12,7 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import LabChecklist from "@site/src/components/LabChecklist";
+import LabCallout from "@site/src/components/LabCallout";
 
 <InlineHighlighter courseId="autopilot" site="vendasta_learn">
 
@@ -37,7 +38,7 @@ import LabChecklist from "@site/src/components/LabChecklist";
 
 By the end of this step, one real automation is live on your own account, running without you touching it again. *You are here: Partner Center, the same account you have been building on since step 2.* The workforce so far only acts when spoken to; this step is what runs when nobody is in the conversation at all.
 
-:::info Lab: build a smart list
+<LabCallout title="build a smart list">
 You are going to **CRM** → **Lists** → **Create**.
 
 <LabChecklist
@@ -49,11 +50,11 @@ You are going to **CRM** → **Lists** → **Create**.
   ]}
   confirm={<>Matching contacts populate immediately, and keep populating as new ones match: the list itself is the trigger, no manual upkeep required.</>}
 />
-:::
+</LabCallout>
 
 ## Pair it with an automation
 
-:::info Lab: connect the list to an action
+<LabCallout title="connect the list to an action">
 You are going to **Automations** → **Create automation**.
 
 <LabChecklist
@@ -65,11 +66,11 @@ You are going to **Automations** → **Create automation**.
   ]}
   confirm={<>Every contact who lands on the smart list now sets off the automation, with no one needing to notice they arrived.</>}
 />
-:::
+</LabCallout>
 
 Three starter recipes cover most of what a workforce needs autopilot for. Building the first one end to end is worth doing now; the other two follow the exact same shape once the pattern clicks.
 
-:::info Lab: ship the nurture recipe
+<LabCallout title="ship the nurture recipe">
 You are back in **Automations**.
 
 <LabChecklist
@@ -81,7 +82,7 @@ You are back in **Automations**.
   ]}
   confirm={<>A form submission now starts a nurture campaign on its own, the moment the contact lands on the list.</>}
 />
-:::
+</LabCallout>
 
 The other two follow the same shape, one trigger and one or two steps: a new-lead list paired with a CRM sales task for the contact plus an SMS acknowledgment, so a person and the lead both hear something right away; and, once a completed-job integration is in place, a jobs-done list paired with a review-request campaign for the company.
 
