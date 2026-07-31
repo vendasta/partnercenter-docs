@@ -128,3 +128,85 @@ Partner had already tested his voice receptionist on a prior call; this session 
 6. **Any existing third-party lead-capture form can feed the same automation chain** without being rebuilt in Vendasta — webhook the existing form (the partner's example was a standard WordPress form emailing the client directly) so submissions still land in the CRM and trigger the identical follow-up sequence a native Vendasta form would.
 
 ---
+
+## Date unknown — a Saskatchewan-based digital marketing agency owner with a Vendasta account manager (product walkthrough / pricing call)
+
+**Source:** [CALL] Partner reviews AI chatbot and AI phone receptionist performance/pricing, including a live fix to a voice-response-delay complaint
+
+1. **Chatbot positioning reinforced as lead capture, not a salesperson.** The partner relayed a recurring client objection: a bulk-goods distributor client kept pushing to make the chatbot "the salesperson" and got frustrated when it couldn't close deals outright. The partner's own framing to clients: "It's not a salesperson. It's a lead capture at the end of the day... it can't look up body language and emotion." His sales script for skeptics: no long-term contract on the chatbot itself, so "if you don't like it, we'll take it off" — lowers the perceived risk of trying it.
+2. **AI phone receptionist churn risk called out directly:** the partner said he's losing some phone-receptionist clients to competing products that offer **live-agent hand-off/transfer capabilities** his current setup doesn't have — one client of 12 months left specifically over this gap. Flagged as an open product gap from the field.
+3. **Response-eagerness fix, walked through live:** the receptionist was defaulting to the **slowest response-eagerness setting**, causing ~5-second reply delays that customers noticed and complained about. Fix path: **AI → Workforce → Configure → Settings (green icon) → scroll to Advanced Voice Options → Response Eagerness**. Recommended starting point: set to **medium** first, escalate to **high** only if still too slow (not straight to max).
+4. **Voice options:** the same Advanced Voice Options panel offers feminine/masculine preset voices, with one marked "recommended."
+5. **Mobile carrier call-forwarding gotcha:** after activating and then later deactivating call forwarding to the AI receptionist on a personal mobile line, the phone's native ring/forward settings didn't revert cleanly — calls kept going to voicemail after just ~2 rings instead of the normal ~30 seconds. Fix required calling the carrier and having them reset it, or the customer re-typing the carrier's own forwarding-delay code with the desired seconds value (some carriers cap the delay at a maximum of 30 seconds). Lesson for partners: warn phone-receptionist customers that toggling forwarding on/off on a mobile line can quietly change their default ring/voicemail timing, and that fixing it is a carrier-side action, not something Vendasta support can do remotely.
+6. **Reputation AI positioned as a review-channel consolidator:** responds to reviews landing from Facebook, Google, TripAdvisor, Booking.com, health-directory sites, etc. from one inbox; with Reputation AI **Premium**, AI can auto-respond to reviews on a set cadence (configurable by rating/sentiment) instead of requiring manual suggested-response approval.
+7. Pricing anchor from this call (wholesale, CAD, partner's own account): **Reputation AI Pro ≈ $43/month**.
+
+---
+
+## Date unknown — a physical-therapy franchise partner (co-owners) with a Vendasta sales rep (SEO/reputation/AI-chatbot proposal call)
+
+**Source:** [CALL] Proposal walkthrough for a seven-location physical-therapy clinic group — SEO diagnostic, reputation automation, and AI chatbot/booking scoping
+
+1. **AI chatbot scoping for a multi-location service business:** proposed build is a per-location AI agent/chatbot trained on that location's information, designed to capture leads coming in from web search (once SEO/AEO work improves traffic), answer FAQs, and either guide callers to a booking link or hand off structured lead info (name, contact info, service interest) to staff. Guardrails discussed explicitly: the AI should refuse to go outside scope (e.g., won't do unrelated tasks) and should only discuss the practice's own services.
+2. **Booking integration constraint surfaced:** the client's actual appointment system is a proprietary EMR-linked scheduling tool (not Outlook/Google Calendar), so the AI chatbot's booking capability would need to connect to Outlook/Google calendars for the therapists (round-robin across locations) rather than the practice's existing scheduling tool directly.
+3. **Setup-fee delta directly tied to whether AI chatbot/lead-capture is included:** if lead capture (the AI chatbot/automation piece) were removed from the package, the one-time per-location setup fee would drop from **$300 to roughly $100** — the chatbot build (training the AI on brand voice, capturing specific info, wiring the automated review-request send) is what drives most of the setup cost, not the reputation/listings pieces.
+4. **Client objection about hands-off risk:** one partner was uneasy handing scheduling/call-answering to AI. Rep's mitigation offer: **set up a free offline test/demo environment** — a working chatbot trained on the practice's info, with an admin view into the conversation log, plus an optional automation that emails the client team a summary whenever the chatbot captures a new lead — before committing to a live rollout.
+5. **Chatbot fulfillment note:** the sales rep noted connecting to a third-party EMR/scheduling system with an open developer platform (APIs/webhooks) is routine fulfillment work ("this is stuff we do every day") but caveated that any given third-party integration still needs scoping by the solutions-architecture team, not an out-of-the-box guarantee.
+
+---
+
+## Date unknown — a solo/single-operator digital marketing agency owner with a Vendasta account manager (billing/automation troubleshooting call)
+
+**Source:** [CALL] Billing and automation walkthrough call; brief conversations-AI selling-practice guidance included
+
+1. **Reseller guidance on how to sell Conversations AI:** the account manager pushed back on the idea of just handing a client platform access and a login — "Here's the software, go set it up — I feel like that's a recipe for disaster... they don't know how it works out of the box." Recommended approach: sell wholesale Conversations AI Pro (cited at **$39/month wholesale**) marked up to something like $149+/month retail plus a separate one-time setup fee, and actually configure the tone, train it, add the knowledge source(s), and validate it's capturing leads correctly before handing it off.
+2. **AI Receptionist Setup as a paid, done-for-you Vendasta service:** wholesale cost **$199** to the partner; partner can mark it up to $299/$399/$499+ retail. Requires the partner to submit a **fulfillment form** confirming Vendasta has permission to work directly with the end client. Recommended approach for a partner new to this: sit in on the first one or two setup calls to learn the process, then run future setups themselves to keep more margin. Included in the service: brand tone/instructions customization, an onboarding call, a training call, and a 30-day refinement call to review performance and tweak. Vendasta will also help connect Facebook/Instagram/WhatsApp channels and set up basic automations/lead pipelines.
+3. **A2P/10DLC compliance flagged as a current pain point** for texting features — "a big pain right now... they really cracked down."
+
+---
+
+## Date unknown — a prospective solo agency owner with a Vendasta sales rep (pre-sale product-fit and demo call)
+
+**Source:** [CALL] Prospect qualification call — SMS database-reactivation use case mapped onto Conversations AI + Campaigns Pro, plus a Vibe demo
+
+1. **Terminology mismatch on a common request:** the prospect asked for "SMS database reactivation" as a named service; the rep initially said "that is not a service that we have," until clarifying the underlying need (upload an old lead list, send an SMS campaign, have AI reply and book the appointment) maps onto two existing products used together: **Campaigns Pro** (list upload and SMS send) plus **Conversations AI Pro** (AI replies within the SMS thread and books meetings). Lesson: don't take a partner's first phrasing of a need at face value — reframe against actual product capability before saying "we don't have that."
+2. **Conversations AI Pro specifically required (not the base/standard tier) because it's the tier that lets AI reply to inbound SMS from a campaign** — quoted at **$39/month**. Confirmed capability: once engaged via SMS, the AI can carry the conversation and book directly onto the client's calendar via an embedded meeting-link feature — booked meetings show up in the platform's Conversations log and sync to whatever calendar is connected.
+3. **AI content-generation gap called out via the product's own FAQ:** an in-product FAQ stated AI content generation was available for email campaigns and would become available for SMS campaigns "soon" — meaning AI-drafted SMS copy generation was **not yet live** as of this call.
+4. **Chatbot over-promising gotcha (marketing-site AI agent, distinct from the client-facing product AI):** the prospect never received emails he'd explicitly requested after interacting with Vendasta's own website chat agent weeks earlier. Rep's diagnosis: the website agent isn't configured to actually pull data/resources and trigger real sends on its own — "sometimes you ask a question and it'll be over-enthusiastic and say 'yeah, for sure, I'm going to send that out'" without the backend wiring to actually do it. Practical lesson generalizable to any AI chat agent: an agent can confidently claim it will complete an action it has no tool/capability configured to perform, and that gap won't be obvious to the person talking to it.
+5. **Chatbot/webchat as a lead-capture + booking layer for a client with no CRM:** embedding a chat widget plus booking links directly onto a Vibe-built landing page so appointments still land on a calendar and conversation history is retained, even with no CRM or scheduling tool on the client's end.
+
+---
+
+## Date unknown — a solo prospective reseller (family/friends referral, passive-income motivation) (webchat/reseller demo and pricing walkthrough)
+
+**Source:** [CALL] Reseller demo — voice assistant and web chat lead-capture walkthrough with a Vendasta sales rep
+
+Live demo detail: the voice assistant/web chat dashboard shows a log of every call/chat interaction, including full transcript, a lead score, and detected language. The system extracts the caller's/chatter's name and email/contact info automatically and can book the meeting/appointment directly. Every new interaction also creates or updates a CRM contact record. The rep noted partners use this specifically for after-hours/missed-call scenarios (business not there to answer) as well as live web visitors who start a chat and get no immediate human response.
+
+---
+
+## Date unknown — a salon-suite franchise location owner exploring a reseller/license-to-hunt model (agency discovery call)
+
+**Source:** [CALL] Discovery call — AI receptionist / missed-call-text-back detail with a Vendasta account executive
+
+See the detailed AI-employee/AI-receptionist workflow captured in `ai-workforce.md` (text-back after a missed call, conversational booking flow, a ~30% lead-loss stat cited for missed calls/messages). The prospect's own framing is a useful metaphor for docs: he described wanting to build "a mousetrap these people can't say no to" for capturing leads while a sole practitioner's hands are literally busy with a client.
+
+---
+
+## Date unknown — a Vendasta product leader, a Vendasta VP of product marketing, a Vendasta product manager (AI monetization), and a Vendasta product specialist, with the product leads of a large European telecom/media reseller partner
+
+**Source:** [CALL] Product-roadmap feedback call on an in-development, unified AI credit system replacing today's separate minutes/messages metering for Conversations AI
+
+1. **Why the change:** today, AI voice minutes and AI chat messages are metered as separate consumables. The new system converts everything — chat, voice, and eventually SMS/email limits — into a single **credit-based** system, because different underlying costs (which LLM/model is used, prompt/knowledge-base complexity, conversation length) mean a "message" isn't a fixed cost unit. Model referenced as currently in use for chat: **GPT-4.1**.
+2. **Messages-to-credits conversion example used on the call:** a plan currently marketed as "200 messages" would become roughly "200 credits," but each real message might consume between **~0.6 and 1.1 credits** depending on complexity — meaning some customers could effectively get ~200 messages for their credit allotment and others closer to ~230. Vendasta's ask to the partner: is it acceptable to guarantee a *minimum* of 200 messages-worth of credits, even though the literal message count per customer will vary slightly? The reseller's stance: variability is hard to explain to clients contractually, so **standardizing/locking the underlying LLM configuration for their customers** was requested to reduce that variance — Vendasta agreed this locked-configuration approach works from their side.
+3. **Rollover behavior — a key distinction confirmed on the call:**
+   - **Purchased top-up credit/message packages roll over month to month** (a purchased package doesn't expire at the end of the month it was bought).
+   - **The included base monthly allotment resets every month and does not roll over** if unused.
+   - **Voice minutes work the same way today:** included minutes reset every month, but a **purchased add-on package of extra minutes does not expire monthly** — it persists until the end of the contract/year.
+4. **Two distinct SMS types, kept separate under the new system:** bulk **Campaign Pro SMS** (marketing sends to large lists) already has SKUs/packages built and ready to go; separately, **SMS sent automatically by the voice AI product as a follow-up after handling a call** (small-scale, one-to-one) is planned to remain **unlimited/unmetered** for the time being, distinct from bulk campaign sends.
+5. **Add-on provisioning latency:** once a client purchases a top-up (e.g., more voice minutes), Vendasta's order-provisioning API activates it in roughly **a couple of minutes** — near-instant on Vendasta's side, with any added latency coming from the partner's own order pipeline before it reaches Vendasta.
+6. **Overage cost reporting gap:** the reseller found (via their own reporting) multiple clients exceeding their monthly minutes allotment, some substantially, and asked Vendasta to confirm the exact overage cost calculation so their finance team can bill/report accurately. Vendasta did not have a finalized number to give on the call and committed to providing a firm overage cost model by Q4.
+7. **Usage-limit notifications — division of responsibility:** the reseller wants their end clients proactively notified (ideally via **WhatsApp**, since it's their dominant regional channel; SMS or email as fallback) as they approach their chat/SMS/voice/email limits. Vendasta's position: rather than sending those notifications directly to end customers themselves, they'd prefer to **expose usage-vs-limit data via API/webhook** and let the reseller's own systems generate the notification — this keeps the communication style/branding consistent with everything else the reseller sends its clients. The reseller agreed this is generally their preferred approach too, contingent on getting the underlying usage data via API (a gap Vendasta acknowledged needing a follow-up to close).
+8. **Self-serve upgrade purchasing constraint:** the reseller explicitly does **not** want end clients to be able to purchase add-ons directly inside the Vendasta-powered Business App/dashboard — they want all upgrade purchases funneled through their own client portal or sales agents, with provisioning still happening via an API call back to Vendasta regardless of which channel initiated it. Vendasta confirmed this is achievable with their existing provisioning API.
+
+---

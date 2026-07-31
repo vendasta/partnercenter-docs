@@ -122,3 +122,64 @@ Most of this call is deep reputation-management/CRM integration mechanics (out o
 **Gotcha — cross-border SMS/A2P limits surfaced while improvising a live demo:** the client needed a working SMS demo for an in-person conference on short notice. Spinning up new A2P/10DLC verification wasn't realistic on that timeline (Twilio's partner verification queue was running long at the time). Workaround used: repurpose/rebrand an existing internal Vendasta demo account with the client's logo/branding rather than provisioning net-new infrastructure. Separately flagged: a Canadian-provisioned number can only send/receive SMS two-way with other Canadian numbers, not US-to-Canada — so for a US-based conference audience texting in from their own phones, a **US number** was required, not a Canadian or European one, or the two-way texting simply wouldn't work.
 
 ---
+
+## Date unknown — a brand-new solo agency owner exploring database reactivation (partner discovery/pricing call)
+
+**Source:** [CALL] Partner discovery call — new-agency signup walkthrough of platform pricing and onboarding path, with a Vendasta sales rep
+
+A prospective partner (starting a brand-new one-person agency, zero clients, coming from a lead-selling background) wanted to build an SMS-based "database reactivation" service to re-engage old leads that businesses can't reach by phone. Key points from the rep:
+
+- Vendasta is positioned as a unified platform/ecosystem so partners don't need "10 different logins and passwords" — partners can both resell software and resell fully-managed done-for-you services (so they don't need to hire freelancers via gig platforms for fulfillment).
+- Pricing model explained: there is no separate platform subscription fee anymore. The **Starter plan** has a **$99/month minimum** — if the partner's activated wholesale products/services for clients total $99 or more, they only pay for those products/services, not an additional platform fee. Example given: email/SMS campaign service ~$20 wholesale, a chat tool ~$30, a website $99–$200 — all of this counts toward the $99 minimum.
+- Billing: Vendasta uses **Stripe** for payments; clients can pay the partner directly through the platform at no extra charge to the partner.
+- The Starter plan is aimed at people testing the platform with one service and a couple of clients. A free trial is available before paying, and partners can sign up directly through Vendasta's own pricing page.
+- Charging per lead is possible — the partner sets their own client-facing pricing model, the platform doesn't restrict this.
+- Recommended on-ramp: try the in-house email/SMS campaign service first, then expand into reselling other marketplace services as the agency scales, all under the partner's own brand.
+- Onboarding/support for new starters: an in-platform virtual AI assistant answers platform questions; access to **Vendasta Academy** (the same training courses Vendasta employees take) with video tutorials on running a digital audit, adding accounts, etc. Paid/assisted onboarding with a dedicated account manager becomes available once the partner upgrades to a higher (e.g., Professional) plan.
+- The rep's pitch: a partner can sign a client "tomorrow" and start selling immediately on the Starter plan without any contracts, LLC, or business setup — "nothing is going out of your pocket" since client payments fund the wholesale cost.
+
+---
+
+## Date unknown — a solo prospective reseller (family/friends referral, passive-income motivation) (webchat/reseller demo and pricing walkthrough)
+
+**Source:** [CALL] Reseller demo — full platform walkthrough (pricing, CRM, prospecting, marketplace) with a Vendasta sales rep for a first-time signup prospect
+
+A prospect who found Vendasta via online reviews, motivated by "passive income" and a built-in clientele of friends/family businesses, was walked through the full model:
+
+- To get started, no LLC/business registration is required — just a card on file. Sign-up grants access to a platform used to prospect, demo, onboard clients, invoice them, and deliver reporting.
+- Confirmed pricing: **$99/month Startup plan**, wholesale products marked up to retail, the partner keeps the margin. Example: activate ~$75 worth of wholesale products, suggested retail is $200–$300, so $125–$225 profit margin is the partner's to keep.
+- Billing sequencing: the partner always collects payment from the client first, then activates the service in Vendasta — that's when Vendasta charges the partner.
+- First month: partner is billed for both the $99 platform minimum and any products/services. From month two onward, as long as monthly product/service spend is above $99, there's no separate platform charge.
+- Higher-tier plans unlock white-label platform options, dedicated onboarding, and account manager support; Starter is meant for testing the platform.
+- End-of-month promo mentioned at time of call: sign-up with the $99 plan included a complimentary onboarding/setup call (normally reserved for Professional-plan-and-above) plus a complimentary chatbot embeddable on the partner's own website.
+- The rep's advice on cold-starting sales: activate a few products on your own account first so you can demo a live, working setup to prospects rather than just showing marketing materials — described as an easier sell than talking about capabilities abstractly. The rep cited partners with 20-30 clients using this same "activate for yourself first" approach.
+- Training/support: signing up grants access to training and white-label sales/marketing material (case studies, sales decks) for every product; an in-platform AI assistant gives step-by-step guidance; live chat support is available even on the Starter plan.
+- The prospect repeatedly noted the platform felt "overwhelming" as a newcomer despite being impressed — a useful gotcha/data point: sales reps should expect and address this objection with the training/resources pitch rather than pushing immediate signup.
+
+---
+
+## Date unknown — a Vendasta onboarding specialist with the partner's marketing-facing co-founder and technical lead
+
+**Source:** [CALL] Partner onboarding session; plan-tier and subscription-economics segment
+
+1. **Starter plan is $99/month** and clearly gates parts of the platform — locked sections show visible "Upgrade" prompts throughout the UI once a partner exceeds starter-tier scope.
+2. **Professional plan is $499/month** and includes **5 team member seats** (vs. paying extra per additional seat on Starter, which includes only 1), and unlocks **white-labeling** — a custom domain for the partner's Business App/branded portal.
+3. **Wholesale-spend credit mechanic:** every $1 a partner spends on **wholesale, qualifying products** applies as a $1 credit against the $499 Professional subscription fee. Spend $499+/month in qualifying wholesale product spend and the subscription effectively drops to $0 while retaining full Professional entitlements.
+4. **Concrete entitlement differences cited between tiers:** Professional includes 25 Snapshot reports (vs. 10 on Starter), 500 minutes of AI voice-agent recording (vs. 250), access to premium reports, API/service-account access, and upgraded support channels (chat + phone, vs. email-only on Starter).
+5. Framing point made directly to the partner: staying on Starter is fine while testing the platform, but once product activation stabilizes, evaluating Professional is worth it specifically because of the wholesale-offset mechanic — the intent is that no partner running meaningful product volume should be paying a net subscription fee.
+
+---
+
+## Date unknown — a Vendasta onboarding specialist with a solo small-business funding/financing consultant, new starter-plan partner
+
+**Source:** [CALL] First platform setup session for a brand-new starter-plan partner — covering chatbot install, email DNS, and Vendasta Payments
+
+1. **Session structure for a first setup call:** three concrete deliverables were targeted — (1) get the AI chat receptionist installed on the partner's own website, (2) get email/DNS settings configured, (3) walk through Vendasta Payments. CS operates as a "co-pilot," directing the partner to click through Partner Center themselves (screen-shared) rather than doing it for them, explicitly to build muscle memory.
+2. **Email marketing DNS setup, step by step:** Marketing → Email Settings → set **Sender Name** (can be a real person's name, not just the business name, if a personal tone is wanted) and **Reply Address**. Common convention suggested by CS for the reply address when doing bulk sends: something generic like `hello@` or `info@` the company domain, though using a personal name/email is fine if only one person manages replies.
+3. Under **"Use my email domain,"** choosing/entering the domain triggers a set of **CNAME records** to add at the domain registrar; the platform screen shows each record turning from red to green as DNS propagates. Activation can take **24–72 hours** after the records are added. Other unrelated DNS records already present on the domain don't interfere — you're only adding to what's there, not replacing it.
+4. **Deliverability guidance:** avoid sending high email volume from the *same* domain across too many separate uses, as it can affect deliverability; sending from your own verified domain (rather than a shared platform default) is what keeps outbound campaign email out of spam folders.
+5. **Vendasta Payments (Stripe-based):** explicitly **not** a partner-to-Vendasta payment — it's a tool for the partner to collect payments *from their own customers*. Built on Stripe. CS recommendation: if a partner doesn't already have a Stripe account, they can create one directly through the platform, but the account is portable — if the partner ever migrates off Vendasta, the Stripe account and its payment history travel with them rather than being locked in. Using it is optional; it's fine to keep billing entirely outside the platform.
+6. **Sparkle (in-platform AI assistant)** was called out twice as the go-to self-serve tool for platform questions — usable for confirming platform facts (e.g., knowledge-source limits) in place of guessing or waiting on a follow-up email.
+7. **Known rough edge hit live on this call:** setting up "Use my own email" under advanced email settings threw a "there was a problem updating sender info" error and a "some domain records missing or incorrect" message that CS could not resolve live — CS's fallback in this situation was to escalate to support/get an answer offline rather than debug further on the call, and to follow up by email once the domain records issue was sorted out.
+
+---

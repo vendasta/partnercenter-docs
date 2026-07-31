@@ -190,3 +190,116 @@ Each entry below is one source call — do not merge or overwrite prior entries.
 7. **Open technical question raised and not resolved on the call:** what "from" name/address a CRM-automation-triggered email actually sends as, when a contact's tag fires a drip — the rep deferred to the support team to confirm, since it depends on how the client's sending domain is configured.
 
 ---
+
+## Date unknown — Vendasta onboarding specialist and marketing agency partner (Business App walkthrough)
+
+**Source:** [CALL] Partner onboarding — Business App walkthrough, CRM/booking-links deep dive
+
+**Contacts vs. companies**: contacts are the base CRM object; whether companies get used as the *primary* object is driven by the client's business model — B2B/agency clients will primarily work with companies, while residential/local-service clients (the partner's own use case: homeowners needing HVAC-type service) will typically only ever use contacts. Framed as something to proactively clarify with new partners so they don't get confused by which object shows up as primary in different client instances.
+
+**Booking links & meeting scheduler** — the partner (an agency actively trying to displace Calendly) asked detailed questions here:
+- Link types: **individual** (one person, one slot at a time with configurable padding/buffer before and after) and **team/round-robin** (availability pooled across multiple people). A more advanced pattern: **service-specific team links** — e.g., an HVAC emergency-service link that only pulls availability from the subset of staff qualified for that specific service type.
+- Per-link settings include buffers before/after, custom questions asked at time of booking (required/optional toggles), and a confirmation-number field.
+- **Confirmed limitation**: the booking tool **cannot collect payment or gate a booking behind a completed payment/deposit**. Estimated overall feature parity vs. Calendly given by the rep: roughly **60-70%**. A workaround discussed: tie booking-link delivery to a payment confirmation automation instead.
+- Brand-color/hex customization of the booking widget was **not confirmed** by the rep during the call.
+- Calendar sync supports **Google Calendar and Microsoft Outlook** (not Microsoft Teams calendar). **Gotcha**: connecting calendar sync binds to whichever Google account is currently logged into the browser session doing the connecting — to onboard a client's own calendar, either the client connects it themselves, or the partner uses an incognito window logged into the client's Google account.
+- Vendasta's own internal convention, shared as a benchmark: standard internal meetings are booked as **45 minutes with a 15-minute buffer**.
+
+---
+
+## Date unknown — Vendasta account managers and home-services-focused marketing agency partner (chatbot configuration and forms follow-up)
+
+**Source:** [CALL] Partner enablement — forms and CRM lead-capture walkthrough
+
+Forms live in the same place and use the same underlying builder whether accessed from Partner Center or a specific client's Business App instance — found under **Marketing → Forms** (or CRM → Forms depending on nav path).
+
+Form types available via "Create Form": **Newsletter Signup**, **Feedback Form**, **Acquisition Widget**, and generic custom/lead-gen forms.
+- The **Acquisition Widget** is a lead-magnet-style embed that pulls in a visitor's business data to auto-generate a snapshot report and prompt a consultation — not intended as a form given directly to end clients (it's a prospecting tool for the partner's own site).
+- Any form supports **fully custom fields** that get added to the CRM record, and can be styled with AI assistance or fully custom CSS.
+- **Automations can be attached to a form submission** — e.g., auto-send an SMS/email to the new contact, or notify the business owner.
+- Submission flow: any Vendasta-native form immediately creates a CRM contact **and** surfaces the conversation in the Conversations inbox. Recommendation: **always use Vendasta-native forms with clients** so lead data lands in one unified CRM/inbox.
+- **Meta/Facebook Lead Ads** is a well-established integration: leads sync directly into the CRM, and Conversations AI can auto-engage a new lead the moment it lands there.
+- **Google Ads lead-form sync** is **not** a pre-built native integration as of this call — described as needing custom setup, similar in shape to the Meta Ads flow.
+
+---
+
+## Date unknown — a Saskatchewan-based digital marketing agency owner with a Vendasta account manager (billing/subscriptions/invoicing walkthrough)
+
+**Source:** [CALL] Detailed billing, subscriptions, invoicing, and QuickBooks-integration troubleshooting session
+
+1. **"Companies" vs. "Accounts" terminology, clarified directly:** a **Company** is just a CRM record (a lead) — no billing or product activation is possible on it. It only becomes an **Account** once a Snapshot report is run against it or a product is activated on it. Rule of thumb given: "if you're not running a snapshot report and you're not activating a product, leave them as a company."
+2. **Automation chain triggered by an Acquisition-widget form fill, traced live end to end:** form submission → creates a **Company** (Google-style address autofill) → creates an **Account** (needed because a Snapshot has to run against an account) → **Snapshot report runs** (~24 hours) → a "Digital Success: Snapshot" **campaign** starts sending.
+3. **Gotcha that silently broke the partner's test runs:** submitting the acquisition form with an email address that **already matched an existing company/contact** caused the system to attach the new submission to that **existing** company rather than creating a new one and firing a "new lead" campaign. Fix confirmed live: use a genuinely unique email per test.
+4. **Manual/on-demand automation build, demonstrated step by step:** create a new automation, set trigger type to **"Trigger manually"** for object type **Company** → choose who can run it manually → add a step to **start a campaign** and select the same snapshot-campaign → save/activate. Confirmed behavior: manually triggering still respects the campaign's built-in delay (does not skip the wait) and will **re-run** the snapshot even if one already exists.
+5. **CodePen.io recommended** as a way to test HTML forms/widgets without deploying them to a live website first.
+6. **QuickBooks integration is one-way only (QuickBooks → Vendasta), confirmed explicitly:** invoicing/collecting payment through QuickBooks syncs contact/payment status into the Vendasta CRM — but there is **no reverse sync**. As of this call the stated 2026 goal is to build out more accounting integrations, but QuickBooks one-way is the only one that exists today.
+7. **$1 test-transaction recommendation:** run a small $1 charge the first time you set up payments on an account, because the first Stripe payout after activation takes noticeably longer than normal.
+8. **Recurring billing / subscription conversion:** create the invoice as normal, then convert it into a **subscription**; toggle payment collection from **manual** to **automatic** so the card on file is charged automatically each renewal date.
+9. **Multi-location billing pattern:** create one dedicated billing entity (e.g., a "head office" account) and put the actual priced recurring line item there; set the equivalent product **instances at the individual locations to a $0 retail price** so they still show as active/tracked without a second bill.
+10. **Where to find billing/usage data:** **Administration → My Billing** shows purchased charges by account, active/deactivated subscriptions, and estimated usage/total for the month. **Reports → Sales invoices/financial reports** exports a CSV, described as "a little messier" and better for line-item review than clean bookkeeping.
+11. **No built-in consolidated expense-tracking tool exists yet** combining a partner's own outside business expenses with Vendasta platform billing into one report — acknowledged as a real gap; a Zapier-based push from Vendasta events into QuickBooks was floated as a possible workaround but not confirmed.
+12. **Custom/Premium Reports (Looker-based)** mentioned as a possible path to a fully custom consolidated report, not explored in depth on this call.
+
+---
+
+## Date unknown — a prospective solo agency owner with a Vendasta sales rep (pre-sale product-fit and demo call)
+
+**Source:** [CALL] Prospect qualification call — Campaigns Pro/SMS pricing for a lead-reactivation use case
+
+1. **Campaigns Pro confirmed as the tool for a CSV-based SMS reactivation campaign:** upload a client's old lead list as a CSV, then send an SMS outreach campaign to re-engage them; **Campaigns Pro priced at $16.50/month wholesale**, with SMS volume sold as a scaling add-on.
+2. **SMS add-on pricing tiers referenced (approximate):** roughly **$15** for a smaller SMS volume tier, roughly **$25** for around **500 SMS**, scaling up from there — rep recommended starting with a small pilot to validate before committing to a larger volume tier.
+3. **Meeting-booking links embeddable directly into campaigns/conversations** for clients without their own CRM or booking tool — booked meetings show up both in the platform's Conversations log and in whatever calendar is connected.
+
+---
+
+## Date unknown — a solo prospective reseller (family/friends referral, passive-income motivation) (webchat/reseller demo and pricing walkthrough)
+
+**Source:** [CALL] Reseller demo — Partner Center CRM and prospecting tool walkthrough with a Vendasta sales rep
+
+Walkthrough of the **Partner Center** (partner's own back-end login) CRM: tracks meetings, logs emails/notes for each client relationship, supports stage-based pipelines with automations/triggers for follow-ups and outreach. A **business-search/prospecting tool** lets partners search for potential accounts by business type and location — filterable further by zip/suburb; works for any vertical (plumbers, doctors, dentists, dealerships). Search results show whether each business has claimed its Google Business Profile, has a website, and its review count/rating — used to identify service gaps to pitch. Selecting a business with a couple of clicks (a) creates an account in the platform, (b) auto-generates that business's client-facing portal, and (c) lets the partner immediately invoice — invoicing shows both wholesale and marked-up retail price side by side, and the client pays through the platform. Note: "claimed" in the search results specifically means the business has verified its Google Business Profile — nothing more.
+
+---
+
+## Date unknown — a multi-agency owner focused on SEO and AI automations (agency discovery/reseller partnership call)
+
+**Source:** [CALL] Agency discovery call — outbound prospecting tooling and built-in CRM with a senior Vendasta account executive
+
+The Partner Center's "Find Accounts" tool lets a partner search for a list of target businesses and see attributes like website presence and Google Business Profile claim status to build a target list. The platform also includes a credit-based prospecting/contact-enrichment tool (functionally similar to tools like Apollo) that partners' sales teams use to find a named decision-maker at a target business and reach out via SMS/email through the platform. There is a built-in CRM for managing this pipeline regardless of whether outreach is manual, cold-calling, or automation/AI-driven outbound.
+
+---
+
+## Date unknown — a marketing manager at a multifamily property management company evaluating a reputation/listings platform (whitelabel reseller product deep-dive)
+
+**Source:** [CALL] Whitelabel partner-led product demo — reputation, listings, and social features for a multifamily property portfolio, with the reseller's account team and a Vendasta partnership manager
+
+Toward the end of the call, the Vendasta partnership manager noted the dashboard supports **Zapier and webhook/external API integrations** to pull in outside CRM data, describing this as a path to make "this thing your true CRM in general" for partners/clients who want everything centralized. The client already used a separate CRM tied to their property-management system (PMS) for call tracking and lead attribution and was interested in how listing/call-tracking data could sync with that external CRM without losing attribution to the CRM-issued tracking numbers.
+
+---
+
+## Date unknown — a Vendasta onboarding specialist with the partner's marketing-facing co-founder and technical lead
+
+**Source:** [CALL] Partner onboarding session covering Campaigns Pro / CRM list-building for an outbound-campaign migration from another vendor
+
+1. **CRM contact/company import mechanics for Campaigns Pro.** Lists are built by importing a CSV into CRM → Contacts or Companies, or by creating a **list** (static or smart) and adding records to it from a filtered view (select records → Action → "Add to a static list"). Campaigns/automations can then be triggered directly off a list.
+2. **Import limits:** CSV import file size cap is **5 MB**. Campaign sends are capped at **10,000 per month** (approximate — worth re-confirming). Guidance given: don't send an entire list in one batch — batch sends so as not to jam shared sending infrastructure.
+3. **Field-mapping limitation and workaround:** the CSV import field-mapping screen only exposes roughly **15–16 mappable field slots**, even when a source sheet has 25+ columns. Fix: **first create custom fields on the Contact/Company CRM object** for any data points not already represented — once a custom field exists, it appears as a selectable mapping target. Unmapped fields are simply excluded, not an error.
+4. **Campaign template builder mechanics:** templates are built from blocks — image, rich text, buttons (with CTA styling and destination URL), dividers, and dynamic merge fields pulled from CRM contact/company records. AI can generate block copy and (slowly) images from a prompt. Templates can be duplicated/edited and saved as new reusable templates.
+5. **Known bug/gotcha — line spacing on pasted content:** pasting rich text copied from an external document (Word/Google Docs) can introduce unwanted double/triple line spacing the on-screen controls don't fix. Workaround: **paste into a plain-text editor (e.g., Notepad) first to strip formatting, then paste that plain text into the email builder.**
+6. **Automation vs. campaign builder — branching logic lives in Automation, not the campaign/template tool.** To get "if yes, send X; if no, send Y" branching, build an **Automation** with a trigger (lead captured, company created, custom object, or opportunity-based) and a split/branch step. A campaign template's AI-content block cannot call an external webhook directly — that logic belongs in Automation instead (untested/uncertain as of this call, per the rep).
+7. **Domain/sender setup is a prerequisite for sending**, and matters more when white-labeling for a client: if sending on behalf of an end client using their own domain, the *client's* Business App → Marketing → Email Settings needs its own sender name, reply-to address, and connected domain (DNS records at the client's registrar) — not the partner's own Partner Center settings.
+
+---
+
+## Date unknown — a Vendasta solutions architect with an agency owner building a multi-client AI-employee automation practice (and his outsourced automation developers)
+
+**Source:** [CALL] Architecture/automation troubleshooting session on CRM automation triggers and pipeline-stage logic for lead-qualification workflows
+
+1. **Two lead-capture automation triggers, with an important difference in scope:**
+   - **"Web chat captures lead"** fires only once — on the very first communication summary for a contact — and only if that contact's very first interaction originated specifically from the **Web Chat** channel. It does **not** re-fire for that same contact's later conversations.
+   - **"When a contact communication summary is created"** (newer/broader) fires on every communication summary, from any channel, at any point — recommended as the general-purpose trigger for lead-qualification automations since it also catches SMS/WhatsApp/repeat conversations.
+2. **Recommended automation shape for top-of-funnel qualification:** trigger on the broad communication-summary event → check whether the contact has an associated **Opportunity** → if yes, check the opportunity's **Pipeline and Stage** — if beyond the funnel's "top of funnel" stages, end the automation immediately.
+3. **Opportunity-stage automation trigger:** "when opportunity field modified → calculated stage ID," combined with a condition on Pipeline + Stage equals a specific value, fires an action the moment a deal moves into that stage — regardless of whether the move was human or automated. Stage-moves can come from a mix of human and automated actors on the same pipeline, working in parallel.
+4. **CRM contact tagging as a lightweight status signal:** tags combined with a pipeline-stage move and a task for the record owner is a common pattern for surfacing a newly-qualified lead to a human for review before it proceeds.
+*(The automation/webhook/AI-employee wiring details from this same call are filed in `builder.md`; the AI-employee channel-assignment and persona concept is filed in `ai-workforce.md`.)*
+
+---

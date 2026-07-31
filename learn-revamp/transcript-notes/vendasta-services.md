@@ -84,6 +84,54 @@ Brian had an old/dormant Vendasta account (a prior trial arranged by a rep named
 
 ---
 
+## Date unknown — a Saskatchewan-based digital marketing agency owner with a Vendasta account manager (product walkthrough / pricing call)
+
+**Source:** [CALL] Partner reviews his own bundled reseller pricing against Vendasta guidance on markup norms
+
+1. **Partner's own bundle math, walked through live:** wholesale cost for a 4-product bundle (Local SEO Pro + Yext, Campaigns Pro, Reputation AI Pro, Social AI) totaled roughly **$142/month**, sold retail at **$599/month** — about **4.2x** wholesale. The account manager's read: this is "toward the highest side of the ceiling" but not unreasonable, given clients today can easily Google baseline chatbot/tool pricing and don't place much extra value on a dashboard alone.
+2. **Vendasta account manager's stated markup guidance:** never go **below 2x wholesale**; most successful partners land somewhere between roughly 2x and 4x. One outlier partner known to the account manager runs a much higher markup across everything and generates seven-figure annual revenue on it: his model bundles everything into a single "we do it all for you" custom package with a minimum multi-month contract, runs a biweekly reporting cadence in the first month, then shifts to monthly — and bundles in Citation Builder as a standard line item that most partners overlook.
+3. **Sales-objection technique named on the call ("FUD"):** a fear/uncertainty/doubt framing borrowed from another partner, used specifically on AI-skeptical prospects — "create the fear [competitors are already doing this], create the uncertainty, then create doubt [for the holdouts who don't yet see the value of AI]." Framed as a technique for a slow-adopting/skeptical local market.
+4. **Concrete adoption anecdotes shared by the partner as sales proof points:** (a) a bulk-goods distributor client found the partner via an AI-search tool after his own website revamp/SEO work got him ranked #1 within ~12 weeks, and later added a chatbot for lead capture; (b) an older, low-tech client received a single large-value order lead generated purely through the website's chatbot capturing an inbound email inquiry — used as an ROI story to un-stick reluctant, "if it's not broke, don't fix it" older business owners.
+5. **General market-education/objection-handling note from the call:** partner reported real resistance in some regional markets to any AI or automated communication and to using AI-driven scheduling instead of face-to-face meetings — reinforcing that "we like human interaction" is a live, common objection that has to be worked around with reassurance (e.g., no long-term contract to reduce trial risk) rather than argued away outright.
+
+---
+
+## Date unknown — a physical-therapy franchise partner (co-owners) with a Vendasta sales rep (SEO/reputation/AI-chatbot proposal call)
+
+**Source:** [CALL] Proposal/packaging structure for a seven-location physical-therapy clinic group
+
+1. **Package structure proposed:** a **$300 one-time setup fee per location** (covering fixing directory/listing inaccuracies and platform configuration) plus a recurring monthly tier (one of three tiers offered) bundling reputation management, listings, and AI chatbot/conversations.
+2. **Two-tier dashboard model explained:** each individual location gets its own **location-level dashboard** (local staff can log in, see performance, respond to reviews); the franchise's corporate/head office would separately get a **multi-location roll-up dashboard** to see performance across all locations and identify who's winning/losing where.
+3. **Sales approach for enterprise/multi-location proposals — offer a scoped pilot before a full commitment:** rather than pushing for a system-wide signed contract, the rep proposed building a free offline demo on a single chosen location first, timeboxed to a couple of business days, explicitly framed as low-risk ("if you like it, we can chat more; if you don't, we go our separate ways as friends").
+
+---
+
+## Date unknown — a solo/single-operator digital marketing agency owner with a Vendasta account manager (billing/automation troubleshooting call)
+
+**Source:** [CALL] Billing/automation troubleshooting call; touched on general reseller selling philosophy for AI products
+
+1. **Explicit reseller philosophy stated by the account manager:** don't just resell software access — "here's the software, go set it up" is, in his words, "a recipe for disaster... because they don't know how it works." His recommended approach: mark product up meaningfully (example cited: wholesale $39/month Conversations AI Pro marked up to $149+ retail with a separate setup fee), and actually configure/train it for the client as part of the sale.
+2. **Vendasta's own recommended campaign templates** are available as starting points under Campaigns, some dating back years — intended as ideation/inspiration rather than send-as-is; newer agencies commonly use them when they don't know where to start, and any template can be copied and edited into something fully custom.
+3. **A2P/10DLC SMS compliance flagged again as a broad current pain point** across partners, not specific to one product — described as "cracking down" recently.
+
+---
+
+## Date unknown — a salon-suite franchise location owner exploring a reseller/license-to-hunt model (agency discovery call)
+
+**Source:** [CALL] Discovery call — done-for-you vs. self-serve service model decision with a Vendasta account executive
+
+The prospect was explicit he did not want to create more work for himself ("I'm not looking to create more work for myself... I got to be able to explain this to an 8th grader"). The rep laid out three fulfillment paths available on Vendasta for any given service: (1) Vendasta's own team does the work fully done-for-you, (2) the partner trains up their own team (including offshore/VA staff) to use Vendasta's tools to do the work, lowering the partner's cost and increasing margin, or (3) give the end business/tenant direct self-serve access to their own dashboard to do the work themselves. The rep concluded this prospect's use case fit either the fully-managed or the "train an offshore team" path, not self-serve.
+
+---
+
+## Date unknown — a solo prospective reseller (family/friends referral, passive-income motivation) (webchat/reseller demo and pricing walkthrough)
+
+**Source:** [CALL] Reseller demo — tool vs. managed-service distinction with a Vendasta sales rep
+
+Explains the difference between the self-serve social posting tool ($15/mo wholesale, partner or client does the work manually with AI assistance) and the fully-managed **Social Media Manager service** ($24–25/mo wholesale), where Vendasta's own team configures and runs the monthly content calendar for the client. The prospect had initially confused a "2 posts/week, pay more for extra" limitation with Vendasta's offering — the rep clarified that limitation applied to a different managed-service SKU he'd researched elsewhere, and that the core social tool itself is unlimited posting.
+
+---
+
 ## Date unknown — Jordan H (Vendasta) with Elias Hanna (City Scene Media, partner) — white-label email connection mechanics, and how far white-labeling actually extends
 **Source:** [CALL] `white-label-email-setup-city-scene-media-elias-hanna.txt` — a setup call connecting a partner's custom-domain email address for white-labeled client communication, followed by the partner asking pointed questions about how "white label" actually works in practice.
 
