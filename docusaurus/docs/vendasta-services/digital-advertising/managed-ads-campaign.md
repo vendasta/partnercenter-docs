@@ -32,7 +32,7 @@ Your campaign can run across a range of platforms. The platforms available depen
 * **Performance Max — Google:** Goal-based campaigns that run across Google's full inventory (Search, Display, YouTube, Gmail, and Maps).
 * **Meta — Facebook & Instagram:** Social ads for demand creation with precise audience targeting.
 * **YouTube:** Video ads before, during, or after videos, for reach and awareness.
-* **TikTok:** Short-form vertical (9:16) video in the For You feed and other placements; a TikTok creatives add-on can produce platform-native video.
+* **TikTok:** Short-form vertical (9:16) video in the For You feed and other placements, for reach and awareness.
 * **LinkedIn:** Business-focused ads for recruitment, lead generation, and visibility (higher minimum ad spend).
 
 ### Spend tiers and features
@@ -42,7 +42,7 @@ What's included scales with your monthly ad spend. Management fees are added on 
 | Feature | $500–$999/mo | $1,000–$2,999/mo | $3,000+/mo |
 |---|---|---|---|
 | **Ad channels** | 1 | Up to 2 | Up to 3 |
-| **Ad types** | Google/Bing Search, Meta | Google/Bing Search, Google Display, PMax, Meta, YouTube Video | Google/Bing Search, Google Display, PMax, Meta, YouTube Video, LinkedIn |
+| **Ad types** | Google/Bing Search, Meta | Google/Bing Search, Google Display, PMax, Meta, YouTube Video | Google/Bing Search, Google Display, PMax, Meta, YouTube Video, TikTok, LinkedIn |
 | **Strategy call with an Ads Specialist** | — | Every quarter | Every month |
 | **Campaign edits** | 1 round per month | 1 round per month | 2 rounds per month |
 | **Advertising Intelligence reporting** | ✅ | ✅ | ✅ |
