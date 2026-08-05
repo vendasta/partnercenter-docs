@@ -1,0 +1,107 @@
+# .github/workflows/source-citation-check.yml
+#
+# Flags factual claims added to Learn tab training content that ship without a source
+# citation, and reports them as a single PR comment.
+#
+# This check is deliberately ADVISORY. It never fails the build and never blocks a merge.
+# It is a reviewer aid, not a gate — the detection is heuristic and will both miss real
+# gaps and occasionally flag prose that needs no source. The actual rule lives in
+# .cursor/rules/source-citation-required and CLAUDE.md; authors are expected to cite as
+# they write rather than wait for this.
+
+name: Source Citation Check
+
+on:
+  pull_request:
+    paths:
+      - "docusaurus/training/**/*.mdx"
+      - "scripts/check_source_citations.py"
+  workflow_dispatch:
+    inputs:
+      scan_all:
+        description: "Scan every training file instead of just this PR's changes"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+jobs:
+  check-citations:
+    name: Flag uncited claims
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          # Full history so the base commit is present for the diff
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run the citation check
+        id: check
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.scan_all }}" = "true" ]; then
+            python3 scripts/check_source_citations.py --all --output report.md
+          else
+            python3 scripts/check_source_citations.py \
+              --base "${{ github.event.pull_request.base.sha }}" \
+              --output report.md
+          fi
+
+          # Expose whether anything was flagged, so the comment step can stay quiet
+          # on clean PRs that never had a comment.
+          if grep -q "^| [0-9]" report.md; then
+            echo "findings=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "findings=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Comment on the pull request
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const marker = '<!-- source-citation-check -->';
+            const body = marker + '\n\n' + fs.readFileSync('report.md', 'utf8');
+            const findings = ${{ steps.check.outputs.findings }};
+
+            const { owner, repo } = context.repo;
+            const issue_number = context.payload.pull_request.number;
+
+            const comments = await github.paginate(
+              github.rest.issues.listComments,
+              { owner, repo, issue_number, per_page: 100 }
+            );
+            const existing = comments.find(c => c.body && c.body.includes(marker));
+
+            if (existing) {
+              // Keep one comment and edit it in place, so the thread does not fill up
+              // with a new report on every push.
+              await github.rest.issues.updateComment({
+                owner, repo, comment_id: existing.id, body,
+              });
+              core.info(`Updated comment ${existing.id}`);
+            } else if (findings) {
+              await github.rest.issues.createComment({
+                owner, repo, issue_number, body,
+              });
+              core.info('Posted a new comment');
+            } else {
+              core.info('Nothing flagged and no existing comment — staying quiet');
+            }
+
+      - name: Write the report to the run summary
+        if: always()
+        run: cat report.md >> "$GITHUB_STEP_SUMMARY"

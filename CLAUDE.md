@@ -57,6 +57,18 @@ URL redirects are managed in `docusaurus.config.ts` via `@docusaurus/plugin-clie
 - Sentence case headings: `## Set up a domain`
 - **Bold** for UI elements, `code` for commands and filenames
 
+### Source citations in training content
+
+Applies to `docusaurus/training/**`. Full rule: `.cursor/rules/source-citation-required`.
+
+- **Every new factual claim ships with its source.** Numbers, caps, limits, percentages, prices, turnaround times, SLAs, trial durations, entitlement and tier gating, defaults, and UI navigation paths.
+- Two forms. `{/* Source: URL — verified YYYY-MM-DD */}` when the source confirms the claim. `{/* Audit YYYY-MM-DD: finding. Source: URL */}` when it contradicts, only partly supports, or the claim is on hold pending a product team's answer.
+- **Append inline on list items and table rows.** A JSX expression on its own line between bullets or table rows splits the list or table. Paragraphs get the comment on the next line.
+- **Never compose a URL from memory.** Fetch the page and confirm it contains the claim first. A citation that does not support its claim is worse than none.
+- **Sync every copy of the claim.** Training pages repeat facts in body copy, FlipCards and Knowledge Check answers. Grep the file and update all of them, or the quiz will test the old number.
+- Skip marketing copy, learning objectives and In Practice anecdotes. If a claim genuinely needs no source, mark it `{/* no-source-needed: reason */}` rather than leaving it bare.
+- `scripts/check_source_citations.py` flags gaps on pull requests. Advisory only, and it misses things. Cite as you write.
+
 ### Frontmatter
 
 ```yaml
