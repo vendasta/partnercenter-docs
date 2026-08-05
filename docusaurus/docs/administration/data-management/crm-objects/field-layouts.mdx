@@ -39,7 +39,7 @@ Layouts are set per object type. Contacts, Companies, Opportunities, and each cu
 2. Select an object from the list on the left — **Contacts**, **Companies**, **Opportunities**, or one of your custom objects.
 3. Click **Organize layout**.
 
-{/* SCREENSHOT: organize-layout-button.png — Custom Fields page, Contacts selected, showing the "Organize layout" and "Create" buttons above the field table */}
+<img src={require('./img/organize-layout-button.png').default} alt="CRM objects page with Contacts selected, showing the Organize layout button beside Create field above the field table" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 ## The editor
 
@@ -53,15 +53,18 @@ The editor has three panels.
 
 Drag a field between any two panels, or between groups. To move several fields at once, select them and use **Add to group** or **Hide field** from the selection menu.
 
-{/* SCREENSHOT: organize-layout-editor.png — the full three-panel editor for Contacts: Unassigned on the left with the sort control, two or three named field groups in the centre, Hidden fields on the right */}
+<img src={require('./img/organize-layout-editor.png').default} alt="The Organize field layout editor for Contacts, with the Unassigned panel and its sort control on the left, the Basic information and About contact groups in the centre, and the Hidden fields panel on the right" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 ### Field groups
 
 - Click **Add group** and give it a name. Every group needs a name, and names must be unique.
-- Click a group's name to rename it.
+- Rename a group with the pencil icon in its header. Press Enter to confirm or Escape to cancel.
+- Delete a group with the trash icon. The fields in it return to **Unassigned**.
+- Click a group's name, or the chevron, to collapse and expand it. The number beside the name is how many fields it holds.
 - Drag a group by its handle to move it up or down. The order here is the order on the record.
 - Drag fields within a group to reorder them.
-- Use a field's menu to **Move to** another group, **Remove to Unassigned**, or **Hide field**.
+- Use a field's **⋮** menu to **Move to** another group, **Remove to Unassigned**, or **Hide field**.
+- In **Unassigned**, the **+** button on a field is a shortcut: it lists every group so you can drop the field straight into one, or hide it.
 
 :::info
 A group has to contain at least one displayed field. Empty groups block saving — either add a field or remove the group.
@@ -82,9 +85,11 @@ A newly created custom field starts out unassigned, so it shows up on records ri
 
 Drag a field into **Hidden fields** to take it off the record. Hiding is not deleting: the field definition and all its stored data stay exactly as they are, and the field is still available to imports, automations, and the API.
 
-To bring a hidden field back, use **Restore to Unassigned**.
+<img src={require('./img/organize-layout-hidden.png').default} alt="The Hidden fields panel holding three hidden contact fields under the heading Fields here are hidden from contact records" style={{width: '400px', maxWidth: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-{/* SCREENSHOT: organize-layout-hidden.png — the Hidden fields panel with two or three fields in it, showing the "Fields here are hidden from contact records" helper text and a field's Restore action */}
+To bring a hidden field back, open its **⋮** menu and choose **Restore to Unassigned**. From there, drag it into whichever group you want.
+
+<img src={require('./img/organize-layout-restore.png').default} alt="A hidden field's menu open in the Hidden fields panel, showing the Restore to Unassigned action" style={{width: '400px', maxWidth: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 ### Fields you won't see in the editor
 
