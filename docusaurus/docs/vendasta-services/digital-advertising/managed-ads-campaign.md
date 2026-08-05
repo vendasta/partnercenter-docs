@@ -160,6 +160,7 @@ The campaign continues to run with the same monthly budget and ongoing optimizat
 
 * **Results guarantees:** We can't guarantee specific results. We implement best-practice strategies, but platform algorithms are unpredictable, so it would be unethical to promise results that can't be guaranteed.
 * **Fluctuating timelines:** We launch as quickly as possible, but we can't launch without ironing out every important detail first. Completing the fulfillment form fully helps your campaign launch far more seamlessly.
+* **Hold off on post-launch changes:** Making changes right after launch is not ideal. Unless a change is crucial, we recommend waiting at least **5 weeks** so the campaign has time to run and gather data. Once a change is made, our team needs several weeks to re-optimize the campaign, so frequent edits can reset that learning period and work against performance.
 
 ## FAQ
 
