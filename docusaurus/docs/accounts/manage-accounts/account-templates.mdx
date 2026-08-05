@@ -21,6 +21,7 @@ A template captures the full configuration of a source account, including:
 - Web chat widgets and settings
 - Forms
 - CRM fields
+- CRM field layouts
 - Campaigns
 - Automations
 
@@ -56,6 +57,14 @@ To set this up:
 4. Select the template to apply.
 
 This lets you apply or re-apply a template based on any condition an automation can evaluate.
+
+## Including CRM field layouts
+
+A [field layout](/administration/data-management/crm-objects/field-layouts) — the grouping and ordering of fields on contact, company, opportunity, and custom object records — can be rolled out with a template so every account presents its records the same way.
+
+- Only customized layouts are captured. Object types still on the standard layout are skipped.
+- If a layout references custom fields or a custom object type the target account doesn't have, those are created there first and the layout is repointed at them.
+- Applying a template replaces the target account's layout for that object type. Any layout customization already made on the target account is overwritten.
 
 ## Including forms and web chat widgets
 
