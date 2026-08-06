@@ -43,7 +43,7 @@ The **Extract value** field uses JQ syntax. If you leave it blank, the entire ou
 The **Extract value** field shows example expressions as placeholder text. Common patterns include `.data.name`, `.results[0].id`, and `.items | length`.
 :::
 
-Once saved, the reference is stored as a step ID — for example `{.WorkflowStep.773dcc25-db4c-4d5d-882d-d3c8482e9770.response}` — which doesn't tell you which earlier step it points to. To see those connections on the canvas, turn on [Step references](./advanced-automation-features.mdx#step-references) in the automation editor toolbar.
+Once saved, the reference is stored as a step ID — for example `{.WorkflowStep.773dcc25-db4c-4d5d-882d-d3c8482e9770.response}` — which doesn't tell you which earlier step it points to. To see those connections on the canvas, turn on [Step references](./navigating-the-automation-canvas.mdx#step-references) in the automation editor toolbar.
 
 ## Expression syntax
 
@@ -177,7 +177,7 @@ Each expression reaches into the nested webhook payload and pulls out exactly th
 
 1. **Start simple** — Use basic field extraction (`.name`, `.email`) before reaching for complex expressions
 2. **Test in stages** — Verify each expression works before combining multiple in one step
-3. **Use descriptive step names** — Clear step names, plus [Step references](./advanced-automation-features.mdx#step-references) on the canvas, make it easy to see where each expression's data comes from
+3. **Use descriptive step names** — Clear step names, plus [Step references](./navigating-the-automation-canvas.mdx#step-references) on the canvas, make it easy to see where each expression's data comes from
 4. **Stay under the limit** — Expressions have a 500-character maximum, so keep them focused on one transformation
 5. **Combine with logic steps** — Pair data expressions with if/else steps for powerful conditional workflows based on extracted data
 

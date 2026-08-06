@@ -1,0 +1,61 @@
+---
+title: Navigating the automation canvas
+description: Use the automation editor's canvas tools — step search, step references, and the minimap — to find your way around long or complex workflows.
+sidebar_position: 8
+tags: [automations, canvas, editor, navigation]
+keywords: [automation canvas, step references, step search, minimap, automation editor, dynamic content step id]
+---
+
+# Navigating the automation canvas
+
+Once an automation grows past a handful of steps, the canvas gets hard to scan — and the connections between steps become invisible, because dynamic content references steps by ID rather than by name.
+
+The automation editor has three tools for this, in the toolbar on the right edge of the canvas. All three only change what you see: none of them alter the automation, and turning them on or off is never a change you need to save.
+
+| Tool | What it does |
+| --- | --- |
+| **Search for steps** | Finds and highlights steps matching a keyword |
+| **Step references** | Draws lines showing which steps pass data to which |
+| **Minimap** | Shows a scaled-down overview of the whole workflow |
+
+## Search for steps
+
+When editing a long automation, press **Cmd+F** (Mac) or **Ctrl+F** (Windows) inside the automation editor to open step search. Type any keyword — a step name, action type, or phrase like "email" or "update contact" — and matching steps are highlighted so you can jump directly to what you need.
+
+- Search is case-insensitive
+- Works across all trigger and action steps
+- Use the arrow keys or Enter to move between matches, or click a highlighted step to jump to it
+
+This is available in both **Business App** and **Partner Center**.
+
+## Step references
+
+When a step uses dynamic content from an earlier step, the value is stored as a step ID rather than a step name — for example `{.WorkflowStep.773dcc25-db4c-4d5d-882d-d3c8482e9770.response}`. Opening that step later tells you a previous step is feeding it data, but not which one.
+
+**Step references** answers that visually. Select the step references icon in the canvas toolbar — between the search and minimap controls — and the canvas draws coloured dotted lines between steps. Each line connects a step that produces data to the step that consumes it, with a different colour per source step so you can follow several at once. Select the icon again (**Hide step references**) to turn the lines off.
+
+<img src={require('./img/automations/step-references-canvas.png').default} alt="Automation canvas with step references turned on, showing coloured dotted lines connecting steps that pass data to each other, and the canvas toolbar with the step references icon selected" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Use it to:
+
+- Trace where a dynamic content value came from without opening each step in turn
+- See what would break before you delete, move, or reorder a step
+- Get oriented in an automation someone else built
+
+:::tip
+Name your steps descriptively as you build. Step references shows you *which* step a value comes from; a clear step name tells you *what* that value is.
+:::
+
+For the syntax behind these references, see [Data expressions in automations](./data-expressions.mdx).
+
+## Minimap
+
+The minimap gives you a scaled-down view of the entire workflow, so you can see the overall shape of a long automation and where you currently are within it. Select the minimap icon at the bottom of the canvas toolbar to show or hide it.
+
+This is most useful in automations with many branches, where the full workflow no longer fits on screen at a readable zoom level.
+
+## Learn more
+
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows
+- [Data expressions in automations](./data-expressions.mdx) — Pass data between steps
+- [Advanced automation features](./advanced-automation-features.mdx) — Logic steps, delays, grouping, and action sets
