@@ -21,7 +21,7 @@ The Branding section in Customize Business App controls how your brand appears w
 
 ## How do I access branding settings?
 
-Navigate to **Partner Center** > **Accounts** > **Manage Business App** > **Customize Business App** > **Branding**.
+Navigate to `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Branding`.
 
 ## How do I rename Business App?
 
@@ -39,10 +39,10 @@ The Business App name setting changes the display name "Business App" to your cu
 
 **How to configure:**
 
-1. Navigate to **Partner Center** > **Accounts** > **Manage Business App** > **Customize Business App** > **Branding**.
-2. Find the **Rename Business App** field.
+1. Navigate to `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Branding`.
+2. Find the `Rename Business App` field.
 3. Enter your preferred name (e.g., "ClientHub", "MyAgency Portal", "Growth Dashboard").
-4. Click **Save**.
+4. Click `Save`.
 
 **What customers see:**
 The new name appears in the navigation sidebar, page titles, and email communications instead of "Business App".
@@ -61,14 +61,36 @@ A custom domain lets customers access Business App from your own branded URL (e.
 - You want to build trust with a recognizable URL
 
 **How to configure:**
-Click the **Add custom domain** link in the Branding section to access domain configuration. For detailed setup instructions, see [Customize your domains](/docs/partner-center/overview#customize-your-domains).
+Click the `Add custom domain` link in the Branding section to access domain configuration. For detailed setup instructions, see [Customize your domains](/partner-center#customize-your-domains).
 
 ## How do I customize the Contact Us card?
 
-The Contact Us card appears in the Business App navigation and displays your contact information to customers.
+The Contact Us card appears in the Business App navigation and displays your contact information to customers. You can also add a meeting scheduling link so customers can book time with their assigned salesperson directly from the card.
+
+**What this does:**
+- Displays a `Book a meeting` button on the Business App contact card
+- Links to a CalendarHero meeting link, or any other meeting scheduling link you provide
+- Appears for accounts assigned to the salesperson with the link configured
+
+:::info
+When impersonating a customer's account from Business App, you can't start a conversation with the salesperson from that view. To test the booking link, log in to Business App directly as that customer.
+:::
 
 **How to configure:**
-For instructions on customizing the Contact Us button and card, see the [Contact Us button documentation](/docs/administration/platform-settings/customize-business-app/customize-contact-us-button-business-app).
+
+1. Add a booking link to the salesperson profile:
+   1. Navigate to `Partner Center` → `Administration` → `My Team`.
+   2. Find the salesperson, select the three dots next to their name, and choose `Edit Salesperson`.
+   3. Scroll to the `Book a meeting link` field.
+   4. Enter the meeting URL.
+   5. Click `Save`.
+2. Assign the salesperson to the account:
+   1. Navigate to `Partner Center` → `Accounts` → `Manage Accounts`.
+   2. Select an account and choose `Edit`.
+   3. Under `Administration`, ensure the correct salesperson is assigned.
+   4. Once saved, customers on that account see a `Book a meeting` button on the Business App contact card.
+
+<img src={require('./img/contact-card-booking-link.png').default} alt="Business App contact card showing the Book a meeting button" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 ## How do I control web chat footer branding?
 
@@ -89,10 +111,10 @@ When enabled, displays "Chat Powered By [Your Partner Name]" (with optional link
 
 **How to configure:**
 
-1. Navigate to **Partner Center** > **Accounts** > **Manage Business App** > **Customize Business App** > **Branding**.
-2. Scroll to the **Conversations Web Chat** section.
+1. Navigate to `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Branding`.
+2. Scroll to the `Conversations Web Chat` section.
 3. Toggle the checkbox to show or hide the footer branding.
-4. Click **Save**.
+4. Click `Save`.
 
 **What appears in the footer:**
 - If you have a website URL configured in your partner profile: "Chat Powered By [Your Name]" with a clickable link to your website (includes UTM parameters for tracking)
@@ -104,7 +126,7 @@ Your partner name and website URL are configured in your [Company Profile](https
 
 ## Related resources
 
-For comprehensive branding options including logos, colors, and themes, see [Visual Branding and Identity](/docs/administration/platform-settings/partner-branding/visual-branding-and-identity).
+For comprehensive branding options including logos, colors, and themes, see [Visual Branding and Identity](/administration/platform-settings/partner-branding/visual-branding-and-identity).
 
 ## FAQs
 
@@ -121,7 +143,7 @@ The custom name appears in:
 - The Business App navigation sidebar
 - Email communications to customers
 - Welcome messages and onboarding content
-- Any interface text that previously said "Business App"
+- Any interface text that would otherwise display "Business App"
 </details>
 
 <details>

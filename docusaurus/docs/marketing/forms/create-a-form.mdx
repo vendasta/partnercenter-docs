@@ -88,7 +88,6 @@ Click on the **Marketing email consent source** field to open the properties pan
 Now, whenever someone consents to receive more emails, the CRM will automatically update to show if they came from a specific campaign. This lets us know which campaigns are specifically driving more sign-ups to our email list.
 
 For more detailed information on tracking form submissions, see [Track form submissions in GA4](./tracking-form-submissions-ga4.mdx).
-:::
 
 ## Step 4 — Match your form design to your website
 
@@ -142,7 +141,7 @@ If you do not have an appropriate campaign created, you can save the automation 
 :::info Building more complex automations for forms
 You can edit existing form automation templates by using the **Advanced mode** toggle in Forms. The automation builder provides you many more actions and conditional logic you can use to build more complex automations for forms. 
 
-For more information on building automations with the automation builder, see [Create a new automation](../../automations/my-automations/create-new-automation.mdx).
+For more information on building automations with the automation builder, see [Creating and configuring automations](../../automations/creating-and-configuring-automations.mdx).
 :::
 
 ## Step 6 — Form submission settings and publishing
@@ -184,6 +183,155 @@ You don't have to paste your form embed code into your website to test it! There
 - [W3Schools](https://www.w3schools.com/html/html_examples.asp)
 :::
 
+## Embedding multiple forms on a page
+
+You can safely place more than one form embed on the same page. Each form renders inside its own isolated shadow DOM, so styles and scripts from one form never affect another.
+
+Duplicate the `<script>` embed tag for each form you want to display, changing only the `data=` attribute:
+
+```html
+<!-- First form -->
+<script
+  async
+  data-crm-form-widget
+  src="https://www.cdnlinks.vendasta.com/.../custom_form.widget.js"
+  data="YOUR_BASE64_DATA_FORM_1"
+></script>
+
+<!-- Second form -->
+<script
+  async
+  data-crm-form-widget
+  src="https://www.cdnlinks.vendasta.com/.../custom_form.widget.js"
+  data="YOUR_BASE64_DATA_FORM_2"
+></script>
+```
+
+Copy the embed code from the **Embed** tab in the form editor for each form — the `data=` value (a Base64 string) is the only attribute that differs between instances. The `src=` URL stays the same.
+
+:::info Legacy single-form embed
+Older embed codes using `id="__custom_form_widget"` still work for pages with a single form. Upgrade to the `data-crm-form-widget` pattern when you need multiple forms on the same page.
+:::
+
+:::tip Single-page apps
+If your site inserts form embed tags dynamically after the page loads, call `window.CRMFormsInit()` after inserting the tags to trigger initialization without a page reload.
+:::
+
+## Styling forms from the host page
+
+Each form renders inside a shadow DOM for CSS isolation. Standard CSS selectors in your page's stylesheets **cannot** cross the shadow boundary — they have no effect on elements inside the form:
+
+```css
+/* ❌ These selectors do NOT reach inside the form */
+.crm-form-host input { border: 2px solid blue; }
+.crm-form-host label { color: navy; }
+```
+
+Use the CSS [`::part()` pseudo-element](https://developer.mozilla.org/en-US/docs/Web/CSS/::part) to style form elements from outside the shadow root:
+
+```css
+/* ✅ ::part() crosses the shadow DOM boundary */
+.crm-form-host::part(input) {
+  border: 2px solid #3b82f6;
+  border-radius: 6px;
+}
+
+.crm-form-host::part(label) {
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+.crm-form-host::part(submit-button) {
+  background-color: #2563eb;
+  color: white;
+  border-radius: 999px;
+  padding: 10px 28px;
+}
+```
+
+### Available part names
+
+| Part name | What it targets |
+|-----------|----------------|
+| `form` | The form container element |
+| `input` | All input, textarea, and select elements |
+| `label` | All field labels |
+| `submit-button` | The submit button |
+| `section-button` | Next/back buttons on multi-section forms |
+| `{type}-input` | Input by field type, e.g. `email-input`, `text-input` |
+| `{type}-label` | Label by field type, e.g. `email-label` |
+| `{fieldId}-input` | A specific field's input element |
+| `{fieldId}-label` | A specific field's label |
+| `consent-input` | Consent checkbox inputs |
+| `consent-field-label` | Label above a consent field group |
+| `consent-description` | Consent field description text |
+| `promo-card` | Promo section cards |
+| `success-page` | Success page container shown after submission |
+| `success-icon` | Checkmark icon on the success page |
+| `success-heading` | Heading on the success page |
+| `success-body` | Body text on the success page |
+
+### Scoping styles to a specific form instance
+
+When multiple forms are on the same page, you can scope `::part()` rules to one specific form using its form ID as an additional part name. The form ID is the `FormConfigID-...` value visible in your embed code.
+
+```css
+/* Style inputs only in the contact form */
+.crm-form-host::part(FormConfigID-abc123 input) {
+  border-color: #7c3aed;
+  border-radius: 12px;
+}
+
+/* Style the submit button only in the newsletter form */
+.crm-form-host::part(FormConfigID-xyz456 submit-button) {
+  background-color: #059669;
+}
+```
+
+:::tip Finding your form ID
+Your form ID appears in the embed code from the form editor. It follows the pattern `FormConfigID-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`. You can also inspect the rendered page in browser DevTools and look for the host element: `<div class="crm-form-host" data-form-id="FormConfigID-...">`.
+:::
+
+## Interacting with forms using JavaScript
+
+Because each form renders inside a shadow root, `document.querySelector()` alone cannot reach elements inside it. Use the host element's `shadowRoot` property to query inside the shadow tree.
+
+### Selecting a form instance
+
+Each form's host element has the class `crm-form-host` and a `data-form-id` attribute. Use these to target a specific form when multiple are on the page:
+
+```javascript
+// Select a specific form by its form ID
+const host = document.querySelector('[data-form-id="FormConfigID-abc123"]');
+const shadowRoot = host?.shadowRoot;
+```
+
+### Pre-filling field values
+
+Once you have the shadow root, query and set values the same way you would with normal DOM elements:
+
+```javascript
+const host = document.querySelector('[data-form-id="FormConfigID-abc123"]');
+const shadowRoot = host?.shadowRoot;
+if (!shadowRoot) return;
+
+// Pre-fill a text input by its name attribute
+const nameInput = shadowRoot.querySelector('input[name="contactName"]');
+if (nameInput) {
+  nameInput.value = 'Jane Smith';
+}
+
+// Select an option in a dropdown
+const sourceSelect = shadowRoot.querySelector('select[name="leadSource"]');
+if (sourceSelect) {
+  sourceSelect.value = 'website';
+}
+```
+
+:::info Initialization timing
+Forms load asynchronously. Run any JavaScript that reads or writes form fields after the form has rendered — for example, in response to a user interaction. Avoid running pre-fill logic immediately on page load before the form's shadow root exists.
+:::
+
 ## Frequently asked questions
 
 <details>
@@ -203,7 +351,7 @@ Forms are automatically mobile-responsive by default and the AI design assistant
 <details>
 <summary>Can I integrate forms with other platforms?</summary>
 
-Yes! Forms can integrate with various platforms through automations and webhooks. For example, you can send form data to CRMs, marketing automation tools, or custom applications. Check the [Automations documentation](../../automations/my-automations/create-new-automation.mdx) for tips on how to build integrations with other systems.
+Yes! Forms can integrate with various platforms through automations and webhooks. For example, you can send form data to CRMs, marketing automation tools, or custom applications. Check the [Automations documentation](../../automations/index.mdx) for tips on how to build integrations with other systems.
 
 </details>
 

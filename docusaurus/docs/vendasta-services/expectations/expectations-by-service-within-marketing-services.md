@@ -19,9 +19,9 @@ With so many services available, it's important to understand what to expect fro
 | **Direct-to-customer communication is available** | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | **Project tracking in Business App** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | **Business App connections required** | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ |
-| **External credentials (passwords) required** | ❌ | ✅ | ✅ | ❌ | ✅[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNSZXGATFMA6XKMG0B38KVX) | ❌ |
-| **Digital Agents access required** | ✅ | ✅ | ✅ | ❌ | ✅[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNT07KYFS0Y5JSTEDQ4QEAK) | ✅[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNT07KYFS0Y5JSTEDQ4QEAK) |
-| **Business days to launch after assets received** | **3**[\*](https://marketing-services.zendesk.com/hc/en-us/articles/19299630230423-Expectations-by-Service-within-Marketing-Services#h_01GPNT2PA61DE430WNW2XXBEPT) | **1-2** | **5** | **5** | **5-10** | **1-10** |
+| **External credentials (passwords) required** | ❌ | ✅ | ✅ | ❌ | ✅\* | ❌ |
+| **Digital Agents access required** | ✅ | ✅ | ✅ | ❌ | ✅\* | ✅\* |
+| **Business days to launch after assets received** | **3**\* | **1-2** | **5** | **5** | **5-10** | **1-10** |
 
 \*See more in definitions below.
 
@@ -35,7 +35,7 @@ If you would only like specific people to be contacted in relation to the order 
 
 This is what an order confirmation email looks like:
 
-[![Confirmation_Email.png](./img/19299630230423-ab1a66875a.png)](https://marketing-services.zendesk.com/hc/article_attachments/19299621999255)
+![Confirmation_Email.png](./img/19299630230423-ab1a66875a.png)
 
 ## Pre-launch call
 

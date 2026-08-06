@@ -113,6 +113,27 @@ Configure the steps taken when provisioning your product:
 - **Notifications** — Add one or more recipient email addresses to receive notifications when the product is activated, canceled, or deactivated.
 - **Required products** — Select products that must be purchased before your product can be activated.
 
+#### Auto Activation Toggle
+
+The **Auto Activation** toggle (found in **Marketplace > Products > [your product] > Product Info**) allows the product to activate automatically without requiring an admin to manually process an order.
+
+:::info Order Form dependency
+Auto Activation only works if the product has **no Order Form** configured. If an Order Form is attached, the toggle has no effect — the order must be manually processed so the form can be completed. Remove the Order Form first if you want auto activation to apply.
+:::
+
+#### Auto-activating a product when a new account is created
+
+To activate a custom product automatically every time a new account is created:
+
+1. Go to **Partner Center > Administration > Customize > Account Creation**
+2. Under **Products to activate on account creation**, add your custom product
+
+The product will activate on every new account without requiring a separate order.
+
+#### Notification recipients behavior
+
+Email addresses added to **Notifications** receive alerts whenever the product is activated, canceled, or deactivated. These recipients persist on the product record regardless of whether the email address is still an active user in your platform. If someone unexpected is receiving activation emails, check the Notifications list in Vendor Center and remove any outdated addresses.
+
 ### Order form
 
 Build a custom order form to collect information when customers purchase your product. The form includes:
@@ -209,7 +230,6 @@ Standardize your fulfillment process by automating project and task creation in 
   - *Reviews* — When a customer review is left for businesses.
   - *Mentions* — When the business is mentioned across the web.
   - *Listings* — When a listing is missing or inaccurate.
-  - *Google Q&A* — When a question is asked on Google about the business.
   - Choose whether these are fulfilled by *Vendor* or *Reseller*.
 
 ## Add-ons
@@ -222,6 +242,10 @@ The **Compare product** tab shows the activation status of your product and lets
 
 - **Suspend new activations** — Prevent new customers from activating the product while keeping it available for existing users.
 - **Open** — Open the product (and all of its add-ons) to the marketplace so it can be activated.
+
+## Custom products and the Start/Stop Selling buttons
+
+Custom (private) products you create in Vendor Center do not have **Start Selling** or **Stop Selling** buttons. This is by design — your own products are already enabled for selling in your marketplace. To prevent a custom product from being ordered, use **Suspend new activations** in the **Compare product** tab of Vendor Center instead.
 
 ## Best practices
 

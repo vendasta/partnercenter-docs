@@ -1,0 +1,146 @@
+---
+sidebar_position: 6
+title: Billing and payment basics
+description: Learn how to manage your billing and payments with Vendasta—set up payment information, view purchases, download reports, and get ready for Merchant Services.
+---
+
+import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+
+<InlineHighlighter courseId="billing-and-payment-basics" site="vendasta_learn">
+
+<CourseProgressBar courseId="billing-and-payment-basics" site="vendasta_learn" />
+
+As a Vendasta partner, you have access to everything you need to sell solutions to local businesses and add new revenue streams. Before you start selling, set up payment information so you can bill and track payments in one place. This course covers subscription tiers, platform purchases, payment setup, and managing your billing.
+
+:::tip Learning Goals
+- Understand subscription tiers and charge-per-activation billing
+- Set up payment information including your billing contact and credit card
+- Navigate My Billing to view purchases and download reports
+- Get started with Vendasta Payments (Merchant Services) for client invoicing
+:::
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">📦</span>How Subscriptions Work at Vendasta</div>
+
+Vendasta's pricing is designed for businesses at every stage of growth. With your subscription, you gain access to the platform, including Marketing Automation, Sales CRM, Marketplace, and your online Store. Depending on your tier, you unlock additional features—like access to the white-label Marketing Services team.
+
+### Subscription tiers
+
+| Tier | Highlights |
+|------|------------|
+| **Starter** | Get started. Market, sell, bill, and fulfill. |
+| **Professional** | White-label software. Scale your team. |
+| **Premium** | Multi-location. End-to-end commerce. |
+| **Custom Enterprise** | Plan tailored to your organization. |
+
+Visit the Vendasta website for current pricing on each tier.
+
+### Snapshot reports
+
+A certain number of free Snapshot Reports are included monthly in each subscription. They are used when creating reports individually or through Marketing Automation campaigns.
+
+### Products and services
+
+Each product in the Marketplace has unique wholesale pricing, but there is **no cost to add it to your Store**. Add the entire lineup at no cost, mark up, and package as you see fit. You are **only billed once you activate** a product or service for a client—on a charge-per-activation basis.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">💳</span>Set Up Payment for Your Subscription</div>
+
+### Instant billing
+
+As a new Vendasta partner, you'll be billed **instantly (same day)** for in-platform purchases. To activate any product that is not priced as free, you need a credit card in the system.
+
+### Add your payment information
+
+:::info
+There are three cards under Administration that deal with payments. **My Billing** is the one that handles *your* payments. The other two pertain to your customer accounts and payment settings.
+:::
+
+**Three steps:**
+
+1. Navigate to the **My Billing** card under My Account in the Administration tab (Partner Center).
+2. Add a **Billing Contact** — purchase receipts are emailed here.
+3. Add your **credit card** information into the system.
+
+### Receipt breakdown
+
+When a payment goes through, Vendasta sends a purchase receipt email to the Billing Contact with a CSV attached—including which customers the purchase was for. Click the link in the email to view the purchase in the platform.
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">📋</span>Navigate and Manage Billing</div>
+
+The **My Billing** card in the Administration tab lets you manage billing and purchases in many ways:
+
+- See a detailed list of purchases
+- View the estimated total costs for the current month
+- Download monthly billing reports
+- Search, organize, and download billing information as you prefer
+
+---
+
+<div className="principle-area"><span className="principle-area__icon">🛒</span>Get Set Up with Vendasta Payments</div>
+
+Set up Merchant Services to accept payments from your clients and send invoices.
+
+### Where to start
+
+Partner Center → Administration → Platform Settings → Vendasta Payments
+
+### What it enables
+
+To accept credit card payments via invoices and the Shopping Cart, you need to set up a **Stripe Connect account** through Vendasta Payments. This lesson is an introduction; a full Academy course walks through every detail.
+
+:::info
+For a complete deep dive into Vendasta Payments, recurring subscription invoices, and other billing walkthroughs, take the Academy course: *Streamline Billing With Merchant Services*.
+:::
+
+<div className="in-practice">
+  <span className="in-practice__icon">💬</span>
+  <div className="in-practice__body">
+    <span className="in-practice__label">In Practice</span>
+    <p>You sign up on Starter. You add a Billing Contact and credit card to My Billing. You add Listings, Reputation, and Social Marketing to your Store at no cost. You activate Listings for your first client—you're billed that day for the wholesale amount. The receipt emails to your Billing Contact with a CSV breakdown. You set up Vendasta Payments via Stripe Connect so you can invoice that client next month. Billing and client payments, managed in one place.</p>
+  </div>
+</div>
+
+---
+
+<SectionFeedback courseId="billing-and-payment-basics" site="vendasta_learn" section="content" />
+
+## Key Resources
+
+<FlipCardGrid>
+  <FlipCard front="My Billing" back="Administration → My Account. Card, contact, receipts." subtext="Your payments" />
+  <FlipCard front="Charge-per-Activation" back="Add to Store free. Pay when you activate." subtext="Products" />
+  <FlipCard front="Vendasta Payments" back="Stripe Connect. Invoices. Shopping Cart." subtext="Client billing" />
+</FlipCardGrid>
+
+---
+
+## Knowledge Check
+
+<KnowledgeCheck courseId="billing-and-payment-basics" site="vendasta_learn"
+  sessionSize={5}
+  questions={[
+    { type: "mcq", question: "Which Administration card handles YOUR payment information?", options: ["Vendasta Payments (client invoicing)", "My Billing", "Default Billing Settings", "Partner Center → Marketplace"], correctIndex: 1, explanation: "Set Up Payment for Your Subscription states that My Billing under My Account is for your card and billing contact; other payment cards cover customers or client payments." },
+    { type: "truefalse", statement: "There is no cost to add products from the Marketplace to your Store.", correct: true, explanation: "Products and Services explains there is no cost to add Marketplace products to your Store—you pay wholesale only when you activate for a client." },
+    { type: "whicharea", principle: "Where do you learn about Stripe Connect and invoicing clients?", correctArea: "🛒 Get Set Up with Vendasta Payments", explanation: "Get Set Up with Vendasta Payments points to Administration → Platform Settings → Vendasta Payments and Stripe Connect for invoicing and the Shopping Cart." },
+    { type: "match", instruction: "Match the concept to its description.", pairs: [{ term: "Charge-per-activation", definition: "Billed when you activate a product for a client" }, { term: "Billing Contact", definition: "Receives purchase receipt emails" }, { term: "Instant billing", definition: "New partners billed same day for purchases" }], explanation: "How Subscriptions Work ties charge-per-activation and instant billing; Add Your Payment Information ties the Billing Contact to receipt emails." },
+    { type: "truefalse", statement: "As a new partner, you need a credit card in the system to activate products that are not free.", correct: true, explanation: "Instant Billing says in-platform purchases bill the same day, so a card must be on file before activating non-free products." }
+  ]}
+/>
+
+---
+
+Explore subscription plan details on the Vendasta website. When ready for invoicing and Merchant Services, take the Academy course: Streamline Billing With Merchant Services.
+
+</InlineHighlighter>
+
+<MarkComplete courseId="billing-and-payment-basics" site="vendasta_learn" />

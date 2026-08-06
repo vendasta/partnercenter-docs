@@ -59,8 +59,32 @@ Effective project management helps you deliver consistent results by organizing 
 
 #### For Social Calendar projects:
 - **Content Call**: Schedule a call to discuss content strategy and requirements
-- **Schedule Social Posts**: Automatically generate social post tasks within the project
+- **Social Calendar Generation**: Automatically generate and schedule social post tasks within the project
 - **Client Review**: Require client approval before content goes live
+
+#### Social Calendar Generation defaults
+
+When you use **Social Calendar Generation** in a Social Calendar project, these defaults are pre-configured:
+
+- **AI model:** **Gemini Flash Latest** (recommended)
+- **Schedule type:** **On a Schedule**
+- **Frequency:** **Weekly**
+- **Day of week:** **Monday**
+- **Time:** **9:00 AM**
+- **Timezone:** Automatically populated from the SMB timezone in Business App
+- **Start date:** Current date
+- **End date:** **No end date**
+- **Availability:** Web and mobile
+- **Applies to:** **Social Media Manager**
+:::info Setting up Client Review
+**Client Review** is only available for Social Calendar projects and requires **Schedule Social Posts** to be selected first. Once both are enabled and the project is created, a **Client Review** task appears at the bottom of the project. To send content for client review:
+
+1. Open the **Client Review** task in the project
+2. Click **Generate new preview**
+3. Click **Send for review**
+
+Clients receive a notification and can approve or request changes before posts go live. If you don't see the Client Review option, confirm that Schedule Social Posts is checked.
+:::
 
 ### Step 4: Complete project creation
 
@@ -96,6 +120,10 @@ Effective project management helps you deliver consistent results by organizing 
    - **Dependency**: Optionally select other tasks that must be completed before this task can start
 
 3. Click **Add** to save the task to your project
+
+:::warning Bulk project due date updates are not supported
+The Projects page does not support bulk due date updates. If you need to change the due date for multiple projects, each one must be updated individually. Note that **subtask** due dates within a single project can be bulk-edited using the bulk edit feature in the Tasks view.
+:::
 
 ### Step 3: Organize and manage tasks
 

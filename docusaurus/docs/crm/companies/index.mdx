@@ -108,6 +108,22 @@ The Companies interface provides powerful filtering and search capabilities to h
 - **Creation date**: Find recently added or historical companies
 - **Record source**: Filter by how companies entered your CRM (form, import, manual)
 
+## Tag formatting rules
+
+Tags help you organize and filter company records. To work correctly in filters and search, tags must follow these formatting rules:
+
+- **Character limit**: 50 characters maximum
+- **Allowed characters**: Letters (A–Z, a–z), numbers (0–9), dashes (`-`), spaces, and underscores (`_`)
+- **Special characters**: Not supported — tags containing characters such as `@`, `#`, `&`, `!`, or `%` may appear to save but will not work correctly in filters or search
+
+**Best practices:**
+- Keep tags short and descriptive (for example, `hot-lead`, `enterprise`, `renewal-q3`)
+- Establish a consistent tagging convention with your team to keep filters predictable
+
+:::warning
+Tags with unsupported characters may appear to save successfully but will silently fail in filtering and search. If a tag filter isn't returning expected results, check the tags on those records for special characters.
+:::
+
 ## Managing company hierarchies
 
 The CRM supports parent-child company relationships, allowing you to organize and manage corporate hierarchies effectively. This feature is particularly useful for tracking multi-location businesses, franchise operations, or corporate structures with subsidiary companies.
@@ -252,3 +268,45 @@ Lead scoring empowers customer-facing representatives with precise and customiza
 **Configuration**: Lead scoring is configured in `Partner Center` > `Administration` > `Score`. See the [Score documentation](../../administration/data-management/score/index.mdx) for detailed setup instructions.
 
 **Availability**: Lead scoring works out of the box for all users on the Professional subscription or above.
+
+## Bulk deleting companies
+
+You can delete multiple company records at once to clean up CRM data.
+
+:::warning
+Bulk deletion is **permanent and cannot be undone**. Any notes attached to deleted companies are lost and cannot be recovered, even if you recreate the company later. Export any records you may need before deleting.
+:::
+
+**Limits:** Companies are deleted in batches of **100 records** at a time.
+
+**Steps:**
+
+1. Go to **Partner Center** > **CRM** > **Companies**.
+2. Increase the items-per-page setting to show more records (up to 100).
+3. Use filters or search to narrow to the records you want to delete.
+4. Click the top-left checkbox to select all visible records.
+5. Click **Actions** > **Delete**.
+6. In the confirmation modal, type `Delete` and confirm.
+
+Repeat for additional batches if you need to delete more than 100 companies.
+
+## Recreating a deleted company
+
+If a company was accidentally deleted, you can trigger the system to recreate it — as long as the associated account still exists in Partner Center.
+
+**What gets recovered:**
+- The Company record (with a new Company ID)
+- Business profile information synced from the account
+
+**What is NOT recovered:**
+- Notes and activity history from the deleted company record
+- The original Company ID (a new one is assigned)
+
+**How to recreate:**
+
+1. Go to the associated account in **Partner Center** > **Accounts** > **Manage Accounts**.
+2. Open the account and click **Edit Account**.
+3. Make a minor change to the Business Profile — the recommended approach is to add a tag and then remove it.
+4. Save the account.
+
+Saving triggers a sync that recreates the Company record linked to that account. The recreated company will have a fresh activity timeline with no previous notes.

@@ -1,0 +1,132 @@
+---
+title: "Advanced automations"
+sidebar_position: 7
+description: "Trigger scope, guarded triggers, activities over notes, custom objects, and data expressions: automations that run start to finish without a person in the middle."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+
+<InlineHighlighter courseId="advanced-automations" site="vendasta_learn">
+
+<CourseProgressBar courseId="advanced-automations" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Advanced"
+  time="about 11 minutes"
+  pathName="Wire your AI Workforce to act"
+  step={7}
+  totalSteps={8}
+  outcomes={[
+    "Match a trigger's scope to the record you are acting on",
+    "Guard a trigger so it fires exactly when you intend",
+    "Log engagement as an activity other automations can act on",
+    "Model business data with a custom object",
+  ]}
+/>
+
+## An automation that runs without you
+
+An automation is the follow-through worker, the teammate that picks up when an AI Employee announces it is done. It earns the name when it runs from trigger to finish with no one in the middle. If it needs someone to paste a value or click approve halfway through, it is a manual process wearing a costume. What lets it carry real work on its own, and what keeps it from misfiring, comes down to a handful of pieces.
+
+## The trigger decides what you can do
+
+Every automation starts with a trigger, and the trigger quietly sets the rules for everything after it. A trigger scoped to a contact gives you contact steps; one scoped to a company gives you company steps; a trigger with no scope is more limited than either. Match the trigger to the thing you are acting on, and the steps you need are there.
+
+This is worth saying plainly because it is the most common snag in the builder: when a step you expect is missing, it is almost always because the trigger's scope does not reach it. Change the trigger, and the step appears.
+
+## Guard the trigger
+
+A trigger with no condition fires on every matching event. Create a single test contact to see what happens, and it fires on that one too. So guard it. Add a condition, on the record's source or a tag, so the automation runs on exactly the records you mean and no others.
+
+Conditions can be grouped with "and" and "or" for finer aim. A guarded trigger is the whole difference between an automation you trust to run unattended and one you feel you have to watch.
+
+<FlipCardGrid>
+  <FlipCard front="Trigger" back="The event that starts the workflow. Its scope decides which steps you can use." subtext="Start" />
+  <FlipCard front="Condition" back="The guard that decides whether to run on this record. Without it, the trigger fires on everything." subtext="Guard" />
+  <FlipCard front="Action" back="A step the workflow takes: send, create, log, wait. They run top to bottom." subtext="Do" />
+</FlipCardGrid>
+
+## Log activities, not notes
+
+When your automation records that something happened, make it an activity, not a note dropped into a field. An activity is anchored in time, and, more importantly, other automations can trigger on it. A value hidden in a message field is invisible to the rest of your system; an activity is something the platform can act on later. Building on activities is what lets one automation hand off cleanly to the next.
+
+## Model what the business tracks: custom objects
+
+Contacts and companies cover most of the CRM, but not everything a business runs on. A veterinary clinic tracks a pet: the pet has its own name, its vaccination record, its chip number. That is a custom object, a record type you define with its own fields, separate from any field on the contact. Custom objects power automations and smart lists the same way built-in records do, and you can bulk-import them from a spreadsheet to get started.
+
+## Shape a value mid-flow: data expressions
+
+Sometimes the value you receive is not quite the value you need to pass on: a first and last name to combine, one field to pull out of a larger payload, a number to reformat. A data expression reshapes it in the middle of the workflow. They are compact by design, with a length limit, and they fail softly: a missing field returns an empty result rather than crashing the run, so a small mistake never takes the whole automation down. When you need the full syntax, [the data expressions guide](/automations/data-expressions) has it.
+
+:::tip Try it now
+Take one automation you run, or want to. Write the single condition that would keep it from firing on the wrong record: a source, a tag, a field value. That one line is what turns a noisy automation into a reliable one.
+:::
+
+<SectionFeedback courseId="advanced-automations" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="advanced-automations" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on trigger scope, guarding a trigger, and modeling data."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'While building an automation, the step you want is not in the list. What is the most likely reason?',
+      options: [
+        'The automation limit for your account was reached',
+        'The trigger\'s scope does not reach that kind of step',
+        'The step is only available on a paid tier',
+        'The automation needs to be saved first'
+      ],
+      correctIndex: 1,
+      explanation: 'A trigger\'s scope, no scope, account, company, or contact, decides which steps are available. A missing step almost always means the trigger scope does not match the action.'
+    },
+    {
+      type: 'mcq',
+      question: 'You want an automation to run only on leads that came from a specific web form. What makes that reliable?',
+      options: [
+        'A condition on the record source or a tag',
+        'A longer wait step at the start',
+        'Running it manually each morning',
+        'Removing the trigger so it fires less often'
+      ],
+      correctIndex: 0,
+      explanation: 'An unguarded trigger fires on everything, including test records. A condition on source or tag is the guard that makes it run on exactly the records you mean.'
+    },
+    {
+      type: 'mcq',
+      question: 'Why record an engagement as an activity instead of a note in a field?',
+      options: [
+        'Notes cost more to store than activities',
+        'Activities are anchored in time and other automations can trigger on them',
+        'Notes cannot be edited once written',
+        'Activities are the only thing that appears on a contact'
+      ],
+      correctIndex: 1,
+      explanation: 'A value buried in a field is invisible to the rest of your system. An activity is anchored in time and triggerable, so the next automation can act on it.'
+    },
+    {
+      type: 'mcq',
+      question: 'A clinic needs to track each pet, with its own vaccination and chip records, separate from the owner. That is...',
+      options: [
+        'A custom field added to the owner\'s contact',
+        'A tag applied to the owner\'s contact',
+        'A custom object with its own fields',
+        'A note logged on the owner\'s contact'
+      ],
+      correctIndex: 2,
+      explanation: 'A distinct thing the business tracks, with its own fields, is a custom object, not a field or a tag on the contact. Custom objects power automations and smart lists like built-in records do.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/builder/beyond-the-platform" pathName="Wire your AI Workforce to act" step={7} totalSteps={8} />
+
+</InlineHighlighter>
+<MarkComplete courseId="advanced-automations" site="vendasta_learn" />

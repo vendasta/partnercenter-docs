@@ -36,7 +36,7 @@ Users can be created in two ways in Partner Center: from an individual account, 
 2. Go to **Accounts** → **Manage Accounts**.
 3. Select the account where the user should be added.
 4. Click **Add users**, then select **Create User**.
-5. Enter the required details (email address, name, and other requested fields).
+5. Enter the required details (email address, name, and other requested fields). The **Send welcome email** checkbox is selected by default; clear it if you don't want the user notified immediately.
 6. Click **Save** to create the user.
 
 The user is added to the selected account.
@@ -45,7 +45,7 @@ The user is added to the selected account.
 
 1. Navigate to **Accounts** → **Manage Users**.
 2. Click **Create user**.
-3. Fill in the user information (email address, name, and other required fields).
+3. Fill in the user information (email address, name, and other required fields). The **Send welcome email** checkbox is selected by default; clear it if you don't want the user notified immediately.
 4. Assign the user to the appropriate account.
 5. Click **Save** to create the user.
 
@@ -85,6 +85,21 @@ This workflow is useful when onboarding teams or standardizing access across man
 Users can be removed from Partner Center when access is no longer required. Common reasons include the individual leaving the business, access no longer needed, or the individual being managed as a CRM contact instead.
 
 To remove a user, click the three-dot menu next to the user, then select **Delete**.
+
+## SMB self-service user management
+
+Business App users who have the **User Management** tab permission enabled can manage users directly from Business App, without requiring Partner Center access. From **Administration** → **Users**, they can:
+
+- View all users on the account
+- Invite new team members
+- Edit permissions (tab access) for existing users
+- Remove users
+
+When a user is added or removed — whether by a partner or by an SMB user — the event is automatically logged in the CRM activity feed on both the company record and the contact record. The log includes who performed the action and which account it was for.
+
+:::tip
+To control whether an SMB user can manage other users, enable or disable the **User Management** tab in that user's permissions. Users without this tab cannot see the Users page or make changes.
+:::
 
 ## Managing the user lifecycle
 
@@ -142,5 +157,17 @@ Deactivate or delete the user account to prevent unauthorized access. Consider w
 <details>
 <summary>Can users change their own permission levels?</summary>
 
-No, only administrators can modify user permissions. Users can update their personal information and notification preferences, but permission changes require administrative access.
+Users who have the **User Management** tab enabled in their permissions can edit permissions for themselves and other users on the same account. However, they cannot remove their own user account or revoke their own access to the Users tab. Partners can also manage permissions from Partner Center.
+</details>
+
+<details>
+<summary>Can SMB users manage other users without Partner Center?</summary>
+
+Yes. If the **User Management** tab is enabled in a user's permissions, they can invite, edit permissions for, and remove other users directly from Business App under **Administration** → **Users**.
+</details>
+
+<details>
+<summary>Are user additions and removals tracked?</summary>
+
+Yes. When a user is added or removed from an account, it is logged in the CRM activity feed on both the associated company and contact records. The log notes who performed the action and which account it was for.
 </details>

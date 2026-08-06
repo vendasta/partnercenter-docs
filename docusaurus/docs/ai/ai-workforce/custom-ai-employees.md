@@ -78,7 +78,7 @@ Choose where your Custom AI Employee will work:
 
 **Available Channels:**
 
-- **Website chat**: Deploy on one or multiple website chat widgets
+- **Website chat**: Deploy on one or multiple website chat widgets. Custom AI Employees on Web Chat receive the visitor's current page URL with every message — see [Make responses page-aware with the visitor's URL](./ai-chat-receptionist/index.md#make-responses-page-aware-with-the-visitors-url) for how to tune prompts to use it.
 - **In-platform chat**: Chat directly in Partner Center (automatically available after creation)
 
 
@@ -138,9 +138,14 @@ Once tested, deploy your Custom AI Employee:
 
 **Web Chat:**
 
-- Assign your Custom AI Employee to a web chat widget
-- Requires Conversations AI Standard, Pro, or Premium
-- See [Web Chat Setup](../../business-app/conversations/web-chat/index.mdx) for details
+Assign your Custom AI Employee to a web chat widget so it handles conversations with website visitors:
+
+1. Go to **Conversations** → **Settings**, then click **Manage widgets** on the **Web Chat** card.
+2. On the **Web Chat configuration** page, click **New Web Chat** (or open an existing widget to edit it).
+3. In the **AI employee** card, click **Select employee**, choose your Custom AI Employee, and click **Ok**.
+4. Click **Next** to save, then install the widget on your site.
+
+Requires Conversations AI Standard, Pro, or Premium. See [Web Chat Setup](../../conversations/ai-assisted-web-chat-widget.mdx) for details.
 
 **Automations:**
 
@@ -220,7 +225,7 @@ Your Custom AI Employee is automatically available in the AI Workforce tab after
 
 ### Web Chat
 
-Assign your Custom AI Employee to a web chat widget to provide specialized chat experiences for website visitors.
+Assign your Custom AI Employee to a web chat widget to provide specialized chat experiences for website visitors. Go to **Conversations** → **Settings** → **Manage widgets**, open a widget, then use **Select employee** in the **AI employee** card to assign it. A widget uses one AI employee at a time, but the same employee can be assigned to multiple widgets.
 
 **Benefits:**
 
@@ -228,7 +233,7 @@ Assign your Custom AI Employee to a web chat widget to provide specialized chat 
 - Interactive knowledge navigation for website visitors
 - Lead capture and resource discovery
 
-For setup instructions, see [Web Chat Setup](../../business-app/conversations/web-chat/index.mdx).
+For setup instructions, see [Web Chat Setup](../../conversations/ai-assisted-web-chat-widget.mdx).
 
 ### Automations
 

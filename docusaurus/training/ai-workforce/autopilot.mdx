@@ -1,0 +1,171 @@
+---
+title: Put your workforce on autopilot
+sidebar_position: 6
+description: Smart lists, starter automation recipes, and reading the activity log with confidence.
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LabChecklist from "@site/src/components/LabChecklist";
+import LabCallout from "@site/src/components/LabCallout";
+
+<InlineHighlighter courseId="autopilot" site="vendasta_learn">
+
+<CourseProgressBar courseId="autopilot" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Intermediate"
+  time="about 30 minutes"
+  required={["Partner Center access", "A CRM with at least one contact source already flowing in, such as a form or your receptionist from step 2"]}
+  lab
+  pathName="Hire your first AI Employee"
+  step={6}
+  totalSteps={7}
+  outcomes={[
+    "Build a smart list that triggers on a real filter",
+    "Pair a smart list with an automation using a starter recipe",
+    "Read an activity log entry without mistaking a safety net for a failure",
+    "Describe what the multi-location review-automation pattern looks like when a business is ready for it",
+  ]}
+/>
+
+## What runs when nobody is watching
+
+By the end of this step, one real automation is live on your own account, running without you touching it again. *You are here: Partner Center, the same account you have been building on since step 2.* The workforce so far only acts when spoken to; this step is what runs when nobody is in the conversation at all.
+
+<LabCallout title="build a smart list">
+You are going to **CRM** → **Lists** → **Create**.
+
+<LabChecklist
+  storageKey="autopilot-lab-1"
+  steps={[
+    <>Choose <strong>Smart List</strong> and name it before saving.</>,
+    <>Add a filter, for example record source equals form submission.</>,
+    <>Save.</>,
+  ]}
+  confirm={<>Matching contacts populate immediately, and keep populating as new ones match: the list itself is the trigger, no manual upkeep required.</>}
+/>
+</LabCallout>
+
+## Pair it with an automation
+
+<LabCallout title="connect the list to an action">
+You are going to **Automations** → **Create automation**.
+
+<LabChecklist
+  storageKey="autopilot-lab-2"
+  steps={[
+    <>Choose <strong>A contact is added to a list</strong> (or <strong>A company is added to a list</strong>) as the trigger, and select your smart list.</>,
+    <>Add one step: start a campaign, create a task, or send a notification.</>,
+    <>Save, then turn the automation on.</>,
+  ]}
+  confirm={<>Every contact who lands on the smart list now sets off the automation, with no one needing to notice they arrived.</>}
+/>
+</LabCallout>
+
+Three starter recipes cover most of what a workforce needs autopilot for. Building the first one end to end is worth doing now; the other two follow the exact same shape once the pattern clicks.
+
+<LabCallout title="ship the nurture recipe">
+You are back in **Automations**.
+
+<LabChecklist
+  storageKey="autopilot-lab-3"
+  steps={[
+    <>Trigger: a contact is added to your form-submission smart list.</>,
+    <>Step: Start a campaign for the contact, pointed at a nurture sequence.</>,
+    <>Turn the automation on and submit a test form yourself to confirm it fires.</>,
+  ]}
+  confirm={<>A form submission now starts a nurture campaign on its own, the moment the contact lands on the list.</>}
+/>
+</LabCallout>
+
+The other two follow the same shape, one trigger and one or two steps: a new-lead list paired with a CRM sales task for the contact plus an SMS acknowledgment, so a person and the lead both hear something right away; and, once a completed-job integration is in place, a jobs-done list paired with a review-request campaign for the company.
+
+## Read the log before assuming something broke
+
+An automation's activity log is where you go to confirm a run actually happened, not just to check for problems. A line reading "entity already exists" usually means the safety net worked exactly as intended, most often when an entry-setting choice like *Only once per account* correctly blocked a second run, not that anything failed. Read the log first; it usually already answers the question.
+
+## Where autopilot grows into
+
+One smart list and one automation cover a single business well. A multi-location business eventually asks for more: branching a review request by zip code to the right satellite location, with a webhook per location and a safety-net fallback to the hub when nothing matches. Worth knowing the shape exists; this step is not where it gets built.
+
+{/* TODO(ET-741): once the advanced-automations / multi-location review-request piece exists, uncomment — a "go deeper" link here to the zip-code-branching pattern. */}
+
+## Keep a person in the loop
+
+Anything that reaches a client's customers on its own, especially content a client did not expect to see posted automatically, deserves a human approval step before it goes out. Set that review in as a deliberate step in the automation itself, not as an afterthought caught by chance.
+
+## What you now have
+
+- A smart list that updates itself, with no manual upkeep
+- One automation live on your own account, running the nurture recipe end to end
+- Two more starter recipes ready to build the same way
+- The habit of reading an activity log entry correctly before assuming something is wrong
+- A clear sense of where autopilot grows next, and where a human stays in the loop on the way there
+
+<SectionFeedback courseId="autopilot" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="autopilot" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on smart lists, starter recipes, and reading the activity log."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'What makes a smart list different from a static list for automation purposes?',
+      options: [
+        'A smart list updates on its own as contacts match its filter, so it keeps triggering the automation',
+        'A smart list can only hold companies, never contacts',
+        'A smart list requires manually adding every new contact',
+        'A smart list cannot be shared with your team'
+      ],
+      correctIndex: 0,
+      explanation: 'A smart list is rule-based and updates in real time. That constant updating is exactly what makes it useful as an automation trigger.'
+    },
+    {
+      type: 'mcq',
+      question: 'A new lead lands on your CRM. Which starter recipe fits?',
+      options: [
+        'A nurture campaign built for form submissions',
+        'A CRM sales task plus an SMS acknowledgment',
+        'A review-request campaign for a completed job',
+        'The multi-location zip-code pattern'
+      ],
+      correctIndex: 1,
+      explanation: 'A new lead calls for a fast acknowledgment and an owner task, so someone and the lead both hear something right away.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your automation\'s activity log shows "entity already exists" on a run. What does that usually mean?',
+      options: [
+        'The automation failed and needs to be rebuilt',
+        'The safety net worked as intended, often because of an entry setting like Only once per account',
+        'The trigger fired on the wrong list',
+        'The campaign step is misconfigured'
+      ],
+      correctIndex: 1,
+      explanation: 'This line is typically the safety net doing its job, not a failure. Reading the log first usually answers the question before you touch anything.'
+    },
+    {
+      type: 'mcq',
+      question: 'A multi-location client wants review requests branched by zip code to each location. What is the right move in this step?',
+      options: [
+        'Build the full branching pattern right now, since autopilot already covers it',
+        'Recognize the pattern as a further build, not something this step covers',
+        'Tell the client this is not possible on the platform',
+        'Replace the smart list with a static list instead'
+      ],
+      correctIndex: 1,
+      explanation: 'The zip-code-branching pattern is real and worth knowing about, but it is a deeper build than a single automation, not part of getting a first one live.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/ai-workforce/sell-and-manage" pathName="Hire your first AI Employee" step={6} totalSteps={7} />
+
+</InlineHighlighter>
+<MarkComplete courseId="autopilot" site="vendasta_learn" />

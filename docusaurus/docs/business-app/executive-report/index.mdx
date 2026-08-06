@@ -51,11 +51,11 @@ The following products push information to the Executive Report:
 - Reputation AI
 - Local SEO
 - Google Business Profile (via Local SEO)
-- Website Pro
+- WordPress Hosting
 - Advertising Intelligence
   - Google Ads (via Advertising Intelligence)
   - Facebook Ads (via Advertising Intelligence)
-- Social Marketing
+- Social AI
 - Google Ads Robot
 - Marketgoo
 - Metricool
@@ -188,6 +188,8 @@ If there are no changes from the previous month for any specific section of the 
 <summary>Can I customize the date range for my Executive Report?</summary>
 
 Yes, you can choose weekly or monthly reports as defaults, or select a completely custom date range using the date selector in the top-right of the report.
+
+Note that **Listings** and **Social AI** cards are not available when a custom date range is selected. Those data sources are delivered in fixed monthly rollups and cannot be broken into arbitrary date ranges. An in-app banner appears to notify you when these cards are hidden. To see them again, switch back to the standard weekly or monthly view.
 </details>
 
 <details>
@@ -223,7 +225,7 @@ Yes, the Executive Report is mobile-responsive and can be viewed from any device
 <details>
 <summary>What products need to be active to receive an Executive Report?</summary>
 
-You need active products that push data to the report, such as Reputation AI, Local SEO, Website Pro, Advertising Intelligence, Social Marketing, and others listed in the supported products section.
+You need active products that push data to the report, such as Reputation AI, Local SEO, WordPress Hosting, Advertising Intelligence, Social AI, and others listed in the supported products section.
 </details>
 
 <details>
@@ -272,6 +274,85 @@ For a single user: Partner Center > Accounts > Manage Users > 3 dots next to use
 <summary>How do I manually resend an Executive Report?</summary>
 
 Navigate to Partner Center > Accounts > Manage Accounts, select the account, then under the Reports section, click "Resend Executive Report." Select the report you want to resend from the dropdown menu and hit send.
+</details>
+
+<details>
+<summary>How do I stop sending Executive Reports to a former client?</summary>
+
+Deactivating a client's products does not automatically stop report emails — scheduling persists until you disable it explicitly.
+
+To stop reports for a former client:
+
+1. Go to **Partner Center > Businesses** and find the account
+2. Navigate to **Manage Users**
+3. Click the three dots next to each user and select **Edit Notifications**
+4. Select the **Business App** tab
+5. Set both **Executive Report** (monthly) and **Weekly Digest** to **Disabled**
+6. Save
+
+If the account has multiple users, select all users and use **Bulk Update > Notifications > Business App** to disable both report types at once.
+
+</details>
+
+<details>
+<summary>A client isn't receiving their automated Executive Report or Weekly Digest. What should I check?</summary>
+
+Work through these steps in order:
+
+1. **Check the notification toggle** — Go to **Partner Center > Businesses > [Account] > Manage Users**, click the three dots next to the user, select **Edit Notifications > Business App**, and confirm the Executive Report and Weekly Digest toggles are enabled.
+
+2. **Check the spam or junk folder** — Executive Report emails are sent via SendGrid and can be filtered by some email clients, especially Microsoft 365 and Outlook. Ask the client to check spam and mark the email as Not Spam.
+
+3. **Check for an accidental unsubscribe** — If a user clicked Unsubscribe in a report email, they are removed from the mailing list. This cannot be self-served — contact [Vendasta Support](https://support.vendasta.com) to request a resubscription for that user.
+
+</details>
+
+<details>
+<summary>A client sees "The page that you are trying to access cannot be loaded" when clicking an Executive Report link. What's wrong?</summary>
+
+This error is caused by **Microsoft Defender SafeLinks**, a security feature in Microsoft 365 that rewrites and scans email links before allowing them to open. SafeLinks may block the Executive Report link because the sending domain (`sendgrid.com`) isn't on the client's allowlist. Forwarding the email doesn't help — the SafeLinks wrapper travels with the email.
+
+There are two ways to resolve this:
+
+- **Option 1 — Turn off SafeLinks** (individual users): In Outlook, go to **Settings > Mail > Junk email** and disable the SafeLinks link-rewriting option. This may not be available if SafeLinks is controlled by an IT admin.
+
+- **Option 2 — Allow `sendgrid.com`** (enterprise/IT admin): In the [Microsoft 365 Defender portal](https://security.microsoft.com), go to **Email and collaboration > Policies and rules > Threat policies > Safe Links**, edit the policy, and add `sendgrid.com` to the "Do not rewrite" exceptions list.
+
+As a workaround, the client can log in to Business App directly to view the Executive Report without needing the email link.
+
+</details>
+
+<details>
+<summary>Charts and graphs are missing when I export the Executive Report to PDF. How do I fix this?</summary>
+
+This is caused by a browser print setting. Most browsers hide background images by default when printing, which removes charts and visuals from the PDF.
+
+To include graphics in the export:
+
+1. Open the Executive Report in Business App
+2. Press **Ctrl+P** (Windows) or **Cmd+P** (Mac)
+3. Click **More settings**
+4. Under **Options**, check **Background graphics**
+5. Set the destination to **Save as PDF** and save
+
+This applies to Chrome and Edge. In Firefox, look for **Print Background Colors and Images** in the print settings.
+
+</details>
+
+<details>
+<summary>What is the difference between Listings on Search and Searches in the Executive Report?</summary>
+
+These two GBP metrics measure different things:
+
+- **Views / Listings on Search** — How many times the Google Business Profile listing appeared in Search or Maps results (impressions).
+- **Searches** — The number of unique search queries that caused the listing to appear.
+
+A single query searched repeatedly generates many views but counts as one search. They cannot be directly compared.
+
+The **Actions card** (Visit your website, Call you, Request directions) shows what users did after finding the listing. Google Directions data appears here — not in the Marketing Funnel section.
+
+If **Searches** shows as 0 early in the month, this is expected. Google releases Searches data on a monthly cadence and doesn't backfill it immediately at the start of a new period. Check back after the first week before assuming a data issue.
+
 </details>
 
 ## Example Report

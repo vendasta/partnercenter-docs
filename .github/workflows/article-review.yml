@@ -1,0 +1,69 @@
+# .github/workflows/article-review.yml
+#
+# Automatically flags the least-recently-updated help center articles for
+# review, on a rotating cadence (not a one-time staleness threshold —
+# reviewing an article resets its own last-updated date in git, so a fixed
+# threshold would eventually stop finding anything once the backlog clears).
+#
+# Runs every weekday at 9:00 AM UTC by default.
+# You can also trigger it manually from the Actions tab in GitHub.
+
+name: Help Center Article Review
+
+on:
+  schedule:
+    # Every weekday (Mon–Fri) at 9:00 AM UTC — up to 5 articles per day
+    # Adjust the time using https://crontab.guru if needed
+    - cron: "0 9 * * 1-5"
+
+  # Allow manual runs from the GitHub Actions tab
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (log only — no issues created, no notifications sent)"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+jobs:
+  flag-articles:
+    name: Flag stale articles for review
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read    # To read the git history
+      issues: write     # To create and read GitHub Issues
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          # Fetch full history so git log dates are accurate for all files
+          fetch-depth: 0
+
+      - name: Fix git directory ownership
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run article review script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GOOGLE_CHAT_WEBHOOK: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
+          # Change ARTICLE_DIRS to target a specific folder, e.g. "docs,articles"
+          # Leave as "." to scan the entire repo
+          ARTICLE_DIRS: "docusaurus/docs,docusaurus/training"
+          # Number of least-recently-updated articles to flag per run
+          MAX_ARTICLES_PER_RUN: "5"
+          # Label applied to review issues in GitHub
+          ARTICLE_LABEL: "review-due"
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+        run: |
+          python scripts/flag_articles.py

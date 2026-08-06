@@ -111,4 +111,45 @@ Use Docusaurus callouts:
    sidebar_position: 1
    description: Short description
    ---
+   ```
+
+---
+
+## Service page template
+
+Service-offering pages should follow a consistent, scannable structure so readers find the same information in the same place every time. Omit a section only when it genuinely doesn't apply — don't invent details (for example, link to a product page or brochure instead of inventing pricing).
+
+```markdown
+# Service Name
+
+## Overview
+One-paragraph summary of the service.
+
+## What's Included
+Bullet list of deliverables, per tier if applicable.
+
+## Prerequisites
+What the customer/partner needs ready before onboarding (access, credentials, content).
+
+## Getting Started
+Step-by-step process, or a link to the onboarding flow.
+
+## FAQ
+Short answers to common questions (use `<details>` blocks).
+```
+
+Index (section landing) pages use a lighter version: **Overview** → **What's Included** (the services in the section) → **FAQ**.
+
+---
+
+## Using Claude / Cursor for docs tasks
+
+AI assistants are useful for routine docs work in this repo:
+
+- **Rewrite for readability:** paste a wall of text and ask it to rewrite for clarity and conciseness.
+- **Format admonitions:** paste a section with "Note:" lines or `>` blockquotes and ask it to convert them to `:::note` / `:::tip` / `:::warning` syntax (remember: never use `>` blockquotes or em dashes).
+- **Generate a service page:** provide the service name, tiers, and key details, and ask it to draft a page using the template above.
+- **Audit the sidebar:** paste the current sidebar structure and ask for shorter labels or consolidation suggestions.
+
+Always review AI output against these guidelines and the [Architecture Guide](./ARCHITECTURE.md) before committing.
 

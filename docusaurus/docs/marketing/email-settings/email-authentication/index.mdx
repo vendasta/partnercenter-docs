@@ -58,14 +58,101 @@ To get the specific DNS records you need to add:
 DNS changes can take up to 48 hours to fully propagate across the internet. Be patient if your authentication doesn't show as verified immediately.
 :::
 
-## Troubleshooting
+## SPF troubleshooting
 
-If you're having trouble with email authentication:
+### You can only have one SPF record per domain
 
-- **Double-check your DNS records** - Make sure you've copied the values exactly as shown in Partner Center
-- **Wait for propagation** - DNS changes can take time to take effect
-- **Contact your DNS provider** - They can help verify that records were added correctly
-- **Check for existing records** - Some domains may already have SPF records that need to be modified rather than replaced
+DNS allows you to create multiple TXT records, but SPF requires a single record. If you add Vendasta's SPF entry as a second `TXT v=spf1 ...` record, it breaks SPF validation and email delivery will fail.
+
+**How to fix:** Combine all `include:` entries into a single SPF record. For example:
+
+```
+v=spf1 include:sendgrid.net include:mail.otherprovider.com -all
+```
+
+If you use a host like DreamHost that already sends through MailChannels, your combined record would be:
+
+```
+v=spf1 include:sendgrid.net include:mailchannels.net -all
+```
+
+### `-all` vs. `~all`
+
+| Mechanism | Meaning | Effect |
+|-----------|---------|--------|
+| `-all` | Hard fail | Unauthenticated emails are rejected |
+| `~all` | Soft fail | Unauthenticated emails are accepted but may be marked as spam |
+
+Use `-all` for the strongest protection. If you see emails silently landing in spam without a clear bounce, check whether your record ends in `~all` instead of `-all`.
+
+### The 10-DNS-lookup limit
+
+SPF has a hard limit of 10 DNS lookups per evaluation. Each `include:` counts toward this limit. If your record chains too many providers, SPF evaluation will fail even if the record syntax is correct.
+
+**To check:** Use a tool like [MXToolbox SPF Lookup](https://mxtoolbox.com/spf.aspx) to count your lookups and identify which `include:` entries can be consolidated or replaced with flattened IP ranges.
+
+### Common SPF issues
+
+| Symptom | Likely cause |
+|---------|-------------|
+| SPF not verifying in Partner Center | Multiple SPF records, or DNS hasn't propagated yet (allow up to 72 hours) |
+| Emails fail after adding Vendasta DNS record | You created a second SPF record; merge them into one |
+| SPF passes but emails still go to spam | `~all` softfail; change to `-all`, and check DKIM and DMARC too |
+
+## DMARC troubleshooting
+
+### Choosing a DMARC policy
+
+| Policy | Meaning |
+|--------|---------|
+| `p=none` | Monitor only — failed emails are delivered anyway |
+| `p=quarantine` | Failed emails go to spam/junk |
+| `p=reject` | Failed emails are rejected entirely |
+
+**Recommended starting point:** Begin with `p=none` to collect reports without affecting delivery, then tighten to `p=quarantine` or `p=reject` once you've confirmed SPF and DKIM are aligned.
+
+### Stopping DMARC failure reports
+
+If you're receiving a flood of DMARC report emails, it's because your DMARC record includes a `ruf=mailto:` (forensic reports) or `rua=mailto:` (aggregate reports) tag. To stop them, remove those tags from the record value.
+
+For example, change:
+
+```
+v=DMARC1; p=none; rua=mailto:reports@yourdomain.com; ruf=mailto:forensics@yourdomain.com
+```
+
+to:
+
+```
+v=DMARC1; p=none
+```
+
+### You can only have one DMARC record per domain
+
+Like SPF, you can only have one DMARC TXT record at `_dmarc.<yourdomain>`. If you use multiple monitoring services, combine their reporting addresses into a single `rua` tag using comma-separated `mailto:` addresses:
+
+```
+v=DMARC1; p=none; rua=mailto:service1@vendor.com,mailto:service2@vendor.com
+```
+
+### Verifying your DMARC record in Partner Center
+
+Go to **Partner Center > Marketing > Email Settings** and find your domain. A green checkmark next to DMARC means the record is valid and detected. An error state means either the record is missing, has a syntax problem, or DNS propagation is still in progress (allow up to 72 hours).
+
+### Common DMARC issues
+
+| Symptom | Likely cause |
+|---------|-------------|
+| Emails bounce with DMARC reject | Policy is `p=reject` and SPF or DKIM alignment is failing; verify both pass before tightening policy |
+| Receiving DMARC reports for every failed delivery | `ruf=mailto:` is set in the record; remove it |
+| Multiple DMARC records broke verification | Consolidate to a single `_dmarc.<domain>` TXT record |
+
+## General troubleshooting
+
+- **Double-check your DNS records** — Make sure you've copied the values exactly as shown in Partner Center
+- **Wait for propagation** — DNS changes can take up to 72 hours to take effect globally
+- **Contact your DNS provider** — They can verify that records were added correctly
+- **Check for conflicting records** — Look for existing SPF or DMARC records that need to be merged rather than replaced
 
 ## Need Help?
 
