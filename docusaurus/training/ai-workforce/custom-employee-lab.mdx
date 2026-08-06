@@ -12,6 +12,7 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import LabChecklist from "@site/src/components/LabChecklist";
+import LabCallout from "@site/src/components/LabCallout";
 
 <InlineHighlighter courseId="custom-employee-lab" site="vendasta_learn">
 
@@ -46,7 +47,7 @@ Write your outcome in one sentence before you open the configuration panel: what
 
 ## Create the employee
 
-:::info Lab: create the employee and its profile
+<LabCallout title="create the employee and its profile">
 You are going to **AI** → **AI Workforce** → **Create**.
 
 <LabChecklist
@@ -58,11 +59,11 @@ You are going to **AI** → **AI Workforce** → **Create**.
   ]}
   confirm={<>The employee now exists in your AI Workforce roster, with a profile and an autonomy level set.</>}
 />
-:::
+</LabCallout>
 
 ## Give it knowledge and capabilities
 
-:::info Lab: connect knowledge and turn on capabilities
+<LabCallout title="connect knowledge and turn on capabilities">
 You are staying on the employee's **Configure** panel.
 
 <LabChecklist
@@ -73,7 +74,7 @@ You are staying on the employee's **Configure** panel.
   ]}
   confirm={<>The employee can now answer from real knowledge and take the actions its outcome needs, using only built-in pieces.</>}
 />
-:::
+</LabCallout>
 
 ## Add one custom capability
 
@@ -81,7 +82,7 @@ Most outcomes need one more thing a built-in capability does not cover: a real a
 
 This step uses a real, working endpoint so you are testing against an actual response, not a hypothetical one: [dummyjson.com](https://dummyjson.com), a free public test API that needs no authentication. Its `/carts` endpoint stands in for an order-lookup system. Give it an order number from 1 to 50 and it returns that order's total, its discounted total, how many products and total items it contains, and the products themselves (name, quantity, and line total for each). It is not a real Vendasta or client order system — it exists so the tool you configure here behaves exactly like the one you would later point at a client's real order API, with a live response to check your work against instead of guessing whether the capability is wired up correctly.
 
-:::info Lab: add a capability with a tool
+<LabCallout title="add a capability with a tool">
 You are going to **Capabilities** → **Custom Capabilities** → **Add a capability**.
 
 <LabChecklist
@@ -93,7 +94,7 @@ You are going to **Capabilities** → **Custom Capabilities** → **Add a capabi
   ]}
   confirm={<>The tool now appears on the capability, ready for the AI to call once its instructions say when.</>}
 />
-:::
+</LabCallout>
 
 Path parameters, query parameters, headers, and every field in detail: [Creating Custom Capabilities walks through the rest](/ai/ai-capabilities/creating-custom-capabilities).
 
@@ -103,7 +104,7 @@ Brief the capability the way you would brief a new hire's one task: exactly when
 
 ## Test before you call it done
 
-:::info Lab: run the pass/fail script
+<LabCallout title="run the pass/fail script">
 You are on the employee's **Try it** page, or its assigned channel.
 
 <LabChecklist
@@ -115,7 +116,7 @@ You are on the employee's **Try it** page, or its assigned channel.
   ]}
   confirm={<>Three questions, three different situations, and the employee handled all three the way its outcome intended.</>}
 />
-:::
+</LabCallout>
 
 ## Where this stops, for now
 

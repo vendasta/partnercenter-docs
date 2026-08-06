@@ -11,8 +11,8 @@ interface LabChecklistProps {
 
 const STORAGE_PREFIX = "vendasta_learn_lab_";
 
-const GREEN = "#3F9B63";
-const NAVY = "#072337";
+const LAB_PURPLE = "var(--lab-purple)";
+const LAB_PURPLE_BG = "var(--lab-purple-bg)";
 
 export default function LabChecklist({
   storageKey,
@@ -79,7 +79,7 @@ export default function LabChecklist({
                 marginTop: "0.3rem",
                 width: "1rem",
                 height: "1rem",
-                accentColor: GREEN,
+                accentColor: LAB_PURPLE,
                 cursor: "pointer",
                 flexShrink: 0,
               }}
@@ -104,17 +104,17 @@ export default function LabChecklist({
         style={{
           marginTop: "0.75rem",
           padding: "0.6rem 0.9rem",
-          borderLeft: `3px solid ${done ? GREEN : "#c9ced3"}`,
+          borderLeft: `3px solid ${done ? LAB_PURPLE : "#c9ced3"}`,
           borderRadius: "0 6px 6px 0",
-          background: done ? "#e8f4ed" : "transparent",
-          color: NAVY,
+          background: done ? LAB_PURPLE_BG : "transparent",
+          color: "var(--Vendasta-Navy, #072337)",
           opacity: done ? 1 : 0.75,
           transition: "background 0.25s ease, border-color 0.25s ease",
         }}
       >
         {done && (
           <span
-            style={{ color: GREEN, fontWeight: 700, marginRight: "0.45rem" }}
+            style={{ color: LAB_PURPLE, fontWeight: 700, marginRight: "0.45rem" }}
           >
             &#10003;
           </span>

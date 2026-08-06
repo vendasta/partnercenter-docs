@@ -48,6 +48,104 @@ Out of scope for this note (belongs to snapshot-executive-reports): the same cal
 
 ---
 
+## Date unknown — Vendasta managed-services leadership team (vendor evaluation call)
+
+**Source:** [CALL] Vendor demo — Vendasta's internal managed-services/AI-services leadership team evaluating a white-label AI-agent SEO platform (a former digital marketing agency turned SaaS vendor) as a possible fulfillment tool/marketplace partner, local SEO and Google Business Profile portion
+
+The vendor's platform includes a dedicated Google Business Profile (GBP) management module that is relevant background for how a competing tool approaches local listings automation:
+- On connecting a GBP account, the tool ingests everything currently live on the profile, then an AI model scores the existing profile and surfaces specific suggested improvements (e.g., "do you offer these services," "add more images"). The user accepts/rejects suggestions, then hits "push" to publish to the live GBP.
+- After publishing, the tool can **lock** the GBP so no other user/admin can silently undo the changes — framed as preserving the integrity of completed optimization work.
+- Built-in guardrail: the tool explicitly flags fields that risk triggering Google's re-verification process (business name change is the flagged example) and warns/double-confirms with the user before allowing that kind of edit, rather than letting it happen accidentally.
+- A separate "citation score" audit checks a shorter list of major citation sources than Vendasta natively covers (the vendor rep candidly admitted their citation coverage was weaker than Vendasta's and that a partner comparing head-to-head likely wouldn't switch for citations specifically, only if bundled with the rest of the platform). It flags missing/inaccurate listings and lets you buy additional citations.
+- A **local heat map** tool: import a business from the connected GBP or search by name/place ID, then place/move a map pin, adjust grid density and spacing, set a crawl/refresh interval and time-of-day, and get AI-suggested keywords to track. Running the report shows current map-pack ranking position at each grid point for a target keyword, with a timeline view of how rankings change over successive crawls. Positioned as a strong **sales tool**: side-by-side visualizations (e.g., green pins for your listing vs. red for a competitor) make it easy to show a prospect why they should switch.
+- Separate standalone GBP auditing tool (usable even for non-customers, just by adding a business manually) runs a full audit covering NAP consistency, profile completeness, and competitor comparison on reviews/post frequency — output is shareable with the prospect/client as a report.
+- The vendor also has an industry-benchmarking visualization showing which local ranking signals (reviews volume, citations, posting frequency, etc.) matter most by industry vertical, plus a "what if I scale up X" forecasting tool — again framed as more of a sales/education tool than an action tool.
+
+Gotcha called out by the Vendasta team during the demo: they specifically asked about triggering re-verification and were satisfied that the vendor's tool proactively blocks/warns on risky field changes rather than just documenting the risk after the fact — something worth benchmarking Vendasta's own GBP tooling against.
+
+---
+
+## Date unknown — Vendasta onboarding specialist and marketing agency partner (Business App walkthrough)
+
+**Source:** [CALL] Partner onboarding — Business App walkthrough and customization planning call with a marketing agency partner and their account manager
+
+Google Business Profile suspension triggers came up as a partner pain point: the partner's team maintains a standing list of "don't do this" rules they tell clients (e.g., never change the business name; don't change the address if the account is set up as a service-area business) because those changes can trigger a GBP suspension or re-verification. The partner asked whether Business App could show a contextual warning/pop-up at the moment a client tries to make one of those risky changes. As of this call, **no such in-context warning exists** in Business App — the only available option is to publish external guides/content (see `business-app.md` notes on the guides/library feature) rather than a blocking or warning overlay tied to the specific settings field.
+
+Business Profile data has an exact-match sensitivity gotcha: a Vendasta account manager on the call flagged that if the business name field has so much as a trailing space, the listing sync will treat it as inconsistent and report a listing error across every synced directory for that business — worth checking business name fields for stray whitespace before troubleshooting sync error reports.
+
+The partner also asked about **duplicating/replicating listing and profile configuration** from one company to a near-identical second company profile. The rep pointed to a feature called **configuration syncing** — described as letting you set up a profile once and have future new-location accounts automatically inherit that same configuration — but the rep was not certain whether configuration syncing extends specifically to AI-related settings, and took it as a follow-up item.
+
+On listing sync vendor options: Vendasta's own **Listing Sync Pro** can be delivered powered either by **Yext** or by an underlying provider called **UberAll**; pricing stays the same regardless of which backing vendor is chosen, so it's positioned purely as a customer preference toggle.
+
+---
+
+## Date unknown — Vendasta senior sales/product executive and account manager (marketplace pitch to a multi-location marketing agency prospect)
+
+**Source:** [CALL] Partner/prospect pitch — marketplace overview call with a multi-location digital marketing agency evaluating Vendasta as a platform, local SEO/listings portion
+
+Local SEO is described internally as a **parent SKU** with dependent add-on products underneath it: **Listing Sync Pro** (wholesale ~$25/month), **Citation Builder** (starts at ~$5/month), and **Local SEO Pro** (starts at ~$9/month) — a "full-blown" bundle of all three runs roughly $35-$40/month wholesale, versus $199/month if bought retail direct from Vendasta's own direct-to-SMB sales division. All of it bills monthly, no annual-only option was mentioned.
+
+On data source architecture: Vendasta syncs **direct** to the largest platforms — Google, Apple (via Apple Business Connect), Bing, Facebook, Instagram, and X — plus direct integrations with a handful of secondary sources. Smaller/long-tail directories (roughly 380 total sources cited) are reached indirectly through the Yext/UberAll aggregator layer and are pushed out on a monthly cadence, covering things like DMV records and local directory-style listings.
+
+Local SEO tooling starts with a **heat map view** showing the account's current visibility plus a few competitors, with the ability to track a limited number of keywords (three, tied to the standard tier — a higher pro/premium tier unlocks more) before moving into the listing sync configuration screen. Vendasta noted that all local SEO pricing scales off of the business profile rather than the account overall.
+
+---
+
+## Date unknown — a Saskatchewan-based digital marketing agency owner with a Vendasta account manager (product walkthrough / pricing call)
+
+**Source:** [CALL] Partner reviews Local SEO Pro pricing tiers, the Yext dependency, and a new Citation Builder add-on
+
+1. **Local SEO Pro is tiered by account count (wholesale, per account):** **$13/account for 1–20 accounts**, dropping to **$11/account for 21+ accounts**.
+2. **Yext is effectively a required companion product, not optional** — the account manager confirmed you can't fully populate directory listings without it. Cited cost ~**$35/account** wholesale.
+3. **New add-on: Citation Builder**, found via **Marketplace → Discover Products → search "Citation Builder" → Start selling this add-on**. Priced at **~$5 USD ($5.50 CAD) per account**.
+4. **What Citation Builder actually solves — data-aggregator refresh cycles:** smaller/local directories periodically (roughly every 6–8 months) pull refreshed business info from a small number of **large data aggregators**. If a partner has manually corrected a listing's info directly on a specific directory, but the underlying data aggregator still has old/incorrect info, the directory's periodic refresh from that aggregator can **silently overwrite the manually-corrected data back to the stale version**. Citation Builder is what keeps the data aggregators themselves in sync so this doesn't happen — a "one source of truth" listing update tool alone does not protect against this if the aggregator layer isn't also updated.
+5. **Gotcha this creates for existing clients:** this issue applies retroactively to clients already running Local SEO Pro without Citation Builder.
+6. **Email campaign deliverability tied to DNS/domain settings, but not fully resolved on the call:** a separate campaigns product's outbound emails were reportedly landing in recipients' junk/spam folders for the partner's clients despite DNS records already being configured; the account manager insisted correctly-configured DNS should prevent this — flagged as something the partner needs to re-verify rather than a known product bug.
+
+---
+
+## Date unknown — a physical-therapy franchise partner (co-owners) with a Vendasta sales rep (SEO/reputation/AI-chatbot proposal call)
+
+**Source:** [CALL] Local SEO/listings diagnostic walkthrough for a seven-location physical-therapy clinic group
+
+1. **Diagnostic framing used with the client:** rep built a location-by-location scorecard checking (a) keyword ranking for the core search term, (b) directory/listing accuracy, and (c) review volume, presented as "out of eight searches, if you're in five of them, they're finding someone else first."
+2. **Stale-address listing example:** one clinic location's directory listings still pointed to a five-year-old former address — even though the location still ranks #1 organically for its core keyword in its current town, the rep flagged that inconsistent old-address data is exactly the kind of signal that confuses both traditional search engines and **AI/AEO ("answer engine optimization")/GEO ("generative engine optimization")** systems, which cross-reference information across the internet for accuracy before deciding who to recommend — even when it isn't currently hurting rankings, it's a risk to clean up.
+3. **Keyword self-competition between a corporate/parent listing and an individual location listing:** when both a franchise's corporate office and one of its outpatient locations rank for the same keyword, they're not being penalized for existing twice — the fix is differentiating the **Google Business Profile descriptions/keywords** for each so corporate ranks for general/administrative queries while the specific location ranks for the service-seeking query.
+4. **Practical tip for checking real rankings:** always check search rank in an **incognito browser tab** — a logged-in/cached browser session will show a personalized result set that doesn't reflect what a new searcher actually sees.
+5. **Reviews-as-backlinks framing:** the rep explained that responding to Google/other reviews with strong, relevant keywords functions similarly to a backlink/directory reference in the eyes of both Google's ranking algorithm and AI systems — an active, keyword-rich review-response habit builds "authority figure" signal over time, distinct from just collecting more reviews.
+6. **Live-math misstep as a process lesson:** the rep presented a single blended "average reviews per location" number without first showing the underlying per-location breakdown, which visibly confused the client mid-meeting until the rep walked back through the math live. Lesson for future proposal decks: show the per-location numbers alongside any aggregate/average figure, not the average alone.
+
+---
+
+## Date unknown — a solo prospective reseller (family/friends referral, passive-income motivation) (webchat/reseller demo and pricing walkthrough)
+
+**Source:** [CALL] Reseller demo — Snapshot Report and listing-sync tool with a Vendasta sales rep
+
+The **Snapshot Report** is generated by clicking "create a snapshot report" on a business record; within 24 hours it produces a detailed, partner-rebranded report breaking down the business's online presence across listings, reviews, social, and website, flagging specific inaccuracies. Once gaps are identified, the partner activates a listing-sync tool ("Local SEO Pro"/Google Business tool) that pulls accurate business data from the Google Business Profile and pushes/syncs it to **65 different listing sources and sites**, improving search ranking accuracy with no manual per-site work required — "you just need to activate it." The report also supports a side-by-side competitor comparison and sections can be toggled on/off before sharing with a prospect.
+
+---
+
+## Date unknown — a marketing manager at a multifamily property management company evaluating a reputation/listings platform (whitelabel reseller product deep-dive)
+
+**Source:** [CALL] Whitelabel partner-led product demo — multi-location listings and keyword tracking with the reseller's account team and a Vendasta partnership manager
+
+This is the most detailed listings-feature walkthrough across the batch:
+- The platform integrates with **50+ listing sources by default** (search engines, review sites, social platforms, directories, Apple Maps, Bing Maps), automatically filtered to what's relevant for the business's industry.
+- If a source-specific listing isn't auto-detected, the location/business can manually add the listing URL or claim it. The tool also flags discrepancies (example given live: a secondary source showing a different phone number than the primary listing) and lets the user mark which number is correct per source, or manually override/verify.
+- **Call tracking**: the platform currently supports adding up to **3 source-specific call-tracking numbers** with no ability yet to label/annotate which tracking number belongs to which lead source beyond those. A client managing ~26 properties with 15+ distinct tracking numbers from their own PMS/CRM flagged this as a real gap — they wanted a centralized place to input all 15+ CRM-issued tracking numbers per property, with alerts if any listing source silently changes/overwrites a number without their knowledge. The Vendasta partnership manager logged this as product feedback to escalate internally, with no committed timeline.
+- **Listing syndication:** connects to 6 primary sources to keep business-profile data in sync automatically (toggle on/off, no manual per-site work). Attributes pushed include hours of operation, special/holiday hours, short/long descriptions (AI can write these), images/logos, connected social URLs, and structured attributes relevant to answer-engine/generative-engine optimization (the rep explicitly used the terms **AEO/GEO** — e.g., accessibility or amenity attributes — framed as increasingly important for being surfaced by AI-driven long-tail searches).
+- **Keyword tracking**: each individual location gets up to **15 tracked keywords** (hard cap); a brand admin can bulk-apply keywords across all locations in one action (typical pattern cited: 5 brand-wide keywords + 10 location-specific keywords). Includes an interactive local-ranking heat map, competitor visibility for the same keyword, and radius/URL-path customization. Also reports Google/Bing performance metrics: maps searches, calls, and website-visit click-throughs.
+
+---
+
+## Date unknown — a salon-suite franchise location owner exploring a reseller/license-to-hunt model (agency discovery call)
+
+**Source:** [CALL] Discovery call — starting-point service recommendation (GBP) with a Vendasta account executive
+
+The prospect explicitly said most of his target micro-businesses (independent salon-suite tenants) don't have a claimed Google Business Profile and don't understand SEO — the rep's recommendation was to lead with a basic GBP setup/listing product before layering on reputation management or paid services, given this audience's low sophistication and tight budgets.
+
+---
+
 ## Date unknown — Derek Dittmer, Kesley S, Rob P, Jordan H (Vendasta) with Chad A (partner leadership) and an offshore SEO fulfillment team (Meeting Room 1) — legacy SEO-vendor migration ("Alpha" to Vendasta), product mapping and onboarding-funnel gaps
 **Source:** [CALL] `seo-product-migration-alpha-to-vendasta-partner-onboarding.txt` — internal partner/Vendasta review of migrating an existing book of SEO clients off a legacy white-label vendor ("Alpha") onto Vendasta's SEO products.
 

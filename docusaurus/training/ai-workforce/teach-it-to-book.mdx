@@ -12,6 +12,7 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import LabChecklist from "@site/src/components/LabChecklist";
+import LabCallout from "@site/src/components/LabCallout";
 
 <InlineHighlighter courseId="teach-it-to-book" site="vendasta_learn">
 
@@ -37,7 +38,7 @@ import LabChecklist from "@site/src/components/LabChecklist";
 
 By the end of this step, your receptionist from the last step can book a real meeting on a real calendar, and knows exactly what to do with a call outside business hours. *You are here: Partner Center, on the same employee steps 2 and 4 build on.* An employee that only answers is a receptionist who never puts anything on the books; booking is what turns a good conversation into a kept appointment.
 
-:::info Lab: connect a calendar
+<LabCallout title="connect a calendar">
 You are going to **CRM** → **My Meetings**.
 
 <LabChecklist
@@ -48,7 +49,7 @@ You are going to **CRM** → **My Meetings**.
   ]}
   confirm={<>Your calendar shows as connected in Meeting Settings, which lets My Meetings both check for conflicts and create events automatically once a booking is confirmed.</>}
 />
-:::
+</LabCallout>
 
 For the full setup, including switching providers later, [Setting up calendar integration walks through the rest](/crm/my-meetings/setting-up-calendar-integration).
 
@@ -56,7 +57,7 @@ For the full setup, including switching providers later, [Setting up calendar in
 
 Pick a URL slug, then set your availability windows and the buffer time you want before and after a meeting. My Meetings offers durations of 15, 30, 45, or 60 minutes, or a custom length; decide which one your receptionist should offer before you test it.
 
-:::info Lab: build one booking link
+<LabCallout title="build one booking link">
 You are staying in **My Meetings** → **Manage booking links** → **Create event type**.
 
 <LabChecklist
@@ -68,7 +69,7 @@ You are staying in **My Meetings** → **Manage booking links** → **Create eve
   ]}
   confirm={<>One event type exists with a working link, ready to hand to your receptionist in the next section.</>}
 />
-:::
+</LabCallout>
 
 ## The team event, done right
 
@@ -76,7 +77,7 @@ For a group instead of one person, create a **team event** rather than several p
 
 ## Enable the capability
 
-:::info Lab: turn on Book Appointments
+<LabCallout title="turn on Book Appointments">
 You are on your receptionist's **Configure** panel → **Capabilities**.
 
 <LabChecklist
@@ -87,7 +88,7 @@ You are on your receptionist's **Configure** panel → **Capabilities**.
   ]}
   confirm={<>Your receptionist can now offer real time slots, collect the booking details it needs, and create the event automatically.</>}
 />
-:::
+</LabCallout>
 
 If an older capability on the same employee only records a caller's preferred time without actually booking anything, replace it with Book Appointments: a preference is not a kept meeting.
 
@@ -99,7 +100,7 @@ One limit is worth knowing before a client asks: Book Appointments does not coll
 
 Business-hours routing is the pattern worth building once and reusing everywhere: transfer during hours, capture the lead after. Rather than folding this logic into an existing capability's prompt, give it a custom capability of its own.
 
-:::info Lab: build the routing capability
+<LabCallout title="build the routing capability">
 You are on **Capabilities** → **Custom Capabilities** → **Add a capability**.
 
 <LabChecklist
@@ -112,13 +113,13 @@ You are on **Capabilities** → **Custom Capabilities** → **Add a capability**
   ]}
   confirm={<>The capability checks the time against the business's real hours and branches correctly, every time it runs.</>}
 />
-:::
+</LabCallout>
 
 Do not build a second after-hours capture from scratch: the Capture Lead Information capability your receptionist already runs after hours can extend to ask which department the caller wanted, the same way any other question gets added to its prompt.
 
 ## Test both directions
 
-:::info Lab: confirm both branches
+<LabCallout title="confirm both branches">
 You are on the **Try it** test page or the assigned channel.
 
 <LabChecklist
@@ -129,7 +130,7 @@ You are on the **Try it** test page or the assigned channel.
   ]}
   confirm={<>Both directions work exactly as the routing capability describes them.</>}
 />
-:::
+</LabCallout>
 
 {/* TODO(ET-740): once the builder-track "wire booking into an outside system" step exists, uncomment — "If a client needs bookings to land in their own outside system, that's a deeper build — [here's where to go for it](/learn/builder/...)." */}
 

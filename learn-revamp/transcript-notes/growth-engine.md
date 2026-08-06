@@ -45,3 +45,26 @@ CMS/build note relevant to ecosystem framing: WordPress is the primary website b
 Integration philosophy stated directly by Braedon: "we are open source" — meaning the platform exposes APIs, webhooks, and native connectors (demonstrated live as a two-way HubSpot contact/notes sync) so that leads, notes, and activity mirror in both systems; when a formal connector isn't wanted, partners have improvised with things like an email-parser feeding a client's own tool, though Braedon's own preference is Zapier/webhook over that pattern.
 
 ---
+
+## Date unknown — a salon-suite franchise location owner exploring a reseller/license-to-hunt model (agency discovery call)
+
+**Source:** [CALL] Discovery call — franchise/reseller business-model exploration with a Vendasta account executive
+
+A salon-suite property owner (commercial landlord model, dozens of independent stylist/tattoo/lash-artist tenants across two locations, each tenant running their own brand) wanted to build a second revenue stream by offering marketing services to his tenants, both to grow tenant retention/success and to eventually license the model out to other franchise locations. Key concepts discussed:
+
+- Vendasta does business two ways: **direct with a franchisor/franchisee**, or through an **agency/reseller model** — the rep identified this prospect's situation as best fit for the reseller model, where the property owner's own business entity becomes the reseller to the individual tenant businesses.
+- The rep described a **"license to hunt" model** used with larger franchise partners: the partner gets tools at a set wholesale cost, then sells/upsells those tools to the franchisee network at a markup, keeping the difference. This doesn't have to be structured exactly that way — it's one template among several.
+- Because products are "a la carte," a partner can pick one tool, three tools, or bundle everything into a custom package, choosing their own markup/profit margin on each.
+- Recommended go-to-market approach: **run a pilot with 1–2 locations first** to build a case study/proof of results, then use that case study to sell the remaining tenant/franchisee base once the pilot shows results.
+- The prospect's core objection/insight worth capturing: individual tenant-level businesses (sole practitioners) have very low per-service budgets and don't think in annual-cost terms — a weekly charge doesn't register as an annual dollar figure to them; they instead evaluate it as "how many client appointments does this cost me." Packaging price anchors around "this equals one client appointment" resonated more than dollar-per-month framing for this micro-business segment.
+- The three product lines the rep recommended leading with for this segment: **Google Business Profile setup**, **scheduled/automated social posting**, and an **AI receptionist/missed-call-text-back** tool — with reputation management, SEO, websites, and paid ads positioned as later upsells once individual tenants "buy in."
+
+---
+
+## Date unknown — a multi-agency owner focused on SEO and AI automations (agency discovery/reseller partnership call)
+
+**Source:** [CALL] Agency discovery call — partner growth/reach and lead-generation options with a senior Vendasta account executive
+
+An established multi-agency owner (SMB-focused, referrals + paid ads + SEO + agency-partner referrals as his lead sources, doing zero outbound at the time) asked specifically whether Vendasta offers any way to extend his agency's reach/lead generation, not just tools to resell. The rep's answer: Vendasta doesn't have a formal lead-referral program to point to here, but the platform itself has partner-facing prospecting/outbound tooling (see `crm.md`) that agencies use to build their own outbound list and pipeline — framed as "it depends on what you as the agency owner want to do with these solutions," i.e., growth is partner-driven using the built-in tools rather than a Vendasta-supplied lead-sharing arrangement.
+
+---

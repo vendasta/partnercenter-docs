@@ -143,3 +143,77 @@ filed here as a follow-up.
 5. **Strategic signal worth tracking, volunteered by the partner:** described steadily moving accounts off Vendasta-managed social/blog services toward in-house or AI/Vibe-assisted alternatives (down from roughly 10-15 accounts to just two blogs and two socials remaining at the time of this call), citing peer-agency adoption of AI-built landing pages (in Divi 5) as a competitive pressure he's watching closely — framed as an open strategic question about whether Vendasta's own content/website tooling is keeping pace, not a definitive complaint. Account manager's response: reaffirmed that even a small remaining footprint gets full-quality attention, not deprioritized because volume dropped.
 
 ---
+
+## Date unknown — Vendasta managed-services leadership team (vendor evaluation call)
+
+**Source:** [CALL] Vendor demo — Vendasta's internal managed-services/AI-services leadership team evaluating a white-label AI-agent SEO/marketing platform, social posting and review-response automation portion
+
+The evaluated vendor's platform bundles social **post automation** and **review response automation** into the same local/GBP module (rather than a separate social product):
+- Manual/scheduled posting workflow: create a batch of posts, assign a cadence, classify each as an update/offer/event, and either AI-generate the image and copy, upload your own image, or write your own copy. A single post can be pushed simultaneously to a booking link plus multiple social profiles from one screen. Posts can also be manually dragged onto a calendar for scheduling.
+- **Full automation mode**: instead of manually building each post, you set rules — posting frequency, start date, whether to use AI-generated images or only pull from the client's own media library, and whether posting requires approval (option to require approval only for AI-generated content, or for everything, or for nothing).
+- Review response automation is configured with conditional, tone/language, and length rules per client, and can be fully autonomous, fully manual, or routed to require human approval before publishing — same approval-gate pattern used elsewhere in the platform.
+- Cross-account **approval workflow**: any task set to require approval (posts, review responses, blog content, etc.) feeds into a shared task board. An account manager overseeing multiple client accounts can filter that board by task type and batch-approve/decline/edit across all managed accounts from one screen — useful for agencies managing dozens of clients with one team member.
+- A downloadable **work-summary report** (exportable as a spreadsheet) documents, by client, everything the system did over a period — directly answering the "what did we actually do for you this month" question for client-facing reporting.
+
+Because this is a competing white-label vendor being evaluated (not Vendasta's own Social Marketing product), treat this as competitive/workflow reference rather than a description of Vendasta functionality — flagged explicitly for whoever picks this up.
+
+---
+
+## Date unknown — a Vendasta account manager with a home-services-focused marketing agency partner (AI Workforce demo)
+
+**Source:** [CALL] Partner enablement — AI Workforce product walkthrough, upcoming Social Media Manager feature
+
+A **Social Media Manager** AI employee was described as not-yet-released at the time of the call, expected close to the end of a near-term month, positioned as an added autonomy layer on top of the existing **Social Pro** tool (making Social Pro a "premium" tool once this ships). Planned capabilities, per the rep's description of the in-progress product:
+- Includes a "blogger" capability that writes and publishes blog posts directly to the client's WordPress site.
+- Creates on-brand social content (copy, images, and video) based on a knowledge base and a specific instruction set configured per client — same configuration pattern as the chat/voice receptionist (knowledge base + instructions + selectable "capabilities").
+- Manages the full social content calendar; posting frequency/cadence is configurable via dropdown (e.g., daily, specific weekday, first-of-month).
+- Configurable capabilities include: reading CRM data, reading social-post performance data, customized social-post instruction sets, sourcing images, and generating the content calendar.
+- Same "chat with your data" pattern as other AI employees: ask it things like "what are my best-performing posts" or "help me create more posts like this one for this promotion" to surface actionable insight, not just raw analytics.
+
+Sequencing note from the rep on AI employee rollout order (as of this call): Chat Receptionist, Reputation Specialist, and AI Sales Assistant were already out of the box; Content Creator (blogging) was expected next, with a Search Specialist to follow. This is a snapshot of a roadmap in flux at call time, not a confirmed shipped feature list — flag any dates as unverified/likely stale.
+
+---
+
+## Date unknown — a Saskatchewan-based digital marketing agency owner with a Vendasta account manager (product walkthrough / pricing call)
+
+**Source:** [CALL] Partner reviews a recent rebrand/relaunch of the social marketing product into "Social AI," including a live demo of two new AI employees
+
+1. **"Social Marketing" was recently rebranded/relaunched as "Social AI"**, now built around two distinct AI employees rather than a single posting tool: a **Social Media Manager** AI employee and an **AI Blogger** AI employee, both accessed under **AI → Workforce → Configure**.
+2. **Social Media Manager configuration walkthrough:** set posting cadence (e.g., one or three posts/week), specific days/times, and a start/end window; a "customize social post instructions" field lets the partner set tone (funky/casual vs. professional/serious, or a mix) tailored to the specific client business. Posts to roughly **six platforms**, confirmed: Facebook, Instagram, LinkedIn, X/Twitter, TikTok, and one more not fully named on the call.
+3. **AI Blogger is purpose-built for AEO/SEO, not just content generation:** designed to generate FAQ-style blog posts intended to surface in AI-driven search/answer engines, connects to a WordPress site, and runs on its own cadence like the social manager. Can auto-post/cross-post blog content out to social channels too if those are connected.
+4. **Image generation is built in.** This removes the need to burn credits on a separate AI image tool (the partner had previously used, then dropped, a different AI image generator after ~6 months due to inconsistent output requiring multiple regenerations).
+5. **Adoption/proof points cited by the account manager:** a Vendasta head of sales runs the Social Media Manager on his own personal LinkedIn (3 posts/week, deliberately configured with **no images**) and reported a **14x jump in engagement**. A separate unnamed partner using a prior version of the tool reported dropping from **3–4 hours/week** of manual social work to **under 20 minutes/week**.
+6. **Partner critique of blog output quality on this call (live, real-time test):** a sample blog post generated live had a good title/structure but was **missing an internal/money-page link** — the partner's stated bar for "real" SEO blogging is proper H1/H2 header structure, internal linking, and a link to the money page in the first paragraph, none of which he was confident the tool nailed without review. His position: "writing the blog is easy... blogs on their own do nothing for SEO" without the surrounding technical structure and backlink/cluster strategy — he treats the AI output as a fast first draft, not a finished SEO asset.
+7. **Trend/topic-scanning capability confirmed on the call:** the account manager confirmed the tool can scan for currently trending topics/discussions rather than just writing on a given prompt — one of the AI employee's built-in capabilities does market/industry scanning to inform what it writes about.
+8. **Pricing:** **Social AI bundle (both AI employees together) = $34/month wholesale** — described as a current promotional bundle with "no end date" for now, but not guaranteed permanent.
+9. **Image upload/bank feature:** a client can upload a batch of their own photos for the tool to pull from instead of generating AI images, or a post can be generated as a draft and a human can swap in their own image before publishing — both confirmed possible.
+
+---
+
+## Date unknown — a salon-suite franchise location owner exploring a reseller/license-to-hunt model (agency discovery call)
+
+**Source:** [CALL] Discovery call — content batching/repurposing need with a Vendasta account executive
+
+The prospect described wanting a system where a business gives the agency a handful of raw photos/one video per month, and the system/team turns that into a full month of scheduled content (before/afters, reels, cut-down clips) — explicitly stated he did not want to create more manual work for himself and expected this to fall under a fully-done-for-you service rather than a self-serve posting tool (see `vendasta-services.md` for the fulfillment-model discussion this triggered).
+
+---
+
+## Date unknown — a solo prospective reseller (family/friends referral, passive-income motivation) (webchat/reseller demo and pricing walkthrough)
+
+**Source:** [CALL] Reseller demo — social posting tool tiers and live product walkthrough with a Vendasta sales rep
+
+Two distinct product tiers, both unlimited posting (no per-post caps or paid add-ons for extra posts):
+1. **Manual/self-serve social tool** — $15/month wholesale. Client-facing portal branded with the partner's logo; connects Facebook/Google/etc. accounts; each connected business has its own knowledge base (seeded by pasting in a website URL or social profile link) that the AI trains on to generate on-brand post copy, hashtags, and keywords from a simple prompt. Users can generate images via AI or upload their own; everything can be scheduled to a specific date/time; clients can log in to review, edit, and approve scheduled posts.
+2. **Social Media Manager (AI agent)** — $24–25/month wholesale. On the 1st of each month it auto-generates a full month's worth of posts optimized per platform; once approved, it posts on schedule automatically to all connected platforms and can auto-respond to comments on published posts.
+
+---
+
+## Date unknown — a marketing manager at a multifamily property management company evaluating a reputation/listings platform (whitelabel reseller product deep-dive)
+
+**Source:** [CALL] Whitelabel partner-led product demo — multi-location social posting and AI guardrails with the reseller's account team and a Vendasta partnership manager
+
+For a client managing 26 properties, the multi-location business app lets one user create and post to all locations from a single place, with all social networks connected per location. AI can write per-location content and understands source-specific image requirements (e.g., sizing) automatically. Partners/clients configure **AI guardrails per location** via a "social post instructions" field — demoed examples: "do not use emojis," "do not use hashtags," "always use a specific tone," "always include our booking link/special-events URL," "do not sound salesy." AI is restricted by default to only use the business's own profile/website info, plus any custom brand guideline documents/PDFs uploaded, so it "will never go off and create random content." The **AI content calendar builder** can generate 3, 6, 9, or 12 posts at once across selected networks and formats from a single topic + tone input. Blog writing is also supported: if a WordPress blog is connected, AI can write and auto-publish blog posts, with the same custom-instruction guardrail pattern.
+- Gotcha flagged and explained: social account connections (Facebook/Instagram/GBP) can periodically disconnect because Meta/Google break API tokens when they detect anything resembling spam/scam activity on third-party-connected integrations — described as unavoidable and outside any platform's control, happening to every competing tool as well. Differentiator raised: this whitelabel reseller's team will go in and fix/reconnect the integration on the client's behalf, because the reseller's team manages the actual social page (unlike a prior vendor the client used, which required the client to manually reconnect broken integrations themselves).
+- User permissions: individual users can be role-restricted to specific parts of the platform (e.g., reputation access only, no social access) via the business app's admin/user-management tab — used by the client to prevent on-site staff from requesting features like TikTok posting that management didn't want to support.
+
+---

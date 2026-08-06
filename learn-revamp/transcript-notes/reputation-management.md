@@ -131,3 +131,97 @@ Each entry below is one source call — do not merge or overwrite prior entries.
 4. **CRM-sourcing mechanic for review requests:** if the client's contacts live in a third-party CRM (here, the client mentioned evaluating Ricochet360 or Shape CRM as alternatives) rather than Vendasta's own CRM, the workaround is simply exporting contacts to CSV and importing into Vendasta's CRM — described as "pretty simple," not requiring a deeper integration.
 
 ---
+## Date unknown — Vendasta onboarding specialist and marketing agency partner (Business App walkthrough)
+
+**Source:** [CALL] Partner onboarding — Business App walkthrough, reputation/AI review-response configuration portion
+
+Review response automation is configurable by **star-rating threshold**, not a single on/off switch. Common partner configuration pattern discussed on the call: reviews at 4 stars and above can be fully automated (AI drafts and posts the response with no human step), while reviews at 3 stars and below require a human approval step before the AI-drafted response gets published — some partners set **all** negative reviews to require approval for an initial trial window (30/60/90 days mentioned as typical) until they've built trust in the AI's tone, then loosen the approval requirement over time.
+
+The partner raised a direct objection worth capturing in spirit: he was worried about "putting reputation response on full autopilot" given industry backlash against obviously AI-generated content, and specifically referenced wanting best-practice-aligned (E-E-A-T-style) responses that still read as human. The Vendasta rep's framing in response, a useful sales/positioning line: **"we are managing the AI, we're not managing the work"** — i.e., the human's role shifts from writing every response to supervising/tuning the AI's tone, language, and guardrails per client, and per review sentiment category.
+
+---
+
+## Date unknown — Vendasta senior sales/product executive and account manager (marketplace pitch to a multi-location marketing agency prospect)
+
+**Source:** [CALL] Partner/prospect pitch — marketplace overview call, reputation management deep dive
+
+Reputation management ("Reputation AI") was walked through end to end:
+1. **Connect accounts** (Facebook, Google, LinkedIn, etc.) under Reputation settings. Once connected, the tool immediately starts propagating/pulling in any reviews found on those platforms.
+2. **Manage Reviews** screen shows every review across connected sources with a flag for whether a response is required; responses can be written and sent to *all* connected platforms from one box. The rep noted this single feature alone satisfies roughly 90% of customers who use the product.
+3. For higher-review-volume businesses, the recommended workflow is **NPS-style pre-screening**: after a service/purchase, the customer gets an SMS/email asking them to rate the experience (a single tap, e.g., 0-10). If the score is high (the call used 7/8+ as an example threshold, fully customizable), the customer is automatically redirected to leave a public review on Google/Facebook. If the score is low, it routes internally (e.g., to a manager) instead of the review platforms, so the business can address the problem directly.
+   - **Compliance gotcha explicitly confirmed on the call:** review-gating/filtering (only asking happy customers to post publicly) is against Google's and the FTC's rules. The NPS step exists specifically as the compliant workaround — it's a private satisfaction score, not a public review filter, so it doesn't violate the "don't gate reviews" rule.
+4. Businesses that don't want the NPS intermediate step can skip straight to blanket **review requests** after every job/purchase (manual entry, CSV upload, Zapier, or a webhook/POS integration).
+5. **Review widget**: a piece of embeddable code lets a business choose which star ratings to surface on their own website. **BBB-specific rule flagged**: if you opt in to show Better Business Bureau reviews on the widget, BBB requires you to display *all* of their reviews (you can't selectively hide low BBB ratings) — this is a BBB platform rule, not a Vendasta limitation.
+6. **Upcoming feature discussed on this call:** per-technician QR-code "tap cards" for post-job review/NPS requests attributed to individual service staff, with good scores routing to public review requests and bad scores routing to that technician's manager. The vendor cited a pilot showing review-generation volume increasing substantially when the QR code is a mandatory step in the technician's workflow, with reviews attributed and leaderboard-tracked by team member.
+7. Reviews themselves always live on their native platform (Google, Facebook, etc.) — Vendasta doesn't store/host the review text itself; the review widget just pulls and displays it.
+
+---
+
+## Date unknown — a Vendasta account manager with a home-services-focused marketing agency partner (AI Workforce demo)
+
+**Source:** [CALL] Partner enablement — AI Workforce product walkthrough and packaging/pricing session with a solo agency partner
+
+The **Reputation Specialist** is one of Vendasta's "out of the box" AI employees, described as an added autonomy layer on top of the existing Reputation Premium tool: given a set of instructions, it responds directly to Google and Facebook reviews on the client's behalf. It can be sold and activated as a standalone product (it does not need to be bundled with the chat/voice receptionist), though the rep's recommended sales approach is to position it as part of a broader "AI Workforce" bundle rather than a single point solution. A stated value-add beyond auto-responding: the client can "chat with the data" — asking things like "what's our customer sentiment been recently" or "turn my latest review into a social post" directly from the reputation module.
+
+Integration note: several job-management platforms are pre-integrated so that when a job is marked complete in the client's existing system of record, Vendasta can automatically trigger a review request — explicitly positioned as "we plug into your existing tech stack rather than disrupting what's already working."
+
+---
+
+## Date unknown — a physical-therapy franchise partner (co-owners) with a Vendasta sales rep (SEO/reputation/AI-chatbot proposal call)
+
+**Source:** [CALL] Review-request automation diagnostic for a seven-location physical-therapy clinic group
+
+1. **Client's existing review-request process (pre-Vendasta), described in detail:** on patient discharge, an automated export from their EMR feeds a list into a third-party email tool, which sends a review-request email, followed by an automatic re-marketing/reminder email **3 days later** if the recipient hasn't clicked the survey link.
+2. **SMS vs. email open-rate gap, cited as the reason to add SMS to review requests:** email open rates for review-request messages run roughly **20–30%**, versus roughly **95% for SMS**. Rep's stated rationale: individual consumers don't check personal email consistently and a lot of personal-email traffic is filtered as spam, whereas people at least glance at texts.
+3. **NPS-based review-request mechanic described:** Vendasta's SMS-based reputation flow sends an **NPS-style question ("would you recommend us to a friend, 0–10?")**; responses of 8–10 route the person directly to leave a Google review (or into a follow-up campaign), giving a built-in way to filter for happy customers before asking for a public review.
+4. **Automation trigger design discussed but not finalized:** the client wanted the review-request trigger tied to their EMR automatically firing "when a contract is closed or a payment is made," rather than manually uploading discharge lists. The sales rep confirmed Vendasta's system is open-code/open-API and can integrate with anything that itself exposes an open API — but was explicit that actually wiring this integration is real work requiring the solutions-architecture team, not a guaranteed instant connection.
+
+---
+
+## Date unknown — a solo prospective reseller (family/friends referral, passive-income motivation) (webchat/reseller demo and pricing walkthrough)
+
+**Source:** [CALL] Reseller demo — review management and review-request funnel with a Vendasta sales rep
+
+Review requests are sent via email/SMS using an uploaded CSV contact list. When a review-request form goes out, a low rating routes the respondent to a private feedback capture (so the negative review doesn't get posted publicly and instead reaches the business directly); a high rating prompts the respondent to post their review publicly — described as a way to preemptively filter negative reviews before they go live. A widget can be embedded on the client's website (described as a review carousel) to display reviews. All reviews-mentioning-the-business activity feeds into one dashboard where the business (or an AI, if configured) can respond.
+
+---
+
+## Date unknown — a marketing manager at a multifamily property management company evaluating a reputation/listings platform (whitelabel reseller product deep-dive)
+
+**Source:** [CALL] Whitelabel partner-led product demo — full reputation-management feature deep-dive for a multi-property portfolio, with the reseller's account team and a Vendasta partnership manager
+
+This is the deepest reputation-management coverage in this batch. Context: the client currently uses a competing multifamily reputation-management platform and previously used a different reputation vendor, and was evaluating consolidating onto this whitelabel reseller's Vendasta-powered platform.
+
+- **Multi-location business app/dashboard**: rolls up reputation, listings, and social for every property into one place, filterable by date range (default 7 days, adjustable) and by individual location.
+- **Review response service**: fully human-staffed (explicitly **not AI-generated** — a deliberate differentiator called out repeatedly, since the client's current vendor claims human responses but the client suspects staff are copy-pasting AI output). Reviews rated 4–5 stars get a response drafted and posted by the reseller's team; reviews rated 1–3 stars require the client's approval before posting. Response SLA: **within 2 business days, excluding weekends**. An "Additional Guidelines" notes field lets the client specify tone/language preferences, signature format, and words/phrases to avoid — team members see these notes every time they reply, avoiding the client's prior pain point of inconsistent staff wording.
+- **Approval/posting workflow**: the client receives an email containing the review text and the team's proposed reply; clicking through opens the dashboard where the client can edit the text before it posts, or approve as-is. Google and Facebook have direct API integrations so approved replies post automatically; for sources without an integration, the client edits/approves in the dashboard and the reseller's team manually logs in and posts the client-approved text. The platform "will never override" what the client has posted/edited.
+- **Reviews covered for response**: confirmed sources included Google, Facebook, and several multifamily-specific and general review sites.
+- **Edited-review tracking**: the dashboard shows a history of edited/removed reviews and attributes which team member authored each response, supporting accountability.
+- **Sentiment/keyword tracking**: the dashboard surfaces trending keywords and name mentions within reviews — used by some property clients to run internal staff recognition/incentive programs off review mentions. **Gotcha raised by the client**: their prior PMS-integrated review-request automation auto-attributed 5-star reviews to whichever staff member closed out the underlying maintenance work order — even when that staff member wasn't actually named in the review text — producing inflated/misleading per-employee attribution. **Roadmap item mentioned** (not yet released): employee- or location-specific QR codes for review requests, to create a cleaner attribution mechanism than name-mention parsing alone.
+- **Negative review removal**: this Vendasta-powered platform does not offer active negative-review-removal/dispute services; it can flag particularly egregious/offensive reviews for the internal reviews team to report to the platform, and will proactively alert the client's point of contact about questionable reviews worth a closer look. This is a known gap versus the client's prior vendor, which used a third-party service to actively contest reviews going back through historical review history, not just newly incoming ones.
+- **User management**: users can be added directly in the business app's admin tab per location, with role-based access control — handled by the client themselves rather than requiring a support ticket.
+- **Trials/pilots**: this whitelabel reseller does not run short (2–3 week) trials; the standard commitment is annual, but the account team indicated a **30–60 day pilot across a couple of properties** could likely be arranged with manager approval before a full portfolio rollout — a workable path for skeptical multi-location clients.
+
+---
+
+## Date unknown — a Vendasta account manager with a dental-marketing agency's owner/decision-maker and the agency's platform administrator
+
+**Source:** [CALL] White-label reputation-management sales demo for a dental-clinic-focused marketing agency evaluating Vendasta to fill a gap in their existing (listings-only) service stack
+
+1. **Context/need:** the agency already resells listings management (through a separate tool) to dental practices but has no reputation-management offering — that gap, plus a general market trend of marketing agencies moving to "full scope" offerings, was the stated reason for evaluating Vendasta.
+2. **Account-consolidation gotcha:** the two people on the call had ended up in **two separate logins/instances** before onboarding was complete — the AM flagged this explicitly as something that causes real problems if left unresolved before go-live ("all of a sudden you'd have two different logins, and that could be all kinds of issues"), and took an action item to consolidate both people and the pilot account into one instance before the next session.
+3. **White-label depth demonstrated, end to end:**
+   - The Business App can be branded with a **custom domain**, and beyond just the wrapper dashboard, an individual product's page itself (e.g., the Reputation Management tool) can carry its **own separate custom domain URL**.
+   - Inside Marketplace → the product itself, a partner can **white-label the tool specifically** — replace the product's own logo and rename it — not just re-skin the outer dashboard.
+   - **User/permission setup:** a "user" record is what associates a login with dashboard access; permissions/visible-sections are fully customizable per user (e.g., a client user might only ever see the Reputation Management panel on the left nav, nothing else). This setup can be done **in bulk** as a template so every newly-added client user automatically inherits the same standard access configuration rather than being manually reconfigured each time.
+4. **Reputation Management feature set demoed:**
+   - **AI-assisted review response:** respond to incoming reviews with AI-drafted replies; set up templates so the AI "learns" how to auto-respond going forward.
+   - **Review requests:** SMS/email templates that can be sent post-visit to solicit reviews.
+   - **Mentions/comments monitoring:** track online mentions of the business beyond just direct reviews.
+   - **NPS-gated review requests:** a post-visit survey scores the customer; high scores are routed to a public review ask, lower scores are routed to an internal follow-up flow instead of a public review request — used to manage reputation risk from upset customers.
+5. **Live-testing tool for prospects/new clients — "My Listing" test page:** every account auto-generates a "my listing" test page tied to the demo/test business. A team member can post an intentionally negative fake review there, click "Suggest a review response," and see exactly what the AI-generated reply would look like — without it being live/public — letting an agency validate response quality before turning on live auto-respond for a real, sensitive vertical like dental practices.
+6. **Where AI response quality comes from:** the reputation AI's knowledge base is built by scraping the business's website/profile (plus optional PDFs/articles uploaded manually); a **rule/persona** is then defined for how it should talk/behave, and that combination is what lets the "reputation specialist" AI Employee draft on-brand responses.
+7. **Standard AM working pattern for a multi-stakeholder onboarding:** rather than looping every stakeholder into every call going forward, the agency owner opted to hand ongoing day-to-day setup calls to her power-user teammate, with the two of them syncing separately afterward — the AM explicitly supported this as a normal pattern to reduce scheduling friction.
+*(Marketplace navigation and subscription pricing/wholesale-credit mechanics from this same call are filed in `marketplace.md`.)*
+
+---
