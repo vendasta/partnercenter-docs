@@ -1,12 +1,175 @@
 ---
 title: Train your AI Employee
 sidebar_position: 4
-description: Knowledge sourcing, price lists, guardrails, and the coach-and-correct loop that makes every answer accurate.
-sidebar_class_name: hide-from-sidebar
+description: Fix a wrong answer, add a guardrail that stops price hallucination, and build the coach-and-correct habit that keeps every answer accurate.
 ---
 
-:::info Content coming soon!
-This part of the learning path is being built. Check back shortly.
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LabChecklist from "@site/src/components/LabChecklist";
+import LabCallout from "@site/src/components/LabCallout";
+
+<InlineHighlighter courseId="train-your-employee" site="vendasta_learn">
+
+<CourseProgressBar courseId="train-your-employee" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Beginner"
+  time="about 15 minutes"
+  required={["Partner Center access", "An AI Employee with knowledge sources and a capability, such as your receptionist from the last step"]}
+  lab
+  pathName="Hire your first AI Employee"
+  step={4}
+  totalSteps={7}
+  outcomes={[
+    "Audit an AI Employee's answers, prices included, before a client meets it",
+    "Fix a knowledge source that is giving wrong or outdated answers",
+    "Write a guardrail capability that stops price hallucination",
+    "Sort a fix correctly: knowledge is the degree, capabilities are the skill",
+    "Read Explanation to see exactly what an answer used",
+  ]}
+/>
+
+## Audit what it actually knows
+
+By the end of this step, your receptionist from the last step answers your ten hardest questions correctly, prices included, with a guardrail in place so it never invents one again. *You are here: Partner Center, on the same employee you deployed last step.*
+
+Run the ten-question audit again, now that the employee is doing real work: open the Try it test page and ask everything a prospect is likely to ask, prices included. A wrong answer is not a defect, it is a training gap, and every training gap has an address, either a knowledge source that needs fixing or an instruction it never received.
+
+:::tip Try it now
+Open the test page in a fresh incognito window and run the audit before you change anything. Keep the answers that need fixing; the rest of this step fixes them.
 :::
 
-**What you will learn here:** Auditing an employee before clients meet it, fixing knowledge sources, writing a pricing guardrail, right-sizing prompts, and running the ongoing training loop.
+## Fix the source, not the AI
+
+A wrong price usually means the source it searched never had the real number, not that the AI is broken. Copy the package's exact pricing into a clean document and upload it as the authoritative source: auto-imported marketplace content can carry broken links or no usable pricing at all.
+
+<LabCallout title="upload a clean price list">
+You are going to your employee's **Configure** panel → **Knowledge Sources**.
+
+<LabChecklist
+  storageKey="train-your-employee-lab-1"
+  steps={[
+    <>Write or copy the package's exact prices and details into one document.</>,
+    <>Select <strong>Add knowledge source</strong> and upload it as a file, labeled clearly (for example, "2026 Service Pricing").</>,
+  ]}
+  confirm={<>The price list now appears in <strong>Knowledge Sources</strong>, ready for the AI to search.</>}
+/>
+</LabCallout>
+
+For every knowledge source type and what belongs in each, [the Knowledge Base guide covers the rest](/ai/knowledge-base).
+
+## Add a guardrail
+
+Knowledge is what the AI looks up when a question calls for it. A rule that must hold on every response belongs in a capability instead, so a guardrail like "quote only from the published list, never estimate" holds even on a question the price list does not directly answer.
+
+<LabCallout title="write the pricing guardrail">
+You are going to your employee's **Configure** panel → **Capabilities**.
+
+<LabChecklist
+  storageKey="train-your-employee-lab-2"
+  steps={[
+    <>Open the capability that answers pricing questions, or add a custom capability named something like <code>QuotePricing</code>.</>,
+    <>In its instructions, add: quote only the prices in the knowledge base; if a price is not there, capture the visitor's contact details and say a person will follow up.</>,
+    <>Save.</>,
+  ]}
+  confirm={<>The capability now holds the rule, and it applies on every conversation, not only the ones a knowledge lookup happens to catch.</>}
+/>
+</LabCallout>
+
+Keep the instruction short. Everything an employee has been told shares one working memory, and a long list of rules competes with itself; specific and short beats long every time. Instructions also tend to collect leftover lines from earlier edits, so revisit and trim them now and then rather than only ever adding to them. The same discipline suits a business in a regulated field: rather than answering specifics on medical or legal questions, have the guardrail redirect to a person, and use the word its own customers would use, never a clinical term a business would not use itself.
+
+## Re-test and see why it answered that way
+
+<LabCallout title="re-run the audit">
+You are back on the **Try it** test page.
+
+<LabChecklist
+  storageKey="train-your-employee-lab-3"
+  steps={[
+    <>Ask the same ten questions again, in a fresh incognito window.</>,
+    <>On any answer worth checking, select <strong>Explanation</strong>.</>,
+  ]}
+  confirm={<>Explanation shows exactly which knowledge source or capability produced that answer, so you know precisely what to adjust if it is still off.</>}
+/>
+</LabCallout>
+
+## The habit that keeps it accurate
+
+Treat the employee as a new hire rather than a setting: coach it, correct it, and expect the answers to keep improving, the same way a new team member does. The rule behind every fix here is the one behind every fix to come: a wrong answer to a specific question is usually a knowledge gap, and a wrong behavior across every conversation is usually a capability gap. Knowledge is the degree it holds; capabilities are the skill it practices.
+
+Testing on purpose, on your own account, is how gaps surface before a client ever sees them, and a change that turns out wrong is never permanent: undo it and try again. As an employee earns your trust through this loop, its autonomy level can grow with it, from close review to running full conversations on its own, a decision the next step puts in your hands from the very first setup.
+
+## What you now have
+
+- A receptionist whose pricing answers come from one clean, current source
+- A guardrail capability that stops it from ever guessing a price
+- The habit of auditing after every knowledge change, with Explanation to show you why an answer happened
+- The knowledge-versus-capability question, answered, for every fix you make from here on
+
+<SectionFeedback courseId="train-your-employee" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="train-your-employee" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on fixing a wrong answer, sorting knowledge from capabilities, and reading Explanation."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A customer asks about pricing and your AI Employee makes up a number that is not real. What kind of fix is this?',
+      options: [
+        'A capability fix, because the guardrail failed',
+        'A knowledge fix, because the source it searched does not have the real price',
+        'A channel fix, because the wrong channel is enabled',
+        'An autonomy fix, because the level is set too high'
+      ],
+      correctIndex: 1,
+      explanation: 'An invented price means the source did not have the real number to find. Fix the knowledge first, then add a guardrail so it cannot happen again.'
+    },
+    {
+      type: 'mcq',
+      question: 'Which instruction belongs in a capability rather than a knowledge source?',
+      options: [
+        'Quote only the prices in the price list, every time',
+        'Our spa\'s current price list',
+        'Our hours change seasonally, check the website',
+        'Reviews and testimonials from past customers'
+      ],
+      correctIndex: 0,
+      explanation: 'A rule that must hold on every response belongs in a capability. Facts the AI looks up when relevant belong in knowledge.'
+    },
+    {
+      type: 'mcq',
+      question: 'You want to know exactly which knowledge source or capability produced a specific answer. What do you check?',
+      options: [
+        'The Conversations inbox tab',
+        'The Explanation link on that message',
+        'The AI Workforce roster page',
+        'The plan and billing page'
+      ],
+      correctIndex: 1,
+      explanation: 'Explanation shows the reasoning behind a response, which knowledge it used, and any capability or tool it called.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your receptionist gives a great answer this week and a strange one next week to the same question. What is the right response?',
+      options: [
+        'Turn it off until it is more consistent',
+        'Treat it once and leave it; it will settle on its own',
+        'Keep coaching it the way you would a new hire, correcting what is off as you see it',
+        'Lower its autonomy level permanently'
+      ],
+      correctIndex: 2,
+      explanation: 'The operating mindset is continuous: coach and correct as you go, the way you would with any new team member.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/ai-workforce/custom-employee-lab" pathName="Hire your first AI Employee" step={4} totalSteps={7} />
+
+</InlineHighlighter>
+<MarkComplete courseId="train-your-employee" site="vendasta_learn" />

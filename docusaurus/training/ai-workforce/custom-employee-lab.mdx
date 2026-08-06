@@ -1,12 +1,192 @@
 ---
 title: Build a Custom AI Employee
 sidebar_position: 5
-description: "A hands-on lab: design an employee from an outcome statement and assemble knowledge, capabilities, and tools."
-sidebar_class_name: hide-from-sidebar
+description: Design an AI Employee from an outcome, set its role and autonomy, connect knowledge and capabilities, add one custom tool, and test it before calling it done.
 ---
 
-:::info Content coming soon!
-This part of the learning path is being built. Check back shortly.
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LabChecklist from "@site/src/components/LabChecklist";
+import LabCallout from "@site/src/components/LabCallout";
+
+<InlineHighlighter courseId="custom-employee-lab" site="vendasta_learn">
+
+<CourseProgressBar courseId="custom-employee-lab" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Intermediate"
+  time="about 18 minutes"
+  required={["Partner Center access on a Professional plan or higher", "A simple API to test against, or dummyjson.com's free public order-lookup endpoint, used as the example in this step"]}
+  lab
+  pathName="Hire your first AI Employee"
+  step={5}
+  totalSteps={7}
+  outcomes={[
+    "Start a custom AI Employee from an outcome statement, not a feature list",
+    "Write a role and connect the knowledge and capabilities that outcome needs",
+    "Set an autonomy level that matches how much you trust the role on day one",
+    "Add one custom capability with a simple tool",
+    "Test against a pass/fail script before calling it done",
+  ]}
+/>
+
+## Start from the outcome
+
+By the end of this step, a custom AI Employee built for one outcome you chose is live, answering from its own knowledge and capable of one real action through a tool you configured. *You are here: Partner Center, on a Professional plan or higher.*
+
+Every employee so far came pre-built. This one starts blank, so the first decision is the outcome, not the employee: "qualify inbound leads before booking" is a real brief, "build a sales bot" is not. Building one costs nothing extra, and there is no limit on how many you create, so the only real constraint is a clear outcome. If the outcome resembles a data analyst, an inside sales representative, or a support role, [the custom AI employee guide](/ai/ai-workforce/custom-ai-employees) has a worked example close to it, worth stealing from rather than starting from nothing.
+
+:::tip Try it now
+Write your outcome in one sentence before you open the configuration panel: what this employee does, and for whom.
 :::
 
-**What you will learn here:** Outcome-first design, writing the role, attaching knowledge, building a custom capability, adding a simple tool, and testing against a pass-fail script.
+## Create the employee
+
+<LabCallout title="create the employee and its profile">
+You are going to **AI** → **AI Workforce** → **Create**.
+
+<LabChecklist
+  storageKey="custom-employee-lab-1"
+  steps={[
+    <>Give it a name and avatar that fit the role.</>,
+    <>Set its autonomy level. Autonomous is the usual starting default, one level below the highest (Agentic), and it manages full conversations, captures leads, and books on its own while every conversation stays reviewable. Choose a lower level if you would rather review closely while it is new.</>,
+    <>In Purpose, write the role prompt: who it is, its tone, and the one outcome it exists for.</>,
+  ]}
+  confirm={<>The employee now exists in your AI Workforce roster, with a profile and an autonomy level set.</>}
+/>
+</LabCallout>
+
+## Give it knowledge and capabilities
+
+<LabCallout title="connect knowledge and turn on capabilities">
+You are staying on the employee's **Configure** panel.
+
+<LabChecklist
+  storageKey="custom-employee-lab-2"
+  steps={[
+    <>In Knowledge Sources, add the business profile and any website pages or documents the outcome needs.</>,
+    <>In Capabilities, turn on the built-in capabilities that match the outcome, such as lead capture or booking.</>,
+  ]}
+  confirm={<>The employee can now answer from real knowledge and take the actions its outcome needs, using only built-in pieces.</>}
+/>
+</LabCallout>
+
+## Add one custom capability
+
+Most outcomes need one more thing a built-in capability does not cover: a real action in another system, a price check, an order status, an inventory count. Knowledge only answers from what has been uploaded to it, so an outcome that depends on live information hits a ceiling fast without a live connection. That connection becomes a tool, added inside a custom capability.
+
+This step uses a real, working endpoint so you are testing against an actual response, not a hypothetical one: [dummyjson.com](https://dummyjson.com), a free public test API that needs no authentication. Its `/carts` endpoint stands in for an order-lookup system. Give it an order number from 1 to 50 and it returns that order's total, its discounted total, how many products and total items it contains, and the products themselves (name, quantity, and line total for each). It is not a real Vendasta or client order system — it exists so the tool you configure here behaves exactly like the one you would later point at a client's real order API, with a live response to check your work against instead of guessing whether the capability is wired up correctly.
+
+<LabCallout title="add a capability with a tool">
+You are going to **Capabilities** → **Custom Capabilities** → **Add a capability**.
+
+<LabChecklist
+  storageKey="custom-employee-lab-3"
+  steps={[
+    <>Name the capability <code>CheckOrderStatus</code> and describe what it does in detail: "Given an order number, looks up that order's status: its total, discounted total, item count, and the products in it, so the employee can read back a real summary instead of guessing." A specific description here is what lets the AI decide correctly when to call this tool versus a different one.</>,
+    <>Add a tool. Method: <code>GET</code>. URL: <code>https://dummyjson.com/carts</code>. Add one parameter named <code>order_number</code>, set as a path parameter — the platform appends it to the end of the URL, so asking about order 7 calls <code>https://dummyjson.com/carts/7</code>.</>,
+    <>Save.</>,
+  ]}
+  confirm={<>The tool now appears on the capability, ready for the AI to call once its instructions say when.</>}
+/>
+</LabCallout>
+
+Path parameters, query parameters, headers, and every field in detail: [Creating Custom Capabilities walks through the rest](/ai/ai-capabilities/creating-custom-capabilities).
+
+## Write the capability's instructions
+
+Brief the capability the way you would brief a new hire's one task: exactly when to use it, what it needs before it can act, and how to talk about what comes back. "Only call this when the customer asks about an existing order, and get the order number first" holds up in every conversation; "help with orders when it makes sense" does not.
+
+## Test before you call it done
+
+<LabCallout title="run the pass/fail script">
+You are on the employee's **Try it** page, or its assigned channel.
+
+<LabChecklist
+  storageKey="custom-employee-lab-4"
+  steps={[
+    <>Ask a question that should trigger the capability, and confirm it calls the tool and answers correctly.</>,
+    <>Ask a related question that should not trigger it, and confirm it does not.</>,
+    <>Ask the triggering question again without the information the tool needs, and confirm the employee asks for it instead of guessing.</>,
+  ]}
+  confirm={<>Three questions, three different situations, and the employee handled all three the way its outcome intended.</>}
+/>
+</LabCallout>
+
+## Where this stops, for now
+
+One tool answering one outcome is a complete employee. Chaining several tools together, or connecting through middleware, is a deeper build for a job that genuinely needs it; the [Tools & Integrations Overview](/ai/ai-capabilities/tools-overview) is where to go next when that day comes.
+
+## What you now have
+
+- A custom AI Employee built around one outcome you named, not a feature list
+- A role, an autonomy level, knowledge, and capabilities, all set from a blank start
+- One custom capability with a working tool, briefed like a new hire's task
+- A pass/fail test result you can trust before anyone else talks to it
+
+<SectionFeedback courseId="custom-employee-lab" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="custom-employee-lab" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on starting from an outcome, sorting knowledge from tools, and testing a new capability."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'You want a custom AI Employee for a landscaping company. Which brief gets you started well?',
+      options: [
+        'Build a helpful bot',
+        'Qualify inbound quote requests and collect the job address before booking a site visit',
+        'Make it sound professional',
+        'Give it every capability available'
+      ],
+      correctIndex: 1,
+      explanation: 'An outcome statement names the result and who it is for. A feature list or a tone note is not enough to design around.'
+    },
+    {
+      type: 'mcq',
+      question: 'The employee needs to check real-time inventory before promising a delivery date. Where does that live?',
+      options: [
+        'A knowledge source, updated daily',
+        'The Purpose field',
+        'A custom capability with a tool that looks up inventory live',
+        'The channel settings'
+      ],
+      correctIndex: 2,
+      explanation: 'Information that changes constantly is better fetched live through a tool than kept as knowledge that goes stale between updates.'
+    },
+    {
+      type: 'mcq',
+      question: 'Why test a question that should NOT trigger the new capability, not just one that should?',
+      options: [
+        'To confirm the employee is not calling the tool when it should not be',
+        'To check the channel is installed correctly',
+        'To see if the plan needs an upgrade',
+        'To test its autonomy level'
+      ],
+      correctIndex: 0,
+      explanation: 'A pass/fail script needs both directions: the capability firing when it should, and staying quiet when it should not.'
+    },
+    {
+      type: 'mcq',
+      question: 'Which capability instruction is ready to ship?',
+      options: [
+        'Help with orders when it makes sense',
+        'Only call CheckOrderStatus when the customer asks about an existing order, after you have the order number',
+        'Be helpful about order status',
+        'Use the order tool sometimes'
+      ],
+      correctIndex: 1,
+      explanation: 'A ready instruction says exactly when to call the tool and what must be known first. Vague instructions like "when it makes sense" leave the AI to guess.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/ai-workforce/autopilot" pathName="Hire your first AI Employee" step={5} totalSteps={7} />
+
+</InlineHighlighter>
+<MarkComplete courseId="custom-employee-lab" site="vendasta_learn" />
