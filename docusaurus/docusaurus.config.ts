@@ -175,7 +175,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           // library regroup: advertising + social
           { from: '/learn/products/advertising/Introduction-to-Advertising-Intelligence', to: '/learn/products/attract/advertising/introduction-to-advertising-intelligence' },
           { from: '/learn/products/advertising/Measure-Digital-Ad-Success-with-Advertising-Intelligence', to: '/learn/products/attract/advertising/measure-digital-ad-success' },
-          { from: '/learn/products/social-marketing/Introduction-to-Social-Marketing', to: '/learn/products/attract/social-marketing/introduction-to-social-marketing' },
+          { from: '/learn/products/social-marketing/Introduction-to-Social-Marketing', to: '/learn/products/attract/social-ai/introduction-to-social-ai' },
+          { from: '/learn/products/attract/social-marketing/introduction-to-social-marketing', to: '/learn/products/attract/social-ai/introduction-to-social-ai' },
           // library regroup: snapshot + executive reports
           { from: '/learn/products/snapshot-executive-reports/Explore-the-Snapshot-Report-Interface', to: '/learn/products/convert/snapshot-executive-reports/explore-the-snapshot-report-interface' },
           { from: '/learn/products/snapshot-executive-reports/Snapshot-Section-Breakdown', to: '/learn/products/convert/snapshot-executive-reports/snapshot-section-breakdown' },
