@@ -55,6 +55,10 @@ Standard CRM records cover common sales workflows, but many businesses need to t
 
 Once saved, the custom object appears directly in the CRM navigation alongside standard objects. You can begin populating records manually, via bulk import, or through the API.
 
+:::info
+Each account can have up to 3 custom objects. Attempting to create a fourth returns a clear error message identifying the limit instead of a generic failure.
+:::
+
 ## Import custom object records
 
 The Bulk Import workflow fully supports custom objects, making it easy to migrate asset lists, service records, inventory data, or any other custom dataset into the CRM.
@@ -188,6 +192,13 @@ Yes. Custom object upsert is supported via the Vendasta API. See the [Developer 
 <summary>Which CRM AI editions include custom objects?</summary>
 
 Custom objects are included with CRM AI Standard and Pro. See [CRM AI editions](/ai/ai-workforce/ai-sales-assistant#crm-ai-editions) for the full feature comparison.
+
+</details>
+
+<details>
+<summary>Is there a limit to how many custom objects an account can have?</summary>
+
+Yes. Each account can have up to 3 custom objects. This limit applies whether the object is created manually or rolled out through an [account template](/accounts/manage-accounts/account-templates) — if applying a template would push an account past the limit, the application fails for that account with a clear error instead of failing silently.
 
 </details>
 
