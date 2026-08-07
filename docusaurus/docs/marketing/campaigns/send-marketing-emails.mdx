@@ -163,8 +163,20 @@ When sending campaigns, you can:
 ### Sender Configuration
 Configure who the campaign is sent from:
 1. **Default sender** - Uses your configured email settings
-2. **Salesperson assignment** - When a salesperson is assigned to an account, their information will be used
+2. **Salesperson assignment** - When a salesperson is assigned to an account, their information will be used as the sender, overriding your partner-level sender settings
 3. **Custom sender** - Override with specific sender details for the campaign
+
+**How salesperson sender override works:**
+
+When an account has an assigned salesperson, campaign emails go out from the salesperson's email address and name — not your partner-level "from" address. This is by design so replies go directly to the salesperson managing the relationship.
+
+If the salesperson's email is on an unverified or unauthenticated domain, the platform automatically sends the email from your verified domain while preserving the salesperson's name as the display name (e.g., `Jane Smith via yourdomain.com`). This may appear in Gmail as "via yourdomain.com" in the sender line.
+
+**To send campaigns from your partner-level sender instead:** Remove the salesperson assignment from the account before starting the campaign.
+
+**Reply-to addresses:**
+
+The **Reply Address** field in **Marketing** → **Email Settings** → **Sender and Reply Settings** applies to system emails only (such as Daily Digest notifications) — not to campaign emails. Campaign replies go to the sender address (salesperson or partner-level sender, as described above).
 
 ### Email Deliverability Settings
 Ensure successful delivery by:

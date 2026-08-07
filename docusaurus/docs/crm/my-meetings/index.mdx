@@ -59,7 +59,7 @@ From here you can configure:
 
 - **Choose meeting app** - Select your default meeting app from Google Meet, Zoom, or Microsoft Teams.
 - **Scheduling settings** - Control how your availability is displayed:
-  - **Availability increment** - Show time slots in increments of 15, 30, or 60 minutes.
+  - **Availability increment** - Show time slots in increments of 5, 10, 15, 30, or 60 minutes.
   - **Meeting buffer before/after** - Set buffer time before and after meetings for travel, notes, or preparation.
 
 ![Meeting settings - meeting app and scheduling](./img/crm/my-meetings/meeting-settings-app-scheduling.png)
@@ -82,20 +82,41 @@ Click **Create event type** to set up a new type of meeting. Fill in the event t
 
 - **Name** - Give the event type a name.
 - **Link** - A unique booking link is generated automatically.
-- **Location** - Choose where the meeting takes place (for example, Video).
+- **Location** - Choose where the meeting takes place:
+  - **Video** - Meeting is held over video conference (Google Meet, Zoom, or Microsoft Teams link is inserted automatically).
+  - **In Person** - Meeting is held at a physical location. Choose who sets the address:
+    - **I'll set the location** - You provide the address (pre-filled from your business profile). Optionally enable **Include video conferencing** to make it a hybrid meeting.
+    - **Invitee sets the location** - The person booking provides their address at booking time. Useful for on-site service calls.
 - **Duration** - Select a duration of 15, 30, 45, or 60 minutes, or set a custom length.
 - **Description** - Add an optional description.
 - **Color** - Pick a color to help identify this event type.
 
 ![New event type details](./img/crm/my-meetings/new-event-type-details.png)
 
-You can also configure additional options for each event type:
+You can also configure additional options for each event type. Settings configured here override your user-level defaults for this event type only:
 
 - **General availability** - Override your default availability for this specific event type.
-- **Questions for invitee** - Add custom questions that invitees answer when booking.
-- **Customize invitation email** - Customize the email sent for invitations through the CRM.
-- **Availability increment** - Override the default time slot increment.
+- **Questions for invitee** - Add custom questions that invitees answer when booking. Making **Phone Number** and/or **Email** required fields controls which channels are available for confirmations and reminders.
+
+  Choose a **confirmation channel** - **Email**, **SMS**, or **Both** - for the confirmation guests receive when they book. Choose a **reminder channel** the same way; it defaults to your confirmation channel until you change it, after which the two work independently - for example, an Email confirmation with an SMS reminder.
+
+  - Turning off **Phone Number** required disables **SMS** and **Both** in both channel controls, and any current SMS/Both selection falls back to Email.
+  - Turning off **Email** required disables **Email** and **Both** in both channel controls, and any current Email/Both selection falls back to SMS.
+  - If both **Phone Number** and **Email** are off, all channel options are disabled and an inline warning appears - the event type can't be saved until at least one channel is selected.
+
+  Set the **reminder lead time** - an integer plus a unit (minutes, hours, or days) - to control how far ahead of the meeting the reminder sends. The default is 24 hours, and the maximum is 10 days; values entered above the maximum are clamped, and switching units re-clamps the value. Only one reminder can be configured per event type.
+
+  :::note
+  SMS confirmations and reminders require an active subscription to Conversations AI Pro or Premium (Reputation AI Premium and Campaigns Pro also unlock this), and the business's phone number must be registered first. Configure at **Administration** → **SMS Configuration**.
+  :::
+
+- **Customize invitation email** - Customize the email subject and body sent when you request a meeting via the CRM Contacts page.
+- **Availability increment** - Override the default time slot increment (5, 10, 15, 30, or 60 minutes).
 - **Meeting buffer before/after** - Override the default buffer times.
+- **Advance notice** - Override the minimum lead time required to prevent last-minute bookings.
+- **Add to my website** - Get an embed code to add your booking form directly to a website as an inline widget. Copy and paste the code into your site's HTML wherever you want the booking form to appear.
+
+- **Limit future meetings** - Control how far into the future meetings can be scheduled. Set limits by days, weeks, months, or choose a custom date range. When the limit is reached, no time slots are shown beyond that point.
 
 ![New event type options](./img/crm/my-meetings/new-event-type-options.png)
 

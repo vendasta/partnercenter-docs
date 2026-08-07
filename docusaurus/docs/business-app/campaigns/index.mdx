@@ -2,12 +2,12 @@
 id: business-app-campaigns
 title: Campaigns
 sidebar_position: 1
-description: Create and manage email and SMS marketing campaigns in Business App with Campaigns Pro. Use templates, AI, and the builder to reach your audience.
+description: Create and manage email and SMS marketing campaigns in Business App. Use templates, AI, and the builder to reach your audience.
 ---
 
 # Campaigns Overview
 
-Campaigns in Business App (Campaigns Pro) let your clients run email and SMS marketing from one place. The base plan includes email sending (e.g. 10,000 emails per month); SMS requires an add-on. Clients can create campaigns from scratch or from templates, add email or SMS steps, use AI to generate content, and send to filtered contact lists.
+Campaigns in Business App let your clients run email and SMS marketing from one place. The base plan includes email sending (e.g. 10,000 emails per month); SMS requires an add-on. Clients can create campaigns from scratch or from templates, add email or SMS steps, use AI to generate content, and send to filtered contact lists.
 
 <iframe src="//www.youtube-nocookie.com/embed/cg0a5aRUjAk" width="560" height="315" frameBorder="0" allowFullScreen></iframe>
 
@@ -17,6 +17,17 @@ Campaigns in Business App (Campaigns Pro) let your clients run email and SMS mar
 - **Templates and AI**: Start from ready-made templates or generate copy with AI.
 - **Targeted sends**: Choose time zone, send days, and filter contacts so the right message reaches the right audience.
 - **Integrated with Business App**: Campaigns live alongside contacts, Conversations, and automations.
+
+## Tracking your sending limits
+
+<img src={require('./img/campaigns-pro/emails-sent-counter.png').default} alt="Marketing emails and SMS sent this billing period counters" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+At the top of the Campaigns page you'll see two counters showing how much of your monthly allotment has been used for the current billing period:
+
+- **Marketing emails sent this billing period** — tracks email usage against your monthly limit (e.g. 0 of 10,000)
+- **Marketing SMS sent this billing period** — tracks SMS usage if you have an SMS add-on enabled (e.g. 0 of 50)
+
+Both counters reset at the start of each billing period.
 
 ## How to use Campaigns
 
@@ -53,17 +64,58 @@ To send your campaign, go to the **Contacts** tab. You can add filters and send 
 3. **Send** — Use the **Contacts** tab to choose recipients (with filters if needed), then publish and send.
 
 :::info
-The base Campaigns Pro plan includes email (e.g. 10,000 emails/month). To send SMS campaigns, clients need an **SMS add-on** (available in the United States and Canada).
+The base Email & SMS Marketing plan includes email (e.g. 10,000 emails/month). To send SMS campaigns, clients need an **SMS add-on** (available in the United States and Canada).
 :::
 
 ## More on campaigns
 
 - **[SMS campaigns](./sms-campaigns.mdx)**: SMS add-on, creating and setting up SMS campaigns (one-time or recurring), audience selection, scheduling, and compliance.
 
+## Troubleshooting campaigns
+
+### "Some contacts cannot be added to this campaign"
+
+This error occurs when a campaign uses **dynamic fields** (e.g., a personalization variable like `{{first_name}}`) and one or more contacts are missing a value for that field. Contacts with missing values are excluded.
+
+**How to fix it:**
+- Remove or make optional the dynamic field from the email step, or
+- Update the affected contacts in the CRM to fill in the missing field values before adding them to the campaign.
+
+### Campaign shows "Ongoing" but no emails are being delivered
+
+1. Confirm that recipients were actually added — open the campaign and check the **Contacts** tab to verify the contact list is populated.
+2. Check that contact email addresses are valid (no obvious formatting errors).
+3. Confirm the campaign has at least one published email step.
+
+### Email delivery delays (deferred emails)
+
+Emails may be **deferred** rather than sent immediately if the receiving mail server temporarily rejects them. This is a normal part of email delivery — the sending system retries automatically. Deferred emails are not failures; they typically deliver within a few hours. No action is needed unless an email remains undelivered for more than 24 hours.
+
+### Featured templates not loading
+
+If the templates gallery appears blank or fails to load, check whether the account has complete **business profile information**, particularly the business name, address, and phone number (NAP). Missing NAP data can prevent template rendering.
+
+**How to fix:** Go to **Business App** → **Administration** → **Business Profile** and ensure all required fields are filled in.
+
+### Image upload errors
+
+Supported image formats for campaigns are **JPEG** and **PNG**. If an upload fails:
+- Confirm the file is a `.jpg` or `.png` (not `.webp`, `.gif`, `.heic`, etc.)
+- Keep file size under 5 MB
+- Try re-saving the image in an image editor and re-uploading
+
+### Restarting a published campaign with the same contact list
+
+Published campaigns cannot be re-sent to the same list directly. To send again:
+
+1. Open the campaign and click **Duplicate** (or use the three-dot menu → **Copy campaign**).
+2. Add your contacts to the new copy.
+3. Publish the copy.
+
 ## Frequently asked questions
 
 <details>
-<summary>Can you export campaign activity from Campaigns Pro in Business App?</summary>
+<summary>Can you export campaign activity from Email & SMS Marketing in Business App?</summary>
 
 No. Campaign activity can only be viewed in Business App. Open a campaign and click the number under **Recipients** to open the campaign activity table.
 </details>
@@ -75,7 +127,7 @@ You can send up to 10,000 emails per month by default. You can purchase an addit
 </details>
 
 <details>
-<summary>Do I need an SMS add-on to use SMS in Campaigns Pro?</summary>
+<summary>Do I need an SMS add-on to use SMS in Email & SMS Marketing?</summary>
 
-Yes. To send SMS messages in Campaigns Pro, an **SMS add-on is required**. SMS add-ons are only available in the United States and Canada.
+Yes. To send SMS messages in Email & SMS Marketing, an **SMS add-on is required**. SMS add-ons are only available in the United States and Canada.
 </details>

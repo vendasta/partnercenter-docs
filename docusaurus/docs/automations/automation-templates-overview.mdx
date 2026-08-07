@@ -1,238 +1,117 @@
 ---
-title: Automation Templates Overview
-description: Explore our collection of automation templates that help you get started using automation within the platform quickly and effectively.
-sidebar_position: 8
+title: Automation templates overview
+description: Start from a pre-built automation template or build your own from the blank template.
+sidebar_position: 13
 ---
 
-# Automation Templates Overview
+# Automation templates overview
 
-We have a great collection of example templates that can help you get started using automation within the platform. [Here](https://partners.vendasta.com/automations/create-from-template), you will find a list of example templates along with a description of what they do, how to use them, and some possible next steps.
+Templates are pre-built automation workflows you can customize for your own use. They're the fastest way to get up and running, especially for common scenarios like onboarding, lead nurturing, and sales follow-up.
 
-This article can serve as a manual, providing extra context as you [create your own automation](https://partners.vendasta.com/automations) in the platform.
+The full, up-to-date list of templates lives in [Partner Center](https://partners.vendasta.com/automations/create-from-template). This page covers the basics of using templates and walks through a handful of featured ones.
 
-## Getting Started with Templates
+## Use a template
 
-Templates provide pre-built automation workflows that you can customize for your specific needs. They're designed to address common business scenarios and can save you significant time in setting up your automations.
+1. Go to **Partner Center** → **Automations**.
+2. Click **Create automation**.
+3. Browse the available templates.
+4. Click **Use template** on the one you want.
+5. Customize the trigger, conditions, and steps for your use case.
+6. Test the automation, then toggle it **On**.
 
-### How to Use Templates
-
-1. Navigate to **Partner Center** > **Automations**
-2. Click **Create Automation**
-3. Select **From Template**
-4. Browse available templates by category or objective
-5. Click **Use Template** on your chosen template
-6. Customize the template settings for your needs
-7. Test and activate your automation
-
-## Template Categories
-
-### Set Up Accounts
-
-| Template | Description |
-| :--- | :--- |
-| [Segment active leads into a list](#segment-active-leads-into-a-list) | Automatically categorize leads based on engagement |
-| [Offer solutions to new accounts without websites](#offer-solutions-to-new-accounts-without-websites) | Target accounts that need website services |
-| [Set up new accounts](#set-up-new-accounts) | Streamline new account onboarding |
-| [Create an account when a company is created](#create-an-account-when-a-company-is-created) | Sync company and account creation |
-| [Get customers to connect to the Business App](#get-customers-to-connect-business-app) | Drive app adoption |
-
-### Convert Leads
-
-| Template | Description |
-| :--- | :--- |
-| [Systematize your sales process](#systematize-your-sales-process) | Create consistent sales workflows |
-| [Nurture cold leads (advanced automation)](#nurture-cold-leads-advanced-automation) | Re-engage inactive prospects |
-| [Offer a self-service free trial for leads](#offer-a-self-service-free-trial-for-leads) | Automate trial provisioning |
-| [Recurring sales task](#recurring-sales-task) | Schedule regular follow-ups |
-| [Segment accounts into lists](#segment-accounts-into-lists) | Organize accounts by criteria |
-| [Notify your team when a user is active](#notify-your-team-when-a-user-is-active) | Alert on user engagement |
-
-### Automate CRM
-
-| Template | Description |
-| :--- | :--- |
-| [AGOGE task sequence on Company (advanced automation)](#agoge-task-sequence-on-company-advanced-automation) | Implement structured sales methodology |
-| [Create a Snapshot Report when a form is submitted](#create-a-snapshot-report-when-a-form-is-submitted) | Generate reports from form data |
-| [Send a follow-up email when a form is submitted](#send-a-follow-up-email-when-a-form-is-submitted) | Automate form response |
-| [Notify your team about opportunity changes](#notify-your-team-about-opportunity-changes) | Track sales pipeline updates |
-
-### Email Campaigns
-
-| Template | Description |
-| :--- | :--- |
-| [Send a welcome message](#send-a-welcome-message) | Greet new customers |
-| [Send a product education campaign](#send-a-product-education-campaign) | Educate users about features |
-| [Send a campaign](#send-a-campaign) | Basic campaign automation |
-
-### Others
-
-| Template | Description |
-| :--- | :--- |
-| [Create a fulfillment project](#create-a-fulfillment-project) | Automate project creation |
-| [Notify your team about failed payments](#notify-your-team-about-failed-payments) | Handle payment issues |
-| [Log activity for sent messages in the Inbox](#log-activity-for-sent-messages-in-inbox) | Track communication |
-| [Respond to Inbox messages](#respond-to-inbox-messages) | Auto-respond to messages |
-
-*A complete list of templates is available here: [Automation Templates in the Partner Center](https://partners.vendasta.com/automations/create-from-template)*
-
-## The Blank Template
+## The blank template
 
 <iframe src="https://www.loom.com/embed/5c55090e160e4de5bdf40f4d75363c64" width="100%" height="400px" frameborder="0" allowfullscreen></iframe>
 
-The blank template is the canvas from which you can create your own automations from scratch. When you set up a new blank template, you will be prompted to choose a trigger (the condition that kicks off the rest of the workflow) and steps (the actions that your automation does after the automation is triggered).
+The blank template is a clean canvas — pick a trigger and add steps from scratch. Use this when no pre-built template matches, or when you want full control over the workflow.
 
-To learn more about how to use automation, see [Automations overview](./index.mdx). You can also find all [available triggers](./automation-triggers-reference.mdx) and [available steps](./automation-steps-reference.mdx) to learn what they do and how they work.
+See [Automations overview](./index.mdx), [Automation triggers reference](./automation-triggers-reference.mdx), and [Automation steps reference](./automation-steps-reference.mdx) for the building blocks.
 
-## Featured Templates
+## Featured templates
 
-### Recurring Sales Task
+### Auto-assign a salesperson to new accounts
 
-This automation creates a recurring sales task on weekdays from 9 to 5 every 30 days for a full year.
+Automatically assign a specific salesperson (or a member of a sales team) to every account that gets created.
 
-**Customization Options:**
-- Change how often the task is created by editing the number of days in the delay step
-- Edit how many times this process repeats by modifying the jump to a step action at the end of the automation
+**Setup:**
 
-### Segment Accounts Into Lists
+1. Go to **Partner Center** → **Automations** → **Create automation** and select **Blank Template**.
+
+   ![Blank automation template](./img/automations/my-automations/auto-assign-salesperson-blank-template.jpg)
+
+2. Under **Start the automation when**, select **An account is created** and click **Save**. Add conditions only if you want to limit which accounts trigger the automation.
+
+   ![Account created trigger](./img/automations/my-automations/auto-assign-salesperson-trigger.jpg)
+
+3. Click the **+** under the trigger, scroll to **Sales**, and select **Assign a salesperson** (or **Assign a sales team** for round-robin assignment across a team).
+
+   ![Assign a salesperson step](./img/automations/my-automations/auto-assign-salesperson-action.jpg)
+
+4. Pick the salesperson (or team) and click **Save**.
+5. Toggle the automation **On**.
+
+### Recurring sales task
+
+Creates a recurring sales task on weekdays from 9 AM to 5 PM, every 30 days, for a full year.
+
+**Customize:**
+
+- Change how often the task is created by editing the number of days in the delay step.
+- Adjust how many times it repeats by modifying the **Jump to a step** action at the end.
+
+### Segment accounts into lists
 
 <iframe src="//www.loom.com/embed/827c9de749924ef689257afebd418dcf" width="560" height="315" frameborder="0" allowfullscreen></iframe>
 
-When an account is created, segment it into one of three lists based on whether the business is located in one of your target markets or not.
+When an account is created, segment it into one of three lists based on whether the business is in a target market.
 
-**Setup Requirements:**
-- Create lists that your accounts will be sorted into
-- Define your target market criteria
+**Setup:**
 
-**Advanced Usage:**
-- Use other account data to filter your accounts (custom fields, tags)
-- Create separate automations for each market segment
-- Build unique workflows based on market segments
+- Create the lists your accounts will be sorted into.
+- Define the target-market criteria (location, custom fields, tags).
 
-### AGOGE Task Sequence on Company (Advanced Automation)
+### AGOGE task sequence on company
 
-This automation template is triggered manually and creates an opportunity if there isn't one open for the company. It follows the AGOGE sequence to create tasks on day 1, day 3, day 4, day 7, day 10, day 14, day 17, day 19, and day 24. It sends reminders to the assigned salesperson if tasks aren't completed within 1 day for up to 5 times.
+Triggered manually. Creates an opportunity on the company (if one isn't already open), then creates tasks on days 1, 3, 4, 7, 10, 14, 17, 19, and 24 following the AGOGE methodology. Sends reminders to the assigned salesperson if tasks aren't completed within 1 day, up to 5 times.
 
 **Prerequisites:**
-- Pipeline set up to create sales opportunities
-- Product or package added to opportunities
 
-**How It Works:**
-- Creates tasks following the AGOGE methodology
-- Sends reminders for incomplete tasks
-- Stops when no open opportunities exist or tasks aren't completed within 5 days
+- A sales pipeline set up for opportunities.
+- A product or package associated with the opportunity.
 
-### Nurture Cold Leads (Advanced Automation)
+The automation stops when no open opportunities remain or when tasks aren't completed within 5 days.
+
+### Nurture cold leads
 
 <iframe src="//www.loom.com/embed/1a8fedb03683462588554cd0ce24a0e5" width="560" height="315" frameborder="0" allowfullscreen></iframe>
 
-Put a cold lead into a list and see if they engage with a starter email campaign before sending a Snapshot Report campaign.
+Put a cold lead into a list, send a starter email campaign, and based on engagement, either send a Snapshot Report campaign or mark the lead as disengaged.
 
-**Setup Requirements:**
-- Create lists for Cold Leads, Warm Leads, and Disengaged contacts
-- Set up two email campaigns: starter and Snapshot Report
-- Have at least one salesperson created
+**Setup:**
 
-**Note:** Standard rates apply for Snapshot campaigns beyond your allocation.
+- Create lists for Cold Leads, Warm Leads, and Disengaged contacts.
+- Publish two email campaigns: the starter and the Snapshot Report follow-up.
+- Have at least one salesperson created.
 
-### Systematize Your Sales Process
+:::note
+Standard rates apply for Snapshot campaigns beyond your allocation.
+:::
+
+### Systematize your sales process
 
 <iframe src="//www.loom.com/embed/8be38913796d441aa073f3f307732f07" width="560" height="315" frameborder="0" allowfullscreen></iframe>
 
-When an account is added to a list, this automation ensures a uniform sales process is followed. With an opportunity and sales task automatically created, less time is spent on administration while ensuring needed data is available.
+When an account is added to a list, automatically create an opportunity and a sales task so your team runs a consistent process without manual setup.
 
-**Setup Requirements:**
-- Set up a list for accounts requiring sales outreach
-- Create an email campaign for post-contact follow-up
+**Setup:**
 
-## System Automations
+- A list for accounts requiring sales outreach.
+- An email campaign for post-contact follow-up.
 
-System automations are pre-built automations that run automatically in the background to enhance your platform experience. These automations are managed by Vendasta and help streamline common processes.
+## Related resources
 
-### What Are System Automations?
-
-System automations are built-in workflows that:
-- Run automatically without user configuration
-- Handle common platform tasks
-- Improve user experience and data consistency
-- Cannot be modified by users (but can often be disabled)
-
-### Common System Automations
-
-**Hot Lead Detection**
-- Automatically identifies engaged prospects
-- Flags accounts showing high interest
-- Triggers notifications to sales teams
-
-**Product Activation Workflows**
-- Handles standard onboarding processes
-- Creates necessary accounts and permissions
-- Sends welcome communications
-
-**Data Synchronization**
-- Keeps information consistent across systems
-- Updates related records automatically
-- Maintains data integrity
-
-**Notification Systems**
-- Sends alerts for important events
-- Manages communication preferences
-- Handles escalation procedures
-
-### Managing System Automations
-
-While you cannot modify system automations, you can:
-- View their activity in automation history
-- Disable specific system automations if needed
-- Create complementary custom automations
-- Monitor their impact on your workflows
-
-## Template Customization Best Practices
-
-### Before You Start
-
-1. **Understand Your Process**: Map out your current manual process
-2. **Identify Key Triggers**: Determine what events should start the automation
-3. **Define Success Metrics**: Know how you'll measure the automation's effectiveness
-4. **Plan for Edge Cases**: Consider unusual scenarios that might occur
-
-### Customization Guidelines
-
-1. **Start Simple**: Use the template as-is first, then add complexity
-2. **Test Thoroughly**: Test with real data before going live
-3. **Document Changes**: Keep track of modifications you make
-4. **Monitor Performance**: Watch how the automation performs over time
-
-### Common Customizations
-
-**Adding Conditions**
-- Filter triggers based on account properties
-- Add geographic or demographic criteria
-- Include/exclude specific account types
-
-**Extending Workflows**
-- Add additional notification steps
-- Include more comprehensive data collection
-- Create parallel processes for different scenarios
-
-**Integration Enhancements**
-- Connect to external systems via API
-- Add webhook notifications
-- Sync with third-party tools
-
-## Getting Help with Templates
-
-### Resources
-
-- **Template Documentation**: Each template includes detailed setup instructions
-- **Video Tutorials**: Many templates have accompanying video guides
-- **Community Support**: Ask questions in the [Vendasta community](https://www.facebook.com/groups/vendasta)
-- **Professional Services**: Consider consulting for complex customizations
-
-### Best Practices for Success
-
-1. **Start with Popular Templates**: Begin with widely-used templates that have proven success
-2. **Customize Gradually**: Make small changes and test before adding more complexity
-3. **Monitor and Optimize**: Regularly review performance and make improvements
-4. **Share Knowledge**: Document successful customizations for your team
-
-Templates are designed to give you a head start on automation. They represent best practices and common use cases, but remember that every business is unique. Don't hesitate to customize templates to fit your specific needs and processes.
+- [Partner-made automation templates](./partner-made-automation-templates.mdx) — build templates for your clients to use
+- [Automations overview](./index.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Automation steps reference](./automation-steps-reference.mdx)

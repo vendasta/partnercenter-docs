@@ -4,7 +4,7 @@ sidebar_label: Configuring Capabilities
 sidebar_position: 2
 ---
 
-import { AISparkleIcon } from '@site/src/components/Icons';
+import { AISparkleIcon, GraduationCapIcon } from '@site/src/components/Icons';
 
 This guide walks you through enabling and configuring built-in capabilities for your AI Employees. Follow these steps to set up capabilities that handle common business tasks like lead capture and appointment booking.
 
@@ -29,15 +29,17 @@ If you don't see the Configure button, verify you have the necessary permissions
 
 1. In the AI Employee configuration panel, scroll down to the **Capabilities** section.
 2. Click to expand the section if it's collapsed.
-3. You'll see a list of available built-in capabilities with toggle switches.
+3. You'll see a list of capabilities already added to the AI Employee.
 
-## Step 3: Enable Desired Capabilities
+## Step 3: Add Desired Capabilities
 
-For each capability you want to activate:
+Capabilities that appear in the Capabilities section are active. To add a new one:
 
-1. **Review the capability description** to understand what it does.
-2. **Toggle the capability switch** to the "on" position.
+1. Click **+ Add a capability**.
+2. **Review the capability description** to understand what it does.
 3. **Add specific instructions** (optional) to customize how the capability behaves.
+
+To remove a capability, click the three-dot menu next to it and select **Remove**.
 
 ### Common capability configurations
 
@@ -100,6 +102,17 @@ Get contact info when needed.
 - **Keep it concise** - Shorter, specific instructions often work better than long paragraphs
 - **Test and iterate** - Try different phrasings and see what produces better results
 :::
+
+### Tailor a capability to specific channels
+
+Your AI Employee knows which channel it's responding on, so a capability's instructions can reference the channel by name. This is useful when a task should behave differently depending on where the customer reaches out — for example, collecting fewer details for lead capture over SMS than by email:
+
+```
+When capturing a lead on SMS, ask for name and phone number only, one question at a time, and keep each message short.
+When capturing a lead by email, you can ask for name, email, phone, and preferred appointment time in a single reply.
+```
+
+For guidance on channel-specific behavior across the whole AI Employee, see [Adjust responses by channel](../ai-workforce/index.mdx#adjust-responses-by-channel).
 
 #### Why Examples Matter
 
@@ -186,7 +199,7 @@ After initial setup:
 ### Capabilities conflicting
 - **Review capability priorities**: Some capabilities may override others
 - **Clarify instructions**: Make trigger conditions more specific
-- **Disable conflicting capabilities**: Temporarily turn off capabilities that interfere
+- **Remove conflicting capabilities**: Remove capabilities that interfere and re-add them once instructions are refined
 
 ## Advanced configuration tips
 
@@ -217,5 +230,12 @@ Track key metrics to measure capability effectiveness:
 - **Integration Setup**: Connect external systems to enhance capability functionality
 
 Need help with specific capability configurations? Check our [troubleshooting guide](#troubleshooting-common-issues) or contact support for personalized assistance.
+
+<div style={{display: 'flex', alignItems: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px 0'}}>
+  <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
+  <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)'}}>
+    New to how AI Employees work? Take the <a href="/learn/ai-foundations" style={{color: '#3C9A63', fontWeight: 600}}>AI foundations</a> course in Vendasta Learn — Beginner, 6 lessons.
+  </span>
+</div>
 
 

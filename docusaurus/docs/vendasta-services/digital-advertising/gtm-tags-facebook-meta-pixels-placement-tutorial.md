@@ -1,39 +1,20 @@
 ---
 title: "Google Tag Manager & Facebook Meta Pixels Overview"
 sidebar_label: "GTM Tags & Facebook Meta Pixels"
-description: "This article will guide you through the essentials of Google Tag Manager (GTM) tags and Facebook Meta Pixels. Understanding and implementing these tools is cru"
+description: "This article guides you through the essentials of Google Tag Manager (GTM) tags and Facebook Meta Pixels, and how to install and verify them on your website."
 ---
 
-This article will guide you through the essentials of Google Tag Manager (GTM) tags and Facebook Meta Pixels. Understanding and implementing these tools is crucial for tracking and optimizing your digital marketing campaigns, ensuring you get the most out of your advertising efforts.
-
-**Table of Contents:**
-
-*   **What is a GTM?**
-    *   How GTM Works
-    *   Why You Need GTM on Your Website
-*   **What is a Facebook Meta Pixel?**
-    *   How Facebook Meta Pixel Works
-    *   Why You Need Facebook Meta Pixel on Your Website
-*   **Obtaining the GTM Code or Facebook Meta Pixel Code**
-    *   Finding the GTM Code
-    *   Finding the Facebook Meta Pixel Code
-*   **Checking Your Website for Existing Code**
-*   **Adding a GTM or Facebook Meta Pixel to Your Website**
-    *   Access the Backend of the Website
-    *   Adding the GTM Code to the Website
-    *   Adding the Facebook Meta Pixel Code to the Website
-*   **Verifying Correct Installation & Functionality of GTM or Facebook Meta Pixel on Website**
-    *   Verify Your GTM Installation
-    *   Verify Your Facebook Meta Pixel Installation
+This article guides you through the essentials of Google Tag Manager (GTM) tags and Facebook Meta Pixels. Understanding and implementing these tools is crucial for tracking and optimizing your digital marketing campaigns, ensuring you get the most out of your advertising efforts.
 
 ## What is a GTM?
 
 **Google Tag Manager (GTM)** is a free tool provided by Google that allows you to manage and deploy marketing tags (snippets of code or tracking pixels) on your website without having to modify the code directly. Tags are tiny bits of website code that can measure traffic and visitor behaviour, understand the impact of online advertising and social channels, use remarketing and audience targeting, and test and improve your site.
 
-**How GTM Works**  
+### How GTM works
+
 GTM uses a container tag to contain all the other tags for your site, like Google Analytics, Google Ads, or third-party tags. When a user visits your website, the container tag is triggered and fires all the tags contained within it based on specific rules you set up. This allows for greater control and flexibility in managing your tags without needing to involve a developer for each update.
 
-**Why You Need GTM on Your Website**
+### Why you need GTM on your website
 
 1.  **Ease of Use:** Marketers can easily add and update website tags without needing technical knowledge or a developer's help.
 2.  **Speed:** Updates and changes to tags can be done quickly and efficiently.
@@ -47,10 +28,11 @@ GTM is crucial for running effective digital ad campaigns. It ensures accurate d
 
 A **Facebook Meta Pixel** is a snippet of JavaScript code that you place on your website. It allows you to track visitor activity on your site, gather insights about your audience, and measure the effectiveness of your Facebook advertising campaigns.
 
-**How Facebook Meta Pixel Works**  
+### How Facebook Meta Pixel works
+
 When someone visits your website and takes an action (like completing a purchase), the Facebook Pixel is triggered and reports this action. This allows you to track visitors as they interact with your website, ensuring your ads are shown to the right people and measuring the outcomes of your ads.
 
-**Why You Need Facebook Meta Pixel on Your Website**
+### Why you need Facebook Meta Pixel on your website
 
 1.  **Audience Insights:** Helps you understand your audience better by tracking their interactions on your website.
     
@@ -65,21 +47,21 @@ When someone visits your website and takes an action (like completing a purchase
 
 Implementing the Facebook Meta Pixel is essential for running successful Facebook ad campaigns. It provides valuable data for optimizing ads and understanding user behaviour on your website.
 
-## Obtaining the GTM Code or Facebook Meta Pixel Code:
+## Obtaining the GTM code or Facebook Meta Pixel code
 
 To add a GTM or Facebook Meta Pixel to your website, you will need to add the code for the GTM container or the pixel to the website.
 
-**Finding the GTM Code:**
+### Finding the GTM code
 
 1.  Open the [Google Tag Manager website](https://tagmanager.google.com/) and sign in with the Google account you’ve used to create the tags and containers.
 2.  Once your container is created, Google Tag Manager will provide you with the GTM code snippets. There will be two pieces of code: one to be placed in the `<head>` section and one in the `<body>` section of your website's HTML.
     1.  The GTM itself is quite short (ex: GTM-ABCDEFG), but the entire code will be several lines of text.
 
-**Finding the Facebook Meta Pixel Code:**
+### Finding the Facebook Meta Pixel code
 
 1.  Log into your Facebook account and go to [Facebook Ads Manager](https://www.facebook.com/adsmanager).
     
-2.  Click on the menu icon (a grid of nine small squares) in the top left corner to open the Business Tools menu. Select **Events Manager**.
+2.  Click on the menu icon (a grid of nine small squares) in the top left corner to open the Business Tools menu. Select `Events Manager`.
     
 3.  In the Events Manager, you’ll see a list of data sources. Look for the section labelled “Pixels.”
     
@@ -87,12 +69,12 @@ To add a GTM or Facebook Meta Pixel to your website, you will need to add the co
     
 5.  Once you click on your pixel, you’ll be taken to the pixel details page.
     
-6.  Click on the **Set Up** button in the top right corner.
+6.  Click on the `Set Up` button in the top right corner.
     
-    1.  Choose “Install Pixel” and then “Manually add pixel code to website” to access the pixel code.
+    1.  Choose `Install Pixel` and then `Manually add pixel code to website` to access the pixel code.
         
 
-## Checking Your Website for Existing Code:
+## Checking your website for existing code
 
 In case the code has already been placed on the site, it’s a good idea to check for it first.
 
@@ -104,22 +86,22 @@ In case the code has already been placed on the site, it’s a good idea to chec
     1.  Review the results to see if any match your GTM or Facebook Meta Pixel.
 4.  If the code is not on the website, proceed with the below steps to add it.
 
-## Adding a GTM or Facebook Meta Pixel to Your Website:
+## Adding a GTM or Facebook Meta Pixel to your website
 
-**Access the Backend of the Website:**
+### Access the backend of the website
 
 1.  Go to the backend of your website and navigate to the HTML sections. (The steps will be different depending on your website platform and builder.)
     
     _Below are the steps for a WordPress website built with Divi:_
     
-2.  Within the WordPress dashboard, click on “Divi” from the navigation bar on the left.  
+2.  Within the WordPress dashboard, click on `Divi` from the navigation bar on the left.  
     ![](./img/25119048322327-8016ff584a.png)
-3.  From the Divi Theme Options page, click on the **Integration** tab.  
+3.  From the Divi Theme Options page, click on the `Integration` tab.  
     ![](./img/25119048322327-6c06f2c968.png)
-4.  Look for two boxes in which code can be added—one for the `<head>` and one for the `<body>`.  
+4.  Look for two boxes in which code can be added, one for the `<head>` and one for the `<body>`.  
     ![](./img/25119048322327-d0ba257aff.png)
 
-**Adding the GTM Code to the Website:**
+### Adding the GTM code to the website
 
 1.  From Google Tag Manager, copy the GTM code snippets and paste them into your website’s HTML where instructed.
     1.  Paste the code for the `<head>` in the relevant section and the code for the `<body>` into the relevant section.
@@ -127,28 +109,28 @@ In case the code has already been placed on the site, it’s a good idea to chec
             
             This approach ensures that your tags in the GTM will fire ASAP, whereas placing the code lower in the HTML script will cause them to fire later and could result in missing some of your data.
             
-2.  Click the green **Save Changes** button at the bottom of the page.
+2.  Click the green `Save Changes` button at the bottom of the page.
 
-**Adding the Facebook Meta Pixel Code to the Site:**
+### Adding the Facebook Meta Pixel code to the site
 
 1.  Copy the entire pixel code provided by Facebook.
 2.  Paste the pixel code into your website’s HTML within the header (i.e. the `<head>`) section.
     1.  (You will need to access the backend of your website to do this.)
 3.  Paste the entire pixel code just before the closing `</head>` tag.  
     ![](./img/25119048322327-a9b3470729.png)
-4.  Click the green **Save Changes** button at the bottom of the page.
+4.  Click the green `Save Changes` button at the bottom of the page.
 
 Now that the GTM code and/or the Facebook Meta Pixel codes have been added to the site, you should verify the installation and that they’re functioning correctly.
 
-## Verifying Correct Installation & Functionality of GTM or Facebook Meta Pixel on Website:
+## Verifying correct installation and functionality of GTM or Facebook Meta Pixel on website
 
-**Verify Your GTM Installation:**
+### Verify your GTM installation
 
-To verify that you’ve installed the GTM and that it’s functioning correctly, you can use a browser extension tool, like Google’s [Tag Assistant Legacy](https://chromewebstore.google.com/detail/deprecated-tag-assistant/kejbdjndbnbjgmefkgdddjlbokphdefk) from the Chrome Web Store.  
-_Note: This extension is deprecated; however, we find it is more straightforward to use than Google’s [Tag Assistant Companion](https://chromewebstore.google.com/detail/tag-assistant-companion/jmekfmbnaedfebfnmakmokmlfpblbfdm) extension. With this extension no longer being maintained, keep in mind that the information may be inaccurate._
+To verify that you’ve installed the GTM and that it’s functioning correctly, you can use a browser extension tool, like Google’s [Tag Assistant Companion](https://chromewebstore.google.com/detail/tag-assistant-companion/jmekfmbnaedfebfnmakmokmlfpblbfdm) from the Chrome Web Store.  
+_Note: The steps below describe [Tag Assistant Legacy](https://chromewebstore.google.com/detail/deprecated-tag-assistant/kejbdjndbnbjgmefkgdddjlbokphdefk), an older Google extension that is deprecated and no longer maintained. Tag Assistant Companion is Google's current, actively maintained equivalent, though its interface differs from the steps outlined below._
 
 1.  Install and enable the Tag Assistant Legacy browser extension from the Chrome Web Store.
-2.  Visit your website homepage on the front end. Click on the Tag Legacy browser extension. In the pop-up window, click the blue **Enable** button.
+2.  Visit your website homepage on the front end. Click on the Tag Legacy browser extension. In the pop-up window, click the blue `Enable` button.
     
     1.  Refresh/reload your website homepage within the same tab.
         
@@ -156,7 +138,7 @@ _Note: This extension is deprecated; however, we find it is more straightforward
     ![](./img/25119048322327-f0b3c838b6.png)
     1.  If there are any errors, you can click on them to view more details.
 
-**Verify Your Pixel Installation:**
+### Verify your Facebook Meta Pixel installation
 
 You can use a browser extension tool, like [Meta Pixel Helper](https://chromewebstore.google.com/detail/meta-pixel-helper/fdgfkebogiimcoedlicjlajpkdmockpc) from the Chrome Web Store, to verify that you've installed the pixel and that it's functioning correctly.
 

@@ -1,280 +1,122 @@
 ---
-title: Troubleshooting Automations
-description: Comprehensive guide to troubleshooting automation issues, understanding common problems, and resolving errors in Vendasta's platform.
-sidebar_position: 7
+title: Troubleshooting automations
+description: Diagnose common automation problems — why an automation isn't running, campaign errors, and whether you can undo a run.
+sidebar_position: 11
 ---
 
-# Troubleshooting Automations
+# Troubleshooting automations
 
-This comprehensive guide covers common automation issues, their solutions, and best practices for preventing problems before they occur.
+This page covers the issues you're most likely to hit. For a full picture of activity and error details, see [Managing your automations](./managing-your-automations.mdx).
 
-## Common Automation Issues
+## Why isn't my automation running?
 
-### Why Isn't My Automation Running?
+### 1. The automation is turned off
 
-There are several reasons why your automation, or a step in your automation might not be running:
+Automations only run when the toggle at the top-right of the automation editor is set to **On**.
 
-#### 1. Automation is Turned Off
+![Automation on/off toggle](./img/automations/faqs/automation-toggle-button.png)
 
-The automation must be turned **On** using the toggle button in the top-right of the automation editor.
+### 2. The entry setting is "Run once per account"
 
-![Automation toggle button](./img/automations/faqs/automation-toggle-button.png)
+By default, an automation only runs the first time the trigger conditions are met for a given account. If you need it to run every time, change **Entry settings** in the automation's **Advanced** section to **Run every time**.
 
-**Solution**: Navigate to your automation and ensure the toggle is set to "On".
+### 3. A previous step threw an error and stopped the run
 
-#### 2. Entry Settings Configuration
+If a step fails and your **Error handling settings** are set to **Stop that specific automation run**, the workflow halts.
 
-The automation may be configured to run **once per account**, which is the default behavior. To allow the automation to run multiple times per account, update the **Entry settings** in the **Settings** tab of the automation.
+Check the **Activity** tab for the specific error, then either:
 
-**Solution**: 
-1. Go to the **Settings** tab of your automation
-2. Under **Entry settings**, change from "Run once per account" to "Run every time"
-3. Save your changes
+- Fix the underlying issue (missing data, misconfigured step, etc.), then retry the run from the failed step, or
+- If non-critical, change **Error handling settings** to **Ignore the error and continue** so future runs don't stop.
 
-#### 3. Automation Encountered an Error
+### 4. The trigger conditions don't match
 
-The automation may have encountered an error. Check the **Activity** tab for error messages. If you would like the automation to keep running when an error occurs, update the **Error handling settings** in the **Settings** tab of the automation.
+Double-check your trigger's conditions against the account or record you expect it to fire on:
 
-**Solution**:
-1. Check the **Activity** tab for specific error messages
-2. Fix the underlying issue causing the error
-3. Optionally, update **Error handling settings** to "Ignore the error and continue"
+- Are you using **AND** when you meant **OR** (or vice versa)?
+- Are the conditions too restrictive?
+- Test with a record you know should qualify.
 
-#### 4. Trigger Conditions Not Met
+### 5. A step is running before its data is ready
 
-The automation may have a trigger condition that doesn't match any accounts. Double-check how your trigger is set up to make sure accounts meet all of the criteria.
+Some triggers complete before downstream data exists. For example, when an account is created it takes about 10 minutes before a salesperson is assigned — so an if/else step that checks the salesperson will find nothing if it runs immediately.
 
-**Solution**:
-1. Review your trigger conditions carefully
-2. Test with a known account that should meet the criteria
-3. Simplify conditions if they're too restrictive
-4. Use OR conditions instead of AND if appropriate
+Add a **Delay** or **Delay until an event happens** step before any branch that depends on upstream data.
 
-#### 5. Missing Delay Steps
+### 6. A step has a once-per-account limit
 
-The automation may have a step that only makes sense after a delay occurs, but no delay was provided. For example, you may build automation that starts with a trigger of an account being created, and then an if/else branch based on the salesperson assigned to the account. In this case, it takes about 10 minutes to assign a salesperson to an account once the account is created. Since that delay is not accounted for in the automation, the automation will stop running when it gets to the if/else branch.
+Some steps can only run once per account regardless of settings. For example, an email campaign can only be sent to the same account once. If your automation is set to run multiple times per account and includes a "Send campaign" step, later runs will error.
 
-**Solution**:
-1. Add appropriate delay steps before conditions that depend on other processes
-2. Use "Delay Until" steps for event-based delays
-3. Add simple time delays (e.g., 10-15 minutes) for system processes
+Design around these limits by using different campaigns or by using pause/resume campaign steps instead.
 
-#### 6. Step Limitations
+## Webhook action isn't sending data correctly
 
-The automation may have a step that can only run once per account under any circumstance, which can't be changed. For example, an email campaign can only be sent **once** to the same account. If you build automation that involves sending a campaign to an account, and you want the automation to run multiple times per account, the automation will have errors since it can't send the campaign multiple times.
+### External system receives no data
 
-**Solution**:
-1. Understand which steps have "once per account" limitations
-2. Design workflows that account for these limitations
-3. Use different campaigns for repeat communications
-4. Consider using pause/resume campaign steps instead
+The most common cause is that fields were mapped as **request headers** instead of in the **request body**. Webhook data must be sent as JSON in the request body.
 
-## Email Campaign Issues
+Open the **Send Webhook** step and verify that your field mappings are in the **Body** section as JSON key–value pairs, not in a headers section. Remove any header mappings and re-add the fields to the body.
 
-### Campaign Failed to Start
+### `id.trim is not a function` error
 
-When attempting to start an email campaign from Automations, you may encounter an error stating: "Failed to complete due to an error. The required contact information for campaigns is missing."
+This error means a mapped field value is an integer rather than a string. All webhook body values must be strings. Re-map the affected field as text, or use the `toString()` expression to convert the value before passing it.
 
-![Campaign Failed Error](./img/automations/faqs/campaign-failed-error.png)
+### Webhook URL is not responding
 
-This error occurs when there is no contact information specified in Partner Center for your business. You must include your contact information within every promotional email campaign, including a physical mailing address or PO Box where you can receive mail.
+Confirm the URL is reachable from outside your network and accepts HTTP POST requests. Test it with a tool like [webhook.site](https://webhook.site) before connecting it to the automation.
 
-#### Solution: Add Required Contact Information
+### Limitations
 
-To fix this error, you'll have to enter your contact information in Partner Center:
+- File attachments (PDFs, images, etc.) cannot be sent via webhook. Pass a URL to the file instead.
+- The Send Webhook step is not available on all contact-based triggers.
 
-1. Go to **Partner Center** > **Administration** > [**Customize**](https://partners.vendasta.com/customize-design)
-2. Expand the **Email Settings** tab
-3. In the **Required Contact Information for Campaigns** section, fill in the required fields
-4. Click **Apply Changes** to save your settings
+## Campaign failed to start
 
-:::note Market-Specific Settings
-If you have Markets enabled, make sure that each market has the required contact information. To access the email settings for each market, click on the **Markets** tab at the top of the **Customize** page, then click the **Edit** icon for a specific market. For each market, you can choose to use the **Partner's Contact Information** or **Market's Contact Information**. However, selecting **None** will disable campaigns from being sent in that market.
+When starting an email campaign from an automation, you may see this error:
+
+> Failed to complete due to an error. The required contact information for campaigns is missing.
+
+![Campaign failed error](./img/automations/faqs/campaign-failed-error.png)
+
+**Cause:** Contact information for your business isn't set in Partner Center. Every promotional email campaign must include a physical mailing address or PO Box.
+
+**Fix:**
+
+1. Go to **Partner Center** → **Administration** → [**Customize**](https://partners.vendasta.com/customize-design).
+2. Expand the **Email Settings** tab.
+3. Fill in the **Required Contact Information for Campaigns** section.
+4. Click **Apply Changes**.
+
+:::note Markets
+If Markets are enabled, each market needs contact information. Open the **Markets** tab on the **Customize** page, click **Edit** on each market, and choose **Partner's Contact Information** or **Market's Contact Information**. Selecting **None** disables campaigns for that market, even the default market.
 :::
 
-:::warning Default Market Requirements
-Even if it is a default market, this setting is necessary in order to get the campaigns completed successfully.
-:::
+![Market contact settings](./img/automations/faqs/market-contact-settings.png)
 
-![Market Contact Settings](./img/automations/faqs/market-contact-settings.png)
+## Can I remove an account from an automation that's already running?
 
-### Other Campaign Issues
+Once an automation has started processing an account, the completed steps can't be undone. What you can do depends on whether the run is still in flight:
 
-**Campaign Not Sending**
-- Verify the campaign is published and active
-- Check that the account has users with valid email addresses
-- Ensure the campaign hasn't already been sent to the account
+- **Run is still in progress or waiting.** Check the **Activity** tab for runs in **In progress** or **Waiting** status (for example, between delay steps). You may be able to cancel the remaining steps from there.
+- **Run has already completed.** You'll need to manually reverse any actions that can be undone (remove tags, deactivate products, etc.).
 
-**Campaign Sending to Wrong Audience**
-- Review your trigger conditions
-- Check list membership if using list-based triggers
-- Verify account segmentation is correct
+To prevent unintended runs going forward, add conditions or exclusion lists to the trigger so the affected accounts aren't eligible.
 
-## Account Management Issues
+## Getting help
 
-### Can I Remove an Account from an Automation?
+If the above doesn't resolve the issue, reach out to support with:
 
-Once an account has been processed through automation, it cannot be undone. However, if the automation includes a delay step, you may have a brief window of time to intervene and stop the process. If no delay step is present, the automation will complete almost instantly, leaving no opportunity to interrupt it.
-
-#### Prevention Strategies
-
-1. **Use Test Accounts**: Always test automations with test accounts first
-2. **Add Confirmation Steps**: Include manual approval steps for critical actions
-3. **Use Staging Environments**: Test in a separate environment before production
-4. **Implement Safeguards**: Add conditions to prevent automation on certain account types
-
-#### What You Can Do
-
-**If the automation is still running:**
-1. Go to the **Activity** tab
-2. Look for "In Progress" or "Waiting" status
-3. If found, you may be able to cancel the remaining steps
-
-**If the automation has completed:**
-1. Manually reverse any actions that can be undone
-2. Update account records to reflect the correct state
-3. Add the account to exclusion lists to prevent future issues
-
-## Data and Integration Issues
-
-### API and Webhook Problems
-
-**API Automation Not Triggering**
-1. Verify API credentials are correct
-2. Check API endpoint URLs
-3. Review payload format and required fields
-4. Test API calls manually first
-
-**Webhook Issues**
-1. Confirm webhook URL is accessible
-2. Check webhook payload format
-3. Verify authentication if required
-4. Test webhook endpoint independently
-
-### CRM Integration Issues
-
-**Contact/Company Creation Failures**
-1. Verify required fields are populated
-2. Check for duplicate prevention rules
-3. Ensure proper permissions are set
-4. Review field mapping configuration
-
-**Opportunity Management Problems**
-1. Confirm pipeline stages exist
-2. Check opportunity association rules
-3. Verify user permissions for opportunity creation
-4. Review field validation requirements
-
-## Performance and Timing Issues
-
-### Automation Running Too Slowly
-
-**Causes and Solutions:**
-
-1. **Too Many Simultaneous Runs**
-   - Stagger automation triggers
-   - Use delay steps to spread load
-   - Consider rate limiting
-
-2. **Complex Conditions**
-   - Simplify trigger conditions
-   - Reduce the number of conditional branches
-   - Optimize filter logic
-
-3. **External API Delays**
-   - Add appropriate timeout settings
-   - Implement retry logic
-   - Consider asynchronous processing
-
-### Timing-Related Issues
-
-**Steps Executing Out of Order**
-1. Add explicit delay steps between dependent actions
-2. Use "Delay Until" steps for event-based sequencing
-3. Review automation flow logic
-
-**Race Conditions**
-1. Identify competing automations
-2. Add coordination mechanisms
-3. Use exclusive locks where necessary
-
-## Diagnostic Tools and Techniques
-
-### Using the Activity Tab
-
-The Activity tab is your primary diagnostic tool:
-
-1. **Filter by Status**: Focus on "Error" status entries
-2. **Review Error Messages**: Look for specific error details
-3. **Check Timing**: Identify when issues occurred
-4. **Track Progress**: Monitor "In Progress" automations
-
-### Testing Strategies
-
-**Systematic Testing Approach:**
-
-1. **Unit Testing**: Test individual steps in isolation
-2. **Integration Testing**: Test complete workflows end-to-end
-3. **Load Testing**: Test with multiple simultaneous triggers
-4. **Edge Case Testing**: Test with unusual or boundary conditions
-
-**Test Account Strategy:**
-1. Create dedicated test accounts
-2. Use test data that mirrors production
-3. Test all possible trigger scenarios
-4. Verify cleanup procedures work correctly
-
-### Monitoring and Alerting
-
-**Set Up Proactive Monitoring:**
-
-1. **Error Notifications**: Configure alerts for automation failures
-2. **Performance Monitoring**: Track execution times and success rates
-3. **Regular Reviews**: Schedule periodic automation health checks
-4. **Capacity Planning**: Monitor system resource usage
-
-## Prevention Best Practices
-
-### Design Phase
-
-1. **Plan Thoroughly**: Map out complete workflows before implementation
-2. **Consider Edge Cases**: Think about unusual scenarios
-3. **Design for Failure**: Plan how to handle errors gracefully
-4. **Keep It Simple**: Start with simple automations and add complexity gradually
-
-### Implementation Phase
-
-1. **Test Extensively**: Test all scenarios before going live
-2. **Use Staging**: Implement in a test environment first
-3. **Gradual Rollout**: Start with a small subset of accounts
-4. **Monitor Closely**: Watch for issues during initial deployment
-
-### Maintenance Phase
-
-1. **Regular Reviews**: Periodically review automation performance
-2. **Update Conditions**: Keep trigger conditions current with business changes
-3. **Clean Up**: Remove or update obsolete automations
-4. **Document Changes**: Keep records of modifications and their reasons
-
-## Getting Help
-
-If you continue to experience issues after following this troubleshooting guide:
-
-1. **Check Documentation**: Review related articles for additional context
-2. **Contact Support**: Reach out to Vendasta support with specific error messages
-3. **Community Resources**: Ask questions in the [Vendasta community](https://www.facebook.com/groups/vendasta)
-4. **Professional Services**: Consider consulting services for complex implementations
-
-### Information to Provide When Seeking Help
-
-When contacting support, include:
 - Automation name and ID
-- Specific error messages
-- Screenshots of the issue
-- Steps to reproduce the problem
-- Account or entity IDs affected
+- The specific error message from the **Activity** tab
+- Steps to reproduce
+- Account or record IDs affected
 - Timeline of when the issue started
 
-<a className="button button--primary" href="https://partners.vendasta.com/customize-design" target="_blank" rel="noopener">
-  Configure Contact Information
-</a>
+You can also ask in the [Vendasta community](https://www.facebook.com/groups/vendasta).
+
+## Related resources
+
+- [Managing your automations](./managing-your-automations.mdx) — Activity tab, error details, retry
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — entry settings, error handling
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Automation steps reference](./automation-steps-reference.mdx)

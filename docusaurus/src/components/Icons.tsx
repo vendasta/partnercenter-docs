@@ -1,10 +1,10 @@
 import React from 'react';
 
-export function AISparkleIcon() {
+export function AISparkleIcon({ size = 16 }: { size?: number } = {}) {
   return (
     <svg 
-      width="16" 
-      height="16" 
+      width={size} 
+      height={size} 
       viewBox="0 0 24 24" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg" 
@@ -26,11 +26,11 @@ export function AISparkleIcon() {
   );
 }
 
-export function SettingsIcon() {
+export function SettingsIcon({ size = 16 }: { size?: number } = {}) {
   return (
     <svg 
-      width="16" 
-      height="16" 
+      width={size} 
+      height={size} 
       viewBox="0 0 24 24" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg" 
@@ -44,11 +44,11 @@ export function SettingsIcon() {
   );
 }
 
-export function CRMIcon() {
+export function CRMIcon({ size = 16 }: { size?: number } = {}) {
   return (
     <svg 
-      width="16" 
-      height="16" 
+      width={size} 
+      height={size} 
       viewBox="0 0 24 24" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg" 
@@ -62,4 +62,46 @@ export function CRMIcon() {
   );
 }
 
-export default { AISparkleIcon, SettingsIcon, CRMIcon };
+
+export function TaskIcon({ size = 16 }: { size?: number } = {}) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ display: 'inline', verticalAlign: 'middle', marginRight: '4px' }}
+    >
+      <path
+        d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-2 14-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+export function GraduationCapIcon({ size = 16, color = '#3cad6e' }: { size?: number; color?: string } = {}) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke={color}
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ display: 'inline', verticalAlign: 'middle', marginRight: '4px' }}
+    >
+      <path d="M12 4.5 2.5 9l9.5 4.5L21.5 9 12 4.5Z" />
+      <path d="M6.5 11.2v3.4c0 1.1.5 2.15 1.4 2.82C9.1 18.3 10.5 18.75 12 18.75s2.9-.45 4.1-1.33c.9-.67 1.4-1.72 1.4-2.82v-3.4" />
+      <path d="M21 9.6v5.4" />
+      <circle cx="21" cy="16.35" r="0.85" fill={color} />
+      <rect x="19.9" y="17.5" width="2.2" height="2.2" rx="0.5" fill={color} />
+    </svg>
+  );
+}
+
+export default { AISparkleIcon, SettingsIcon, CRMIcon, TaskIcon, GraduationCapIcon };

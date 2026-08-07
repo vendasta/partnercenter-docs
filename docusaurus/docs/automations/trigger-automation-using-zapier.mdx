@@ -1,13 +1,13 @@
 ---
-title: Trigger an Automation using Zapier
+title: Trigger an automation using Zapier
 sidebar_label: Trigger via Zapier
 description: Learn how to connect the Vendasta CRM to 3rd Party systems using Zapier and trigger automations.
-sidebar_position: 1
+sidebar_position: 17
 ---
 
 The Vendasta App in Zapier allows Partners to connect the Vendasta CRM to several 3rd Party systems using Zapier. Users can select any 3rd Party system available in Zapier as a Trigger which would initiate an action in the Vendasta CRM
 
-### **How Does Triggering and Automation with Zapier Work?**
+## How triggering an automation with Zapier works
 
 **Step 1: Selecting the Trigger**
 
@@ -96,3 +96,38 @@ Before publishing the Zap, be sure to test the steps in Zapier. This can help id
 ![Zapier Test Step](../business-app/automations/img/business-app/zapier/zapier-vendasta-app-14.jpg)
 
 After testing, a 'Run Automation Successful' message confirms that the Zap is working as expected and ready to be published.
+
+## Connect Facebook Lead Ads to Vendasta automations
+
+You can automatically create contacts in Vendasta CRM whenever a new lead submits a Facebook Lead Ad. This uses Zapier as middleware between Facebook and Vendasta.
+
+**Prerequisites:**
+- An active [Zapier](https://zapier.com) account
+- A Facebook Lead Ads account with at least one active lead form
+- Partner Center access with permission to manage automations and CRM
+
+### Set up the Zap
+
+1. In Zapier, create a new Zap and set **Facebook Lead Ads** as the trigger with **New Lead** as the trigger event.
+2. Connect your Facebook account, then select the Page and lead form to watch.
+3. Click **Test trigger** to pull in a sample lead.
+4. Add a Vendasta action:
+   - **Run Automation** — triggers a specific Vendasta automation for each new lead, allowing you to run a full onboarding or notification flow.
+   - **Create or Update Contact** — writes the lead directly to CRM.
+5. Connect your Vendasta account and enter your Partner ID when prompted.
+6. Map the lead fields (first name, last name, email, phone) to the corresponding Vendasta CRM fields.
+7. Test the action, then publish the Zap.
+
+### Associate contacts with companies
+
+If a contact should be linked to a company in Vendasta CRM, pass the **Company ID** in the **Primary Company** field — not the company name. The company must already exist in CRM before the Zap runs.
+
+To find a Company ID, open the company in **Partner Center** → **CRM** → **Companies** and check the URL: `.../companies/76543/details` — the number is the Company ID.
+
+### Common issues
+
+| Issue | Fix |
+|-------|-----|
+| Primary company not linking | Use the numeric Company ID, not the company name |
+| Leads not appearing in CRM | Verify the Zap is **On** and all required fields are mapped |
+| Automation not triggering | Confirm the automation is toggled **On** in Partner Center and uses a compatible trigger type |

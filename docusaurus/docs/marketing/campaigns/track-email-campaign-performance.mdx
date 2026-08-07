@@ -56,8 +56,13 @@ Unfortunately, these external initiations are out of our control. To maintain ac
 - **Completed** - how many campaigns whose emails have all been delivered. **Note:** this does not mean that the recipient has received the email; only that SendGrid has successfully sent the email to the recipient's email server. It will be up to the recipient's email server to determine if the email can be sent to the recipient's inbox.
 
 #### Email performance
-- **Engaged recipients** - how many recipients have clicked on at least one email in their campaign. 
+- **Engaged recipients** - how many recipients have clicked on at least one email in their campaign. This counts the first unique click per email address — if the same address opens multiple emails, they are still counted as one engaged recipient.
 - **Delivery rate** - describes what percentage of emails were successfully delivered. This statistic is calculated by dividing how many emails were successfully delivered with how many emails were processed. Processed events mean that SendGrid has successfully received the email Vendasta sent, but have yet to send to the recipient's email server.
+
+:::note
+Delivery rate and undeliverable are calculated **per account**, not per individual user. If one account has multiple users, the metric reflects the account's overall delivery, not each user separately. This is why delivery rate may show 100% even when only a small number of users received the email.
+:::
+
 - **Open rate** - describes what percentage of all emails have been opened. This statistic is calculated by dividing how many emails were opened with how many emails were delivered. This statistic matches Open rate in the Campaigns page.
 - **Click to open rate** - describes what percentage of your emails opened have had links on their content body clicked. This is calculated by dividing how many click events have links captured with the number of opened emails. This statistic matches CTOR in the Campaigns page.
 - **Undeliverable** - how many emails were unable to be delivered. This statistic is calculated by dividing how many emails were bounced and dropped with how many emails were processed.

@@ -6,17 +6,15 @@ tags: [commerce, orders, payments, billing, credit-cards]
 keywords: [order payments, payment collection, billing, credit cards, customer approval payments, automated billing]
 ---
 
-# Order Payments and Billing
-
 ## What are Order Payments?
 
 Order payments in Partner Center allow you to collect and process payments directly within the order workflow. This includes collecting first payments when orders are created, enabling customer payment collection during approval processes, and automating billing setup for ongoing subscriptions. The system securely handles credit card information and streamlines payment processing to reduce manual effort.
 
-## Why are Order Payments Important?
+## Why are order payments important?
 
 Payment collection within orders eliminates manual steps, reduces processing time, and ensures secure handling of sensitive payment information. By collecting payments directly in the order workflow, you can automatically activate orders, create subscriptions, and establish billing relationships. This streamlined approach improves cash flow and reduces the risk of payment delays or errors.
 
-## What You Can Do with Order Payments
+## What you can do with order payments
 
 With order payment features, you can:
 
@@ -29,9 +27,9 @@ With order payment features, you can:
 - Configure payment collection permissions for salespeople
 - Generate invoices automatically upon successful payment
 
-## How to Set Up Order Payments
+## How to set up order payments
 
-### How to Collect First Payments Directly from Orders
+### How to collect first payments directly from orders
 
 This feature allows you to collect and charge credit card information directly within an order:
 
@@ -70,7 +68,7 @@ This feature allows you to collect and charge credit card information directly w
 All payment details can be found in the "PAYMENT" tab of the order.
 :::
 
-### How to Enable Customer Payment Collection
+### How to enable customer payment collection
 
 Partner Center allows sales orders sent for customer approval to include payment collection capabilities:
 
@@ -80,12 +78,12 @@ Partner Center allows sales orders sent for customer approval to include payment
 - Streamlined transaction process
 - Enhanced security for customer payments
 
-![Example of order approval with payment collection](./img/collect-payment-example.png)
+<img src={require('./img/collect-payment-example.png').default} alt="Example of order approval with payment collection" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 **Configuration Steps for Administrators:**
 
 1. **Navigate to Administration**:
-   - Go to **Administration > Customize > Sales > Configure sales orders and processes**
+   - Go to `Administration` → `Customize` → `Sales` → `Configure sales orders and processes`
 
 2. **Configure Sales Orders**:
    - Find the "Salesperson submit actions" card
@@ -94,26 +92,26 @@ Partner Center allows sales orders sent for customer approval to include payment
    - Ensure "Allow salespeople to send an order to customers for approval" is checked
    - Check "Orders sent for approval by salespeople can accept payment"
 
-![Configuration settings for salespeople](./img/salespeople-config.png)
+<img src={require('./img/salespeople-config.png').default} alt="Configuration settings for salespeople" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 **Salesperson Workflow:**
-1. Salespeople can select **Submit for customer approval** on an order
+1. Salespeople can select `Submit for customer approval` on an order
 2. Order is sent to customer for approval and payment
 3. Customer approves order and provides payment information
 4. Upon successful payment, invoice with 'Paid' status is generated
 5. Order processes and changes to 'Activated' status
 
-## Payment Collection Process
+## Payment collection process
 
-### Direct Payment Collection
+### Direct payment collection
 
 **For Sales and Admin Users:**
-- Users with necessary permissions can utilize payment collection features
+- You can utilize payment collection features with the necessary permissions
 - Secure credit card storage within the order system
 - Automatic processing and activation upon successful payment
 - Clear payment tracking in dedicated PAYMENT tab
 
-### Customer Approval with Payment
+### Customer approval with payment
 
 **Enhanced Customer Experience:**
 - Customers receive approval request with payment collection capability
@@ -121,9 +119,9 @@ Partner Center allows sales orders sent for customer approval to include payment
 - Streamlined approval and payment in single workflow
 - Automatic invoice generation and order processing
 
-## Payment Handling
+## Payment handling
 
-### Successful Payments
+### Successful payments
 
 When payments are successfully processed:
 - Orders automatically activate (or schedule activation)
@@ -133,7 +131,7 @@ When payments are successfully processed:
 - Payment information is securely stored
 - Default billing settings are established
 
-### Payment Declines
+### Payment declines
 
 When payments are declined:
 - Clear indication of decline reason in PAYMENT tab
@@ -142,21 +140,21 @@ When payments are declined:
 - Opportunity to update payment information
 - Ability to retry payment collection
 
-## User Permissions
+## User permissions
 
-### Sales Users
+### Sales users
 - Can collect payments with appropriate permissions
 - Can send orders for customer approval with payment
 - Can view payment status in orders
 - Cannot access full administrative payment features
 
-### Admin Users
+### Admin users
 - Full access to payment collection features
 - Can configure payment collection settings
 - Can enable/disable customer payment collection
 - Can manage payment-related permissions for salespeople
 
-## Best Practices
+## Best practices
 
 - Verify customer payment information before processing
 - Use customer approval with payment for better customer experience
