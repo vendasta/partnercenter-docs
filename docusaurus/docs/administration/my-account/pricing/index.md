@@ -13,25 +13,25 @@ The **Pricing** section of administration shows you the wholesale pricing for yo
 
 ![Pricing page overview](./img/administration/my-account/pricing/pricing-page.png)
 
-## Understanding the Pricing Table
+## Understanding the pricing table
 
 The Pricing page displays a comprehensive table of all available products and services with the following information:
 
-### Table Columns
+### Table columns
 
 | Column | Description |
 |--------|-------------|
-| **Product/Services** | The name of the product or service, displayed with an icon for easy identification |
-| **Billing Model** | How the product is billed (Standard or Stairstep) |
-| **Wholesale Price** | The cost you pay for the product, displayed as starting price or fixed rate |
-| **Discounts** | Any active wholesale discounts applied to the product |
+| `Product/Services` | The name of the product or service, displayed with an icon for easy identification |
+| `Billing Model` | How the product is billed (Standard or Stairstep) |
+| `Wholesale Price` | The cost you pay for the product, displayed as starting price or fixed rate |
+| `Discounts` | Any active wholesale discounts applied to the product |
 
-## Pricing Details
+## Pricing details
 
 <Tabs groupId="pricing-info">
 <TabItem value="billing-models" label="Billing Models" default>
 
-### Billing Models Explained
+### Billing models explained
 
 Products use one of two billing models:
 
@@ -48,7 +48,7 @@ Products use one of two billing models:
 
 <TabItem value="price-formats" label="Wholesale Prices">
 
-### Understanding Wholesale Prices
+### Understanding wholesale prices
 
 Wholesale prices are displayed in several formats:
 
@@ -70,16 +70,16 @@ Wholesale prices are displayed in several formats:
 
 <TabItem value="discounts" label="Discounts">
 
-### Understanding Discounts
+### Understanding discounts
 
-Some products may have active wholesale discounts applied. Discounts are displayed in the **Discounts** column and show:
+Some products may have active wholesale discounts applied. Discounts are displayed in the `Discounts` column and show:
 
 - **Discount type** (e.g., "100 free units per period")
 - **Start date** when the discount became active
 - **Period information** (monthly, quarterly, etc.)
 
 :::info Example discount
-> "Active Discounts: 100 free units per period starting 2021-01-03"
+"Active Discounts: 100 free units per period starting 2021-01-03"
 
 This indicates that you receive 100 free units of the product each billing period, with the discount starting on January 3, 2021.
 :::
@@ -87,17 +87,17 @@ This indicates that you receive 100 free units of the product each billing perio
 </TabItem>
 </Tabs>
 
-## Using the Pricing Page
+## Using the pricing page
 
-### Searching for Products
+### Searching for products
 
 Use the search functionality to quickly find specific products:
 
-1. Click in the **Search products** field at the top of the page
+1. Click in the `Search products` field at the top of the page
 2. Type the product name or keywords
 3. The table filters automatically to show matching results
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 <details>
 <summary>Do prices include taxes?</summary>
