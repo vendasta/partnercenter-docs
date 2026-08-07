@@ -81,6 +81,10 @@ After improving the source account a template was built from, click **Update tem
 
 When a template finishes applying, the target account receives an activity log entry. Automations can listen for that entry and chain downstream work off a completed template application, such as rep assignment or coupon form setup.
 
+## Custom object limits
+
+Each account can have up to 3 [CRM custom objects](/crm/custom-objects). If applying a template would push a target account past this limit, the application fails for that account and Partner Center shows an error identifying the cause, rather than failing silently.
+
 ## Who this is for
 
 - Partners onboarding accounts at scale (enterprise rollouts, reseller channels, migrations)
