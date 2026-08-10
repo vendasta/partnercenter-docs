@@ -244,6 +244,13 @@ To manage what syncs, go to **Settings** on your Autotask connection page:
 - **Sync back to Autotask selected** — changes in Vendasta push to Autotask
 - **Sync back to Autotask cleared** — changes only flow from Autotask to Vendasta (one-way)
 
+### One-way vs. two-way sync
+
+| Mode | Recommended when | What to expect |
+|------|-------------------|-----------------|
+| One-way sync | Autotask is your primary source of truth and you want changes to flow into Vendasta only. | Updates made in Autotask sync into Vendasta. Changes made only in Vendasta do not write back to Autotask. |
+| Two-way sync | Your team actively works in both systems and wants updates to stay aligned. | Changes move in both directions. Agree ahead of time on who owns data quality and where edits normally happen, to avoid conflicting updates. |
+
 ## Integration example
 
 Here is a real-world example of the integration in action:
@@ -253,6 +260,16 @@ Here is a real-world example of the integration in action:
 3. The team updates Sneha Iyer's phone number in Vendasta. With **Sync back to Autotask** selected, the updated phone number flows back to Autotask automatically.
 
 <img src={require('./img/integrations/autotask/autotask_sync_example.png').default} alt="Sneha Iyer contact profile with Autotask sync activity notes" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## Recommended rollout approach
+
+Roll the integration out gradually so you can confirm it behaves as expected before relying on it for every record:
+
+1. Start with one internal test company and one contact.
+2. Verify field mapping behavior and confirm the records appear as expected in both systems.
+3. Decide whether one-way or two-way sync best fits your team.
+4. Train administrators on where to update customer records going forward.
+5. Roll out to the broader team once the process is confirmed.
 
 ## Troubleshooting
 
@@ -351,5 +368,19 @@ Yes. Direct API-to-API communication. Data encrypted in transit. No third-party 
 <summary>Why is my sync broken after a credential change?</summary>
 
 Your API credentials may have expired. Check the integration card — if it shows "Broken" status, click **Re-authenticate** and re-enter your credentials.
+
+</details>
+
+<details>
+<summary>Does the integration sync historical notes or all CRM activity?</summary>
+
+No. The integration syncs company and contact records, and it logs sync events (creates, updates, safe deletes) to the Activity Feed as they happen. It does not retroactively import historical notes or mirror all past CRM activity from one system into the other.
+
+</details>
+
+<details>
+<summary>How long does setup usually take?</summary>
+
+Most partners can complete setup in 5 to 10 minutes if they already have Autotask administrator access and the required permissions in place. Add extra time for the bulk import step if you have existing records in both systems.
 
 </details>
