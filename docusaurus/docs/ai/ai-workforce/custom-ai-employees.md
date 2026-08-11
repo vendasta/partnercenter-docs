@@ -1,6 +1,7 @@
 ---
 title: Creating Custom AI Employees
 sidebar_label: Custom AI Employees
+sidebar_position: 7
 description: Learn how to create specialized AI employees tailored to specific business functions like job estimation, project management, sales enablement, and payment coordination.
 tags: [ai-workforce, custom-capabilities, ai-employees]
 keywords: [custom AI employees, AI workforce, capabilities, tools, deployment, web chat]
@@ -27,15 +28,15 @@ Custom AI Employees are AI workers you create from scratch to handle specialized
 To create a Custom AI Employee in Partner Center, your account must be on a Professional plan or higher, as well as equivalent legacy subscriptions.
 :::
 
-## Step-by-Step: Creating a Custom AI Employee
+## Step-by-step: creating a Custom AI Employee
 
-### Step 1: Navigate to AI Workforce
+### Step 1: navigate to AI Workforce
 
-1. Navigate to **AI** > **AI Workforce**
-2. Click **Create**
+1. Navigate to `AI` → `AI Workforce`
+2. Click `Create`
 3. You'll see the configuration interface for your new Custom AI Employee
 
-### Step 2: Configure Profile
+### Step 2: configure profile
 
 Set up the basic identity and behavior of your Custom AI Employee:
 
@@ -72,13 +73,13 @@ Use bullets or numbered lists to make instructions clear. Be specific about what
 
 For more guidance on writing effective instructions, see the [AI Workforce Overview](./index.mdx#profile) section on Profile configuration.
 
-### Step 3: Set Up Channels
+### Step 3: set up channels
 
 Choose where your Custom AI Employee will work:
 
 **Available Channels:**
 
-- **Website chat**: Deploy on one or multiple website chat widgets. Custom AI Employees on Web Chat receive the visitor's current page URL with every message — see [Make responses page-aware with the visitor's URL](./ai-chat-receptionist/index.md#make-responses-page-aware-with-the-visitors-url) for how to tune prompts to use it.
+- **Website chat**: Deploy on one or multiple website chat widgets. Custom AI Employees on Web Chat receive the visitor's current page URL with every message. See [Make responses page-aware with the visitor's URL](./ai-chat-receptionist/index.md#make-responses-page-aware-with-the-visitors-url) for how to tune prompts to use it.
 - **In-platform chat**: Chat directly in Partner Center (automatically available after creation)
 
 
@@ -88,7 +89,7 @@ You do *not* need to assign an AI Employee to in-platform chat; the Chat button 
 
 For detailed information on channels, see the [AI Workforce Overview](./index.mdx#channels) section.
 
-### Step 4: Add Knowledge Sources
+### Step 4: add knowledge sources
 
 Teach your Custom AI Employee about your business:
 
@@ -109,7 +110,7 @@ Teach your Custom AI Employee about your business:
 
 For comprehensive guidance on knowledge sources, see the [Knowledge Base documentation](../knowledge-base/).
 
-### Step 5: Configure Capabilities
+### Step 5: configure capabilities
 
 Define what your Custom AI Employee can do:
 
@@ -127,7 +128,7 @@ Define what your Custom AI Employee can do:
 
 For detailed information on creating custom capabilities, see [Creating Custom Capabilities](../ai-capabilities/creating-custom-capabilities.md).
 
-### Step 6: Deploy Your Custom AI Employee
+### Step 6: deploy your Custom AI Employee
 
 Once tested, deploy your Custom AI Employee:
 
@@ -140,10 +141,10 @@ Once tested, deploy your Custom AI Employee:
 
 Assign your Custom AI Employee to a web chat widget so it handles conversations with website visitors:
 
-1. Go to **Conversations** → **Settings**, then click **Manage widgets** on the **Web Chat** card.
-2. On the **Web Chat configuration** page, click **New Web Chat** (or open an existing widget to edit it).
-3. In the **AI employee** card, click **Select employee**, choose your Custom AI Employee, and click **Ok**.
-4. Click **Next** to save, then install the widget on your site.
+1. Go to `Conversations` → `Settings`, then click `Manage widgets` on the `Web Chat` card.
+2. On the `Web Chat configuration` page, click `New Web Chat` (or open an existing widget to edit it).
+3. In the `AI employee` card, click `Select employee`, choose your Custom AI Employee, and click `Ok`.
+4. Click `Next` to save, then install the widget on your site.
 
 Requires Conversations AI Standard, Pro, or Premium. See [Web Chat Setup](../../conversations/ai-assisted-web-chat-widget.mdx) for details.
 
@@ -153,7 +154,7 @@ Requires Conversations AI Standard, Pro, or Premium. See [Web Chat Setup](../../
 - Use Custom AI Employees for decision-making in automated processes
 - See [Advanced Automation Features](../../automations/my-automations/advanced-automation-features.mdx) for details
 
-## Use Case Examples
+## Use case examples
 
 Explore these examples to see how Custom AI Employees can be tailored for specific business functions:
 
@@ -211,9 +212,9 @@ Keep customers and your team members informed by sending regular updates based o
 </TabItem>
 </Tabs>
 
-## Deployment Options
+## Deployment options
 
-### In-Platform Chat
+### In-platform chat
 
 Your Custom AI Employee is automatically available in the AI Workforce tab after creation. Team members can chat directly with the AI Employee for internal assistance and decision support.
 
@@ -225,7 +226,7 @@ Your Custom AI Employee is automatically available in the AI Workforce tab after
 
 ### Web Chat
 
-Assign your Custom AI Employee to a web chat widget to provide specialized chat experiences for website visitors. Go to **Conversations** → **Settings** → **Manage widgets**, open a widget, then use **Select employee** in the **AI employee** card to assign it. A widget uses one AI employee at a time, but the same employee can be assigned to multiple widgets.
+Assign your Custom AI Employee to a web chat widget to provide specialized chat experiences for website visitors. Go to `Conversations` → `Settings` → `Manage widgets`, open a widget, then use `Select employee` in the `AI employee` card to assign it. A widget uses one AI employee at a time, but the same employee can be assigned to multiple widgets.
 
 **Benefits:**
 
@@ -253,7 +254,7 @@ Add Custom AI Employees to automation workflows using the "Send a prompt to an A
 
 For details on automation integration, see [Advanced Automation Features](../../automations/my-automations/advanced-automation-features.mdx).
 
-## Framework Consistency
+## Framework consistency
 
 Custom AI Employees use the same framework as pre-built AI Employees. All AI Employees share:
 

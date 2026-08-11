@@ -1,6 +1,7 @@
 ---
 title: "Connect the AI Chat Receptionist with Shopify"
 sidebar_label: Connect with Shopify
+description: Connect the AI Chat Receptionist to Shopify to search products, share details, and check inventory in chat.
 ---
 
 import {AISparkleIcon} from '@site/src/components/Icons'
@@ -29,10 +30,10 @@ Before you connect your AI Receptionist to Shopify, you need to gather the follo
 
 | What you need | Where to find it | Scopes / Notes |
 |---------------|------------------|----------------|
-| **Shopify Store Domain** (`your-store.myshopify.com`) | `Admin` → `Settings` → `General`, copy `Store address` | — |
+| **Shopify Store Domain** (`your-store.myshopify.com`) | `Admin` → `Settings` → `General`, copy `Store address` | N/A |
 | **Admin API Access Token** | <p>1. Click <code>New app</code> → <code>Configure Admin API</code> (select the permissions shown in “Scopes / Notes” and click Save)</p><p>2. Click <code>Install</code> → <code>Reveal token</code></p> | <ul><li>`read_inventory`</li><li>`read_products`</li></ul> |
 | **Storefront API Access Token** | <p>1. Click <code>Enable Storefront API</code> (turn on the permission listed in “Scopes / Notes” and click Save)</p><p>2. Click <code>Install / Update</code> → <code>Reveal token</code></p> | <ul><li>`unauthenticated_read_product_listings`</li></ul> |
-| *(Optional)* **GraphQL Familiarity** | Review [Shopify Admin GraphQL API docs](https://shopify.dev/docs/api/admin-graphql) | — |
+| *(Optional)* **GraphQL Familiarity** | Review [Shopify Admin GraphQL API docs](https://shopify.dev/docs/api/admin-graphql) | N/A |
 
 #### Shopify help resources
 
@@ -54,8 +55,8 @@ This step creates the capability your AI Receptionist will reference when someon
 2. Select your AI Employee and click `Configure`.
 3. Under `Custom Capabilities`, click `Add a capability`.
 4. Fill in the following fields:
-   - **Name**: `Get Shopify Product Info`
-   - **Description**: Searches the Shopify store for products matching a keyword and returns product names, descriptions, prices, and availability using the Storefront API.
+   - `Name`: `Get Shopify Product Info`
+   - `Description`: Searches the Shopify store for products matching a keyword and returns product names, descriptions, prices, and availability using the Storefront API.
   
 :::note
 You will come back to this screen in [Step 3: Write the Prompt](#step-3-write-the-prompt).
