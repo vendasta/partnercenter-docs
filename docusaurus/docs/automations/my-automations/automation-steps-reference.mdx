@@ -32,6 +32,7 @@ Steps marked **(draft)** are in development and may change or be removed before 
 | --- | --- | --- | --- |
 | Get my team member | Retrieves a specific team member from your account for use in later steps, such as assigning a record to them or sending them a notification. | | Look up a team member before a "Notify" or "Assign" step that needs one in scope. |
 | Create a user from a contact | Creates a Business App user from an existing CRM contact. | Available on contact-scoped triggers. | When a new contact is qualified, create a user so they can access Business App. |
+| Create a user from a user | Creates a new user record based on an existing user's data — for example, cloning a user to another account. | | When a multi-location client adds a new account, copy the primary user to the new account. |
 
 ## Companies
 
@@ -145,6 +146,12 @@ Steps marked **(draft)** are in development and may change or be removed before 
 | Create a sales task (legacy) | Creates a legacy sales task. | Available on account-scoped triggers. New automations should prefer the CRM sales task step. | |
 | Create a proposal | Creates a sales proposal on the account. | Available on account-scoped triggers. | When an opportunity reaches the **Proposal** stage, auto-generate the proposal document. |
 | Create a Snapshot Report | Creates a Snapshot Report for the account or company in scope. | Snapshots typically start as F ratings because web scraping takes time. Add a delay step before using the Snapshot data. | When a new lead is qualified, generate a Snapshot to guide the sales conversation. |
+| Reopen an opportunity | Reopens a previously closed opportunity, returning it to an active pipeline stage. | Available on account-scoped triggers. | When a churned customer re-engages, reopen the associated opportunity. |
+| Query opportunities | Queries opportunities based on filter criteria and brings matching results into scope. | Available on account-scoped triggers. | Before creating a new opportunity, check if one already exists for the same product. |
+| Get open opportunities | Retrieves all open opportunities on the account and brings them into scope. | Available on account-scoped triggers. | Before closing all opportunities on churn, log a summary of the open pipeline value. |
+| Charge an invoice | Charges a specific invoice against the customer's payment method. | | When an invoice is past due, attempt automatic payment collection. |
+| Finalize an invoice | Finalizes a draft invoice, locking it for payment collection. | | When all line items are confirmed, finalize the invoice for sending. |
+| Send an invoice | Sends an invoice to the customer via email. | | After an invoice is finalized, automatically send it to the customer. |
 | Pay an invoice *(draft)* | Records a payment against an invoice. | | |
 | Void an invoice *(draft)* | Voids an open invoice. | | |
 
@@ -163,13 +170,25 @@ Steps marked **(draft)** are in development and may change or be removed before 
 | Send a public system message | Sends a public system message visible to everyone on the account. | Available on account-scoped triggers. | When an outage is resolved, post an all-clear system message. |
 | Send an SMS message via Conversations | Sends an SMS message via your Conversations inbox to a contact. | Available on contact-scoped triggers. | When a hot lead is flagged, text the contact a link to book a meeting. |
 | Send an SMS message to a phone number | Sends an SMS to any phone number you specify, including numbers not in your CRM. | | When a lead fills out a high-intent form, send an SMS to the on-call salesperson. |
+| Send a WhatsApp message to a contact | Sends an approved WhatsApp message template to a contact via Conversations. | Available on contact-scoped triggers. Requires a connected WhatsApp Business account and an approved message template. | When a contact books a meeting, send a WhatsApp confirmation with the meeting details. |
+| Send a review request | Sends a review request to a contact, prompting them to leave a review on a connected platform. | Available on contact-scoped triggers. | After a service is completed, send the contact a review request to build online reputation. |
+| Send a coupon | Sends a coupon or discount code to the account or contact. | | When a trial is about to expire, send a discount coupon to encourage conversion. |
 | Make outbound call with an employee | Places an outbound AI phone call to a contact using a selected AI employee. |  | When a hot lead is flagged, have an AI employee call the contact to qualify them and book a meeting. |
 
 ## Sales orders
 
 | Step | Overview | Special Cases | Example Use Cases |
 | --- | --- | --- | --- |
+| Create and activate a sales order | Creates a new sales order and immediately activates it in a single step. | Available on account-scoped triggers. | When a product trial converts, automatically create and activate the paid order. |
+| Activate a sales order | Activates a sales order for the account, beginning fulfillment of the ordered products. | | When an order is approved, activate it to start product delivery. |
+| Approve a sales order | Approves a pending sales order so it can proceed to activation or payment. | | When a manager reviews and approves the order, move it forward in the pipeline. |
+| Decline a sales order | Declines a pending sales order, preventing it from proceeding. | | When a credit check fails, automatically decline the order. |
+| Archive a sales order | Archives a sales order, removing it from active views while retaining the record. | | When an order has been in **Draft** for more than 90 days, archive it. |
+| Submit order for admin approval | Submits a sales order for admin approval before it can be activated. | | When a salesperson creates an order above a threshold, require admin sign-off. |
+| Submit order for customer approval | Submits a sales order for customer approval before it can proceed. | | When a renewal order is generated, send it to the customer for confirmation. |
 | Charge the order *(draft)* | Charges the payment method on the order. | | |
+| Add tags to order | Adds one or more tags to a sales order for tracking and filtering. | | Tag orders by source channel for reporting. |
+| Remove tags from order | Removes one or more tags from a sales order. | | When an order is fulfilled, remove the **Pending Fulfillment** tag. |
 
 ## Advanced
 
@@ -189,6 +208,9 @@ Steps marked **(draft)** are in development and may change or be removed before 
 | Log a call activity to the contact | Logs a call record on the contact's activity timeline. | Available on contact-scoped triggers. | When an outbound call is detected via integration, log the call on the contact. |
 | Add a note to the contact | Adds a note to a contact record. | Available on contact-scoped triggers. | When a contact hits a milestone, log it as a note for the next touchpoint. |
 | Create a CRM sales task for the contact | Creates a CRM sales task on the contact. | Available on contact-scoped triggers. | When a contact is created, create a follow-up task on the new contact. |
+| Call an endpoint | Calls an internal or external API endpoint and returns the response for use in later steps. | | Fetch data from a third-party CRM before deciding which branch to take. |
+| Associate a company and contact | Links a company and contact record in the CRM. | | When a contact is created from a form submission, associate them with the matching company. |
+| Associate a custom object with an activity | Links a custom object record to a CRM activity for tracking. | | When a service ticket is created, link it to the corresponding project custom object. |
 | Send a webhook | Sends an HTTP POST request with custom data to an external URL. Data must be sent as JSON in the request body — sending as headers is the most common misconfiguration. Cannot send file attachments. | Not available on all contact-based triggers. All mapped values must be strings; passing integers causes a runtime error. | When a key event happens, notify an external system or trigger a Zapier Zap. |
 | Trigger a webhook *(draft)* | Triggers an existing webhook configuration with data from the workflow. | Available on account-scoped triggers. | |
 
