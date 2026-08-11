@@ -44,12 +44,32 @@ Filters are case-sensitive and will not match if there are leading or trailing s
 
 ### Activity statuses
 
-Each run shows one of:
+Each run shows one of these statuses:
 
-- **Success** — the automation completed
-- **Error** — the automation hit an error and stopped (see error handling settings in [Creating and configuring automations](../my-automations/creating-and-configuring-automations.mdx))
-- **In progress** — the automation is currently running
-- **Waiting** — the automation is paused (for example, waiting for a delay step to finish)
+| Status | Meaning |
+|--------|---------|
+| **In progress** | The automation is currently running through its steps. |
+| **Waiting** | The automation is paused — for example, waiting for a delay step to finish or an event to occur. |
+| **Completed** | The automation finished successfully. |
+| **Completed from goal** | The automation finished because it reached a defined goal. |
+| **Completed from error** | The automation finished after encountering and recovering from an error (error handling set to **Continue**). |
+| **Continued from error** | The automation hit an error on a step but continued to the next step (error handling set to **Continue**). |
+| **Error** | The automation hit an error and stopped (error handling set to **Stop**). See [Creating and configuring automations](../my-automations/creating-and-configuring-automations.mdx) for error handling settings. |
+| **Canceled** | The run was manually canceled or stopped by the system. |
+| **Did not run** | The automation was triggered but didn't execute. See the reasons below. |
+
+### Why an automation "did not run"
+
+When the Activity tab shows **Did not run**, the reason tells you why:
+
+| Reason | What happened |
+|--------|---------------|
+| **Run type** | The automation's entry setting prevented this run — for example, it's set to **Only once per account** and has already run for this account. |
+| **One at a time** | The automation is set to **One at a time per account** and another run is already in progress for this account. The trigger was dropped. |
+| **Rate limited** | The automation exceeded the platform's rate limit (50 runs per minute). Try again shortly. |
+| **Trigger filters failed** | The trigger's conditions didn't match the event data — for example, the account didn't have the required tag. |
+| **Trigger choices failed** | The trigger's choice logic (conditional branching on the trigger) didn't match. |
+| **Task definition choices failed** | A step's pre-condition check failed before the workflow could start. |
 
 ## Error handling
 
