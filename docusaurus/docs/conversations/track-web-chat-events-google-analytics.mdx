@@ -16,7 +16,7 @@ Trackable events include:
 - When a new lead is captured
 - When a meeting time is chosen
 
-This document show the steps to add a web chat widget to a website and track events from the widget with Google Analytics.
+This document shows the steps to add a web chat widget to a website and track events from the widget with Google Analytics.
 
 :::info Prerequisites
 This guide assumes you have a Google Analytics account and Google Tag Manager installed on your site. See [Set up Google Tag Manager](https://support.google.com/tagmanager/answer/14842164?hl=en) if you haven't done this yet.
@@ -24,9 +24,9 @@ This guide assumes you have a Google Analytics account and Google Tag Manager in
 
 ## 1. Install the web chat via Google Tag Manager
 
-In Google Tag Manager, under **Tags**, add a new **Custom HTML** tag that includes the web chat widget script. The script is located in your web chat configuration in Partner Center or Business App.
+In Google Tag Manager, under `Tags`, add a new `Custom HTML` tag that includes the web chat widget script. The script is located in your web chat configuration in Partner Center or Business App.
 
-Set the trigger to **Initialization - All Pages** so the widget loads on every page of the site.
+Set the trigger to `Initialization - All Pages` so the widget loads on every page of the site.
 
 <img src={require('./img/track-web-chat-ga4/gtm-webchat-install-tag.png').default} alt="GTM Custom HTML tag with web chat widget script" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -54,7 +54,7 @@ The web chat widget emits events when visitor actions occur. Use GTM triggers to
 | Open/close FAB | `inbx_web_chat_clicked_fab_openclose_widget` | Emits when the chat window is opened or closed by a visitor |
 | Appointment time selected | `inbx_web_chat_clicked_appointment_time` | Emits when an appointment time is selected by a visitor (**Neighborly only**) |
 
-In Google Tag Manager, go to the **Triggers** tab and add a new trigger for each event you want to track:
+In Google Tag Manager, go to the `Triggers` tab and add a new trigger for each event you want to track:
 
 - **Trigger type:** Custom Event
 - **Event name:** The event key from the table above
@@ -67,13 +67,13 @@ Add a trigger for each event you want to track. Your triggers list should look s
 
 ## 4. Track web chat events
 
-Add one final tag to send the trigger events to Google Analytics. Go to the **Tags** tab and add a new tag.
+Add one final tag to send the trigger events to Google Analytics. Go to the `Tags` tab and add a new tag.
 
 ### Tag configuration
 
 - **Tag type:** Google Analytics → Google Analytics: GA4 Event
 - **Measurement ID:** Same ID used for your Google Analytics tag in step 2
-- **Event name:** Set to `{{Event}}` — this dynamically uses the trigger event name
+- **Event name:** Set to `{{Event}}`. This dynamically uses the trigger event name
 
 <img src={require('./img/track-web-chat-ga4/gtm-ga4-event-tag.png').default} alt="GA4 Event tag configuration" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -100,7 +100,7 @@ To track these, add User-Defined Variables in GTM:
 
 <img src={require('./img/track-web-chat-ga4/gtm-user-defined-variables.png').default} alt="GTM User-Defined Variables section" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-Click **New** under User-Defined Variables, set the variable type to **Data Layer Variable**, and set the **Data Layer Variable Name** to `conversationId`.
+Click `New` under User-Defined Variables, set the variable type to `Data Layer Variable`, and set the `Data Layer Variable Name` to `conversationId`.
 
 <img src={require('./img/track-web-chat-ga4/gtm-conversation-id-variable.png').default} alt="Adding conversationId as a Data Layer Variable" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -120,21 +120,21 @@ After publishing, the new fields will appear in your Google Analytics events:
 
 ### Google Tag Manager
 
-Click the **Preview** button at the top of GTM to open the preview screen. Your website will open in a new tab. Interact with the web chat widget and verify events appear in the GTM preview.
+Click the `Preview` button at the top of GTM to open the preview screen. Your website will open in a new tab. Interact with the web chat widget and verify events appear in the GTM preview.
 
 <img src={require('./img/track-web-chat-ga4/gtm-preview-mode.png').default} alt="GTM preview mode showing web chat events" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-If everything is working correctly, events will show as **Succeeded**:
+If everything is working correctly, events will show as `Succeeded`:
 
 <img src={require('./img/track-web-chat-ga4/gtm-event-success.png').default} alt="GTM event showing Succeeded status" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 ### Google Analytics
 
-In your Google Analytics dashboard, go to **Admin → Data display → DebugView**. Interact with the web chat widget on your site and confirm the events appear in real time.
+In your Google Analytics dashboard, go to `Admin` → `Data display` → `DebugView`. Interact with the web chat widget on your site and confirm the events appear in real time.
 
 <img src={require('./img/track-web-chat-ga4/ga4-debug-view.png').default} alt="GA4 DebugView showing incoming web chat events" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-You can also verify in the **Realtime** overview:
+You can also verify in the `Realtime` overview:
 
 <img src={require('./img/track-web-chat-ga4/ga4-realtime-overview.png').default} alt="GA4 Realtime overview showing web chat events" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -147,25 +147,25 @@ If you manage multiple businesses, you can duplicate your GTM setup using the **
 ### Export your GTM container
 
 1. Open your GTM account and select the configured container.
-2. Go to **Admin** in the top navigation.
-3. Under the **Container** column, select **Export Container**.
-4. Choose the latest container version and click **Export**. Save the `.json` file to your computer.
+2. Go to `Admin` in the top navigation.
+3. Under the `Container` column, select `Export Container`.
+4. Choose the latest container version and click `Export`. Save the `.json` file to your computer.
 
 ### Import to another GTM account
 
 1. Open the target GTM account or container.
-2. Go to **Admin → Container → Import Container**.
+2. Go to `Admin` → `Container` → `Import Container`.
 3. Choose the `.json` file from the export.
-4. Select **Existing** or **New** container as appropriate.
-5. Choose **Merge** to add items alongside existing ones, then resolve any conflicts.
-6. Review the Summary screen and click **Confirm**.
+4. Select `Existing` or `New` container as appropriate.
+5. Choose `Merge` to add items alongside existing ones, then resolve any conflicts.
+6. Review the Summary screen and click `Confirm`.
 
 After importing, update the client-specific details:
 
 - Google Analytics Measurement IDs (two locations)
 - The web chat widget script
 
-Test in **Preview Mode** before publishing to the client's live site.
+Test in `Preview Mode` before publishing to the client's live site.
 
 :::tip
 Save each configuration as a GTM version before making changes, so you have a rollback option if needed.
