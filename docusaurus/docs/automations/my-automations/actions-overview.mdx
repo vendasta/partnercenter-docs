@@ -1,0 +1,64 @@
+---
+title: Actions overview
+description: Actions are the steps your automation performs after a trigger fires — understand action categories, scope rules, and how to build effective workflows.
+sidebar_position: 7
+sidebar_label: Actions overview
+tags: [automations, actions, steps]
+keywords: [automation actions, automation steps, workflow steps, action categories, step scope]
+---
+
+# Actions overview
+
+Actions are the "then" of your automation — what happens after the trigger fires. Build your workflow by adding action steps in sequence.
+
+## How action availability works
+
+The actions you can add depend on your trigger's scope. A company-scoped trigger unlocks company-focused actions; an account-scoped trigger unlocks account-focused actions.
+
+| Trigger scope | Example available actions |
+|---|---|
+| **Account** | Assign salesperson, activate products, add tags, create sales order |
+| **Company** | Assign owner, log call, start campaign, create opportunity |
+| **Contact** | Assign owner, send email, add to list, start campaign |
+| **No entity** | Create company, create contact, send webhook, delay, if/else |
+
+:::tip
+Need actions from a different scope? Use **lookup steps** like Find company, Find contact, or Get associated account to bring additional records into context.
+:::
+
+## Action categories
+
+Vendasta provides 130+ action steps across these categories:
+
+| Category | What it does | Examples |
+|---|---|---|
+| **AI** | Use AI to summarize, categorize, analyze, or prompt | Summarize with AI, Categorize with AI, Send request to AI employee |
+| **Communication** | Send messages across channels | Email, SMS, WhatsApp, Conversations message, review request |
+| **CRM** | Create and update records | Create company, find contact, update fields, log activity |
+| **Sales** | Manage the sales pipeline | Create opportunity, assign salesperson, create proposal |
+| **Campaigns** | Start and manage campaigns | Start campaign, pause campaign, send marketing email |
+| **Billing** | Handle invoicing and payments | Create invoice, charge order, send invoice |
+| **Notifications** | Alert people | Notify user, notify salesperson, send in-app notification |
+| **Products** | Manage product lifecycle | Activate products, deactivate products, start trials |
+| **Sales orders** | Manage order workflow | Create and activate, approve, decline, archive |
+| **Advanced** | Integration and utility | Call endpoint, send webhook, format text, apply account template |
+| **Flow control** | Direct automation logic | If/else, delay, jump, rate filter, end automation |
+
+For the complete list with special cases and examples, see the **[Automation steps reference](./automation-steps-reference.mdx)**.
+
+## Building effective workflows
+
+**Start simple.** Begin with a trigger and one or two actions. Test that the basics work before adding complexity.
+
+**Use delays strategically.** Some data isn't available immediately after a trigger fires (e.g., salesperson assigned a few minutes after account creation). Add a delay step before actions that depend on that data.
+
+**Branch with if/else.** Use [logic steps](./advanced-automation-features.mdx) to route records down different paths based on conditions — like sending different emails based on sentiment analysis.
+
+**Pass data between steps.** Use [data expressions](./data-expressions.mdx) to extract values from one step's output and feed them into another step's input.
+
+## Pages in this section
+
+- **[Automation steps reference](./automation-steps-reference.mdx)** — Complete list of every action step, organized by category
+- **[AI Actions](./ai-actions/)** — Summarize, categorize, analyze sentiment, prompt AI, or request an AI employee
+- **[Step deep-dives](./steps/)** — Detailed guides for Find company, Find custom object, and Copy AI employee
+- **[Bulk actions](./bulk-actions.mdx)** — Run automation-powered actions on demand from CRM views
