@@ -1,0 +1,35 @@
+.script {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--ifm-color-emphasis-100);
+  border-left: 4px solid var(--ifm-color-primary);
+  border-radius: 0 10px 10px 0;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.35rem;
+}
+
+.body {
+  line-height: 1.55;
+}
+
+/* Each paragraph is one thing the rep says. Consecutive lines stay visually
+   grouped but individually scannable. */
+.body p {
+  margin: 0 0 0.75rem;
+}
+
+.body p:last-child {
+  margin-bottom: 0;
+}
+
+[data-theme='dark'] .script {
+  background: var(--ifm-color-emphasis-200);
+}
