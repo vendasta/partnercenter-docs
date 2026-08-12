@@ -1,0 +1,137 @@
+---
+title: "Build the custom tool"
+sidebar_position: 2
+description: "Turn a weather API into a custom tool with a cURL import, then write the four-part capability prompt that gives it judgment."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+
+<InlineHighlighter courseId="build-the-custom-tool" site="vendasta_learn">
+
+<CourseProgressBar courseId="build-the-custom-tool" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Advanced"
+  time="about 15 minutes"
+  lab
+  pathName="Put it into action"
+  step={2}
+  totalSteps={3}
+  required={[
+    "An AI Employee with Appointment Booking and Lead Capture switched on",
+  ]}
+  outcomes={[
+    "Build a custom tool from an API's own documentation with a cURL import",
+    "Write parameter descriptions the AI can follow in a live conversation",
+    "Write the four-part capability prompt that tells the AI when to reach for the tool",
+  ]}
+/>
+
+## The job the platform does not already do
+
+Gutter cleaning happens outside, and a booking made during a storm helps nobody. The platform does not know this client cares about weather; that judgment is yours to add, and it is exactly the kind of job a custom tool exists for.
+
+1. Pick a weather service with a public API and open its documentation to the forecast endpoint. Many are free, and several need no account at all.
+2. Copy the example request from the docs. Most API documentation shows one as a cURL command, and that single line is all you need to bring with you.
+3. In **AI Workforce**, open your AI Employee's **Configure** view, go to the **Capabilities** tab, scroll to **Custom Capabilities**, and click **Add a capability**.
+4. Name it something a teammate would understand at a glance, like `WeatherCheck`. No spaces.
+5. In the **Prompt** field, type `TBD` for now. The prompt gets its own section, once the tool exists for it to talk about.
+6. Click **Add Tool** and choose **Import from cURL**. Paste the example you copied. The import fills in the method, URL, headers, and parameter names for you.
+7. Give the tool an **ID** like `GetForecast` and a description that says when to reach for it: "Use before booking outdoor appointments to check the weather conditions."
+8. Write each **parameter description** so the AI knows where the value comes from: "The date the visitor wants, from their message. Convert phrases like next Tuesday to a date formatted YYYY-MM-DD. If no date is given, ask for one." Mark what the API requires as **Required**.
+9. The business location never changes with the conversation, so for the location parameter turn **Set by AI** off and set the value once. The AI should only fill in what actually comes from the visitor.
+10. Click **Save**.
+
+**Confirm it:** the tool is saved with the method, URL, and headers matching the docs you copied from, and every parameter has a description you would trust a new hire to follow.
+
+## Write the capability prompt
+
+The tool is the hands; the prompt is the judgment. A reliable capability prompt answers four questions, in order: when to act, what to collect first, how to respond, and what to do when something goes wrong.
+
+Replace the `TBD` with a prompt built on those four parts:
+
+```markdown
+# Check the weather before outdoor bookings
+
+## When to use
+- ONLY use GetForecast when the visitor is booking an outdoor service:
+  gutter cleaning, lawn care, exterior work.
+- Do NOT use it for indoor services or general questions.
+
+## What you need first
+- The day the visitor wants, and the service they are booking.
+
+## How to respond
+- If the forecast is clear, continue the booking as normal. Do not
+  mention the check.
+- If rain or high wind is forecast, say so and offer the nearest
+  clear day instead.
+
+## When something goes wrong
+- If no forecast comes back, continue the booking and let the visitor
+  know a team member will confirm the day before.
+```
+
+Write yours in your own words, but keep all four parts. Almost every capability that misfires in testing is missing one of them: no clear trigger, so it fires at the wrong moment, or no error path, so an empty response becomes an awkward answer.
+
+**Confirm it:** your prompt names the trigger, the required information, the response shape, and the error path. Save it.
+
+:::tip Try it now
+Read your prompt back as if you were briefing a new hire on their first day. Any sentence that would not change what they do is noise; cut it before you test.
+:::
+
+<SectionFeedback courseId="build-the-custom-tool" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="build-the-custom-tool" site="vendasta_learn"
+  sessionSize={2}
+  intro="Two quick questions on parameter descriptions and the four-part prompt."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'Your tool runs, but it keeps sending the wrong value for one parameter. What is the usual fix?',
+      options: [
+        'Switch the method from GET to POST',
+        'Rewrite the parameter description so the AI knows where the value comes from',
+        'Delete the tool and import the cURL again',
+        'Turn Set by AI off for that parameter'
+      ],
+      correctIndex: 1,
+      explanation: 'Parameter descriptions do the heavy lifting. Tell the AI where the value comes from, what format it takes, and what to do when it is missing, and the right value follows.'
+    },
+    {
+      type: 'mcq',
+      question: 'A capability keeps answering awkwardly whenever its API returns nothing. Which part of the four-part prompt is missing?',
+      options: [
+        'When to use the capability',
+        'What information to collect first',
+        'How to respond on success',
+        'What to do when something goes wrong'
+      ],
+      correctIndex: 3,
+      explanation: 'An empty response becoming an awkward answer is the signature of a missing error path. Name what the AI should say when nothing comes back, and the awkwardness disappears.'
+    },
+    {
+      type: 'mcq',
+      question: 'The business location never changes between conversations. How should that parameter be configured?',
+      options: [
+        'Set by AI on, with a detailed description',
+        'Set by AI off, with the value fixed once',
+        'Marked optional so the AI can skip it',
+        'Left blank so the API uses a default'
+      ],
+      correctIndex: 1,
+      explanation: 'The AI should only fill in what actually comes from the conversation. A value that never changes is a fixed value: Set by AI off, set once.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/build-lab/test-and-run-it" pathName="Put it into action" step={2} totalSteps={3} />
+
+</InlineHighlighter>
+<MarkComplete courseId="build-the-custom-tool" site="vendasta_learn" />

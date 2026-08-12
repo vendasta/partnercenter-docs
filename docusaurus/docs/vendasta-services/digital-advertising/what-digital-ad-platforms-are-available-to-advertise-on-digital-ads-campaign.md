@@ -56,11 +56,11 @@ Content creators on YouTube strategically place ads in their videos to maximize 
 
 ## TikTok Ads
 
+![](./img/tiktok-ads-hero.png)
+
 TikTok ads are short-form, vertical (9:16) videos that appear natively in the For You feed and across TikTok's other placements, including search results and TikTok Shop. They reach a large, multigenerational audience and are well suited to building awareness and demand through engaging video, much like social and video ads.
 
 Depending on the campaign goal, your client can run a range of formats: in-feed video, premium first-impression placements (TopView and Top Feed), Spark Ads that boost the business's existing organic posts, Search Ads that appear in TikTok search results, lead generation ads with in-app lead forms, and shoppable TikTok Shop placements for ecommerce.
-
-If the business doesn't already have TikTok-ready video, a TikTok creatives add-on can produce platform-native short-form video from the brand assets they already have, such as logo files, brand photos, and product imagery, including one review and revision round before launch. If suitable video already exists, the add-on is optional and the campaign will run with the assets provided.
 * **Supported by:** [MatchCraft Managed Ads Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN)
 
 ## LinkedIn Ads

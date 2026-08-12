@@ -27,50 +27,50 @@ Avoid using an order form when possible, since it adds purchase friction. If you
 
 ## Creating an order form
 
-1. Navigate to **Vendor Center** → **Product Name** → **Product Info** → **Product Activation** → **Order Form**, then toggle **Use a custom order form**.
-2. Choose any necessary **Basic Information. AccountID** and **Company Name** are recommended.
-   - These are **optional** by default to avoid completed order forms from containing irrelevant information. If you require any of this information check them off.
+1. Navigate to `Vendor Center` → `Product Name` → `Product Info` → `Product Activation` → `Order Form`, then toggle `Use a custom order form`.
+2. Choose any necessary Basic Information fields. `AccountID` and `Company Name` are recommended.
+   - These are `optional` by default to avoid completed order forms from containing irrelevant information. If you require any of this information, check them off.
 
-**Selecting the Primary Contact** will not result in obtaining required contact information. The Primary Contact will automatically populate any existing user on the account.
+Selecting the `Primary Contact` option will not result in obtaining required contact information. The `Primary Contact` field will automatically populate any existing user on the account.
 
-**Selecting Salesperson** will only provide you with the Reseller's assigned Salesperson on the account which will not result in obtaining required contact information.
+Selecting `Salesperson` will only provide you with the Reseller's assigned Salesperson on the account, which will not result in obtaining required contact information.
 
-3. **Additional Information fields** (optional) will enforce the Reseller to backfill required information on their or their client's account.
-4. To add a custom field, click **Add Form Field** and expand the New Form Field item that will have appeared.
-5. The **Order Form Footer** should be used to include information regarding the order itself such as service level agreements and is displayed to both the Reseller and their client.
+3. `Additional Information` fields (optional) will require the Reseller to backfill required information on their or their client's account.
+4. To add a custom field, click `Add Form Field` and expand the `New Form Field` item that appears.
+5. The `Order Form Footer` should be used to include information regarding the order itself such as service level agreements and is displayed to both the Reseller and their client.
 
 ### Types of form fields
 
 There are various types of form fields available. Underneath each is an example of that field as it would appear in Partner Center when activating a product:
 
-- **Files** – Used to request specific files.
-- **Drop Down** – A multi-option field where you can add options by selecting Add Option.
-- **Check Box** — Allows you to present the user with a single option in the form of a checkbox.
-- **Text Area** – An open-ended input that allows users to type long answers. This is especially useful when requesting a description.
-- **Text Box** – An input box that allows users to enter text for simple answers. You can add a prefix and suffix to this, as well as add regex validation (answers must be in a specific format).
-  - One example might be that you want users to enter their website. You may start with a prefix of 'www.' and a suffix of '.com'.
-- **End User** – Requires a user on the account to be selected as a designated user of the product. This field is commonly used in tandem with a seat-based billing model.
+- `Files`: Used to request specific files.
+- `Drop Down`: A multi-option field where you can add options by selecting Add Option.
+- `Check Box`: Allows you to present the user with a single option in the form of a checkbox.
+- `Text Area`: An open-ended input that allows users to type long answers. This is especially useful when requesting a description.
+- `Text Box`: An input box that allows users to enter text for simple answers. You can add a prefix and suffix to this, as well as add regex validation (answers must be in a specific format).
+  - For example, if you want users to enter their website, you can add a prefix of `www.` and a suffix of `.com`.
+- `End User`: Requires a user on the account to be selected as a designated user of the product. This field is commonly used in tandem with a seat-based billing model.
   - This can be handy if there is an initial user that needs to be set up with different permissions than all other users on the Account.
-  - If you mark this field as required, and there are no users on the Account it will force the admin to go back and add a user to the Account before they can activate your product.
+  - If you mark this field as required, and there are no users on the Account, it will force the admin to go back and add a user to the Account before they can activate your product.
 
 **Requirements**
 
-Form Fields can either be left as optional or Required. Requirements are often used for contact information, domains, digital advertising collateral, or shipping information for example.
+Form Fields can either be left as optional or Required. Requirements are often used for contact information, domains, digital advertising collateral, or shipping information, for example.
 
 **Which persona will see the order form?**
 
-Each form field requires you to choose whether it is **Hidden from end users** or **Office editable only**.
+Each form field requires you to choose whether it is `Hidden from end users` or `Office editable only`.
 
-**Hidden from end users** hides your question from the reseller's client, so the Reseller must provide a response. Select this option if you need specific Reseller contact information.
+`Hidden from end users` hides your question from the reseller's client, so the Reseller must provide a response. Select this option if you need specific Reseller contact information.
 
-**Office editable only** lets end users see the form field but not provide a response. Making this selection means you may want the end user to be informed of certain configurations, but not be able to change them.
+`Office editable only` lets end users see the form field but not provide a response. Making this selection means you may want the end user to be informed of certain configurations, but not be able to change them.
 
 ### Asking for contact information
 
 You may need to get in touch with either the Reseller or their client if you provide an initial onboarding or the SKU is a service. 
 
 :::warning Primary Contact does not provide required contact info
-Selecting the Primary Contact may not give you the contact information you need. The Primary Contact field automatically populates a user from the account. Use custom order form fields to capture the required contact information.
+Selecting the `Primary Contact` may not give you the contact information you need. The `Primary Contact` field automatically populates a user from the account. Use custom order form fields to capture the required contact information.
 :::
 
 ![](./img/partner-center/vendor-onboarding-guide/order-form-contact-info.png)
@@ -79,21 +79,21 @@ Selecting the Primary Contact may not give you the contact information you need.
 
 **If you will communicate with the Reseller OR their client:**
 
-Start with a question for the Reseller to identify who you are able to communicate with. This question should be **Required** and **Hidden from end users** and works best in the form of a Drop Down form field.
+Start with a question for the Reseller to identify who you are able to communicate with. This question should be `Required` and `Hidden from end users` and works best in the form of a `Drop Down` form field.
 
 ![](./img/partner-center/vendor-onboarding-guide/order-form-dropdown.png)
 
 :::tip Best practice
-Include a **Check Box** that is **Required** and **Hidden from end users** for the Reseller to acknowledge that by choosing "End user", you will contact their customer directly and this will not be a white-labelled product.
+Include a `Check Box` that is `Required` and `Hidden from end users` for the Reseller to acknowledge that by choosing `End User`, you will contact their customer directly and this will not be a white-labelled product.
 :::
 
-Lastly, ensure you ask for the contact's name and contact information as **Required** and **Hidden from end users** Form Fields. Here's an example of the full order form requesting contact information if you don't have a preference for which persona you interact with on the project:
+Lastly, ensure you ask for the contact's name and contact information as `Required` and `Hidden from end users` Form Fields. Here's an example of the full order form requesting contact information if you don't have a preference for which persona you interact with on the project:
 
 ![](./img/partner-center/vendor-onboarding-guide/order-form-contact-full.png)
 
 **If you will be communicating with the Reseller only:**
 
-Your questions should be **Required** and **Hidden from end users** and include hint text that lets the Reseller know that you will only be in communication with them directly. Here's an example of the full order form when you will only be communicating with the Reseller:
+Your questions should be `Required` and `Hidden from end users` and include hint text that lets the Reseller know that you will only be in communication with them directly. Here's an example of the full order form when you will only be communicating with the Reseller:
 
 ![](./img/partner-center/vendor-onboarding-guide/order-form-reseller-only.png)
 
