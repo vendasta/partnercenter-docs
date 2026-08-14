@@ -6,6 +6,8 @@ tags: [ai-capabilities, capabilities, ai-employees, custom-capabilities, automat
 keywords: [AI capabilities, capabilities, custom capabilities, AI employees, automation, tools, integrations, lead capture, appointment booking]
 ---
 
+import { GraduationCapIcon } from '@site/src/components/Icons';
+
 AI Capabilities are specialized skills that define what your AI Employees can do and how they behave when interacting with customers. Think of capabilities as building blocks that transform a basic AI assistant into a skilled employee who can handle specific business tasks.
 
 ## What are AI Capabilities?
@@ -128,3 +130,12 @@ Use the Explanations feature in Conversations to understand:
 - When the AI chooses not to use a capability and why
 - How well your trigger conditions are working in practice
 :::
+
+---
+
+<div style={{display: 'flex', alignItems: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px 0'}}>
+  <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
+  <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)'}}>
+    New to how AI Employees work? Take the <a href="/learn/ai-foundations" style={{color: '#3C9A63', fontWeight: 600}}>AI foundations</a> course in Vendasta Learn — Beginner, 6 lessons.
+  </span>
+</div>
