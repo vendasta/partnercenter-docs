@@ -154,15 +154,6 @@ Use AskUserQuestion with options tailored to the context, e.g.:
 - `Replace "[term]" with "[suggested alternative]"`
 - `Leave it for now — I'll handle this manually`
 
-**H1 in article body:**
-
-```
-**Issue:** The article has a top-level heading (H1) in the body. The title is already set in the frontmatter, so this line is a duplicate.
-**Location:** Line [N]
-**Current:** "# [heading text]"
-**Proposed:** Remove this line entirely.
-```
-
 **File rename:**
 
 ```
@@ -385,6 +376,8 @@ These are mechanical, rules-based changes with no risk of affecting product accu
 - **Audience language** — consumer/SMB framing rewritten for a partner audience (e.g., removing "your provider" framing, correcting third-person "users" → "you" when addressing the partner reader)
 - **UI formatting** — bold UI elements and navigation paths converted to inline code (backticks)
 - **Blockquote replacement** — `>` callouts replaced with the appropriate `:::info`, `:::tip`, `:::warning`, or `:::note` block
+- **Duplicate H1 removal** — a top-level heading in the body that duplicates the frontmatter `title` is deleted outright; this is always mechanical since the title already lives in frontmatter
+- **Em dash replacement** — every `—` replaced with a comma, colon, or period depending on context; purely mechanical punctuation, no risk to accuracy
 
 ### Approval required (flag and wait)
 
@@ -482,6 +475,6 @@ The article is mostly clear and well-structured. Two audience-language issues an
 
 - **Never assert** that content is wrong — use "may be outdated" or "verify with SME" when uncertain.
 - **Never infer functionality** from the article text. If a step or feature claim cannot be verified from other current documentation, flag it for SME review.
-- **Apply auto-fixes immediately, flag the rest** — sentence casing, audience language, UI formatting, and blockquote-to-callout fixes are applied directly without asking. All other changes require explicit approval before editing.
+- **Apply auto-fixes immediately, flag the rest** — sentence casing, audience language, UI formatting, blockquote-to-callout fixes, duplicate H1 removal, and em dash replacement are applied directly without asking. All other changes require explicit approval before editing.
 - **Check every link** — do not skip link checks even if the article looks clean. This includes anchor fragments (Step 4) and inbound links from other articles into the ones you're editing (Step 4b) — a heading rename that looks harmless in isolation can silently break a link on a page you never opened.
 - **Report on every article** — even articles that pass should appear in the output with "Status: Pass" and a brief confirmation.
