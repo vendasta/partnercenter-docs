@@ -52,7 +52,7 @@ export default function SkillCheck({
 
   const startSession = () => {
     const shuffled = [...questions].sort(() => Math.random() - 0.5);
-    setSession(shuffled.slice(0, sessionSize));
+    setSession(shuffled.slice(0, sessionSize).map(shuffleOptions));
     setCurrentIndex(0);
     setUserAnswer(null);
     setShowFeedback(false);
@@ -162,6 +162,22 @@ export default function SkillCheck({
       )}
     </div>
   );
+}
+
+/**
+ * Randomize an MCQ's option order and move correctIndex with it. Without this,
+ * a set authored with the right answer written first is trivially gameable, and
+ * authors should not have to hand-scatter correct positions to avoid a pattern.
+ * Other question types pass through untouched.
+ */
+function shuffleOptions(q: Question): Question {
+  if (q.type !== 'mcq') return q;
+  const order = q.options.map((_, i) => i).sort(() => Math.random() - 0.5);
+  return {
+    ...q,
+    options: order.map((i) => q.options[i]),
+    correctIndex: order.indexOf(q.correctIndex),
+  };
 }
 
 function getQuestionText(q: Question): string {
