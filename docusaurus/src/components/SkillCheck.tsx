@@ -95,7 +95,6 @@ export default function SkillCheck({
         <h3>{title}</h3>
         <p>
           {intro ?? `Test your understanding with ${served} questions`}
-          {questions.length > sessionSize ? ` drawn from a pool of ${questions.length}` : ''}
           {`. You need ${Math.round(PASS_THRESHOLD * 100)}% to pass.`}
         </p>
         <button type="button" className={styles.startBtn} onClick={startSession}>
