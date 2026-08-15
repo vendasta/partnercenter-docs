@@ -1,5 +1,6 @@
 ---
-title: "Sell socially"
+title: "Master Sales: Social selling"
+sidebar_label: "Social selling"
 sidebar_position: 7
 description: "Turn LinkedIn into a prospecting channel, not a resume."
 sidebar_class_name: hide-from-sidebar
@@ -12,46 +13,17 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
-import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import Accordion from "@site/src/components/Accordion";
 
 <InlineHighlighter courseId="sell-socially" site="vendasta_learn">
 
 <CourseProgressBar courseId="sell-socially" site="vendasta_learn" />
 
-{/* VIDEO: "How to Become a LinkedIn Ninja" — Wistia ID `m5blizgpyo`, verified by Shiva 2026-08-14.
-    Note: `e7xf8v54en` (previously listed here as "Get Started with LinkedIn") turned out to be
-    "Getting Started with Yesware" instead — not used. */}
-
-<div
-  className="wistia_responsive_padding"
-  style={{ padding: '56.25% 0 0 0', position: 'relative' }}
->
-  <div
-    className="wistia_responsive_wrapper"
-    style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
-  >
-    <iframe
-      src="https://fast.wistia.net/embed/iframe/m5blizgpyo?web_component=true&seo=true"
-      title="How to Become a LinkedIn Ninja"
-      allow="autoplay; fullscreen"
-      allowTransparency
-      frameBorder="0"
-      scrolling="no"
-      className="wistia_embed"
-      name="wistia_embed"
-      width="100%"
-      height="100%"
-    ></iframe>
-  </div>
-</div>
-<script src="https://fast.wistia.net/player.js" async></script>
-
 <LessonHeader
   difficulty="Beginner"
   time="about 9 minutes"
   required={["None — this is a standing habit, start it anytime"]}
-  video={true}
-  pathName="How to sell"
+  pathName="Master Sales Series"
   step={7}
   totalSteps={9}
   outcomes={[
@@ -62,71 +34,86 @@ import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
   ]}
 />
 
-The first six lessons followed a single deal from first contact to signed order. These last three are different: they are the habits that make that cycle repeatable, so you are not starting from zero on every new prospect. This one is a standing habit — you can start it today, regardless of where any particular deal sits.
+
 
 ## LinkedIn is your virtual business card, not your photo album
 
-Treat your profile like the first thing a prospect sees about you, because it usually is. Five things matter more than the rest:
+Your profile is usually the first thing a prospect sees about you. Five things matter more than the rest.
 
-- **A professional photo.** Not the beach photo with your dog — save that for other platforms.
-- **A banner** that matches your brand, or highlights a recent accomplishment.
-- **A headline that reads like a business card.** "VP of Sales, Riverside Marketing" beats "Thinker. Change agent."
-- **A filled-in featured section** linking to your best work.
-- **At least one recommendation** from someone who has actually worked with you.
-
-Most people skip the featured section. Do not be most people.
+<Accordion
+  items={[
+    {
+      id: 'photo-banner',
+      title: 'A professional photo and a banner',
+      badge: '1',
+      content: (
+        <>
+          <p>Not the beach photo with your dog. The banner should match your brand or highlight a recent accomplishment.</p>
+        </>
+      )
+    },
+    {
+      id: 'headline',
+      title: 'A headline that says why someone should care',
+      badge: '2',
+      content: (
+        <>
+          <p>Not just your title. "Helping local businesses fix the gaps in their online presence" tells a prospect more than "Account Executive" does.</p>
+        </>
+      )
+    },
+    {
+      id: 'summary',
+      title: 'A summary that tells a story, not a resume',
+      badge: '3',
+      content: (
+        <>
+          <p>One of the highest-leverage 200 words on your profile, and worth getting help on if writing is not your strength. Below it, work experience is what a skeptical prospect checks first: how long you have done this, and whether they recognize the companies.</p>
+        </>
+      )
+    },
+    {
+      id: 'featured',
+      title: 'A filled-in featured section',
+      badge: '4',
+      content: (
+        <>
+          <p>Link your best work. Most people skip this one, which is exactly why filling it in separates you.</p>
+        </>
+      )
+    },
+    {
+      id: 'proof',
+      title: 'Recommendations and endorsed skills',
+      badge: '5',
+      content: (
+        <>
+          <p>At least one recommendation from someone who actually worked with you. And if you claim a skill, get it endorsed. "SEO expert" with zero SEO endorsements reads as a claim nobody would back up.</p>
+        </>
+      )
+    }
+  ]}
+/>
 
 ## The score that tells you if you are actually doing this
 
-LinkedIn's Social Selling Index is not a vanity number — treat it as a checklist. It scores four things:
-
-1. How complete and active your personal brand is
-2. How well you are finding the right people to connect with
-3. How often you engage with insight — actual comments and shares that add something, not just likes
-4. How strong your relationships are getting over time
-
-If your score is low, it is not a mystery why. It is telling you which of those four you are skipping.
-
-<FlipCardGrid>
-  <FlipCard front="Personal brand" back="Complete the profile, publish things worth reading." subtext="SSI pillar 1" />
-  <FlipCard front="Find & engage" back="Use search to reach the right people, then engage with insight rather than likes." subtext="SSI pillars 2–3" />
-  <FlipCard front="Build relationships" back="Depth over volume. The score rewards relationships that actually develop." subtext="SSI pillar 4" />
-</FlipCardGrid>
-
-## Write a headline and summary that make someone care
-
-Two pieces of your profile do more work than people expect.
-
-**Your headline** should say what you do and why someone should care, not just your title. "Helping local businesses fix the gaps in their online presence" tells a prospect more than "Account Executive" does.
-
-**Your summary** should tell a short story, not list your resume. If writing is not your strength, this is worth getting help on — it is one of the highest-leverage 200 words on your whole profile.
-
-Below that, your work experience is what a skeptical prospect checks first: how long you have been doing this, what you have actually done, whether they recognize the companies. And if you claim a skill, get it endorsed. A profile that says "SEO expert" with zero endorsements for SEO reads as a claim nobody was willing to back up.
+LinkedIn's Social Selling Index is a checklist, not a vanity number. It scores how complete and active your personal brand is, how well you find the right people, how often you engage with insight rather than likes, and how much your relationships develop over time. A low score is not a mystery. It names which of the four you are skipping.
 
 ## Research them, because they are already researching you
 
-Spend 10 minutes on LinkedIn before every meeting: check who you are meeting, what they post about, what you have in common. That is the habit most reps already know they should build.
+Ten minutes before every meeting: who you are meeting, what they post about, what you have in common. Most reps know that half.
 
-Here is the half people forget: **the prospect is very likely doing exactly the same thing to you, before the same meeting.** A thin or outdated profile does not just fail to help you — it actively costs you credibility before you have said a word. Treat your own profile as part of your prep, not a setup task you finished two years ago.
+The half people forget is that the prospect is very likely doing the same thing to you before the same meeting. A thin profile does not merely fail to help, it costs you credibility before you have said a word. Your own profile is part of your prep, not a setup task you finished two years ago.
 
-## Share content that makes you look like the expert, not the salesperson
+## Share what makes you the expert, not the salesperson
 
-Make LinkedIn part of your daily routine rather than a once-a-quarter chore: check connection requests, comment on a couple of posts, share one useful thing.
+Make it a daily routine rather than a quarterly chore: check connection requests, comment on a couple of posts, share one useful thing. What performs is what helps people learn, not another product announcement.
 
-The content that performs best is the content that helps people learn — not another announcement about your product. One way to do this without writing from scratch every time: when you read something genuinely good from a source your network already trusts, share it with two or three sentences of your own take up front.
-
-You do not need to be the original author to look like the person who finds and understands the good stuff first, and it is a far easier habit to sustain than always creating from a blank page.
+You do not need to be the original author to be the person who finds and understands the good stuff first. When you read something genuinely good from a source your network trusts, share it with two or three sentences of your own take up front. That habit is far easier to sustain than writing from a blank page.
 
 :::tip Try it now
 Open your own LinkedIn profile and check three things: does your headline say what you do and why someone should care, is your featured section filled in, and do your top two claimed skills actually have endorsements? Fix whichever is weakest today.
 :::
-
-## What you now have
-
-- A profile checklist: photo, banner, headline, summary, work experience, endorsements, featured content
-- A practical reading of the Social Selling Index as a to-do list rather than a score to feel bad about
-- The habit of 10 minutes of research before every meeting, knowing the prospect is doing the same to you
-- A repeatable way to build authority without writing something new every single day
 
 <SectionFeedback courseId="sell-socially" site="vendasta_learn" section="content" />
 
@@ -155,7 +142,7 @@ Open your own LinkedIn profile and check three things: does your headline say wh
     },
     {
       type: 'mcq',
-      question: 'Why does the lesson say to keep your own profile current, not just research the prospect?',
+      question: 'Why keep your own profile current, not just research the prospect?',
       options: [
         'LinkedIn requires activity to keep an account open',
         'The prospect is very likely researching you too, so a thin profile costs you credibility before the meeting starts',
@@ -198,7 +185,7 @@ Open your own LinkedIn profile and check three things: does your headline say wh
   ]}
 />
 
-<LessonFooter to="/learn/sales/consult-dont-just-pitch" pathName="How to sell" step={7} totalSteps={9} />
+<LessonFooter to="/learn/sales/consult-dont-just-pitch" pathName="Master Sales Series" step={7} totalSteps={9} />
 
 </InlineHighlighter>
 <MarkComplete courseId="sell-socially" site="vendasta_learn" />

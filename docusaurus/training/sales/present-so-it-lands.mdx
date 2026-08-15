@@ -1,5 +1,6 @@
 ---
-title: "Present so it lands"
+title: "Master Sales: Presenting"
+sidebar_label: "Presenting"
 sidebar_position: 4
 description: "Structure a presentation around insights, deliverables, value, and the ask, so a discovery call turns into a decision."
 sidebar_class_name: hide-from-sidebar
@@ -12,7 +13,7 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
-import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import Accordion from "@site/src/components/Accordion";
 
 <InlineHighlighter courseId="present-so-it-lands" site="vendasta_learn">
 
@@ -27,7 +28,7 @@ import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
   time="about 8 minutes"
   required={["A discovery call already run on this prospect"]}
   video={true}
-  pathName="How to sell"
+  pathName="Master Sales Series"
   step={4}
   totalSteps={9}
   outcomes={[
@@ -38,64 +39,102 @@ import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
   ]}
 />
 
+{/* VIDEO: "The Killer Sales Presentation Format" — Wistia ID `6b5f8wve1s`, Master Sales Training Series folder, confirmed 2026-08-15. */}
+
+Watch sales expert George Leith lay out a presentation format that turns a discovery call into a decision.
+
+<div
+  className="wistia_responsive_padding"
+  style={{ padding: '56.25% 0 0 0', position: 'relative' }}
+>
+  <div
+    className="wistia_responsive_wrapper"
+    style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
+  >
+    <iframe
+      src="https://fast.wistia.net/embed/iframe/6b5f8wve1s?web_component=true&seo=true"
+      title="The Killer Sales Presentation Format"
+      allow="autoplay; fullscreen"
+      frameBorder="0"
+      scrolling="no"
+      className="wistia_embed"
+      name="wistia_embed"
+      width="100%"
+      height="100%"
+    ></iframe>
+  </div>
+</div>
+<script src="https://fast.wistia.net/player.js" async></script>
+
 ## A presentation is not a recap
 
-You already ran the discovery call. You know the gaps, you know what the prospect said mattered, and now you are back in front of them with a plan. The mistake at this stage is treating the presentation like a summary of everything you found. A summary is an audit, and nobody signs an audit. A presentation is four moves, always in the same order: show them you listened, tell them what changes, prove it is worth it, and ask.
+A summary of everything you found is an audit, and nobody signs an audit. A presentation is four moves, always in the same order.
 
-## Open with what you heard, not what you sell
-
-Start the meeting with the specific things the prospect told you, not with your product. If a landscaping company's owner told you on the discovery call that half her quote requests never get a follow-up, that line opens the presentation:
-
-> "You told me last week that quote requests go cold if nobody follows up within a day. That's the first thing we built this plan around."
-
-This is the insight move, and it does one job: it proves you were listening. A generic opener ("Here's what we do for businesses like yours") sounds like every rep before you. A specific callback sounds like a plan built for this prospect, because it is.
-
-## Say what changes, not what you install
-
-Once they know you listened, tell them what changes for their business. Keep this at the level of outcomes, not features. "We'll set up automated follow-up on every quote request within one hour" is a deliverable. "We'll configure a CRM automation with a conditional trigger on lead status" is a feature tour, and feature tours are for the appendix, not the main pitch.
-
-A useful test: if the sentence describes a click path, it belongs in the appendix. If it describes a change the owner will notice in their business, it belongs here.
-
-## Prove it is worth it before they have to ask
-
-Every owner is running the same math in their head: will this pay for itself. Answer that before they ask instead of after:
-
-> "We'll track quote-to-close rate monthly, and I'll show you the before-and-after myself. If follow-up is really costing you jobs, you'll see it move within the first month."
-
-Naming how you will measure it, and when you will show up with the number, turns "trust me" into a plan the owner can check.
-
-## Make the ask, out loud, in this section
-
-Here is the part most reps flinch on: you have to actually ask for the business, and you have to do it here, not bury it in a follow-up email. After insights, deliverables, and value, say the plan and ask for the yes:
-
-> "That's the plan: automated follow-up, a monthly report on quote-to-close, and I'll be your point of contact the whole way. Can we get you started this week?"
-
-Confidence here is not about volume, it is about not softening the ask into a question about whether you should be asking. You did the discovery, you built the plan around what they told you, and this is the moment it was all leading to.
-
-<FlipCardGrid>
-  <FlipCard front="Insight" back="Open with a specific thing they told you on the discovery call. Proves you listened." subtext="Move 1" />
-  <FlipCard front="Deliverable + value" back="Say what changes for their business, then how you will measure it." subtext="Moves 2–3" />
-  <FlipCard front="The ask" back="Out loud, in the room, right after value. Not in a follow-up email." subtext="Move 4" />
-</FlipCardGrid>
+<Accordion
+  items={[
+    {
+      id: 'insight',
+      title: 'Open with what you heard, not what you sell',
+      badge: '1',
+      content: (
+        <>
+          <p>Start with the specific things the prospect told you. If a landscaping owner said half her quote requests never get followed up, that line opens the meeting:</p>
+          <p><em>"You told me last week that quote requests go cold if nobody follows up within a day. That's the first thing we built this plan around."</em></p>
+          <p>A generic opener sounds like every rep before you. A specific callback sounds like a plan built for this prospect, because it is.</p>
+        </>
+      )
+    },
+    {
+      id: 'deliverable',
+      title: 'Say what changes, not what you install',
+      badge: '2',
+      content: (
+        <>
+          <p>Keep this at the level of outcomes. "We'll set up automated follow-up on every quote request within one hour" is a deliverable. "We'll configure a CRM automation with a conditional trigger on lead status" is a feature tour.</p>
+          <p>The test: if the sentence describes a click path, it belongs in the appendix. If it describes a change the owner will notice, it belongs here.</p>
+        </>
+      )
+    },
+    {
+      id: 'value',
+      title: 'Prove it is worth it before they have to ask',
+      badge: '3',
+      content: (
+        <>
+          <p>Every owner is running the same math: will this pay for itself. Answer it before they ask.</p>
+          <p><em>"We'll track quote-to-close rate monthly, and I'll show you the before-and-after myself. If follow-up is really costing you jobs, you'll see it move within the first month."</em></p>
+          <p>Naming how you measure it, and when you show up with the number, turns "trust me" into something the owner can check.</p>
+        </>
+      )
+    },
+    {
+      id: 'ask',
+      title: 'Make the ask, out loud, in the room',
+      badge: '4',
+      content: (
+        <>
+          <p>Ask for the business here, not in a follow-up email.</p>
+          <p><em>"That's the plan: automated follow-up, a monthly report on quote-to-close, and I'll be your point of contact the whole way. Can we get you started this week?"</em></p>
+          <p>Confidence here is not volume. It is not softening the ask into a question about whether you should be asking.</p>
+        </>
+      )
+    }
+  ]}
+/>
 
 ## Everything you are not sure about goes in the appendix
 
-Not every capability belongs in the main story. If a feature might matter to this prospect but you are not certain, do not build the main pitch around a maybe, and do not cut it either. Put it in an appendix and mention that it is there:
+If a capability might matter to this prospect but you are not certain, do not build the pitch around a maybe and do not cut it either. Put it at the back and say that it is there.
 
-> "There's a webchat feature that might be a fit for you too. I've put a page on it at the back in case you want to look at it, but I didn't want to build our whole conversation around something you haven't seen yet."
-
-This keeps the main pitch tight and confident, and it still lets a curious owner go looking without you guessing wrong about what they care about.
-
-:::tip Try it now
-Take the plan you would present to your next prospect and write one sentence for each move: the insight you heard from them, the deliverable, how you will prove it worked, and the exact words you will use to ask. Say the ask out loud before the meeting. If it sounds like a question about whether you should ask, rewrite it.
+:::info Naming the appendix
+"There's a webchat feature that might be a fit for you too. I've put a page on it at the back in case you want to look at it, but I didn't want to build our whole conversation around something you haven't seen yet."
 :::
 
-## What you now have
+The main pitch stays tight, and a curious owner can still go looking.
 
-- A four-part structure that turns a discovery call into a decision: insight, deliverable, value, ask
-- A test for what belongs in the main pitch versus the appendix: outcomes here, click paths and maybes there
-- Three lines you can adapt word for word: the insight callback, the value proof, and the ask
-- The habit of asking out loud, in the room, instead of hoping the follow-up email does it for you
+:::tip Try it now
+Write one sentence for each move for your next prospect: the insight you heard, the deliverable, how you will prove it worked, and the exact words you will use to ask. Say the ask out loud beforehand. If it sounds like a question about whether you should ask, rewrite it.
+:::
 
 {/* No "do it, delegate it, or buy it" block here: this lesson teaches a rep's own presentation skill,
     and there is no Vendasta Services equivalent to delegate a sales conversation to. */}
@@ -171,7 +210,7 @@ Take the plan you would present to your next prospect and write one sentence for
   ]}
 />
 
-<LessonFooter to="/learn/sales/handle-objections" pathName="How to sell" step={4} totalSteps={9} />
+<LessonFooter to="/learn/sales/handle-objections" pathName="Master Sales Series" step={4} totalSteps={9} />
 
 </InlineHighlighter>
 <MarkComplete courseId="present-so-it-lands" site="vendasta_learn" />

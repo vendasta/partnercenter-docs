@@ -1,5 +1,6 @@
 ---
-title: "Consult, don't just pitch"
+title: "Master Sales: Consulting"
+sidebar_label: "Consulting"
 sidebar_position: 8
 description: "The questions that make a prospect trust your recommendation."
 sidebar_class_name: hide-from-sidebar
@@ -12,71 +13,17 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
-import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import Accordion from "@site/src/components/Accordion";
 
 <InlineHighlighter courseId="consult-dont-just-pitch" site="vendasta_learn">
 
 <CourseProgressBar courseId="consult-dont-just-pitch" site="vendasta_learn" />
 
-{/* VIDEO 1: "Using Dynamic and Personalized Content to Fuel Growth" — Wistia ID `u24r2lp4vp`,
-    verified by Shiva 2026-08-14. */}
-
-<div
-  className="wistia_responsive_padding"
-  style={{ padding: '56.25% 0 0 0', position: 'relative' }}
->
-  <div
-    className="wistia_responsive_wrapper"
-    style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
-  >
-    <iframe
-      src="https://fast.wistia.net/embed/iframe/u24r2lp4vp?web_component=true&seo=true"
-      title="Using Dynamic and Personalized Content to Fuel Growth"
-      allow="autoplay; fullscreen"
-      allowTransparency
-      frameBorder="0"
-      scrolling="no"
-      className="wistia_embed"
-      name="wistia_embed"
-      width="100%"
-      height="100%"
-    ></iframe>
-  </div>
-</div>
-
-{/* VIDEO 2: "Stacking Success: Your Competitive Advantage" — Wistia ID `4in417wbuj`,
-    verified by Shiva 2026-08-14. */}
-
-<div
-  className="wistia_responsive_padding"
-  style={{ padding: '56.25% 0 0 0', position: 'relative' }}
->
-  <div
-    className="wistia_responsive_wrapper"
-    style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
-  >
-    <iframe
-      src="https://fast.wistia.net/embed/iframe/4in417wbuj?web_component=true&seo=true"
-      title="Stacking Success: Your Competitive Advantage"
-      allow="autoplay; fullscreen"
-      allowTransparency
-      frameBorder="0"
-      scrolling="no"
-      className="wistia_embed"
-      name="wistia_embed"
-      width="100%"
-      height="100%"
-    ></iframe>
-  </div>
-</div>
-<script src="https://fast.wistia.net/player.js" async></script>
-
 <LessonHeader
   difficulty="Intermediate"
   time="about 9 minutes"
-  required={["A discovery call run (Lesson 3) and at least one deal closed (Lesson 6)"]}
-  video={true}
-  pathName="How to sell"
+  required={["A discovery call run, and at least one deal closed"]}
+  pathName="Master Sales Series"
   step={8}
   totalSteps={9}
   outcomes={[
@@ -87,70 +34,81 @@ import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
   ]}
 />
 
+
+
+
 ## The pitch you did not earn
 
-A pitch is something you can write before you have met the prospect. A recommendation is something you can only write after. The difference matters because a prospect can tell which one they are getting.
+A pitch is something you can write before you have met the prospect. A recommendation is something you can only write after, and a prospect can tell which one they are getting.
 
-Three different agency owners, on a panel about what they automate in their sales process, all landed on the same rule without prompting each other: **they will never automate the actual sales conversation.** Not because it is sentimental — because that conversation is the one place they find out what the client actually needs, and a recommendation built on a guess is just a pitch wearing a nicer outfit.
+Three agency owners on a panel about sales automation landed on the same rule without prompting each other: never automate the actual sales conversation. That conversation is the one place you find out what the client needs, and a recommendation built on a guess is a pitch wearing a nicer outfit.
 
-> "This is your chance to understand what the client needs. And after you know what the client needs, this allows you to then map the problem and how you can best solve that."
+:::info The whole job in one sentence
+"This is your chance to understand what the client needs. And after you know what the client needs, this allows you to then map the problem and how you can best solve that."
+:::
 
-That is the whole job in one sentence: understand, then map, then recommend. Skip the first step and you are not consulting, you are guessing out loud.
+Understand, then map, then recommend. Skip the first step and you are guessing out loud.
 
-## Do your homework before you recommend anything
+## Understand, map, recommend
 
-One agency owner on that panel runs a qualifying questionnaire before a prospect ever gets on a call — a short form asking about pain points, how the prospect found them, and their financial situation. By the time they are on the call, they already know "what their hand in poker is" instead of guessing.
-
-You do not need a website form to do the same thing. Before your next consultation, get answers to three questions however you can — a quick email, a form, or the first two minutes of the call:
-
-- What is the actual goal you are trying to hit this quarter?
-- What have you already tried, and why did it not stick?
-- What would make this a clear win for you, in your own words?
-
-Walking in with those answers is what separates a consultation from a cold pitch with a prospect's name swapped in.
-
-## The two questions that turn a pitch into a recommendation
-
-Once you know what they are chasing, two follow-up questions do most of the remaining work:
-
-> "What does 'better' actually look like for you here?"
->
-> "What's stopped this from getting fixed already?"
-
-The first stops you from recommending the wrong *size* of solution — you are aiming at their definition of success, not yours. The second surfaces the real obstacle, which is often not the one they led with.
-
-A client who says they need "more reviews" but whose real obstacle is that nobody on staff has time to ask for them needs a different recommendation than the one you would have made from the first sentence alone.
-
-<FlipCardGrid>
-  <FlipCard front="Understand" back="The sales conversation is the only place you learn the real need. Never automate it." subtext="Step 1" />
-  <FlipCard front="Map" back="Two questions: what does better look like, and what has stopped this from being fixed?" subtext="Step 2" />
-  <FlipCard front="Recommend" back="Only now. A recommendation made before understanding is just a pitch." subtext="Step 3" />
-</FlipCardGrid>
+<Accordion
+  items={[
+    {
+      id: 'understand',
+      title: 'Do your homework before you recommend anything',
+      badge: '1',
+      content: (
+        <>
+          <p>One owner on that panel sends a qualifying questionnaire before anyone gets on a call, asking about pain points, how they found the agency, and their financial situation. They arrive knowing "what their hand in poker is" instead of guessing.</p>
+          <p>You do not need a form. Get answers to three questions however you can, even a two-line email:</p>
+          <ul>
+            <li>What is the actual goal you are trying to hit this quarter?</li>
+            <li>What have you already tried, and why did it not stick?</li>
+            <li>What would make this a clear win for you, in your own words?</li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 'map',
+      title: 'Ask the two questions that map the problem',
+      badge: '2',
+      content: (
+        <>
+          <p><em>"What does 'better' actually look like for you here?"</em> stops you recommending the wrong <em>size</em> of solution, because you aim at their definition of success rather than yours.</p>
+          <p><em>"What's stopped this from getting fixed already?"</em> surfaces the real obstacle, which is often not the one they led with.</p>
+          <p>A client who says they need "more reviews" but whose real obstacle is that nobody has time to ask for them needs a different recommendation than the first sentence implied.</p>
+        </>
+      )
+    },
+    {
+      id: 'recommend',
+      title: 'Only now, recommend',
+      badge: '3',
+      content: (
+        <>
+          <p>With the goal, the history, and the real obstacle in hand, the recommendation writes itself and is defensible when questioned. Anything you name before this point is a pitch.</p>
+        </>
+      )
+    }
+  ]}
+/>
 
 ## Why trust beats features
 
-Here is the payoff for working this way instead of pitching: roughly three out of every four dollars small businesses spend on software and services flow through an expert they already trust, not the vendor with the longest feature list. Research cited in this material also finds B2B buyers are *more* emotionally attached to the vendors and service providers they rely on than typical consumers are to the brands they buy from.
+Roughly three of every four dollars small businesses spend on software and services flow through an expert they already trust, not the vendor with the longest feature list. B2B buyers are also more emotionally attached to the providers they rely on than typical consumers are to the brands they buy.
 
-That is not a reason to be less rigorous about your product. It is the reason the questions above matter more than your pitch deck. A prospect is not deciding whether your product is good — they are deciding whether you are the person whose recommendation they can trust without independently verifying it. Understanding their problem before you name a solution is how you earn that.
+That is not a reason to be less rigorous about your product. It is why the questions above matter more than your deck. A prospect is not deciding whether your product is good. They are deciding whether you are the person whose recommendation they can trust without checking it themselves.
 
 ## Keep consulting after the sale
 
-The same "do not automate the conversation" rule those agency owners apply to selling, they also apply to reporting results.
+The same rule applies to reporting. An automated monthly report is fine. What keeps a client is walking them through their real numbers yourself, in a short screen recording or a call. Skip the vanity metrics and narrate the ones that show where the business improved.
 
-It is fine to have an automated monthly report go out. But the thing that actually keeps a client is walking them through their real numbers yourself, in a short screen recording or a call, rather than letting a canned report speak for you. Skip the vanity metrics — impressions, clicks — and narrate the ones that show where the business actually improved.
-
-Clients who get that personal walkthrough trust the relationship more, because they can tell you are not hiding behind a dashboard when the numbers are anything less than perfect.
+Clients who get that walkthrough trust the relationship more, because they can tell you are not hiding behind a dashboard when the numbers are less than perfect.
 
 :::tip Try it now
 Before your next consultation, write down the three homework questions above and actually get answers before the call, even if it is just a two-line email. Then, in the call itself, ask the two follow-up questions before you say a single word about what you would recommend.
 :::
-
-## What you now have
-
-- A three-question homework habit that replaces guessing with actual knowledge of the client's goal
-- Two follow-up questions that keep your recommendation sized to their definition of success
-- A clear line on what never gets automated: diagnosing the problem, and reporting the real results
-- The trust-over-features argument for why this is worth the extra ten minutes
 
 <SectionFeedback courseId="consult-dont-just-pitch" site="vendasta_learn" section="content" />
 
@@ -172,7 +130,7 @@ Before your next consultation, write down the three homework questions above and
     },
     {
       type: 'mcq',
-      question: 'Why do the agency owners in this lesson refuse to automate the sales conversation itself?',
+      question: 'Why do the agency owners refuse to automate the sales conversation itself?',
       options: [
         'Automation software for sales calls does not exist yet',
         'It is the one place they find out what the client actually needs before recommending anything',
@@ -202,7 +160,7 @@ Before your next consultation, write down the three homework questions above and
     },
     {
       type: 'fillblank',
-      principle: 'The consulting sequence in this lesson is: understand, ___, then recommend.',
+      principle: 'The consulting sequence is: understand, ___, then recommend.',
       before: '',
       answer: 'map',
       after: '',
@@ -218,7 +176,7 @@ Before your next consultation, write down the three homework questions above and
   ]}
 />
 
-<LessonFooter to="/learn/sales/build-your-brand-and-your-day" pathName="How to sell" step={8} totalSteps={9} />
+<LessonFooter to="/learn/sales/build-your-brand-and-your-day" pathName="Master Sales Series" step={8} totalSteps={9} />
 
 </InlineHighlighter>
 <MarkComplete courseId="consult-dont-just-pitch" site="vendasta_learn" />

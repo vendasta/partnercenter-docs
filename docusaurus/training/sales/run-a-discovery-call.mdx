@@ -1,5 +1,6 @@
 ---
-title: "Run a discovery call that actually discovers something"
+title: "Master Sales: Discovery calls"
+sidebar_label: "Discovery calls"
 sidebar_position: 3
 description: "Ask the questions that tell you whether to keep going."
 sidebar_class_name: hide-from-sidebar
@@ -12,69 +13,17 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
-import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import Accordion from "@site/src/components/Accordion";
 
 <InlineHighlighter courseId="run-a-discovery-call" site="vendasta_learn">
 
 <CourseProgressBar courseId="run-a-discovery-call" site="vendasta_learn" />
 
-{/* VIDEO 1: "Insights Based Selling" — Wistia ID `rto0p9fo18`, found by Shiva 2026-08-14. */}
-
-<div
-  className="wistia_responsive_padding"
-  style={{ padding: '56.25% 0 0 0', position: 'relative' }}
->
-  <div
-    className="wistia_responsive_wrapper"
-    style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
-  >
-    <iframe
-      src="https://fast.wistia.net/embed/iframe/rto0p9fo18?web_component=true&seo=true"
-      title="Insights Based Selling"
-      allow="autoplay; fullscreen"
-      allowTransparency
-      frameBorder="0"
-      scrolling="no"
-      className="wistia_embed"
-      name="wistia_embed"
-      width="100%"
-      height="100%"
-    ></iframe>
-  </div>
-</div>
-
-{/* VIDEO 2: "Selling Local" webinar — Wistia ID `0zlccoi4iu`, found by Shiva 2026-08-14 (turned out to be in Wistia after all). */}
-
-<div
-  className="wistia_responsive_padding"
-  style={{ padding: '56.25% 0 0 0', position: 'relative' }}
->
-  <div
-    className="wistia_responsive_wrapper"
-    style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
-  >
-    <iframe
-      src="https://fast.wistia.net/embed/iframe/0zlccoi4iu?web_component=true&seo=true"
-      title="Selling Local (webinar)"
-      allow="autoplay; fullscreen"
-      allowTransparency
-      frameBorder="0"
-      scrolling="no"
-      className="wistia_embed"
-      name="wistia_embed"
-      width="100%"
-      height="100%"
-    ></iframe>
-  </div>
-</div>
-<script src="https://fast.wistia.net/player.js" async></script>
-
 <LessonHeader
   difficulty="Intermediate"
   time="about 10 minutes"
-  required={["A discovery call booked (Lesson 2's endpoint)"]}
-  video={true}
-  pathName="How to sell"
+  required={["A discovery call booked"]}
+  pathName="Master Sales Series"
   step={3}
   totalSteps={9}
   outcomes={[
@@ -85,88 +34,81 @@ import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
   ]}
 />
 
+
+
+
 ## Stop opening with the weather
 
-There used to be a rule in sales: spend the first fifteen or twenty minutes of a call on rapport. Ask about their weekend, their family, the weather.
+Fifteen minutes of small talk assumes a business owner has fifteen minutes to spare. Get to why they are on the call, and prove you are listening a different way: paraphrase what they just told you before you move on.
 
-That rule is outdated. Business owners are busier than it assumes, and most of them can tell within the first minute whether you are going to waste their time. Get to why they are on the call, fast. That does not mean skipping rapport — it means proving you are listening a different way: paraphrase back what they just told you, in your own words, before you move on.
+:::info Say it back
+"So if I have got this right, the real issue is [X], and it is costing you [Y]. Is that a fair read?"
+:::
 
-> "So if I have got this right, the real issue is [X], and it is costing you [Y]. Is that a fair read?"
-
-That one sentence does more to build trust than twenty minutes of small talk, because it proves you were actually listening instead of waiting for your turn to talk.
+That one sentence builds more trust than twenty minutes of weather, because it proves you were listening instead of waiting for your turn.
 
 ## The three questions that do most of the work
 
-You do not need a long list of discovery questions. Three, asked in order, uncover almost everything you need:
+Asked in order, these uncover almost everything you need.
 
-> "What's on your mind?"
->
-> "And what else?"
->
-> "So what's the real challenge here?"
-
-**"And what else?" is the one reps skip, and it is the one that matters most.** The first answer a prospect gives is rarely the whole picture — it is the thing that was easiest to say out loud. Asking "what else" once, sometimes twice, is what gets you from the surface complaint to the actual problem.
-
-Once you are there, two follow-ups keep the conversation useful instead of just diagnostic:
-
-> "What would solving this actually mean for your business?"
->
-> "What can I do to help you move forward?"
-
-<FlipCardGrid>
-  <FlipCard front="What's on your mind?" back="Opens the call on their agenda, not yours." subtext="Question 1" />
-  <FlipCard front="And what else?" back="The one reps skip. Gets you past the easiest answer to the real one." subtext="Question 2" />
-  <FlipCard front="What's the real challenge?" back="Names the problem you will actually be solving for." subtext="Question 3" />
-</FlipCardGrid>
+<Accordion
+  items={[
+    {
+      id: 'on-your-mind',
+      title: '"What\'s on your mind?"',
+      badge: '1',
+      content: (
+        <>
+          <p>Opens the call on their agenda instead of yours, and tells you what they think the problem is.</p>
+        </>
+      )
+    },
+    {
+      id: 'what-else',
+      title: '"And what else?"',
+      badge: '2',
+      content: (
+        <>
+          <p>The one reps skip, and the one that matters most. A first answer is rarely the whole picture; it is whatever was easiest to say out loud. Ask once, sometimes twice, to get from the surface complaint to the actual problem.</p>
+        </>
+      )
+    },
+    {
+      id: 'real-challenge',
+      title: '"So what\'s the real challenge here?"',
+      badge: '3',
+      content: (
+        <>
+          <p>Names the problem you will actually solve for. Follow it with "What would solving this mean for your business?" and "What can I do to help you move forward?" to keep the call useful rather than merely diagnostic.</p>
+        </>
+      )
+    }
+  ]}
+/>
 
 ## Discover, then define
 
-Treat discovery as two separate moves, not one.
+Two moves, not one. First **discover**: ask and listen without jumping to a solution. Then **define**: say back what you heard and get them to confirm you understood the real challenge, not just the first thing mentioned. Only after "yes, that's it" should the conversation move to what you recommend.
 
-First you **discover**: you ask, and you listen, without jumping to a solution. Then you **define**: you say back what you heard and get the prospect to confirm you understood the real challenge correctly, not just the first thing they mentioned. Only after they have said "yes, that's it" should the conversation move toward what you would recommend.
+Going straight from discover to pitch is how you solve the wrong problem confidently.
 
-Skipping straight from discover to a pitch is how you end up solving the wrong problem confidently.
+## Come in with a hypothesis, not a script
 
-## Come in with some idea of where they stand
+Do not walk in with a blank page. A Snapshot Report gives you a starting read across listings, reviews, social, website, SEO, and advertising, so you arrive with an idea of where the gaps probably are. Cover their business and what they sell, what they use today, where it falls short in their words, and how much they already know about what you offer.
 
-You should not walk into a discovery call with a blank page. Before the call, pull what you can — a Snapshot Report gives you a starting read across listings, reviews, social, website, SEO, and advertising, so you already have a hypothesis about where the gaps probably are.
-
-During the call, cover the ground a good discovery conversation always covers, in whatever order the conversation naturally goes:
-
-- Their business, their team, and what they actually sell
-- What they are already using to do the job today
-- Where that is falling short — the challenge, in their words
-- How much they already know about what you could offer
-
-The report gives you a hypothesis. The call is still where you find out if the hypothesis is right. Do not read the report *at* them instead of asking questions.
+The report is a hypothesis. The call is where you find out whether it is right, so do not read it *at* them instead of asking.
 
 ## Tell them when something does not fit
 
-Here is the part that feels counterintuitive: the strongest trust move in a discovery call is sometimes telling a prospect that something does not fit them.
-
-If a solution genuinely is not going to help their specific situation, say so. It costs you a possible add-on in the moment, and it buys you something worth more — proof that you are solving for their outcome, not your quota. A prospect who hears you say "that one's probably not worth it for you" believes you completely the next time you say something is.
+The strongest trust move on a discovery call is sometimes telling a prospect that something is not for them. It costs an add-on now and buys proof that you solve for their outcome rather than your quota. A prospect who hears "that one is probably not worth it for you" believes you completely the next time you say something is.
 
 ## Match your depth to the opportunity
 
-Not every call needs the same depth of questioning.
-
-A prospect who already knows exactly what they want — a specific placement, a specific fix, no ambiguity — does not need you to challenge their thinking or dig for a hidden strategic problem. Give them fast, efficient service and respect that they have done their own discovery.
-
-A prospect who is trying to build a brand, break into a competitive market, or fix something they cannot quite name yet is a different conversation entirely, and that is where the three questions and the discover-then-define sequence earn their keep.
-
-Running every call the same way wastes effort on the simple ones and shortchanges the complex ones.
+Someone who knows exactly what they want does not need you to dig for a hidden strategic problem. Give them fast service and respect that they did their own discovery. Someone building a brand or fixing something they cannot quite name is where the three questions earn their keep. Running every call the same way wastes effort on the simple ones and shortchanges the complex ones.
 
 :::tip Try it now
-On your next discovery call, use only the three questions above to start — nothing else prepared. When the prospect answers, paraphrase it back before you say anything else. Notice how much of the call you do not have to script once you have actually heard the real answer.
+On your next discovery call, open with only the three questions, nothing else prepared. Paraphrase each answer back before you say anything else. Notice how much of the call you do not have to script once you have heard the real answer.
 :::
-
-## What you now have
-
-- Three questions that do most of the diagnostic work on any discovery call
-- A discover-then-define habit: listen, paraphrase, and only then recommend
-- A pre-call habit of pulling a Snapshot for a working hypothesis, without letting it replace the conversation
-- Permission to tell a prospect something does not fit, and the trust that earns you later
-- A way to decide how deep to go, based on the opportunity rather than a fixed script
 
 <SectionFeedback courseId="run-a-discovery-call" site="vendasta_learn" section="content" />
 
@@ -176,7 +118,7 @@ On your next discovery call, use only the three questions above to start — not
   questions={[
     {
       type: 'mcq',
-      question: 'Why does this lesson push back on spending the first fifteen minutes of a call on small talk?',
+      question: 'Why push back on spending the first fifteen minutes of a call on small talk?',
       options: [
         'Prospects find small talk unprofessional',
         'Business owners are busy, and proving you listened builds trust faster than rapport time',
@@ -234,7 +176,7 @@ On your next discovery call, use only the three questions above to start — not
   ]}
 />
 
-<LessonFooter to="/learn/sales/present-so-it-lands" pathName="How to sell" step={3} totalSteps={9} />
+<LessonFooter to="/learn/sales/present-so-it-lands" pathName="Master Sales Series" step={3} totalSteps={9} />
 
 </InlineHighlighter>
 <MarkComplete courseId="run-a-discovery-call" site="vendasta_learn" />
