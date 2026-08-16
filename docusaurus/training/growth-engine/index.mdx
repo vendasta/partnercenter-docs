@@ -6,40 +6,93 @@ description: "Run the full loop for one prospect: Snapshot, package, propose, de
 hide_table_of_contents: true
 ---
 
-import PathRoadmap from "@site/src/components/PathRoadmap";
+import PathCards from "@site/src/components/PathCards";
+import PathHeader from "@site/src/components/PathHeader";
 
-This learning path runs the whole motion, one move per step: find a business and show it where it stands, package and price the fix, close the deal, deliver it under your brand, and prove the result month after month. One worked example, Northside Dental, threads through every step.
+{/* Steps 3 to 6 are still stubs, so PathHeader deliberately carries no `time`:
+    a total across unwritten steps would be a guess. Add it once they publish. */}
 
-<PathRoadmap
-  steps={[
+<PathHeader
+  parts={6}
+  difficulty="Beginner"
+  topics={["Snapshot Report", "Packaging", "Closing", "Client delivery", "Proving results"]}
+  required={["A Partner Center account"]}
+  objective="The whole motion, one move per step: find a business and show it where it stands, package and price the fix, close the deal, deliver it under your brand, and prove the result month after month. One worked example, Northside Dental, threads through every step."
+  outcomes={[
+    "You can run a Snapshot Report and read it aloud to an owner",
+    "You can turn the gaps it finds into a priced package",
+    "You can close, deliver under your own brand, and prove the result at renewal",
+  ]}
+/>
+
+:::info Content is rolling out now
+The first two steps are published. The rest are being written.
+:::
+
+## This path covers
+
+Six steps, following one prospect from first report to renewal.
+
+<PathCards
+  cards={[
     {
       title: "Run your first Snapshot Report",
       description: "Create the account and see how the platform grades a business.",
+      topics: [
+        "The report that starts the sale",
+        "Choosing your prospect and creating the account",
+        "What the grades measure",
+      ],
       to: "/learn/growth-engine/run-your-first-snapshot",
     },
     {
       title: "Turn grades into a conversation",
       description: "Read each Snapshot section and pick the gap that opens the sale.",
+      topics: [
+        "Two gaps and a strength",
+        "When the owner pushes back",
+        "Present it, do not send it",
+      ],
       to: "/learn/growth-engine/read-the-snapshot",
     },
     {
       title: "Package and price the fix",
       description: "Match gaps to products, bundle them, and set your retail prices.",
+      topics: [
+        "Matching Snapshot gaps to Marketplace products",
+        "Building a package",
+        "Pricing it with your margin",
+      ],
       to: "/learn/growth-engine/build-your-package",
     },
     {
       title: "Send the order and close",
       description: "Payment required on approval, so acceptance activates everything.",
+      topics: [
+        "Creating the order from the package",
+        "Sending it for client approval",
+        "What happens the moment it is accepted",
+      ],
       to: "/learn/growth-engine/propose-and-close",
     },
     {
       title: "Deliver in Business App",
       description: "Products land as dashboards under your brand; invite the client in.",
+      topics: [
+        "Where activated products appear for the client",
+        "Adding the client as a user",
+        "The welcome email",
+      ],
       to: "/learn/growth-engine/deliver-in-business-app",
     },
     {
       title: "Prove it with the Executive Report",
       description: "Proof of performance, and the renewal conversation it sets up.",
+      topics: [
+        "The Executive Report as proof of performance",
+        "The Snapshot-to-Executive-Report before-and-after",
+        "The renewal conversation",
+      ],
       to: "/learn/growth-engine/prove-with-executive-report",
     },
   ]}

@@ -14,8 +14,9 @@ interface PathHeaderProps {
   difficulty: string;
   /** Subject pills, e.g. ["Prospecting", "Discovery", "Closing"] */
   topics?: string[];
-  /** Total time across the path, e.g. "about 2 hours" */
-  time: string;
+  /** Total time across the path, e.g. "about 2 hours". Omit when steps are still
+   *  unpublished and a total would be a guess. */
+  time?: string;
   /** Technical requirements only. Defaults to ["None"]. */
   required?: string[];
   /** What the path builds, in one short paragraph */
@@ -53,10 +54,14 @@ export default function PathHeader({
       </div>
 
       <div className="lesson-header__bar">
-        <span>
-          <strong>Estimated time</strong> · {time}
-        </span>
-        <span className="lesson-header__divider">|</span>
+        {time && (
+          <>
+            <span>
+              <strong>Estimated time</strong> · {time}
+            </span>
+            <span className="lesson-header__divider">|</span>
+          </>
+        )}
         <span>
           <strong>Required</strong> · {required.join(", ")}
         </span>
