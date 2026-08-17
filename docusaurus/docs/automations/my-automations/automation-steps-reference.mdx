@@ -226,13 +226,13 @@ Steps marked **(draft)** are in development and may change or be removed before 
 | Step | Overview | Special Cases | Example Use Cases |
 | --- | --- | --- | --- |
 | Delay | Pauses the automation for a set amount of time before continuing to the next step. | The automation run may be cancelled if the account, contact, or company becomes ineligible for the workflow while waiting. | When an account is added to Marketing Services, wait 3 days and then send a **How's it going?** email. |
-| Delay until an event happens | Pauses the automation and waits until a specified event occurs (e.g. a task is completed, a campaign email is clicked). | See [Advanced automation features](./advanced-automation-features.mdx) for configuration details. | When an opportunity is created, wait until it reaches the **Proposal** stage before generating the proposal document. |
+| Delay until an event happens | Pauses the automation and waits until a specified event occurs (e.g. a task is completed, a campaign email is clicked). | See [Logic & flow control](./logic-and-flow-control.mdx) for configuration details. | When an opportunity is created, wait until it reaches the **Proposal** stage before generating the proposal document. |
 
 ## Conditions
 
 | Step | Overview | Special Cases | Example Use Cases |
 | --- | --- | --- | --- |
-| If/else branch | Splits the workflow into two paths based on whether a condition is met, so different steps run for different scenarios. | See [Advanced automation features](./advanced-automation-features.mdx) for configuration details. | If a contact is from a target industry, route to the sales team; otherwise, enroll in a nurture sequence. |
+| If/else branch | Splits the workflow into two paths based on whether a condition is met, so different steps run for different scenarios. | See [Logic & flow control](./logic-and-flow-control.mdx) for configuration details. | If a contact is from a target industry, route to the sales team; otherwise, enroll in a nurture sequence. |
 | Jump to a step | Skips forward or backward to a specific step in the workflow. | | Loop back to the start of a follow-up sequence after a delay. |
 | Rate filter | Limits how frequently the automation can proceed for a given contact, preventing the same person from moving through too often. | | Prevent sending more than one outreach email per week per contact. |
 
@@ -252,6 +252,6 @@ The Workflow category is in **early access**.
 ## Related resources
 
 - [Automation triggers reference](./automation-triggers-reference.mdx)
-- [Advanced automation features](./advanced-automation-features.mdx) — logic steps, delays, and grouping
+- [Logic & flow control](./logic-and-flow-control.mdx) — if/else branches, delays, and jump steps
 - [Automations overview](../index.mdx)
 - [Creating and configuring automations](./creating-and-configuring-automations.mdx)
