@@ -5,8 +5,6 @@ sidebar_label: Create Marketing Emails
 sidebar_position: 1
 ---
 
-# Create marketing emails
-
 Create professional marketing emails that engage your contacts and drive business results. Marketing emails can be deployed through campaigns for scheduled sends or automations for trigger-based delivery. 
 
 ## Overview
@@ -84,16 +82,16 @@ The Email Builder allows you to design engaging emails that look great on any de
 
 With upwards of [80% of emails opened on mobile devices](https://www.litmus.com/blog/email-client-market-share-infographic/), it's crucial to ensure your emails display properly across all devices. The Email Builder provides instant visual feedback so you can see exactly how your emails will appear to recipients.
 
-### Customize Your Logo
+### Customize your logo
 
 Use this feature to hide or customize the logo for each email you design. The logo can be hidden or changed for each different email inside your campaigns, allowing for more personalized content.
 
 ![Email Builder Logo Customization](./img/marketing/campaigns/email_builder_logo_customization.jpg)
 
 The logo customization block has three options:
-- **Default** — Uses the partner logo configured in your branding settings.
-- **Custom** — Upload a different image. You can set the width and alignment, and add a URL so clicking the logo takes recipients to a destination of your choice.
-- **Hide** — Removes the logo from this email entirely.
+- **Default**: Uses the partner logo configured in your branding settings.
+- **Custom**: Upload a different image. You can set the width and alignment, and add a URL so clicking the logo takes recipients to a destination of your choice.
+- **Hide**: Removes the logo from this email entirely.
 
 ### Adjusting padding between content blocks
 
@@ -106,7 +104,7 @@ If you have two images stacked on top of each other and there's an unwanted gap 
 
 This eliminates the space between the two blocks. The same approach works for any adjacent blocks where you want tighter spacing.
 
-### Working with Content Blocks
+### Working with content blocks
 
 All email content is placed in content "blocks." Email Builder provides multiple blocks that you can click and add. The blocks determine what kind of content can be entered as well as the styling and editing options available. Click **"+Add new block"** to start building your email.
 
@@ -120,13 +118,13 @@ Click **"Preview"** in the top right-hand corner to check out your email!
 
 ![Email Builder Preview](./img/marketing/campaigns/email_builder_preview.jpg)
 
-### Preview on Different Devices
+### Preview on different devices
 
 You can see how your email will appear on different devices in real-time with the click of a button. This ensures your emails look great whether opened on desktop, tablet, or mobile.
 
 ![Email Builder Logo Personalization](./img/marketing/campaigns/email_builder_logo_personalization.jpg)
 
-### Additional Email Builder Features
+### Additional email builder features
 
 - **Side-by-side content**: Render images and text side by side with simple click and selection
 - **Color customization**: Change colors for text, titles, subtitles, links, footer text, content background, and page background
@@ -134,11 +132,13 @@ You can see how your email will appear on different devices in real-time with th
 - **Tables**: Add simple tables to arrange data intuitively in your emails
 - **Contact cards**: Personalize emails with contact images and details
 
-### Email Builder Limitations
+### Email builder limitations
 
+{/* SME/writer review: "legacy" and "new" Email Builder violate evergreen style (no past/recency framing). Confirm whether the legacy builder still exists as a distinct product surface, and if so, what evergreen-safe names to use for both versions. */}
 1. Emails built in the legacy Email Builder cannot be edited in the new Email Builder and vice-versa
 2. Emails started in the legacy builder cannot be switched mid-creation to the new Email Builder
 
+{/* SME/writer review: this numbered list starts at 6 with no steps 1-5 anywhere nearby. It isn't clearly a continuation of "Creating custom campaign emails" above (that list ends cleanly at step 5) or any other list in this article. A near-duplicate fragment numbered 7-8 ("Campaign Timing Configuration") also appears later, after the entire Method 2 section, covering the same timing/delivery topic in more detail. Needs a writer/SME to determine where this content actually belongs and how the two fragments should be reconciled — do not guess the placement or renumber without confirming. */}
 **Campaign Setup Process:**
 
 6. Continue adding email events until you have finished creating the campaign
@@ -149,11 +149,11 @@ You can see how your email will appear on different devices in real-time with th
 **Campaign Limitations**: Campaigns provide straightforward drip sequences but lack conditional branching, trigger responses, or dynamic timing. For more sophisticated email marketing with conditional logic and smart triggers, consider using [Automations](/automations) instead.
 :::
 
-## Method 2: Using Email Templates in Automations (Advanced Smart Marketing)
+## Method 2: Using email templates in automations (advanced smart marketing)
 
 Automations are intelligent marketing workflows that support both drip sequences AND conditional logic. Unlike simple campaigns, automations can respond to contact actions, form submissions, business events, and data changes in real-time. This advanced approach enables both scheduled sequences and smart, responsive communication based on contact behavior and business intelligence.
 
-### Setting Up Email Automation
+### Setting up email automation
 
 **To create automated email sequences:**
 
@@ -169,7 +169,7 @@ Automations are intelligent marketing workflows that support both drip sequences
 - **Start Campaign for Company** - Trigger an existing campaign sequence for the company
 - **Campaign Step** - Use existing campaigns as building blocks within automation workflows
 
-### Email Template Creation in Automations
+### Email template creation in automations
 
 When adding email steps to automations:
 
@@ -182,7 +182,7 @@ When adding email steps to automations:
 **Using Campaign Steps in Automations:**
 The "Campaign" step allows you to incorporate existing drip campaigns as building blocks within your automation workflows. This lets you combine the simplicity of pre-built campaigns with the advanced conditional logic of automations.
 
-### Automation Email Benefits
+### Automation email benefits
 
 **Drip Sequence Capabilities (Like Campaigns, But Smarter):**
 - Create time-based email sequences with conditional branching
@@ -225,6 +225,8 @@ The "Campaign" step allows you to incorporate existing drip campaigns as buildin
 
 **Recommendation**: Automations provide superior flexibility and intelligence. Consider using automations for most email marketing needs, as they support everything campaigns can do plus advanced conditional capabilities.
 :::
+
+{/* SME/writer review: this fragment (7-8) covers the same timing/delivery topic as the "Campaign Setup Process" list (6-8) earlier in this article, and sits disconnected here after the entire Method 2 section. See the review note on that list — same open question about where this content belongs and whether these two fragments should be merged. */}
 **Campaign Timing Configuration:**
 
 7. Adjust the "days before starting" or "days before previous event"
@@ -235,7 +237,7 @@ The "Campaign" step allows you to incorporate existing drip campaigns as buildin
 
 ![Campaign Configuration](./img/marketing/marketing-campaigns/campaign-configuration.png)
 
-## Campaign Configuration Settings
+## Campaign configuration settings
 
 In the **Campaign configuration** section of a campaign, you can configure the following settings:
 
@@ -243,14 +245,14 @@ In the **Campaign configuration** section of a campaign, you can configure the f
 
 ![Campaign configuration settings](./img/marketing/marketing-campaigns/configure-campaigns/campaign-config-2-v2.png)
 
-### Time Zone Settings
+### Time zone settings
 
 By default, campaigns are sent in your local time zone. To change this setting:
 
 1. Select a time zone from the dropdown
 2. Click **Save**
 
-### Included Days
+### Included days
 
 By default, emails are only sent Monday-Friday. However, the delays that are set between campaign events count all the days of the week. If an email is scheduled to send on a day that's not included, the email will be sent on the next included day.
 
@@ -266,9 +268,9 @@ To change this setting:
 1. Select the days that emails should be sent on
 2. Click **Save**
 
-### Rate Limiting
+### Rate limiting
 
-This option limits the number of emails that can be sent on behalf of each salesperson per day. The limit only applies when adding a list to a campaign (not adding individual accounts). Only the first email step of a campaign is affected—the remaining emails in a campaign are sent with the delays set in the campaign. Pausing and resuming a campaign will bypass the limit.
+This option limits the number of emails that can be sent on behalf of each salesperson per day. The limit only applies when adding a list to a campaign (not adding individual accounts). Only the first email step of a campaign is affected. The remaining emails in a campaign are sent with the delays set in the campaign. Pausing and resuming a campaign will bypass the limit.
 
 :::note
 For example, if a company has 4 salespeople, and the limit is set to 2 recipients per day, then 8 recipients will be added to the campaign per day. Each recipient will receive subsequent emails in the campaign with the delays that are set in the campaign.
@@ -280,13 +282,13 @@ By default, the limit is disabled. To turn on the limit:
 2. Enter the maximum number of recipients that should be added to the campaign per salesperson per day (from a list)
 3. Click **Save**
 
-### Campaign Sender Settings
+### Campaign sender settings
 
 You can change the 'sender' email address and name in **Partner Center** > **Marketing** > **Email Settings > Sender and Reply Settings.**
 
 ![Campaign email settings](./img/marketing-campaigns/campaign_email_settings.jpg)
 
-### Scheduling Campaigns Walkthrough Video
+### Scheduling campaigns walkthrough video
 
 <iframe 
   src="https://drive.google.com/file/d/17wY5cNDUF8X4WQ2nVLBn5BaSvFA4RoEe/preview" 
@@ -295,11 +297,11 @@ You can change the 'sender' email address and name in **Partner Center** > **Mar
   allowFullScreen
 ></iframe>
 
-## Testing and Optimizing Marketing Emails
+## Testing and optimizing marketing emails
 
 Whether you're using campaigns or automations, thorough testing ensures your emails perform effectively across different email clients and devices.
 
-### Email Testing Process
+### Email testing process
 
 Email clients like Gmail, Apple Mail, and Outlook display emails differently. Always test your emails before sending to ensure optimal presentation and functionality.
 
@@ -319,7 +321,7 @@ Email clients like Gmail, Apple Mail, and Outlook display emails differently. Al
 
 ![Send Test Button](./img/marketing/marketing-campaigns/send-test-button.png)
 
-### Advanced Preview: Testing as Specific Accounts
+### Advanced preview: testing as specific accounts
 
 You can preview email campaigns as a specific account to ensure proper functionality and see exactly how dynamic content will appear for different businesses.
 
@@ -353,7 +355,7 @@ The test email will be customized with the selected account's data, showing you 
 **Note:** For test campaigns to send successfully, there needs to be an account linked to the user receiving the email.
 :::
 
-### Publishing and Activation
+### Publishing and activation
 
 **For Campaigns:**
 Once testing is complete, click **Publish** to make your campaign available for sending.
@@ -363,7 +365,7 @@ Once testing is complete, click **Publish** to make your campaign available for 
 **For Automations:**
 Turn on your automation to begin trigger-based email delivery or use the "Manual" trigger to trigger the automation manually. Monitor initial sends to ensure proper functionality.
 
-## Troubleshooting Common Issues
+## Troubleshooting common issues
 
 ### Error: "Your company hasn't set up campaigns yet"
 
@@ -392,7 +394,7 @@ The contact information is required to send marketing campaigns. This error occu
   allowFullScreen
 ></iframe>
 
-### Other Common Setup Issues
+### Other common setup issues
 
 **Campaign Won't Publish:**
 - Ensure all required email content is complete

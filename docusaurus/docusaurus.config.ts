@@ -114,6 +114,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           // --- Learn restructure (2026-07): TRAINING -> LEARN, paths + lifecycle libraries ---
           // builder lab broken out into its own path (2026-07)
           { from: '/learn/builder/the-builder-lab', to: '/learn/build-lab' },
+          // Master Sales Series (2026-08): path scoped to the Master Sales Training Series only.
+          // These four steps had no series episode behind them and were removed.
+          { from: '/learn/sales/run-a-discovery-call', to: '/learn/sales' },
+          { from: '/learn/sales/close-and-open-the-relationship', to: '/learn/sales' },
+          { from: '/learn/sales/sell-socially', to: '/learn/sales' },
+          { from: '/learn/sales/consult-dont-just-pitch', to: '/learn/sales' },
           // getting-started renames
           { from: '/learn/getting-started/A-Brief-Introduction-to-the-Vendasta-Platform', to: '/learn/getting-started/the-vendasta-platform' },
           { from: '/learn/getting-started/Organize-Teams-in-the-Platform', to: '/learn/getting-started/organize-your-team' },
@@ -221,8 +227,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/administration/my-account/my-plan/cancelling-your-subscription', to: '/administration/my-account/my-plan/' },
           // My Billing: billing-overview-and-model is now the index
           { from: '/administration/my-account/my-billing/billing-overview-and-model', to: '/administration/my-account/my-billing/' },
-          // Affiliate Program: terms merged into index
-          { from: '/administration/my-account/affiliate-program/vendasta-affiliate-program-terms-and-conditions', to: '/administration/my-account/affiliate-program/' },
+          // Affiliate Program: page removed
+          { from: '/administration/my-account/affiliate-program/vendasta-affiliate-program-terms-and-conditions', to: '/administration/my-account/' },
+          { from: '/administration/my-account/affiliate-program/', to: '/administration/my-account/' },
           // Data Management: CRM Objects and Custom Fields merged into one page
           { from: '/administration/data-management/crm-objects/custom-fields', to: '/administration/data-management/crm-objects/' },
           // Data Management: Pipelines and Create a new Pipeline merged into one page
@@ -437,8 +444,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/getting-started/intro-to-vendasta/vendasta-platform-overview', to: '/getting-started' },
           { from: '/getting-started/intro-to-vendasta/partner-onboarding', to: '/getting-started/partner-onboarding' },
           { from: '/getting-started/intro-to-vendasta/partner-troubleshooting-guide', to: '/getting-started/partner-troubleshooting-guide' },
-          { from: '/getting-started/intro-to-vendasta/vendasta-affiliate-program', to: '/administration/my-account/affiliate-program/' },
-          { from: '/getting-started/vendasta-affiliate-program', to: '/administration/my-account/affiliate-program/' },
+          { from: '/getting-started/intro-to-vendasta/vendasta-affiliate-program', to: '/administration/my-account/' },
+          { from: '/getting-started/vendasta-affiliate-program', to: '/administration/my-account/' },
           { from: '/partner-center/partner-center-getting-started-guide', to: '/partner-center' },
           { from: '/partner-center/AI-receptionist-features-by-plan', to: '/ai/ai-workforce/ai-receptionist-features-by-plan' },
           // AI Workforce Optimization Plan content is now on every service page

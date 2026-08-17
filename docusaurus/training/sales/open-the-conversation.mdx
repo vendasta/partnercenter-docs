@@ -1,8 +1,8 @@
 ---
-title: "Open the conversation"
-sidebar_position: 2
+title: "Master the elevator pitch"
+sidebar_label: "Master the elevator pitch"
+sidebar_position: 3
 description: "Earn 30 seconds, then earn the meeting."
-sidebar_class_name: hide-from-sidebar
 ---
 
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
@@ -12,26 +12,20 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
-import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import Accordion from "@site/src/components/Accordion";
 
 <InlineHighlighter courseId="open-the-conversation" site="vendasta_learn">
 
 <CourseProgressBar courseId="open-the-conversation" site="vendasta_learn" />
 
-{/* VIDEO SLOT: "Ep. 3: The Perfect Elevator Pitch" (Master Sales Training Series, Wistia,
-    keep-as-is verdict — talking-head, no product UI). No embed ID recorded: proj-009 catalogued
-    the Wistia library by title, and this clip is not in the 360Learning export that carries IDs.
-    Look it up in the vendasta-1 Wistia account by title. A near-duplicate cut exists as "Master
-    the Elevator Pitch" — use the Ep. 3 cut, it carries the fuller story. */}
-
 <LessonHeader
   difficulty="Beginner"
   time="about 12 minutes"
-  required={["A prospect to call (Lesson 1's endpoint)"]}
+  required={["A prospect to call"]}
   video={true}
-  pathName="How to sell"
-  step={2}
-  totalSteps={9}
+  pathName="The Master Sales Series"
+  step={3}
+  totalSteps={5}
   outcomes={[
     "Explain what an elevator pitch is actually for, and what it is not",
     "Build a pitch in four parts: goal, plain-language value, your edge, a question",
@@ -40,60 +34,107 @@ import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
   ]}
 />
 
+{/* VIDEO: "Master the Elevator Pitch" — Wistia ID `mbeqpwbrjx`, Master Sales Training Series folder, confirmed 2026-08-15. */}
+
+Watch sales expert George Leith build an elevator pitch that earns the next meeting.
+
+<div
+  className="wistia_responsive_padding"
+  style={{ padding: '56.25% 0 0 0', position: 'relative' }}
+>
+  <div
+    className="wistia_responsive_wrapper"
+    style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
+  >
+    <iframe
+      src="https://fast.wistia.net/embed/iframe/mbeqpwbrjx?web_component=true&seo=true"
+      title="Master the Elevator Pitch"
+      allow="autoplay; fullscreen"
+      frameBorder="0"
+      scrolling="no"
+      className="wistia_embed"
+      name="wistia_embed"
+      width="100%"
+      height="100%"
+    ></iframe>
+  </div>
+</div>
+<script src="https://fast.wistia.net/player.js" async></script>
+
+
+
 ## An elevator pitch does not close anything
 
-Picture this: you are on a plane, and the person who just sat down next to you turns out to be the exact prospect you have been trying to reach for months. You have until they put their headphones on. What do you say?
-
-Most reps freeze here because they think the job of that moment is to win the deal. It is not. An elevator pitch has one job: deliver enough value that the other person wants to keep talking. That is it. If you walk into that moment thinking you need a signature in ninety seconds, you have already lost the room.
+A pitch has one job: deliver enough value that the other person wants to keep talking. Walk into that moment needing a signature and you have already lost the room.
 
 ## Build it in four parts
 
-**1. Identify the goal.** Before you write a word, decide what you want the listener to take away. Not "impress them" — a specific next step: a follow-up call, a meeting, a "tell me more."
+<Accordion
+  items={[
+    {
+      id: 'goal',
+      title: 'Identify the goal',
+      badge: '1',
+      content: (
+        <>
+          <p>Decide what you want the listener to do next before you write a word. Not "impress them" but a specific next step: a follow-up call, a meeting, a "tell me more."</p>
+        </>
+      )
+    },
+    {
+      id: 'value',
+      title: 'Say what you do in as few words as possible',
+      badge: '2',
+      content: (
+        <>
+          <p>Test it literally. Get in an elevator, press a button three floors up, and explain your value proposition before the doors open. If you need more than three floors, you do not have a pitch yet. You have a speech.</p>
+        </>
+      )
+    },
+    {
+      id: 'edge',
+      title: 'Name your unique selling proposition',
+      badge: '3',
+      content: (
+        <>
+          <p>What do you do that the person across the aisle cannot also claim? Back this one with a real result, not an adjective.</p>
+        </>
+      )
+    },
+    {
+      id: 'question',
+      title: 'Ask a question',
+      badge: '4',
+      content: (
+        <>
+          <p>Do not end on a statement. End on something that pulls them into the next exchange, such as "Does that sound like a problem you are dealing with right now?" A pitch with no question is a monologue with a deadline.</p>
+        </>
+      )
+    }
+  ]}
+/>
 
-**2. Say what you do in as few words as possible.** Test this literally: get in an elevator, press a button three floors up, and explain your value proposition before the doors open. If you need more than three floors, you do not have a pitch yet. You have a speech.
+## Reframe a pain they already have
 
-**3. Name your unique selling proposition.** What do you do that the person sitting across the aisle from you cannot also claim? This is the part you back up with a real result, not an adjective.
+The best pitches do not introduce a new problem. They reframe one the prospect is already living with.
 
-**4. Ask a question.** Do not end on a statement. End on something that pulls them into the next exchange: *"Does that sound like a problem you are dealing with right now?"* A pitch with no question is a monologue with a deadline.
+Years ago a seller pitched a newspaper organization built entirely on print advertising, with no reason of their own to change. They did not open with "you need digital marketing." They opened with what the room already cared about:
 
-<FlipCardGrid>
-  <FlipCard front="The goal" back="A specific next step — a call, a meeting, a 'tell me more'. Not 'impress them'." subtext="Part 1" />
-  <FlipCard front="Three floors" back="If your value proposition needs more than three floors, it is a speech, not a pitch." subtext="Part 2" />
-  <FlipCard front="The question" back="End on a question. A pitch with no question is a monologue with a deadline." subtext="Part 4" />
-</FlipCardGrid>
+:::info The Fort Worth pitch
+"You have sold a lot of advertising. I have too. And one thing we both know is that the advertising you sell is coming under attack. The client's first comment on the next call is always 'it isn't working like it used to.' It's not your ad that's the problem. It's that they've got broken listings, bad reviews, and a website that takes forever to load. What if the thing you sell could work better, because their virtual doorway finally matches the ad that sent someone looking for it?"
+:::
 
-## Edit it until it survives contact
+Nobody was asked to abandon what they were good at. The pitch named a pain the room already felt, advertising getting blamed for problems it did not cause, and pointed at a fix that made their existing product stronger. Five years later people who were in that room were still using a version of it.
 
-The first version of your pitch is never the one you use. Say it out loud, cut what does not earn its place, say it again.
+## Sharpen it on a real person
 
-Practise to a mirror if you need somewhere to start, but the practice that actually sharpens a pitch is the uncomfortable kind: saying it in front of a peer, a manager, or a real prospect and watching their face when something does not land. Junior reps skip this step because it is awkward. It is also the only way you find out your pitch is confusing before a prospect tells you by walking away.
+Say it out loud, cut what does not earn its place, say it again. A mirror is somewhere to start. The practice that sharpens a pitch is saying it to a peer, a manager, or a prospect and watching their face when something does not land.
 
-A useful test: if the person on the other end of your pitch looks *more* confused at the end than they did at the start, you do not have a good pitch. You have a bad one that happens to be short.
-
-## The Fort Worth story
-
-Years ago, a seller was pitching a newspaper organization that had built its entire business on selling print advertising — and had no reason, in their own minds, to change. They did not open with "you need digital marketing." They opened with the thing the room already cared about:
-
-> "You have sold a lot of advertising. I have too. And one thing we both know is that the advertising you sell is coming under attack — the client's first comment on the next call is always 'it isn't working like it used to.' It's not your ad that's the problem. It's that they've got broken listings, bad reviews, and a website that takes forever to load. What if the thing you sell could work better, because their virtual doorway finally matches the ad that sent someone looking for it?"
-
-That pitch did not ask anyone to abandon what they were good at. It named a pain they already felt — advertising getting blamed for problems it did not cause — and pointed at a fix that made their existing product stronger instead of replacing it. Five years later, people who were in that room were still using a version of that same pitch on their own prospects.
-
-The lesson underneath the story: **the best elevator pitches do not introduce a new problem. They reframe a problem the prospect is already living with.**
-
-## You need more than one
-
-If you sell more than one thing, you need more than one pitch — one per audience, one per problem you solve. A rep with a single generic elevator pitch for every prospect is a rep who has not done the work yet.
+If you sell more than one thing, you need more than one pitch: one per audience, one per problem you solve.
 
 :::tip Try it now
 Pick your next prospect. Write your pitch in four lines: the goal, the value in one sentence, your edge, and the question. Say it out loud. If it takes longer than three floors, cut it and say it again.
 :::
-
-## What you now have
-
-- A four-part structure for building any elevator pitch: goal, value, edge, question
-- The three-floor test for whether a pitch is actually short enough
-- A model for reframing an existing pain instead of inventing a new one
-- The habit of rehearsing out loud, in front of someone who will tell you when it does not land
 
 <SectionFeedback courseId="open-the-conversation" site="vendasta_learn" section="content" />
 
@@ -163,7 +204,7 @@ Pick your next prospect. Write your pitch in four lines: the goal, the value in 
   ]}
 />
 
-<LessonFooter to="/learn/sales/run-a-discovery-call" pathName="How to sell" step={2} totalSteps={9} />
+<LessonFooter to="/learn/sales/present-so-it-lands" pathName="The Master Sales Series" step={3} totalSteps={5} />
 
 </InlineHighlighter>
 <MarkComplete courseId="open-the-conversation" site="vendasta_learn" />
