@@ -19,6 +19,34 @@ Vendasta Ads is in open beta, available to Partner Center users serving business
 
 If you're looking for a fully managed, do-it-with-me campaign instead, see [Express Ads](./express-ads.md) or [Managed Ads Campaign](./managed-ads-campaign.md).
 
+{/* VIDEO: "Plan, propose, and order a digital ad campaign with Vendasta Ads" — Wistia ID `9re5lqhyi8`, provided by Shiva 2026-08-17. */}
+
+Watch the full walkthrough: build an AI-generated plan, share the branded proposal with your client, and turn it into a live, managed campaign, all without leaving Partner Center.
+
+<div
+  className="wistia_responsive_padding"
+  style={{ padding: '56.25% 0 0 0', position: 'relative' }}
+>
+  <div
+    className="wistia_responsive_wrapper"
+    style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
+  >
+    <iframe
+      src="https://fast.wistia.net/embed/iframe/9re5lqhyi8?web_component=true&seo=true"
+      title="Plan, propose, and order a digital ad campaign with Vendasta Ads"
+      allow="autoplay; fullscreen"
+      allowTransparency
+      frameBorder="0"
+      scrolling="no"
+      className="wistia_embed"
+      name="wistia_embed"
+      width="100%"
+      height="100%"
+    ></iframe>
+  </div>
+</div>
+<script src="https://fast.wistia.net/player.js" async></script>
+
 ## Before you start
 
 * **Eligibility:** Vendasta Ads is available to all Partner Center users who serve businesses located in the United States and Canada, and who don't have a dedicated Vendasta Ads Enterprise instance.
