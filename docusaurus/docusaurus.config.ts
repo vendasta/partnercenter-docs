@@ -114,6 +114,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           // --- Learn restructure (2026-07): TRAINING -> LEARN, paths + lifecycle libraries ---
           // builder lab broken out into its own path (2026-07)
           { from: '/learn/builder/the-builder-lab', to: '/learn/build-lab' },
+          // Master Sales Series (2026-08): path scoped to the Master Sales Training Series only.
+          // These four steps had no series episode behind them and were removed.
+          { from: '/learn/sales/run-a-discovery-call', to: '/learn/sales' },
+          { from: '/learn/sales/close-and-open-the-relationship', to: '/learn/sales' },
+          { from: '/learn/sales/sell-socially', to: '/learn/sales' },
+          { from: '/learn/sales/consult-dont-just-pitch', to: '/learn/sales' },
           // getting-started renames
           { from: '/learn/getting-started/A-Brief-Introduction-to-the-Vendasta-Platform', to: '/learn/getting-started/the-vendasta-platform' },
           { from: '/learn/getting-started/Organize-Teams-in-the-Platform', to: '/learn/getting-started/organize-your-team' },
