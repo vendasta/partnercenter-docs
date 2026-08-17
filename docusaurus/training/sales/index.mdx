@@ -1,65 +1,96 @@
 ---
-title: How to sell
+title: The Master Sales Series
 sidebar_position: 0
 sidebar_label: Overview
-description: "The rep's arc from finding a prospect to closing and growing the relationship: prospecting, pitching, discovery, presenting, objections, closing, social selling, consulting, and running your sales day."
+description: "The Master Sales Series with George Leith: running your sales day, prospecting, the elevator pitch, the presentation format, and handling objections."
 hide_table_of_contents: true
-sidebar_class_name: hide-from-sidebar
 ---
 
-import PathRoadmap from "@site/src/components/PathRoadmap";
+import PathCards from "@site/src/components/PathCards";
+import PathHeader from "@site/src/components/PathHeader";
 
-{/* Draft path, staged ahead of Cal's sixth-path IA sign-off (per proj-010). hide-from-sidebar on this
-    category and every lesson below keeps it off the live nav until that approval lands. */}
+{/* Live in the sidebar as of 2026-08-15 (Cal, sixth-path IA sign-off per proj-010). To take the path
+    back off the nav, restore `className: hide-from-sidebar` on _category_.json — the category node
+    carries the whole path, so a per-step frontmatter flag is not needed and will not work on its own.
 
-This path follows one rep's arc: finding a prospect, opening the conversation, running a discovery call that earns the right to present, presenting so it lands, handling objections without flinching, closing and opening the relationship, selling socially, consulting instead of just pitching, and building the habits that make it repeatable.
+    Scope rule (Cal, 2026-08-15): this path carries the Master Sales Training Series and nothing else.
+    Source folder: https://vendasta-1.wistia.com/folders/i562ezn9i8/subfolders/krzt8ljsux
+    Order follows the folder. The objections step is the one approved exception: its two videos are a
+    different presenter and not from the folder, kept because the content fits and no series episode
+    covers objections. Do not add videos from other series. */}
 
-<PathRoadmap
-  steps={[
+<PathHeader
+  parts={5}
+  difficulty="Beginner to Intermediate"
+  topics={["Prospecting", "Pitching", "Sales presentations", "Handling objections", "Sales productivity"]}
+  time="about 1 hour"
+  required={["None"]}
+  objective="The Master Sales Series with George Leith; how to run a sales day, keep a funnel full, pitch in the time it takes to ride three floors, structure a presentation that closes, and handle a prospect who pushes back."
+  outcomes={[
+    "You run a day that produces conversations instead of admin",
+    "You keep a pipeline full instead of rebuilding it between big deals",
+    "You pitch and present so a conversation ends in a decision",
+    "You treat an objection as information rather than a no",
+  ]}
+/>
+
+## This path covers
+
+Each step pairs a video session with the practice behind it, and ends with a knowledge check.
+
+<PathCards
+  cards={[
     {
-      title: "Find your next prospect",
+      title: "Run the perfect sales day",
+      description: "The habits and positioning that make everything after this repeatable.",
+      topics: [
+        "Deciding between local variety and a global niche",
+        "Splitting your book into A, B, and C",
+        "The 60/30/10 rule and the line-by-line test",
+      ],
+      to: "/learn/sales/build-your-brand-and-your-day",
+    },
+    {
+      title: "Six habits for better prospecting",
       description: "Build a pipeline instead of waiting for one to show up.",
+      topics: [
+        "Six habits that keep a funnel full",
+        "The five-before-nine, nine-after-five rule",
+        "Which AI Employees carry part of the load",
+      ],
       to: "/learn/sales/find-your-next-prospect",
     },
     {
-      title: "Open the conversation",
+      title: "Master the elevator pitch",
       description: "Earn 30 seconds, then earn the meeting.",
+      topics: [
+        "What a pitch is actually for",
+        "Building one in four parts",
+        "Why you need more than one",
+      ],
       to: "/learn/sales/open-the-conversation",
     },
     {
-      title: "Run a discovery call that actually discovers something",
-      description: "Ask the questions that tell you whether to keep going.",
-      to: "/learn/sales/run-a-discovery-call",
-    },
-    {
-      title: "Present so it lands",
-      description: "Insights, deliverables, value, and the ask, in that order.",
+      title: "A killer sales presentation",
+      description: "Insights, deliverables, value, then the ask.",
+      topics: [
+        "Opening with what you heard, not what you sell",
+        "Saying what changes, not what you install",
+        "Making the ask out loud",
+      ],
       to: "/learn/sales/present-so-it-lands",
     },
     {
-      title: "Handle objections without flinching",
+      title: "Handle objections like a master",
       description: "The five objections you will hear most, and what to say back.",
+      topics: [
+        "The LAIR sequence",
+        "The five objections you will hear most",
+        "Five ways to bounce back",
+      ],
       to: "/learn/sales/handle-objections",
-    },
-    {
-      title: "Close, then open the relationship",
-      description: "The close is the beginning of the account, not the end of the sale.",
-      to: "/learn/sales/close-and-open-the-relationship",
-    },
-    {
-      title: "Sell socially",
-      description: "Turn LinkedIn into a prospecting channel, not a resume.",
-      to: "/learn/sales/sell-socially",
-    },
-    {
-      title: "Consult, don't just pitch",
-      description: "The questions that make a prospect trust your recommendation.",
-      to: "/learn/sales/consult-dont-just-pitch",
-    },
-    {
-      title: "Build your brand and run your sales day like a pro",
-      description: "The habits and positioning that make the other eight steps repeatable.",
-      to: "/learn/sales/build-your-brand-and-your-day",
     },
   ]}
 />
+
+Work through the five steps, then finish with the **[Master sales skill check](/learn/sales/master-sales-skill-check)**: fifteen scenario questions covering the whole series.

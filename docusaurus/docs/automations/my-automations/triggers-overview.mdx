@@ -1,0 +1,61 @@
+---
+title: Triggers overview
+description: Triggers are the events that start your automations — understand trigger types, scoping, and how to choose the right trigger for your workflow.
+sidebar_position: 3
+sidebar_label: Triggers overview
+tags: [automations, triggers]
+keywords: [automation triggers, event triggers, scheduled triggers, manual triggers, trigger types, trigger scope]
+---
+
+# Triggers overview
+
+A trigger is the "when" of your automation — the event that kicks off the workflow. Every automation starts with exactly one trigger.
+
+## Trigger types
+
+| Type | How it works | Example |
+|---|---|---|
+| **Event triggers** | Fires when something happens in the platform | Form submitted, contact created, opportunity stage changed |
+| **Time-based triggers** | Fires on a recurring schedule | Every Monday at 9 AM, first of each month |
+| **Manual triggers** | Fires when you click "Run" on specific records | Run for a selected account, company, or contact |
+| **Advanced triggers** | Fires from external systems or API calls | Webhook received, Zapier integration, API request |
+
+## How trigger scope works
+
+The trigger you choose determines which actions are available downstream:
+
+| Trigger scope | What's in context | Available actions |
+|---|---|---|
+| **Account-scoped** | The account that fired the trigger | Account-focused steps — assign salesperson, activate products, add tags |
+| **Company-scoped** | The company (and its account) | Company-focused steps — assign owner, log call, start campaign |
+| **Contact-scoped** | The contact (and its company/account) | Contact-focused steps — assign owner, send email, add to list |
+| **No entity** | No record in context (webhook, API, schedule) | Entity-creation steps only — create company, send webhook, delay, if/else |
+
+:::tip
+If your automation needs company data but your trigger is contact-scoped, use a **Find company** or **Get company from contact** step to bring the company into scope.
+:::
+
+## Choosing a trigger
+
+**React to user or customer actions** — Use event triggers (form submitted, contact created, opportunity changed). These are the most common and fire in real time.
+
+**Run on a schedule** — Use [time-based triggers](./time-based-triggers.mdx) for recurring tasks like weekly check-ins, monthly invoice reminders, or daily AI employee invocations.
+
+**Start from an external system** — Use [Zapier](./trigger-automation-using-zapier.mdx), webhook, or API triggers to connect third-party apps.
+
+**Run on demand** — Use manual triggers to execute automations for specific records you select in the CRM.
+
+## Trigger conditions
+
+After choosing a trigger, add **conditions** to filter which events actually start the automation:
+
+- **AND conditions** — all must be true (e.g., company industry is "Healthcare" AND company city is "Edmonton")
+- **OR conditions** — any can be true (e.g., trigger on form A OR form B)
+
+Combine AND/OR to build precise filters so your automation only runs for the right records.
+
+## Pages in this section
+
+- **[Automation triggers reference](./automation-triggers-reference.mdx)** — Complete list of every trigger, organized by category
+- **[Time-based triggers](./time-based-triggers.mdx)** — Set up daily, weekly, or monthly schedules
+- **[Trigger via Zapier](./trigger-automation-using-zapier.mdx)** — Connect third-party apps to start automations
