@@ -8,11 +8,12 @@ tags: [automations, workflows, automation, partner-center]
 keywords: [automations, workflows, triggers, automation steps, email campaigns, CRM integration]
 ---
 
+import { Cards, Card } from '@site/src/components/Cards';
 import { GraduationCapIcon } from '@site/src/components/Icons';
 
 # Automations overview
 
-Automations help you automate sales and marketing processes. Define workflows in the builder so that when a trigger happens, the platform runs your chosen actions—for example, "When a new client is added, assign a salesperson to the account."
+Automations help you automate sales and marketing processes. Define workflows in the builder so that when a trigger happens, the platform runs your chosen actions — for example, "When a new client is added, assign a salesperson to the account."
 
 <iframe
   src="//www.youtube-nocookie.com/embed/AdLMXuGvGDE"
@@ -26,23 +27,20 @@ An automation workflow is a set of instructions: **when** this trigger happens, 
 
 ## What's in this section
 
-- **[Creating and configuring automations](./my-automations/creating-and-configuring-automations.mdx)** – Build and configure custom workflows
-- **[Automation triggers reference](./my-automations/automation-triggers-reference.mdx)** – All available triggers
-- **[Automation steps reference](./my-automations/automation-steps-reference.mdx)** – All available actions and steps
-- **[Step deep-dives](./my-automations/steps/index.mdx)** – In-depth guides for specific steps like Categorize with AI, Find company, and Find custom object
-- **[Data expressions in automations](./my-automations/data-expressions.mdx)** – Extract and transform data between steps
-- **[Time-based triggers](./my-automations/time-based-triggers.mdx)** – Run automations on a daily, weekly, or monthly schedule
-- **[Navigating the automation canvas](./my-automations/navigating-the-automation-canvas.mdx)** – Step search, step references, and the minimap
-- **[Logic & flow control](./my-automations/logic-and-flow-control.mdx)** – If/else branches, delays, jump steps, rate filters
-- **[Reusable workflows](./my-automations/reusable-workflows.mdx)** – Grouping, action sets, AI employee integration
-- **[Managing your automations](./automation-history/managing-your-automations.mdx)** – Monitor, edit, and maintain automations
-- **[Troubleshooting automations](./automation-history/troubleshooting-automations.mdx)** – Common issues and solutions
-- **[Fixing the permissions banner](./automation-history/automation-permissions-error.mdx)** – Clear "Automation requires valid permissions to run"
-- **[Automation templates overview](./templates/index.mdx)** – Pre-built templates to get started quickly
-- **[Partner-made automation templates](./templates/partner-made-automation-templates.mdx)** – Create and manage templates for your clients
-- **[Visual Visitor template](./templates/automation-template-create-companies-from-visual-visitor.mdx)** – Create CRM companies from Visual Visitor data
-- **[Bulk actions](./my-automations/bulk-actions.mdx)** – Run automation-powered actions on demand from CRM views
-- **[Trigger an automation using Zapier](./my-automations/trigger-automation-using-zapier.mdx)** – Connect Vendasta CRM to third-party systems via Zapier
+<Cards cols={2}>
+  <Card href="/automations/my-automations/" title="My automations">
+    Create, configure, and build custom workflows with triggers, actions, logic, and data expressions
+  </Card>
+  <Card href="/automations/system-automations/" title="System automations">
+    Pre-built workflows provided by Vendasta — enable or disable per account
+  </Card>
+  <Card href="/automations/templates/" title="Templates">
+    Pre-built templates to get started quickly, plus partner-made templates for your clients
+  </Card>
+  <Card href="/automations/automation-history/" title="Automation history">
+    Monitor runs, troubleshoot errors, retry failed automations, and fix permissions
+  </Card>
+</Cards>
 
 ## What you can do with automations
 
@@ -59,21 +57,23 @@ When a customer has a failed payment, receive a notification so you can follow u
 
 ## Understanding automation triggers
 
-Triggers are the events that start a workflow. Some are ready to use (e.g. **An account is created**). Others need **trigger options**—for example, **A sales order status is changed** requires you to set the order origin and the status it changes to.
+Triggers are the events that start a workflow. Some are ready to use (e.g. **An account is created**). Others need **trigger options** — for example, **A sales order status is changed** requires you to set the order origin and the status it changes to.
 
 ![Trigger options example](./my-automations/img/automations/trigger-options.jpg)
 
 ### Trigger conditions
 Conditions filter when the workflow runs. You can filter on tags, salespeople, account location, account categories, active products, and more. When you add multiple conditions, choose **AND** or **OR**:
 
-- **OR** – The trigger runs when **any** condition in the group is met.
-- **AND** – The trigger runs only when **all** conditions in the group are met.
+- **OR** — The trigger runs when **any** condition in the group is met.
+- **AND** — The trigger runs only when **all** conditions in the group are met.
 
 ![Trigger conditions example](./my-automations/img/automations/trigger-conditions.jpg)
 
+For a complete list of triggers and how to choose the right one, see [Triggers overview](./my-automations/triggers-overview.mdx).
+
 ## Creating your first automation
 
-1. In Business App go to **Settings** → **Automations**.
+1. In Business App go to **Settings** then **Automations**.
 2. Click **Create** (top right).
 3. Enter **Name**, optional **Description**, and **Status** (on/off).
 4. Define the **trigger** (When) and optional **conditions** (If).
@@ -92,30 +92,20 @@ The automation runs whenever the trigger conditions are met (if it's turned on).
 
 ![Create automation button](./my-automations/img/automations/create-automation-5.jpg)
 
-## Available triggers and actions
-
-What you see depends on your Vendasta subscription. Common examples:
-
-**Common triggers:** Order created, new lead added, product reaches a certain status, task completed, account created, user active in Business App, campaign email opened or clicked.
-
-**Common actions:** Create a task, send an email, create a note, update a record, assign a salesperson, start an email campaign, add account to a list.
-
-See [Automation Triggers Reference](./my-automations/automation-triggers-reference.mdx) and [Automation Steps Reference](./my-automations/automation-steps-reference.mdx) for full lists.
-
 ## Best practices
 
-- **Start simple** – Build and test simple automations before complex workflows.
-- **Use clear names** – So your team understands each automation's purpose.
-- **Monitor regularly** – Check that automations are running as expected.
-- **Consider impact** – Think through how automations affect the rest of your workflow.
-- **Test first** – Run with a small group before enabling for all accounts.
+- **Start simple** — Build and test simple automations before complex workflows.
+- **Use clear names** — So your team understands each automation's purpose.
+- **Monitor regularly** — Check that automations are running as expected.
+- **Consider impact** — Think through how automations affect the rest of your workflow.
+- **Test first** — Run with a small group before enabling for all accounts.
 
 ## Next steps
 
-- [Automation Triggers Reference](./my-automations/automation-triggers-reference.mdx) – Complete list of triggers
-- [Automation Steps Reference](./my-automations/automation-steps-reference.mdx) – Complete list of actions
-- [Creating and Configuring Automations](./my-automations/creating-and-configuring-automations.mdx) – Advanced configuration
-- [Automation Templates Overview](./templates/index.mdx) – Pre-built templates
+- [Triggers overview](./my-automations/triggers-overview.mdx) — Understand trigger types and choose the right one
+- [Actions overview](./my-automations/actions-overview.mdx) — Explore 130+ available action steps
+- [Creating and configuring automations](./my-automations/creating-and-configuring-automations.mdx) — Entry settings, error handling, permissions
+- [Automation templates](./templates/index.mdx) — Pre-built templates to get started quickly
 
 <a href="https://partners.vendasta.com/automations" target="_blank" rel="noopener">**Create an Automation**</a> (Partner Center)
 

@@ -111,6 +111,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/security-and-compliance', to: '/getting-started/security-and-privacy' },
           // Commerce: order processing/activation article merged into Creating and Managing Orders
           { from: '/commerce/orders/order-processing-and-activation', to: '/commerce/orders/creating-and-managing-orders' },
+          // Vendasta Ads in Partner Center promoted to its own top-level "Ads" sidebar item (2026-08)
+          { from: '/vendasta-services/digital-advertising/vendasta-ads-partner-center', to: '/ads' },
           // --- Learn restructure (2026-07): TRAINING -> LEARN, paths + lifecycle libraries ---
           // builder lab broken out into its own path (2026-07)
           { from: '/learn/builder/the-builder-lab', to: '/learn/build-lab' },
