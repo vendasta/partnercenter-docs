@@ -210,8 +210,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/vendasta-services/social-media-management/social-media-marketing-timeline', to: '/vendasta-services/social-media-management/' },
           // Vendasta Services: expectation brochures article removed
           { from: '/vendasta-services/expectations/expectation-brochures', to: '/vendasta-services/expectations/' },
-          // Vendasta Services digital advertising: MatchCraft overview split into Express Ads + Managed Ads Campaign
+          // Vendasta Services digital advertising: MatchCraft overview replaced by Specialty Ad Campaign
           { from: '/vendasta-services/digital-advertising/matchcraft-services-overview', to: '/vendasta-services/digital-advertising/' },
+          // Vendasta Services digital advertising: Express Ads retired
+          { from: '/vendasta-services/digital-advertising/express-ads', to: '/vendasta-services/digital-advertising/' },
           // Vendasta Services digital advertising: short articles merged into the section FAQ
           { from: '/vendasta-services/digital-advertising/matchcraft-ad-services-refund-policy', to: '/vendasta-services/digital-advertising/' },
           { from: '/vendasta-services/digital-advertising/criteria-for-unskippable-youtube-ads', to: '/vendasta-services/digital-advertising/' },

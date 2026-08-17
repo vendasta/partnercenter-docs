@@ -4,7 +4,7 @@ sidebar_label: AI onboarding
 sidebar_position: 3
 description: An onboarding email and set of Business App Home cards that show SMBs the work AI has already done for them, recommend next steps, and surface upgrade options. Available to Early Access partners.
 tags: [business-app, onboarding, home, ai, early-access, upgrades]
-keywords: [onboarding email, AI work done, home cards, upgrade cards, recommended next steps, Vibe, early access, activation]
+keywords: [onboarding email, AI work done, home cards, upgrade cards, recommended next steps, Vibe, early access, activation, custom greeting, receptionist name, business profile, easy account create]
 ---
 
 # AI onboarding experience
@@ -77,11 +77,29 @@ The table below lists every line the summary can contain, the exact condition fo
 | **Scanned 40+ directories** and found where you're missing | Local SEO is active, past the first 24 hours | view your results |
 | **Calculated your local visibility and Google search rankings** | Local SEO **Pro/Premium** is active (shown in addition to the directory line) | ask your local search specialist for a report |
 | Read your website (**\{count\} pages** from \{domain\}) and taught your AI everything about your business | The business has a website on file | the website domain |
-| Prefilled your **business profile** | Always | ready for you to review |
+| Prefilled your **business profile** | Always | **review suggestions** when the business description is empty and AI has drafted one, otherwise **ready for you to review** |
+| Named your AI Chat Receptionist **\{name\}** | The receptionist has been named for the account | **change it** |
 
 :::note
 The onboarding email shows this same checklist. It keeps the fewest inline links — typically just the Vibe **see it live** link and the website domain — because the richer in-app links (drafting responses, opening a specialist chat, and so on) live behind login.
 :::
+
+### Your AI gets a name
+
+When an account is created, AI reads what's known about the business — starting with its website — and gives the AI Chat Receptionist a **real, human-sounding name** rather than a generic one. The name is chosen to suit the business and avoids reusing the name of anyone found on the site.
+
+The SMB sees it in two places:
+
+- On the work summary, as **"Named your AI Chat Receptionist \[name\]"**, with a **change it** link into the receptionist's configuration page.
+- On the **Meet your AI receptionist** next-step card, whose title becomes **"Meet \[name\]"** once the naming has run.
+
+The naming line waits until the name has actually been set, so the SMB never sees a placeholder. If the business has no website on file, a suitable name is still generated from the other business details. The SMB or your team can rename the receptionist at any time, and a later name change is never overwritten.
+
+### AI fills in the business profile
+
+The **business profile** line takes the SMB straight to the **Business Description** tab of their profile. When the description is empty, AI drafts a suggestion in advance so the SMB arrives to a filled-in draft rather than a blank field, and the link reads **review suggestions**.
+
+The suggestion still has to be reviewed and saved by the SMB — nothing is written to the business profile on their behalf without approval.
 
 ## How a Vibe website is kicked off
 
@@ -125,8 +143,33 @@ You don't have to create a brand-new user to use the onboarding email. You can s
 This is handy for re-triggering the experience for someone already set up — and it's also the easiest way to see the real email yourself: add yourself as a user on the account and send it to your own inbox.
 
 :::note
-The classic **welcome email** is always available too. To send it after a user has been created, open the **options menu (⋮)** next to the user's name — either on the account or in **Accounts → Manage Users** — and click **Resend Welcome Email**.
+The classic **welcome email** is always available too. To send it after a user has been created, open the **options menu (⋮)** next to the user's name — either on the account or in **Accounts → Manage Users** — and click **Send Set Password email (Welcome email)**.
 :::
+
+### Sending it from the CRM
+
+You can also send the onboarding email without leaving the CRM. On a contact's **Access Business App** card, the action reads **Send Onboarding Email**, with a link underneath to preview the email first. Sending from here starts the same onboarding workflow as the create-user flow, including Vibe site generation where it applies.
+
+This is the fastest path when you're already working a contact record and want to bring them into Business App in the same motion.
+
+### Adding a personal greeting
+
+Each time you send the onboarding email, you can include a **custom greeting** — useful for referring to a conversation you've already had, or for setting up what the client is about to see.
+
+- Your message is added to the **top of the email**, after the greeting and above the standard content.
+- It appears in the **preview**, so you can check it before sending.
+- It applies to **that send only**. It isn't saved as a default for future emails.
+
+The custom greeting is available when creating a new user, when sending to an existing user from the options menu, and when sending from the CRM. This matches how the custom message on the classic welcome email has always worked.
+
+### Creating users in Easy Account Create
+
+When you add users as part of **Easy Account Create**, the form now matches the standard create-user flow, so the onboarding email arrives correctly addressed:
+
+- **Correspondence language** — sets the language the email is sent in. English is the default.
+- **Greeting name** — the name used to address the person in the email.
+
+If any user in the batch can't be created or associated, a message names the specific users that failed, so you can retry just those rather than re-running the whole batch.
 
 <img src={require('./img/ai-onboarding-create-user.png').default} alt="The Create User form with the 'Send Onboarding Email' checkbox selected by default and a Preview button beside it" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -162,6 +205,8 @@ On Home, each line can carry its in-app links — for example **edit here** on t
 
 The familiar Getting Started cards are restyled into **recommended next steps** that appear on the dashboard until the SMB clears them. Each card points the SMB to a meaningful setup action. Completing a task removes its card, and the SMB can dismiss a card they don't need. This keeps the dashboard focused on what's still worth doing.
 
+Once the AI Chat Receptionist has been named, the **Meet your AI receptionist** card is titled **"Meet \[name\]"** instead — a small touch that makes the receptionist feel like a colleague rather than a setting.
+
 ### Product upgrade cards
 
 Below the work-done card, a **Recommended for \[business name\]** section surfaces your core AI products so SMBs can add them without leaving Home. Each card leads with a benefit headline:
@@ -179,7 +224,14 @@ Each card's button adapts to the account's state:
 | Product available, but you route upgrades to your sales team | **Contact us** — opens the contact card in Business App |
 | Product already active (Pro tier or above) | **Open \[product\]** — a link into the product's app |
 | Product currently provisioning | **Activating. This will only take a few moments.** (no button) |
+| **You've turned the upgrade option off for that product** | The card is not shown |
 | Product not in your catalog, or the account is suspended | The card is not shown |
+
+Turning a product's upgrade option off in **Marketplace → Manage Products** removes that product's card from Home entirely rather than falling back to a **Contact us** button. This keeps **Contact us** meaningful: it appears only when you've deliberately chosen to route that product's upgrades to your sales team.
+
+:::info
+If you haven't configured a product's upgrade settings at all, the upgrade path is treated as **on** and the card shows **Get started**. To suppress a card, turn the upgrade option off explicitly.
+:::
 
 When an SMB completes an upgrade, payment is collected through **Vendasta Payments** if you have it enabled — the SMB enters their card and checks out right from Home. If you don't use Vendasta Payments, the upgrade is sent to you as an **order** to process through your normal flow.
 
@@ -261,7 +313,16 @@ No. In the create-user flow the onboarding email is selected by default and repl
 <details>
 <summary>Can I still send the classic welcome email after a user is created?</summary>
 
-Yes. The classic welcome email is always available. Open the **options menu (⋮)** next to the user's name — either on the account or in **Accounts → Manage Users** — and click **Resend Welcome Email**. This is useful for password resets or any time you'd prefer the standard welcome email over the onboarding email.
+Yes. The classic welcome email is always available. Open the **options menu (⋮)** next to the user's name — either on the account or in **Accounts → Manage Users** — and click **Send Set Password email (Welcome email)**. This is useful for password resets or any time you'd prefer the standard welcome email over the onboarding email.
+
+You're no longer asked to choose a sending domain when you send it — the platform selects the best one automatically.
+
+</details>
+
+<details>
+<summary>Can we change the name AI gives the receptionist?</summary>
+
+Yes. The name is a starting point, not a fixed setting. The SMB can use the **change it** link on the work summary, and you or the SMB can rename the receptionist from its configuration page at any time. Once a name has been changed it stays changed — later updates to the account won't overwrite it.
 
 </details>
 

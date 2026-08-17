@@ -11,23 +11,53 @@ keywords: [Vendasta Ads, ad plans, ad proposal, Google ads, Bing ads, Meta ads, 
 
 ## Overview
 
-Vendasta Ads is a self-serve tool built into Partner Center that lets you **generate, share, and order** AI-assisted ad campaign plans for Google, Bing, and Meta without leaving Partner Center. Describe the business and its goals, and Vendasta Ads generates ad copy, keywords, audience targeting, and budget options in about a minute. From there, share a branded proposal with your client and, once approved, order the campaign directly. Vendasta Services then builds, launches, and manages the campaign on your behalf.
+Plan, propose, and order ad campaigns for Google, Bing, and Meta in minutes, all without leaving Partner Center. This article covers how to create a plan, share a branded proposal with your client, and turn your plan into a live campaign.
 
 :::info Open beta
-Vendasta Ads is in open beta, available to Partner Center users serving businesses in the United States and Canada that don't already have a dedicated Vendasta Ads Enterprise (formerly MatchCraft) instance.
+Vendasta Ads is in open beta, available to Partner Center users serving businesses in the United States and Canada that don't already have a dedicated MatchCraft instance.
 :::
 
-If you're looking for a fully managed, do-it-with-me campaign instead, see [Express Ads](./express-ads.md) or [Managed Ads Campaign](./managed-ads-campaign.md).
+If you're looking for a fully managed, do-it-with-me campaign instead, see [Specialty Ad Campaign](./specialty-ad-campaign.md).
+
+{/* VIDEO: "Plan, propose, and order a digital ad campaign with Vendasta Ads" — Wistia ID `9re5lqhyi8`, provided by Shiva 2026-08-17. */}
+
+Watch the full walkthrough: build an AI-generated plan, share the branded proposal with your client, and turn it into a live, managed campaign, all without leaving Partner Center.
+
+<div
+  className="wistia_responsive_padding"
+  style={{ padding: '56.25% 0 0 0', position: 'relative' }}
+>
+  <div
+    className="wistia_responsive_wrapper"
+    style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
+  >
+    <iframe
+      src="https://fast.wistia.net/embed/iframe/9re5lqhyi8?web_component=true&seo=true"
+      title="Plan, propose, and order a digital ad campaign with Vendasta Ads"
+      allow="autoplay; fullscreen"
+      allowTransparency
+      frameBorder="0"
+      scrolling="no"
+      className="wistia_embed"
+      name="wistia_embed"
+      width="100%"
+      height="100%"
+    ></iframe>
+  </div>
+</div>
+<script src="https://fast.wistia.net/player.js" async></script>
 
 ## Before you start
 
-* **Eligibility:** Vendasta Ads is available to all Partner Center users who serve businesses located in the United States and Canada, and who don't have a dedicated Vendasta Ads Enterprise instance.
+* **Eligibility:** Vendasta Ads is available to all Partner Center users who serve businesses located in the United States and Canada, and who don't have a dedicated MatchCraft instance.
 
-  * If your business has a Vendasta Ads Enterprise instance, create ad plans from **Vendasta Ads Enterprise** → **Manage** → **Plans** instead.
+  * If your business has a MatchCraft instance, create ad plans from **MatchCraft** → **Manage** → **Plans** instead.
 
 * **No setup required:** `Ads` appears automatically in the Partner Center left navigation. There's no activation step.
 
 ## Creating an ad plan
+
+<img src={require('./img/vendasta-ads-plan.png').default} alt="Create a plan screen showing the auto-populated website URL, optional instructions, and campaign type selection" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 1. Go to `Partner Center` → `Ads` → `Ad plans` → `Create new plan`.
 2. Review the auto-populated website URL, and correct it if needed.
@@ -94,15 +124,15 @@ Vendasta's platform and team of experts continuously optimize live campaigns. Ce
   * **Edit positive keywords:** Add positive keywords to existing ad groups to capture more search volume.
 
 * **Proposal link isn't loading for the client:** Confirm the plan has been shared, not just created, then regenerate the share link from the plan.
-* **Ordering option is missing:** Confirm the plan covers a supported network (Google/Bing Search, Google Display, or Meta) and that the account doesn't have a dedicated Vendasta Ads Enterprise instance blocking Partner Center Ads access.
+* **Ordering option is missing:** Confirm the plan covers a supported network (Google/Bing Search, Google Display, or Meta) and that the account doesn't have a dedicated MatchCraft instance blocking Partner Center Ads access.
 * **Need LinkedIn, YouTube, TikTok, Performance Max, or Yelp:** These networks aren't available as ad plans yet. Order a Specialty Ad Campaign from the Marketplace instead.
 
 ## FAQ
 
 <details>
-<summary>Do I need a dedicated Vendasta Ads Enterprise instance to use this?</summary>
+<summary>Do I need a dedicated MatchCraft instance to use this?</summary>
 
-No. Vendasta Ads in Partner Center is built for partners who don't have a dedicated Vendasta Ads Enterprise (formerly MatchCraft) instance. If your business does have one, create plans from **Vendasta Ads Enterprise** → **Manage** → **Plans** instead.
+No. Vendasta Ads in Partner Center is built for partners who don't have a dedicated MatchCraft instance. If your business does have one, create plans from **MatchCraft** → **Manage** → **Plans** instead.
 </details>
 
 <details>
