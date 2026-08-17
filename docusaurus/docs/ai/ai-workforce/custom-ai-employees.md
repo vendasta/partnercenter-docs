@@ -152,7 +152,7 @@ Requires Conversations AI Standard, Pro, or Premium. See [Web Chat Setup](../../
 
 - Add "Send a prompt to an AI Employee" step to automation workflows
 - Use Custom AI Employees for decision-making in automated processes
-- See [Advanced Automation Features](../../automations/my-automations/advanced-automation-features.mdx) for details
+- See [Reusable workflows](../../automations/my-automations/reusable-workflows.mdx) for details
 
 ## Use case examples
 
@@ -252,7 +252,7 @@ Add Custom AI Employees to automation workflows using the "Send a prompt to an A
 - Contextual decision making based on customer information
 - Reduces manual intervention in workflows
 
-For details on automation integration, see [Advanced Automation Features](../../automations/my-automations/advanced-automation-features.mdx).
+For details on automation integration, see [Reusable workflows](../../automations/my-automations/reusable-workflows.mdx).
 
 ## Framework consistency
 
@@ -310,6 +310,6 @@ While you can assign an AI Employee to multiple web chat widgets, you can't assi
 <details>
 <summary>Can I use Custom AI Employees in automation workflows?</summary>
 
-Yes! You can add Custom AI Employees to automation workflows using the "Send a prompt to an AI Employee" step. This allows you to use AI-powered decision-making in your automated processes. For more details, see [Advanced Automation Features](../../automations/my-automations/advanced-automation-features.mdx).
+Yes! You can add Custom AI Employees to automation workflows using the "Send a prompt to an AI Employee" step. This allows you to use AI-powered decision-making in your automated processes. For more details, see [Reusable workflows](../../automations/my-automations/reusable-workflows.mdx).
 
 </details>
