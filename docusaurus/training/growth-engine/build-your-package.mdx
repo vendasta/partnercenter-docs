@@ -2,11 +2,218 @@
 title: "Package and price the fix"
 sidebar_position: 3
 description: "Match each gap to a product, bundle the products into a package, and set your retail prices."
-sidebar_class_name: hide-from-sidebar
 ---
 
-:::info Content coming soon!
-This part of the learning path is being built. Check back shortly.
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LabChecklist from "@site/src/components/LabChecklist";
+import LabCallout from "@site/src/components/LabCallout";
+import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+
+<InlineHighlighter courseId="build-your-package" site="vendasta_learn">
+
+<CourseProgressBar courseId="build-your-package" site="vendasta_learn" />
+
+{/* VIDEO SLOT: candidate is "Package, Personalize, Rinse, Repeat" (George Leith) — Wistia ID
+    `arvev46b3h` in the library scrape. NOT VERIFIED, DO NOT EMBED YET. Two reasons for caution:
+    (1) every Wistia ID in the 360Learning export was injected by a fuzzy string-matching script,
+    not exported, and has produced confirmed mismatches and duplicates; (2) this asset is a 35:39
+    conference breakout session, which is the exact pattern flagged in partnercenter-docs #959 —
+    clips carrying George Leith's name that are actually older Conquer Local sessions, not course
+    videos. Verify in Wistia and confirm it is course material before embedding.
+
+    Rejected for this lesson: "Masterclass: Selling a High-Margin Online Presence Package"
+    (Jacqueline Cook, `vvg77ag0vd`). Product-accuracy pass verdict is DO NOT EMBED — its closing
+    workflow is built on Proposal Builder, now a legacy product, the priced bundle it sells does
+    not exist, and all three headline products in it have been renamed. See
+    enablement-docs/DOC-829-AC1-video-accuracy-findings.md. */}
+
+<LessonHeader
+  difficulty="Beginner"
+  time="about 12 minutes"
+  required={["A Snapshot Report you have already read", "Partner Center admin access"]}
+  lab
+  pathName="Your growth engine"
+  step={3}
+  totalSteps={6}
+  outcomes={[
+    "Turn the gaps on a Snapshot Report into a short list of products you can actually sell",
+    "Build a package in Marketplace and set a price per line item or across the whole bundle",
+    "Read your wholesale cost and profit before you quote anything",
+    "Publish a package so it is visible to the client instead of silently hidden",
+  ]}
+/>
+
+## A package is an answer to a specific report
+
+You left the last step with two gaps and a strength. That short list is the whole brief for this one. A package is not a catalogue you show every prospect; it is the fix for the report you just read aloud, and it should be small enough that the owner can repeat it back to you.
+
+Northside Dental's report gave you the shape of it: patients love the clinic, and the directories disagree about its address. So the package has to fix the disagreement, keep the reviews flowing, and stop there. Two problems and a bit of maintenance is an easy yes. Nine products is a proposal that needs a committee.
+
+## From gap to product
+
+Work down your shortlist and put one product against each gap. The report helps here: each Snapshot section names the kind of solution it is pointing at, so you are matching a graded weakness to a thing you sell rather than guessing.
+
+- **The listings gap** is an accuracy problem, and accuracy is what listing management is for. Northside Dental's address needs to be the same everywhere the search engines look.
+- **The reviews strength** is worth protecting. A section the business aces is the easiest product conversation you will have, because you are selling continuity rather than repair.
+- **Leave the rest out.** Anything you cannot fix, or the owner did not react to, does not belong in version one. You are not trying to bill every gap on the page.
+
+Before you can put a product in a package at all, you have to be selling it. Products come from **Partner Center** → **Marketplace** → **Discover Products**, where each one shows its wholesale cost and a suggested retail price. **Start Selling** adds it to your store in one click.
+
+:::info Only products you sell appear in the package builder
+The package constructor's **+ Add item** list shows products you are currently selling and nothing else. If a product you expected is missing, that is why — go back to **Discover Products** and start selling it first.
 :::
 
-**What you will learn here:** Matching Snapshot gaps to Marketplace products, building a package, and pricing it with your margin.
+## Build the package
+
+Packages live at **Partner Center** → **Marketplace** → **Packages**. There are two ways in, and the fast one is worth knowing about even if you rarely use it.
+
+- **Start from a recommended bundle.** The **Recommended Packages** tab holds pre-built bundles. **Add to Store** takes one as-is; **Copy** on the Package Details page gives you an editable duplicate you can rename, re-price, and cut down. Copying is usually the better move, because a bundle built for everyone is rarely the answer to one report.
+- **Start from scratch.** **Create Package** gives you an empty constructor. This is the honest choice when you are pricing against a specific Snapshot.
+
+Either way you end up in the same builder, and the parts that matter are the item list on the left and the money panel on the right.
+
+<FlipCardGrid>
+  <FlipCard front="+ Add item" back="Only products you are currently selling appear here. Drag to reorder, X to remove." subtext="The item list" />
+  <FlipCard front="Wholesale Cost" back="What the components cost you. Sits beside Profit at Purchase, which is retail minus wholesale." subtext="The money panel" />
+  <FlipCard front="Publish" back="Until you publish, the package is a draft and the client cannot see it anywhere." subtext="The last step" />
+</FlipCardGrid>
+
+## Price it two ways
+
+The builder lets you price from either end, and most partners use both in the same sitting.
+
+**Per line item.** Click the price on any item and set it. Each item keeps its own billing frequency, so a monthly service and a one-time setup can sit in one package. The package total recalculates as you go.
+
+**Across the whole package.** Click the **package total**, type the number you actually intend to charge, and the system distributes it back across the items using a weighted split based on each item's retail value and frequency. This is the one to reach for when you have already decided the package is a $499-a-month package and you are working backwards.
+
+Setting the total first and then nudging individual items is a normal workflow, not a conflict.
+
+**Setup fees** are one-time charges. Worth knowing where they land: a setup fee is allocated to a one-time item if the package has one, and to the first item if it does not.
+
+**Read the money panel before you quote.** **Wholesale Cost** is what the components cost you. **Profit at Purchase** is retail minus wholesale. Quoting a number you have not checked against that panel is how a package ends up selling at a loss.
+
+:::warning If Package Profit shows as unavailable
+That is almost always a currency mismatch between the package and the market it sits in. Check **Marketplace** → **Manage Store** → **Currency** — one currency per market, and anything outside USD, CAD, and AUD needs a conversion rate you maintain yourself.
+:::
+
+## Decide how the client buys it
+
+**Purchase behavior** has three settings, and it decides what the client can actually do when they see the package.
+
+- **Add to Shopping Cart** — the client can buy it themselves. This is what you want for anything self-serve.
+- **Contact Sales** — the package shows a button instead of a price. It needs a salesperson assigned through a contact form, or the button will not render at all.
+- **External URL** — sends the client somewhere else entirely.
+
+Two combinations catch people out. **Starting at** pricing and **Contact Sales** are both incompatible with shopping-cart checkout, so if you have set either one, do not expect a cart. And the checkout button in Business App needs two things switched on behind the scenes: Orders enabled for your account, and Vendasta Payments configured.
+
+You also control how much of the package the client can see. The presets run from the package name alone, through contents visible with prices hidden, to contents and prices both visible. **Contents are hidden by default**, and the setting carries through to the store, Business App, and invoices.
+
+<LabCallout title="build the package for your prospect">
+You are going to **Partner Center** → **Marketplace** → **Packages**.
+
+<LabChecklist
+  storageKey="build-your-package-lab-1"
+  steps={[
+    <>Write your two gaps and one strength at the top of a note. That list is your scope.</>,
+    <>Check you are already selling the products you need. If not, add them from <strong>Marketplace</strong> → <strong>Discover Products</strong> → <strong>Start Selling</strong>.</>,
+    <>Select <strong>Create Package</strong>, and name it something the owner would recognize rather than something internal.</>,
+    <>Use <strong>+ Add item</strong> to add one product per gap, and nothing you cannot deliver.</>,
+    <>Set your price. Either price each item, or click the package total and let it allocate backwards.</>,
+    <>Read <strong>Wholesale Cost</strong> and <strong>Profit at Purchase</strong>. If the margin is not what you assumed, fix it now rather than in front of the client.</>,
+    <>Set <strong>Purchase behavior</strong>, then <strong>Publish</strong>.</>,
+  ]}
+  confirm={<>You have a published package that answers one specific report, at a price you have checked your margin on.</>}
+/>
+</LabCallout>
+
+## The trap worth knowing before it costs you a meeting
+
+A product marked available in your store is still invisible to the client until it sits inside a **published** package assigned to a **visible** store category. Partners lose real time to this one: the product is switched on, the store looks empty, and nothing appears broken.
+
+A few smaller ones in the same family:
+
+- **You cannot add the same product twice** to a package. Use an add-on with multiple purchases allowed instead.
+- **Bulk price updates across packages are not supported.** One package at a time.
+- **Older packages migrate the first time you open and save them** in the constructor. The total is preserved, but the per-item breakdown will look new, and packages need this newer pricing model before they work with invoices or cart checkout.
+- **Draft preview links work for anyone holding the link.** That is deliberate, for sending to a colleague — just do not treat it as private.
+
+:::tip Try it now
+Say your package out loud as one sentence: what it fixes, what it costs, and what the client gets each month. If it takes more than a breath, it has too many products in it.
+:::
+
+<SectionFeedback courseId="build-your-package" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="build-your-package" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three questions on scoping the package, pricing it, and getting it visible."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A product you sell is switched on, but the client cannot see it anywhere. What is the most likely cause?',
+      options: [
+        'It is not inside a published package in a visible store category',
+        'The client has not been added as a Business App user yet',
+        'Its wholesale cost has not been set',
+        'The package needs a setup fee before it displays'
+      ],
+      correctIndex: 0,
+      explanation: 'Availability alone does not make a product visible. It has to sit in a published package assigned to a category the client can see.'
+    },
+    {
+      type: 'mcq',
+      question: 'You have decided the package will be $499 a month and want the items to reflect that. What is the quickest route?',
+      options: [
+        'Price each item until the total happens to reach $499',
+        'Click the package total, enter $499, and let it allocate across items by weight',
+        'Set a $499 setup fee and leave item prices at default',
+        'Use Starting at pricing so the exact total does not matter'
+      ],
+      correctIndex: 1,
+      explanation: 'Setting the total back-allocates it across line items using each one\'s retail value and billing frequency. You can then fine-tune individual items.'
+    },
+    {
+      type: 'mcq',
+      question: 'Where do you check whether a package is actually worth selling at your price?',
+      options: [
+        'The Recommended Packages tab',
+        'Manage Store → Currency',
+        'The Wholesale Cost and Profit at Purchase figures in the money panel',
+        'The Discover Products suggested retail price'
+      ],
+      correctIndex: 2,
+      explanation: 'Wholesale Cost is what the components cost you; Profit at Purchase is retail minus wholesale. Check both before quoting.'
+    },
+    {
+      type: 'truefalse',
+      statement: 'A package set to Contact Sales can still be bought through the shopping cart.',
+      correct: false,
+      explanation: 'Contact Sales and Starting at pricing are both incompatible with cart checkout. Contact Sales also needs a salesperson assigned or its button will not render.'
+    },
+    {
+      type: 'sort',
+      instruction: 'Sort each item into whether it belongs in version one of the package, or gets left out.',
+      items: [
+        { label: 'A product that fixes a gap the owner reacted to', correctBucket: 'in' },
+        { label: 'A product for a gap you cannot currently deliver', correctBucket: 'out' },
+        { label: 'Maintenance on a section the business already aces', correctBucket: 'in' },
+        { label: 'Every remaining graded section, for completeness', correctBucket: 'out' }
+      ],
+      buckets: [
+        { id: 'in', label: 'In the package' },
+        { id: 'out', label: 'Leave it out' }
+      ],
+      explanation: 'A package answers one report. Two problems plus maintenance is an easy yes; a full audit priced line by line is a proposal that needs a committee.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/growth-engine/propose-and-close" pathName="Your growth engine" step={3} totalSteps={6} />
+
+</InlineHighlighter>
+<MarkComplete courseId="build-your-package" site="vendasta_learn" />

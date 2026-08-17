@@ -2,11 +2,220 @@
 title: "Deliver in the client’s Business App"
 sidebar_position: 5
 description: "Products land as dashboards under your brand; add users and send the welcome email."
-sidebar_class_name: hide-from-sidebar
 ---
 
-:::info Content coming soon!
-This part of the learning path is being built. Check back shortly.
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LabChecklist from "@site/src/components/LabChecklist";
+import LabCallout from "@site/src/components/LabCallout";
+import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+
+<InlineHighlighter courseId="deliver-in-business-app" site="vendasta_learn">
+
+<CourseProgressBar courseId="deliver-in-business-app" site="vendasta_learn" />
+
+{/* VIDEO: "Business App Overview" — Wistia ID `s9aqsoo0ks`, provided and confirmed by Shiva
+    2026-08-17. Product-accuracy pass: EMBED AS-IS. Verified current across all 3:12 — says
+    "Conversations" (not the retired Inbox), carries the AI workforce section, and shows the
+    first-time-user onboarding checklist. No stale product naming anywhere in it.
+
+    Note the clip is client-side: it addresses the business owner, not the partner. That is why it
+    sits here as "what your client sees" while the lesson text carries the partner-side steps. It is
+    also shareable with clients as-is. */}
+
+<LessonHeader
+  difficulty="Beginner"
+  time="about 10 minutes"
+  required={["An account with at least one activated product"]}
+  video={true}
+  lab
+  pathName="Your growth engine"
+  step={5}
+  totalSteps={6}
+  outcomes={[
+    "Describe what your client lands on the first time they log in",
+    "Add the client as a Business App user and control what the welcome email looks like",
+    "Explain how activated products appear, and how the client pins the ones they use",
+    "Know which invitations you can send and which only the client can",
+  ]}
+/>
+
+## The product is now theirs, under your name
+
+The order activated, so the work exists. What it does not yet have is a person looking at it. This step is about handing over: getting the owner into Business App, under your branding, seeing the thing they just paid for.
+
+Northside Dental's owner has never logged in. What they see in the first thirty seconds decides whether the next month is a partnership or an invoice they forgot the reason for.
+
+Watch the tour your client gets, then we will do the partner-side setup that makes it appear.
+
+<div
+  className="wistia_responsive_padding"
+  style={{ padding: '56.25% 0 0 0', position: 'relative' }}
+>
+  <div
+    className="wistia_responsive_wrapper"
+    style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
+  >
+    <iframe
+      src="https://fast.wistia.net/embed/iframe/s9aqsoo0ks?web_component=true&seo=true"
+      title="Business App Overview"
+      allow="autoplay; fullscreen"
+      allowTransparency
+      frameBorder="0"
+      scrolling="no"
+      className="wistia_embed"
+      name="wistia_embed"
+      width="100%"
+      height="100%"
+    ></iframe>
+  </div>
+</div>
+<script src="https://fast.wistia.net/player.js" async></script>
+
+:::tip This one is shareable
+The clip is written for the business owner rather than the partner, so you can send it to a client as their orientation instead of walking them through the nav yourself.
 :::
 
-**What you will learn here:** Where activated products appear in the client’s Business App, adding the client as a user, and the welcome email.
+## Add the client as a user
+
+Nothing above happens until the owner has a login. From **Partner Center** → **Accounts** → **Manage Accounts**, open the account and use **Add users** → **Create User**. Enter their email and name, and note the **Send welcome email** checkbox — it is selected by default, and clearing it means the client gets a login they never hear about.
+
+You can also work centrally from **Accounts** → **Manage Users** → **Create user** and assign the account there.
+
+Email addresses have to be unique across the whole system, so a client who is already a user somewhere will throw an error rather than duplicate.
+
+## What you can and cannot change about the welcome email
+
+This catches people out, so it is worth being precise. The welcome email is only partly yours.
+
+| Element | Yours to change? |
+|---|---|
+| Logo and brand colours | Yes, from your white-label settings |
+| Sender name and email domain | Yes, from email domain settings |
+| A short custom introductory message | Yes, added when you create the user |
+| Subject line | No, hard-coded |
+| Body content | No, hard-coded |
+
+There is a branding wrinkle worth knowing if you run more than one market: the **initial** creation email always uses your **default** market branding regardless of which market the account belongs to. Resending from Account Details uses the account's market; resending from the Users page uses the default. If a client's first email looks like the wrong brand, that is why.
+
+:::info If you want a real onboarding sequence
+The welcome email is a login handoff, not onboarding. For something richer, build a campaign at **Marketing** → **Campaigns** → **Product Adoption**, then switch it on at **Customize Business App** → **Notifications** → **New customer experience** → **Onboarding campaign**. It fires on the client's first login only.
+:::
+
+Some partners are on an Early Access experience where the checkbox reads **Send Onboarding Email** instead, with a **Preview** button beside it. Where that is switched on it replaces the classic welcome email for that user rather than sending both. If you do not see it, you are on the classic flow described above.
+
+## How activated products show up
+
+Products you activate appear on the client's **My Products** page automatically, and anything you add later appears without you doing anything. Clients never see products they have not purchased.
+
+The client controls their own view from there. Each product card has a **pin icon** in its top right, and pinning moves it to the top of the navigation and the products card. Two details worth passing on: pinning is **per user**, so two people at the same business can have different layouts, and the **first four pinned items appear on the dashboard**.
+
+<FlipCardGrid>
+  <FlipCard front="Per user, not per account" back="Pinning is personal. Two people at the same business can pin different products." subtext="My Products" />
+  <FlipCard front="First four" back="Only the first four pinned items surface on the dashboard. Tell the client which four matter." subtext="My Products" />
+  <FlipCard front="Added later, appears anyway" back="Activate a new product next month and it shows up in their Business App on its own." subtext="My Products" />
+</FlipCardGrid>
+
+If you need to narrow what one person sees, use **Manage Users** → **Edit Permissions** and enable only the allowed products. The catch: a product has to be active on the account before it appears in Edit Permissions at all.
+
+## The invitation you cannot send
+
+When the owner wants to bring their office manager in, you cannot do it for them by logging in as them. Invitations have to come from someone signed directly into the account — either an admin user or an existing Business App user. Impersonating and clicking invite does not work.
+
+The client's own route is **Invite team member** at the top of their Business App home page: first name, last name, email, **Send invite**.
+
+Every user added or removed is logged in the CRM activity feed on both the company and the contact record, including who did it. Useful when someone asks how a person got access.
+
+<LabCallout title="hand the account over">
+You are going to **Partner Center** → **Accounts** → **Manage Accounts**.
+
+<LabChecklist
+  storageKey="deliver-in-business-app-lab-1"
+  steps={[
+    <>Open your prospect's account and select <strong>Add users</strong> → <strong>Create User</strong>.</>,
+    <>Add <em>yourself</em> first, with a second email address, and leave <strong>Send welcome email</strong> checked.</>,
+    <>Open the email you receive and check the branding is yours, not a default market's.</>,
+    <>Log in with that account and pin the products you would want a client to see first.</>,
+    <>Now create the real client user, with a short custom introductory message.</>,
+    <>Use <strong>View as Customer</strong> from the account's three-dot menu to confirm what they will land on.</>,
+  ]}
+  confirm={<>You have seen the handover exactly as your client will, and fixed anything off-brand before they saw it.</>}
+/>
+</LabCallout>
+
+:::warning View as Customer has one blind spot
+Impersonation is the right way to check layout and product visibility, but you cannot start a conversation with the salesperson while impersonating. To test booking links and contact flows, log in as a real test user instead.
+:::
+
+<SectionFeedback courseId="deliver-in-business-app" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="deliver-in-business-app" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three questions on handing the account over and what the client controls."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A client asks you to add their office manager as a user. You log in as the client and click invite, but it does not work. Why?',
+      options: [
+        'The account needs a second paid seat first',
+        'Invitations must come from someone signed directly into the account, not from impersonation',
+        'Office managers require admin permissions to be invited',
+        'The client has to pin a product before inviting anyone'
+      ],
+      correctIndex: 1,
+      explanation: 'Only an admin user or an existing Business App user logged in directly can invite others. Impersonating the client and clicking invite will not send it.'
+    },
+    {
+      type: 'mcq',
+      question: 'Which part of the welcome email can you not change?',
+      options: [
+        'The logo and brand colours',
+        'The sender name and email domain',
+        'The subject line and body content',
+        'The short custom introductory message'
+      ],
+      correctIndex: 2,
+      explanation: 'Subject and body are hard-coded. Branding, sender details, and a short intro message are yours.'
+    },
+    {
+      type: 'mcq',
+      question: 'You activate another product for a client next month. What do you have to do for it to appear in their Business App?',
+      options: [
+        'Nothing — it appears automatically',
+        'Resend the welcome email',
+        'Add it manually to their My Products page',
+        'Ask the client to pin it before it becomes visible'
+      ],
+      correctIndex: 0,
+      explanation: 'Activated products appear on My Products on their own. Pinning only changes where they sit in the client\'s navigation.'
+    },
+    {
+      type: 'truefalse',
+      statement: 'Pinning products in Business App changes the layout for everyone at that business.',
+      correct: false,
+      explanation: 'Pinning is per user. Two people at the same business can pin different products, and only the first four pinned items reach the dashboard.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client says their first email came through with branding that was not yours. What is the likely explanation?',
+      options: [
+        'The account was assigned to the wrong salesperson',
+        'The initial creation email always uses your default market branding, not the account\'s market',
+        'White-label settings do not apply to email at all',
+        'The client opened it in a mail app that stripped the styling'
+      ],
+      correctIndex: 1,
+      explanation: 'The creation email uses default market branding regardless of the account\'s market. Resending from Account Details picks up the account\'s market instead.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/growth-engine/prove-with-executive-report" pathName="Your growth engine" step={5} totalSteps={6} />
+
+</InlineHighlighter>
+<MarkComplete courseId="deliver-in-business-app" site="vendasta_learn" />

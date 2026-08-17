@@ -2,11 +2,232 @@
 title: "Prove it with the Executive Report"
 sidebar_position: 6
 description: "Turn activity into proof of performance and set up the renewal conversation."
-sidebar_class_name: hide-from-sidebar
 ---
 
-:::info Content coming soon!
-This part of the learning path is being built. Check back shortly.
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LabChecklist from "@site/src/components/LabChecklist";
+import LabCallout from "@site/src/components/LabCallout";
+import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+
+<InlineHighlighter courseId="prove-with-executive-report" site="vendasta_learn">
+
+<CourseProgressBar courseId="prove-with-executive-report" site="vendasta_learn" />
+
+{/* VIDEO SLOT: CONFIRMED CONTENT GAP. No usable source video exists for this lesson.
+
+    The Wistia library has an "Executive Report walkthrough" (`feepui3nrz`) and related titles
+    ("Executive Report Capitalize on Reporting", "Multi-location Executive Report"). Shiva checked
+    2026-08-17: the walkthrough is OUTDATED and needs re-recording. Do not embed it.
+
+    Also checked: all four Executive Report courses in the 360Learning export are text-only, with no
+    video attached. "Snapshot Ninja – The Ungroomed Report" is a false positive — it teases the
+    Executive Report at 0:19 then delivers no Executive Report content at all.
+
+    One usable narrative-only candidate, if a framing clip is wanted rather than a walkthrough:
+    "Close Prospects, Open Relationships" (George Leith) at 6:10–6:25 delivers the before-and-after
+    and highlight-what-changed renewal move. It is talking-head with no product UI, so it carries no
+    stale-screenshot risk. It is already live in the Master Sales Series, so cross-link rather than
+    duplicate.
+
+    Ground truth for a fresh recording: docs/business-app/executive-report/index.mdx.
+    See enablement-docs/DOC-829-AC1-video-accuracy-findings.md. */}
+
+<LessonHeader
+  difficulty="Beginner"
+  time="about 11 minutes"
+  required={["A client account with active products"]}
+  lab
+  pathName="Your growth engine"
+  step={6}
+  totalSteps={6}
+  outcomes={[
+    "Explain the difference between the Snapshot Report and the Executive Report, and when each one is the right tool",
+    "Know when reports send, and why one sometimes does not arrive",
+    "Configure which sections a client sees and in what order",
+    "Run the renewal conversation off the before-and-after rather than a feeling",
+  ]}
+/>
+
+## The report that keeps the client
+
+The Snapshot Report won the deal. It is the wrong tool for keeping it.
+
+The split is clean: **the Snapshot Report is for prospecting, before you have a relationship. The Executive Report is for after.** One grades a stranger's online presence to start a conversation; the other reports what your work actually produced, month after month, under your brand.
+
+Northside Dental signed because a report showed them where they stood. They will renew because a second report shows them how far they have moved.
+
+The number worth knowing: Business App users who receive a weekly or monthly Executive Report have a **38% higher chance of being retained** than those who do not. Not because the report is persuasive, but because a client who sees the work is a client who remembers paying for a reason.
+
+## What is in it, and where it comes from
+
+The Executive Report pulls metrics from the products active on the account into one rollup — Leads, Website, Reputation, Social, Listings, SEO, Advertising, and Accounting. It is white-labelled under your brand, mobile-responsive, and **needs no sign-in to view**, which is why it works as an email rather than a login chore.
+
+Personalized data starts appearing within about five minutes of running a Snapshot Report or authenticating Google Business Profile on the account.
+
+## When it sends, and when it does not
+
+<FlipCardGrid>
+  <FlipCard front="Monthly" back="Usually sent between the 1st and 3rd of each month. Allow a 2–3 day processing delay." subtext="Cadence" />
+  <FlipCard front="Weekly" back="Sent on Mondays. The report follows the calendar, so it can land outside business days." subtext="Cadence" />
+  <FlipCard front="No change, no section" back="A section with no change since last month does not populate at all." subtext="Suppression" />
+</FlipCardGrid>
+
+That last rule is the one clients ask about. A section that has not moved simply does not appear, and on accounts where **only Local SEO** is active, no data change means no report at all. It is working as designed, but it looks like a bug from the client's side, so it is worth knowing before the phone call.
+
+:::warning Deactivating products does not stop the emails
+Report scheduling persists until someone disables it explicitly. Turn it off per user with **Edit Notifications** → **Business App**, or in bulk from **Accounts** → **Manage Users** → **Bulk Update**. And if a client hits Unsubscribe by accident, that cannot be self-served — it takes a support request to put them back on.
 :::
 
-**What you will learn here:** The Executive Report as proof of performance, the Snapshot-to-Executive-Report before-and-after, and the renewal conversation.
+## Shape the report before the client sees it
+
+Which sections appear, and in what order, is yours to set at **Partner Center** → **Accounts** → **Manage Business App** → **Customize Business App** → **Executive Report** → **Sections**.
+
+Pick the market from the dropdown in the top right first, because each market holds its own configuration. Then toggle sections on or off, and drag them into the order you want. The same rule from reading the Snapshot applies here: lead with what you can talk about.
+
+Four constraints to plan around:
+
+- **One order serves both frequencies.** You cannot have a different section order for weekly and monthly.
+- **Changes apply to historical reports too**, not just future ones.
+- **There is no preview.** The only way to see it is to be a recipient, so add yourself as a user on a test account.
+- **Allow up to 24 hours** for changes to reach scheduled reports.
+
+Turning off **Show this page** removes the tab from Business App, but email delivery can continue based on notification settings — the two are separate switches.
+
+## Custom date ranges, and the two cards that vanish
+
+The report defaults to weekly or monthly, and you can select a fully custom range from the top right.
+
+One thing to expect when you do: **Listings and Social AI cards are not available on a custom date range.** Those sources arrive in fixed monthly rollups and cannot be sliced arbitrarily. A banner appears in the app to say so, and switching back to the standard weekly or monthly view brings them back. If a client reports missing cards, ask what date range they are on before anything else.
+
+## The renewal conversation
+
+The report is the meeting. Run it the way you ran the Snapshot: not as a recital of every number, but as a story with a direction.
+
+- **Open on the before-and-after.** The Snapshot Report you ran to win the deal is your baseline. Put it beside today's Executive Report and the movement is the argument — no adjectives required.
+- **Highlight what changed, not everything that exists.** Two improvements the owner can feel beats eight metrics they cannot.
+- **Name what has not moved yet, before they do.** A gap you raise yourself is a plan. The same gap raised by the client is a complaint.
+- **End on the next opportunity.** The report shows what is still unaddressed, which is the natural opening for the next package rather than a separate sales call.
+
+<LabCallout title="run the before-and-after">
+You are going to your client's account in **Partner Center**.
+
+<LabChecklist
+  storageKey="prove-with-executive-report-lab-1"
+  steps={[
+    <>Add yourself as a user on the account so you receive the report the client receives.</>,
+    <>Open <strong>Customize Business App</strong> → <strong>Executive Report</strong> → <strong>Sections</strong>, and order the sections so the strongest result is near the top.</>,
+    <>Open the original Snapshot Report you ran in step 1 and note the two gaps you sold against.</>,
+    <>Open today's Executive Report and find the metric that speaks to each of those gaps.</>,
+    <>Write two sentences: what changed, and what is next. That is your renewal meeting.</>,
+    <>If the client has not been receiving it, resend from the account's <strong>Reports</strong> section with <strong>Resend Executive Report</strong>.</>,
+  ]}
+  confirm={<>You can show a client where they started, where they are now, and what is worth doing next — from two reports rather than an opinion.</>}
+/>
+</LabCallout>
+
+## When a client says they never get it
+
+- **Check the per-user notification toggle first.** It is the cause most of the time.
+- **Then check spam.** Reports send through SendGrid and are commonly filtered by Microsoft 365 and Outlook.
+- **"The page cannot be loaded"** is usually Microsoft Defender SafeLinks rewriting the link. Forwarding the email does not help. Either allowlist `sendgrid.com` in your Safe Links policy, or have the client view the report in Business App instead.
+- **A PDF export missing its charts** is a browser print setting: enable **Background graphics** under the print dialog's options before saving.
+
+:::tip Try it now
+Open the oldest Executive Report on any client account and today's, side by side. Find one number that moved. That sentence is the most useful thing you will say in your next client meeting.
+:::
+
+<SectionFeedback courseId="prove-with-executive-report" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="prove-with-executive-report" site="vendasta_learn"
+  sessionSize={4}
+  intro="Four questions to close the path: which report, when it sends, and how to shape it."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'When is the Snapshot Report the right tool rather than the Executive Report?',
+      options: [
+        'Every month, as the ongoing proof of performance',
+        'Before you have a business relationship, to open the conversation',
+        'At renewal, to re-grade the client against competitors',
+        'Only for multi-location businesses'
+      ],
+      correctIndex: 1,
+      explanation: 'Snapshot is for prospecting, before the relationship. Executive is for after it, as ongoing proof.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client on an account with only Local SEO active says no report arrived this month. What is the most likely reason?',
+      options: [
+        'Reports only send to admin users',
+        'There were no data changes, so nothing sent',
+        'The account needs Google Business Profile authenticated first',
+        'Monthly reports were discontinued in favour of weekly'
+      ],
+      correctIndex: 1,
+      explanation: 'On Local-SEO-only accounts, no change in the data means no report. More broadly, any section with no change since last month does not populate.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client selects a custom date range and reports that two cards have disappeared. What do you tell them?',
+      options: [
+        'Their products were deactivated',
+        'Listings and Social AI are not available on custom ranges; switch back to weekly or monthly',
+        'Custom ranges only work on the mobile app',
+        'The report needs 24 hours to rebuild'
+      ],
+      correctIndex: 1,
+      explanation: 'Those two sources arrive as fixed monthly rollups and cannot be sliced into arbitrary ranges. A banner in the app says so, and the standard views restore them.'
+    },
+    {
+      type: 'truefalse',
+      statement: 'You can set one section order for the weekly report and a different one for the monthly.',
+      correct: false,
+      explanation: 'One configuration serves both frequencies for a given market. Changes also apply to historical reports, and take up to 24 hours to reach scheduled sends.'
+    },
+    {
+      type: 'mcq',
+      question: 'You deactivate a client\'s products but they keep receiving Executive Report emails. Why?',
+      options: [
+        'There is a 90-day grace period on report emails',
+        'Report scheduling persists until it is explicitly disabled',
+        'The emails are coming from the client\'s own automations',
+        'Deactivated products still push data for one final cycle'
+      ],
+      correctIndex: 1,
+      explanation: 'Scheduling is independent of product status. Disable it per user under Edit Notifications, or in bulk from Manage Users.'
+    },
+    {
+      type: 'sort',
+      instruction: 'Sort each move into whether it belongs in a renewal conversation or not.',
+      items: [
+        { label: 'Putting the original Snapshot beside today\'s Executive Report', correctBucket: 'do' },
+        { label: 'Reading every metric in the report in order', correctBucket: 'skip' },
+        { label: 'Naming a gap that has not moved yet, before the client does', correctBucket: 'do' },
+        { label: 'Waiting for the client to ask whether it is working', correctBucket: 'skip' }
+      ],
+      buckets: [
+        { id: 'do', label: 'Do it' },
+        { id: 'skip', label: 'Skip it' }
+      ],
+      explanation: 'The before-and-after is the argument. A recital is an audit, and a gap you raise yourself is a plan rather than a complaint.'
+    }
+  ]}
+/>
+
+<LessonFooter
+  to="/learn/sales/"
+  pathName="Your growth engine"
+  step={6}
+  totalSteps={6}
+  nextPathName="The Master Sales Series"
+  description="George Leith's sales fundamentals: prospecting, the elevator pitch, presenting, and handling objections."
+/>
+
+</InlineHighlighter>
+<MarkComplete courseId="prove-with-executive-report" site="vendasta_learn" />

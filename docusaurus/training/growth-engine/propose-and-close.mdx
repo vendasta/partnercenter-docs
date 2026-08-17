@@ -2,11 +2,220 @@
 title: "Send the order and close"
 sidebar_position: 4
 description: "Build the order, require payment on approval, and let acceptance activate everything."
-sidebar_class_name: hide-from-sidebar
 ---
 
-:::info Content coming soon!
-This part of the learning path is being built. Check back shortly.
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LabChecklist from "@site/src/components/LabChecklist";
+import LabCallout from "@site/src/components/LabCallout";
+import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+
+<InlineHighlighter courseId="propose-and-close" site="vendasta_learn">
+
+<CourseProgressBar courseId="propose-and-close" site="vendasta_learn" />
+
+{/* VIDEO SLOT: NO SOURCE VIDEO EXISTS for this lesson. Recorded here so nobody re-runs the search.
+
+    proj-009's repurpose map mapped "Deliver Impact: The Art of Killer Sales Presentations" to this
+    lesson. That mapping is wrong. The clip teaches presentation craft (offer insights, state
+    deliverables, park uncertainty in an appendix) and contains zero product UI by design; this
+    lesson is an in-platform order workflow. The clip's correct home is the Master Sales Series,
+    where it is already live as "The Killer Sales Presentation Format" (`6b5f8wve1s`) on
+    training/sales/present-so-it-lands.mdx. Do not duplicate it here — cross-link if needed.
+
+    Also checked and rejected: every proposal-related video in the Wistia library is about Proposal
+    Builder, which is now a legacy product (docs/legacy/proposals/). Those leads are dead, not
+    merely unverified. The only order-adjacent clips are partner-side billing setup, not the close
+    motion. This lesson needs a fresh screen recording against the current Commerce → Orders flow.
+    See enablement-docs/DOC-829-AC1-video-accuracy-findings.md. */}
+
+<LessonHeader
+  difficulty="Intermediate"
+  time="about 14 minutes"
+  required={["A published package", "Partner Center access with order permissions"]}
+  lab
+  pathName="Your growth engine"
+  step={4}
+  totalSteps={6}
+  outcomes={[
+    "Build an order from your package and set its billing terms",
+    "Send an order for customer approval with payment collected on acceptance",
+    "Explain exactly what happens the moment the client approves and pays",
+    "Choose between customer approval and admin approval, and know which one activates automatically",
+  ]}
+/>
+
+## The close happens in the platform, not beside it
+
+Everything so far has been preparation. This is the step where Northside Dental becomes a client: you turn the package into an order, the owner signs and pays on the same screen, and the products switch on by themselves.
+
+That last part is the bit to understand properly before you send anything. When a client pays during approval, activation is automatic and **cannot be switched off**. That is usually exactly what you want — signature, payment, and delivery in one motion. It is also the single most common surprise on this workflow, so it is worth knowing before you find out live.
+
+:::warning Proposal Builder is not the tool for this
+If you learned this motion on Proposal Builder, that product is now legacy. The current path is **Commerce** → **Orders**, and the Orders workflow itself was redesigned in July 2025. Older walkthroughs referring to a "Sales Orders" flow will not match what you see.
 :::
 
-**What you will learn here:** Creating the order from the package, sending it for client approval with payment required, and what happens the moment they accept.
+## Switch on the option before you need it
+
+Sending an order for customer approval *with payment* is an admin setting, and it is off until someone turns it on. Do this once.
+
+At **Partner Center** → **Administration** → **Order Settings**, find the **Salesperson submit actions** card and confirm both boxes:
+
+- **Allow salespeople to send an order to customers for approval**
+- **Orders sent for approval by salespeople can accept payment**
+
+While you are there, set your **Customer terms of service** — that is the text the client agrees to on the approval screen, and it is worth writing once rather than discovering it is empty mid-deal.
+
+## Build the order
+
+Orders start at **Partner Center** → **Commerce** → **Orders** → **Create Order**. You can also start from the account itself, or from a company profile in the CRM, which is often faster because the account is already selected.
+
+Then:
+
+1. **Confirm the account.** Ordering against the wrong account cannot be undone by transfer — it has to be cancelled and re-created, so check this first.
+2. **Add the package**, choosing editions where a product offers them.
+3. **Review retail pricing and quantities.** Prices carry over from the package and can be overridden here without changing the stored package.
+4. **Set billing terms** if the deal has a start date or a fixed term.
+
+**Billing terms** are reachable two ways on any line item: click the blue **Automatically Renews** link under the product name, or use the item's kebab menu and choose **Edit Billing Terms**. The modal sets a start date and a number of renewals.
+
+<FlipCardGrid>
+  <FlipCard front="Start date" back="The product does not activate until that date. Subscriptions are created pending and switch on by themselves." subtext="Billing terms" />
+  <FlipCard front="Fixed renewals" back="Sets an end date. After the last renewal the product deactivates, billing stops, and its data is removed." subtext="Billing terms" />
+  <FlipCard front="Not changeable" back="Start dates cannot be edited after processing. You unschedule the activation and submit a new order." subtext="The constraint" />
+</FlipCardGrid>
+
+The fixed-renewal behaviour deserves reading twice: after the final renewal the product becomes inaccessible **and its associated data is removed**. Contract duration, by contrast, is internal record-keeping only and does not deactivate anything.
+
+## Send it for approval, with payment
+
+With the order built, choose **Send For Customer Approval**, indicate that payment is required, and pick the contact who should receive it. The order moves to **Awaiting customer approval**.
+
+What the client gets is a **Contract Awaiting Approval** email. On the page it links to, they see your terms of service, sign to approve, and enter card details.
+
+The moment the card is approved, all of this happens without you:
+
+- The order is **activated**, or scheduled if you set a future start date
+- **Subscriptions are created**
+- An **invoice is generated** with **Paid** status
+- Payment details land on the order's **PAYMENT** tab, and billing information becomes the account default if none was set
+- Order status becomes **Activated**
+
+If the card is declined, the order picks up a **Payment declined** tag and moves to **DECLINED**. You can convert it back to a draft and reprocess rather than starting over.
+
+:::warning Automatic activation cannot be disabled
+When a customer pays during approval, product activation triggers automatically and there is no setting to prevent it. If you need payment before delivery, you have two real options: set a **future contract start date** on the line items, or use a manual invoice flow and activate by hand.
+:::
+
+## The other route, and why the difference matters
+
+Customer approval is not the only way to submit. If you **Submit** instead, the order goes to **Pending** for an admin with **Can Manage Orders** to approve — and here activation is **not** automatic.
+
+An approved order still sits there until someone ticks the billing-agreement box (**I understand that I will be billed for activated products**) and chooses **Activate Immediately** or **Activate on Contract Start Date**.
+
+That gap is a feature. Leaving the box unchecked is how you approve an order, invoice the client, collect payment, and only then switch the products on. It is the deliberate answer to the automatic-activation problem above.
+
+Learners conflate these two routes constantly, so hold onto the difference: **customer approval with payment activates by itself; admin approval waits for a human.**
+
+<LabCallout title="send your first order for approval">
+You are going to **Partner Center** → **Commerce** → **Orders**.
+
+<LabChecklist
+  storageKey="propose-and-close-lab-1"
+  steps={[
+    <>Confirm the two <strong>Salesperson submit actions</strong> boxes are checked in <strong>Administration</strong> → <strong>Order Settings</strong>, and that your terms of service are written.</>,
+    <>Select <strong>Create Order</strong> and choose your prospect's account. Check the name twice.</>,
+    <>Add your published package, and review the retail prices that carried over.</>,
+    <>If the work starts later than today, open <strong>Edit Billing Terms</strong> and set the start date.</>,
+    <>Select <strong>Send For Customer Approval</strong>, indicate payment is required, and choose the contact.</>,
+    <>Confirm the order reads <strong>Awaiting customer approval</strong>, and check the <strong>Order Activity</strong> card to see the email was delivered.</>,
+  ]}
+  confirm={<>Your prospect has a signable, payable order in their inbox, and you know what will switch on the moment they accept.</>}
+/>
+</LabCallout>
+
+## When it does not go smoothly
+
+- **Status shows Deferred.** The approval email failed to deliver. Check the address, then check SPF and DMARC on your sending domain.
+- **The client got two emails.** Expected. Orders near their expiry date trigger an automatic reminder, usually a day or two before. Get the approval or cancel the order to stop them.
+- **You need to resend.** Open the order and use **Resend to a customer**, then confirm the contact.
+- **Something failed to activate.** A red badge appears on the **Fulfillment** card. Fix it from the item's kebab menu with **Edit and resubmit**, or dismiss, correct, and re-order.
+- **You need to change something after sending.** Free editing only exists in draft. Salespeople cannot edit after submission at all; admins with the right permission can adjust a pending order before approval. Anything else means cancelling and recreating.
+- **Cancelling is one-way.** Cancelled orders cannot be restored — use **Duplicate** instead. And cancelling an order does not cancel the underlying subscriptions.
+
+:::info Activation emails to clients are off by default
+Switching a product on does not tell the client. If you want that email, build it: **Automations** → **Create Automation**, trigger on the activation event, and add a **Send Email** action aimed at the client contact. This replaced the old automatic activation email.
+:::
+
+<SectionFeedback courseId="propose-and-close" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="propose-and-close" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three questions on approval routes, activation, and what the client actually receives."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A client approves an order and pays by card during approval. What happens to the products?',
+      options: [
+        'They wait for an admin to activate them',
+        'They activate automatically, and this cannot be disabled',
+        'They activate only after the invoice is marked paid manually',
+        'They stay off until the contract start date is confirmed'
+      ],
+      correctIndex: 1,
+      explanation: 'Payment during approval triggers activation automatically with no setting to prevent it. To delay delivery, set a future contract start date or use a manual invoice flow instead.'
+    },
+    {
+      type: 'mcq',
+      question: 'You want to collect payment before any product switches on. What is the documented way to do it?',
+      options: [
+        'Send for customer approval and untick payment required',
+        'Cancel the order after approval and re-create it',
+        'Approve the order but leave the billing-agreement box unchecked, then activate later',
+        'Set the package purchase behavior to Contact Sales'
+      ],
+      correctIndex: 2,
+      explanation: 'On the admin-approval route, an approved order sits with products off until someone ticks the billing-agreement box and chooses activation timing. That is the gap you use to invoice first.'
+    },
+    {
+      type: 'mcq',
+      question: 'An order shows status Deferred. What does that mean?',
+      options: [
+        'The client opened it but has not signed',
+        'The approval email failed to deliver',
+        'An admin declined it',
+        'The contract start date is in the future'
+      ],
+      correctIndex: 1,
+      explanation: 'Deferred is a delivery failure. Check the recipient address, then verify SPF and DMARC on your sending domain.'
+    },
+    {
+      type: 'truefalse',
+      statement: 'When a product activates on a client account, the client is emailed automatically.',
+      correct: false,
+      explanation: 'Activation emails are off by default. You build one with an Automation triggered on the activation event, which replaced the old automatic behaviour.'
+    },
+    {
+      type: 'mcq',
+      question: 'You set a fixed number of renewals on a line item. What happens after the final one?',
+      options: [
+        'The subscription renews month to month until cancelled',
+        'The product deactivates, billing stops, and its data is removed',
+        'The order returns to draft for renewal',
+        'Only the invoicing stops; the product stays accessible'
+      ],
+      correctIndex: 1,
+      explanation: 'A fixed renewal count sets a real end date. The product becomes inaccessible and its associated data is removed, so use it deliberately.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/growth-engine/deliver-in-business-app" pathName="Your growth engine" step={4} totalSteps={6} />
+
+</InlineHighlighter>
+<MarkComplete courseId="propose-and-close" site="vendasta_learn" />
