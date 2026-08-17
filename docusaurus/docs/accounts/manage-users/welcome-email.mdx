@@ -15,12 +15,21 @@ When a Business App user is created, the platform automatically sends them a wel
 | Element | Customizable? |
 |---------|--------------|
 | Logo and brand colors | Yes, via market white-label settings |
-| Sender name and email domain | Yes, via email domain settings |
+| Sender name | Yes, via email domain settings |
+| Sending domain | No, selected automatically |
 | Subject line | No, hard-coded |
 | Email body content | No, hard-coded |
 | Custom introductory message | Yes, a short message can be added at user creation time |
 
 The body of the welcome email is fixed and cannot be edited directly. The most common workaround is to use a **Marketing Campaign** to send a fully custom onboarding email after the user logs in for the first time.
+
+## How the sending domain is chosen
+
+The platform selects the best sending domain for you automatically, based on the domains configured for your account. There is no domain picker to set at send time.
+
+:::tip
+To influence which domain is used, configure your sending domains under `Marketing` → `Email Settings`. A verified, correctly configured domain improves deliverability.
+:::
 
 ## Recommended workaround: Marketing Campaigns
 
@@ -51,7 +60,9 @@ If your markets have different branding, make sure the correct market is assigne
 <details>
 <summary>Can I resend the welcome email?</summary>
 
-Yes. From the account's user list, click the three-dot menu next to the user and select `Resend Welcome Email`. You can also resend from `Accounts` → `Manage Users`.
+Yes. From the account's user list, click the three-dot menu next to the user and select `Send Set Password email (Welcome email)`. You can also resend from `Accounts` → `Manage Users`.
+
+The confirmation dialog shows which market's branding will be used and gives you a `Preview` button so you can check the email before it goes out.
 </details>
 
 <details>
