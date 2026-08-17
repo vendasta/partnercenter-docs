@@ -1,17 +1,17 @@
 ---
-title: "MatchCraft Managed Ads Campaign"
-sidebar_label: "Managed Ads Campaign"
+title: "Specialty Ad Campaign"
+sidebar_label: "Specialty Ad Campaign"
 sidebar_position: 2
-description: "MatchCraft Managed Ads Campaign is a do-it-with-me, multi-platform advertising campaign built and optimized by our specialists across search, social, display, and video."
-tags: [vendasta-services, digital-advertising, matchcraft, managed-ads, campaigns]
-keywords: [Managed Ads Campaign, MatchCraft, multi-platform, conversions, onboarding call, campaign assets, call tracking, boost, landing page, strategy call]
+description: "Specialty Ad Campaign is a do-it-with-me, multi-platform advertising campaign built and optimized by our specialists across search, social, display, and video."
+tags: [vendasta-services, digital-advertising, matchcraft, specialty-ads, campaigns]
+keywords: [Specialty Ad Campaign, MatchCraft, multi-platform, conversions, onboarding call, campaign assets, call tracking, boost, landing page, strategy call]
 ---
 
-# MatchCraft Managed Ads Campaign
+# Specialty Ad Campaign
 
 ## Overview
 
-MatchCraft Managed Ads Campaign is a **do-it-with-me** solution where our advertising professionals work with you to create and manage an effective online advertising campaign. Campaigns can run across **search, social, display, and video**, and are conversion-focused, with an onboarding call, one major round of revisions, ongoing optimization, and reporting through Advertising Intelligence. It's the right fit for businesses ready to scale and focus on results.
+Specialty Ad Campaign is a **do-it-with-me** solution where our advertising professionals work with you to create and manage an effective online advertising campaign. Campaigns can run across **search, social, display, and video**, and are conversion-focused, with an onboarding call, one major round of revisions, ongoing optimization, and reporting through Advertising Intelligence. It's the right fit for businesses ready to scale and focus on results.
 
 ## What's Included
 
@@ -236,4 +236,10 @@ Of course! [Visit this website](https://examples.yourdigitalagents.com/) to find
 <summary>Do you support ads on Google Maps?</summary>
 
 Yes, local search ads can show on Google Maps after the owner of the Google Business Profile (GBP) authorizes access to the platform.
+</details>
+
+<details>
+<summary>Will you setup my Google Analytics 4 account?</summary>
+
+Installing your GA4 is not a part of this service but if you need to create a new account, look at purchasing our [GA4 service](https://partners.vendasta.com/marketplace/products/MP-87SQTMSDZVRSBZZ4CWG46BHWXDM2BDSB)
 </details>

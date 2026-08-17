@@ -17,7 +17,7 @@ Plan, propose, and order ad campaigns for Google, Bing, and Meta in minutes, all
 Vendasta Ads is in open beta, available to Partner Center users serving businesses in the United States and Canada that don't already have a dedicated MatchCraft instance.
 :::
 
-If you're looking for a fully managed, do-it-with-me campaign instead, see [Express Ads](./express-ads.md) or [Managed Ads Campaign](./managed-ads-campaign.md).
+If you're looking for a fully managed, do-it-with-me campaign instead, see [Specialty Ad Campaign](./specialty-ad-campaign.md).
 
 {/* VIDEO: "Plan, propose, and order a digital ad campaign with Vendasta Ads" — Wistia ID `9re5lqhyi8`, provided by Shiva 2026-08-17. */}
 
