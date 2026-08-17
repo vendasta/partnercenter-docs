@@ -85,12 +85,13 @@ Campaigns perform meaningfully better with assets supplied at order time:
 
 ## Getting Started
 
-1. **Place the order** for the account in Partner Center through the Ads tab, confirming the network, monthly media spend, reseller margin, and whether call tracking is included. Review the pricing breakdown before submitting.
-2. **Campaign build and launch — same day.** Vendasta Services builds and sets the campaign live the same business day the order is placed.
-3. **Call tracking setup — within 2 business days,** if included on the order.
-4. **Conversion tracking — on request.** Reach out to your Vendasta Services representative to have conversion tracking configured.
-5. **Reporting.** Advertising Intelligence is connected in Business App automatically, and activated at no charge if it isn't already active on the account.
-6. **Ongoing management.** The campaign is optimized continuously by the platform and by our specialists until it's cancelled.
+1. **Create the ad plan.** Go to **Partner Center** → **Ads** → **Ad plans** → **Create new plan**, choose the network, and let Vendasta Ads generate the ad copy, keywords, targeting, and budget options. Share the proposal with your client and order once it's approved. See [Creating an ad plan](./vendasta-ads-partner-center.md#creating-an-ad-plan) for the full walkthrough.
+2. **Place the order** for the account in Partner Center through the Ads tab, confirming the network, monthly media spend, reseller margin, and whether call tracking is included. Review the pricing breakdown before submitting.
+3. **Campaign build and launch — same day.** Vendasta Services builds and sets the campaign live the same business day the order is placed.
+4. **Call tracking setup — within 2 business days,** if included on the order.
+5. **Conversion tracking — on request.** Reach out to your Vendasta Services representative to have conversion tracking configured.
+6. **Reporting.** Advertising Intelligence is connected in Business App automatically, and activated at no charge if it isn't already active on the account.
+7. **Ongoing management.** The campaign is optimized continuously by the platform and by our specialists until it's cancelled.
 
 ### Making changes to a live campaign
 
