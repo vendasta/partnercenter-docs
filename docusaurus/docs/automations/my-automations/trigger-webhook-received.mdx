@@ -1,0 +1,46 @@
+---
+title: "Trigger: A webhook is received"
+description: Start an automation when an HTTP POST request arrives at the trigger's unique webhook URL.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, advanced]
+keywords: [webhook trigger, webhook received, HTTP POST trigger, inbound webhook, webhook automation]
+---
+
+# A webhook is received
+
+**A webhook is received** fires when an HTTP POST request is sent to the unique URL generated for this trigger. Use this trigger to connect any external system that supports outgoing webhooks — such as a third-party CRM, e-commerce platform, or custom application — to an automation workflow in Partner Center.
+
+Each automation using this trigger gets its own unique URL. Share that URL with the external system to start the workflow whenever that system sends a POST request.
+
+:::info Trigger scope
+This trigger has **no entity scope**. No account, contact, or company is automatically in context. Use the data from the webhook payload and lookup steps to bring entities into scope downstream.
+:::
+
+## How it works
+
+1. An external system sends an HTTP POST request to the automation's unique webhook URL.
+2. The automation receives the request and makes the request body available as dynamic data.
+3. The workflow starts and downstream steps can parse and use the webhook payload.
+4. Use lookup steps (such as **Find company** or **Find contact**) to bring CRM entities into scope based on data in the payload.
+
+## Available data
+
+The full JSON body of the incoming POST request is available as dynamic data via **Add dynamic content**. No CRM entity data is available automatically — you must use lookup steps to retrieve it.
+
+:::tip
+Use a **Find company** or **Find contact** step early in your workflow to locate the relevant CRM record based on an identifier in the webhook payload, then use that entity in subsequent steps.
+:::
+
+## Tips
+
+- Copy the unique webhook URL from the trigger settings panel and paste it into your external system's webhook configuration.
+- The external system must send a valid HTTP POST with a JSON body. The automation does not respond to GET requests.
+- Validate webhook payloads using a **Condition** step before taking action to guard against unexpected data shapes.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)
+- [Logic and flow control](./logic-and-flow-control.mdx)

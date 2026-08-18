@@ -1,0 +1,39 @@
+---
+title: "Trigger: A CRM sales task is overdue for a contact"
+description: Start an automation when a sales task on a contact passes its due date without being completed.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, contact]
+keywords: [overdue task trigger, CRM task overdue, sales task past due, contact task overdue, automation trigger]
+---
+
+# A CRM sales task is overdue for a contact
+
+**A CRM sales task is overdue for a contact** starts a workflow the moment a sales task on a contact passes its due date without being marked complete. Use this trigger to escalate missed tasks, alert managers, or create follow-up tasks automatically so nothing falls through the cracks.
+
+This trigger is time-sensitive — it fires as soon as the task's due date passes and the task is still open.
+
+:::info Trigger scope
+This trigger operates at the **contact** scope. Contact, company, and account actions are available downstream.
+:::
+
+## How it works
+
+1. A sales task on a contact reaches its due date without being completed.
+2. The automation evaluates any trigger conditions you've configured (for example, filtering on task name or assignee).
+3. If all conditions are met, the workflow starts with the contact, their associated company, and the account in context.
+4. Downstream steps can use **Add dynamic content** to reference the overdue task details, contact fields, and company fields.
+
+## Available data
+
+All standard contact, company, and account fields are available downstream via **Add dynamic content**. This includes fields such as contact name, email, phone, assigned salesperson, company name, and account tags.
+
+:::info
+Sales task fields (such as task name, due date, and assignee) are available as dynamic data in steps that follow this trigger, so you can include task details in escalation notifications or replacement tasks.
+:::
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx) — trigger types, scoping, and how to choose the right trigger
+- [Automation triggers reference](./automation-triggers-reference.mdx) — full reference for every available trigger
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — entry settings, conditions, and error handling
+- [Actions overview](./actions-overview.mdx) — what can happen after a trigger fires

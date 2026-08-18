@@ -1,0 +1,39 @@
+---
+title: "Trigger: A meeting activity is created or modified for a contact"
+description: Start an automation when a meeting activity is logged or updated on a contact record.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, contact]
+keywords: [meeting activity trigger, contact meeting logged, meeting updated, CRM meeting activity, automation trigger]
+---
+
+# A meeting activity is created or modified for a contact
+
+**A meeting activity is created or modified for a contact** starts a workflow whenever a meeting is logged — or an existing meeting activity is updated — on a contact record. Use this trigger to automate post-meeting tasks, advance pipeline stages, or notify team members whenever a contact interaction is recorded.
+
+This trigger fires for both new meeting logs and edits to existing ones, keeping downstream records accurate as meeting details are filled in or corrected.
+
+:::info Trigger scope
+This trigger operates at the **contact** scope. Contact, company, and account actions are available downstream.
+:::
+
+## How it works
+
+1. A team member logs a new meeting activity — or edits an existing one — on a contact record in the CRM.
+2. The automation evaluates any trigger conditions you've configured (for example, filtering on meeting outcome or attendees).
+3. If all conditions are met, the workflow starts with the contact, their associated company, and the account in context.
+4. Downstream steps can use **Add dynamic content** to reference meeting details, contact fields, and company fields.
+
+## Available data
+
+All standard contact, company, and account fields are available downstream via **Add dynamic content**. This includes fields such as contact name, email, phone, assigned salesperson, company name, and account tags.
+
+:::info
+Meeting activity fields (such as meeting notes, date, and outcome) are available as dynamic data in steps that follow this trigger.
+:::
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx) — trigger types, scoping, and how to choose the right trigger
+- [Automation triggers reference](./automation-triggers-reference.mdx) — full reference for every available trigger
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — entry settings, conditions, and error handling
+- [Actions overview](./actions-overview.mdx) — what can happen after a trigger fires

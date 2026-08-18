@@ -1,0 +1,39 @@
+---
+title: "Trigger: Run manually on an account"
+description: Run an automation on demand from an account detail page.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, manual]
+keywords: [manual trigger, run manually, account trigger, on demand automation, manual account automation]
+---
+
+# Run manually on an account
+
+**Run manually on an account** allows you to start an automation on demand directly from an account detail page. Use this trigger for workflows that should only run when a team member explicitly initiates them — such as one-off outreach sequences, account audits, or processes that require human judgment before starting.
+
+This trigger does not fire automatically. A team member must navigate to the account and trigger the run manually.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account and contact actions are available downstream.
+:::
+
+## How it works
+
+1. A team member opens an account detail page in Partner Center.
+2. They locate the automation in the account's automation panel and click **Run**.
+3. The workflow starts immediately with the account in context.
+4. Downstream steps can use **Add dynamic content** to reference account fields and contact details.
+
+## Available data
+
+Standard account and contact fields are available via **Add dynamic content** once the automation starts.
+
+:::info
+Because this trigger is manual, no event-specific data (such as a triggering message or payment) is passed in. All available data comes from the account and its associated records at the time of the run.
+:::
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

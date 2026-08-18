@@ -1,0 +1,39 @@
+---
+title: "Trigger: A company is removed from a list"
+description: Start an automation whenever a company is removed from a specified CRM list.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, company]
+keywords: [company removed from list trigger, CRM list trigger, list membership removed, company scope trigger, list exit trigger]
+---
+
+# A company is removed from a list
+
+The **A company is removed from a list** trigger starts an automation whenever a company is removed from a CRM list. Use this trigger to react to list exits — such as archiving records, changing ownership, or triggering a follow-up sequence when a company leaves a specific segment.
+
+:::info Trigger scope
+This trigger operates at the **company** scope. Company, account, and contact actions are available downstream.
+:::
+
+## How it works
+
+1. A company is removed from a CRM list, either manually, through a bulk action, or by another automation.
+2. The company and its associated account are brought into scope.
+3. The list name and removal event data become available as dynamic content.
+4. Downstream steps execute using the company, account, and list context.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **List name** | The name of the list the company was removed from |
+| **List ID** | The unique identifier of the list |
+| **Associated company** | Name, ID, and standard fields of the company removed from the list |
+
+Standard company and account fields are also available to downstream steps via **Add dynamic content**.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)
