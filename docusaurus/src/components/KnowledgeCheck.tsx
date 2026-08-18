@@ -59,9 +59,11 @@ export type Question =
 export interface KnowledgeCheckProps {
   sessionSize: number;
   questions: Question[];
+  /** Optional content-specific intro line. Defaults to a generic description of the session. */
+  intro?: string;
 }
 
-export default function KnowledgeCheck({ sessionSize, questions }: KnowledgeCheckProps) {
+export default function KnowledgeCheck({ sessionSize, questions, intro }: KnowledgeCheckProps) {
   const [session, setSession] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswer, setUserAnswer] = useState<string | number | Record<string, string> | null>(null);
@@ -101,7 +103,7 @@ export default function KnowledgeCheck({ sessionSize, questions }: KnowledgeChec
     return (
       <div className={styles.container}>
         <h3>Knowledge Check</h3>
-        <p>Test your understanding with {sessionSize} random questions from a pool of {questions.length}.</p>
+        <p>{intro ?? `Test your understanding with ${sessionSize} random questions from a pool of ${questions.length}.`}</p>
         <button className={styles.startBtn} onClick={startSession}>
           Start Quiz
         </button>
@@ -130,7 +132,7 @@ export default function KnowledgeCheck({ sessionSize, questions }: KnowledgeChec
   );
 }
 
-function getCorrectAnswer(q: Question): string | number | Record<string, string> {
+export function getCorrectAnswer(q: Question): string | number | Record<string, string> {
   switch (q.type) {
     case 'mcq':
       return q.correctIndex;
@@ -149,7 +151,7 @@ function getCorrectAnswer(q: Question): string | number | Record<string, string>
   }
 }
 
-function checkCorrectness(q: Question, userAnswer: string | number | Record<string, string>, correct: string | number | Record<string, string>): boolean {
+export function checkCorrectness(q: Question, userAnswer: string | number | Record<string, string>, correct: string | number | Record<string, string>): boolean {
   if (q.type === 'mcq') return userAnswer === correct;
   if (q.type === 'truefalse') return String(userAnswer) === String(correct);
   if (q.type === 'whicharea') {
@@ -350,7 +352,7 @@ interface QuestionRendererProps {
   correct: boolean;
 }
 
-function QuestionRenderer({ question, onAnswer, showFeedback, userAnswer, correct }: QuestionRendererProps) {
+export function QuestionRenderer({ question, onAnswer, showFeedback, userAnswer, correct }: QuestionRendererProps) {
   switch (question.type) {
     case 'mcq':
       return (

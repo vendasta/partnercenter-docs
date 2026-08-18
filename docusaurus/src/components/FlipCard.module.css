@@ -2,18 +2,37 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
-  margin: 1.5rem 0;
+  margin: 2.25rem 0 1.5rem;
 }
 
 .card {
   perspective: 1000px;
   cursor: pointer;
+  position: relative;
+  margin-top: 22px;
+}
+
+.flipBadge {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--ifm-background-surface-color);
+  border: 2px solid #1976d2;
+  color: #072337;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
 }
 
 .cardInner {
   position: relative;
   width: 100%;
-  min-height: 120px;
+  height: 140px;
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
@@ -25,39 +44,252 @@
 .cardFront,
 .cardBack {
   position: absolute;
-  width: 100%;
-  min-height: 120px;
+  inset: 0;
+  height: 100%;
   backface-visibility: hidden;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 2rem 1.25rem 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .cardFront {
-  background: var(--vendasta-accent, var(--ifm-color-primary));
-  color: white;
+  background: #e9f1fa;
+  color: #072337;
+  align-items: center;
+  justify-content: center;
 }
 
 .cardBack {
   background: var(--vendasta-card, var(--ifm-background-surface-color));
   border: 1px solid var(--vendasta-border, var(--ifm-color-emphasis-300));
   transform: rotateY(180deg);
+  overflow: hidden;
 }
 
 .frontText {
-  font-weight: 600;
-  flex: 1;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-align: center;
+  line-height: 1.35;
 }
 
 .backText {
   font-size: 0.9em;
   color: var(--ifm-font-color-base);
+  flex: 1;
+  line-height: 1.45;
+  overflow-y: auto;
+  min-height: 0;
 }
 
 .subtext {
   font-size: 0.75em;
-  opacity: 0.9;
+  opacity: 0.8;
   margin-top: 0.5rem;
+}
+
+.cardLink {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.cardLink:hover {
+  text-decoration: underline;
+}
+
+/* --- Icon variant, ported from the Vendasta LEARN AI Foundations path --- */
+
+.showGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+  align-items: stretch;
+}
+
+.showcase {
+  margin-top: 0;
+  height: 100%;
+  transition: transform 0.2s ease;
+}
+
+.showcase:hover {
+  transform: translateY(-2px);
+}
+
+.showcase:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 3px;
+  border-radius: 12px;
+}
+
+.showcase .cardInner {
+  display: grid;
+  height: 100%;
+  min-height: 240px;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.showFront,
+.showBack {
+  position: relative;
+  grid-area: 1 / 1;
+  width: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem 1.25rem;
+  border-radius: 12px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.showFront {
+  background: var(--vendasta-card, var(--ifm-background-surface-color));
+  border: 1px solid var(--vendasta-border, var(--ifm-color-emphasis-300));
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.showcase:hover .showFront {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.showBack {
+  transform: rotateY(180deg);
+  border: 1px solid transparent;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.iconTile {
+  width: 72px;
+  height: 72px;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #072337;
+  flex-shrink: 0;
+}
+
+.iconTile svg {
+  width: 36px;
+  height: 36px;
+}
+
+.showFrontLabel {
+  font-weight: 600;
+  font-size: 1.05em;
+  color: var(--ifm-font-color-base);
+}
+
+.showBackTitle {
+  font-weight: 700;
+  font-size: 1.05em;
+  color: #fff;
+}
+
+.showBackText {
+  font-size: 0.92em;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.flipHint,
+.flipHintBack {
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.flipHintBack {
+  left: 0.75rem;
+  right: auto;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* No icon: the name is the whole front, so the card shrinks to fit it. */
+.noIcon .cardInner {
+  min-height: 132px;
+}
+
+.noIcon .showFront,
+.noIcon .showBack {
+  padding: 1.25rem 1.25rem 1.6rem;
+}
+
+.noIcon .showFrontLabel {
+  font-weight: 700;
+  font-size: 1.15em;
+  line-height: 1.35;
+}
+
+.noIcon .showBackTitle {
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.noIcon .showBack {
+  gap: 0.5rem;
+}
+
+.showLarge .cardInner {
+  min-height: 250px;
+}
+
+.showLarge .showBack {
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 1.5rem 1.4rem;
+}
+
+.showLarge .showBackText {
+  font-size: 0.88em;
+}
+
+.showLarge .showBackText ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.showLarge .showBackText li {
+  margin-bottom: 0.5rem;
+}
+
+.showLarge .showBackText li:last-child {
+  margin-bottom: 0;
+}
+
+.gradient_blue {
+  background: linear-gradient(135deg, #7cb5f5 0%, #3b6fd4 100%);
+}
+
+.gradient_green {
+  background: linear-gradient(135deg, #7cc896 0%, #2e7655 100%);
+}
+
+.gradient_sunrise {
+  background: linear-gradient(135deg, #f6c66d 0%, #e58a5a 100%);
+}
+
+.gradient_purple {
+  background: linear-gradient(135deg, #a58ee8 0%, #6a4fc4 100%);
 }

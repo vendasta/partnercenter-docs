@@ -1,0 +1,473 @@
+---
+title: Actions overview
+description: Actions are the steps your automation performs after a trigger fires — understand action categories, scope rules, and how to build effective workflows.
+sidebar_position: 4
+sidebar_label: Actions overview
+tags: [automations, actions, steps]
+keywords: [automation actions, automation steps, workflow steps, action categories, step scope]
+---
+
+import { Cards, Card } from '@site/src/components/Cards';
+
+# Actions overview
+
+Actions are the "then" of your automation — what happens after the trigger fires. Build your workflow by adding action steps in sequence.
+
+## How action availability works
+
+The actions you can add depend on your trigger's scope.
+
+| Trigger scope | Example available actions |
+|---|---|
+| **Account** | Assign salesperson, activate products, add tags, create sales order |
+| **Company** | Assign owner, log call, start campaign, create opportunity |
+| **Contact** | Assign owner, send email, add to list, start campaign |
+| **No entity** | Create company, create contact, send webhook, delay, if/else |
+
+:::tip
+Need actions from a different scope? Use **lookup steps** like Find company, Find contact, or Get associated account to bring additional records into context.
+:::
+
+## Available actions
+
+### Companies
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/automation-steps-reference#companies" title="Assign a company owner / salesperson">
+    Assigns a team member as the owner or salesperson for a company
+  </Card>
+</Cards>
+
+### Contacts
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/automation-steps-reference#contacts" title="Assign a contact owner / salesperson">
+    Assigns a team member as the owner or salesperson for a contact
+  </Card>
+</Cards>
+
+### Custom objects
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/automation-steps-reference#custom-objects" title="Associate custom object with activity">
+    Links a custom object record to a CRM activity for tracking
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#custom-objects" title="Create a custom object">
+    Creates a new custom object record
+  </Card>
+  <Card href="/automations/my-automations/find-custom-object" title="Find custom object">
+    Looks up a custom object record and brings it into scope
+  </Card>
+</Cards>
+
+### Users
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/automation-steps-reference#users" title="Create a user from a contact">
+    Creates a Business App user from an existing CRM contact
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#users" title="Get my team member">
+    Retrieves a specific team member for use in later steps
+  </Card>
+</Cards>
+
+### Businesses
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/automation-steps-reference#businesses" title="Create a company">
+    Creates a company in the CRM
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#businesses" title="Create a contact">
+    Creates a contact in the CRM
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#businesses" title="Get or create the associated account">
+    Gets the account associated with a company, creating one if needed
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#businesses" title="Get company from contact">
+    Retrieves the company linked to a contact
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#businesses" title="Get company from custom object">
+    Retrieves the company linked to a custom object
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#businesses" title="Get contact from company">
+    Retrieves a contact linked to a company
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#businesses" title="Get contact from custom object">
+    Retrieves a contact linked to a custom object
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#businesses" title="Get custom object from company">
+    Retrieves a custom object record linked to a company
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#businesses" title="Get custom object from contact">
+    Retrieves a custom object record linked to a contact
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#businesses" title="Get the associated company">
+    Gets the company associated with the account in scope
+  </Card>
+  <Card href="/automations/my-automations/find-company" title="Find company">
+    Searches for a company by field criteria and brings it into scope
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#businesses" title="Find contact">
+    Searches for a contact by field criteria and brings it into scope
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#businesses" title="Set account lifecycle stage">
+    Sets an account's lifecycle stage (Lead, Prospect, or Customer)
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#businesses" title="Update company">
+    Updates one or more fields on a company record
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#businesses" title="Update contact">
+    Updates a CRM contact, supports appending or clearing field values
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#businesses" title="Update custom object">
+    Updates one or more fields on a custom object record
+  </Card>
+</Cards>
+
+### Campaigns and emails
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/automation-steps-reference#campaigns-and-emails" title="Pause campaign for company">
+    Pauses an ongoing campaign for the company
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#campaigns-and-emails" title="Pause campaign for contact">
+    Pauses an ongoing campaign for the contact
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#campaigns-and-emails" title="Pause a campaign for the user">
+    Pauses an ongoing campaign for the user
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#campaigns-and-emails" title="Pause a campaign for the account">
+    Pauses an ongoing campaign for the account
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#campaigns-and-emails" title="Start a campaign for the user">
+    Starts an email campaign for a user
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#campaigns-and-emails" title="Start a campaign for the account">
+    Starts an email campaign for the account and all its users/contacts
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#campaigns-and-emails" title="Start a campaign for the contact">
+    Enrolls a contact in an email campaign
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#campaigns-and-emails" title="Start a Yesware campaign for the contact">
+    Enrolls a contact in a Yesware email sequence
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#campaigns-and-emails" title="Send a plain text email via Gmail">
+    Sends a plain-text email from your connected Gmail account
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#campaigns-and-emails" title="Send a plain text email via Outlook">
+    Sends a plain-text email from your connected Outlook account
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#campaigns-and-emails" title="Send a marketing email template to a company">
+    Sends a one-off marketing email to the company's contacts
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#campaigns-and-emails" title="Send a marketing email template to a contact">
+    Sends a one-off marketing email to the contact
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#campaigns-and-emails" title="Send an email to users">
+    Sends a one-off email to the users on the account
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#campaigns-and-emails" title="Start a campaign for the company">
+    Enrolls all contacts on a company in a campaign
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#campaigns-and-emails" title="Copy email template to another company">
+    Copies an email template from one company to another
+  </Card>
+</Cards>
+
+### Fulfillment
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/automation-steps-reference#fulfillment" title="Create a fulfillment task">
+    Creates a task in Task Manager
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#fulfillment" title="Create a fulfillment project for the account">
+    Creates a project in Task Manager from a template
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#fulfillment" title="Add account to Task Manager">
+    Adds the account to Task Manager so tasks can generate
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#fulfillment" title="Pause or cancel the Task Manager account">
+    Pauses or cancels a Task Manager account
+  </Card>
+</Cards>
+
+### Lists
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/automation-steps-reference#lists" title="Add the account to a list">
+    Adds the account to a list
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#lists" title="Remove the account from a list">
+    Removes the account from a list
+  </Card>
+</Cards>
+
+### Notifications
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/automation-steps-reference#notifications" title="Notify all account users">
+    Sends a notification to every user on the account
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#notifications" title="Notify a user">
+    Sends an in-app and email notification to one or more users
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#notifications" title="Notify a digital agent">
+    Sends a notification to a fulfillment agent
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#notifications" title="Notify a salesperson">
+    Sends a notification to a salesperson
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#notifications" title="Notify the user">
+    Sends a notification to the triggering user
+  </Card>
+</Cards>
+
+### Products
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/automation-steps-reference#products" title="Activate express products">
+    Activates a specific express product
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#products" title="Activate products">
+    Activates a product for the account
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#products" title="Deactivate products">
+    Deactivates one or more products for the account
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#products" title="Get products' custom field data">
+    Gets custom field data for the account's products
+  </Card>
+</Cards>
+
+### Sales
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/automation-steps-reference#sales" title="Assign a sales team">
+    Assigns a random salesperson from a team to the account
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#sales" title="Assign a salesperson">
+    Assigns a specific salesperson to the account
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#sales" title="Charge an invoice">
+    Charges a specific invoice against the payment method
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#sales" title="Close all Sales Opportunities">
+    Closes every open opportunity on the account
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#sales" title="Close opportunity">
+    Closes a specific opportunity
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#sales" title="Log activity and hotness rating">
+    Logs a business activity and raises the hotness rating
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#sales" title="Create a sales opportunity">
+    Creates a CRM opportunity on the account
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#sales" title="Create a proposal">
+    Creates a sales proposal on the account
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#sales" title="Create a sales task (legacy)">
+    Creates a legacy sales task
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#sales" title="Create a Snapshot Report">
+    Creates a Snapshot Report for the account or company
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#sales" title="Finalize an invoice">
+    Finalizes a draft invoice for payment collection
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#sales" title="Reopen opportunity">
+    Reopens a previously closed opportunity
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#sales" title="Unassign salespeople">
+    Removes assigned salespeople from the account
+  </Card>
+</Cards>
+
+### Tags
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/automation-steps-reference#tags" title="Add tags to the account">
+    Adds one or more tags to the account
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#tags" title="Add tags to the order">
+    Adds one or more tags to a sales order
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#tags" title="Remove tags from the account">
+    Removes one or more tags from the account
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#tags" title="Remove tags from the order">
+    Removes one or more tags from a sales order
+  </Card>
+</Cards>
+
+### Conversations
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/automation-steps-reference#conversations" title="Send a Conversations message">
+    Sends a message to the account's Conversations inbox
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#conversations" title="Send a public system message">
+    Sends a public system message visible to everyone on the account
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#conversations" title="Send an SMS message via Conversations">
+    Sends an SMS message via Conversations to a contact
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#conversations" title="Send an SMS message to a phone number">
+    Sends an SMS to any phone number, including numbers not in CRM
+  </Card>
+</Cards>
+
+### Sales orders
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/automation-steps-reference#sales-orders" title="Activate products for the order">
+    Activates products associated with a sales order
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#sales-orders" title="Add tags to the order">
+    Adds one or more tags to a sales order
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#sales-orders" title="Approve the order">
+    Approves a pending sales order
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#sales-orders" title="Archive the order">
+    Archives a sales order from active views
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#sales-orders" title="Decline the order">
+    Declines a pending sales order
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#sales-orders" title="Get order data">
+    Retrieves order data and brings it into scope for downstream steps
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#sales-orders" title="Remove tags from the order">
+    Removes one or more tags from a sales order
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#sales-orders" title="Submit the order for admin approval">
+    Submits an order for admin approval before activation
+  </Card>
+</Cards>
+
+### Advanced
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/automation-steps-reference#advanced" title="Apply account template">
+    Deploys an account template to the target account
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#advanced" title="Associate company with contact">
+    Links a company and contact record in the CRM
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#advanced" title="Update opportunity stage">
+    Updates the pipeline stage of an opportunity
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#advanced" title="Log a call activity to the company">
+    Logs a call record on the company's activity timeline
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#advanced" title="Log a call activity to the contact">
+    Logs a call record on the contact's activity timeline
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#advanced" title="Add a note to the company">
+    Adds a note to a company record
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#advanced" title="Add a note to the contact">
+    Adds a note to a contact record
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#advanced" title="Create a CRM sales task for the company">
+    Creates a CRM sales task on the company
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#advanced" title="Create a CRM sales task for the contact">
+    Creates a CRM sales task on the contact
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#advanced" title="Modify a call activity for the company">
+    Updates an existing call activity on a company
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#advanced" title="Modify custom account data">
+    Writes or updates custom account data fields
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#advanced" title="Modify custom product data">
+    Writes or updates custom product data fields
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#advanced" title="Modify custom sales order data">
+    Writes or updates custom sales order data fields
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#advanced" title="Modify custom user data">
+    Writes or updates custom user data fields
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#advanced" title="Send a webhook">
+    Sends an HTTP POST request with custom data to an external URL
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#advanced" title="Get an opportunity">
+    Gets an opportunity and brings it into scope
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#advanced" title="Format text">
+    Transforms a text value using formatting rules
+  </Card>
+</Cards>
+
+### Integrations
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/automation-steps-reference#integrations" title="Add contact to Kixie powerlist">
+    Adds a contact to a Kixie powerlist for automated calling
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#integrations" title="Remove contact from Kixie powerlist">
+    Removes a contact from a Kixie powerlist
+  </Card>
+</Cards>
+
+### AI actions
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/categorize-with-ai" title="Categorize with AI">
+    Classifies text into custom categories and branches accordingly
+  </Card>
+  <Card href="/automations/my-automations/analyze-sentiment-with-ai" title="Analyze sentiment with AI">
+    Detects positive, neutral, or negative tone and branches accordingly
+  </Card>
+  <Card href="/automations/my-automations/summarize-with-ai" title="Summarize with AI">
+    Condenses text into concise summaries for downstream steps
+  </Card>
+  <Card href="/automations/my-automations/automation-steps-reference#advanced" title="Translate with AI">
+    Translates text into another language
+  </Card>
+  <Card href="/automations/my-automations/send-a-request-to-an-ai-employee" title="Send a request to an AI employee">
+    Sends a prompt to a specific AI employee with its knowledge base
+  </Card>
+  <Card href="/automations/my-automations/send-a-prompt-to-ai" title="Send a prompt to AI">
+    Sends a free-form prompt to an AI model and returns the response
+  </Card>
+</Cards>
+
+### Delays
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/logic-and-flow-control" title="Delay until an event happens">
+    Pauses and waits until a specified event occurs
+  </Card>
+  <Card href="/automations/my-automations/logic-and-flow-control" title="Delay">
+    Pauses the automation for a set amount of time
+  </Card>
+</Cards>
+
+### Conditions
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/logic-and-flow-control" title="If/else branch">
+    Splits the workflow into two paths based on a condition
+  </Card>
+  <Card href="/automations/my-automations/logic-and-flow-control" title="Jump to a step">
+    Skips forward or backward to a specific step
+  </Card>
+  <Card href="/automations/my-automations/logic-and-flow-control" title="Rate filter">
+    Limits how frequently the automation can proceed per contact
+  </Card>
+</Cards>
+
+### Workflow (Early Access)
+
+<Cards cols={3}>
+  <Card href="/automations/my-automations/logic-and-flow-control" title="A/B branch">
+    Randomly splits contacts into two groups for testing
+  </Card>
+  <Card href="/automations/my-automations/logic-and-flow-control" title="End this automation">
+    Immediately stops the current automation run
+  </Card>
+</Cards>

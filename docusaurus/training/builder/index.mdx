@@ -1,0 +1,116 @@
+---
+title: Wire your AI Workforce to act
+sidebar_position: 0
+sidebar_label: Overview
+description: "Wiring an AI Employee into the systems your clients already run: custom tools, the API, webhooks, automations, and where the platform hands off to a developer."
+hide_table_of_contents: true
+---
+
+import PathCards from "@site/src/components/PathCards";
+import PathHeader from "@site/src/components/PathHeader";
+
+<PathHeader
+  parts={8}
+  difficulty="Foundational to Advanced"
+  topics={["Integrations", "Vendasta API", "Automations", "Capabilities"]}
+  time="about 1 hour 20 minutes"
+  required={["A Partner Center account", "An AI Employee already deployed"]}
+  objective="In most businesses a person is the glue: someone takes the call, types the details into the CRM, checks the calendar, sends the confirmation. This path hands that glue work to your AI Employees, so they take the actions people usually do and pass work to each other through automated handoffs."
+  outcomes={[
+    "You can tell whether a system is connectable, and how far you have to go to use it",
+    "You can turn a working API call into a tool an AI Employee can use",
+    "You can send data out with webhooks and react to platform events as they happen",
+    "You know where the platform ends and a developer picks up",
+  ]}
+/>
+
+## This path covers
+
+Eight steps, from the plain-English model through to the developer surface.
+
+<PathCards
+  cards={[
+    {
+      title: "How systems talk",
+      description: "The plain-English mental model: doorways, the two patterns, connectors, and signals.",
+      topics: [
+        "How an AI Employee reaches another system",
+        "Two ways systems talk: ask and announce",
+        "The hand-off between employee and automation",
+      ],
+      to: "/learn/builder/how-systems-talk",
+    },
+    {
+      title: "The integration landscape",
+      description: "What decides whether a system can be connected, and how far you have to go to use it.",
+      topics: [
+        "What makes a system connectable",
+        "What the platform opens up for you",
+        "When it is developer work, and how to hand it off",
+      ],
+      to: "/learn/builder/the-integration-landscape",
+    },
+    {
+      title: "Capabilities, tools, and triggers",
+      description: "The platform vocabulary that connects a system, and how the pieces fit together.",
+      topics: [
+        "Designing from the outcome",
+        "The three parts of a reliable capability",
+        "Trimming what does not earn its place",
+      ],
+      to: "/learn/builder/capabilities-in-depth",
+    },
+    {
+      title: "Custom tools: connect any API",
+      description: "Turn a working API call into a doorway an AI Employee can use.",
+      topics: [
+        "Starting from a working call",
+        "The four parts of a tool",
+        "Authentication, and reading what it actually sent",
+      ],
+      to: "/learn/builder/custom-tools",
+    },
+    {
+      title: "Authenticate and make your first API call",
+      description: "Service accounts, scopes, and your first contact upsert into the CRM.",
+      topics: [
+        "A service account as your code's identity",
+        "Scopes: asking for exactly what the job needs",
+        "Your first call, the contact upsert",
+      ],
+      to: "/learn/builder/authenticate-and-first-api-call",
+    },
+    {
+      title: "Webhooks and platform events",
+      description: "Push instead of poll: sending data out, and receiving events as they happen.",
+      topics: [
+        "Push, not poll",
+        "The outbound webhook step",
+        "Inbound triggers and platform events",
+      ],
+      to: "/learn/builder/webhooks-and-platform-events",
+    },
+    {
+      title: "Advanced automations",
+      description: "Guarded triggers, activities over notes, custom objects, and data expressions.",
+      topics: [
+        "How the trigger decides what you can do",
+        "Guarding the trigger",
+        "Logging activities, and modelling what the business tracks",
+      ],
+      to: "/learn/builder/advanced-automations",
+    },
+    {
+      title: "Beyond the platform",
+      description: "The build-tier line, the developer surface, and productizing what you built.",
+      topics: [
+        "Where the platform ends",
+        "Putting the logic in the platform, not your code",
+        "Productizing what you built",
+      ],
+      to: "/learn/builder/beyond-the-platform",
+    },
+  ]}
+/>
+
+When you finish, [developers.vendasta.com](https://developers.vendasta.com) is the reference you will keep open as you build.

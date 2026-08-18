@@ -222,6 +222,16 @@ Personalize the team booking page with custom colors and booking questions.
 
 You can add custom questions that visitors must complete when booking a meeting. This information will be available to the team member who receives the booking.
 
+### Confirmation and reminder channels
+
+Making **Phone Number** and/or **Email** required fields (in the booking questions) controls which channels are available for confirmations and reminders.
+
+- Choose a **confirmation channel** - **Email**, **SMS**, or **Both** - for the confirmation guests receive when they book.
+- Choose a **reminder channel** the same way. It defaults to your confirmation channel until you change it, after which the two channels work independently - for example, an Email confirmation with an SMS reminder.
+- Turning off **Phone Number** required disables **SMS** and **Both** in both channel controls, and any current SMS/Both selection falls back to Email. Turning off **Email** required disables **Email** and **Both**, and falls back to SMS.
+- If both **Phone Number** and **Email** are off, all channel options are disabled and an inline warning appears - the event type can't be saved until at least one channel is selected.
+- Set the **reminder lead time** - an integer plus a unit (minutes, hours, or days) - to control how far ahead of the meeting the reminder sends. The default is 24 hours, and the maximum is 10 days; values above the maximum are clamped, and switching units re-clamps the value. Only one reminder can be configured per event type.
+
 ## Viewing and sharing your team booking link
 
 After creating a team booking link, you can view and share it with prospects and clients.

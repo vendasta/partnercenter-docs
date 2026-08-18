@@ -32,6 +32,23 @@ Self-signup is designed to reduce friction and get customers into Business App a
 - **Contact email**: The email address for the primary user
 - **Company name**: Used to look up the business via Google Places
 
+### Sign up with Google or Microsoft
+
+Customers can start signup in one of two ways:
+
+- **Enter an email address** directly on the signup form, or
+- **Sign up with Google** or **Sign up with Microsoft** using an existing account
+
+When a customer chooses **Sign up with Google** or **Sign up with Microsoft**, they authorize Business App on Google's or Microsoft's sign-in screen, and their verified email address is used to create the account. Because the account provider has already confirmed the email, the customer skips the separate email verification step and lands in the signup flow right away. They still confirm their company name so the platform can enrich the business profile through Google Places.
+
+:::info
+The email address is the only detail pulled from the Google or Microsoft account — no contacts, calendar, or other data is accessed.
+:::
+
+:::tip
+Social sign-up removes password creation and email verification from the flow, which reduces friction and can improve signup completion. Customers can return later and sign in with the same Google or Microsoft account from your Business App login page.
+:::
+
 ### Automatic business data enrichment
 
 When a customer enters their company name, the system searches Google Places to find their business:
@@ -53,9 +70,9 @@ When a customer completes signup, the platform sets up AI in two ways:
 
 This means the AI is ready to go the moment the customer lands in Business App.
 
-**In the signup flow**, after the customer verifies their email, they're shown a live preview of their AI Receptionist — already trained on the business profile and website data captured during signup. They can chat with it immediately and see how it responds *as their business* before they even reach the Business App homepage. This gives new customers an instant "wow" moment and demonstrates the value of AI from their very first interaction.
+**In the signup flow**, after the customer verifies their email (or signs up with a Google or Microsoft account, which skips verification), they're shown a live preview of their AI Receptionist — already trained on the business profile and website data captured during signup. They can chat with it immediately and see how it responds *as their business* before they even reach the Business App homepage. This gives new customers an instant "wow" moment and demonstrates the value of AI from their very first interaction.
 
-The AI Employee Preview can be turned on or off per market in **Customize Business App** > **Add Your Clients**. See [Add Your Customers Settings](/docs/administration/platform-settings/customize-business-app/add-your-customers-settings#how-do-i-show-new-signups-a-preview-of-their-ai-receptionist) for details.
+The AI Employee Preview can be turned on or off per market in **Customize Business App** > **Add Your Clients**. See [Add Your Clients Settings](/administration/platform-settings/customize-business-app/add-your-customers-settings#how-do-i-show-new-signups-a-preview-of-their-ai-receptionist) for details.
 
 :::tip
 The automatic AI onboarding helps demonstrate value immediately. Customers can test their AI Receptionist in Business App as soon as they complete signup — and with the AI Employee Preview enabled, they experience AI before they even finish onboarding.
@@ -218,7 +235,7 @@ If you need more control beyond the pre-built templates, you can create automati
 - **Add to a list**: Organize self-signup customers for targeted campaigns
 - **Create an opportunity**: Track the potential revenue from each self-signup customer
 
-For detailed instructions, see [Automations overview](/automations/) and the [Automation Triggers Reference](/automations/automation-triggers-reference).
+For detailed instructions, see [Automations overview](/automations/) and the [Automation Triggers Reference](/automations/my-automations/automation-triggers-reference).
 
 ## Tips and best practices
 
@@ -242,6 +259,12 @@ Navigate to **Partner Center** > **Accounts** > **Manage Business App** > **Cust
 <summary>Can customers sign up without a direct link?</summary>
 
 Yes. Enable the **Show Create Account** option to add a registration link to your Business App login page. Customers can then click **Create Account** to register.
+</details>
+
+<details>
+<summary>Can customers sign up with a Google or Microsoft account?</summary>
+
+Yes. On the signup form, customers can enter an email address or choose **Sign up with Google** or **Sign up with Microsoft**. When they use a Google or Microsoft account, the verified email address on that account is used to create their Business App account, and they skip the separate email verification step. Only the email address is used — no other account data is accessed. Customers can return later and sign in with the same account from your Business App login page.
 </details>
 
 <details>

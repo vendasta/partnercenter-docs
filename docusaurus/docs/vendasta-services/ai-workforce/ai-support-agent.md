@@ -7,6 +7,12 @@ description: "An overview of the AI Support Agent service, detailing the process
 import OptimizationPlanSection from './_optimization-plan-section.mdx';
 import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
 
+:::tip Share a client-facing version
+Want to hand this to a client? The **grey-labeled guide** has the same information with no brand or platform names, so it is safe to send directly.
+
+<a className="button button--primary" href="https://servicesdocs.io/ai-workforce/ai-support-agent" target="_blank" rel="noopener noreferrer">Open the client-facing AI Support Agent guide →</a>
+:::
+
 
 :::info Requirements
 **Conversations AI** must be active on your account. The edition that is active will affect which channels our team is able to connect. See the full [requirements](#requirements) below.
@@ -18,18 +24,20 @@ The AI Support Agent Setup is a done-for-you service where our experts configure
 
 Choose one or the other:
 
-- **Setup**: a **one-time fee**. Our experts configure, train, and launch your AI Support Agent (everything in "What's included with setup" below).
-- **AI Workforce Optimization Plan**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
+- **[AI Employee Setup](https://partners.vendasta.com/marketplace/products/MP-K48XKQV7DXLGQZ67ZH4MNZDM2FQCK8LM)**: a **one-time fee**. Our experts configure, train, and launch your AI Support Agent (everything in "What's included" below).
+- **[AI Workforce Optimization Plan](https://partners.vendasta.com/marketplace/products/MP-JHLVQX6W4MJFZ8V3V68CWMQ43X6N46TW)**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
 
 :::
 
-## What's included with setup
+## Setup
 
-### 1. AI Employee profile
+### What's included
+
+#### 1. AI Employee profile
 
 We configure the AI Employee with a name and avatar that represents your business. Customers interact with a professional support persona rather than a generic bot. The profile is configured within the **AI Workforce** section of Business App.
 
-### 2. HEARD Support Framework
+#### 2. HEARD Support Framework
 
 We configure the HEARD framework, a structured support methodology that guides every conversation through five stages:
 
@@ -41,7 +49,7 @@ We configure the HEARD framework, a structured support methodology that guides e
 
 For simple questions, the AI answers immediately. For complaints or unresolved issues, it follows the full sequence.
 
-### 3. Escalation logic
+#### 3. Escalation logic
 
 We configure your escalation rules so the AI hands off to your team only when it genuinely can't help, not for every inquiry it receives. Escalation is triggered when the AI cannot find an answer in the knowledge base, or when the issue requires human judgment. At that point, the AI smoothly transitions the conversation and captures the customer's contact information.
 
@@ -49,7 +57,7 @@ We configure your escalation rules so the AI hands off to your team only when it
 The quality and completeness of your knowledge base directly affects how often escalations are triggered. A well-documented FAQ reduces unnecessary handoffs to your team.
 :::
 
-### 4. Channel setup
+#### 4. Channel setup
 
 We connect all channels requested during the onboarding call. Supported channels include:
 
@@ -66,7 +74,7 @@ Each channel routes conversations to your AI Support Agent automatically, so cus
 SMS for U.S. businesses requires A2P registration before it can be activated. See the [requirements](#requirements) below for details.
 :::
 
-### 5. Chat widget installation
+#### 5. Chat widget installation
 
 For web chat, we will install the chat widget directly on your website, typically in the global footer or homepage, so it is visible to customers across all pages. We will need login access to the place where you edit your website (for example, WordPress, Wix, Squarespace, or whichever platform you use to manage your site).
 
@@ -74,23 +82,21 @@ For web chat, we will install the chat widget directly on your website, typicall
 If you are unable to provide website access, we will provide the embed code and installation instructions for your team or web developer to install independently.
 :::
 
-### 6. Knowledge base setup
+#### 6. Knowledge base setup
 
 We connect your business profile, website, and any FAQs, policies, or help documentation to the AI's knowledge base. This allows the Support Agent to answer questions about your services, hours, policies, and more without fabricating information.
 
-<OptimizationPlanSection />
-
-## The setup process
+### The setup process
 
 The process involves a fulfillment form, a series of calls, and configuration steps to get your AI Support Agent running effectively.
 
-### 1. Fulfillment form
+#### 1. Fulfillment form
 
 To ensure a smooth and efficient setup, please fill out the fulfillment form with as much detail as possible, including your common customer inquiries, escalation preferences, and the channels you'd like to activate.
 
 * **Timeline:** We'll review the order and start the process within 2 business days.
 
-### 2. Onboarding call
+#### 2. Onboarding call
 
 Our team will lead a structured onboarding call to understand your support needs, common customer inquiries, and escalation preferences. We'll configure the HEARD Support Framework, a structured approach that guides your AI through direct answers for simple questions, empathetic resolution for complaints, and a smooth handoff to your team when human support is needed. We'll come to the call with an initial setup ready to demo and refine together.
 
@@ -101,19 +107,19 @@ Our team will lead a structured onboarding call to understand your support needs
 If you are unable to attend the onboarding call, our team will proceed with setup using the information provided in your fulfillment form and will follow up via email and phone to review and refine. If we are unable to reach you after our follow-up process, the project will be closed, but can be reopened at any time by reaching back out to us.
 :::
 
-### 3. Agent setup
+#### 3. Agent setup
 
 Using the information gathered during the onboarding call, we will configure your AI Support Agent with the HEARD support framework, set up escalation logic to smoothly transition complex or unresolved issues to your team, connect all requested channels (web chat, SMS, Facebook, Instagram, and more), and install the chat widget on your website.
 
 * **Timeline:** Your AI Support Agent will be complete in 1 business day, or 3 business days for setups with multiple channels or complex knowledge bases.
 
-### 4. Training call
+#### 4. Training call
 
 This call will walk you through your new AI Support Agent: how it handles simple questions, complaints, and escalations, where to find captured leads and conversation summaries, and how to manage and respond to conversations in Business App.
 
 * **Timeline:** This call can be booked in as little as 1 business day after Agent setup completion, depending on availability.
 
-### 5. 30-day check-in
+#### 5. 30-day check-in
 
 This call will be used to review real conversations, assess how the AI is handling inquiries, and refine the knowledge base, escalation triggers, and support prompts based on actual interactions.
 
@@ -122,6 +128,8 @@ Prior to this call, our team will review 5-10 conversations to identify improvem
 :::
 
 * **Timeline:** This call will be booked 3-4 weeks after the completion of your AI Support Agent setup.
+
+<OptimizationPlanSection />
 
 ## Requirements
 

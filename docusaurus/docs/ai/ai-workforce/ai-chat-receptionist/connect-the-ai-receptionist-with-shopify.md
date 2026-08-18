@@ -1,6 +1,7 @@
 ---
 title: "Connect the AI Chat Receptionist with Shopify"
 sidebar_label: Connect with Shopify
+description: Connect the AI Chat Receptionist to Shopify to search products, share details, and check inventory in chat.
 ---
 
 import {AISparkleIcon} from '@site/src/components/Icons'
@@ -29,18 +30,20 @@ Before you connect your AI Receptionist to Shopify, you need to gather the follo
 
 | What you need | Where to find it | Scopes / Notes |
 |---------------|------------------|----------------|
-| **Shopify Store Domain** (`your-store.myshopify.com`) | `Admin` → `Settings` → `General` — copy **Store address** | — |
+| **Shopify Store Domain** (`your-store.myshopify.com`) | `Admin` → `Settings` → `General`, copy `Store address` | N/A |
 | **Admin API Access Token** | <p>1. Click <code>New app</code> → <code>Configure Admin API</code> (select the permissions shown in “Scopes / Notes” and click Save)</p><p>2. Click <code>Install</code> → <code>Reveal token</code></p> | <ul><li>`read_inventory`</li><li>`read_products`</li></ul> |
 | **Storefront API Access Token** | <p>1. Click <code>Enable Storefront API</code> (turn on the permission listed in “Scopes / Notes” and click Save)</p><p>2. Click <code>Install / Update</code> → <code>Reveal token</code></p> | <ul><li>`unauthenticated_read_product_listings`</li></ul> |
-| *(Optional)* **GraphQL Familiarity** | Review [Shopify Admin GraphQL API docs](https://shopify.dev/docs/api/admin-graphql) | — |
+| *(Optional)* **GraphQL Familiarity** | Review [Shopify Admin GraphQL API docs](https://shopify.dev/docs/api/admin-graphql) | N/A |
 
 #### Shopify help resources
 
-> You can get more detailed help on gathering this information from the Shopify help links below:
-> - Getting your store domain ([Shopify general settings](https://help.shopify.com/en/manual/intro-to-shopify/initial-setup/general-settings))
-> - Developing "apps" for your store ([Custom Apps](https://help.shopify.com/en/manual/apps/custom-apps))
-> - Utilizing the Shopify Storefront API ([Storefront API docs](https://shopify.dev/docs/api/storefront))
-> - Utilizing Shopify Admin GraphQL API ([Admin GraphQL API docs](https://shopify.dev/docs/api/admin-graphql))
+:::info
+You can get more detailed help on gathering this information from the Shopify help links below:
+- Getting your store domain ([Shopify general settings](https://help.shopify.com/en/manual/intro-to-shopify/initial-setup/general-settings))
+- Developing "apps" for your store ([Custom Apps](https://help.shopify.com/en/manual/apps/custom-apps))
+- Utilizing the Shopify Storefront API ([Storefront API docs](https://shopify.dev/docs/api/storefront))
+- Utilizing Shopify Admin GraphQL API ([Admin GraphQL API docs](https://shopify.dev/docs/api/admin-graphql))
+:::
 
 ---
 
@@ -52,8 +55,8 @@ This step creates the capability your AI Receptionist will reference when someon
 2. Select your AI Employee and click `Configure`.
 3. Under `Custom Capabilities`, click `Add a capability`.
 4. Fill in the following fields:
-   - **Name**: `Get Shopify Product Info`
-   - **Description**: Searches the Shopify store for products matching a keyword and returns product names, descriptions, prices, and availability using the Storefront API.
+   - `Name`: `Get Shopify Product Info`
+   - `Description`: Searches the Shopify store for products matching a keyword and returns product names, descriptions, prices, and availability using the Storefront API.
   
 :::note
 You will come back to this screen in [Step 3: Write the Prompt](#step-3-write-the-prompt).
@@ -61,7 +64,7 @@ You will come back to this screen in [Step 3: Write the Prompt](#step-3-write-th
 
 ## Step 2: Configure Shopify API tools for the AI Receptionist
 
-For your AI Receptionist to be able to get information from Shopify, they will need to be able to call Shopify APIs using Tools. In this step you will configure a single tool your AI Receptionist can use to search for products and report whether they are available for sale.
+For your AI Receptionist to be able to get information from Shopify, it will need to be able to call Shopify APIs using Tools. In this step you will configure a single tool your AI Receptionist can use to search for products and report whether they are available for sale.
 
 ### Shopify tool: getProductList
 
@@ -84,12 +87,14 @@ Use the values below (replacing any placeholders) to create your version of this
 | `X-Shopify-Storefront-Access-Token` | `YOUR_STOREFRONT_ACCESS_TOKEN` | ✓ |
 | `Content-Type` | `application/json` | ✓ |
 
-> For help getting your storefront access token, you can follow the [Prerequisites & Setup](#prerequisites--setup) section in this guide.
+:::info
+For help getting your storefront access token, you can follow the [Prerequisites & Setup](#prerequisites--setup) section in this guide.
+:::
 
 #### Body parameters
 | Name | Location | Type | Description |
 |------|----------|------|-------------|
-| `query` | `Body` | `string` | `Generate a full GraphQL query string using Shopify Storefront API with this format: query { products(first: 5, query: "KEYWORD") { edges { node { title handle availableForSale priceRange { minVariantPrice { amount currencyCode } } descriptionHtml } } } }, replacing KEYWORD with the user's term. Do not return just a keyword—return the entire query string exactly as shown.` |
+| `query` | `Body` | `string` | `Generate a full GraphQL query string using Shopify Storefront API with this format: query { products(first: 5, query: "KEYWORD") { edges { node { title handle availableForSale priceRange { minVariantPrice { amount currencyCode } } descriptionHtml } } } }, replacing KEYWORD with the user's term. Do not return just a keyword, return the entire query string exactly as shown.` |
 
 :::info
 If an API call is failing, compare the API call created by your AI Employee with this example successful GraphQL body. You can inspect AI Employee raw API calls in the `Conversations` tab.
@@ -309,7 +314,7 @@ Shopify returned a `429 Too Many Requests` error, indicating you are hitting the
 
 </Tabs>
 
-## FAQ: Connecting the AI Receptionist with Shopify
+## FAQ: connecting the AI Receptionist with Shopify
 
 ### Integration & setup
 
@@ -324,7 +329,7 @@ This means customers can ask about products through phone calls, SMS, WhatsApp, 
 <details>
 <summary>What other e-commerce platforms can I connect besides Shopify?</summary>
 
-While this guide is specific to Shopify, you can create similar integrations with any e-commerce platform that offers an API—including WooCommerce, BigCommerce, Magento, or custom-built stores.
+While this guide is specific to Shopify, you can create similar integrations with any e-commerce platform that offers an API, including WooCommerce, BigCommerce, Magento, or custom-built stores.
 
  The Custom Capabilities Framework allows you to connect to virtually any system that has an API. You can also explore other pre-built integrations in Connections or create workflows with external platforms using Zapier.
 </details>
@@ -365,12 +370,12 @@ This ensures your AI can provide complete, helpful answers by combining real-tim
 
 Yes! Custom Capabilities work across all communication channels supported by your AI Employees. Customers can ask about products through:
 
-- [Web chat](/business-app/conversations/web-chat/)
+- [Web chat](/business-app/conversations/#ai-assisted-web-chat-widget)
 - SMS Messaging (Conversations Pro required)
 - WhatsApp
 - Phone calls (with [AI Voice Receptionist](/ai/ai-workforce/ai-voice-receptionist))
-- [Facebook Messenger](/business-app/conversations/facebook/)
-- [Instagram DMs](/business-app/conversations/instagram/)
+- [Facebook Messenger](/business-app/conversations/#social-media-integration)
+- [Instagram DMs](/business-app/conversations/#social-media-integration)
 
  The same product information will be available regardless of how customers choose to contact you. See [Conversations Overview](/business-app/conversations/) for a complete list of supported channels.
 </details>
@@ -499,7 +504,7 @@ The query uses `first: 5` by default. You can edit that number in your tool defi
 <details>
 <summary>Can I customize the fields returned by the query?</summary>
 
-Yes—update the GraphQL body in the tool definition to include any product fields you need (e.g., `tags`, `images { src }`), and adjust your AI prompt so it knows how to display them.
+Yes, update the GraphQL body in the tool definition to include any product fields you need (e.g., `tags`, `images { src }`), and adjust your AI prompt so it knows how to display them.
 </details>
 
 <details>

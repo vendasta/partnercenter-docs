@@ -1,0 +1,144 @@
+---
+title: "Capabilities, tools, and triggers"
+sidebar_label: Capabilities, tools, and triggers
+sidebar_position: 3
+description: "The platform vocabulary that connects an AI Employee to other systems: capabilities, tools, triggers, and guardrails, and how they fit together."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+
+<InlineHighlighter courseId="capabilities-in-depth" site="vendasta_learn">
+
+<CourseProgressBar courseId="capabilities-in-depth" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Intermediate"
+  time="about 9 minutes"
+  pathName="Wire your AI Workforce to act"
+  step={3}
+  totalSteps={8}
+  outcomes={[
+    "Name the platform pieces that connect an AI Employee to a system: capability, tool, trigger, guardrail",
+    "Tell a capability from knowledge, and behavior from facts",
+    "See how a trigger and a tool are what actually reach through a doorway",
+    "Design a capability from the outcome, and trim what does not earn its place",
+  ]}
+/>
+
+## The vocabulary that connects a system
+
+A capability is a single skill you switch on for an AI Employee: capture a lead, book an appointment, look something up and answer from it. Each one is a set of plain instructions, sometimes with a tool attached, and the AI reads the situation in front of it and reaches for the capability that fits. It is where the craft lives, because a vague capability is exactly where an AI Employee's behavior drifts.
+
+That is the line between a capability and knowledge. Knowledge is what the AI Employee knows, the facts it looks up when a question calls for them. A capability is what it does, the behavior you want in a given moment. Facts go in knowledge; behavior goes in a capability. Keeping that split clean is most of what makes an AI Employee predictable.
+
+The useful way to think about writing one: you are briefing a new team member. You would not hand a new hire a hundred rules on their first day. You would tell them what the job is, when to do it, and what a good result looks like. A capability is the same brief, written down once.
+
+## Design from the outcome
+
+Start from the result you want, not the steps to get there. "A booked appointment on the right calendar, with the customer's name and reason for the visit" is an outcome. "Click the calendar, then pick a time, then..." is a script, and the AI does not need your script. Name the destination and the guardrails, and let the AI find the path.
+
+Vague instructions produce vague behavior. Compare these two versions of the same instruction:
+
+- Vague: "Get the order number."
+- Specific: "Ask for the order number from the customer's message. Order numbers are eight to ten digits and may include letters. If it is missing, ask once before moving on."
+
+The second one tells the AI where the value comes from, what it looks like, and what to do when it is not there. That is the difference between a capability that works on the thousandth conversation and one that drifts on the second.
+
+## The three parts of a reliable capability
+
+Every capability worth trusting has the same three parts. Flip each one to see what it does:
+
+<FlipCardGrid>
+  <FlipCard front="Instruction" back="What the skill does and when to reach for it. Written like a brief to a new hire, not a script." subtext="Behavior" />
+  <FlipCard front="Guardrail" back="The line it must not cross. 'Quote only published prices.' Keeps a confident answer from becoming a wrong one." subtext="Boundary" />
+  <FlipCard front="Trigger" back="The situation that tells the AI to use this skill instead of another. Vague triggers make skills collide." subtext="When" />
+</FlipCardGrid>
+
+Get these three right and the capability behaves. Most capabilities that misfire are missing one of them: no guardrail, so it invents; no clear trigger, so it fires at the wrong moment.
+
+This is also where connecting a system starts. The trigger is the moment the AI decides to reach through a doorway to another system. The tool is the doorway itself. A capability is the wrapper that holds them together: it tells the AI when to reach out (the trigger), what it is allowed to do (the guardrail), and, when a tool is attached, which doorway to walk through.
+
+## Trim what does not earn its place
+
+Everything you tell an AI Employee lands in one working memory, and it all competes for attention. Long, overlapping instructions do not make an employee smarter; they cross wires. A capability that tries to do three jobs does all three worse than three capabilities doing one each.
+
+So write short and specific, then cut. If a sentence does not change what the AI does, it is noise. If a capability has grown a second job, split it. The goal is not the most detailed instruction, it is the one that produces the same right behavior every time.
+
+:::tip Try it now
+Take a capability you have built, or one you want to. Write its outcome in a single sentence: what result does it produce? If you cannot say it in one sentence, the capability is doing too much, and that is your signal to split it.
+:::
+
+## Tighten it by watching it work
+
+A capability is rarely right on the first try, and it does not need to be. You let it run, watch where it drifts, and tighten the instruction that let it drift. That loop is the craft, not a sign something went wrong.
+
+Test in a test account where nothing is at stake, and try the messy inputs on purpose: the missing field, the wrong format, the customer who asks two things at once. When an answer surprises you, the [Explanation view](/ai/ai-capabilities) shows what the AI actually did, so you tighten the real cause instead of guessing. When you are ready to write one from scratch, [this guide walks through the full capability builder](/ai/ai-capabilities/creating-custom-capabilities).
+
+<SectionFeedback courseId="capabilities-in-depth" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="capabilities-in-depth" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on capability versus knowledge, designing from the outcome, and why shorter wins."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A client\'s hours and prices change often. Where should that information live?',
+      options: [
+        'In the capability instructions, restated in full each time',
+        'In knowledge, where the AI looks it up when a question needs it',
+        'In the trigger condition for every capability',
+        'In a guardrail on the booking capability'
+      ],
+      correctIndex: 1,
+      explanation: 'Facts the AI looks up belong in knowledge. Behavior belongs in a capability. Hours and prices are facts, so they live in knowledge and stay easy to update.'
+    },
+    {
+      type: 'mcq',
+      question: 'You are writing a capability that books appointments. What is the outcome-first way to start?',
+      options: [
+        'List every button the AI should click, in order',
+        'Describe the result you want, plus the guardrails around it',
+        'Paste the full calendar documentation into the instruction',
+        'Write one rule for every situation you can imagine'
+      ],
+      correctIndex: 1,
+      explanation: 'Design from the outcome. Name the result and the limits; the AI finds the path. A click-by-click script is the thing you do not need to write.'
+    },
+    {
+      type: 'mcq',
+      question: 'An AI Employee\'s single capability keeps giving inconsistent answers. Its instruction is three paragraphs covering booking, refunds, and complaints. What is the likely fix?',
+      options: [
+        'Add more detail to the existing instruction',
+        'Move the whole instruction into knowledge instead',
+        'Split it into separate capabilities, one job each',
+        'Remove the guardrails so it has more freedom'
+      ],
+      correctIndex: 2,
+      explanation: 'One capability doing three jobs crosses wires in a single working memory. Split it so each capability does one job, and each does it reliably.'
+    },
+    {
+      type: 'mcq',
+      question: 'What does a guardrail add to a capability?',
+      options: [
+        'The situation that tells the AI when to use the skill',
+        'The line the AI must not cross, so a confident answer stays correct',
+        'The list of facts the AI can look up',
+        'The step-by-step path the AI should follow'
+      ],
+      correctIndex: 1,
+      explanation: 'A guardrail is the boundary. "Quote only published prices" keeps a fluent, confident answer from becoming a wrong one. The trigger is when to act; the guardrail is what never to do.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/builder/custom-tools" pathName="Wire your AI Workforce to act" step={3} totalSteps={8} />
+
+</InlineHighlighter>
+<MarkComplete courseId="capabilities-in-depth" site="vendasta_learn" />

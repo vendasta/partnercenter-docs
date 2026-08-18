@@ -78,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       {
         id: 'training',
         path: 'training',
-        routeBasePath: 'platform-training',
+        routeBasePath: 'learn',
         sidebarPath: './sidebars-training.ts',
       },
     ],
@@ -97,13 +97,108 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         // Add search page that shows all results
         searchResultLimits: 8,
         searchResultContextMaxLength: 50,
-        docsRouteBasePath: '/',
+        // Index both docs instances: main docs at '/' and Learn at '/learn'
+        docsRouteBasePath: ['/', '/learn'],
       },
     ],
     [
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
+          // Security & privacy: convenience aliases to the Security and privacy page
+          { from: '/security', to: '/getting-started/security-and-privacy' },
+          { from: '/trust-center', to: '/getting-started/security-and-privacy' },
+          { from: '/security-and-compliance', to: '/getting-started/security-and-privacy' },
+          // Commerce: order processing/activation article merged into Creating and Managing Orders
+          { from: '/commerce/orders/order-processing-and-activation', to: '/commerce/orders/creating-and-managing-orders' },
+          // Vendasta Ads in Partner Center promoted to its own top-level "Ads" sidebar item (2026-08)
+          { from: '/vendasta-services/digital-advertising/vendasta-ads-partner-center', to: '/ads' },
+          // --- Learn restructure (2026-07): TRAINING -> LEARN, paths + lifecycle libraries ---
+          // builder lab broken out into its own path (2026-07)
+          { from: '/learn/builder/the-builder-lab', to: '/learn/build-lab' },
+          // Master Sales Series (2026-08): path scoped to the Master Sales Training Series only.
+          // These four steps had no series episode behind them and were removed.
+          { from: '/learn/sales/run-a-discovery-call', to: '/learn/sales' },
+          { from: '/learn/sales/close-and-open-the-relationship', to: '/learn/sales' },
+          { from: '/learn/sales/sell-socially', to: '/learn/sales' },
+          { from: '/learn/sales/consult-dont-just-pitch', to: '/learn/sales' },
+          // getting-started renames
+          { from: '/learn/getting-started/A-Brief-Introduction-to-the-Vendasta-Platform', to: '/learn/getting-started/the-vendasta-platform' },
+          { from: '/learn/getting-started/Organize-Teams-in-the-Platform', to: '/learn/getting-started/organize-your-team' },
+          { from: '/learn/getting-started/Add-Your-Customer-Accounts-and-Users', to: '/learn/getting-started/accounts-and-users' },
+          { from: '/learn/getting-started/Customize-and-Brand-Your-Platform', to: '/learn/getting-started/customize-and-brand' },
+          // dissolved sections
+          { from: '/learn/platform', to: '/learn/products' },
+          { from: '/learn/automations-ai', to: '/learn/ai-workforce' },
+          { from: '/learn/automations-ai/AI-and-Automations-in-the-Vendasta-Platform', to: '/learn/ai-workforce/autopilot' },
+          { from: '/learn/automations-ai/Acquisition-Automation-AI', to: '/learn/ai-workforce/autopilot' },
+          { from: '/learn/platform/integrations/Integrations-101', to: '/learn/builder' },
+          // AI Receptionist lessons consolidated into the AI Workforce path
+          { from: '/learn/products/ai-receptionist/Meet-Your-First-AI-Employee-The-AI-Receptionist', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
+          { from: '/learn/products/ai-receptionist/AI-Receptionist-Setup-and-Configuration', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
+          { from: '/learn/products/ai-receptionist/Vendasta-AI-Receptionist-Walkthrough', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
+          { from: '/learn/products/ai-receptionist/AI-Receptionist-Implementation-Essentials', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
+          // marketplace lessons harvested into paths
+          { from: '/learn/platform/marketplace/Package-Digital-Products-with-Vendasta', to: '/learn/ai-workforce/sell-and-manage' },
+          { from: '/learn/platform/marketplace/Billing-and-Payment-Basics', to: '/learn/getting-started/get-set-up-to-get-paid' },
+          // library regroup: business-app
+          { from: '/learn/platform/business-app/Introducing-Business-App', to: '/learn/products/engage/business-app/introduction-to-business-app' },
+          { from: '/learn/platform/business-app/Introduction-to-Business-App-Pro', to: '/learn/products/engage/business-app/introduction-to-business-app' },
+          { from: '/learn/platform/business-app/Attract-Convert-and-Engage-Customers-with-Business-App-Pro', to: '/learn/products/engage/business-app/attract-convert-engage-with-business-app' },
+          { from: '/learn/platform/business-app/Customize-Business-App-in-Partner-Center', to: '/learn/products/engage/business-app/customize-business-app' },
+          { from: '/learn/platform/business-app/How-to-Sell-Business-App-Pro', to: '/learn/products/engage/business-app/how-to-sell-business-app' },
+          { from: '/learn/platform/business-app/Automation-Workflows-in-Business-App-Pro', to: '/learn/products/engage/business-app/automation-workflows-in-business-app' },
+          // library regroup: marketplace
+          { from: '/learn/platform/marketplace/Set-up-your-Store', to: '/learn/products/convert/marketplace/set-up-your-store' },
+          { from: '/learn/platform/marketplace/Build-your-product-catalog-with-the-Vendasta-Marketplace', to: '/learn/products/convert/marketplace/build-your-product-catalog' },
+          { from: '/learn/platform/marketplace/Set-up-Payments-and-Create-Invoices', to: '/learn/products/convert/marketplace/payments-and-invoices' },
+          { from: '/learn/platform/marketplace/Digital-Ads-Advertising-Campaigns-in-the-Marketplace', to: '/learn/products/convert/marketplace/digital-ads-campaigns-in-the-marketplace' },
+          // library regroup: crm
+          { from: '/learn/platform/crm/Nurture-leads-with-the-CRM', to: '/learn/products/convert/crm/nurture-leads-with-the-crm' },
+          { from: '/learn/platform/crm/Optimize-Sales-Team-Performance-with-the-CRM', to: '/learn/products/convert/crm/optimize-sales-team-performance' },
+          { from: '/learn/platform/crm/Start-Selling-in-the-Partner-Center-CRM', to: '/learn/products/convert/crm/start-selling-in-the-crm' },
+          { from: '/learn/platform/crm/CRM2.0-Identifying-your-customers', to: '/learn/products/convert/crm/crm-2-identifying-your-customers' },
+          { from: '/learn/platform/crm/Setup-your-CRM-to-Scale', to: '/learn/products/convert/crm/set-up-your-crm-to-scale' },
+          { from: '/learn/platform/crm/CRM2.0-Connecting-with-your-customers', to: '/learn/products/convert/crm/crm-2-connecting-with-your-customers' },
+          { from: '/learn/platform/crm/CRM2.0-Closing-opportunities', to: '/learn/products/convert/crm/crm-2-closing-opportunities' },
+          // library regroup: conversations-ai
+          { from: '/learn/products/conversations-ai/Introduction-to-Conversations-AI-in-the-Platform', to: '/learn/products/convert/conversations-ai/introduction-to-conversations-ai' },
+          { from: '/learn/products/conversations-ai/Conversations-AI-in-Business-App', to: '/learn/products/convert/conversations-ai/conversations-ai-in-business-app' },
+          { from: '/learn/products/conversations-ai/Transform-Your-Sales-Strategy-with-AI-Powered-Web-Chat-Solutions', to: '/learn/products/convert/conversations-ai/transform-your-sales-strategy-with-ai-web-chat' },
+          // library regroup: local seo + listings (incl. merged duplicates)
+          { from: '/learn/products/local-seo-listings/Introduction-to-SEO', to: '/learn/products/attract/local-seo-listings/introduction-to-seo' },
+          { from: '/learn/products/local-seo-listings/Introduction-to-Search-Engine-Optimization', to: '/learn/products/attract/local-seo-listings/introduction-to-seo' },
+          { from: '/learn/products/local-seo-listings/Why-Small-Medium-Businesses-SMBs-need-SEO', to: '/learn/products/attract/local-seo-listings/why-local-businesses-need-seo' },
+          { from: '/learn/products/local-seo-listings/Listings-An-Introduction-to-What-an-Online-Listing-Is', to: '/learn/products/attract/local-seo-listings/what-is-an-online-listing' },
+          { from: '/learn/products/local-seo-listings/Manage-Listings-with-Local-SEO', to: '/learn/products/attract/local-seo-listings/manage-listings-with-local-seo' },
+          { from: '/learn/products/local-seo-listings/Introduction-to-Listing-Management', to: '/learn/products/attract/local-seo-listings/manage-listings-with-local-seo' },
+          { from: '/learn/products/local-seo-listings/SEO-Website-Analysis-with-Alpha-SEO', to: '/learn/products/attract/local-seo-listings/seo-website-analysis-with-alpha-seo' },
+          { from: '/learn/products/local-seo-listings/Search-Engine-Marketing', to: '/learn/products/attract/local-seo-listings/search-engine-marketing' },
+          { from: '/learn/products/local-seo-listings/Power-Your-Organic-Search-Visibility', to: '/learn/products/attract/local-seo-listings/power-your-organic-search-visibility' },
+          { from: '/learn/products/local-seo-listings/Product-Knowledge-SEO-Standard', to: '/learn/products/attract/local-seo-listings/product-knowledge-seo-standard' },
+          // library regroup: reputation (incl. merged duplicate)
+          { from: '/learn/products/reputation-management/Introduction-to-Reputation-Management', to: '/learn/products/engage/reputation-management/introduction-to-reputation-management' },
+          { from: '/learn/products/reputation-management/Reputation-An-Introduction', to: '/learn/products/engage/reputation-management/introduction-to-reputation-management' },
+          { from: '/learn/products/reputation-management/Manage-Online-Reviews-with-Reputation-Management', to: '/learn/products/engage/reputation-management/manage-online-reviews' },
+          // library regroup: advertising + social
+          { from: '/learn/products/advertising/Introduction-to-Advertising-Intelligence', to: '/learn/products/attract/advertising/introduction-to-advertising-intelligence' },
+          { from: '/learn/products/advertising/Measure-Digital-Ad-Success-with-Advertising-Intelligence', to: '/learn/products/attract/advertising/measure-digital-ad-success' },
+          { from: '/learn/products/social-marketing/Introduction-to-Social-Marketing', to: '/learn/products/attract/social-ai/introduction-to-social-ai' },
+          { from: '/learn/products/attract/social-marketing/introduction-to-social-marketing', to: '/learn/products/attract/social-ai/introduction-to-social-ai' },
+          // library regroup: snapshot + executive reports
+          { from: '/learn/products/snapshot-executive-reports/Explore-the-Snapshot-Report-Interface', to: '/learn/products/convert/snapshot-executive-reports/explore-the-snapshot-report-interface' },
+          { from: '/learn/products/snapshot-executive-reports/Snapshot-Section-Breakdown', to: '/learn/products/convert/snapshot-executive-reports/snapshot-section-breakdown' },
+          { from: '/learn/products/snapshot-executive-reports/The-Executive-Report-vs-the-Snapshot-Report', to: '/learn/products/convert/snapshot-executive-reports/executive-report-vs-snapshot-report' },
+          { from: '/learn/products/snapshot-executive-reports/Demonstrate-Proof-of-Performance-with-the-Executive-Report', to: '/learn/products/convert/snapshot-executive-reports/demonstrate-proof-of-performance' },
+          { from: '/learn/products/snapshot-executive-reports/Tailoring-Executive-Reports-for-Client-Success', to: '/learn/products/convert/snapshot-executive-reports/tailoring-executive-reports' },
+          { from: '/learn/products/snapshot-executive-reports/The-Power-of-Executive-Reports-in-Business-App-Analytics', to: '/learn/products/convert/snapshot-executive-reports/executive-reports-in-business-app-analytics' },
+          // library regroup: websites
+          { from: '/learn/products/websites/Introduction-to-Accelerated-Templated-Websites-using-the-Duda-Platform', to: '/learn/products/engage/websites/introduction-to-accelerated-templated-websites' },
+          { from: '/learn/products/websites/Get-your-Clients-Selling-Online-with-Accelerated-Templated-Website-Plus', to: '/learn/products/engage/websites/get-your-clients-selling-online' },
+          { from: '/learn/products/websites/Websites-An-Introduction', to: '/learn/products/engage/websites/websites-an-introduction' },
+          // vendasta-services renames (case-only renames live in nginx.conf - they collide with real pages on case-insensitive local filesystems)
+          { from: '/learn/vendasta-services/Grow-Your-Agency-with-our-Team-of-Marketing-Experts', to: '/learn/vendasta-services/grow-your-agency-with-marketing-experts' },
+          // --- end Learn restructure ---
           // Vendasta Services: AI Workforce section renamed (dropped "setup" from URLs)
           { from: '/vendasta-services/ai-workforce-setup', to: '/vendasta-services/ai-workforce/' },
           { from: '/vendasta-services/ai-workforce-setup/ai-receptionist-setup', to: '/vendasta-services/ai-workforce/ai-receptionist' },
@@ -117,8 +212,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/vendasta-services/social-media-management/social-media-marketing-timeline', to: '/vendasta-services/social-media-management/' },
           // Vendasta Services: expectation brochures article removed
           { from: '/vendasta-services/expectations/expectation-brochures', to: '/vendasta-services/expectations/' },
-          // Vendasta Services digital advertising: MatchCraft overview split into Express Ads + Managed Ads Campaign
+          // Vendasta Services digital advertising: MatchCraft overview replaced by Specialty Ad Campaign
           { from: '/vendasta-services/digital-advertising/matchcraft-services-overview', to: '/vendasta-services/digital-advertising/' },
+          // Vendasta Services digital advertising: Express Ads retired
+          { from: '/vendasta-services/digital-advertising/express-ads', to: '/vendasta-services/digital-advertising/' },
           // Vendasta Services digital advertising: short articles merged into the section FAQ
           { from: '/vendasta-services/digital-advertising/matchcraft-ad-services-refund-policy', to: '/vendasta-services/digital-advertising/' },
           { from: '/vendasta-services/digital-advertising/criteria-for-unskippable-youtube-ads', to: '/vendasta-services/digital-advertising/' },
@@ -134,8 +231,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/administration/my-account/my-plan/cancelling-your-subscription', to: '/administration/my-account/my-plan/' },
           // My Billing: billing-overview-and-model is now the index
           { from: '/administration/my-account/my-billing/billing-overview-and-model', to: '/administration/my-account/my-billing/' },
-          // Affiliate Program: terms merged into index
-          { from: '/administration/my-account/affiliate-program/vendasta-affiliate-program-terms-and-conditions', to: '/administration/my-account/affiliate-program/' },
+          // Affiliate Program: page removed
+          { from: '/administration/my-account/affiliate-program/vendasta-affiliate-program-terms-and-conditions', to: '/administration/my-account/' },
+          { from: '/administration/my-account/affiliate-program/', to: '/administration/my-account/' },
           // Data Management: CRM Objects and Custom Fields merged into one page
           { from: '/administration/data-management/crm-objects/custom-fields', to: '/administration/data-management/crm-objects/' },
           // Data Management: Pipelines and Create a new Pipeline merged into one page
@@ -146,6 +244,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/administration/platform-settings/customize/client-experience-and-customization', to: '/administration/platform-settings/customize/' },
           // Customize Business App: interface customization overview merged into index
           { from: '/administration/platform-settings/customize-business-app/business-app-interface-customization', to: '/administration/platform-settings/customize-business-app/' },
+          { from: '/business-app/crm/add-booking-link-contact-card', to: '/administration/platform-settings/customize-business-app/branding-settings#how-do-i-customize-the-contact-us-card' },
           // Partner Branding: customize-your-branding is now the index
           { from: '/administration/platform-settings/partner-branding/customize-your-branding', to: '/administration/platform-settings/partner-branding/' },
           // Conversations Settings: how-to-turn-off-inbox-messages-tab merged into index
@@ -231,55 +330,90 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/automations/getting-started-with-automations', to: '/automations/' },
           // Automations: category page redirects to linked doc
           { from: '/category/automations', to: '/automations/' },
-          // Automations: history content merged into managing
-          { from: '/automations/automation-history', to: '/automations/managing-your-automations' },
           // Automations: email-campaign-automations deleted (feature removed from Marketing)
           { from: '/automations/email-campaign-automations', to: '/automations/' },
           // Automations: sales-and-crm-integration walkthrough merged into templates overview
-          { from: '/automations/sales-and-crm-integration', to: '/automations/automation-templates-overview' },
-          // Automations: step deep-dives moved under /automations/steps/
-          { from: '/automations/categorize-with-ai', to: '/automations/steps/categorize-with-ai' },
-          { from: '/automations/find-company', to: '/automations/steps/find-company' },
-          { from: '/automations/find-custom-object', to: '/automations/steps/find-custom-object' },
-          { from: '/automations/copy-assistant-automation', to: '/automations/steps/copy-assistant-automation' },
-          // Automations: sort-text-with-ai → categorize-text-with-ai → categorize-with-ai (now canonical, under steps/)
-          { from: '/automations/sort-text-with-ai', to: '/automations/steps/categorize-with-ai' },
-          { from: '/automations/categorize-text-with-ai', to: '/automations/steps/categorize-with-ai' },
-          // Automations: deleted /my-automations/* sub-pages — map each to its content's current home
-          { from: '/automations/my-automations', to: '/automations/' },
-          { from: '/automations/my-automations/index', to: '/automations/' },
+          { from: '/automations/sales-and-crm-integration', to: '/automations/templates/' },
+          // Automations: ai-actions and steps flattened into my-automations/
+          { from: '/automations/categorize-with-ai', to: '/automations/my-automations/categorize-with-ai' },
+          { from: '/automations/steps/categorize-with-ai', to: '/automations/my-automations/categorize-with-ai' },
+          { from: '/automations/ai-actions/categorize-with-ai', to: '/automations/my-automations/categorize-with-ai' },
+          { from: '/automations/ai-actions/summarize-with-ai', to: '/automations/my-automations/summarize-with-ai' },
+          { from: '/automations/ai-actions/analyze-sentiment-with-ai', to: '/automations/my-automations/analyze-sentiment-with-ai' },
+          { from: '/automations/ai-actions/send-a-prompt-to-ai', to: '/automations/my-automations/send-a-prompt-to-ai' },
+          { from: '/automations/ai-actions/send-a-request-to-an-ai-employee', to: '/automations/my-automations/send-a-request-to-an-ai-employee' },
+          { from: '/automations/ai-actions', to: '/automations/my-automations/actions-overview' },
+          { from: '/automations/find-company', to: '/automations/my-automations/find-company' },
+          { from: '/automations/find-custom-object', to: '/automations/my-automations/find-custom-object' },
+          { from: '/automations/copy-assistant-automation', to: '/automations/my-automations/copy-assistant-automation' },
+          { from: '/automations/steps/find-company', to: '/automations/my-automations/find-company' },
+          { from: '/automations/steps/find-custom-object', to: '/automations/my-automations/find-custom-object' },
+          { from: '/automations/steps/copy-assistant-automation', to: '/automations/my-automations/copy-assistant-automation' },
+          { from: '/automations/steps', to: '/automations/my-automations/actions-overview' },
+          // Automations: old subfolder paths redirect to flat
+          { from: '/automations/my-automations/ai-actions/categorize-with-ai', to: '/automations/my-automations/categorize-with-ai' },
+          { from: '/automations/my-automations/ai-actions/summarize-with-ai', to: '/automations/my-automations/summarize-with-ai' },
+          { from: '/automations/my-automations/ai-actions/analyze-sentiment-with-ai', to: '/automations/my-automations/analyze-sentiment-with-ai' },
+          { from: '/automations/my-automations/ai-actions/send-a-prompt-to-ai', to: '/automations/my-automations/send-a-prompt-to-ai' },
+          { from: '/automations/my-automations/ai-actions/send-a-request-to-an-ai-employee', to: '/automations/my-automations/send-a-request-to-an-ai-employee' },
+          { from: '/automations/my-automations/ai-actions', to: '/automations/my-automations/actions-overview' },
+          { from: '/automations/my-automations/steps/find-company', to: '/automations/my-automations/find-company' },
+          { from: '/automations/my-automations/steps/find-custom-object', to: '/automations/my-automations/find-custom-object' },
+          { from: '/automations/my-automations/steps/copy-assistant-automation', to: '/automations/my-automations/copy-assistant-automation' },
+          { from: '/automations/my-automations/steps', to: '/automations/my-automations/actions-overview' },
+          { from: '/automations/sort-text-with-ai', to: '/automations/my-automations/categorize-with-ai' },
+          { from: '/automations/categorize-text-with-ai', to: '/automations/my-automations/categorize-with-ai' },
+          // Automations: flat pages moved into /automations/my-automations/
+          { from: '/automations/creating-and-configuring-automations', to: '/automations/my-automations/creating-and-configuring-automations' },
+          { from: '/automations/automation-triggers-reference', to: '/automations/my-automations/automation-triggers-reference' },
+          { from: '/automations/automation-steps-reference', to: '/automations/my-automations/automation-steps-reference' },
+          { from: '/automations/advanced-automation-features', to: '/automations/my-automations/logic-and-flow-control' },
+          { from: '/automations/data-expressions', to: '/automations/my-automations/data-expressions' },
+          { from: '/automations/time-based-triggers', to: '/automations/my-automations/time-based-triggers' },
+          { from: '/automations/navigating-the-automation-canvas', to: '/automations/my-automations/navigating-the-automation-canvas' },
+          { from: '/automations/bulk-actions', to: '/automations/my-automations/bulk-actions' },
+          { from: '/automations/trigger-automation-using-zapier', to: '/automations/my-automations/trigger-automation-using-zapier' },
+          // Automations: flat pages moved into /automations/automation-history/
+          { from: '/automations/managing-your-automations', to: '/automations/automation-history/managing-your-automations' },
+          { from: '/automations/troubleshooting-automations', to: '/automations/automation-history/troubleshooting-automations' },
+          { from: '/automations/automation-permissions-error', to: '/automations/automation-history/automation-permissions-error' },
+          // Automations: flat pages moved into /automations/templates/
+          { from: '/automations/automation-templates-overview', to: '/automations/templates/' },
+          { from: '/automations/partner-made-automation-templates', to: '/automations/templates/partner-made-automation-templates' },
+          { from: '/automations/automation-template-create-companies-from-visual-visitor', to: '/automations/templates/automation-template-create-companies-from-visual-visitor' },
+          // Automations: legacy /my-automations/* sub-pages — map to new homes
           { from: '/automations/my-automations/getting-started-with-automations', to: '/automations/' },
-          { from: '/automations/my-automations/create-new-automation', to: '/automations/creating-and-configuring-automations' },
-          { from: '/automations/my-automations/automation-settings', to: '/automations/creating-and-configuring-automations' },
-          { from: '/automations/my-automations/available-automation-steps', to: '/automations/automation-steps-reference' },
-          { from: '/automations/my-automations/available-automations-triggers-list', to: '/automations/automation-triggers-reference' },
-          { from: '/automations/my-automations/what-are-automation-triggers', to: '/automations/automation-triggers-reference' },
-          { from: '/automations/my-automations/manually-triggered-automations', to: '/automations/automation-triggers-reference' },
-          { from: '/automations/my-automations/form-submission-trigger', to: '/automations/automation-triggers-reference' },
-          { from: '/automations/my-automations/web-chat-lead-capture-trigger', to: '/automations/automation-triggers-reference' },
-          { from: '/automations/my-automations/logic-steps', to: '/automations/advanced-automation-features' },
-          { from: '/automations/my-automations/action-sets-in-automations', to: '/automations/advanced-automation-features' },
-          { from: '/automations/my-automations/delay-until-steps-in-automation-workflows', to: '/automations/advanced-automation-features' },
-          { from: '/automations/my-automations/grouping-of-automation-steps', to: '/automations/advanced-automation-features' },
-          { from: '/automations/my-automations/automation-activity', to: '/automations/managing-your-automations' },
-          { from: '/automations/my-automations/turn-off-an-automation', to: '/automations/managing-your-automations' },
-          { from: '/automations/my-automations/duplicating-automations', to: '/automations/managing-your-automations' },
-          { from: '/automations/my-automations/organize-your-automations-with-tags', to: '/automations/managing-your-automations' },
-          { from: '/automations/my-automations/automations-data-passing', to: '/automations/data-expressions' },
-          { from: '/automations/my-automations/automations-api-action', to: '/automations/automation-steps-reference' },
-          { from: '/automations/my-automations/automatically-assign-salespeople', to: '/automations/automation-templates-overview' },
-          { from: '/automations/my-automations/start-campaign-snapshot-report', to: '/automations/automation-templates-overview' },
-          { from: '/automations/my-automations/set-up-automation-when-a-user-shows-interest-in-a-package', to: '/automations/automation-templates-overview' },
+          { from: '/automations/my-automations/create-new-automation', to: '/automations/my-automations/creating-and-configuring-automations' },
+          { from: '/automations/my-automations/automation-settings', to: '/automations/my-automations/creating-and-configuring-automations' },
+          { from: '/automations/my-automations/available-automation-steps', to: '/automations/my-automations/automation-steps-reference' },
+          { from: '/automations/my-automations/available-automations-triggers-list', to: '/automations/my-automations/automation-triggers-reference' },
+          { from: '/automations/my-automations/what-are-automation-triggers', to: '/automations/my-automations/automation-triggers-reference' },
+          { from: '/automations/my-automations/manually-triggered-automations', to: '/automations/my-automations/automation-triggers-reference' },
+          { from: '/automations/my-automations/form-submission-trigger', to: '/automations/my-automations/automation-triggers-reference' },
+          { from: '/automations/my-automations/web-chat-lead-capture-trigger', to: '/automations/my-automations/automation-triggers-reference' },
+          { from: '/automations/my-automations/logic-steps', to: '/automations/my-automations/logic-and-flow-control' },
+          { from: '/automations/my-automations/action-sets-in-automations', to: '/automations/my-automations/reusable-workflows' },
+          { from: '/automations/my-automations/delay-until-steps-in-automation-workflows', to: '/automations/my-automations/logic-and-flow-control' },
+          { from: '/automations/my-automations/grouping-of-automation-steps', to: '/automations/my-automations/reusable-workflows' },
+          // Automations: advanced-automation-features split into logic-and-flow-control + reusable-workflows
+          { from: '/automations/my-automations/advanced-automation-features', to: '/automations/my-automations/logic-and-flow-control' },
+          { from: '/automations/my-automations/automation-activity', to: '/automations/automation-history/managing-your-automations' },
+          { from: '/automations/my-automations/turn-off-an-automation', to: '/automations/automation-history/managing-your-automations' },
+          { from: '/automations/my-automations/duplicating-automations', to: '/automations/automation-history/managing-your-automations' },
+          { from: '/automations/my-automations/organize-your-automations-with-tags', to: '/automations/automation-history/managing-your-automations' },
+          { from: '/automations/my-automations/automations-data-passing', to: '/automations/my-automations/data-expressions' },
+          { from: '/automations/my-automations/automations-api-action', to: '/automations/my-automations/automation-steps-reference' },
+          { from: '/automations/my-automations/automatically-assign-salespeople', to: '/automations/templates/' },
+          { from: '/automations/my-automations/start-campaign-snapshot-report', to: '/automations/templates/' },
+          { from: '/automations/my-automations/set-up-automation-when-a-user-shows-interest-in-a-package', to: '/automations/templates/' },
           { from: '/automations/my-automations/add-email-campaign-automations', to: '/automations/' },
           { from: '/automations/my-automations/partner-center-admin-notifications', to: '/automations/' },
           { from: '/automations/my-automations/reputation-management-premium-scheduling-logic', to: '/automations/' },
-          // Automations: deleted /templates/* sub-pages — all merged into automation-templates-overview
-          { from: '/automations/templates', to: '/automations/automation-templates-overview' },
-          { from: '/automations/templates/index', to: '/automations/automation-templates-overview' },
-          { from: '/automations/templates/automation-templates-in-partner-center', to: '/automations/automation-templates-overview' },
-          { from: '/automations/templates/create-sales-opportunity-form-submission', to: '/automations/automation-templates-overview' },
-          { from: '/automations/templates/start-a-campaign-when-a-contact-is-added-to-a-specific-list', to: '/automations/automation-templates-overview' },
-          { from: '/automations/templates/system-automations', to: '/automations/automation-templates-overview' },
+          // Automations: legacy /templates/* sub-pages
+          { from: '/automations/templates/automation-templates-in-partner-center', to: '/automations/templates/' },
+          { from: '/automations/templates/create-sales-opportunity-form-submission', to: '/automations/templates/' },
+          { from: '/automations/templates/start-a-campaign-when-a-contact-is-added-to-a-specific-list', to: '/automations/templates/' },
+          { from: '/automations/templates/system-automations', to: '/automations/system-automations/' },
           // Fulfillment: open-task-manager and flat paths now under task-manager folder
           { from: '/fulfillment/open-task-manager', to: '/fulfillment/' },
           { from: '/fulfillment/open-task-manager/get-started', to: '/fulfillment/task-manager/task-manager-getting-started' },
@@ -326,7 +460,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/getting-started/intro-to-vendasta/vendasta-platform-overview', to: '/getting-started' },
           { from: '/getting-started/intro-to-vendasta/partner-onboarding', to: '/getting-started/partner-onboarding' },
           { from: '/getting-started/intro-to-vendasta/partner-troubleshooting-guide', to: '/getting-started/partner-troubleshooting-guide' },
-          { from: '/getting-started/intro-to-vendasta/vendasta-affiliate-program', to: '/getting-started/vendasta-affiliate-program' },
+          { from: '/getting-started/intro-to-vendasta/vendasta-affiliate-program', to: '/administration/my-account/' },
+          { from: '/getting-started/vendasta-affiliate-program', to: '/administration/my-account/' },
           { from: '/partner-center/partner-center-getting-started-guide', to: '/partner-center' },
           { from: '/partner-center/AI-receptionist-features-by-plan', to: '/ai/ai-workforce/ai-receptionist-features-by-plan' },
           // AI Workforce Optimization Plan content is now on every service page
@@ -366,6 +501,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="https://www.vendasta.com/terms/" target="_blank" rel="noopener noreferrer">Terms of Service</a>
             <a href="https://www.vendasta.com/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
             <a href="https://www.vendasta.com/gdpr/" target="_blank" rel="noopener noreferrer">GDPR</a>
+            <a href="/getting-started/security-and-privacy">SOC 2</a>
           </nav>
         </div>
       `,

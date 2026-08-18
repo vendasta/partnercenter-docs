@@ -8,7 +8,7 @@ With Vendasta Services, you have access to a team of AI and marketing experts. L
 
 With so many services available, it's important to understand what to expect from each one. This article will break down what you can expect based on each product line.
 
-# Expectation by Managed Service
+## Expectation by managed service
 
 | Service Feature | Listings | Reputation | Social | Blogs | Websites | DigitalAds |
 |---|---|---|---|---|---|---|
@@ -24,7 +24,7 @@ With so many services available, it's important to understand what to expect fro
 
 \*See more in definitions below.
 
-# Definitions
+## Definitions
 
 ## Order confirmation
 
@@ -42,7 +42,7 @@ This call happens before the launch or completion of a service and in many cases
 
 ## Post-launch call
 
-This is unique to MatchCraft Managed Ads orders. All work is completed and the ads are made ready to launch, after which a post-launch call is set up with you to discuss expectations around campaign performance, optimizations, and future strategy calls (when applicable).
+This is unique to Specialty Ad Campaign orders. All work is completed and the ads are made ready to launch, after which a post-launch call is set up with you to discuss expectations around campaign performance, optimizations, and future strategy calls (when applicable).
 
 ## Direct-to-customer communication
 
@@ -50,7 +50,7 @@ For all services, with the exception of Digital Ads, partners have the option of
 
 ## Project tracking in Business App
 
-All services will showcase a tracker found in Business App > Projects that showcases the tasks to be completed, expected completion dates, and notes.
+All services will showcase a tracker found in `Business App` → `Projects` that showcases the tasks to be completed, expected completion dates, and notes.
 
 ![MS-Project-Notes.png](./img/19299630230423-96eb40105b.png)
 
@@ -76,6 +76,6 @@ _\*Note that for Website services, either credentials are required or delegate a
 
 ## Business days to launch after assets received
 
-Timelines for delivery can vary depending on additional services ordered and project complexity. If you are concerned that a business may require complex services (eg. a high volume of social posts, a listing claim requiring intervention from the source’s support team, or a highly customized website), reach out to your account contact with Vendasta for more information and assistance.
+Timelines for delivery can vary depending on additional services ordered and project complexity. If you are concerned that a business may require complex services (e.g. a high volume of social posts, a listing claim requiring intervention from the source’s support team, or a highly customized website), reach out to your account contact with Vendasta for more information and assistance.
 
 _\*Note that complex listing claims, including Google Business Profile claims and optimization, may take up to 90 days to complete._

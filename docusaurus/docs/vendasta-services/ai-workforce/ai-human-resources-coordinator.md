@@ -7,6 +7,12 @@ description: "An overview of the AI Human Resources Coordinator service, detaili
 import OptimizationPlanSection from './_optimization-plan-section.mdx';
 import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
 
+:::tip Share a client-facing version
+Want to hand this to a client? The **grey-labeled guide** has the same information with no brand or platform names, so it is safe to send directly.
+
+<a className="button button--primary" href="https://servicesdocs.io/ai-workforce/ai-human-resources-coordinator" target="_blank" rel="noopener noreferrer">Open the client-facing AI Human Resources Coordinator guide →</a>
+:::
+
 
 :::info Requirements
 **Conversations AI** must be active on your account. See the full [requirements](#requirements) below.
@@ -18,18 +24,20 @@ The AI Human Resources Coordinator Setup is a do-it-with-me service where our ex
 
 Choose one or the other:
 
-- **Setup**: a **one-time fee**. Our experts configure, train, and launch your AI Human Resources Coordinator (everything in "What's included with setup" below).
-- **AI Workforce Optimization Plan**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
+- **[AI Employee Setup](https://partners.vendasta.com/marketplace/products/MP-K48XKQV7DXLGQZ67ZH4MNZDM2FQCK8LM)**: a **one-time fee**. Our experts configure, train, and launch your AI Human Resources Coordinator (everything in "What's included" below).
+- **[AI Workforce Optimization Plan](https://partners.vendasta.com/marketplace/products/MP-JHLVQX6W4MJFZ8V3V68CWMQ43X6N46TW)**: an **ongoing monthly fee** that **includes the same setup** plus continued optimization (monthly check-ins, unlimited change requests, and a live training session).
 
 :::
 
-## What's included with setup
+## Setup
 
-### 1. AI Employee profile
+### What's included
+
+#### 1. AI Employee profile
 
 We create a custom AI Employee with a name and avatar that represents your HR team. Employees interact with a professional HR persona that is warm, accurate, and appropriately cautious with sensitive topics. The profile is configured within the **AI Workforce** section of Business App.
 
-### 2. PolicyScope framework
+#### 2. PolicyScope framework
 
 We configure the PolicyScope framework — a three-level routing system that governs how the AI handles every HR inquiry:
 
@@ -41,11 +49,11 @@ We configure the PolicyScope framework — a three-level routing system that gov
 The AI will never guess or fabricate answers to personal questions — it is designed to redirect before it over-reaches.
 :::
 
-### 3. Escalation contact configuration
+#### 3. Escalation contact configuration
 
 We populate the Level 2 redirect language with your actual HR contact's name, role, phone, and email — so employees receive a clear, specific direction rather than a generic "speak to HR" message. Additional escalation contacts for Level 3 (IT, Finance, Legal) can be added at any time.
 
-### 4. Knowledge base setup
+#### 4. Knowledge base setup
 
 We upload every policy document, employee handbook, benefit guide, onboarding checklist, and FAQ provided during setup. This is the most critical step — the AI can only answer questions it has been given the information to answer.
 
@@ -53,27 +61,25 @@ We upload every policy document, employee handbook, benefit guide, onboarding ch
 The AI HR Coordinator is an internal tool and does not require a chat widget or website installation. No code will be added to your public website.
 :::
 
-### 5. Optional: Appointment booking
+#### 5. Optional: Appointment booking
 
 If your HR team uses a connected Google, Outlook, or Microsoft calendar in Business App, we can enable the AI to schedule meetings with HR team members directly in the conversation.
 
-### 6. Optional: Google Drive sync
+#### 6. Optional: Google Drive sync
 
 If your HR policies are stored and maintained in Google Drive, we can configure an automated sync so that policy updates in your Drive folder are automatically reflected in the AI's knowledge base. This requires brief access to your Google Drive folder structure.
 
-<OptimizationPlanSection />
-
-## The setup process
+### The setup process
 
 The process involves a fulfillment form, a series of calls, and configuration steps to get your AI Human Resources Coordinator running effectively.
 
-### 1. Fulfillment form
+#### 1. Fulfillment form
 
 To ensure a smooth and efficient setup, please fill out the fulfillment form with as much detail as possible. Include your escalation contact's full name, role, and contact information — this is required to configure the AI's handoff logic.
 
 * **Timeline:** We'll review the order and start the process within 2 business days.
 
-### 2. Onboarding call
+#### 2. Onboarding call
 
 Our team will lead a structured onboarding call to understand your HR workflows, the types of questions employees most commonly ask, and how you'd like sensitive or personal inquiries handled. We'll configure the PolicyScope framework — a three-level routing system that answers general questions directly, redirects personal inquiries to your HR contact, and declines out-of-scope questions gracefully. We will come to the call with an initial setup ready to demo and refine together.
 
@@ -83,19 +89,19 @@ Our team will lead a structured onboarding call to understand your HR workflows,
 If you are unable to attend the onboarding call, our team will proceed with setup using the information provided in your fulfillment form and will follow up via email and phone to review and refine. If we are unable to reach you after our follow-up process, the project will be closed — but can be reopened at any time by reaching back out to us.
 :::
 
-### 3. HR Coordinator setup
+#### 3. HR Coordinator setup
 
 Using the information gathered during the onboarding call, we will configure your AI HR Coordinator with the PolicyScope framework, set up your escalation contacts, upload all HR policy documents and handbooks to the knowledge base, and connect optional capabilities such as appointment booking if required.
 
 * **Timeline:** Your AI Human Resources Coordinator will be complete in 1 business day, or 3 business days for setups with large or complex policy libraries.
 
-### 4. Training call
+#### 4. Training call
 
 This call will walk you through your AI HR Coordinator — how it handles general policy questions, how it redirects personal or sensitive inquiries, and where it declines out-of-scope requests. We'll test it live together and answer any questions your team has before go-live.
 
 * **Timeline:** This call can be booked in as little as 1 business day after HR Coordinator Setup completion, depending on availability.
 
-### 5. 30-day check-in
+#### 5. 30-day check-in
 
 This call will be used to review real employee interactions, assess whether the AI is routing questions correctly across all three PolicyScope levels, and refine the knowledge base or escalation contacts based on actual usage.
 
@@ -104,6 +110,8 @@ Prior to this call, our team will review 5–10 conversations to identify gaps i
 :::
 
 * **Timeline:** This call will be booked 3–4 weeks after the completion of your HR Coordinator Setup.
+
+<OptimizationPlanSection />
 
 ## Requirements
 
