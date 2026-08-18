@@ -1,0 +1,51 @@
+---
+title: Assign a salesperson
+description: Learn how to use the Assign a salesperson action to assign a specific salesperson (or one chosen randomly from a pool) to an account.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, sales, salesperson, assignment]
+keywords: [assign salesperson, assign specific salesperson, salesperson automation, sales assignment, account salesperson]
+---
+
+# Assign a salesperson
+
+**Assign a salesperson** assigns a specific person — or one randomly chosen from a pool you define — as the salesperson on the account. Unlike **Assign a sales team**, you select individual people rather than a team. This action is available on account-scoped triggers.
+
+## How it works
+
+1. The automation reaches the **Assign a salesperson** step with an account in scope
+2. You provide one or more user IDs — either selected statically or passed via dynamic content
+3. If multiple people are selected, one is chosen at random
+4. That person is assigned as the salesperson on the account
+5. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Sales**, select **Assign a salesperson**
+3. Configure the fields:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Salesperson** | Yes | One or more people to assign. Select team members by name or use **Add dynamic content** to pass a user ID from a previous step. If multiple are selected, one is randomly chosen. |
+| **Should reassign** | No | When enabled, replaces the account's current salesperson. When disabled (default), accounts that already have a salesperson are skipped. |
+
+:::tip
+Use **Add dynamic content** to pass a user ID from a **Get my team member** step or a webhook payload. This is especially useful in account templates where the salesperson isn't known at build time.
+:::
+
+## Outputs
+
+This action produces no outputs available to downstream steps.
+
+## Tips
+
+- **Multiple selections result in random assignment** — if you select three people, each automation run picks one at random. This gives informal load balancing across a custom pool.
+- **Accounts with an existing salesperson are skipped by default** — enable **Should reassign** only when you intentionally want to overwrite the current assignment.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Assign a sales team](./assign-a-sales-team.mdx) — Assign a random member from a whole team
+- [Unassign salespeople](./unassign-salespeople.mdx) — Remove all salesperson assignments from an account
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows
