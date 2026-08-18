@@ -5,21 +5,19 @@ sidebar_label: Email Deliverability
 description: Complete guide to email deliverability including Vendasta platform features, best practices, troubleshooting, and technical configuration.
 ---
 
-# Email Deliverability
-
 Sending emails is a crucial part of digital marketing. However, ensuring that your email campaigns actually reach your recipients' inboxes is a complex challenge. This article covers best practices and tips to improve your email deliverability when using Campaigns.
 
-## What is Email Deliverability?
+## What is email deliverability?
 
 Email deliverability refers to the ability to successfully deliver emails to recipients' inboxes. It is affected by numerous factors including sender reputation, email content, technical setup, and recipient engagement.
 
-## How Vendasta Helps Improve Your Email Deliverability
+## How Vendasta helps improve your email deliverability
 
 Spam laws and regulations are becoming more complex, and precautions are needed to prevent emails from being flagged as spam. To help deliver your emails successfully, Vendasta makes automatic adjustments to optimize your email delivery.
 
-### Automatic Domain Management
+### Automatic domain management
 
-We start with the email you used to sign up for Vendasta, but we update the address domain portion to a verified domain. For example, if you sign up with john@gmail.com, we'll send emails from john@smblogin.com by default.
+We start with the email you used to sign up for Vendasta, but we update the address domain portion to a verified domain. For example, if you sign up with john@gmail.com, we'll send emails from john@ at our default domain instead.
 
 **Why do we change the domain?**
 
@@ -30,13 +28,13 @@ There are restrictions associated with sending marketing emails using free email
 - **Free email addresses** (john@gmail.com) can't be verified since you don't own these domains
 - **Free email services** have DMARC policies in place that can disrupt your email deliverability, even though they're intended to prevent spam
 
-### Using Your Own Domain
+### Using your own domain
 
 If you own a custom domain, you can update your sender address to use your domain instead of our grey-label domain. However, until you update your SPF, DKIM, and DMARC records in your Domain Name System (DNS), there's a high chance your emails will land in spam folders.
 
 **Setting up your custom domain:**
 1. Update your DNS records with proper authentication (SPF, DKIM, DMARC)
-2. Go to **Partner Center** > **Marketing** > **Email Settings** > **Sender and Reply Settings**
+2. Go to `Partner Center` → `Marketing` → `Email Settings` → `Sender and Reply Settings`
 3. Update your sender address to use your custom domain
 4. Allow up to 72 hours for DNS changes to propagate
 
@@ -44,13 +42,13 @@ If you own a custom domain, you can update your sender address to use your domai
 **Important:** You can only use custom email addresses. Free email addresses from gmail.com, outlook.com, yahoo.com will not save.
 :::
 
-### Reply Handling
+### Reply handling
 
-All replies are automatically forwarded to the email address you used to sign up for the platform. An email may be sent from john@smblogin.com, but when someone replies, it will be sent to john@gmail.com.
+All replies are automatically forwarded to the email address you used to sign up for the platform. An email may be sent from our default domain, but when someone replies, it will be sent to john@gmail.com.
 
-## Best Practices to Improve Email Deliverability
+## Best practices to improve email deliverability
 
-### 1. Avoid Spam Triggers in Your Content
+### 1. Avoid spam triggers in your content
 
 Certain elements in your emails can trigger spam filters:
 
@@ -63,7 +61,7 @@ Certain elements in your emails can trigger spam filters:
 - Too many images with minimal text
 - Misleading subject lines
 
-### 2. Check Your Grammar and Spelling
+### 2. Check your grammar and spelling
 
 Poor grammar and spelling mistakes can trigger spam filters and reduce your credibility.
 
@@ -71,7 +69,7 @@ Poor grammar and spelling mistakes can trigger spam filters and reduce your cred
 
 Use tools like Grammarly to proofread your content before sending.
 
-### 3. Be Careful with Formatting and Colors
+### 3. Be careful with formatting and colors
 
 Heavily formatted emails with multiple colors can appear unprofessional and trigger spam filters.
 
@@ -83,15 +81,15 @@ Heavily formatted emails with multiple colors can appear unprofessional and trig
 - Ensure sufficient contrast between text and background
 - Use web-safe fonts
 
-### 4. Personalize Your Emails
+### 4. Personalize your emails
 
 Personalized emails perform better and are less likely to be flagged as spam.
 
-#### In Campaigns:
+#### In campaigns:
 
 ![Campaigns Personalization](./img/marketing/email-deliverability/campaigns-personalization.jpg)
 
-#### In Templates:
+#### In templates:
 
 ![Templates Personalization](./img/marketing/email-deliverability/templates-personalization.jpg)
 
@@ -100,20 +98,20 @@ Use merge tags to personalize:
 - Greeting lines
 - Content based on recipient data
 
-### 5. Maintain a Healthy Email List
+### 5. Maintain a healthy email list
 
 - Regularly clean your email list
 - Remove hard bounces and unengaged subscribers
 - Use double opt-in when possible
 - Never buy email lists
 
-### 6. Follow a Consistent Sending Schedule
+### 6. Follow a consistent sending schedule
 
 - Send emails on a predictable schedule
 - Avoid sudden increases in volume
 - Gradually increase sending volume over time
 
-### 7. Test Before Sending
+### 7. Test before sending
 
 - Send test emails to yourself and colleagues
 - Check how emails appear on different devices and email clients
@@ -123,14 +121,14 @@ Use merge tags to personalize:
 
 Gmail applies stricter filtering than many other providers, particularly for:
 
-- **Links that collect user information** — Gmail flags emails containing links to pages that gather user data, even if the content is legitimate. If campaigns are consistently filtered only on Gmail accounts, review your links and replace any that point to data-collection pages with safer alternatives.
-- **Linked-page content** — Gmail evaluates not just the email content but also the content of linked pages. Pages with spam signals can cause the email to be filtered even if the email itself looks clean.
+- **Links that collect user information**: Gmail flags emails containing links to pages that gather user data, even if the content is legitimate. If campaigns are consistently filtered only on Gmail accounts, review your links and replace any that point to data-collection pages with safer alternatives.
+- **Linked-page content**: Gmail evaluates not just the email content but also the content of linked pages. Pages with spam signals can cause the email to be filtered even if the email itself looks clean.
 
 If Gmail-only filtering persists after reviewing links and content, register your domain on [Google Postmaster Tools](https://postmaster.google.com/) to monitor your domain reputation and authentication results with Gmail.
 
-## Technical Configuration
+## Technical configuration
 
-### Platform Authentication
+### Platform authentication
 
 Vendasta automatically handles email authentication for improved deliverability. When using our grey-label domain or properly configured custom domains, this includes:
 
@@ -138,7 +136,7 @@ Vendasta automatically handles email authentication for improved deliverability.
 - **DKIM (DomainKeys Identified Mail)**: Adds a digital signature to verify that emails haven't been tampered with
 - **DMARC (Domain-based Message Authentication, Reporting & Conformance)**: Tells receiving servers what to do with emails that fail authentication checks
 
-### Setting Up Your Custom Domain
+### Setting up your custom domain
 
 To authenticate your custom domain and use it for sending emails:
 
@@ -146,14 +144,14 @@ To authenticate your custom domain and use it for sending emails:
 2. **Configure DNS records** - Follow our domain-specific guides:
    - [Add SPF, DKIM, DMARC Records (GoDaddy)](/marketing/email-settings/email-authentication/adding-spf-dkim-dmarc-records-godaddy)
    - [Add SPF, DKIM, DMARC Records (cPanel/Namecheap)](/marketing/email-settings/email-authentication/adding-spf-dkim-dmarc-records-cpanel-namecheap)
-3. **Update sender settings** - Go to **Partner Center** > **Marketing** > **Email Settings** > **Sender and Reply Settings**
+3. **Update sender settings** - Go to `Partner Center` → `Marketing` → `Email Settings` → `Sender and Reply Settings`
 4. **Verify configuration** - Allow up to 72 hours for DNS changes to propagate
 
 :::tip Quick Access
 You can directly access your email settings at [partners.vendasta.com/campaign-settings](https://partners.vendasta.com/campaign-settings)
 :::
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 <details>
 <summary>Do I need to register my domain on Google Postmaster Tools?</summary>
@@ -169,10 +167,10 @@ While not required, registering your domain on Google Postmaster Tools is highly
 **How to register:**
 1. Go to [Google Postmaster Tools](https://postmaster.google.com/)
 2. Sign in with your Google account
-3. Click "Add a domain" and enter your domain name
+3. Click `Add a domain` and enter your domain name
 4. Verify domain ownership by creating a DNS TXT record
 5. Add the provided TXT record to your DNS settings
-6. Return to Google Postmaster Tools and click "Verify"
+6. Return to Google Postmaster Tools and click `Verify`
 
 **Available insights:**
 - Domain reputation and IP reputation
@@ -193,13 +191,12 @@ If your domain's SPF, DMARC, and DKIM records are verified but emails still land
 3. **Analyze Results** - Headers show why emails may have been flagged as spam
 
 **How to get email headers:**
-- **Gmail**: Open the email → Click three dots → Show original
-- **Outlook**: Right-click email → View source
-- **Apple Mail**: View → Message → Raw Source
+- **Gmail**: Open the email → Click the three dots icon → `Show original`
+- **Outlook**: Right-click the email → `View source`
+- **Apple Mail**: `View` → `Message` → `Raw Source`
 
 **Helpful resources:**
 - [MX Toolbox Email Headers Guide](https://mxtoolbox.com/public/content/emailheaders/)
-- [IONOS Email Headers Guide](https://www.ionos.com/help/email/general-topics/what-are-email-headers-and-how-can-i-view-them/)
 
 **Note:** Save the email headers in a text file and share them with the Vendasta support team for detailed analysis.
 
@@ -256,16 +253,16 @@ If your message is rejected with any of these reasons, it means your IP or domai
 <details>
 <summary>Links in my emails are being blocked or rewritten by Microsoft Defender Safe Links. How do I fix this?</summary>
 
-Microsoft Defender Safe Links is a security feature in Microsoft 365 that rewrites URLs in incoming emails and scans them before allowing them to open. This can cause campaign links — including links sent through `sendgrid.net` — to be blocked or display an error page.
+Microsoft Defender Safe Links is a security feature in Microsoft 365 that rewrites URLs in incoming emails and scans them before allowing them to open. This can cause campaign links, including links sent through `sendgrid.net`, to be blocked or display an error page.
 
 There are two resolution paths depending on whether the affected user is on a personal Outlook.com account or a managed Microsoft 365 organization.
 
 **For organizations with Microsoft Defender Premium (IT admin required):**
 
 1. Sign in to the [Microsoft 365 Defender portal](https://security.microsoft.com)
-2. Go to **Email and collaboration > Policies and rules > Threat policies > Safe Links**
+2. Go to `Email and collaboration` → `Policies and rules` → `Threat policies` → `Safe Links`
 3. Edit the applicable Safe Links policy
-4. Under **Do not rewrite the following URLs**, add:
+4. Under `Do not rewrite the following URLs`, add:
    - `*.sendgrid.net/*`
    - `*.<your-partner-domain>.com/*`
    - `*.<your-business-app-url>.com/*`
@@ -276,10 +273,10 @@ Use wildcard syntax as shown. Changes take effect for new emails after the polic
 **For individual users on Outlook.com:**
 
 1. Sign in to [Outlook.com](https://outlook.com)
-2. Go to **Settings > Mail > Junk email**
-3. Under **Safe Links**, disable the link-rewriting option
+2. Go to `Settings` → `Mail` → `Junk email`
+3. Under `Safe Links`, disable the link-rewriting option
 
-Note that this only applies to future messages — previously received emails with rewritten links are not affected.
+Note that this only applies to future messages. Previously received emails with rewritten links are not affected.
 
 If the issue persists after updating the policy, confirm the correct Safe Links policy was edited and that the wildcard syntax matches your domains exactly.
 
@@ -291,18 +288,18 @@ If the issue persists after updating the policy, confirm the correct Safe Links 
 Ask recipients to add your sender address to their safe senders list using the steps for their email client.
 
 **Outlook 365:**
-1. Go to **Settings > View all Outlook settings > Mail > Junk email**
-2. Under **Safe senders and domains**, click **Add**
+1. Go to `Settings` → `View all Outlook settings` → `Mail` → `Junk email`
+2. Under `Safe senders and domains`, click `Add`
 3. Enter your sender email address or domain and save
 
 **Gmail:**
 1. Open a previous email from your sender address
 2. Click the three dots in the top right of the email
-3. Select **Filter messages like these**
-4. Click **Create filter**
-5. Check **Never send it to Spam** and click **Create filter**
+3. Select `Filter messages like these`
+4. Click `Create filter`
+5. Check `Never send it to Spam` and click `Create filter`
 
-Alternatively, the recipient can drag the email from Spam to their inbox — Gmail treats this as a "Not spam" signal and learns from it over time.
+Alternatively, the recipient can drag the email from Spam to their inbox. Gmail treats this as a "Not spam" signal and learns from it over time.
 
 </details>
 
@@ -314,13 +311,13 @@ Gmail sometimes routes calendar invitation emails to spam, even when the sender 
 Ask the recipient to:
 
 1. Find the calendar invitation email in their **Spam** folder
-2. Open the email and click **Add to Calendar**
-3. Click **Report as Not Spam** (or drag the email to the inbox)
+2. Open the email and click `Add to Calendar`
+3. Click `Report as Not Spam` (or drag the email to the inbox)
 
 Once the recipient marks the email as Not Spam, future calendar invitations from the same sender are more likely to land in the inbox.
 
 </details>
 
-## Need More Help?
+## Need more help?
 
 If you're experiencing deliverability issues or have questions about how to optimize your email campaigns, please contact support.
