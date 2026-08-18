@@ -5,15 +5,13 @@ sidebar_label: Email Settings
 sidebar_position: 5
 ---
 
-# Email Settings
-
 Email settings are crucial for ensuring your email campaigns reach recipients' inboxes successfully. Proper configuration of authentication protocols, sender information, and deliverability settings helps avoid spam filters and maintain your sender reputation.
 
 ## Overview
 
 Email settings encompass all the technical and policy configurations needed for successful email delivery. This includes domain authentication (SPF, DKIM, DMARC), sender verification, deliverability optimization, and compliance requirements.
 
-## Why Email Settings Matter
+## Why email settings matter
 
 Proper email configuration is essential because:
 
@@ -23,7 +21,7 @@ Proper email configuration is essential because:
 - **Compliance** - Meets legal requirements for commercial email
 - **Trust** - Recipients trust properly authenticated emails
 
-## Core Requirements
+## Core requirements
 
 Before sending email campaigns, you must configure:
 
@@ -32,9 +30,9 @@ Before sending email campaigns, you must configure:
 3. **Mailing Address** - Required business address for compliance
 4. **User Verification** - Email verification for all platform users
 
-## Main Configuration Areas
+## Main configuration areas
 
-### Sender Setup and Authentication
+### Sender setup and authentication
 
 Configure your domain and authentication settings:
 
@@ -42,64 +40,64 @@ Configure your domain and authentication settings:
 - **[Update email settings](./update-email-settings.mdx)** - Configure sender information and authentication
 - **[Email Authentication](./email-authentication/index.mdx)** - Understand SPF, DKIM, and DMARC protocols
 
-### DNS and Domain Configuration
+### DNS and domain configuration
 
 Set up DNS records for email authentication:
 
 - **[Add SPF, DKIM, and DMARC Records (cPanel Namecheap)](./email-authentication/adding-spf-dkim-dmarc-records-cpanel-namecheap.mdx)** - Step-by-step guide for cPanel/Namecheap
 - **[Guide - Add SPF, DKIM, & DMARC Records (GoDaddy)](./email-authentication/adding-spf-dkim-dmarc-records-godaddy.mdx)** - Configuration guide for GoDaddy
 
-### Email Subscription Preferences
+### Email subscription preferences
 
 Manage how recipients control their email preferences:
 
 - **[Email Subscription Preferences](./email-subscription-preferences.mdx)** - Learn how recipients manage marketing, product, and website email preferences by category
 
-### Email Deliverability and Optimization
+### Email deliverability and optimization
 
 Ensure your emails reach recipients successfully:
 
 - **[Email Deliverability](./email-deliverability.mdx)** - Complete guide including platform features, best practices, troubleshooting, authentication setup, and common delivery error codes
 
-### User Management and Verification
+### User management and verification
 
 For user access and email verification, see the [My Team](/administration/my-account/my-team) section under Administration.
 
-### Technical Requirements and Compliance
+### Technical requirements and compliance
 
 Understand platform requirements, limitations, and legal compliance:
 
 - **[Email Settings Requirements](./email-settings-requirements.mdx)** - Complete setup requirements, CAN-SPAM compliance, custom domain requirements, and email size limitations
 
-## Getting Started Checklist
+## Getting started checklist
 
-### 1. Domain Setup
+### 1. Domain setup
 - [ ] Connect your business domain
 - [ ] Verify domain ownership
 - [ ] Configure DNS settings
 
-### 2. Authentication Setup
+### 2. Authentication setup
 - [ ] Add SPF record to DNS
 - [ ] Configure DKIM signing
 - [ ] Set up DMARC policy
 - [ ] Verify all records are valid
 
-### 3. Sender Configuration
+### 3. Sender configuration
 - [ ] Set sender name and email address  
 - [ ] Configure business mailing address
 - [ ] Test email sending functionality
 
-### 4. User Management
+### 4. User management
 - [ ] Verify all user email addresses
 - [ ] Set up appropriate permissions
 - [ ] Configure user notification preferences
 
-### 5. Deliverability Optimization
+### 5. Deliverability optimization
 - [ ] Review deliverability best practices
 - [ ] Set up monitoring and alerts
 - [ ] Configure rate limiting if needed
 
-## Email Authentication Explained
+## Email authentication explained
 
 ### SPF (Sender Policy Framework)
 Specifies which servers are authorized to send emails from your domain. This prevents email spoofing by allowing recipients to verify that emails actually come from your authorized servers.
@@ -110,47 +108,47 @@ Adds a digital signature to your emails that proves they haven't been tampered w
 ### DMARC (Domain-based Message Authentication, Reporting & Conformance)
 Tells receiving email servers what to do with emails that fail SPF or DKIM checks. It also provides reports on email authentication activity for your domain.
 
-## Common Issues and Solutions
+## Common issues and solutions
 
-### Authentication Problems
+### Authentication problems
 - **Invalid SPF record** - Check DNS configuration and syntax
 - **DKIM signature failure** - Verify DKIM keys are properly configured
 - **DMARC policy violations** - Review and adjust DMARC settings
 
-### Deliverability Issues  
+### Deliverability issues  
 - **High bounce rates** - Clean email lists and verify addresses
 - **Spam folder delivery** - Review content and authentication
 - **Rate limiting** - Adjust sending frequency and volume
 
-### Configuration Errors
+### Configuration errors
 - **Domain verification failure** - Confirm DNS records are published
 - **Sender authentication** - Verify sender information matches domain
 - **User access issues** - Check email verification status
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 <details>
 <summary>Can I send campaigns from multiple domains or under a different brand?</summary>
 
-Yes — there are two approaches depending on what you're trying to do.
+Yes. There are two approaches depending on what you're trying to do.
 
 **Option 1: Authorize an additional sender domain**
 
-If you want to send campaigns from a second domain (for example, a sub-brand or a different business unit), you can authenticate that domain in **Marketing** → **Email Settings** → **[Connect Domains](./connecting-domains.mdx)**. Each domain requires SPF, DKIM, and DMARC DNS records. DNS changes can take up to 72 hours to propagate, and verification won't complete until all records are published correctly.
+If you want to send campaigns from a second domain (for example, a sub-brand or a different business unit), you can authenticate that domain in `Marketing` → `Email Settings` → [Connect Domains](./connecting-domains.mdx). Each domain requires SPF, DKIM, and DMARC DNS records. DNS changes can take up to 72 hours to propagate, and verification won't complete until all records are published correctly.
 
 Once verified, you can select the domain as your sender in Email Settings.
 
 **Option 2: Create a separate market**
 
-If you need fully separate branding — different logo, name, and sender identity — you can create a new market in Partner Center. Each market can have its own email settings and branding. When you create a campaign, selecting the right market ensures it sends with that market's branding.
+If you need fully separate branding, different logo, name, and sender identity, you can create a new market in Partner Center. Each market can have its own email settings and branding. When you create a campaign, selecting the right market ensures it sends with that market's branding.
 
 :::note
 Creating additional markets requires a Custom plan. Contact your Vendasta representative to discuss plan options.
 :::
 
 **Troubleshooting:**
-- *Gmail shows "via yourdomain.com" in the sender line* — This appears when the sending domain doesn't match the from address domain. Ensure the domain you're sending from is the one authenticated in Email Settings.
-- *Domain stuck in "Pending"* — Check that all three DNS records (SPF, DKIM, DMARC) are published at your DNS provider and allow up to 72 hours for propagation.
+- *Gmail shows "via yourdomain.com" in the sender line*: This appears when the sending domain doesn't match the from address domain. Ensure the domain you're sending from is the one authenticated in Email Settings.
+- *Domain stuck in "Pending"*: Check that all three DNS records (SPF, DKIM, DMARC) are published at your DNS provider and allow up to 72 hours for propagation.
 </details>
 
 <details>
@@ -174,14 +172,14 @@ While not required, registering your domain with Google Postmaster Tools provide
 <details>
 <summary>Can I use a different domain for Marketing Email Settings vs. Partner Branding Email Settings?</summary>
 
-No. Marketing Email Settings and Partner Branding Email Settings are tied — they share the same sending domain. You cannot configure a separate domain for campaign sends versus brand notifications (such as Daily Digests or Executive Reports). If you change the domain in one place, it affects both.
+No. Marketing Email Settings and Partner Branding Email Settings are tied: they share the same sending domain. You cannot configure a separate domain for campaign sends versus brand notifications (such as Daily Digests or Executive Reports). If you change the domain in one place, it affects both.
 
 </details>
 
 <details>
 <summary>Why does the reply-to address always match my sender email?</summary>
 
-The reply-to address is automatically set to match the market's sender email. This is intentional — it prevents white-label breaks on automated emails like Daily Digests and Executive Reports, which need to reply back to the configured sender identity rather than a different address.
+The reply-to address is automatically set to match the market's sender email. This is intentional: it prevents white-label breaks on automated emails like Daily Digests and Executive Reports, which need to reply back to the configured sender identity rather than a different address.
 
 If you need different reply-to addresses across audiences, the supported approach is to create separate markets, each with its own sender email. The platform natively supports up to two authenticated sending domains.
 
@@ -202,9 +200,9 @@ If you're unsure which record is conflicting, use a DNS lookup tool like [MXTool
 
 </details>
 
-## Best Practices
+## Best practices
 
-### Domain Management
+### Domain management
 
 **Automatic Domain Monitoring:**
 To ensure your emails reach inboxes rather than spam folders, Vendasta automatically monitors and manages your email domain settings:
@@ -221,24 +219,24 @@ Notifications are sent both as in-platform alerts and email messages to Partner 
 - Monitor domain reputation regularly
 - Respond to verification notifications quickly
 
-### Authentication Setup
+### Authentication setup
 - Implement all three authentication protocols (SPF, DKIM, DMARC)
 - Start with a permissive DMARC policy and gradually strengthen it
 - Regularly review authentication reports
 
-### Deliverability Optimization
+### Deliverability optimization
 - Maintain clean email lists
 - Monitor bounce rates and remove invalid addresses
 - Follow email marketing best practices
 - Test emails across different clients and devices
 
-### Security and Compliance
+### Security and compliance
 - Keep authentication records secure
 - Regularly audit user access and permissions
 - Stay informed about email regulations and requirements
 - Use [category-based subscription preferences](./email-subscription-preferences.mdx) to give recipients granular control over email types
 
-## Need More Help?
+## Need more help?
 
 - **Campaign Creation** - Learn to create effective campaigns with [CRM field personalization](/marketing/campaigns) using [contact fields](/crm/contacts/crm-default-contact-fields) and [company fields](/crm/companies/crm-default-company-fields)
 - **Technical Support** - Contact support for advanced DNS or authentication issues
