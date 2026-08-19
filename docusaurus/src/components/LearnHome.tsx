@@ -164,7 +164,7 @@ const FOCUS_AREAS: ExplorerFacet[] = [
   { id: "setting-up", label: "Setting up your platform", items: GETTING_STARTED_ITEMS },
   { id: "selling", label: "Learning how to sell", items: SALES_ITEMS },
   { id: "ai-to-work", label: "Putting AI to work", items: [...AI_FOUNDATIONS_ITEMS, ...AI_WORKFORCE_ITEMS] },
-  { id: "delivering", label: "Delivering client work", items: SERVICES_ITEMS },
+  { id: "delivering", label: "Partnering with our services team", items: SERVICES_ITEMS },
 ];
 
 function PathCard({ path }: { path: HomePathCard }) {
