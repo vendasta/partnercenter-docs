@@ -1,0 +1,39 @@
+---
+title: Start a campaign for the account
+description: Learn how to use the Start a campaign for the account action to enroll all users and contacts on an account in an email campaign.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, campaigns, email, account]
+keywords: [start campaign account, email campaign, campaign automation, account campaign, enroll campaign]
+---
+
+# Start a campaign for the account
+
+**Start a campaign for the account** enrolls all users and contacts on the account in a specified email campaign. A campaign can only be sent to each account once. This action is available on account-scoped triggers.
+
+## How it works
+
+1. The automation reaches the step with an account in scope
+2. The step enrolls the account in the selected campaign
+3. All users and contacts on the account receive the campaign emails
+4. The automation continues to the next step
+
+:::info
+An error occurs if the campaign is sent to an account without users. A campaign can only be sent to each account once — subsequent attempts are skipped.
+:::
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Campaigns and emails**, select **Start a campaign for the account**
+3. Select the campaign to start
+
+## Outputs
+
+This action produces no outputs available to downstream steps.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Pause a campaign for the account](./pause-campaign-account.mdx) — Pause the campaign
+- [Start a campaign for the contact](./start-campaign-contact.mdx) — Enroll a single contact
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows
