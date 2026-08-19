@@ -49,9 +49,13 @@
   box-shadow: 0 6px 18px rgba(7, 35, 55, 0.12), 0 16px 40px rgba(7, 35, 55, 0.1);
 }
 
+/* Fixed height so every card hero is the same size regardless of title length;
+   the title size below is chosen so a two-line title still fits. */
 .vd-home-card__hero {
   padding: 1.4rem 1.5rem 1.6rem;
   color: #fff;
+  height: 8rem;
+  overflow: hidden;
 }
 
 .vd-home-card__hero--purple { background: linear-gradient(120deg, #c026d3, #2563eb); }
@@ -74,7 +78,7 @@
 
 .vd-home-card__title {
   font-family: var(--ifm-heading-font-family);
-  font-size: 1.45rem;
+  font-size: 1.3rem;
   font-weight: 700;
   line-height: 1.2;
 }

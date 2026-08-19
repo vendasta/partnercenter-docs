@@ -48,7 +48,7 @@ const PATHS: HomePathCard[] = [
     gate: "About 1 hour 15 minutes",
     cta: "Start",
     to: "/learn/getting-started",
-    tone: "green",
+    tone: "navy",
   },
   {
     id: "ai-foundations",
@@ -84,7 +84,7 @@ const PATHS: HomePathCard[] = [
     gate: "About 1 hour",
     cta: "Start",
     to: "/learn/sales",
-    tone: "blue",
+    tone: "navy",
   },
   {
     id: "vendasta-services",
@@ -96,7 +96,7 @@ const PATHS: HomePathCard[] = [
     gate: "Visit in any order",
     cta: "Start",
     to: "/learn/vendasta-services",
-    tone: "slate",
+    tone: "navy",
   },
 ];
 
@@ -154,18 +154,10 @@ const SERVICES_ITEMS: ExplorerItem[] = [
   { title: "Introduction to Digital Ads", to: "/learn/vendasta-services/introduction-to-digital-ads" },
 ];
 
-const ROLES: ExplorerFacet[] = [
-  { id: "admin", label: "Admin", items: [...GETTING_STARTED_ITEMS, ...SERVICES_ITEMS] },
-  { id: "sales", label: "Sales", items: SALES_ITEMS },
-  {
-    id: "builder",
-    label: "Builder",
-    items: [],
-    comingSoon:
-      "Learning content for builders is coming soon — building with AI, APIs, webhooks, and integrations. Browse the paths above in the meantime.",
-  },
-];
-
+// The "What's your role?" facet group (Admin / Sales / Builder) was removed
+// 2026-08-19 (Cal): too few roles to be useful yet. Restore it from git history
+// when the role list grows — Builder should carry a "Coming soon" badge
+// (comingSoon field below) until builder content on AI, APIs, and webhooks ships.
 const FOCUS_AREAS: ExplorerFacet[] = [
   { id: "setting-up", label: "Setting up your platform", items: GETTING_STARTED_ITEMS },
   { id: "selling", label: "Learning how to sell", items: SALES_ITEMS },
@@ -253,37 +245,29 @@ function FacetGroup({
 }
 
 function Explorer() {
-  // One selection across both groups, keyed "role:sales" / "focus:selling".
-  const [selected, setSelected] = useState(`focus:${FOCUS_AREAS[0].id}`);
+  const [selectedId, setSelectedId] = useState(FOCUS_AREAS[0].id);
 
-  const facet = useMemo(() => {
-    const [group, id] = selected.split(":");
-    const pool = group === "role" ? ROLES : FOCUS_AREAS;
-    return pool.find((f) => f.id === id) ?? null;
-  }, [selected]);
+  const facet = useMemo(
+    () => FOCUS_AREAS.find((f) => f.id === selectedId) ?? null,
+    [selectedId],
+  );
 
   const items = facet?.items ?? [];
 
   return (
-    <section className="vd-explore" aria-label="Browse by role or focus">
+    <section className="vd-explore" aria-label="Browse by focus">
       <span className="vd-explore__kicker">Find what fits</span>
       <h2 className="vd-explore__title">Learning for how you work</h2>
       <p className="vd-explore__blurb">
-        Pick your role, or start from what you&rsquo;re working on right now.
+        Start from what you&rsquo;re working on right now.
       </p>
       <div className="vd-explore__layout">
         <aside className="vd-explore__rail">
           <FacetGroup
-            title="What's your role?"
-            facets={ROLES}
-            activeId={selected.startsWith("role:") ? selected.slice(5) : null}
-            onSelect={(id) => setSelected(`role:${id}`)}
-          />
-          <FacetGroup
             title="What are you focused on?"
             facets={FOCUS_AREAS}
-            activeId={selected.startsWith("focus:") ? selected.slice(6) : null}
-            onSelect={(id) => setSelected(`focus:${id}`)}
+            activeId={selectedId}
+            onSelect={setSelectedId}
           />
         </aside>
         <div className="vd-explore__results">
