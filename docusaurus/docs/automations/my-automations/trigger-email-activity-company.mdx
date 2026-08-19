@@ -1,0 +1,41 @@
+---
+title: "Trigger: An email activity is created or modified for a company"
+description: Start an automation whenever an email activity is logged or updated on a company record in the CRM.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, company]
+keywords: [email activity trigger, company email logged, CRM email activity, automation trigger email, company scope trigger]
+---
+
+# An email activity is created or modified for a company
+
+The **An email activity is created or modified for a company** trigger starts an automation whenever an email is logged on a company record or an existing email activity on that record is updated. Use this trigger to react to email correspondence at the company level — without any manual follow-up steps.
+
+:::info Trigger scope
+This trigger operates at the **company** scope. Company, account, and contact actions are available downstream.
+:::
+
+## How it works
+
+1. An email activity is created on a company record, or an existing email activity on that record is modified.
+2. The company and its associated account are brought into scope.
+3. The email activity data — including subject, direction, and notes — becomes available as dynamic content.
+4. Downstream steps execute using the company, account, and email activity context.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Email subject** | The subject line of the logged email activity |
+| **Email direction** | Whether the email was inbound or outbound |
+| **Activity notes** | Notes logged on the email activity |
+| **Activity date** | The date and time the email activity was created or last modified |
+| **Associated company** | Name, ID, and standard fields of the company the email is logged on |
+
+Standard company and account fields are also available to downstream steps via **Add dynamic content**.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

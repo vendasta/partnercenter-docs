@@ -1,0 +1,43 @@
+---
+title: "Trigger: A Conversations message is sent or received"
+description: Start an automation when a message is sent or received on an account in Conversations.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, conversations]
+keywords: [conversations trigger, message received trigger, message sent trigger, inbox automation, conversations message trigger]
+---
+
+# A Conversations message is sent or received
+
+**A Conversations message is sent or received** fires whenever a message is sent or received on an account in the Conversations inbox. Use this trigger to automate responses, route messages to the right team member, or log communication activity when messages flow through your inbox.
+
+You can configure the trigger to respond to inbound messages, outbound messages, or both depending on your workflow needs.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account and contact actions are available downstream.
+:::
+
+## How it works
+
+1. A message is sent or received on an account in the Conversations inbox.
+2. The automation evaluates any trigger conditions you've configured, such as message direction or channel.
+3. If conditions are met, the workflow starts with the account and message data in context.
+4. Downstream steps can use **Add dynamic content** to reference the message content, channel, and account fields.
+
+## Available data
+
+Standard account fields and message fields are available via **Add dynamic content**.
+
+| Output | Description |
+|---|---|
+| **Message content** | The body text of the message |
+| **Message direction** | Whether the message was inbound or outbound |
+| **Channel** | The channel the message was sent on (SMS, email, etc.) |
+| **Sender name** | The name of the message sender |
+| **Account name** | The account the Conversations inbox belongs to |
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

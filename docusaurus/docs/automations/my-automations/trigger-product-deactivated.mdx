@@ -1,0 +1,46 @@
+---
+title: "Trigger: Product deactivated"
+description: Start an automation whenever a product is deactivated on an account.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, products]
+keywords: [product deactivated trigger, product deactivation, account product, automation trigger, account scope]
+---
+
+# Product deactivated
+
+The **Product deactivated** trigger starts an automation whenever a product is deactivated on an account. Use this trigger to send offboarding communications, revoke access, or flag churned products for follow-up.
+
+This trigger operates at the account scope, so account and product data are available to downstream steps.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account fields and deactivated product data are available downstream.
+:::
+
+## How it works
+
+1. A product is deactivated on an account — either manually by an admin or through a billing event.
+2. The account is brought into scope along with the product details.
+3. Account and product data become available as dynamic content.
+4. Downstream steps execute using that context.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Product name** | Name of the product that was deactivated |
+| **Product ID** | Unique identifier for the deactivated product |
+| **Account name** | The account the product was deactivated on |
+| **Deactivated at** | Timestamp when the product was deactivated |
+
+## Tips
+
+:::tip Run once per account
+Enable the **Run only once per account** option if you want the automation to fire just the first time a product is deactivated — for example, to send a single save-the-relationship email rather than triggering again if the product is later reactivated and deactivated again.
+:::
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

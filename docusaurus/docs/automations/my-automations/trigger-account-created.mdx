@@ -1,0 +1,46 @@
+---
+title: "Trigger: Account created"
+description: Start an automation whenever a new account is created in Partner Center.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, accounts]
+keywords: [account created trigger, new account, account onboarding, automation trigger, account scope]
+---
+
+# Account created
+
+The **Account created** trigger starts an automation the moment a new account is created in Partner Center. Use this trigger to automate onboarding steps, send welcome communications, or set up initial data without any manual intervention.
+
+This trigger operates at the account scope, so all standard account fields are available to downstream steps.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account fields, tags, and product data are available downstream.
+:::
+
+## How it works
+
+1. A new account is created in Partner Center, either manually, via import, or through an API call.
+2. The account is brought into scope.
+3. Standard account fields become available as dynamic content.
+4. Downstream steps execute using the account data.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Account name** | The name of the newly created account |
+| **Account ID** | Unique identifier for the account |
+| **Created at** | Timestamp when the account was created |
+| **Account fields** | Standard fields such as address, phone, website, and industry |
+
+## Tips
+
+:::warning Duplicate accounts
+This trigger fires for every new account creation event, including likely duplicates. If your team imports accounts in bulk or creates accounts from multiple sources, add trigger conditions to filter out records that don't meet your criteria before running downstream steps.
+:::
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

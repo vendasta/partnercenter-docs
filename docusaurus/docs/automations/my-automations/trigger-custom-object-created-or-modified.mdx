@@ -1,0 +1,42 @@
+---
+title: "Trigger: Custom object created or modified"
+description: Start an automation whenever a custom object record is created or any of its fields are updated.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, custom-objects]
+keywords: [custom object trigger, custom object created, custom object modified, record updated, automation trigger]
+---
+
+# Custom object created or modified
+
+The **Custom object created or modified** trigger starts an automation whenever a custom object record is first created or any field on an existing record is updated. Use this trigger to respond to data changes on your custom object types in real time.
+
+This trigger operates at the custom object scope, so all fields on the record are available to downstream steps.
+
+:::info Trigger scope
+This trigger operates at the **custom object** scope. Custom object record fields are available downstream. Use lookup steps to bring account or company context into the workflow if needed.
+:::
+
+## How it works
+
+1. A custom object record is created, or any field on an existing record is changed.
+2. The record is brought into scope.
+3. All current field values — including the field that changed — become available as dynamic content.
+4. Downstream steps execute using the record data.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Record ID** | Unique identifier for the custom object record |
+| **Record fields** | All custom fields defined on the object type, reflecting current values |
+| **Created at** | Timestamp when the record was first created |
+| **Modified at** | Timestamp of the most recent update |
+
+All field values reflect the state of the record at the moment the trigger fired.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)
