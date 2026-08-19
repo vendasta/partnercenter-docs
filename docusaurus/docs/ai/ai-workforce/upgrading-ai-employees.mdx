@@ -2,9 +2,9 @@
 id: upgrading-ai-employees
 title: Upgrading AI Employees
 sidebar_position: 8
-description: How locked AI Employee cards in Business App let customers upgrade themselves, how marketplace gating decides which cards appear, and how to configure the upgrade experience in Partner Center.
-tags: [ai, ai-workforce, ai-employees, upgrade, editions, marketplace]
-keywords: [AI workforce upgrade, self-serve upgrade, edition change, upgrade CTA, marketplace gating, AI employees]
+description: How locked AI Employee cards in Business App let customers upgrade themselves, how marketplace gating decides which cards appear, how to hide a card regardless of what you sell, and how to configure the upgrade experience in Partner Center.
+tags: [ai, ai-workforce, ai-employees, upgrade, editions, marketplace, visibility]
+keywords: [AI workforce upgrade, self-serve upgrade, edition change, upgrade CTA, marketplace gating, AI employees, hide AI employee, AI employee visibility]
 ---
 
 The **AI Workforce** page in Business App shows your customer every AI Employee available to them. Some of those employees are already active; others are locked because the product or edition that powers them isn't part of the customer's current plan.
@@ -75,6 +75,17 @@ Locked cards are filtered by what you actually sell, so customers are never show
 - **Active** employees and employees with no backing product are never hidden by this rule.
 
 This means your **stop-selling** and market-availability decisions in the Marketplace directly control the AI Workforce page: stop selling a product in a market, and its locked AI Employee card disappears for customers in that market.
+
+## Hide an AI Employee regardless of what you sell
+
+Marketplace gating only follows what you sell, which doesn't help in two situations:
+
+- **You sell the product, but only a lower edition.** The AI Employee's card still appears, locked, advertising an edition you're not ready to offer.
+- **The product also powers something you still need to sell.** For example, Local SEO unlocks the AI Search Specialist but also powers the Chat Receptionist's `Try It` demo, so you can't stop selling it just to remove one card.
+
+For these cases, hide the AI Employee directly instead of changing what you sell. Go to `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Pages` → `AI Assistant`, and turn off that AI Employee's visibility checkbox. See [AI Assistant page settings](/administration/platform-settings/customize-business-app/page-visibility-settings#ai-assistant-page-settings) for the full control.
+
+Hiding an AI Employee this way only removes its card from the AI Workforce page. A customer who already has it configured keeps using it, and it stays reachable from the chat employee menu.
 
 ## Configure the upgrade experience in Partner Center
 

@@ -206,6 +206,43 @@ Controls whether customers see the AI Assistant page.
 
 Show this page when customers have AI features enabled and would benefit from AI-assisted tools.
 
+### Choosing which AI Employees appear
+
+Below the page toggle, a list shows every AI Employee your customers could have. A checkbox on each row controls whether that AI Employee's card can appear on the [AI Workforce page](/ai/ai-workforce/upgrading-ai-employees) in Business App.
+
+Each row shows the AI Employee's avatar, name, and description, along with a `Beta` badge where it applies. A `Visible` or `Hidden` label next to the checkbox shows the current state:
+
+- **Checked (`Visible`)**: the AI Employee's card can appear on the AI Workforce page.
+- **Unchecked (`Hidden`)**: the card never appears on the AI Workforce page, for any customer in that market.
+
+A search box, a count of currently visible AI Employees, and `Show all` / `Hide all` buttons sit above the list. New AI Employees are `Visible` by default — hide one only if you're not ready for customers to ask about it.
+
+:::info Chat Receptionist can't be hidden
+The Chat Receptionist has no row in this list and always appears on the AI Workforce page.
+:::
+
+#### Market defaults and overrides
+
+This list follows the same partner-default-versus-market pattern as other settings on this page:
+
+- Configure defaults at the partner level using `All Markets`.
+- Override for a specific market by selecting it from the dropdown.
+- A market with no override of its own shows disabled rows using the partner default. To use `Show all` or `Hide all` on that market, turn off the market default first.
+
+#### What hiding an AI Employee does (and doesn't do)
+
+Hiding an AI Employee only removes its card from the AI Workforce page. It doesn't:
+
+- **Disable the AI Employee.** A customer who already has it configured keeps full access, and it keeps doing its automatic work.
+- **Remove it from the chat employee menu.** Customers can still open a hidden AI Employee from there and read its past conversations.
+- **Change what customers can buy.** Product availability, editions, and pricing are unaffected.
+
+When you hide an AI Employee that was previously visible, a warning repeats these points before you save. Changes may take a short time to reach the AI Workforce page after you save.
+
+:::tip
+Hiding only affects the AI Workforce page, so it's meant for AI Employees a customer can't buy from you yet — not for stopping a customer from using one they've already set up. To do that, remove access to the underlying product instead.
+:::
+
 ---
 
 ## Executive Report page settings
