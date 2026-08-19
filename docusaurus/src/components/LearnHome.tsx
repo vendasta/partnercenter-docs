@@ -88,7 +88,7 @@ const PATHS: HomePathCard[] = [
   },
   {
     id: "vendasta-services",
-    kicker: "Drop-in library",
+    kicker: "Done for you",
     title: "Vendasta Services",
     blurb: "Scope, order, and manage white-label fulfillment and marketing services.",
     tag: "Services",
