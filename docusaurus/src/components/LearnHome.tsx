@@ -89,11 +89,11 @@ const PATHS: HomePathCard[] = [
   {
     id: "vendasta-services",
     kicker: "Done for you",
-    title: "Vendasta Services",
-    blurb: "Scope, order, and manage white-label fulfillment and marketing services.",
+    title: "Work with Vendasta Services",
+    blurb: "Decide what to run yourself and what to hand over, then implement an AI workforce with expert help.",
     tag: "Services",
-    scope: ["3 courses"],
-    gate: "Visit in any order",
+    scope: ["5 lessons"],
+    gate: "About 45 minutes",
     cta: "Start",
     to: "/learn/vendasta-services",
     tone: "navy",
@@ -149,9 +149,11 @@ const SALES_ITEMS: ExplorerItem[] = [
 ];
 
 const SERVICES_ITEMS: ExplorerItem[] = [
-  { title: "Grow your agency with our team of marketing experts", to: "/learn/vendasta-services/grow-your-agency-with-marketing-experts" },
-  { title: "Fulfilling websites with Marketing Services", to: "/learn/vendasta-services/fulfilling-websites-with-marketing-services" },
-  { title: "Introduction to Digital Ads", to: "/learn/vendasta-services/introduction-to-digital-ads" },
+  { title: "What Vendasta Services does", to: "/learn/vendasta-services/what-vendasta-services-does" },
+  { title: "Choose how the work gets done", to: "/learn/vendasta-services/choose-how-the-work-gets-done" },
+  { title: "Implement your AI Workforce", to: "/learn/vendasta-services/implement-your-ai-workforce" },
+  { title: "Order and launch a service", to: "/learn/vendasta-services/order-and-launch-a-service" },
+  { title: "Run the work over time", to: "/learn/vendasta-services/run-the-work-over-time" },
 ];
 
 // The "What's your role?" facet group (Admin / Sales / Builder) was removed

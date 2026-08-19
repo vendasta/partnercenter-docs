@@ -127,6 +127,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/learn/getting-started/Organize-Teams-in-the-Platform', to: '/learn/getting-started/organize-your-team' },
           { from: '/learn/getting-started/Add-Your-Customer-Accounts-and-Users', to: '/learn/getting-started/accounts-and-users' },
           { from: '/learn/getting-started/Customize-and-Brand-Your-Platform', to: '/learn/getting-started/customize-and-brand' },
+          // Vendasta Services library rebuilt as the "Work with Vendasta Services" path (2026-08)
+          { from: '/learn/vendasta-services/grow-your-agency-with-marketing-experts', to: '/learn/vendasta-services/what-vendasta-services-does' },
+          { from: '/learn/vendasta-services/fulfilling-websites-with-marketing-services', to: '/learn/vendasta-services/order-and-launch-a-service' },
+          { from: '/learn/vendasta-services/introduction-to-digital-ads', to: '/learn/vendasta-services/choose-how-the-work-gets-done' },
           // dissolved sections
           { from: '/learn/platform', to: '/learn/products' },
           { from: '/learn/automations-ai', to: '/learn/ai-workforce' },
@@ -197,7 +201,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/learn/products/websites/Get-your-Clients-Selling-Online-with-Accelerated-Templated-Website-Plus', to: '/learn/products/engage/websites/get-your-clients-selling-online' },
           { from: '/learn/products/websites/Websites-An-Introduction', to: '/learn/products/engage/websites/websites-an-introduction' },
           // vendasta-services renames (case-only renames live in nginx.conf - they collide with real pages on case-insensitive local filesystems)
-          { from: '/learn/vendasta-services/Grow-Your-Agency-with-our-Team-of-Marketing-Experts', to: '/learn/vendasta-services/grow-your-agency-with-marketing-experts' },
+          { from: '/learn/vendasta-services/Grow-Your-Agency-with-our-Team-of-Marketing-Experts', to: '/learn/vendasta-services/what-vendasta-services-does' },
           // --- end Learn restructure ---
           // Vendasta Services: AI Workforce section renamed (dropped "setup" from URLs)
           { from: '/vendasta-services/ai-workforce-setup', to: '/vendasta-services/ai-workforce/' },

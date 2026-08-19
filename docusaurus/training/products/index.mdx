@@ -13,10 +13,60 @@ hide_table_of_contents: true
     in the search index — the pending decision is to move the folder to training-retired/
     (with redirects) once the team signs off. To restore, remove the className. */}
 
-Every product course, organized the way you grow a local business:
+import PathCards from "@site/src/components/PathCards";
+import PathHeader from "@site/src/components/PathHeader";
 
-- **Attract** - be found: Local SEO and Listings, Social AI, Advertising.
-- **Convert** - turn attention into revenue: Snapshot and Executive Reports, CRM, Conversations AI, Marketplace.
-- **Engage** - deliver and retain: Business App, Reputation Management, Websites.
+<PathHeader
+  parts={3}
+  difficulty="Beginner to Intermediate"
+  topics={["Local SEO", "Snapshot Report", "CRM", "Conversations", "Business App", "Reputation Management"]}
+  required={["None"]}
+  objective="Every product course in one place, grouped by where the product does its work in a client relationship. Attract products get a business found, Convert products turn that attention into revenue, and Engage products deliver and retain. These are drop-in courses, so take one whenever a product enters your offering."
+  outcomes={[
+    "You can find the course for any product you are about to sell or activate",
+    "You can say which products do the attracting, the converting, and the retaining",
+    "You can brief yourself on a product before a client conversation",
+  ]}
+/>
 
-These are drop-in courses - take them in any order, whenever a product enters your offering. For the sequenced journey, start with the [learning paths](/learn).
+{/* No estimated time: this is a library rather than a sequenced path, so a total would
+    imply you work through all of it. Add one only if it ever becomes linear. */}
+
+## The three groups
+
+Forty-one courses across three groups. Take them in any order. For the sequenced journey, start with the [learning paths](/learn).
+
+<PathCards
+  cards={[
+    {
+      title: "Attract",
+      description: "The products that put a client in front of people already searching for what they sell.",
+      topics: [
+        "Search visibility and listings accuracy",
+        "Social presence with Social AI",
+        "Paid reach and advertising performance",
+      ],
+      to: "/learn/products/attract/local-seo-listings/introduction-to-seo",
+    },
+    {
+      title: "Convert",
+      description: "The products that turn that attention into a customer, and prove the value once it is.",
+      topics: [
+        "Snapshot and Executive Reports",
+        "CRM, pipeline, and closing",
+        "Conversations AI and the Marketplace",
+      ],
+      to: "/learn/products/convert/snapshot-executive-reports/explore-the-snapshot-report-interface",
+    },
+    {
+      title: "Engage",
+      description: "The products that deliver the work, keep the client close, and earn the renewal.",
+      topics: [
+        "Business App as the client workspace",
+        "Reputation and review management",
+        "Websites and online storefronts",
+      ],
+      to: "/learn/products/engage/business-app/introduction-to-business-app",
+    },
+  ]}
+/>
