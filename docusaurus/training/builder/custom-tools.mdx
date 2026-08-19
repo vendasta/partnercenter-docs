@@ -67,11 +67,13 @@ The parameter descriptions do the heavy lifting. "The order number from the cust
 
 Most systems will not open the door without proof of who is knocking. That proof travels with the call, and the system's API docs tell you which kind it expects:
 
-| Strategy | How it travels | When you see it |
+| What the API wants | What you put in Headers | Works as a custom tool? |
 |---|---|---|
-| **API key** | A key in a header or in the URL | The most common; simple systems |
-| **OAuth 2.0** | A token you obtain, then send on each call | Systems with user accounts and permissions |
-| **Basic auth** | A username and password, encoded | Older or internal systems |
+| **An API key** | `Authorization: Bearer YOUR_KEY`, or whatever header name the API documents | Yes. This is the common case. |
+| **Basic auth** | `Authorization: Basic <base64 of user:password>` | Yes, as a static value. |
+| **A short-lived OAuth token** | `Authorization: Bearer <token you obtained elsewhere>` | Only until it expires. The platform will not refresh it for you. |
+
+A custom tool authenticates by sending headers. It does not run a login flow, so there is nowhere to put a client ID and secret and nothing that renews a token on your behalf. If the API you want needs a live token exchange, you have two honest options: get a long-lived key from that provider instead, or put a small service of your own in between that holds the credentials and exposes one simple endpoint your tool can call.
 
 Whichever it uses, one rule holds: give the tool the narrowest access that does the job, and keep credentials out of anywhere they could be seen, including screenshots you share.
 
@@ -79,9 +81,9 @@ There is also a newer option, an **MCP connection**, which links a whole set of 
 
 ## Read what it actually sent
 
-When a tool misbehaves, do not guess. After the AI uses it, open the **Explanation view** on the message to see the exact values the tool sent to the API. That tells you whether the tool sent the wrong thing (fix the parameter description) or the API rejected a correct call (fix the connection or the auth).
+When a tool misbehaves, do not guess. Isolate the call: take the same method, URL, headers, and parameter values the tool would send, and run that exact call again on its own outside the platform. If it succeeds there, the tool sent the wrong thing (fix the parameter description). If it fails the same way, the API is rejecting a correct call (fix the connection or the auth).
 
-Test on purpose, not just the happy path: the missing value, the wrong format, the request that names two things at once. If you cannot tell whether the tool or the API is the problem, run the call again on its own outside the platform to isolate it.
+Test on purpose, not just the happy path: the missing value, the wrong format, the request that names two things at once.
 
 :::tip Try it now
 Find any public API you can call without an account, like a weather service or a public directory, and get one request working from the command line or Postman. That single working call is exactly the raw material a custom tool imports. You will build one for real in the lab.
@@ -127,7 +129,7 @@ Find any public API you can call without an account, like a weather service or a
         'No authentication of any kind'
       ],
       correctIndex: 1,
-      explanation: 'A single secret string is an API key, the most common strategy for simple systems. OAuth is for systems with user accounts and permissions.'
+      explanation: 'A single secret string is an API key, and it works as a custom tool because you paste it straight into a header. OAuth tokens can be pasted the same way but expire, and nothing in the platform renews them, so an API key is what you want for a tool that has to keep working.'
     },
     {
       type: 'mcq',
@@ -135,11 +137,11 @@ Find any public API you can call without an account, like a weather service or a
       options: [
         'Rewrite the capability instruction and try again',
         'Add more parameters to the tool',
-        'Open Explanation to see what was sent, then test the call on its own',
+        'Take the exact same call and run it again on its own outside the platform',
         'Switch the method from POST to GET'
       ],
       correctIndex: 2,
-      explanation: 'Explanation shows the exact values the tool sent. Pair that with running the call on its own outside the platform, and you can tell a bad parameter from a bad connection.'
+      explanation: 'Running the exact same call outside the platform isolates the variable. If it succeeds there, the tool sent something wrong; if it fails the same way, the API itself is rejecting it.'
     }
   ]}
 />

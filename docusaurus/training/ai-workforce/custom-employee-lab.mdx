@@ -1,7 +1,7 @@
 ---
 title: Build a Custom AI Employee
 sidebar_position: 5
-description: Design an AI Employee from an outcome, set its role and autonomy, connect knowledge and capabilities, add one custom tool, and test it before calling it done.
+description: Design an AI Employee from an outcome, set its role, connect knowledge and capabilities, add one custom tool, and test it before calling it done.
 ---
 
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
@@ -29,7 +29,7 @@ import LabCallout from "@site/src/components/LabCallout";
   outcomes={[
     "Start a custom AI Employee from an outcome statement, not a feature list",
     "Write a role and connect the knowledge and capabilities that outcome needs",
-    "Set an autonomy level that matches how much you trust the role on day one",
+    "Shape what it will and won't do through its role and capabilities, not a dial",
     "Add one custom capability with a simple tool",
     "Test against a pass/fail script before calling it done",
   ]}
@@ -54,10 +54,10 @@ You are going to **AI** → **AI Workforce** → **Create**.
   storageKey="custom-employee-lab-1"
   steps={[
     <>Give it a name and avatar that fit the role.</>,
-    <>Set its autonomy level. Autonomous is the usual starting default, one level below the highest (Agentic), and it manages full conversations, captures leads, and books on its own while every conversation stays reviewable. Choose a lower level if you would rather review closely while it is new.</>,
+    <>Note what it can do on its own. A custom employee runs at the same autonomy the platform sets for you: it manages full conversations, captures leads, and books, and every conversation stays reviewable. There is no level to choose here, so what shapes its behaviour is the role, the knowledge and the capabilities you give it next.</>,
     <>In Purpose, write the role prompt: who it is, its tone, and the one outcome it exists for.</>,
   ]}
-  confirm={<>The employee now exists in your AI Workforce roster, with a profile and an autonomy level set.</>}
+  confirm={<>The employee now exists in your AI Workforce roster, with a profile you can open and edit.</>}
 />
 </LabCallout>
 
@@ -125,7 +125,7 @@ One tool answering one outcome is a complete employee. Chaining several tools to
 ## What you now have
 
 - A custom AI Employee built around one outcome you named, not a feature list
-- A role, an autonomy level, knowledge, and capabilities, all set from a blank start
+- A role, knowledge, and capabilities, all set from a blank start
 - One custom capability with a working tool, briefed like a new hire's task
 - A pass/fail test result you can trust before anyone else talks to it
 
