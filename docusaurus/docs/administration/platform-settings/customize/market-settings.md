@@ -6,15 +6,13 @@ tags: [markets, early-access, business-priorities, advanced-configuration]
 keywords: [market-configuration, market-management, early-access-program, business-priorities, marketplace-vendor-control]
 ---
 
-# Markets and Advanced Configuration
-
 This comprehensive guide covers market configuration, advanced platform settings, and specialized features including Early Access Program enrollment, business priorities customization, and marketplace vendor controls.
 
-## What are Markets and Advanced Configuration Settings?
+## What are Markets and advanced configuration settings?
 
 Markets and advanced configuration settings help you organize your business structure, customize market-specific branding and settings, access new features early, and configure specialized business workflows. These settings include market segmentation, branding customization, feature preview programs, and business priority management.
 
-## Why are Markets and Advanced Configuration Important?
+## Why are Markets and advanced configuration important?
 
 - **Business Organization**: Segment your business by region, brand, industry, or custom criteria
 - **Market-Specific Branding**: Customize logos, colors, and experiences for different markets
@@ -22,21 +20,21 @@ Markets and advanced configuration settings help you organize your business stru
 - **Business Alignment**: Configure settings to match your business priorities and workflows
 - **Scalability**: Set up systems that grow with your business and maintain centralized oversight
 
-## What's Included with Markets and Advanced Configuration?
+## What's included with Markets and advanced configuration?
 
-### Market Organization and Structure
+### Market organization and structure
 - **Account assignment**: All new accounts must be assigned to a specific market
 - **Market segmentation**: Organize by brand, region, industry, or custom criteria
 - **Centralized management**: Maintain oversight across all markets from one platform
 - **Scalable structure**: Add new markets as your business grows
 
-### Market-Specific Branding
+### Market-specific branding
 - **Custom logos**: Upload different logos for each market
 - **Color schemes**: Set unique color palettes per market
 - **Product naming**: Customize product names for different markets
 - **Login portals**: Branded experiences for market-specific users
 
-### Market-Level Configuration
+### Market-level configuration
 - **Individual settings**: Configure features and restrictions per market
 - **Permission inheritance**: Markets inherit default settings but can be customized
 - **Sales order settings**: Market-specific sales processes and configurations
@@ -46,18 +44,18 @@ Markets and advanced configuration settings help you organize your business stru
 Markets are only available on certain subscription tiers. Contact your account representative or support to activate Markets for your platform or add additional markets.
 :::
 
-## How to Understand Market Structure
+## How to understand market structure
 
-### Market Organization Principles
+### Market organization principles
 
-#### Account Assignment Process
+#### Account assignment process
 When Markets are activated on your platform:
 - **Required assignment**: Each new account must be assigned to a market during creation
 - **Dropdown selection**: A market dropdown appears in the Account Create form
 - **Default market**: One market represents your company as a whole
 - **Additional markets**: Used for segmentation by region, brand, or other criteria
 
-#### User Access and Permissions
+#### User access and permissions
 Different user types interact with markets differently:
 
 **Business App Users**:
@@ -72,22 +70,22 @@ Different user types interact with markets differently:
 - New accounts automatically created under their assigned market
 - Must be assigned to a market (required for salespeople created before Markets activation)
 
-### URL and Portal Management
+### URL and portal management
 - **Consistent URLs**: Portal URLs remain consistent with your original setup
 - **Custom domains**: Per-market custom domains are currently unavailable
 - **Login branding**: Pre-login portals display your white-label branding
 - **Market switching**: Branding updates dynamically based on selected accounts
 
-## How to Configure Market-Specific Branding
+## How to configure market-specific branding
 
-### Access Market Branding Settings
+### Access market branding settings
 
 To customize branding for individual markets:
 
-1. Navigate to `Administration` > `Partner Branding`
+1. Navigate to `Administration` → `Partner Branding`
 2. Use the dropdown in the top-right corner to select:
-   - **All Markets**: Apply branding to all markets
-   - **Individual Market**: Customize specific market branding
+   - `All Markets`: Apply branding to all markets
+   - `Individual Market`: Customize specific market branding
 3. Configure logos, colors, and visual elements
 4. Save changes for the selected market scope
 
@@ -95,72 +93,72 @@ To customize branding for individual markets:
 
 ![Market selection dropdown](./img/markets-overview/11939932669719.png)
 
-### Branding Inheritance and Customization
+### Branding inheritance and customization
 - **Default branding**: Branding created before Markets activation becomes the default for new markets
 - **Individual customization**: Each market can have unique visual identity
 - **Inheritance model**: New markets inherit default settings but can be modified
 - **Consistent elements**: Maintain brand consistency across markets while allowing differentiation
 
-## How to Manage Market Settings and Configuration
+## How to manage market settings and configuration
 
-### Configure Market-Specific Features
+### Configure market-specific features
 
 Each market can have its own configuration for various features:
 
-#### Sales Order Settings Configuration
+#### Sales order settings configuration
 Markets can have customized sales processes:
 - **Individual sales processes**: Configure unique workflows per market
 - **Order restrictions**: Set market-specific product and sales limitations
 - **Process customization**: Tailor sales workflows to market requirements
 - **Permission variations**: Different access levels and capabilities per market
 
-#### Beta Program and Feature Management
+#### Beta program and feature management
 - **Market-level beta access**: Enable or disable beta features per market
 - **Independent settings**: Beta program participation separate from partner-level settings
 - **Feature rollouts**: Test new features in specific markets before wider deployment
 - **Controlled access**: Manage feature availability based on market readiness
 
-### Restore Market Settings to Defaults
+### Restore market settings to defaults
 
 If you need to reset market-specific configurations:
 
-1. Go to `Administration` > `Customize`
-2. Click **Markets**
+1. Go to `Administration` → `Customize`
+2. Click `Markets`
 3. Click the edit icon next to the market you want to restore
-4. Navigate to **Sales** > **Configure Orders and Sales Processes**
-5. Scroll to the bottom and click **Restore Back to Partner Defaults**
+4. Navigate to `Sales` → `Configure Orders and Sales Processes`
+5. Scroll to the bottom and click `Restore Back to Partner Defaults`
 
 ![edit icon](./img/restore-market-settings/edit-icon.png)
 
 :::info
-The "Restore Back to Partner Defaults" option only appears if you've previously configured market-specific sales order settings. This ensures you don't accidentally reset markets that are using default configurations.
+The `Restore Back to Partner Defaults` option only appears if you've previously configured market-specific sales order settings. This ensures you don't accidentally reset markets that are using default configurations.
 :::
 
-## How to Configure Market-Based Reporting Limits
+## How to configure market-based reporting limits
 
-### Set Market-Specific Snapshot Report Limits
+### Set market-specific Snapshot Report limits
 
 While there's no direct market-wide snapshot limit, you can control reporting per market by configuring salesperson limits within each market:
 
-1. Navigate to `Administration` > `Customize` > `Sales`
+1. Navigate to `Administration` → `Customize` → `Sales`
 2. Switch to the specific market you want to configure
-3. Check the **Limit monthly Snapshot Reports** checkbox
-4. Set the **Snapshot creation limit** for salespeople in that market
+3. Check the `Limit monthly Snapshot Reports` checkbox
+4. Set the `Snapshot creation limit` for salespeople in that market
 5. Save the configuration
 
 ![Limit monthly snapshot report checkbox](./img/administration/customize/limit-snapshot-report-1.jpg)
 
 ![Snapshot creation limit setting](./img/administration/customize/limit-snapshot-report-2.jpg)
 
-### Understanding Market Report Limits
+### Understanding market report limits
 - **Combined limits**: If multiple salespeople work in a market, the limit is the total maximum all salespeople can create combined
 - **Market-specific**: Each market can have different reporting limits
 - **Individual tracking**: Each salesperson's usage is tracked separately within the market total
 - **Monthly reset**: All limits reset monthly regardless of market configuration
 
-## How to Add and Manage Markets
+## How to add and manage Markets
 
-### Adding New Markets
+### Adding new Markets
 To expand your market structure:
 - **Contact support**: Reach out to your account representative or Support On Demand
 - **Define purpose**: Clearly identify how the new market will be used
@@ -173,19 +171,19 @@ Disabling a market removes it from active use but does not delete it. Accounts a
 
 ### Reactivating a market
 
-A previously disabled or cancelled market can be reactivated. Before requesting reactivation, check with your Vendasta account manager — reactivating a cancelled market may incur an additional cost depending on your contract. To reactivate a market, contact [Vendasta Support](https://support.vendasta.com) with the market name and your account details.
+A previously disabled or cancelled market can be reactivated. Before requesting reactivation, check with your Vendasta account manager, since reactivating a cancelled market may incur an additional cost depending on your contract. To reactivate a market, contact [Vendasta Support](https://support.vendasta.com) with the market name and your account details.
 
 ### Renaming a market
 
 Market names can be changed at any time. Contact [Vendasta Support](https://support.vendasta.com) with the current name, the new name, and your account details.
 
-### Market Management Best Practices
+### Market management best practices
 - **Clear naming**: Use descriptive market names that reflect their purpose
 - **Consistent organization**: Establish clear criteria for account assignment
 - **Regular review**: Periodically assess market structure effectiveness
 - **User training**: Ensure team members understand market assignments and implications
 
-## How to Join the Early Access Program
+## How to join the Early Access Program
 
 ### What is the Early Access Program?
 
@@ -204,16 +202,16 @@ The Early Access Program provides access to features before they're released to 
 ### Joining Early Access
 
 **For Your Entire Platform:**
-1. Go to **Partner Center > Administration > Customize**
-2. Navigate to **General Product Settings > Others**
-3. Select **Join Early Access Program**
+1. Go to `Partner Center` → `Administration` → `Customize`
+2. Navigate to `General Product Settings` → `Others`
+3. Select `Join Early Access Program`
 
 **For Individual Markets:**
-1. Go to **Partner Center > Administration > Customize**
-2. Navigate to **Markets** and select your target market
-3. Go to **General Product Settings** section
-4. Locate **Early Access Program**
-5. Change selection to **Enable**
+1. Go to `Partner Center` → `Administration` → `Customize`
+2. Navigate to `Markets` and select your target market
+3. Go to `General Product Settings` section
+4. Locate `Early Access Program`
+5. Change selection to `Enable`
 
 :::info
 Market-specific settings override partner defaults unless explicitly defined.
@@ -223,70 +221,70 @@ Market-specific settings override partner defaults unless explicitly defined.
 
 If you leave the program, you'll no longer have access to Early Access features. Consider this carefully as some features may be removed from your platform.
 
-## How to Manage Business Priorities
+## How to manage Business Priorities
 
-### Customizing Business Priority Options
+### Customizing Business Priority options
 
 You can customize the business priority options available to your clients, allowing them to focus on the most relevant goals for their industry or business model.
 
-### Configuration Steps
+### Configuration steps
 
-1. Navigate to **Partner Center > Administration > Customize**
-2. Go to **Product Settings > Business Priorities**
+1. Navigate to `Partner Center` → `Administration` → `Customize`
+2. Go to `Product Settings` → `Business Priorities`
 3. Review available priority categories
 4. Enable/disable priorities based on your client base
 5. Customize priority descriptions if needed
 6. Save your configuration
 
-### Best Practices for Business Priorities
+### Best practices for Business Priorities
 
 - **Industry Relevance**: Enable priorities that align with your clients' industries
 - **Simplicity**: Don't overwhelm clients with too many options
 - **Regular Review**: Update priorities as your client base evolves
 - **Clear Descriptions**: Ensure priority descriptions are easily understood
 
-## How to Control Marketplace Vendor Contact
+## How to control Marketplace vendor contact
 
-### Preventing Direct Vendor Contact
+### Preventing direct vendor contact
 
 You can prevent Marketplace Vendors from directly contacting your partners, maintaining control over vendor relationships and communications.
 
-### Enabling Contact Protection
+### Enabling contact protection
 
 To prevent direct marketplace vendor contact:
 
-1. Navigate to **Partner Center > Administration > Customize**
-2. Go to **General Product Settings**
-3. Locate **Marketplace Vendor Contact** settings
-4. Select **Prevent Direct Contact**
+1. Navigate to `Partner Center` → `Administration` → `Customize`
+2. Go to `General Product Settings`
+3. Locate `Marketplace Vendor Contact` settings
+4. Select `Prevent Direct Contact`
 5. Save your changes
 
-### Benefits of Contact Control
+### Benefits of contact control
 
 - **Relationship Management**: Maintain control over vendor partnerships
 - **Quality Assurance**: Filter vendor communications for relevance
 - **Brand Protection**: Ensure consistent messaging from your organization
 - **Client Protection**: Shield clients from unsolicited vendor outreach
 
-## How to Restore Market Sales Order Settings
+## How to restore market sales order settings
 
-### Understanding Default vs Custom Settings
+### Understanding default vs custom settings
 
 Market sales order settings can be customized per market or inherit from partner-level defaults. Sometimes you may need to restore these settings to their original configuration.
 
-### Restoration Process
+### Restoration process
 
-1. Navigate to **Partner Center > Administration > Customize**
-2. Go to **Markets** and select your target market
-3. Locate **Sales Order Settings** section
-4. Click **Restore to Partner Defaults**
+1. Navigate to `Partner Center` → `Administration` → `Customize`
+2. Go to `Markets` and select your target market
+3. Locate `Sales Order Settings` section
+4. Click `Restore to Partner Defaults`
 5. Confirm the restoration when prompted
 
 :::warning
 Restoring market settings will override any custom configurations you've made for that specific market.
 :::
 
-## Frequently Asked Questions (FAQs)
+## Frequently asked questions (FAQs)
 
 <details>
 <summary>How do I activate Markets for my platform?</summary>
