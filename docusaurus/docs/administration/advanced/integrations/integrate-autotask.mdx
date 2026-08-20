@@ -277,7 +277,7 @@ Roll the integration out gradually so you can confirm it behaves as expected bef
 |-------------|-------------------|--------------|
 | 500 error when connecting | API credentials are invalid or the user is disabled | Verify credentials in Autotask Admin. Re-enter. |
 | "Connected" but nothing syncs | Webhooks are not enabled on the security level | Open the security level in Autotask → Other Settings → enable webhooks with limit of 5+ |
-| Contacts not appearing | Contact is not linked to a company in Autotask | Link the contact to a company in Autotask. Unlinked contacts are skipped. |
+| Contacts not appearing | Contact is not linked to a company in Autotask | Link the contact to a company in Autotask. The Activity Feed logs "Unable to sync this contact. Company details are not associated. Please associate a company and try again." Unlinked contacts are skipped. |
 | Duplicate records after connecting | Records existed in both systems without Autotask IDs | Disconnect. Clean up duplicates. Bulk import with external_id. Reconnect. See [Recovery](#recovery--already-have-duplicates) section. |
 | "Broken" status on connection card | API credentials expired or revoked | Click **Re-authenticate**. Re-enter credentials. |
 | Sync back to Autotask not working | The record is missing its Autotask ID | Check the record in Vendasta. If autotask-company-id or autotask-contact-id is empty, use bulk import to add external IDs. |
@@ -311,7 +311,7 @@ Nothing is deleted. Records stay in both systems. Reconnecting later resumes syn
 <details>
 <summary>Can I create a contact in Vendasta without associating it to a company?</summary>
 
-Yes. Vendasta allows contacts to exist independently without a company association. However, standalone contacts will not sync to Autotask. Autotask enforces a mandatory company-contact relationship — every contact must belong to a company. If a contact exists in Vendasta without a company association, the integration will skip the sync and log an activity note indicating the contact was not synced.
+Yes. Vendasta allows contacts to exist independently without a company association. However, standalone contacts will not sync to Autotask. Autotask enforces a mandatory company-contact relationship — every contact must belong to a company. If a contact exists in Vendasta without a company association, the integration skips the sync and logs this message in the Activity Feed: "Unable to sync this contact. Company details are not associated. Please associate a company and try again."
 
 </details>
 
