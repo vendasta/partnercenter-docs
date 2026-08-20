@@ -78,13 +78,23 @@ grep -n "^#" docusaurus/docs/accounts/connect-profile.md
 
 ### Step 4b: Check inbound anchors
 
-A link pointing *into* one of today's flagged articles can go stale the moment you rename or remove a heading in it during this verification — and nothing else will ever check that. For each flagged article, search the rest of the repo for anything that links to it:
+A link pointing *into* one of today's flagged articles can go stale the moment you rename or remove a heading in it during this verification — and nothing else will ever check that. This step only exists to catch damage from *today's own edits*, so scope it accordingly:
+
+**Skip this step entirely for any flagged article whose headings you did not add, rename, or remove in Step 5/7.** No heading change means no inbound anchor could have broken today — re-scanning the repo for it is redundant work with no new information. Note in the Link check section that inbound anchors were not re-checked because no headings changed.
+
+For articles that did have heading changes, batch the repo scan into a single pass instead of one grep per article — search for all such articles' filenames at once:
 
 ```bash
-grep -rln "article-filename-without-extension" docusaurus/docs
+grep -rlE "article-one-filename|article-two-filename" docusaurus/docs
 ```
 
-For every hit found outside today's batch, open it and check any `#anchor` fragment on that inbound link against the flagged article's current headings (after your Step 5/7 edits are applied), using the same slugify check as Step 4. Flag any inbound link whose anchor no longer resolves — this is a broken link on a page you weren't otherwise going to touch, so it needs its own **Pending approval** item (propose fixing the anchor or the surrounding text on the linking page, scoped narrowly to that link).
+Then, for each hit found outside today's batch, filter to only the lines that actually contain a `#anchor` fragment on the link before opening anything — a plain file-level link with no fragment cannot be broken by a heading rename:
+
+```bash
+grep -n "article-filename-without-extension#" path/to/hit.mdx
+```
+
+For each remaining hit, open it and check the `#anchor` fragment against the affected article's current headings, using the same slugify check as Step 4. Flag any inbound link whose anchor no longer resolves — this is a broken link on a page you weren't otherwise going to touch, so it needs its own **Pending approval** item (propose fixing the anchor or the surrounding text on the linking page, scoped narrowly to that link).
 
 This is how a self-referential loop gets caught: Page A defers to Page B for a topic's details ("see Page B for details") while Page B has no content on that topic and defers back to Page A. Anchor resolution surfaces the symptom (a dead fragment) even when the underlying cause (missing content, circular deferral) needs a human judgment call — flag it as a **Needs SME Review** item rather than guessing where the content should live.
 
@@ -104,52 +114,52 @@ After outputting the report, apply all auto-fixable issues using the Edit tool. 
 
 After auto-fixes are applied, check whether any articles have items listed under **Pending approval**. If none, skip this step.
 
-Work through pending items **one article at a time**, in the order they appeared in the report.
+**Collapse duplicates first.** If the exact same issue (e.g. the same prohibited term, the same tone problem) appears at multiple locations in the same article with the same proposed fix, treat it as **one** pending item covering every location, not one item per occurrence. List all affected lines in that single item's **Location** field. This is what keeps a repeated issue from turning into repeated near-identical prompts.
 
-**Opening:** Announce how many articles have pending items and that you're starting the review:
+**Batch into groups of up to 4.** `AskUserQuestion` accepts up to 4 questions per call. Collect all pending items across all articles into a single ordered queue (article order, then report order within each article), then work through the queue in batches of up to 4 items per `AskUserQuestion` call — never one call per item. A typical day's batch (5 articles, a handful of pending items each) usually fits in 1-3 calls total, not one per item.
 
-> "Auto-fixes are applied. Now let's go through the [N] items that need your input — I'll take them one at a time."
+**Opening:** Announce how many total items need input and roughly how many rounds that will take:
+
+> "Auto-fixes are applied. [N] items need your input across [M] articles — I'll go through them in [K] batch(es)."
 
 ---
 
-**For each article with pending items**, announce the article first, including a clickable markdown link to the file so the user can open it if they want to see the full context:
-
-> "**[Article title]** ([path/to/file.mdx](path/to/file.mdx)) — [N] item(s) need your input."
-
-**For each individual pending item**, output the context block as plain text first — before calling AskUserQuestion. Do not put this content inside the option descriptions. Always include the filename as a clickable link so the user can jump to the file:
+**For each batch**, output the context block for every item in that batch as plain text first — before calling AskUserQuestion. Do not put this content inside the option descriptions. Group the text blocks by article with the article name and a clickable link as a sub-heading, so the user can see which file each item belongs to:
 
 ```
+**[Article title]** ([path/to/file.mdx](path/to/file.mdx))
+
 **Issue:** [One plain sentence — no jargon — describing what was found and why it matters]
 **Location:** Line [N] in [filename](path/to/file.mdx)
 **Current:** "[exact text as it appears in the file]"
 **Proposed:** "[exact replacement text]"
 ```
 
-Output that block as text, then immediately call AskUserQuestion with:
-- Question: `Apply this change?`
+Then make **one** AskUserQuestion call containing one question entry per item in the batch (up to 4). Make each item's `question` text unique (e.g. include the file and line, like `Apply this change? [file.mdx:24]`) so answers don't collide when matched back up — the tool returns answers keyed by question text. For the standard case, each entry uses:
+- Question: `Apply this change? [file.mdx:line]`
 - Option 1: `Yes — apply it`
 - Option 2: `No — skip it`
 
-Keep the option descriptions brief (one short sentence max) — all the detail the user needs is in the text block above. Do not repeat the Issue/Current/Proposed content inside the option descriptions.
+Keep the option descriptions brief (one short sentence max) — all the detail the user needs is in the text blocks above. Do not repeat the Issue/Current/Proposed content inside the option descriptions.
 
-The question automatically includes an "Other" free-text field. If the user types their own version there, apply their text instead of the proposed change — do not apply the original proposed text.
+Each question automatically includes an "Other" free-text field. If the user types their own version there, apply their text instead of the proposed change — do not apply the original proposed text.
 
-Apply, apply-custom, or skip based on the response, then immediately move to the next item.
+Apply, apply-custom, or skip each item based on its answer, then move to the next batch. If a collapsed duplicate item is approved, apply the fix at every location it covers.
 
 ---
 
-**Special cases — use these instead of the standard format when the item doesn't have an obvious proposed change. As with the standard format, output the context block as text first, then call AskUserQuestion:**
+**Special cases — mix these into the same batches as standard items (still up to 4 questions per call total). As with the standard format, output every item's context block as text first, then call AskUserQuestion once for the whole batch:**
 
 **Prohibited term with no obvious replacement:**
 
 ```
 **Issue:** "[term]" is a prohibited term — it should not appear in partner-facing documentation.
-**Location:** Line [N]
+**Location:** Line [N] (and any other lines with the same term/fix — see Collapse duplicates above)
 **Current:** "[exact sentence]"
 **Question:** What should this say instead?
 ```
 
-Use AskUserQuestion with options tailored to the context, e.g.:
+Use an AskUserQuestion entry with options tailored to the context, e.g.:
 - `Remove the sentence entirely`
 - `Replace "[term]" with "[suggested alternative]"`
 - `Leave it for now — I'll handle this manually`
@@ -163,7 +173,7 @@ Use AskUserQuestion with options tailored to the context, e.g.:
 **Note:** This changes the article's URL. Check for any existing inbound links to the old URL before confirming.
 ```
 
-Use AskUserQuestion:
+Use an AskUserQuestion entry with:
 - `Yes — rename the file`
 - `No — leave the filename as-is`
 
@@ -176,15 +186,13 @@ Use AskUserQuestion:
 **This needs an SME to verify** — I can't propose a safe change here without product confirmation.
 ```
 
-Use AskUserQuestion:
+Use an AskUserQuestion entry with:
 - `Flag it with an inline comment for SME follow-up`
 - `Leave it as-is — I'll handle it separately`
 
 ---
 
-**After all items for an article are complete**, move straight to the next article without a summary — keep momentum going.
-
-**After all articles are complete**, if any articles had items in their **Needs verification** section, print a compact checklist before the closing summary:
+**After all batches are complete**, if any articles had items in their **Needs verification** section, print a compact checklist before the closing summary:
 
 > **Before creating your PR, verify these manually in the live product:**
 > - [Article title]: [the specific thing to check]
