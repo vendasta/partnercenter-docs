@@ -125,10 +125,11 @@ You stay in control: because a site is only ever created by *sending the onboard
 
 ### Turning the email on
 
-The onboarding email is **default-on** in the single-user creation flow, so it's selected automatically when you add a user to an account:
+The onboarding email is **default-on** wherever you add a user, so it's selected automatically:
 
 - From an account: **Accounts → Manage Accounts →** select the account **→ Add users → Create User**.
 - Or from **Accounts → Manage Users**.
+- Or from the **Users** panel of Easy Account Create, while you're creating the account itself — see [Creating users in Easy Account Create](#creating-users-in-easy-account-create).
 
 When the onboarding email is enabled, it **replaces** the classic welcome email for that user — the two aren't sent together.
 
@@ -160,16 +161,33 @@ Each time you send the onboarding email, you can include a **custom greeting** �
 - It appears in the **preview**, so you can check it before sending.
 - It applies to **that send only**. It isn't saved as a default for future emails.
 
-The custom greeting is available when creating a new user, when sending to an existing user from the options menu, and when sending from the CRM. This matches how the custom message on the classic welcome email has always worked.
+The custom greeting is available when creating a new user, when sending to an existing user from the options menu, when sending from the CRM, and in the **Users** panel of Easy Account Create. This matches how the custom message on the classic welcome email works.
 
 ### Creating users in Easy Account Create
 
-When you add users as part of **Easy Account Create**, the form now matches the standard create-user flow, so the onboarding email arrives correctly addressed:
+You can add an account's first users while you create the account, in the **Users** panel of Easy Account Create. Those users receive the onboarding email instead of the classic welcome email.
 
-- **Correspondence language** — sets the language the email is sent in. English is the default.
-- **Greeting name** — the name used to address the person in the email.
+- **Send Onboarding Email** is selected by default. Clear it and no email of either kind is sent.
+- **Custom introductory message** — an optional greeting added to the top of the email. It applies to this account creation only and isn't saved as a default.
+- **Preview email** — opens the email before the account exists. It's branded with your white label, stands in a placeholder business name for the account you're creating, and renders in the language Partner Center is displayed in.
 
-If any user in the batch can't be created or associated, a message names the specific users that failed, so you can retry just those rather than re-running the whole batch.
+Each user you add also carries a **Correspondence language**, which sets the language their email is sent in, and a **Greeting name**, the name used to address them. English is the default language.
+
+**One send for the whole account.** Everyone you added is emailed together, once the account is ready:
+
+1. The account and its users are created, and the products you selected begin activating.
+2. If Vibe is active, the demo website is built — see [How a Vibe website is kicked off](#how-a-vibe-website-is-kicked-off).
+3. Once those products are active and the site is built, or after **15 minutes**, whichever comes first, the onboarding email goes to every user you added.
+
+That wait is what lets a single email list the products the client just bought and link to their new website, rather than each user getting a separate email that arrived before any of it existed. If the 15 minutes elapse first the email is still sent — it just leaves out whatever wasn't ready.
+
+The email uses the white-label branding of the **market selected on the account**, so partners running several markets get the right sender and logo without an extra step.
+
+**If something doesn't go through:**
+
+- If a user can't be created or associated, a message names the specific users that failed, so you can retry just those rather than re-running the whole batch.
+- If the email can't be sent to someone, the message names their email address so you know who to follow up with. The account and the other recipients are unaffected.
+- Entering an email address that already belongs to a user shows an error on the field. Add that person from the **Add existing user** tab instead — existing users are onboarded alongside the new ones.
 
 <img src={require('./img/ai-onboarding-create-user.png').default} alt="The Create User form with the 'Send Onboarding Email' checkbox selected by default and a Preview button beside it" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -306,7 +324,23 @@ Note that turning off the "AI has done the work" card in Customize Business App 
 <details>
 <summary>Do I have to use the onboarding email instead of the welcome email?</summary>
 
-No. In the create-user flow the onboarding email is selected by default and replaces the classic welcome email for that user, because it shows value up front — but it's your choice. If you'd rather send the classic welcome email, clear the **Send Onboarding Email** checkbox. For fully custom messaging, you can also use a Marketing Campaign.
+No. The onboarding email is selected by default and replaces the classic welcome email for that user, because it shows value up front — but it's your choice. If you'd rather send the classic welcome email, clear the **Send Onboarding Email** checkbox. For fully custom messaging, you can also use a Marketing Campaign.
+
+</details>
+
+<details>
+<summary>I created an account and added users in one go — when does the email arrive?</summary>
+
+Within about 15 minutes. The platform holds the send until the products you selected on that account have finished activating and, if Vibe is active, the demo website has been built. It then emails everyone you added, all at once, so each person gets the same summary listing the products just purchased and a link to the new website.
+
+Fifteen minutes is the ceiling, not the target — most sends go out as soon as everything settles. If the wait runs out first, the email still goes; it simply leaves out anything that wasn't ready.
+
+</details>
+
+<details>
+<summary>I added several users while creating an account. Does each one get their own email?</summary>
+
+Each person receives their own copy, addressed to them in their correspondence language, but they all go out together as one send for that account. That's why a custom introductory message you type on the account creation form reaches everyone you added, and why the product list is identical for all of them.
 
 </details>
 
