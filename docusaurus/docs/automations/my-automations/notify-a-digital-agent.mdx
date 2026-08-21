@@ -1,0 +1,61 @@
+---
+title: Notify a digital agent
+description: Learn how to use the Notify a digital agent action to send in-app and email notifications to a fulfillment agent in an automation.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, notifications, fulfillment, digital-agent]
+keywords: [notify digital agent, fulfillment agent notification, automation notification, alert fulfillment agent, task manager notification]
+---
+
+# Notify a digital agent
+
+**Notify a digital agent** sends an in-app and email notification to a fulfillment agent. Use it to alert the person responsible for delivering a service when an automation reaches a point that requires human action. This action is available on account-scoped triggers.
+
+## How it works
+
+1. The automation reaches the **Notify a digital agent** step with an account in scope
+2. The step identifies the target fulfillment agent — either a specific person or the assigned agent
+3. Both an in-app notification and an email are sent with the content you configured
+4. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Notifications**, select **Notify a digital agent**
+3. Configure the fields:
+
+### Recipient
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Fulfillment agents** | Yes | The fulfillment agent(s) to notify. Select specific team members or leave as **Assigned fulfillment agent** to target whoever is assigned to the account. |
+
+:::info
+In account templates and default automations, the recipient is locked to **Assigned fulfillment agent** and cannot be changed. This ensures the notification always reaches the right person regardless of which account the template is applied to.
+:::
+
+### Notification content
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **In-app message** | Yes | The text displayed in the in-app notification. |
+| **In-app link** | Yes | The URL the notification links to when clicked in-app. Defaults to the Task Manager page for the account. |
+| **Email subject** | Yes | The subject line of the email notification. |
+| **Email message** | Yes | The body of the email notification. Supports rich text formatting. |
+| **Email button text** | Yes | The label on the email's call-to-action button. |
+| **Email link** | Yes | The URL the email button links to. Defaults to the Task Manager page for the account. |
+
+:::tip
+Use **Add dynamic content** in any text or link field to insert values from a previous step. You can use `{{business_id}}` and `{{partner_id}}` in link fields as placeholders that resolve at runtime.
+:::
+
+## Outputs
+
+This action produces no outputs available to downstream steps.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Notify a salesperson](./notify-a-salesperson.mdx) — Notify salespeople assigned to the account
+- [Notify a user](./notify-a-user.mdx) — Notify specific users
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

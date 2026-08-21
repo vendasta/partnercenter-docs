@@ -1,0 +1,39 @@
+---
+title: Format text
+description: Learn how to use the Format text action to transform a text value using formatting rules before passing it to another step.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, advanced, text, formatting]
+keywords: [format text, text transformation, uppercase, trim, replace, text automation, string operations]
+---
+
+# Format text
+
+**Format text** transforms a text value using formatting rules — such as uppercase, lowercase, trim, or find-and-replace — before passing it to the next step. Use it to clean up dynamic content or normalize data between steps.
+
+## How it works
+
+1. The automation reaches the **Format text** step
+2. You provide the input text and select the formatting operation
+3. The step applies the transformation and outputs the result
+4. The formatted text is available to downstream steps via dynamic content
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Advanced**, select **Format text**
+3. Configure the input text and formatting operation
+
+:::tip
+Use **Add dynamic content** to insert the text you want to format from a previous step. Chain multiple **Format text** steps for complex transformations.
+:::
+
+## Outputs
+
+After the step runs, the formatted text value is available to downstream steps via **Add dynamic content**.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Data expressions in automations](./data-expressions.mdx) — Extract and transform data between steps
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

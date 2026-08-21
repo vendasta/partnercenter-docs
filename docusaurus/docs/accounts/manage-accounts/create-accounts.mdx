@@ -7,6 +7,8 @@ tags: [account-creation, business-profile, bulk-import]
 keywords: [create-account, add-business, account-setup, bulk-import]
 ---
 
+import { GraduationCapIcon } from '@site/src/components/Icons';
+
 # Create Accounts
 
 ## What is account creation?
@@ -42,7 +44,7 @@ Creating accurate business accounts is essential because:
 
 The fastest way to create accounts for known businesses:
 
-1. Navigate to **Accounts** > **Manage Accounts**
+1. Navigate to `Accounts` → `Manage Accounts`
 2. Click `Create Account` in the upper right corner
 3. **Search for the business**:
    - Enter business name and location (e.g., "Starbucks, Broadway, New York, NY")
@@ -65,15 +67,15 @@ When businesses don't appear in search results:
 
 1. Click `Go to Account Creation` from the search interface
 2. **Complete required business information**:
-   - **Business Name**: Official business name as it appears publicly
-   - **Street Address**: Physical business location
-   - **City, State/Province, ZIP**: Complete location details
-   - **Country/Region**: Business location country
-   - **Phone Number**: Primary business contact number
-   - **Business Categories**: Select up to 3 relevant categories
+   - `Business Name`: Official business name as it appears publicly
+   - `Street Address`: Physical business location
+   - `City, State/Province, ZIP`: Complete location details
+   - `Country/Region`: Business location country
+   - `Phone Number`: Primary business contact number
+   - `Business Categories`: Select up to 3 relevant categories
 
 :::info Business Categories Reference  
-For a complete list of available business categories and guidance on proper classification, see [Business Categories](../../directory/business-categories.mdx). Proper categorization ensures optimal product features and integration capabilities.
+For a complete list of available business categories and guidance on proper classification, see [Business Categories](../directory/business-categories.mdx). Proper categorization ensures optimal product features and integration capabilities.
 :::
 
 :::warning
@@ -81,25 +83,25 @@ If no suitable category exists, select "Other" - but note that some product feat
 :::
 
 3. **Add optional information**:
-   - **Website URL**: Business website address
-   - **Customer Identifier**: Your internal tracking ID
-   - **Business Description**: Brief description of services
-   - **Additional Contact Info**: Secondary phone, fax, email
+   - `Website URL`: Business website address
+   - `Customer Identifier`: Your internal tracking ID
+   - `Business Description`: Brief description of services
+   - `Additional Contact Info`: Secondary phone, fax, email
 4. **Configure account settings**:
-   - **Market Assignment**: Select appropriate geographic market
-   - **Service Area**: Choose if business serves customers at their location
-   - **Business Hours**: Operating schedule information
+   - `Market Assignment`: Select appropriate geographic market
+   - `Service Area`: Choose if business serves customers at their location
+   - `Business Hours`: Operating schedule information
 5. Click `Create Account` to save
 
 ### Handling special business types
 
-**Service Area Businesses (SABs)** — businesses that serve customers at the customer's location and have no fixed public storefront (plumbers, landscapers, mobile pet groomers, etc.):
+**Service Area Businesses (SABs)**: businesses that serve customers at the customer's location and have no fixed public storefront (plumbers, landscapers, mobile pet groomers, etc.):
 
-SABs commonly don't appear in the account creation search bar. This is expected — the search uses Google's Locations API, which only surfaces businesses with a verified physical address. An SAB that doesn't list a street address publicly won't appear in results.
+SABs commonly don't appear in the account creation search bar. This is expected. The search uses Google's Locations API, which only surfaces businesses with a verified physical address. An SAB that doesn't list a street address publicly won't appear in results.
 
 **To create an account for an SAB:**
 
-1. In the **Create Account** search, type the business name. If it doesn't appear, click **Skip to Account Creation** (or **Go to Account Creation**).
+1. In the `Create Account` search, type the business name. If it doesn't appear, click `Skip to Account Creation` (or `Go to Account Creation`).
 2. Fill in the business name and a valid street address. If the SAB has no public address, use the owner's address or a city/ZIP placeholder.
 3. Once the account is created, update the listing to define a service area radius and remove or hide the public street address if needed.
 
@@ -109,15 +111,15 @@ Creating an account with **no street address** limits Listing Sync and other lis
 
 **Multi-Location Businesses**:
 
-**Multi-Location Businesses** — create separate accounts for each physical location, use a consistent naming convention (e.g., "Business Name - Location"), and plan to group them using Multi-Location Groups later.
+**Multi-Location Businesses**: create separate accounts for each physical location, use a consistent naming convention (e.g., "Business Name - Location"), and plan to group them using Multi-Location Groups later.
 
 ## How to import multiple accounts
 
-### Preparing for Bulk Import
+### Preparing for bulk import
 
 Before importing accounts:
 
-1. Navigate to **Accounts** > **Manage Accounts**
+1. Navigate to `Accounts` → `Manage Accounts`
 2. Click `Import Accounts`
 3. **Download the CSV template** to ensure proper formatting
 4. **Gather required data** for all businesses:
@@ -135,7 +137,7 @@ Before importing accounts:
 - State/Province
 - ZIP/Postal Code
 - Phone Number
-- Business Category (see [Business Categories guide](../../directory/business-categories.mdx) for valid options or [download the complete list](../../directory/downloads/business-categories-list.csv))
+- Business Category (see [Business Categories guide](../directory/business-categories.mdx) for valid options or [download the complete list](../directory/downloads/business-categories-list.csv))
 
 **Optional columns:**
 - Customer Identifier
@@ -144,7 +146,7 @@ Before importing accounts:
 - Market Assignment
 - Additional Contact Information
 - Business Hours
-- `ServiceAreaBusiness` — set to `TRUE` if the account is a Service Area Business; `FALSE` or blank otherwise. This field is **case-sensitive**: only `TRUE` and `FALSE` (uppercase) are valid. Using `true`, `True`, `yes`, or any other value will cause the row to fail validation.
+- `ServiceAreaBusiness`: set to `TRUE` if the account is a Service Area Business; `FALSE` or blank otherwise. This field is **case-sensitive**: only `TRUE` and `FALSE` (uppercase) are valid. Using `true`, `True`, `yes`, or any other value will cause the row to fail validation.
 
 **Save format:** Save your file as **CSV UTF-8** (not standard CSV or Excel format) to avoid character encoding errors during import.
 
@@ -192,7 +194,7 @@ After import, the system attempts to enrich each account with data from Google (
 - No Google listing exists for the business
 - The account has no street address (SABs without an address are not enriched)
 
-Accounts that aren't enriched still import successfully — they just retain only the data from your CSV.
+Accounts that aren't enriched still import successfully. They just retain only the data from your CSV.
 
 ## How to handle account creation issues
 
@@ -221,8 +223,8 @@ Accounts that aren't enriched still import successfully — they just retain onl
 - **Missing required fields**: Complete all required columns in CSV
 - **Invalid phone formats**: Use consistent formatting (e.g., (555) 123-4567)
 - **Address validation failures**: Verify addresses exist and are properly formatted
-- **Category assignment errors**: Use exact category names from the system (refer to [Business Categories](../../directory/business-categories.mdx) or [download the complete list](../../directory/downloads/business-categories-list.csv) for all valid category options)
-- **`ServiceAreaBusiness` validation error**: This field only accepts `TRUE` or `FALSE` (uppercase). Using any other value — including `true`, `yes`, `1`, or leaving it as a non-blank non-`TRUE`/`FALSE` value — will cause the row to fail. Blank is treated as `FALSE`.
+- **Category assignment errors**: Use exact category names from the system (refer to [Business Categories](../directory/business-categories.mdx) or [download the complete list](../directory/downloads/business-categories-list.csv) for all valid category options)
+- **`ServiceAreaBusiness` validation error**: This field only accepts `TRUE` or `FALSE` (uppercase). Using any other value, including `true`, `yes`, `1`, or leaving it as a non-blank non-`TRUE`/`FALSE` value, will cause the row to fail. Blank is treated as `FALSE`.
 
 **Duplicate business handling:**
 - **Similar names**: Review carefully for legitimate duplicates vs. similar businesses
@@ -264,13 +266,13 @@ You can adjust user permissions later from Manage Users if needed.
 
 ## Troubleshooting business search
 
-If a business doesn’t appear in the `Create account` search:
+If a business doesn’t appear in the `Create Account` search:
 
-- **Service Area Business** — SABs without a public address are not returned by Google’s Locations API, which powers the search. This is expected, not a bug. Click **Skip to Account Creation** to add the account manually.
-- **New or recently listed businesses** — New businesses may not yet appear in Google’s database. Use manual creation.
-- **Name variations** — Try shortened names (drop "LLC", "Inc.", etc.) or search by address instead.
+- **Service Area Business**: SABs without a public address are not returned by Google’s Locations API, which powers the search. This is expected, not a bug. Click `Skip to Account Creation` to add the account manually.
+- **New or recently listed businesses**: New businesses may not yet appear in Google’s database. Use manual creation.
+- **Name variations**: Try shortened names (drop "LLC", "Inc.", etc.) or search by address instead.
 
-Clicking **Skip to Account Creation** always lets you create the account manually regardless of whether it appears in search results.
+Clicking `Skip to Account Creation` always lets you create the account manually regardless of whether it appears in search results.
 
 ## Frequently asked questions (FAQs)
 
@@ -315,7 +317,7 @@ Review the error messages, correct data formatting issues in your CSV file, and 
 
 SABs often won't appear in the Create Account search because Google's Locations API doesn't surface businesses without a verified public address. To create the account:
 
-1. Type the business name in the search bar. If it doesn't appear, click **Skip to Account Creation**.
+1. Type the business name in the search bar. If it doesn't appear, click `Skip to Account Creation`.
 2. Enter the business name and a street address (use the owner's address or a placeholder city/ZIP if there's no public address).
 3. After the account is created, update the listing to define a service area and hide the street address if needed.
 
@@ -333,3 +335,15 @@ While creating accounts, you can configure default user settings for bulk import
 
 The Google Locations API is used to gather the Name, Address, Phone Number, Website, geo-location, Business Category and Hours of Operation.  The social profile URLs are gathered from the business website.
 </details>
+
+{/* growth-engine callout — commented out 2026-08-19 (Cal, Learn tab refresh) because the
+    Your growth engine path is hidden until its remaining steps and Snapshot videos ship.
+    Restore at relaunch; see training/growth-engine/index.mdx. */}
+{/*
+<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
+  <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
+  <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>
+    New to running the full sales motion? Take the <a href="/learn/growth-engine" style={{color: '#3C9A63', fontWeight: 600}}>Your growth engine</a> course in Vendasta Learn — Beginner, 6 lessons.
+  </span>
+</div>
+*/}

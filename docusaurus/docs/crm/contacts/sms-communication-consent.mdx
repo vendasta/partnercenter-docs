@@ -6,8 +6,6 @@ tags: [crm, contacts, sms, consent, campaigns]
 keywords: [SMS consent, communication consent, unset, subscribed, SMS not delivered]
 ---
 
-# SMS communication consent
-
 ## Why SMS messages from campaigns aren't delivered
 
 The most common reason campaign SMS messages aren't delivered to a contact is that their SMS consent is set to **Unset**. Unlike email, SMS legally requires **explicit opt-in consent** (Subscribed status) before messages can be sent. Contacts without confirmed consent are skipped by the campaign delivery system.
@@ -19,17 +17,17 @@ If you've sent an SMS campaign and some contacts didn't receive it, check their 
 | Status | What it means | Can receive SMS? |
 |--------|--------------|-----------------|
 | **Subscribed** | The contact has explicitly opted in to receive SMS | Yes |
-| **Unset** | No consent has been recorded — neither opted in nor opted out | No |
+| **Unset** | No consent has been recorded, neither opted in nor opted out | No |
 | **Unsubscribed** | The contact has opted out of SMS | No |
 
-**Unset is not the same as opted in.** A contact who hasn't explicitly opted out still cannot receive SMS until they are moved to Subscribed. This is a regulatory requirement — sending SMS without explicit consent can violate laws such as TCPA (US) and similar regulations in other jurisdictions.
+**Unset is not the same as opted in.** A contact who hasn't explicitly opted out still cannot receive SMS until they are moved to Subscribed. This is a regulatory requirement. Sending SMS without explicit consent can violate laws such as TCPA (US) and similar regulations in other jurisdictions.
 
 ## How to update SMS consent for a contact
 
-1. Go to **Partner Center** > **CRM** > **Contacts**.
+1. Go to `Partner Center` → `CRM` → `Contacts`.
 2. Open the contact's profile.
-3. Find the **Communication consent** section (usually in the contact details panel).
-4. Locate **SMS consent**.
+3. Find the `Communication consent` section (usually in the contact details panel).
+4. Locate `SMS consent`.
 5. Change the status to **Subscribed**.
 6. Save the record.
 
@@ -56,9 +54,9 @@ Contact your Vendasta account team to confirm the current bulk consent update op
 </details>
 
 <details>
-<summary>A contact texted back "STOP" — what happens?</summary>
+<summary>A contact texted back "STOP": what happens?</summary>
 
-When a contact replies STOP to an SMS, their consent is automatically updated to Unsubscribed. The platform honors opt-outs immediately. Do not manually reset their consent to Subscribed — doing so overrides their explicit opt-out request.
+When a contact replies STOP to an SMS, their consent is automatically updated to Unsubscribed. The platform honors opt-outs immediately. Do not manually reset their consent to Subscribed. Doing so overrides their explicit opt-out request.
 </details>
 
 <details>

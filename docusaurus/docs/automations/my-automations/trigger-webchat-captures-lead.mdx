@@ -1,0 +1,43 @@
+---
+title: "Trigger: Web Chat captures a lead"
+description: Start an automation when Web Chat captures a new lead from a website visitor.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, conversations]
+keywords: [web chat trigger, lead captured trigger, webchat lead, website visitor lead, chat automation trigger]
+---
+
+# Web Chat captures a lead
+
+**Web Chat captures a lead** fires whenever the Web Chat widget on a website captures a new lead — typically when a visitor submits their contact information during a chat session. Use this trigger to automate immediate follow-up, create CRM records, or assign the lead to a sales rep the moment it arrives.
+
+Speed of response matters for inbound leads. Pair this trigger with fast follow-up actions to maximize conversion.
+
+:::info Trigger scope
+This trigger operates at the **contact** scope. Contact, company, and account actions are available downstream.
+:::
+
+## How it works
+
+1. A website visitor interacts with the Web Chat widget and submits their contact information.
+2. Web Chat captures the lead and creates or matches a contact record.
+3. The automation evaluates any trigger conditions you've configured.
+4. If conditions are met, the workflow starts with the new contact in context, and downstream steps can use **Add dynamic content** to reference contact fields and chat details.
+
+## Available data
+
+Standard contact and account fields are available via **Add dynamic content**, along with any information collected during the chat session.
+
+| Output | Description |
+|---|---|
+| **Contact name** | Name provided by the visitor during chat |
+| **Contact email** | Email address captured from the chat session |
+| **Contact phone** | Phone number captured from the chat session (if provided) |
+| **Chat transcript** | The conversation content from the chat session |
+| **Account name** | The account the Web Chat widget is associated with |
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

@@ -1,0 +1,42 @@
+---
+title: "Trigger: A company is created or modified"
+description: Start an automation whenever a company record is created or any field on the record changes.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, company]
+keywords: [company created trigger, company modified trigger, company record changed, CRM company trigger, company scope trigger]
+---
+
+# A company is created or modified
+
+The **A company is created or modified** trigger starts an automation whenever a new company record is created in the CRM or any field on an existing company record changes. Use this trigger to keep downstream systems in sync or to kick off onboarding workflows the moment a company enters or updates in your CRM.
+
+:::info Trigger scope
+This trigger operates at the **company** scope. Company, account, and contact actions are available downstream.
+:::
+
+## How it works
+
+1. A company record is created for the first time, or a field on an existing company record is updated.
+2. The company and its associated account are brought into scope.
+3. Standard company fields — such as name, industry, and address — become available as dynamic content.
+4. Downstream steps execute using the full company and account context.
+
+## Available data
+
+Standard company and account fields are available to downstream steps via **Add dynamic content**.
+
+| Output | Description |
+|---|---|
+| **Company name** | The name of the company record |
+| **Industry** | Industry classification on the company record |
+| **Phone** | Primary phone number on the company record |
+| **Address** | Street, city, province/state, and country fields |
+| **Website** | Company website URL |
+| **Custom fields** | Any custom fields configured on the company object |
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

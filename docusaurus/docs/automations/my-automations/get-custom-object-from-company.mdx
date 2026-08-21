@@ -1,0 +1,34 @@
+---
+title: Get custom object from company
+description: Learn how to use the Get custom object from company action to retrieve a custom object record linked to a company.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, crm, custom-objects, company, lookup]
+keywords: [get custom object company, custom object lookup, company custom object, bring custom object into scope]
+---
+
+# Get custom object from company
+
+**Get custom object from company** retrieves a custom object record linked to the company in scope. Use it when you need to access or update custom object data in a company-scoped automation. This action is available on company-scoped triggers.
+
+## How it works
+
+1. The automation reaches the step with a company in scope
+2. The step looks up custom object records associated with the company
+3. The custom object record is brought into scope for downstream steps
+4. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Businesses**, select **Get custom object from company**
+
+## Outputs
+
+After the step runs, a custom object record is available in scope. Downstream steps can reference custom object fields via **Add dynamic content**.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Get custom object from contact](./get-custom-object-from-contact.mdx) — Retrieve a custom object from a contact instead
+- [Find custom object](./find-custom-object.mdx) — Search for a custom object by criteria
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

@@ -1,0 +1,41 @@
+---
+title: "Trigger: User asked a question"
+description: Start an automation whenever a user sends a message or question through Business App.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, users]
+keywords: [user question trigger, Business App message, user inquiry, automation trigger, account scope]
+---
+
+# User asked a question
+
+The **User asked a question** trigger starts an automation whenever a user submits a message or question through the **Business App**. Use this trigger to route inquiries, acknowledge questions instantly, or escalate messages that need attention.
+
+This trigger operates at the account scope, so account and user data are available to downstream steps.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account fields and user details are available downstream.
+:::
+
+## How it works
+
+1. A user sends a message or submits a question through **Business App**.
+2. The account associated with that user is brought into scope.
+3. The message content and user details become available as dynamic content.
+4. Downstream steps execute using the account and message context.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Message content** | The text of the question or message the user submitted |
+| **User name** | First and last name of the user who asked the question |
+| **User email** | Email address of the user |
+| **Account name** | The account the user belongs to |
+| **Asked at** | Timestamp when the question was submitted |
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

@@ -1,0 +1,42 @@
+---
+title: "Trigger: Custom object removed from a list"
+description: Start an automation whenever a custom object record is removed from a list.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, custom-objects]
+keywords: [custom object trigger, removed from list, custom object list, automation trigger, custom object scope]
+---
+
+# Custom object removed from a list
+
+The **Custom object removed from a list** trigger starts an automation whenever a custom object record is taken off a list. Use this trigger to react to records being uncategorized or moved out of a group.
+
+This trigger operates at the custom object scope, making all fields on the record available to downstream steps.
+
+:::info Trigger scope
+This trigger operates at the **custom object** scope. Custom object record fields are available downstream. Use lookup steps to bring account or company context into the workflow if needed.
+:::
+
+## How it works
+
+1. A custom object record is removed from a list, either manually or via another automation step.
+2. The custom object record is brought into scope.
+3. All fields on the record become available as dynamic content.
+4. Downstream steps execute using the record data.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Record ID** | Unique identifier for the custom object record |
+| **Record fields** | All custom fields defined on the object type |
+| **List name** | The name of the list the record was removed from |
+| **Removed at** | Timestamp when the record was removed from the list |
+
+Additional fields depend on how the custom object type is configured in your account.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

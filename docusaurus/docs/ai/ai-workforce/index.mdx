@@ -1,6 +1,6 @@
 ---
 title: AI Workforce Overview
-description: Overview of AI Employees — configure AI Workforce, capabilities, tools, and channels to automate conversations, capture leads, and handle customer interactions.
+description: Overview of AI Employees. Configure AI Workforce, capabilities, tools, and channels to automate conversations, capture leads, and handle customer interactions.
 tags: [ai-workforce, ai, ai-employees, capabilities]
 keywords: [AI workforce, AI employees, capabilities, tools, lead capture, web chat, automations]
 ---
@@ -16,7 +16,23 @@ See these guides for step-by-step setup or details on specific AI Employees:
 - [Set up the AI Voice Receptionist](./ai-voice-receptionist)
 - [AI Sales Assistant](./ai-sales-assistant) - Automatically record meetings, update CRM records, and chat with your CRM data
 - [Social Media Manager](./social-media-manager) - Generate social calendars with weekly scheduling defaults
+- [AI Search Specialist](./ai-search-specialist) - Open beta for Local SEO Pro: optimize business profiles and report on AI search visibility
 - [Create Custom AI Employees](./custom-ai-employees) - Build specialized AI employees for specific business functions
+
+## Social Media Manager defaults
+
+For newly activated **Social Media Manager** AI employees, `Social Calendar Generation` starts with these defaults:
+
+- `AI model`: `Gemini Flash Latest` (recommended)
+- `Trigger type`: `On a Schedule`
+- `Schedule defaults`:
+  - `Frequency`: Weekly
+  - `Day`: Monday
+  - `Time`: 9:00 AM
+  - `Timezone`: Uses the business timezone from Business App settings
+  - `Start date`: Current date
+  - `End date`: No end date
+- Available in web and mobile
 
 For more detail on setup:
 - [AI Capabilities Overview](../ai-capabilities/)
@@ -29,17 +45,17 @@ If you're just getting started, review the sections below for an overview of the
 
 ## AI Employee elements
 
-AI Employees all share a similar structure—no matter what role they play in your business. This applies to pre-built AI Employees (eg. Chat Receptionist, Voice Receptionist) and Custom AI Employees you create. Each one comes with common parts you can review and configure, such as their name, purpose, communication channels, capabilities, and what knowledge they use to answer questions. 
+AI Employees all share a similar structure, no matter what role they play in your business. This applies to pre-built AI Employees (eg. Chat Receptionist, Voice Receptionist) and Custom AI Employees you create. Each one comes with common parts you can review and configure, such as their name, purpose, communication channels, capabilities, and what knowledge they use to answer questions. 
 
 ### Profile
 
-The **Profile** section is where you set the basics for your AI Employee—how they appear to your team and how they introduce themselves to customers.
+The `Profile` section is where you set the basics for your AI Employee: how they appear to your team and how they introduce themselves to customers.
 
-- **Name & Avatar:**  
+- `Name & Avatar`:  
   **What this is:** The display name and image used for your AI Employee across your channels.  
   **What to do:** Choose a friendly, memorable name and a profile image (like your logo or a custom avatar) that fits the role or your brand. This helps customers and your team instantly recognize who they're interacting with.
 
-- **Purpose:**  
+- `Purpose`:  
   **What this is:** The job description and behavioral "guidelines" for your AI Employee. This sets the tone, goals, and important instructions for every conversation.  
   **What to do:** Write a clear, short summary of what your AI Employee should do. Be specific about their tone, greeting, and key tasks.
 
@@ -61,9 +77,9 @@ Use bullets or numbered lists to make instructions clear and scannable. Be speci
 
 ### Channels
 
-The **Channels** section lets you choose where your AI Employee will work for you.
+The `Channels` section lets you choose where your AI Employee will work for you.
 
-**What this is:** Channels are the different places or platforms where your AI Employee can interact with your customers—like website chat, SMS, phone calls, or even Google Meet.
+**What this is:** Channels are the different places or platforms where your AI Employee can interact with your customers, like website chat, SMS, phone calls, or even Google Meet.
 
 **What to do:**  
 Review the available channels for your AI Employee's role. Turn on only the channels that make sense for your business right now. For example, you might want your AI to respond on your website's chat widget, via text messages, or answer phone calls.
@@ -85,10 +101,10 @@ Some channels require specific products to unlock. For example, assigning a Cust
 
 ### Capabilities
 
-The **Capabilities** section is where you decide what your AI Employee can actually do for your business.
+The `Capabilities` section is where you decide what your AI Employee can actually do for your business.
 
 **What this is:**  
-Capabilities are like "skills" or "tasks" you can turn on or off, depending on the role of your AI Employee. Each capability tells your AI which actions it should take or what outcomes to prioritize—such as capturing leads, booking appointments, answering FAQs, or performing a role-specific function.
+Capabilities are like "skills" or "tasks" you can turn on or off, depending on the role of your AI Employee. Each capability tells your AI which actions it should take or what outcomes to prioritize, such as capturing leads, booking appointments, answering FAQs, or performing a role-specific function.
 
 **What to do:**  
 Review the available capabilities for your chosen AI Employee.
@@ -117,7 +133,7 @@ You can experiment with different capabilities to see what works best, and updat
 
 ### Tools
 
-The **Tools** section enables your AI Employee to interact with external systems and retrieve real-time information during conversations.
+The `Tools` section enables your AI Employee to interact with external systems and retrieve real-time information during conversations.
 
 **What this is:**  
 Tools are connections to APIs (external software systems) that your AI Employee can use to perform actions or retrieve information that goes beyond their built-in knowledge. For example, tools can check weather forecasts, look up inventory, create records in your CRM, or verify appointment availability in real-time.
@@ -148,10 +164,10 @@ Most standard business needs (like appointment booking or lead capture) are hand
 
 ### Knowledge sources
 
-The **Knowledge Sources** section is where you teach your AI Employee about your business, so it can give accurate, up-to-date answers to customers.
+The `Knowledge Sources` section is where you teach your AI Employee about your business, so it can give accurate, up-to-date answers to customers.
 
 **What this is:**  
-Knowledge sources are collections of business information your AI can refer to during conversations—such as website pages, FAQs, or uploaded documents. The AI uses this info only when it needs to answer a relevant question.
+Knowledge sources are collections of business information your AI can refer to during conversations, such as website pages, FAQs, or uploaded documents. The AI uses this info only when it needs to answer a relevant question.
 
 **What to do:**  
 Add any information that would help your AI answer questions or provide better service:
@@ -185,13 +201,13 @@ There's no separate menu for per-channel behavior. Instead, you write **channel-
 **What to do:**  
 Add channel-specific instructions in either (or both) of these places:
 
-- **The Purpose field** (labeled `Role` on the Chat and Voice Receptionists) — best for behavior that should apply across everything the employee does, such as tone, greeting style, or reply length per channel.
-- **A capability's instructions** — best for shaping a single task, such as how much information to collect for lead capture on SMS versus email.
+- The `Purpose` field (labeled `Role` on the Chat and Voice Receptionists): best for behavior that should apply across everything the employee does, such as tone, greeting style, or reply length per channel.
+- A capability's instructions: best for shaping a single task, such as how much information to collect for lead capture on SMS versus email.
 
 Reference the channel by name in your instructions and describe how you want the AI to behave there. For example, add lines like these to your Purpose field or a capability's instructions:
 
 ```text wrap
-When responding on SMS, keep replies short and conversational. Use plain text only — no bullet points, headings, or markdown, since text messages display them as raw symbols. Aim for one or two sentences.
+When responding on SMS, keep replies short and conversational. Use plain text only (no bullet points, headings, or markdown), since text messages display them as raw symbols. Aim for one or two sentences.
 
 When responding by email, you can write longer, more detailed replies. Open with a professional greeting and sign off with the business name.
 
@@ -203,7 +219,7 @@ Only add channel-specific instructions for the channels where the default behavi
 :::
 
 :::info Instructions shape communication, not actions
-These instructions change *how* your AI Employee communicates on each channel. They don't change *which* actions it can take — those come from its capabilities and tools. See the [AI Capabilities Overview](../ai-capabilities/).
+These instructions change *how* your AI Employee communicates on each channel. They don't change *which* actions it can take: those come from its capabilities and tools. See the [AI Capabilities Overview](../ai-capabilities/).
 :::
 
 ---
@@ -233,7 +249,7 @@ After initial setup, regularly test and optimize your AI Employees to ensure the
 - Identify common customer questions that need better responses
 
 **Use AI Explanations**
-- Click "Explanation" on any AI response to see:
+- Click `Explanation` on any AI response to see:
   - The reasoning behind the AI's decisions
   - Which knowledge sources were used
   - What tools were called and their API responses
@@ -248,10 +264,10 @@ After initial setup, regularly test and optimize your AI Employees to ensure the
 - Tone or behavior that doesn't match expectations
 
 **2. Determine the Root Cause**
-- **Purpose issue**: Adjust if it affects overall behavior across all conversations
-- **Capability issue**: Refine when specific actions aren't working correctly
-- **Knowledge issue**: Update when facts are missing or incorrect
-- **Tool issue**: Fix when API calls fail or return wrong data
+- `Purpose` issue: Adjust if it affects overall behavior across all conversations
+- `Capability` issue: Refine when specific actions aren't working correctly
+- `Knowledge` issue: Update when facts are missing or incorrect
+- `Tool` issue: Fix when API calls fail or return wrong data
 
 **3. Make Focused Changes**
 - Change only one thing at a time
@@ -267,13 +283,13 @@ After initial setup, regularly test and optimize your AI Employees to ensure the
 - Test after every configuration change
 - Monitor live conversations regularly (weekly is a good starting point)
 - Keep notes on what works and what doesn't
-- Be patient—optimizing AI Employees is an iterative process that improves over time
+- Be patient. Optimizing AI Employees is an iterative process that improves over time
 :::
 
-<div style={{display: 'flex', alignItems: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px 0'}}>
+<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
   <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
-  <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)'}}>
-    New to how AI Employees work? Take the <a href="/learn/ai-foundations" style={{color: '#3C9A63', fontWeight: 600}}>AI foundations</a> course in Vendasta Learn — Beginner, 6 lessons.
+  <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>
+    New to how AI Employees work? Take the <a href="/learn/ai-foundations" style={{color: '#3C9A63', fontWeight: 600}}>AI foundations</a> course in Vendasta Learn (Beginner, 6 lessons).
   </span>
 </div>
 

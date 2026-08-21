@@ -43,7 +43,7 @@ This call happens before the launch or completion of a service and in many cases
 
 ## Post-launch call
 
-This is unique to MatchCraft Managed Ads orders. All work is completed and the ads are made ready to launch, after which a post-launch call is set up with you to discuss expectations around campaign performance, optimizations, and future strategy calls (when applicable).
+This is unique to Specialty Ad Campaign orders. All work is completed and the ads are made ready to launch, after which a post-launch call is set up with you to discuss expectations around campaign performance, optimizations, and future strategy calls (when applicable).
 
 
 ## Project tracking in Business App

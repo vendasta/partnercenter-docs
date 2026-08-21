@@ -21,6 +21,7 @@ A template captures the full configuration of a source account, including:
 - Web chat widgets and settings
 - Forms
 - CRM fields
+- CRM field layouts
 - Campaigns
 - Automations
 
@@ -57,6 +58,14 @@ To set this up:
 
 This lets you apply or re-apply a template based on any condition an automation can evaluate.
 
+## Including CRM field layouts
+
+A [field layout](/administration/data-management/crm-objects/field-layouts) — the grouping and ordering of fields on contact, company, opportunity, and custom object records — can be rolled out with a template so every account presents its records the same way.
+
+- Only customized layouts are captured. Object types still on the standard layout are skipped.
+- If a layout references custom fields or a custom object type the target account doesn't have, those are created there first and the layout is repointed at them.
+- Applying a template replaces the target account's layout for that object type. Any layout customization already made on the target account is overwritten.
+
 ## Including forms and web chat widgets
 
 Forms and web chat widgets configured on the source account can be included in the template and rolled out to every account the template is applied to. This is particularly useful when:
@@ -71,6 +80,10 @@ After improving the source account a template was built from, click **Update tem
 ## Using template application as an automation trigger
 
 When a template finishes applying, the target account receives an activity log entry. Automations can listen for that entry and chain downstream work off a completed template application, such as rep assignment or coupon form setup.
+
+## Custom object limits
+
+Each account can have up to 3 [CRM custom objects](/crm/custom-objects). If applying a template would push a target account past this limit, the application fails for that account and Partner Center shows an error identifying the cause, rather than failing silently.
 
 ## Who this is for
 
