@@ -75,11 +75,20 @@ rather than trusting this list blindly, since folders do get added.
 
 ## Where raw transcripts live
 
-Raw source transcripts (before extraction) belong in `learn-revamp/transcripts/`
--- see that folder's `README.md` for naming convention. That folder is
-git-ignored on purpose (raw verbatim call text can carry names/numbers that
-don't need to sit in git history); only the distilled output in
-`learn-revamp/transcript-notes/` gets committed. If the user points at a file
+**Raw transcripts live outside the repo entirely.** Not merely git-ignored inside
+it -- outside it. A git-ignored folder still puts unredacted partner names,
+business specifics, and negotiated pricing on disk inside a shared working
+copy, one `git add -f` or one ignore-rule edit away from history. Keep the raw
+files in a folder outside the repository and point the skill at that path when
+processing.
+
+Only the **distilled, redacted** output in `learn-revamp/transcript-notes/`
+lives in the repo, and it gets committed. The separation is the whole point:
+raw text outside, knowledge inside.
+
+*(Standing instruction from Shiva, 2026-08-18. The legacy in-repo
+`learn-revamp/transcripts/` folder predates this rule; it is git-ignored, and
+its contents should be relocated outside the repo.)* If the user points at a file
 there, or pastes text directly in chat, either is a valid input -- check the
 folder for anything not yet processed when asked to "catch up on transcripts"
 or similar.
@@ -88,11 +97,11 @@ or similar.
 
 ### Step 1: Read the full transcript
 
-Use the Read tool (or the pasted text directly) — do not skim or summarize from a partial read. Note the source metadata if available: who was on the call, their role (SME name, partner name, CS rep), the date, and what the call was nominally booked for. If metadata is missing, ask the user for at least a name and date before filing anything (notes with no provenance are not useful later, and `learning-path-writing` rule 19 requires `[CALL]` source tags to trace back to something).
+Use the Read tool (or the pasted text directly) — do not skim or summarize from a partial read. **Read the body, and treat the filename as telling you nothing.** The filename is a label someone typed; what the call covers is decided only by its content, and the two disagree often. Never let a filename set your expectation of what you are about to find, and never skip a file because its name looks off-topic. Note the source metadata if available: who was on the call, their role (SME name, partner name, CS rep), the date, and what the call was nominally booked for. If metadata is missing, ask the user for at least a name and date before filing anything (notes with no provenance are not useful later, and `learning-path-writing` rule 19 requires `[CALL]` source tags to trace back to something).
 
 ### Step 2: Identify every topic actually covered
 
-Walk the transcript and tag each stretch of content with the topic slug(s) from the taxonomy above that it belongs to. A topic only counts as "covered" if there is enough substance to extract a real workflow, gotcha, terminology point, or concrete fact — a single passing mention ("we also use Social Marketing sometimes") is not enough to warrant a section; a few sentences explaining how or why is.
+Walk the transcript and tag each stretch of content with the topic slug(s) from the taxonomy above that it belongs to. Derive this from the words spoken, never from the filename or the meeting title -- a call booked as one thing regularly spends most of its time on another, and that wandering is where the useful material is. A topic only counts as "covered" if there is enough substance to extract a real workflow, gotcha, terminology point, or concrete fact — a single passing mention ("we also use Social Marketing sometimes") is not enough to warrant a section; a few sentences explaining how or why is.
 
 List the topics found before writing anything, e.g.:
 
@@ -103,7 +112,7 @@ List the topics found before writing anything, e.g.:
 For each topic identified, write a **detailed, in-your-own-words** account of what was said — not a transcript excerpt or word-for-word copy. Preserve:
 
 - Concrete steps, in order, if a workflow was walked through
-- Exact terminology, product names, UI labels, prices, and numbers (these should stay precise, unlike prose around them)
+- Exact terminology, product names, UI labels, and non-commercial numbers (these should stay precise, unlike prose around them). **Never carry a price, fee, or rate across into a note** -- see the redaction rule below. Counts, durations, limits and thresholds ("15 keywords per location", "7 to 10 business days") are fine and should stay exact; currency figures are not.
 - Gotchas, failure modes, and the fix ("if X happens, do Y")
 - Direct quotes only when the phrasing itself is the point (a metaphor, a verbatim objection) — keep these short and attributed, per the copyright limits already in place for this workspace (short quotes only, attributed, no reproducing large spans verbatim)
 
@@ -118,10 +127,10 @@ Provenance says who spoke; these tags say what kind of claim it is and how far t
   - **The verifier signs it first-person, where a human is on record** — a line in the commit message or a PR comment in their own words ("I checked Level 3 is the default in-product on July 21 — screenshot attached"). An AI may draft the surrounding notes, but it must never author the attestation on the human's behalf. A verification the model claims on someone's behalf is not a verification.
   - **Name the evidence** — screenshot, screen recording, or at minimum a dated "checked live." The stronger the claim (anything safety- or money-relevant, like an autonomy default), the more it earns a captured artifact rather than a memory.
   - Any `[VERIFIED IN-PRODUCT]` claim also carries a standing flag to get it into the docs, so it can graduate to a real `[DOC]` citation and stop depending on one person's check.
-- `[COMMERCIAL]` — a price, fee, tier, or billing term stated as general. Use `[COMMERCIAL — partner-specific]` for anything that applies to one partner's negotiated deal (net terms, per-brand rate, one-off onboarding fee).
+- `[COMMERCIAL]` — a pricing, fee, tier, or billing *structure* stated as general. **Record the structure, never the figure** (see the redaction rule): "tiering runs standard/pro/premium, voice gated to the top tier" is filable; the monthly rates are not. Use `[COMMERCIAL — partner-specific]` for anything shaped by one partner's negotiated deal, and note only that it was negotiated, not the terms. Every `[COMMERCIAL]` note carries an implicit instruction to the downstream author: verify the current number in the platform.
 - `[FIELD]` — a sales or usage technique, a recommendation, or an opinion. True as "what this person does or believes," not as product truth.
 - `[SPECULATION]` — a roadmap guess, an ETA, a "working theory," or anything the speaker themselves framed as unconfirmed. Carry the hedge verbatim.
-- `[DEMO]` — a value read off a demo, test, or fake account (a sample price, a placeholder business). Never a real figure.
+- `[DEMO]` — a value read off a demo, test, or fake account (a placeholder business, sample data). Never a real figure, and never reusable as an example in a lesson without saying it is demo data.
 
 Judge a claim by who is making it (authority ladder, highest first):
 
@@ -160,7 +169,7 @@ Each entry below is one source call — do not merge or overwrite prior entries.
 **Source:** [CALL] <one-line description of the call, e.g. "Alistair, technical setup walkthrough, screen recording">
 
 1. <Claim in your own words.> [PRODUCT]
-2. <A price that applies only to this partner's deal.> [COMMERCIAL — partner-specific]
+2. <The shape of a commercial arrangement specific to this partner's deal, figures withheld.> [COMMERCIAL — partner-specific]
 3. <A rep's recommended technique.> [FIELD]
 4. <A roadmap guess the speaker hedged.> [SPECULATION]
    - Corroborated by [CALL] <other source/date>.  ← added when a later call confirms an existing claim (Step 4)
@@ -186,13 +195,26 @@ If a topic file already had entries, mention that too, so the user knows this is
 
 ## Guardrails
 
+- **Redact before you store. This is not optional and not per-batch.** Every note filed from a transcript is scrubbed of two classes of content on the way in, always:
+  - **Identities.** No real customer, partner, prospect, or Vendasta employee names. Use role and industry descriptors instead: "a Vendasta solutions architect with a multi-location retail partner", "an insurance-agency owner". Same for business names, addresses, phone numbers, account IDs, and domains.
+  - **All commercial figures.** No prices, wholesale or retail rates, fees, margins, discounts, or negotiated terms -- not even ones presented on the call as standard published pricing. **Pricing is verified in the platform at authoring time, never carried from a transcript.** Prices move, calls go stale, and a figure quoted confidently on a sales call is the least reliable kind of fact in the corpus.
+
+  Record that a commercial conversation happened and what *shape* it took, because that is the teachable part, then point at the platform for the number. Write "the partner benchmarked reseller markup well above the usual range" rather than the multiple, and "tiering runs standard/pro/premium with voice gated to the top tier" rather than the monthly figures. A note that needs a price to make sense is a note that needs rewriting.
+
+  *(Standing instruction from Shiva, 2026-08-18: transcripts are wiped of partner names and any mention of pricing before the information is stored as knowledge, because pricing should be checked in the platform.)*
 - **Never fabricate.** If the transcript is ambiguous or a claim can't be pinned to a topic confidently, say so rather than guessing a slug.
+- **Never use a transcript's filename as evidence of anything.** Filenames are convenience labels a human typed. They are routinely wrong, partial, or actively misleading about what a call contains. Three specific things are forbidden:
+  - **Judging relevance by filename.** A file named for an SEO proposal may hold the corpus's best custom-tool build; one named for a receptionist setup may be forty minutes of billing. Open it and read it.
+  - **Judging coverage by filename.** Never check whether a call has been filed by grepping its filename against `transcript-notes/`. Entries deliberately use role and industry descriptors instead of names, so a filename will almost never appear even when the call is fully filed. This method invents gaps at scale: a 2026-08-18 pass reported "60 of 112 transcripts unreferenced" this way, and the real number of genuine gaps turned out to be three, all found by comparing content.
+  - **Deriving search keywords from filenames.** Keywords for finding related material come from what people actually said inside the transcript, in their own words. See the matching rule in sop-013 (`enablement-docs/subfunctions/learning/sops/013-search-activity-feed-for-partner-call-evidence.md`).
+
+  **Reconcile coverage by content instead.** Pick distinctive content markers from the transcript -- a specific number, an unusual product combination, a named third-party tool, a verbatim gotcha -- and grep the topic files for those. That is the only reliable way to tell a filed call from an unfiled one.
 - **Never write directly into `docusaurus/training/` or any published page from this skill.** This skill only populates `learn-revamp/transcript-notes/` — actual lesson drafting is the `learning-path-writing` skill's job, using these notes as `[CALL]`-tagged source material, with its own draft → review → approval loop.
 - **Never edit `learn-revamp/partner-call-insights.md` from this skill.** That file is a separate, point-in-time strategic synthesis authored for Cal Cooper's IA spec. Cross-reference it for style/depth, but this skill's output lives only in `transcript-notes/`.
 - **Append, never overwrite,** existing topic files — multiple calls about the same topic accumulate as a timeline.
 - **Always carry provenance** (who, what kind of call, when) on every entry — notes with no source are hard to trust later and violate the `[CALL]` tagging rule other skills depend on.
 - **Respect copyright limits already in place for this workspace**: at most brief, attributed quotes: no reproducing long verbatim spans of a transcript.
 - **Tag claims, do not flatten them.** Every claim is weighed by type and by who said it (Step 3's tags and authority ladder). A partner asserting product behavior is not an SME stating it, and a demo price is not a real price — mark the difference so the downstream author is not guessing.
-- **Never let a partner-specific or demo value read as general truth.** Negotiated terms carry `[COMMERCIAL — partner-specific]`; sample/test figures carry `[DEMO]`. Neither may reach a lesson as standard pricing or real data.
+- **Never let a partner-specific or demo value read as general truth.** Negotiated arrangements carry `[COMMERCIAL — partner-specific]`; sample/test values carry `[DEMO]`. Neither may reach a lesson as standard pricing or real data — and under the redaction rule the figures should not be in the note to begin with.
 - **Contradictions, doc discrepancies, and duplicates are a hard stop for a human (Step 4).** When a new claim conflicts with or substantially repeats a filed one, or disagrees with the published Partner Center docs under `docusaurus/docs/`, surface it and wait — never overwrite, never silently keep both, never paste a full duplicate, and never let the transcript or the docs quietly win by default.
 - **A human signs a `[VERIFIED IN-PRODUCT]` claim, never the model.** The skill may draft the surrounding note, but the first-person attestation — "I checked this live, here's the evidence" — has to be the named person's own words, on record (commit message, PR comment, or equivalent), not the AI relaying that a check happened.
