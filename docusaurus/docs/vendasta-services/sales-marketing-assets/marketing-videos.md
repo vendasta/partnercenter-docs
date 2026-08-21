@@ -1,7 +1,7 @@
 ---
 title: "Marketing Videos"
 sidebar_label: "Marketing Videos"
-description: "You can use these videos to help advertise these services. They include insights on what customers can expect like timelines and some best practices. The video"
+description: "Unbranded, ready-to-use marketing videos to help you promote Vendasta services to your clients, including timelines and best practices for each service."
 ---
 
 These unbranded videos are ready-to-use marketing assets to help you promote Vendasta services to your clients. Each video covers what customers can expect, including timelines and best practices, and can be downloaded using the links below.
