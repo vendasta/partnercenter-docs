@@ -1,7 +1,7 @@
 ---
-title: Get set up to get paid
-sidebar_position: 6
-description: "The wholesale-retail model, connecting a payment method, and setting your retail prices, so you are ready before your first sale."
+title: Connect payments and billing
+sidebar_position: 3
+description: "The wholesale-retail model, the Stripe decision, retail prices, and billing that collects on its own, so you are ready before your first sale."
 ---
 
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
@@ -13,30 +13,28 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 
-<InlineHighlighter courseId="get-set-up-to-get-paid" site="vendasta_learn">
+<InlineHighlighter courseId="connect-payments-and-billing" site="vendasta_learn">
 
-<CourseProgressBar courseId="get-set-up-to-get-paid" site="vendasta_learn" />
+<CourseProgressBar courseId="connect-payments-and-billing" site="vendasta_learn" />
 
 <LessonHeader
   difficulty="Beginner"
-  time="about 8 minutes"
+  time="about 9 minutes"
   required={["Partner Center admin access"]}
-  pathName="Get started"
-  step={6}
-  totalSteps={6}
+  pathName="Get set up"
+  step={3}
+  totalSteps={7}
   outcomes={[
     "Explain the wholesale-to-retail model in one sentence",
-    "Connect Vendasta Payments so clients can pay you inside the platform",
-    "Set the retail price and margin on a product you resell",
+    "Choose between connecting your own Stripe account and creating one in the platform",
+    "Set your default billing so renewals collect on their own",
     "Read your Estimated Usage to know what you owe Vendasta this month",
   ]}
 />
 
-Getting paid runs on one relationship: you buy products from Vendasta at a wholesale price, and you sell them to your clients at the retail price you set. This step connects your payment method, sets your prices, and shows you the one page in Partner Center where you check what you owe each month.
-
 ## Two prices on every product
 
-Every product has two prices, and the difference between them is your margin. Flip each one:
+Getting paid runs on one relationship: you buy products from Vendasta at a wholesale price, and you sell them to your clients at the retail price you set. Every product has two prices, and the difference between them is your margin. Flip each one:
 
 <IconFlipCardGrid>
   <IconFlipCard
@@ -53,15 +51,24 @@ Every product has two prices, and the difference between them is your margin. Fl
 
 Each active product creates two matching subscriptions: a wholesale subscription from you to Vendasta, and a retail subscription from your client to you. You manage both from Partner Center.
 
-## Connect a way to get paid
+## Choose how you collect
 
-You can collect from clients inside the platform with **Vendasta Payments**, or bill them your own way and collect outside the platform. Connecting Vendasta Payments lets a client pay an order or invoice with a card, and pays that revenue out to your bank account on a schedule.
+*You are here: Partner Center. Everything in this section happens in your workspace.*
 
-To collect in-platform, connect Vendasta Payments in Partner Center under **Commerce**, then add the bank account you want revenue paid out to. When a client pays, funds are processed and then transferred to that account. When you are ready to connect, [this guide walks you through Vendasta Payments](/commerce/payments).
+**Vendasta Payments** lets a client pay an order or invoice with a card inside the platform, and pays that revenue out to your bank account. It runs on Stripe, and there are two ways to set it up:
 
-:::tip Try it now
-Open **Commerce** → **Payouts** and read the status row at the top: upcoming payouts, funds in transit, and completed. This is where your money shows up once a client pays.
-:::
+- **Connect your own Stripe account.** The account belongs to you: your transaction history, your reporting, and your negotiated Stripe rates stay yours wherever your business goes. Connecting it adds a 0.75 percent platform fee on each transaction, on top of your Stripe fees.
+- **Create an account in the platform.** No platform fee, and setup happens in one place. The account lives inside the platform rather than under your own Stripe login.
+
+Both collect the same payments; the difference is who holds the account. A pattern many partners follow is connecting their own Stripe account and treating the fee as the price of portability. You can also skip in-platform collection entirely and bill clients through whatever system you already use.
+
+Set either option up under **Administration** → **Commerce Settings** → **Vendasta Payments**, then add the bank account your revenue pays out to. When you are ready to connect, [this guide walks through Vendasta Payments](/administration/commerce/vendasta-payments/).
+
+## Set billing to collect on its own
+
+Default billing settings decide what happens on every renewal, and they apply automatically to each new account you create. Set payment collection to **automatic**, with **Automatically charge payment method on file**: renewals then charge your client's saved card on schedule, and an invoice is emailed instead whenever no card is on file.
+
+Set it once under **Administration** → **Default Billing Settings**, and every account you create afterward starts with collection handled. Any single account can still be switched to manual from its own billing settings; [this guide covers the options](/administration/commerce/default-billing-settings/).
 
 ## Set your retail prices
 
@@ -79,11 +86,11 @@ The **Active Subscriptions** tab beside it shows which products are in the curre
 Open **Administration** → **My Billing** → **Estimated Usage** and find the current month. Even with nothing sold yet, this is the page you will return to first each month.
 :::
 
-<SectionFeedback courseId="get-set-up-to-get-paid" site="vendasta_learn" section="content" />
+<SectionFeedback courseId="connect-payments-and-billing" site="vendasta_learn" section="content" />
 
-<KnowledgeCheck courseId="get-set-up-to-get-paid" site="vendasta_learn"
+<KnowledgeCheck courseId="connect-payments-and-billing" site="vendasta_learn"
   sessionSize={3}
-  intro="Three quick questions on the two prices, where you get paid, and where you check what you owe."
+  intro="Three quick questions on the two prices, the Stripe decision, and where the money shows up."
   questions={[
     {
       type: 'mcq',
@@ -96,6 +103,30 @@ Open **Administration** → **My Billing** → **Estimated Usage** and find the 
       ],
       correctIndex: 1,
       explanation: 'Vendasta charges you the $120 wholesale price; your client pays the $200 retail price you set; the $80 difference is your margin.'
+    },
+    {
+      type: 'mcq',
+      question: 'You already run a Stripe account with years of history and negotiated rates. What does connecting it to Vendasta Payments mean for you?',
+      options: [
+        'Your account, history, and rates stay yours, and a 0.75 percent platform fee applies per transaction',
+        'Your Stripe rates are replaced by the platform\'s standard processing rates',
+        'Your history transfers into the platform and can no longer be viewed in Stripe',
+        'Nothing changes at all, and no fees apply beyond your existing Stripe fees'
+      ],
+      correctIndex: 0,
+      explanation: 'A connected Stripe account remains yours: your history, reporting, and negotiated rates are untouched. The platform adds a 0.75 percent fee per transaction on top of your Stripe fees.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client\'s subscription renewed this morning, and their saved card was charged without you touching anything. Which setting made that happen?',
+      options: [
+        'Automatic payment collection with a payment method on file, from your billing settings',
+        'The retail price configured on the Marketplace product',
+        'The payout schedule on your connected bank account',
+        'The wholesale billing frequency on your Vendasta contract'
+      ],
+      correctIndex: 0,
+      explanation: 'Automatic collection charges the saved card on each renewal. Set it in your Default Billing Settings and every new account starts with collection handled.'
     },
     {
       type: 'mcq',
@@ -136,7 +167,7 @@ Open **Administration** → **My Billing** → **Estimated Usage** and find the 
   ]}
 />
 
-<LessonFooter to="/learn/ai-foundations" pathName="Get started" step={6} totalSteps={6} nextPathName="AI foundations" />
+<LessonFooter to="/learn/getting-started/brand-it" pathName="Get set up" step={3} totalSteps={7} />
 
 </InlineHighlighter>
-<MarkComplete courseId="get-set-up-to-get-paid" site="vendasta_learn" />
+<MarkComplete courseId="connect-payments-and-billing" site="vendasta_learn" />

@@ -1,0 +1,132 @@
+---
+title: Connect your domain and email
+sidebar_position: 2
+description: "Send every Snapshot Report, order, and welcome email from your own domain: the DNS records to add, where they live, and how to confirm they verified."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+
+<InlineHighlighter courseId="connect-your-domain-and-email" site="vendasta_learn">
+
+<CourseProgressBar courseId="connect-your-domain-and-email" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Beginner"
+  time="about 7 minutes"
+  required={[
+    "Partner Center admin access",
+    "An email address on your own domain",
+    "Access to your domain's DNS settings",
+  ]}
+  pathName="Get set up"
+  step={2}
+  totalSteps={7}
+  outcomes={[
+    "Send every email the platform generates from your own domain",
+    "Add the SPF, DKIM, and DMARC records at your DNS host",
+    "Confirm your domain verified and set your sender name and from address",
+  ]}
+/>
+
+## What your domain unlocks
+
+The platform sends email on your behalf from your first week: Snapshot Reports to prospects, orders waiting for a client's approval, welcome emails to new Business App users, marketing campaigns. Connect your email domain once, and every one of them arrives from your business and lands in the inbox, with your name in the sender line.
+
+Until then, platform email sends from a shared Vendasta domain. Connecting your own is the setup task with the widest reach: nearly everything you do in the platform produces email at some point.
+
+Your sending address must live on a domain you own, such as hello@yourbusiness.com. Addresses from free providers like Gmail or Yahoo cannot be authenticated; if you do not own a domain yet, any registrar can sell you one in minutes.
+
+## Set your sender identity
+
+*You are here: Partner Center. Everything in this section happens in your workspace.*
+
+Open **Marketing** → **Email Settings**. Two fields shape every email the platform sends for you:
+
+- **Sender name**: your business name is the strong choice, because everyone on your team who sends from the platform sends under it.
+- **From address**: an address on your own domain, such as hello@ or info@.
+
+When a salesperson is assigned to an account, the platform uses that salesperson's name and email instead. Prospects always hear from the person they already know.
+
+## Add your domain
+
+Under the advanced email settings on the same page, choose to use your own email domain, enter your domain, and start authorizing. The platform generates the DNS records that let it send as you: SPF, DKIM, and DMARC. Mail providers check these records on every incoming message; they are the agreement between your domain and the platform that this sender is genuine.
+
+Add each generated record at the service that hosts your DNS, such as Google Workspace, GoDaddy, Cloudflare, or Namecheap. Copy each host name and value exactly as shown. If your DNS lives with GoDaddy or Namecheap, [these guides walk through the exact screens](/marketing/email-settings/email-authentication/).
+
+One record sometimes needs a merge instead of a new entry: a domain carries only one SPF record. If your domain already has one, add the platform's include value into that existing line rather than creating a second record.
+
+## Confirm it verified
+
+Back in **Email Settings**, check your domain records. A green check mark beside a record means it validated; a red mark means the entry needs another look. Records often confirm within minutes, and DNS changes can take up to 48 hours to finish propagating.
+
+Once every record is green, choose your domain as the one to use, confirm your from address, and save. From that moment, everything the platform sends carries your domain. For a walkthrough of each validation, [this guide covers updating email settings](/marketing/email-settings/update-email-settings).
+
+:::tip Try it now
+Open **Marketing** → **Email Settings** and look at the domain section. If your domain is not there yet, add it and generate your records; if it is, confirm every validation shows green.
+:::
+
+## The address at the bottom
+
+One more field completes the compliance picture: commercial email must include your physical mailing address, and the platform prints it in the footer of what you send. Add your complete business address so every campaign sends cleanly; [the requirements guide covers this and the rest](/marketing/email-settings/email-settings-requirements).
+
+<SectionFeedback courseId="connect-your-domain-and-email" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="connect-your-domain-and-email" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on what the domain connection covers, the records themselves, and reading the validation screen."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'You connected your email domain this morning. Which of these now sends from your own domain?',
+      options: [
+        'Every email the platform sends for you: Snapshot Reports, orders, welcome emails, and campaigns',
+        'Marketing campaigns only, because the setting lives under Marketing',
+        'Welcome emails only, because those are the emails clients see first',
+        'Only emails you write by hand from inside the CRM'
+      ],
+      correctIndex: 0,
+      explanation: 'The domain connection covers everything the platform sends on your behalf. The setting lives under Marketing, and its reach is platform-wide.'
+    },
+    {
+      type: 'mcq',
+      question: 'You added the generated records at your DNS host, but the SPF line keeps showing as invalid. Your domain already had an SPF record before today. What is the likely fix?',
+      options: [
+        'Merge the platform\'s include value into your existing SPF record, because a domain carries only one',
+        'Delete the DKIM records, because they conflict with SPF on the same domain',
+        'Wait a full week, because SPF records always propagate more slowly than others',
+        'Re-enter the record at your domain registrar instead of your DNS host'
+      ],
+      correctIndex: 0,
+      explanation: 'A domain carries a single SPF record. When one already exists, add the platform\'s include value into that line instead of creating a second record.'
+    },
+    {
+      type: 'mcq',
+      question: 'A prospect should receive a Snapshot Report from hello@yourbusiness.com, and you want to confirm the platform is ready before sending. Where do you look?',
+      options: [
+        'Marketing → Email Settings, where each DNS record shows a green check when validated',
+        'Commerce → Payouts, where outgoing messages are logged',
+        'Administration → My Billing, where platform services are listed',
+        'The Marketplace page for the Snapshot Report product'
+      ],
+      correctIndex: 0,
+      explanation: 'Email Settings shows the validation state of every record. Green check marks across the board mean the platform sends as your domain.'
+    },
+    {
+      type: 'truefalse',
+      statement: 'A Gmail address works as your platform sending address as long as you verify it.',
+      correct: false,
+      explanation: 'Authentication records can only be added to a domain you own. Free provider addresses like Gmail or Yahoo cannot be authenticated, which is why the sending address lives on your own domain.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/getting-started/connect-payments-and-billing" pathName="Get set up" step={2} totalSteps={7} />
+
+</InlineHighlighter>
+<MarkComplete courseId="connect-your-domain-and-email" site="vendasta_learn" />

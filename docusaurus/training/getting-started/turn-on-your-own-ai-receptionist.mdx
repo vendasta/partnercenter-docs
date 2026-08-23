@@ -1,0 +1,155 @@
+---
+title: Turn on your own AI receptionist
+sidebar_position: 5
+description: "Configure the receptionist serving your own business: its purpose, capabilities, and knowledge, the widget on your website, and a proper test drive."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import { IconFlipCard, IconFlipCardGrid } from "@site/src/components/FlipCard";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+
+<InlineHighlighter courseId="turn-on-your-own-ai-receptionist" site="vendasta_learn">
+
+<CourseProgressBar courseId="turn-on-your-own-ai-receptionist" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Beginner"
+  time="about 12 minutes"
+  lab
+  required={[
+    "Partner Center admin access",
+    "Access to edit your website, for the widget install",
+  ]}
+  pathName="Get set up"
+  step={5}
+  totalSteps={7}
+  outcomes={[
+    "Describe any AI Employee through its purpose, capabilities, and knowledge",
+    "Configure your own chat receptionist and connect your calendar for bookings",
+    "Install the web chat widget on your website",
+    "Test your receptionist the way a customer would meet it",
+  ]}
+/>
+
+## Three parts make a receptionist
+
+Every AI Employee, this one included, is built from the same three parts. Flip each one:
+
+<IconFlipCardGrid>
+  <IconFlipCard
+    gradient="blue"
+    front="Purpose"
+    back="Who the AI is and how it behaves: its job description, tone, and standing instructions. Yours arrives with a working purpose already written."
+  />
+  <IconFlipCard
+    gradient="green"
+    front="Capability"
+    back="A skill you switch on, such as capturing leads or booking appointments. Each one tells the AI what to do and when to do it."
+  />
+  <IconFlipCard
+    gradient="purple"
+    front="Knowledge"
+    back="What the AI knows about the business: website content, documents, and facts it references when answering. You choose every source."
+  />
+</IconFlipCardGrid>
+
+This frame carries you a long way: the same three parts describe every AI Employee you will ever configure, for yourself or for a client. Configuring one is deciding who it is, what it can do, and what it knows.
+
+## Configure yours
+
+*You are here: Partner Center. Everything in this section happens in your workspace.*
+
+Your receptionist serves your business, so it lives in your workspace. Open **AI** → **AI Workforce** and click **Configure** on the AI Chat Receptionist.
+
+It works well out of the box. Give it a name and an image that fit your brand, and it will introduce itself accordingly. The capability that captures leads is on by default: it asks visitors for a name, phone number, and email, and saves what it gathers to your CRM. Add the capability that books appointments and connect it to a booking link from **My Meetings** in your CRM, and the receptionist offers real meeting times from your actual calendar. [This guide covers each setting](/ai/ai-workforce/ai-chat-receptionist/).
+
+## Give it knowledge, sparingly
+
+Knowledge is chosen, not dumped. Add your own website as a source, switch the mode to follow links so it learns every public page, and enable automatic refresh so it stays current on its own. Business facts that live nowhere on your site (hours, services, what makes you different) go in as plain text or file uploads.
+
+Then stop. Less is more with AI knowledge: a lean, current set of sources keeps answers consistent, and you can add more the moment a real conversation shows a gap. [The Knowledge Base guide](/ai/knowledge-base/) covers every source type.
+
+## Put it on your website
+
+The widget does not add itself to your site; installing the code is what makes the receptionist real. In the widget setup, set the welcome greeting and match the colors to your brand, then copy the install code. One script works for most websites, with specific snippets for WordPress, GoDaddy, and Google Tag Manager. The floating widget is the strong default: it travels with the visitor down every page.
+
+This is the exact setup you will later repeat for clients from their Business App.
+
+## Put it through its paces
+
+Configuration ends where testing begins. Click **Try it** on the receptionist's card to open a test page, and ask it what your customers ask you: services, hours, prices, something ambiguous, a meeting request. Watch whether it gives too much, too little, or exactly enough, then adjust its purpose, capabilities, or knowledge and ask again. If your receptionist also answers a phone line through the AI Voice Receptionist, call the number and run the same questions out loud.
+
+Experimenting here is safe by design: any section you have edited is marked as modified and can be returned to its default.
+
+:::tip Try it now
+Open **AI** → **AI Workforce**, click **Try it** on your receptionist, and ask it the three questions your customers ask you most. Tune one thing it gets wrong, and ask again.
+:::
+
+Everything deeper (voice configuration, custom capabilities, and building receptionists for clients in their Business App) has a path of its own: [Hire your first AI Employee](/learn/ai-workforce).
+
+<SectionFeedback courseId="turn-on-your-own-ai-receptionist" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="turn-on-your-own-ai-receptionist" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on the three parts, knowledge choices, and getting the widget live."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'You want your receptionist to offer visitors real meeting times from your calendar. Which part of its configuration is that?',
+      options: [
+        'A capability, connected to a booking link from My Meetings',
+        'A knowledge source, uploaded as your availability document',
+        'The purpose, rewritten to mention your working hours',
+        'The widget appearance, with a booking button added'
+      ],
+      correctIndex: 0,
+      explanation: 'Booking is a skill the AI performs, which makes it a capability. Connect it to a My Meetings booking link and the receptionist offers times from your actual calendar.'
+    },
+    {
+      type: 'mcq',
+      question: 'You are deciding what knowledge to give your receptionist. Which approach sets it up best?',
+      options: [
+        'Your website plus the few facts the job needs, kept current',
+        'Every document your business has ever produced, for completeness',
+        'Nothing at all, since the purpose prompt already describes the business',
+        'Only competitor websites, so it can make comparisons'
+      ],
+      correctIndex: 0,
+      explanation: 'Less is more with AI knowledge. A lean, current set of sources keeps answers consistent, and you add more the moment a real conversation shows a gap.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your receptionist answers beautifully on the Try it page, but nothing appears on your website. What is the missing step?',
+      options: [
+        'Installing the widget code on your site',
+        'Waiting for the knowledge sources to finish training',
+        'Upgrading the receptionist to a voice plan',
+        'Adding your website as a knowledge source'
+      ],
+      correctIndex: 0,
+      explanation: 'The widget does not add itself to your site. Copy the install code from the widget setup and add it to your website, and the receptionist goes live for visitors.'
+    },
+    {
+      type: 'mcq',
+      question: 'You rewrote your receptionist\'s purpose and prefer how it behaved before. What is your move?',
+      options: [
+        'Return the modified section to its default and start again from there',
+        'Delete the receptionist and request a replacement from support',
+        'Remove its knowledge sources, which clears all edits everywhere',
+        'Create a second receptionist and migrate your settings across'
+      ],
+      correctIndex: 0,
+      explanation: 'Edited sections are marked as modified and can be returned to their defaults. Experiments are reversible, which is exactly why testing boldly is safe.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/getting-started/where-to-get-help" pathName="Get set up" step={5} totalSteps={7} />
+
+</InlineHighlighter>
+<MarkComplete courseId="turn-on-your-own-ai-receptionist" site="vendasta_learn" />

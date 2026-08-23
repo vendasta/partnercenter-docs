@@ -1,7 +1,7 @@
 ---
 title: The Vendasta Platform
 sidebar_position: 1
-description: "The white-label model, who works in the platform, and how it all connects: Partner Center, Business App, accounts, CRM, products, AI Employees, and automations."
+description: "The white-label model, who works in the platform, and how it all connects: Partner Center, Business App, your team, products, AI Employees, and automations."
 ---
 
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
@@ -19,14 +19,15 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 <LessonHeader
   difficulty="Beginner"
-  time="about 8 minutes"
-  pathName="Get started"
+  time="about 10 minutes"
+  pathName="Get set up"
   step={1}
-  totalSteps={6}
+  totalSteps={7}
   outcomes={[
     "Describe the mental model for the platform: AI does the work, you orchestrate",
     "Say which workspace any task belongs to: Partner Center or Business App",
     "Place any AI Employee in the workspace it belongs to, before you configure it",
+    "Give each person on your team the right view of Partner Center",
   ]}
 />
 
@@ -63,7 +64,7 @@ As our partner, you can access all of these parts of the platform. But let's bre
 
 **Business App** is the client-facing side. Every client gets their own, under your brand: their dashboard, inbox, reports, and every product you activate for them. Their own brand lives inside it, in their business profile, and flows into everything they send: their campaigns, their review requests, their widgets. You have full access to configure products and AI Employees on their behalf. Some clients live in it daily; many are happy to let you drive.
 
-The two workspaces stay connected. Products you activate in Partner Center appear in your client's Business App. Everything their business generates after that (leads, conversations, reviews, results) lands in their Business App, where you have full visibility, and the Executive Report turns those results into proof of your value, delivered to them under your brand.
+The two workspaces stay connected. Products you activate in Partner Center appear in your client's Business App. Everything their business generates after that (leads, conversations, reviews, results) lands in their Business App, where you have full visibility. The Executive Report turns those results into proof of your value, delivered to them under your brand.
 
 :::tip Try it now
 Log in at [partners.vendasta.com](https://partners.vendasta.com) and read the left navigation top to bottom. Everything you see there is the Partner Center side of the diagram above.
@@ -83,7 +84,31 @@ Here is how the split plays out in practice, side by side:
 | **Calendars** | Connect your calendar in My Meetings so booking works everywhere | Their meeting scheduler, once they have Conversations AI |
 | **Products** | Choose what to sell and build packages in the Marketplace | Every product you activate appears as a dashboard for them |
 
-Each row on this table becomes hands-on later in this learning path; for now, the pattern is the takeaway: set yourself up once on the left, then repeat the client side of the ritual for every business you bring on.
+Each row on this table becomes hands-on later in this learning path; for now, the pattern is the takeaway. Set yourself up once on the left, then repeat the client side of the ritual for every business you bring on.
+
+## Find any setting from what it is about
+
+*You are here: Partner Center. Everything in this section happens in your workspace.*
+
+Partner Center's left navigation is grouped by what a setting is about, so name the subject and the section follows. Your own setup (brand, team, billing, platform settings) lives in **Administration**. Each client exists as a record in **Accounts**, and that record is where their products and users live. What you sell and the retail price on it live in **Marketplace**. Orders, subscriptions, invoices, and payouts live in **Commerce**. Your pipeline lives in the **CRM**, and your own AI Employees live under **AI**.
+
+One habit makes the map stick: before you change any setting, say whose it is. Your brand and your team live in Administration; a client's products and users live on their account. Settings that look similar sit in different places for exactly that reason.
+
+## Two ways your team sees Partner Center
+
+*You are here: Partner Center. Everything in this section happens in your workspace.*
+
+Everyone on your team works in Partner Center, and their role decides how much of it they see. An **Admin** gets the full workspace: accounts, billing, branding, and administration, the right fit for decision-makers, managers, and fulfillment staff. A **Salesperson** gets the CRM, a focused view for pipeline, prospects, and client communication. Running solo? You are the Admin, and the CRM view is where your selling happens.
+
+Permissions go finer than the two roles. You can restrict an Admin from specific areas, such as billing reports, platform customization, or creating other Admins. Add people and set their roles under **Administration** → **My Team**; when you are ready, [this guide walks through adding your team](/getting-started/getting-started-guides/getting-started-with-your-team).
+
+## The boundary in practice
+
+Two placements follow the whose-workspace rule and are worth knowing before they come up.
+
+**SMS registration lives with the client.** United States carriers require a business to register before it sends SMS messages (the registration is called A2P, application-to-person). The registration belongs to the business sending the texts, so it happens in that client's Business App, under **Administration** → **Conversation**. [This guide covers the registration](/business-app/conversations/sms/us-businesses-sms-registration).
+
+**A CRM contact is not a Business App user.** A contact is someone you are talking to: a record in your CRM. A user is someone you have invited into Business App, where they can log in and use their tools. Contacts never become users on their own; you create the user and send the welcome email when their products are ready for them.
 
 ## Where AI Employees live
 
@@ -135,7 +160,7 @@ Automations are the third piece, and they carry work between the other two. That
 
 <KnowledgeCheck courseId="the-vendasta-platform" site="vendasta_learn"
   sessionSize={3}
-  intro="Three quick questions on the model, the two workspaces, and how products and AI Employees relate."
+  intro="Three quick questions on the model, the two workspaces, and where things happen for you versus for a client."
   questions={[
     {
       type: 'mcq',
@@ -208,11 +233,35 @@ Automations are the third piece, and they carry work between the other two. That
       ],
       correctIndex: 2,
       explanation: 'Trigger-and-action workflows are automations. Products are activated and resold; AI Employees are workers configured with knowledge and capabilities.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client is ready to send SMS messages in the United States and needs to complete the carrier registration. Where does that happen?',
+      options: [
+        'In their Business App, under Administration',
+        'In your Partner Center, under Administration',
+        'On the Marketplace page for Conversations AI',
+        'In Vendor Center, under product settings'
+      ],
+      correctIndex: 0,
+      explanation: 'A2P registration belongs to the business sending the texts, so it lives in that client\'s Business App under Administration → Conversation. Whose workspace? Theirs.'
+    },
+    {
+      type: 'mcq',
+      question: 'A business owner you have been emailing for weeks sits in your CRM. She asks why she cannot log in to the app you keep mentioning. What is going on?',
+      options: [
+        'A contact is not a user; she can log in once you create her user and send the welcome email',
+        'Her CRM company record has to sync overnight before her access begins',
+        'Her login activates automatically once her first invoice is generated in Commerce',
+        'Contacts log in through Vendor Center rather than Business App'
+      ],
+      correctIndex: 0,
+      explanation: 'A contact is someone you are talking to; a user is someone you have invited into Business App. You create the user and send the welcome email when her products are ready for her.'
     }
   ]}
 />
 
-<LessonFooter to="/learn/getting-started/partner-center-walkthrough" pathName="Get started" step={1} totalSteps={6} />
+<LessonFooter to="/learn/getting-started/connect-your-domain-and-email" pathName="Get set up" step={1} totalSteps={7} />
 
 </InlineHighlighter>
 <MarkComplete courseId="the-vendasta-platform" site="vendasta_learn" />
