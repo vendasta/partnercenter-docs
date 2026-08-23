@@ -19,6 +19,7 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 <LessonHeader
   difficulty="Beginner"
+  topics={["AI receptionist", "AI Workforce"]}
   time="about 12 minutes"
   lab
   required={[
@@ -44,7 +45,7 @@ Every AI Employee, this one included, is built from the same three parts. Flip e
   <IconFlipCard
     gradient="blue"
     front="Purpose"
-    back="Who the AI is and how it behaves: its job description, tone, and standing instructions. Yours arrives with a working purpose already written."
+    back="Who the AI is and how it behaves: its job description, tone, and standing instructions, held in the field labeled Role on the receptionist. Yours arrives with a working purpose already written."
   />
   <IconFlipCard
     gradient="green"
@@ -62,32 +63,30 @@ This frame carries you a long way: the same three parts describe every AI Employ
 
 ## Configure yours
 
-*You are here: Partner Center. Everything in this section happens in your workspace.*
+Your receptionist serves your business, so it lives in your workspace. Open `AI` → `AI Workforce` and click `Configure` on the AI Chat Receptionist.
 
-Your receptionist serves your business, so it lives in your workspace. Open **AI** → **AI Workforce** and click **Configure** on the AI Chat Receptionist.
-
-It works well out of the box. Give it a name and an image that fit your brand, and it will introduce itself accordingly. The capability that captures leads is on by default: it asks visitors for a name, phone number, and email, and saves what it gathers to your CRM. Add the capability that books appointments and connect it to a booking link from **My Meetings** in your CRM, and the receptionist offers real meeting times from your actual calendar. [This guide covers each setting](/ai/ai-workforce/ai-chat-receptionist/).
+It works well out of the box. Give it a name and an image that fit your brand, and it will introduce itself accordingly. The `Capture Lead Information` capability is on by default: it asks visitors for contact details such as a name, phone number, or email, and saves captured leads to your CRM. Turn on `Book Appointments` and connect your calendar, set up in `CRM` → `My Meetings`, and the receptionist offers real meeting times and collects the booking details itself. [This guide covers each setting](/ai/ai-workforce/ai-chat-receptionist/).
 
 ## Give it knowledge, sparingly
 
-Knowledge is chosen, not dumped. Add your own website as a source, switch the mode to follow links so it learns every public page, and enable automatic refresh so it stays current on its own. Business facts that live nowhere on your site (hours, services, what makes you different) go in as plain text or file uploads.
+Knowledge is chosen, not dumped. Add your own website as a source in `Follow links` mode, which learns up to 100 pages from the URL you give it (the site must be publicly reachable without a login), and enable `Automatic refresh` so it re-crawls monthly on its own. Business facts that live nowhere on your site (hours, services, what makes you different) go in as plain text or file uploads.
 
 Then stop. Less is more with AI knowledge: a lean, current set of sources keeps answers consistent, and you can add more the moment a real conversation shows a gap. [The Knowledge Base guide](/ai/knowledge-base/) covers every source type.
 
 ## Put it on your website
 
-The widget does not add itself to your site; installing the code is what makes the receptionist real. In the widget setup, set the welcome greeting and match the colors to your brand, then copy the install code. One script works for most websites, with specific snippets for WordPress, GoDaddy, and Google Tag Manager. The floating widget is the strong default: it travels with the visitor down every page.
+The widget does not add itself to your site; installing the code is what makes the receptionist real. Your receptionist's widget lives at `Conversations` → `Settings`, on the **Web Chat** card, behind `Manage widgets`: open the **System** widget (the built-in receptionist widget) to set its messages and appearance to match your brand, then choose `Embed` from the row's `⋮` menu to copy the installation code. The code installs on any site that lets you add code to the page head, with specific routes for WordPress, GoDaddy, and Google Tag Manager. The floating widget is the strong default: it travels with the visitor down every page. [This guide covers widgets and embed codes](/conversations/ai-assisted-web-chat-widget).
 
 This is the exact setup you will later repeat for clients from their Business App.
 
 ## Put it through its paces
 
-Configuration ends where testing begins. Click **Try it** on the receptionist's card to open a test page, and ask it what your customers ask you: services, hours, prices, something ambiguous, a meeting request. Watch whether it gives too much, too little, or exactly enough, then adjust its purpose, capabilities, or knowledge and ask again. If your receptionist also answers a phone line through the AI Voice Receptionist, call the number and run the same questions out loud.
+Configuration ends where testing begins. Click `Try it` on the receptionist's card to open a test page (an incognito window gives every test a fresh conversation), and ask it what your customers ask you: services, hours, prices, something ambiguous, a meeting request. Watch whether it gives too much, too little, or exactly enough; each response carries a clickable `Explanation` showing the reasoning and the knowledge source behind it. Change one thing at a time (its purpose, a capability, or a knowledge source) and ask again. If your receptionist also answers a phone line through the AI Voice Receptionist, call the number and run the same questions out loud.
 
-Experimenting here is safe by design: any section you have edited is marked as modified and can be returned to its default.
+Experimenting here is safe by design: the configuration includes a reset to default when you want to start over.
 
 :::tip Try it now
-Open **AI** → **AI Workforce**, click **Try it** on your receptionist, and ask it the three questions your customers ask you most. Tune one thing it gets wrong, and ask again.
+Open `AI` → `AI Workforce`, click `Try it` on your receptionist, and ask it the three questions your customers ask you most. Tune one thing it gets wrong, and ask again.
 :::
 
 Everything deeper (voice configuration, custom capabilities, and building receptionists for clients in their Business App) has a path of its own: [Hire your first AI Employee](/learn/ai-workforce).
@@ -136,15 +135,15 @@ Everything deeper (voice configuration, custom capabilities, and building recept
     },
     {
       type: 'mcq',
-      question: 'You rewrote your receptionist\'s purpose and prefer how it behaved before. What is your move?',
+      question: 'Your receptionist fumbled a pricing question on the test page. What is the productive next move?',
       options: [
-        'Return the modified section to its default and start again from there',
-        'Delete the receptionist and request a replacement from support',
-        'Remove its knowledge sources, which clears all edits everywhere',
-        'Create a second receptionist and migrate your settings across'
+        'Change one thing, such as the knowledge source that carries your prices, then run the same question again',
+        'Rewrite the purpose, swap capabilities, and add three documents in a single pass',
+        'Delete the receptionist and configure a fresh one from the defaults',
+        'Move on, since behavior on the test page differs from the live widget'
       ],
       correctIndex: 0,
-      explanation: 'Edited sections are marked as modified and can be returned to their defaults. Experiments are reversible, which is exactly why testing boldly is safe.'
+      explanation: 'Change one element at a time, then retest the same scenario. Each response includes an Explanation showing the reasoning and knowledge source it used, which points you at the element that needs the change.'
     }
   ]}
 />

@@ -18,6 +18,7 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 <LessonHeader
   difficulty="Beginner"
+  topics={["Email domain", "Partner Center"]}
   time="about 7 minutes"
   required={[
     "Partner Center admin access",
@@ -36,26 +37,26 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 ## What your domain unlocks
 
-The platform sends email on your behalf from your first week: Snapshot Reports to prospects, orders waiting for a client's approval, welcome emails to new Business App users, marketing campaigns. Connect your email domain once, and every one of them arrives from your business and lands in the inbox, with your name in the sender line.
+Connecting your email domain once ensures that every email sent from the platform, whether your AI Receptionist is programmed to send a welcome email or you are sending Snapshot Reports to prospects, arrives from your business and lands in the inbox, with your name in the sender line. Orders waiting for a client's approval, welcome emails to new Business App users, marketing campaigns: all of it follows the same rule.
 
-Until then, platform email sends from a shared Vendasta domain. Connecting your own is the setup task with the widest reach: nearly everything you do in the platform produces email at some point.
+Before you connect, platform email sends from a shared Vendasta domain. Connecting your own is the setup task with the widest reach: nearly everything you do in the platform produces email at some point. It is also what keeps you out of spam folders: an authenticated domain, a complete business address, and the CAN-SPAM basics on every campaign are the three legs of deliverability, and this lesson sets up the first two. [The requirements guide lists all of them](/marketing/email-settings/email-settings-requirements).
 
-Your sending address must live on a domain you own, such as hello@yourbusiness.com. Addresses from free providers like Gmail or Yahoo cannot be authenticated; if you do not own a domain yet, any registrar can sell you one in minutes.
+Your sending address must live on a domain you own, such as hello@yourbusiness.com. Addresses from free providers like Gmail or Yahoo cannot be authenticated. If you do not own a domain yet, your own Marketplace carries domain products (look for **Domains** or **GoDaddy Domains**), or any registrar can sell you one in minutes.
 
 ## Set your sender identity
 
-*You are here: Partner Center. Everything in this section happens in your workspace.*
-
-Open **Marketing** → **Email Settings**. Two fields shape every email the platform sends for you:
+Open `Marketing` → `Email Settings`. Two fields shape every email the platform sends for you:
 
 - **Sender name**: your business name is the strong choice, because everyone on your team who sends from the platform sends under it.
 - **From address**: an address on your own domain, such as hello@ or info@.
 
 When a salesperson is assigned to an account, the platform uses that salesperson's name and email instead. Prospects always hear from the person they already know.
 
+One requirement that catches teams later: every user who sends email from the platform needs a verified email address. Yours verifies during signup; as you add teammates, [the verification guide covers theirs](/administration/my-account/my-team/email-verification).
+
 ## Add your domain
 
-Under the advanced email settings on the same page, choose to use your own email domain, enter your domain, and start authorizing. The platform generates the DNS records that let it send as you: SPF, DKIM, and DMARC. Mail providers check these records on every incoming message; they are the agreement between your domain and the platform that this sender is genuine.
+In `Marketing` → `Email Settings`, find the **Email Domains** section. Choose to use your own email domain, enter your domain, and start authorizing. The platform generates the three DNS records that authenticate your domain: SPF, DKIM, and DMARC. Receiving mail servers check these records on every incoming message to confirm that email from your domain is legitimate, which is what keeps your email out of spam folders.
 
 Add each generated record at the service that hosts your DNS, such as Google Workspace, GoDaddy, Cloudflare, or Namecheap. Copy each host name and value exactly as shown. If your DNS lives with GoDaddy or Namecheap, [these guides walk through the exact screens](/marketing/email-settings/email-authentication/).
 
@@ -63,17 +64,17 @@ One record sometimes needs a merge instead of a new entry: a domain carries only
 
 ## Confirm it verified
 
-Back in **Email Settings**, check your domain records. A green check mark beside a record means it validated; a red mark means the entry needs another look. Records often confirm within minutes, and DNS changes can take up to 48 hours to finish propagating.
+Back in `Email Settings`, check your domain records. A green check mark beside a record means it validated; a red mark means the entry needs another look. Records often confirm the same day; DNS changes can take up to 48 hours to propagate, and validation can show as pending for up to 72 hours.
 
 Once every record is green, choose your domain as the one to use, confirm your from address, and save. From that moment, everything the platform sends carries your domain. For a walkthrough of each validation, [this guide covers updating email settings](/marketing/email-settings/update-email-settings).
 
 :::tip Try it now
-Open **Marketing** → **Email Settings** and look at the domain section. If your domain is not there yet, add it and generate your records; if it is, confirm every validation shows green.
+Open `Marketing` → `Email Settings` and look at the domain section. If your domain is not there yet, add it and generate your records; if it is, confirm every validation shows green.
 :::
 
 ## The address at the bottom
 
-One more field completes the compliance picture: commercial email must include your physical mailing address, and the platform prints it in the footer of what you send. Add your complete business address so every campaign sends cleanly; [the requirements guide covers this and the rest](/marketing/email-settings/email-settings-requirements).
+One more field completes the compliance picture: commercial email must include your physical mailing address, and the platform prints it in the footer of what you send. Add your complete business address (street, city, state or province, and postal code) at `Administration` → `Customize` → `Partner Defaults`, and every campaign sends cleanly; [the requirements guide covers this and the rest](/marketing/email-settings/email-settings-requirements).
 
 <SectionFeedback courseId="connect-your-domain-and-email" site="vendasta_learn" section="content" />
 
@@ -85,13 +86,13 @@ One more field completes the compliance picture: commercial email must include y
       type: 'mcq',
       question: 'You connected your email domain this morning. Which of these now sends from your own domain?',
       options: [
-        'Every email the platform sends for you: Snapshot Reports, orders, welcome emails, and campaigns',
+        'Every email sent from the platform: Snapshot Reports, orders, welcome emails, and campaigns',
         'Marketing campaigns only, because the setting lives under Marketing',
         'Welcome emails only, because those are the emails clients see first',
         'Only emails you write by hand from inside the CRM'
       ],
       correctIndex: 0,
-      explanation: 'The domain connection covers everything the platform sends on your behalf. The setting lives under Marketing, and its reach is platform-wide.'
+      explanation: 'The domain connection covers every email sent from the platform. The setting lives under Marketing, and its reach is platform-wide.'
     },
     {
       type: 'mcq',

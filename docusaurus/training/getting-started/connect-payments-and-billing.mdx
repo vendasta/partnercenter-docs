@@ -19,8 +19,12 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 <LessonHeader
   difficulty="Beginner"
+  topics={["Payments", "Partner Center"]}
   time="about 9 minutes"
-  required={["Partner Center admin access"]}
+  required={[
+    "Partner Center admin access",
+    "A paid subscription (Vendasta Payments is not offered on free or trial tiers)",
+  ]}
   pathName="Get set up"
   step={3}
   totalSteps={7}
@@ -53,37 +57,74 @@ Each active product creates two matching subscriptions: a wholesale subscription
 
 ## Choose how you collect
 
-*You are here: Partner Center. Everything in this section happens in your workspace.*
-
 **Vendasta Payments** lets a client pay an order or invoice with a card inside the platform, and pays that revenue out to your bank account. It runs on Stripe, and there are two ways to set it up:
 
 - **Connect your own Stripe account.** The account belongs to you: your transaction history, your reporting, and your negotiated Stripe rates stay yours wherever your business goes. Connecting it adds a 0.75 percent platform fee on each transaction, on top of your Stripe fees.
-- **Create an account in the platform.** No platform fee, and setup happens in one place. The account lives inside the platform rather than under your own Stripe login.
+- **Create an account in the platform.** No platform fee; standard processing runs 2.9 percent plus 30 cents per transaction in USD, CAD, AUD, and NZD. The account lives inside the platform rather than under your own Stripe login, and approval typically takes one to two business days.
 
-Both collect the same payments; the difference is who holds the account. A pattern many partners follow is connecting their own Stripe account and treating the fee as the price of portability. You can also skip in-platform collection entirely and bill clients through whatever system you already use.
+Both collect the same payments; the difference is who holds the account. Decide before your first transaction: connecting your own Stripe account stays open only until you process a payment through a platform-created account. A pattern many partners follow is connecting their own account and treating the fee as the price of portability. You can also skip in-platform collection entirely and bill clients through whatever system you already use.
 
-Set either option up under **Administration** → **Commerce Settings** → **Vendasta Payments**, then add the bank account your revenue pays out to. When you are ready to connect, [this guide walks through Vendasta Payments](/administration/commerce/vendasta-payments/).
+Two settings inside the setup flow earn attention. Complete your billing contact first, with a full address and postal code, under `Administration` → `My Billing`: setup checks it, and a complete address is what clears the "Unsupported in Your Area" message. And the **customer statement description** is what your clients see on their card statements: it reads "Vendasta" until you replace it with your own business name, up to 22 characters.
+
+## Set it up
+
+{/* VIDEO: "Vendasta Payments" — Wistia ID `ayjibivt6o`, sourced from the top of docs/administration/commerce/vendasta-payments/index.mdx (Cal chose this one over the Loom setup recording), confirmed 2026-08-23. */}
+
+Watch how Vendasta Payments works before you start the application:
+
+<div
+  className="wistia_responsive_padding"
+  style={{ padding: '56.25% 0 0 0', position: 'relative' }}
+>
+  <div
+    className="wistia_responsive_wrapper"
+    style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
+  >
+    <iframe
+      src="https://fast.wistia.net/embed/iframe/ayjibivt6o?web_component=true&seo=true"
+      title="Vendasta Payments overview"
+      allow="autoplay; fullscreen"
+      allowTransparency
+      frameBorder="0"
+      scrolling="no"
+      className="wistia_embed"
+      name="wistia_embed"
+      width="100%"
+      height="100%"
+    ></iframe>
+  </div>
+</div>
+<script src="https://fast.wistia.net/player.js" async></script>
+
+Open `Administration` → `Commerce Settings` → `Vendasta Payments` and choose `Set up Vendasta Payments`. The application is a Stripe identity check, so it goes fastest with the details ready before you start:
+
+- Your **legal business name**, exactly as it appears on your tax ID, plus your operating name if you do business under a different one.
+- Your **business number**: EIN in the US, CRA business number in Canada.
+- Your **registered business address** (a home address works if you do not have one).
+- The **account representative's** legal name, home address, and government ID for verification.
+
+You will agree to the Vendasta Payments [Terms of Service](https://www.vendasta.com/terms/terms-of-service/) during setup, then add the bank account your revenue pays out to. Approval typically takes one to two business days, and the full field-by-field detail is in [the Vendasta Payments guide](/administration/commerce/vendasta-payments/).
 
 ## Set billing to collect on its own
 
-Default billing settings decide what happens on every renewal, and they apply automatically to each new account you create. Set payment collection to **automatic**, with **Automatically charge payment method on file**: renewals then charge your client's saved card on schedule, and an invoice is emailed instead whenever no card is on file.
+Default billing settings decide what happens on every renewal, and they apply automatically to each new account you create. Open `Administration` → `Default Billing Settings`, turn the `Subscriptions` toggle on, set `Payment collection` to `Automatic`, and choose `Automatically charge payment method on file` under `Subscription renewal`: renewals then charge your client's saved card on schedule, and the invoice is emailed instead whenever no card is on file.
 
-Set it once under **Administration** → **Default Billing Settings**, and every account you create afterward starts with collection handled. Any single account can still be switched to manual from its own billing settings; [this guide covers the options](/administration/commerce/default-billing-settings/).
+Save it once, and every account you create afterward starts with collection handled; accounts that already exist keep their current settings. Any single account can still be switched from its own billing settings; [this guide covers the options](/administration/commerce/default-billing-settings/).
 
 ## Set your retail prices
 
-Pricing is yours to control. Open a product in the **Marketplace** to see its wholesale cost and a suggested retail price, then set the retail price and billing frequency that fit your market. Adjust pricing any time in **Marketplace** → **Products**.
+Pricing is yours to control. Open a product in the `Marketplace` to see its wholesale cost and a suggested retail price, then set the retail price and billing frequency that fit your market. Automatic collection calculates each invoice from these retail prices, so set them before your first activation. Adjust pricing any time in `Marketplace` → `Products`.
 
 One fact keeps your numbers clean: a catalog price change applies to new subscriptions from then on. Existing clients keep the price they signed up at unless you edit their subscription directly, and an edit takes effect on the next billing cycle. When you need to change a live subscription, [this guide covers subscription management](/commerce/subscriptions/subscription-management).
 
 ## Check what you owe each month
 
-One page answers "what will I pay Vendasta this month?" Open **Administration** → **My Billing** → **Estimated Usage**. It breaks down what you owe at month end based on the products currently active on your accounts.
+One page answers "what will I pay Vendasta this month?" Open `Administration` → `My Billing` → `Estimated Usage`. It breaks down what you owe at month end based on the products currently active on your accounts.
 
-The **Active Subscriptions** tab beside it shows which products are in the current billing cycle and when any of them expire. Together they are your monthly billing check.
+The `Active Subscriptions` tab beside it shows which products are in the current billing cycle and when any of them expire. Together they are your monthly billing check.
 
 :::tip Try it now
-Open **Administration** → **My Billing** → **Estimated Usage** and find the current month. Even with nothing sold yet, this is the page you will return to first each month.
+Open `Administration` → `My Billing` and complete your billing contact with your full address and postal code. Payments setup checks it, and a complete address is what clears the "Unsupported in Your Area" message before it ever appears.
 :::
 
 <SectionFeedback courseId="connect-payments-and-billing" site="vendasta_learn" section="content" />
