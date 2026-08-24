@@ -2,7 +2,7 @@
 title: "A killer sales presentation"
 sidebar_label: "A killer sales presentation"
 sidebar_position: 4
-description: "Structure a presentation around insights, deliverables, value, and the ask, so a discovery call turns into a decision."
+description: "Structure a presentation around insights, strategy, proof, and the ask, so a discovery call turns into a decision."
 ---
 
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
@@ -13,6 +13,7 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import Accordion from "@site/src/components/Accordion";
+import Admonition from "@theme/Admonition";
 
 <InlineHighlighter courseId="present-so-it-lands" site="vendasta_learn">
 
@@ -20,23 +21,29 @@ import Accordion from "@site/src/components/Accordion";
 
 <LessonHeader
   difficulty="Intermediate"
-  time="about 8 minutes"
+  time="about 14 minutes"
   required={["A discovery call already run on this prospect"]}
   video={true}
   pathName="The master sales series"
   step={4}
   totalSteps={5}
   outcomes={[
-    "Structure a presentation around insights, deliverables, value, then the ask",
-    "Know exactly where to make the ask, and say it with confidence instead of apology",
-    "Decide what belongs in the appendix instead of the main pitch",
-    "Reuse three ready-made lines for opening, asking, and answering a maybe",
+    "Structure a presentation in five stages, from insights through to the appendix",
+    "Put measurement on the table early instead of waiting to be asked about ROI",
+    "Know exactly where to make the ask, and say it without apologising for it",
+    "Run the meeting as a conversation rather than a monologue",
   ]}
 />
 
 {/* VIDEO: "The Killer Sales Presentation Format" — Wistia ID `6b5f8wve1s`, Master Sales Training Series folder, confirmed 2026-08-15. */}
 
-Watch sales expert George Leith lay out a presentation format that turns a discovery call into a decision.
+## A presentation is not a recap
+
+A summary of everything you found is an audit, and nobody signs an audit. A presentation points forward: here is the future state we are taking you to, here is what we will hold ourselves to, and here is the strategy that gets you there.
+
+It also has to work on people who are not in the room. You might be presenting to a decisive executive while a detail-oriented finance lead reads the deck afterwards, so the format has to serve both.
+
+Five stages do that, always in the same order. Watch George lay them out, then take them one at a time.
 
 <div
   className="wistia_responsive_padding"
@@ -61,84 +68,141 @@ Watch sales expert George Leith lay out a presentation format that turns a disco
 </div>
 <script src="https://fast.wistia.net/player.js" async></script>
 
-## A presentation is not a recap
+## The five stages
 
-A summary of everything you found is an audit, and nobody signs an audit. A presentation is four moves, always in the same order.
+Each stage earns the right to make the next one. Open each to see what it looks like in practice.
 
 <Accordion
   items={[
     {
       id: 'insight',
-      title: 'Open with what you heard, not what you sell',
+      title: 'Open with insights, not with what you sell',
       badge: '1',
       content: (
         <>
-          <p>Start with the specific things the prospect told you. If a landscaping owner said half her quote requests never get followed up, that line opens the meeting:</p>
-          <p><em>"You told me last week that quote requests go cold if nobody follows up within a day. That's the first thing we built this plan around."</em></p>
-          <p>A generic opener sounds like every rep before you. A specific callback sounds like a plan built for this prospect, because it is.</p>
+          <p>Leading with what you learned: partly industry knowledge the prospect may not have themselves, partly the specific things they told you during discovery. George calls it digging for nuggets. If a landscaping owner said half her quote requests never get followed up, that line opens the meeting, not your company history.</p>
+          <ul>
+            <li>Keep talk about your own company under two minutes, because win rates drop sharply past that.</li>
+            <li>Strong demos spend roughly the first 10 minutes on context before showing any product.</li>
+          </ul>
         </>
       )
     },
     {
-      id: 'deliverable',
-      title: 'Say what changes, not what you install',
+      id: 'strategy',
+      title: 'Give the strategy at ten thousand feet',
       badge: '2',
       content: (
         <>
-          <p>Keep this at the level of outcomes. "We'll set up automated follow-up on every quote request within one hour" is a deliverable. "We'll configure a CRM automation with a conditional trigger on lead status" is a feature tour.</p>
-          <p>The test: if the sentence describes a click path, it belongs in the appendix. If it describes a change the owner will notice, it belongs here.</p>
+          <p>Describing what you will deliver and how it connects back to those insights, without dropping into which button does what. Outcomes, not configuration: "automated follow-up on every quote request within an hour" rather than "a CRM automation with a conditional trigger on lead status."</p>
+          <ul>
+            <li>Open with the buyer's highest-value use case rather than building up to it.</li>
+            <li>Across 121,828 recorded meetings, won deals averaged 9.1 minutes of deck sharing and losses 11.4.</li>
+          </ul>
         </>
       )
     },
     {
-      id: 'value',
-      title: 'Prove it is worth it before they have to ask',
+      id: 'performance',
+      title: 'Put measurement on the table early',
       badge: '3',
       content: (
         <>
-          <p>Every owner is running the same math: will this pay for itself. Answer it before they ask.</p>
-          <p><em>"We'll track quote-to-close rate monthly, and I'll show you the before-and-after myself. If follow-up is really costing you jobs, you'll see it move within the first month."</em></p>
-          <p>Naming how you measure it, and when you show up with the number, turns "trust me" into something the owner can check.</p>
+          <p>Committing up front to how you will prove it is working, rather than leaving reporting to the end or, worse, to ninety days after they buy. Everyone is thinking about ROI and everyone is a little skeptical of salespeople, so volunteering the scorecard is what separates you.</p>
+          <ul>
+            <li>Ask the buyer to name the financial impact they want, then build the metrics from their figures.</li>
+            <li>Agree the KPIs before building any report, then set the cadence: weekly checks, monthly deep dives.</li>
+          </ul>
         </>
       )
     },
     {
-      id: 'ask',
-      title: 'Make the ask, out loud, in the room',
+      id: 'tactics-ask',
+      title: 'Then the tactics, and the ask',
       badge: '4',
       content: (
         <>
-          <p>Ask for the business here, not in a follow-up email.</p>
-          <p><em>"That's the plan: automated follow-up, a monthly report on quote-to-close, and I'll be your point of contact the whole way. Can we get you started this week?"</em></p>
-          <p>Confidence here is not volume. It is not softening the ask into a question about whether you should be asking.</p>
+          <p>Now the features, benefits, and what it costs. Go only as deep as the prospect leads you, and move the rest to the appendix. This is also where the investment slide lives, which makes it the moment to ask for the business, out loud, in the room: <em>"That's the plan. Can we get you started this week?"</em></p>
+          <ul>
+            <li>Top reps discuss business value 52% more often and product features 39% less than their peers.</li>
+            <li>Raise price once value is established, late in the meeting rather than early.</li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 'appendix',
+      title: 'Park the rest in the appendix',
+      badge: '5',
+      content: (
+        <>
+          <p>Everything the room did not need but someone else might: detailed specifications, terms, contract sections, and the capability you suspect matters but are not sure about. It keeps the main pitch tight while still arming whoever reads the deck later.</p>
+          <ul>
+            <li>Build two versions: a visual deck for the room, and one that reads on its own without you.</li>
+            <li>Gartner found sellers who filter and curate information closed low-regret deals 80% of the time.</li>
+          </ul>
         </>
       )
     }
   ]}
 />
 
-## Everything you are not sure about goes in the appendix
-
-If a capability might matter to this prospect but you are not certain, do not build the pitch around a maybe and do not cut it either. Put it at the back and say that it is there.
-
-:::info Naming the appendix
+:::tip Naming the appendix out loud
 "There's a webchat feature that might be a fit for you too. I've put a page on it at the back in case you want to look at it, but I didn't want to build our whole conversation around something you haven't seen yet."
 :::
 
-The main pitch stays tight, and a curious owner can still go looking.
+## The insights come from the discovery call
+
+Stage one is only as good as the conversation before it. Three questions do most of the work, and the order matters.
+
+| Ask this | Why it works |
+|---|---|
+| "What's on your mind?" | Opens with their agenda instead of yours, and tells you what they think the problem is. |
+| "And what else?" | The second and third answers are usually the honest ones. Keep asking until they run out. |
+| "So what's the real challenge here for you?" | Moves from symptoms to the thing actually blocking them, in their words. |
+
+Two habits make those questions land. Come in with a **hypothesis, not a script**, so you can be wrong out loud and get corrected. And when something genuinely does not fit, **say so** — telling a prospect that one piece is not right for them buys more credibility than a clean sweep ever does.
+
+Then recommend, in that order: understand, map, recommend. A recommendation that arrives before the understanding is just a pitch you did not earn, and prospects can tell the difference.
+
+## Present to the room you actually have
+
+The same content lands differently depending on who is listening.
+
+- **Decisive, assertive buyers** want the numbers and the point. Skip the testimonials, the personal opinions, and the flowery language.
+- **Detail-oriented buyers**, such as a finance lead, want the workflow specifics and the methodology. Give them enough to verify, and reference the appendix for the rest.
+- **Executives** get the outcome summary. **Practitioners** get how it actually works day to day.
+
+## Make it a conversation, not a monologue
+
+George is blunt about this: the presentation is not you pontificating. It is you making a point and then getting a reaction, the whole way through.
+
+- Successful demos average 21% more speaker switches per minute, and keep any single monologue near 76 seconds.
+- Prepare questions rather than talking points, with planned pauses that ask how this fits their process.
 
 :::tip Try it now
-Write one sentence for each move for your next prospect: the insight you heard, the deliverable, how you will prove it worked, and the exact words you will use to ask. Say the ask out loud beforehand. If it sounds like a question about whether you should ask, rewrite it.
+Write one sentence for each stage for your next prospect: the insight you heard, the strategy, how you will prove it worked, the ask, and what goes in the appendix. Say the ask out loud beforehand. If it sounds like a question about whether you should be asking, rewrite it.
 :::
 
-{/* No "do it, delegate it, or buy it" block here: this step teaches a rep's own presentation skill,
-    and there is no Vendasta Services equivalent to delegate a sales conversation to. */}
+## Keep the promises you just made
+
+A presentation creates commitments: the report you offered, the follow-up you scheduled, the thing you said you would check. Those are what the prospect remembers.
+
+<Admonition type="info" icon="✓" title="AI Sales Assistant — turns what you promised into a task list">
+  <p>After a meeting is recorded and analyzed, it updates the CRM records from that conversation and turns the action items into activities, so the commitments you made in the room become something on a list rather than something you hope you remember. It is part of CRM AI and needs a CRM AI Standard or Pro subscription; [the AI Sales Assistant guide](/ai/ai-workforce/ai-sales-assistant) covers what it updates and how to control it.</p>
+</Admonition>
+
+## Where this leaves you
+
+A presentation that closes is not a better-looking deck. It is insights they recognise, a strategy at the right altitude, measurement offered before it is demanded, and an ask made out loud.
+
+Do all that and you will still hear "I need to think about it." That is not a no, and it is the last thing left to learn.
 
 <SectionFeedback courseId="present-so-it-lands" site="vendasta_learn" section="content" />
 
 <KnowledgeCheck courseId="present-so-it-lands" site="vendasta_learn"
   sessionSize={4}
-  intro="Four quick questions on structure, what goes where, and making the ask."
+  intro="Four questions on structure, what goes where, and making the ask."
   questions={[
     {
       type: 'mcq',
@@ -157,7 +221,7 @@ Write one sentence for each move for your next prospect: the insight you heard, 
       question: 'A sentence in your draft presentation describes exactly which buttons the owner will click to set up a feature. Where does it belong?',
       options: [
         'The opening insight',
-        'The main deliverables section',
+        'The main strategy section',
         'The appendix',
         'It should be cut entirely'
       ],
@@ -170,11 +234,23 @@ Write one sentence for each move for your next prospect: the insight you heard, 
       options: [
         'In a follow-up email after the meeting',
         'At the very start, before you explain anything',
-        'Right after insights, deliverables, and value, in the same meeting',
+        'In the tactics stage of the same meeting, after insights, strategy, and proof',
         'Only after the prospect asks about price'
       ],
       correctIndex: 2,
-      explanation: 'The ask belongs in the tactics section of the same meeting, after you have shown you listened, said what changes, and proven it is worth it. Waiting for an email loses the momentum you just built.'
+      explanation: 'The ask belongs alongside the investment slide in the same meeting, after you have shown you listened, given the strategy, and proven you will measure it. Waiting for an email loses the momentum you just built.'
+    },
+    {
+      type: 'mcq',
+      question: 'Why put reporting and measurement early in the presentation rather than at the end?',
+      options: [
+        'It fills time while the prospect reads the deck',
+        'Every buyer is already wondering about ROI, so volunteering the scorecard builds trust',
+        'It is required before you can quote a price',
+        'It replaces the need for a case study'
+      ],
+      correctIndex: 1,
+      explanation: 'Offering how you will prove it works, before being asked, separates you from sellers who leave reporting until after the purchase.'
     },
     {
       type: 'truefalse',
@@ -184,14 +260,14 @@ Write one sentence for each move for your next prospect: the insight you heard, 
     },
     {
       type: 'match',
-      instruction: 'Match each of the four presentation moves to what it does.',
+      instruction: 'Match each of the five stages to what it does.',
       pairs: [
-        { term: 'Insight', definition: 'Prove you listened, using their own words' },
-        { term: 'Deliverable', definition: 'Say what changes for their business' },
-        { term: 'Value', definition: 'Show how you will measure it, and when' },
-        { term: 'The ask', definition: 'Request the business, out loud, in the room' }
+        { term: 'Insights', definition: 'Prove you listened, using their own words' },
+        { term: 'Strategy', definition: 'Say what changes, at ten thousand feet' },
+        { term: 'Performance', definition: 'Show how you will measure it, and when' },
+        { term: 'Tactics and the ask', definition: 'Detail, price, and requesting the business' }
       ],
-      explanation: 'Always in that order. Each move earns the right to make the next one.'
+      explanation: 'Always in that order, with the appendix last. Each stage earns the right to make the next one.'
     },
     {
       type: 'fillblank',
@@ -201,11 +277,35 @@ Write one sentence for each move for your next prospect: the insight you heard, 
       after: '',
       hint: 'the back of the deck',
       explanation: 'The main pitch stays at the level of outcomes the owner will notice. Click paths and feature tours go in the appendix.'
+    },
+    {
+      type: 'truefalse',
+      statement: 'A strong sales presentation means delivering your prepared material without interruption.',
+      correct: false,
+      explanation: 'The presentation is a conversation, not a monologue. Stronger meetings switch speaker far more often and keep any single stretch of talking short, so prepare questions and planned pauses rather than only talking points.'
+    },
+    {
+      type: 'mcq',
+      question: 'A prospect gives you a short, surface-level answer to your first discovery question. What is the most useful thing to ask next?',
+      options: [
+        '"And what else?"',
+        '"Should I explain what we do first?"',
+        '"Is this not a priority for you right now?"',
+        '"Who else needs to be part of this decision?"'
+      ],
+      correctIndex: 0,
+      explanation: 'The second and third answers are usually the honest ones. Keep asking until they run out, because that is where the real challenge surfaces.'
     }
   ]}
 />
 
-<LessonFooter to="/learn/sales/handle-objections" pathName="The master sales series" step={4} totalSteps={5} />
+<LessonFooter
+  to="/learn/sales/handle-objections"
+  pathName="The master sales series"
+  step={4}
+  totalSteps={5}
+  description="Now handle the push-back that follows a good presentation."
+/>
 
 </InlineHighlighter>
 <MarkComplete courseId="present-so-it-lands" site="vendasta_learn" />

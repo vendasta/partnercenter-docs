@@ -13,21 +13,23 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import Accordion from "@site/src/components/Accordion";
+import Admonition from "@theme/Admonition";
 
 <InlineHighlighter courseId="handle-objections" site="vendasta_learn">
 
 <CourseProgressBar courseId="handle-objections" site="vendasta_learn" />
 
-{/* Both video embeds for this step are placed inline below, under their matching headings.
-    Shiva's 2026-08-14 verification found the two IDs originally listed here were swapped from
-    what this comment said: `bm47k8n12o` is actually the "recognizing common objections" clip
-    (price/authority/trust/complacency/recognition — placed under "The LAIR sequence"), and
-    `59g98gwzj6` is actually the "five ways to bounce back" clip (placed under "Five ways to
-    bounce back"). IDs below reflect the corrected mapping. */}
+{/* Two video embeds in this step, each under the heading it actually covers.
+    Shiva's 2026-08-14 verification found the two IDs originally listed here were swapped:
+    `bm47k8n12o` is the "5 Common Sales Objections" clip (price/authority/trust/complacency/
+    competitor), and `59g98gwzj6` is the "five ways to bounce back" clip.
+    2026-08-21 fix: `bm47k8n12o` had been embedded under a "LAIR sequence" heading, but its
+    transcript never mentions LAIR. The embed now sits under the five objections, and LAIR,
+    which has no video of its own, is presented as a table rather than as video content. */}
 
 <LessonHeader
   difficulty="Intermediate"
-  time="about 15 minutes"
+  time="about 18 minutes"
   required={["A strategy already presented to this prospect"]}
   video={true}
   pathName="The master sales series"
@@ -35,9 +37,10 @@ import Accordion from "@site/src/components/Accordion";
   totalSteps={5}
   outcomes={[
     "Recognize that an objection is a request for more information, not a rejection",
-    "Work through any objection using the LAIR sequence",
-    "Recognize the five most common objections and know what to say back to each",
-    "Reach for five specific bounce-back techniques when you need one",
+    "Name the five most common objections and what each one actually means",
+    "Reach for five specific bounce-back techniques when a deal stalls",
+    "Work any objection through the LAIR sequence before you answer it",
+    "Treat the close as the start of the account rather than the end of the sale",
   ]}
 />
 
@@ -47,12 +50,7 @@ An objection almost never means what it sounds like on the surface. *"I don't kn
 
 Every one of them is a request for information, not a locked door. The reps who close more are not the ones who avoid objections. They are the ones with a process for working through them.
 
-## The LAIR sequence
-
-{/* VIDEO: "Breaking Down Objections using the 'LAIR' Strategy" — Wistia ID `bm47k8n12o`,
-    verified by Shiva 2026-08-14. */}
-
-Watch the five objections you will hear most, and the LAIR sequence for working through any of them.
+Two short videos cover this. The first names the five objections you will hear most and what each one is really telling you.
 
 <div
   className="wistia_responsive_padding"
@@ -78,56 +76,9 @@ Watch the five objections you will hear most, and the LAIR sequence for working 
 </div>
 <script src="https://fast.wistia.net/player.js" async></script>
 
-LAIR is a repeatable order of operations for any objection, before you know which specific one you are facing. The sequence matters more than any single line inside it.
-
-<Accordion
-  items={[
-    {
-      id: 'listen',
-      title: 'Listen',
-      badge: 'L',
-      content: (
-        <>
-          <p>Let the prospect finish, uninterrupted. Do not jump to a rebuttal. On the phone, signal you are there with a "mm-hmm" or "I see" rather than silence.</p>
-        </>
-      )
-    },
-    {
-      id: 'acknowledge',
-      title: 'Acknowledge and clarify',
-      badge: 'A',
-      content: (
-        <>
-          <p>Tell them the concern is valid, then probe if you suspect more underneath it: <em>"It sounds like you're concerned about X. Can you tell me more?"</em></p>
-        </>
-      )
-    },
-    {
-      id: 'identify',
-      title: 'Identify',
-      badge: 'I',
-      content: (
-        <>
-          <p>Repeat the concern back in your own words and confirm you have it right. This is the step that proves you were listening rather than waiting for your turn.</p>
-        </>
-      )
-    },
-    {
-      id: 'redirect',
-      title: 'Redirect',
-      badge: 'R',
-      content: (
-        <>
-          <p>Respond first with a <em>question</em>, not an answer. Only once the prospect is out of defensive mode will they hear your solution. Then redirect with context, data, or a customer story that speaks to the specific doubt.</p>
-        </>
-      )
-    }
-  ]}
-/>
-
 ## The five objections you will hear most
 
-Almost every push-back is one of five: price, authority, trust, complacency, or a competitor. Naming which one you are facing tells you what to say back, and each opens with the words you will actually hear.
+Almost every push-back is one of five. Naming which one you are facing tells you what to say back.
 
 <Accordion
   items={[
@@ -137,7 +88,11 @@ Almost every push-back is one of five: price, authority, trust, complacency, or 
       badge: '1',
       content: (
         <>
-          <p>They do not see the value yet. "Too expensive" is usually code for "not worth what you're charging." Do not reach for a discount, which just confirms the price was inflated. Highlight long-term savings, break the cost into smaller units so the number feels less abstract, and offer proof of customers who came out ahead.</p>
+          <p>They do not see the value yet. "Too expensive" is usually code for "not worth what you are charging." Highlight the long-term savings, break the cost into smaller units so the number stops feeling abstract, and offer proof of customers who came out ahead. Reaching for a discount just confirms the price was padded.</p>
+          <ul>
+            <li>Ask "too expensive compared to what?" to find out whether they are benchmarking you against a rival or against nothing.</li>
+            <li>Then ask whether it is a cash flow issue or a budget issue, because those need different answers.</li>
+          </ul>
         </>
       )
     },
@@ -147,7 +102,11 @@ Almost every push-back is one of five: price, authority, trust, complacency, or 
       badge: '2',
       content: (
         <>
-          <p>They do not feel confident deciding alone. Often a stall rather than a lie, but do not challenge it even if you suspect so, because that creates conflict without moving anything. Keep the process going: <em>"I absolutely understand. Could we set up a group meeting with the other decision-makers?"</em></p>
+          <p>They do not feel confident deciding alone. Often a stall rather than a lie, and challenging it creates conflict without moving anything. Keep the process going instead: <em>"I absolutely understand. Could we set up a meeting with the other decision-makers?"</em></p>
+          <ul>
+            <li>Ask what objections they will face internally, then offer to build their business case for them.</li>
+            <li>Gong found deals with no decision-maker involved close far less often, so ask to join that meeting.</li>
+          </ul>
         </>
       )
     },
@@ -157,7 +116,11 @@ Almost every push-back is one of five: price, authority, trust, complacency, or 
       badge: '3',
       content: (
         <>
-          <p>They need reassurance, not a defense. Demonstrate capability by knowing your solution cold, show integrity with real examples of putting the customer first, and give objective proof: case studies, testimonials, references, not just your word.</p>
+          <p>They need reassurance, not a defence. Demonstrate capability by knowing your solution cold, show integrity with real examples of putting the customer first, and give objective proof: case studies, testimonials, and references rather than your own word.</p>
+          <ul>
+            <li>Give a count plus one name: "we work with 15 companies like yours, including X."</li>
+            <li>On a bad review, state the fix rather than hiding it. Consumer research finds a perfect five-star average reads as less credible than 4.2 to 4.5.</li>
+          </ul>
         </>
       )
     },
@@ -168,6 +131,10 @@ Almost every push-back is one of five: price, authority, trust, complacency, or 
       content: (
         <>
           <p>The status quo is comfortable and what you sell is not urgent yet. Name the specific changes that come from saying yes, then build urgency: the industry is moving, competitors are adapting, and standing still has a cost.</p>
+          <ul>
+            <li>Ask "how are you solving for that today?" so the prospect names the gap instead of you.</li>
+            <li>Research on no-decision losses found most stem from fear of choosing wrong, so de-risk rather than push harder.</li>
+          </ul>
         </>
       )
     },
@@ -177,19 +144,20 @@ Almost every push-back is one of five: price, authority, trust, complacency, or 
       badge: '5',
       content: (
         <>
-          <p>Good news. They already believe they need this, they just do not think it comes from you. Ask about their experience with the incumbent (<em>"What's working? What isn't?"</em>), let them name the gaps themselves, then show how you differ on those specific points. Competitor-bashing reads as petty and costs you credibility.</p>
+          <p>Good news. They already believe they need this, they just do not think it comes from you. Ask about their experience with the incumbent, let them name the gaps themselves, then show how you differ on those specific points. Competitor-bashing reads as petty and costs you credibility.</p>
+          <ul>
+            <li>Ask what they like best about working with them, then stay quiet for a full seven to ten seconds.</li>
+            <li>Get the renewal date, then ask how they would move forward if the contract did not exist.</li>
+          </ul>
         </>
       )
     }
   ]}
 />
 
-## Five ways to bounce back
+## Then five ways to bounce back
 
-{/* VIDEO: "Five Ways to Bounce Back after Objection" — Wistia ID `59g98gwzj6`,
-    verified by Shiva 2026-08-14. */}
-
-Then five higher-level strategies for when an objection stalls the deal.
+The second video covers higher-level techniques for when an objection stalls the deal, whichever of the five you are facing.
 
 <div
   className="wistia_responsive_padding"
@@ -214,7 +182,7 @@ Then five higher-level strategies for when an objection stalls the deal.
   </div>
 </div>
 
-These five are not tied to any one objection. Reach for whichever fits the moment, or combine more than one when the conversation calls for it.
+Reach for whichever fits the moment, or combine more than one.
 
 <Accordion
   items={[
@@ -224,7 +192,11 @@ These five are not tied to any one objection. Reach for whichever fits the momen
       badge: '1',
       content: (
         <>
-          <p><em>"Out of curiosity, why doesn't this work for you?"</em> People like explaining themselves, and the act of explaining often surfaces the real issue.</p>
+          <p>Answering an objection with a question rather than a rebuttal, so the prospect explains themselves and surfaces the real issue on their own. People like explaining their reasoning, and the explanation is usually more useful than the objection was.</p>
+          <ul>
+            <li>Gong found top reps answer objections with a question 54.3% of the time, against 31% for average reps.</li>
+            <li>Avoid opening with "why", which sounds like a challenge. Try "can you help me understand what's driving that?"</li>
+          </ul>
         </>
       )
     },
@@ -234,7 +206,11 @@ These five are not tied to any one objection. Reach for whichever fits the momen
       badge: '2',
       content: (
         <>
-          <p><em>"If I can show you this saves you money, can we keep talking?"</em> A yes to the condition is a soft yes to the sale.</p>
+          <p>A social agreement in a fixed shape: "if I do this, will you agree to that." It ties the objection directly to the solution, so a yes to the condition is a soft yes to the sale.</p>
+          <ul>
+            <li>Lead with the "if I can" half, since opening on "will you" invites a fresh objection first.</li>
+            <li>Isolate before you condition: "aside from that, is anything else holding this up?"</li>
+          </ul>
         </>
       )
     },
@@ -244,7 +220,11 @@ These five are not tied to any one objection. Reach for whichever fits the momen
       badge: '3',
       content: (
         <>
-          <p>Agree first, then shift the lens: <em>"Yes, the colour's unusual, and that is exactly what makes it memorable."</em> Do not argue the fact. Change what it means.</p>
+          <p>Agreeing with the fact, then changing what it means. You are not arguing the point, you are shifting the lens from negative to positive: <em>"Yes, the cost is higher, and that is a testament to how it is built."</em></p>
+          <ul>
+            <li>Ask "can I bounce a few thoughts off you?" rather than "can I make a suggestion?", which invites defensiveness.</li>
+            <li>Close the loop afterwards: "what part of that still feels unresolved?" stops false agreement resurfacing later.</li>
+          </ul>
         </>
       )
     },
@@ -254,7 +234,11 @@ These five are not tied to any one objection. Reach for whichever fits the momen
       badge: '4',
       content: (
         <>
-          <p>Repeat the objection, then make it the reason to buy: <em>"You're right, you are busy. That is exactly why this saves you five hours a week."</em></p>
+          <p>Repeating the objection back, then making it the very reason to buy. <em>"I get that you're busy. That is exactly why this is worth it, because it takes five hours a week off you."</em></p>
+          <ul>
+            <li>The hinge phrase is "that's exactly why", which turns the objection into your evidence.</li>
+            <li>Always attach a real proof point. A bare boomerang reads as brushing the concern aside.</li>
+          </ul>
         </>
       )
     },
@@ -264,16 +248,71 @@ These five are not tied to any one objection. Reach for whichever fits the momen
       badge: '5',
       content: (
         <>
-          <p><em>"I understand how you feel. Other customers felt the same way. Once they got started, they found [the actual outcome]."</em> Validate, normalize, resolve.</p>
+          <p>Three steps that put a prospect at ease: show you understand how they feel, note that others felt the same, then tell them what those others found once they went ahead. Validate, normalize, resolve.</p>
+          <ul>
+            <li>Say "some people feel" rather than "I understand how you feel", which invites "no you don't".</li>
+            <li>Put real names and numbers in the "found" step, because a vague outcome exposes the script.</li>
+          </ul>
         </>
       )
     }
   ]}
 />
 
-:::tip Try it now
-Pick an objection you heard this week. Run it through LAIR out loud — what would Listen, Acknowledge, Identify, and Redirect actually sound like for that exact conversation? Then pick one of the five bounce-back techniques you did not use in the moment and rewrite your response with it.
+## Work the sequence before you answer
+
+Neither video names an order of operations, so here is one worth borrowing. LAIR runs before you reach for any specific response, and the sequence matters more than any single line inside it.
+
+| Step | What it means | What it sounds like |
+|---|---|---|
+| **L** — Listen | Let them finish, uninterrupted. Do not jump to a rebuttal. | On the phone, "mm-hmm" or "I see" rather than dead silence. |
+| **A** — Acknowledge | Tell them the concern is valid, then probe for what sits under it. | "It sounds like you're worried about X. Can you tell me more?" |
+| **I** — Identify | Repeat the concern back in your own words and confirm you have it right. | "So it's the contract length, not the price itself?" |
+| **R** — Redirect | Respond with a question first, then the answer, then the proof. | "Can I bounce a few thoughts off you?" |
+
+## Listen longer than feels comfortable
+
+The instinct when an objection lands is to fill the silence. The data says do the opposite.
+
+- Top sellers pause roughly five times longer after an objection than average reps do.
+- The best reps hold around 43% of the talk time. Average reps talk into the high sixties.
+
+:::tip Two numbers worth remembering
+- **74%** of all objections fall into just five recurring types, which is why naming the type is most of the work.
+- **40 to 60%** of qualified deals are lost to no decision at all, not to a competitor. Indecision is the real rival.
 :::
+
+## The close is the start, not the finish
+
+You get through the objections, they say yes, and the instinct is to move on to the next deal. That is where accounts quietly leak.
+
+| When | What to do |
+|---|---|
+| 30 days | Prove what changed. Bring one number that moved, however small. |
+| 60 days | Keep asking the discovery questions, now that you do not have to. |
+| 90 days | Turn their result into their story, and ask for the referral. |
+
+Two things to watch for after that. A **one-degree drift**, where nothing is wrong but the relationship is slowly cooling, is far cheaper to correct than a save. And **at-risk is not the same as lost**: a client saying they are unhappy is still talking to you, which is a better position than silence.
+
+When you do lose one, lose it well. Ask what would have had to be true, thank them, and leave the door open. Some of the best re-signs are accounts that left and came back.
+
+:::tip Try it now
+Take an objection you heard this week. Name which of the five it was, then run it through LAIR out loud. Now pick one bounce-back technique you did not use in the moment and rewrite your response with it.
+:::
+
+## Answer the repeat objections once
+
+The same three or four objections come up on nearly every call. Those are the ones worth answering somewhere other than a live conversation.
+
+<Admonition type="info" icon="✓" title="AI Chat Receptionist — handles the objections you have answered a hundred times">
+  <p>It answers website visitors around the clock from your knowledge base, so the routine push-backs (what it costs, who else you work with, how long a contract runs) get a clear answer before anyone reaches you. Put your best responses to the five objections into that knowledge base and they get delivered consistently, which leaves your live conversations for the objections that are actually specific to that prospect. [This guide walks you through setup](/ai/ai-workforce/ai-chat-receptionist/).</p>
+</Admonition>
+
+## Where this leaves you
+
+An objection is the prospect telling you where the gap is. Name which of the five it is, run LAIR before you answer, and pick the technique that fits the moment.
+
+That completes the series: a day that produces conversations, a full funnel, a pitch that earns the meeting, a presentation that closes, and a process for the push-back. The skill check is where you find out what stuck.
 
 <SectionFeedback courseId="handle-objections" site="vendasta_learn" section="content" />
 
@@ -330,6 +369,18 @@ Pick an objection you heard this week. Run it through LAIR out loud — what wou
       explanation: 'The hardest sale is convincing someone they need the category at all. A prospect using a competitor has already made that decision, so the remaining task is smaller.'
     },
     {
+      type: 'mcq',
+      question: 'What loses more qualified deals than competitors do?',
+      options: [
+        'Pricing set too high',
+        'No decision at all, driven by fear of choosing wrong',
+        'Slow contract paperwork',
+        'Poor product documentation'
+      ],
+      correctIndex: 1,
+      explanation: 'Between 40 and 60% of qualified deals end in no decision. The rival is usually indecision, which is why de-risking beats pushing harder.'
+    },
+    {
       type: 'truefalse',
       statement: 'If you suspect a prospect is not being fully honest about an authority objection, you should challenge them on it directly.',
       correct: false,
@@ -354,11 +405,30 @@ Pick an objection you heard this week. Run it through LAIR out loud — what wou
       after: '',
       hint: 'what other customers discovered',
       explanation: 'Feel, felt, found: validate the feeling, normalize it by sharing that others felt the same, then resolve it with what those others found.'
+    },
+    {
+      type: 'mcq',
+      question: 'You worked through the objections and the prospect signed. When does the account start needing your attention?',
+      options: [
+        'Immediately, because the close is the start of the account rather than the end of the sale',
+        'At the first renewal conversation',
+        'Once they raise a problem themselves',
+        'After the onboarding period finishes'
+      ],
+      correctIndex: 0,
+      explanation: 'Check in at 30, 60, and 90 days: prove what changed, keep asking the discovery questions now that you do not have to, then turn their result into their story. A one-degree drift is far cheaper to correct than a save.'
     }
   ]}
 />
 
-<LessonFooter to="/learn/sales/master-sales-skill-check" pathName="The master sales series" step={5} totalSteps={5} title="Last step done. Ready to test it?" />
+<LessonFooter
+  to="/learn/sales/master-sales-skill-check"
+  pathName="The master sales series"
+  step={5}
+  totalSteps={5}
+  title="Last step done. Ready to test it?"
+  description="Fifteen scenario questions covering the whole series."
+/>
 
 </InlineHighlighter>
 <MarkComplete courseId="handle-objections" site="vendasta_learn" />

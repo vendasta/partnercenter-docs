@@ -1,6 +1,6 @@
 ---
-title: "Six habits for better prospecting"
-sidebar_label: "Six habits for better prospecting"
+title: "Ten habits for better prospecting"
+sidebar_label: "Ten habits for better prospecting"
 sidebar_position: 2
 description: "Build a pipeline instead of waiting for one to show up."
 ---
@@ -13,6 +13,8 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import Accordion from "@site/src/components/Accordion";
+import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import Admonition from "@theme/Admonition";
 
 <InlineHighlighter courseId="find-your-next-prospect" site="vendasta_learn">
 
@@ -30,6 +32,7 @@ import Accordion from "@site/src/components/Accordion";
     "Explain why keeping the funnel full matters more than any single deal",
     "Deliver a concise, headline-first pitch instead of a rambling one",
     "Respond to a prospect at the moment they are most engaged, not hours later",
+    "Turn your own profile into something that holds up when a prospect researches you",
     "Use a sales engagement tool to automate the outreach grind instead of doing it by hand",
     "Name which AI Employees support prospecting, and the part of it that stays yours",
   ]}
@@ -37,7 +40,13 @@ import Accordion from "@site/src/components/Accordion";
 
 {/* VIDEO: "Better Prospecting" — Wistia ID `lpdxav2w39`, verified by Shiva 2026-08-14. */}
 
-Watch sales expert George Leith on what it takes to keep a funnel full.
+## A full funnel beats a big deal
+
+You have seen it happen: someone crushes every record one month and is scraping the bottom of the leaderboard the next. It is almost never that they got worse at selling. It is that they stopped prospecting while they were busy servicing the deals they just won, and the funnel behind them went empty.
+
+Prospecting is not the thing you do when you have spare time. It is the thing that decides whether you have a next month at all. Ten habits are what keep it full.
+
+Sales expert George Leith walks through all ten. Watch it first, then work through them one at a time below.
 
 <div
   className="wistia_responsive_padding"
@@ -63,95 +72,182 @@ Watch sales expert George Leith on what it takes to keep a funnel full.
 </div>
 <script src="https://fast.wistia.net/player.js" async></script>
 
-## A full funnel beats a big deal
+## Keep the funnel full: ten habits
 
-You have seen it happen: someone crushes every record one month and is scraping the bottom of the leaderboard the next. It is almost never that they got worse at selling. It is that they stopped prospecting while they were busy servicing the deals they just won — and the funnel behind them went empty.
-
-Prospecting is not the thing you do when you have spare time. It is the thing that determines whether you have a next month at all.
-
-## Keep the funnel full: six habits
-
-Six habits separate the reps who always have a next month from the ones who do not. Open each to see what it looks like in practice.
+Ten habits separate the reps who always have a next month from the ones who do not. None of them are complicated. Open each to see what it looks like in practice.
 
 <Accordion
   items={[
     {
-      id: 'concise-first',
-      title: 'Deliver the concise version first',
+      id: 'master-pitch',
+      title: 'Master your sales pitch',
       badge: '1',
       content: (
         <>
-          <p>Human attention is measured in seconds, not minutes. Say the headline up front, then go deeper only if they ask. An eight-paragraph email gets skimmed for ten seconds and deleted; a two-line one gets read.</p>
+          <p>A sales pitch you can deliver confidently to any prospect, at any moment, adjusted for whichever type of buyer you are speaking to: one flexible value proposition, not a single fixed script.</p>
+          <ul>
+            <li>Build a separate version for each type of buyer you sell to.</li>
+            <li>Lead with the problem they have, not your product's features.</li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 'concise-first',
+      title: 'Deliver the concise version first',
+      badge: '2',
+      content: (
+        <>
+          <p>The TL;DR habit: saying the headline of your message first, then offering more detail only if it is asked for, instead of building up to the point.</p>
+          <ul>
+            <li>Keep cold emails to roughly 50 to 125 words.</li>
+            <li>Close with a question instead of a flat statement — it invites a reply.</li>
+          </ul>
         </>
       )
     },
     {
       id: 'shape-not-content',
       title: 'Ask questions you can predict the shape of, not the content of',
-      badge: '2',
+      badge: '3',
       content: (
         <>
-          <p>You often already know roughly what a prospect will say. You are asking because <em>how</em> they say it tells you what they actually care about. That is different from an interrogation. Nobody wants to feel like they are filling out a form out loud.</p>
+          <p>Asking questions whose answer you can roughly predict, so you are listening for <em>how</em> a prospect responds rather than gathering brand-new information: the opposite of a rapid-fire interrogation.</p>
+          <ul>
+            <li>Aim for the 70/30 rule: let the prospect talk 70% of the time.</li>
+            <li>If you are doing most of the talking, you are pitching, not discovering.</li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 'ask-for-clarification',
+      title: 'Ask for clarification, both ways',
+      badge: '4',
+      content: (
+        <>
+          <p>Closing the loop after every exchange: confirming you understood what a prospect said, and confirming they understood what you just told them.</p>
+          <ul>
+            <li>Paraphrase what you heard in your own words: "Let me see if I've got this right..."</li>
+            <li>It is one of the most consistently taught active-listening techniques in sales training.</li>
+          </ul>
         </>
       )
     },
     {
       id: 'always-deliver-value',
       title: 'Never stop delivering value, even to your own customers',
-      badge: '3',
+      badge: '5',
       content: (
         <>
-          <p>Your customer is someone else's prospect, and your prospect is someone else's customer. It is a constant contest over who delivers more value more often, and the rep who stops adding value between deals loses the account eventually.</p>
+          <p>Treating every customer the way you would treat a prospect: your customer is someone else's prospect, and your prospect is someone else's customer, so whoever adds more value, more often, keeps the account.</p>
+          <ul>
+            <li>Stay useful between deals: send a relevant article, make an introduction, or answer a question with nothing to sell.</li>
+            <li>It keeps you top of mind before you need to be.</li>
+          </ul>
         </>
       )
     },
     {
       id: 'respond-when-engaged',
       title: 'Respond at the moment they are engaged, not on your schedule',
-      badge: '4',
+      badge: '6',
       content: (
         <>
-          <p>A prospect is far more likely to convert when you reach them in the first moments after they open your message. If you can see when an email was opened or a message was read, that is your signal to call, right then, not at the end of the day.</p>
+          <p>Reaching a prospect in the seconds after they open your message: the single highest-leverage moment in the relationship, and one that does not last.</p>
+          <ul>
+            <li>Leads contacted within 5 minutes convert dramatically more often than ones reached even 30 minutes later.</li>
+            <li>Most companies still take hours to respond at all.</li>
+          </ul>
         </>
       )
     },
     {
       id: 'their-channel',
       title: 'Use the channel your prospect actually prefers',
-      badge: '5',
+      badge: '7',
       content: (
         <>
-          <p>Some people want a phone call. A growing number would rather text or message than ever get on one. Do not fight this: figure out which channel a given prospect responds to and meet them there.</p>
+          <p>Meeting a prospect on whichever channel they actually use, phone, text, social, or email, instead of defaulting to the one you personally prefer.</p>
+          <ul>
+            <li>Start with two or three channels — email, LinkedIn, and phone is a common mix.</li>
+            <li>Plan on 5 to 7 touches across them; most prospects respond only after multiple attempts.</li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 'research-first',
+      title: 'Research a prospect before you reach out',
+      badge: '8',
+      content: (
+        <>
+          <p>Looking up a prospect's social media or running a quick search on their name before you ever speak to them, so you already know something about what they care about.</p>
+          <ul>
+            <li>Budget about 10 minutes across LinkedIn, the company site, and recent news, enough to reference something specific instead of opening generically.</li>
+            <li>Assume they are doing the same to you before the same meeting, so your own profile is part of the prep.</li>
+          </ul>
         </>
       )
     },
     {
       id: 'trusted-expert',
       title: 'Become the trusted expert, so referrals do your prospecting for you',
-      badge: '6',
+      badge: '9',
       content: (
         <>
-          <p>Bragging is just marketing with worse branding. If customers say good things about you, amplify it. The endpoint of doing this well is referrals: prospects who arrive pre-sold because someone already vouched for you.</p>
+          <p>Building a reputation strong enough that customers recommend you unprompted: amplifying what they already say about you until referrals start arriving pre-sold, with no cold outreach required.</p>
+          <ul>
+            <li>Keep roughly 80% of what you share as value and 20% as promotion.</li>
+            <li>You do not have to write it yourself. Sharing something genuinely good with two or three sentences of your own take is far easier to sustain.</li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 'five-nine-rule',
+      title: 'Five-before-nine, nine-after-five',
+      badge: '10',
+      content: (
+        <>
+          <p>A calling discipline: five prospecting calls before 9am, nine after 5pm, timed to catch buyers during their own admin hours instead of their actual workday.</p>
+          <ul>
+            <li>Phone connection rates peak around 9 to 11am and again 4 to 5pm local time.</li>
+            <li>Tuesday through Thursday outperforms Monday and Friday for actually reaching someone.</li>
+          </ul>
         </>
       )
     }
   ]}
 />
 
-## The five-before-nine, nine-after-five rule
+:::tip Two numbers worth remembering
+- **~4 seconds** is the average human attention span, a shade behind a goldfish's five. Lead with the headline, every time.
+- **60x** is how much more likely a prospect is to convert if you reach them within 60 seconds of opening your message.
+:::
 
-If you work a standard nine-to-five, make five prospecting calls before 9am and nine after 5pm. The logic: your buyer is doing their actual job during business hours. You want to reach them when they are doing their own admin and planning, when they are more likely to pick up.
+## Make your profile a prospecting asset
 
-Even on days this feels arbitrary, the discipline of doing it keeps prospecting as something you think about every day, not something you get to eventually.
+Habits 7, 8, and 9 all run through the same place: the profile a prospect finds when they look you up. Five things carry most of the weight.
+
+| Profile element | What makes it work |
+|---|---|
+| Photo and banner | A professional headshot, not the beach photo with your dog. Use the banner for your brand or a recent win. |
+| Headline | Say why someone should care, not just your title. "Helping local businesses fix the gaps in their online presence" beats "Account Executive." |
+| Summary | The highest-leverage 200 words you have. Tell a story rather than restating your resume. |
+| Featured section | Link your best work. Most people leave this empty, which is exactly why filling it in separates you. |
+| Recommendations and skills | At least one recommendation from someone who actually worked with you, and endorsements behind any skill you claim. |
+
+LinkedIn's Social Selling Index scores four things: how complete your presence is, how well you find the right people, whether you engage with insight rather than likes, and how your relationships develop over time. Treat a low score as a checklist of what you are skipping, not as a vanity metric.
 
 ## Automate the outreach grind
 
 Everything above is a discipline. The next part is a tool. A sales engagement platform like Yesware plugs into Gmail or Outlook and takes over the mechanical side of outreach, so you spend your time on conversations instead of the busywork around them:
 
-- **Track** — get a real-time notification when a prospect opens your email or clicks a link, so you know exactly when to follow up. This is habit 4, automated.
+- **Track** — get a real-time notification when a prospect opens your email or clicks a link, so you know exactly when to follow up. This is the respond-fast habit, automated.
 - **Search** — pull verified contact data (phone, email, social) for new leads in a couple of clicks instead of hours of manual research.
 - **Standardize** — build reusable, personalizable email templates once, instead of rewriting the same email every time.
-- **Automate** — schedule multi-touch outreach across several days. It takes an average of five follow-ups after first contact before a prospect says yes, so a tool that remembers to send touch number four is doing real work.
+- **Automate** — schedule multi-touch outreach across several days, so the fourth and fifth touches actually get sent instead of quietly forgotten.
 - **Analyze** — see which campaigns, cadences, and follow-up counts actually produce replies, so you stop guessing.
 
 None of this replaces the habits above. It removes the manual grind around them so more of your day goes to actually talking to people, which is where the 60/30/10 rule says most of your time belongs anyway.
@@ -164,17 +260,31 @@ Pick one prospect you have not followed up with this week. Write the headline ve
 
 Two AI Employees do real work around prospecting, and it is worth being precise about which part each one takes.
 
-The **AI Chat Receptionist** works the top of the funnel. It answers website visitors around the clock using your knowledge base and website content, and it collects a name, phone number, or email so you have someone to follow up with. That is habit 4 running without you: someone is engaged right now, and something is responding right now instead of tomorrow morning. When you are ready to put one on your site, [this guide walks you through setup](/ai/ai-workforce/ai-chat-receptionist/).
+<Admonition type="info" icon="✓" title="AI Chat Receptionist — works the top of the funnel">
+  <p>Answers website visitors around the clock using your knowledge base and website content, and collects a name, phone number, or email so you have someone to follow up with. That is the respond-fast habit running without you: someone is engaged right now, and something is responding right now instead of tomorrow morning. When you are ready to put one on your site, [this guide walks you through setup](/ai/ai-workforce/ai-chat-receptionist/).</p>
+</Admonition>
 
-The **AI Sales Assistant** works behind the funnel. After a meeting is recorded and analyzed, it updates the CRM records that came out of that conversation and creates activities from the action items, so a commitment you made out loud becomes something on a list. You can also ask it about your pipeline in plain language, such as "What opportunities are currently open in my pipeline?" or "What action items came out of my recent meetings?", instead of building a report. It is part of CRM AI and needs a CRM AI Standard or Pro subscription; [the AI Sales Assistant guide](/ai/ai-workforce/ai-sales-assistant) covers what it updates and how to control it.
+<Admonition type="info" icon="✓" title="AI Sales Assistant — works behind the funnel">
+  <p>After a meeting is recorded and analyzed, it updates the CRM records that came out of that conversation and creates activities from the action items, so a commitment you made out loud becomes something on a list. Ask it about your pipeline in plain language, such as "What opportunities are currently open in my pipeline?", instead of building a report. It is part of CRM AI and needs a CRM AI Standard or Pro subscription; [the AI Sales Assistant guide](/ai/ai-workforce/ai-sales-assistant) covers what it updates and how to control it.</p>
+</Admonition>
 
-Both of them work on conversations that arrive at you or have already happened. Going out and finding someone who has never heard of you is still yours, and the six habits above are how you do it.
+Both work on people already in your world: a visitor on your site, a contact in your CRM, a meeting that already happened. An automation can even place an outbound AI call to a contact you already hold. What none of them do is find someone who has never heard of you, and the ten habits above are how you do that.
 
 ## Do it, delegate it, or buy it
 
-- **Do it** — build your own outreach cadence and templates by hand. Free, but the most time.
-- **Delegate it** — have an SDR or junior rep own the prospecting-volume side of the funnel while you focus on live conversations.
-- **Buy it** — a sales engagement tool to automate tracking, sequencing, and reporting. The fastest path to more outreach without more hours.
+Flip each option to see the trade-off:
+
+<FlipCardGrid>
+  <FlipCard front="Do it" back="Build your own outreach cadence and templates by hand. Free, but the most time." subtext="Free, most time" size="large" />
+  <FlipCard front="Delegate it" back="Have an SDR or junior rep own the prospecting-volume side of the funnel while you focus on live conversations." subtext="Costs headcount" size="large" />
+  <FlipCard front="Buy it" back="A sales engagement tool to automate tracking, sequencing, and reporting. The fastest path to more outreach without more hours." subtext="Fastest to scale" size="large" />
+</FlipCardGrid>
+
+## Where this leaves you
+
+Prospecting is not a burst of activity after a slow month. It is ten small habits running daily, a profile that holds up when someone looks you up, and the tools and AI Employees that take the mechanical work off your plate.
+
+Keep the funnel full and everything downstream gets easier. What changes next is what you actually say when one of those prospects picks up.
 
 <SectionFeedback courseId="find-your-next-prospect" site="vendasta_learn" section="content" />
 
@@ -246,7 +356,13 @@ Both of them work on conversations that arrive at you or have already happened. 
   ]}
 />
 
-<LessonFooter to="/learn/sales/open-the-conversation" pathName="The master sales series" step={2} totalSteps={5} />
+<LessonFooter
+  to="/learn/sales/open-the-conversation"
+  pathName="The master sales series"
+  step={2}
+  totalSteps={5}
+  description="Now sharpen what you say when a prospect picks up."
+/>
 
 </InlineHighlighter>
 <MarkComplete courseId="find-your-next-prospect" site="vendasta_learn" />

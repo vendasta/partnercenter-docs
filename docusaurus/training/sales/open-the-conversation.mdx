@@ -13,6 +13,7 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import Accordion from "@site/src/components/Accordion";
+import Admonition from "@theme/Admonition";
 
 <InlineHighlighter courseId="open-the-conversation" site="vendasta_learn">
 
@@ -20,23 +21,29 @@ import Accordion from "@site/src/components/Accordion";
 
 <LessonHeader
   difficulty="Beginner"
-  time="about 12 minutes"
-  required={["A prospect to call"]}
+  time="about 14 minutes"
+  required={["None"]}
   video={true}
   pathName="The master sales series"
   step={3}
   totalSteps={5}
   outcomes={[
     "Explain what an elevator pitch is actually for, and what it is not",
-    "Build a pitch in four parts: goal, plain-language value, your edge, a question",
+    "Build a pitch in six parts, from the goal through to rehearsal",
     "Cut a pitch down until it survives the three-floor test",
-    "Rehearse a pitch the way that makes it hold up in a real room",
+    "Reframe a pain the prospect already has instead of introducing a new one",
   ]}
 />
 
 {/* VIDEO: "Master the Elevator Pitch" — Wistia ID `mbeqpwbrjx`, Master Sales Training Series folder, confirmed 2026-08-15. */}
 
-Watch sales expert George Leith build an elevator pitch that earns the next meeting.
+## An elevator pitch does not close anything
+
+Picture the setup George opens with: you get upgraded, and the prospect who would change your year is in the next seat. You have until they reach for their headphones.
+
+A pitch has exactly one job in that moment, and it is not signing anyone. It is delivering enough value that the other person wants to keep talking. Walk in needing a signature and you have already lost the room.
+
+Six parts build one that works. Watch George assemble them, then take them one at a time below.
 
 <div
   className="wistia_responsive_padding"
@@ -61,15 +68,9 @@ Watch sales expert George Leith build an elevator pitch that earns the next meet
 </div>
 <script src="https://fast.wistia.net/player.js" async></script>
 
+## Build it in six parts
 
-
-## An elevator pitch does not close anything
-
-A pitch has one job: deliver enough value that the other person wants to keep talking. Walk into that moment needing a signature and you have already lost the room.
-
-## Build it in four parts
-
-Every pitch that works carries the same four parts: a goal, the value in plain words, your edge, and a question. Each part earns the next.
+Each part earns the next. Open each to see what it looks like in practice.
 
 <Accordion
   items={[
@@ -79,7 +80,11 @@ Every pitch that works carries the same four parts: a goal, the value in plain w
       badge: '1',
       content: (
         <>
-          <p>Decide what you want the listener to do next before you write a word. Not "impress them" but a specific next step: a follow-up call, a meeting, a "tell me more."</p>
+          <p>Deciding what you want the listener to do next before you write a word. Not "impress them" but a specific next step: a follow-up call, a meeting, or a "tell me more."</p>
+          <ul>
+            <li>Gong found saying "the reason for my call is" makes booking a meeting 2.1 times likelier.</li>
+            <li>End on the action you actually want, such as asking for their card so you can follow up.</li>
+          </ul>
         </>
       )
     },
@@ -89,7 +94,11 @@ Every pitch that works carries the same four parts: a goal, the value in plain w
       badge: '2',
       content: (
         <>
-          <p>Test it literally. Get in an elevator, press a button three floors up, and explain your value proposition before the doors open. If you need more than three floors, you do not have a pitch yet. You have a speech.</p>
+          <p>Compressing your value proposition until it fits the ride. Test it literally: get in an elevator, press a button three floors up, and explain what you do before the doors open. If you need more than three floors, you do not have a pitch yet. You have a speech.</p>
+          <ul>
+            <li>A 30 to 60 second pitch is roughly 75 to 140 words, so draft against a word count.</li>
+            <li>Film producers decide in about 45 seconds, listening for a one or two sentence logline.</li>
+          </ul>
         </>
       )
     },
@@ -99,7 +108,11 @@ Every pitch that works carries the same four parts: a goal, the value in plain w
       badge: '3',
       content: (
         <>
-          <p>What do you do that the person across the aisle cannot also claim? Back this one with a real result, not an adjective.</p>
+          <p>Naming what you do that the person across the aisle cannot also claim. Back it with a real result rather than an adjective, because "we care about service" is what everyone says.</p>
+          <ul>
+            <li>A study of 400 buyers found leading with a need they had not considered scored 41% higher on uniqueness.</li>
+            <li>Check it three ways: does it resonate, does it differentiate, and can you substantiate it.</li>
+          </ul>
         </>
       )
     },
@@ -109,12 +122,49 @@ Every pitch that works carries the same four parts: a goal, the value in plain w
       badge: '4',
       content: (
         <>
-          <p>Do not end on a statement. End on something that pulls them into the next exchange, such as "Does that sound like a problem you are dealing with right now?" A pitch with no question is a monologue with a deadline.</p>
+          <p>Ending on something that pulls the other person into the next exchange instead of closing with a statement. A pitch with no question is a monologue with a deadline.</p>
+          <ul>
+            <li>Sandler's thirty-second commercial ends on a hook: "Do any of these sound familiar?"</li>
+            <li>Keep it open enough to answer at length, since a yes or no ends the conversation you wanted.</li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 'edit',
+      title: 'Edit, edit, and re-edit',
+      badge: '5',
+      content: (
+        <>
+          <p>Treating the pitch as something you iterate rather than something you finish. Developers would call it iteration; George's radio program director called it edit, edit, and re-edit. Every pass should make it shorter and sharper.</p>
+          <ul>
+            <li>Write three versions at 20, 40, and 60 words, then pick per situation.</li>
+            <li>Cut the buzzwords, then have someone else read it aloud to expose stiff phrasing.</li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 'practice',
+      title: 'Practice, practice, and practice some more',
+      badge: '6',
+      content: (
+        <>
+          <p>Delivering it hundreds of times rather than once. A mirror or a steering wheel is where you start. The level most junior reps skip is practising on peers, a manager, or real customers, and showing you are open to the feedback.</p>
+          <ul>
+            <li>Record yourself, then score the playback rather than trusting how it felt.</li>
+            <li>Rehearse tone, pace, and volume instead of memorizing exact wording, which sounds recited.</li>
+          </ul>
         </>
       )
     }
   ]}
 />
+
+:::tip Two numbers worth remembering
+- **75 to 140 words** is the realistic budget for a 30 to 60 second pitch. Draft against it.
+- **Three floors** is the test. If your value proposition does not land in that ride, keep cutting.
+:::
 
 ## Reframe a pain they already have
 
@@ -126,17 +176,38 @@ Years ago a seller pitched a newspaper organization built entirely on print adve
 "You have sold a lot of advertising. I have too. And one thing we both know is that the advertising you sell is coming under attack. The client's first comment on the next call is always 'it isn't working like it used to.' It's not your ad that's the problem. It's that they've got broken listings, bad reviews, and a website that takes forever to load. What if the thing you sell could work better, because their virtual doorway finally matches the ad that sent someone looking for it?"
 :::
 
-Nobody was asked to abandon what they were good at. The pitch named a pain the room already felt, advertising getting blamed for problems it did not cause, and pointed at a fix that made their existing product stronger. Five years later people who were in that room were still using a version of it.
-
-## Sharpen it on a real person
-
-Say it out loud, cut what does not earn its place, say it again. A mirror is somewhere to start. The practice that sharpens a pitch is saying it to a peer, a manager, or a prospect and watching their face when something does not land.
+Nobody was asked to abandon what they were good at. The pitch named a pain the room already felt, advertising getting blamed for problems it did not cause, and pointed at a fix that made their existing product stronger. Five years later the sales leader who was in that room brought it up unprompted, which is the real test of whether a pitch stuck.
 
 If you sell more than one thing, you need more than one pitch: one per audience, one per problem you solve.
+
+## Why some pitches stick
+
+George closes by recommending a book on exactly this question. It is worth naming precisely, because two well-known books have near-identical titles.
+
+| Book | Author | What it covers |
+|---|---|---|
+| **Made to Stick** | Chip and Dan Heath | Why some ideas survive and others die. This is the one referenced in the video. |
+| Make It Stick | Brown, Roediger, and McDaniel | The science of successful learning, a different subject entirely. |
+
+*Made to Stick* argues memorable ideas tend to share six traits: simple, unexpected, concrete, credible, emotional, and told as a story. Read your own pitch against that list and the weak spot is usually obvious.
 
 :::tip Try it now
 Pick your next prospect. Write your pitch in four lines: the goal, the value in one sentence, your edge, and the question. Say it out loud. If it takes longer than three floors, cut it and say it again.
 :::
+
+## The pitch that runs when you are not in the room
+
+Most first impressions no longer happen in an elevator. They happen on your website at 11pm, which means something else is delivering your opening line.
+
+<Admonition type="info" icon="✓" title="AI Chat Receptionist — your value proposition, on duty">
+  <p>It answers website visitors around the clock using your knowledge base and website content, which means whatever you wrote there <em>is</em> the pitch it gives. Everything in this step applies: lead with the value, keep it short, end by asking something. Then it collects a name, phone number, or email so a real conversation can follow. When you are ready to put one on your site, [this guide walks you through setup](/ai/ai-workforce/ai-chat-receptionist/).</p>
+</Admonition>
+
+## Where this leaves you
+
+A pitch is not a speech you finally got right. It is six parts, cut short, aimed at a pain the prospect already feels, and rehearsed on real people until it holds up.
+
+Do that and you get the meeting. What you do with the meeting is the next thing to get right.
 
 <SectionFeedback courseId="open-the-conversation" site="vendasta_learn" section="content" />
 
@@ -188,7 +259,7 @@ Pick your next prospect. Write your pitch in four lines: the goal, the value in 
     },
     {
       type: 'match',
-      instruction: 'Match each part of the four-part pitch to what it does.',
+      instruction: 'Match each part of the pitch to what it does.',
       pairs: [
         { term: 'The goal', definition: 'Decide the specific next step you want' },
         { term: 'The value', definition: 'Say what you do in as few words as possible' },
@@ -202,11 +273,29 @@ Pick your next prospect. Write your pitch in four lines: the goal, the value in 
       statement: 'Practising a pitch alone in front of a mirror is the most effective way to sharpen it.',
       correct: false,
       explanation: 'The mirror is a starting point. The practice that actually sharpens a pitch is saying it to a peer, a manager, or a prospect and watching where their face says it did not land.'
+    },
+    {
+      type: 'mcq',
+      question: 'You have an elevator pitch that works. What does the material say to do with it next?',
+      options: [
+        'Keep editing it shorter, and keep delivering it to real people',
+        'Lock the wording so you deliver it identically every time',
+        'Write a longer version for prospects who want more detail',
+        'Leave it alone and build pitches for your other products'
+      ],
+      correctIndex: 0,
+      explanation: 'Edit, edit, and re-edit. A pitch that works is not finished, and the perfect one is not the pitch you delivered once but the one you have delivered hundreds of times.'
     }
   ]}
 />
 
-<LessonFooter to="/learn/sales/present-so-it-lands" pathName="The master sales series" step={3} totalSteps={5} />
+<LessonFooter
+  to="/learn/sales/present-so-it-lands"
+  pathName="The master sales series"
+  step={3}
+  totalSteps={5}
+  description="Now structure the meeting that pitch just earned you."
+/>
 
 </InlineHighlighter>
 <MarkComplete courseId="open-the-conversation" site="vendasta_learn" />

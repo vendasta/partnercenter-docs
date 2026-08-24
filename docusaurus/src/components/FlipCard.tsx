@@ -17,13 +17,15 @@ export interface FlipCardProps {
   back: string;
   subtext?: string;
   href?: string;
+  /** 'large' gives a taller card, for back text too long to fit without scrolling at the default size */
+  size?: 'default' | 'large';
 }
 
-export function FlipCard({ front, back, subtext, href }: FlipCardProps) {
+export function FlipCard({ front, back, subtext, href, size = 'default' }: FlipCardProps) {
   const [flipped, setFlipped] = useState(false);
   return (
     <div
-      className={`${styles.card} ${flipped ? styles.flipped : ''}`}
+      className={`${styles.card} ${size === 'large' ? styles.cardLarge : ''} ${flipped ? styles.flipped : ''}`}
       onClick={() => setFlipped(!flipped)}
       role="button"
       tabIndex={0}
