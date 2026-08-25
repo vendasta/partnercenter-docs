@@ -13,17 +13,19 @@ typically once a month.
 
 ## Setup (once)
 
-- Ensure `.triage/` is in the repo's `.gitignore` (it holds the export and per-run
+- Ensure `.triage/` is in the repo's `.gitignore` (it holds the exports and per-run
   scratch; none of it should ever be committed).
-- The bundled `validate.mjs` defaults to reading articles from `docusaurus/docs`. No
-  flag needed as long as you run from the repo root.
+- Two bundled scripts, both zero-dependency and both run from the repo root:
+  - `inspect-export.mjs` — Step 0. Identifies the exports in `.triage/` by shape and
+    checks they pair correctly.
+  - `validate.mjs` — Step 2. Resolves citations against `docusaurus/docs`. No flag needed.
 
 ## Hard rules
 
 1. **Commit only article changes.** Never commit conversation data, findings, snippets,
    or anything under `.triage/`.
-2. **Findings are ephemeral.** `report.json`, `findings.json`, and `validated.*` are
-   per-run scratch — inputs, not artifacts.
+2. **Findings are ephemeral.** The exports, `findings.json`, and `validated.*` are per-run
+   scratch — inputs, not artifacts. Everything worth keeping goes in the PR description.
 3. **Single repo.** Every citation is expected to resolve to an article in this repo.
    A citation that does not resolve is surfaced as `CITED_NOT_IN_REPO` (it likely lives
    on the vendasta.com docs site). Never silently drop it.
@@ -74,21 +76,48 @@ is cited (the analyzer's Top Citations). Severity: MISSING ≈ EXISTS_WRONG > EX
 
 ## Run protocol
 
-**Input:** the export lives at `.triage/report.json`. If missing, stop and ask the user to
-export the conversations and drop the file there.
+**Input:** drop the export(s) in `.triage/` **under their original filenames — do not rename
+them.** Two different exports feed this skill and both download as sensible names on their
+own (`exported-conversations_<user>_<timestamp>.json` and `report.json`). Renaming is what
+made them collide on the first run.
 
-**Two exports exist, and only one of them works.** Check which you have before anything else:
+0. **Identify the inputs before reading them.** From the repo root run:
 
-- **Aggregate summary** — top-level `aggregates` + `examples`. Carries `ai_process_gaps`
-  (the real per-bucket counts), `intents`, `csat`, `escalation_breakdown`, `total_citations`.
-  If `examples` and `conversation_topics` are empty objects, findings **cannot** be mapped to
-  conversations and Step 1 is not possible. Use it to calibrate, then stop and ask for the
-  per-conversation export.
-- **Raw conversation dump** — top-level `conversations[]`, each with `messages[]` of
-  `{message_id, participant_id, message_type, body, created, ui_components, media, metadata}`.
-  Beware: `metadata` is null throughout, `participant_id` is opaque (derive speaker from the
-  first chronological message), and `messages` is **not** reliably ordered — sort by `created`
-  before splitting speakers or alternation breaks on ~1000 of 2742 conversations.
+   ```bash
+   node .claude/skills/ai-assistant-conversations-triage/inspect-export.mjs
+   ```
+
+   It classifies every file in `.triage/` **by shape, not by filename**, reports what each
+   can and cannot be used for, surfaces the known analyzer data-quality traps automatically,
+   and checks that the two exports cover the same window. Act on what it prints:
+
+   - **Window mismatch** — the exports are from different pulls. Stop and ask for a matching
+     pair; calibrating across pulls produces plausible but meaningless results, and nothing
+     downstream would catch it.
+   - **Raw only** — stop and ask for the analyzer. Do not derive gap type (see below).
+   - **Analyzer only** — you have counts but no quotes, so Step 3 cannot run. Ask for the raw
+     export.
+   - **Neither** — ask the user to export and drop the files in `.triage/`.
+
+**Two exports exist, and neither is sufficient alone:**
+
+- **Analyzer summary** — top-level `aggregates`, usually downloaded as `report.json`. Carries
+  `ai_process_gaps` (the real per-bucket counts), `intents`, `csat`, `escalation_breakdown`,
+  `total_citations`. **This is the only trustworthy source of gap type.** If `examples` and
+  `conversation_topics` are empty objects, findings cannot be mapped to conversations, so it
+  can calibrate but cannot drive Step 1 on its own — ask for the per-conversation variant.
+- **Raw conversation dump** — top-level `conversations[]`, usually downloaded as
+  `exported-conversations_<user>_assistant_system_<timestamp>.json`. Each conversation has
+  `messages[]` of `{message_id, participant_id, message_type, body, created, ui_components,
+  media, metadata}`. **This is the only source of verbatim partner quotes**, which the
+  judgment step in Step 3 depends on. Beware: `metadata` is null throughout, `participant_id`
+  is opaque (derive speaker from the first chronological message), and `messages` is **not**
+  reliably ordered — sort by `created` before splitting speakers, or alternation breaks on
+  roughly half the conversations.
+
+Neither replaces the other: the analyzer knows *how many* and of what type, the raw dump
+shows *why*. A run with only one of them is a partial run — say so rather than filling the
+gap by inference.
 
 **Do not derive gap type from the raw dump.** It was tried and it fails badly — measured
 against the analyzer on the same 2,742 conversations: Knowledge Gap 280 derived vs 114 actual,
@@ -162,27 +191,29 @@ This removes the **files only** — `.triage/` itself stays, so the next run has
 recreate and no window where a fresh export lands before the ignore rule applies. Never
 `rm -rf` the directory.
 
-**Ask before deleting `.triage/report.json`** (and any `report (n).json`). Those are the
-user's exports — re-obtaining one is a manual step they may not want to repeat, so removing
-them is their call, not an automatic action. Do prompt for it: an unreviewed export sitting
-on disk is the largest concentration of partner PII in the working tree.
+**Ask before deleting the exports themselves** — anything `inspect-export.mjs` identified as
+a raw dump or analyzer summary. Re-obtaining one is a manual step the user may not want to
+repeat, so removing them is their call, not an automatic action. Do prompt for it: an
+export sitting on disk is the largest concentration of partner PII in the working tree.
 
 ### The ignore rule is permanent
 
 `.gitignore` carries `.triage/` as a tracked, committed line. It survives deleting the
 directory's contents, and being a directory rule it covers every filename inside — including
-awkward ones like `report (1).json`. It does not need re-adding between runs.
+awkward ones with spaces and parentheses. It does not need re-adding between runs, and
+exports keep their original filenames safely.
 
 Verify it once at the start of a run, before any export is read, and stop if it ever fails:
 
 ```bash
-git check-ignore -q ".triage/report.json" || echo "STOP: .triage/ is not ignored"
+git check-ignore -q ".triage/probe.json" || echo "STOP: .triage/ is not ignored"
 ```
 
 ## First-run calibration (once)
 
-- The `report.json` field names may differ from the defaults assumed in Step 1. On the
-  first run, inspect one conversation object and confirm the mapping before trusting output.
+- Export field names may differ from the defaults assumed in Step 1. Run
+  `inspect-export.mjs` first, then inspect one conversation object and confirm the mapping
+  before trusting output.
 - Sample the analyzer's **Unknown/Unclear** bucket — real undocumented area or noise?
 - Decide what **Engagement Drop-off** means in your data before acting on it. On the
   2026-08 export it was 684 — larger than every other gap bucket combined — and undefined.
