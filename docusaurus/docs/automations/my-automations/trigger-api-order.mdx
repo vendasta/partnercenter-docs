@@ -1,0 +1,44 @@
+---
+title: "Trigger: API call on an order"
+description: Start an automation when an API call invokes the trigger for a specific order.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, advanced]
+keywords: [API trigger, API order trigger, programmatic trigger, order API automation, developer trigger]
+---
+
+# API call on an order
+
+**API call on an order** fires when an external system makes an API call that invokes this trigger for a specific order. Use this trigger to start order-scoped automations programmatically — for example, to kick off fulfillment steps, status updates, or notifications from an external platform or custom integration.
+
+This trigger is intended for developers and technical users who need to initiate order-scoped automations from outside Partner Center.
+
+:::info Trigger scope
+This trigger operates at the **order** scope. Order and account actions are available downstream.
+:::
+
+## How it works
+
+1. An external system makes an authenticated API call that references the trigger and a specific order ID.
+2. The automation starts with the identified order in context.
+3. Any payload data included in the API call is available as dynamic content in downstream steps.
+4. Downstream steps can use **Add dynamic content** to reference order fields and any data passed in the request.
+
+## Available data
+
+Standard order and account fields are available via **Add dynamic content**. Additional fields depend on what data your API call passes as part of the request payload.
+
+:::info
+Consult the Vendasta developer documentation for the correct API endpoint, authentication requirements, and payload schema to invoke this trigger.
+:::
+
+## Tips
+
+- Use this trigger when you need to start order-scoped automation workflows from an external system or custom-built integration.
+- Pass relevant context (such as order status or fulfillment details) in the API payload to make it available as dynamic data in downstream steps.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

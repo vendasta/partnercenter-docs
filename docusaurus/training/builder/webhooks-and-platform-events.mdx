@@ -1,7 +1,7 @@
 ---
 title: "Webhooks and platform events"
 sidebar_position: 6
-description: "Push instead of poll: sending data out with an outbound webhook step, receiving events with inbound triggers, and the platform events a product receives."
+description: "Push instead of poll: sending data out with an outbound webhook step, receiving events with inbound triggers, and how a product reacts to things happening across accounts."
 ---
 
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
@@ -21,7 +21,7 @@ import LessonFooter from "@site/src/components/LessonFooter";
   time="about 10 minutes"
   pathName="Wire your AI Workforce to act"
   step={6}
-  totalSteps={9}
+  totalSteps={8}
   outcomes={[
     "Explain the difference between polling and a webhook",
     "Send data out of the platform with an outbound webhook step",
@@ -50,11 +50,11 @@ Before you wire anything downstream, test-fire the step and read exactly what ar
 
 The same idea runs in reverse. An automation can start from an inbound webhook: the platform gives the trigger its own unique URL, and a POST to that URL starts the workflow with whatever data you send. An automation can also be started by an API call, or by a glue tool like Zapier sitting in front of it. However it starts, the automation carries the work from there.
 
-## Platform events, when you productize
+## Reacting to things that happen, when you productize
 
-When you build a product that others resell, the platform can notify you of events on it: a purchase, a new account, a change to a user or a customer. These are platform events, and they let your product react to what happens across every account that uses it. Use that name, platform events, which is the language the documentation uses too.
+When you build a product that others resell, you will want it to react to things happening across every account that uses it: a purchase, a new account, a change to a user or a customer. The pattern is the same one you just used — something happens, and the platform pushes it to you, instead of your code asking over and over whether anything changed.
 
-For now, the point is the shape: your code does not have to watch for these things, because the platform pushes them to you as they happen.
+The vocabulary you will actually see in the product and the docs is "trigger" and "automation" for the things you build, and "webhook" for the delivery mechanism. Search for those.
 
 :::tip Try it now
 Create an outbound webhook step in a test automation and point it at a free request-bin URL, like Webhook.site. Test-fire it and read the payload that lands. Seeing the exact shape of what the platform sends is the whole game; everything you build downstream is built to match it.
@@ -117,7 +117,7 @@ Create an outbound webhook step in a test automation and point it at a free requ
   ]}
 />
 
-<LessonFooter to="/learn/builder/advanced-automations" pathName="Wire your AI Workforce to act" step={6} totalSteps={9} />
+<LessonFooter to="/learn/builder/advanced-automations" pathName="Wire your AI Workforce to act" step={6} totalSteps={8} />
 
 </InlineHighlighter>
 <MarkComplete courseId="webhooks-and-platform-events" site="vendasta_learn" />

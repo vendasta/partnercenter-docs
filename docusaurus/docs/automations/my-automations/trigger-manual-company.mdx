@@ -1,0 +1,39 @@
+---
+title: "Trigger: Run manually on a company"
+description: Run an automation on demand from a company detail page.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, manual]
+keywords: [manual trigger, run manually, company trigger, on demand automation, manual company automation]
+---
+
+# Run manually on a company
+
+**Run manually on a company** allows you to start an automation on demand directly from a company detail page in the CRM. Use this trigger for workflows that require intentional initiation — such as enriching a company record, sending a targeted outreach, or running a one-off data sync.
+
+This trigger does not fire automatically. A team member must navigate to the company and trigger the run manually.
+
+:::info Trigger scope
+This trigger operates at the **company** scope. Company, account, and contact actions are available downstream.
+:::
+
+## How it works
+
+1. A team member opens a company detail page in the CRM.
+2. They locate the automation and click **Run**.
+3. The workflow starts immediately with the company in context.
+4. Downstream steps can use **Add dynamic content** to reference company fields, associated account fields, and contact details.
+
+## Available data
+
+Standard company, account, and contact fields are available via **Add dynamic content** once the automation starts.
+
+:::info
+Because this trigger is manual, no event-specific data is passed in. All available data comes from the company record and its associated records at the time of the run.
+:::
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

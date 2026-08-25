@@ -1,0 +1,46 @@
+---
+title: Remove the account from a list
+description: Learn how to use the Remove the account from a list action to remove an account from a named list during an automation run.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, lists]
+keywords: [remove account from list, action list, account list automation, list segmentation, automation lists]
+---
+
+# Remove the account from a list
+
+**Remove the account from a list** removes the account currently in scope from a list you choose. If the account is not on the list, the step completes without error and the automation continues. This action is available on account-scoped triggers.
+
+Use this action to keep lists clean as accounts progress through workflows — move accounts off a prospect list when they convert, remove them from a follow-up list once a task is completed, or clear them from a segment when conditions change.
+
+## How it works
+
+1. The automation reaches this step with an account in scope from the trigger
+2. The step reads the **List** field to identify the target list
+3. The platform checks whether the account is on that list
+4. If present, the account is removed from the list
+5. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Lists**, select **Remove the account from a list**
+3. Configure the field:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **List** | Yes | The list to remove the account from. Select from your existing lists. |
+
+:::tip
+The **List** field does not support dynamic content — select a specific list from the dropdown. To remove the same account from multiple lists, add separate **Remove the account from a list** steps for each list.
+:::
+
+## Outputs
+
+This action produces no outputs available to downstream steps.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Add the account to a list](./add-account-to-list.mdx) — Add an account to a list
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

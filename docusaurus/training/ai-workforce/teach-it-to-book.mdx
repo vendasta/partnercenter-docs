@@ -2,10 +2,204 @@
 title: "Teach it to book: calendars, appointments, and call routing"
 sidebar_position: 3
 description: Connect calendars, configure booking links and team events, and route calls by business hours.
+sidebar_class_name: hide-from-sidebar
 ---
 
-:::info Content coming soon!
-This part of the learning path is being built. Check back shortly.
-:::
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LabChecklist from "@site/src/components/LabChecklist";
+import LabCallout from "@site/src/components/LabCallout";
 
-**What you will learn here:** Per-user calendar connection, booking links and round robin done right, enabling the book-appointments capability, and building business-hours call routing with a custom capability.
+<InlineHighlighter courseId="teach-it-to-book" site="vendasta_learn">
+
+<CourseProgressBar courseId="teach-it-to-book" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Intermediate"
+  time="about 30 minutes"
+  required={["Partner Center access", "A receptionist with a Capabilities panel, such as your employee from step 2", "Calendar sign-in for everyone who will take bookings"]}
+  lab
+  pathName="Hire your first AI Employee"
+  step={3}
+  totalSteps={7}
+  outcomes={[
+    "Connect a calendar the right way, one person at a time",
+    "Configure a booking link and a team event without the round robin trap",
+    "Enable the book-appointments capability and choose the right calendar",
+    "Build a business-hours routing capability that transfers during hours and captures leads after",
+  ]}
+/>
+
+## Put a real appointment on the calendar
+
+By the end of this step, your receptionist from the last step can book a real meeting on a real calendar, and knows exactly what to do with a call outside business hours. *You are here: Partner Center, on the same employee steps 2 and 4 build on.* An employee that only answers is a receptionist who never puts anything on the books; booking is what turns a good conversation into a kept appointment.
+
+<LabCallout title="connect a calendar">
+You are going to **CRM** → **My Meetings**.
+
+<LabChecklist
+  storageKey="teach-it-to-book-lab-1"
+  steps={[
+    <>Each person taking bookings signs in <strong>as themselves</strong>, not through an admin connecting it on their behalf.</>,
+    <>Select Google Calendar or Microsoft 365 / Outlook and grant the requested permissions.</>,
+  ]}
+  confirm={<>Your calendar shows as connected in Meeting Settings, which lets My Meetings both check for conflicts and create events automatically once a booking is confirmed.</>}
+/>
+</LabCallout>
+
+For the full setup, including switching providers later, [Setting up calendar integration walks through the rest](/crm/my-meetings/setting-up-calendar-integration).
+
+## Configure the booking link
+
+Pick a URL slug, then set your availability windows and the buffer time you want before and after a meeting. My Meetings offers durations of 15, 30, 45, or 60 minutes, or a custom length; decide which one your receptionist should offer before you test it.
+
+<LabCallout title="build one booking link">
+You are staying in **My Meetings** → **Manage booking links** → **Create event type**.
+
+<LabChecklist
+  storageKey="teach-it-to-book-lab-2"
+  steps={[
+    <>Name the event type and choose its duration.</>,
+    <>Set your general availability and buffer time before and after.</>,
+    <>Save, then copy the link.</>,
+  ]}
+  confirm={<>One event type exists with a working link, ready to hand to your receptionist in the next section.</>}
+/>
+</LabCallout>
+
+## The team event, done right
+
+For a group instead of one person, create a **team event** rather than several personal links, and choose an assignment method such as round robin so bookings distribute across the team. Two conditions decide who actually appears in that rotation: each teammate needs their own calendar connected, and round-robin membership comes from the Sales Team you add them to in **CRM** → **Sales Teams**, so a teammate missing from either place never gets a turn. [Team booking links covers every assignment method in detail](/crm/my-meetings/team-booking-links).
+
+## Enable the capability
+
+<LabCallout title="turn on Book Appointments">
+You are on your receptionist's **Configure** panel → **Capabilities**.
+
+<LabChecklist
+  storageKey="teach-it-to-book-lab-3"
+  steps={[
+    <>Turn on <strong>Book Appointments</strong>.</>,
+    <>Choose which event link or calendar it should offer, the one you built above.</>,
+  ]}
+  confirm={<>Your receptionist can now offer real time slots, collect the booking details it needs, and create the event automatically.</>}
+/>
+</LabCallout>
+
+If an older capability on the same employee only records a caller's preferred time without actually booking anything, replace it with Book Appointments: a preference is not a kept meeting.
+
+Chat and voice hand off a booking link differently, and both are worth setting deliberately. A lead already using another business's booking tool can get the link directly, mid-conversation, in chat. Voice cannot paste a link into a call, so the honest answer there is that a person will follow up, with an automation sending the link right afterward (the next step covers building that automation).
+
+One limit is worth knowing before a client asks: Book Appointments does not collect payment or hold a slot behind one. A business that wants a deposit first ties sending the link to a payment-confirmation automation instead, rather than expecting the booking capability to gate on it.
+
+## Route calls by business hours
+
+Business-hours routing is the pattern worth building once and reusing everywhere: transfer during hours, capture the lead after. Rather than folding this logic into an existing capability's prompt, give it a custom capability of its own.
+
+<LabCallout title="build the routing capability">
+You are on **Capabilities** → **Custom Capabilities** → **Add a capability**.
+
+<LabChecklist
+  storageKey="teach-it-to-book-lab-4"
+  steps={[
+    <>Name it something like <code>BusinessHoursCheck</code> and describe what it does.</>,
+    <>Write the prompt in markdown: numbered steps, with a branch for during hours and a branch for after hours.</>,
+    <>Inside each branch, reference other capabilities by their exact capitalized name, for example "call the Transfer Call capability," rather than restating what that capability already does.</>,
+    <>Point the hours check at the business's own knowledge sources instead of a hardcoded list, so a holiday or a seasonal change never needs a manual edit here.</>,
+  ]}
+  confirm={<>The capability checks the time against the business's real hours and branches correctly, every time it runs.</>}
+/>
+</LabCallout>
+
+Do not build a second after-hours capture from scratch: the Capture Lead Information capability your receptionist already runs after hours can extend to ask which department the caller wanted, the same way any other question gets added to its prompt.
+
+## Test both directions
+
+<LabCallout title="confirm both branches">
+You are on the **Try it** test page or the assigned channel.
+
+<LabChecklist
+  storageKey="teach-it-to-book-lab-5"
+  steps={[
+    <>Call or chat during business hours and confirm you get transferred.</>,
+    <>Call or chat after hours and confirm the AI captures your lead instead.</>,
+  ]}
+  confirm={<>Both directions work exactly as the routing capability describes them.</>}
+/>
+</LabCallout>
+
+{/* TODO(ET-740): once the builder-track "wire booking into an outside system" step exists, uncomment — "If a client needs bookings to land in their own outside system, that's a deeper build — [here's where to go for it](/learn/builder/...)." */}
+
+## What you now have
+
+- A calendar connected the right way, by the person who owns it
+- A booking link and, if you need one, a team event that assigns fairly
+- A receptionist that books real meetings and hands off a link the right way on every channel
+- A business-hours routing capability that transfers during hours and captures leads after, without a second capability doing the same job twice
+
+<SectionFeedback courseId="teach-it-to-book" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="teach-it-to-book" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on calendar connection, booking handoffs, and routing by business hours."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A teammate never appears in a team event\'s round-robin rotation, even though they are added to the Sales Team. What do you check first?',
+      options: [
+        'Whether their personal calendar is connected',
+        'Whether the event type has a description',
+        'Whether the booking link has a color set',
+        'Whether the event duration is 30 or 60 minutes'
+      ],
+      correctIndex: 0,
+      explanation: 'Round-robin membership needs both a Sales Team assignment and a connected calendar. A missing calendar connection is the most common reason a teammate never gets a turn.'
+    },
+    {
+      type: 'mcq',
+      question: 'Who should sign in to connect a team member\'s calendar to My Meetings?',
+      options: [
+        'An admin, on behalf of the whole team at once',
+        'That team member, signing in as themselves',
+        'Whoever created the Sales Team',
+        'It connects automatically once the Sales Team is created'
+      ],
+      correctIndex: 1,
+      explanation: 'Each person taking bookings connects their own calendar by signing in as themselves. An admin cannot do this step for someone else.'
+    },
+    {
+      type: 'mcq',
+      question: 'A lead already booked with a different scheduling tool asks your voice receptionist for a new time by phone. What should it do?',
+      options: [
+        'Read the booking link aloud character by character',
+        'Say a person will follow up, and let an automation send the link afterward',
+        'Refuse to help until the lead switches tools',
+        'Book the slot anyway without sending a link'
+      ],
+      correctIndex: 1,
+      explanation: 'Voice cannot hand over a clickable link mid-call. The honest, workable answer is a follow-up promise backed by an automation, not a workaround that pretends the channel can do something it cannot.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your business-hours routing capability needs to transfer a call. What should its prompt do?',
+      options: [
+        'Restate the entire transfer process inline',
+        'Reference the Transfer Call capability by its exact name',
+        'Ask the caller to call back during business hours',
+        'Hand the call to Capture Lead Information instead'
+      ],
+      correctIndex: 1,
+      explanation: 'Referencing another capability by its exact capitalized name keeps each capability doing one job, rather than duplicating logic that already exists elsewhere.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/ai-workforce/train-your-employee" pathName="Hire your first AI Employee" step={3} totalSteps={7} />
+
+</InlineHighlighter>
+<MarkComplete courseId="teach-it-to-book" site="vendasta_learn" />

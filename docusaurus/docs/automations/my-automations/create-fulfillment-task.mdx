@@ -1,0 +1,39 @@
+---
+title: Create a fulfillment task
+description: Learn how to use the Create a fulfillment task action to create a task in Task Manager.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, fulfillment, task-manager, tasks]
+keywords: [create fulfillment task, task manager, fulfillment automation, create task, assign agent]
+---
+
+# Create a fulfillment task
+
+**Create a fulfillment task** creates a task in Task Manager for the account in scope. You can assign it to the default fulfillment agent or a specific individual. This action is available on account-scoped triggers.
+
+## How it works
+
+1. The automation reaches the step with an account in scope
+2. The step creates a task in Task Manager with the details you configured
+3. The task is assigned to the specified fulfillment agent
+4. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Fulfillment**, select **Create a fulfillment task**
+3. Configure the task details
+
+:::info
+If the assigned fulfillment agent doesn't exist, the task is created with no assignee.
+:::
+
+## Outputs
+
+This action produces no outputs available to downstream steps.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Create a fulfillment project](./create-fulfillment-project.mdx) — Create a full project from a template
+- [Add account to Task Manager](./add-account-to-task-manager.mdx) — Activate Task Manager for the account
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

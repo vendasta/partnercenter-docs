@@ -1,0 +1,64 @@
+---
+title: Notify a salesperson
+description: Learn how to use the Notify a salesperson action to send in-app and email notifications to salespeople assigned to an account.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, notifications, salesperson]
+keywords: [notify salesperson, salesperson notification, automation notification, alert salesperson, in-app notification, email notification]
+---
+
+# Notify a salesperson
+
+**Notify a salesperson** sends an in-app and email notification to one or more salespeople associated with the account. You can target the assigned salesperson, additional salespeople, or specific team members by name. This action is available on account-scoped triggers.
+
+## How it works
+
+1. The automation reaches the **Notify a salesperson** step with an account in scope
+2. You choose which salespeople to notify — assigned, additional, or specific individuals
+3. The step sends both an in-app notification and an email using the content you configure
+4. The notification includes a customizable message, subject line, and link
+5. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Notifications**, select **Notify a salesperson**
+3. Configure the fields:
+
+### Recipients
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Salespeople** | Yes | Who to notify. Options include **Assigned salesperson**, **Additional salespeople**, or specific team members selected by name. You can combine multiple selections. |
+| **Job title** | No | Filter recipients by job title. Only available when **Assigned salesperson** or **Additional salespeople** is selected — disabled when specific individuals are chosen. |
+
+### Notification content
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **In-app message** | Yes | The text displayed in the in-app notification. |
+| **In-app link** | Yes | The URL the notification links to when clicked in-app. Defaults to the account details page. |
+| **Email subject** | Yes | The subject line of the email notification. |
+| **Email message** | Yes | The body of the email notification. Supports rich text formatting. |
+| **Email button text** | Yes | The label on the email's call-to-action button. |
+| **Email link** | Yes | The URL the email button links to. Defaults to the account details page. |
+
+:::tip
+Use **Add dynamic content** in any text or link field to insert values from a previous step — for example, the account name or a specific record URL. You can use `{{business_id}}` in link fields as a placeholder that resolves to the account's ID at runtime.
+:::
+
+## Outputs
+
+This action produces no outputs available to downstream steps.
+
+## Tips
+
+- **Job title filtering only works with role-based selections** — if you select a specific individual by name, the **Job title** field is disabled because it's unnecessary.
+- **Both in-app and email are always sent** — you cannot send one without the other in this action.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Notify a user](./notify-a-user.mdx) — Send notifications to specific users
+- [Notify all account users](./notify-all-account-users.mdx) — Notify every user on the account
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

@@ -1,0 +1,39 @@
+---
+title: Create a contact
+description: Learn how to use the Create a contact action to create a new contact record in your CRM.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, crm, contact, businesses]
+keywords: [create contact, new contact, crm contact, contact automation, create lead]
+---
+
+# Create a contact
+
+**Create a contact** creates a new contact record in your CRM. Use it to automatically create contacts from webhook data, form submissions, or other external sources.
+
+## How it works
+
+1. The automation reaches the **Create a contact** step
+2. The step creates a new contact record using the fields you configured
+3. The new contact is brought into scope for downstream steps
+4. Contact-scoped actions become available in subsequent steps
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Businesses**, select **Create a contact**
+3. Configure the contact fields as prompted
+
+:::tip
+Use **Add dynamic content** to populate fields from previous steps — for example, pull contact details from a webhook payload.
+:::
+
+## Outputs
+
+After the step runs, the new contact record is available in scope. Downstream steps can act on it directly via **Add dynamic content**.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Find contact](./find-contact.mdx) — Check for existing contacts before creating
+- [Update contact](./update-contact.mdx) — Update fields on an existing contact
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

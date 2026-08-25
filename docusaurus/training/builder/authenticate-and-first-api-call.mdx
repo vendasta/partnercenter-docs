@@ -22,7 +22,7 @@ import LessonFooter from "@site/src/components/LessonFooter";
   lab
   pathName="Wire your AI Workforce to act"
   step={5}
-  totalSteps={9}
+  totalSteps={8}
   outcomes={[
     "Create a service account and use it as your integration's identity",
     "Request the right scopes when you generate a token",
@@ -69,7 +69,7 @@ Phone numbers are forgiving: send them in whatever format you have, and the plat
 The exact request, field by field, lives in the [CRM API reference](https://developers.vendasta.com). This step is the shape of it, so that reference reads like confirmation instead of a foreign language.
 
 :::tip Try it now
-In a sandbox account, generate a token with a contact-write scope and upsert one contact by email. Then send the same contact again with a different phone number, and check the record: did it match the contact you already had instead of creating a second one, and did your overwrite choice behave the way you expected? That one loop is authentication, scopes, and upsert semantics learned in a single sitting.
+Generate a token with a contact-write scope and upsert one contact by email into a test account you have created. Then send the same contact again with a different phone number, and check the record: did it match the contact you already had instead of creating a second one, and did your overwrite choice behave the way you expected? That one loop is authentication, scopes, and upsert semantics learned in a single sitting.
 :::
 
 <SectionFeedback courseId="authenticate-and-first-api-call" site="vendasta_learn" section="content" />
@@ -129,7 +129,7 @@ In a sandbox account, generate a token with a contact-write scope and upsert one
   ]}
 />
 
-<LessonFooter to="/learn/builder/webhooks-and-platform-events" pathName="Wire your AI Workforce to act" step={5} totalSteps={9} />
+<LessonFooter to="/learn/builder/webhooks-and-platform-events" pathName="Wire your AI Workforce to act" step={5} totalSteps={8} />
 
 </InlineHighlighter>
 <MarkComplete courseId="authenticate-and-first-api-call" site="vendasta_learn" />

@@ -1,0 +1,39 @@
+---
+title: Log activity and hotness rating
+description: Learn how to use the Log activity and hotness rating action to log a business activity and raise the account's hotness rating.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, sales, activity, hotness]
+keywords: [log activity, hotness rating, hot lead, business activity, sales activity automation, lead scoring]
+---
+
+# Log activity and hotness rating
+
+**Log activity and hotness rating** logs a business activity on the account and raises its hotness rating. The hotness rating only increases — if the new level is lower than the current one, the rating stays unchanged. This action is available on account-scoped triggers.
+
+## How it works
+
+1. The automation reaches the step with an account in scope
+2. The step logs the activity you configured on the account
+3. If the specified hotness level is higher than the current rating, the rating is raised
+4. If the specified hotness level is lower, the current rating is kept (hotness never decreases)
+5. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Sales**, select **Log activity and hotness rating**
+3. Configure the activity details and hotness level
+
+## Outputs
+
+This action produces no outputs available to downstream steps.
+
+## Tips
+
+- **Hotness ratings can only go up** — this prevents accidental downgrades. To reset a hotness rating, you need to do it manually outside of automations.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

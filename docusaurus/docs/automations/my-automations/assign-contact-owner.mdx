@@ -1,0 +1,52 @@
+---
+title: Assign contact owner
+description: Learn how to use the Assign a contact owner / salesperson action to set a team member as the owner of a CRM contact record in an automation.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, crm, contact, owner, salesperson, workflows]
+keywords: [assign contact owner, assign salesperson contact, contact owner automation, crm contact owner, assign owner contact, set contact owner]
+---
+
+# Assign contact owner
+
+**Assign a contact owner / salesperson** sets a team member as the owner of a CRM contact record. Use it in contact-scoped automations to route new leads, form submissions, or updated contacts to the right person automatically — without manual reassignment.
+
+This action is available on any trigger that brings a contact into scope, such as **A contact is created or modified** or **A form is submitted for a contact**.
+
+## How it works
+
+1. The automation reaches the **Assign a contact owner / salesperson** step with a contact in scope
+2. You specify the team member to assign — either a static selection or a dynamic value from a previous step
+3. The action updates the contact record's owner field in the CRM
+4. The assigned user ID is returned as an output available to downstream steps
+5. If the contact already has an owner, the previous owner is replaced
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Contacts**, select **Assign a contact owner / salesperson**
+3. Configure the field:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Owner** | Yes | The team member to assign as the contact owner. Select a user from the list or use dynamic content to pass a user ID from a previous step. |
+
+:::tip
+Use **Add dynamic content** to assign ownership based on data from the trigger or an earlier step. For example, pass a salesperson user ID from a form submission or webhook payload to route the contact to the right person at the moment they enter your CRM.
+:::
+
+## Outputs
+
+After the step runs, one value is available to downstream steps:
+
+| Output | Description |
+| --- | --- |
+| **owner_id** | The user ID of the newly assigned contact owner. |
+
+Reference this output in later steps using **Add dynamic content** and selecting this step's **owner_id**.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Assign company owner](./assign-company-owner.mdx) — Assign an owner to a CRM company record
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

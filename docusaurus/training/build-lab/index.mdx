@@ -1,0 +1,63 @@
+---
+title: Put it into action
+sidebar_position: 0
+sidebar_label: Overview
+description: "Take one real build end to end: switch on booking and lead capture, add a custom tool for the job the platform does not already do, and prove the whole flow."
+hide_table_of_contents: true
+---
+
+import PathCards from "@site/src/components/PathCards";
+import PathHeader from "@site/src/components/PathHeader";
+
+<PathHeader
+  parts={3}
+  difficulty="Intermediate to Advanced"
+  topics={["Integrations", "AI Receptionists", "Capabilities"]}
+  time="about 45 minutes"
+  required={["A test account", "A connected calendar"]}
+  objective="One AI Employee for a home-services client: it books jobs on a real calendar, saves every lead to the CRM, and checks the weather before it confirms outdoor work. You build it end to end, in a test account, one confirmed piece at a time."
+  outcomes={[
+    "You have a working AI Employee that books, captures leads, and checks the weather first",
+    "You can tell what the platform already does from what has to be built",
+    "You can test a tool where it will actually run, and read the Explanation view",
+  ]}
+/>
+
+## This path covers
+
+Three steps, in order: each one builds on the machine the last one left running. Booking and lead capture get switched on because the platform already does them; the weather check gets built because that judgment is specific to the client. Knowing which is which is the builder's skill this lab trains.
+
+<PathCards
+  cards={[
+    {
+      title: "Switch on what the platform already does",
+      description: "Connect the calendar, switch on booking and lead capture, and watch a real booking land.",
+      topics: [
+        "The platform first, then the custom piece",
+        "Switching it on",
+        "Testing it, your first win",
+      ],
+      to: "/learn/build-lab/switch-on-the-platform",
+    },
+    {
+      title: "Build the custom tool",
+      description: "Turn a weather API into a tool, and write the prompt that gives it judgment.",
+      topics: [
+        "The job the platform does not already do",
+        "Writing the capability prompt",
+        "When to use it, and how to respond",
+      ],
+      to: "/learn/build-lab/build-the-custom-tool",
+    },
+    {
+      title: "Test it and run the whole thing",
+      description: "Test where it will actually run, read the Explanation view, and prove the full flow.",
+      topics: [
+        "Testing the tool where it will actually run",
+        "Reading the Explanation view",
+        "Running the whole flow end to end",
+      ],
+      to: "/learn/build-lab/test-and-run-it",
+    },
+  ]}
+/>

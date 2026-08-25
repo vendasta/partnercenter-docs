@@ -1,0 +1,40 @@
+---
+title: Update opportunity stage
+description: Learn how to use the Update opportunity stage action to move an opportunity to a different pipeline stage.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, crm, opportunity, pipeline, advanced]
+keywords: [update opportunity stage, pipeline stage, move opportunity, opportunity automation, pipeline automation]
+---
+
+# Update opportunity stage
+
+**Update opportunity stage** moves an opportunity to a different stage in its pipeline. Use it to automatically advance deals when milestones are reached — for example, moving to "Proposal" when a Snapshot Report is created. This action is available on account-scoped triggers.
+
+## How it works
+
+1. The automation reaches the step with an opportunity in scope
+2. The step updates the opportunity's pipeline stage to the one you selected
+3. The opportunity moves to the new stage immediately
+4. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Advanced**, select **Update opportunity stage**
+3. Configure the fields:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Pipeline** | Yes | The pipeline the opportunity belongs to. |
+| **Stage** | Yes | The stage to move the opportunity to. |
+
+## Outputs
+
+This action produces no outputs available to downstream steps.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Create a sales opportunity](./create-a-sales-opportunity.mdx) — Create a new opportunity
+- [Get an opportunity](./get-an-opportunity.mdx) — Bring an opportunity into scope
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

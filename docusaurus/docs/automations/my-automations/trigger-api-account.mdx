@@ -1,0 +1,44 @@
+---
+title: "Trigger: API call on an account"
+description: Start an automation when an API call invokes the trigger for a specific account.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, advanced]
+keywords: [API trigger, API account trigger, programmatic trigger, developer trigger, account API automation]
+---
+
+# API call on an account
+
+**API call on an account** fires when an external system or custom integration makes an API call that invokes this trigger for a specific account. Use this trigger to start automations programmatically — for example, from your own application, a custom integration, or another platform that can send API requests.
+
+This trigger is intended for developers and technical users who need to initiate account-scoped automations from outside Partner Center.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account and contact actions are available downstream.
+:::
+
+## How it works
+
+1. An external system makes an authenticated API call that references the trigger and a specific account ID.
+2. The automation starts with the identified account in context.
+3. Any payload data included in the API call is available as dynamic content in downstream steps.
+4. Downstream steps can use **Add dynamic content** to reference account fields and any data passed in the request.
+
+## Available data
+
+Standard account fields are available via **Add dynamic content**. Additional fields depend on what data your API call passes as part of the request payload.
+
+:::info
+Consult the Vendasta developer documentation for the correct API endpoint, authentication requirements, and payload schema to invoke this trigger.
+:::
+
+## Tips
+
+- Use this trigger when you need to start account-scoped automation workflows from an external system or custom-built integration.
+- Pass relevant context in the API payload to make it available as dynamic data in downstream steps.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

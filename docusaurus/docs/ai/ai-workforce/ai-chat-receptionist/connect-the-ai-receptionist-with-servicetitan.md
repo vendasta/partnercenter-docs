@@ -1,6 +1,7 @@
 ---
 title: "Connect the AI Chat Receptionist with ServiceTitan"
 sidebar_label: Connect with ServiceTitan
+description: Connect the AI Chat Receptionist to ServiceTitan to look up customers, schedule appointments, and provide job status updates.
 ---
 
 import {AISparkleIcon} from '@site/src/components/Icons'
@@ -26,7 +27,7 @@ ServiceTitan is a software platform used by many trades businesses (HVAC, plumbi
 While this guide has been written primarily for your AI Chat Receptionist, you can use the Capabilities created in this guide with your AI Voice Receptionist, or any other AI Employee!
 :::
 
-## Prerequisites & Setup
+## Prerequisites & setup
 
 Before you connect your AI Receptionist to ServiceTitan, you need to gather the following items from your ServiceTitan account and API access. You'll only need to do this once.
 
@@ -38,31 +39,33 @@ Before you connect your AI Receptionist to ServiceTitan, you need to gather the 
 | **App ID & App Key** | Developer Portal → Your App → App Details | Application-specific identifiers |
 | **API Permissions** | `Settings` → `Integrations` → `API Application Access` → Configure Permissions | <ul><li>`jpm:jobs:read`</li><li>`jpm:jobs:write`</li><li>`crm:customers:read`</li><li>`crm:appointments:read`</li><li>`crm:appointments:write`</li><li>`accounting:invoices:read`</li><li>`settings:technicians:read`</li></ul> |
 
-#### ServiceTitan Help Resources
+#### ServiceTitan help resources
 
-> You can get more detailed help on gathering this information from the ServiceTitan resources below:
-> - Setting up API access ([ServiceTitan Developer Portal](https://developer.servicetitan.io/))
-> - Managing integrations ([API Application Access Guide](https://help.servicetitan.com/admin-settings/integrations/api-application-access))
-> - Understanding API permissions ([ServiceTitan API Documentation](https://developer.servicetitan.io/docs))
+:::info
+You can get more detailed help on gathering this information from the ServiceTitan resources below:
+- Setting up API access ([ServiceTitan Developer Portal](https://developer.servicetitan.io/))
+- Managing integrations ([API Application Access Guide](https://help.servicetitan.com/admin-settings/integrations/api-application-access))
+- Understanding API permissions ([ServiceTitan API Documentation](https://developer.servicetitan.io/docs))
+:::
 
 ---
 
-## Capability 1: Customer Lookup and Service History
+## Capability 1: Customer lookup and service history
 
 This capability allows your AI Receptionist to search for customers and retrieve their service history, providing instant access to past jobs, upcoming appointments, and customer preferences.
 
-### Step 1: Add a ServiceTitan Customer Lookup Capability
+### Step 1: Add a ServiceTitan customer lookup capability
 
 1. In your Business App, navigate to <AISparkleIcon /> `AI` → `AI Workforce`
 2. Select your AI Employee and click `Configure`.
 3. Under `Custom Capabilities`, click `Add a capability`.
 4. Fill in the following fields:
-   - **Name**: `ServiceTitan Customer Lookup`
-   - **Description**: Searches ServiceTitan for customer information, service history, and account details to provide personalized support and context for customer inquiries.
+   - `Name`: `ServiceTitan Customer Lookup`
+   - `Description`: Searches ServiceTitan for customer information, service history, and account details to provide personalized support and context for customer inquiries.
 
-### Step 2: Configure ServiceTitan Customer API Tools
+### Step 2: Configure ServiceTitan customer API tools
 
-#### ServiceTitan Tool: searchCustomers
+#### ServiceTitan tool: searchCustomers
 
 `searchCustomers` allows your AI Receptionist to find customers by name, phone number, or email address and retrieve basic customer information.
 
@@ -93,7 +96,7 @@ This capability allows your AI Receptionist to search for customers and retrieve
 | `page` | `Query` | `integer` | Page number for pagination (default: 1) |
 | `pageSize` | `Query` | `integer` | Number of results per page (default: 20, max: 100) |
 
-#### ServiceTitan Tool: getCustomerJobs
+#### ServiceTitan tool: getCustomerJobs
 
 `getCustomerJobs` retrieves the complete job history for a specific customer, including past service calls, upcoming appointments, and job details.
 
@@ -124,7 +127,7 @@ This capability allows your AI Receptionist to search for customers and retrieve
 | `page` | `Query` | `integer` | Page number for pagination |
 | `pageSize` | `Query` | `integer` | Number of results per page (max: 100) |
 
-#### ServiceTitan Tool: createCustomer
+#### ServiceTitan tool: createCustomer
 
 `createCustomer` creates a new customer record in ServiceTitan when they don't already exist in the system.
 
@@ -155,7 +158,7 @@ This capability allows your AI Receptionist to search for customers and retrieve
 | `doNotMail` | `Body` | `boolean` | Opt-out preference for mailing (default: false) |
 | `doNotService` | `Body` | `boolean` | Service restriction flag (default: false) |
 
-### Step 3: Write the Customer Lookup Prompt
+### Step 3: Write the customer lookup prompt
 
 ````
 ## **Customer Information Lookup Instructions**
@@ -225,22 +228,22 @@ Initiate a ServiceTitan customer search **when**:
 
 ---
 
-## Capability 2: Appointment Scheduling and Job Creation
+## Capability 2: Appointment scheduling and job creation
 
 This capability enables your AI Receptionist to schedule new appointments, create service jobs in ServiceTitan, and manage the booking process end-to-end.
 
-### Step 1: Add a ServiceTitan Appointment Scheduling Capability
+### Step 1: Add a ServiceTitan appointment scheduling capability
 
 1. In your Business App, navigate to <AISparkleIcon /> `AI` → `AI Workforce`
 2. Select your AI Employee and click `Configure`.
 3. Under `Custom Capabilities`, click `Add a capability`.
 4. Fill in the following fields:
-   - **Name**: `ServiceTitan Appointment Scheduling`
-   - **Description**: Creates new appointments and service jobs in ServiceTitan, checks technician availability, and manages the complete booking workflow from initial request to job creation.
+   - `Name`: `ServiceTitan Appointment Scheduling`
+   - `Description`: Creates new appointments and service jobs in ServiceTitan, checks technician availability, and manages the complete booking workflow from initial request to job creation.
 
-### Step 2: Configure ServiceTitan Scheduling API Tools
+### Step 2: Configure ServiceTitan scheduling API tools
 
-#### ServiceTitan Tool: getAvailableTimeSlots
+#### ServiceTitan tool: getAvailableTimeSlots
 
 `getAvailableTimeSlots` checks technician availability and capacity to find open appointment slots.
 
@@ -266,7 +269,7 @@ This capability enables your AI Receptionist to schedule new appointments, creat
 | `active` | `Query` | `boolean` | Filter for active technicians only |
 | `hasPermissions` | `Query` | `string` | Filter technicians by specific permissions |
 
-#### ServiceTitan Tool: createAppointment
+#### ServiceTitan tool: createAppointment
 
 `createAppointment` creates a new appointment and job in ServiceTitan with all necessary details.
 
@@ -298,7 +301,7 @@ This capability enables your AI Receptionist to schedule new appointments, creat
 | `appointmentStart` | `Body` | `string` | Appointment start time (ISO 8601 format) |
 | `duration` | `Body` | `integer` | Expected job duration in minutes |
 
-### Step 3: Write the Appointment Scheduling Prompt
+### Step 3: Write the appointment scheduling prompt
 
 ````
 ## **Appointment Scheduling Instructions**
@@ -379,22 +382,22 @@ After successfully creating an appointment:
 
 ---
 
-## Capability 3: Job Status and Updates
+## Capability 3: Job status and updates
 
 This capability allows your AI Receptionist to provide real-time updates on job status, technician location, and estimated arrival times.
 
-### Step 1: Add a ServiceTitan Job Status Capability
+### Step 1: Add a ServiceTitan job status capability
 
 1. In your Business App, navigate to <AISparkleIcon /> `AI` → `AI Workforce`
 2. Select your AI Employee and click `Configure`.
 3. Under `Custom Capabilities`, click `Add a capability`.
 4. Fill in the following fields:
-   - **Name**: `ServiceTitan Job Status Updates`
-   - **Description**: Retrieves real-time job status, technician location, and appointment updates from ServiceTitan to keep customers informed about their service appointments.
+   - `Name`: `ServiceTitan Job Status Updates`
+   - `Description`: Retrieves real-time job status, technician location, and appointment updates from ServiceTitan to keep customers informed about their service appointments.
 
-### Step 2: Configure ServiceTitan Job Status API Tools
+### Step 2: Configure ServiceTitan job status API tools
 
-#### ServiceTitan Tool: getJobStatus
+#### ServiceTitan tool: getJobStatus
 
 `getJobStatus` retrieves current job status and details for specific jobs.
 
@@ -419,7 +422,7 @@ This capability allows your AI Receptionist to provide real-time updates on job 
 |------|----------|------|-------------|
 | `job_id` | `Path` | `integer` | Specific job ID to retrieve status for |
 
-#### ServiceTitan Tool: getTechnicianLocation
+#### ServiceTitan tool: getTechnicianLocation
 
 `getTechnicianLocation` provides technician location and estimated arrival information (requires ServiceTitan Mobile integration).
 
@@ -439,7 +442,7 @@ This capability allows your AI Receptionist to provide real-time updates on job 
 | `Authorization` | `Bearer {{access_token}}` | ✓ |
 | `ST-App-Key` | `{{app_key}}` | ✓ |
 
-### Step 3: Write the Job Status Prompt
+### Step 3: Write the job status prompt
 
 ````
 ## **Job Status and Updates Instructions**
@@ -512,7 +515,7 @@ Retrieve job status information **when**:
 
 ## Example conversations with AI Receptionist connected to ServiceTitan
 
-### Example 1: Existing Customer Scheduling Maintenance
+### Example 1: Existing customer scheduling maintenance
 
 <ChatUserMessage>
 Hi, I'd like to schedule an HVAC maintenance appointment for my home. Can you check what's available next week?
@@ -566,7 +569,7 @@ Mike will call you about 30 minutes before arrival. Please ensure the area aroun
 You'll receive a confirmation email shortly, and we'll send a reminder the day before your appointment. Is there anything specific you'd like our technician to check during the maintenance?
 </ChatAIMessage>
 
-### Example 2: New Customer Requesting Service
+### Example 2: New customer requesting service
 
 <ChatUserMessage>
 Hi, my kitchen sink has been leaking and I need a plumber. Can someone come out this week?
@@ -641,7 +644,7 @@ Dave will call you about 30 minutes before arrival. Please make sure the area un
 You'll receive a confirmation email at sarah.williams@email.com, and we'll send you a reminder the day before. Welcome to our family of customers, Sarah!
 </ChatAIMessage>
 
-## Testing & Troubleshooting
+## Testing & troubleshooting
 
 This section walks you through diagnosing the most common issues with connecting ServiceTitan to the AI Receptionist: from authentication errors and API limits, to empty results and permission issues.
 
@@ -728,9 +731,9 @@ The API returned a `404 Not Found` error, meaning the requested resource doesn't
 
 </Tabs>
 
-## FAQ: Connecting the AI Receptionist with ServiceTitan
+## FAQ: connecting the AI Receptionist with ServiceTitan
 
-### Integration & Setup
+### Integration & setup
 
 <details>
 <summary>Can I use this ServiceTitan integration with other AI Employees besides the Chat Receptionist?</summary>
@@ -760,7 +763,7 @@ While this guide covers core customer service functions, ServiceTitan's API supp
 You can create additional Custom Capabilities for features like inventory lookup, invoice status, equipment history, and maintenance reminders using the same framework described in this guide.
 </details>
 
-### AI & Workflow Questions
+### AI & workflow questions
 
 <details>
 <summary>How does the ServiceTitan integration work with my AI's Knowledge Base?</summary>
@@ -790,7 +793,7 @@ Great question! The ServiceTitan API provides operational and customer data, but
 This ensures your AI can provide complete, helpful answers by combining real-time ServiceTitan data with your business policies and expertise.
 </details>
 
-### Business Process Questions
+### Business process questions
 
 <details>
 <summary>How can I ensure my AI creates jobs with the right priority and routing?</summary>
@@ -857,7 +860,7 @@ Emergency services require special handling to ensure rapid response:
 "I understand you have no heat and it's freezing outside. This is definitely an emergency. I'm creating a high-priority service call right now and will have our emergency dispatch contact you within 10 minutes. In the meantime, if you have a space heater, please use it safely..."
 </details>
 
-### Technical & Advanced Configuration
+### Technical & advanced configuration
 
 <details>
 <summary>How can I track which services customers request most through AI interactions?</summary>

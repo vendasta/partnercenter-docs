@@ -1,0 +1,111 @@
+---
+title: "Switch on what the platform already does"
+sidebar_position: 1
+description: "Connect a calendar, switch on Appointment Booking and Lead Capture, and watch a real booking land before any custom work begins."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+
+<InlineHighlighter courseId="switch-on-the-platform" site="vendasta_learn">
+
+<CourseProgressBar courseId="switch-on-the-platform" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Intermediate"
+  time="about 15 minutes"
+  lab
+  pathName="Put it into action"
+  step={1}
+  totalSteps={3}
+  required={[
+    "A test account you have created in Partner Center, with you added as a user",
+    "A calendar account to connect for Appointment Booking",
+  ]}
+  outcomes={[
+    "Switch on Appointment Booking and Lead Capture, and shape them with instructions",
+    "Book a real meeting through your AI Employee and find the lead it saved in the CRM",
+  ]}
+/>
+
+## The platform first, then the custom piece
+
+Booking and lead capture are built-in capabilities: the platform already knows how to schedule on a connected calendar and save a contact to the CRM, so you switch those on and shape them with instructions. The custom work comes later in this path, and only for the job the platform does not already do. That line, switch on what exists and build only what is genuinely custom, is what keeps a build small, fast to test, and easy to hand to the next client.
+
+You will build in a test account: an account you create in Partner Center with yourself added as a user, so you have a Business App where nothing is at stake and you can break things on purpose. When you are ready to create one, [this guide walks you through it](/accounts/manage-accounts/create-accounts).
+
+## Switch it on
+
+*You are here: Business App, inside your test account. Everything in this path happens here.*
+
+1. Connect a calendar in your Business App settings. Appointment Booking schedules against this calendar, so it needs to exist first.
+2. Go to **AI** → **AI Workforce** and select the AI Employee you want to build on.
+3. Click **Configure** and scroll to the **Capabilities** section.
+4. Click **+ Add a capability** and add **Appointment Booking**. Read its description; it books meetings using the calendar you just connected.
+5. Add instructions that shape how it books. A strong starting set: check availability for the next two weeks, confirm date, time, service type, and duration before booking, and send the confirmation details to the customer.
+6. Confirm **Lead Capture** is in the active list, and add it if it is not. This is the capability that saves each visitor's contact details to the CRM.
+7. Give Lead Capture its instructions too: always ask for name, email, and phone number before booking is finished.
+8. Save.
+
+**Confirm it:** both capabilities show in the active list, each with instructions you wrote on purpose rather than defaults you have not read.
+
+## Test it, your first win
+
+No custom work has happened yet, and you already have something worth showing. Prove it.
+
+1. Open a chat with your AI Employee in a fresh browser session. An incognito window is the easy way; it keeps earlier test conversations from leaking context into this one.
+2. Ask the way a customer would: "Can I book someone to clean my gutters next week?"
+3. Let the conversation run. The AI should collect your name, email, and phone number, offer real times, and confirm the details before booking.
+4. Open the connected calendar. The booking is on it.
+5. Open the CRM in the same account and find the contact the AI just saved.
+
+That is a working AI Employee, booking real appointments and filing real leads. Everything else in this path extends a machine that already runs.
+
+**Confirm it:** the meeting is on the calendar and the contact is in the CRM, and you touched neither.
+
+:::tip Try it now
+Open **Conversations**, find the chat you just had, and click **Explanation** under the booking message. It shows what the AI actually did to make that booking happen. You will lean on this view for the rest of the path, so meet it while everything is working.
+:::
+
+<SectionFeedback courseId="switch-on-the-platform" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="switch-on-the-platform" site="vendasta_learn"
+  sessionSize={2}
+  intro="Two quick questions on choosing built-in over custom."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A client wants their AI Employee to book appointments on their connected calendar. What is the first move?',
+      options: [
+        'Build a custom availability tool with a cURL import',
+        'Switch on the built-in Appointment Booking capability and shape it with instructions',
+        'Write a webhook that watches the calendar for changes',
+        'Ask a developer to connect the calendar API'
+      ],
+      correctIndex: 1,
+      explanation: 'Booking against a connected calendar is a built-in capability. Switch on what the platform already does, and save custom builds for the jobs it does not.'
+    },
+    {
+      type: 'mcq',
+      question: 'Which of these jobs actually needs a custom tool?',
+      options: [
+        'Saving a chat visitor\'s contact details to the CRM',
+        'Booking a meeting on the connected calendar',
+        'Checking a weather forecast before confirming an outdoor job',
+        'Asking a visitor for their name and email'
+      ],
+      correctIndex: 2,
+      explanation: 'Lead capture and calendar booking are built in. The weather check is specific to one client\'s business, and reaching a system the platform does not already connect to is exactly what custom tools are for.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/build-lab/build-the-custom-tool" pathName="Put it into action" step={1} totalSteps={3} />
+
+</InlineHighlighter>
+<MarkComplete courseId="switch-on-the-platform" site="vendasta_learn" />

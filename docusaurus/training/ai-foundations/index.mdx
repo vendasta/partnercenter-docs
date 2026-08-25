@@ -6,40 +6,87 @@ description: "How AI Employees actually work: models, knowledge, capabilities, t
 hide_table_of_contents: true
 ---
 
-import PathRoadmap from "@site/src/components/PathRoadmap";
+import PathCards from "@site/src/components/PathCards";
+import PathHeader from "@site/src/components/PathHeader";
 
-How AI Employees actually work: how they think, what they know, what they do, how they act, and when to reach for an automation instead. There is nothing to set up and nothing to activate.
+<PathHeader
+  parts={6}
+  difficulty="Beginner"
+  topics={["AI fundamentals", "AI Workforce", "Capabilities", "Automations"]}
+  time="about 40 minutes"
+  required={["None"]}
+  objective="How AI Employees actually work, in plain language; how they think, what they know, what they do, how they reach into other systems, and when an automation is the better tool for the job. There is nothing to set up and nothing to activate."
+  outcomes={[
+    "You can explain how an AI Employee composes an answer, and what keeps it accurate",
+    "You know whether a given instruction belongs in behavior or in knowledge",
+    "You can tell when a job wants an AI Employee and when it wants an automation",
+  ]}
+/>
 
-<PathRoadmap
-  steps={[
+## This path covers
+
+Six steps, each building on the one before it. Nothing here requires access to a live account.
+
+<PathCards
+  cards={[
     {
       title: "From work to AI workforce",
-      description: "Workflows always needed a person at the end. The whole picture of what changed.",
+      description: "Workflows always needed a person at the end. This is what changed.",
+      topics: [
+        "Why automation was never the new part",
+        "The two shapes of work",
+        "What it means to have a worker on the other end",
+      ],
       to: "/learn/ai-foundations/from-work-to-ai-workforce",
     },
     {
       title: "How AI Employees think",
-      description: "A different beast from the phone menu: how answers get composed and what keeps them accurate.",
+      description: "A different beast from the phone menu, and what keeps answers accurate.",
+      topics: [
+        "How an answer gets composed",
+        "What a guess looks like, and how to spot one",
+        "Working memory and where it runs out",
+      ],
       to: "/learn/ai-foundations/how-ai-employees-think",
     },
     {
       title: "Context is everything",
       description: "The three sources behind every answer, and why business data is the moat.",
+      topics: [
+        "Three sources, one answer",
+        "Instructions lead, knowledge informs",
+        "Seeing exactly what an answer used",
+      ],
       to: "/learn/ai-foundations/context-is-everything",
     },
     {
       title: "Instructions that scale",
-      description: "Capabilities, the instructions-or-knowledge decision, and why short beats long.",
+      description: "Capabilities, and the decision between an instruction and a document.",
+      topics: [
+        "Capabilities you switch on",
+        "Whether something is behavior or facts",
+        "Why short beats long",
+      ],
       to: "/learn/ai-foundations/instructions-that-scale",
     },
     {
       title: "Taking action",
-      description: "Tools: how an AI Employee reaches into other systems, safely.",
+      description: "How an AI Employee reaches into another system, safely.",
+      topics: [
+        "Tools as a doorway into another system",
+        "When information wants to be a tool",
+        "How actions stay safe",
+      ],
       to: "/learn/ai-foundations/taking-action",
     },
     {
       title: "Agents and automations, together",
-      description: "Deterministic workflows, agentic AI, and how they hand off to each other.",
+      description: "Deterministic workflows, agentic AI, and how they hand off.",
+      topics: [
+        "Two kinds of help",
+        "The sorting test for which one a job needs",
+        "How the two hand off to each other",
+      ],
       to: "/learn/ai-foundations/agents-and-automations-together",
     },
   ]}

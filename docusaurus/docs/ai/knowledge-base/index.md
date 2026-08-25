@@ -6,6 +6,8 @@ tags: [knowledge-base, ai-employees, knowledge-sources, conversations-ai]
 keywords: [knowledge base, knowledge sources, business profile, ai employees, conversations ai]
 ---
 
+import { GraduationCapIcon } from '@site/src/components/Icons';
+
 ## What is the Knowledge Base?
 
 The **Knowledge Base** is where AI employees access factual information about a business. It ensures that answers are accurate and grounded in real data.  
@@ -207,3 +209,10 @@ Use **text** for short, specific information not on the site. Use **website** fo
 No. You'll need to upload a new version of the file to refresh its content.
 
 </details>
+
+<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
+  <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
+  <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>
+    New to hiring and running an AI Employee? Take the <a href="/learn/ai-workforce" style={{color: '#3C9A63', fontWeight: 600}}>Hire your first AI Employee</a> course in Vendasta Learn — Beginner to Intermediate, 7 lessons.
+  </span>
+</div>

@@ -5,6 +5,7 @@ description: "The white-label model, who works in the platform, and how it all c
 ---
 
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import { IconFlipCard, IconFlipCardGrid } from "@site/src/components/FlipCard";
 import CourseProgressBar from "@site/src/components/CourseProgressBar";
 import SectionFeedback from "@site/src/components/SectionFeedback";
 import InlineHighlighter from "@site/src/components/InlineHighlighter";
@@ -95,21 +96,46 @@ Pick the workspace first and everything downstream lands where you expect: chann
 
 ## Products, AI Employees, and automations
 
-Three building blocks, three different jobs:
+Three building blocks, three different jobs. Flip each one:
 
-| | What it is | Where it lives | Example |
-|---|---|---|---|
-| **Product** | Something you activate on an account and resell | Marketplace → the account | Local SEO, Conversations AI |
-| **AI Employee** | A worker you configure with knowledge and capabilities | Partner Center or Business App | AI Receptionist, AI Sales Assistant |
-| **Automation** | A trigger-and-action workflow that runs on its own | Automations, in either workspace | New form submission creates a follow-up task |
+<IconFlipCardGrid>
+  <IconFlipCard
+    gradient="blue"
+    front="Product"
+    back="What you shop for in the Marketplace and resell, like Local SEO, Social AI, or Conversations AI. You activate it on an account, and it is what your client is billed for."
+  />
+  <IconFlipCard
+    gradient="green"
+    front="AI Employee"
+    back="The worker a product turns on. You will not find one for sale in the Marketplace on its own: you sell the product, and the employee is what it unlocks. You configure it with knowledge and capabilities in the workspace it serves."
+  />
+  <IconFlipCard
+    gradient="purple"
+    front="Automation"
+    back="A trigger-and-action workflow that runs on its own, such as a new form submission creating a follow-up task. Automations live in either workspace."
+  />
+</IconFlipCardGrid>
 
-They compose: a product often unlocks an AI Employee, and automations carry work between them. That composition is "AI does the work, you orchestrate" in miniature.
+The order matters: **you sell products, and products unlock AI Employees.** These AI Employees are each powered by a specific product:
+
+| AI Employee | Product that unlocks it |
+|---|---|
+| Voice Receptionist | Conversations AI |
+| Social Media Manager | Social Marketing (Social AI) |
+| Blogger | Social Marketing (Social AI) |
+| Reputation Specialist | Reputation Management |
+| AI Sales Assistant | CRM AI |
+| AI Search Specialist | Local SEO / Listing Builder |
+
+When a client is ready to add an employee, [this guide covers the upgrade path](/ai/ai-workforce/upgrading-ai-employees).
+
+Automations are the third piece, and they carry work between the other two. That composition is "AI does the work, you orchestrate" in miniature.
 
 <SectionFeedback courseId="the-vendasta-platform" site="vendasta_learn" section="content" />
 
 <KnowledgeCheck courseId="the-vendasta-platform" site="vendasta_learn"
   sessionSize={3}
-  intro="Three quick questions on the model, the two workspaces, and where AI Employees live."
+  intro="Three quick questions on the model, the two workspaces, and how products and AI Employees relate."
   questions={[
     {
       type: 'mcq',
@@ -158,6 +184,18 @@ They compose: a product often unlocks an AI Employee, and automations carry work
       ],
       correctIndex: 1,
       explanation: 'An AI Employee lives in the workspace of the business it serves. A client-facing receptionist is configured in that client\'s Business App.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client asks you to sell them a Voice Receptionist. You search the Marketplace and cannot find one. What is going on?',
+      options: [
+        'AI Employees are not sold on their own; you sell Conversations AI and the receptionist is what it unlocks',
+        'Receptionists come free on every account, so there is nothing in the Marketplace to sell',
+        'The receptionist is published from Vendor Center, which is where you activate it for a client',
+        'Vendasta Support has to enable the receptionist for that account before it becomes sellable'
+      ],
+      correctIndex: 0,
+      explanation: 'You shop for products; AI Employees are what those products turn on. Conversations AI unlocks the Voice Receptionist, and one product can unlock several employees: Social AI brings both the Social Media Manager and the Blogger.'
     },
     {
       type: 'mcq',

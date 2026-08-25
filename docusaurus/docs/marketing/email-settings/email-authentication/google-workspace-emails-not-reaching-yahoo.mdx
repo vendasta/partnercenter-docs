@@ -1,0 +1,213 @@
+---
+title: Self-troubleshooting - Google Workspace emails not reaching Yahoo
+sidebar_label: Google Workspace Emails Not Reaching Yahoo
+sidebar_position: 3
+description: Help a client troubleshoot Google Workspace emails that are bouncing, delayed, or not reaching Yahoo recipients.
+---
+
+If a client's business email is hosted on Google Workspace and messages to Yahoo addresses are failing, delayed, or bouncing back, use this guide to check the most common causes before contacting support.
+
+This guide is intended for domain owners, administrators, or anyone who can access DNS settings and the Google Admin console. If your client doesn't manage their own domain or email settings, share this page with their IT provider or website administrator.
+
+## What this issue usually means
+
+In most cases, Yahoo rejects messages when the sending domain isn't fully authenticated or when DNS records are incomplete or conflicting. The most common causes are:
+
+- Incorrect or outdated MX records
+- Missing or invalid SPF record
+- Missing DKIM setup
+- Missing DMARC record
+- A Google Workspace account that isn't fully activated
+- A domain reputation or spam-policy issue
+
+Even if email works with some providers, Yahoo may still reject messages because it applies stricter authentication checks than many other mailbox providers.
+
+## Before you begin
+
+Gather the following:
+
+- The domain name, such as `yourcompany.com`
+- Access to the DNS provider, such as GoDaddy, Cloudflare, or the website host
+- Access to the Google Admin account at [admin.google.com](https://admin.google.com)
+- A recent bounce-back or non-delivery message, if one is available
+
+You can also use [MXToolbox](https://mxtoolbox.com) to check public DNS records.
+
+## Self-troubleshooting steps
+
+### 1. Confirm the Google Workspace account is active
+
+If Google Workspace was recently purchased or set up, the account may still require final activation.
+
+1. Sign in to [admin.google.com](https://admin.google.com).
+2. Check whether the Google Workspace subscription is active.
+3. Make sure the administrator has accepted Google's Terms of Service.
+4. Confirm the affected user has a Google Workspace license that includes Gmail.
+
+If the mailbox can send to some domains but not Yahoo, the account is usually active. In that case, continue to the DNS authentication checks below.
+
+### 2. Check MX records
+
+MX records tell the internet which mail server handles email for a domain. If they're incorrect or mixed with another provider, mail flow can break.
+
+Use MXToolbox to run an MX lookup for the domain.
+
+The domain should point only to Google Workspace mail servers. Many older Google Workspace setups use five MX records, while newer setups may use a single Google MX target. What matters most is that DNS points only to Google and doesn't include leftover records from another provider.
+
+- Remove MX records from old services like Microsoft 365, cPanel, Zoho, or another mail host
+- Make sure there are no duplicate or conflicting MX entries
+- Allow time for DNS changes to propagate after updates
+
+:::warning
+If you're unsure whether MX records are correct, don't guess. Incorrect MX changes can disrupt all inbound email for the domain.
+:::
+
+### 3. Check the SPF record
+
+SPF tells receiving mail systems which servers are allowed to send email for a domain. Yahoo checks this closely.
+
+Run a TXT lookup for the domain in MXToolbox and locate the SPF record.
+
+A valid SPF record usually starts with `v=spf1`. If mail is sent from Google Workspace, the SPF record should include Google. If the domain also uses another service like SendGrid or Mailchimp, that service must be included in the same SPF record.
+
+**Important:** A domain should have only one SPF record. Multiple SPF records can cause email failures.
+
+Example of a merged SPF record:
+
+```
+v=spf1 include:_spf.google.com include:sendgrid.net ~all
+```
+
+### 4. Check whether DKIM is enabled
+
+DKIM adds a digital signature to outbound messages. This helps Yahoo verify that the message was really sent by the domain and wasn't altered in transit.
+
+1. Sign in to [admin.google.com](https://admin.google.com).
+2. Go to Gmail settings for email authentication.
+3. Check whether DKIM has been generated and enabled for the domain.
+4. Verify that the required DNS record has been added at the DNS provider.
+
+If DKIM is missing or not turned on, Yahoo may reject the email even if SPF is correct.
+
+:::tip
+Some DNS providers automatically append the domain name to a record's host value. If the DKIM host is entered twice, it creates an invalid record. If the DNS provider automatically appends the domain name, enter only the host value requested by Google rather than the full domain.
+:::
+
+#### Fix: Set up DKIM for Google Workspace
+
+If MXToolbox shows "DNS record not found" for `google._domainkey.yourdomain.com`, follow these steps:
+
+**Step 1 - Generate the DKIM key in Google Admin**
+
+1. Sign in to [admin.google.com](https://admin.google.com).
+2. Navigate to **Apps** → **Google Workspace** → **Gmail** → **Authenticate Email**.
+3. Select the domain and click **Generate New Record**.
+4. Set the key length to **2048-bit** (recommended).
+5. Leave the DKIM selector prefix as `google` (default).
+
+**Step 2 - Add the CNAME record to the DNS provider**
+
+Add the following record in the DNS settings (for example, GoDaddy or Cloudflare):
+
+| Field | Value |
+| --- | --- |
+| Type | CNAME |
+| Host / Name | `google._domainkey` |
+| Points to / Value | Copy the exact value shown in the Google Admin console |
+| TTL | 3600 (or default) |
+
+**Step 3 - Activate and verify**
+
+1. Return to Google Admin → **Authenticate Email**.
+2. Click **Start Authentication**.
+3. Wait 24-48 hours for DNS propagation.
+4. Verify by running a CNAME lookup on [MXToolbox](https://mxtoolbox.com) for `google._domainkey.yourdomain.com`.
+
+**Expected DNS summary after the fix:**
+
+| Record | Type | Host | Value |
+| --- | --- | --- | --- |
+| MX | MX | @ | `aspmx.l.google.com` (pri 1), `alt1.aspmx.l.google.com` (pri 5), `alt2.aspmx.l.google.com` (pri 5), `alt3.aspmx.l.google.com` (pri 10), `alt4.aspmx.l.google.com` (pri 10) |
+| SPF | TXT | @ | `v=spf1 include:_spf.google.com include:sendgrid.net ~all` |
+| DKIM | CNAME | `google._domainkey` | Value from the Google Admin console |
+| DMARC | TXT | `_dmarc` | `v=DMARC1; p=none; rua=mailto:postmaster@yourdomain.com; pct=100;` |
+
+### 5. Check whether a DMARC record exists
+
+DMARC tells receiving systems how to handle messages that fail SPF or DKIM checks. It also helps improve trust in the domain.
+
+Run a TXT lookup for `_dmarc.yourdomain.com`.
+
+A DMARC record should begin with `v=DMARC1`. Even a basic policy is better than having no DMARC record at all.
+
+Example:
+
+```
+v=DMARC1; p=none; rua=mailto:postmaster@yourdomain.com
+```
+
+If the domain owner doesn't monitor DMARC reports, start with a simple policy and review carefully before making stricter changes.
+
+### 6. If the domain uses Cloudflare, review proxy settings
+
+If the domain uses Cloudflare, some DNS records should remain set to **DNS only** rather than proxied.
+
+For email-related records such as DKIM CNAME entries, make sure Cloudflare isn't proxying them. Proxied DNS can interfere with mail authentication.
+
+### 7. Review the bounce-back message
+
+If Yahoo rejected the message, the bounce-back or error notice usually explains why. Look for keywords such as:
+
+- SPF fail
+- DKIM fail
+- DMARC fail
+- Policy rejection
+- Message blocked
+- Spam content
+
+This message is often the fastest way to identify whether the issue is authentication-related or reputation-related.
+
+## When to contact support
+
+Contact support if the checks above are complete and any of the following is true:
+
+- MX, SPF, DKIM, and DMARC records appear correct, but Yahoo still rejects messages
+- A specific Yahoo policy or reputation error is shown
+- The domain owner isn't comfortable editing DNS records themselves
+- The issue affects only one user or one mailbox and not the whole domain
+
+To speed up support, send the domain name, a screenshot of the current DNS records, and the full bounce-back message from Yahoo.
+
+## Quick checklist
+
+- [ ] Google Workspace account is active
+- [ ] A Gmail-enabled license is assigned to the user
+- [ ] MX records point only to Google
+- [ ] Exactly one SPF record exists
+- [ ] DKIM is generated, published, and enabled
+- [ ] DMARC record is published
+- [ ] Cloudflare email-related records are set to DNS only
+- [ ] Bounce-back message has been reviewed and saved
+
+## Frequently asked questions
+
+<details>
+<summary>Does Google Workspace have trouble sending to Yahoo in general?</summary>
+
+No. Google Workspace can send to Yahoo normally. If Yahoo is rejecting messages from a domain, it usually points to a domain-specific setup issue such as SPF, DKIM, DMARC, or sender reputation.
+
+</details>
+
+<details>
+<summary>Could incorrect MX records be causing outbound messages to Yahoo to fail?</summary>
+
+Yes and no. MX records affect inbound mail routing, but Yahoo may reject outbound messages if the sending domain isn't properly authenticated with SPF, DKIM, and DMARC.
+
+</details>
+
+<details>
+<summary>How long does it take for a DNS fix to take effect?</summary>
+
+Some changes appear quickly, but full DNS propagation can take several hours and sometimes up to 48 hours depending on the DNS provider and record TTL.
+
+</details>
