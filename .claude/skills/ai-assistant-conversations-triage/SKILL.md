@@ -130,14 +130,54 @@ about whether the assistant had a source.
    Edit ONLY article files. Then STOP — the user reviews diffs inline and commits. Do not
    commit, and never stage anything under `.triage/`.
 
-5. **Continuity.** Remind the user to append one line to their metrics log (date, window,
-   counts per bucket, slugs touched), kept OUTSIDE the repo — see below.
+5. **Record, then clean up.** In that order — the record has to exist before the scratch it
+   was built from is deleted. See Continuity and Cleanup below.
 
 ## Continuity
 
-After each run, append one line to a metrics log kept **outside** the repo (a private note
-or Sheet): date, export window, count per gap type, article slugs touched. This is the only
-cross-run memory — without it you cannot tell whether a fix landed.
+**The decision record goes in the PR description.** That is the only durable output of a run:
+nothing under `.triage/` is ever committed, so anything not written into the PR is lost.
+Include:
+
+- Export window and the gap counts per bucket
+- Each article changed, with a one-line reason tied to what partners actually did
+- Anything deferred, with the open question and who needs to answer it — these outlive the
+  PR and are what the next run should start from
+- Anything needing a live UI check before it can be actioned
+
+## Cleanup (end of every run)
+
+`.triage/` holds partner PII — the 2026-08 derived files carried 91 unique account IDs and
+email addresses, and the raw export holds far more. It is gitignored, so it will not be
+committed, but it should not linger on disk either.
+
+Once the PR description is written, delete the derived scratch:
+
+```bash
+rm -f .triage/findings.json .triage/themes.json .triage/validated.json \
+      .triage/validated.md .triage/worklist.md
+```
+
+This removes the **files only** — `.triage/` itself stays, so the next run has nothing to
+recreate and no window where a fresh export lands before the ignore rule applies. Never
+`rm -rf` the directory.
+
+**Ask before deleting `.triage/report.json`** (and any `report (n).json`). Those are the
+user's exports — re-obtaining one is a manual step they may not want to repeat, so removing
+them is their call, not an automatic action. Do prompt for it: an unreviewed export sitting
+on disk is the largest concentration of partner PII in the working tree.
+
+### The ignore rule is permanent
+
+`.gitignore` carries `.triage/` as a tracked, committed line. It survives deleting the
+directory's contents, and being a directory rule it covers every filename inside — including
+awkward ones like `report (1).json`. It does not need re-adding between runs.
+
+Verify it once at the start of a run, before any export is read, and stop if it ever fails:
+
+```bash
+git check-ignore -q ".triage/report.json" || echo "STOP: .triage/ is not ignored"
+```
 
 ## First-run calibration (once)
 

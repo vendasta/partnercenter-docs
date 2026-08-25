@@ -27,8 +27,8 @@
  * unmatched citations become CITED_NOT_IN_REPO, never silently dropped.
  */
 
-import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from "node:fs";
-import { join, relative, extname, basename } from "node:path";
+import { readFileSync, writeFileSync, readdirSync, statSync, existsSync, mkdirSync } from "node:fs";
+import { join, relative, extname, basename, dirname } from "node:path";
 import { execSync } from "node:child_process";
 
 const args = Object.fromEntries(
@@ -246,6 +246,10 @@ const results = findings.map((f) => {
 });
 
 const trainingCount = results.filter((r) => r.outOfScopeTraining).length;
+
+// The run's scratch files are deleted after each run (see SKILL.md Cleanup), so the
+// directory can legitimately be absent on a fresh clone. Recreate rather than throw.
+mkdirSync(dirname(OUT_JSON), { recursive: true });
 
 writeFileSync(OUT_JSON, JSON.stringify(results, null, 2));
 
