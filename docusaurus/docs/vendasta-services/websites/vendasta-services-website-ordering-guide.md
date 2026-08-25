@@ -63,7 +63,7 @@ One of the questions will ask “What is the AGID for this Website?” The AGID 
 In this section, you will be able to provide the login credentials for your domain registrar (eg. GoDaddy, NameCheap, etc). If you do not have a domain, you will need to purchase one before we set the website live. To purchase a domain, you can purchase it directly from the domain registrar of choice, or via one of the following products within the product Marketplace:
 
 *   [Domains](https://partners.vendasta.com/marketplace/products/MP-L3DHRP5Z2RP4QVWLLTQGJLLVSH232WR5?tab=0)
-*   [GoDaddy Domains](https://partners.vendasta.com/marketplace/products/MP-https://partners.vendasta.com/marketplace/products/MP-4TMLZSQ5FMJQX5T75TPC43FQBWD2VXLB)
+*   [GoDaddy Domains](https://partners.vendasta.com/marketplace/products/MP-4TMLZSQ5FMJQX5T75TPC43FQBWD2VXLB)
 
 ### Navigation
 
