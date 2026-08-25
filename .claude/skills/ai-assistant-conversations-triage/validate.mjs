@@ -19,7 +19,7 @@
  *
  * Zero dependencies. Run with: node validate.mjs
  * Options:
- *   --docs=<path>      docs root (default: ./docusaurus/docs)
+ *   --docs=<path>      docs root (default: ./docusaurus/docs, served at /)
  *   --findings=<path>  findings file (default: .triage/findings.json)
  *   --inspect          print detected doc-index shape and exit (first-run sanity check)
  *
@@ -27,8 +27,8 @@
  * unmatched citations become CITED_NOT_IN_REPO, never silently dropped.
  */
 
-import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from "node:fs";
-import { join, relative, extname, basename } from "node:path";
+import { readFileSync, writeFileSync, readdirSync, statSync, existsSync, mkdirSync } from "node:fs";
+import { join, relative, extname, basename, dirname } from "node:path";
 import { execSync } from "node:child_process";
 
 const args = Object.fromEntries(
@@ -40,6 +40,10 @@ const args = Object.fromEntries(
 
 const DOCS_ROOT = args.docs || "docusaurus/docs";
 const FINDINGS = args.findings || join(".triage", "findings.json");
+
+// Training material (docusaurus/training, served at /learn) is deliberately OUT OF SCOPE for
+// documentation triage. /learn citations are recognised and reported, never matched into docs.
+const TRAINING_PREFIX = "/learn";
 const OUT_JSON = join(".triage", "validated.json");
 const OUT_MD = join(".triage", "validated.md");
 
@@ -99,6 +103,22 @@ function daysSince(iso) {
   return Math.round((Date.now() - new Date(iso).getTime()) / 86400000);
 }
 
+/**
+ * Site path for a doc file. docusaurus/docs has routeBasePath "/" — docs are the site root.
+ * A folder's index.md(x) maps to the folder itself, so
+ *   docs/administration/my-account/my-team/index.mdx -> /administration/my-account/my-team
+ * An absolute `slug:` in frontmatter wins.
+ */
+function sitePathFor(root, file, fm) {
+  if (fm.slug && fm.slug.startsWith("/")) return fm.slug.replace(/\/+$/, "") || "/";
+  let p = relative(root, file).replace(/\.(md|mdx)$/, "");
+  p = p.replace(/(^|\/)index$/, ""); // folder index -> the folder itself
+  return "/" + p.replace(/^\/+|\/+$/g, "");
+}
+
+// Segments too generic to identify an article on their own.
+const GENERIC_SEG = new Set(["index", "gettingstarted", "faq", "overview", "readme", "learn", "docs"]);
+
 function buildIndex(docsRoot) {
   if (!existsSync(docsRoot)) {
     console.error(`Docs root not found: ${docsRoot} (pass --docs=<path>)`);
@@ -115,30 +135,69 @@ function buildIndex(docsRoot) {
       title,
       id,
       slug: fm.slug || null,
+      sitePath: sitePathFor(docsRoot, file, fm),
       gitDate: gitDate(rel),
     };
   });
 }
 
+const urlPath = (u) => {
+  try {
+    return new URL(u).pathname.replace(/\/+$/, "") || "/";
+  } catch {
+    return "/" + u.split(/[#?]/)[0].replace(/^\/+|\/+$/g, ""); // bare path, not a full URL
+  }
+};
+
+// A /learn citation points at training material, which this triage does not cover.
+const isTrainingUrl = (cited) => {
+  if (!cited || !cited.url) return false;
+  const p = urlPath(cited.url).toLowerCase();
+  return p === TRAINING_PREFIX || p.startsWith(TRAINING_PREFIX + "/");
+};
+
+/**
+ * Resolve a citation to a file in the docs tree, strongest signal first:
+ *   1. exact site-path match — the reliable one
+ *   2. exact title match, only when unambiguous
+ *   3. last-segment match, only for a non-generic segment that is unique in the index
+ *
+ * Step 3 previously ran unguarded against every doc's basename, which resolved
+ * docs.vendasta.com/learn/getting-started (a training page) to
+ * fulfillment/task-manager/getting-started.mdx. Two guards prevent that class of error:
+ * the generic-segment stoplist with a uniqueness requirement (ambiguous means no match,
+ * never a guess), and the /learn bail-out below — without it, a training URL could still
+ * reach a same-titled docs article through the title match in step 2.
+ */
 function matchArticle(cited, index) {
   if (!cited) return null;
-  if (cited.title) {
-    const n = norm(cited.title);
-    const hit = index.find((d) => norm(d.title) === n);
+  if (isTrainingUrl(cited)) return null; // training is out of scope, never match into docs
+
+  if (cited.url) {
+    const p = urlPath(cited.url).toLowerCase();
+    const hit = index.find((d) => d.sitePath.toLowerCase() === p);
     if (hit) return hit;
   }
+
+  if (cited.title) {
+    const n = norm(cited.title);
+    const hits = index.filter((d) => norm(d.title) === n);
+    if (hits.length === 1) return hits[0];
+  }
+
   if (cited.url) {
-    const seg = norm(cited.url.split(/[#?]/)[0].replace(/\/+$/, "").split("/").pop());
-    if (seg) {
-      const hit = index.find(
+    const seg = norm(urlPath(cited.url).split("/").pop());
+    if (seg && !GENERIC_SEG.has(seg)) {
+      const hits = index.filter(
         (d) =>
           norm(d.slug) === seg ||
-          norm(d.id.split("/").pop()) === seg ||
+          norm(d.sitePath.split("/").pop()) === seg ||
           norm(basename(d.file).replace(/\.(md|mdx)$/, "")) === seg
       );
-      if (hit) return hit;
+      if (hits.length === 1) return hits[0];
     }
   }
+
   return null;
 }
 
@@ -181,8 +240,16 @@ const results = findings.map((f) => {
     gitDate: match ? match.gitDate : null,
     ageDays: match ? daysSince(match.gitDate) : null,
     verdict: verdictFor(f, match),
+    // Training (/learn) is out of scope. Flagged so it is not re-investigated as a missing doc.
+    outOfScopeTraining: isTrainingUrl(f.citedArticle),
   };
 });
+
+const trainingCount = results.filter((r) => r.outOfScopeTraining).length;
+
+// The run's scratch files are deleted after each run (see SKILL.md Cleanup), so the
+// directory can legitimately be absent on a fresh clone. Recreate rather than throw.
+mkdirSync(dirname(OUT_JSON), { recursive: true });
 
 writeFileSync(OUT_JSON, JSON.stringify(results, null, 2));
 
@@ -198,6 +265,9 @@ md += `| MISSING | ${byVerdict.MISSING.length} | write a new article (confirm no
 md += `| EXISTS_WRONG | ${byVerdict.EXISTS_WRONG.length} | fix / rewrite for correctness |\n`;
 md += `| EXISTS_UNCLEAR | ${byVerdict.EXISTS_UNCLEAR.length} | clarify / restructure |\n`;
 md += `| CITED_NOT_IN_REPO | ${byVerdict.CITED_NOT_IN_REPO.length} | eyeball — likely the vendasta.com site |\n\n`;
+if (trainingCount) {
+  md += `**${trainingCount}** of these cite \`/learn\` training material, which is out of scope for documentation triage — they are tagged \`(training — out of scope)\` below. Do not treat them as missing docs.\n\n`;
+}
 
 for (const v of order) {
   const rows = byVerdict[v];
@@ -207,7 +277,9 @@ for (const v of order) {
     const loc = r.matchedFile
       ? `\`${r.matchedFile}\`${r.ageDays != null ? ` — last commit ${r.ageDays}d ago` : " — uncommitted"}`
       : r.citedArticle
-      ? `cited: *${r.citedArticle.title || r.citedArticle.url}* (no file match)`
+      ? `cited: *${r.citedArticle.title || r.citedArticle.url}*${
+          r.outOfScopeTraining ? " (training — out of scope)" : " (no file match)"
+        }`
       : "no citation";
     md += `- **${loc}**\n`;
     md += `  - _${(r.snippet || "").slice(0, 200).replace(/\n/g, " ")}_\n`;
@@ -218,3 +290,4 @@ for (const v of order) {
 writeFileSync(OUT_MD, md);
 console.log(`Wrote ${OUT_JSON} and ${OUT_MD}. ${results.length} findings across ${order.length} buckets.`);
 for (const v of order) console.log(`  ${v}: ${byVerdict[v].length}`);
+if (trainingCount) console.log(`  (${trainingCount} of these cite /learn training material — out of scope)`);
