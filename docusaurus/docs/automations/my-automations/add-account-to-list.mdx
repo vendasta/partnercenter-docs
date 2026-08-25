@@ -1,0 +1,46 @@
+---
+title: Add the account to a list
+description: Learn how to use the Add the account to a list action to add an account to a named list during an automation run.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, lists]
+keywords: [add account to list, action list, account list automation, list segmentation, automation lists]
+---
+
+# Add the account to a list
+
+**Add the account to a list** adds the account currently in scope to a list you choose. If the account is already on the list, the step completes without error and the automation continues. This action is available on account-scoped triggers.
+
+Use this action to segment accounts dynamically — flag accounts for follow-up, route them into list-based campaigns, or track which accounts have reached a specific point in a workflow.
+
+## How it works
+
+1. The automation reaches this step with an account in scope from the trigger
+2. The step reads the **List** field to identify the target list
+3. The platform checks whether the account is already on that list
+4. If not already present, the account is added to the list
+5. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Lists**, select **Add the account to a list**
+3. Configure the field:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **List** | Yes | The list to add the account to. Select from your existing lists. |
+
+:::tip
+The **List** field does not support dynamic content — select a specific list from the dropdown. To add the same account to multiple lists, add separate **Add the account to a list** steps for each list.
+:::
+
+## Outputs
+
+This action produces no outputs available to downstream steps.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Remove the account from a list](./remove-account-from-list.mdx) — Remove an account from a list
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

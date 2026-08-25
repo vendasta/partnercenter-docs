@@ -21,7 +21,7 @@ import SnapshotCreateIcon from "./img/snapshot-create-icon.svg";
 
 <LessonHeader
   difficulty="Beginner"
-  time="about 10 minutes"
+  time="about 11 minutes"
   required={["Partner Center admin access", "A Snapshot Report create available on your plan"]}
   lab
   pathName="Your growth engine"
@@ -45,7 +45,7 @@ This path follows one prospect through the whole motion: Northside Dental, a cli
 
 *You are here: Partner Center. Everything in this step happens in your workspace.*
 
-The account is the prospect's home in your workspace, and creating it also creates the linked CRM company, so your sales activity and the service record stay connected from the first touch. Two details carry the report: the **primary category**, because every grade is benchmarked against the business's industry, and the **salesperson**, because a report is sent from a person, and that person is you.
+The account is the prospect's home in your workspace, and creating it also creates the linked CRM company, so your sales activity and the service record stay connected from the first touch. Two details carry the report: the **primary category**, because every grade is benchmarked against the business's industry, and the **salesperson**, because a report is sent from a person, and that person is you. When the category populates itself from the search, that is a small piece of intelligence in its own right: a business the directories can already categorize is usually one with a Google presence to work with, which is worth knowing before you open the conversation.
 
 <LabCallout title="create your prospect's account">
 You are going to **Partner Center** → **Accounts** → **Manage Accounts**.
@@ -62,6 +62,8 @@ You are going to **Partner Center** → **Accounts** → **Manage Accounts**.
   confirm={<>The business now appears in <strong>Manage Accounts</strong>, and the platform has created its linked CRM company for you.</>}
 />
 </LabCallout>
+
+When the search comes back with nothing and you have to type every field yourself, that is not the annoying version of this task. That is the finding. A business the directories cannot describe has no virtual doorway at all: nothing out there for a search engine or an AI tool to read, and nothing for a customer to find. Those accounts take the longest to create and need you more than any prospect who was already listed everywhere.
 
 For every field and option along the way, [this guide covers creating accounts](/accounts/manage-accounts/create-accounts). And when you want the platform to surface prospects for you instead, [Find Leads searches local businesses from the CRM](/crm/companies) and creates company records in bulk.
 
@@ -99,18 +101,18 @@ You are going to **Partner Center** → **Administration** → **Client Notifica
 
 ## What the grades measure
 
-<img src={require('./img/scorecard-overview.jpg').default} alt="The Snapshot Report scorecard: letter grades for each section rolled into an overall Digital Score" style={{width: '480px', maxWidth: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginBottom: '28px'}} />
+<img src={require('./img/scorecard-overview.png').default} alt="The Snapshot Report scorecard: an overall Digital Score of 22%, with letter grades beside Social, Reviews, Listings, Website, SEO, AI Optimization, Ecommerce, and Advertising, and an ungraded Technology row" style={{width: '320px', maxWidth: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginBottom: '28px'}} />
 
 The report grades eight parts of the business's online presence, each with a letter grade from A to F, rolled into an overall Digital Score:
 
-- **Business listings**: how accurately the business appears across online directories
-- **Reviews**: volume, ratings, frequency, and where they land
-- **Social media**: presence, followers, and posting rhythm
-- **Website performance**: speed and mobile experience, measured with Google's Core Web Vitals
-- **SEO**: how visible the business is in organic search
-- **Advertising**: online advertising presence against its industry's top keywords
-- **Ecommerce**: whether the business can sell, schedule, and take payment online
-- **AI optimization**: whether the business shows up when customers ask AI tools instead of search engines
+- **[Business listings](/snapshot-report/snapshot-report-listings-reviews#whats-included-with-business-listings-assessment)**: how accurately the business appears across online directories
+- **[Reviews](/snapshot-report/snapshot-report-listings-reviews#whats-included-with-reviews-assessment)**: volume, ratings, frequency, and where they land
+- **[Social media](/snapshot-report/snapshot-report-social-advertising#whats-included-with-social-media-assessment)**: presence, followers, and posting rhythm
+- **[Website performance](/snapshot-report/snapshot-report-website-seo#whats-included-with-website-performance-assessment)**: speed and mobile experience, measured with Google's Core Web Vitals
+- **[SEO](/snapshot-report/snapshot-report-website-seo#whats-included-with-seo-assessment)**: how visible the business is in organic search
+- **[Advertising](/snapshot-report/snapshot-report-social-advertising#whats-included-with-advertising-assessment)**: online advertising presence against its industry's top keywords
+- **[Ecommerce](/snapshot-report/snapshot-report-ecommerce-technology#whats-included-with-ecommerce-assessment)**: whether the business can sell, schedule, and take payment online
+- **[AI optimization](/snapshot-report/snapshot-report-ai-optimization)**: whether the business shows up when customers ask AI tools instead of search engines
 
 Every grade is a comparison against the business's own industry, which is what the primary category feeds. Northside Dental came back a B in reviews and a D in listings: patients love the clinic, and the directories cannot find it. A gap like that is where a sale begins.
 
@@ -180,6 +182,18 @@ Northside Dental has its grades. Yours are on the way.
       ],
       correctIndex: 0,
       explanation: 'Creating an account also creates the linked CRM company, so sales activity and the service record stay connected from the first touch. Users, reports, and packages come later in the motion.'
+    },
+    {
+      type: 'mcq',
+      question: 'You search for a prospect and nothing comes back, so you have to enter every field by hand. What does that tell you?',
+      options: [
+        'The business is likely too small to be worth a report',
+        'The business is close to invisible online, which makes it a stronger prospect',
+        'The report cannot grade accurately without directory data',
+        'The account should be created from the CRM instead'
+      ],
+      correctIndex: 1,
+      explanation: 'A business the directories cannot describe has no virtual doorway for a customer or a search engine to find. It takes longer to set up and needs the help more than a business already listed everywhere.'
     }
   ]}
 />

@@ -1,0 +1,39 @@
+---
+title: "Trigger: Run manually on a contact"
+description: Run an automation on demand from a contact detail page.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, manual]
+keywords: [manual trigger, run manually, contact trigger, on demand automation, manual contact automation]
+---
+
+# Run manually on a contact
+
+**Run manually on a contact** allows you to start an automation on demand directly from a contact detail page in the CRM. Use this trigger for workflows that should only run when explicitly initiated — such as sending a personalized sequence, updating contact fields, or running a one-off enrichment for a specific person.
+
+This trigger does not fire automatically. A team member must navigate to the contact and trigger the run manually.
+
+:::info Trigger scope
+This trigger operates at the **contact** scope. Contact, company, and account actions are available downstream.
+:::
+
+## How it works
+
+1. A team member opens a contact detail page in the CRM.
+2. They locate the automation and click **Run**.
+3. The workflow starts immediately with the contact in context.
+4. Downstream steps can use **Add dynamic content** to reference contact fields, company fields, and account details.
+
+## Available data
+
+Standard contact, company, and account fields are available via **Add dynamic content** once the automation starts.
+
+:::info
+Because this trigger is manual, no event-specific data is passed in. All available data comes from the contact record and its associated records at the time of the run.
+:::
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

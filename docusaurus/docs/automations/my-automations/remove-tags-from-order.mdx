@@ -1,0 +1,43 @@
+---
+title: Remove tags from order
+description: Learn how to use the Remove tags from order action to strip one or more tags from a sales order.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, tags, sales-orders]
+keywords: [remove tags order, order tags, untag order, sales order tags, order automation]
+---
+
+# Remove tags from order
+
+**Remove tags from order** strips one or more tags from a sales order. If a specified tag does not exist on the order, the step skips it without error.
+
+## How it works
+
+1. The automation reaches the **Remove tags from order** step with an order in scope
+2. You define one or more tags to remove
+3. When the step runs, each matching tag is deleted from the order record
+4. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Tags** or **Sales orders**, select **Remove tags from order**
+3. Configure the fields:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Tags** | Yes | One or more tags to remove from the order. Enter each tag and press Enter to add it. |
+
+:::tip
+Use **Add dynamic content** in the tag field to insert a tag value from a previous step. Dynamic values are resolved at runtime.
+:::
+
+## Outputs
+
+This action produces no outputs available to downstream steps.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Add tags to order](./add-tags-to-order.mdx) — Apply tags to a sales order
+- [Remove tags from account](./remove-tags-from-account.mdx) — Remove tags from an account instead
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

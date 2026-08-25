@@ -1,0 +1,39 @@
+---
+title: Get my team member
+description: Learn how to use the Get my team member action to retrieve a specific team member for use in later automation steps.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, users, team]
+keywords: [get team member, team member automation, lookup team member, user lookup, team member step]
+---
+
+# Get my team member
+
+**Get my team member** retrieves a specific team member from your partner account and makes their user ID available to downstream steps. Use it before a **Notify a user** or **Assign** step that needs a specific person in scope.
+
+## How it works
+
+1. The automation reaches the **Get my team member** step
+2. You select a specific team member from your partner account
+3. The step retrieves their user ID and makes it available as dynamic content
+4. Downstream steps can reference this user ID for notifications, assignments, or other user-scoped actions
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Users**, select **Get my team member**
+3. Configure the field:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Team member** | Yes | The team member to retrieve. Select from your partner account's user list. |
+
+## Outputs
+
+After the step runs, the selected team member's user ID is available to downstream steps via **Add dynamic content**.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Notify a user](./notify-a-user.mdx) — Send a notification using the retrieved user ID
+- [Assign a salesperson](./assign-a-salesperson.mdx) — Assign the retrieved user as salesperson
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

@@ -4,7 +4,7 @@ sidebar_position: 2
 description: Set up, train, and monitor the AI Chat Receptionist to capture leads and answer visitor questions across web chat and SMS.
 ---
 
-import { AISparkleIcon } from '@site/src/components/Icons';
+import { AISparkleIcon, GraduationCapIcon } from '@site/src/components/Icons';
 
 The AI Chat Receptionist helps you capture leads and respond to website visitors 24/7. In this guide, you'll learn how to set up, train, and monitor your AI assistant to work for your business.
 
@@ -74,6 +74,10 @@ Your AI Chat Receptionist is assigned to the `Web Chat` channel by default. This
 
 :::note
 The `Web Chat` widget isn't automatically added to your website! You'll need to install the widget code or enable it within your site builder before your AI can start engaging visitors. When you are ready to install the widget, refer to [How to install the Conversations Web Chat Widget](https://docs.businessapp.io/business-app/conversations/web-chat)
+:::
+
+:::tip
+Managing multiple locations under one brand or franchise? With a [multi-location web chat widget](/multi-location-business-app/conversations/multi-location-web-chat), visitors pick their location on your main website and this AI Chat Receptionist answers for the location they choose.
 :::
 
 :::tip Respond differently on each channel
@@ -418,3 +422,10 @@ This only applies to conversations where messages have been sent from Conversati
 :::
 
 </details>
+
+<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
+  <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
+  <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>
+    New to hiring and running an AI Employee? Take the <a href="/learn/ai-workforce" style={{color: '#3C9A63', fontWeight: 600}}>Hire your first AI Employee</a> course in Vendasta Learn — Beginner to Intermediate, 7 lessons.
+  </span>
+</div>

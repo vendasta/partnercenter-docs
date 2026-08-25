@@ -1,0 +1,43 @@
+---
+title: "Trigger: An invoice is past due"
+description: Start an automation when an invoice status changes to past due on an account.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, billing]
+keywords: [invoice past due trigger, overdue invoice, billing trigger, invoice status changed, collections automation]
+---
+
+# An invoice is past due
+
+**An invoice is past due** fires when an invoice's status transitions to past due on an account. Use this trigger to automate payment reminders, notify account managers, or escalate collections workflows the moment a payment deadline is missed.
+
+This trigger fires on the status transition to past due — not on a recurring schedule — so it fires once per invoice when that threshold is crossed.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account and contact actions are available downstream.
+:::
+
+## How it works
+
+1. An invoice on an account transitions to a past due status.
+2. The automation evaluates any trigger conditions you've configured.
+3. If conditions are met, the workflow starts with the account and invoice data in context.
+4. Downstream steps can use **Add dynamic content** to reference the invoice amount, due date, and account fields.
+
+## Available data
+
+Standard account fields and invoice fields are available via **Add dynamic content**.
+
+| Output | Description |
+|---|---|
+| **Invoice number** | The unique identifier for the invoice |
+| **Invoice amount** | The total amount due on the invoice |
+| **Due date** | The original payment due date |
+| **Account name** | The name of the account associated with the invoice |
+| **Contact email** | The primary contact email for billing correspondence |
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

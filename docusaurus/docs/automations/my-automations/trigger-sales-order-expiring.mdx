@@ -1,0 +1,48 @@
+---
+title: "Trigger: A sales order is approaching expiration"
+description: Start an automation when a sales order is nearing its expiration date.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, sales-orders]
+keywords: [sales order expiring trigger, order expiration trigger, expiring order automation, sales order reminder, order deadline trigger]
+---
+
+# A sales order is approaching expiration
+
+**A sales order is approaching expiration** fires when a sales order is within a configured number of days of its expiration date. Use this trigger to automate expiration reminders, prompt a sales rep to follow up, or send the customer a nudge to review and accept the order before it lapses.
+
+Configure the number of days before expiration that should trigger the workflow to match your sales cadence.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account and contact actions are available downstream.
+:::
+
+## How it works
+
+1. A sales order has an expiration date set and is approaching that date within the configured window.
+2. The automation evaluates any trigger conditions you've configured.
+3. If conditions are met, the workflow starts with the account and order data in context.
+4. Downstream steps can use **Add dynamic content** to reference order fields, expiration date, and account details.
+
+## Available data
+
+Standard account fields and sales order fields are available via **Add dynamic content**.
+
+| Output | Description |
+|---|---|
+| **Order name** | The name or title of the sales order |
+| **Expiration date** | The date the order is set to expire |
+| **Order value** | The total value of the sales order |
+| **Order status** | The current status of the order |
+| **Account name** | The account the order is associated with |
+
+## Tips
+
+- Set the expiration window to 3–7 days before the deadline to give customers enough time to respond before the order lapses.
+- Chain multiple automations with different windows (e.g., 7 days and 1 day) for a two-touch reminder sequence.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

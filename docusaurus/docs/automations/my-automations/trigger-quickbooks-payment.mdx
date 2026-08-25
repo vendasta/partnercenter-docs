@@ -1,0 +1,43 @@
+---
+title: "Trigger: A QuickBooks payment event occurs"
+description: Start an automation when a QuickBooks payment event is detected for a contact.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, integrations]
+keywords: [QuickBooks trigger, QuickBooks payment trigger, QuickBooks integration, payment event trigger, accounting automation]
+---
+
+# A QuickBooks payment event occurs
+
+**A QuickBooks payment event occurs** fires when a QuickBooks payment event is detected for a contact — such as a payment being received or applied to an invoice. Use this trigger to automate thank-you messages, update contact records, or kick off fulfillment workflows when a payment is confirmed in QuickBooks.
+
+This trigger requires an active QuickBooks integration connected to your Partner Center account.
+
+:::info Trigger scope
+This trigger operates at the **contact** scope. Contact, company, and account actions are available downstream.
+:::
+
+## How it works
+
+1. A QuickBooks payment event occurs and is synced to Partner Center via the QuickBooks integration.
+2. The automation evaluates any trigger conditions you've configured, such as filtering on payment amount or status.
+3. If conditions are met, the workflow starts with the associated contact in context.
+4. Downstream steps can use **Add dynamic content** to reference payment fields, contact fields, and company fields.
+
+## Available data
+
+QuickBooks payment fields and standard contact, company, and account fields are available via **Add dynamic content**.
+
+| Output | Description |
+|---|---|
+| **Payment amount** | The total amount of the payment |
+| **Payment date** | The date the payment was received |
+| **Payment method** | How the payment was made (e.g., check, credit card) |
+| **Applied to invoice** | The invoice number the payment was applied to |
+| **Contact name** | The contact the payment is associated with |
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

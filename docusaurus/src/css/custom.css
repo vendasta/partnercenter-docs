@@ -2382,3 +2382,91 @@ div[class*="language-"] pre {
 .hidden-sidebar-item {
   display: none !important;
 }
+
+/* Path landing header: pills, meta bar, objective/outcomes panel.
+   Reuses .lesson-header__* tag, bar, and outcome styles. */
+.path-header {
+  margin: 0.5rem 0 1.5rem;
+}
+
+.path-header__count {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.path-header__topic {
+  background: #cfe2ff;
+  color: #084298;
+  border-radius: 6px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.path-header__panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  background: var(--ifm-color-emphasis-100);
+  border-left: 4px solid #2e8555;
+  border-radius: 0 0 8px 8px;
+  padding: 0.25rem 1.25rem 1.25rem;
+  font-size: 0.85rem;
+}
+
+.path-header__objective {
+  line-height: 1.6;
+}
+
+/* Path landing "This path covers" card grid. */
+.path-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.path-cards__card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: var(--ifm-background-surface-color);
+}
+
+.path-cards__title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.path-cards__rule {
+  margin: 1rem 0;
+  border: none;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  background: none;
+  height: 0;
+}
+
+.path-cards__description {
+  margin: 0 0 1rem;
+}
+
+.path-cards__topics-label {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+
+.path-cards__topics {
+  margin: 0 0 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.path-cards__link {
+  margin-top: auto;
+  font-weight: 700;
+}

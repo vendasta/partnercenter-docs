@@ -1,0 +1,40 @@
+---
+title: "Trigger: A form is submitted for a company"
+description: Start an automation whenever a form linked to a company is submitted.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, company]
+keywords: [form submitted trigger, company form trigger, form submission automation, company scope trigger, CRM form trigger]
+---
+
+# A form is submitted for a company
+
+The **A form is submitted for a company** trigger starts an automation whenever a form associated with a company record is submitted. Use this trigger to react immediately to inbound form submissions — routing data, notifying team members, or updating company fields automatically.
+
+:::info Trigger scope
+This trigger operates at the **company** scope. Company, account, and contact actions are available downstream.
+:::
+
+## How it works
+
+1. A form linked to a company is submitted by a visitor or CRM user.
+2. The company and its associated account are brought into scope.
+3. Form field responses become available as dynamic content for downstream steps.
+4. Downstream steps execute using the company, account, and form submission data.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Form name** | The name of the form that was submitted |
+| **Form field responses** | Individual field values captured in the submission |
+| **Submission date** | The date and time the form was submitted |
+| **Associated company** | Name, ID, and standard fields of the company the form is linked to |
+
+Standard company and account fields are also available to downstream steps via **Add dynamic content**.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

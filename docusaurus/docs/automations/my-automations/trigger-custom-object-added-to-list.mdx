@@ -1,0 +1,42 @@
+---
+title: "Trigger: Custom object added to a list"
+description: Start an automation whenever a custom object record is added to a list.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, custom-objects]
+keywords: [custom object trigger, added to list, custom object list, automation trigger, custom object scope]
+---
+
+# Custom object added to a list
+
+The **Custom object added to a list** trigger starts an automation whenever a custom object record is placed into a list. Use this trigger to kick off workflows scoped to that record the moment it's categorized or grouped.
+
+This trigger operates at the custom object scope, making all fields on the record available to downstream steps.
+
+:::info Trigger scope
+This trigger operates at the **custom object** scope. Custom object record fields are available downstream. Use lookup steps to bring account or company context into the workflow if needed.
+:::
+
+## How it works
+
+1. A custom object record is added to a list, either manually or via another automation step.
+2. The custom object record is brought into scope.
+3. All fields on the record become available as dynamic content.
+4. Downstream steps execute using the record data.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Record ID** | Unique identifier for the custom object record |
+| **Record fields** | All custom fields defined on the object type |
+| **List name** | The name of the list the record was added to |
+| **Added at** | Timestamp when the record was added to the list |
+
+Additional fields depend on how the custom object type is configured in your account.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

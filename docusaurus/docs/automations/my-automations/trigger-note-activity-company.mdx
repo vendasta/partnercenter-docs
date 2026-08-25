@@ -1,0 +1,39 @@
+---
+title: "Trigger: A note activity is created or modified for a company"
+description: Start an automation whenever a note is added or modified on a company record in the CRM.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, company]
+keywords: [note activity trigger, company note trigger, CRM note activity, automation trigger note, company scope trigger]
+---
+
+# A note activity is created or modified for a company
+
+The **A note activity is created or modified for a company** trigger starts an automation whenever a note is added to a company record or an existing note on that record is modified. Use this trigger to act on important context captured by your team — routing notes, alerting colleagues, or updating fields based on note content.
+
+:::info Trigger scope
+This trigger operates at the **company** scope. Company, account, and contact actions are available downstream.
+:::
+
+## How it works
+
+1. A note is added to a company record, or an existing note on that record is modified.
+2. The company and its associated account are brought into scope.
+3. The note content and activity metadata become available as dynamic content.
+4. Downstream steps execute using the company, account, and note context.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Note content** | The body text of the note |
+| **Activity date** | The date and time the note was created or last modified |
+| **Associated company** | Name, ID, and standard fields of the company the note is logged on |
+
+Standard company and account fields are also available to downstream steps via **Add dynamic content**.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

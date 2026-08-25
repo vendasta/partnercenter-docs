@@ -89,7 +89,11 @@ The other two follow the same shape, one trigger and one or two steps: a new-lea
 
 ## Read the log before assuming something broke
 
-An automation's activity log is where you go to confirm a run actually happened, not just to check for problems. A line reading "entity already exists" usually means the safety net worked exactly as intended, most often when an entry-setting choice like *Only once per account* correctly blocked a second run, not that anything failed. Read the log first; it usually already answers the question.
+An automation's activity log is where you go to confirm a run actually happened, not just to check for problems. It lists runs that started and the outcome of each step, so the thing to learn to read is what *isn't* there. If you have a re-entry setting like "One at a time per account" and you trigger the automation again while a run is still going, the second trigger is quietly dropped: no error, no warning, no new entry. That silence is the safety net working. To confirm it, compare the number of times the trigger should have fired against the number of runs you can actually see.
+
+:::info Go deeper
+[The Lists guide](/crm/lists) covers every filter type and list option, [Creating and configuring automations](/automations/my-automations/creating-and-configuring-automations) covers every trigger and step, and [Managing your automations](/automations/automation-history/managing-your-automations) walks through what each activity-log status means.
+:::
 
 ## Where autopilot grows into
 
@@ -141,15 +145,15 @@ Anything that reaches a client's customers on its own, especially content a clie
     },
     {
       type: 'mcq',
-      question: 'Your automation\'s activity log shows "entity already exists" on a run. What does that usually mean?',
+      question: 'You have an automation set to run one at a time per account. You trigger it again while a run is still in progress, then check the activity log. What do you expect to see?',
       options: [
-        'The automation failed and needs to be rebuilt',
-        'The safety net worked as intended, often because of an entry setting like Only once per account',
-        'The trigger fired on the wrong list',
-        'The campaign step is misconfigured'
+        'An error explaining that a run is already in progress',
+        'A warning line saying the entity already exists',
+        'Nothing new at all, because the second trigger was quietly dropped',
+        'Two runs side by side, with the second one paused'
       ],
-      correctIndex: 1,
-      explanation: 'This line is typically the safety net doing its job, not a failure. Reading the log first usually answers the question before you touch anything.'
+      correctIndex: 2,
+      explanation: 'Blocked runs leave no trace. The log only records runs that actually started, so the safety net working looks like nothing happening. That is why confirming it means comparing trigger events against the runs you can see.'
     },
     {
       type: 'mcq',

@@ -1,0 +1,39 @@
+---
+title: "Trigger: A CRM sales task is created or modified for a contact"
+description: Start an automation when a sales task is created or updated on a contact record.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, contact]
+keywords: [CRM task trigger, sales task created, sales task modified, contact task automation, CRM sales task trigger]
+---
+
+# A CRM sales task is created or modified for a contact
+
+**A CRM sales task is created or modified for a contact** starts a workflow whenever a sales task is created — or an existing task is updated — on a contact record. Use this trigger to chain tasks together, notify assignees, or update contact records automatically as your sales process moves forward.
+
+This trigger fires for both new tasks and edits to existing ones, so you can react to status changes, reassignments, or completion events.
+
+:::info Trigger scope
+This trigger operates at the **contact** scope. Contact, company, and account actions are available downstream.
+:::
+
+## How it works
+
+1. A sales task is created on a contact, or an existing task on a contact is updated — whether by a user or another automation.
+2. The automation evaluates any trigger conditions you've configured (for example, filtering on task status or task name).
+3. If all conditions are met, the workflow starts with the contact, their associated company, and the account in context.
+4. Downstream steps can use **Add dynamic content** to reference task details, contact fields, and company fields.
+
+## Available data
+
+All standard contact, company, and account fields are available downstream via **Add dynamic content**. This includes fields such as contact name, email, phone, assigned salesperson, company name, and account tags.
+
+:::info
+Sales task fields (such as task name, status, due date, and assignee) are available as dynamic data in steps that follow this trigger.
+:::
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx) — trigger types, scoping, and how to choose the right trigger
+- [Automation triggers reference](./automation-triggers-reference.mdx) — full reference for every available trigger
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — entry settings, conditions, and error handling
+- [Actions overview](./actions-overview.mdx) — what can happen after a trigger fires

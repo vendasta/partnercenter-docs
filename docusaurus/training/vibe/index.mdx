@@ -1,15 +1,98 @@
 ---
 title: Build with Vibe
 sidebar_position: 0
-sidebar_label: Build with Vibe
+sidebar_label: Overview
 description: Describe what you want in plain English and ship real apps - landing pages, dashboards, and client portals.
 hide_table_of_contents: true
 ---
 
-:::info Content coming soon!
-This path is in development.
+import PathCards from "@site/src/components/PathCards";
+import PathHeader from "@site/src/components/PathHeader";
+
+{/* Every step here is still a stub, so PathHeader carries no `time`: a total would be
+    invented. Add it, and drop the callout below, once the steps publish. */}
+
+<PathHeader
+  parts={6}
+  difficulty="Beginner"
+  topics={["Vibe", "App building", "Prompting", "Selling AI"]}
+  required={["A Business App account with Vibe"]}
+  objective="Describe what you want in plain English and ship real apps. What makes Vibe different is that it already knows the business, so you are never starting from a blank page. This path runs from your first landing page through to selling Vibe work as a service."
+  outcomes={[
+    "You can describe an app in plain English and get something real back",
+    "You can connect a build to forms, CRM, and analytics",
+    "You can take a prototype to production on a custom domain",
+    "You can price and sell Vibe work for clients",
+  ]}
+/>
+
+:::info Content coming soon
+This path is in development. Until it publishes, the [Vibe overview in Documentation](/ai/vibe) and the detailed guides in the [Business App Help Center](https://docs.businessapp.io/business-app/ai/vibe/) are the places to go.
 :::
 
-This learning path runs from first build to Vibe-as-a-service: what makes Vibe different (it already knows the business), your first landing page, prompting like a builder, connecting forms and CRM and analytics, going to production with a custom domain, and pricing Vibe work for clients.
+## This path covers
 
-**Where to go today:** the [Vibe overview in Documentation](/ai/vibe) and the detailed guides in the [Business App Help Center](https://docs.businessapp.io/business-app/ai/vibe/).
+<PathCards
+  cards={[
+    {
+      title: "Meet Vibe",
+      description: "What vibe coding is, and why an app builder that already knows the business changes the game.",
+      topics: [
+        "What vibe coding is",
+        "Why pre-loaded business context is the differentiator",
+        "What partners are building today",
+      ],
+      to: "/learn/vibe/meet-vibe",
+    },
+    {
+      title: "Your first build",
+      description: "From a plain-English description to something real on the screen.",
+      topics: [
+        "Describing what you want",
+        "Your first landing page",
+        "Iterating on what comes back",
+      ],
+      to: "/learn/vibe/your-first-build",
+    },
+    {
+      title: "Prompt like a builder",
+      description: "The difference between asking for an app and specifying one.",
+      topics: [
+        "Being specific about structure and behavior",
+        "Building in layers instead of one shot",
+        "Knowing when to restart rather than patch",
+      ],
+      to: "/learn/vibe/prompt-like-a-builder",
+    },
+    {
+      title: "Connect everything",
+      description: "Forms, CRM, and analytics wired into what you built.",
+      topics: [
+        "Capturing form submissions",
+        "Writing into the CRM",
+        "Adding analytics",
+      ],
+      to: "/learn/vibe/connect-everything",
+    },
+    {
+      title: "From prototype to production",
+      description: "Custom domains and the checks worth running before a client sees it.",
+      topics: [
+        "Going live on a custom domain",
+        "What to check before you hand it over",
+        "Maintaining what you shipped",
+      ],
+      to: "/learn/vibe/from-prototype-to-production",
+    },
+    {
+      title: "Vibe as a service",
+      description: "Pricing and selling Vibe work for clients.",
+      topics: [
+        "What clients will pay for",
+        "Pricing a build",
+        "Turning one build into a repeatable offer",
+      ],
+      to: "/learn/vibe/vibe-as-a-service",
+    },
+  ]}
+/>
