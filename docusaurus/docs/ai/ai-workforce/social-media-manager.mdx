@@ -1,39 +1,121 @@
 ---
 title: Social Media Manager
 sidebar_label: Social Media Manager
-sidebar_position: 4
-description: Configure the Social Media Manager AI employee to generate social calendars with recommended model and weekly schedule defaults.
+sidebar_position: 5
+description: Configure the Social Media Manager AI employee to autonomously generate, draft, schedule, and publish a social calendar across your connected networks.
 tags: [ai-workforce, social-media-manager, social-calendar-generation]
-keywords: [Social Media Manager, Social Calendar Generation, AI workforce, weekly schedule, Gemini Flash Latest]
+keywords: [Social Media Manager, Social Calendar Generation, AI workforce, weekly schedule, Gemini Flash Latest, social calendar, AI Social Media Manager]
 ---
 
 ## What is the Social Media Manager?
 
-The **Social Media Manager** is an AI employee that helps you generate a social calendar for your business.
+The **Social Media Manager** is an AI employee that runs your social media program for you. On a schedule you set, it generates a social calendar, writes on-brand posts for your connected networks, sources or generates matching images, and drafts, schedules, or publishes the content automatically. You can also work with it conversationally: ask it to write a post, adjust a draft, or pull performance insights from chat inside Business App.
+
+## Why is the Social Media Manager important?
+
+Keeping a consistent social presence takes time you may not have to spare. Without help, content often goes out only when someone finds time to write it, performance data goes unreviewed, and small edits mean opening the full post composer.
+
+The Social Media Manager solves this by building and maintaining your content calendar automatically, using your business's performance data and knowledge sources to keep posts relevant and on-brand.
+
+## What's included with the Social Media Manager
+
+The Social Media Manager ships with default capabilities covering the full content lifecycle:
+
+- **Configure social media calendar:** Goal, total posts, content split, post length, images, networks, cadence, posting time, and whether posts save as a draft, schedule, or publish
+- **Customize social post instructions:** Tone, platform formatting, hashtags, calls to action, and localization, with a safeguard against inventing promotions or pricing your business hasn't offered
+- **AI image generation:** Creates an original image for each post, sized for its destination network
+- **Find royalty-free images:** Sources stock imagery from Pexels and Pixabay when you'd rather not use AI-generated images, or as a fallback
+- **Search web:** Surfaces current trends and observance days so posts stay timely
+- **List integration connections:** Publishes only to networks you've actually connected
+- **Social post performance data:** Pulls engagement metrics to inform future calendars and answer performance questions in chat
+- **Manage social posts:** Publishes content and lets you list, edit, reschedule, or delete posts conversationally
+
+Each capability is fully editable, and you can add your own with **+ Add Capability**.
+
+:::info Requirements
+The Social Media Manager requires **Social AI Premium** to be active on the account.
+:::
 
 ## Default configuration
 
 When you activate the Social Media Manager, **Social Calendar Generation** is preconfigured with these defaults:
 
-- **AI model:** **Gemini Flash Latest** (recommended)
-- **Schedule type:** **On a Schedule**
-- **Frequency:** **Weekly**
-- **Day of the week:** **Monday**
-- **Time:** **9:00 AM**
-- **Timezone:** Uses the SMB timezone configured in Business App
-- **Start date:** Current date
-- **End date:** **No end date**
+- **AI model**: Gemini Flash Latest (recommended)
+- **Schedule type**: On a Schedule
+- **Frequency**: Weekly
+- **Day of the week**: Monday
+- **Time**: 9:00 AM
+- **Timezone**: Uses the SMB timezone configured in Business App
+- **Start date**: Current date
+- **End date**: No end date
 
-## Where to configure it
+## How to configure it
 
-1. Go to **AI** and open **AI Workforce**.
-2. Select **Social Media Manager**.
-3. Open **Social Calendar Generation** to review or adjust the default model and schedule settings.
+1. Go to `AI` and open `AI Workforce`.
+2. Select `Social Media Manager`.
+3. *(Optional)* Rename the AI employee and update its profile photo.
+4. Open `Social Calendar Generation` to review or adjust the trigger, model, and schedule defaults.
+5. Open the `Configure social media calendar` capability to set your goal, content split, images, networks, cadence, and save-as behavior.
+6. Review the remaining capabilities and adjust as needed, such as post instructions or your preferred image generation model.
+7. Save. The Social Media Manager will run automatically based on the trigger schedule.
+
+:::tip
+Start with **Save as: Draft** while you get comfortable with the output. Once you're confident in the results, switch to **Schedule** or **Publish** for hands-off execution.
+:::
+
+## Managing posts after generation
+
+You can review and adjust drafts, scheduled posts, and published posts either conversationally or through the Business App interface.
+
+- **Editing post text:** Chat with the Social Media Manager (for example, "update yesterday's draft to mention our new promo") or use the AI Assist panel in the post editor.
+- **Editing images:** Use the AI Image Assist panel in the post editor to regenerate or refine the visual.
+- **Deleting posts:** Ask the Social Media Manager in chat, or remove a post manually from the editor.
+- **Scheduling drafts:** Move a draft straight to the schedule from within Business App.
+
+:::note
+Editing images, changing destination networks, or adjusting advanced post options still requires the Social Marketing app. Open the post from Business App to access these options there.
+:::
 
 ## Web and mobile behavior
 
 The same Social Calendar Generation defaults are used in web and mobile.
 
-## Tip
+## Notifications
 
+- When a post is drafted or scheduled, you'll receive an email notification.
+- An in-app notification also appears in Business App.
+- To turn off notifications, click the bell icon and disable email and/or in-app notifications individually.
+
+## FAQs
+
+<details>
+<summary>What does the Social Media Manager do by default?</summary>
+
+It generates a weekly social calendar every Monday at 9:00 AM (in your business's timezone), using Gemini Flash Latest, and saves posts as drafts for your review. Every part of this is configurable.
+
+</details>
+
+<details>
+<summary>Where do images come from if I don't want AI-generated ones?</summary>
+
+The Social Media Manager falls back to royalty-free images from Pexels and Pixabay, either by choice or if the AI image limit is reached.
+
+</details>
+
+<details>
+<summary>Can I ask it questions about performance?</summary>
+
+Yes. Chat with it directly, for example "which posts performed best last month?" It uses engagement data from your connected networks to answer and to inform future calendars.
+
+</details>
+
+<details>
+<summary>Do I need Social AI Premium to use this?</summary>
+
+Yes, the Social Media Manager requires Social AI Premium to be active on the account.
+
+</details>
+
+:::tip
 Review these settings before activating automations to confirm the model and schedule align with your publishing workflow.
+:::

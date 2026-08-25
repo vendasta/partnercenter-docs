@@ -1,0 +1,41 @@
+---
+title: "Trigger: Social comment received"
+description: Start an automation whenever a comment is received on a connected social network post.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, social]
+keywords: [social comment trigger, social media comment, connected network, automation trigger, account scope]
+---
+
+# Social comment received
+
+The **Social comment received** trigger starts an automation whenever a comment arrives on a post from a connected social network. Use this trigger to acknowledge comments quickly, route them for review, or log social engagement activity automatically.
+
+This trigger operates at the account scope, so account data and comment details are available to downstream steps.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account fields and social comment data are available downstream. The social network must be connected to the account for this trigger to fire.
+:::
+
+## How it works
+
+1. A post on a connected social network receives a new comment.
+2. The comment event is detected and the account is brought into scope.
+3. Comment content and network details become available as dynamic content.
+4. Downstream steps execute using the account and comment context.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Comment text** | The content of the comment received |
+| **Network** | The social network where the comment was posted (e.g., Facebook, Instagram) |
+| **Post content** | A reference to the post that received the comment |
+| **Commenter name** | Display name of the person who left the comment, if available |
+| **Received at** | Timestamp when the comment was received |
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

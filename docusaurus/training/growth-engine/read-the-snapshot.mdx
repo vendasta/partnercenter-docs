@@ -12,6 +12,7 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import LabChecklist from "@site/src/components/LabChecklist";
+import LabCallout from "@site/src/components/LabCallout";
 
 <InlineHighlighter courseId="read-the-snapshot" site="vendasta_learn">
 
@@ -19,22 +20,26 @@ import LabChecklist from "@site/src/components/LabChecklist";
 
 <LessonHeader
   difficulty="Beginner"
-  time="about 8 minutes"
+  time="about 13 minutes"
   required={["A Snapshot Report run on an account"]}
   pathName="Your growth engine"
   step={2}
   totalSteps={6}
   outcomes={[
     "Read each grade the way the business owner will",
-    "Prepare a report so every visible grade is one you can act on",
+    "Prepare a report, then verify its anchor data with the owner before showing a grade",
     "Pick the two gaps and one strength that open the sale",
-    "Answer the owner who says a grade is wrong",
+    "Answer the owner who says a grade is wrong, including when they are right",
   ]}
 />
 
 ## A grade only sells when someone reads it aloud
 
-A Snapshot Report reads like a school report card on purpose: letter grades are a language every owner already speaks. Two things make the grades land. First, the report grades hard by design; it is built to find every gap it can, so a rough first page is the report working, not the business failing. Second, the criteria are not your opinion: they mirror what search engines reward, so you and the owner sit on the same side of the table, reading what Google sees together.
+A Snapshot Report reads like a school report card on purpose: letter grades are a language every owner already speaks. What is less obvious is that the harshness is deliberate. The grading is built on **fear of loss** — it grades hard, and any small inconsistency pulls a score down, because low scores turn out to produce better conversations than reassuring ones. A rough first page is the report working, not the business failing.
+
+It also helps to know what the report is *for*. It is not a verdict on the business, and it is not trying to be comprehensive. It is trying to earn you a conversation, and everything below serves that one goal.
+
+The second thing that makes grades land is that the criteria are not your opinion: they mirror what search engines reward, so you and the owner sit on the same side of the table, reading what Google sees together. One move is worth having ready before you need it. The website grade in particular is Google's measurement, not yours, and saying so out loud is what keeps a low score from becoming an argument. You do not know who built that site. It may have cost the owner a great deal last year, or their nephew may have built it over a summer. Nobody enjoys being told their baby is ugly, so put the grade where it belongs: this is Google's score, and here is what it is reacting to.
 
 Northside Dental's report came back the way most do: a strong grade worth celebrating, a weak one worth fixing, and six others in between. What happens next depends entirely on how it is read.
 
@@ -42,7 +47,7 @@ Northside Dental's report came back the way most do: a strong grade worth celebr
 
 Before an owner ever sees the report, you shape it. Details carry the grades: a wrong address or a stale primary category grades the business against the wrong industry, and every section inherits the mistake.
 
-:::info Lab: prepare the report for the conversation
+<LabCallout title="prepare the report for the conversation">
 You are going to your prospect's account in **Partner Center**.
 
 <LabChecklist
@@ -52,33 +57,57 @@ You are going to your prospect's account in **Partner Center**.
     <>Check the business name, address, and <strong>Primary Category</strong> on the account, and correct anything stale.</>,
     <>In <strong>Edit Report</strong> mode, add two or three competitors the owner actually watches.</>,
     <>Uncheck the box beside any section that does not fit the business, like an ecommerce grade for a clinic that should never sell online.</>,
-    <>Select <strong>Configure</strong> → <strong>Rearrange</strong> and order the sections so the conversation starts where you want it to.</>,
+    <>Select <strong>Configure</strong> → <strong>Rearrange</strong> and put the lowest scores at the top. Listings is the usual place to start, because it is the foundation the other sections sit on and fixing it lifts more than itself.</>,
     <>Write down two gaps and one strength. Those three are the meeting.</>,
   ]}
   confirm={<>The report now shows a business the owner will recognize, measured against rivals they care about, in the order you plan to walk it.</>}
 />
-:::
+</LabCallout>
 
 Turning a section off for every report at once happens at the template level, and [the customization guide covers every option](/snapshot-report/snapshot-report-customization).
+
+## Verify the anchor data out loud
+
+The business name, address, city, state or province, postal code, phone number, website, and category are the **anchor data**. Every grade in the report was produced by comparing the real world against those fields, so if one of them is wrong, the grade built on it is wrong too. This is the single most common place a Snapshot conversation comes apart.
+
+Which is why it is worth doing with the owner watching, not only on your own. Open on the business details and ask them to confirm it:
+
+*"This is the information I used to build a seven-page analysis of your business's virtual doorway — everything a customer runs into when they go looking for you online. Is this how you want to be seen?"*
+
+Two things happen. If something is wrong, you find out before it costs you the meeting, and you can correct it and run the report again. If it is all right, you have their agreement on the inputs before you show them a single grade, which makes every grade that follows much harder to argue with.
+
+It is also the natural moment to ask for competitors: *"If you tell me the three competitors that keep you up at night, I can add them and show you where you sit against them."* That question does double duty — it improves the report, and it is real discovery. On a colder relationship where you have only traded email, make your best guess instead rather than opening with a question you should already know the answer to.
+
+## Read what the section is actually measuring
+
+Some sections are two questions wearing one grade, and the difference changes what you sell.
+
+Listings measures **presence** and **accuracy** separately. Presence is a yes or no that does not care about quality: could we find this business on a given source at all? Accuracy is the opposite — it demands an exact match against the anchor data, and a toll-free number in place of the business line, or "St" where the record says "Street", is enough on its own to pull the score down. A business can be everywhere and wrong, or accurate in the three places it appears and missing from a dozen more. Those are different problems with different fixes.
+
+Website splits the same way: how fast the site is, and separately what a crawler can actually find on the homepage. When you read a section, work out which half is failing before you decide what to say about it.
 
 ## Two gaps and a strength
 
 Eight grades recited in a row is an audit, and nobody buys an audit. Pick two gaps and one strength, and give each one a consequence a customer would feel:
 
-- **The gap chain.** Grade, then what a customer experiences, then what that costs. For Northside Dental: patients love this clinic, 4.8 stars across sixty reviews, and the top directories disagree about its address. Search engines read disagreement as doubt, and doubt ranks below the clinic down the street.
+- **The gap chain.** Grade, then what a customer experiences, then what that costs. For Northside Dental: patients love this clinic, 4.8 stars across sixty reviews, and the top directories disagree about its address. Search engines read disagreement as doubt, and doubt ranks below the clinic down the street. Then hand the floor back: *"how are you handling this today?"* You will get a tool, a person they pay, or themselves — and you will know what you are really competing with before you propose anything.
 - **The sites nobody has heard of.** The listings section names directories the owner will not recognize. Neither will their customers, and it does not matter: the search engines and AI tools deciding who to recommend check them anyway.
-- **The strength is also an opening.** A section the business aces is worth naming out loud, then asking what it takes to keep it there. What that effort costs each month is a conversation many partners find more productive than any failing grade.
+- **Know what the reviews grade is reacting to.** It reads four things at once: how many reviews there are, how many sources they come from, the average score, and how recent they are. Two businesses can hold the same grade for opposite reasons, so find which of the four is dragging before you propose anything. Worth flagging to the owner that a negative score here means anything under four, not a one or a two — and that a 4.4 average usually means one source is carrying poor scores rather than every source being mediocre.
+- **A strong grade is an opening, not a disqualifier.** It is tempting to read an A and conclude there is nothing to sell. Usually the opposite is true: the business is scoring well because somebody there is spending real hours on it by hand, often without knowing a managed option exists. Reviews are the clearest case — holding a high rating means visiting every source, every week, forever, and almost nobody sustains that. Name the grade, then ask what it costs them each month to keep it.
 - **Only raise what you can fix.** Every gap on your shortlist should map to work you can actually turn on. The report is not a diagnosis to hand over; it is the menu for everything the rest of this path delivers.
 
 ## When the owner pushes back
 
 - **"This grade is harsh."** It is, by design, and the bar is the top of their industry rather than average. A 4.8-star clinic can still grade a B when the industry's leaders hold straight fives. The grade is the gap to first place, and first place is the goal.
 - **"This grade is wrong."** Check the business details together, starting with the primary category. A stale category grades the business against the wrong rivals, and correcting the profile is itself the first improvement you deliver, before anything is bought.
+- **"It says I'm not there, but I am."** This one is usually true, and it is not the account record. A profile can be real and still unreadable: the page carries an age or geographic restriction, its custom URL does not match the name the report was built from, or it was set up as a personal profile rather than a business one, so the business is a person as far as the platform is concerned. The same thing happens on a website when the address and phone number are baked into a photo — the owner can see them plainly, and the crawler sees an image with no text in it. Ask them to pull the profile up rather than telling them it does not exist, and you will usually find which of these it is inside a minute.
 - **"What does this technical section mean?"** The detailed findings are for whoever maintains their website; you are there to sell the outcome, and the outcome is customers who find them first.
 
 ## Present it, do not send it
 
 A report that arrives alone in an inbox is a page of numbers. Walked through live, it is a conversation that starts where you choose. When you do send it, **Edit Report** mode drafts AI-suggested email copy around the sections you picked, and the [AI Chat on the report itself](/snapshot-report/snapshot-report-ai-chat) answers the owner's follow-up questions and can book the meeting for you.
+
+Sending has one legitimate use, and it is not instead of presenting. A report built entirely around one business makes unusually good outreach content, because it is about them rather than about you. Send it to earn the meeting; present it to win the deal.
 
 The report keeps enriching for seven days after you run it. Partners present anywhere from the first day on, and the fullest read comes at the end of that week.
 
@@ -139,6 +168,36 @@ Open your report from the last step and write your opening sentence: one gap, it
       ],
       correctIndex: 3,
       explanation: 'Grades are benchmarked against the business\'s own industry, and the reviews bar sits at the top of it. The grade measures the gap to first place, not the distance from failing.'
+    },
+    {
+      type: 'mcq',
+      question: 'An owner insists they have an active social profile, but the report shows it as not found. What is the most likely cause?',
+      options: [
+        'The primary category on the account is wrong',
+        'The profile has a restriction, a mismatched custom URL, or is a personal rather than business profile',
+        'The report needs a paid refresh to pick it up',
+        'Social profiles are only graded for businesses with a website'
+      ],
+      correctIndex: 1,
+      explanation: 'This pushback is usually correct. The profile exists but cannot be read: an age or geographic restriction, a custom URL that does not match the name the report was built from, or a personal profile the platform reads as a person rather than a business.'
+    },
+    {
+      type: 'mcq',
+      question: 'A business scores an A on reviews. What does that most likely mean for you?',
+      options: [
+        'There is no opportunity in that section',
+        'Someone there is sustaining it by hand, which is the thing to sell against',
+        'The section should be turned off before the meeting',
+        'Their competitors are unlikely to be graded lower'
+      ],
+      correctIndex: 1,
+      explanation: 'High grades usually reflect unmanaged effort rather than a solved problem. Holding a rating means checking every source on a schedule indefinitely, and most owners do not know a managed option exists.'
+    },
+    {
+      type: 'truefalse',
+      statement: 'The Snapshot Report grades harshly because of a flaw in how it matches business data.',
+      correct: false,
+      explanation: 'The harshness is deliberate. The grading is built on fear of loss, because low scores produce better conversations, and the report is trying to earn a meeting rather than deliver a verdict.'
     }
   ]}
 />

@@ -15,6 +15,8 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --lab-purple: #432874;
+  --lab-purple-bg: #e2d9f3;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -223,7 +225,7 @@ ul.theme-doc-sidebar-menu.menu__list li.theme-doc-sidebar-item-link-level-1:firs
 
 /* Hide docs that opt-in via frontmatter `sidebar_class_name: hide-from-sidebar` */
 .theme-doc-sidebar-item-link.hide-from-sidebar,
-.theme-doc-sidebar-item-category-link.hide-from-sidebar {
+.theme-doc-sidebar-item-category.hide-from-sidebar {
   display: none !important;
 }
 
@@ -1762,7 +1764,7 @@ div[class*="language-"] pre {
 
 /* Hide docs that opt-in via frontmatter `sidebar_class_name: hide-from-sidebar` */
 .theme-doc-sidebar-item-link.hide-from-sidebar,
-.theme-doc-sidebar-item-category-link.hide-from-sidebar {
+.theme-doc-sidebar-item-category.hide-from-sidebar {
   display: none !important;
 }
 /* ── Training: section-label bars and in-practice callouts ── */
@@ -1930,8 +1932,8 @@ div[class*="language-"] pre {
 }
 
 .lesson-header__tag--lab {
-  background: #e2d9f3;
-  color: #432874;
+  background: var(--lab-purple-bg);
+  color: var(--lab-purple);
 }
 
 .lesson-header__position {
@@ -1983,6 +1985,43 @@ div[class*="language-"] pre {
   margin-right: 0.4rem;
 }
 
+/* Lab instruction box (LabCallout component) */
+.lab-callout {
+  border-left: 4px solid var(--lab-purple);
+  background: var(--lab-purple-bg);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.lab-callout__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.75rem;
+  font-weight: 700;
+  color: var(--lab-purple);
+}
+
+.lab-callout__badge {
+  background: var(--lab-purple);
+  color: #fff;
+  border-radius: 4px;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.lab-callout__body {
+  color: var(--ifm-font-color-base);
+}
+
+.lab-callout__body > :last-child {
+  margin-bottom: 0;
+}
+
 /* End-of-lesson footer (LessonFooter component) */
 .lesson-footer {
   margin: 2.5rem 0 1rem;
@@ -1999,6 +2038,20 @@ div[class*="language-"] pre {
   color: var(--ifm-font-color-base);
 }
 
+.lesson-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem 2.5rem;
+}
+
+.lesson-footer__link-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  max-width: 320px;
+}
+
 .lesson-footer__link {
   display: inline-flex;
   align-items: center;
@@ -2006,6 +2059,13 @@ div[class*="language-"] pre {
   font-weight: 600;
   color: var(--ifm-color-primary);
   text-decoration: none;
+}
+
+.lesson-footer__description {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--ifm-color-emphasis-600);
 }
 
 .lesson-footer__link:hover {
@@ -2321,4 +2381,92 @@ div[class*="language-"] pre {
 /* Learning paths hidden from the sidebar pending review (still reachable by URL) */
 .hidden-sidebar-item {
   display: none !important;
+}
+
+/* Path landing header: pills, meta bar, objective/outcomes panel.
+   Reuses .lesson-header__* tag, bar, and outcome styles. */
+.path-header {
+  margin: 0.5rem 0 1.5rem;
+}
+
+.path-header__count {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.path-header__topic {
+  background: #cfe2ff;
+  color: #084298;
+  border-radius: 6px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.path-header__panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  background: var(--ifm-color-emphasis-100);
+  border-left: 4px solid #2e8555;
+  border-radius: 0 0 8px 8px;
+  padding: 0.25rem 1.25rem 1.25rem;
+  font-size: 0.85rem;
+}
+
+.path-header__objective {
+  line-height: 1.6;
+}
+
+/* Path landing "This path covers" card grid. */
+.path-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.path-cards__card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: var(--ifm-background-surface-color);
+}
+
+.path-cards__title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.path-cards__rule {
+  margin: 1rem 0;
+  border: none;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  background: none;
+  height: 0;
+}
+
+.path-cards__description {
+  margin: 0 0 1rem;
+}
+
+.path-cards__topics-label {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+
+.path-cards__topics {
+  margin: 0 0 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.path-cards__link {
+  margin-top: auto;
+  font-weight: 700;
 }

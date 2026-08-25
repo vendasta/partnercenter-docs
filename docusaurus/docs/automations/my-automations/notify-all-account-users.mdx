@@ -1,0 +1,53 @@
+---
+title: Notify all account users
+description: Learn how to use the Notify all account users action to send in-app and email notifications to every user on the account.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, notifications, account, users]
+keywords: [notify all users, account users notification, automation notification, broadcast notification, notify everyone]
+---
+
+# Notify all account users
+
+**Notify all account users** sends an in-app and email notification to every user on the account. You don't need to select individual recipients — the platform resolves account membership at runtime. This action is available on account-scoped triggers.
+
+## How it works
+
+1. The automation reaches the **Notify all account users** step with an account in scope
+2. The platform resolves all users currently associated with the account
+3. Each user receives both an in-app notification and an email with the content you configured
+4. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Notifications**, select **Notify all account users**
+3. Configure the fields:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **In-app message** | Yes | The text displayed in the in-app notification. |
+| **In-app link** | Yes | The URL the notification links to when clicked in-app. |
+| **Email subject** | Yes | The subject line of the email notification. |
+| **Email message** | Yes | The body of the email notification. Supports rich text formatting. |
+| **Email button text** | Yes | The label on the email's call-to-action button. |
+| **Email link** | Yes | The URL the email button links to. |
+
+:::tip
+Use **Add dynamic content** in any text or link field to insert values from a previous step. You can use `{{business_id}}` in link fields as a placeholder that resolves to the account's ID at runtime.
+:::
+
+## Outputs
+
+This action produces no outputs available to downstream steps.
+
+## Tips
+
+- **Membership is resolved at runtime** — if users are added or removed between when the automation starts and when this step runs, the notification reflects the current membership, not the membership at trigger time.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Notify a user](./notify-a-user.mdx) — Notify specific users
+- [Notify a salesperson](./notify-a-salesperson.mdx) — Notify salespeople assigned to the account
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

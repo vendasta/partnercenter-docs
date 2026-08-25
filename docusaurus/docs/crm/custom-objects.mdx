@@ -70,6 +70,7 @@ From Organize Layout, you can:
 - Set the sort order for fields that aren't assigned to a group
 
 You can reset an object type's layout back to its default configuration at any time.
+Each custom object type has its own [field layout](/administration/data-management/crm-objects/field-layouts), so you can group and order its fields independently of contacts, companies, and opportunities.
 
 ## Import custom object records
 
@@ -204,6 +205,13 @@ Yes. Custom object upsert is supported via the Vendasta API. See the [Developer 
 <summary>Which CRM AI editions include custom objects?</summary>
 
 Custom objects are included with CRM AI Standard and Pro. See [CRM AI editions](/ai/ai-workforce/ai-sales-assistant#crm-ai-editions) for the full feature comparison.
+
+</details>
+
+<details>
+<summary>Is there a limit to how many custom objects an account can have?</summary>
+
+Yes. Each account can have up to 3 custom objects. This limit applies whether the object is created manually or rolled out through an [account template](/accounts/manage-accounts/account-templates) — if applying a template would push an account past the limit, the application fails for that account with a clear error instead of failing silently.
 
 </details>
 

@@ -5,15 +5,13 @@ sidebar_position: 2
 description: How to connect Google Analytics GA4 to multi-location accounts without duplicating data or mixing signals across sites.
 ---
 
-# Set up Google Analytics (GA4) for multi-location accounts
-
-Google Analytics (GA4) connects at the **single-location level** in Vendasta — each individual Business App account can have its own GA4 property or data stream connected. The Multi-Location Executive Report then rolls up that data across all locations in the group.
+Google Analytics (GA4) connects at the **single-location level** in Vendasta. Each individual Business App account can have its own GA4 property or data stream connected. The Multi-Location Executive Report then rolls up that data across all locations in the group.
 
 How you set up GA4 depends on whether your multi-location brand has one shared website or separate websites for each location.
 
 ## Recommended setup: one shared website
 
-If all your locations share a single website (for example, a national brand with one domain and location pages), connect GA4 to a single designated location — typically a headquarters or primary location account.
+If all your locations share a single website (for example, a national brand with one domain and location pages), connect GA4 to a single designated location, typically a headquarters or primary location account.
 
 - Only connect the shared site to **one** account. Connecting the same site to multiple location accounts will result in duplicate data in the Executive Report.
 - The other location accounts do not need a GA4 connection if they all use the same website.
@@ -23,7 +21,7 @@ If all your locations share a single website (for example, a national brand with
 If each location has its own website or microsite, set up a **separate GA4 data stream** for each site and connect it to the corresponding single-location Business App.
 
 - Each location account should be connected to the data stream for that location's specific site only.
-- Do not use a single shared GA4 property across unrelated domains — this mixes traffic from different sites and produces unreliable data in the Executive Report.
+- Do not use a single shared GA4 property across unrelated domains. This mixes traffic from different sites and produces unreliable data in the Executive Report.
 
 :::tip
 If locations share a domain but have distinct paths or subdomains (e.g., `brand.com/toronto` and `brand.com/vancouver`), consider using a single GA4 property with cross-domain or subdirectory filtering, connected to one representative location account.
@@ -39,9 +37,9 @@ If locations share a domain but have distinct paths or subdomains (e.g., `brand.
 
 ## How to connect GA4 to a location
 
-1. Go to **Partner Center** → **Accounts** → **Manage Accounts** and open the location account.
-2. Navigate to the account's **Business App**.
-3. In the Business App, go to **Executive Report** → **Connections**.
-4. Select **Google Analytics** and follow the prompts to connect the GA4 property or data stream for that location's website.
+1. Go to `Partner Center` → `Accounts` → `Manage Accounts` and open the location account.
+2. Navigate to the account's `Business App`.
+3. In the Business App, go to `Executive Report` → `Connections`.
+4. Select `Google Analytics` and follow the prompts to connect the GA4 property or data stream for that location's website.
 
 Repeat for each location that has its own website or microsite.

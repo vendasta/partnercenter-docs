@@ -62,6 +62,17 @@ Previously, you could only schedule one social post at a time. This feature remo
 
 <img src={require('./img/multi-location-CSV-location.png').default} alt="CSV Upload Location Selection" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
+   :::note
+   If LinkedIn is selected, use the **Only LinkedIn business pages** toggle to control which LinkedIn accounts receive the post. When enabled, posts are sent to LinkedIn business pages only. When disabled, posts are sent to both personal profiles and business pages.
+   :::
+:::warning
+If two or more of the locations you choose share the same Facebook, Instagram, LinkedIn, or X connection, you can't save the post. You'll see:
+
+**"Posts cannot be saved because the same Facebook/Instagram/LinkedIn/X connection is linked to multiple locations to stop duplicate posts. To continue, either remove this social connection from the other location(s) or remove the affected location."**
+
+Where possible, the message names the specific location. Remove the shared connection from the other location, or remove the affected location, then continue.
+:::
+
 8. (Optional) Enable `Upload as drafts` to save posts without scheduling
 
 <img src={require('./img/multi-location-CSV-drafts.png').default} alt="CSV Upload Location Drafts" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
@@ -219,5 +230,12 @@ It enables automatic localization of posts per location using AI Knowledge and S
 <summary>What if a location doesn't have AI configuration?</summary>
 
 The original multi-location content will be used without personalization.
+
+</details>
+
+<details>
+<summary>Why can't I save posts to some of the locations I chose?</summary>
+
+This happens when two or more of the chosen locations share the same Facebook, Instagram, LinkedIn, or X connection. Import CSV blocks saving in this case to prevent duplicate posts. Remove the shared connection from the other location(s), or remove the affected location, then continue.
 
 </details>

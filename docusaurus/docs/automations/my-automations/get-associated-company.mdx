@@ -1,0 +1,37 @@
+---
+title: Get the associated company
+description: Learn how to use the Get the associated company action to bring a company record into scope from an account-scoped trigger.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, crm, company, account, lookup]
+keywords: [get associated company, company from account, account company, lookup company, bring company into scope]
+---
+
+# Get the associated company
+
+**Get the associated company** retrieves the company associated with the account currently in scope and makes it available to downstream steps. Use it in account-scoped automations when you need to run company-level actions (assign an owner, start a campaign, add a note) but only have an account in context. This action is available on account-scoped triggers.
+
+## How it works
+
+1. The automation reaches the **Get the associated company** step with an account in scope
+2. The step looks up the company associated with the account
+3. The company record is brought into scope for downstream steps
+4. Company-scoped actions become available in subsequent steps
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Businesses**, select **Get the associated company**
+
+This action has no configuration fields — it retrieves the company linked to the account in scope.
+
+## Outputs
+
+After the step runs, the associated company record is available in scope. Downstream steps can act on the company directly — assign an owner, start a campaign, log a note, or reference company fields via **Add dynamic content**.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Get or create the associated account](./get-or-create-associated-account.mdx) — Go the other direction: get an account from a company
+- [Find company](./find-company.mdx) — Search for a company by field criteria
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

@@ -12,6 +12,7 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import LabChecklist from "@site/src/components/LabChecklist";
+import LabCallout from "@site/src/components/LabCallout";
 
 <InlineHighlighter courseId="train-your-employee" site="vendasta_learn">
 
@@ -48,7 +49,7 @@ Open the test page in a fresh incognito window and run the audit before you chan
 
 A wrong price usually means the source it searched never had the real number, not that the AI is broken. Copy the package's exact pricing into a clean document and upload it as the authoritative source: auto-imported marketplace content can carry broken links or no usable pricing at all.
 
-:::info Lab: upload a clean price list
+<LabCallout title="upload a clean price list">
 You are going to your employee's **Configure** panel → **Knowledge Sources**.
 
 <LabChecklist
@@ -59,7 +60,7 @@ You are going to your employee's **Configure** panel → **Knowledge Sources**.
   ]}
   confirm={<>The price list now appears in <strong>Knowledge Sources</strong>, ready for the AI to search.</>}
 />
-:::
+</LabCallout>
 
 For every knowledge source type and what belongs in each, [the Knowledge Base guide covers the rest](/ai/knowledge-base).
 
@@ -67,7 +68,7 @@ For every knowledge source type and what belongs in each, [the Knowledge Base gu
 
 Knowledge is what the AI looks up when a question calls for it. A rule that must hold on every response belongs in a capability instead, so a guardrail like "quote only from the published list, never estimate" holds even on a question the price list does not directly answer.
 
-:::info Lab: write the pricing guardrail
+<LabCallout title="write the pricing guardrail">
 You are going to your employee's **Configure** panel → **Capabilities**.
 
 <LabChecklist
@@ -79,13 +80,13 @@ You are going to your employee's **Configure** panel → **Capabilities**.
   ]}
   confirm={<>The capability now holds the rule, and it applies on every conversation, not only the ones a knowledge lookup happens to catch.</>}
 />
-:::
+</LabCallout>
 
 Keep the instruction short. Everything an employee has been told shares one working memory, and a long list of rules competes with itself; specific and short beats long every time. Instructions also tend to collect leftover lines from earlier edits, so revisit and trim them now and then rather than only ever adding to them. The same discipline suits a business in a regulated field: rather than answering specifics on medical or legal questions, have the guardrail redirect to a person, and use the word its own customers would use, never a clinical term a business would not use itself.
 
 ## Re-test and see why it answered that way
 
-:::info Lab: re-run the audit
+<LabCallout title="re-run the audit">
 You are back on the **Try it** test page.
 
 <LabChecklist
@@ -96,13 +97,13 @@ You are back on the **Try it** test page.
   ]}
   confirm={<>Explanation shows exactly which knowledge source or capability produced that answer, so you know precisely what to adjust if it is still off.</>}
 />
-:::
+</LabCallout>
 
 ## The habit that keeps it accurate
 
 Treat the employee as a new hire rather than a setting: coach it, correct it, and expect the answers to keep improving, the same way a new team member does. The rule behind every fix here is the one behind every fix to come: a wrong answer to a specific question is usually a knowledge gap, and a wrong behavior across every conversation is usually a capability gap. Knowledge is the degree it holds; capabilities are the skill it practices.
 
-Testing on purpose, on your own account, is how gaps surface before a client ever sees them, and a change that turns out wrong is never permanent: undo it and try again. As an employee earns your trust through this loop, its autonomy level can grow with it, from close review to running full conversations on its own, a decision the next step puts in your hands from the very first setup.
+Testing on purpose, on your own account, is how gaps surface before a client ever sees them, and a change that turns out wrong is never permanent: undo it and try again. As an employee earns your trust through this loop, what changes is how closely you review it, not a level it's set to: the next step builds one from a blank start and shows you exactly what it can do from day one.
 
 ## What you now have
 

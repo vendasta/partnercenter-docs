@@ -1,0 +1,39 @@
+---
+title: "Trigger: A company is added to a list"
+description: Start an automation whenever a company is added to a specified CRM list.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, company]
+keywords: [company added to list trigger, CRM list trigger, company list automation, company scope trigger, list membership trigger]
+---
+
+# A company is added to a list
+
+The **A company is added to a list** trigger starts an automation whenever a company is added to a CRM list. Use this trigger to act on list membership changes — such as notifying a team member or updating company fields — the moment a company enters a list.
+
+:::info Trigger scope
+This trigger operates at the **company** scope. Company, account, and contact actions are available downstream.
+:::
+
+## How it works
+
+1. A company is added to a CRM list, either manually or through another automation or bulk action.
+2. The company and its associated account are brought into scope.
+3. The list name and membership event data become available as dynamic content.
+4. Downstream steps execute using the company, account, and list context.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **List name** | The name of the list the company was added to |
+| **List ID** | The unique identifier of the list |
+| **Associated company** | Name, ID, and standard fields of the company added to the list |
+
+Standard company and account fields are also available to downstream steps via **Add dynamic content**.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)
