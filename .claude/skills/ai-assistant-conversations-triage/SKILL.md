@@ -27,10 +27,15 @@ typically once a month.
 3. **Single repo.** Every citation is expected to resolve to an article in this repo.
    A citation that does not resolve is surfaced as `CITED_NOT_IN_REPO` (it likely lives
    on the vendasta.com docs site). Never silently drop it.
-4. **No staleness-by-age.** A file's git age does NOT mean it is out of date. Age is only
+4. **Documentation only — training is out of scope.** This triage covers `docusaurus/docs`
+   and nothing else. `docusaurus/training` (the LEARN tab, served at `/learn`) is a separate
+   editorial track with its own review process — see the `learning-path-writing` skill. A
+   `/learn` citation is reported and tagged `(training — out of scope)`, never matched into
+   `docs`, and never actioned here. Do not propose training edits from this run.
+5. **No staleness-by-age.** A file's git age does NOT mean it is out of date. Age is only
    a sort key for review order, never a verdict. The real out-of-sync signal is the
    conversation itself (a Citation Failure or Post-Citation Escalation on an article).
-5. **Snippets may go to the model as-is** — the API org is covered by Zero Data Retention,
+6. **Snippets may go to the model as-is** — the API org is covered by Zero Data Retention,
    so no scrubbing step is required. (If that changes, sanitize snippets first.)
 
 ## The two checks per finding
@@ -72,12 +77,42 @@ is cited (the analyzer's Top Citations). Severity: MISSING ≈ EXISTS_WRONG > EX
 **Input:** the export lives at `.triage/report.json`. If missing, stop and ask the user to
 export the conversations and drop the file there.
 
-1. **Normalize (adapt to the real export shape).** Read a few objects from
-   `.triage/report.json` and identify the fields for: conversation id, gap type, intent,
-   outcome, CSAT, the partner's message/snippet, and the cited article (title and/or URL).
-   Field names vary — do not assume, look. Write `.triage/findings.json` as an array of:
+**Two exports exist, and only one of them works.** Check which you have before anything else:
+
+- **Aggregate summary** — top-level `aggregates` + `examples`. Carries `ai_process_gaps`
+  (the real per-bucket counts), `intents`, `csat`, `escalation_breakdown`, `total_citations`.
+  If `examples` and `conversation_topics` are empty objects, findings **cannot** be mapped to
+  conversations and Step 1 is not possible. Use it to calibrate, then stop and ask for the
+  per-conversation export.
+- **Raw conversation dump** — top-level `conversations[]`, each with `messages[]` of
+  `{message_id, participant_id, message_type, body, created, ui_components, media, metadata}`.
+  Beware: `metadata` is null throughout, `participant_id` is opaque (derive speaker from the
+  first chronological message), and `messages` is **not** reliably ordered — sort by `created`
+  before splitting speakers or alternation breaks on ~1000 of 2742 conversations.
+
+**Do not derive gap type from the raw dump.** It was tried and it fails badly — measured
+against the analyzer on the same 2,742 conversations: Knowledge Gap 280 derived vs 114 actual,
+Post-Citation Escalation 73 vs 1. The cause is structural: **citations are retrieval metadata,
+not links in the message body.** The analyzer counts 10,028 citations at a 92.6% citation rate,
+while only 1,884 of 14,336 message bodies contain any URL. "No URL in the body" says nothing
+about whether the assistant had a source.
+
+1. **Normalize.** From the **per-conversation** export, identify the fields for: conversation
+   id, gap type, intent, outcome, CSAT, the partner's message/snippet, and the cited article
+   (title and/or URL). Field names vary — do not assume, look. Write `.triage/findings.json`
+   as an array of:
    `{ id, gapType, intent, outcome, csat, snippet, citedArticle: {title, url} | null }`.
    Keep only Knowledge Gap, Citation Failure, and Post-Citation Escalation findings.
+
+   Two filters that matter when reading snippets:
+   - **Partner Center app URLs are not citations.** `partners.vendasta.com`, `crm.*`,
+     `*.smblogin.com` and partner white-label domains are product deep-links. Only
+     `docs.vendasta.com`, `docs.businessapp.io`, `servicesdocs.io`, `developers.vendasta.com`
+     and `support.vendasta.com` are documentation.
+   - **Not every finding is documentation work.** A large share of low-turn conversations are
+     pure escalation requests ("human", "speak with support") or the app's own
+     "Help me fix something" button label, and others are account-specific incidents
+     (`AG-*`/`ORD-*`, site down, stuck order). Neither is a doc gap — drop them before ranking.
 
 2. **Deterministic checks.** From the repo root run:
    `node .claude/skills/ai-assistant-conversations-triage/validate.mjs`
@@ -109,4 +144,18 @@ cross-run memory — without it you cannot tell whether a fix landed.
 - The `report.json` field names may differ from the defaults assumed in Step 1. On the
   first run, inspect one conversation object and confirm the mapping before trusting output.
 - Sample the analyzer's **Unknown/Unclear** bucket — real undocumented area or noise?
-- Decide what **Engagement Drop-off** means in your data before acting on it.
+- Decide what **Engagement Drop-off** means in your data before acting on it. On the
+  2026-08 export it was 684 — larger than every other gap bucket combined — and undefined.
+
+## Known analyzer data-quality issues (2026-08 export)
+
+Verified against `aggregates`; confirm they are still present before trusting either field:
+
+- **`escalation_after_citations` is not credible.** It reported 1, while `citation_rate` was
+  0.926 and `escalated` was 365 — nearly every escalation must have followed a citation-bearing
+  response. Treat Post-Citation Escalation counts as suspect until the definition is confirmed.
+- **CSAT is a relabel of resolution, not a survey.** `csat.satisfied` (2219) was exactly
+  `ai_resolved` (2219), `resolution_rate` == `satisfaction_rate` == 0.80926, and
+  `not_satisfied` + `neutral` (523) was exactly `escalated` + `unresolved` (523). CSAT carries
+  no signal beyond the outcome field — **do not prioritize on it** (this weakens the
+  reach × severity ranking in Prioritization above).
