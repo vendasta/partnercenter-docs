@@ -14,6 +14,8 @@ interface LessonHeaderProps {
   video?: boolean;
   /** Hands-on build step */
   lab?: boolean;
+  /** Subject pills, e.g. ["Partner Center", "Payments"] */
+  topics?: string[];
   /** e.g. "Getting started" */
   pathName?: string;
   step?: number;
@@ -27,6 +29,7 @@ export default function LessonHeader({
   required = ["None"],
   video = false,
   lab = false,
+  topics = [],
   pathName,
   step,
   totalSteps,
@@ -49,6 +52,11 @@ export default function LessonHeader({
             Lab
           </span>
         )}
+        {topics.map((topic) => (
+          <span key={topic} className="path-header__topic">
+            {topic}
+          </span>
+        ))}
         {pathName && step && totalSteps && (
           <span className="lesson-header__position">
             {pathName} · Step {step} of {totalSteps}

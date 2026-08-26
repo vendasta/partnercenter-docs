@@ -1,0 +1,193 @@
+---
+title: Get set up skill check
+sidebar_position: 7
+description: "Ten scenario questions covering the whole path: the platform map, email, payments, brand, your receptionist, and help."
+---
+
+import SkillCheck from "@site/src/components/SkillCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+
+<InlineHighlighter courseId="get-set-up-skill-check" site="vendasta_learn">
+
+<CourseProgressBar courseId="get-set-up-skill-check" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Beginner"
+  topics={["Partner Center", "Email domain", "Payments", "AI Receptionist"]}
+  time="about 10 minutes"
+  required={["The six steps of this path"]}
+  pathName="Get set up"
+  step={7}
+  totalSteps={7}
+  outcomes={[
+    "Apply the platform map, email, payments, brand, and receptionist material to situations you have not seen before",
+    "Spot which setup a scenario calls for, rather than recalling a definition",
+    "Find the steps worth a second pass before you bring your first client on",
+  ]}
+/>
+
+<SkillCheck
+  sessionSize={10}
+  intro="Ten scenario questions covering the whole path"
+  questions={[
+    {
+      type: 'mcq',
+      question: 'You built and polished a chat receptionist for your newest client, working from the AI menu in your own Partner Center. It now answers as if it works for your agency. What happened?',
+      options: [
+        'You configured your own receptionist; the client\'s belongs in their Business App, the workspace of the business it serves',
+        'The client\'s knowledge sources have not finished training yet, so it falls back to your details',
+        'The receptionist needs the client\'s logo uploaded before it can represent them',
+        'Chat receptionists always represent the partner until the client buys Conversations AI'
+      ],
+      correctIndex: 0,
+      explanation: 'An AI Employee lives in the workspace of the business it serves. Your Partner Center AI menu configures the receptionist serving your agency; a client\'s receptionist is configured in their Business App.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your new sales hire needs to work the pipeline, run Snapshot Reports, and log calls, and nothing more. How do you add them?',
+      options: [
+        'As a Salesperson, which gives them the CRM view of Partner Center',
+        'As an Admin with a note asking them to stay out of billing',
+        'As a Business App user on your own account',
+        'As a vendor in Vendor Center with CRM permissions'
+      ],
+      correctIndex: 0,
+      explanation: 'The Salesperson role is the CRM: pipeline, prospects, and client communication. Admin is for people who run the business side, and its access can be restricted further when needed.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your first Snapshot Report is ready for a real prospect. Before sending it, you want the email to arrive from your business and land in their inbox. Which setup does that?',
+      options: [
+        'Your email domain connected under Marketing → Email Settings, with SPF, DKIM, and DMARC validated',
+        'Your logo uploaded under Partner Branding, which signs your outgoing email',
+        'Vendasta Payments connected, which verifies your business identity to mail providers',
+        'The prospect added as a Business App user before the report goes out'
+      ],
+      correctIndex: 0,
+      explanation: 'The domain connection is what authorizes the platform to send as you. Once the records validate, every platform email, Snapshot Reports included, sends from your domain.'
+    },
+    {
+      type: 'mcq',
+      question: 'Every DNS record on your domain shows a green check mark, yet platform email still sends from the shared Vendasta domain. What did you skip?',
+      options: [
+        'Choosing your domain as the one to use and saving your from address',
+        'Waiting the mandatory 48 hours after validation before sending begins',
+        'Adding a second SPF record to confirm the first one',
+        'Registering the domain with each mail provider individually'
+      ],
+      correctIndex: 0,
+      explanation: 'Validation proves the records are in place; the final move is selecting the verified domain as the one to use and saving the from address. From then on, everything sends as you.'
+    },
+    {
+      type: 'mcq',
+      question: 'You have five years of history and negotiated rates in your existing Stripe account, and you want to keep both no matter where your business goes. How do you set up Vendasta Payments?',
+      options: [
+        'Connect your existing Stripe account, accepting the 0.75 percent platform fee per transaction',
+        'Create a new account in the platform, which imports your Stripe history automatically',
+        'Run both accounts in parallel and alternate between them by client',
+        'Skip Vendasta Payments, since connected accounts lose their negotiated rates'
+      ],
+      correctIndex: 0,
+      explanation: 'A connected Stripe account stays yours: history, reporting, and negotiated rates travel with you. The platform adds a 0.75 percent fee per transaction, which is the price of that portability.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client bought a monthly product from you in June. It is now the renewal date in July, their card is on file, and your default billing is set to automatic. What happens?',
+      options: [
+        'Their card is charged the retail price, and Vendasta bills you the wholesale price',
+        'Nothing happens until you manually generate and send an invoice',
+        'Vendasta charges the client directly and forwards you the margin',
+        'The subscription pauses until the client approves the renewal in Business App'
+      ],
+      correctIndex: 0,
+      explanation: 'Automatic collection charges the saved card on renewal. The two subscriptions both run: your client pays you retail, and Vendasta bills you wholesale, with the difference as your margin.'
+    },
+    {
+      type: 'mcq',
+      question: 'A new client logs in to their Business App for the first time and sees your logo at the top. Where did that come from?',
+      options: [
+        'The one logo upload in Partner Branding, which brands both workspaces',
+        'A per-client branding step you completed when creating their account',
+        'Their business profile, which pulls your logo from your website',
+        'The welcome email template, which injects your logo into their app'
+      ],
+      correctIndex: 0,
+      explanation: 'One upload under Administration → Partner Branding brands Partner Center and every client\'s Business App, along with login pages and outgoing email.'
+    },
+    {
+      type: 'mcq',
+      question: 'A prospect studies your pitch and asks whether their team would log in at a vendasta.com address or one with your name on it. What is the accurate answer?',
+      options: [
+        'A custom domain like app.youragency.com is available on select plans; on others, the default URL applies',
+        'Every plan includes a custom login domain from day one',
+        'Login URLs cannot be branded, only the interface inside them',
+        'Each client picks their own login address when they first sign in'
+      ],
+      correctIndex: 0,
+      explanation: 'Custom domains are available on select plans. Knowing which yours includes keeps the expectation you set accurate before anyone logs in.'
+    },
+    {
+      type: 'mcq',
+      question: 'You fed your receptionist your website, three old service brochures, and a retired price list. It now quotes two different prices for the same service. What is the fix?',
+      options: [
+        'Trim the knowledge to current sources only, and keep the set lean from here on',
+        'Add more documents so the correct price outweighs the outdated one',
+        'Rewrite the purpose to instruct the AI to average conflicting prices',
+        'Turn off the lead capture capability until the answers stabilize'
+      ],
+      correctIndex: 0,
+      explanation: 'Less is more with AI knowledge. A lean, current set of sources keeps answers consistent; retired documents come out, and new sources go in only when a real conversation shows a gap.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your receptionist is configured and its widget is installed. What does putting it through its paces look like before real traffic arrives?',
+      options: [
+        'Interview it like a customer: services, hours, prices, something ambiguous, and a booking request, then tune and repeat',
+        'Send one test message saying hello, and go live if it responds at all',
+        'Read through its purpose and capabilities carefully instead of chatting with it',
+        'Wait a week of live traffic and review the transcripts afterward'
+      ],
+      correctIndex: 0,
+      explanation: 'Put it through its paces with the questions real customers ask, including an ambiguous one and a booking. Tune what misses, ask again, and repeat by phone if it answers a voice line.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client asks for something their whole team can bookmark about using their inbox and reviews dashboard. What do you send?',
+      options: [
+        'The matching pages on docs.businessapp.io, which carry nothing from your partner side',
+        'Screenshots of your Partner Center, cropped to hide the wholesale prices',
+        'A link to this documentation site, including the billing sections',
+        'Your Partner Center login, restricted to read-only'
+      ],
+      correctIndex: 0,
+      explanation: 'docs.businessapp.io is written for the people using Business App, with nothing partner-side in it. The site is gray-labeled (neutral, no Vendasta and no partner branding), so the site or a single article is safe to share.'
+    },
+    {
+      type: 'mcq',
+      question: 'Month end is close, a billing question is past what the AI assistant answered, and you want a person to walk you through it. Who do you reach, and where?',
+      options: [
+        'Your assigned Client Success team, from the bottom left corner of Partner Center',
+        'The vendor of your most recent product, through the Marketplace',
+        'Your clients\' bookkeeper, who sees the invoices land',
+        'The webinar calendar, by waiting for the next billing session'
+      ],
+      correctIndex: 0,
+      explanation: 'Your Customer Success Manager supports training sessions across the platform, and the assigned Client Success team is reachable from the bottom left corner of Partner Center.'
+    }
+  ]}
+/>
+
+<LessonFooter
+  to="/learn/ai-foundations"
+  pathName="Get set up"
+  step={7}
+  totalSteps={7}
+  nextPathName="AI foundations"
+/>
+
+</InlineHighlighter>
+<MarkComplete courseId="get-set-up-skill-check" site="vendasta_learn" />

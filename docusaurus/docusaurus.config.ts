@@ -124,9 +124,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/learn/sales/consult-dont-just-pitch', to: '/learn/sales' },
           // getting-started renames
           { from: '/learn/getting-started/A-Brief-Introduction-to-the-Vendasta-Platform', to: '/learn/getting-started/the-vendasta-platform' },
-          { from: '/learn/getting-started/Organize-Teams-in-the-Platform', to: '/learn/getting-started/organize-your-team' },
-          { from: '/learn/getting-started/Add-Your-Customer-Accounts-and-Users', to: '/learn/getting-started/accounts-and-users' },
-          { from: '/learn/getting-started/Customize-and-Brand-Your-Platform', to: '/learn/getting-started/customize-and-brand' },
+          // "Get set up" rebuild (2026-08): walkthrough/team/accounts steps retired,
+          // branding shrunk to brand-it, payments rebuilt as connect-payments-and-billing.
+          { from: '/learn/getting-started/Organize-Teams-in-the-Platform', to: '/learn/getting-started' },
+          { from: '/learn/getting-started/Add-Your-Customer-Accounts-and-Users', to: '/learn/getting-started' },
+          { from: '/learn/getting-started/Customize-and-Brand-Your-Platform', to: '/learn/getting-started/brand-it' },
+          { from: '/learn/getting-started/partner-center-walkthrough', to: '/learn/getting-started' },
+          { from: '/learn/getting-started/organize-your-team', to: '/learn/getting-started' },
+          { from: '/learn/getting-started/accounts-and-users', to: '/learn/getting-started' },
+          { from: '/learn/getting-started/customize-and-brand', to: '/learn/getting-started/brand-it' },
+          { from: '/learn/getting-started/get-set-up-to-get-paid', to: '/learn/getting-started/connect-payments-and-billing' },
           // Vendasta Services library rebuilt as the "Work with Vendasta Services" path (2026-08)
           { from: '/learn/vendasta-services/grow-your-agency-with-marketing-experts', to: '/learn/vendasta-services/what-vendasta-services-does' },
           { from: '/learn/vendasta-services/fulfilling-websites-with-marketing-services', to: '/learn/vendasta-services/order-and-launch-a-service' },
@@ -144,7 +151,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/learn/products/ai-receptionist/AI-Receptionist-Implementation-Essentials', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
           // marketplace lessons harvested into paths
           { from: '/learn/platform/marketplace/Package-Digital-Products-with-Vendasta', to: '/learn/ai-workforce/sell-and-manage' },
-          { from: '/learn/platform/marketplace/Billing-and-Payment-Basics', to: '/learn/getting-started/get-set-up-to-get-paid' },
+          { from: '/learn/platform/marketplace/Billing-and-Payment-Basics', to: '/learn/getting-started/connect-payments-and-billing' },
           // library regroup: business-app
           { from: '/learn/platform/business-app/Introducing-Business-App', to: '/learn/products/engage/business-app/introduction-to-business-app' },
           { from: '/learn/platform/business-app/Introduction-to-Business-App-Pro', to: '/learn/products/engage/business-app/introduction-to-business-app' },

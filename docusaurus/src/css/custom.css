@@ -2422,7 +2422,7 @@ div[class*="language-"] pre {
   line-height: 1.6;
 }
 
-/* Path landing "This path covers" card grid. */
+/* Path landing "What you will learn" card grid. */
 .path-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -2469,4 +2469,74 @@ div[class*="language-"] pre {
 .path-cards__link {
   margin-top: auto;
   font-weight: 700;
+}
+
+/* ===== Learn course styling pilot (2026-08-25) ===== */
+
+/* Tinted section bands: alternate lesson sections wrapped in <LessonSection> */
+.lesson-band {
+  background: #f6f7f8;
+  border-radius: 16px;
+  padding: 1.75rem 2rem 1.25rem;
+  margin: 2.5rem -1rem;
+}
+[data-theme='dark'] .lesson-band {
+  background: #1b1f23;
+}
+.lesson-band > h2:first-child {
+  margin-top: 0;
+}
+@media (max-width: 996px) {
+  .lesson-band {
+    margin-inline: 0;
+    padding: 1.25rem 1.25rem 1rem;
+  }
+}
+
+/* Key-point rows: small illustration beside a bold term and one-liner */
+.keypoints {
+  display: grid;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.keypoints__row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.keypoints__icon {
+  width: 72px;
+  height: 72px;
+  flex: 0 0 72px;
+}
+.keypoints__title {
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+.keypoints__text {
+  margin: 0;
+}
+
+/* Boxed tab skin for lesson tabs: wrap <Tabs> in <div className="learn-tabs"> */
+.learn-tabs .tabs {
+  border: 0;
+  gap: 0;
+}
+.learn-tabs .tabs__item {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 0;
+  margin: 0;
+  padding: 0.8rem 1.3rem;
+  font-weight: 600;
+}
+.learn-tabs .tabs__item--active {
+  background: #1976d2;
+  border-color: #1976d2;
+  color: #fff;
+}
+.learn-tabs [role='tabpanel'] {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0 0 8px 8px;
+  padding: 1.25rem 1.5rem;
 }

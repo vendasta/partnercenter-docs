@@ -13,6 +13,10 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import Accordion from "@site/src/components/Accordion";
+import LessonSection from "@site/src/components/LessonSection";
+import KeyPoints from "@site/src/components/KeyPoints";
+import aiReceptionistFace from './img/ai-receptionist-face.png';
+import aiSalesAssistantFace from './img/ai-sales-assistant-face.png';
 
 <InlineHighlighter courseId="find-your-next-prospect" site="vendasta_learn">
 
@@ -20,6 +24,7 @@ import Accordion from "@site/src/components/Accordion";
 
 <LessonHeader
   difficulty="Beginner"
+  topics={["Prospecting", "Sales productivity", "AI Workforce"]}
   time="about 12 minutes"
   required={["None"]}
   video={true}
@@ -68,6 +73,8 @@ Watch sales expert George Leith on what it takes to keep a funnel full.
 You have seen it happen: someone crushes every record one month and is scraping the bottom of the leaderboard the next. It is almost never that they got worse at selling. It is that they stopped prospecting while they were busy servicing the deals they just won — and the funnel behind them went empty.
 
 Prospecting is not the thing you do when you have spare time. It is the thing that determines whether you have a next month at all.
+
+<LessonSection>
 
 ## Keep the funnel full: six habits
 
@@ -138,11 +145,15 @@ Six habits separate the reps who always have a next month from the ones who do n
   ]}
 />
 
+</LessonSection>
+
 ## The five-before-nine, nine-after-five rule
 
 If you work a standard nine-to-five, make five prospecting calls before 9am and nine after 5pm. The logic: your buyer is doing their actual job during business hours. You want to reach them when they are doing their own admin and planning, when they are more likely to pick up.
 
 Even on days this feels arbitrary, the discipline of doing it keeps prospecting as something you think about every day, not something you get to eventually.
+
+<LessonSection>
 
 ## Automate the outreach grind
 
@@ -160,21 +171,40 @@ None of this replaces the habits above. It removes the manual grind around them 
 Pick one prospect you have not followed up with this week. Write the headline version of your outreach — one sentence of value, one question — before you write anything longer.
 :::
 
+</LessonSection>
+
 ## Put your AI Workforce on the funnel
 
 Two AI Employees do real work around prospecting, and it is worth being precise about which part each one takes.
 
-The **AI Chat Receptionist** works the top of the funnel. It answers website visitors around the clock using your knowledge base and website content, and it collects a name, phone number, or email so you have someone to follow up with. That is habit 4 running without you: someone is engaged right now, and something is responding right now instead of tomorrow morning. When you are ready to put one on your site, [this guide walks you through setup](/ai/ai-workforce/ai-chat-receptionist/).
+<KeyPoints
+  items={[
+    {
+      img: aiReceptionistFace,
+      title: 'AI Chat Receptionist',
+      text: 'Works the top of the funnel. It answers website visitors around the clock using your knowledge base and website content, and it collects a name, phone number, or email so you have someone to follow up with. That is habit 4 running without you: someone is engaged right now, and something is responding right now instead of tomorrow morning.',
+    },
+    {
+      img: aiSalesAssistantFace,
+      title: 'AI Sales Assistant',
+      text: 'Works behind the funnel. After a meeting is recorded and analyzed, it updates the CRM records that came out of that conversation and creates activities from the action items, so a commitment you made out loud becomes something on a list. You can also ask it about your pipeline in plain language, such as "What opportunities are currently open in my pipeline?" or "What action items came out of my recent meetings?", instead of building a report.',
+    },
+  ]}
+/>
 
-The **AI Sales Assistant** works behind the funnel. After a meeting is recorded and analyzed, it updates the CRM records that came out of that conversation and creates activities from the action items, so a commitment you made out loud becomes something on a list. You can also ask it about your pipeline in plain language, such as "What opportunities are currently open in my pipeline?" or "What action items came out of my recent meetings?", instead of building a report. It is part of CRM AI and needs a CRM AI Standard or Pro subscription; [the AI Sales Assistant guide](/ai/ai-workforce/ai-sales-assistant) covers what it updates and how to control it.
+When you are ready to put a Chat Receptionist on your site, [this guide walks you through setup](/ai/ai-workforce/ai-chat-receptionist/). The AI Sales Assistant is part of CRM AI and needs a CRM AI Standard or Pro subscription; [the AI Sales Assistant guide](/ai/ai-workforce/ai-sales-assistant) covers what it updates and how to control it.
 
 Both of them work on conversations that arrive at you or have already happened. Going out and finding someone who has never heard of you is still yours, and the six habits above are how you do it.
+
+<LessonSection>
 
 ## Do it, delegate it, or buy it
 
 - **Do it** — build your own outreach cadence and templates by hand. Free, but the most time.
 - **Delegate it** — have an SDR or junior rep own the prospecting-volume side of the funnel while you focus on live conversations.
 - **Buy it** — a sales engagement tool to automate tracking, sequencing, and reporting. The fastest path to more outreach without more hours.
+
+</LessonSection>
 
 <SectionFeedback courseId="find-your-next-prospect" site="vendasta_learn" section="content" />
 

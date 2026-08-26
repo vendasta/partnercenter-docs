@@ -1,0 +1,133 @@
+---
+title: Brand your platform
+sidebar_position: 4
+description: "Your logo, your color, and your domain across both workspaces: what white label covers and what your clients see."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
+
+<InlineHighlighter courseId="brand-it" site="vendasta_learn">
+
+<CourseProgressBar courseId="brand-it" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Beginner"
+  topics={["Branding", "Partner Center"]}
+  time="about 5 minutes"
+  required={["Partner Center admin access"]}
+  pathName="Get set up"
+  step={4}
+  totalSteps={7}
+  outcomes={[
+    "Apply your logo and brand color across both workspaces",
+    "Say what white label covers and which plans include it",
+    "Set the right expectation for a custom domain",
+  ]}
+/>
+
+## What white label covers
+
+**White-label products and services** are re-brandable, re-sellable items produced by one company to be re-branded and re-sold by another. That is the model the whole platform runs on: the workspaces, the products you resell, and the services that fulfill them carry your brand, so your clients see your name throughout.
+
+Branding the platform is quick work with wide reach. The logo you upload appears in Business App, in outgoing email, on login pages, and everywhere else the platform represents you.
+
+<LessonSection>
+
+## Your logo and color
+
+Open `Administration` → `Partner Branding`. Three settings do most of the branding work:
+
+- **Company name**: your brand as clients see it, in email headers, login pages, and notifications.
+- **Logo**: one upload brands both Partner Center and every client's Business App. A PNG with a transparent background works best, and you can add a dark-mode version so it stays sharp on any screen.
+- **Primary color**: your brand's hex color, used as an accent throughout the platform and in some client emails.
+
+![The Partner Branding settings, with the company name, the theme choices, the logo upload with a separate dark theme logo, and the company avatar](./img/partner-branding-settings.jpg)
+
+The whole task takes a few minutes, and it is worth doing before anything client-facing goes out. For every setting on the page, including icons and favicons, [this guide walks through branding and customization](/getting-started/getting-started-guides/getting-started-with-branding-and-customization).
+
+:::tip Try it now
+Open `Administration` → `Partner Branding`, upload your logo, and set your primary color. Refresh the page: Partner Center is already wearing your brand.
+:::
+
+</LessonSection>
+
+## White label
+
+On plans with white label, the platform carries your brand with no mention of Vendasta: your logo, your colors, your name, in Partner Center and in every client's Business App. White label depends on your subscription: free tiers do not include it, and some white-label options vary by plan, so check what yours includes. [Plan details are on the pricing page](https://www.vendasta.com/pricing).
+
+<LessonSection>
+
+## A domain of your own
+
+A custom domain lets clients and salespeople reach the platform through a link that carries your brand, such as app.youragency.com, instead of a default Vendasta URL. Custom domains are available on select plans, so treat this as an upgrade to plan for rather than a first-day task. When you are ready to connect one, [the branding guide covers custom domain setup](/getting-started/getting-started-guides/getting-started-with-branding-and-customization).
+
+</LessonSection>
+
+<SectionFeedback courseId="brand-it" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="brand-it" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on white label, the logo, and what a client sees."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'Which is the best definition of white label?',
+      options: [
+        'Software products delivered digitally with no physical media',
+        'Brands with modern, simple design',
+        'Products a company produces that can be re-branded with the purchaser\'s branding',
+        'A word to describe marketing and digital solutions'
+      ],
+      correctIndex: 2,
+      explanation: 'White-label products are re-brandable items produced by one company to be re-branded and re-sold by another. You provide the brand and the relationship; the platform provides the software.'
+    },
+    {
+      type: 'mcq',
+      question: 'You upload your logo in Partner Branding. Where does it appear?',
+      options: [
+        'In Partner Center only, since that is where you uploaded it',
+        'In both Partner Center and every client\'s Business App',
+        'Only in email campaigns you send from Marketing',
+        'Nowhere until each client approves it in their settings'
+      ],
+      correctIndex: 1,
+      explanation: 'One upload brands both workspaces. Your logo also flows into login pages, notifications, and outgoing email.'
+    },
+    {
+      type: 'mcq',
+      question: 'A new partner on a free tier asks why their clients can still tell the platform is not fully their brand. What is the accurate answer?',
+      options: [
+        'White label depends on the subscription plan, and free tiers do not include it',
+        'Their logo upload failed and the platform fell back to its own branding',
+        'White label only applies to Partner Center, never to Business App',
+        'Every plan is fully white label, so something is misconfigured'
+      ],
+      correctIndex: 0,
+      explanation: 'White label is plan-gated. On plans that include it, the platform carries your brand with no mention of Vendasta; free tiers do not include it.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client asks why the platform link you gave them says vendasta.com instead of your business name. What is the accurate answer?',
+      options: [
+        'A branded link like app.youragency.com comes from a custom domain, available on select plans',
+        'Platform links can never carry a partner\'s own domain',
+        'The link changes automatically once your logo is uploaded',
+        'Each client chooses their own login domain in Business App'
+      ],
+      correctIndex: 0,
+      explanation: 'A custom domain gives clients a branded URL for the platform. It is available on select plans, so set the expectation accordingly.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/getting-started/turn-on-your-own-ai-receptionist" pathName="Get set up" step={4} totalSteps={7} />
+
+</InlineHighlighter>
+<MarkComplete courseId="brand-it" site="vendasta_learn" />
