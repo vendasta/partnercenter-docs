@@ -13,6 +13,7 @@ import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import LabChecklist from "@site/src/components/LabChecklist";
 import LabCallout from "@site/src/components/LabCallout";
+import LessonSection from "@site/src/components/LessonSection";
 
 <InlineHighlighter courseId="custom-employee-lab" site="vendasta_learn">
 
@@ -46,6 +47,8 @@ Every employee so far came pre-built. This one starts blank, so the first decisi
 Write your outcome in one sentence before you open the configuration panel: what this employee does, and for whom.
 :::
 
+<LessonSection>
+
 ## Create the employee
 
 <LabCallout title="create the employee and its profile">
@@ -62,6 +65,8 @@ You are going to **AI** → **AI Workforce** → **Create**.
 />
 </LabCallout>
 
+</LessonSection>
+
 ## Give it knowledge and capabilities
 
 <LabCallout title="connect knowledge and turn on capabilities">
@@ -76,6 +81,8 @@ You are staying on the employee's **Configure** panel.
   confirm={<>The employee can now answer from real knowledge and take the actions its outcome needs, using only built-in pieces.</>}
 />
 </LabCallout>
+
+<LessonSection>
 
 ## Add one custom capability
 
@@ -99,9 +106,13 @@ You are going to **Capabilities** → **Custom Capabilities** → **Add a capabi
 
 Path parameters, query parameters, headers, and every field in detail: [Creating Custom Capabilities walks through the rest](/ai/ai-capabilities/creating-custom-capabilities).
 
+</LessonSection>
+
 ## Write the capability's instructions
 
 Brief the capability the way you would brief a new hire's one task: exactly when to use it, what it needs before it can act, and how to talk about what comes back. "Only call this when the customer asks about an existing order, and get the order number first" holds up in every conversation; "help with orders when it makes sense" does not.
+
+<LessonSection>
 
 ## Test before you call it done
 
@@ -119,9 +130,13 @@ You are on the employee's **Try it** page, or its assigned channel.
 />
 </LabCallout>
 
+</LessonSection>
+
 ## Where this stops, for now
 
 One tool answering one outcome is a complete employee. Chaining several tools together, or connecting through middleware, is a deeper build for a job that genuinely needs it; the [Tools & Integrations Overview](/ai/ai-capabilities/tools-overview) is where to go next when that day comes.
+
+<LessonSection>
 
 ## What you now have
 
@@ -129,6 +144,8 @@ One tool answering one outcome is a complete employee. Chaining several tools to
 - A role, an autonomy level, knowledge, and capabilities, all set from a blank start
 - One custom capability with a working tool, briefed like a new hire's task
 - A pass/fail test result you can trust before anyone else talks to it
+
+</LessonSection>
 
 <SectionFeedback courseId="custom-employee-lab" site="vendasta_learn" section="content" />
 

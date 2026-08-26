@@ -11,6 +11,7 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
 
 <InlineHighlighter courseId="connect-your-domain-and-email" site="vendasta_learn">
 
@@ -43,6 +44,8 @@ Before you connect, platform email sends from a shared Vendasta domain. Connecti
 
 Your sending address must live on a domain you own, such as hello@yourbusiness.com. Addresses from free providers like Gmail or Yahoo cannot be authenticated. If you do not own a domain yet, your own Marketplace carries domain products (look for **Domains** or **GoDaddy Domains**), or any registrar can sell you one in minutes.
 
+<LessonSection>
+
 ## Set your sender identity
 
 Open `Marketing` → `Email Settings`. Two fields shape every email the platform sends for you:
@@ -54,13 +57,19 @@ When a salesperson is assigned to an account, the platform uses that salesperson
 
 One requirement that catches teams later: every user who sends email from the platform needs a verified email address. Yours verifies during signup; as you add teammates, [the verification guide covers theirs](/administration/my-account/my-team/email-verification).
 
+</LessonSection>
+
 ## Add your domain
 
 In `Marketing` → `Email Settings`, find the **Email Domains** section. Choose to use your own email domain, enter your domain, and start authorizing. The platform generates the three DNS records that authenticate your domain: SPF, DKIM, and DMARC. Receiving mail servers check these records on every incoming message to confirm that email from your domain is legitimate, which is what keeps your email out of spam folders.
 
+![The Email Settings page with Use my own email domain selected, a from address on the partner's domain, and the Email Domains section listing the domain with its DNS records](./img/email-settings-domain.png)
+
 Add each generated record at the service that hosts your DNS, such as Google Workspace, GoDaddy, Cloudflare, or Namecheap. Copy each host name and value exactly as shown. If your DNS lives with GoDaddy or Namecheap, [these guides walk through the exact screens](/marketing/email-settings/email-authentication/).
 
 One record sometimes needs a merge instead of a new entry: a domain carries only one SPF record. If your domain already has one, add the platform's include value into that existing line rather than creating a second record.
+
+<LessonSection>
 
 ## Confirm it verified
 
@@ -71,6 +80,8 @@ Once every record is green, choose your domain as the one to use, confirm your f
 :::tip Try it now
 Open `Marketing` → `Email Settings` and look at the domain section. If your domain is not there yet, add it and generate your records; if it is, confirm every validation shows green.
 :::
+
+</LessonSection>
 
 ## The address at the bottom
 

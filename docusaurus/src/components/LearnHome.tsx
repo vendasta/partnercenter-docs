@@ -115,11 +115,12 @@ interface ExplorerFacet {
 
 const GETTING_STARTED_ITEMS: ExplorerItem[] = [
   { title: "The Vendasta Platform", to: "/learn/getting-started/the-vendasta-platform" },
-  { title: "Partner Center walkthrough", to: "/learn/getting-started/partner-center-walkthrough" },
-  { title: "Customize and brand your platform", to: "/learn/getting-started/customize-and-brand" },
-  { title: "Add your customer accounts and users", to: "/learn/getting-started/accounts-and-users" },
-  { title: "Organize your team in Partner Center", to: "/learn/getting-started/organize-your-team" },
-  { title: "Get set up to get paid", to: "/learn/getting-started/get-set-up-to-get-paid" },
+  { title: "Connect your domain and email", to: "/learn/getting-started/connect-your-domain-and-email" },
+  { title: "Connect payments and billing", to: "/learn/getting-started/connect-payments-and-billing" },
+  { title: "Brand your platform", to: "/learn/getting-started/brand-it" },
+  { title: "Turn on your own AI Receptionist", to: "/learn/getting-started/turn-on-your-own-ai-receptionist" },
+  { title: "Where to get help", to: "/learn/getting-started/where-to-get-help" },
+  { title: "Get set up skill check", to: "/learn/getting-started/get-set-up-skill-check" },
 ];
 
 const AI_FOUNDATIONS_ITEMS: ExplorerItem[] = [

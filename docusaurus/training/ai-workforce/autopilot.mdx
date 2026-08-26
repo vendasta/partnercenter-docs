@@ -14,6 +14,7 @@ import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import LabChecklist from "@site/src/components/LabChecklist";
 import LabCallout from "@site/src/components/LabCallout";
+import LessonSection from "@site/src/components/LessonSection";
 
 <InlineHighlighter courseId="autopilot" site="vendasta_learn">
 
@@ -54,6 +55,8 @@ You are going to **CRM** → **Lists** → **Create**.
 />
 </LabCallout>
 
+<LessonSection>
+
 ## Pair it with an automation
 
 <LabCallout title="connect the list to an action">
@@ -88,6 +91,8 @@ You are back in **Automations**.
 
 The other two follow the same shape, one trigger and one or two steps: a new-lead list paired with a CRM sales task for the contact plus an SMS acknowledgment, so a person and the lead both hear something right away; and, once a completed-job integration is in place, a jobs-done list paired with a review-request campaign for the company.
 
+</LessonSection>
+
 ## Read the log before assuming something broke
 
 An automation's activity log is where you go to confirm a run actually happened, not just to check for problems. A line reading "entity already exists" usually means the safety net worked exactly as intended, most often when an entry-setting choice like *Only once per account* correctly blocked a second run, not that anything failed. Read the log first; it usually already answers the question.
@@ -96,15 +101,21 @@ An automation's activity log is where you go to confirm a run actually happened,
 [The Lists guide](/crm/lists) covers every filter type and list option, [Creating and configuring automations](/automations/my-automations/creating-and-configuring-automations) covers every trigger and step, and [Managing your automations](/automations/automation-history/managing-your-automations) walks through what each activity-log status means.
 :::
 
+<LessonSection>
+
 ## Where autopilot grows into
 
 One smart list and one automation cover a single business well. A multi-location business eventually asks for more: branching a review request by zip code to the right satellite location, with a webhook per location and a safety-net fallback to the hub when nothing matches. Worth knowing the shape exists; this step is not where it gets built.
 
 {/* TODO(ET-741): once the advanced-automations / multi-location review-request piece exists, uncomment — a "go deeper" link here to the zip-code-branching pattern. */}
 
+</LessonSection>
+
 ## Keep a person in the loop
 
 Anything that reaches a client's customers on its own, especially content a client did not expect to see posted automatically, deserves a human approval step before it goes out. Set that review in as a deliberate step in the automation itself, not as an afterthought caught by chance.
+
+<LessonSection>
 
 ## What you now have
 
@@ -113,6 +124,8 @@ Anything that reaches a client's customers on its own, especially content a clie
 - Two more starter recipes ready to build the same way
 - The habit of reading an activity log entry correctly before assuming something is wrong
 - A clear sense of where autopilot grows next, and where a human stays in the loop on the way there
+
+</LessonSection>
 
 <SectionFeedback courseId="autopilot" site="vendasta_learn" section="content" />
 

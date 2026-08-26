@@ -14,6 +14,7 @@ import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import LabChecklist from "@site/src/components/LabChecklist";
 import LabCallout from "@site/src/components/LabCallout";
+import LessonSection from "@site/src/components/LessonSection";
 
 <InlineHighlighter courseId="teach-it-to-book" site="vendasta_learn">
 
@@ -21,7 +22,7 @@ import LabCallout from "@site/src/components/LabCallout";
 
 <LessonHeader
   difficulty="Intermediate"
-  topics={["AI receptionist", "Appointment booking", "AI Workforce"]}
+  topics={["AI Receptionist", "Appointment booking", "AI Workforce"]}
   time="about 30 minutes"
   required={["Partner Center access", "A receptionist with a Capabilities panel, such as your employee from step 2", "Calendar sign-in for everyone who will take bookings"]}
   lab
@@ -55,6 +56,8 @@ You are going to **CRM** → **My Meetings**.
 
 For the full setup, including switching providers later, [Setting up calendar integration walks through the rest](/crm/my-meetings/setting-up-calendar-integration).
 
+<LessonSection>
+
 ## Configure the booking link
 
 Pick a URL slug, then set your availability windows and the buffer time you want before and after a meeting. My Meetings offers durations of 15, 30, 45, or 60 minutes, or a custom length; decide which one your receptionist should offer before you test it.
@@ -73,9 +76,13 @@ You are staying in **My Meetings** → **Manage booking links** → **Create eve
 />
 </LabCallout>
 
+</LessonSection>
+
 ## The team event, done right
 
 For a group instead of one person, create a **team event** rather than several personal links, and choose an assignment method such as round robin so bookings distribute across the team. Two conditions decide who actually appears in that rotation: each teammate needs their own calendar connected, and round-robin membership comes from the Sales Team you add them to in **CRM** → **Sales Teams**, so a teammate missing from either place never gets a turn. [Team booking links covers every assignment method in detail](/crm/my-meetings/team-booking-links).
+
+<LessonSection>
 
 ## Enable the capability
 
@@ -98,6 +105,8 @@ Chat and voice hand off a booking link differently, and both are worth setting d
 
 One limit is worth knowing before a client asks: Book Appointments does not collect payment or hold a slot behind one. A business that wants a deposit first ties sending the link to a payment-confirmation automation instead, rather than expecting the booking capability to gate on it.
 
+</LessonSection>
+
 ## Route calls by business hours
 
 Business-hours routing is the pattern worth building once and reusing everywhere: transfer during hours, capture the lead after. Rather than folding this logic into an existing capability's prompt, give it a custom capability of its own.
@@ -119,6 +128,8 @@ You are on **Capabilities** → **Custom Capabilities** → **Add a capability**
 
 Do not build a second after-hours capture from scratch: the Capture Lead Information capability your receptionist already runs after hours can extend to ask which department the caller wanted, the same way any other question gets added to its prompt.
 
+<LessonSection>
+
 ## Test both directions
 
 <LabCallout title="confirm both branches">
@@ -135,6 +146,8 @@ You are on the **Try it** test page or the assigned channel.
 </LabCallout>
 
 {/* TODO(ET-740): once the builder-track "wire booking into an outside system" step exists, uncomment — "If a client needs bookings to land in their own outside system, that's a deeper build — [here's where to go for it](/learn/builder/...)." */}
+
+</LessonSection>
 
 ## What you now have
 
