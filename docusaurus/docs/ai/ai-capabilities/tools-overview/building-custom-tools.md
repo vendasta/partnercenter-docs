@@ -21,7 +21,7 @@ Before you begin, ensure you have:
 - A clear understanding of the business process you want to automate
 - Basic familiarity with API concepts (URLs, methods, parameters)
 
-## Overview of the Process
+## Overview of the process
 
 Building a custom tool involves these key steps:
 
@@ -34,11 +34,11 @@ Building a custom tool involves these key steps:
 
 Let's walk through each step in detail.
 
-## Step 1: Pre-Building - Finding and Understanding API Documentation
+## Step 1: Pre-building - finding and understanding API documentation
 
 Before you start building your tool, you need to locate and understand the API documentation for the service you want to integrate.
 
-### How to Locate API Documentation
+### How to locate API documentation
 
 Most services provide API documentation in one of these locations:
 
@@ -75,7 +75,7 @@ API documentation can be overwhelming, but focusing on these key sections will h
 - Error response formats
 - Status codes and their meanings
 
-### Identifying the Right Endpoints for Your Needs
+### Identifying the right endpoints for your needs
 
 When reviewing API documentation, ask yourself:
 
@@ -122,7 +122,7 @@ curl -X GET "https://api.example.com/customers?api_key=YOUR_API_KEY"
 Always keep your API keys secure. Never share them in screenshots. Use environment variables or secure credential storage.
 :::
 
-### Tips for Navigating Common API Documentation Formats
+### Tips for navigating common API documentation formats
 
 Different services organize their documentation differently:
 
@@ -141,7 +141,7 @@ Different services organize their documentation differently:
 - Uses a schema explorer to understand available fields
 - Different structure than REST APIs
 
-## Step 2: Key Principles for Building Tools
+## Step 2: Key principles for building tools
 
 Following these principles will help you build reliable, effective tools:
 
@@ -172,7 +172,7 @@ clear description for the productId parameter that tells the AI
 how to extract it from customer messages."
 ```
 
-### Use cURL Import Feature in Vendasta
+### Use cURL import feature in Vendasta
 
 The cURL import feature automatically fills in:
 - HTTP method (GET, POST, etc.)
@@ -213,11 +213,11 @@ Description: The order number
 
 The first description tells AI exactly what the parameter is; the second doesn't provide enough guidance.
 
-## Step 3: Using the cURL Import Feature
+## Step 3: Using the cURL import feature
 
 The cURL import feature is one of the fastest ways to set up a new tool. It automatically extracts API configuration from a cURL command.
 
-### What is a cURL Command?
+### What is a cURL command?
 
 cURL (Client URL) is a command-line tool for making HTTP requests. It's commonly used to test APIs and is often provided in API documentation as example code.
 
@@ -238,7 +238,7 @@ This command:
 - Includes an authorization header
 - Sends JSON data in the request body
 
-### How to Get a cURL from an API URL Using AI
+### How to get a cURL from an API URL using AI
 
 If API documentation doesn't provide cURL examples, you can ask AI to generate one:
 
@@ -265,18 +265,18 @@ curl -X POST "https://api.example.com/appointments" \
 
 **Step 3:** Copy the generated cURL and use it in Vendasta's import feature.
 
-### Step-by-Step: Importing a cURL into Vendasta
+### Step-by-step: importing a cURL into Vendasta
 
 **1. Access Tool Configuration**
-   - Navigate to <AISparkleIcon /> **AI** → **AI Workforce** in your Business App dashboard
+   - Navigate to <AISparkleIcon /> `AI` → `AI Workforce` in your Business App dashboard
    - Select the AI Employee you want to enhance
-   - Click **Configure** → **Capabilities** tab
-   - Scroll to **Custom Capabilities** section
-   - Click **Add a capability**
+   - Click `Configure` → `Capabilities` tab
+   - Scroll to `Custom Capabilities` section
+   - Click `Add a capability`
 
 **2. Add a Tool**
-   - Click **Add Tool** within your capability
-   - Select **Import from cURL**
+   - Click `Add Tool` within your capability
+   - Select `Import from cURL`
 
 **3. Paste Your cURL Command**
    - Copy the cURL command from API documentation or AI-generated example
@@ -292,8 +292,8 @@ curl -X POST "https://api.example.com/appointments" \
      - Body parameters and structure
 
 **5. Complete Manual Configuration**
-   - Fill in the **ID** field (unique name, no spaces)
-   - Write a clear **Description** of when to use this tool
+   - Fill in the `ID` field (unique name, no spaces)
+   - Write a clear `Description` of when to use this tool
    - Review and enhance parameter descriptions (critical step!)
 
 ### What gets auto-filled and what needs manual work
@@ -353,13 +353,13 @@ Manual enhancement needed:
 - Manually adjust nested objects or arrays if needed
 - Verify parameter types match API expectations
 
-## Step 4: Working with AI to Fill Out Tools
+## Step 4: Working with AI to fill out tools
 
 AI assistants can significantly speed up tool creation by helping you write effective parameter descriptions and understand complex API requirements.
 
 ### Using screenshots as context for AI
 
-Screenshots are powerful tools for getting AI assistance:
+Screenshots are useful tools for getting AI assistance:
 
 **1. Capture API Documentation Screenshots**
    - Take screenshots of endpoint documentation
@@ -462,7 +462,7 @@ base. Never guess product IDs."
 - Include instructions for missing information
 - Mention edge cases and how to handle them
 
-### Best practices for AI-assisted Tool creation
+### Best practices for AI-assisted tool creation
 
 **1. Start with Clear Context**
    - Explain your business use case
@@ -484,11 +484,11 @@ base. Never guess product IDs."
    - Test with real conversations
    - Refine based on results
 
-## Step 5: Testing Your Tools
+## Step 5: Testing your tools
 
 Thorough testing ensures your tools work correctly and provide a good customer experience.
 
-### How to Test Tools in Conversations
+### How to test tools in conversations
 
 **1. Start a Test Conversation**
    - Navigate to your AI Employee's chat interface
@@ -516,7 +516,7 @@ Expected: AI handles invalid order number format gracefully
 ### Verifying correct parameter filling
 
 **1. Use the Explanation Feature**
-   - In Conversations, click **Explanation** under a message
+   - In Conversations, click `Explanation` under a message
    - Review the AI's reasoning for using the tool
    - Check the actual parameter values sent to the API
 
@@ -556,7 +556,7 @@ Expected: AI handles invalid order number format gracefully
 3. Verify authentication headers are correct
 4. Check for API rate limits or errors
 
-### Iteration and Improvement
+### Iteration and improvement
 
 **1. Document Issues**
    - Keep notes on what doesn't work
@@ -598,7 +598,7 @@ Even with careful planning, you may encounter issues. Here's how to resolve comm
 
 **2. Capability not enabled**
    - **Solution:** Verify the capability is assigned to your AI Employee
-   - Check: AI Workforce → Configure → Capabilities tab
+   - Check: `AI Workforce` → `Configure` → `Capabilities` tab
 
 **3. Conflicting capabilities**
    - **Solution:** Review other capabilities that might be handling the same request
@@ -608,7 +608,7 @@ Even with careful planning, you may encounter issues. Here's how to resolve comm
    - **Solution:** Ensure required information is available in the conversation
    - Check if the AI has access to necessary data
 
-#### API Authentication Fails
+#### API authentication fails
 
 **Symptoms:**
 - API returns 401 (Unauthorized) or 403 (Forbidden) errors

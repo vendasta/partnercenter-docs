@@ -1,7 +1,7 @@
 ---
 title: "Test it and run the whole thing"
 sidebar_position: 3
-description: "Test the tool where it will actually run, read the Explanation view, isolate a failing call, and prove the full flow end to end."
+description: "Test the tool where it will actually run, isolate a failing call, and prove the full flow end to end."
 ---
 
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
@@ -29,7 +29,7 @@ import LessonFooter from "@site/src/components/LessonFooter";
   ]}
   outcomes={[
     "Test a custom tool in the place it will actually run: a live conversation",
-    "Read the Explanation view to see exactly what a tool sent",
+    "Tell a wrong value from a mistimed trigger by watching what the tool actually does",
     "Isolate a failing call outside the platform and re-import the fix",
     "Prove the full flow end to end, the way you will for every build after this one",
   ]}
@@ -42,30 +42,30 @@ Custom tools are tested the same place they work: in conversation.
 1. Open a fresh session and book an outdoor job: "Can someone clean my gutters Thursday?"
 2. Watch for the weather moment. The AI should check the forecast before confirming, and only mention it when the forecast is bad.
 3. Book an indoor job next. The weather tool should stay quiet; a tool that fires at the wrong moment has a trigger to tighten.
-4. When any answer surprises you, click **Explanation** under the message in **Conversations**. It shows the exact values the tool sent. A wrong value means a parameter description to tighten.
+4. When any answer surprises you, look at what actually happened, not just what was said. A tool that never fired is a trigger to tighten; one that fired but booked or logged the wrong thing is a parameter description to tighten.
 5. If the call itself is failing, test it on its own in a tool like Postman, adjust it until it works, and import the corrected cURL again. That is the one moment outside tools enter the picture: isolating a broken call, not starting the build.
 
-**Confirm it:** outdoor bookings get a forecast check, indoor bookings do not, and you have read at least one Explanation on purpose.
+**Confirm it:** outdoor bookings get a forecast check, and indoor bookings do not.
 
 ## Run the whole thing
 
 1. Fresh session, one conversation, start to finish: ask for an outdoor job, give your details, take the offered time.
-2. Check all three results: the forecast was consulted (the Explanation view shows the call), the booking is on the calendar, and the contact is in the CRM.
+2. Check all three results: the forecast was consulted, the booking is on the calendar, and the contact is in the CRM.
 3. Read the conversation once more as a customer would experience it. The weather check should feel like good service, not machinery: mentioned only when it changes the plan.
 
 :::tip Try it now
-Time that final run. A checked forecast, a booked job, and a clean CRM record in under a minute, with no person involved, is the story this build tells a client. Spot-check the first few live conversations the same way you tested: Explanation view first, guesswork never.
+Time that final run. A checked forecast, a booked job, and a clean CRM record in under a minute, with no person involved, is the story this build tells a client. Spot-check the first few live conversations the same way you tested here: check the actual outcome first, guesswork never.
 :::
 
 <SectionFeedback courseId="test-and-run-it" site="vendasta_learn" section="content" />
 
 <KnowledgeCheck courseId="test-and-run-it" site="vendasta_learn"
   sessionSize={2}
-  intro="Two quick questions on reading the Explanation view and isolating a failing call."
+  intro="Two quick questions on isolating a failing call and fixing a mistimed trigger."
   questions={[
     {
       type: 'mcq',
-      question: 'A custom tool\'s API call keeps failing, and the Explanation view shows the values it sent look correct. What next?',
+      question: 'A custom tool\'s API call keeps failing, even though the parameter values look right in the conversation. What next?',
       options: [
         'Rewrite the capability prompt with more instructions',
         'Test the call on its own in a tool like Postman, fix it, and import the corrected cURL',
