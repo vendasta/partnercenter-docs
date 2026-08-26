@@ -57,11 +57,14 @@ Once a call reaches your AI Voice Receptionist, there are a number of potential 
   
 2. **Forward calls**  
    The call is routed to another phone number automatically. See [Transfer calls to other numbers](#transfer-calls-to-other-numbers-from-your-ai-voice-receptionist) to configure rules and destinations.
+
+3. **Dispatch to on-call staff**  
+   The caller is placed on hold while the AI calls an on-call number and announces the caller before connecting. See [Dispatch calls to on-call staff](#dispatch-calls-to-on-call-staff) to configure rules and destinations.
   
-3. **End with a custom message**  
+4. **End with a custom message**  
    A branded or informational message is played before the call is ended automatically.
   
-4. **Missed-call SMS**  
+5. **Missed-call SMS**  
    A text message is sent to callers, prompting them to leave a voicemail or schedule a callback.
 
 :::note
@@ -182,6 +185,23 @@ Best practices:
 
 :::warning
 Once a call is transferred, recording ends and the system does not record or transcribe the destination leg. If the destination doesn't answer, the transfer is not reverted; the caller would need to call again to speak with the AI.
+:::
+
+#### Dispatch calls to on-call staff
+
+The `Dispatch` capability routes qualifying calls to an on-call team member instead of transferring the caller directly. Add a destination phone number and the criteria for when a call should dispatch, for example, an after-hours emergency line.
+
+When a call meets the dispatch criteria, the AI Voice Receptionist collects the caller's information the same way it does for default lead capture, then places the caller on hold and calls the destination number. Once the destination number answers, the AI announces the caller using a message you define, with placeholders for details like the caller's name, location, and the reason for the call, then connects the call.
+
+How to enable:
+1. Go to `AI` → `AI Workforce` → `Voice Receptionist` → `Configure`
+2. In Capabilities, click `Add new capability`
+3. Select `Dispatch`
+4. Add the destination phone number and the criteria for when a call should dispatch
+5. Customize the announcement message the AI Voice Receptionist reads to the destination number when connecting the call
+
+:::tip Automate what happens next
+Dispatching a call starts an automation trigger with the call details, so you can notify the on-call team member through other channels or log the dispatch. See [Automation triggers reference](/automations/my-automations/automation-triggers-reference#conversations).
 :::
 
 ### Step 3: Add knowledge sources to your AI Voice Receptionist
