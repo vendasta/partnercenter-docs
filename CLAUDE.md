@@ -55,7 +55,7 @@ URL redirects are managed in `docusaurus.config.ts` via `@docusaurus/plugin-clie
 - **CRITICAL: Never use `>` character in markdown** - creates unintended blockquotes. Use "greater than" in text or `→` for UI paths
 - Use Docusaurus callouts: `:::tip`, `:::info`, `:::warning` (not blockquotes)
 - Sentence case headings: `## Set up a domain`
-- **Bold** for UI elements, `code` for commands and filenames
+- `code` for UI elements (buttons, tabs, menu paths, field names), commands, and filenames — e.g. `Save`, `Settings` → `Integrations`. **Bold** is for emphasis only, not a substitute for inline code on UI elements
 
 ### Frontmatter
 
