@@ -110,6 +110,8 @@ For each article, produce one report block using the **Report Format** below. Ou
 
 After outputting the report, apply all auto-fixable issues using the Edit tool. Do not ask for confirmation before making these changes. See **Fix Authorization** for the complete list of what is and is not auto-fixable.
 
+For every article that reaches **Pass** status with zero applied fixes, still add or update a `last_reviewed: YYYY-MM-DD` line in its frontmatter (today's date). The review-due bot (`scripts/flag_articles.py`) re-flags articles by git commit date alone — a Pass verification that touches nothing leaves the commit date unchanged, so the article gets re-flagged and re-reviewed on the very next run. The frontmatter stamp is a real, minimal commit that records the verification without altering visible content. List this under **Applied fixes** as "Added `last_reviewed` stamp (Pass, no content changes)."
+
 ### Step 8: Interactive approval flow for pending items
 
 After auto-fixes are applied, check whether any articles have items listed under **Pending approval**. If none, skip this step.
