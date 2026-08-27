@@ -11,7 +11,7 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
-import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import { IconFlipCard, IconFlipCardGrid } from "@site/src/components/FlipCard";
 
 <InlineHighlighter courseId="advanced-automations" site="vendasta_learn">
 
@@ -48,11 +48,11 @@ A trigger with no condition fires on every matching event. Create a single test 
 
 Conditions can be grouped with "and" and "or" for finer aim. A guarded trigger is the whole difference between an automation you trust to run unattended and one you feel you have to watch.
 
-<FlipCardGrid>
-  <FlipCard front="Trigger" back="The event that starts the workflow. Its scope decides which steps you can use." subtext="Start" />
-  <FlipCard front="Condition" back="The guard that decides whether to run on this record. Without it, the trigger fires on everything." subtext="Guard" />
-  <FlipCard front="Action" back="A step the workflow takes: send, create, log, wait. They run top to bottom." subtext="Do" />
-</FlipCardGrid>
+<IconFlipCardGrid>
+  <IconFlipCard gradient="blue" front="Trigger" back="Start: The event that starts the workflow. Its scope decides which steps you can use." />
+  <IconFlipCard gradient="green" front="Condition" back="Guard: The guard that decides whether to run on this record. Without it, the trigger fires on everything." />
+  <IconFlipCard gradient="purple" front="Action" back="Do: A step the workflow takes: send, create, log, wait. They run top to bottom." />
+</IconFlipCardGrid>
 
 ## Log activities, not notes
 

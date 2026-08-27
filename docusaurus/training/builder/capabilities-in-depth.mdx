@@ -12,7 +12,7 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
-import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import { IconFlipCard, IconFlipCardGrid } from "@site/src/components/FlipCard";
 
 <InlineHighlighter courseId="capabilities-in-depth" site="vendasta_learn">
 
@@ -56,11 +56,11 @@ The second one tells the AI where the value comes from, what it looks like, and 
 
 Every capability worth trusting has the same three parts. Flip each one to see what it does:
 
-<FlipCardGrid>
-  <FlipCard front="Instruction" back="What the skill does and when to reach for it. Written like a brief to a new hire, not a script." subtext="Behavior" />
-  <FlipCard front="Guardrail" back="The line it must not cross. 'Quote only published prices.' Keeps a confident answer from becoming a wrong one." subtext="Boundary" />
-  <FlipCard front="Trigger" back="The situation that tells the AI to use this skill instead of another. Vague triggers make skills collide." subtext="When" />
-</FlipCardGrid>
+<IconFlipCardGrid>
+  <IconFlipCard gradient="blue" front="Instruction" back="Behavior: What the skill does and when to reach for it. Written like a brief to a new hire, not a script." />
+  <IconFlipCard gradient="green" front="Guardrail" back="Boundary: The line it must not cross. 'Quote only published prices.' Keeps a confident answer from becoming a wrong one." />
+  <IconFlipCard gradient="purple" front="Trigger" back="When: The situation that tells the AI to use this skill instead of another. Vague triggers make skills collide." />
+</IconFlipCardGrid>
 
 Get these three right and the capability behaves. Most capabilities that misfire are missing one of them: no guardrail, so it invents; no clear trigger, so it fires at the wrong moment.
 

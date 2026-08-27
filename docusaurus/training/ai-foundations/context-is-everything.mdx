@@ -11,7 +11,7 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
-import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import { IconFlipCard, IconFlipCardGrid } from "@site/src/components/FlipCard";
 import LessonSection from "@site/src/components/LessonSection";
 
 <InlineHighlighter courseId="context-is-everything" site="vendasta_learn">
@@ -36,11 +36,11 @@ import LessonSection from "@site/src/components/LessonSection";
 
 An AI Employee is only as good as the context it is given, and that context is assembled from the same three places every time. Know them and you can diagnose almost any answer an AI Employee gives. Flip each one:
 
-<FlipCardGrid>
-  <FlipCard front="Its instructions" back="How it behaves: its role, its rules, and the skills it applies. Always present, in every answer." />
-  <FlipCard front="Its knowledge" back="What it knows about the business: the reference library it searches when a question calls for facts." />
-  <FlipCard front="The conversation" back="What is happening right now: the live thread it holds in working memory, from the first message to the current one." />
-</FlipCardGrid>
+<IconFlipCardGrid>
+  <IconFlipCard gradient="blue" front="Its instructions" back="How it behaves: its role, its rules, and the skills it applies. Always present, in every answer." />
+  <IconFlipCard gradient="green" front="Its knowledge" back="What it knows about the business: the reference library it searches when a question calls for facts." />
+  <IconFlipCard gradient="purple" front="The conversation" back="What is happening right now: the live thread it holds in working memory, from the first message to the current one." />
+</IconFlipCardGrid>
 
 Instructions set behavior, knowledge supplies facts, and the conversation supplies the moment.
 
