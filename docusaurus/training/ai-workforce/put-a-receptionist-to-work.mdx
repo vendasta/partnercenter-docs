@@ -12,6 +12,9 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import LessonSection from "@site/src/components/LessonSection";
+import KeyPoints from "@site/src/components/KeyPoints";
+import ChatAiIcon from './img/chat-ai-icon.svg';
+import PhoneAiIcon from './img/phone-ai-icon.svg';
 
 <InlineHighlighter courseId="put-a-receptionist-to-work" site="vendasta_learn">
 
@@ -48,7 +51,24 @@ Open **AI** in Partner Center, open your Chat Receptionist, and give it a name, 
 
 ## Chat, voice, or both
 
-The decision is the client's channels, not the technology. A business whose leads arrive through the website wants the **Chat Receptionist**: it greets visitors, answers from knowledge, and captures every conversation. A business that lives on the phone and misses calls after hours wants the **Voice Receptionist**: a dedicated number, a chosen voice and greeting, and booking while the line would have rung out. Many businesses want both, and they share one brain: the same knowledge, purpose, and capabilities serve both channels.
+The decision is the client's channels, not the technology:
+
+<KeyPoints
+  items={[
+    {
+      icon: ChatAiIcon,
+      title: 'Chat Receptionist',
+      text: 'For the business whose leads arrive through the website: it greets visitors, answers from knowledge, and captures every conversation.',
+    },
+    {
+      icon: PhoneAiIcon,
+      title: 'Voice Receptionist',
+      text: 'For the business that lives on the phone and misses calls after hours: a dedicated number, a chosen voice and greeting, and booking while the line would have rung out.',
+    },
+  ]}
+/>
+
+Many businesses want both, and the two share one brain: the same knowledge, purpose, and capabilities serve both channels.
 
 Two gates to check before you promise anything: the Chat Receptionist is included from the **Starter** plan; the Voice Receptionist and social channels unlock at **Professional** and above.
 
