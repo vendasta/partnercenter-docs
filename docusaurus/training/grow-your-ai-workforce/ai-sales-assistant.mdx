@@ -29,7 +29,7 @@ import aiSalesAssistantFace from './img/ai-sales-assistant-face.png';
   outcomes={[
     "Say what the AI Sales Assistant captures and where it puts it",
     "Ask it the pipeline questions it answers from CRM data",
-    "Quote the CRM AI edition that carries it, and what the free CRM does not include",
+    "Quote the CRM AI editions: Standard carries the assistant, Pro adds recording and coaching",
   ]}
 />
 
@@ -39,7 +39,7 @@ import aiSalesAssistantFace from './img/ai-sales-assistant-face.png';
   <img src={aiSalesAssistantFace} alt="AI Sales Assistant portrait" style={{width: '110px', borderRadius: '50%', flex: '0 0 110px'}} />
   <div style={{flex: '1 1 320px', minWidth: '260px'}}>
 
-The AI Sales Assistant works from the CRM and the meeting record. It auto-records and transcribes customer conversations, syncs the details to the CRM, creates follow-up activities, and answers questions about the pipeline in chat, so lead status, follow-up history, and outcomes are always current without anyone typing them in.
+The AI Sales Assistant works from the CRM and the meeting record. It keeps records current, creates follow-up activities, and answers questions about the pipeline in chat. With conversation intelligence, the recording layer on the Pro edition, it also auto-records and transcribes customer meetings and syncs the details to the CRM, so nothing said on a call is lost.
 
   </div>
 </div>
@@ -80,11 +80,14 @@ This is the employee whose first business to serve is usually yours. Your CRM in
 
 A configured Sales Assistant already:
 
-- Auto-records and transcribes customer calls and meetings
-- Updates CRM records with lead and job details from those conversations
-- Creates follow-up activities so the next step is never lost
+- Keeps CRM records up to date and creates follow-up activities so the next step is never lost
 - Answers pipeline questions in chat, from "which deals stalled this month?" to "who have I not followed up with?"
-- Surfaces sales coaching insights from real conversations
+
+On the **Pro** edition, conversation intelligence adds the capture:
+
+- Auto-records and transcribes customer calls and meetings, once recording is enabled, with 750 minutes included each month
+- Updates CRM records with lead and job details straight from those conversations
+- Surfaces sales coaching insights from real calls
 
 </LessonSection>
 
@@ -93,7 +96,7 @@ A configured Sales Assistant already:
 The assistant is not a separate purchase; **CRM AI** carries it. You activate CRM AI on the client's account, from the account's `Products` tab in `Accounts` → `Manage Accounts`. From that moment the assistant works inside the client's CRM in their Business App, under your brand: meetings recorded, records updated, and the chat ready for pipeline questions.
 
 :::info Which edition carries the assistant
-CRM AI **Standard** or **Pro** unlocks the Sales Assistant. A basic CRM is free with every Business App account, and your own CRM comes with Partner Center, but the free CRM does not include this employee: the CRM AI subscription is what adds it.
+CRM AI **Standard** or **Pro** unlocks the Sales Assistant. A basic CRM is free with every Business App account, and your own CRM comes with Partner Center, but the free CRM does not include this employee: the CRM AI subscription is what adds it. Conversation intelligence, the recording and coaching layer, is **Pro** only.
 :::
 
 :::tip Try it now
@@ -110,7 +113,7 @@ When a client is ready, [the AI Sales Assistant setup guide](/ai/ai-workforce/ai
   questions={[
     {
       type: 'mcq',
-      question: 'A client finishes a 40-minute sales call. What has the Sales Assistant done by the time they open the CRM?',
+      question: 'A client on CRM AI Pro finishes a 40-minute sales call, with recording on. What has the Sales Assistant done by the time they open the CRM?',
       options: [
         'Recorded and transcribed the call, updated the record with the details, and created the follow-up activity',
         'Emailed the client a summary to copy into the CRM themselves',
@@ -118,7 +121,7 @@ When a client is ready, [the AI Sales Assistant setup guide](/ai/ai-workforce/ai
         'Nothing yet; it processes conversations in a nightly batch'
       ],
       correctIndex: 0,
-      explanation: 'Capture is automatic: the conversation is recorded and transcribed, the CRM record is updated from it, and the follow-up activity is created without anyone typing.'
+      explanation: 'On Pro, conversation intelligence records and transcribes the call, the CRM record is updated from it, and the follow-up activity is created without anyone typing. Standard carries the assistant without the recording layer.'
     },
     {
       type: 'mcq',
