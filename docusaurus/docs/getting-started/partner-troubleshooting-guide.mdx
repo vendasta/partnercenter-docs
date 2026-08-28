@@ -38,6 +38,34 @@ Login failures and platform slowness are usually caused by browser-related issue
 
 6. **If the issue persists** — Contact [support@vendasta.com](mailto:support@vendasta.com) with details about what you're seeing.
 
+## Common issue: "This site can't be reached" on a client or white-label URL
+
+### Explanation
+
+A **"This site can't be reached"** or DNS error is not the same as a platform error. It means your browser never reached a server at all, so the status page and cache clearing usually will not help. The most common cause is the **URL itself** — a custom or white-label domain that is not resolving — rather than the product behind it.
+
+### Issue
+
+- "This site can't be reached", `ERR_NAME_NOT_RESOLVED`, or `ERR_CONNECTION_REFUSED` when opening a client login URL
+- A white-label domain (for example `login.youragency.com`) stops loading while `vendasta.com` URLs work normally
+- Client-facing products such as Social AI Pro or Local SEO cannot be opened from a custom domain, but open fine from Partner Center
+
+### Fix
+
+1. **Open the account from Partner Center instead** — Go to **Accounts** → **Accounts**, open the account, and launch the product from there. If it opens this way, the product is working and the problem is the domain or URL, not the product.
+
+2. **Test the equivalent Vendasta URL** — If the `vendasta.com` address loads but your branded domain does not, the platform is up and the issue is isolated to your custom domain.
+
+3. **Check the status page** — Visit [status.vendasta.com](https://status.vendasta.com) to rule out an active outage.
+
+4. **Review your custom domain configuration** — See [Partner Branding](/administration/platform-settings/partner-branding) for white-label domain settings. A domain that previously worked can stop resolving if its DNS records or certificate have changed.
+
+5. **If the issue persists** — Escalate with the details in [Submitting a Support Ticket](#best-practice-submitting-a-support-ticket), and include the exact URL, the error code shown by the browser, and whether the `vendasta.com` equivalent loads.
+
+:::tip
+Step 1 is the fastest way to split "the product is broken" from "the address is broken". These need different teams, so establishing which one you have saves a round trip.
+:::
+
 ## Common issue: Cache & Cookies
 
 ### Explanation
@@ -77,7 +105,7 @@ This error will appear in the history of a list that failed to be added to a cam
 
 ### Fix
 
-1. Navigate to **Administration > Customize**
+1. Navigate to **Administration** → **Customize**
 2. Select **Markets** from the top tab
 3. Click the **pencil** next to the market name to edit settings
 4. Scroll down to **Email Settings**
@@ -125,10 +153,10 @@ The HAR file may be over 35MB. If so, we recommend file sharing with Google Driv
 
 To get your HAR file in Safari:
 
-1. Navigate to the menu bar at the top of the screen, and click on **"Safari"** then select **Preferences > Advanced**
+1. Navigate to the menu bar at the top of the screen, and click on **"Safari"** then select **Preferences** → **Advanced**
 2. Make sure the option **"Show Develop menu in the menu bar"** (the last setting) is selected
 3. Then, you should be able to proceed with getting a HAR file like normal from the browser:
-   - Right click > **Inspect element** > **Network** > Check **"Preserve log"** > Refresh page > Right click on any lines that appear > Select **"Save HAR"**
+   - Right click → **Inspect element** → **Network** → check **"Preserve log"** → refresh the page → right click on any lines that appear → select **"Save HAR"**
 
 ## Common issue: Product Activation Failed but I was Charged
 
@@ -147,7 +175,7 @@ A credit card was charged the wholesale cost of a failed product activation.
 No fix is required.
 
 1. Check **Billing Center** under **Refunds**
-2. Once the refund has been issued, you can see it in **Partner Center** by going to **Administration > Financial Documents > Credit Notes**
+2. Once the refund has been issued, you can see it in **Partner Center** by going to **Administration** → **Financial Documents** → **Credit Notes**
 
 ## Common issue: Jim Salesman is Showing on the Email When I Send a Test
 
@@ -196,13 +224,13 @@ Unsure who to contact about a Vendasta Services related issue or question.
    - **support@vendasta.com**
 
 2. **Does this involve making changes to work Vendasta Services is currently doing or will be doing in the future?**
-   - **support@yourdigitalagents.com**
+   - **marketingservices@yourdigitalagents.com**
 
 3. **Is there a reporting error or an error message blocking work, or does this feel like a bug?**
    - **support@vendasta.com**
 
 4. **Is this communication/feedback/questions for the Vendasta Services teams?**
-   - **support@yourdigitalagents.com**
+   - **marketingservices@yourdigitalagents.com**
 
 ## Best practice: Submitting a Support Ticket
 
@@ -225,6 +253,24 @@ For best results, please include the following information in the body of the ti
 5. Screenshots (or video) of error messages
 
 These best practices are highly recommended when submitting a ticket to support.
+
+### Where to submit
+
+You have three routes, and they reach different teams:
+
+| Route | Use it for |
+|---|---|
+| [support@vendasta.com](mailto:support@vendasta.com) | Platform or product errors, bugs, anything you are unsure about |
+| [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com) — or 1-866-378-8031, Mon–Fri 8:00 AM–5:00 PM CST | Work Vendasta Services is doing or will do |
+| **Chat with support** / **Create a ticket** in the Partner Center AI assistant | The same as above, but the assistant attaches your conversation transcript, Partner ID, and Account Group ID automatically |
+
+If you are unsure, send it to [support@vendasta.com](mailto:support@vendasta.com) — see [When to Contact Marketing Support vs Support on-Demand](#common-question-when-to-contact-marketing-support-vs-support-on-demand) for the full routing logic.
+
+### If you are already waiting on a ticket
+
+**Reply to the existing ticket thread** rather than opening a second one. A duplicate ticket splits the history across two records, which slows the response down instead of speeding it up.
+
+If you need to add information to a ticket you opened through the AI assistant, reopen that same conversation so the new detail is attached to the original transcript.
 
 ## Frequently Asked Questions
 

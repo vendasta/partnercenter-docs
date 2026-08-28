@@ -9,6 +9,10 @@ sidebar_position: 1
 
 Partner Center notifications keep you and your team informed about activity across orders, tasks, products, and more. Before any individual notification can fire, the master toggle must be enabled.
 
+:::info
+This page covers Partner Center notifications — orders, tasks, products, and platform activity. Notifications about **customer conversations** (web chat, SMS, phone calls, AI Receptionist) are not configured here. See [Conversation and Inbox notifications are set up elsewhere](#conversation-and-inbox-notifications-are-set-up-elsewhere).
+:::
+
 ## The master notification toggle
 
 The master toggle controls all notifications. When it is off, no notifications are sent — regardless of individual settings.
@@ -65,6 +69,22 @@ After enabling the master toggle, expand each product section to configure its n
 
 Enable or disable individual notification types within each section, and set App and/or Email delivery per type.
 
+## Conversation and Inbox notifications are set up elsewhere
+
+Client Notifications does not control who is emailed when a customer messages you. Web chat, SMS, phone call, and AI Receptionist notifications are driven by two separate things: **who follows a conversation**, and each user's own **Inbox notification preferences**. Changing a setting on this page will not change who receives them.
+
+| What you are trying to change | Where it is controlled |
+|---|---|
+| Who is notified about a new web chat lead or call | [Lead capture notifications](/business-app/conversations/conversations-ai/understanding-lead-capture-notifications) |
+| Someone unexpected is receiving Inbox emails | [Auto-follow and unfollowing conversations](/business-app/conversations/conversations-ai/understanding-lead-capture-notifications#auto-follow-and-unfollowing-conversations) |
+| Getting an email for every single message and reply | [Auto-follow and unfollowing conversations](/business-app/conversations/conversations-ai/understanding-lead-capture-notifications#auto-follow-and-unfollowing-conversations) — unfollow the conversation, or switch the Inbox preference to **Only my events** |
+| Being alerted on follow-up messages, not just new leads | [Notification timing: new leads vs. follow-ups](/business-app/conversations/conversations-ai/understanding-lead-capture-notifications#notification-timing-new-leads-vs-follow-ups) |
+| Turning the Conversations tab on or off for clients | [Conversations settings](/administration/platform-settings/conversations-settings) |
+
+:::tip
+The most common surprise: anyone who **sends a message** in a conversation, or who is **assigned as Salesperson** on the account, is automatically set to follow that conversation and keeps receiving notifications for it. That is usually the explanation when a teammate is getting Inbox emails nobody configured for them, or when you are listed as the contact on a client's account but the client is the one receiving the chat notifications.
+:::
+
 ## Common questions
 
 **I enabled a notification but I'm not receiving it.**
@@ -78,3 +98,6 @@ Confirm the master toggle is on, then check whether the specific notification ty
 
 **Notifications are enabled but email isn't arriving.**
 Confirm email delivery is toggled on for that notification type. Also check spam or junk folders, and verify the user's email address in their profile.
+
+**I never get an email when a customer messages the web chat widget.**
+That notification is not configured on this page. See [Conversation and Inbox notifications are set up elsewhere](#conversation-and-inbox-notifications-are-set-up-elsewhere) — you need to be following the conversation, and your Inbox notification preference has to include the event.
