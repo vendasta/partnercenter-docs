@@ -80,7 +80,7 @@ const PATHS: HomePathCard[] = [
     title: "Grow your AI Workforce",
     blurb: "Every member of the fleet, one at a time: watch each one work, learn its day-one job, and know the edition that carries it.",
     tag: "AI",
-    scope: ["7 lessons", "8 videos"],
+    scope: ["6 lessons", "8 videos"],
     gate: "About 1 hour",
     cta: "Start",
     to: "/learn/grow-your-ai-workforce",
