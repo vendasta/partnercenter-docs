@@ -75,6 +75,30 @@ const PATHS: HomePathCard[] = [
     tone: "purple",
   },
   {
+    id: "grow-your-ai-workforce",
+    kicker: "Staff the team",
+    title: "Grow your AI Workforce",
+    blurb: "Every member of the fleet, one at a time: watch each one work, learn its day-one job, and know the edition that carries it.",
+    tag: "AI",
+    scope: ["6 lessons", "8 videos"],
+    gate: "About 1 hour",
+    cta: "Start",
+    to: "/learn/grow-your-ai-workforce",
+    tone: "purple",
+  },
+  {
+    id: "sell-the-ai-workforce",
+    kicker: "Sell it",
+    title: "Sell the AI Workforce",
+    blurb: "The packages, the live demo, the ROI numbers, the close, and the launch that gets a client to their first captured lead.",
+    tag: "Sales",
+    scope: ["7 lessons", "4 videos", "2 labs"],
+    gate: "About 2 hours",
+    cta: "Start",
+    to: "/learn/sell-the-ai-workforce",
+    tone: "purple",
+  },
+  {
     id: "sales",
     kicker: "Learn to sell",
     title: "The master sales series",
@@ -140,6 +164,27 @@ const AI_WORKFORCE_ITEMS: ExplorerItem[] = [
   { title: "Build a Custom AI Employee", to: "/learn/ai-workforce/custom-employee-lab" },
 ];
 
+const GROW_AI_ITEMS: ExplorerItem[] = [
+  { title: "AI Receptionist", to: "/learn/grow-your-ai-workforce/ai-receptionist" },
+  { title: "AI Reputation Specialist", to: "/learn/grow-your-ai-workforce/ai-reputation-specialist" },
+  { title: "AI Social Media Manager", to: "/learn/grow-your-ai-workforce/ai-social-media-manager" },
+  { title: "AI Blogger", to: "/learn/grow-your-ai-workforce/ai-blogger" },
+  { title: "AI Sales Assistant", to: "/learn/grow-your-ai-workforce/ai-sales-assistant" },
+  { title: "The specialist bench", to: "/learn/grow-your-ai-workforce/the-specialist-bench" },
+  { title: "Grow your AI Workforce skill check", to: "/learn/grow-your-ai-workforce/grow-ai-workforce-skill-check" },
+];
+
+const SELL_AI_ITEMS: ExplorerItem[] = [
+  { title: "Know your offer", to: "/learn/sell-the-ai-workforce/know-your-offer" },
+  { title: "Get in the room", to: "/learn/sell-the-ai-workforce/get-in-the-room" },
+  { title: "Demo with confidence", to: "/learn/sell-the-ai-workforce/demo-with-confidence" },
+  { title: "Sell the outcome", to: "/learn/sell-the-ai-workforce/sell-the-outcome" },
+  { title: "Execute the play", to: "/learn/sell-the-ai-workforce/execute-the-play" },
+  { title: "Practice the pitch", to: "/learn/sell-the-ai-workforce/practice-the-pitch" },
+  { title: "From signed to activated", to: "/learn/sell-the-ai-workforce/from-signed-to-activated" },
+  { title: "Sell the AI Workforce skill check", to: "/learn/sell-the-ai-workforce/sell-ai-workforce-skill-check" },
+];
+
 const SALES_ITEMS: ExplorerItem[] = [
   { title: "Run the perfect sales day", to: "/learn/sales/build-your-brand-and-your-day" },
   { title: "Six habits for better prospecting", to: "/learn/sales/find-your-next-prospect" },
@@ -163,8 +208,9 @@ const SERVICES_ITEMS: ExplorerItem[] = [
 // (comingSoon field below) until builder content on AI, APIs, and webhooks ships.
 const FOCUS_AREAS: ExplorerFacet[] = [
   { id: "setting-up", label: "Setting up your platform", items: GETTING_STARTED_ITEMS },
+  { id: "selling-ai", label: "Selling the AI Workforce", items: SELL_AI_ITEMS },
   { id: "selling", label: "Learning how to sell", items: SALES_ITEMS },
-  { id: "ai-to-work", label: "Putting AI to work", items: [...AI_FOUNDATIONS_ITEMS, ...AI_WORKFORCE_ITEMS] },
+  { id: "ai-to-work", label: "Putting AI to work", items: [...AI_FOUNDATIONS_ITEMS, ...AI_WORKFORCE_ITEMS, ...GROW_AI_ITEMS] },
   { id: "delivering", label: "Partnering with our services team", items: SERVICES_ITEMS },
 ];
 
