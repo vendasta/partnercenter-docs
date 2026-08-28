@@ -1,0 +1,153 @@
+---
+title: AI Sales Assistant
+sidebar_position: 5
+description: "How the AI Sales Assistant keeps the CRM current from real conversations, answers pipeline questions in chat, and the CRM AI editions that carry it."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
+import aiSalesAssistantFace from './img/ai-sales-assistant-face.png';
+
+<InlineHighlighter courseId="ai-sales-assistant" site="vendasta_learn">
+
+<CourseProgressBar courseId="ai-sales-assistant" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Beginner"
+  video={true}
+  topics={["AI Sales Assistant", "CRM AI", "Pipeline"]}
+  time="about 7 minutes"
+  pathName="Grow your AI Workforce"
+  step={5}
+  totalSteps={7}
+  outcomes={[
+    "Say what the AI Sales Assistant captures and where it puts it",
+    "Ask it the pipeline questions it answers from CRM data",
+    "Quote the CRM AI edition that carries it, and what the free CRM does not include",
+  ]}
+/>
+
+## Every conversation captured, nothing lost
+
+<div style={{display: 'flex', alignItems: 'center', gap: '24px', flexWrap: 'wrap', marginBottom: '1rem'}}>
+  <img src={aiSalesAssistantFace} alt="AI Sales Assistant portrait" style={{width: '110px', borderRadius: '50%', flex: '0 0 110px'}} />
+  <div style={{flex: '1 1 320px', minWidth: '260px'}}>
+
+The AI Sales Assistant works from the CRM and the meeting record. It auto-records and transcribes customer conversations, syncs the details to the CRM, creates follow-up activities, and answers questions about the pipeline in chat, so lead status, follow-up history, and outcomes are always current without anyone typing them in.
+
+  </div>
+</div>
+
+Watch the AI Sales Assistant update the CRM from a real conversation:
+
+{/* VIDEO: "AI Sales Assistant" — Wistia ID `wyog8l8olh`, sourced from businessapp-docs docs/business-app/ai/ai-workforce/ai-sales-assistant.mdx, confirmed 2026-08-28. */}
+
+<div
+  className="wistia_responsive_padding"
+  style={{ padding: '56.25% 0 0 0', position: 'relative' }}
+>
+  <div
+    className="wistia_responsive_wrapper"
+    style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
+  >
+    <iframe
+      src="https://fast.wistia.net/embed/iframe/wyog8l8olh?web_component=true&seo=true"
+      title="AI Sales Assistant walkthrough"
+      allow="autoplay; fullscreen"
+      allowTransparency
+      frameBorder="0"
+      scrolling="no"
+      className="wistia_embed"
+      name="wistia_embed"
+      width="100%"
+      height="100%"
+    ></iframe>
+  </div>
+</div>
+<script src="https://fast.wistia.net/player.js" async></script>
+
+This is the employee whose first business to serve is usually yours. Your CRM in Partner Center is where your own pipeline lives, and the Sales Assistant is what keeps it clean while you sell: meetings recorded, records updated, follow-ups created, coaching insights on every call.
+
+<LessonSection>
+
+## What it does on day one
+
+A configured Sales Assistant already:
+
+- Auto-records and transcribes customer calls and meetings
+- Updates CRM records with lead and job details from those conversations
+- Creates follow-up activities so the next step is never lost
+- Answers pipeline questions in chat, from "which deals stalled this month?" to "who have I not followed up with?"
+- Surfaces sales coaching insights from real conversations
+
+</LessonSection>
+
+## Activate the AI Sales Assistant for your clients
+
+The assistant is not a separate purchase; **CRM AI** carries it. You activate CRM AI on the client's account, from the account's `Products` tab in `Accounts` → `Manage Accounts`. From that moment the assistant works inside the client's CRM in their Business App, under your brand: meetings recorded, records updated, and the chat ready for pipeline questions.
+
+:::info Which edition carries the assistant
+CRM AI **Standard** or **Pro** unlocks the Sales Assistant. A basic CRM is free with every Business App account, and your own CRM comes with Partner Center, but the free CRM does not include this employee: the CRM AI subscription is what adds it.
+:::
+
+:::tip Try it now
+Open your `CRM` in Partner Center and pick any company record. You never have to type those fields in by hand again: the Sales Assistant fills them from the conversation itself.
+:::
+
+When a client is ready, [the AI Sales Assistant setup guide](/ai/ai-workforce/ai-sales-assistant) walks the full configuration end to end: recording, CRM updates, and the chat interface.
+
+<SectionFeedback courseId="ai-sales-assistant" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="ai-sales-assistant" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on what it captures, what it answers, and the edition that carries it."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A client finishes a 40-minute sales call. What has the Sales Assistant done by the time they open the CRM?',
+      options: [
+        'Recorded and transcribed the call, updated the record with the details, and created the follow-up activity',
+        'Emailed the client a summary to copy into the CRM themselves',
+        'Flagged the record as stale until someone types in the notes',
+        'Nothing yet; it processes conversations in a nightly batch'
+      ],
+      correctIndex: 0,
+      explanation: 'Capture is automatic: the conversation is recorded and transcribed, the CRM record is updated from it, and the follow-up activity is created without anyone typing.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client already uses the free CRM in Business App and asks why there is no Sales Assistant in it. What is going on?',
+      options: [
+        'The Sales Assistant is carried by CRM AI, Standard or Pro; the free CRM does not include it',
+        'The Sales Assistant only works in Partner Center, never in Business App',
+        'Their records are too new; it activates after 30 days of CRM history',
+        'It is there but hidden until conversation recording is turned on'
+      ],
+      correctIndex: 0,
+      explanation: 'The free CRM is real, but the AI employee is the CRM AI upgrade: Standard or Pro is what unlocks the Sales Assistant.'
+    },
+    {
+      type: 'mcq',
+      question: 'You want to know which of your own deals have gone quiet. What is the fastest route?',
+      options: [
+        'Ask your Sales Assistant in chat; it answers from your CRM data',
+        'Sort the pipeline board by last-activity date and scan it',
+        'Export the opportunities list and filter it in a spreadsheet',
+        'Set an automation to email you a weekly stalled-deals digest'
+      ],
+      correctIndex: 0,
+      explanation: 'Pipeline questions are the Sales Assistant\'s job: ask in plain language and it answers from the CRM data directly. The other routes work, but they are the manual versions of the same answer.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/grow-your-ai-workforce/the-specialist-bench" pathName="Grow your AI Workforce" step={5} totalSteps={7} />
+
+</InlineHighlighter>
+<MarkComplete courseId="ai-sales-assistant" site="vendasta_learn" />

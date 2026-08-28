@@ -75,6 +75,18 @@ const PATHS: HomePathCard[] = [
     tone: "purple",
   },
   {
+    id: "grow-your-ai-workforce",
+    kicker: "Staff the team",
+    title: "Grow your AI Workforce",
+    blurb: "Every member of the fleet, one at a time: watch each one work, learn its day-one job, and know the edition that carries it.",
+    tag: "AI",
+    scope: ["7 lessons", "8 videos"],
+    gate: "About 1 hour",
+    cta: "Start",
+    to: "/learn/grow-your-ai-workforce",
+    tone: "purple",
+  },
+  {
     id: "sell-the-ai-workforce",
     kicker: "Sell it",
     title: "Sell the AI Workforce",
@@ -152,6 +164,16 @@ const AI_WORKFORCE_ITEMS: ExplorerItem[] = [
   { title: "Build a Custom AI Employee", to: "/learn/ai-workforce/custom-employee-lab" },
 ];
 
+const GROW_AI_ITEMS: ExplorerItem[] = [
+  { title: "AI Receptionist", to: "/learn/grow-your-ai-workforce/ai-receptionist" },
+  { title: "AI Reputation Specialist", to: "/learn/grow-your-ai-workforce/ai-reputation-specialist" },
+  { title: "AI Social Media Manager", to: "/learn/grow-your-ai-workforce/ai-social-media-manager" },
+  { title: "AI Blogger", to: "/learn/grow-your-ai-workforce/ai-blogger" },
+  { title: "AI Sales Assistant", to: "/learn/grow-your-ai-workforce/ai-sales-assistant" },
+  { title: "The specialist bench", to: "/learn/grow-your-ai-workforce/the-specialist-bench" },
+  { title: "Grow your AI Workforce skill check", to: "/learn/grow-your-ai-workforce/grow-ai-workforce-skill-check" },
+];
+
 const SELL_AI_ITEMS: ExplorerItem[] = [
   { title: "Know your offer", to: "/learn/sell-the-ai-workforce/know-your-offer" },
   { title: "Get in the room", to: "/learn/sell-the-ai-workforce/get-in-the-room" },
@@ -188,7 +210,7 @@ const FOCUS_AREAS: ExplorerFacet[] = [
   { id: "setting-up", label: "Setting up your platform", items: GETTING_STARTED_ITEMS },
   { id: "selling-ai", label: "Selling the AI Workforce", items: SELL_AI_ITEMS },
   { id: "selling", label: "Learning how to sell", items: SALES_ITEMS },
-  { id: "ai-to-work", label: "Putting AI to work", items: [...AI_FOUNDATIONS_ITEMS, ...AI_WORKFORCE_ITEMS] },
+  { id: "ai-to-work", label: "Putting AI to work", items: [...AI_FOUNDATIONS_ITEMS, ...AI_WORKFORCE_ITEMS, ...GROW_AI_ITEMS] },
   { id: "delivering", label: "Partnering with our services team", items: SERVICES_ITEMS },
 ];
 
