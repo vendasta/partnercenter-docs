@@ -45,11 +45,11 @@ const PATHS: HomePathCard[] = [
     title: "Get set up",
     blurb: "Run your business on Vendasta: the platform, the ecosystem, setup, and getting paid.",
     tag: "Platform",
-    scope: ["6 lessons", "1 video", "5 labs"],
-    gate: "About 1 hour 50 minutes",
+    scope: ["7 lessons", "1 video", "6 labs"],
+    gate: "About 2 hours 10 minutes",
     cta: "Start",
     to: "/learn/getting-started",
-    tone: "navy",
+    tone: "purple",
   },
   {
     id: "ai-foundations",
@@ -109,7 +109,7 @@ const PATHS: HomePathCard[] = [
     gate: "About 1 hour 30 minutes",
     cta: "Start",
     to: "/learn/builder",
-    tone: "teal",
+    tone: "purple",
   },
   {
     id: "sales",
@@ -121,7 +121,7 @@ const PATHS: HomePathCard[] = [
     gate: "About 1 hour 20 minutes",
     cta: "Start",
     to: "/learn/sales",
-    tone: "navy",
+    tone: "purple",
   },
   {
     id: "vendasta-services",
@@ -133,7 +133,7 @@ const PATHS: HomePathCard[] = [
     gate: "About 45 minutes",
     cta: "Start",
     to: "/learn/vendasta-services",
-    tone: "navy",
+    tone: "purple",
   },
 ];
 
@@ -156,6 +156,7 @@ const GETTING_STARTED_ITEMS: ExplorerItem[] = [
   { title: "Connect payments and billing", to: "/learn/getting-started/connect-payments-and-billing" },
   { title: "Brand your platform", to: "/learn/getting-started/brand-it" },
   { title: "Turn on your own AI Receptionist", to: "/learn/getting-started/turn-on-your-own-ai-receptionist" },
+  { title: "Bring in your first client", to: "/learn/getting-started/bring-in-your-first-client" },
   { title: "Where to get help", to: "/learn/getting-started/where-to-get-help" },
   { title: "Get set up skill check", to: "/learn/getting-started/get-set-up-skill-check" },
 ];

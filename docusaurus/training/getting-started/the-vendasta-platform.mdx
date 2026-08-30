@@ -16,8 +16,6 @@ import LessonSection from "@site/src/components/LessonSection";
 import LabCallout from "@site/src/components/LabCallout";
 import LabChecklist from "@site/src/components/LabChecklist";
 import KeyPoints from "@site/src/components/KeyPoints";
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 import aiReceptionistFace from './img/ai-receptionist-face.png';
 import aiReputationSpecialistFace from './img/ai-reputation-specialist-face.png';
 
@@ -33,7 +31,7 @@ import aiReputationSpecialistFace from './img/ai-reputation-specialist-face.png'
   required={["Partner Center admin access"]}
   pathName="Get set up"
   step={1}
-  totalSteps={7}
+  totalSteps={8}
   outcomes={[
     "Describe the mental model for the platform: AI does the work, you orchestrate",
     "Name what the platform gives you beyond products: the CRM, Vendasta Services, and billing",
@@ -75,7 +73,7 @@ And everything you run can be white label: the platform, the products you resell
 
 ## One platform to run your business
 
-The building blocks do the work; the toolkit around them runs the business. With Vendasta you get the full infrastructure: client management, a catalog of products to resell, automation, billing, and a fulfillment team, all under your own brand. You do not have to use all of it right away. Most partners start with one or two products and grow into the rest.
+The building blocks do the work; the toolkit around them runs the business. With Vendasta you get the full infrastructure: client management, a catalog of products to resell, automation, billing, and a fulfillment team, all under your own brand. You do not have to use all of it right away. Most partners get one AI Employee running for a client, or lead with a single package that bundles the products a vertical needs, and grow into the rest from there.
 
 Alongside the products you resell, three pieces of that toolkit carry the day-to-day:
 
@@ -87,46 +85,6 @@ Alongside the products you resell, three pieces of that toolkit carry the day-to
 
 </LessonSection>
 
-## Who works in the platform, and where
-
-Four kinds of people work in the platform, each in their own space. Click through each one:
-
-<div className="learn-tabs">
-<Tabs>
-<TabItem value="you" label="You">
-
-**Where:** Partner Center, at [partners.vendasta.com](https://partners.vendasta.com).
-
-Orchestrate everything: your AI workforce, your brand, your pricing, and every client relationship.
-
-</TabItem>
-<TabItem value="clients" label="Your clients">
-
-**Where:** Business App.
-
-Use the products you sell them, under your brand.
-
-</TabItem>
-<TabItem value="salespeople" label="Your salespeople">
-
-**Where:** The CRM, inside Partner Center.
-
-Work the pipeline, log activity, and send proposals.
-
-</TabItem>
-<TabItem value="vendors" label="Vendors">
-
-**Where:** Vendor Center.
-
-Configure the products distributed through the Marketplace, including your own if you create one.
-
-</TabItem>
-</Tabs>
-</div>
-
-You can access all of these spaces. The two that matter day to day are Partner Center and Business App: where you will do real work, and when and why.
-
-<LessonSection>
 
 ## Partner Center versus Business App
 
@@ -138,17 +96,14 @@ You can access all of these spaces. The two that matter day to day are Partner C
 
 </div>
 
-**Partner Center** is your command center: [accounts](/accounts) and billing, your [CRM](/crm) and pipeline, [Marketplace](/marketplace) packages, [automations](/automations), and administration.
-
-**Business App** is the client-facing side. Every client gets their own, under your brand: their dashboard, inbox, reports, and every product you activate for them. Their own brand lives inside it, in their business profile, and flows into everything they send: their campaigns, their review requests, their widgets. You have full access to configure products and AI Employees on their behalf. Some clients live in it daily; many are happy to let you drive.
-
 The two workspaces stay connected. Products you activate in Partner Center appear in your client's Business App. Everything their business generates after that (leads, conversations, reviews, results) lands in their Business App, where you have full visibility. The Executive Report turns those results into proof of your value, delivered to them under your brand.
 
 :::tip Try it now
 Not sure whose workspace you are in? Look at the top left: the navigation is labeled `Partner Center` or `Business App`. That one glance answers "whose workspace am I in?" anywhere in the platform.
 :::
 
-</LessonSection>
+
+<LessonSection>
 
 ## What you set up in each
 
@@ -166,13 +121,6 @@ Here is how the split plays out in practice, side by side:
 
 Each row on this table becomes hands-on later in this learning path; for now, the pattern is the takeaway. Set yourself up once on the left, then repeat the client side of the ritual for every business you bring on.
 
-<LessonSection>
-
-## Where everything lives
-
-Partner Center's left navigation is organized by subject, so once you know what a setting concerns, you know where to look. Your own setup (brand, team, billing, platform settings) lives in `Administration`. Each client exists as a record in `Accounts`, and that record is where their products and users live. What you sell and the retail price on it live in `Marketplace`. Orders, subscriptions, invoices, and payouts live in `Commerce`. Your pipeline lives in the `CRM`, and your own AI Employees live under `AI`.
-
-One habit makes the map stick: before you change any setting, say whose it is. Your brand and your team live in Administration; a client's products and users live on their account. Settings that look similar sit in different places for exactly that reason.
 
 </LessonSection>
 
@@ -270,18 +218,6 @@ Pick the workspace first and everything downstream lands where you expect: chann
     },
     {
       type: 'mcq',
-      question: 'You want to create a product of your own and distribute it through the Marketplace. Where does that configuration happen?',
-      options: [
-        'Business App',
-        'The CRM',
-        'Vendor Center',
-        'The Executive Report'
-      ],
-      correctIndex: 2,
-      explanation: 'Vendor Center is where products are configured for Marketplace distribution, including your own custom products. As the partner, you have access to it.'
-    },
-    {
-      type: 'mcq',
       question: 'Where do you log in to run your business on the platform?',
       options: [
         'Business App, from your client\'s welcome email',
@@ -355,7 +291,7 @@ Pick the workspace first and everything downstream lands where you expect: chann
   ]}
 />
 
-<LessonFooter to="/learn/getting-started/connect-your-domain-and-email" pathName="Get set up" step={1} totalSteps={7} />
+<LessonFooter to="/learn/getting-started/connect-your-domain-and-email" pathName="Get set up" step={1} totalSteps={8} />
 
 </InlineHighlighter>
 <MarkComplete courseId="the-vendasta-platform" site="vendasta_learn" />
