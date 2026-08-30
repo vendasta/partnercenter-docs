@@ -82,7 +82,7 @@ Different user types interact with markets differently:
 
 To customize branding for individual markets:
 
-1. Navigate to `Administration` → `Partner Branding`
+1. Navigate to `Administration` → `Partner branding`
 2. Use the dropdown in the top-right corner to select:
    - `All Markets`: Apply branding to all markets
    - `Individual Market`: Customize specific market branding
@@ -301,7 +301,7 @@ There's no direct market-wide limit, but you can limit snapshot creation per sal
 <details>
 <summary>How do I restore market settings to defaults?</summary>
 
-Go to Administration > Customize > Markets, edit the market, navigate to Sales > Configure Orders and Sales Processes, then click "Restore Back to Partner Defaults" at the bottom of the page.
+Go to `Administration` → `Customize` → `Markets`, edit the market, navigate to `Sales` → `Configure Orders and Sales Processes`, then click "Restore Back to Partner Defaults" at the bottom of the page.
 </details>
 
 <details>
@@ -313,7 +313,7 @@ Salespeople created before Markets activation must be assigned to a market the n
 <details>
 <summary>Can each market have different branding?</summary>
 
-Yes, each market can have custom logos, colors, product names, and other branding elements. Use the market dropdown in Partner Branding to configure individual market branding.
+Yes, each market can have custom logos, colors, product names, and other branding elements. Use the market dropdown in Partner branding to configure individual market branding.
 </details>
 
 <details>

@@ -64,7 +64,7 @@ Follow these simple steps to configure your AI Chat Receptionist so it effective
 
 ### Step 1: Configure basic settings for the AI Chat Receptionist
 
-Go to <AISparkleIcon /> `AI` → `AI Workforce` and then click `Configure` on the AI Chat Receptionist.
+Go to <AISparkleIcon /> `AI` → `Workforce` and then click `Configure` on the AI Chat Receptionist.
 
 - `Name and Image`
 Give your AI a friendly, professional name and photo. The AI Receptionist knows their name and the photo will help you distinguish between other AI Employees in your app.
@@ -92,7 +92,7 @@ Capabilities are like instructions that guide how your AI Chat Receptionist beha
   The AI automatically asks visitors for contact details such as name, phone number, or email and saves captured leads directly to your CRM. This capability is turned on by default.
 
   :::tip Webchat visitors showing as anonymous?
-  If contacts are appearing under the `Anonymous Visitors` tab instead of being saved to your CRM, check that the Lead Capture capability is enabled. Go to `AI Workforce` and then `Configure` on the Chat Receptionist, then open `Capabilities` and make sure `Lead Capture` is toggled on, then save.
+  If contacts are appearing under the `Anonymous Visitors` tab instead of being saved to your CRM, check that the Lead Capture capability is enabled. Go to `Workforce` and then `Configure` on the Chat Receptionist, then open `Capabilities` and make sure `Lead Capture` is toggled on, then save.
   :::
 
   **How phone numbers are stored**
@@ -202,28 +202,14 @@ Once your AI Chat Receptionist is set up, it's important to test how it handles 
 
 ### Test the AI Chat Receptionist's responses
 
-Click the `Try it` button from <AISparkleIcon /> `AI` → `AI Workforce` to open up a `My Listing` page you can use to test chat responses before installing the website widget. For best results, open the test in an incognito window so it starts with a clean session.
+Click the `Chat` button on the AI Chat Receptionist's card from <AISparkleIcon /> `AI` → `Workforce` to open a private conversation with the employee. The conversation is just between you and the AI Chat Receptionist, so you can test its responses before you install the web chat widget on your site.
 
 Ask the kinds of questions your real customers might ask, and pay attention to:
 - How the AI responds
 - Whether it gives too much or too little information
 - If it's assuming something you didn't intend
 
-#### Testing with fresh conversations
-
-For accurate testing results, you'll want each test to start with a fresh conversation that doesn't carry over previous context:
-
-**Method 1: Use Incognito/Private Browsing**
-- Open the test page in a new incognito or private browsing window
-- This ensures a completely fresh session each time
-- Best for quick, one-off tests
-
-**Method 2: Clear Site Cookies (Advanced)**
-- In your browser's developer tools (F12), navigate to the Application or Storage tab
-- Find cookies for the My Listing page domain
-- Delete all cookies for that site
-- Refresh the page to start a new conversation
-- Best for systematic testing when you need multiple fresh conversations in sequence
+For a test that starts clean rather than carrying context from your last one, open the conversation in an incognito or private browsing window.
 
 :::tip Testing best practice
 Test the same prompt multiple times to see if you get consistent results. AI responses can vary slightly, so testing helps you identify if your prompts need to be more specific.

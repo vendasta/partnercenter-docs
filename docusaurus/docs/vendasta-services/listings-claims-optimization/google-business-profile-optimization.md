@@ -3,7 +3,7 @@ title: "Google Business Profile Optimization"
 sidebar_label: "Google Business Profile Optimization"
 description: "An overview of the fully managed Google Business Profile Optimization service, including the setup process, verification options, monthly maintenance, and what to expect."
 tags: [vendasta-services, listings, google-business-profile, optimization, gbp, verification]
-keywords: [Google Business Profile, GBP optimization, listing claim, verification, postcard, suspension, reinstatement, bulk verification, Social Marketing]
+keywords: [Google Business Profile, GBP optimization, listing claim, verification, postcard, suspension, reinstatement, bulk verification, Social AI]
 ---
 
 # Google Business Profile Optimization
@@ -49,11 +49,11 @@ Once per month, a service-based post is published to the listing. The post appea
 
 **Timeline:** These monthly components are completed by the end of each month.
 
-#### Social Marketing and posting
+#### Social AI and posting
 
-GBP Optimization monthly posting is fulfilled through **Social Marketing**. Social Marketing Standard is activated at no charge for the duration of an active GBP Optimization subscription if a paid edition is not already active on the account.
+GBP Optimization monthly posting is fulfilled through Social AI. Social AI Standard is activated at no charge for the duration of an active GBP Optimization subscription if a paid edition is not already active on the account.
 
-If GBP Optimization is cancelled, we notify you before ending the complimentary Social Marketing instance. If you want to keep Social Marketing, it can stay active and Social Marketing charges will begin in the next billing period.
+If GBP Optimization is cancelled, we notify you before ending the complimentary Social AI instance. If you want to keep Social AI, it can stay active and Social AI charges will begin in the next billing period.
 
 :::warning
 

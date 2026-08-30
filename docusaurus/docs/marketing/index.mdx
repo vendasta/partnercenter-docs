@@ -22,7 +22,7 @@ Marketing tools in `Partner Center` → `Marketing` help you capture leads, run 
 - **[Forms](./forms/)** – Build and manage forms with the Form Builder, reCAPTCHA, GA4 tracking, and CSS styling.
 - **[Campaigns](./campaigns/)** – Create, send, and track email campaigns with the Email Builder, user lists, dynamic content, and performance tracking.
 - **[Email Templates](./email-templates/)** – Pre-built email templates to speed up campaign creation and keep branding consistent.
-- **[Email Settings](./email-settings/)** – Domain authentication (SPF, DKIM, DMARC), deliverability setup, troubleshooting, and multi-location support.
+- **[Email settings](./email-settings/)** – Domain authentication (SPF, DKIM, DMARC), deliverability setup, troubleshooting, and multi-location support.
 
 ## Lead generation and capture
 
@@ -64,7 +64,7 @@ Streamline campaign creation with pre-built templates:
 
 ## Email configuration and deliverability
 
-### [Email Settings](./email-settings/)
+### [Email settings](./email-settings/)
 
 Ensure optimal email delivery and authentication:
 - **Email authentication** with SPF, DKIM, and DMARC setup
@@ -76,10 +76,10 @@ Ensure optimal email delivery and authentication:
 
 ## Get started
 
-1. **Set up email authentication** – Add SPF, DKIM, and DMARC in [Email Settings](./email-settings/) and verify your sending domain so campaigns reach the inbox.
+1. **Set up email authentication** – Add SPF, DKIM, and DMARC in [Email settings](./email-settings/) and verify your sending domain so campaigns reach the inbox.
 2. **Capture leads** – Create [Acquisition Widgets](./acquisition-widgets/) or [Forms](./forms/) and embed them on client sites; connect to automations for immediate follow-up.
 3. **Run campaigns** – Use [Campaigns](./campaigns/) to build and send email campaigns (with [Email Templates](./email-templates/) for a head start), then track performance and adjust.
-4. **Troubleshoot deliverability** – If mail lands in spam or you see errors, use [Email Settings](./email-settings/) and the [email deliverability guide](./email-settings/email-deliverability.mdx) to fix authentication and content issues.
+4. **Troubleshoot deliverability** – If mail lands in spam or you see errors, use [Email settings](./email-settings/) and the [email deliverability guide](./email-settings/email-deliverability.mdx) to fix authentication and content issues.
 
 ## Frequently asked questions
 
@@ -117,13 +117,13 @@ See our [Email Deliverability guide](./email-settings/email-deliverability.mdx) 
 <details>
 <summary>What email authentication records do I need to set up?</summary>
 
-For optimal email deliverability, you need three DNS records:
+For optimal email deliverability, you need four DNS records:
 
-- **SPF (Sender Policy Framework)**: Specifies which servers can send emails from your domain
-- **DKIM (DomainKeys Identified Mail)**: Adds digital signatures to verify email authenticity
-- **DMARC (Domain-based Message Authentication)**: Provides policy instructions for handling failed authentication
+- **SPF (Sender Policy Framework)** – one TXT record. Specifies which servers can send emails from your domain
+- **DKIM (DomainKeys Identified Mail)** – **two** CNAME records. Adds digital signatures to verify email authenticity. Both are required
+- **DMARC (Domain-based Message Authentication)** – one TXT record. Provides policy instructions for handling failed authentication
 
-Find your specific records in `Partner Center` → `Marketing` → `Email Settings`. See our setup guides for [GoDaddy](./email-settings/email-authentication/adding-spf-dkim-dmarc-records-godaddy.mdx) and [cPanel/Namecheap](./email-settings/email-authentication/adding-spf-dkim-dmarc-records-cpanel-namecheap.mdx).
+Find your specific records in `Partner Center` → `Marketing` → `Email settings`. See our setup guides for [GoDaddy](./email-settings/email-authentication/adding-spf-dkim-dmarc-records-godaddy.mdx) and [cPanel/Namecheap](./email-settings/email-authentication/adding-spf-dkim-dmarc-records-cpanel-namecheap.mdx).
 </details>
 
 <details>

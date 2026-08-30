@@ -1,61 +1,65 @@
 ---
 id: default-billing-settings
-title: Default Billing Settings
-description: "Configure default billing automation for new accounts: collection method, timing, and market-specific settings."
+title: Default billing settings
+description: "Configure default subscription billing for new accounts: payment collection, subscription renewal, scheduling, and the invoice memo."
 sidebar_position: 2
 tags: [billing, automation, subscriptions, configuration]
 keywords: [billing-automation, default-settings, recurring-billing, invoice-automation, collection-methods]
 ---
 
-Default billing automation applies your chosen billing settings to every new account you create. You set collection method and timing once; new accounts get those settings automatically. Existing accounts are unchanged.
+Default billing settings apply your chosen subscription billing configuration to every new account you create. You set it once; new accounts get those settings automatically. Existing accounts are unchanged.
 
 ## What it is
 
-Billing automation creates and sends invoices or charges saved payment methods for recurring subscriptions. Default settings in `Administration` → `Default Billing Settings` apply to all new accounts so you don’t configure billing for each account manually.
+Subscription billing creates and sends invoices or charges saved payment methods for recurring subscriptions. Default settings in `Administration` → `Default billing settings` apply to all new accounts so you don't configure billing for each account manually.
 
 ## Why it matters
 
-- **Less manual work** – New accounts get your preferred billing method and schedule automatically
+- **Less manual work** – New accounts get your preferred billing configuration automatically
 - **Consistency** – Same billing practices across new customers
-- **Flexibility** – Override any account's billing under `Accounts` → `Manage Accounts` → account → `Products`
+- **Flexibility** – Change any single account from its own billing settings under `Accounts` → `Manage Accounts`
 
 ## What you can configure
 
-- **Collection method** – Automatic charging (saved card) or invoice generation (manual payment)
-- **Collection timing** – Which day(s) of the month to bill
-- **Per market** – Different defaults per market if you use multiple markets
+- **`Subscriptions`** – A toggle that turns subscription billing on for new accounts. It is `Off` by default
+- **`Payment collection`** – How you take the money for a subscription
+- **`Subscription renewal`** – What happens when a subscription renews. Options include `Do nothing` and `Create a draft invoice`
+- **`Subscription scheduling`** – Whether each subscription renews on its own start date, or all subscriptions are aligned to a common date
+- **`Memo`** – Free text that prints at the bottom of every invoice subscription billing creates
 
-Defaults apply only to accounts created **after** you save. Existing accounts keep their current settings.
+The page shows a banner stating that these settings apply only to accounts created **after** you save. Existing accounts keep their current settings.
 
 ## How to configure default billing
 
-1. Go to `Partner Center` → `Administration` → `Default Billing Settings`
-2. Select a `Market` if you use multiple markets
-3. Turn the toggle `On` (default is `Off`)
-4. Set `Collection method` (how you collect: auto charge vs invoice) and `Collect on` (day or days)
-5. Review the summary and click `Save`
+1. Go to `Partner Center` → `Administration` → `Default billing settings`
+2. Turn the `Subscriptions` toggle on. It is `Off` by default
+3. Set `Payment collection` to the method you want to use to take payment
+4. Set `Subscription renewal`. Choose `Do nothing` if you do not want anything generated on renewal, or `Create a draft invoice` if you want an invoice you review before sending
+5. Set `Subscription scheduling`. Renew each subscription on its own start date, or align subscriptions to a common date
+6. Add a `Memo` if you want standing text at the bottom of every invoice subscription billing creates
+7. Review the settings and select `Save`
 
 ![Default billing settings configuration page](./img/administration/default-billing-settings/default-billing-settings.png)
 
-New accounts will get these settings in their `Billing` configuration automatically.
+New accounts will get these settings in their billing configuration automatically.
 
 :::warning
 Default billing settings do not change existing accounts. Only accounts created after you save will use these defaults.
 :::
 
-## Override for a single account
+## Change billing for a single account
 
 You can change billing for any account at any time:
 
 1. Go to `Partner Center` → `Accounts` → `Manage Accounts`
 2. Open the account
-3. Open the `Products` section and adjust `Billing` settings for that account
+3. Change that account's own billing settings
 
 For more on per-account billing, see [Subscription management](/commerce/subscriptions/subscription-management).
 
 ## Market-specific defaults
 
-With multiple markets, set different default billing automation per market (e.g. different collection days or methods). Use the market selector on the Default Billing Settings page.
+With multiple markets, you can set different default billing settings per market. Use the market selector on the `Default billing settings` page.
 
 ## Product pricing requirement
 
@@ -79,7 +83,7 @@ No. They apply only to accounts created after you save. Existing accounts keep t
 <details>
 <summary>Can I change billing for one account after applying defaults?</summary>
 
-Yes. Go to `Accounts` → `Manage Accounts` → account → `Products` and change that account's billing settings.
+Yes. Go to `Accounts` → `Manage Accounts`, open the account, and change that account's own billing settings.
 </details>
 
 <details>
@@ -91,30 +95,36 @@ Yes. Set retail prices for each product so automatic billing can calculate amoun
 <details>
 <summary>Can I have different defaults per market?</summary>
 
-Yes. Select each market on the Default Billing Settings page and save different collection method and timing per market.
+Yes. Select each market on the `Default billing settings` page and save different settings per market.
 </details>
 
 <details>
-<summary>What collection methods are available?</summary>
+<summary>What does the `Payment collection` setting do?</summary>
 
-You can use automatic credit card charging, invoice generation for manual payment, or different approaches per market or account.
+`Payment collection` sets how you take the money for a subscription on a new account. Open the field on the `Default billing settings` page to see the methods available to your account, and pick the one that matches how you want to be paid.
 </details>
 
 <details>
-<summary>Can I turn off default billing automation later?</summary>
+<summary>What is the `Memo` field for?</summary>
 
-Yes. Go to `Default Billing Settings`, set the toggle to `Off`, and save. New accounts will no longer get defaults; existing accounts are unchanged.
+Anything you type in `Memo` prints at the bottom of every invoice that subscription billing creates. Use it for standing text such as payment terms or a remittance note.
+</details>
+
+<details>
+<summary>Can I turn off default subscription billing later?</summary>
+
+Yes. Go to `Default billing settings`, set the `Subscriptions` toggle to `Off`, and save. New accounts will no longer get defaults; existing accounts are unchanged.
 </details>
 
 <details>
 <summary>My customers are receiving unexpected invoice emails: how do I stop this?</summary>
 
-This happens when billing automation is enabled and set to email invoices to customers. To stop invoice emails from being sent:
+This happens when subscription billing is turned on and set to generate invoices on renewal. To stop invoice emails from being sent:
 
-1. Go to `Partner Center` → `Administration` → `Default Billing Settings` and check whether billing automation is turned `On`
-2. If it is On, also check the Account Level Setting for the affected account, since account-level settings override the default
-3. Change the collection method to `Don't bill, just track revenue` to stop invoices from being sent to customers
+1. Go to `Partner Center` → `Administration` → `Default billing settings` and check whether the `Subscriptions` toggle is on
+2. Set `Subscription renewal` to `Do nothing` so renewals no longer generate an invoice, then select `Save`
+3. This changes the default for new accounts only. For an account that is already sending invoices, change that account's own billing settings
 
-Account-level settings can be found under `Partner Center` → `Accounts` → `Manage Accounts` → select the account → `Products` → `Billing Settings`.
+Account settings are found under `Partner Center` → `Accounts` → `Manage Accounts`, then open the affected account.
 
 </details>

@@ -1,6 +1,6 @@
 ---
 title: Update email settings
-sidebar_label: Update Email Settings
+sidebar_label: Update email settings
 description: Learn how to update email settings to ensure your email campaigns pass spam regulations and reach your prospects successfully.
 sidebar_position: 3
 ---
@@ -22,13 +22,21 @@ To prevent emails from being sent on someone's behalf unintentionally, email ser
 
 To update email campaign settings:
 
-1. Go to `Partner Center` → `Marketing` → [`Email Settings`](https://partners.vendasta.com/campaign-settings).  
-2. Enter the correct Email 'Send As' Information for your campaigns. 
+1. Go to `Partner Center` → `Marketing` → [`Email settings`](https://partners.vendasta.com/campaign-settings). The page has three stacked cards: `Sender and reply settings`, `Advanced email settings`, and `Email domains`.
+2. In the `Sender and reply settings` card, set `Sender name` and `Reply Address`, then select `Save` on that card.
    :::note
    **Note:** When a salesperson is assigned to an account, the salesperson's email address and name is used instead of these settings.
    :::
-3. Verify the SPF, DKIM, and DMARC Validations under your domain. A green circle with a checkmark means that the record is validated correctly; a red circle with an exclamation mark means that the record is invalid.
-4. For each invalid record, update your DNS record with the correct entries. For assistance, you can contact your DNS service provider.
+3. In the `Advanced email settings` card, set `Sender domain` (choose `Use my own email domain` to send from your own domain) and `Email address`, then select `Save` on that card.
+   :::warning
+   Each card has its own `Save` button. Saving one card does not save the other, so press both.
+   :::
+4. In the `Email domains` card, check the four records under your domain: one SPF (TXT), two DKIM (CNAME), and one DMARC (TXT). Each row has a `Current value` column showing the value found at your DNS host, or `Not found` in red if it has not been detected. The domain's own row header carries the overall status, and a `Domain authorization required` banner stays on the page until every record lands.
+5. For each record showing `Not found`, update your DNS record with the correct entry. For assistance, you can contact your DNS service provider.
+
+:::info Scope
+These settings drive Campaigns and other integrated services. Emails sent through Conversations are not affected.
+:::
 
 ![Email settings screenshot](./img/email-settings/email-settings-screenshot.png)
 

@@ -32,9 +32,9 @@ To create a Custom AI Employee in Partner Center, your account must be on a Prof
 
 ## Step-by-step: creating a Custom AI Employee
 
-### Step 1: navigate to AI Workforce
+### Step 1: navigate to Workforce
 
-1. Navigate to `AI` → `AI Workforce`
+1. Navigate to `AI` → `Workforce`
 2. Click `Create`
 3. You'll see the configuration interface for your new Custom AI Employee
 
