@@ -13,6 +13,8 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import aiReceptionistFace from './img/ai-receptionist-face.png';
@@ -29,7 +31,8 @@ import PhoneAiIcon from './img/phone-ai-icon.svg';
 <LessonHeader
   difficulty="Beginner"
   topics={["AI Workforce", "Packaging", "Selling AI"]}
-  time="about 18 minutes"
+  time="about 20 minutes"
+  lab
   video={true}
   pathName="Sell the AI Workforce"
   step={1}
@@ -37,6 +40,7 @@ import PhoneAiIcon from './img/phone-ai-icon.svg';
   outcomes={[
     "Meet the five AI agents that work across your ideal client package",
     "Learn why smart packaging beats single-product sales every time",
+    "Add a ready-made vertical package to your store and price it",
     "Know which edition unlocks each agent before you quote it",
     "Open any conversation with an outcome the owner already wants",
   ]}
@@ -104,7 +108,22 @@ Each vertical package arrives ready to deploy: sample AI Receptionist prompting 
 
 *You are here: Partner Center. Everything in this section happens in your workspace.*
 
-The vertical packages are built and waiting in the [Marketplace](/marketplace), under `Packages` → `Recommended Packages`: each one bundles the Conversations, Reputation, Social, CRM, and Local SEO products its vertical needs, with recommended retail pricing and a setup fee preset. Open one to review its contents and wholesale cost, then click `Add To Store` to make it yours. Adjust the retail price to your market and the offer is ready to sell.
+The vertical packages are built and waiting, each bundling the Conversations, Reputation, Social, CRM, and Local SEO products its vertical needs, with recommended retail pricing and a setup fee preset. Adding one to your store takes three clicks and leaves you with something sellable.
+
+<LabCallout title="put one package in your store">
+Go to `Marketplace` → `Packages` → `Recommended Packages`.
+
+<LabChecklist
+  storageKey="know-your-offer-lab-1"
+  steps={[
+    <>Find the package for the vertical you sell into most.</>,
+    <>Open it and read what it bundles, and what it costs you.</>,
+    <>Select <code>Add To Store</code>.</>,
+    <>Adjust the retail price to your market.</>,
+  ]}
+  confirm={<>One priced, sellable package sits in your store, built for a vertical you actually work in.</>}
+/>
+</LabCallout>
 
 Those bundled products are also what unlock the AI agents your pitch promises. There is no agent for sale on its own: the product carries it, and the edition determines which agent your client actually gets. Quote the edition that carries the agent you promised.
 
@@ -112,9 +131,9 @@ Those bundled products are also what unlock the AI agents your pitch promises. T
 |---|---|---|
 | AI Receptionist, chat | Conversations AI | Every edition |
 | AI Receptionist, voice | Conversations AI | Premium; SMS text-back arrives on Pro |
-| Reputation Specialist | Reputation Management | Premium |
-| Social Media Manager | Social Marketing (Social AI) | Premium, together with AI Blogger |
-| AI Blogger | Social Marketing (Social AI) | Premium, together with Social Media Manager |
+| Reputation Specialist | Reputation AI | Premium |
+| Social Media Manager | Social AI | Premium, together with AI Blogger |
+| AI Blogger | Social AI | Premium, together with Social Media Manager |
 | AI Sales Assistant | CRM AI | Standard or Pro; the free CRM does not include it |
 | AI Search Specialist | Local SEO / Listing Builder | Early access |
 

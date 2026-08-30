@@ -1,0 +1,164 @@
+---
+title: Start with what the platform already does
+sidebar_position: 1
+description: "What makes a system connectable, the ladder from a setting to custom code, and proof that booking and lead capture already run before any custom work begins."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
+
+<InlineHighlighter courseId="start-with-what-exists" site="vendasta_learn">
+
+<CourseProgressBar courseId="start-with-what-exists" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Intermediate"
+  topics={["Integrations", "AI Receptionist", "Capabilities"]}
+  time="about 11 minutes"
+  lab
+  required={[
+    "A test account you created in Partner Center, with yourself added as a user",
+    "A calendar connected in that account",
+    "An AI Employee in that account with Appointment Booking and Lead Capture switched on",
+  ]}
+  pathName="Wire your AI Workforce to act"
+  step={1}
+  totalSteps={8}
+  outcomes={[
+    "Settle in a minute whether an outside system can be connected at all",
+    "Reach for the lightest option that does the job",
+    "Confirm booking and lead capture already run without a person touching them",
+    "Name the one job in your build the platform does not already cover",
+  ]}
+/>
+
+## What decides whether a system can be connected
+
+Whether a client's software can be connected is decided by that software, not by the platform. A system that publishes an API can be reached. A system that does not publish one cannot, no matter what you build on this side.
+
+That makes the first question of every integration a one-minute question: does this system have an API? The answer is usually on its own website, under a heading called `API` or `Developers`. Find that page and you know whether the conversation is about how, or about whether.
+
+<LessonSection>
+
+## The ladder from a setting to custom code
+
+Once you know a system can be reached, the second question is how far you have to go. There is a ladder here, and the rung that does the job is almost never the one you reach for first.
+
+1. **A setting that already exists.** Many jobs are a field, a toggle, or a native integration nobody told you about. Check before you build.
+2. **An automation.** If the whole job happens inside the platform, a trigger and a few steps finish it, with nothing external involved.
+3. **A glue tool.** Zapier or Make connects two systems without code. Good for one client and one flow; the cost climbs as you repeat it, and the platform meets it with a `Triggered via Zapier` automation trigger.
+4. **A custom tool.** An AI Employee reaching a system directly, mid-conversation, using judgment about when to reach.
+5. **The API.** Your own code working with platform records on a schedule or in bulk.
+6. **Custom code.** Reshaping or reconciling data that does not line up. This is developer work, and it has its own handoff.
+
+Every step in this path names the rung it is on. Reaching for the lightest one that does the job is the whole skill, and it is what keeps a build maintainable a year later.
+
+</LessonSection>
+
+## Prove the built-in half first
+
+*You are here: Business App, inside your test account. The build in this path lives here until the API step.*
+
+The build this path carries is an AI Employee for a home-services client: it books jobs on a real calendar and saves every lead to the CRM. Both of those are rung one. Before adding anything custom, confirm the platform's own half works, because a custom piece added to an unproven build gives you two things to debug at once.
+
+<LabCallout title="watch it book and capture, untouched">
+Go to your AI Employee's `Chat`.
+
+<LabChecklist
+  storageKey="start-with-what-exists-lab-1"
+  steps={[
+    <>Open a fresh session in an incognito window, so the conversation starts clean.</>,
+    <>Ask for an outdoor job with a day attached: "Can someone clean my gutters next Thursday?"</>,
+    <>Give the details it asks for, and take one of the times it offers.</>,
+    <>Open your connected calendar and find the event.</>,
+    <>Open <code>CRM</code> → <code>Contacts</code> and find the contact it created.</>,
+  ]}
+  confirm={<>A real meeting sits on the calendar and a real contact sits in the CRM, and you typed nothing into either one.</>}
+/>
+</LabCallout>
+
+Keep that contact. It is the same record you will read back through the API at the end of this path, which is how you will know the two halves are the same system.
+
+<LessonSection>
+
+## The one job left over
+
+Gutter cleaning happens outside, and a booking made into a storm helps nobody. The platform does not know this client cares about weather, and no setting, automation, or glue tool supplies that judgment inside the conversation itself. That is rung four, and it is the only rung this build needs.
+
+Naming the leftover job precisely is what keeps a build small. Not "make it smarter" and not "connect it to everything": one sentence about one moment. For this build it is that the employee checks the forecast before it confirms outdoor work, and offers a clear day instead when the forecast is bad.
+
+:::tip Try it now
+Open `Conversations`, find the chat you just had, and click `Explanation` under the booking message. You are meeting the view while everything works, which is the only time it is easy to read.
+:::
+
+</LessonSection>
+
+<SectionFeedback courseId="start-with-what-exists" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="start-with-what-exists" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on what makes a system connectable, choosing a rung, and what the platform already covers."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A client asks you to connect their scheduling software to the platform. What settles whether it is possible?',
+      options: [
+        'Whether that scheduling software publishes an API',
+        'Whether your subscription includes custom tools',
+        'Whether the client is on a Premium edition',
+        'Whether the software is listed in the Marketplace'
+      ],
+      correctIndex: 0,
+      explanation: 'The other system decides. If it publishes an API, it can be reached; if it does not, nothing built on this side changes that. The answer is usually on its own website under API or Developers.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client wants every new lead tagged and added to a nurture sequence. Nothing outside the platform is involved. Which rung does the job?',
+      options: [
+        'An automation',
+        'A custom tool on their AI Employee',
+        'A glue tool like Zapier',
+        'The API, called from your own code'
+      ],
+      correctIndex: 0,
+      explanation: 'The whole job happens inside the platform, so a trigger and a few steps finish it. Reaching past an automation here adds a system to maintain and buys nothing.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your AI Employee books a meeting and saves the contact without you touching either one. What did that take to set up?',
+      options: [
+        'Built-in capabilities switched on, and nothing custom',
+        'A custom tool pointed at the calendar',
+        'An outbound webhook to the CRM',
+        'A service account and an API call'
+      ],
+      correctIndex: 0,
+      explanation: 'Appointment Booking and Lead Capture are built in. Proving the platform half works first is what keeps a custom piece from inheriting a problem it did not cause.'
+    },
+    {
+      type: 'mcq',
+      question: 'Why check the forecast inside the conversation rather than in an automation that runs afterward?',
+      options: [
+        'The decision changes what the employee says while the visitor is still there',
+        'Automations cannot call outside systems at all',
+        'Weather data is too large for an automation step',
+        'Automations only run on contacts, never on bookings'
+      ],
+      correctIndex: 0,
+      explanation: 'An automation acts after the fact. The judgment here has to land before the booking is confirmed, in front of the visitor, which is exactly what a custom tool on a capability is for.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/builder/build-the-doorway" pathName="Wire your AI Workforce to act" step={1} totalSteps={8} />
+
+</InlineHighlighter>
+<MarkComplete courseId="start-with-what-exists" site="vendasta_learn" />

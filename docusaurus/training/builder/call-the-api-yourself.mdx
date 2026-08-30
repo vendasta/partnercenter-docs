@@ -1,0 +1,226 @@
+---
+title: Call the API yourself
+sidebar_position: 6
+description: "Generate a scoped token in the browser, make a real read-only call from the API reference, and read back the lead your own AI Employee captured. No code required."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
+
+<InlineHighlighter courseId="call-the-api-yourself" site="vendasta_learn">
+
+<CourseProgressBar courseId="call-the-api-yourself" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Intermediate"
+  topics={["Vendasta API", "Integrations", "CRM"]}
+  time="about 14 minutes"
+  lab
+  required={[
+    "Your partner ID, the short code in parentheses in the Partner Center header",
+    "The test account you have been building in, and the contact your AI Employee captured",
+  ]}
+  pathName="Wire your AI Workforce to act"
+  step={6}
+  totalSteps={8}
+  outcomes={[
+    "Generate a scoped access token for yourself in the browser",
+    "Request the narrowest scopes a call needs, and read the error when one is missing",
+    "Make a real read-only call from the API reference without writing any code",
+    "Read back the lead your own build captured",
+  ]}
+/>
+
+## A token is the proof every call carries
+
+Every call to the platform carries a token, and the token is what says both who is asking and what they are allowed to ask for. Get one and the API stops being a wall.
+
+This step is where most builder tracks lose people, because the traditional route is to create a service account, generate a key pair, and write code that signs a request before anything happens at all. There is a shorter way in, and it produces a real call against your own data in a few minutes.
+
+:::info Two identifiers before you start
+You need your **partner ID**, and the **account group ID** of the test account you have been building in. Your partner ID sits in the top left of Partner Center, in the header that reads `#YourName (ABC)`: it is the short code in the parentheses. The account group ID is the `AG-` segment of the Business App address bar.
+:::
+
+<LessonSection>
+
+## Generate one for yourself
+
+*You are here: [developers.vendasta.com](https://developers.vendasta.com), the developer documentation.*
+
+The `Generate Token` button in the top navigation opens a form that mints a short-lived token for you. It logs you in through Vendasta in a popup window, so the token it hands back carries your own access and nothing more.
+
+<LabCallout title="mint a read-only token">
+Go to `Generate Token` in the top navigation.
+
+<LabChecklist
+  storageKey="call-the-api-yourself-lab-1"
+  steps={[
+    <>In <strong>Scopes</strong>, type to search and add <code>crm.schema:read</code> and <code>crm.contact:read</code>.</>,
+    <>Leave <strong>Environment</strong> on <code>Prod</code>, which is already selected. The reference pages call production, so a Demo token is rejected there.</>,
+    <>In <strong>Partner ID</strong>, enter yours: the short code in parentheses in the Partner Center header.</>,
+    <>Select <strong>Generate Token</strong>.</>,
+    <>Sign in with Vendasta in the window that opens. The modal explains what it is doing: it mints a short-lived OAuth2 token and saves it to the browser so the reference pages are pre-authorized.</>,
+  ]}
+  confirm={<>A token has been minted and saved to your browser for the environment, partner ID, and scopes you asked for.</>}
+/>
+</LabCallout>
+
+The token is now saved to your browser, which is what makes the next two calls a matter of editing one value on a reference page.
+
+</LessonSection>
+
+## Ask for exactly what the job needs
+
+A scope is a single permission, and a token carries only the ones you asked for when you generated it. Both scopes above end in `:read`, which is deliberate: a read-only token cannot change anything while you are learning what the calls return. Both calls are sent as `POST` even though they only read, which is how this gateway works; the scope is what decides what a call may do, not the method.
+
+That discipline is worth keeping past this step. Request the narrowest scopes that do the job, and what an integration is able to do stays obvious to whoever looks at it next year.
+
+Two errors tell you which half is wrong, and they are worth recognising on sight:
+
+| What comes back | What it means |
+|---|---|
+| `UNAUTHENTICATED` | The token is missing, malformed, or expired. Generate a new one. |
+| `PERMISSION_DENIED` | The token is valid, but it does not carry the scope this call requires. Generate a new one with that scope added. |
+
+<LessonSection>
+
+## Your first call reads, and changes nothing
+
+The first call is a read against your own CRM: it returns the field schema, which is the list of fields your contacts actually have, including any you added yourself. It is a good first call because it cannot change anything while you are getting your bearings.
+
+<LabCallout title="list your CRM's contact fields">
+Go to the API reference, under `CRM` → `CRMFieldSchemaService` → `List Field Schema`. There are two `CRM` sections in the reference; take the one under Vendasta APIs rather than Legacy APIs.
+
+<LabChecklist
+  storageKey="call-the-api-yourself-lab-2"
+  steps={[
+    <>Find the <code>REQUEST</code> panel on that page. Your token is already attached.</>,
+    <>The <code>Body</code> is a raw JSON editor. Set <code>namespace</code> to your partner ID and <code>crmObjectType</code> to <code>Contact</code>.</>,
+    <>Select <code>SEND API REQUEST</code>.</>,
+    <>Read the <code>RESPONSE</code> below it.</>,
+  ]}
+  confirm={<>The response lists the real fields on your contacts, which is the shape any integration you build would read and write.</>}
+/>
+</LabCallout>
+
+</LessonSection>
+
+## Find your own lead
+
+The second call goes to the test account you have been building in, and returns the contacts on it. One of them is the lead your AI Employee captured when you first proved booking and lead capture worked.
+
+You need that account's ID. Open the account in Business App and read the address bar: the ID is the `AG-` segment, in `/account/location/AG-XXXXXXXXXX/`.
+
+<LabCallout title="read back the contact your build captured">
+Go to `CRM` → `CRMService` → `List Contacts` in the API reference.
+
+<LabChecklist
+  storageKey="call-the-api-yourself-lab-3"
+  steps={[
+    <>In the <code>REQUEST</code> panel, set <code>namespace</code> in the JSON body to the account's <code>AG-</code> ID.</>,
+    <>Select <code>SEND API REQUEST</code>.</>,
+    <>Find the contact your AI Employee created in the response.</>,
+  ]}
+  confirm={<>The lead your build captured in a conversation comes back as data, over the API, in the same shape any integration would receive it.</>}
+/>
+</LabCallout>
+
+That is the whole point of this step. The conversation, the booking, the CRM record, and the API are one system, and you have now touched it from both ends.
+
+<LessonSection>
+
+## When you go to production
+
+What changes when this stops being you clicking and starts being your integration running is the identity, not the ideas.
+
+Your code authenticates as a **service account**: an identity that belongs to the integration rather than to a person, created in Partner Center and carrying a key pair you download once. It exchanges that key for a token the same way the generator just did for you, and asks for the same kind of scopes. Tokens expire, so production code requests a fresh one rather than storing it. Writes work the same way reads do, with one addition worth knowing before you send any: a contact write is an upsert, matched on a key you choose, which is what keeps you from creating a second copy of a contact you already have.
+
+[The developer documentation covers all of it](https://developers.vendasta.com/getting-started/authorization), and the generator stays useful for exploring long after your integration has its own credentials.
+
+:::tip Try it now
+Generate one more token, this time with only `crm.schema:read`, and run `List Contacts` again. Read the error you get back. Recognising `PERMISSION_DENIED` on sight is worth more than any amount of reading about scopes.
+:::
+
+</LessonSection>
+
+<SectionFeedback courseId="call-the-api-yourself" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="call-the-api-yourself" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on scopes, reading the two common errors, and what changes in production."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A call returns PERMISSION_DENIED. Your token was generated ten minutes ago. What is wrong?',
+      options: [
+        'The token does not carry the scope this call requires',
+        'The token has expired and needs regenerating',
+        'The partner ID was entered incorrectly',
+        'The call is only available on the Demo environment'
+      ],
+      correctIndex: 0,
+      explanation: 'PERMISSION_DENIED means the token is valid but missing a scope. An expired or malformed token comes back as UNAUTHENTICATED instead.'
+    },
+    {
+      type: 'mcq',
+      question: 'You generate a token on the Demo environment and try a call from an API reference page. It fails to authenticate. Why?',
+      options: [
+        'The reference pages call production, so a production token is what they need',
+        'Demo tokens have to be pasted in manually',
+        'Demo tokens expire faster than the page can use them',
+        'The scopes are named differently on Demo'
+      ],
+      correctIndex: 0,
+      explanation: 'The API reference pages call production. Leave Environment on Prod when you intend to send from a reference page, and keep the scopes read-only while you are exploring.'
+    },
+    {
+      type: 'mcq',
+      question: 'Both calls in this step take a namespace. What goes in it?',
+      options: [
+        'Your partner ID for your own CRM, or an account\'s AG- ID for that account',
+        'The name of the AI Employee that captured the record',
+        'The scope you generated the token with',
+        'The automation ID that created the contact'
+      ],
+      correctIndex: 0,
+      explanation: 'The namespace says which CRM you are reading. Your partner ID reaches your own; an account group ID, visible in the Business App address bar, reaches that client\'s.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your integration is ready to run on its own schedule. What replaces the token generator?',
+      options: [
+        'A service account, which exchanges a key pair for a token the same way',
+        'A permanent token generated once and stored in your code',
+        'A Vendor Center listing with its own credentials',
+        'Nothing; the generator is the production route as well'
+      ],
+      correctIndex: 0,
+      explanation: 'A service account is an identity that belongs to the integration rather than to a person. The ideas do not change: same scopes, same tokens, same expiry, requested by your code instead of by you.'
+    },
+    {
+      type: 'mcq',
+      question: 'Why are both scopes in this step read-only?',
+      options: [
+        'A read-only token cannot change anything while you are learning what a call returns',
+        'Write scopes are only issued to service accounts',
+        'The reference pages refuse to send write requests',
+        'Read scopes are the only ones the generator offers'
+      ],
+      correctIndex: 0,
+      explanation: 'Narrowest-scope discipline starts here. Both calls read, so nothing you do while exploring can touch a record.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/builder/where-the-platform-ends" pathName="Wire your AI Workforce to act" step={6} totalSteps={8} />
+
+</InlineHighlighter>
+<MarkComplete courseId="call-the-api-yourself" site="vendasta_learn" />

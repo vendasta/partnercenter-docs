@@ -1,7 +1,7 @@
 ---
 title: Brand your platform
 sidebar_position: 4
-description: "Your logo, your color, and your domain across both workspaces: what white label covers and what your clients see."
+description: "Your logo, your color, and your name across both workspaces: Partner Branding, renaming Business App, choosing what clients see, and what white label covers."
 ---
 
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
@@ -12,6 +12,8 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
 
 <InlineHighlighter courseId="brand-it" site="vendasta_learn">
 
@@ -19,16 +21,21 @@ import LessonSection from "@site/src/components/LessonSection";
 
 <LessonHeader
   difficulty="Beginner"
-  topics={["Branding", "Partner Center"]}
-  time="about 5 minutes"
-  required={["Partner Center admin access"]}
+  topics={["Branding", "Partner Center", "Business App"]}
+  time="about 15 minutes"
+  lab
+  required={[
+    "Partner Center admin access",
+    "Your logo as a PNG with a transparent background, and your brand's hex color",
+  ]}
   pathName="Get set up"
   step={4}
   totalSteps={7}
   outcomes={[
-    "Apply your logo and brand color across both workspaces",
+    "Apply your name, logo, icons, and color across both workspaces",
+    "Rename Business App to something your clients recognize",
+    "Choose which pages clients see when they log in",
     "Say what white label covers and which plans include it",
-    "Set the right expectation for a custom domain",
   ]}
 />
 
@@ -36,45 +43,98 @@ import LessonSection from "@site/src/components/LessonSection";
 
 **White-label products and services** are re-brandable, re-sellable items produced by one company to be re-branded and re-sold by another. That is the model the whole platform runs on: the workspaces, the products you resell, and the services that fulfill them carry your brand, so your clients see your name throughout.
 
-Branding the platform is quick work with wide reach. The logo you upload appears in Business App, in outgoing email, on login pages, and everywhere else the platform represents you.
+Branding is quick work with wide reach, and it is worth doing before anything client-facing goes out. What you upload once appears in Business App, in outgoing email, on login pages, on invoices, and everywhere else the platform represents you.
 
 <LessonSection>
 
-## Your logo and color
+## Brand both workspaces at once
 
-Open `Administration` → `Partner Branding`. Three settings do most of the branding work:
+Partner branding is one page, and it controls how your business is represented everywhere. Six settings do the work, in this order. If you run multiple markets, note the `All Markets` selector at the top right: branding can differ per market.
 
-- **Company name**: your brand as clients see it, in email headers, login pages, and notifications.
-- **Logo**: one upload brands both Partner Center and every client's Business App. A PNG with a transparent background works best, and you can add a dark-mode version so it stays sharp on any screen.
-- **Primary color**: your brand's hex color, used as an accent throughout the platform and in some client emails.
+<LabCallout title="upload your brand">
+Go to `Administration` → `Partner branding`.
 
-![The Partner Branding settings, with the company name, the theme choices, the logo upload with a separate dark theme logo, and the company avatar](./img/partner-branding-settings.jpg)
+<LabChecklist
+  storageKey="brand-it-lab-1"
+  steps={[
+    <>In <strong>Company Name</strong>, enter your business name exactly as you want clients to see it. This is what appears in email headers, login pages, and notifications, so use the name they already know you by.</>,
+    <>Under <strong>Theme</strong>, choose Light or Dark for your own team's Partner Center. Set <strong>Business App Theme</strong> separately, and User System Default is the safe choice because it respects each client's own device setting.</>,
+    <>Upload your <strong>Logo</strong>. Recommended is 360 by 58 pixels with a transparent background. Turn on <code>Use a different logo for dark theme</code> if you have a second version.</>,
+    <>Upload a square <strong>Company avatar / shortcut icon</strong>, 512 by 512 pixels. This is what a client sees when they save Business App to their phone's home screen, and it represents you in Conversations chat.</>,
+    <>Upload a <strong>Favicon</strong> for the browser tab, at 16 by 16 pixels. Browsers cache favicons hard, so give yours time to appear.</>,
+    <>Enter your <strong>Primary Color</strong> as a hex code, or pick it, and save.</>,
+  ]}
+  confirm={<>Refresh the page: Partner Center is wearing your brand, and so is every client's Business App.</>}
+/>
+</LabCallout>
 
-The whole task takes a few minutes, and it is worth doing before anything client-facing goes out. For every setting on the page, including icons and favicons, [this guide walks through branding and customization](/getting-started/getting-started-guides/getting-started-with-branding-and-customization).
+For every setting on the page, [this guide walks through branding and customization](/getting-started/getting-started-guides/getting-started-with-branding-and-customization).
 
-:::tip Try it now
-Open `Administration` → `Partner Branding`, upload your logo, and set your primary color. Refresh the page: Partner Center is already wearing your brand.
+</LessonSection>
+
+## Make Business App yours
+
+Business App is where your clients log in. It is called "Business App" until you rename it, and the name you choose appears in its navigation and in the emails it sends.
+
+<LabCallout title="rename it, and turn on the backlink">
+Go to `Accounts` → `Manage Business App` → `Customize Business App` → `Branding`.
+
+<LabChecklist
+  storageKey="brand-it-lab-2"
+  steps={[
+    <>Find <strong>Rename Business App</strong> and enter your preferred name. It shows in the Business App navigation and in the emails it sends. Two or three words carries best across device sizes, and plain words beat special characters.</>,
+    <>Scroll to <strong>Conversations Web Chat</strong> and decide on the footer. The checkbox reads <code>Show "Chat Powered By [your company name]" on all Web Chat widgets</code>, and it pulls that name from Partner branding.</>,
+    <>Save.</>,
+  ]}
+  confirm={<>Your clients' portal now carries a name you chose rather than a generic one.</>}
+/>
+</LabCallout>
+
+The footer pulls your agency name and website from your Company Profile, so fill that in first if the fields look empty. That backlink is worth switching on deliberately: it earns SEO value from every client site running your widget.
+
+<LessonSection>
+
+## Decide what clients see
+
+You choose which pages appear when a client logs in. Hiding a page removes it from their navigation without disabling anything underneath it, so this is about focus rather than restriction.
+
+<LabCallout title="set your page visibility">
+Go to `Customize Business App` → `Pages`.
+
+<LabChecklist
+  storageKey="brand-it-lab-3"
+  steps={[
+    <>Select a page from the left sidebar.</>,
+    <>Tick or clear its <code>Show this page</code> checkbox, and save.</>,
+    <>Work down the list with one question in mind: does the client do this themselves, or do you do it for them?</>,
+  ]}
+  confirm={<>A client logging in sees the pages that match how you actually work with them.</>}
+/>
+</LabCallout>
+
+A useful starting point: **Store** and **My Products** make sense when clients self-serve, and come off when every purchase goes through your team. **Invoices** comes off when you bill outside the platform. **Projects** comes off if you do not run fulfillment workflows. Page visibility applies to every client at once, or per market if you use them, so this is a decision about how you work rather than about one client.
+
+</LessonSection>
+
+## What your plan carries
+
+Two pieces of the brand story are decided by your subscription rather than by these screens, and both are worth knowing before you promise anything to a client.
+
+:::info What your subscription gates
+**White label** depends on your plan. On plans that include it, the platform carries your brand with no mention of Vendasta, in Partner Center and in every client's Business App. Free tiers do not include it, and some white-label options vary by plan. **Custom domains** are available on select plans as well. [Plan details are on the pricing page](https://www.vendasta.com/pricing).
 :::
 
-</LessonSection>
+A **custom domain** is the piece most often mistaken for a first-day task. It lets clients and salespeople reach the platform through a link that carries your brand, such as app.youragency.com, instead of a default URL. Treat it as an upgrade to plan for rather than something to chase now, and set the expectation with clients accordingly.
 
-## White label
-
-On plans with white label, the platform carries your brand with no mention of Vendasta: your logo, your colors, your name, in Partner Center and in every client's Business App. White label depends on your subscription: free tiers do not include it, and some white-label options vary by plan, so check what yours includes. [Plan details are on the pricing page](https://www.vendasta.com/pricing).
-
-<LessonSection>
-
-## A domain of your own
-
-A custom domain lets clients and salespeople reach the platform through a link that carries your brand, such as app.youragency.com, instead of a default Vendasta URL. Custom domains are available on select plans, so treat this as an upgrade to plan for rather than a first-day task. When you are ready to connect one, [the branding guide covers custom domain setup](/getting-started/getting-started-guides/getting-started-with-branding-and-customization).
-
-</LessonSection>
+:::tip Try it now
+Open Business App the way a client would and look at it end to end: the name in the navigation, your logo, the color, the tab icon. That is the first thing every client you bring on will see.
+:::
 
 <SectionFeedback courseId="brand-it" site="vendasta_learn" section="content" />
 
 <KnowledgeCheck courseId="brand-it" site="vendasta_learn"
   sessionSize={3}
-  intro="Three quick questions on white label, the logo, and what a client sees."
+  intro="Three quick questions on white label, the branding settings, and what a client sees."
   questions={[
     {
       type: 'mcq',
@@ -99,6 +159,30 @@ A custom domain lets clients and salespeople reach the platform through a link t
       ],
       correctIndex: 1,
       explanation: 'One upload brands both workspaces. Your logo also flows into login pages, notifications, and outgoing email.'
+    },
+    {
+      type: 'mcq',
+      question: 'You uploaded a new favicon and your browser tab still shows the old one. What is going on?',
+      options: [
+        'Check the file against the recommended 16 by 16 pixels, then allow time for the browser cache to clear',
+        'Favicons are set per client, not at the partner level',
+        'Upload it as the company avatar instead',
+        'The upload failed silently because the file was too large'
+      ],
+      correctIndex: 0,
+      explanation: 'The favicon slot asks for 16 by 16 pixels, and browsers cache favicons for a long time, so a correct upload can still look unchanged for a while.'
+    },
+    {
+      type: 'mcq',
+      question: 'You handle all billing outside the platform and never want clients looking at invoices. What do you do?',
+      options: [
+        'Hide the Invoices page in Customize Business App → Pages',
+        'Cancel the Commerce product on each account',
+        'Remove the client\'s user so they cannot log in',
+        'Set every retail price to zero'
+      ],
+      correctIndex: 0,
+      explanation: 'Page visibility removes a page from the client\'s navigation without disabling anything underneath it, which is exactly the tool for this.'
     },
     {
       type: 'mcq',

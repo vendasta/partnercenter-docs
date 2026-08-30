@@ -14,8 +14,12 @@ import PathHeader from "@site/src/components/PathHeader";
   parts={7}
   difficulty="Beginner"
   topics={["Partner Center", "Email domain", "Payments", "Branding", "AI Receptionist"]}
-  time="about 55 minutes"
-  required={["None"]}
+  time="about 1 hour 50 minutes"
+  required={[
+    "Partner Center admin access",
+    "Access to your domain's DNS settings, for the email step",
+    "A paid subscription, for the payments step (Vendasta Payments is not offered on free or trial tiers)",
+  ]}
   objective="Make the platform yours before your first client arrives. The map of the two workspaces, email that sends from your own domain, and payments that collect on their own. Then your brand across everything clients see, a working AI Receptionist on your own website, and every help channel by name."
   outcomes={[
     "You can say which workspace any task belongs to, for you and for each client",
@@ -46,9 +50,9 @@ Everything in these lessons is done from your main administration workspace: **P
       title: "Connect your domain and email",
       description: "Every email the platform sends arrives from your business.",
       topics: [
-        "What sending from your domain unlocks",
-        "The DNS records and where they go",
-        "Confirming your domain verified",
+        "Setting your sender name and address",
+        "Adding SPF, DKIM, and DMARC at your DNS host",
+        "Confirming each record validated",
       ],
       to: "/learn/getting-started/connect-your-domain-and-email",
     },
@@ -57,8 +61,8 @@ Everything in these lessons is done from your main administration workspace: **P
       description: "The two prices, the Stripe decision, and billing that collects on its own.",
       topics: [
         "The wholesale-to-retail model",
-        "Your own Stripe account versus one in the platform",
-        "Retail prices and automatic collection",
+        "Completing the Payments application",
+        "Default billing, retail prices, and what you owe",
       ],
       to: "/learn/getting-started/connect-payments-and-billing",
     },
@@ -66,19 +70,19 @@ Everything in these lessons is done from your main administration workspace: **P
       title: "Brand your platform",
       description: "Your logo and color across both workspaces, and what clients see.",
       topics: [
-        "What white label covers",
-        "One logo upload, both workspaces",
-        "White label and custom domains",
+        "Partner Branding, top to bottom",
+        "Renaming Business App",
+        "Choosing which pages clients see",
       ],
       to: "/learn/getting-started/brand-it",
     },
     {
       title: "Turn on your own AI Receptionist",
-      description: "Configure it, install the widget on your site, and put it through its paces.",
+      description: "Configure it, give it knowledge, test it, then put the widget on your site.",
       topics: [
         "Purpose, capabilities, and knowledge",
-        "The widget on your website",
-        "Testing it like a customer would",
+        "Testing it before anyone else meets it",
+        "The widget, and where the leads land",
       ],
       to: "/learn/getting-started/turn-on-your-own-ai-receptionist",
     },

@@ -13,6 +13,8 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
 import KeyPoints from "@site/src/components/KeyPoints";
 
 <InlineHighlighter courseId="from-signed-to-activated" site="vendasta_learn">
@@ -70,15 +72,31 @@ Draft your reusable intake form from the checklist above. Ten minutes now, and e
 
 ## Configure, then prove it works
 
-Start on your side, in Partner Center: activate the products on the client's account from its `Products` tab, and set up the billing, since the order, subscription, and retail pricing live in `Commerce`. Then work through the setup in the client's Business App: branding, the AI Receptionist's hours and greeting and lead-capture questions, the chat widget on their website, review sources connected, social accounts connected with the first posts scheduled, and any CRM or scheduling integrations. The [Hire your first AI Employee](/learn/ai-workforce) path covers the mechanics of each piece hands-on; this checklist is the order you run them in for a client.
+Deployment runs in two places, and the order matters: your side first, so the products exist and the billing is right, then theirs, so there is something to configure.
 
-Setup is complete when every component has passed a live test:
+**On your side, in Partner Center.** Activate the products they bought from the `Products` card on the account's Overview, using `Create order`, then set their billing: the order, the subscription, and the retail pricing all live in `Commerce`. [Subscription management](/commerce/subscriptions/subscription-management) covers the billing detail.
 
-- Call the AI Receptionist from a mobile phone. It answers, greets correctly, and captures a lead.
-- Send a test web chat. The AI responds and the lead appears in the inbox.
-- Trigger a missed-call text-back. The SMS sends within seconds.
-- Submit a review request manually. It goes out.
-- Check the social post queue. The first post is scheduled.
+**On their side, in Business App.** Their branding, the AI Receptionist's hours and greeting and lead-capture questions, the chat widget on their website, review sources connected, social accounts connected with the first posts scheduled, and any CRM or scheduling tool they already run.
+
+Each of those is a procedure in its own right, and none of them is a single click. [Hire your first AI Employee](/learn/ai-workforce) walks the AI pieces hands-on, and [Get set up](/learn/getting-started/turn-on-your-own-ai-receptionist) covers the receptionist and the widget end to end. What this step adds is the order, because running them in any other one means redoing work.
+
+Configured is not the same as working. Setup is complete when every component has passed a live test, and running it takes ten minutes. Check the client's editions first: three of the five tests below only run on the right one, so a failure may be a missing product rather than a broken setup.
+
+<LabCallout title="run the go-live test">
+Go to the client's account, with a mobile phone in your hand.
+
+<LabChecklist
+  storageKey="from-signed-to-activated-lab-1"
+  steps={[
+    <>Call the AI Receptionist from your mobile. It answers, greets correctly, and captures a lead. Voice needs Conversations AI Premium, available in the US and Canada.</>,
+    <>Send a test web chat from their site. The AI responds and the lead appears in the inbox. This one works on every edition.</>,
+    <>Trigger a missed-call text-back. Needs Conversations AI Pro, and call forwarding set on the client's real line, so confirm both before you test.</>,
+    <>Submit a review request manually and confirm it goes out. Needs Reputation AI Premium.</>,
+    <>Check the social post queue. The first post is scheduled.</>,
+  ]}
+  confirm={<>Every component has been proven live, on their account, before the client has seen any of it.</>}
+/>
+</LabCallout>
 
 That test run is also the moment worth describing to the client on the handoff call: their own business, answering its own phone.
 

@@ -1,0 +1,161 @@
+---
+title: Wire it to your own systems
+sidebar_position: 5
+description: "Push instead of poll: the Send a webhook step, reading the payload before you build on it, passing a response into later steps, and starting an automation from outside."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
+
+<InlineHighlighter courseId="wire-it-to-your-systems" site="vendasta_learn">
+
+<CourseProgressBar courseId="wire-it-to-your-systems" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Advanced"
+  topics={["Webhooks", "Automations", "Integrations"]}
+  time="about 10 minutes"
+  lab
+  required={[
+    "The Rain delay follow-up automation saved in your test account",
+  ]}
+  pathName="Wire your AI Workforce to act"
+  step={5}
+  totalSteps={8}
+  outcomes={[
+    "Send data out of the platform with the Send a webhook step",
+    "Read the payload the step sends before building anything on it",
+    "Pass a webhook response into the automation steps that follow it",
+    "Start an automation from outside with a single API call",
+  ]}
+/>
+
+## Push, not poll
+
+There are two ways to learn that something happened in another system. You can ask on a timer, over and over, which is polling: wasteful, and always a little behind. Or the other system can tell you the moment it happens. That message is a webhook, and for anything time-sensitive it wins every time.
+
+Everything so far has happened inside the platform. This is the rung where the build reaches the systems your agency actually runs on.
+
+<LessonSection>
+
+## Send data out
+
+*You are here: Partner Center → `Automations`.*
+
+Inside any automation, the `Send a webhook` step posts to an endpoint you name. It is how a workflow reaches a system the platform has no built-in step for: a team chat, a job board, your own server. You can customize the query parameters, headers, cookies, and the JSON body.
+
+Two facts shape what you put in it.
+
+**Send identifiers, not the data itself.** The request goes over HTTPS, but the platform cannot confirm that the destination is under your team's control, so anything sensitive is safer left out. Send the record's ID, then fetch the current version over the API on your side. That also means the data your system acts on is never a stale copy.
+
+**The body is a single JSON object.** Nested JSON is not supported unless you construct it yourself, so design the payload flat.
+
+<LabCallout title="add a Send a webhook step and fire it">
+Go to `Automations` → `My automations` → `Rain delay follow-up`.
+
+<LabChecklist
+  storageKey="wire-it-to-your-systems-lab-1"
+  steps={[
+    <>Open <a href="https://webhook.site">webhook.site</a> in another tab and copy the unique URL it gives you.</>,
+    <>Add a <code>Send a webhook</code> step to the automation and paste that URL in.</>,
+    <>Open <code>JSON Body</code> and use <code>Add Field</code> to build a flat payload carrying the contact's ID and the booked service.</>,
+    <>Select <code>Copy example request as curl</code> and run it from your own terminal. There is no test-fire button on the step itself.</>,
+    <>Read what landed on webhook.site: the headers, and every field in the body.</>,
+  ]}
+  confirm={<>You can see the exact request the platform sends, field by field, before anything downstream depends on it.</>}
+/>
+</LabCallout>
+
+</LessonSection>
+
+## Read the payload before you build on it
+
+That payload is the contract. Everything you build on the receiving side is built to match its shape, so you confirm the shape first and write the handler second. Reading it afterward means writing the handler twice.
+
+The step also passes data back the other way. Whatever your endpoint returns can feed the automation steps that follow it, but only if you declare it under `Response body` first: "Specify the data from the webhook response that should be passed to other steps." Use `+ Add data value` and check the `Expected payload` preview. Without that, the response arrives and later steps cannot see it.
+
+<LessonSection>
+
+## Start it from outside
+
+The same idea runs in reverse. An automation built with the `Triggered via API for an account` trigger can be started from your own code with a single call, for one business at a time. There is a sibling for orders, and a `Triggered via Zapier` trigger beside them. That turns a chain of platform actions into one request from wherever your work actually starts.
+
+To hand it data as well, fill in the trigger's `Payload data` section to match the keys you intend to send: "Define the structure of the data that will be passed in via the webhook." Choose the right `Type` for each key and later steps can use those values directly as their inputs. Skip that configuration and the call still starts the automation, but the data does not reach the steps.
+
+There is a boundary worth knowing here, because it saves an afternoon: you can start an automation from outside, and you cannot author one from outside. Automations, AI Employees, and Vibe apps are built in the interface. [The developer documentation covers the call itself](https://developers.vendasta.com/getting-started/authorization).
+
+:::tip Try it now
+Look at the payload sitting on webhook.site and pick the one field your own system would key on. If it is anything other than an ID, ask what happens when that value changes tomorrow.
+:::
+
+</LessonSection>
+
+<SectionFeedback courseId="wire-it-to-your-systems" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="wire-it-to-your-systems" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on what to send, reading the payload, passing a response onward, and starting an automation from outside."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'What belongs in a Send a webhook body, and why?',
+      options: [
+        'The record\'s ID, so your side fetches the current version over the API',
+        'Every field on the record, so your side never has to call back',
+        'Only values that have changed since the last run',
+        'A nested object mirroring the whole CRM record'
+      ],
+      correctIndex: 0,
+      explanation: 'The platform cannot confirm the destination is under your control, so sensitive data is safer left out. Sending an ID and fetching over the API also means your system never acts on a stale copy.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your endpoint returns a value that a later automation step needs, but that step sees nothing. What was missed?',
+      options: [
+        'The expected response body structure was never configured on the step',
+        'The webhook was pointed at an HTTPS URL instead of HTTP',
+        'The automation was saved before the step was added',
+        'Response data can only reach the step directly after the webhook'
+      ],
+      correctIndex: 0,
+      explanation: 'The step supports data passing, but only once you configure the expected response body. Without it the response arrives and later steps cannot see it.'
+    },
+    {
+      type: 'mcq',
+      question: 'Why read the payload the step sends before writing the handler that receives it?',
+      options: [
+        'The payload is the contract everything downstream is built to match',
+        'The step refuses to save until a payload has been read',
+        'Reading it is what registers the URL with the platform',
+        'The payload shape changes after the first successful run'
+      ],
+      correctIndex: 0,
+      explanation: 'Confirm the shape first and write the handler second. Reading it afterward means writing the handler twice.'
+    },
+    {
+      type: 'mcq',
+      question: 'You want your own code to create a new automation for each client you onboard. What is the honest answer?',
+      options: [
+        'Automations are built in the interface; your code can start one, not author one',
+        'Create them through the automations API, one call per client',
+        'Copy an existing automation with the duplicate endpoint',
+        'Only Vendor Center integrations can create automations'
+      ],
+      correctIndex: 0,
+      explanation: 'Automations, AI Employees, and Vibe apps are built in the interface. An automation with the triggered-via-API trigger can be started from outside with a single call, which covers most of what people want this for.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/builder/call-the-api-yourself" pathName="Wire your AI Workforce to act" step={5} totalSteps={8} />
+
+</InlineHighlighter>
+<MarkComplete courseId="wire-it-to-your-systems" site="vendasta_learn" />
