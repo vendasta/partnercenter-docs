@@ -21,13 +21,13 @@ Strong branding gives a unified, professional experience and reinforces your bus
 
 ## Set up company name and primary branding
 
-1. Go to `Partner Center` → `Administration` → `Partner Branding`
+1. Go to `Partner Center` → `Administration` → `Partner branding`
 2. Set `Company Name` – Enter the name you want in client communications and across the platform
 3. Save
 
 ## Configure color theme
 
-1. In `Partner Branding`, open the `Theme` section
+1. In `Partner branding`, open the `Theme` section
 2. Set `Primary` (and any secondary/background) colors
 3. Preview, then save
 
@@ -37,22 +37,22 @@ The theme applies across customer-facing areas.
 
 ### Upload primary logo
 
-1. Go to `Partner Center` → `Administration` → `Partner Branding` → `Logo`
+1. Go to `Partner Center` → `Administration` → `Partner branding` → `Logo`
 2. Upload your logo (PNG or JPG; transparent PNG recommended)
 3. Use a high-resolution file for clear display on different devices
 4. Position and save
 
-![Partner Branding Logo Settings](./img/administration/partner-branding/partner-branding-logo.jpg)
+![Partner branding logo settings](./img/administration/partner-branding/partner-branding-logo.jpg)
 
 ### Market-specific branding
 
-1. In `Partner Branding`, use the `All Markets` dropdown (top right) to select a market
+1. In `Partner branding`, use the `All Markets` dropdown (top right) to select a market
 2. Set logos, colors, and company name for that market
 3. Save; repeat for other markets
 
 ### Login page branding
 
-1. In `Partner Branding` → `Logo`, upload the logo you want on the login page
+1. In `Partner branding` → `Logo`, upload the logo you want on the login page
 2. **Note:** The login page cannot be fully white-labeled. With multiple markets, you can use a generic logo for the default market so that market-specific branding appears after login.
 
 ![Business App Login Page](./img/administration/partner-branding/business-app-login.jpg)
@@ -65,7 +65,7 @@ You cannot fully white-label the login page. Using a generic logo for the defaul
 
 ### Upload favicon
 
-1. Go to `Partner Center` → `Administration` → `Partner Branding` → `Favicon`
+1. Go to `Partner Center` → `Administration` → `Partner branding` → `Favicon`
 2. Use an `ICO` file (e.g. favicon.ico). PNG/JPG are not accepted.
 3. Recommended size: 16×16 or 32×32 px
 4. Upload and check that it appears in browser tabs
@@ -80,7 +80,7 @@ You cannot fully white-label the login page. Using a generic logo for the defaul
 
 ### Company avatar / shortcut icon
 
-1. In `Partner Branding`, set `Company Avatar` (square image for profiles, small contexts)
+1. In `Partner branding`, set `Company Avatar` (square image for profiles, small contexts)
 2. Set `Shortcut Icon` for mobile home screen and bookmarks (512×512 px; GIF, JPG, or PNG)
 3. Save and test on different devices
 
@@ -101,7 +101,7 @@ Yes, for most areas. You can replace logos, colors, company name, and most visua
 <details>
 <summary>Why is my favicon not uploading?</summary>
 
-Favicons must be ICO files (e.g. image.ico, not image.png or image.jpg). Go to `Partner Center` → `Administration` → `Partner Branding` → `Favicon`.
+Favicons must be ICO files (e.g. image.ico, not image.png or image.jpg). Go to `Partner Center` → `Administration` → `Partner branding` → `Favicon`.
 
 If it still fails: check the file is .ico, keep size small (16×16 or 32×32), or try recreating the ICO. If the problem continues, contact support.
 </details>
@@ -111,7 +111,7 @@ If it still fails: check the file is .ico, keep size small (16×16 or 32×32), o
 
 You cannot fully white-label the login page. With multiple markets, use a generic logo for the default market; that logo shows on login, and market-specific branding shows inside Business App after login.
 
-To change branding: `Partner Center` → `Administration` → `Partner Branding` → `Logo`. For multiple markets, use the `All Markets` tab (top right) and customize per market.
+To change branding: `Partner Center` → `Administration` → `Partner branding` → `Logo`. For multiple markets, use the `All Markets` tab (top right) and customize per market.
 </details>
 
 <details>
@@ -129,7 +129,7 @@ PNG with a transparent background is best. Use high resolution for clarity on di
 <details>
 <summary>Can I have different branding for different markets?</summary>
 
-Yes. Use the market selector in Partner Branding to set logos, colors, and company name per market.
+Yes. Use the market selector in Partner branding to set logos, colors, and company name per market.
 </details>
 
 <details>
@@ -160,6 +160,6 @@ Check file formats, image sizes, and clear browser cache. If it still fails, con
 
 The branding interface shows a live preview. Test logos, colors, and favicon on different devices and browsers.
 
-![Partner Branding Overview](./img/administration/partner-branding/customize-branding-overview.jpg)
+![Partner branding overview](./img/administration/partner-branding/customize-branding-overview.jpg)
 
 For help with visual branding, contact support at support@vendasta.com.

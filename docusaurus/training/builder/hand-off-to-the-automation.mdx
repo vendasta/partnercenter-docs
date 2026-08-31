@@ -1,0 +1,171 @@
+---
+title: Hand off to the automation
+sidebar_position: 4
+description: "Trigger scope, guarding a trigger with a condition, logging activities other automations can act on, and the custom objects and data expressions that carry the rest."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
+import { IconFlipCard, IconFlipCardGrid } from "@site/src/components/FlipCard";
+
+<InlineHighlighter courseId="hand-off-to-the-automation" site="vendasta_learn">
+
+<CourseProgressBar courseId="hand-off-to-the-automation" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Advanced"
+  topics={["Automations", "CRM", "Integrations"]}
+  time="about 12 minutes"
+  lab
+  required={[
+    "A test account with the WeatherCheck build running",
+  ]}
+  pathName="Wire your AI Workforce to act"
+  step={4}
+  totalSteps={8}
+  outcomes={[
+    "Match a trigger's scope to the record you are acting on",
+    "Guard a trigger so it fires on exactly the records you mean",
+    "Build the follow-up that picks up where the conversation ends",
+    "Log engagement as an activity the next automation can act on",
+  ]}
+/>
+
+## The trigger decides what you can do
+
+An AI Employee stops when the conversation stops. Everything that should happen afterward, reliably and without anyone remembering, belongs to an automation, and the trigger you choose sets the rules for everything that follows it.
+
+Trigger scope is the mechanism. A trigger scoped to a contact gives you contact steps; one scoped to a company gives you company steps; a trigger with no scope reaches less than either. When a step you expect is not in the list, the scope is the reason, and changing the trigger brings it back.
+
+<LessonSection>
+
+## Guard the trigger
+
+A trigger with no condition fires on every matching event, including the test record you made two minutes ago. A condition is what aims it: the record's source, a tag, a field value. Conditions group with `and` and `or` when one line is not enough.
+
+Three pieces make every automation, and each one answers a different question. Flip each one:
+
+<IconFlipCardGrid>
+  <IconFlipCard gradient="blue" front="Trigger" back="The event that starts the workflow. Its scope decides which steps are available to you." />
+  <IconFlipCard gradient="green" front="Condition" back="The guard that decides whether to run on this record. Without one, the trigger fires on everything that matches." />
+  <IconFlipCard gradient="purple" front="Action" back="A step the workflow takes: send, create, log, wait. They run top to bottom." />
+</IconFlipCardGrid>
+
+A guarded trigger with a scope that reaches its steps is the difference between an automation you leave running and one you feel you have to watch.
+
+</LessonSection>
+
+## Build the follow-up
+
+*You are here: Partner Center. The automation lives in your workspace, and it acts on the test account's records.*
+
+The build so far ends when the visitor closes the chat. The follow-up is what makes a booked job feel handled: the client hears something, and a person has a task waiting.
+
+<LabCallout title="build Rain delay follow-up">
+Go to `Automations` → `My automations`, then `Create automation`.
+
+<LabChecklist
+  storageKey="hand-off-to-the-automation-lab-1"
+  steps={[
+    <>Choose <code>Blank</code> from the <strong>Automation templates</strong> gallery that opens. Selecting it creates the automation, so pick deliberately.</>,
+    <>Name it <code>Rain delay follow-up</code> using <code>Edit details</code> in the Overview rail on the left.</>,
+    <>Select <code>Add a trigger</code> and pick one from the <strong>Contacts</strong> group, so contact steps are available to you.</>,
+    <>Tick <code>Add conditions for starting this automation</code>, then set a <code>Condition type</code> on the record's source, so it runs only on contacts your AI Employee captured.</>,
+    <>Add one action: create a task for the person who will confirm the day before.</>,
+    <>Save, turn it on, and run one more booking through the employee to watch it fire.</>,
+  ]}
+  confirm={<>A booking made in conversation now leaves a task behind it, and a contact from any other source does not.</>}
+/>
+</LabCallout>
+
+<LessonSection>
+
+## Log activities, not notes
+
+When an automation records that something happened, make it an activity rather than a note dropped in a field. An activity is anchored in time, and other automations can trigger on it. A value sitting in a message field is invisible to the rest of your system; an activity is something the platform can act on later, which is what lets one automation hand off cleanly to the next.
+
+That is the same handoff you just built, one level up: the employee announces, the automation acts, and what the automation logs is what the next one listens for.
+
+</LessonSection>
+
+## What carries the rest
+
+Two pieces cover the jobs a contact and a company cannot.
+
+**Custom objects** model what a business actually tracks. A veterinary clinic tracks a pet, with its own name, vaccination record, and chip number: a record type you define with its own fields, separate from anything on the contact. They power automations and smart lists the same way built-in records do, and they bulk-import from a spreadsheet.
+
+**Data expressions** reshape a value mid-flow, when what arrives is not quite what the next step needs: a first and last name to combine, one field to pull out of a larger payload, a number to reformat. They are compact by design and they fail softly, so a missing field returns an empty result rather than stopping the run. [The data expressions guide](/automations/my-automations/data-expressions) has the full syntax.
+
+:::tip Try it now
+Take one automation you run, or want to. Write the single condition that would keep it from firing on the wrong record: a source, a tag, a field value. That one line is what turns a noisy automation into one you leave running.
+:::
+
+<SectionFeedback courseId="hand-off-to-the-automation" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="hand-off-to-the-automation" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on trigger scope, guarding a trigger, and what other automations can act on."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'You are building an automation and the step you need is not in the list. What is the usual reason?',
+      options: [
+        'The trigger\'s scope does not reach that step',
+        'The automation has not been saved yet',
+        'The step requires a custom object first',
+        'Your plan does not include that action'
+      ],
+      correctIndex: 0,
+      explanation: 'The trigger sets the rules for everything after it. A contact-scoped trigger gives you contact steps; change the trigger and the step you want appears.'
+    },
+    {
+      type: 'mcq',
+      question: 'You want an automation to run only on leads your AI Employee captured, not on contacts you imported. What does that?',
+      options: [
+        'A condition on the record\'s source',
+        'A second trigger for the imported contacts',
+        'A data expression on the contact name',
+        'Turning the automation off between imports'
+      ],
+      correctIndex: 0,
+      explanation: 'A trigger with no condition fires on everything that matches. The condition is what aims it, on a source, a tag, or a field value.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your automation records that a follow-up call happened. Why log it as an activity rather than writing it into a field?',
+      options: [
+        'Other automations can trigger on an activity',
+        'Activities are the only records that can be exported',
+        'A field value would overwrite the contact\'s source',
+        'Activities do not count against your record limit'
+      ],
+      correctIndex: 0,
+      explanation: 'An activity is anchored in time and visible to the rest of your system. A value hidden in a field is not something the platform can act on later.'
+    },
+    {
+      type: 'mcq',
+      question: 'A veterinary clinic wants to track each pet: name, vaccination record, chip number. What models that?',
+      options: [
+        'A custom object with its own fields',
+        'Extra fields on the contact record',
+        'A separate contact for each pet',
+        'A data expression that splits the contact name'
+      ],
+      correctIndex: 0,
+      explanation: 'A custom object is a record type you define, separate from the contact, and it powers automations and smart lists the same way built-in records do.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/builder/wire-it-to-your-systems" pathName="Wire your AI Workforce to act" step={4} totalSteps={8} />
+
+</InlineHighlighter>
+<MarkComplete courseId="hand-off-to-the-automation" site="vendasta_learn" />

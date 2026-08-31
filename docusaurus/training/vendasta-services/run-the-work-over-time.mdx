@@ -12,6 +12,8 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
 
 <InlineHighlighter courseId="run-the-work-over-time" site="vendasta_learn">
 
@@ -20,7 +22,8 @@ import LessonSection from "@site/src/components/LessonSection";
 <LessonHeader
   difficulty="Beginner"
   topics={["Client delivery", "Proving results"]}
-  time="about 8 minutes"
+  time="about 10 minutes"
+  lab
   pathName="Work with Vendasta Services"
   step={5}
   totalSteps={5}
@@ -93,6 +96,22 @@ You did not do the work, and you still need to show the result. Three surfaces c
 - **Advertising Intelligence** reports campaign performance for Digital Ads, and Managed Ads Campaign adds strategy calls by spend tier.
 - **The Projects tracker** in Business App shows what shipped and when, mid-build rather than only at the end.
 
+<LabCallout title="send one client the proof">
+Go to `Accounts` → `Manage Accounts` and open a live client's account.
+
+<LabChecklist
+  storageKey="run-the-work-lab-1"
+  steps={[
+    <>Find the <strong>Reports</strong> card and select <code>View Executive Report</code> to read it as the owner would: what moved, and over what period.</>,
+    <>Check that it carries your brand rather than anyone else's.</>,
+    <>Back on the account, select <code>Resend Executive Report</code> to put it in their hands.</>,
+  ]}
+  confirm={<>Your client has evidence of work you did not do yourself, delivered under your name.</>}
+/>
+</LabCallout>
+
+The client can open the report themselves from their Business App at any time; sending it is a Partner Center action, on the account.
+
 The team also runs partner-only training webinars covering getting started, websites, digital ads, social and long-form content, and listings and reputation. Sessions are listed on the [webinar calendar](http://www.vendasta.com/webinar).
 
 <SectionFeedback courseId="run-the-work-over-time" site="vendasta_learn" section="content" />
@@ -153,15 +172,16 @@ The team also runs partner-only training webinars covering getting started, webs
 />
 
 <LessonFooter
-  to="/learn/ai-workforce"
+  to="/learn"
   pathName="Work with Vendasta Services"
   step={5}
   totalSteps={5}
-  nextPathName="Hire your first AI Employee"
-  description="Deploy, train, and grow an AI workforce yourself, for the functions you decided to keep in house."
-  secondTo="/learn/growth-engine"
-  secondNextPathName="Your growth engine"
-  secondDescription="Run the full loop for one prospect: Snapshot, package, propose, deliver, prove."
+  title="That is every learning path. Nicely done."
+  linkText="Back to all learning paths"
+  description="Revisit any path, or pick up the ones you skipped."
+  secondTo="/"
+  secondLinkText="Browse the documentation"
+  secondDescription="Every product, setting, and workflow in Partner Center, searchable, for the questions that come up while you work."
 />
 
 </InlineHighlighter>

@@ -41,10 +41,10 @@ import LessonSection from "@site/src/components/LessonSection";
 
 By the end of this step, your receptionist from the last step answers your ten hardest questions correctly, prices included, with a guardrail in place so it never invents one again. *You are here: Partner Center, on the same employee you deployed last step.*
 
-Run the ten-question audit again, now that the employee is doing real work: open the Try it test page and ask everything a prospect is likely to ask, prices included. A wrong answer is not a defect, it is a training gap, and every training gap has an address, either a knowledge source that needs fixing or an instruction it never received.
+Run the ten-question audit again, now that the employee is doing real work: open `Chat` and ask everything a prospect is likely to ask, prices included. A wrong answer is not a defect, it is a training gap, and every training gap has an address, either a knowledge source that needs fixing or an instruction it never received.
 
 :::tip Try it now
-Open the test page in a fresh incognito window and run the audit before you change anything. Keep the answers that need fixing; the rest of this step fixes them.
+Open `Chat` in a fresh incognito window and run the audit before you change anything. Keep the answers that need fixing; the rest of this step fixes them.
 :::
 
 <LessonSection>
@@ -54,15 +54,16 @@ Open the test page in a fresh incognito window and run the audit before you chan
 A wrong price usually means the source it searched never had the real number, not that the AI is broken. Copy the package's exact pricing into a clean document and upload it as the authoritative source: auto-imported marketplace content can carry broken links or no usable pricing at all.
 
 <LabCallout title="upload a clean price list">
-You are going to your employee's **Configure** panel → **Knowledge Sources**.
+Go to your employee's `Configure` page → `Knowledge sources`.
 
 <LabChecklist
   storageKey="train-your-employee-lab-1"
   steps={[
     <>Write or copy the package's exact prices and details into one document.</>,
-    <>Select <strong>Add knowledge source</strong> and upload it as a file, labeled clearly (for example, "2026 Service Pricing").</>,
+    <>Select the <code>Add knowledge</code> field, then <code>+ Add new knowledge</code> at the top of the dropdown, then <strong>File Upload</strong>.</>,
+    <>Upload the document, labeled clearly (for example, "2026 Service Pricing").</>,
   ]}
-  confirm={<>The price list now appears in <strong>Knowledge Sources</strong>, ready for the AI to search.</>}
+  confirm={<>The price list now appears in <strong>Knowledge sources</strong>, ready for the AI to search.</>}
 />
 </LabCallout>
 
@@ -75,12 +76,12 @@ For every knowledge source type and what belongs in each, [the Knowledge Base gu
 Knowledge is what the AI looks up when a question calls for it. A rule that must hold on every response belongs in a capability instead, so a guardrail like "quote only from the published list, never estimate" holds even on a question the price list does not directly answer.
 
 <LabCallout title="write the pricing guardrail">
-You are going to your employee's **Configure** panel → **Capabilities**.
+Go to your employee's `Configure` page → `Capabilities`.
 
 <LabChecklist
   storageKey="train-your-employee-lab-2"
   steps={[
-    <>Open the capability that answers pricing questions, or add a custom capability named something like <code>QuotePricing</code>.</>,
+    <>Open the capability that answers pricing questions, or select <code>+ Add a capability</code> then <code>+ New capability</code> to write one named something like <code>QuotePricing</code>.</>,
     <>In its instructions, add: quote only the prices in the knowledge base; if a price is not there, capture the visitor's contact details and say a person will follow up.</>,
     <>Save.</>,
   ]}
@@ -95,7 +96,7 @@ Keep the instruction short. Everything an employee has been told shares one work
 ## Re-test and see why it answered that way
 
 <LabCallout title="re-run the audit">
-You are back on the **Try it** test page.
+Go back to `Chat`.
 
 <LabChecklist
   storageKey="train-your-employee-lab-3"
@@ -139,7 +140,7 @@ Testing on purpose, on your own account, is how gaps surface before a client eve
         'A capability fix, because the guardrail failed',
         'A knowledge fix, because the source it searched does not have the real price',
         'A channel fix, because the wrong channel is enabled',
-        'An autonomy fix, because the level is set too high'
+        'A channel fix, because the answer went out on the wrong channel'
       ],
       correctIndex: 1,
       explanation: 'An invented price means the source did not have the real number to find. Fix the knowledge first, then add a guardrail so it cannot happen again.'
@@ -175,7 +176,7 @@ Testing on purpose, on your own account, is how gaps surface before a client eve
         'Turn it off until it is more consistent',
         'Treat it once and leave it; it will settle on its own',
         'Keep coaching it the way you would a new hire, correcting what is off as you see it',
-        'Lower its autonomy level permanently'
+        'Remove the pricing source so it stops answering the question'
       ],
       correctIndex: 2,
       explanation: 'The operating mindset is continuous: coach and correct as you go, the way you would with any new team member.'

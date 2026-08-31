@@ -13,7 +13,7 @@ To receive these email notifications, you must [add the respective person as a u
 (Reputation AI will need to be active on the account)  
   
 
-1.  In Partner Center, click on **Accounts** > **Manage Users**.  
+1.  In Partner Center, click on `Accounts` → `Manage Users`.  
     ![PC Manage Users.png](./img/23186071999127-0fd7c6820f.png)  
       
     

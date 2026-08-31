@@ -1,0 +1,248 @@
+---
+title: Build the doorway
+sidebar_position: 2
+description: "Turn a working API call into a custom tool: the cURL import, the four parts, parameter descriptions, the authentication a tool can carry, and the four-part capability prompt."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
+
+<InlineHighlighter courseId="build-the-doorway" site="vendasta_learn">
+
+<CourseProgressBar courseId="build-the-doorway" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Advanced"
+  topics={["Custom tools", "Capabilities", "Integrations"]}
+  time="about 14 minutes"
+  lab
+  required={[
+    "An AI Employee in your test account with booking and lead capture confirmed working",
+  ]}
+  pathName="Wire your AI Workforce to act"
+  step={2}
+  totalSteps={8}
+  outcomes={[
+    "Turn a working API call into a custom tool with a cURL import",
+    "Write parameter descriptions the AI can follow in a live conversation",
+    "Choose the authentication a custom tool can actually carry",
+    "Write the four-part capability prompt that gives the tool judgment",
+  ]}
+/>
+
+## Start from a call that already works
+
+The fastest reliable way to build a tool is to get the API call working on its own first, outside the platform, and import it once it returns what you expect. Debugging a call and debugging a capability at the same time is two problems; getting the call working first leaves you one.
+
+*You are here: Business App, inside your test account.*
+
+This build uses [Open-Meteo](https://open-meteo.com), a public forecast API that needs no account and no key. Any forecast API works the same way. Open its documentation, find the forecast endpoint, and copy the example request it gives you. Most API documentation shows one as a cURL command, and that single line is everything the import needs.
+
+The method tells the other system what you are asking for, and its documentation tells you which one to use:
+
+| Method | What it means |
+|---|---|
+| **GET** | Give me some information |
+| **POST** | Create or send something new |
+| **PUT / PATCH** | Change something that exists |
+| **DELETE** | Remove something |
+
+A forecast lookup reads and changes nothing, so it is a `GET`.
+
+<LessonSection>
+
+## Import the call and name what it does
+
+<LabCallout title="create the capability">
+Go to `AI` → `Workforce`, then your employee's `Configure` page → `Capabilities` → `+ Add a capability`.
+
+<LabChecklist
+  storageKey="build-the-doorway-lab-1"
+  steps={[
+    <>The dialog lists capabilities you already have. Select <code>+ New capability</code> at the bottom left to write a new one.</>,
+    <>Name it <code>WeatherCheck</code>. No spaces, and a name a teammate would recognize at a glance.</>,
+    <>In the <strong>Prompt</strong> field, type <code>TBD</code> for now. The prompt comes last, once there is a tool for it to talk about.</>,
+  ]}
+  confirm={<>An empty capability exists, named and waiting for the tool you are about to give it.</>}
+/>
+</LabCallout>
+
+<LabCallout title="import the call as a tool">
+Stay on the `WeatherCheck` capability, under **Tools**.
+
+<LabChecklist
+  storageKey="build-the-doorway-lab-2"
+  steps={[
+    <>Select <code>+ Add a tool</code>, then <code>+ New tool</code> at the bottom left of that dialog.</>,
+    <>Select <code>Generate from cURL</code>, paste the example you copied, and select <code>Generate</code>. It fills in the method, URL, headers, and parameter names.</>,
+    <>Set the tool's <code>Name</code> to <code>GetForecast</code>. It is required, and it is the name the AI reaches for.</>,
+    <>Write its <code>Description</code> as the moment it is for: "Use before booking outdoor appointments to check the weather conditions."</>,
+  ]}
+  confirm={<>The tool sits on the capability with a method, URL, and headers matching the documentation you copied from. Select <code>Done</code> to keep it.</>}
+/>
+</LabCallout>
+
+The description is not a label. The AI reads it to decide whether this is the right doorway for the moment in front of it, so it earns real attention when an employee carries several tools.
+
+</LessonSection>
+
+## Parameter descriptions do the heavy lifting
+
+Every custom tool is four things: a **description**, a **method and URL**, **headers**, and **parameters**. The first three are copied from the other system's documentation. The parameters are where your judgment goes.
+
+Each parameter row carries a `Parameter key`, a `Location`, a `Type`, a `Required` checkbox, a `Set by AI` checkbox that is on by default, and a `Description`. The description is what the AI follows mid-conversation, so write it as an instruction rather than a label:
+
+- **The date.** "The date the visitor wants, from their message. Convert phrases like next Tuesday to a date formatted YYYY-MM-DD. If no date is given, ask for one." Set by AI stays on, because this value comes from the conversation.
+- **The location.** The business does not move between conversations, so clear `Set by AI` and set the value once. The AI should only fill in what genuinely comes from the visitor.
+
+When a tool sends the wrong value, a vague parameter description is almost always why. "The date" tells the AI nothing about format or fallback; the sentence above tells it both.
+
+<LessonSection>
+
+## Proving the tool is allowed in
+
+Open-Meteo opens without proof of who is knocking. Most systems will not, and the proof travels in the headers. The other system's documentation names which kind it expects:
+
+| What the API wants | What goes in Headers | Works as a custom tool |
+|---|---|---|
+| **An API key** | `Authorization: Bearer YOUR_KEY`, or whatever header name it documents | Yes, and this is the common case |
+| **Basic auth** | `Authorization: Basic <base64 of user:password>` | Yes, as a static value |
+| **A short-lived OAuth token** | `Authorization: Bearer <a token you obtained elsewhere>` | Only until it expires |
+
+A custom tool authenticates by sending headers. It does not run a login flow, so there is nowhere to put a client ID and secret, and nothing renews a token on your behalf. When an API needs a live token exchange, there are two honest routes: ask that provider for a long-lived key instead, or put a small service of your own in between that holds the credentials and exposes one simple endpoint your tool can call.
+
+Whichever it uses, give the tool the narrowest access that does the job, and keep credentials out of anywhere they could be read later.
+
+</LessonSection>
+
+## Write the capability prompt
+
+The tool is the hands. The prompt is the judgment, and it is what decides whether the tool fires at the right moment. A reliable capability prompt answers four questions in order: when to act, what to collect first, how to respond, and what to do when something goes wrong.
+
+<LabCallout title="replace the TBD with a four-part prompt">
+Go back to the `WeatherCheck` capability's `Prompt` field.
+
+<LabChecklist
+  storageKey="build-the-doorway-lab-3"
+  steps={[
+    <>Write the trigger: which services this applies to, and which it does not.</>,
+    <>Write what the capability needs before it can act: the day, and the service being booked.</>,
+    <>Write the response on success, including staying quiet when the forecast is clear.</>,
+    <>Write the error path: what to say when no forecast comes back.</>,
+    <>Select <code>Done</code>.</>,
+  ]}
+  confirm={<>The prompt names a trigger, a requirement, a response shape, and an error path, and the TBD is gone.</>}
+/>
+</LabCallout>
+
+Written out, it looks like this:
+
+```markdown
+# Check the weather before outdoor bookings
+
+## When to use
+- ONLY use GetForecast when the visitor is booking an outdoor service:
+  gutter cleaning, lawn care, exterior work.
+- Do NOT use it for indoor services or general questions.
+
+## What you need first
+- The day the visitor wants, and the service they are booking.
+
+## How to respond
+- If the forecast is clear, continue the booking as normal. Do not
+  mention the check.
+- If rain or high wind is forecast, say so and offer the nearest
+  clear day instead.
+
+## When something goes wrong
+- If no forecast comes back, continue the booking and let the visitor
+  know a team member will confirm the day before.
+```
+
+Write yours in your own words, and keep all four parts. Almost every capability that misfires is missing one of them: no clear trigger, so it fires at the wrong moment, or no error path, so an empty response becomes an awkward answer.
+
+:::tip Try it now
+Read your prompt back as if you were briefing a new hire on their first day. Any sentence that would not change what they do is noise. Cut it before you test.
+:::
+
+<SectionFeedback courseId="build-the-doorway" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="build-the-doorway" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on the cURL import, parameter descriptions, authentication, and the four-part prompt."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'Your tool runs, but it keeps sending the wrong value for one parameter. What is the usual fix?',
+      options: [
+        'Rewrite the parameter description so the AI knows where the value comes from',
+        'Switch the method from GET to POST',
+        'Delete the tool and import the cURL again',
+        'Turn Set by AI off for that parameter'
+      ],
+      correctIndex: 0,
+      explanation: 'Parameter descriptions do the heavy lifting. Say where the value comes from, what format it takes, and what to do when it is missing, and the right value follows.'
+    },
+    {
+      type: 'mcq',
+      question: 'The business location never changes between conversations. How should that parameter be configured?',
+      options: [
+        'Set by AI off, with the value fixed once',
+        'Set by AI on, with a detailed description',
+        'Marked optional so the AI can skip it',
+        'Left blank so the API uses a default'
+      ],
+      correctIndex: 0,
+      explanation: 'The AI should only fill in what actually comes from the conversation. A value that never changes is a fixed value.'
+    },
+    {
+      type: 'mcq',
+      question: 'An API you want to reach issues short-lived OAuth tokens that expire every hour. What can a custom tool do with that?',
+      options: [
+        'Carry the token in a header until it expires, and no further',
+        'Run the OAuth login flow and refresh the token itself',
+        'Store the client ID and secret and renew on a schedule',
+        'Nothing at all; that API cannot be reached by any route'
+      ],
+      correctIndex: 0,
+      explanation: 'A custom tool authenticates by sending headers. It does not run a login flow and nothing renews a token for it. Ask the provider for a long-lived key, or put a small service of your own in between.'
+    },
+    {
+      type: 'mcq',
+      question: 'A capability keeps answering awkwardly whenever its API returns nothing. Which part of the four-part prompt is missing?',
+      options: [
+        'What to do when something goes wrong',
+        'When to use the capability',
+        'What information to collect first',
+        'How to respond on success'
+      ],
+      correctIndex: 0,
+      explanation: 'An empty response becoming an awkward answer is the signature of a missing error path. Name what the AI should say when nothing comes back, and the awkwardness goes.'
+    },
+    {
+      type: 'mcq',
+      question: 'Why get the API call working outside the platform before importing it?',
+      options: [
+        'It leaves you one thing to debug instead of two',
+        'The import only accepts calls that have been run before',
+        'The platform cannot make a first call to a new system',
+        'It is the only way to discover the required method'
+      ],
+      correctIndex: 0,
+      explanation: 'A call that already returns what you expect takes the API out of the equation, so anything that goes wrong afterward belongs to the tool or the prompt.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/builder/watch-it-work" pathName="Wire your AI Workforce to act" step={2} totalSteps={8} />
+
+</InlineHighlighter>
+<MarkComplete courseId="build-the-doorway" site="vendasta_learn" />

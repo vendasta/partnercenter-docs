@@ -1,7 +1,7 @@
 ---
 title: Turn on your own AI Receptionist
 sidebar_position: 5
-description: "Configure the receptionist serving your own business: its purpose, capabilities, and knowledge, the widget on your website, and a proper test drive."
+description: "Configure the receptionist serving your own business: its name, its role, the knowledge it answers from, a real conversation with it, and the widget that puts it on your site."
 ---
 
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
@@ -13,6 +13,8 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
 
 <InlineHighlighter courseId="turn-on-your-own-ai-receptionist" site="vendasta_learn">
 
@@ -20,142 +22,294 @@ import LessonSection from "@site/src/components/LessonSection";
 
 <LessonHeader
   difficulty="Beginner"
-  topics={["AI Receptionist", "AI Workforce"]}
-  time="about 12 minutes"
+  topics={["AI Receptionist", "AI Workforce", "Knowledge Base"]}
+  time="about 25 minutes"
   lab
   required={[
     "Partner Center admin access",
-    "Access to edit your website, for the widget install",
+    "Access to add code to your website, for the final section only",
   ]}
   pathName="Get set up"
   step={5}
-  totalSteps={7}
+  totalSteps={8}
   outcomes={[
-    "Describe any AI Employee through its purpose, capabilities, and knowledge",
-    "Configure your own chat receptionist and connect your calendar for bookings",
-    "Install the web chat widget on your website",
-    "Test your receptionist the way a customer would meet it",
+    "Find your AI Workforce and tell the employees on it apart",
+    "Name your Chat Receptionist and read the role it already runs on",
+    "Add your website as a knowledge source and see what it trained on",
+    "Hold a real conversation with it and sharpen an answer",
+    "Install the web chat widget and watch it become a trigger on the employee",
   ]}
 />
 
 ## Three parts make a receptionist
 
-Every AI Employee, including the AI Receptionist, is built from the same core parts. These three elements comprise every AI Employee in the platform, and configuring yours means deciding who it is (its purpose), what it can do (its capabilities), and what it knows (its knowledge). Flip each one:
+Every AI Employee, including the AI Receptionist, is built from the same three parts. Configuring yours means deciding who it is, what it can do, and what it knows. Flip each one:
 
 <IconFlipCardGrid>
   <IconFlipCard
     gradient="blue"
-    front="Purpose"
-    back="Who the AI is and how it behaves: its job description, tone, and standing instructions, held in the field labeled Role on the receptionist. Yours arrives with a working purpose already written."
+    front="Role"
+    back="Who the AI is and how it behaves: its job description, tone, and standing instructions. Yours arrives with a working role already written, and you can read it before you change anything."
   />
   <IconFlipCard
     gradient="green"
     front="Capabilities"
-    back="A skill you switch on, such as capturing leads or booking appointments. Each one tells the AI what to do and when to do it."
+    back="A skill it can apply, with instructions telling it when. Yours ships with Capture leads already on, which is what turns a conversation into a CRM contact."
   />
   <IconFlipCard
     gradient="purple"
-    front="Knowledge"
-    back="What the AI knows about the business: website content, documents, and facts it references when answering. You choose every source."
+    front="Knowledge sources"
+    back="What it can pull from when answering: your website, documents, and facts you add. Each source shows when it last refreshed and how many pages it trained on."
   />
 </IconFlipCardGrid>
 
+Your receptionist serves your business, so it lives in your workspace: **Partner Center**. Everything in this step happens there.
+
 <LessonSection>
 
-## Configure yours
+## Meet your workforce
 
-Your receptionist serves your business, so it lives in your workspace: Partner Center. There, open `AI` → `AI Workforce` and click `Configure` on the AI Chat Receptionist.
+Open `AI` → `Workforce`. The page that loads is your **AI Workforce**, and every AI Employee you have sits on it as a card.
 
-It works well out of the box. Give it a name and an image that fit your brand, and it will introduce itself accordingly. The `Capture Lead Information` capability is on by default: it asks visitors for contact details such as a name, phone number, or email, and saves captured leads to your CRM. Turn on `Book Appointments` and connect your calendar, set up in `CRM` → `My Meetings`, and the receptionist offers real meeting times and collects the booking details itself. [This guide covers each setting](/ai/ai-workforce/ai-chat-receptionist/).
+You already have more than one. The **Chat Receptionist** answers anyone messaging your business. **Ash** is the voice receptionist and answers the phone. The **AI Sales Assistant** works on your recorded sales calls. Alongside them sit any custom employees, and a `Create` button in the top right for building your own.
+
+Two things on every card are worth reading before you click anything:
+
+- **The buttons differ by employee.** The Chat Receptionist offers `Chat` and `Configure`. Ash offers `Call`, `Try it`, and `Configure`, because you test a voice receptionist by phoning it.
+- **Autonomy** is shown on the two receptionist cards as a level, and it is a label rather than a control. The info icon beside it explains the four levels; there is nothing to set. Custom employees show no autonomy at all.
+
+:::info Which plan carries which receptionist
+The **Starter** plan includes the AI Chat Receptionist, which is the one this step configures. The **Professional** plan and above add the AI Voice Receptionist and the social channels, Facebook, Instagram, and WhatsApp. Two gates run in parallel and it is worth keeping them apart: your own subscription decides what you get, and a client gets whichever edition of Conversations AI is active on their account. [This guide breaks down what each plan includes](/ai/ai-workforce/ai-receptionist-features-by-plan).
+:::
+
+<LabCallout title="find your receptionist">
+Go to `AI` → `Workforce`.
+
+<LabChecklist
+  storageKey="turn-on-receptionist-lab-1"
+  steps={[
+    <>Expand <code>AI</code> in the left navigation. Three items appear: <code>Workforce</code>, <code>Capabilities</code>, and <code>Knowledge Base</code>.</>,
+    <>Select <code>Workforce</code>.</>,
+    <>Find the card whose subtitle reads <strong>Chat receptionist</strong>. The large text is a name, which you or a teammate can change; the subtitle is what stays put.</>,
+    <>Select <code>Configure</code> on that card.</>,
+  ]}
+  confirm={<>The Configure page is open, with the receptionist's photo and name on the left.</>}
+/>
+</LabCallout>
 
 </LessonSection>
 
-## Give it knowledge, sparingly
+## Name it, and read what it already does
 
-Knowledge is chosen, not dumped. Add your own website as a source in `Follow links` mode, which learns up to 100 pages from the URL you give it (the site must be publicly reachable without a login), and enable `Automatic refresh` so it re-crawls monthly on its own. Business facts that live nowhere on your site (hours, services, what makes you different) go in as plain text or file uploads.
+The Configure page is one screen with everything on it. On the left: the photo, the **Name** field, the **Autonomy** level, and a `View prompt` button. On the right, in order: **Triggers**, **Profile**, **Capabilities**, **Knowledge sources**, and **Automations**.
 
-Then stop. Less is more with AI knowledge: a lean, current set of sources keeps answers consistent, and you can add more the moment a real conversation shows a gap. [The Knowledge Base guide](/ai/knowledge-base/) covers every source type.
+Start with the name, because the AI knows its own name and introduces itself with it. Then read before you write, because two things are already done for you.
+
+Under **Capabilities** you will find **Capture leads**: "Collects contact information, creates a new contact, and lets the contact know someone on your team will follow up." That is the capability that turns a chat into a record in your CRM, and it is on before you touch anything.
+
+<LabCallout title="make it yours, then read the role">
+Go to the receptionist's `Configure` page.
+
+<LabChecklist
+  storageKey="turn-on-receptionist-lab-2"
+  steps={[
+    <>In <strong>Name</strong>, replace "Chat Receptionist" with a name that fits your brand, and set a photo.</>,
+    <>Under <strong>Profile</strong>, expand <code>Role</code>. This is the job description and behavioural guidelines it already runs on. Read it before changing a word.</>,
+    <>Select <code>View prompt</code> to see the full instruction the AI actually receives.</>,
+    <>Under <strong>Capabilities</strong>, find <strong>Capture leads</strong> and read its description. Its <code>⋮</code> menu is where you edit or remove it, and <code>Learn more</code> opens its documentation.</>,
+    <>Select <code>Save</code>.</>,
+  ]}
+  confirm={<>The receptionist carries your name and photo, and you have read both the role it runs on and the Capture leads capability it already has.</>}
+/>
+</LabCallout>
+
+Reading first is the habit worth forming. The role that ships is a working one, and most first-day changes are small additions to it rather than rewrites.
+
+<LessonSection>
+
+## Give it knowledge
+
+**Knowledge sources** on the same page is where you choose what the AI can pull from when it answers. Your website homepage is already one of them, included by default, which is why the receptionist can say something useful before you configure anything at all. Every source lists its address, when it last refreshed, and how many pages it trained on, so you can always see exactly what the AI is working from.
+
+Adding one takes two clicks rather than one. The `Add knowledge` field first offers knowledge you already have; `+ Add new knowledge` at the top of that list is what opens the choice of three:
+
+- **Text** for content related to your business, such as FAQs or custom information
+- **Website** to retrieve content from a website
+- **File Upload** for a document or file
+
+<LabCallout title="add the rest of your website">
+Go to the same `Configure` page, under **Knowledge sources**.
+
+<LabChecklist
+  storageKey="turn-on-receptionist-lab-3"
+  steps={[
+    <>Read the sources already listed, and note the page count on each one.</>,
+    <>Select the <code>Add knowledge</code> field at the bottom of the list. It opens a dropdown of knowledge you already have.</>,
+    <>Select <code>+ Add new knowledge</code> at the top of that dropdown, then choose <strong>Website</strong>.</>,
+    <>Enter your website address. It has to be reachable without a login, so check it in an incognito window if you are unsure.</>,
+    <>Save, then give the source time to finish training.</>,
+    <>Come back and read its line: the date it last refreshed, and how many pages it trained on out of how many it found.</>,
+  ]}
+  confirm={<>Your site appears as a source with a page count, and you know exactly how much of it the AI learned.</>}
+/>
+</LabCallout>
+
+Anything that lives nowhere on your site (your hours, your prices, what makes you different) goes in through **Text** as a written entry, and a price list or a policy document goes in through **File Upload**. For every source type, crawl mode, and refresh option, [the Knowledge Base guide](/ai/knowledge-base/) covers it, and `AI` → `Knowledge Base` is where you manage sources across every employee at once.
+
+</LessonSection>
+
+## Put it to practice
+
+`Chat` on the receptionist's card opens a conversation between you and your employee. It is private to you and it keeps a history, and it is where you try your receptionist out: you chat with it, you audit the answers, and you fix what is off. There is no separate test page to find.
+
+<LabCallout title="interview your receptionist">
+Go to `AI` → `Workforce`, then `Chat` on the Chat Receptionist card.
+
+<LabChecklist
+  storageKey="turn-on-receptionist-lab-4"
+  steps={[
+    <>Ask the three questions your customers ask you most. Include one about price.</>,
+    <>Ask something deliberately vague, and watch whether it asks a good follow-up or guesses.</>,
+    <>Ask the same question a second time. Answers vary slightly, and a question that only works sometimes needs a sharper source or a clearer instruction.</>,
+    <>Select <code>Configure</code> from the top right, change one thing, and ask again.</>,
+    <>Use <code>+ New chat</code> whenever you want a clean start with no history behind it.</>,
+  ]}
+  confirm={<>You have found at least one answer worth sharpening, changed one thing, and seen the difference.</>}
+/>
+</LabCallout>
+
+Change one element at a time, whether that is the role, a capability, or a knowledge source. Changing three at once tells you nothing about which one worked.
 
 <LessonSection>
 
 ## Put it on your website
 
-The widget does not add itself to your site; installing the code is what makes the receptionist real. Your receptionist's widget lives at `Conversations` → `Settings`, on the **Web Chat** card, behind `Manage widgets`: open the **System** widget (the built-in receptionist widget) to set its messages and appearance to match your brand, then choose `Embed` from the row's `⋮` menu to copy the installation code. The code installs on any site that lets you add code to the page head, with specific routes for WordPress, GoDaddy, and Google Tag Manager. The floating widget is the strong default: it travels with the visitor down every page. [This guide covers widgets and embed codes](/conversations/ai-assisted-web-chat-widget).
+The widget does not add itself. Installing the code is the step that turns a working configuration into a receptionist your visitors can reach, and it is also what connects the two halves of this lesson: a widget you install shows up back on the employee as a **trigger**, one of the events that invokes it.
 
-This is the exact setup you will later repeat for clients from their Business App.
+<LabCallout title="create a widget you can embed">
+Go to `Conversations` → `More` → `Conversations Settings`, on the **Web Chat** card. (`Administration` → `Conversations Settings` reaches the same page.)
 
-</LessonSection>
+<LabChecklist
+  storageKey="turn-on-receptionist-lab-5"
+  steps={[
+    <>Select <code>Manage widgets</code> to open the <strong>Web Chat configuration</strong> page.</>,
+    <>Select <code>New Web Chat</code> and give it a widget name. This creates a <strong>Standard</strong> widget, which is the kind you can embed.</>,
+    <>On the <strong>AI employee</strong> card, select your receptionist.</>,
+    <>Set the <strong>Welcome greeting</strong>, the <strong>Initial AI message</strong>, and the <strong>Appearance</strong> colors to match your brand, then save.</>,
+  ]}
+  confirm={<>Your widget is listed with its <code>Widget type</code> reading <strong>Standard</strong> and your receptionist assigned to it.</>}
+/>
+</LabCallout>
 
-## Put it through its paces
+The widget that ships with your account has a `Widget type` of **System**, and its `⋮` menu offers only `Edit`. Embed codes live on Standard widgets, which is why the step above creates one.
 
-Configuration ends where testing begins. Click `Chat` on the receptionist's card to open a test conversation (an incognito window gives every test a fresh start), and ask it what your customers ask you: services, hours, prices, something ambiguous, a meeting request. Watch whether it gives too much, too little, or exactly enough; each response carries a clickable `Explanation` showing the reasoning and the knowledge source behind it. Change one thing at a time (its purpose, a capability, or a knowledge source) and ask again. If your receptionist also answers a phone line through the AI Voice Receptionist, call the number and run the same questions out loud.
+<LabCallout title="embed it on your site">
+Go to your new widget's `⋮` menu on the **Web Chat configuration** page.
 
-Experimenting here is safe by design: the configuration includes a reset to default when you want to start over.
+<LabChecklist
+  storageKey="turn-on-receptionist-lab-6"
+  steps={[
+    <>Choose <code>Embed</code>.</>,
+    <>Open the <strong>Floating chat widget</strong> section and pick the tab that matches your site: <code>Website</code>, <code>Google Tag Manager</code>, <code>WordPress</code>, or <code>GoDaddy</code>.</>,
+    <>Copy the code and paste it into your page head, just before the closing head tag, then publish.</>,
+    <>Load your own site in an incognito window and start a conversation.</>,
+  ]}
+  confirm={<>The widget opens on your live site, the conversation appears in <code>Conversations</code>, and the contact is saved to your CRM.</>}
+/>
+</LabCallout>
+
+Go back to the receptionist's `Configure` page and look at **Triggers**. Your widget is listed there now, as an event that invokes this employee, with its own `Settings`. That is the shape of the whole system: a channel arrives, a trigger fires, and the employee answers with the role, capabilities, and knowledge you just set.
 
 :::tip Try it now
-Open `AI` → `AI Workforce`, click `Chat` on your receptionist, and ask it the three questions your customers ask you most. Tune one thing it gets wrong, and ask again.
+Open `Conversations` and find the chat you just had through your own widget. Whatever a visitor sends now lands here, and this is the inbox you will check in the morning.
 :::
 
-Everything deeper (voice configuration, custom capabilities, and building receptionists for clients in their Business App) has a path of its own: [Hire your first AI Employee](/learn/ai-workforce).
+Everything deeper, voice configuration, custom capabilities, and building receptionists for clients in their Business App, has a path of its own: [Hire your first AI Employee](/learn/ai-workforce).
+
+</LessonSection>
 
 <SectionFeedback courseId="turn-on-your-own-ai-receptionist" site="vendasta_learn" section="content" />
 
 <KnowledgeCheck courseId="turn-on-your-own-ai-receptionist" site="vendasta_learn"
   sessionSize={3}
-  intro="Three quick questions on the three parts, knowledge choices, and getting the widget live."
+  intro="Three quick questions on finding your workforce, the three parts, testing, and getting the widget live."
   questions={[
     {
       type: 'mcq',
-      question: 'You want your receptionist to offer visitors real meeting times from your calendar. Which part of its configuration is that?',
+      question: 'You want to test your Chat Receptionist before anyone else meets it. What do you use?',
       options: [
-        'A capability, with your calendar connected in My Meetings',
-        'A knowledge source, uploaded as your availability document',
-        'The purpose, rewritten to mention your working hours',
-        'The widget appearance, with a booking button added'
+        'Chat on its card, which opens a conversation private to you',
+        'Try it on its card, which opens a public sample page',
+        'Call on its card, which dials your business number',
+        'The live widget on your website, in an incognito window'
       ],
       correctIndex: 0,
-      explanation: 'Booking is a skill the AI performs, which makes it a capability. Connect your calendar in My Meetings and the receptionist offers times from your actual availability.'
+      explanation: 'Chat opens a private conversation with your employee, complete with history. Call and Try it belong to the voice receptionist, which you test by phoning it.'
     },
     {
       type: 'mcq',
-      question: 'You are deciding what knowledge to give your receptionist. Which approach sets it up best?',
+      question: 'A rule that should shape how your receptionist behaves in every conversation belongs where?',
       options: [
-        'Your website plus the few facts the job needs, kept current',
-        'Every document your business has ever produced, for completeness',
-        'Nothing at all, since the purpose prompt already describes the business',
-        'Only competitor websites, so it can make comparisons'
+        'In the Role, under Profile',
+        'In Knowledge sources, as a written entry',
+        'In Triggers, as a new event',
+        'In Automations, as a follow-up step'
       ],
       correctIndex: 0,
-      explanation: 'Less is more with AI knowledge. A lean, current set of sources keeps answers consistent, and you add more the moment a real conversation shows a gap.'
+      explanation: 'The Role is the job description and behavioural guidelines the AI carries into every conversation. Knowledge sources are facts it looks up when a question calls for them.'
     },
     {
       type: 'mcq',
-      question: 'Your receptionist answers beautifully on the Try it page, but nothing appears on your website. What is the missing step?',
+      question: 'You added your website as a knowledge source. How do you know how much of it the AI actually learned?',
       options: [
-        'Installing the widget code on your site',
+        'The source lists when it last refreshed and how many pages it trained on',
+        'The AI reports its page count when you ask it in Chat',
+        'The page count appears only in the Knowledge Base section of the nav',
+        'You compare the answer quality before and after'
+      ],
+      correctIndex: 0,
+      explanation: 'Every knowledge source shows its address, its last refresh date, and how many pages it trained on out of how many it found.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your receptionist answers well in Chat, but nothing appears on your website. What is the missing step?',
+      options: [
+        'Creating a Standard widget and installing its embed code on your site',
         'Waiting for the knowledge sources to finish training',
-        'Upgrading the receptionist to a voice plan',
+        'Raising the autonomy level',
         'Adding your website as a knowledge source'
       ],
       correctIndex: 0,
-      explanation: 'The widget does not add itself to your site. Copy the install code from the widget setup and add it to your website, and the receptionist goes live for visitors.'
+      explanation: 'The widget does not add itself, and the System widget that ships with your account carries no embed code. Create a Standard widget, assign your receptionist, and copy its embed code to your site.'
     },
     {
       type: 'mcq',
-      question: 'Your receptionist fumbled a pricing question on the test page. What is the productive next move?',
+      question: 'After installing your widget, you open the receptionist\'s Configure page. Where does the widget show up?',
       options: [
-        'Change one thing, such as the knowledge source that carries your prices, then run the same question again',
-        'Rewrite the purpose, swap capabilities, and add three documents in a single pass',
-        'Delete the receptionist and configure a fresh one from the defaults',
-        'Move on, since behavior on the test page differs from the live widget'
+        'Under Triggers, as an event that invokes the employee',
+        'Under Capabilities, as a new skill',
+        'Under Knowledge sources, as a new source',
+        'It does not appear on the employee at all'
       ],
       correctIndex: 0,
-      explanation: 'Change one element at a time, then retest the same scenario. Each response includes an Explanation showing the reasoning and knowledge source it used, which points you at the element that needs the change.'
+      explanation: 'Triggers are the events that invoke an AI employee to act, and each installed web chat widget is one of them, with its own settings.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your receptionist fumbled a pricing question. What is the productive next move?',
+      options: [
+        'Change one thing, such as the source carrying your prices, then ask the same question again',
+        'Rewrite the role, add three documents, and switch on a capability in one pass',
+        'Delete the receptionist and configure a fresh one',
+        'Raise the autonomy level so it answers more confidently'
+      ],
+      correctIndex: 0,
+      explanation: 'Change one element at a time and retest the same question. Changing three at once tells you nothing about which one worked.'
     }
   ]}
 />
 
-<LessonFooter to="/learn/getting-started/where-to-get-help" pathName="Get set up" step={5} totalSteps={7} />
+<LessonFooter to="/learn/getting-started/bring-in-your-first-client" pathName="Get set up" step={5} totalSteps={8} />
 
 </InlineHighlighter>
 <MarkComplete courseId="turn-on-your-own-ai-receptionist" site="vendasta_learn" />

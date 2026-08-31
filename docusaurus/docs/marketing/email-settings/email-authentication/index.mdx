@@ -19,6 +19,8 @@ Email authentication consists of three main protocols:
 2. **DKIM (DomainKeys Identified Mail)**: Adds a digital signature to your emails that verifies they were sent by an authorized sender
 3. **DMARC (Domain-based Message Authentication, Reporting & Conformance)**: Tells receiving mail servers what to do with emails that fail SPF or DKIM checks
 
+Three protocols, but four DNS records. The platform generates one SPF record (TXT), one DMARC record (TXT), and **two** DKIM records (CNAME). Authentication does not complete until all four are published, including both DKIM CNAMEs.
+
 ## Domain Provider Setup Guides
 
 Choose your domain provider for step-by-step setup instructions:
@@ -53,9 +55,9 @@ Before setting up email authentication, make sure you have:
 
 To get the specific DNS records you need to add:
 
-1. Go to **Partner Center > Marketing > Email Settings**
-2. Find your domain in the Email Domains section
-3. Copy the SPF, DKIM, and DMARC values shown
+1. Go to `Partner Center` → `Marketing` → `Email settings`
+2. Find your domain in the `Email domains` card
+3. Copy the values shown. The platform generates four records in total: one DMARC record (TXT), one SPF record (TXT), and two DKIM records (CNAME). Both DKIM CNAMEs are required, so copy them both
 4. Follow the setup guide for your specific domain provider
 
 :::tip
@@ -141,7 +143,7 @@ v=DMARC1; p=none; rua=mailto:service1@vendor.com,mailto:service2@vendor.com
 
 ### Verifying your DMARC record in Partner Center
 
-Go to **Partner Center > Marketing > Email Settings** and find your domain. A green checkmark next to DMARC means the record is valid and detected. An error state means either the record is missing, has a syntax problem, or DNS propagation is still in progress (allow up to 72 hours).
+Go to `Partner Center` → `Marketing` → `Email settings` and find your domain in the `Email domains` card. Each record row has a `Current value` column. If it shows the value found at your DNS host, the record is detected. If it shows `Not found` in red, the record is missing, has a syntax problem, or DNS propagation is still in progress (allow up to 72 hours). The domain's own row header carries the overall status, and a `Domain authorization required` banner stays on the page until every record lands.
 
 ### Common DMARC issues
 

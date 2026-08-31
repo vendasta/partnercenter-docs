@@ -1,0 +1,216 @@
+---
+title: Bring in your first client
+sidebar_position: 6
+description: "Your first local business in the platform: create the account, activate a product on it, and create the user whose onboarding email opens their Business App."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
+
+<InlineHighlighter courseId="bring-in-your-first-client" site="vendasta_learn">
+
+<CourseProgressBar courseId="bring-in-your-first-client" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Beginner"
+  topics={["Accounts", "Partner Center"]}
+  time="about 20 minutes"
+  lab
+  required={[
+    "Partner Center admin access",
+    "A real local business to bring in, or one you invent for practice",
+  ]}
+  pathName="Get set up"
+  step={6}
+  totalSteps={8}
+  outcomes={[
+    "Create a client account with the fields that matter filled in",
+    "Activate a product on the account and know what it costs you",
+    "Create the client's user and send the onboarding email at the right moment",
+    "Say what your client sees the first time they log in",
+  ]}
+/>
+
+## Create your first client account
+
+Everything you have set up so far serves your own business. A client enters the platform through one record: the **account**. Their products, their users, and their billing all live on it, and their Business App is the account seen from their side.
+
+An account is not the same thing as a CRM contact. The contact is someone you are talking to; the account is a business you are serving. The platform keeps them linked, and creating an account creates its CRM company for you.
+
+Bringing a client in takes three moves, in order:
+
+1. Create the account, under `Accounts` in Partner Center.
+2. Activate a product on it, from the `Products` card using `Create order`.
+3. Create their user, from the `Users` card, with the onboarding email that opens their Business App.
+
+<LabCallout title="create your first account">
+Go to `Accounts` → `Manage Accounts`, then select `Create account`.
+
+<LabChecklist
+  storageKey="first-client-lab-1"
+  steps={[
+    <>Search for the business by name. The search fills in details from public directories. If it does not appear, select <code>Go to Create account</code> and enter it yourself.</>,
+    <>Fill the required fields: <code>Business name</code>, <code>Primary category</code>, <code>Country/region</code>, and <code>Business phone number</code>. The category drives reporting, so pick the closest real match.</>,
+    <>Expand <strong>Administration</strong> and add yourself under <code>Salespeople</code>, so the account has an owner from day one.</>,
+    <>Review <strong>Included products &amp; services</strong>. Free starter products come pre-selected, and anything selected here activates the moment the account exists.</>,
+    <>Select <code>Create account</code>.</>,
+  ]}
+  confirm={<>The account opens on its Overview: business details up top, and cards for Reports, Products, Orders, Users, and Projects below.</>}
+/>
+</LabCallout>
+
+The Overview is the account's home page, and the cards on it are the same ones you will work from in the next two labs. For imports and every field in depth, [this guide covers creating accounts](/accounts/manage-accounts/create-accounts).
+
+<LessonSection>
+
+## Activate a product on the account
+
+A brand new account is an empty container. Products are what fill it: each one you activate becomes a working dashboard inside the client's Business App. The Products card says it plainly while it is still empty: activate a product to give users on this account access to it.
+
+:::info What activation costs
+Activating a product charges you its **wholesale cost** from that moment. What the client pays is the **retail price** you set in the Marketplace, the same pricing you configured earlier in this path. Activate what the client is paying for, or what you are deliberately funding as a trial.
+:::
+
+<LabCallout title="activate a product on the account">
+Go to the account's Overview, and find the `Products` card.
+
+<LabChecklist
+  storageKey="first-client-lab-2"
+  steps={[
+    <>Select <code>Create order</code> on the <strong>Products</strong> card.</>,
+    <>Choose the product to activate, and its edition where the product has them. The edition decides which features the client gets.</>,
+    <>Review the wholesale cost shown before you confirm, then complete the order.</>,
+  ]}
+  confirm={<>The product appears on the <strong>Products</strong> card, and the order shows under <strong>Orders</strong>.</>}
+/>
+</LabCallout>
+
+Editions matter more than they look: a client on the wrong edition is either missing features they paid for or paying for features they do not use. Match the edition to what the client actually needs now. [This guide covers activating and managing products](/accounts/manage-accounts/product-management).
+
+</LessonSection>
+
+## Create the client's user
+
+A **user** is a person who can log in to the account's Business App: the owner, their office manager, anyone at the business who will work the tools you just activated. Products belong to the account; users are the people who use them. Until a user exists, everything you have set up is running with nobody from the business in it.
+
+Order matters here, and the platform tells you why: a user with no active products logs in to an empty Business App. Activate first, create the user second, and their first login lands on working tools instead of a blank page.
+
+<LabCallout title="create the client's user">
+Go to the account's Overview, and select `Add users` on the `Users` card.
+
+<LabChecklist
+  storageKey="first-client-lab-3"
+  steps={[
+    <>Select <code>Create user</code> at the bottom of the panel. The search above it is for attaching a user who already exists.</>,
+    <>Enter their <code>Email</code>, first name, and last name.</>,
+    <>Leave <code>Send Onboarding Email</code> checked, and select <code>Preview</code> to read exactly what they will receive.</>,
+    <>Add a <code>Custom introductory message</code> if you want a personal line inside that email.</>,
+    <>Select <code>Create user</code>.</>,
+  ]}
+  confirm={<>The user appears on the <strong>Users</strong> card, and the onboarding email is on its way with a link to set their password.</>}
+/>
+</LabCallout>
+
+That email is your setup work paying off: it sends from the domain you connected, carries the brand you uploaded, and links to a Business App wearing your name. If the moment is not right yet, clear the checkbox and the platform holds off; when you are ready, the `⋮` menu on the user's row sends it, and [this guide covers what the email contains](/accounts/manage-users/welcome-email).
+
+<LessonSection>
+
+## What they see when they log in
+
+Your client lands in their own Business App: your brand on the workspace, their business inside it. The pages you chose to show them are the navigation, and every product you activated is a working dashboard. Nothing about your wholesale costs, your margins, or your other clients is anywhere in sight.
+
+:::tip Try it now
+Open the account's Overview and select `Open in` → `Business App`. You are now looking at exactly what your client will see on their first login. Check it the way they would: the name, the logo, the products, the pages.
+:::
+
+From here the relationship runs on rails you already know: their conversations and leads land in their Business App with full visibility for you, and the account's Overview stays your one place to manage what they have.
+
+</LessonSection>
+
+<SectionFeedback courseId="bring-in-your-first-client" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="bring-in-your-first-client" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on the account record, activation order, and what the client sees."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'You are about to bring a signed client into the platform. What is the right order?',
+      options: [
+        'Create the account, activate their products, then create their user with the onboarding email',
+        'Create their user first so they can watch you set up the rest',
+        'Activate products in your own workspace, then transfer them to the client',
+        'Send the onboarding email first, since passwords take time to arrive'
+      ],
+      correctIndex: 0,
+      explanation: 'A user with no active products logs in to an empty Business App. Account, then products, then the user: their first login lands on working tools.'
+    },
+    {
+      type: 'mcq',
+      question: 'You activate a product on a client account. What does it cost, and who pays what?',
+      options: [
+        'You are charged the wholesale cost from activation; the client pays the retail price you set',
+        'Nothing until the client makes their first payment',
+        'The client is charged the wholesale cost directly by Vendasta',
+        'You are charged the retail price and keep the difference'
+      ],
+      correctIndex: 0,
+      explanation: 'Activation charges you the wholesale cost. The retail price you set in the Marketplace is what the client pays you, and the difference is your margin.'
+    },
+    {
+      type: 'mcq',
+      question: 'The client is not ready to be invited yet, but you want their account and products in place today. What do you do?',
+      options: [
+        'Set everything up now, and clear the Send Onboarding Email checkbox when you create the user',
+        'Wait to create the account until they are ready to log in',
+        'Create the user with a fake email address as a placeholder',
+        'Activate the products in your own Business App until they are ready'
+      ],
+      correctIndex: 0,
+      explanation: 'The onboarding email is a checkbox, not an obligation. Create everything now, leave the email unsent, and send it from the user\'s row when the moment is right.'
+    },
+    {
+      type: 'mcq',
+      question: 'A business does not appear when you search for it during account creation. What is going on?',
+      options: [
+        'Nothing is wrong: the search draws on public directories, and you can select Go to Create account to enter it manually',
+        'The business must claim its Google listing before you can create the account',
+        'Accounts can only be created for businesses the platform already knows',
+        'You need the client to sign up themselves first'
+      ],
+      correctIndex: 0,
+      explanation: 'The search is a convenience that fills in details from public directories. Go to Create account takes you to the manual form, and the required fields are yours to enter.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your client logs in for the first time. Which of these can they see?',
+      options: [
+        'Their own dashboards for the products you activated, under your brand',
+        'The wholesale cost of each product you activated',
+        'Your other client accounts, listed in their navigation',
+        'Your Partner Center administration settings'
+      ],
+      correctIndex: 0,
+      explanation: 'Business App shows the client their own business through your brand. Wholesale costs, margins, and other clients exist only on your side of the platform.'
+    },
+    {
+      type: 'truefalse',
+      statement: 'Creating an account also creates a linked CRM company for the business.',
+      correct: true,
+      explanation: 'The account and its CRM company are created together and stay linked: the account carries products, users, and billing, while the CRM side carries the relationship.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/getting-started/where-to-get-help" pathName="Get set up" step={6} totalSteps={8} />
+
+</InlineHighlighter>
+<MarkComplete courseId="bring-in-your-first-client" site="vendasta_learn" />

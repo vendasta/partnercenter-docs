@@ -52,7 +52,7 @@ The emails that you supply in the Account Representative Email and the Primary C
 
 :::note
 
-One of the questions will ask “What is the AGID for this Website?” The AGID is the account’s unique identification code inside of the Vendasta platform. We receive many forms that may contain similar business names, and so this code allows our team to tie your Website Creation & Content Form to the correct account and product activation. The AGID can be found on your client's Account page under their Business Details. (Navigation: **Partner Center** → **Businesses** → **Accounts** → **Client account**)
+One of the questions will ask “What is the AGID for this Website?” The AGID is the account’s unique identification code inside of the Vendasta platform. We receive many forms that may contain similar business names, and so this code allows our team to tie your Website Creation & Content Form to the correct account and product activation. The AGID can be found on your client's Account page under their Business Details. (Navigation: `Partner Center` → `Businesses` → `Accounts` → `Client account`)
 
 ![Finding the AGID on the Account page](./img/19127162749463-de8c3b1267.png)
 

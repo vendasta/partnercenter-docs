@@ -12,6 +12,8 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
 import KeyPoints from "@site/src/components/KeyPoints";
 import ChatAiIcon from './img/chat-ai-icon.svg';
 import PhoneAiIcon from './img/phone-ai-icon.svg';
@@ -37,14 +39,12 @@ import PhoneAiIcon from './img/phone-ai-icon.svg';
   ]}
 />
 
-The receptionist is the first hire in every AI workforce: it answers, captures, and books while nobody is watching the inbox or the phone. This step is the decisions that make the hire work; [the chat guide](/ai/ai-workforce/ai-chat-receptionist/) and [the voice guide](/ai/ai-workforce/ai-voice-receptionist) carry the full setup mechanics whenever you are ready to click through them.
-
 ## Hire for yourself first
 
-Partners who sell AI Employees well run one themselves first. The Chat Receptionist is already included in your plan, your own site is where you can experiment freely, and a receptionist working on your site becomes your best demo: "let me show you how it is doing for us" opens more client conversations than any pitch deck. Yours lives in **Partner Center**, under **AI**, because it serves your business; every client's lives in their Business App.
+The receptionist is the first hire in every AI workforce: it answers, captures, and books while nobody is watching the inbox or the phone. Partners who sell AI Employees well run one themselves first. The Chat Receptionist is already included in your plan, your own site is where you can experiment freely, and a receptionist working on your site becomes your best demo: "let me show you how it is doing for us" opens more client conversations than any pitch deck. Yours lives in **Partner Center**, under **AI**, because it serves your business; every client's lives in their Business App.
 
 :::tip Try it now
-Open **AI** in Partner Center, open your Chat Receptionist, and give it a name, the way you would name a member of staff. Then follow [the chat guide](/ai/ai-workforce/ai-chat-receptionist/) to put it on your site this week.
+Open `AI` → `Workforce` in Partner Center and look at your own Chat Receptionist. If you have not configured it yet, [Get set up walks it end to end](/learn/getting-started/turn-on-your-own-ai-receptionist); everything from here applies it to a client.
 :::
 
 <LessonSection>
@@ -76,16 +76,32 @@ Two gates to check before you promise anything: the Chat Receptionist is include
 
 ## SMS: register the business before it needs it
 
-For a US business to send SMS, carriers require registration first (A2P 10DLC). The business completes it in **Business App** → **Administration** → **Conversations Settings**, progress can be saved partway, and one registration covers both review requests and AI conversations. Calls and web chat work right away; SMS begins once registration is approved, so start it during onboarding rather than the week a campaign launches. [This guide covers US SMS registration](/business-app/conversations/sms/us-businesses-sms-registration).
+For a US business to send SMS, carriers require registration first (A2P 10DLC). Calls and web chat work right away, and SMS begins only once registration is approved, so this belongs in onboarding rather than the week a campaign launches. This step assumes the client already has an account with Conversations AI active on it; if that part is still ahead of you, [Bring in your first client](/learn/getting-started/bring-in-your-first-client) walks it end to end.
+
+<LabCallout title="start a client's SMS registration">
+Go to that client's `Business App` → `Administration` → `Conversation`.
+
+<LabChecklist
+  storageKey="put-a-receptionist-lab-1"
+  steps={[
+    <>Find the SMS registration card. It shows a <strong>Not submitted</strong> status until the business completes it.</>,
+    <>Select <code>Register now</code> to open the form.</>,
+    <>Save your progress and stop there if you are missing any of the business's legal details. Drafts hold, so nothing you have entered is lost.</>,
+  ]}
+  confirm={<>The registration is open with a draft saved, and you know what you still need from the client to submit it.</>}
+/>
+</LabCallout>
+
+The form asks for the legal business details the carriers require, and it is worth filling in one sitting once you have them. [This guide covers every field in US SMS registration](/business-app/conversations/sms/us-businesses-sms-registration). Once submitted, tell the client what happens next: approval takes time, and their calls and web chat are unaffected while they wait.
 
 <LessonSection>
 
 ## The ten-question audit
 
-Before a receptionist meets anyone, interview it the way you would interview a new hire. The **Try it** button in **AI** → **AI Workforce** opens a test page where you can chat with it directly, before any widget is installed.
+Before a receptionist meets anyone, interview it the way you would interview a new hire. The `Chat` button in `AI` → `Workforce` opens a conversation with it directly, private to you, before any widget is installed.
 
 :::tip Try it now
-Open the test page in an incognito window (each test starts a clean session) and ask the ten questions a prospect is most likely to ask, prices included. Repeat the audit after every knowledge change. Every answer you sharpen now is a lead you keep later.
+Open `Chat` in an incognito window so the conversation starts clean, and ask the ten questions a prospect is most likely to ask, prices included. Repeat the audit after every knowledge change. Every answer you sharpen now is a lead you keep later.
 :::
 
 </LessonSection>
@@ -141,12 +157,12 @@ Every conversation lands in **Conversations**, and captured visitors become cont
       question: 'You changed a receptionist\'s knowledge sources this morning. What happens before it talks to another prospect?',
       options: [
         'Nothing, knowledge changes are risk-free',
-        'You rerun the ten-question audit on the Try it test page',
+        'You rerun the ten-question audit in Chat',
         'You reinstall the web chat widget',
         'You upgrade the plan'
       ],
       correctIndex: 1,
-      explanation: 'The audit is a habit, not a launch step: ten likely prospect questions, prices included, on the Try it page, after every knowledge change.'
+      explanation: 'The audit is a habit, not a launch step: ten likely prospect questions, prices included, in Chat, after every knowledge change.'
     }
   ]}
 />

@@ -56,9 +56,9 @@ This capability allows your AI Receptionist to search for customers and retrieve
 
 ### Step 1: Add a ServiceTitan customer lookup capability
 
-1. In your Business App, navigate to <AISparkleIcon /> `AI` → `AI Workforce`
+1. In your Business App, navigate to <AISparkleIcon /> `AI` → `Workforce`
 2. Select your AI Employee and click `Configure`.
-3. Under `Custom Capabilities`, click `Add a capability`.
+3. Open `Capabilities`, click `+ Add a capability`, then choose `+ New capability`.
 4. Fill in the following fields:
    - `Name`: `ServiceTitan Customer Lookup`
    - `Description`: Searches ServiceTitan for customer information, service history, and account details to provide personalized support and context for customer inquiries.
@@ -234,9 +234,9 @@ This capability enables your AI Receptionist to schedule new appointments, creat
 
 ### Step 1: Add a ServiceTitan appointment scheduling capability
 
-1. In your Business App, navigate to <AISparkleIcon /> `AI` → `AI Workforce`
+1. In your Business App, navigate to <AISparkleIcon /> `AI` → `Workforce`
 2. Select your AI Employee and click `Configure`.
-3. Under `Custom Capabilities`, click `Add a capability`.
+3. Open `Capabilities`, click `+ Add a capability`, then choose `+ New capability`.
 4. Fill in the following fields:
    - `Name`: `ServiceTitan Appointment Scheduling`
    - `Description`: Creates new appointments and service jobs in ServiceTitan, checks technician availability, and manages the complete booking workflow from initial request to job creation.
@@ -388,9 +388,9 @@ This capability allows your AI Receptionist to provide real-time updates on job 
 
 ### Step 1: Add a ServiceTitan job status capability
 
-1. In your Business App, navigate to <AISparkleIcon /> `AI` → `AI Workforce`
+1. In your Business App, navigate to <AISparkleIcon /> `AI` → `Workforce`
 2. Select your AI Employee and click `Configure`.
-3. Under `Custom Capabilities`, click `Add a capability`.
+3. Open `Capabilities`, click `+ Add a capability`, then choose `+ New capability`.
 4. Fill in the following fields:
    - `Name`: `ServiceTitan Job Status Updates`
    - `Description`: Retrieves real-time job status, technician location, and appointment updates from ServiceTitan to keep customers informed about their service appointments.

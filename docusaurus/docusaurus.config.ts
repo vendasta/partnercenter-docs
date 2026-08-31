@@ -114,8 +114,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           // Vendasta Ads in Partner Center promoted to its own top-level "Ads" sidebar item (2026-08)
           { from: '/vendasta-services/digital-advertising/vendasta-ads-partner-center', to: '/ads' },
           // --- Learn restructure (2026-07): TRAINING -> LEARN, paths + lifecycle libraries ---
-          // builder lab broken out into its own path (2026-07)
-          { from: '/learn/builder/the-builder-lab', to: '/learn/build-lab' },
+          // Builder merge (2026-08-29): the builder and build-lab paths became one
+          // eight-step path under /learn/builder. Steps that only re-taught AI
+          // foundations material land on the closest surviving step.
+          { from: '/learn/builder/the-builder-lab', to: '/learn/builder' },
+          { from: '/learn/builder/how-systems-talk', to: '/learn/builder' },
+          { from: '/learn/builder/the-integration-landscape', to: '/learn/builder/start-with-what-exists' },
+          { from: '/learn/builder/capabilities-in-depth', to: '/learn/builder/build-the-doorway' },
+          { from: '/learn/builder/custom-tools', to: '/learn/builder/build-the-doorway' },
+          { from: '/learn/builder/authenticate-and-first-api-call', to: '/learn/builder/call-the-api-yourself' },
+          { from: '/learn/builder/webhooks-and-platform-events', to: '/learn/builder/wire-it-to-your-systems' },
+          { from: '/learn/builder/advanced-automations', to: '/learn/builder/hand-off-to-the-automation' },
+          { from: '/learn/builder/beyond-the-platform', to: '/learn/builder/where-the-platform-ends' },
+          { from: '/learn/build-lab', to: '/learn/builder' },
+          { from: '/learn/build-lab/switch-on-the-platform', to: '/learn/builder/start-with-what-exists' },
+          { from: '/learn/build-lab/build-the-custom-tool', to: '/learn/builder/build-the-doorway' },
+          { from: '/learn/build-lab/test-and-run-it', to: '/learn/builder/watch-it-work' },
           // Master Sales Series (2026-08): path scoped to the Master Sales Training Series only.
           // These four steps had no series episode behind them and were removed.
           { from: '/learn/sales/run-a-discovery-call', to: '/learn/sales' },
