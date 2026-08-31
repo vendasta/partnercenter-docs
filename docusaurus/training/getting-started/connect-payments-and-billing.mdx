@@ -13,6 +13,8 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
 
 <InlineHighlighter courseId="connect-payments-and-billing" site="vendasta_learn">
 
@@ -21,19 +23,23 @@ import LessonSection from "@site/src/components/LessonSection";
 <LessonHeader
   difficulty="Beginner"
   topics={["Payments", "Partner Center"]}
-  time="about 9 minutes"
+  time="about 25 minutes"
+  video={true}
+  lab
   required={[
     "Partner Center admin access",
     "A paid subscription (Vendasta Payments is not offered on free or trial tiers)",
+    "Your legal business name, business number, and a bank account for payouts",
   ]}
   pathName="Get set up"
   step={3}
-  totalSteps={7}
+  totalSteps={8}
   outcomes={[
     "Explain the wholesale-to-retail model in one sentence",
     "Choose between connecting your own Stripe account and creating one in the platform",
+    "Complete the Vendasta Payments application and connect a payout account",
     "Set your default billing so renewals collect on their own",
-    "Read your Estimated Usage to know what you owe Vendasta this month",
+    "Set a retail price, and read your Estimated Usage to know what you owe Vendasta",
   ]}
 />
 
@@ -62,16 +68,37 @@ Each active product creates two matching subscriptions: a wholesale subscription
 
 **Vendasta Payments** lets a client pay an order or invoice with a card inside the platform, and pays that revenue out to your bank account. It runs on Stripe, and there are two ways to set it up:
 
-- **Connect your own Stripe account.** The account belongs to you: your transaction history, your reporting, and your negotiated Stripe rates stay yours wherever your business goes. Connecting it adds a 0.75 percent platform fee on each transaction, on top of your Stripe fees.
-- **Create an account in the platform.** No platform fee; standard processing runs 2.9 percent plus 30 cents per transaction in USD, CAD, AUD, and NZD. The account lives inside the platform rather than under your own Stripe login, and approval typically takes one to two business days.
+- **`Connect an existing account`.** Your Stripe account belongs to you: your transaction history, your reporting, and your negotiated Stripe rates stay yours wherever your business goes.
+- **`Set up Stripe account`.** A new account created through the platform rather than under your own Stripe login. Approval typically takes one to two business days.
 
-Both collect the same payments; the difference is who holds the account. Decide before your first transaction: connecting your own Stripe account stays open only until you process a payment through a platform-created account. A pattern many partners follow is connecting their own account and treating the fee as the price of portability. You can also skip in-platform collection entirely and bill clients through whatever system you already use.
+Processing runs at 2.9 percent plus 30 cents per credit or debit card transaction, and 1 percent per direct debit transaction, whichever route you take.
 
-Two settings inside the setup flow earn attention. Complete your billing contact first, with a full address and postal code, under `Administration` → `My Billing`: setup checks it, and a complete address is what clears the "Unsupported in Your Area" message. And the **customer statement description** is what your clients see on their card statements: it reads "Vendasta" until you replace it with your own business name, up to 22 characters.
+Both collect the same payments; the difference is who holds the account. Decide before your first transaction, because connecting your own Stripe account stays available only until you process a payment through a platform-created one. A pattern many partners follow is connecting their own account and treating the fee as the price of portability. You can also skip in-platform collection entirely and bill clients through whatever system you already use.
 
 </LessonSection>
 
-## Set it up
+## Complete your billing contact first
+
+Setup checks your billing details before it will let you apply, and an incomplete address is what produces the "Unsupported in Your Area" message. Two minutes here saves a confusing message later.
+
+<LabCallout title="fill in your billing contact">
+Go to `Administration` → `My billing`.
+
+<LabChecklist
+  storageKey="connect-payments-lab-1"
+  steps={[
+    <>Find the <strong>Billing contact</strong> card and select <code>Edit</code>. It is read-only until you do.</>,
+    <>Fill in the required fields: company name, contact name, email addresses, phone number, address, country, city, and postal code.</>,
+    <>Save.</>,
+    <>Check that a payment method is on file. This is not required if Vendasta currently bills you by invoice.</>,
+  ]}
+  confirm={<>Your billing contact is complete, which is what lets the platform bill you the wholesale cost of anything you activate.</>}
+/>
+</LabCallout>
+
+<LessonSection>
+
+## Set up Vendasta Payments
 
 {/* VIDEO: "Vendasta Payments" — Wistia ID `ayjibivt6o`, sourced from the top of docs/administration/commerce/vendasta-payments/index.mdx (Cal chose this one over the Loom setup recording), confirmed 2026-08-23. */}
 
@@ -101,50 +128,85 @@ Watch how Vendasta Payments works before you start the application:
 </div>
 <script src="https://fast.wistia.net/player.js" async></script>
 
-Open `Administration` → `Commerce Settings` → `Vendasta Payments` and choose `Set up Vendasta Payments`. The application is a Stripe identity check, so it goes fastest with the details ready before you start:
+The application is a Stripe identity check, so it goes fastest with your details in front of you: your **legal business name** exactly as it appears on your tax ID, your **business number** (EIN in the US, CRA business number in Canada), your **operating name** if you trade under a different one, your **registered business address** (a home address works if you do not have one), and the **account representative's** legal name, home address, and government ID.
 
-- Your **legal business name**, exactly as it appears on your tax ID, plus your operating name if you do business under a different one.
-- Your **business number**: EIN in the US, CRA business number in Canada.
-- Your **registered business address** (a home address works if you do not have one).
-- The **account representative's** legal name, home address, and government ID for verification.
+Two things on that page are yours to set rather than Stripe's, and both are easy to miss. The **`Account statement description`** is how charges appear on your customers' statements: replace the default with your own business name. And **`Receiving bank account`** is an in-platform form asking for the country, currency, transit number, institution number, and account number your payouts land in, so have those details to hand.
 
-The application opens on Stripe's screens:
+This is the one part of setting up that is not a five-minute job, and it is not worth pretending otherwise: it runs across several Stripe screens, it asks for government ID, and approval typically takes one to two business days. Work through it with [the Vendasta Payments guide](/administration/commerce/vendasta-payments/) open beside you, which covers every field in order.
 
 ![The first screen of the Vendasta Payments application, a Stripe form asking for the type of business](./img/vendasta-payments-application.jpg)
 
-You will agree to the Vendasta Payments [Terms of Service](https://www.vendasta.com/terms/terms-of-service/) during setup, then add the bank account your revenue pays out to. Approval typically takes one to two business days, and the full field-by-field detail is in [the Vendasta Payments guide](/administration/commerce/vendasta-payments/).
+Once you are approved, payments your clients make appear under `Commerce` → `Payments`. Stripe holds your first payments for up to a week, then pays out on a seven-day rolling basis into the account you just added. The full field-by-field detail is in [the Vendasta Payments guide](/administration/commerce/vendasta-payments/).
 
-<LessonSection>
+</LessonSection>
 
 ## Set billing to collect on its own
 
-Default billing settings decide what happens on every renewal, and they apply automatically to each new account you create. Open `Administration` → `Default Billing Settings`, turn the `Subscriptions` toggle on, set `Payment collection` to `Automatic`, and choose `Automatically charge payment method on file` under `Subscription renewal`: renewals then charge your client's saved card on schedule, and the invoice is emailed instead whenever no card is on file.
+Default billing settings decide what happens on every renewal, and they apply automatically to each new account you create. Set this once and collection is handled from then on.
+
+<LabCallout title="turn on default billing automation">
+Go to `Administration` → `Default billing settings`.
+
+<LabChecklist
+  storageKey="connect-payments-lab-3"
+  steps={[
+    <>Turn the <code>Subscriptions</code> toggle on. It is off by default, and it is what tracks and collects payment on each renewal.</>,
+    <>Set <code>Payment collection</code>: how you take the money.</>,
+    <>Set <code>Subscription renewal</code>: <code>Do nothing</code> leaves renewals alone, <code>Create a draft invoice</code> raises an invoice you send yourself.</>,
+    <>Set <code>Subscription scheduling</code>: renew on each subscription's own start date, or put every new subscription on one shared day of the month.</>,
+    <>Read the <strong>Billing summary</strong> panel on the right, then select <code>Save</code>.</>,
+  ]}
+  confirm={<>Every account you create from now on starts with collection handled, without you configuring it each time.</>}
+/>
+</LabCallout>
 
 ![The Default billing automation settings, with the subscription billing toggle on, the payment collection methods including Automatically charge payment method on file, and the choice of collecting on each subscription renewal](./img/default-billing-automation.png)
 
-Save it once, and every account you create afterward starts with collection handled; accounts that already exist keep their current settings. Any single account can still be switched from its own billing settings; [this guide covers the options](/administration/commerce/default-billing-settings/).
-
-</LessonSection>
-
-## Set your retail prices
-
-Pricing is yours to control. Open a product in the `Marketplace` to see its wholesale cost and a suggested retail price, then set the retail price and billing frequency that fit your market. Automatic collection calculates each invoice from these retail prices, so set them before your first activation. Adjust pricing any time in `Marketplace` → `Products`.
-
-One fact keeps your numbers clean: a catalog price change applies to new subscriptions from then on. Existing clients keep the price they signed up at unless you edit their subscription directly, and an edit takes effect on the next billing cycle. When you need to change a live subscription, [this guide covers subscription management](/commerce/subscriptions/subscription-management).
+The page carries a `Memo` field as well, which prints at the bottom of every invoice subscription billing creates. And one limit worth knowing, which the page states in a banner of its own: this applies to accounts created after you save. Accounts that already exist keep their current settings, and any single account can be switched from its own billing settings under `Accounts` → `Manage Accounts`. [This guide covers the options](/administration/commerce/default-billing-settings/).
 
 <LessonSection>
 
-## Check what you owe each month
+## Set your retail prices
 
-One page answers "what will I pay Vendasta this month?" Open `Administration` → `My Billing` → `Estimated Usage`. It breaks down what you owe at month end based on the products currently active on your accounts.
+Pricing is yours to control, and automation depends on it. Without a retail price on an edition, the automation has no amount to calculate, so this is not an optional polish step.
 
-The `Active Subscriptions` tab beside it shows which products are in the current billing cycle and when any of them expire. Together they are your monthly billing check.
+The Products screen shows your suggested retail price. Your **wholesale cost** lives elsewhere: `Marketplace` → `Discover Products` carries `Your cost` columns beside the vendor's suggested retail, which is where you check margin before you set a number.
 
-:::tip Try it now
-Open `Administration` → `My Billing` and complete your billing contact with your full address and postal code. Payments setup checks it, and a complete address is what clears the "Unsupported in Your Area" message before it ever appears.
-:::
+<LabCallout title="price one product">
+Go to `Marketplace` → `Products`.
+
+<LabChecklist
+  storageKey="connect-payments-lab-4"
+  steps={[
+    <>Open a product you intend to sell, and select its <code>Product info</code> tab.</>,
+    <>Under <strong>Product settings</strong>, find <strong>Retail price</strong> and expand the edition you sell. Products are priced per edition, not once.</>,
+    <>Select <code>Edit</code>, then set the retail price and <code>Billing period</code> that fit your market.</>,
+    <>Save, and repeat for anything else you plan to activate soon.</>,
+  ]}
+  confirm={<>At least one edition carries your retail price, which is the number automatic collection will invoice against.</>}
+/>
+</LabCallout>
+
+One fact keeps your numbers clean: a catalog price change applies to new subscriptions from then on. Existing clients keep the price they signed up at unless you edit their subscription directly, and an edit takes effect on the next billing cycle. [This guide covers subscription management](/commerce/subscriptions/subscription-management).
 
 </LessonSection>
+
+## Check what you owe each month
+
+One tab answers "what am I on track to pay Vendasta this month?" It is an estimate, broken down per product rather than totalled in one number.
+
+<LabCallout title="read your Estimated Usage">
+Go to `Administration` → `My billing` → `Estimated Usage`.
+
+<LabChecklist
+  storageKey="connect-payments-lab-5"
+  steps={[
+    <>Read the table: <code>Products</code>, <code>Units</code>, <code>Gross Total</code>, <code>Discounts</code>, <code>Net Total</code>, estimated for the current month. It pages, so work through it rather than expecting one figure at the bottom.</>,
+    <>Open the <code>Active subscriptions</code> tab, three along from Estimated Usage, to see which products are in the current cycle and when any of them expire.</>,
+  ]}
+  confirm={<>You know what is driving this month's wholesale cost and which subscriptions are behind it, which together are your monthly billing check.</>}
+/>
+</LabCallout>
 
 <SectionFeedback courseId="connect-payments-and-billing" site="vendasta_learn" section="content" />
 
@@ -178,15 +240,27 @@ Open `Administration` → `My Billing` and complete your billing contact with yo
     },
     {
       type: 'mcq',
-      question: 'A client\'s subscription renewed this morning, and their saved card was charged without you touching anything. Which setting made that happen?',
+      question: 'You turned on default billing automation this morning. Which accounts does it apply to?',
       options: [
-        'Automatic payment collection with a payment method on file, from your billing settings',
-        'The retail price configured on the Marketplace product',
-        'The payout schedule on your connected bank account',
-        'The wholesale billing frequency on your Vendasta contract'
+        'Accounts you create from now on; existing accounts keep their current settings',
+        'Every account you have, immediately',
+        'Only accounts in the market you had selected',
+        'None until each client approves the change'
       ],
       correctIndex: 0,
-      explanation: 'Automatic collection charges the saved card on each renewal. Set it in your Default Billing Settings and every new account starts with collection handled.'
+      explanation: 'Defaults apply to accounts created after you save. Any existing account can still be switched individually from its own billing settings.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your billing automation is on, but one product is not being invoiced. What is the likely cause?',
+      options: [
+        'That product has no retail price set, so there is no amount to calculate',
+        'The client has not logged in to Business App yet',
+        'Automation only bills products activated this month',
+        'The wholesale price has not been confirmed by Vendasta'
+      ],
+      correctIndex: 0,
+      explanation: 'Automatic collection calculates each invoice from your retail prices. A product without one gives the automation nothing to bill against.'
     },
     {
       type: 'mcq',
@@ -204,30 +278,18 @@ Open `Administration` → `My Billing` and complete your billing contact with yo
       type: 'mcq',
       question: 'You want to know what you will owe Vendasta at the end of this month. Where do you look?',
       options: [
-        'Commerce → Payouts',
+        'Commerce → Payments',
         'The Marketplace product page',
         'The client\'s Business App billing tab',
-        'Administration → My Billing → Estimated Usage'
+        'Administration → My billing → Estimated Usage'
       ],
       correctIndex: 3,
-      explanation: 'Estimated Usage shows your month-end total based on currently active products. Payouts is where client revenue is paid out to you.'
-    },
-    {
-      type: 'mcq',
-      question: 'A client is ready to pay you with a card inside the platform. What needs to be connected first?',
-      options: [
-        'Vendasta Payments, with a payout bank account',
-        'Only the client\'s Business App user',
-        'A Marketplace store embed on your website',
-        'An Executive Report subscription'
-      ],
-      correctIndex: 0,
-      explanation: 'Vendasta Payments processes the card payment and pays revenue out to your connected bank account.'
+      explanation: 'Estimated Usage shows your month-end total based on currently active products. Commerce → Payments is where client revenue arrives.'
     }
   ]}
 />
 
-<LessonFooter to="/learn/getting-started/brand-it" pathName="Get set up" step={3} totalSteps={7} />
+<LessonFooter to="/learn/getting-started/brand-it" pathName="Get set up" step={3} totalSteps={8} />
 
 </InlineHighlighter>
 <MarkComplete courseId="connect-payments-and-billing" site="vendasta_learn" />

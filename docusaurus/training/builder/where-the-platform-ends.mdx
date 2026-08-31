@@ -1,0 +1,143 @@
+---
+title: Where the platform ends
+sidebar_position: 7
+description: "The line where a job becomes developer work, handing it off well, keeping changeable logic out of code, the developer surface, and turning a build into a product."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
+
+<InlineHighlighter courseId="where-the-platform-ends" site="vendasta_learn">
+
+<CourseProgressBar courseId="where-the-platform-ends" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Intermediate"
+  topics={["Integrations", "Vendasta API", "Marketplace"]}
+  time="about 8 minutes"
+  pathName="Wire your AI Workforce to act"
+  step={7}
+  totalSteps={8}
+  outcomes={[
+    "Recognize when a task is genuinely developer work",
+    "Hand it off with one reproducible example and a ticket that will not get lost",
+    "Keep changeable logic in a setting rather than in code",
+    "Know what turning a build into a product involves",
+  ]}
+/>
+
+## Almost all of this is work you do yourself
+
+Fields and objects, automations, custom tools, the API, webhooks: all of it is yours. Custom code is the rest, and it is a narrow rest. Reshaping data, reconciling records that do not match, validating a messy feed before it lands. That is development work, and the solution architecture team exists for exactly it.
+
+Knowing where the line sits is what lets you move fast on the near side of it. The expensive version is not asking for help; it is spending a week discovering a task was never a configuration in the first place.
+
+<LessonSection>
+
+## Put the logic in the platform, not your code
+
+One principle saves more grief than any other. When the platform is what sends a request or runs a workflow, let the platform hold the logic that decides who gets it.
+
+A rule written into a setting, a tag, or a condition can be changed by anyone on your team in a minute. The same rule buried in custom code needs a developer every time it changes, and it will change the first time a client asks. Build so the everyday adjustments live where everyday people can reach them, and keep code for the work only code can do.
+
+</LessonSection>
+
+## Hand it off well
+
+A good handoff is short and specific, and it has three parts: the outcome you want, one concrete example that reproduces the problem, and what you have already tried. A general request moves slowly because someone has to turn it into a specific one first.
+
+Two things keep it from getting lost. Confirm a support ticket exists and note its number, and keep your Customer Success contact in the loop so someone with context knows the request is open.
+
+<LessonSection>
+
+## The developer surface, and what is not on it
+
+[developers.vendasta.com](https://developers.vendasta.com) is the reference you keep open: the full API reference with a built-in client on every method, the OAuth scopes and their read-only variants, and the guides for the pieces you now recognise. The CRM API is the flagship there, with the fullest coverage. There is also an API for loading knowledge into an AI Employee in bulk, which is the route when a client has a hundred locations and their facts live in your system rather than in theirs.
+
+One split is worth knowing. The platform APIs are for working inside accounts; the vendor APIs are for building products to distribute through the Marketplace. Which one you reach for depends on whether you are integrating for your own clients or building something to sell.
+
+And one boundary, restated because it is the thing people design around by mistake: you can start an automation from outside, and you cannot author one from outside. Automations, AI Employees, and Vibe apps are built in the interface.
+
+</LessonSection>
+
+## Productize what you built
+
+If a build turns out to be worth selling, Vendor Center is where it becomes a product. You enable the integration, define how it connects, and distribute it through the Marketplace under the model you set. When the same build should land on many accounts at once, account templates are what carry it.
+
+A product that others resell also needs to react to what happens across every account using it: a purchase, a new account, a change to a user. That is the same push-not-poll pattern from the webhook step, one level up.
+
+## Not every wall is technical
+
+Sometimes the API exists, the connection works, and the data still cannot move, because an agreement says so. Some data is licensed in a way that forbids exporting it, whatever is technically possible. Check that boundary before you design around it, so you never build something you are not allowed to ship.
+
+:::tip Try it now
+Think of the last thing that stopped you. Ask the question this path opened with: could a setting or a no-code tool already do it? If it truly needs code, write the one-paragraph handoff now: the outcome, one concrete example, and what you have already tried.
+:::
+
+<SectionFeedback courseId="where-the-platform-ends" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="where-the-platform-ends" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on the custom-code line, where logic belongs, and what the developer surface covers."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A client\'s records and yours use different formats, and something has to reconcile them before either system can use the other\'s data. What kind of work is that?',
+      options: [
+        'Developer work, and the solution architecture team is who it goes to',
+        'A custom tool on the AI Employee',
+        'A data expression inside an automation',
+        'A condition on the automation trigger'
+      ],
+      correctIndex: 0,
+      explanation: 'Reshaping and reconciling data that does not line up is the narrow slice that genuinely needs code. Recognising it early is what stops a week disappearing into it.'
+    },
+    {
+      type: 'mcq',
+      question: 'A rule about which clients receive a message will change every few months. Where should it live?',
+      options: [
+        'In a platform setting, tag, or condition',
+        'In the custom code that sends the request',
+        'In the capability prompt on the AI Employee',
+        'In the webhook payload your endpoint reads'
+      ],
+      correctIndex: 0,
+      explanation: 'A rule in a setting can be changed by anyone on your team in a minute. The same rule in code needs a developer every time it changes.'
+    },
+    {
+      type: 'mcq',
+      question: 'You have a build worth selling to other partners. Where does it become a product?',
+      options: [
+        'Vendor Center, then distributed through the Marketplace',
+        'Partner Center, under Administration',
+        'The API reference, by publishing your endpoints',
+        'Business App, on each client account'
+      ],
+      correctIndex: 0,
+      explanation: 'Vendor Center is where you enable the integration, define how it connects, and set the model it is distributed under.'
+    },
+    {
+      type: 'mcq',
+      question: 'The API exists, your call works, and the client still cannot move their data out of a system. What is worth checking?',
+      options: [
+        'Whether that data is licensed in a way that forbids exporting it',
+        'Whether the scope has a read-only variant',
+        'Whether the automation trigger has the right scope',
+        'Whether the vendor published a public endpoint for it'
+      ],
+      correctIndex: 0,
+      explanation: 'Not every wall is technical. Some data carries an agreement that forbids export whatever is technically possible, and that is worth finding before you design around it.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/builder/wire-to-act-skill-check" pathName="Wire your AI Workforce to act" step={7} totalSteps={8} />
+
+</InlineHighlighter>
+<MarkComplete courseId="where-the-platform-ends" site="vendasta_learn" />

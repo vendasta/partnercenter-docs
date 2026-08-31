@@ -1,0 +1,242 @@
+---
+title: Wire to act skill check
+sidebar_position: 8
+description: "Twelve scenario questions covering the whole path: the ladder, tool craft, testing, automations, webhooks, and the API."
+---
+
+import SkillCheck from "@site/src/components/SkillCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+
+<InlineHighlighter courseId="wire-to-act-skill-check" site="vendasta_learn">
+
+<CourseProgressBar courseId="wire-to-act-skill-check" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Advanced"
+  topics={["Integrations", "Custom tools", "Automations", "Webhooks", "Vendasta API"]}
+  time="about 10 minutes"
+  required={["The seven steps of this path"]}
+  pathName="Wire your AI Workforce to act"
+  step={8}
+  totalSteps={8}
+  outcomes={[
+    "Apply the ladder, tool craft, testing, automation, webhook, and API material to situations you have not seen before",
+    "Spot which rung a scenario calls for, rather than recalling a definition",
+    "Find the steps worth a second pass before you build for a client",
+  ]}
+/>
+
+<SkillCheck
+  sessionSize={12}
+  intro="Twelve scenario questions covering the whole path"
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A client asks whether you can connect their field-service software. What is the one-minute version of the answer?',
+      options: [
+        'Check whether that software publishes an API, usually on its own site under API or Developers',
+        'Check whether your subscription tier includes custom tools',
+        'Check whether the software appears in the Vendasta Marketplace',
+        'Check whether the client is on a Premium edition'
+      ],
+      correctIndex: 0,
+      explanation: 'The other system decides whether it can be reached. Its own website answers the question faster than anything on this side.'
+    },
+    {
+      type: 'mcq',
+      question: 'A job needs a tag applied and a campaign started whenever a lead comes in. Nothing outside the platform is involved. Which rung?',
+      options: [
+        'An automation',
+        'A custom tool on the AI Employee',
+        'A glue tool like Zapier or Make',
+        'Your own code calling the API'
+      ],
+      correctIndex: 0,
+      explanation: 'The whole job happens inside the platform. Reaching past an automation adds a system to maintain and buys nothing.'
+    },
+    {
+      type: 'mcq',
+      question: 'A visitor asks about availability that only exists in the client\'s live booking system, mid-conversation. Which rung?',
+      options: [
+        'A custom tool, because the answer has to arrive inside the conversation',
+        'An automation that runs after the chat ends',
+        'A knowledge source refreshed nightly',
+        'A webhook sent out when the chat closes'
+      ],
+      correctIndex: 0,
+      explanation: 'An automation and a webhook both act after the fact. A value the visitor needs before they decide has to come through a tool the employee can reach mid-conversation.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your custom tool fires at the right moment but sends a malformed date. Where is the fix?',
+      options: [
+        'The parameter description, which should name the format and the fallback',
+        'The when-to-use lines in the capability prompt',
+        'The tool\'s method and URL',
+        'The Set by AI toggle on that parameter'
+      ],
+      correctIndex: 0,
+      explanation: 'Fired at the right moment means the trigger is fine. A wrong value is the parameter description: say where the value comes from, what format it takes, and what to do when it is missing.'
+    },
+    {
+      type: 'mcq',
+      question: 'The weather tool fires when someone books an indoor job. Where is the fix?',
+      options: [
+        'The when-to-use trigger in the capability prompt, including what not to use it for',
+        'The parameter descriptions on the tool',
+        'The authentication headers',
+        'The Lead Capture instructions'
+      ],
+      correctIndex: 0,
+      explanation: 'A tool firing at the wrong moment is a trigger problem, and naming what the capability should not be used for is half of a good trigger.'
+    },
+    {
+      type: 'mcq',
+      question: 'An API you need issues OAuth tokens that expire hourly. What can a custom tool do with that?',
+      options: [
+        'Carry the token in a header until it expires, and nothing beyond that',
+        'Run the login flow and refresh the token on a schedule',
+        'Store the client ID and secret and renew automatically',
+        'Nothing; that API cannot be reached by any route'
+      ],
+      correctIndex: 0,
+      explanation: 'A custom tool authenticates by sending headers and does not run a login flow. Ask the provider for a long-lived key, or put a small service of your own in between that holds the credentials.'
+    },
+    {
+      type: 'mcq',
+      question: 'Values look correct in the conversation, and the API still rejects the call. What do you do next?',
+      options: [
+        'Run the exact same call outside the platform to see which side is wrong',
+        'Add more detail to the capability prompt',
+        'Remove the required flags so the call is simpler',
+        'Rebuild the capability from scratch'
+      ],
+      correctIndex: 0,
+      explanation: 'If it fails the same way outside, the call needs fixing. If it succeeds outside, the tool sent something different from what you just ran.'
+    },
+    {
+      type: 'mcq',
+      question: 'You are building an automation and the step you need is not offered. What is the usual cause?',
+      options: [
+        'The trigger\'s scope does not reach that step',
+        'The automation needs saving before all steps appear',
+        'The step requires a custom object to exist first',
+        'That step is gated behind a higher plan'
+      ],
+      correctIndex: 0,
+      explanation: 'The trigger sets the rules for everything after it. Match the trigger to the record you are acting on and the step appears.'
+    },
+    {
+      type: 'mcq',
+      question: 'An automation should run only on leads your AI Employee captured. What does that?',
+      options: [
+        'A condition on the record\'s source',
+        'A second automation for the other contacts',
+        'A data expression on the contact name',
+        'Turning it off between imports'
+      ],
+      correctIndex: 0,
+      explanation: 'An unguarded trigger fires on everything that matches, including your test records. The condition is what aims it.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your automation records that a follow-up happened. Why an activity rather than a note in a field?',
+      options: [
+        'Other automations can trigger on an activity',
+        'Notes are removed when a contact is updated',
+        'Activities are the only exportable record type',
+        'A note would overwrite the contact\'s source'
+      ],
+      correctIndex: 0,
+      explanation: 'An activity is anchored in time and visible to the rest of your system, which is what lets one automation hand off cleanly to the next.'
+    },
+    {
+      type: 'mcq',
+      question: 'What belongs in a Send a webhook body?',
+      options: [
+        'The record\'s ID, so your side fetches the current version over the API',
+        'Every field, so your side never has to call back',
+        'A nested object mirroring the full record',
+        'Only the fields that changed since the last run'
+      ],
+      correctIndex: 0,
+      explanation: 'The platform cannot confirm the destination is under your control, so sensitive data is safer left out, and an ID means your system never acts on a stale copy. The body is also a single flat JSON object.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your endpoint returns a value a later automation step needs, and that step sees nothing. What was missed?',
+      options: [
+        'The expected response body structure was never configured on the step',
+        'The endpoint returned HTTP 200 instead of 201',
+        'The webhook step was placed after the step that needs it',
+        'Response data only reaches the immediately following step'
+      ],
+      correctIndex: 0,
+      explanation: 'Data passing works, but only once the expected response body is configured. Without it the response arrives and later steps cannot see it.'
+    },
+    {
+      type: 'mcq',
+      question: 'A call returns PERMISSION_DENIED with a token you generated minutes ago. What is wrong?',
+      options: [
+        'The token does not carry the scope that call requires',
+        'The token has expired',
+        'The partner ID was wrong',
+        'The call only exists on Demo'
+      ],
+      correctIndex: 0,
+      explanation: 'PERMISSION_DENIED is a valid token missing a scope. A missing, malformed, or expired token returns UNAUTHENTICATED instead.'
+    },
+    {
+      type: 'mcq',
+      question: 'You want to read the contacts on one client account through the API. What goes in the namespace?',
+      options: [
+        'That account\'s AG- ID, visible in the Business App address bar',
+        'Your partner ID, which covers every account you manage',
+        'The AI Employee\'s ID',
+        'The automation ID that created the contacts'
+      ],
+      correctIndex: 0,
+      explanation: 'The namespace says which CRM you are reading. Your partner ID reaches your own; an account group ID reaches that client\'s.'
+    },
+    {
+      type: 'mcq',
+      question: 'You plan to create a fresh automation for every client you onboard, from your own code. What is the honest answer?',
+      options: [
+        'Automations are built in the interface; code can start one, not author one',
+        'Use the automations API with one call per client',
+        'Duplicate a template automation through the API',
+        'Only Vendor Center integrations may create automations'
+      ],
+      correctIndex: 0,
+      explanation: 'Automations, AI Employees, and Vibe apps are built in the interface. An automation with the triggered-via-API trigger can be started from outside, which covers most of what people want this for.'
+    },
+    {
+      type: 'mcq',
+      question: 'A rule about which clients receive a message will change every few months. Where does it belong?',
+      options: [
+        'In a platform setting, tag, or condition',
+        'In the custom code that sends the request',
+        'In the AI Employee\'s capability prompt',
+        'In the webhook payload'
+      ],
+      correctIndex: 0,
+      explanation: 'A rule in a setting can be changed by anyone on your team in a minute. The same rule in code needs a developer every time it changes.'
+    }
+  ]}
+/>
+
+<LessonFooter
+  to="/learn/sales"
+  pathName="Wire your AI Workforce to act"
+  step={8}
+  totalSteps={8}
+  nextPathName="The master sales series"
+  description="Sharpen the craft underneath every deal: prospecting, the pitch, the presentation, and handling objections."
+/>
+
+</InlineHighlighter>
+<MarkComplete courseId="wire-to-act-skill-check" site="vendasta_learn" />

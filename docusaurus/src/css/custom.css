@@ -1762,11 +1762,6 @@ div[class*="language-"] pre {
   font-weight: 600;
 }
 
-/* Hide docs that opt-in via frontmatter `sidebar_class_name: hide-from-sidebar` */
-.theme-doc-sidebar-item-link.hide-from-sidebar,
-.theme-doc-sidebar-item-category.hide-from-sidebar {
-  display: none !important;
-}
 /* ── Training: section-label bars and in-practice callouts ── */
 .principle-area {
   display: flex;
@@ -1927,8 +1922,8 @@ div[class*="language-"] pre {
 }
 
 .lesson-header__tag--video {
-  background: #cfe2ff;
-  color: #084298;
+  background: var(--lab-purple-bg);
+  color: var(--lab-purple);
 }
 
 .lesson-header__tag--lab {
@@ -2545,4 +2540,22 @@ div[class*="language-"] pre {
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 0 0 8px 8px;
   padding: 1.25rem 1.5rem;
+}
+
+/* Vendasta AI Assistant sparkle, used in lesson copy and beside a heading.
+   max-width:none keeps the icon from being squeezed by the global image rule. */
+.learn-sparkle-inline {
+  width: 1.25em;
+  height: 1.25em;
+  max-width: none;
+  vertical-align: -0.22em;
+  margin: 0 0.12em;
+}
+
+.learn-sparkle-heading {
+  width: 1em;
+  height: 1em;
+  max-width: none;
+  vertical-align: -0.12em;
+  margin-right: 0.35rem;
 }

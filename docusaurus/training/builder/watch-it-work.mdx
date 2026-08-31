@@ -1,0 +1,173 @@
+---
+title: Watch it work
+sidebar_position: 3
+description: "Test a custom tool in a live conversation, read the Explanation view to tell a mistimed trigger from a wrong value, isolate a failing call, and run the whole flow end to end."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
+
+<InlineHighlighter courseId="watch-it-work" site="vendasta_learn">
+
+<CourseProgressBar courseId="watch-it-work" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Advanced"
+  topics={["Custom tools", "Capabilities", "Integrations"]}
+  time="about 11 minutes"
+  lab
+  required={[
+    "The WeatherCheck capability and GetForecast tool saved on your AI Employee",
+  ]}
+  pathName="Wire your AI Workforce to act"
+  step={3}
+  totalSteps={8}
+  outcomes={[
+    "Test a custom tool in the place it will actually run",
+    "Read the Explanation view to tell a mistimed trigger from a wrong value",
+    "Isolate a failing call outside the platform and re-import the fix",
+    "Prove the whole flow end to end before a client sees it",
+  ]}
+/>
+
+## Where a capability becomes reliable
+
+Custom tools are tested in the place they work, which is a live conversation. A tool that behaves on a settings screen has proven nothing; what matters is whether it fires at the right moment, with the right values, in front of someone who is trying to book a job.
+
+*You are here: Business App, inside your test account.*
+
+Two directions need proving, and only testing both tells you anything. A tool that fires on everything looks identical to a tool that works, right up until it interrupts an indoor booking to talk about rain.
+
+<LabCallout title="test both directions">
+Go to your employee's `Chat`, in a fresh incognito session.
+
+<LabChecklist
+  storageKey="watch-it-work-lab-1"
+  steps={[
+    <>Book an outdoor job: "Can someone clean my gutters Thursday?" The forecast should be checked before the booking is confirmed.</>,
+    <>Book an indoor job next. The weather tool should stay quiet.</>,
+    <>Ask for an outdoor job with no day named. The employee should ask for the date rather than guessing one.</>,
+  ]}
+  confirm={<>Outdoor bookings get a forecast check, indoor bookings do not, and a missing date is asked for rather than invented.</>}
+/>
+</LabCallout>
+
+<LessonSection>
+
+## Read what it actually did
+
+When an answer surprises you, look at what happened rather than what was said. Open the message in `Conversations` and select `Explanation`: it shows which capability ran, which tool it called, and what came back.
+
+That view separates the two failures that look the same from the outside:
+
+- **The tool never fired.** The trigger is the fix. Tighten the when-to-use lines in the prompt, including what the capability should not be used for, and test the indoor booking again.
+- **The tool fired and sent the wrong thing.** The parameter description is the fix. Say where the value comes from and what format it takes.
+
+There is a third case worth naming, because it belongs to neither. If the values look right in the conversation and the API is still rejecting the call, the call itself is what needs work.
+
+</LessonSection>
+
+## Isolate a failing call
+
+Take the same method, URL, headers, and parameter values the tool would send, and run that exact call again on its own, outside the platform. The result tells you which side to fix:
+
+- **It succeeds outside.** The tool sent something different from what you just ran. Compare the two and the difference is your answer.
+- **It fails the same way outside.** The API is rejecting a correct-looking call, so the fix is in the call: a parameter it requires, a header it expects, or an account setting on their side.
+
+Adjust it until it works outside, then import the corrected cURL again. That is the one moment a tool like Postman earns its place in this work: isolating a broken call, never starting the build.
+
+<LessonSection>
+
+## Run the whole thing
+
+<LabCallout title="one conversation, start to finish">
+Go to `Chat`, in one more fresh session.
+
+<LabChecklist
+  storageKey="watch-it-work-lab-2"
+  steps={[
+    <>Ask for an outdoor job, give your details, and take the offered time.</>,
+    <>Confirm the forecast was consulted, in <code>Explanation</code>.</>,
+    <>Confirm the booking is on the calendar.</>,
+    <>Confirm the contact is in the CRM.</>,
+    <>Read the conversation once more as a customer would experience it.</>,
+  ]}
+  confirm={<>Three results from one conversation, and the weather check reads as good service rather than machinery: mentioned only when it changes the plan.</>}
+/>
+</LabCallout>
+
+:::tip Try it now
+Time that final run. A checked forecast, a booked job, and a clean CRM record in under a minute, with nobody involved, is the story this build tells a client.
+:::
+
+</LessonSection>
+
+<SectionFeedback courseId="watch-it-work" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="watch-it-work" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on testing both directions, reading Explanation, and isolating a failing call."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'The weather tool fires when a visitor books an indoor cleaning. Where is the fix?',
+      options: [
+        'The when-to-use trigger in the capability prompt',
+        'The parameter descriptions',
+        'The tool\'s URL and method',
+        'The Lead Capture instructions'
+      ],
+      correctIndex: 0,
+      explanation: 'A tool firing at the wrong moment is a trigger problem. Tighten the when-to-use lines, including what the capability should not be used for, and test the indoor booking again.'
+    },
+    {
+      type: 'mcq',
+      question: 'A custom tool\'s API call keeps failing, even though the values look right in the conversation. What next?',
+      options: [
+        'Run the exact same call on its own outside the platform',
+        'Rewrite the capability prompt with more instructions',
+        'Remove the tool\'s required parameters so the call is simpler',
+        'Rebuild the capability from scratch'
+      ],
+      correctIndex: 0,
+      explanation: 'Correct values rejected by the API point at the call itself. Isolate it outside the platform: if it fails there too, the fix is in the call rather than in the tool.'
+    },
+    {
+      type: 'mcq',
+      question: 'What does the Explanation view tell you that the conversation does not?',
+      options: [
+        'Which capability ran, which tool it called, and what came back',
+        'How many other conversations used the same tool that day',
+        'Whether the visitor was satisfied with the answer',
+        'Which edition of the product carries the capability'
+      ],
+      correctIndex: 0,
+      explanation: 'It shows what actually happened rather than what was said, which is how a mistimed trigger and a wrong parameter value stop looking the same.'
+    },
+    {
+      type: 'mcq',
+      question: 'Why test a booking that should NOT trigger the weather tool?',
+      options: [
+        'A tool that fires on everything looks the same as one that works',
+        'To confirm the calendar connection is still active',
+        'To check whether the plan needs an upgrade',
+        'Indoor bookings use a different capability entirely'
+      ],
+      correctIndex: 0,
+      explanation: 'Both directions have to be proven. Until an indoor booking stays quiet, a working outdoor booking has told you nothing about the trigger.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/builder/hand-off-to-the-automation" pathName="Wire your AI Workforce to act" step={3} totalSteps={8} />
+
+</InlineHighlighter>
+<MarkComplete courseId="watch-it-work" site="vendasta_learn" />

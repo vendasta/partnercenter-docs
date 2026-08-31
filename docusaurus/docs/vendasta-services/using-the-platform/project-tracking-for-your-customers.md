@@ -27,7 +27,7 @@ Your customers get a clear view of what's being worked on, its current status, a
 
 **What if I don't want my customers to see this information?**
 
-No problem. You can turn off the `Projects` tab for all Business App users by going to `Partner Center` → `Administration` → `Customize` → `Business App` and toggling off tab access for `Projects`. You can also reach out to the Vendasta Services team to hide visibility for an individual project.
+No problem. You can turn off the `Projects` page for Business App users by going to `Partner Center` → `Administration` → `Customize Business App` → `Pages` → `Projects` and toggling off access. This setting applies to every account in the market, not to a single client. You can also reach out to the Vendasta Services team to hide visibility for an individual project.
 
 **Will my customers see every task that is being worked on?**
 

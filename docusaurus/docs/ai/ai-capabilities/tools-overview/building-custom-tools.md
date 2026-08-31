@@ -263,24 +263,24 @@ curl -X POST "https://api.example.com/appointments" \
   }'
 ```
 
-**Step 3:** Copy the generated cURL and use it in Vendasta's import feature.
+**Step 3:** Copy the generated cURL and use it with `Generate from cURL` in Vendasta.
 
-### Step-by-step: importing a cURL into Vendasta
+### Step-by-step: generating a tool from a cURL in Vendasta
 
 **1. Access Tool Configuration**
-   - Navigate to <AISparkleIcon /> `AI` → `AI Workforce` in your Business App dashboard
+   - Navigate to <AISparkleIcon /> `AI` → `Workforce` in your Business App dashboard
    - Select the AI Employee you want to enhance
-   - Click `Configure` → `Capabilities` tab
-   - Scroll to `Custom Capabilities` section
-   - Click `Add a capability`
+   - Click `Configure` → `Capabilities`
+   - Click `+ Add a capability`
+   - Choose `+ New capability`
 
 **2. Add a Tool**
-   - Click `Add Tool` within your capability
-   - Select `Import from cURL`
+   - Click `+ New tool` within your capability
+   - Select `Generate from cURL`
 
 **3. Paste Your cURL Command**
    - Copy the cURL command from API documentation or AI-generated example
-   - Paste it into the "Import from cURL" field
+   - Paste it into the `Generate from cURL` field
    - Replace placeholder values (like `YOUR_API_KEY`) with actual values or variables
 
 **4. Review Auto-Filled Fields**
@@ -292,7 +292,7 @@ curl -X POST "https://api.example.com/appointments" \
      - Body parameters and structure
 
 **5. Complete Manual Configuration**
-   - Fill in the `ID` field (unique name, no spaces)
+   - Fill in the `Name` field (unique name, no spaces)
    - Write a clear `Description` of when to use this tool
    - Review and enhance parameter descriptions (critical step!)
 
@@ -307,7 +307,7 @@ curl -X POST "https://api.example.com/appointments" \
 - ✅ Parameter locations (Query, Body, Path)
 
 **Requires Manual Work:**
-- ⚠️ **Tool ID**: Choose a descriptive name (no spaces)
+- ⚠️ **Tool Name**: Choose a descriptive name (no spaces)
 - ⚠️ **Tool Description**: Explain when AI should use this tool
 - ⚠️ **Parameter Descriptions**: Critical! Tell AI how to fill each parameter
 - ⚠️ **Required Fields**: Mark parameters as required if the API needs them
@@ -598,7 +598,7 @@ Even with careful planning, you may encounter issues. Here's how to resolve comm
 
 **2. Capability not enabled**
    - **Solution:** Verify the capability is assigned to your AI Employee
-   - Check: `AI Workforce` → `Configure` → `Capabilities` tab
+   - Check: `Workforce` → `Configure` → `Capabilities` tab
 
 **3. Conflicting capabilities**
    - **Solution:** Review other capabilities that might be handling the same request
