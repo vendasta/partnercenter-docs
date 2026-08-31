@@ -32,7 +32,7 @@ Both are controlled by you, the partner, and both can be dismissed by the SMB. D
 
 ## The onboarding email
 
-When you create a new Business App user, you can send an **onboarding email** in place of the classic welcome email. Sending it is **optional and entirely your choice** — it's selected by default in the create-user flow, but you decide per user whether to send it, and you can always send the classic welcome email instead. Rather than a simple "set your password" note, the onboarding email walks the SMB through what your AI has already accomplished for their business, then invites them in.
+When you invite a new Business App user, they receive an **onboarding email** in place of the classic welcome email. Rather than a simple "set your password" note, it walks the SMB through what your AI has already accomplished for their business, then invites them in — and you can make it yours with a **custom introductory message** on every send. It's selected by default wherever you invite users; the classic welcome email remains available when you'd rather send that instead.
 
 <img src={require('./img/ai-onboarding-email-preview.png').default} alt="The onboarding email, shown in the in-app preview: a subject line, a checklist of the work the AI has completed, and a 'See what's ready for you' call to action" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -117,7 +117,7 @@ Here is exactly what triggers it. A Vibe site is generated **only when all of th
 
 The email waits for the site to finish building (allow **5–15 minutes** for it to arrive). If the build is slow or fails, **the email is still sent** — it just won't include the website line or preview image. Site generation never blocks the rest of the onboarding email beyond that window.
 
-You stay in control: because a site is only ever created by *sending the onboarding email* with Vibe active, you can prevent one for any client — simply don't send them the onboarding email, or don't activate Vibe before inviting them. See the [FAQ](#frequently-asked-questions) for the full details.
+You shape this through what's active on the account at invite time: activate Vibe before inviting and the client's first touch leads with a live site; invite without Vibe and the email focuses on the rest of the work. One site per account — re-sending the email to an account with a published Vibe site never creates a second one. See the [FAQ](#frequently-asked-questions) for the full details.
 
 ### Turning the email on
 
@@ -139,7 +139,7 @@ The **Invite users** side panel is the fastest way to invite one or several user
    - **Email** — a **Custom greeting** for the onboarding email, with a **Preview** button.
 3. Click **Invite \[count\] users**.
 
-Everyone in the batch receives the onboarding email with the default configuration unless customized — the panel notes this up front. There's no per-user email opt-out in the panel; to add a user without sending any email, use **Accounts → Manage Users → Create user** and clear the email checkbox there.
+Inviting is what sends the email: everyone in the batch receives the onboarding email, personalized with whatever you customized — the panel notes this up front. If someone isn't ready for Business App yet, keep them as a **contact in the CRM**; when the time is right, the panel will suggest them by name and you can invite them with a custom greeting.
 
 ### Sending it to an existing user
 
@@ -288,9 +288,9 @@ SMBs stay in control of their own dashboard. Both the work-done card and the pro
 
 This lets returning users clean up and streamline their Business App experience once they no longer need the onboarding content.
 
-## How partners control what SMBs see
+## How partners customize what SMBs see
 
-You have full control over whether the Home cards appear for your SMBs, from **Customize Business App**.
+You shape the Home experience for your SMBs from **Customize Business App**.
 
 Go to **Partner Center → Administration → Customize Business App → Pages → Home**. Under **Page Features**:
 
@@ -328,22 +328,22 @@ Only work that was genuinely done for their business. The summary is fully dynam
 </details>
 
 <details>
-<summary>Can I control whether a Vibe site is created?</summary>
+<summary>How do I control when a Vibe demo site is created?</summary>
 
-Yes. A Vibe site is only ever created as a step of *sending the onboarding email*, and only when Vibe is active on the account and it has no live site yet. So you have a few ways to prevent one:
+Through what's active on the account when you invite. A Vibe site is only ever created as a step of *sending the onboarding email*, and only when Vibe is active on the account and it has no live site yet:
 
-- **Don't send the onboarding email to that user** — clear the **Send Onboarding Email** checkbox when creating them (or send the classic welcome email instead). No onboarding email means no Vibe site.
-- **Don't activate Vibe on the account** before inviting them. With Vibe inactive, the email sends normally but no site is built.
+- **Activate Vibe before inviting** and the client's onboarding email leads with their live demo site.
+- **Invite without Vibe active** and the email sends normally, focused on the rest of the AI's work — no site is built.
 - If the account **already has a published Vibe site**, re-sending the onboarding email is safe — it never creates a second one.
 
-Note that turning off the "AI has done the work" card in Customize Business App does **not** stop generation — that toggle only controls whether the card is displayed.
+The "AI has done the work" card toggle in Customize Business App controls only whether the card is displayed, not site generation.
 
 </details>
 
 <details>
-<summary>Do I have to use the onboarding email instead of the welcome email?</summary>
+<summary>Which email should I send — onboarding or welcome?</summary>
 
-No. The onboarding email is selected by default and replaces the classic welcome email for that user, because it shows value up front — but it's your choice. If you'd rather send the classic welcome email, clear the **Send Onboarding Email** checkbox. For fully custom messaging, you can also use a Marketing Campaign.
+The onboarding email is the default because it shows value up front, and it takes a per-send **custom introductory message** so you can make it personal. The classic welcome email suits a plain set-password send — a password reset, or a user who's already familiar with the platform. Whichever is selected replaces the other for that send. For fully custom messaging, layer a Marketing Campaign on top.
 
 </details>
 
