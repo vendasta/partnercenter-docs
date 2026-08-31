@@ -1,0 +1,46 @@
+---
+title: Apply blueprint
+description: Learn how to use the Apply blueprint action to deploy a blueprint to the target account.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, account, blueprints, advanced]
+keywords: [apply blueprint, deploy blueprint, blueprint automation, template automation]
+---
+
+# Apply blueprint
+
+**Apply blueprint** deploys a blueprint to the target account, applying AI assistants, CRM fields, automations, and more. The blueprint runs asynchronously — the automation continues immediately without waiting for the blueprint to finish deploying. This action is available on account-scoped triggers.
+
+## How it works
+
+1. The automation reaches the step with an account in scope
+2. You select the blueprint to deploy
+3. The step triggers the blueprint deployment asynchronously
+4. The automation continues to the next step immediately — deployment happens in the background
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Advanced**, select **Apply blueprint**
+3. Configure the field:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Blueprint** | Yes | The blueprint to deploy to the account. Select from your available blueprints. |
+
+:::tip
+Use data passing for dynamic blueprint selection — this lets you choose different blueprints based on trigger data or earlier step outputs.
+:::
+
+## Outputs
+
+This action produces no outputs available to downstream steps.
+
+## Tips
+
+- **Deployment is asynchronous** — the automation does not wait for the blueprint to finish. If downstream steps depend on resources created by the blueprint (like AI assistants or automations), add a **Delay** step to allow time for deployment.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows
