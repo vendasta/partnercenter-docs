@@ -30,7 +30,7 @@ Filter the activity list to narrow down what you're looking at:
 The Company filter requires a **Company ID**, not the company name. Entering a company name will return no results.
 
 To find a Company ID:
-1. Go to **Partner Center** → **CRM** → **Companies** and open the company.
+1. Go to `Partner Center` → `CRM` → `Companies` and open the company.
 2. Look at the browser URL: `.../companies/76543/details` — the number is the Company ID.
 3. Enter that number in the Company filter.
 
@@ -70,6 +70,10 @@ When the Activity tab shows **Did not run**, the reason tells you why:
 | **Trigger filters failed** | The trigger's conditions didn't match the event data — for example, the account didn't have the required tag. |
 | **Trigger choices failed** | The trigger's choice logic (conditional branching on the trigger) didn't match. |
 | **Task definition choices failed** | A step's pre-condition check failed before the workflow could start. |
+
+:::info Go deeper
+A **Did not run** entry isn't always a problem — often it's an entry setting doing its job. [Put your workforce on autopilot](/learn/ai-workforce/autopilot) walks through reading a run like this correctly before assuming something broke.
+:::
 
 ## Error handling
 

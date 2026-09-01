@@ -17,7 +17,7 @@ A hostname in our system that reads `@.yourdomain.com` would simply be added as 
 2. Navigate to your Domain section
 3. Click on Manage DNS
 4. Look for the DNS records management section
-5. Add the required SPF records found in `Partner Center` → `Marketing` → `Email Settings` → `SPF`. This will be a TXT record.
+5. Add the required SPF records found in `Partner Center` → `Marketing` → `Email settings` → `SPF`. This will be a TXT record.
 
 ## Adding DKIM records
 
@@ -25,7 +25,7 @@ A hostname in our system that reads `@.yourdomain.com` would simply be added as 
 2. Navigate to your Domain section
 3. Click on Manage DNS
 4. Look for the DNS records management section
-5. Add the required DKIM records found in `Partner Center` → `Marketing` → `Email Settings` → `DKIM`. There are three separate records to be added as CNAME records.
+5. Add the required DKIM records found in `Partner Center` → `Marketing` → `Email settings` → `DKIM`. There are **two** separate DKIM records, both added as CNAME records. Both are required, so do not stop after the first one.
 
 ## Adding DMARC record
 
@@ -33,11 +33,12 @@ A hostname in our system that reads `@.yourdomain.com` would simply be added as 
 2. Navigate to your Domain section
 3. Click on Manage DNS
 4. Look for the DNS records management section
-5. Add the required DMARC records found in `Partner Center` → `Marketing` → `Email Settings` → `DMARC`. This will be added as a TXT record.
+5. Add the required DMARC records found in `Partner Center` → `Marketing` → `Email settings` → `DMARC`. This will be added as a TXT record.
 
 ## Validate your DNS records
 
 - DNS changes can take up to 48 hours to propagate throughout the internet
-- From `Partner Center` → `Marketing` → `Email Settings` check if the email domain has a green checkmark beside it. This indicates that the records have been successfully validated.
+- You should have added four records in total: one SPF (TXT), two DKIM (CNAME), and one DMARC (TXT)
+- From `Partner Center` → `Marketing` → `Email settings`, find the domain in the `Email domains` card. Each record row has a `Current value` column showing the value found at your DNS host, or `Not found` in red if it has not been detected yet. The domain's own row header carries the overall status, and a `Domain authorization required` banner stays on the page until every record lands.
 - If you're experiencing issues with email deliverability after adding these records, please wait at least 48 hours before troubleshooting further
 - For additional help with email configuration, contact GoDaddy support or refer to their documentation

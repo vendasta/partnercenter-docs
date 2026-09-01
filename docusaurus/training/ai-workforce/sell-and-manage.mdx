@@ -2,7 +2,6 @@
 title: Sell and manage your AI Workforce
 sidebar_position: 7
 description: Field-tested scripts, packaging and pricing, and the monthly manage-and-improve loop.
-sidebar_class_name: hide-from-sidebar
 ---
 
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
@@ -12,6 +11,9 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
 
 <InlineHighlighter courseId="sell-and-manage" site="vendasta_learn">
 
@@ -19,6 +21,7 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 <LessonHeader
   difficulty="Intermediate"
+  topics={["Selling AI", "Packaging", "Pitching", "AI Workforce"]}
   time="about 30 minutes"
   required={["Completion of steps 1-6", "A real prospect or client to price for"]}
   pathName="Hire your first AI Employee"
@@ -37,17 +40,25 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 By the end of this step, you can price a real AI Workforce package for a real prospect and know which support model to offer them. Everything up to here worked on one account; this step is what turns that account into a sale, and every sale into a program you manage rather than a one-time setup.
 
+<LessonSection>
+
 ## The words that work
 
 Lead with the outcome, not the word "AI": "never miss another lead, no question goes unanswered, day or night." For a team worried an AI Employee threatens their job, the junior-receptionist framing holds up: an extra set of hands up front, so the skilled work stays with the people already doing it. For after-hours value, the plainest math wins: a paid ad click that goes unanswered on a Saturday call is a lead paid for and lost.
+
+</LessonSection>
 
 ## Your own account is the proof
 
 The screenshots and before/after answers you have collected since step 2 are the sales asset, not a slide deck. "Let me show you how it is doing for us" opens a conversation a feature list never will.
 
+<LessonSection>
+
 ## The champion wedge
 
 For a multi-location or franchise prospect with several decision-makers, deploy with the one location or person already convinced, prove real lead volume on their account, then bring the rest of the decision-makers the results instead of a pitch.
+
+</LessonSection>
 
 ## Match the employee to the business model
 
@@ -57,25 +68,53 @@ An online-only business gets chat, not voice. A business that lives on the phone
 Name one real prospect and decide, in one sentence, which employee and which channel actually fits how their customers reach them.
 :::
 
+<LessonSection>
+
 ## Package and price it
 
 Three building blocks combine into a client price: a Conversations AI tier, a one-time AI Employee Setup, and an ongoing AI Workforce Optimization Plan for ongoing management, which folds a full setup into its first month. Check current Marketplace pricing for each before you quote a number; treat this step as the structure to price with, not a fixed price list.
+
+:::info Go deeper
+[The AI Workforce services guide](/vendasta-services/ai-workforce) breaks down what Setup and the Optimization Plan each include, employee by employee, and [the Marketplace products guide](/marketplace/products) covers retail pricing in full.
+:::
 
 Two real end-to-end packages from the field show what a finished bundle looks like: a fuller voice-plus-lead-generation package running $1,500 to $2,000 a month at retail, and a lighter SMS-and-email-only automation package running $600 to $750 a month at retail. Elite Web Professionals ran this exact playbook for a client buried in missed calls: an AI Receptionist deployed, and within four months it had handled 1,017 calls and captured 778 qualified leads, a 76 percent conversion rate. Missed calls became a pipeline the business could work.
 
 Price the bundle, not the seat: a per-employee fee structure throttles a client who wants to add more employees later.
 
+<LabCallout title="price a real bundle against live rates">
+Go to `Marketplace` → `Discover Products`.
+
+<LabChecklist
+  storageKey="sell-and-manage-lab-1"
+  steps={[
+    <>Set <strong>Explore</strong> to <code>All</code>, or clear the <code>Vendor is Vendasta</code> chip. It is applied by default and it hides the service products.</>,
+    <>Look up the Conversations AI edition your prospect needs. The columns give you <code>Your cost</code> beside the vendor's suggested retail.</>,
+    <>Look up the AI Employee Setup, and the AI Workforce Optimization Plan if you intend to manage it ongoing.</>,
+    <>Add the three together and set the monthly retail number you will quote.</>,
+    <>Sense-check it against the field packages above, and against what this client currently loses to missed leads.</>,
+  ]}
+  confirm={<>You have a bundle price built from today's rates rather than a remembered one, for a named prospect.</>}
+/>
+</LabCallout>
+
+</LessonSection>
+
 ## Choose self-serve, setup, or managed
 
 Three tiers of support, named plainly: what the client's own team now runs after this path, on their own account; what a one-time Setup covers, launch and configuration done for them once; and what the ongoing AI Workforce Optimization Plan covers, launch plus continuous tuning. Activating a Setup or an Optimization Plan is what starts delivery on the Vendasta Services side, so it belongs at the moment the client agrees, not as a follow-up task for later.
+
+<LessonSection>
 
 ## Segment clients the way you segment yourself
 
 A client new to AI gets one simple win that changes their week. A client already comfortable gets the next challenge. The same tiered thinking that shaped how you moved through this path applies to every client relationship: match the next step to where they actually are, not to where the full workforce eventually goes.
 
+</LessonSection>
+
 ## Manage and improve, every month
 
-Review real conversations, send anything off back through the audit habit from step 4, and raise autonomy as trust grows rather than leaving it wherever step 5 first set it. A deployed workforce that nobody revisits drifts; one reviewed monthly keeps improving on its own trajectory.
+Review real conversations and send anything off back through the audit habit: a wrong answer is a knowledge gap, a wrong behavior is a capability gap. A deployed workforce that nobody revisits drifts; one reviewed monthly keeps improving on its own trajectory.
 
 ## What you now have
 
@@ -143,15 +182,15 @@ Review real conversations, send anything off back through the audit habit from s
 />
 
 <LessonFooter
-  to="/learn/ai-foundations"
+  to="/learn/grow-your-ai-workforce"
   pathName="Hire your first AI Employee"
   step={7}
   totalSteps={7}
-  nextPathName="AI foundations"
-  description="How AI Employees actually work: models, knowledge, capabilities, tools, and automations, in plain language."
-  secondTo="/learn/vibe"
-  secondNextPathName="Build with Vibe"
-  secondDescription="Describe what you want in plain English and ship real apps: landing pages, dashboards, and client portals."
+  nextPathName="Grow your AI Workforce"
+  description="Meet every member of the fleet: watch each one work, what it does on day one, and the edition that carries it."
+  secondTo="/learn/sell-the-ai-workforce"
+  secondNextPathName="Sell the AI Workforce"
+  secondDescription="Know the offer, get in the room, demo on any prospect's website, close with proof and ROI, and take the signed client to their first captured lead."
 />
 
 </InlineHighlighter>

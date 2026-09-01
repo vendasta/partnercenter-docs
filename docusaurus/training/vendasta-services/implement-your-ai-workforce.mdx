@@ -11,6 +11,7 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
 
 <InlineHighlighter courseId="implement-your-ai-workforce" site="vendasta_learn">
 
@@ -18,8 +19,8 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 <LessonHeader
   difficulty="Intermediate"
+  topics={["AI Workforce", "Client delivery"]}
   time="about 11 minutes"
-  required={["Conversations AI active on the account"]}
   pathName="Work with Vendasta Services"
   step={3}
   totalSteps={5}
@@ -34,7 +35,7 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 An AI employee answers, qualifies, books, responds, or reports without a person doing it each time. Reaching that standard takes configuration: knowledge, capabilities, channels, and the automations that carry work onward. Vendasta Services does that configuration for you, one AI employee per activation.
 
-Eight roles are available today. Conversations AI is the baseline for every one of them, and four roles need a further activation on the account.
+Eight roles are available today, and each one names the product that carries it. Five run on Conversations AI, the reputation role runs on Reputation AI, and the two content roles run on Social AI. Read the requirement per role rather than assuming a common one.
 
 | AI employee | What it does | What must be active |
 |---|---|---|
@@ -42,16 +43,18 @@ Eight roles are available today. Conversations AI is the baseline for every one 
 | **AI Inside Sales Representative** | A sales persona that qualifies and captures leads and books appointments | Conversations AI |
 | **AI Support Agent** | Customer support across channels, escalations, and lead capture | Conversations AI |
 | **AI Human Resources Coordinator** | Internal HR support and meeting scheduling | Conversations AI |
-| **AI Reputation Specialist** | Review responses and requests, reputation workflows, external-platform support | Conversations AI, plus Reputation AI Premium |
+| **AI Reputation Specialist** | Review responses and requests, reputation workflows, external-platform support | Reputation AI Premium |
 | **AI Data Analyst** | Conversational insights from CRM, review, and social data | Conversations AI, plus one data source: CRM AI, Reputation AI, Social AI, or Local SEO |
-| **AI Social Media Manager** | An autonomous social content calendar across connected networks, with brand training and approvals | Conversations AI, plus Social AI Premium |
-| **AI Blogger** | An autonomous SEO blog calendar published to WordPress, with brand training and approvals | Conversations AI, plus Social AI Premium and a WordPress site |
+| **AI Social Media Manager** | An autonomous social content calendar across connected networks, with brand training and approvals | Social AI Premium |
+| **AI Blogger** | An autonomous SEO blog calendar published to WordPress, with brand training and approvals | Social AI Premium, and a WordPress site |
 
 Each role has a guide covering its full scope. Start with the [AI Workforce documentation](/vendasta-services/ai-workforce) when you are scoping a specific one.
 
 :::info One activation, one AI employee
 A Setup covers a single AI employee, and so does an Optimization Plan. Adding a second role means a second activation. Scope that into your pricing before you quote the client.
 :::
+
+<LessonSection>
 
 ## Setup or Optimization Plan
 
@@ -66,6 +69,8 @@ Two ways to buy, and you choose one, not both.
 | **Best for** | Getting an AI employee live and running it yourself | Keeping it accurate as the business changes |
 
 The Optimization Plan already contains a full setup, so purchasing both is buying the same configuration twice. Pick the one that matches who will be tuning the employee six months from now.
+
+</LessonSection>
 
 ## What a setup engagement involves
 
@@ -89,6 +94,8 @@ The engagement runs as a short sequence of calls and configuration work. The AI 
 For a United States business, start A2P registration as soon as the order is placed. It validates the use of SMS and can take up to two weeks, so having the legal business information ready at the initial training call keeps the launch date intact.
 :::
 
+<LessonSection>
+
 ## What the Optimization Plan adds after launch
 
 Setting an AI employee up is the beginning. The value compounds through the tuning that follows, and the plan is where that tuning lives.
@@ -99,6 +106,8 @@ Setting an AI employee up is the beginning. The value compounds through the tuni
 - **A live training session for your team**, covering how the employee works and how to spot when it needs attention.
 
 Two boundaries are worth knowing before you sell it. The plan covers AI employees the team configured, within the standard scope of tasking, prompts, automations, and settings. An AI employee you built yourself can be brought into coverage through a setup engagement. And the plan is a tuning and operating service rather than a development engagement: custom code, third-party tool administration, strategy consulting, and creative production sit outside it. The [AI Workforce documentation](/vendasta-services/ai-workforce) lists the full scope on each role's page.
+
+</LessonSection>
 
 <SectionFeedback courseId="implement-your-ai-workforce" site="vendasta_learn" section="content" />
 
@@ -116,7 +125,7 @@ Two boundaries are worth knowing before you sell it. The plan covers AI employee
         'AI Receptionist, with Reputation AI Premium'
       ],
       correctIndex: 1,
-      explanation: 'The AI Reputation Specialist handles review responses and requests and adds a Reputation AI Premium requirement on top of the Conversations AI baseline.'
+      explanation: 'The AI Reputation Specialist handles review responses and requests, and Reputation AI Premium is what carries it. Each AI employee names its own requirement; there is no single product every one of them sits on.'
     },
     {
       type: 'mcq',
@@ -132,7 +141,7 @@ Two boundaries are worth knowing before you sell it. The plan covers AI employee
     },
     {
       type: 'mcq',
-      question: 'What does the team need from you before they can install the chat widget and lead form?',
+      question: 'What does the Vendasta Services team need from you before they can install the chat widget and lead form?',
       options: [
         'Access to the back end of the website',
         'A completed Snapshot Report for the account',
@@ -144,7 +153,7 @@ Two boundaries are worth knowing before you sell it. The plan covers AI employee
     },
     {
       type: 'mcq',
-      question: 'You configured an AI Receptionist yourself six months ago and now want the team to maintain it. What is the path?',
+      question: 'You configured an AI Receptionist yourself six months ago and now want the Vendasta Services team to maintain it. What is the path?',
       options: [
         'Add it to an existing Optimization Plan at no charge',
         'Bring it into coverage through a setup engagement',
@@ -152,7 +161,7 @@ Two boundaries are worth knowing before you sell it. The plan covers AI employee
         'Reconfigure it from scratch in the client Business App'
       ],
       correctIndex: 1,
-      explanation: 'Ongoing coverage applies to AI employees the team configured. A self-configured employee comes into scope through a setup engagement first.'
+      explanation: 'Ongoing coverage applies to AI employees the Vendasta Services team configured. A self-configured employee comes into scope through a setup engagement first.'
     },
     {
       type: 'mcq',

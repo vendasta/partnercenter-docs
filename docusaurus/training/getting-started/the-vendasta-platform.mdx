@@ -1,7 +1,7 @@
 ---
 title: The Vendasta Platform
 sidebar_position: 1
-description: "The white-label model, who works in the platform, and how it all connects: Partner Center, Business App, accounts, CRM, products, AI Employees, and automations."
+description: "The white-label model, who works in the platform, and how it all connects: Partner Center, Business App, your team, the CRM, products, AI Employees, automations, and billing."
 ---
 
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
@@ -12,6 +12,12 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
+import KeyPoints from "@site/src/components/KeyPoints";
+import aiReceptionistFace from './img/ai-receptionist-face.png';
+import aiReputationSpecialistFace from './img/ai-reputation-specialist-face.png';
 
 <InlineHighlighter courseId="the-vendasta-platform" site="vendasta_learn">
 
@@ -19,14 +25,19 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 <LessonHeader
   difficulty="Beginner"
-  time="about 8 minutes"
-  pathName="Get started"
+  topics={["Partner Center", "Business App", "AI Workforce"]}
+  time="about 12 minutes"
+  lab
+  required={["Partner Center admin access"]}
+  pathName="Get set up"
   step={1}
-  totalSteps={6}
+  totalSteps={8}
   outcomes={[
     "Describe the mental model for the platform: AI does the work, you orchestrate",
+    "Name what the platform gives you beyond products: the CRM, Vendasta Services, and billing",
     "Say which workspace any task belongs to: Partner Center or Business App",
     "Place any AI Employee in the workspace it belongs to, before you configure it",
+    "Give each person on your team the right view of Partner Center",
   ]}
 />
 
@@ -34,69 +45,7 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 The platform is built around one idea: **AI does the work, you orchestrate.** AI Employees answer calls and messages, capture leads, and book appointments. Automations move work between them. You configure, supervise, and sell the outcomes. That changes what your time is spent on: less of the repetitive work itself, more running the system that does it.
 
-And everything you run is white label: the platform, the products you resell, and the services that fulfill them carry your brand, at the retail prices you set, so your clients see your name throughout. Making all of that yours is its own step later in this path.
-
-## Who works in the platform, and where
-
-Four kinds of people work in the platform, each in their own space:
-
-| Who | Where they work | What they do there |
-|---|---|---|
-| **You, our partner** | Partner Center, at [partners.vendasta.com](https://partners.vendasta.com) | Run your business: sell, bill, fulfill, and manage everything |
-| **Your clients** | Business App | Use the products you sell them, under your brand |
-| **Your salespeople** | The CRM, inside Partner Center | Work the pipeline, log activity, and send proposals |
-| **Vendors** | Vendor Center | Configure the products distributed through the Marketplace, including your own if you create one |
-
-As our partner, you can access all of these parts of the platform. But let's break down the two most important workspaces in the ecosystem: where you will do real work, and when and why.
-
-## Partner Center versus Business App
-
-**Partner Center** is where you run your business and build your own AI workforce; **Business App** is where you build the AI workforce for each of your clients. One question orients you anywhere in the platform: whose workspace am I in?
-
-<div style={{border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', padding: '8px', background: '#ffffff', marginBottom: '28px'}}>
-
-![The Vendasta ecosystem: Partner Center is your command center; Business App is the client-facing workspace under your brand. You activate products from Partner Center; everything the client's business generates lands in their Business App, with full visibility for you.](./img/ecosystem-map.svg)
-
-</div>
-
-**Partner Center** is your command center: [accounts](/accounts) and billing, your [CRM](/crm) and pipeline, [Marketplace](/marketplace) packages, [automations](/automations), and administration.
-
-**Business App** is the client-facing side. Every client gets their own, under your brand: their dashboard, inbox, reports, and every product you activate for them. Their own brand lives inside it, in their business profile, and flows into everything they send: their campaigns, their review requests, their widgets. You have full access to configure products and AI Employees on their behalf. Some clients live in it daily; many are happy to let you drive.
-
-The two workspaces stay connected. Products you activate in Partner Center appear in your client's Business App. Everything their business generates after that (leads, conversations, reviews, results) lands in their Business App, where you have full visibility, and the Executive Report turns those results into proof of your value, delivered to them under your brand.
-
-:::tip Try it now
-Log in at [partners.vendasta.com](https://partners.vendasta.com) and read the left navigation top to bottom. Everything you see there is the Partner Center side of the diagram above.
-:::
-
-## What you set up in each
-
-Here is how the split plays out in practice, side by side:
-
-| | Partner Center (yours) | Business App (each client's) |
-|---|---|---|
-| **Brand** | Upload your logo once; it brands both workspaces | Carries your brand automatically |
-| **People** | Invite your team, set permissions, and fill in salesperson profiles | Add client users and send the welcome email once their products are live |
-| **Email** | Connect your email domain so everything the platform sends comes from you | Their notifications and reports send under your brand |
-| **Money** | Connect payments and set your billing defaults | Their orders, subscriptions, and invoices live on their account |
-| **AI Employees** | Your receptionist and sales assistant; serving your business | Their receptionist and specialists; serving their business |
-| **Calendars** | Connect your calendar in My Meetings so booking works everywhere | Their meeting scheduler, once they have Conversations AI |
-| **Products** | Choose what to sell and build packages in the Marketplace | Every product you activate appears as a dashboard for them |
-
-Each row on this table becomes hands-on later in this learning path; for now, the pattern is the takeaway: set yourself up once on the left, then repeat the client side of the ritual for every business you bring on.
-
-## Where AI Employees live
-
-Every AI Employee has a home base, and the rule for finding it is simple: **an AI Employee lives in the workspace of the business it serves.**
-
-- **Your** AI Employees live in your Partner Center: the receptionist answering for your agency, your sales assistant, your capabilities and knowledge.
-- **A client's** AI Employees live in their Business App: their receptionist, their voice line, their reputation specialist, powered by their business knowledge.
-
-Pick the workspace first and everything downstream lands where you expect: channels, knowledge, conversations, and leads. When you are ready to configure one, [this guide will help](/ai).
-
-## Products, AI Employees, and automations
-
-Three building blocks, three different jobs. Flip each one:
+That sentence used three building blocks, and everything in the platform is made of them. Flip each one:
 
 <IconFlipCardGrid>
   <IconFlipCard
@@ -112,30 +61,136 @@ Three building blocks, three different jobs. Flip each one:
   <IconFlipCard
     gradient="purple"
     front="Automation"
-    back="A trigger-and-action workflow that runs on its own, such as a new form submission creating a follow-up task. Automations live in either workspace."
+    back="A trigger-and-action workflow that runs on its own, often paired with an AI Employee so its work goes somewhere: the AI Receptionist captures a lead, and an automation sends the welcome email and creates the follow-up task."
   />
 </IconFlipCardGrid>
 
-The order matters: **you sell products, and products unlock AI Employees.** These AI Employees are each powered by a specific product:
+Together they form one chain: you sell the product, the AI Employee it unlocks does the work, and an automation acts on that work for you. The receptionist captures the lead; the automation sends the welcome email. That chain is "AI does the work, you orchestrate" in action.
 
-| AI Employee | Product that unlocks it |
-|---|---|
-| Voice Receptionist | Conversations AI |
-| Social Media Manager | Social Marketing (Social AI) |
-| Blogger | Social Marketing (Social AI) |
-| Reputation Specialist | Reputation Management |
-| AI Sales Assistant | CRM AI |
-| AI Search Specialist | Local SEO / Listing Builder |
+And everything you run can be white label: the platform, the products you resell, and the services that fulfill them carry your brand, at the retail prices you set, so your clients see your name throughout. White label depends on your subscription plan, and making all of that yours is its own step later in this path.
 
-When a client is ready to add an employee, [this guide covers the upgrade path](/ai/ai-workforce/upgrading-ai-employees).
+<LessonSection>
 
-Automations are the third piece, and they carry work between the other two. That composition is "AI does the work, you orchestrate" in miniature.
+## One platform to run your business
+
+The building blocks do the work; the toolkit around them runs the business. With Vendasta you get the full infrastructure: client management, a catalog of products to resell, automation, billing, and a fulfillment team, all under your own brand. You do not have to use all of it right away. Most partners get one AI Employee running for a client, or lead with a single package that bundles the products a vertical needs, and grow into the rest from there.
+
+Alongside the products you resell, three pieces of that toolkit carry the day-to-day:
+
+**Manage your clients in the [CRM](/crm).** Contacts, companies, pipeline, and tasks, with every client conversation in one place, inside Partner Center.
+
+**Sell services you do not deliver yourself with [Vendasta Services](/vendasta-services).** A fulfillment team for websites, advertising management, social media, content, and more. Vendasta's experts deliver under your brand, so you can say yes to a bigger scope without hiring.
+
+**Bill and get paid in [Commerce](/commerce).** Orders, invoices, subscriptions, and payments in one place: you set the retail price, billing runs on your schedule, and payouts land in your bank account.
+
+</LessonSection>
+
+
+## Partner Center versus Business App
+
+**Partner Center** is where you run your business and build your own AI workforce; **Business App** is where you build the AI workforce for each of your clients. One question orients you anywhere in the platform: whose workspace am I in?
+
+<div style={{border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', padding: '8px', background: '#ffffff', marginBottom: '28px'}}>
+
+![The Vendasta ecosystem: Partner Center is your command center; Business App is the client-facing workspace under your brand. You activate products from Partner Center; everything the client's business generates lands in their Business App, with full visibility for you.](./img/ecosystem-map.svg)
+
+</div>
+
+The two workspaces stay connected. Products you activate in Partner Center appear in your client's Business App. Everything their business generates after that (leads, conversations, reviews, results) lands in their Business App, where you have full visibility. The Executive Report turns those results into proof of your value, delivered to them under your brand.
+
+:::tip Try it now
+Not sure whose workspace you are in? Look at the top left: the navigation is labeled `Partner Center` or `Business App`. That one glance answers "whose workspace am I in?" anywhere in the platform.
+:::
+
+
+<LessonSection>
+
+## What you set up in each
+
+Here is how the split plays out in practice, side by side:
+
+| | Partner Center (yours) | Business App (each client's) |
+|---|---|---|
+| **Brand** | Upload your logo once; it brands both workspaces | Carries your brand automatically |
+| **People** | Invite your team, set permissions, and fill in salesperson profiles | Add client users and send the welcome email once their products are live |
+| **Email** | Connect your email domain so everything the platform sends comes from you | Their notifications and reports send under your brand |
+| **Payments** | Connect payments and set your billing defaults | Their orders, subscriptions, and invoices live on their account |
+| **AI Employees** | Your receptionist and sales assistant; serving your business | Their receptionist and specialists; serving their business |
+| **Calendars** | Connect your calendar in My Meetings so booking works everywhere | Their meeting scheduler, once they have Conversations AI |
+| **Products** | Choose what to sell and build packages in the Marketplace | Every product you activate appears as a dashboard for them |
+
+Each row on this table becomes hands-on later in this learning path; for now, the pattern is the takeaway. Set yourself up once on the left, then repeat the client side of the ritual for every business you bring on.
+
+
+</LessonSection>
+
+## Two ways your team sees Partner Center
+
+Your team works in Partner Center, and each person's role decides how much of it they see. An **Admin** gets the full workspace: accounts, billing, branding, and administration, the right fit for decision-makers, managers, and operations. A **Salesperson** gets a focused view: Opportunities and My Meetings in Partner Center, for pipeline and client communication. (A third role, **Digital Agent**, sees only Task Manager rather than Partner Center; it belongs to fulfillment work later on.) Running solo? You are the Admin, and the CRM view is where your selling happens.
+
+Permissions go finer than the two roles. You can restrict an Admin from specific areas, such as billing reports, platform customization, or creating other Admins. Most people on your team should hold at least some admin access, because permissions can narrow it afterward; defaulting everyone to Salesperson just to limit access gives them less than they need.
+
+<LabCallout title="see your team, and add one person">
+Go to `Administration` → `My team`.
+
+<LabChecklist
+  storageKey="the-vendasta-platform-lab-1"
+  steps={[
+    <>Read the banner at the top. It names how many seats your plan includes and what an additional seat costs per month.</>,
+    <>Look at the list. Every person shows their role in the <strong>Role</strong> column: Admin, Salesperson, or Digital Agent.</>,
+    <>Select <code>Invite team member</code> in the upper right.</>,
+    <>Enter their first name, last name, and email.</>,
+    <>Tick the roles they need. They are checkboxes, so one person can hold more than one.</>,
+    <>Select <code>Send</code>.</>,
+  ]}
+  confirm={<>The person appears on My team with their roles beside their name, and a welcome email is on its way to them with a link to set a password.</>}
+/>
+</LabCallout>
+
+Permissions and market access are set after the person exists, not in the invite panel. Working solo today? Open `My team` anyway and read your own row. Knowing where roles live is what makes the first hire a two-minute job instead of a search. [This guide covers every role and permission in full](/getting-started/getting-started-guides/getting-started-with-your-team).
+
+![The My Team page in Partner Center, listing each team member with their role beside their name: Admin, Salesperson, or Digital Agent](./img/my-team-roles.jpg)
+
+<LessonSection>
+
+## The boundary in practice
+
+Two placements follow the whose-workspace rule and are worth knowing before they come up.
+
+**SMS registration lives with the client.** United States carriers require a business to register before it sends SMS messages (the registration is called A2P, application-to-person). The registration belongs to the business sending the texts, so it happens in that client's Business App, under `Administration` → `Conversation`. [This guide covers the registration](/business-app/conversations/sms/us-businesses-sms-registration).
+
+![The SMS Registration card in Business App, showing a Not submitted status and the Register now button](./img/sms-registration-card.jpg)
+
+**A CRM contact is not a Business App user.** A contact is someone you are talking to: a record in your CRM. A user is someone you have invited into Business App, where they can log in and use their tools. Contacts never become users on their own; you create the user and send the welcome email when their products are ready for them.
+
+</LessonSection>
+
+## Where AI Employees live
+
+Every AI Employee has a home base, and the rule for finding it is simple: **an AI Employee lives in the workspace of the business it serves.**
+
+<KeyPoints
+  items={[
+    {
+      img: aiReceptionistFace,
+      title: 'Your AI Employees',
+      text: 'Live in your Partner Center: the receptionist answering for your agency, your sales assistant, your capabilities and knowledge.',
+    },
+    {
+      img: aiReputationSpecialistFace,
+      title: "A client's AI Employees",
+      text: 'Live in their Business App: their receptionist, their voice line, their reputation specialist, powered by their business knowledge.',
+    },
+  ]}
+/>
+
+Pick the workspace first and everything downstream lands where you expect: channels, knowledge, conversations, and leads. Remember how they arrive: you sell products, and the AI Employee is what the product unlocks; there is no employee for sale on its own. When you are ready to configure one, [this guide will help](/ai).
 
 <SectionFeedback courseId="the-vendasta-platform" site="vendasta_learn" section="content" />
 
 <KnowledgeCheck courseId="the-vendasta-platform" site="vendasta_learn"
   sessionSize={3}
-  intro="Three quick questions on the model, the two workspaces, and how products and AI Employees relate."
+  intro="Three quick questions on the model, the two workspaces, and where things happen for you versus for a client."
   questions={[
     {
       type: 'mcq',
@@ -151,15 +206,15 @@ Automations are the third piece, and they carry work between the other two. That
     },
     {
       type: 'mcq',
-      question: 'You want to create a product of your own and distribute it through the Marketplace. Where does that configuration happen?',
+      question: 'A client signs for a website build, and you have no web team of your own. How do you deliver it?',
       options: [
-        'Business App',
-        'The CRM',
-        'Vendor Center',
-        'The Executive Report'
+        'Order it through Vendasta Services; the team delivers under your brand',
+        'Decline the work, since the platform only resells software products',
+        'Ask Vendasta Support to assign the project to your account manager',
+        'Have the client purchase the build from Vendasta directly'
       ],
-      correctIndex: 2,
-      explanation: 'Vendor Center is where products are configured for Marketplace distribution, including your own custom products. As the partner, you have access to it.'
+      correctIndex: 0,
+      explanation: 'Vendasta Services is the fulfillment team behind work you sell but do not deliver yourself: websites, advertising management, social media, content, and more, delivered under your brand.'
     },
     {
       type: 'mcq',
@@ -195,7 +250,7 @@ Automations are the third piece, and they carry work between the other two. That
         'Vendasta Support has to enable the receptionist for that account before it becomes sellable'
       ],
       correctIndex: 0,
-      explanation: 'You shop for products; AI Employees are what those products turn on. Conversations AI unlocks the Voice Receptionist, and one product can unlock several employees: Social AI brings both the Social Media Manager and the Blogger.'
+      explanation: 'You shop for products; AI Employees are what those products turn on. There is no employee for sale on its own: you sell the product, and the employee is what it unlocks.'
     },
     {
       type: 'mcq',
@@ -208,11 +263,35 @@ Automations are the third piece, and they carry work between the other two. That
       ],
       correctIndex: 2,
       explanation: 'Trigger-and-action workflows are automations. Products are activated and resold; AI Employees are workers configured with knowledge and capabilities.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client is ready to send SMS messages in the United States and needs to complete the carrier registration. Where does that happen?',
+      options: [
+        'In their Business App, under Administration',
+        'In your Partner Center, under Administration',
+        'On the Marketplace page for Conversations AI',
+        'In Vendor Center, under product settings'
+      ],
+      correctIndex: 0,
+      explanation: 'A2P registration belongs to the business sending the texts, so it lives in that client\'s Business App under Administration → Conversation. Whose workspace? Theirs.'
+    },
+    {
+      type: 'mcq',
+      question: 'A business owner you have been emailing for weeks sits in your CRM. She asks why she cannot log in to the app you keep mentioning. What is going on?',
+      options: [
+        'A contact is not a user; she can log in once you create her user and send the welcome email',
+        'Her CRM company record has to sync overnight before her access begins',
+        'Her login activates automatically once her first invoice is generated in Commerce',
+        'Contacts log in through Vendor Center rather than Business App'
+      ],
+      correctIndex: 0,
+      explanation: 'A contact is someone you are talking to; a user is someone you have invited into Business App. You create the user and send the welcome email when her products are ready for her.'
     }
   ]}
 />
 
-<LessonFooter to="/learn/getting-started/partner-center-walkthrough" pathName="Get started" step={1} totalSteps={6} />
+<LessonFooter to="/learn/getting-started/connect-your-domain-and-email" pathName="Get set up" step={1} totalSteps={8} />
 
 </InlineHighlighter>
 <MarkComplete courseId="the-vendasta-platform" site="vendasta_learn" />

@@ -1,12 +1,12 @@
 ---
-title: Order Payments and Billing
-sidebar_label: Order Payments and Billing
+title: Order payments and billing
+sidebar_label: Order payments and billing
 description: Collect payments directly from orders, enable customer payment collection, and streamline billing processes with automated payment handling.
 tags: [commerce, orders, payments, billing, credit-cards]
 keywords: [order payments, payment collection, billing, credit cards, customer approval payments, automated billing]
 ---
 
-## What are Order Payments?
+## What are order payments?
 
 Order payments in Partner Center allow you to collect and process payments directly within the order workflow. This includes collecting first payments when orders are created, enabling customer payment collection during approval processes, and automating billing setup for ongoing subscriptions. The system securely handles credit card information and streamlines payment processing to reduce manual effort.
 
@@ -54,18 +54,18 @@ This feature allows you to collect and charge credit card information directly w
 - Order history is updated
 - Subscriptions are created
 - Invoice is generated
-- Payment details recorded in "PAYMENT" tab
+- Payment details recorded in `PAYMENT` tab
 - Billing information becomes default if none previously set
 
 **Automated System Actions - Credit Card Declined:**
-- Payment details recorded in "PAYMENT" tab
-- "Payment declined" tag added to order
-- Order status set to "DECLINED"
+- Payment details recorded in `PAYMENT` tab
+- `Payment declined` tag added to order
+- Order status set to `DECLINED`
 - Order history updated
-- Order can be converted to "draft" for reprocessing
+- Order can be converted to `draft` for reprocessing
 
 :::tip
-All payment details can be found in the "PAYMENT" tab of the order.
+All payment details can be found in the `PAYMENT` tab of the order.
 :::
 
 ### How to enable customer payment collection
@@ -86,11 +86,11 @@ Partner Center allows sales orders sent for customer approval to include payment
    - Go to `Administration` → `Customize` → `Sales` → `Configure sales orders and processes`
 
 2. **Configure Sales Orders**:
-   - Find the "Salesperson submit actions" card
+   - Find the `Salesperson submit actions` card
 
 3. **Enable Customer Approval and Payment**:
-   - Ensure "Allow salespeople to send an order to customers for approval" is checked
-   - Check "Orders sent for approval by salespeople can accept payment"
+   - Ensure `Allow salespeople to send an order to customers for approval` is checked
+   - Check `Orders sent for approval by salespeople can accept payment`
 
 <img src={require('./img/salespeople-config.png').default} alt="Configuration settings for salespeople" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -98,8 +98,8 @@ Partner Center allows sales orders sent for customer approval to include payment
 1. Salespeople can select `Submit for customer approval` on an order
 2. Order is sent to customer for approval and payment
 3. Customer approves order and provides payment information
-4. Upon successful payment, invoice with 'Paid' status is generated
-5. Order processes and changes to 'Activated' status
+4. Upon successful payment, invoice with `Paid` status is generated
+5. Order processes and changes to `Activated` status
 
 ## Payment collection process
 
@@ -109,7 +109,7 @@ Partner Center allows sales orders sent for customer approval to include payment
 - You can utilize payment collection features with the necessary permissions
 - Secure credit card storage within the order system
 - Automatic processing and activation upon successful payment
-- Clear payment tracking in dedicated PAYMENT tab
+- Clear payment tracking in dedicated `PAYMENT` tab
 
 ### Customer approval with payment
 
@@ -127,16 +127,16 @@ When payments are successfully processed:
 - Orders automatically activate (or schedule activation)
 - Products become available to customers
 - Subscriptions are created for ongoing billing
-- Invoices are generated with 'Paid' status
+- Invoices are generated with `Paid` status
 - Payment information is securely stored
 - Default billing settings are established
 
 ### Payment declines
 
 When payments are declined:
-- Clear indication of decline reason in PAYMENT tab
+- Clear indication of decline reason in `PAYMENT` tab
 - Order status updated to reflect payment issue
-- Option to convert order to draft for reprocessing
+- Option to convert order to `draft` for reprocessing
 - Opportunity to update payment information
 - Ability to retry payment collection
 
@@ -160,14 +160,14 @@ When payments are declined:
 - Use customer approval with payment for better customer experience
 - Monitor payment declines and follow up promptly
 - Ensure proper permissions are set for payment collection
-- Review payment details in PAYMENT tab for all transactions
+- Review payment details in `PAYMENT` tab for all transactions
 - Set up default billing information during first payment collection
 - Use secure payment processing for all credit card transactions
 
 <details>
 <summary>What happens if a customer's payment is declined during approval?</summary>
 
-The order status is set to "DECLINED," payment details are recorded in the PAYMENT tab, and the order can be converted to draft for reprocessing with updated payment information.
+The order status is set to `DECLINED`, payment details are recorded in the `PAYMENT` tab, and the order can be converted to `draft` for reprocessing with updated payment information.
 </details>
 
 <details>
@@ -191,13 +191,13 @@ If no default billing settings were previously set, the payment information ente
 <details>
 <summary>Can salespeople collect payments independently?</summary>
 
-Salespeople can collect payments if administrators have enabled "Orders sent for approval by salespeople can accept payment" in the sales order configuration settings.
+Salespeople can collect payments if administrators have enabled `Orders sent for approval by salespeople can accept payment` in the sales order configuration settings.
 </details>
 
 <details>
 <summary>Where can I find all payment details for an order?</summary>
 
-All payment information, including successful payments and declines, can be found in the "PAYMENT" tab of the order details.
+All payment information, including successful payments and declines, can be found in the `PAYMENT` tab of the order details.
 </details>
 
 <details>
@@ -209,11 +209,11 @@ Partner Center uses secure credit card storage methods that comply with payment 
 <details>
 <summary>Can I reprocess a declined payment?</summary>
 
-Yes, orders with declined payments can be converted to "draft" status, allowing you to update payment information and reprocess the order.
+Yes, orders with declined payments can be converted to `draft` status, allowing you to update payment information and reprocess the order.
 </details>
 
 <details>
 <summary>What triggers automatic invoice generation?</summary>
 
-Successful payment collection automatically generates an invoice with 'Paid' status, providing a complete record of the transaction.
+Successful payment collection automatically generates an invoice with `Paid` status, providing a complete record of the transaction.
 </details>

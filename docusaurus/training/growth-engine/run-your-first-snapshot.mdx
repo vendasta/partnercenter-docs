@@ -21,7 +21,7 @@ import SnapshotCreateIcon from "./img/snapshot-create-icon.svg";
 
 <LessonHeader
   difficulty="Beginner"
-  time="about 10 minutes"
+  time="about 11 minutes"
   required={["Partner Center admin access", "A Snapshot Report create available on your plan"]}
   lab
   pathName="Your growth engine"
@@ -45,10 +45,10 @@ This path follows one prospect through the whole motion: Northside Dental, a cli
 
 *You are here: Partner Center. Everything in this step happens in your workspace.*
 
-The account is the prospect's home in your workspace, and creating it also creates the linked CRM company, so your sales activity and the service record stay connected from the first touch. Two details carry the report: the **primary category**, because every grade is benchmarked against the business's industry, and the **salesperson**, because a report is sent from a person, and that person is you.
+The account is the prospect's home in your workspace, and creating it also creates the linked CRM company, so your sales activity and the service record stay connected from the first touch. Two details carry the report: the **primary category**, because every grade is benchmarked against the business's industry, and the **salesperson**, because a report is sent from a person, and that person is you. When the category populates itself from the search, that is a small piece of intelligence in its own right: a business the directories can already categorize is usually one with a Google presence to work with, which is worth knowing before you open the conversation.
 
 <LabCallout title="create your prospect's account">
-You are going to **Partner Center** → **Accounts** → **Manage Accounts**.
+Go to **Partner Center** → **Accounts** → **Manage Accounts**.
 
 <LabChecklist
   storageKey="run-your-first-snapshot-lab-1"
@@ -63,12 +63,14 @@ You are going to **Partner Center** → **Accounts** → **Manage Accounts**.
 />
 </LabCallout>
 
+When the search comes back with nothing and you have to type every field yourself, that is not the annoying version of this task. That is the finding. A business the directories cannot describe has no virtual doorway at all: nothing out there for a search engine or an AI tool to read, and nothing for a customer to find. Those accounts take the longest to create and need you more than any prospect who was already listed everywhere.
+
 For every field and option along the way, [this guide covers creating accounts](/accounts/manage-accounts/create-accounts). And when you want the platform to surface prospects for you instead, [Find Leads searches local businesses from the CRM](/crm/companies) and creates company records in bulk.
 
 ## Run the report
 
 <LabCallout title="run the Snapshot Report">
-You are staying in **Manage Accounts**.
+Stay in **Manage Accounts**.
 
 <LabChecklist
   storageKey="run-your-first-snapshot-lab-2"
@@ -85,7 +87,7 @@ The report gathers data over its first 24 hours and keeps enriching for seven da
 ## Hear the moment it is ready
 
 <LabCallout title="turn on the Snapshot Ready notification">
-You are going to **Partner Center** → **Administration** → **Client Notifications**.
+Go to **Partner Center** → **Administration** → **Client Notifications**.
 
 <LabChecklist
   storageKey="run-your-first-snapshot-lab-3"
@@ -99,7 +101,7 @@ You are going to **Partner Center** → **Administration** → **Client Notifica
 
 ## What the grades measure
 
-<img src={require('./img/scorecard-overview.jpg').default} alt="The Snapshot Report scorecard: letter grades for each section rolled into an overall Digital Score" style={{width: '480px', maxWidth: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginBottom: '28px'}} />
+<img src={require('./img/scorecard-overview.png').default} alt="The Snapshot Report scorecard: an overall Digital Score of 22%, with letter grades beside Social, Reviews, Listings, Website, SEO, AI Optimization, Ecommerce, and Advertising, and an ungraded Technology row" style={{width: '320px', maxWidth: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginBottom: '28px'}} />
 
 The report grades eight parts of the business's online presence, each with a letter grade from A to F, rolled into an overall Digital Score:
 
@@ -180,6 +182,18 @@ Northside Dental has its grades. Yours are on the way.
       ],
       correctIndex: 0,
       explanation: 'Creating an account also creates the linked CRM company, so sales activity and the service record stay connected from the first touch. Users, reports, and packages come later in the motion.'
+    },
+    {
+      type: 'mcq',
+      question: 'You search for a prospect and nothing comes back, so you have to enter every field by hand. What does that tell you?',
+      options: [
+        'The business is likely too small to be worth a report',
+        'The business is close to invisible online, which makes it a stronger prospect',
+        'The report cannot grade accurately without directory data',
+        'The account should be created from the CRM instead'
+      ],
+      correctIndex: 1,
+      explanation: 'A business the directories cannot describe has no virtual doorway for a customer or a search engine to find. It takes longer to set up and needs the help more than a business already listed everywhere.'
     }
   ]}
 />

@@ -144,8 +144,16 @@ dist
 build/
 
 # Raw SME/partner call transcripts (see learn-revamp/transcripts/README.md)
+# NOTE: raw transcripts belong OUTSIDE this repo entirely. These rules are a
+# backstop for the deprecated in-repo folder, not a blessing to use it.
 learn-revamp/transcripts/*
 !learn-revamp/transcripts/README.md
 
+# Sourcing worklists — identify specific recordings by partner and meeting
+# title, so they are raw identifying material, not distilled knowledge. Same
+# class as a transcript: keep them outside the repo.
+learn-revamp/drafts/SOURCING-*.md
+
 # Internal lesson review drafts (working artifacts, not site content)
 docusaurus/training/*/_review/
+.triage/

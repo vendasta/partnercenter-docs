@@ -33,9 +33,9 @@ There are restrictions associated with sending marketing emails using free email
 If you own a custom domain, you can update your sender address to use your domain instead of our grey-label domain. However, until you update your SPF, DKIM, and DMARC records in your Domain Name System (DNS), there's a high chance your emails will land in spam folders.
 
 **Setting up your custom domain:**
-1. Update your DNS records with proper authentication (SPF, DKIM, DMARC)
-2. Go to `Partner Center` → `Marketing` → `Email Settings` → `Sender and Reply Settings`
-3. Update your sender address to use your custom domain
+1. Update your DNS records with proper authentication: one SPF (TXT), **two** DKIM (CNAME), and one DMARC (TXT)
+2. Go to `Partner Center` → `Marketing` → `Email settings`
+3. In the `Advanced email settings` card, set `Sender domain` to `Use my own email domain` and enter your `Email address`, then select `Save` on that card
 4. Allow up to 72 hours for DNS changes to propagate
 
 :::note
@@ -144,7 +144,7 @@ To authenticate your custom domain and use it for sending emails:
 2. **Configure DNS records** - Follow our domain-specific guides:
    - [Add SPF, DKIM, DMARC Records (GoDaddy)](/marketing/email-settings/email-authentication/adding-spf-dkim-dmarc-records-godaddy)
    - [Add SPF, DKIM, DMARC Records (cPanel/Namecheap)](/marketing/email-settings/email-authentication/adding-spf-dkim-dmarc-records-cpanel-namecheap)
-3. **Update sender settings** - Go to `Partner Center` → `Marketing` → `Email Settings` → `Sender and Reply Settings`
+3. **Update sender settings** - Go to `Partner Center` → `Marketing` → `Email settings` and set `Sender domain` and `Email address` in the `Advanced email settings` card, then select `Save` on that card
 4. **Verify configuration** - Allow up to 72 hours for DNS changes to propagate
 
 :::tip Quick Access

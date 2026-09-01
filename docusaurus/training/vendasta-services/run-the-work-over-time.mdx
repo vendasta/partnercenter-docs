@@ -11,6 +11,9 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
 
 <InlineHighlighter courseId="run-the-work-over-time" site="vendasta_learn">
 
@@ -18,7 +21,9 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 <LessonHeader
   difficulty="Beginner"
-  time="about 8 minutes"
+  topics={["Client delivery", "Proving results"]}
+  time="about 10 minutes"
+  lab
   pathName="Work with Vendasta Services"
   step={5}
   totalSteps={5}
@@ -42,6 +47,8 @@ Under the AI Workforce Optimization Plan there is no cap on how many requests yo
 Draft one change request for a service you already run, in three lines: the service, the change, and the outcome. If you cannot state the outcome, the request needs a decision from you or your client before it goes anywhere.
 :::
 
+<LessonSection>
+
 ## Use the revision window
 
 Most deliverables come with a defined revision round, and the windows are finite. Knowing them means you gather client feedback before the window rather than after it.
@@ -52,6 +59,8 @@ Most deliverables come with a defined revision round, and the windows are finite
 
 Consolidating feedback into one pass gets more changed than sending it in pieces, because each round is counted rather than each message.
 
+</LessonSection>
+
 ## Keep an AI employee accurate
 
 An AI employee reflects the business as it was described during setup. When the business changes, the employee needs to hear about it.
@@ -59,6 +68,8 @@ An AI employee reflects the business as it was described during setup. When the 
 The monthly check-in under the Optimization Plan exists for exactly this. Bring what changed: new services, new hours, new pricing, a new process, a location that closed. The team makes proactive adjustments rather than waiting for a customer to hit the gap in a conversation. Between check-ins, the same information can go in as a change request.
 
 Your side of that arrangement is straightforward: supply accurate business information and content, submit requests with enough context to act on, and validate changes on the account once the team confirms they are live.
+
+<LessonSection>
 
 ## Route the question to the right team
 
@@ -75,13 +86,31 @@ Support on Demand is partner-only and is not white labeled, so keep that channel
 
 For presale questions on a complex project, email Vendasta Services and copy your sales representative. That combination gets pricing and feasibility answered together instead of in sequence.
 
+</LessonSection>
+
 ## Prove the work
 
 You did not do the work, and you still need to show the result. Three surfaces carry it.
 
-- **The Executive Report** turns activity across products into proof of value, delivered to your client under your brand.
+- **[The Executive Report](/business-app/executive-report)** turns activity across products into proof of value, delivered to your client under your brand.
 - **Advertising Intelligence** reports campaign performance for Digital Ads, and Managed Ads Campaign adds strategy calls by spend tier.
 - **The Projects tracker** in Business App shows what shipped and when, mid-build rather than only at the end.
+
+<LabCallout title="send one client the proof">
+Go to `Accounts` → `Manage Accounts` and open a live client's account.
+
+<LabChecklist
+  storageKey="run-the-work-lab-1"
+  steps={[
+    <>Find the <strong>Reports</strong> card and select <code>View Executive Report</code> to read it as the owner would: what moved, and over what period.</>,
+    <>Check that it carries your brand rather than anyone else's.</>,
+    <>Back on the account, select <code>Resend Executive Report</code> to put it in their hands.</>,
+  ]}
+  confirm={<>Your client has evidence of work you did not do yourself, delivered under your name.</>}
+/>
+</LabCallout>
+
+The client can open the report themselves from their Business App at any time; sending it is a Partner Center action, on the account.
 
 The team also runs partner-only training webinars covering getting started, websites, digital ads, social and long-form content, and listings and reputation. Sessions are listed on the [webinar calendar](http://www.vendasta.com/webinar).
 
@@ -143,15 +172,16 @@ The team also runs partner-only training webinars covering getting started, webs
 />
 
 <LessonFooter
-  to="/learn/ai-workforce"
+  to="/learn"
   pathName="Work with Vendasta Services"
   step={5}
   totalSteps={5}
-  nextPathName="Hire your first AI Employee"
-  description="Deploy, train, and grow an AI workforce yourself, for the functions you decided to keep in house."
-  secondTo="/learn/growth-engine"
-  secondNextPathName="Your growth engine"
-  secondDescription="Run the full loop for one prospect: Snapshot, package, propose, deliver, prove."
+  title="That is every learning path. Nicely done."
+  linkText="Back to all learning paths"
+  description="Revisit any path, or pick up the ones you skipped."
+  secondTo="/"
+  secondLinkText="Browse the documentation"
+  secondDescription="Every product, setting, and workflow in Partner Center, searchable, for the questions that come up while you work."
 />
 
 </InlineHighlighter>

@@ -1,116 +1,127 @@
 ---
 title: Wire your AI Workforce to act
-sidebar_position: 0
 sidebar_label: Overview
-description: "Wiring an AI Employee into the systems your clients already run: custom tools, the API, webhooks, automations, and where the platform hands off to a developer."
+sidebar_position: 0
+description: "Take one build end to end: switch on what the platform already does, add a custom tool for the job it does not, hand off to an automation, reach your own systems, and call the API yourself."
 hide_table_of_contents: true
 ---
 
 import PathCards from "@site/src/components/PathCards";
 import PathHeader from "@site/src/components/PathHeader";
 
+{/* Merged 2026-08-29 from the former builder (8 steps) and build-lab (3 steps) paths,
+    which overlapped each other and re-taught material already covered in AI foundations
+    and Hire your first AI Employee. Cut: how-systems-talk and capabilities-in-depth in
+    full, plus the service-account-first API step. The API step is rebuilt on the Access
+    Token Generator at developers.vendasta.com, which reaches a real call with no code.
+    Source of truth for the API half is developer-center-docs; the custom tool half stays
+    sourced from docs/ai/ai-capabilities/. One build threads every step: an AI Employee
+    for a home-services client that will not book outdoor work into a storm. */}
+
 <PathHeader
   parts={8}
-  difficulty="Foundational to Advanced"
-  topics={["Integrations", "Vendasta API", "Automations", "Capabilities"]}
-  time="about 1 hour 20 minutes"
-  required={["A Partner Center account", "An AI Employee already deployed"]}
-  objective="In most businesses a person is the glue: someone takes the call, types the details into the CRM, checks the calendar, sends the confirmation. This path hands that glue work to your AI Employees, so they take the actions people usually do and pass work to each other through automated handoffs."
+  difficulty="Intermediate to Advanced"
+  topics={["Integrations", "Custom tools", "Automations", "Webhooks", "Vendasta API"]}
+  time="about 1 hour 30 minutes"
+  required={[
+    "A Partner Center account",
+    "A test account you have created, with a calendar connected",
+    "An AI Employee deployed in that account",
+  ]}
+  objective="One AI Employee for a home-services client: it books jobs on a real calendar, saves every lead to the CRM, and checks the weather before it confirms outdoor work. You build it end to end, one confirmed piece at a time, then hand it off to an automation, wire it to your own systems, and read the lead it captured back through the API."
   outcomes={[
-    "You can tell whether a system is connectable, and how far you have to go to use it",
-    "You can turn a working API call into a tool an AI Employee can use",
-    "You can send data out with webhooks and react to platform events as they happen",
-    "You know where the platform ends and a developer picks up",
+    "You can tell what the platform already does from what has to be built, and reach for the lightest option that works",
+    "You have a working custom tool, briefed with a prompt that gives it judgment, and tested where it actually runs",
+    "You can send data out with a webhook and start an automation from outside",
+    "You have made a real API call against your own data, and you know what changes in production",
   ]}
 />
 
-## This path covers
-
-Eight steps, from the plain-English model through to the developer surface.
+## What you will learn
 
 <PathCards
   cards={[
     {
-      title: "How systems talk",
-      description: "The plain-English mental model: doorways, the two patterns, connectors, and signals.",
+      title: "Start with what the platform already does",
+      description: "Connectability, the ladder from a setting to custom code, and proof the built-in half works.",
       topics: [
-        "How an AI Employee reaches another system",
-        "Two ways systems talk: ask and announce",
-        "The hand-off between employee and automation",
+        "What decides whether a system can be connected",
+        "The six rungs, lightest first",
+        "Naming the one job left over",
       ],
-      to: "/learn/builder/how-systems-talk",
+      to: "/learn/builder/start-with-what-exists",
     },
     {
-      title: "The integration landscape",
-      description: "What decides whether a system can be connected, and how far you have to go to use it.",
+      title: "Build the doorway",
+      description: "A working call becomes a custom tool, and a prompt gives it judgment.",
       topics: [
-        "What makes a system connectable",
-        "What the platform opens up for you",
-        "When it is developer work, and how to hand it off",
+        "The cURL import and the four parts",
+        "Parameter descriptions and Set by AI",
+        "The four-part capability prompt",
       ],
-      to: "/learn/builder/the-integration-landscape",
+      to: "/learn/builder/build-the-doorway",
     },
     {
-      title: "Capabilities, tools, and triggers",
-      description: "The platform vocabulary that connects a system, and how the pieces fit together.",
+      title: "Watch it work",
+      description: "Test where it runs, read what it actually did, and isolate a failing call.",
       topics: [
-        "Designing from the outcome",
-        "The three parts of a reliable capability",
-        "Trimming what does not earn its place",
+        "Both directions, fired and quiet",
+        "Reading the Explanation view",
+        "Isolating a broken call outside the platform",
       ],
-      to: "/learn/builder/capabilities-in-depth",
+      to: "/learn/builder/watch-it-work",
     },
     {
-      title: "Custom tools: connect any API",
-      description: "Turn a working API call into a doorway an AI Employee can use.",
+      title: "Hand off to the automation",
+      description: "Trigger scope, guarding a trigger, and the follow-through worker.",
       topics: [
-        "Starting from a working call",
-        "The four parts of a tool",
-        "Authentication, and reading what it actually sent",
+        "Why a step is missing from the list",
+        "Guarding a trigger with a condition",
+        "Activities the next automation can act on",
       ],
-      to: "/learn/builder/custom-tools",
+      to: "/learn/builder/hand-off-to-the-automation",
     },
     {
-      title: "Authenticate and make your first API call",
-      description: "Service accounts, scopes, and your first contact upsert into the CRM.",
+      title: "Wire it to your own systems",
+      description: "Push instead of poll: send data out, and start an automation from outside.",
       topics: [
-        "A service account as your code's identity",
-        "Scopes: asking for exactly what the job needs",
-        "Your first call, the contact upsert",
+        "The Send a webhook step",
+        "Reading the payload before you build on it",
+        "Starting an automation with one call",
       ],
-      to: "/learn/builder/authenticate-and-first-api-call",
+      to: "/learn/builder/wire-it-to-your-systems",
     },
     {
-      title: "Webhooks and platform events",
-      description: "Push instead of poll: sending data out, and receiving events as they happen.",
+      title: "Call the API yourself",
+      description: "A real call against your own data, in the browser, with no code.",
       topics: [
-        "Push, not poll",
-        "The outbound webhook step",
-        "Inbound triggers and platform events",
+        "Generating a scoped token",
+        "Narrowest scopes, and the two errors",
+        "Reading back the lead your build captured",
       ],
-      to: "/learn/builder/webhooks-and-platform-events",
+      to: "/learn/builder/call-the-api-yourself",
     },
     {
-      title: "Advanced automations",
-      description: "Guarded triggers, activities over notes, custom objects, and data expressions.",
+      title: "Where the platform ends",
+      description: "The custom-code line, handing it off well, and productizing what you built.",
       topics: [
-        "How the trigger decides what you can do",
-        "Guarding the trigger",
-        "Logging activities, and modelling what the business tracks",
+        "Keeping changeable logic out of code",
+        "The developer surface, and what is not on it",
+        "Vendor Center and the walls that are not technical",
       ],
-      to: "/learn/builder/advanced-automations",
+      to: "/learn/builder/where-the-platform-ends",
     },
     {
-      title: "Beyond the platform",
-      description: "The build-tier line, the developer surface, and productizing what you built.",
+      title: "Wire to act skill check",
+      description: "Twelve scenario questions covering the whole path.",
       topics: [
-        "Where the platform ends",
-        "Putting the logic in the platform, not your code",
-        "Productizing what you built",
+        "Scenarios, not definitions",
+        "Every step represented",
+        "Find what deserves a second pass",
       ],
-      to: "/learn/builder/beyond-the-platform",
+      to: "/learn/builder/wire-to-act-skill-check",
     },
   ]}
 />
 
-When you finish, [developers.vendasta.com](https://developers.vendasta.com) is the reference you will keep open as you build.
+When you finish, [developers.vendasta.com](https://developers.vendasta.com) is the reference you keep open as you build.

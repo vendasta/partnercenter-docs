@@ -13,6 +13,7 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import Accordion from "@site/src/components/Accordion";
+import LessonSection from "@site/src/components/LessonSection";
 
 <InlineHighlighter courseId="open-the-conversation" site="vendasta_learn">
 
@@ -20,12 +21,13 @@ import Accordion from "@site/src/components/Accordion";
 
 <LessonHeader
   difficulty="Beginner"
+  topics={["Pitching", "Prospecting"]}
   time="about 12 minutes"
-  required={["None"]}
+  required={["A prospect to call"]}
   video={true}
   pathName="The master sales series"
   step={3}
-  totalSteps={5}
+  totalSteps={6}
   outcomes={[
     "Explain what an elevator pitch is actually for, and what it is not",
     "Build a pitch in six parts, from the goal through to rehearsal",
@@ -36,13 +38,7 @@ import Accordion from "@site/src/components/Accordion";
 
 {/* VIDEO: "Master the Elevator Pitch" — Wistia ID `mbeqpwbrjx`, Master Sales Training Series folder, confirmed 2026-08-15. */}
 
-## An elevator pitch does not close anything
-
-Picture the setup George opens with: you get upgraded, and the prospect who would change your year is in the next seat. You have until they reach for their headphones.
-
-A pitch has exactly one job in that moment, and it is not signing anyone. It is delivering enough value that the other person wants to keep talking. Walk in needing a signature and you have already lost the room.
-
-Six parts build one that works. Watch George assemble them, then take them one at a time below.
+Watch sales expert George Leith build an elevator pitch that earns the next meeting.
 
 <div
   className="wistia_responsive_padding"
@@ -67,9 +63,17 @@ Six parts build one that works. Watch George assemble them, then take them one a
 </div>
 <script src="https://fast.wistia.net/player.js" async></script>
 
+
+
+## An elevator pitch does not close anything
+
+A pitch has one job: deliver enough value that the other person wants to keep talking. Walk into that moment needing a signature and you have already lost the room.
+
+<LessonSection>
+
 ## Build it in six parts
 
-Each part earns the next. Open each to see what it looks like in practice.
+Each part earns the next. Expand each one:
 
 <Accordion
   items={[
@@ -80,10 +84,6 @@ Each part earns the next. Open each to see what it looks like in practice.
       content: (
         <>
           <p>Decide what you want the listener to do next before you write a word. Not "impress them" but a specific next step: a follow-up call, a meeting, or a "tell me more."</p>
-          <ul>
-            <li>Name the next step out loud, so the pitch has somewhere to land.</li>
-            <li>Say why you are talking to them rather than making them work it out.</li>
-          </ul>
         </>
       )
     },
@@ -94,10 +94,6 @@ Each part earns the next. Open each to see what it looks like in practice.
       content: (
         <>
           <p>Compress your value proposition until it fits the ride. Test it literally: get in an elevator, press a button three floors up, and explain what you do before the doors open. If you need more than three floors, you do not have a pitch yet. You have a speech.</p>
-          <ul>
-            <li>Cut anything a stranger would need context to follow.</li>
-            <li>Aim for something you can say comfortably in one breath.</li>
-          </ul>
         </>
       )
     },
@@ -108,10 +104,6 @@ Each part earns the next. Open each to see what it looks like in practice.
       content: (
         <>
           <p>Name what you do that the person across the aisle cannot also claim. Back it with a real result rather than an adjective, because "we care about service" is what everyone says.</p>
-          <ul>
-            <li>Test it by asking whether a competitor could say the same sentence.</li>
-            <li>Point at a problem they may not have considered yet, not just a feature.</li>
-          </ul>
         </>
       )
     },
@@ -122,10 +114,6 @@ Each part earns the next. Open each to see what it looks like in practice.
       content: (
         <>
           <p>End on something that pulls the other person into the next exchange instead of closing with a statement. A pitch with no question is a monologue with a deadline.</p>
-          <ul>
-            <li>Try a hook they can recognize themselves in: "Does any of that sound familiar?"</li>
-            <li>Keep it open enough to answer at length, since a yes or no ends the conversation you wanted.</li>
-          </ul>
         </>
       )
     },
@@ -135,11 +123,7 @@ Each part earns the next. Open each to see what it looks like in practice.
       badge: '5',
       content: (
         <>
-          <p>Treat the pitch as something you iterate rather than something you finish. Developers would call it iteration; George's radio program director called it edit, edit, and re-edit. Every pass should make it shorter and sharper.</p>
-          <ul>
-            <li>Keep a short, a medium, and a long version, then pick per situation.</li>
-            <li>Cut the buzzwords, then have someone else read it aloud to expose stiff phrasing.</li>
-          </ul>
+          <p>Treat the pitch as something you iterate rather than something you finish. Every pass should make it shorter and sharper.</p>
         </>
       )
     },
@@ -149,16 +133,14 @@ Each part earns the next. Open each to see what it looks like in practice.
       badge: '6',
       content: (
         <>
-          <p>Deliver it hundreds of times rather than once. A mirror or a steering wheel is where you start. The level most junior reps skip is practicing on peers, a manager, or real customers, and showing you are open to the feedback.</p>
-          <ul>
-            <li>Record yourself and watch it back, rather than trusting how it felt.</li>
-            <li>Rehearse tone, pace, and volume instead of memorizing exact wording, which sounds recited.</li>
-          </ul>
+          <p>Deliver it hundreds of times rather than once. A mirror is somewhere to start. The level most junior reps skip is practicing on peers, a manager, or real customers, and showing you are open to the feedback.</p>
         </>
       )
     }
   ]}
 />
+
+</LessonSection>
 
 ## Reframe a pain they already have
 
@@ -170,7 +152,7 @@ Years ago a seller pitched a newspaper organization built entirely on print adve
 "You have sold a lot of advertising. I have too. And one thing we both know is that the advertising you sell is coming under attack. The client's first comment on the next call is always 'it isn't working like it used to.' It's not your ad that's the problem. It's that they've got broken listings, bad reviews, and a website that takes forever to load. What if the thing you sell could work better, because their virtual doorway finally matches the ad that sent someone looking for it?"
 :::
 
-Nobody was asked to abandon what they were good at. The pitch named a pain the room already felt, advertising getting blamed for problems it did not cause, and pointed at a fix that made their existing product stronger. Five years later the sales leader who was in that room brought it up unprompted, which is the real test of whether a pitch stuck.
+Nobody was asked to abandon what they were good at. The pitch named a pain the room already felt, advertising getting blamed for problems it did not cause, and pointed at a fix that made their existing product stronger. Five years later people who were in that room were still using a version of it.
 
 If you sell more than one thing, you need more than one pitch: one per audience, one per problem you solve.
 
@@ -220,7 +202,7 @@ Pick your next prospect and write the pitch out: the goal, the value in one sent
         'It focused on the seller\'s company history'
       ],
       correctIndex: 1,
-      explanation: 'The pitch tied straight into a pain the room already felt, ads getting blamed for problems the ads did not cause, rather than asking them to accept a brand new problem.'
+      explanation: 'The pitch tied straight into a pain the room already felt — ads getting blamed for problems the ads did not cause — rather than asking them to accept a brand new problem.'
     },
     {
       type: 'truefalse',
@@ -247,7 +229,7 @@ Pick your next prospect and write the pitch out: the goal, the value in one sent
     },
     {
       type: 'mcq',
-      question: 'You have an elevator pitch that works. What does the material say to do with it next?',
+      question: 'You have an elevator pitch that works. What should you do with it next?',
       options: [
         'Keep editing it shorter, and keep delivering it to real people',
         'Lock the wording so you deliver it identically every time',
@@ -260,13 +242,7 @@ Pick your next prospect and write the pitch out: the goal, the value in one sent
   ]}
 />
 
-<LessonFooter
-  to="/learn/sales/present-so-it-lands"
-  pathName="The master sales series"
-  step={3}
-  totalSteps={5}
-  description="Now structure the meeting that pitch just earned you."
-/>
+<LessonFooter to="/learn/sales/present-so-it-lands" pathName="The master sales series" step={3} totalSteps={6} />
 
 </InlineHighlighter>
 <MarkComplete courseId="open-the-conversation" site="vendasta_learn" />

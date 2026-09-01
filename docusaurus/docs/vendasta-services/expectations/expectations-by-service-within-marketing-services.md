@@ -48,7 +48,7 @@ This is unique to Specialty Ad Campaign orders. All work is completed and the ad
 
 ## Project tracking in Business App
 
-All services will showcase a tracker found in Business App > Projects that showcases the tasks to be completed, expected completion dates, and notes.
+All services will showcase a tracker found in `Business App` → `Projects` that showcases the tasks to be completed, expected completion dates, and notes.
 
 ![MS-Project-Notes.png](./img/19299630230423-96eb40105b.png)
 

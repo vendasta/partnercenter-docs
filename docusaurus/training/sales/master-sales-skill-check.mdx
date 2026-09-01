@@ -18,16 +18,18 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 <LessonHeader
   difficulty="Intermediate"
+  topics={["Prospecting", "Pitching", "Sales presentations", "Objections"]}
   time="about 15 minutes"
-  required={["The five steps of the master sales series"]}
+  required={["The five steps of this path"]}
+  pathName="The master sales series"
+  step={6}
+  totalSteps={6}
   outcomes={[
     "Apply the sales day, prospecting, pitch, presentation, and objection material to situations you have not seen before",
     "Spot which move a scenario calls for, rather than recalling a definition",
     "Find the steps worth a second pass before you take this into a live call",
   ]}
 />
-
-Questions are drawn from every step in the series. They are scenarios rather than definitions: each one puts you in a moment and asks what you would do.
 
 <SkillCheck
   sessionSize={15}
@@ -176,12 +178,12 @@ Questions are drawn from every step in the series. They are scenarios rather tha
       question: 'A slide in your draft walks through exactly which buttons the owner clicks to configure a feature. Where does it belong?',
       options: [
         'The appendix',
-        'The deliverables section, since it describes what you are setting up for them',
+        'The strategy section, since it describes what you are setting up for them',
         'The opening, to show how little work the setup will take',
-        'Beside the value section, so they can see the effort behind the price'
+        'Beside the performance section, so they can see the effort behind the price'
       ],
       correctIndex: 0,
-      explanation: 'If the sentence describes a click path, it belongs in the appendix. If it describes a change the owner will notice in their business, it belongs in the main pitch. Deliverables are outcomes, not configuration steps.'
+      explanation: 'If the sentence describes a click path, it belongs in the appendix. If it describes a change the owner will notice in their business, it belongs in the main pitch. Strategy is outcomes, not configuration steps.'
     },
     {
       type: 'mcq',
@@ -246,7 +248,7 @@ Questions are drawn from every step in the series. They are scenarios rather tha
         { term: 'Your edge', definition: 'Name what a competitor cannot also claim' },
         { term: 'The question', definition: 'Pull them into the next exchange' }
       ],
-      explanation: 'Goal, value, edge, question. Drop any one of the four and the pitch either rambles or dead-ends.'
+      explanation: 'Goal, value, edge, question, then the editing and practice that sharpen all four.'
     },
     {
       type: 'match',
@@ -277,12 +279,12 @@ Questions are drawn from every step in the series. They are scenarios rather tha
     path was hidden pending its remaining steps and Snapshot videos. Point it back at
     /learn/growth-engine/ on relaunch — or at the Sell the AI Workforce path once it ships. */}
 <LessonFooter
-  to="/learn/ai-workforce"
+  to="/learn/vendasta-services"
   pathName="The master sales series"
-  step={5}
-  totalSteps={5}
-  nextPathName="Hire your first AI Employee"
-  description="Put the sale to work: get an AI Employee hired, trained, and working for a client."
+  step={6}
+  totalSteps={6}
+  nextPathName="Work with Vendasta Services"
+  description="Decide what to run yourself and what to hand over, then order, launch, and manage the work."
   secondTo="/learn/sales/become-an-effective-sales-manager"
   secondNextPathName="Bonus: Become a more effective sales manager"
   secondDescription="Optional, for team leads: thirteen tactics on coaching, pipeline definition, and measuring a team honestly."

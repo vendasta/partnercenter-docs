@@ -13,6 +13,7 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import Accordion from "@site/src/components/Accordion";
+import LessonSection from "@site/src/components/LessonSection";
 
 <InlineHighlighter courseId="handle-objections" site="vendasta_learn">
 
@@ -28,12 +29,13 @@ import Accordion from "@site/src/components/Accordion";
 
 <LessonHeader
   difficulty="Intermediate"
+  topics={["Objections", "Closing"]}
   time="about 15 minutes"
   required={["A strategy already presented to this prospect"]}
   video={true}
   pathName="The master sales series"
   step={5}
-  totalSteps={5}
+  totalSteps={6}
   outcomes={[
     "Recognize that an objection is a request for more information, not a rejection",
     "Name the five most common objections and what each one actually means",
@@ -47,6 +49,10 @@ import Accordion from "@site/src/components/Accordion";
 An objection almost never means what it sounds like on the surface. *"I don't know you"* means "reassure me." *"It's not my decision"* means "I do not want to decide alone." *"I need to think about it"* means "I have doubts I have not said out loud."
 
 Every one of them is a request for information, not a locked door. The reps who close more are not the ones who avoid objections. They are the ones with a process for working through them.
+
+<LessonSection>
+
+## The five objections you will hear most
 
 Two short videos cover this. The first names the five objections you will hear most and what each one is really telling you.
 
@@ -74,9 +80,7 @@ Two short videos cover this. The first names the five objections you will hear m
 </div>
 <script src="https://fast.wistia.net/player.js" async></script>
 
-## The five objections you will hear most
-
-Almost every push-back is one of five. Naming which one you are facing tells you what to say back.
+Almost every push-back is one of five. Naming which one you are facing tells you what to say back. Expand each one:
 
 <Accordion
   items={[
@@ -180,7 +184,7 @@ The second video covers higher-level techniques for when an objection stalls the
   </div>
 </div>
 
-Reach for whichever fits the moment, or combine more than one.
+Reach for whichever fits the moment, or combine more than one. Expand each one:
 
 <Accordion
   items={[
@@ -257,6 +261,8 @@ Reach for whichever fits the moment, or combine more than one.
   ]}
 />
 
+</LessonSection>
+
 ## Work the sequence before you answer
 
 Neither video names an order of operations, so here is one worth borrowing. LAIR runs before you reach for any specific response, and the sequence matters more than any single line inside it.
@@ -319,7 +325,7 @@ Take an objection you heard this week. Name which of the five it was, then run i
       question: 'A prospect mentions they already use a competitor. Why is that good news?',
       options: [
         'It means the deal is definitely lost',
-        'They already believe they need what you sell, they just need convincing it should come from you',
+        'They already believe they need what you sell — they just need convincing it should come from you',
         'It means they have a bigger budget than expected',
         'The competitor will refer business to you'
       ],
@@ -330,7 +336,7 @@ Take an objection you heard this week. Name which of the five it was, then run i
       type: 'truefalse',
       statement: 'If you suspect a prospect is not being fully honest about an authority objection, you should challenge them on it directly.',
       correct: false,
-      explanation: 'Challenging it creates conflict without moving the deal forward. Keep the process moving instead: propose the joint meeting, or offer something they can share.'
+      explanation: 'Challenging it creates conflict without moving the deal forward. Keep the process moving instead — propose the joint meeting, or offer something they can share.'
     },
     {
       type: 'match',
@@ -355,14 +361,7 @@ Take an objection you heard this week. Name which of the five it was, then run i
   ]}
 />
 
-<LessonFooter
-  to="/learn/sales/master-sales-skill-check"
-  pathName="The master sales series"
-  step={5}
-  totalSteps={5}
-  title="Last step done. Ready to test it?"
-  description="Fifteen scenario questions covering the whole series."
-/>
+<LessonFooter to="/learn/sales/master-sales-skill-check" pathName="The master sales series" step={5} totalSteps={6} />
 
 </InlineHighlighter>
 <MarkComplete courseId="handle-objections" site="vendasta_learn" />

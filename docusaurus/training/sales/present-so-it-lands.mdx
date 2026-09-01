@@ -13,6 +13,7 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import Accordion from "@site/src/components/Accordion";
+import LessonSection from "@site/src/components/LessonSection";
 
 <InlineHighlighter courseId="present-so-it-lands" site="vendasta_learn">
 
@@ -20,12 +21,13 @@ import Accordion from "@site/src/components/Accordion";
 
 <LessonHeader
   difficulty="Intermediate"
+  topics={["Sales presentations", "Closing"]}
   time="about 12 minutes"
   required={["A discovery call already run on this prospect"]}
   video={true}
   pathName="The master sales series"
   step={4}
-  totalSteps={5}
+  totalSteps={6}
   outcomes={[
     "Structure a presentation in five stages, from insights through to the appendix",
     "Put measurement on the table early instead of waiting to be asked about ROI",
@@ -36,13 +38,7 @@ import Accordion from "@site/src/components/Accordion";
 
 {/* VIDEO: "The Killer Sales Presentation Format" — Wistia ID `6b5f8wve1s`, Master Sales Training Series folder, confirmed 2026-08-15. */}
 
-## A presentation is not a recap
-
-A summary of everything you found is an audit, and nobody signs an audit. A presentation points forward: here is the future state we are taking you to, here is what we will hold ourselves to, and here is the strategy that gets you there.
-
-It also has to work on people who are not in the room. You might present to a decisive executive while a detail-oriented finance lead reads the deck afterwards, so the format has to serve both. And it is a conversation throughout, not a speech you deliver and then stop.
-
-Five stages do that, always in the same order. Watch George lay them out, then take them one at a time.
+Watch sales expert George Leith lay out a presentation format that turns a discovery call into a decision.
 
 <div
   className="wistia_responsive_padding"
@@ -67,9 +63,11 @@ Five stages do that, always in the same order. Watch George lay them out, then t
 </div>
 <script src="https://fast.wistia.net/player.js" async></script>
 
-## The five stages
+## A presentation is not a recap
 
-Each stage earns the right to make the next one. Open each to see what it looks like in practice.
+A summary of everything you found is an audit, and nobody signs an audit. A presentation points forward: here is the future state we are taking you to, here is what we will hold ourselves to, and here is the strategy that gets you there. It also has to work on people who are not in the room, and it is a conversation throughout, not a speech you deliver and then stop.
+
+Five stages do that, always in the same order. Expand each one:
 
 <Accordion
   items={[
@@ -79,11 +77,9 @@ Each stage earns the right to make the next one. Open each to see what it looks 
       badge: '1',
       content: (
         <>
-          <p>Lead with what you learned: partly industry knowledge the prospect may not have themselves, partly the specific things they told you during discovery. George calls it digging for nuggets. If a landscaping owner said half her quote requests never get followed up, that line opens the meeting, not your company history.</p>
-          <ul>
-            <li>Keep talk about your own company short. It is the least interesting part of the room to them.</li>
-            <li>Spend real time on context before you show anything you sell.</li>
-          </ul>
+          <p>Start with the specific things the prospect told you. If a landscaping owner said half her quote requests never get followed up, that line opens the meeting:</p>
+          <p><em>"You told me last week that quote requests go cold if nobody follows up within a day. That's the first thing we built this plan around."</em></p>
+          <p>A generic opener sounds like every rep before you. A specific callback sounds like a plan built for this prospect, because it is.</p>
         </>
       )
     },
@@ -93,11 +89,8 @@ Each stage earns the right to make the next one. Open each to see what it looks 
       badge: '2',
       content: (
         <>
-          <p>Describe what you will deliver and how it connects back to those insights, without dropping into which button does what. Outcomes, not configuration: "automated follow-up on every quote request within an hour" rather than "a CRM automation with a conditional trigger on lead status."</p>
-          <ul>
-            <li>Open with their highest-value use case rather than building up to it.</li>
-            <li>Keep the deck portion tight. Longer time on slides correlates with worse outcomes, not better ones.</li>
-          </ul>
+          <p>Keep this at the level of outcomes. "We'll set up automated follow-up on every quote request within one hour" is a strategy. "We'll configure a CRM automation with a conditional trigger on lead status" is a feature tour.</p>
+          <p>The test: if the sentence describes a click path, it belongs in the appendix. If it describes a change the owner will notice, it belongs here.</p>
         </>
       )
     },
@@ -107,11 +100,9 @@ Each stage earns the right to make the next one. Open each to see what it looks 
       badge: '3',
       content: (
         <>
-          <p>Commit up front to how you will prove it is working, rather than leaving reporting to the end or, worse, to ninety days after they buy. Everyone is thinking about ROI and everyone is a little skeptical of salespeople, so volunteering the scorecard is what separates you.</p>
-          <ul>
-            <li>Ask the buyer to name the financial impact they want, then build the metrics from their figures.</li>
-            <li>Agree the measures before building any report, then set the cadence for reviewing them.</li>
-          </ul>
+          <p>Every owner is running the same math: will this pay for itself. Answer it before they ask, rather than leaving it for after the sale.</p>
+          <p><em>"We'll track quote-to-close rate monthly, and I'll show you the before-and-after myself. If follow-up is really costing you jobs, you'll see it move within the first month."</em></p>
+          <p>Naming how you measure it, and when you show up with the number, turns "trust me" into something the owner can check.</p>
         </>
       )
     },
@@ -121,11 +112,9 @@ Each stage earns the right to make the next one. Open each to see what it looks 
       badge: '4',
       content: (
         <>
-          <p>Now the features, benefits, and what it costs. Go only as deep as the prospect leads you, and move the rest to the appendix. This is also where the investment slide lives, which makes it the moment to ask for the business, out loud, in the room: <em>"That's the plan. Can we get you started this week?"</em></p>
-          <ul>
-            <li>Talk about business value more than product features, which is what separates strong reps from average ones.</li>
-            <li>Raise price once value is established, rather than opening on it.</li>
-          </ul>
+          <p>Now the detail and the price, only as deep as the prospect leads you. This is also where the ask lives: for the business, out loud, in the room, not in a follow-up email.</p>
+          <p><em>"That's the plan: automated follow-up, a monthly report on quote-to-close, and I'll be your point of contact the whole way. Can we get you started this week?"</em></p>
+          <p>Confidence here is not volume. It is not softening the ask into a question about whether you should be asking.</p>
         </>
       )
     },
@@ -135,11 +124,9 @@ Each stage earns the right to make the next one. Open each to see what it looks 
       badge: '5',
       content: (
         <>
-          <p>Everything the room did not need but someone else might: detailed specifications, terms, contract sections, and the capability you suspect matters but are not sure about. Name it rather than hiding it: <em>"There's a webchat feature that might fit too. There's a page on it at the back, but I didn't want to build our conversation around something you haven't seen."</em></p>
-          <ul>
-            <li>Build two versions: a visual deck for the room, and one that reads on its own without you.</li>
-            <li>Curate rather than dump. The appendix serves the personas who were not in the meeting.</li>
-          </ul>
+          <p>If a capability might matter to this prospect but you are not certain, do not build the pitch around a maybe and do not cut it either. Put it at the back and say that it is there.</p>
+          <p><em>"There's a webchat feature that might be a fit for you too. I've put a page on it at the back in case you want to look at it, but I didn't want to build our whole conversation around something you haven't seen yet."</em></p>
+          <p>The main pitch stays tight, and a curious owner can still go looking.</p>
         </>
       )
     }
@@ -150,11 +137,14 @@ Each stage earns the right to make the next one. Open each to see what it looks 
 Write one sentence for each stage for your next prospect: the insight you heard, the strategy, how you will prove it worked, the ask, and what goes in the appendix. Say the ask out loud beforehand. If it sounds like a question about whether you should be asking, rewrite it.
 :::
 
+{/* No "do it, delegate it, or buy it" block here: this step teaches a rep's own presentation skill,
+    and there is no Vendasta Services equivalent to delegate a sales conversation to. */}
+
 <SectionFeedback courseId="present-so-it-lands" site="vendasta_learn" section="content" />
 
 <KnowledgeCheck courseId="present-so-it-lands" site="vendasta_learn"
   sessionSize={4}
-  intro="Four questions on structure, what goes where, and making the ask."
+  intro="Four quick questions on structure, what goes where, and making the ask."
   questions={[
     {
       type: 'mcq',
@@ -239,13 +229,7 @@ Write one sentence for each stage for your next prospect: the insight you heard,
   ]}
 />
 
-<LessonFooter
-  to="/learn/sales/handle-objections"
-  pathName="The master sales series"
-  step={4}
-  totalSteps={5}
-  description="Now handle the push-back that follows a good presentation."
-/>
+<LessonFooter to="/learn/sales/handle-objections" pathName="The master sales series" step={4} totalSteps={6} />
 
 </InlineHighlighter>
 <MarkComplete courseId="present-so-it-lands" site="vendasta_learn" />

@@ -11,6 +11,9 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
 
 <InlineHighlighter courseId="order-and-launch-a-service" site="vendasta_learn">
 
@@ -18,7 +21,9 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 <LessonHeader
   difficulty="Beginner"
-  time="about 9 minutes"
+  topics={["Client delivery", "Marketplace", "Orders"]}
+  time="about 12 minutes"
+  lab
   required={["Partner Center admin or salesperson access to share fulfillment forms"]}
   pathName="Work with Vendasta Services"
   step={4}
@@ -35,13 +40,23 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 *You are here: Partner Center. Everything in this section happens in your workspace.*
 
-Vendasta Services products do not always carry "Vendasta Services" in the title, so searching by name misses some of them. Filter by vendor instead.
+Vendasta Services products do not carry "Vendasta Services" in the title, so searching by name misses them. Filter by vendor instead, and clear the vendor chip the page starts with: two vendor filters combine rather than replace each other, and the result is an empty catalog.
 
-Go to **Marketplace** → **Discover Products**, select **Add filter**, choose **Vendor** → **Vendasta Services**, then **Apply**. The full catalog comes back in one list. You can also recognize these products on sight by their grey circular logo with a colored ring.
+<LabCallout title="filter the catalog by vendor">
+Go to `Marketplace` → `Discover Products`.
 
-:::tip Try it now
-Run that vendor filter and scan the results against the six service lines. Seeing the actual catalog is the fastest way to learn what is available to sell.
-:::
+<LabChecklist
+  storageKey="order-and-launch-lab-1"
+  steps={[
+    <>Set <strong>Explore</strong> to <code>All</code>, or clear the <code>Vendor is Vendasta</code> chip. The page applies it by default, and leaving it on returns nothing.</>,
+    <>Select <code>Add filter</code>, choose <code>Vendor</code> → <code>Vendasta Services</code>, then <code>Apply</code>.</>,
+    <>Scan the results, so you know what is actually available to order.</>,
+  ]}
+  confirm={<>The Vendasta Services catalog is in front of you in one list, including the products whose names never say "Vendasta Services".</>}
+/>
+</LabCallout>
+
+<LessonSection>
 
 ## Complete the fulfillment form
 
@@ -52,13 +67,34 @@ Ordering works exactly like any other Marketplace product. What is different is 
 - **You can share the form with a Business App user.** They receive an email and can fill in the parts only the client knows. Partner Center admins and salespeople can share.
 - **Submitting notifies the team.** An incomplete form generates in-app and email reminders instead, and the work waits.
 
+The form's questions differ by service, and the fulfillment team's guide for each one lists them; what is the same every time is how you share and submit it.
+
+<LabCallout title="share the form, then submit it">
+Go to the order's fulfillment form. It opens automatically after purchase, and you can return to it later at `Commerce` → `Orders` → open the order → `Fulfillment forms`.
+
+<LabChecklist
+  storageKey="order-and-launch-lab-2"
+  steps={[
+    <>Save a draft, so nothing is lost while you gather what you are missing.</>,
+    <>Share it with a Business App user for the parts only the client knows. They receive an email, and both admins and salespeople can share.</>,
+    <>Note on the form itself if only certain people should hear from the fulfillment team.</>,
+    <>Submit. Submitting is what notifies the team; an incomplete form generates reminders instead, and the work waits.</>,
+  ]}
+  confirm={<>The team has been notified and the clock has started, rather than the order sitting on a form nobody finished.</>}
+/>
+</LabCallout>
+
 Website orders have a second requirement worth flagging: complete the Website Creation and Content Form **and** activate the product. Both steps are needed, and skipping either one delays the build.
+
+</LessonSection>
 
 ## What happens in the first 48 hours
 
 Every contact listed on the order form receives an order confirmation email within 48 hours. It carries an order reference number, the information fulfillment still needs, and, where the service includes one, the details of your pre-launch call.
 
 If only certain people should hear from the team, note that on the order form itself.
+
+<LessonSection>
 
 ## The pre-launch call
 
@@ -67,6 +103,8 @@ Most services open with a call before work begins. Reputation, Social, Blogs, We
 The call covers three things: a welcome and a rundown of what happens when, the connections and account authorizations the service needs inside Business App, and a content questionnaire for anything the fulfillment team still needs from you.
 
 Managed Ads Campaign adds a **post-launch call** as well, once the campaign is built and ready to go live, to set expectations for performance and optimization.
+
+</LessonSection>
 
 ## What to have ready
 
@@ -84,11 +122,28 @@ Two notes on that table. Website services need either external credentials or de
 
 Websites and Digital Ads are the two lines where the product you picked matters more than the line itself. An **Express** website build delivers a first draft of up to five pages within one business day, implements revisions in two to five business days, and goes live within one business day of your final approval, targeting a full launch inside 15 days. **Templated** and **Accelerated Templated** builds set their schedule at the onboarding call. On the ads side, **Express Ads** goes live in minutes, while a **Managed Ads Campaign** launches over roughly 30 days. The [Vendasta Services documentation](/vendasta-services) carries the detail for each specific product.
 
+<LessonSection>
+
 ## Track it to launch
 
-Every service publishes a tracker in **Business App** → **Projects**, showing the tasks in flight, expected completion dates, and notes from the team. Your client can open it themselves, which takes a recurring status question off your desk.
+Every service publishes a tracker showing the tasks in flight, expected completion dates, and notes from the team. You watch it from `Fulfillment` → `Projects`; your client watches the same work from their own Business App, which takes a recurring status question off your desk.
 
-You control whether they see it. The Projects tab can be turned off in **Partner Center** → **Administration** → **Customize** → **Business App**, and the team can hide specific projects on request.
+<LabCallout title="find the tracker, then decide who sees it">
+Go to `Fulfillment` → `Projects` for your own view, then the client's `Business App` → `Projects` for theirs.
+
+<LabChecklist
+  storageKey="order-and-launch-lab-3"
+  steps={[
+    <>In <code>Fulfillment</code> → <code>Projects</code>, find the project and read its status, assignee, and due date.</>,
+    <>Open the client's Business App and look for <code>Projects</code> in the navigation. It appears once they have a project, so a client with none will not see the tab at all.</>,
+    <>Decide whether clients should see it. The switch is <code>Administration</code> → <code>Customize Business App</code> → <code>Pages</code> → <code>Projects</code>, and it applies to every account in the market rather than to one client.</>,
+    <>If a single project should stay hidden, ask the team to hide that one.</>,
+  ]}
+  confirm={<>You know what your clients see and what you see, and the visibility decision was made deliberately rather than by default.</>}
+/>
+</LabCallout>
+
+</LessonSection>
 
 <SectionFeedback courseId="order-and-launch-a-service" site="vendasta_learn" section="content" />
 
@@ -106,7 +161,7 @@ You control whether they see it. The Projects tab can be turned off in **Partner
         'Ask Support on Demand for the product list'
       ],
       correctIndex: 1,
-      explanation: 'These products do not always carry Vendasta Services in the title. The Vendor filter on Discover Products returns all of them at once.'
+      explanation: 'These products do not carry Vendasta Services in the title. The Vendor filter on Discover Products returns all of them at once.'
     },
     {
       type: 'mcq',

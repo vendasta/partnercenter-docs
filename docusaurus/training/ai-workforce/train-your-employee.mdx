@@ -13,6 +13,7 @@ import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import LabChecklist from "@site/src/components/LabChecklist";
 import LabCallout from "@site/src/components/LabCallout";
+import LessonSection from "@site/src/components/LessonSection";
 
 <InlineHighlighter courseId="train-your-employee" site="vendasta_learn">
 
@@ -20,6 +21,7 @@ import LabCallout from "@site/src/components/LabCallout";
 
 <LessonHeader
   difficulty="Beginner"
+  topics={["Training AI", "Knowledge Base", "AI Workforce"]}
   time="about 15 minutes"
   required={["Partner Center access", "An AI Employee with knowledge sources and a capability, such as your receptionist from the last step"]}
   lab
@@ -39,42 +41,47 @@ import LabCallout from "@site/src/components/LabCallout";
 
 By the end of this step, your receptionist from the last step answers your ten hardest questions correctly, prices included, with a guardrail in place so it never invents one again. *You are here: Partner Center, on the same employee you deployed last step.*
 
-Run the ten-question audit again, now that the employee is doing real work: open the Try it test page and ask everything a prospect is likely to ask, prices included. A wrong answer is not a defect, it is a training gap, and every training gap has an address, either a knowledge source that needs fixing or an instruction it never received.
+Run the ten-question audit again, now that the employee is doing real work: open `Chat` and ask everything a prospect is likely to ask, prices included. A wrong answer is not a defect, it is a training gap, and every training gap has an address, either a knowledge source that needs fixing or an instruction it never received.
 
 :::tip Try it now
-Open the test page in a fresh incognito window and run the audit before you change anything. Keep the answers that need fixing; the rest of this step fixes them.
+Open `Chat` in a fresh incognito window and run the audit before you change anything. Keep the answers that need fixing; the rest of this step fixes them.
 :::
+
+<LessonSection>
 
 ## Fix the source, not the AI
 
 A wrong price usually means the source it searched never had the real number, not that the AI is broken. Copy the package's exact pricing into a clean document and upload it as the authoritative source: auto-imported marketplace content can carry broken links or no usable pricing at all.
 
 <LabCallout title="upload a clean price list">
-You are going to your employee's **Configure** panel → **Knowledge Sources**.
+Go to your employee's `Configure` page → `Knowledge sources`.
 
 <LabChecklist
   storageKey="train-your-employee-lab-1"
   steps={[
     <>Write or copy the package's exact prices and details into one document.</>,
-    <>Select <strong>Add knowledge source</strong> and upload it as a file, labeled clearly (for example, "2026 Service Pricing").</>,
+    <>Select the <code>Add knowledge</code> field, then <code>+ Add new knowledge</code> at the top of the dropdown, then <strong>File Upload</strong>.</>,
+    <>Upload the document, labeled clearly (for example, "2026 Service Pricing").</>,
   ]}
-  confirm={<>The price list now appears in <strong>Knowledge Sources</strong>, ready for the AI to search.</>}
+  confirm={<>The price list now appears in <strong>Knowledge sources</strong>, ready for the AI to search.</>}
 />
 </LabCallout>
 
 For every knowledge source type and what belongs in each, [the Knowledge Base guide covers the rest](/ai/knowledge-base).
+
+</LessonSection>
 
 ## Add a guardrail
 
 Knowledge is what the AI looks up when a question calls for it. A rule that must hold on every response belongs in a capability instead, so a guardrail like "quote only from the published list, never estimate" holds even on a question the price list does not directly answer.
 
 <LabCallout title="write the pricing guardrail">
-You are going to your employee's **Configure** panel → **Capabilities**.
+Go to your employee's `Configure` page → `Capabilities`.
 
 <LabChecklist
   storageKey="train-your-employee-lab-2"
   steps={[
-    <>Open the capability that answers pricing questions, or add a custom capability named something like <code>QuotePricing</code>.</>,
+    <>Open the capability that answers pricing questions, or select <code>+ Add a capability</code> then <code>+ New capability</code> to write one named something like <code>QuotePricing</code>.</>,
     <>In its instructions, add: quote only the prices in the knowledge base; if a price is not there, capture the visitor's contact details and say a person will follow up.</>,
     <>Save.</>,
   ]}
@@ -84,10 +91,12 @@ You are going to your employee's **Configure** panel → **Capabilities**.
 
 Keep the instruction short. Everything an employee has been told shares one working memory, and a long list of rules competes with itself; specific and short beats long every time. Instructions also tend to collect leftover lines from earlier edits, so revisit and trim them now and then rather than only ever adding to them. The same discipline suits a business in a regulated field: rather than answering specifics on medical or legal questions, have the guardrail redirect to a person, and use the word its own customers would use, never a clinical term a business would not use itself.
 
+<LessonSection>
+
 ## Re-test and see why it answered that way
 
 <LabCallout title="re-run the audit">
-You are back on the **Try it** test page.
+Go back to `Chat`.
 
 <LabChecklist
   storageKey="train-your-employee-lab-3"
@@ -99,11 +108,15 @@ You are back on the **Try it** test page.
 />
 </LabCallout>
 
+</LessonSection>
+
 ## The habit that keeps it accurate
 
 Treat the employee as a new hire rather than a setting: coach it, correct it, and expect the answers to keep improving, the same way a new team member does. The rule behind every fix here is the one behind every fix to come: a wrong answer to a specific question is usually a knowledge gap, and a wrong behavior across every conversation is usually a capability gap. Knowledge is the degree it holds; capabilities are the skill it practices.
 
-Testing on purpose, on your own account, is how gaps surface before a client ever sees them, and a change that turns out wrong is never permanent: undo it and try again. As an employee earns your trust through this loop, its autonomy level can grow with it, from close review to running full conversations on its own, a decision the next step puts in your hands from the very first setup.
+Testing on purpose, on your own account, is how gaps surface before a client ever sees them, and a change that turns out wrong is never permanent: undo it and try again. As an employee earns your trust through this loop, what changes is how closely you review it, not a level it's set to: the next step builds one from a blank start and shows you exactly what it can do from day one.
+
+<LessonSection>
 
 ## What you now have
 
@@ -111,6 +124,8 @@ Testing on purpose, on your own account, is how gaps surface before a client eve
 - A guardrail capability that stops it from ever guessing a price
 - The habit of auditing after every knowledge change, with Explanation to show you why an answer happened
 - The knowledge-versus-capability question, answered, for every fix you make from here on
+
+</LessonSection>
 
 <SectionFeedback courseId="train-your-employee" site="vendasta_learn" section="content" />
 
@@ -125,7 +140,7 @@ Testing on purpose, on your own account, is how gaps surface before a client eve
         'A capability fix, because the guardrail failed',
         'A knowledge fix, because the source it searched does not have the real price',
         'A channel fix, because the wrong channel is enabled',
-        'An autonomy fix, because the level is set too high'
+        'A channel fix, because the answer went out on the wrong channel'
       ],
       correctIndex: 1,
       explanation: 'An invented price means the source did not have the real number to find. Fix the knowledge first, then add a guardrail so it cannot happen again.'
@@ -161,7 +176,7 @@ Testing on purpose, on your own account, is how gaps surface before a client eve
         'Turn it off until it is more consistent',
         'Treat it once and leave it; it will settle on its own',
         'Keep coaching it the way you would a new hire, correcting what is off as you see it',
-        'Lower its autonomy level permanently'
+        'Remove the pricing source so it stops answering the question'
       ],
       correctIndex: 2,
       explanation: 'The operating mindset is continuous: coach and correct as you go, the way you would with any new team member.'

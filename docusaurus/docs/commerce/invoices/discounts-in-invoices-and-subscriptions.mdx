@@ -16,9 +16,9 @@ To add a one-time discount to an invoice:
 4. Click the `Discount` button in the upper right corner
 
 5. In the setup page, choose:
+   - `Name`: A label for the discount (required); this is shown on the invoice
    - `Type`: Percentage or Fixed Amount
    - `Value`: The percentage or dollar amount
-   - `Reason`: Why you're applying the discount (optional)
 
 <img src={require('./img/commerce/invoices/discount-setup-page.png').default} alt="Discount setup page" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -40,13 +40,14 @@ For recurring subscriptions, you can apply discounts that will be applied to all
 <img src={require('./img/commerce/invoices/subscription-discount-1.png').default} alt="Subscription discount button" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 5. In the setup page, choose:
+   - `Name`: A label for the discount (required); this is shown on the invoice
    - `Type`: Percentage or Fixed Amount
    - `Value`: The percentage or dollar amount
    - `Duration`:
      - `Forever`: Applied to all future invoices
      - `For a limited time`: Select the number of billing cycles to apply the discount
      - `Once`: Applied only to the next invoice
-   - `Reason`: Why you're applying the discount (optional)
+     - `Custom`: Select a specific start date and end date for the discount
 
 <img src={require('./img/commerce/invoices/subscription-discount-settings.png').default} alt="Subscription discount settings" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -57,7 +58,7 @@ For recurring subscriptions, you can apply discounts that will be applied to all
 To modify or remove an existing discount:
 
 1. Go to the invoice or subscription with the discount
-2. Click the `Pencil icon` next to the discount to edit it, or the `X icon` to remove it
+2. Click the ⋮ menu next to the discount and select `Edit discount` or `Cancel discount`
 
 <img src={require('./img/commerce/invoices/edit-cancel-discount.png').default} alt="Edit or cancel discount" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 

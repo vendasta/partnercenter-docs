@@ -540,3 +540,11 @@ Longer-term "orchestration layer" vision acknowledged but unbuilt: the partner d
 6. **Missed-call-text-back mechanic reiterated with a named integration example:** described as working off a call-tracking connection (RingCentral or CallRail were the two named examples) — a missed call auto-triggers a text back to the caller so the lead isn't lost while the business is heads-down.
 
 ---
+## Date unknown — a Vendasta specialist with a partner, on a platform sales-demo technique call (second pass)
+
+**Source:** [CALL] Chat/receptionist sales-demo technique call. **Authority: SME/specialist (highest).** Re-filed 2026-08-18 during the ET-689 Wave 1 sourcing pass. This call's smart-list and graveyard-list material was already captured in `crm.md`; the two items below are from the same call and appear in no topic file.
+
+1. **[FIELD] Outbound voice to populate the CRM after a job.** A partner's client wanted the field technician called automatically after completing a job so the conversation itself becomes the CRM record. Scoped live on the call as feasible: an automation trigger fires a voice AI call, and then, in the specialist's framing, you "send the summary of that conversation to AI, which can then log a note." Filed as `[FIELD]` rather than `[PRODUCT]` because it was scoped as achievable on a call, not demonstrated working end to end.
+2. **[FIELD] A partner expected a starter automation template for the most obvious recipe and did not find one** — web chat captures a lead, the lead lands in the CRM, a nurture sequence begins. This is direct evidence about how `autopilot.mdx` should frame its starter recipes: the gap partners hit is not understanding *that* the recipe exists, it is finding a template for it. Worth stating plainly in the lesson rather than assuming discovery.
+
+---

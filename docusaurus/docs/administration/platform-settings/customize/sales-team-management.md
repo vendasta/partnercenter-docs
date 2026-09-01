@@ -6,64 +6,64 @@ tags: [sales-management, team-permissions, access-controls, snapshot-reports]
 keywords: [sales-permissions, team-management, wholesale-pricing, snapshot-limits, email-campaigns]
 ---
 
-## What is Sales Team Management?
+## What is sales team management?
 
 Sales Team Management provides comprehensive control over what your sales team can access, see, and do within the platform. You can configure different permission levels, control pricing visibility, manage reporting capabilities, and set specific restrictions to ensure your team operates within defined business parameters.
 
-## Why is Sales Team Management important?
+## Why is sales team management important?
 
 Proper sales team configuration protects sensitive business information while ensuring team members have the tools they need to be successful. You can maintain pricing confidentiality, prevent unauthorized actions, and scale team operations efficiently by setting appropriate access levels and restrictions.
 
-## What's Included with Sales Team Management?
+## What's included with sales team management?
 
-### Role-Based Access Control
+### Role-based access control
 - **Sales Manager permissions**: Full market access and administrative capabilities
 - **Salesperson permissions**: Limited access based on assignments and market settings
 - **Market-wide access settings**: Control account visibility across territories
 - **Assignment-based restrictions**: Limit access to specifically assigned accounts
 
-### Pricing and Product Controls
+### Pricing and product controls
 - **Wholesale pricing visibility**: Show or hide cost information from salespeople
 - **Standalone product restrictions**: Control individual product sales capabilities
 - **Product selection controls**: Manage which products team members can sell
 - **Pricing protection**: Maintain confidential cost structures
 
-### Communication and Marketing Permissions
+### Communication and marketing permissions
 - **Email campaign access**: Enable or disable marketing campaign capabilities
 - **Client communication tools**: Control direct client interaction features
 - **Campaign generation**: Manage who can create and send marketing materials
 - **Marketing tool access**: Configure availability of promotional features
 
-### Reporting and Analytics Limitations
+### Reporting and analytics limitations
 - **Snapshot report limits**: Set monthly generation caps per salesperson
 - **Report access controls**: Define what analytics team members can view
 - **Usage monitoring**: Track report generation and team activity
 - **Administrative overrides**: Maintain admin access regardless of restrictions
 
-## How to Configure Sales Team Roles
+## How to configure sales team roles
 
-### Understanding Role Differences
+### Understanding role differences
 
-#### Sales Manager Capabilities
+#### Sales Manager capabilities
 Sales Managers have enhanced access and administrative functions:
 - **Market-wide account access**: Can see all accounts within their market regardless of assignment
 - **Override restrictions**: Access accounts even when market-wide access is turned off
 - **Administrative functions**: Configure team settings and manage permissions
 - **Full reporting access**: Generate unlimited reports and view comprehensive analytics
 
-#### Salesperson Capabilities  
+#### Salesperson capabilities  
 Salespeople have focused access designed for day-to-day sales activities:
 - **Assignment-based access**: Can only see accounts specifically assigned to them (when market-wide access is off)
 - **Limited administrative access**: Cannot modify team settings or permissions
 - **Restricted reporting**: Subject to monthly snapshot report limits
 - **Controlled feature access**: Some features may be disabled based on configuration
 
-### Configure Market-Wide Access Settings
+### Configure market-wide access settings
 
 Market-wide access determines whether salespeople can see all accounts in their territory:
 
-1. Navigate to `Administration` > `Customize` > `Sales` > `Settings`
-2. Locate the **Market-wide access** configuration
+1. Navigate to `Administration` → `Customize` → `Sales` → `Settings`
+2. Locate the `Market-wide access` configuration
 3. Enable to allow salespeople to see all market accounts
 4. Disable to restrict salespeople to assigned accounts only
 5. Save the configuration
@@ -74,91 +74,91 @@ Market-wide access determines whether salespeople can see all accounts in their 
 Sales Managers always have access to all accounts in their market, regardless of the market-wide access setting. This ensures proper management oversight and administrative capabilities.
 :::
 
-## How to Control Pricing Visibility
+## How to control pricing visibility
 
-### Hide Wholesale Pricing from Salespeople
+### Hide wholesale pricing from salespeople
 
 To protect sensitive cost information while maintaining sales functionality:
 
-1. Go to `Administration` > `Customize` 
-2. Expand the **Sales** section
+1. Go to `Administration` → `Customize` 
+2. Expand the `Sales` section
 3. Scroll down to pricing controls
-4. Toggle off **Show wholesale prices**
+4. Toggle off `Show wholesale prices`
 5. Save the changes
 
 ![Screenshot showing the Show wholesale prices toggle setting](./img/administration/hide-wholesale-pricing.jpg)
 
 This setting prevents salespeople from seeing product costs while still allowing them to create quotes and process orders with standard pricing.
 
-### Pricing Visibility Best Practices
+### Pricing visibility best practices
 - **Protect margins**: Hide wholesale pricing to maintain profit margins
 - **Enable transparency**: Show pricing to Sales Managers for oversight
 - **Monitor changes**: Track when pricing visibility settings are modified
 - **Train team members**: Ensure salespeople understand pricing policies
 
-## How to Configure Product and Campaign Permissions
+## How to configure product and campaign permissions
 
-### Enable Email Campaign Access
+### Enable email campaign access
 
 To allow salespeople to send marketing campaigns:
 
-1. Navigate to **Partner Center > Administration > Customize > Sales**
-2. Toggle on **Salespeople can send campaigns**
+1. Navigate to `Partner Center` → `Administration` → `Customize` → `Sales`
+2. Toggle on `Salespeople can send campaigns`
 3. Configure any campaign-specific restrictions
 4. Save the settings
 
 This enables salespeople to create and send email marketing campaigns directly to their assigned accounts.
 
 :::info
-Look for the "Salespeople can send campaigns" toggle in the Sales section of the customization settings. This control determines whether your sales team can access campaign features within Partner Center.
+Look for the `Salespeople can send campaigns` toggle in the Sales section of the customization settings. This control determines whether your sales team can access campaign features within Partner Center.
 :::
 
-## How to Manage Snapshot Report Limits
+## How to manage Snapshot Report limits
 
-### Set Monthly Report Limits
+### Set monthly report limits
 
 To control how many Snapshot Reports each salesperson can generate monthly:
 
-1. Navigate to `Administration` > `Customize` > `Sales`
-2. Check **Limit monthly Snapshot Reports** under Settings
-3. Enter the desired **Snapshot Report limit**
+1. Navigate to `Administration` → `Customize` → `Sales`
+2. Check `Limit monthly Snapshot Reports` under Settings
+3. Enter the desired `Snapshot Report limit`
 4. Configure limits for specific markets if needed
 5. Save the configuration
 
 ![Screenshot showing the Snapshot Report limit configuration](./img/limit-snapshot-reports/snapshot-report-limit-config.png)
 
-### Market-Specific Snapshot Limits
+### Market-specific Snapshot limits
 
 While there's no direct way to limit snapshots per market, you can limit snapshots per salesperson within specific markets:
 
 **For Individual Markets:**
-1. Navigate to the **Markets** section in customization settings
+1. Navigate to the `Markets` section in customization settings
 2. Select your target market
-3. Go to the **Sales** configuration for that market
-4. Check **limit monthly snapshot report** checkbox
-5. Set the **snapshot creation limit** for salespeople in that market
+3. Go to the `Sales` configuration for that market
+4. Check `limit monthly snapshot report` checkbox
+5. Set the `snapshot creation limit` for salespeople in that market
 
 :::info
 If multiple salespeople work in a market, the market limit represents the total allowable maximum that all salespeople in that market can create combined.
 :::
 
 :::warning
-If you have customized markets, you'll need to adjust this setting for each market individually. Check the Markets section to see which markets won't be affected by the default change.
+If you have customized markets, you'll need to adjust this setting for each market individually. Check the Markets section to see which markets already have a custom setting configured, since the default change won't overwrite those.
 :::
 
-### Report Limit Management
+### Report limit management
 - **Complete restriction**: Set limit to 0 to disable report generation entirely
 - **Monthly reset**: All limits reset at 12:00 AM UTC on the first of each month
 - **Administrative access**: Admin-generated reports don't count toward salesperson limits
 - **Campaign integration**: Report limits affect email campaigns that include report generation steps
 
-### When Limits Are Exceeded
+### When limits are exceeded
 
 When a salesperson reaches their monthly limit, they'll see a notification preventing additional report generation:
 
 ![Screenshot showing the message when a salesperson goes over their limit](./img/limit-snapshot-reports/over-limit-message.png)
 
-## Frequently Asked Questions (FAQs)
+## Frequently asked questions (FAQs)
 
 <details>
 <summary>What's the difference between a Sales Manager and a Salesperson?</summary>
@@ -167,16 +167,16 @@ When a salesperson reaches their monthly limit, they'll see a notification preve
 
 **Sales Managers:**
 - Have the ability to see and access **all** accounts within their market regardless of the assignee
-- Maintain full access even when **Market-wide access** configuration is **turned off**
+- Maintain full access even when `Market-wide access` configuration is **turned off**
 - Can override market-wide access restrictions
 
 **Salespeople:**
-- Can only see accounts specifically assigned to them when **Market-wide access** is **turned off**
+- Can only see accounts specifically assigned to them when `Market-wide access` is **turned off**
 - Limited to their assigned accounts unless market-wide access is enabled
 - Subject to market-wide access configuration settings
 
 **Configuration Location:**
-The market-wide access settings can be found in **Partner Center > Administration > Customize > Sales > Settings**.
+The market-wide access settings can be found in `Partner Center` → `Administration` → `Customize` → `Sales` → `Settings`.
 
 This distinction ensures proper account segregation while giving Sales Managers the oversight they need to manage their teams effectively.
 </details>
@@ -186,9 +186,9 @@ This distinction ensures proper account segregation while giving Sales Managers 
 
 You can prevent your salespeople from seeing the wholesale pricing of marketplace products:
 
-1. Go to **Partner Center > Administration > Customize**
-2. Expand the **Sales** section
-3. Scroll down and toggle off **Show wholesale prices**
+1. Go to `Partner Center` → `Administration` → `Customize`
+2. Expand the `Sales` section
+3. Scroll down and toggle off `Show wholesale prices`
 
 This setting hides pricing from salespeople while still allowing them to create quotes and process orders with standard pricing. This helps protect your profit margins while maintaining operational functionality.
 </details>
@@ -234,10 +234,10 @@ Salespeople will be able to create and send email marketing campaigns to their a
 
 Yes, you can configure different monthly limits for each market. While there's no direct market-wide limit, you can set limits per salesperson within specific markets:
 
-1. Navigate to the **Markets** section in customization settings
+1. Navigate to the `Markets` section in customization settings
 2. Select your target market  
-3. Configure **limit monthly snapshot report** for that market
-4. Set the **snapshot creation limit** for salespeople in that market
+3. Configure `limit monthly snapshot report` for that market
+4. Set the `snapshot creation limit` for salespeople in that market
 
 Remember: If multiple salespeople work in a market, the limit applies to each individual salesperson, not as a combined market total.
 </details>
@@ -248,7 +248,7 @@ Remember: If multiple salespeople work in a market, the limit applies to each in
 You can monitor report generation through admin analytics and reporting features. Salespeople who reach their limits will receive notifications when attempting to generate additional reports.
 </details>
 
-## Screenshots or Videos
+## Screenshots or videos
 
 <iframe 
   src="https://drive.google.com/file/d/11_cFgRQLN_Ez6UMK45Tn2O0_yp96AaZI/preview" 
