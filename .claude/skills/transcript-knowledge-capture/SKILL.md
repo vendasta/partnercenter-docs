@@ -3,7 +3,9 @@ name: transcript-knowledge-capture
 description: >-
   Capture every workflow and product topic mentioned in an SME/partner call
   transcript, not just the one topic currently being worked on, into a
-  persistent per-topic knowledge base under learn-revamp/transcript-notes/.
+  persistent per-topic knowledge base in the PRIVATE enablement-docs repo at
+  _source-archive/learn-tab-revamp/transcript-notes/. Never writes into this
+  repository, which is public.
   Use whenever a transcript, recorded-call summary, or screen-recording
   transcript is shared, whether or not the user names a target topic. Feeds
   the learning-path-writing skill later, when that topic's path is actually
@@ -33,9 +35,11 @@ Topics map to the real path/folder structure under `docusaurus/training/`
 (the learn-revamp content tree — this is what ET-689's "existing paths"
 actually refers to; `docusaurus/training/builder/_category_.json` is
 literally labeled "Wire your AI Workforce to Act", the exact path ET-689
-names as an example). Store one note file per **leaf topic slug** in
-`learn-revamp/transcript-notes/`, flat (no subfolders) — every leaf name
-below is already unique.
+names as an example). Store one note file per **leaf topic slug** in `enablement-docs` (private) at `_source-archive/learn-tab-revamp/transcript-notes/`,
+flat (no subfolders) — every leaf name below is already unique.
+
+**This skill never writes into this repository.** `partnercenter-docs` is
+public; the notes are not. See the Output boundary section below.
 
 | Topic slug | Path label | Folder |
 |---|---|---|
@@ -82,13 +86,15 @@ copy, one `git add -f` or one ignore-rule edit away from history. Keep the raw
 files in a folder outside the repository and point the skill at that path when
 processing.
 
-Only the **distilled, redacted** output in `learn-revamp/transcript-notes/`
-lives in the repo, and it gets committed. The separation is the whole point:
-raw text outside, knowledge inside.
+The **distilled, redacted** output lives in `enablement-docs` (private) at `_source-archive/learn-tab-revamp/transcript-notes/` and gets committed there.
+The separation is the whole point: raw text outside any repo, distilled
+knowledge inside a private one.
 
-*(Standing instruction from Shiva, 2026-08-18. The legacy in-repo
-`learn-revamp/transcripts/` folder predates this rule; it is git-ignored, and
-its contents should be relocated outside the repo.)* If the user points at a file
+*(Standing instruction from Shiva, 2026-08-18. The `learn-revamp/` folder this
+skill used to write into was removed from this repo on 2026-09-01 — it was
+publicly readable and carried named individuals, named partner companies, and
+wholesale pricing. Redaction on the way in was the right rule; it was written
+forward-looking and never applied to the ~226 entries already committed.)* If the user points at a file
 there, or pastes text directly in chat, either is a valid input -- check the
 folder for anything not yet processed when asked to "catch up on transcripts"
 or similar.
@@ -116,7 +122,7 @@ For each topic identified, write a **detailed, in-your-own-words** account of wh
 - Gotchas, failure modes, and the fix ("if X happens, do Y")
 - Direct quotes only when the phrasing itself is the point (a metaphor, a verbatim objection) — keep these short and attributed, per the copyright limits already in place for this workspace (short quotes only, attributed, no reproducing large spans verbatim)
 
-Match the depth and style of `learn-revamp/partner-call-insights.md` section 4 (the numbered "common jobs, with exact steps" — see that file for the target level of detail) rather than a loose paragraph summary.
+Match the depth and style of `enablement-docs/_source-archive/learn-tab-revamp/partner-call-insights.md` section 4 (the numbered "common jobs, with exact steps" — see that file for the target level of detail) rather than a loose paragraph summary.
 
 #### Tag every claim by type and by source authority
 
@@ -153,7 +159,7 @@ Everything genuinely new, and every `[PRODUCT]` claim that squares with the docs
 
 ### Step 5: File it
 
-For each topic, append (create the file if it doesn't exist) to `learn-revamp/transcript-notes/<slug>.md` using this structure:
+For each topic, append (create the file if it doesn't exist) to `_source-archive/learn-tab-revamp/transcript-notes/<slug>.md` **in the private `enablement-docs` repo** using this structure:
 
 ```markdown
 # <Topic label> — transcript notes
@@ -181,7 +187,7 @@ New entries always go at the bottom, oldest first, so the file reads as a timeli
 
 ### Step 6: Update the manifest
 
-Update `learn-revamp/transcript-notes/_index.md` — one row per topic slug that has at least one entry: topic, number of source calls filed, date of the most recent entry, and a one-line rollup of what is now covered. Keep slugs with zero entries out of the table (or mark them "no transcripts yet" only if the user asks for the full taxonomy view).
+Update `_source-archive/learn-tab-revamp/transcript-notes/_index.md` in `enablement-docs` — one row per topic slug that has at least one entry: topic, number of source calls filed, date of the most recent entry, and a one-line rollup of what is now covered. Keep slugs with zero entries out of the table (or mark them "no transcripts yet" only if the user asks for the full taxonomy view).
 
 **Maintenance note — when a topic file gets large.** Once a topic passes roughly 15–20 entries, the raw timeline gets expensive to re-read and hard to read for consensus. At that point flag the file to the user as a candidate for a synthesis pass: distill the corroborated, stable workflow into one consensus section, keep contested and single-source claims called out, and archive the raw per-call entries below (or into a dated archive) with provenance intact. This is a separate maintenance operation, not part of routine capture — flag it, do not do it inline.
 
@@ -209,8 +215,9 @@ If a topic file already had entries, mention that too, so the user knows this is
   - **Deriving search keywords from filenames.** Keywords for finding related material come from what people actually said inside the transcript, in their own words. See the matching rule in sop-013 (`enablement-docs/subfunctions/learning/sops/013-search-activity-feed-for-partner-call-evidence.md`).
 
   **Reconcile coverage by content instead.** Pick distinctive content markers from the transcript -- a specific number, an unusual product combination, a named third-party tool, a verbatim gotcha -- and grep the topic files for those. That is the only reliable way to tell a filed call from an unfiled one.
-- **Never write directly into `docusaurus/training/` or any published page from this skill.** This skill only populates `learn-revamp/transcript-notes/` — actual lesson drafting is the `learning-path-writing` skill's job, using these notes as `[CALL]`-tagged source material, with its own draft → review → approval loop.
-- **Never edit `learn-revamp/partner-call-insights.md` from this skill.** That file is a separate, point-in-time strategic synthesis authored for Cal Cooper's IA spec. Cross-reference it for style/depth, but this skill's output lives only in `transcript-notes/`.
+- **Never write anything into this repository from this skill.** `partnercenter-docs` is public. Output goes only to `enablement-docs` (private) at `_source-archive/learn-tab-revamp/transcript-notes/`. If that repo is not available, stop and say so — do not fall back to writing here.
+- **Never write directly into `docusaurus/training/` or any published page from this skill.** This skill only populates the archive's `transcript-notes/` — actual lesson drafting is the `learning-path-writing` skill's job, using these notes as `[CALL]`-tagged source material, with its own draft → review → approval loop.
+- **Never edit `partner-call-insights.md` from this skill** (now at `enablement-docs/_source-archive/learn-tab-revamp/partner-call-insights.md`). That file is a separate, point-in-time strategic synthesis authored for Cal Cooper's IA spec. Cross-reference it for style/depth, but this skill's output lives only in `transcript-notes/`.
 - **Append, never overwrite,** existing topic files — multiple calls about the same topic accumulate as a timeline.
 - **Always carry provenance** (who, what kind of call, when) on every entry — notes with no source are hard to trust later and violate the `[CALL]` tagging rule other skills depend on.
 - **Respect copyright limits already in place for this workspace**: at most brief, attributed quotes: no reproducing long verbatim spans of a transcript.
