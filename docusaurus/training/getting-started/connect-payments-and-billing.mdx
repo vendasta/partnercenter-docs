@@ -88,7 +88,7 @@ Go to `Administration` → `My billing`.
   storageKey="connect-payments-lab-1"
   steps={[
     <>Find the <strong>Billing contact</strong> card and select <code>Edit</code>. It is read-only until you do.</>,
-    <>Fill in the required fields: company name, contact name, email addresses, phone number, address, country, city, and postal code.</>,
+    <>Fill in the required fields: company name, contact name, email addresses, phone number, address, country, city, state/province, and postal code.</>,
     <>Save.</>,
     <>Check that a payment method is on file. This is not required if Vendasta currently bills you by invoice.</>,
   ]}
@@ -151,9 +151,9 @@ Go to `Administration` → `Default billing settings`.
   storageKey="connect-payments-lab-3"
   steps={[
     <>Turn the <code>Subscriptions</code> toggle on. It is off by default, and it is what tracks and collects payment on each renewal.</>,
+    <>Set <code>Subscription scheduling</code>: renew on each subscription's own start date, or put every new subscription on one shared day of the month.</>,
     <>Set <code>Payment collection</code>: how you take the money.</>,
     <>Set <code>Subscription renewal</code>: <code>Do nothing</code> leaves renewals alone, <code>Create a draft invoice</code> raises an invoice you send yourself.</>,
-    <>Set <code>Subscription scheduling</code>: renew on each subscription's own start date, or put every new subscription on one shared day of the month.</>,
     <>Read the <strong>Billing summary</strong> panel on the right, then select <code>Save</code>.</>,
   ]}
   confirm={<>Every account you create from now on starts with collection handled, without you configuring it each time.</>}
@@ -196,7 +196,7 @@ One fact keeps your numbers clean: a catalog price change applies to new subscri
 One tab answers "what am I on track to pay Vendasta this month?" It is an estimate, broken down per product rather than totalled in one number.
 
 <LabCallout title="read your Estimated Usage">
-Go to `Administration` → `My billing` → `Estimated Usage`.
+Go to `Administration` → `My billing`, then select the `Estimated Usage` tab.
 
 <LabChecklist
   storageKey="connect-payments-lab-5"
