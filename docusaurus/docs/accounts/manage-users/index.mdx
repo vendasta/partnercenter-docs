@@ -3,7 +3,7 @@ id: manage-users
 title: Manage Users
 description: Create users, assign them to accounts, and configure permissions for Business App access.
 tags: [users, access, permissions]
-keywords: [create-users, add-user-to-account, user-permissions]
+keywords: [create-users, invite-users, add-user-to-account, user-permissions, onboarding-email]
 ---
 
 # Manage Users
@@ -30,22 +30,24 @@ Managing users allows you to:
 
 Users can be created in two ways in Partner Center: from an individual account, or from the **Manage Users** page. Both workflows create the same type of user and allow you to manage access after creation.
 
-### Create a user from an account
+### Invite users from an account
+
+Inviting users from an account opens the **Invite users** panel:
 
 1. Navigate to **Partner Center**.
 2. Go to `Accounts` → `Manage Accounts`.
-3. Select the account where the user should be added.
-4. Click **Add users**, then select **Create User**.
-5. Enter the required details (email address, name, and other requested fields). The **Send welcome email** checkbox is selected by default; clear it if you don't want the user notified immediately.
-6. Click **Save** to create the user.
+3. Select the account where the user should be added, and click `Invite users`. You can also open the panel directly from the invite icon on the `Manage Accounts` list.
+4. In the `Users` field, type an email address. Matching CRM contacts are suggested as you type — select one to create the user from that contact with their details prefilled, or enter a full address to invite someone new. Add as many users as needed.
+5. Optional: under `Customize users`, select a user to edit their contact information (name, phone, correspondence language, greeting name) or add a custom greeting to their onboarding email, with a preview.
+6. Click `Invite [count] users`.
 
-The user is added to the selected account.
+The users are added to the account, and each receives the [onboarding email](/business-app/ai-onboarding-experience) — inviting is what sends it. If someone isn't ready for Business App yet, keep them as a contact in the CRM and invite them when the time is right; the panel will suggest them by name.
 
 ### Create a user from Manage Users
 
 1. Navigate to `Accounts` → `Manage Users`.
 2. Click **Create user**.
-3. Fill in the user information (email address, name, and other required fields). The **Send welcome email** checkbox is selected by default; clear it if you don't want the user notified immediately.
+3. Fill in the user information (email address, name, and other required fields). The **Send Onboarding Email** checkbox is selected by default — a **Preview** button shows the email, and you can add a custom introductory message. Clear the checkbox if you don't want the user notified immediately.
 4. Assign the user to the appropriate account.
 5. Click **Save** to create the user.
 
@@ -127,13 +129,13 @@ Yes, you can create multiple user accounts for the same business, each with thei
 <details>
 <summary>What happens if I use an email address that's already in the system?</summary>
 
-Email addresses must be unique across the system. If you try to use an existing email, you'll receive an error and need to use a different email address or email alias.
+In the **Invite users** panel, typing an existing user's email is how you add that person to the account — their existing login keeps working, and the panel simply associates them with the account (it warns you if they're already a user on that account). In the **Create user** form on Manage Users, an email that already belongs to a user shows an error; invite that person from an account instead.
 </details>
 
 <details>
 <summary>How do users set their passwords after I create their accounts?</summary>
 
-Users receive a welcome email with a secure link to set their password. They click this link, verify their identity, and create their own password following your system's security requirements.
+Invited users receive an [onboarding email](/business-app/ai-onboarding-experience) (or the classic welcome email, if you selected that instead) with a secure link. The link takes them to a page where they set their own password and continue into Business App.
 </details>
 
 <details>
@@ -143,9 +145,9 @@ Yes, some systems support multi-account access for users like consultants or fra
 </details>
 
 <details>
-<summary>What should I do if a user doesn't receive their welcome email?</summary>
+<summary>What should I do if a user doesn't receive their onboarding or welcome email?</summary>
 
-Check that the email address is correct, ask them to check spam/junk folders, and verify that welcome emails are enabled. You can usually resend welcome emails or manually provide login information.
+Check that the email address is correct and ask them to check spam/junk folders. To resend, open the options menu (⋮) next to the user — on the account or in **Accounts → Manage Users** — and choose **Send Onboarding Email** or **Send Set Password email (Welcome email)**.
 </details>
 
 <details>
