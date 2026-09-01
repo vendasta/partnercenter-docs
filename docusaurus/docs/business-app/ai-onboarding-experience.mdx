@@ -13,14 +13,6 @@ The AI onboarding experience gives newly invited SMBs an immediate sense of valu
 
 The goal is faster activation and more recurring product purchases: the SMB sees results before they lift a finger, understands what to do next, and can add products without leaving Home.
 
-## Watch the overview
-
-<div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px', border: '1px solid #e0e0e0', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}}>
-  <iframe src="https://drive.google.com/file/d/1NTxNV1Q9Ets2TPZsFN4u5iCxVV3eQt5e/preview" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} frameBorder="0" allow="autoplay" allowFullScreen title="Project Ignite onboarding overview"></iframe>
-</div>
-
-{/* NOTE: this Google video must be shared publicly (Anyone with the link) for partners to play it. */}
-
 ## What's included
 
 The experience has two connected halves:
@@ -133,11 +125,15 @@ When the onboarding email is enabled, it **replaces** the classic welcome email 
 
 The **Invite users** side panel is the fastest way to invite one or several users to an account. It opens from the account's **Invite users** button and from the invite icon on the **Manage Accounts** list.
 
+<img src={require('./img/invite-users-panel.png').default} alt="The Invite users panel open on an account, with an email typed in the Users field and an 'Invite email@example.com' suggestion below it" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
 1. In the **Users** field, type an email address. As you type, matching CRM contacts are suggested — select one to create the user from that contact, with their details prefilled — or type a full address to invite someone new. Repeat to invite more users in the same batch.
 2. Optional: under **Customize users**, select a user to adjust their details:
    - **Contact information** — first name, last name, email, phone number, **Correspondence language** (the language of the platform and their emails, including the onboarding email template), and **Greeting name** (the name used to address them in emails).
    - **Email** — a **Custom greeting** for the onboarding email, with a **Preview** button.
 3. Click **Invite \[count\] users**.
+
+<img src={require('./img/invite-users-customize-user.png').default} alt="Customizing a user in the Invite users panel: contact information fields, correspondence language, greeting name, and the onboarding email's custom greeting with a Preview link" style={{width: '55%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 Inviting is what sends the email: everyone in the batch receives the onboarding email, personalized with whatever you customized — the panel notes this up front. If someone isn't ready for Business App yet, keep them as a **contact in the CRM**; when the time is right, the panel will suggest them by name and you can invite them with a custom greeting.
 
@@ -196,8 +192,6 @@ The email uses the white-label branding of the **market selected on the account*
 - If a user can't be created or associated, a message names the specific users that failed, so you can retry just those rather than re-running the whole batch.
 - If the email can't be sent to someone, the message names their email address so you know who to follow up with. The account and the other recipients are unaffected.
 - Entering an email address that already belongs to a user shows an error on the field. Add that person from the **Add existing user** tab instead — existing users are onboarded alongside the new ones.
-
-<img src={require('./img/ai-onboarding-create-user.png').default} alt="The Create User form with the 'Send Onboarding Email' checkbox selected by default and a Preview button beside it" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 ### Previewing before you send
 
