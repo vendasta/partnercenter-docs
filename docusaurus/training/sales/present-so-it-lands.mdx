@@ -2,7 +2,7 @@
 title: "A killer sales presentation"
 sidebar_label: "A killer sales presentation"
 sidebar_position: 4
-description: "Structure a presentation around insights, deliverables, value, and the ask, so a discovery call turns into a decision."
+description: "Structure a presentation around insights, strategy, proof, and the ask, so a discovery call turns into a decision."
 ---
 
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
@@ -22,17 +22,17 @@ import LessonSection from "@site/src/components/LessonSection";
 <LessonHeader
   difficulty="Intermediate"
   topics={["Sales presentations", "Closing"]}
-  time="about 8 minutes"
+  time="about 12 minutes"
   required={["A discovery call already run on this prospect"]}
   video={true}
   pathName="The master sales series"
   step={4}
   totalSteps={6}
   outcomes={[
-    "Structure a presentation around insights, deliverables, value, then the ask",
-    "Know exactly where to make the ask, and say it with confidence instead of apology",
-    "Decide what belongs in the appendix instead of the main pitch",
-    "Reuse three ready-made lines for opening, asking, and answering a maybe",
+    "Structure a presentation in five stages, from insights through to the appendix",
+    "Put measurement on the table early instead of waiting to be asked about ROI",
+    "Know exactly where to make the ask, and say it without apologizing for it",
+    "Run the meeting as a conversation rather than a monologue",
   ]}
 />
 
@@ -65,13 +65,15 @@ Watch sales expert George Leith lay out a presentation format that turns a disco
 
 ## A presentation is not a recap
 
-A summary of everything you found is an audit, and nobody signs an audit. A presentation is four moves, always in the same order. Expand each one:
+A summary of everything you found is an audit, and nobody signs an audit. A presentation points forward: here is the future state we are taking you to, here is what we will hold ourselves to, and here is the strategy that gets you there. It also has to work on people who are not in the room, and it is a conversation throughout, not a speech you deliver and then stop.
+
+Five stages do that, always in the same order. Expand each one:
 
 <Accordion
   items={[
     {
       id: 'insight',
-      title: 'Open with what you heard, not what you sell',
+      title: 'Open with insights, not with what you sell',
       badge: '1',
       content: (
         <>
@@ -82,59 +84,57 @@ A summary of everything you found is an audit, and nobody signs an audit. A pres
       )
     },
     {
-      id: 'deliverable',
-      title: 'Say what changes, not what you install',
+      id: 'strategy',
+      title: 'Give the strategy at ten thousand feet',
       badge: '2',
       content: (
         <>
-          <p>Keep this at the level of outcomes. "We'll set up automated follow-up on every quote request within one hour" is a deliverable. "We'll configure a CRM automation with a conditional trigger on lead status" is a feature tour.</p>
+          <p>Keep this at the level of outcomes. "We'll set up automated follow-up on every quote request within one hour" is a strategy. "We'll configure a CRM automation with a conditional trigger on lead status" is a feature tour.</p>
           <p>The test: if the sentence describes a click path, it belongs in the appendix. If it describes a change the owner will notice, it belongs here.</p>
         </>
       )
     },
     {
-      id: 'value',
-      title: 'Prove it is worth it before they have to ask',
+      id: 'performance',
+      title: 'Put measurement on the table early',
       badge: '3',
       content: (
         <>
-          <p>Every owner is running the same math: will this pay for itself. Answer it before they ask.</p>
+          <p>Every owner is running the same math: will this pay for itself. Answer it before they ask, rather than leaving it for after the sale.</p>
           <p><em>"We'll track quote-to-close rate monthly, and I'll show you the before-and-after myself. If follow-up is really costing you jobs, you'll see it move within the first month."</em></p>
           <p>Naming how you measure it, and when you show up with the number, turns "trust me" into something the owner can check.</p>
         </>
       )
     },
     {
-      id: 'ask',
-      title: 'Make the ask, out loud, in the room',
+      id: 'tactics-ask',
+      title: 'Then the tactics, and the ask',
       badge: '4',
       content: (
         <>
-          <p>Ask for the business here, not in a follow-up email.</p>
+          <p>Now the detail and the price, only as deep as the prospect leads you. This is also where the ask lives: for the business, out loud, in the room, not in a follow-up email.</p>
           <p><em>"That's the plan: automated follow-up, a monthly report on quote-to-close, and I'll be your point of contact the whole way. Can we get you started this week?"</em></p>
           <p>Confidence here is not volume. It is not softening the ask into a question about whether you should be asking.</p>
+        </>
+      )
+    },
+    {
+      id: 'appendix',
+      title: 'Park the rest in the appendix',
+      badge: '5',
+      content: (
+        <>
+          <p>If a capability might matter to this prospect but you are not certain, do not build the pitch around a maybe and do not cut it either. Put it at the back and say that it is there.</p>
+          <p><em>"There's a webchat feature that might be a fit for you too. I've put a page on it at the back in case you want to look at it, but I didn't want to build our whole conversation around something you haven't seen yet."</em></p>
+          <p>The main pitch stays tight, and a curious owner can still go looking.</p>
         </>
       )
     }
   ]}
 />
 
-<LessonSection>
-
-## Everything you are not sure about goes in the appendix
-
-If a capability might matter to this prospect but you are not certain, do not build the pitch around a maybe and do not cut it either. Put it at the back and say that it is there.
-
-:::info Naming the appendix
-"There's a webchat feature that might be a fit for you too. I've put a page on it at the back in case you want to look at it, but I didn't want to build our whole conversation around something you haven't seen yet."
-:::
-
-The main pitch stays tight, and a curious owner can still go looking.
-
-</LessonSection>
-
 :::tip Try it now
-Write one sentence for each move for your next prospect: the insight you heard, the deliverable, how you will prove it worked, and the exact words you will use to ask. Say the ask out loud beforehand. If it sounds like a question about whether you should ask, rewrite it.
+Write one sentence for each stage for your next prospect: the insight you heard, the strategy, how you will prove it worked, the ask, and what goes in the appendix. Say the ask out loud beforehand. If it sounds like a question about whether you should be asking, rewrite it.
 :::
 
 {/* No "do it, delegate it, or buy it" block here: this step teaches a rep's own presentation skill,
@@ -163,7 +163,7 @@ Write one sentence for each move for your next prospect: the insight you heard, 
       question: 'A sentence in your draft presentation describes exactly which buttons the owner will click to set up a feature. Where does it belong?',
       options: [
         'The opening insight',
-        'The main deliverables section',
+        'The main strategy section',
         'The appendix',
         'It should be cut entirely'
       ],
@@ -176,11 +176,23 @@ Write one sentence for each move for your next prospect: the insight you heard, 
       options: [
         'In a follow-up email after the meeting',
         'At the very start, before you explain anything',
-        'Right after insights, deliverables, and value, in the same meeting',
+        'In the tactics stage of the same meeting, after insights, strategy, and proof',
         'Only after the prospect asks about price'
       ],
       correctIndex: 2,
-      explanation: 'The ask belongs in the tactics section of the same meeting, after you have shown you listened, said what changes, and proven it is worth it. Waiting for an email loses the momentum you just built.'
+      explanation: 'The ask belongs alongside the investment slide in the same meeting, after you have shown you listened, given the strategy, and proven you will measure it. Waiting for an email loses the momentum you just built.'
+    },
+    {
+      type: 'mcq',
+      question: 'Why put reporting and measurement early in the presentation rather than at the end?',
+      options: [
+        'It fills time while the prospect reads the deck',
+        'Every buyer is already wondering about ROI, so volunteering the scorecard builds trust',
+        'It is required before you can quote a price',
+        'It replaces the need for a case study'
+      ],
+      correctIndex: 1,
+      explanation: 'Offering how you will prove it works, before being asked, separates you from sellers who leave reporting until after the purchase.'
     },
     {
       type: 'truefalse',
@@ -189,15 +201,21 @@ Write one sentence for each move for your next prospect: the insight you heard, 
       explanation: 'Leave it in, just not in the main story. Put it in an appendix and mention it is there, so a curious owner can look without you guessing wrong about what they care about.'
     },
     {
+      type: 'truefalse',
+      statement: 'A strong sales presentation means delivering your prepared material without interruption.',
+      correct: false,
+      explanation: 'The presentation is a conversation, not a monologue. You make a point, then get a reaction, the whole way through, so prepare questions rather than only talking points.'
+    },
+    {
       type: 'match',
-      instruction: 'Match each of the four presentation moves to what it does.',
+      instruction: 'Match each of the five stages to what it does.',
       pairs: [
-        { term: 'Insight', definition: 'Prove you listened, using their own words' },
-        { term: 'Deliverable', definition: 'Say what changes for their business' },
-        { term: 'Value', definition: 'Show how you will measure it, and when' },
-        { term: 'The ask', definition: 'Request the business, out loud, in the room' }
+        { term: 'Insights', definition: 'Prove you listened, using their own words' },
+        { term: 'Strategy', definition: 'Say what changes, at ten thousand feet' },
+        { term: 'Performance', definition: 'Show how you will measure it, and when' },
+        { term: 'Tactics and the ask', definition: 'Detail, price, and requesting the business' }
       ],
-      explanation: 'Always in that order. Each move earns the right to make the next one.'
+      explanation: 'Always in that order, with the appendix last. Each stage earns the right to make the next one.'
     },
     {
       type: 'fillblank',
