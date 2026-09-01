@@ -6,10 +6,6 @@ description: "Unbranded, ready-to-use marketing videos to help you promote Venda
 
 These unbranded videos are ready-to-use marketing assets to help you promote Vendasta services to your clients. Each video covers what customers can expect, including timelines and best practices, and can be downloaded using the links below.
 
-## Blogs
-
-[Download](https://drive.google.com/file/d/1NTOXOC1gBPv1zxZHBibY_uPLOufqnief/view?usp=sharing)
-
 ## Digital Ads
 
 [Download](https://drive.google.com/file/d/1HIB4OhZNtiz08CZIBvZ_bXFThJK9-Kgz/view?usp=sharing)

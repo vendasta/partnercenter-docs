@@ -4,23 +4,22 @@ sidebar_label: "By service (Vendasta)"
 description: "With Vendasta's Vendasta Services, you have access to a team of digital marketing experts. Leveraging our team, you can claim and optimize your online listings"
 ---
 
-With Vendasta Services, you have access to a team of AI and marketing experts. Leveraging our team, you can claim and optimize your online listings, boost your reputation, engage your followers with content on social and blogs, build your website, and drive awareness of your business with digital advertising. All the while, our team will communicate with you to help set service expectations, inform you about updates, and respond to questions related to your service.
+With Vendasta Services, you have access to a team of AI and marketing experts. Leveraging our team, you can claim and optimize your online listings, boost your reputation, engage your followers with social content, build your website, and drive awareness of your business with digital advertising. All the while, our team will communicate with you to help set service expectations, inform you about updates, and respond to questions related to your service.
 
 With so many services available, it's important to understand what to expect from each one. This article will break down what you can expect based on each product line.
 
 ## Expectation by managed service
 
-| Service Feature | Listings | Reputation | Social | Blogs | Websites | DigitalAds |
-|---|---|---|---|---|---|---|
-| **Order confirmation email within 48 hours** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Pre-launch call** | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Post-launch call** | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| **Direct-to-customer communication is available** | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| **Project tracking in Business App** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Business App connections required** | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ |
-| **External credentials (passwords) required** | ❌ | ✅ | ✅ | ❌ | ✅[\*](#external-credentials-passwords-required) | ❌ |
-| **Digital Agents access required** | ✅ | ✅ | ✅ | ❌ | ✅[\*](#digital-agency-access-required) | ✅[\*](#digital-agency-access-required) |
-| **Business days to launch after assets received** | **3**[\*](#business-days-to-launch-after-assets-received) | **1-2** | **5** | **5** | **5-10** | **1-10** |
+| Service Feature | Listings | Reputation | Social | Websites | DigitalAds |
+|---|---|---|---|---|---|
+| **Order confirmation email within 48 hours** | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **Post-launch call** | ❌ | ❌ | ❌ | ❌ | ✅ |
+| **Direct-to-customer communication is available** | ✅ | ✅ | ✅ | ✅ | ❌ |
+| **Project tracking in Business App** | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **Business App connections required** | ✅ | ✅ | ✅ | ❌ | ✅ |
+| **External credentials (passwords) required** | ❌ | ✅ | ✅ | ✅[\*](#external-credentials-passwords-required) | ❌ |
+| **Digital Agents access required** | ✅ | ✅ | ✅ | ✅[\*](#digital-agency-access-required) | ✅[\*](#digital-agency-access-required) |
+| **Business days to launch after assets received** | **3**[\*](#business-days-to-launch-after-assets-received) | **1-2** | **5** | **5-10** | **1-10** |
 
 \*See more in definitions below.
 

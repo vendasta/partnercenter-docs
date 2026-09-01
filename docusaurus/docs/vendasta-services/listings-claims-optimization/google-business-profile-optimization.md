@@ -1,7 +1,7 @@
 ---
 title: "Google Business Profile Optimization"
 sidebar_label: "Google Business Profile Optimization"
-description: "An overview of the fully managed Google Business Profile Optimization service, including the setup process, verification options, monthly maintenance, and what to expect."
+description: "An overview of the Google Business Profile Optimization service: creation and claiming, hands-on guidance through Google's verification, ownership transfer, and monthly maintenance."
 tags: [vendasta-services, listings, google-business-profile, optimization, gbp, verification]
 keywords: [Google Business Profile, GBP optimization, listing claim, verification, postcard, suspension, reinstatement, bulk verification, Social AI]
 ---
@@ -10,13 +10,26 @@ keywords: [Google Business Profile, GBP optimization, listing claim, verificatio
 
 ## Overview
 
-Google Business Profile (GBP) Optimization is a fully managed solution where the Listing Fulfillment team claims, maintains, and optimizes the business listing on a monthly basis.
+Google Business Profile (GBP) Optimization is a service where the Listing Fulfillment team creates and claims the business listing, guides the client through Google's verification, then maintains and optimizes the profile on a monthly basis.
 
-**What to expect:** order confirmation → completed fulfillment form → claiming and verification → initial optimization → monthly updates and posting.
+**What to expect:** order confirmation → completed fulfillment form → profile creation and claiming → the client completes Google's verification with our guidance → ownership transfer → initial optimization → monthly updates and posting.
+
+:::warning The client completes the verification
+
+Google requires the **business owner or an authorized representative** to complete verification directly. Our team cannot verify the listing on their behalf — Google's methods (video, phone, postcard, email) are tied to the business itself. What our team does is set everything up, tell the client exactly what Google is asking for, and stay with them until they are through it.
+
+Set this expectation before the order. It is the most common source of surprise on GBP orders.
+
+:::
 
 ## What's Included
 
-The service includes a one-time initial optimization once the listing is claimed, plus an ongoing monthly service with two main components: monthly profile updates and content posting.
+* **Google Business Profile creation, claiming, and initial setup**
+* **Dedicated, hands-on support through Google's verification requirements**
+* **Complete ownership transfer and dashboard connectivity**
+* **Ongoing monthly profile updates and content posting**
+
+Once the listing is verified and ownership is transferred to our team, the service includes a one-time initial optimization plus an ongoing monthly service with two main components: monthly profile updates and content posting.
 
 ### Initial profile optimization
 
@@ -71,6 +84,7 @@ If listings are found to be in violation of Google's guidelines, they may be rem
 * Prepare business documents Google may require (for example, a business license or utility bill) and provide them when asked.
 * For a new listing claim, complete the fulfillment form as soon as possible with at least: business name, address, phone number, logo, cover photo, business description, hours of operation, and an email to add as an owner of the listing.
 * **P.O. boxes cannot be used** when claiming GBP listings.
+* **Line up someone at the business to verify.** Google's verification must be completed by the business — have a contact ready who can answer the primary business line, record a video of the premises, access an email address at the business domain, or read the postcard PIN, depending on what Google offers.
 
 ## Getting Started
 
@@ -89,9 +103,9 @@ Fulfillment can follow several paths depending on the situation. The most common
 
 #### Brand new listing claim
 
-Our team works to create a new listing from the fulfillment form. As part of this we add the business name, address, and phone number, plus a logo, cover photo, up to 5 photos and 5 videos, and (where applicable) Highlights, Amenities, Attributes, and Service Options.
+Our team creates the new listing from the fulfillment form. As part of this we add the business name, address, and phone number, plus a logo, cover photo, up to 5 photos and 5 videos, and (where applicable) Highlights, Amenities, Attributes, and Service Options.
 
-You will be offered (and required to complete) one or more of Google's verification methods. To avoid delays, provide all requested information as soon as possible. Methods can include:
+Google then requires **the business** to complete verification. Our team identifies which method Google has offered, walks the client through exactly what to do, and stays available while they work through it — but the steps themselves have to be completed by someone at the business. To avoid delays, make sure the client acts on verification requests as soon as they arrive. Methods can include:
 
 * **Video verification:** You may need to provide a video of unlocking the physical location or cash register. For service area businesses, videos may need to show tools, equipment, and assets used to provide services. In some cases, Google may require a live video call.
 * **Phone call / text message:** Google sends an automated call or text with a PIN to the business phone number.
@@ -102,7 +116,7 @@ You will be offered (and required to complete) one or more of Google's verificat
 
 * You may need to verify with more than one method, and verification may be required more than once.
 * The available methods depend on many factors (Google cites business category, public information, region, and more).
-* We do not have visibility into which method Google will offer, and we cannot control or change the methods available. We must comply with whatever Google offers, including video verification when required.
+* We do not have visibility into which method Google will offer, and we cannot control, change, or complete the methods on the client's behalf. Whatever Google offers — including video verification and live video calls — has to be completed by the business.
 * If there is a suspension on the listing or additional verification is required, the timeline may be delayed.
 
 :::
@@ -145,6 +159,15 @@ Helpful to prepare in advance (Google often asks for at least one of these, plus
 * For service area businesses, a video of tools and equipment used for the services.
 
 This process can take two weeks or more. We cannot guarantee reinstatement. **If the listing is suspended and neither you nor the business have access, it may not be recoverable** through Google Support.
+
+### 3. Ownership transfer and dashboard connectivity
+
+Once the profile is verified, our team completes the handoff so the listing is fully owned by the business and fully managed:
+
+* **Ownership transfer:** ownership of the Google Business Profile is settled in the business's name, with our team added at the access level needed to manage it month to month.
+* **Dashboard connectivity:** the profile is connected to Business App, so profile data, insights, and reviews flow into the same place the client tracks the rest of their online presence.
+
+With ownership settled and the profile connected, initial optimization begins — see [Initial profile optimization](#initial-profile-optimization).
 
 ### Multi-location and bulk verification (10+ locations)
 
@@ -202,6 +225,22 @@ An identical address and phone number can be treated as duplicates. If two separ
 </details>
 
 ### Claiming, ownership, and verification
+
+<details>
+<summary>Can your team verify the Google Business Profile for the client?</summary>
+
+No. Google requires the business itself to complete verification, and there is no way for our team to do it on their behalf. Google decides which method is offered (video, phone, postcard, or email) and ties it to the business location, phone line, address, or domain.
+
+What the service does handle: creating and claiming the profile, telling the client exactly what Google is asking for and how to complete it, staying with them through repeat or multi-method verification, and taking over ownership and management once they are verified. Set this expectation at the point of sale.
+
+</details>
+
+<details>
+<summary>Who needs to be available for verification?</summary>
+
+Someone at the business who can act on Google's request: answer the primary business phone line for a PIN call or text, record or join a video of the premises, access an email address at the business domain, or receive and read the postcard PIN. Verification can be required more than once, so the contact needs to stay available until the profile is verified.
+
+</details>
 
 <details>
 <summary>What happens if someone else already owns the business listing?</summary>
