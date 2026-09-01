@@ -5,13 +5,11 @@ sidebar_position: 1
 description: "Service expectations for Vendasta Services blog posts: one-time and monthly. Learn about timelines, revisions, SEO features, and publishing."
 ---
 
-# Blog Posts
-
 ## Overview
 
 Our team of content writers develops creative, engaging 1,500-word blogs for your business, available as **one-time** or **monthly** orders. We choose relevant topics (or use yours) to position the brand as an expert in its industry, and every blog is built for SEO performance.
 
-## What's Included
+## What's included
 
 Every blog is a 1,500-word, SEO-optimized post. Each one includes:
 
@@ -59,7 +57,7 @@ Before onboarding, have the following ready:
     *   Images of your business
 *   **For free publishing:** WordPress Hosting activated or our Accelerated Templated Website. We can post to other WordPress sites for a fee via the Custom Request add-on (login credentials required); we do not post to non-WordPress/Duda sites.
 
-## Getting Started
+## Getting started
 
 1.  **Order and fulfillment form** – Complete the form with as much detail as possible. We review the order and start the process within 2 business days.
 2.  **Optional onboarding call** – Book using the link in your confirmation email (as little as 1 business day out, depending on availability). The call gives an overview of the service, answers questions about your order, and is our chance to learn about your business.
@@ -103,7 +101,7 @@ At this time, we only offer blog writing services in English.
 <details>
 <summary>Can I choose the blog topics?</summary>
 
-Yes. Submit your topics in the fulfillment form or via email—prior to or during the onboarding call for one-time orders, or before the 10th of each month for monthly orders. If we do not receive a topic, our writers choose one based on current trends in your industry.
+Yes. Submit your topics in the fulfillment form or via email, prior to or during the onboarding call for one-time orders, or before the 10th of each month for monthly orders. If we do not receive a topic, our writers choose one based on current trends in your industry.
 </details>
 
 <details>
@@ -119,7 +117,7 @@ Yes. Visit [examples.yourdigitalagents.com](https://examples.yourdigitalagents.c
 
 Our content writers research your business and industry using your website and other reputable online sources. Each blog includes external hyperlinks to non-competitive sources where possible. The goal is to engage your audience, not only to sell.
 
-**Example:** For a plumber, we might recommend content such as current bathroom design trends, safety tips for keeping water out of your basement during spring thaw, or fun facts about the history of plumbing.
+**Example:** For a plumber, we recommend content such as current bathroom design trends, safety tips for keeping water out of your basement during spring thaw, or fun facts about the history of plumbing.
 
 If you have specific links or sources you want us to use, share them via email.
 </details>
@@ -127,7 +125,7 @@ If you have specific links or sources you want us to use, share them via email.
 <details>
 <summary>What kind of content should I avoid?</summary>
 
-We avoid content that might cause readers to dislike your content, product, or service. We suggest avoiding:
+We avoid content that could cause readers to dislike your content, product, or service. We suggest avoiding:
 
 * Political or religious posts
 * Content that is inconsistent with branding
@@ -179,7 +177,7 @@ Each blog includes SEO features such as city/region keywords, internal and exter
 <details>
 <summary>What is the purpose of optimized Meta Data and Alt Text?</summary>
 
-Meta Data (titles and descriptions) acts as your digital storefront—it's what convinces people to click when they see you in search results. Alt Text does the same for your images, helping your blog appear in Google Image searches and ensuring your site remains accessible and professional.
+Meta Data (titles and descriptions) acts as your digital storefront: it's what convinces people to click when they see you in search results. Alt Text does the same for your images, helping your blog appear in Google Image searches and ensuring your site remains accessible and professional.
 </details>
 
 <details>

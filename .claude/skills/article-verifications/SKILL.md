@@ -118,15 +118,15 @@ After auto-fixes are applied, check whether any articles have items listed under
 
 **Collapse duplicates first.** If the exact same issue (e.g. the same prohibited term, the same tone problem) appears at multiple locations in the same article with the same proposed fix, treat it as **one** pending item covering every location, not one item per occurrence. List all affected lines in that single item's **Location** field. This is what keeps a repeated issue from turning into repeated near-identical prompts.
 
-**Batch into groups of up to 4.** `AskUserQuestion` accepts up to 4 questions per call. Collect all pending items across all articles into a single ordered queue (article order, then report order within each article), then work through the queue in batches of up to 4 items per `AskUserQuestion` call — never one call per item. A typical day's batch (5 articles, a handful of pending items each) usually fits in 1-3 calls total, not one per item.
+**Go one item at a time.** Collect all pending items across all articles into a single ordered queue (article order, then report order within each article), then work through the queue **one item per `AskUserQuestion` call** — never batch multiple items into one call, even though the tool supports up to 4 questions per call. The user needs to read each item's context before deciding, and a multi-question call makes that hard to do carefully. Present, wait for the answer, apply or skip, then move to the next item.
 
-**Opening:** Announce how many total items need input and roughly how many rounds that will take:
+**Opening:** Announce how many total items need input before starting:
 
-> "Auto-fixes are applied. [N] items need your input across [M] articles — I'll go through them in [K] batch(es)."
+> "Auto-fixes are applied. [N] items need your input across [M] articles — I'll go through them one at a time."
 
 ---
 
-**For each batch**, output the context block for every item in that batch as plain text first — before calling AskUserQuestion. Do not put this content inside the option descriptions. Group the text blocks by article with the article name and a clickable link as a sub-heading, so the user can see which file each item belongs to:
+**For each item**, output its context block as plain text first — before calling AskUserQuestion. Do not put this content inside the option descriptions. Lead with the article name and a clickable link as a sub-heading, so the user can see which file the item belongs to:
 
 ```
 **[Article title]** ([path/to/file.mdx](path/to/file.mdx))
@@ -137,20 +137,20 @@ After auto-fixes are applied, check whether any articles have items listed under
 **Proposed:** "[exact replacement text]"
 ```
 
-Then make **one** AskUserQuestion call containing one question entry per item in the batch (up to 4). Make each item's `question` text unique (e.g. include the file and line, like `Apply this change? [file.mdx:24]`) so answers don't collide when matched back up — the tool returns answers keyed by question text. For the standard case, each entry uses:
+Then make **one** AskUserQuestion call containing **exactly one** question entry for this item. For the standard case, that entry uses:
 - Question: `Apply this change? [file.mdx:line]`
 - Option 1: `Yes — apply it`
 - Option 2: `No — skip it`
 
-Keep the option descriptions brief (one short sentence max) — all the detail the user needs is in the text blocks above. Do not repeat the Issue/Current/Proposed content inside the option descriptions.
+Keep the option descriptions brief (one short sentence max) — all the detail the user needs is in the text block above. Do not repeat the Issue/Current/Proposed content inside the option descriptions.
 
 Each question automatically includes an "Other" free-text field. If the user types their own version there, apply their text instead of the proposed change — do not apply the original proposed text.
 
-Apply, apply-custom, or skip each item based on its answer, then move to the next batch. If a collapsed duplicate item is approved, apply the fix at every location it covers.
+Apply, apply-custom, or skip the item based on its answer, then move to the next item in the queue. If a collapsed duplicate item is approved, apply the fix at every location it covers.
 
 ---
 
-**Special cases — mix these into the same batches as standard items (still up to 4 questions per call total). As with the standard format, output every item's context block as text first, then call AskUserQuestion once for the whole batch:**
+**Special cases — work through these in the same one-item-at-a-time queue as standard items, in queue order.** As with the standard format, output the item's context block as text first, then call AskUserQuestion with exactly one question entry for it:
 
 **Prohibited term with no obvious replacement:**
 
@@ -194,7 +194,7 @@ Use an AskUserQuestion entry with:
 
 ---
 
-**After all batches are complete**, if any articles had items in their **Needs verification** section, print a compact checklist before the closing summary:
+**After the queue is complete**, if any articles had items in their **Needs verification** section, print a compact checklist before the closing summary:
 
 > **Before creating your PR, verify these manually in the live product:**
 > - [Article title]: [the specific thing to check]
