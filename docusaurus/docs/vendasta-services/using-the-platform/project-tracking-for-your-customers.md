@@ -1,10 +1,10 @@
 ---
 title: "Project Tracking for Your Customers"
 sidebar_label: "Project Tracking for Your Customers"
-description: "See how Project Tracking in Business App lets your customers check the status of their website, digital ads campaign, blog, and social calendar without contacting you."
+description: "See how Project Tracking in Business App lets your customers check the status of their website, digital ads campaign, listing claim, and social calendar without contacting you."
 ---
 
-When will this website be live? What's the status of our digital ads campaign? Is my blog ready? When should I expect the next social calendar?
+When will this website be live? What's the status of our digital ads campaign? Is my listing claimed yet? When should I expect the next social calendar?
 
 These are all common customer questions. With Project Tracking in Business App, your customers can find answers on their own without needing to contact you.
 

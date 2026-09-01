@@ -235,6 +235,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           // Vendasta Services: social media onboarding + timeline folded into the section index
           { from: '/vendasta-services/social-media-management/social-media-management-onboarding', to: '/vendasta-services/social-media-management/' },
           { from: '/vendasta-services/social-media-management/social-media-marketing-timeline', to: '/vendasta-services/social-media-management/' },
+          // Vendasta Services: manual blog writing retired; blog content is now delivered by the AI Blogger
+          { from: '/vendasta-services/blogs', to: '/vendasta-services/ai-workforce/ai-blogger' },
+          { from: '/vendasta-services/blogs/blog-post-service-expectations', to: '/vendasta-services/ai-workforce/ai-blogger' },
           // Vendasta Services: expectation brochures article removed
           { from: '/vendasta-services/expectations/expectation-brochures', to: '/vendasta-services/expectations/' },
           // Vendasta Services digital advertising: MatchCraft overview replaced by Specialty Ad Campaign

@@ -2,7 +2,7 @@
 title: "Managed Ad Campaign"
 sidebar_label: "Managed Ad Campaign"
 sidebar_position: 1
-description: "Managed Ad Campaign is a do-it-for-me, single-network ad campaign built, launched the same day, and managed by certified ads specialists on Google/Bing Search, Google Display, or Meta."
+description: "Managed Ad Campaign is a do-it-for-me, single-network ad campaign built, launched the same day, and managed by certified ads specialists on Google/Bing Search, Google Display, or Meta. Available for businesses in the United States and Canada only."
 tags: [vendasta-services, digital-advertising, managed-ads, vendasta-ads, campaigns]
 keywords: [Managed Ad Campaign, single network, same-day launch, Google Search, Bing, Google Display, Meta, call tracking, conversion tracking, Advertising Intelligence]
 ---
@@ -14,6 +14,12 @@ keywords: [Managed Ad Campaign, single network, same-day launch, Google Search, 
 Managed Ad Campaign is a **do-it-for-me** solution where Vendasta's AI builds, and our certified ads specialists launch, and manage a **single-network** ad campaign on your client's behalf. Campaigns run on **Google/Bing Search**, **Google Display**, or **Meta (Facebook & Instagram)**, launch the **same day the order is placed**, and are optimized continuously by both the Vendasta Ads platform and our team for the life of the campaign. Reporting is delivered through Advertising Intelligence in Business App.
 
 It's the right fit for the campaigns most businesses need: straightforward, fast to launch, and fully fulfilled by our team—no paid media expertise or campaign management on your end. For campaigns on LinkedIn, YouTube, TikTok, Performance Max, Yelp, or Amazon, see [Specialty Ad Campaign](./specialty-ad-campaign.md).
+
+:::warning United States and Canada only
+
+Managed Ad Campaign is available **only for businesses located in the United States or Canada**. If the business you are advertising is located anywhere else, this service cannot be ordered for them — sell a [Specialty Ad Campaign](./specialty-ad-campaign.md) instead, which is not limited to those two countries.
+
+:::
 
 ## What's Included
 
@@ -60,7 +66,7 @@ Every Managed Ad Campaign covers **one network**, launches the **same business d
 
 * **Complete business account details in Partner Center:** name, address, and website URL for the account the campaign is being ordered for.
 * **A public, accessible website:** the destination URL must load without a login and without geographic or firewall restrictions that return a **403 Forbidden** error.
-* **Supported region:** the business being advertised must be located in the United States or Canada.
+* **Supported region:** the business being advertised must be located in the **United States or Canada**. Businesses in any other country are not eligible and should be sold a [Specialty Ad Campaign](./specialty-ad-campaign.md).
 * **No dedicated Vendasta Ads Enterprise (formerly MatchCraft) instance:** partners with their own instance continue to sell and manage campaigns through Vendasta Ads Enterprise.
 
 ### Campaign assets
@@ -113,7 +119,7 @@ The campaign continues to run at the same monthly budget, with ongoing optimizat
 * **Results guarantees:** We can't guarantee specific results. We implement best-practice strategies, but platform algorithms are unpredictable, so it would be unethical to promise results that can't be guaranteed.
 * **One network per campaign:** A single campaign covers Google/Bing Search *or* Google Display *or* Meta—not a combination. Multi-network coverage means ordering multiple campaigns, each with its own budget.
 * **No manual A/B testing:** We don't set up manual variant tests. Optimization relies on Google's and Meta's built-in engines, which continuously test the creative assets we supply and steer spend toward the best-performing combinations.
-* **Regional availability:** Currently suited to businesses located in the United States and Canada. For businesses outside these countries, see Vendasta Ads Enterprise.
+* **Regional availability:** Only available for businesses located in the United States and Canada. There is no exception process — businesses outside those two countries are served by [Specialty Ad Campaign](./specialty-ad-campaign.md).
 * **Not white-labeled:** Our team does not work directly with your clients. Reach out to your business representative for more information.
 
 ## FAQ
@@ -197,7 +203,7 @@ Yes, on request. Coordinate with your Vendasta Services representative to have i
 <details>
 <summary>Is this service available internationally?</summary>
 
-At this time, Managed Ad Campaign is suited to partners serving businesses in the United States and Canada. Partners with international portfolios should look at Vendasta Ads Enterprise.
+No. Managed Ad Campaign is available only for businesses located in the **United States** or **Canada**. For clients in any other country, sell a [Specialty Ad Campaign](./specialty-ad-campaign.md) instead.
 </details>
 
 <details>
