@@ -105,8 +105,8 @@ const PATHS: HomePathCard[] = [
     title: "Wire your AI Workforce to act",
     blurb: "One build end to end: a custom tool for the job the platform does not cover, an automation that follows through, and a real API call against your own data.",
     tag: "Build",
-    scope: ["7 lessons", "6 labs"],
-    gate: "About 1 hour 30 minutes",
+    scope: ["8 lessons", "6 labs"],
+    gate: "About 1 hour 40 minutes",
     cta: "Start",
     to: "/learn/builder",
     tone: "purple",
@@ -217,6 +217,7 @@ const BUILDER_ITEMS: ExplorerItem[] = [
   { title: "Hand off to the automation", to: "/learn/builder/hand-off-to-the-automation" },
   { title: "Wire it to your own systems", to: "/learn/builder/wire-it-to-your-systems" },
   { title: "Call the API yourself", to: "/learn/builder/call-the-api-yourself" },
+  { title: "Book into an outside system", to: "/learn/builder/book-into-an-outside-system" },
   { title: "Where the platform ends", to: "/learn/builder/where-the-platform-ends" },
   { title: "Wire to act skill check", to: "/learn/builder/wire-to-act-skill-check" },
 ];

@@ -1,0 +1,190 @@
+---
+title: "Book into an outside system"
+sidebar_position: 7
+description: "Wire an AI Employee's booking and cancellation into a client's own scheduling or field-service system: keys, the call sequence, the identity check, and scoping the work."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
+
+<InlineHighlighter courseId="book-into-an-outside-system" site="vendasta_learn">
+
+<CourseProgressBar courseId="book-into-an-outside-system" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Advanced"
+  topics={["Integrations", "Custom tools", "CRM"]}
+  time="about 12 minutes"
+  pathName="Wire your AI Workforce to act"
+  step={7}
+  totalSteps={9}
+  outcomes={[
+    "Map a booking flow to the calls it actually takes before you build",
+    "Choose between a full booking sequence and a single queued request",
+    "Design the identity check a cancellation needs before it runs",
+    "Scope an integration so a proof of concept comes before a promise",
+  ]}
+/>
+
+## When the appointment has to land somewhere else
+
+Some clients run their entire day out of a scheduling system they already own. A multi-location home services brand dispatches technicians from it, every location has its own services and its own crew, and the office staff live in it. When an AI receptionist books an appointment for that client, the booking has to appear there, not on a calendar beside it.
+
+That is a different build from connecting a calendar and switching on a booking capability. One franchise brand's field-service system shows the shape of it, and most scheduling systems a client already runs raise the same questions.
+
+## Two levels of key, and what each one opens
+
+Start with authentication, because it decides how much of the flow you can reach.
+
+The system in this example issues API keys at two levels, and the difference is not cosmetic:
+
+| Key | What it opens |
+|---|---|
+| **Brand level** | Adding a lead or contact. The system routes that contact to the correct location itself, from the postal code. |
+| **Location level** | Everything past contact creation, specifically searching for available times and booking. Each location has its own key. |
+
+So the brand level key is what you reach for when you do not yet know which location a lead belongs to and you want the system to decide. Once you do know the location, you can skip the brand level key entirely and use that location's own key to add the contact and go straight on to booking.
+
+The rollout consequence is worth planning for early. A brand with forty locations means forty location level keys to store, and each call has to carry the right one for the location it is acting on.
+
+Authentication itself is a plain API key here, with no token exchange to run. That is the case a custom tool handles directly: the key travels in a header, exactly as the four parts of a tool describe.
+
+<LessonSection>
+
+## The booking flow is three calls, not one
+
+*You are here: Business App, building a capability on the employee that takes these bookings.*
+
+The system's own web interface makes three calls behind one screen, and an integration makes the same three:
+
+1. **Add the contact.** Returns a contact ID, which the next call needs.
+2. **Search for available times.** Takes the contact ID plus a service ID belonging to that location. Returns the openings, already accounting for that location's crew availability.
+3. **Book.** Takes the chosen opening and creates the appointment.
+
+Two details save time here. Not every service a location offers is necessarily enabled for availability search through the API, so confirm the specific services a client wants bookable before you design around them. And the response times come back already localized to that location's configured time zone, so there is no per contact time zone for you to track or pass.
+
+One capability holds all three calls, because a capability takes [as many tools as the job needs](/ai/ai-capabilities/creating-custom-capabilities), so the sequence lives in the capability prompt: which call runs first, what each one hands to the next, and what the employee says while it works.
+
+</LessonSection>
+
+## The shortcut, and what it costs
+
+The same system offers a single endpoint that skips the availability search. It creates the contact and queues an appointment request at the right location, and then a person at that location assigns the technician and the time.
+
+Both paths are legitimate, and the choice belongs to the client:
+
+| | Full sequence | Single queued request |
+|---|---|---|
+| **Calls to build** | Three | One |
+| **What the caller gets** | A confirmed time on the spot | A request that someone will confirm |
+| **Who finishes the job** | Nobody, it is booked | The location's own staff, by hand |
+
+The shortcut is faster to build and it moves real work onto the people at the location. Decide it with them in the room, not just with the person who signed the contract.
+
+<LessonSection>
+
+## Cancellation asks a question the API does not answer
+
+Cancelling has a direct path and a lookup path. With an appointment ID in hand, one call cancels it. Without one, the route is: search contacts by name, email, or phone, take the contact ID, query that contact's appointments, take the appointment ID, then cancel.
+
+The lookup path is where the design work is. An anonymous visitor on a website can type any email address, and a voice caller can say any name. An employee that cancels on that basis alone will cancel appointments for people who never asked.
+
+The safeguard is yours to build, and the capability prompt is where it goes. A prompt states plainly what the employee must have before a tool runs, in the same shape as `You MUST have the appointment date before calling this tool`, and the employee asks for it instead of guessing. That gives you real choices to design:
+
+- Require a second detail that is already on the record, such as the appointment date alongside the phone number, before the cancel call runs.
+- Confirm the appointment back to the caller and get an explicit yes, so a wrong match is caught out loud.
+- Route cancellations to a person during business hours, and only take them automatically on channels where the visitor is already identified.
+
+Pick the level that fits what the client's appointments are worth, and write it into the prompt as a condition rather than a suggestion. Then test it by trying to cancel an appointment that is not yours.
+
+</LessonSection>
+
+## Test against a sandbox, not a live schedule
+
+Vendors that expect integrations usually have a way for you to build without touching a real dispatch board. In this case there were two: a self-serve trial account with full API access that you can open independently, and a dedicated test location set up by the brand itself, carrying that brand's own realistic services. Using both gives you a clean room to fail in and a realistic one to prove in.
+
+Ask for two things beyond the documentation. A vendor's API reference is often a list of endpoints and parameters, which is accurate and slow to work from, and their own solutions engineers will frequently send example request and response payloads or a ready made Postman collection instead. That single exchange moves faster than a day of reading.
+
+Then keep the first version short. Get the simplest end to end flow working and confirmed, one call at a time, before adding anything to it. Every extra automated write back into the client's system, every added tag, every second system writing to the same records, is another moving part that has to keep working. Add them deliberately, once the core flow is proven.
+
+## Scope it before you promise it
+
+An integration like this crosses two vendors, the client's operations team, and whoever will maintain it. The sequence that keeps that manageable is the same one the field uses:
+
+1. **Write the scope.** Close to a statement of work: what you believe is doable, what is not, and what is still an open question.
+2. **Get sign-off.** The client's stakeholders agree to that document before anyone builds.
+3. **Prove it.** A proof of concept against the sandbox, confirming the doable list was true.
+
+The order matters more than the artifacts. Confirming with engineering that something is buildable, before you tell a client it is, is what makes the eventual yes worth something.
+
+:::tip Try it now
+Name a scheduling system one of your clients already runs, and say which of these you could not answer about it right now: how it authenticates, how it creates a contact, whether it can search availability. Whichever one it is, that is your first question for the vendor.
+:::
+
+<SectionFeedback courseId="book-into-an-outside-system" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="book-into-an-outside-system" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on keys, the booking shortcut, and cancelling safely."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'You have a brand level API key and you want the employee to search available times and book. What does that job need?',
+      options: [
+        'The brand level key, with the location named in the request',
+        'That specific location\'s own API key',
+        'A second brand level key with wider access',
+        'A token exchange against the brand account'
+      ],
+      correctIndex: 1,
+      explanation: 'The brand level key adds the contact and routes it to the right location. Availability search and booking need that location\'s own key, which is why a rollout across many locations means storing a key per location.'
+    },
+    {
+      type: 'mcq',
+      question: 'The client picks the single endpoint that skips the availability search. What does that decision move, and to whom?',
+      options: [
+        'The time zone handling, onto the integration you build',
+        'The assignment of a technician and a time, onto the location\'s staff',
+        'The contact creation, onto the brand level account',
+        'The confirmation message, onto a separate automation'
+      ],
+      correctIndex: 1,
+      explanation: 'The shortcut creates the contact and queues a request at the right location. Someone there still assigns the technician and the time by hand, which is why the people doing that work belong in the decision.'
+    },
+    {
+      type: 'mcq',
+      question: 'A visitor on a client\'s website tells the chat employee to cancel an appointment and gives an email address. What does the build need?',
+      options: [
+        'A condition in the capability prompt requiring a second detail already on the record',
+        'A cancel tool that looks the appointment up by email alone',
+        'A broader API key so the search can reach every location',
+        'A note logged in the CRM after the cancellation runs'
+      ],
+      correctIndex: 0,
+      explanation: 'Anyone can type any email address, so the cancel call needs something more before it runs. The prompt is where you state what the employee must confirm first, and it asks for it rather than guessing.'
+    },
+    {
+      type: 'mcq',
+      question: 'The available times come back from the outside system. Where is the appointment time zone resolved?',
+      options: [
+        'In the capability prompt, from the caller\'s stated location',
+        'In the outside system, from that location\'s own configuration',
+        'In the tool headers, alongside the API key',
+        'In the contact record, from the postal code you sent'
+      ],
+      correctIndex: 1,
+      explanation: 'The system returns times already localized to the location\'s configured time zone. There is no per contact time zone for the integration to track or pass.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/builder/where-the-platform-ends" pathName="Wire your AI Workforce to act" step={7} totalSteps={9} />
+
+</InlineHighlighter>
+<MarkComplete courseId="book-into-an-outside-system" site="vendasta_learn" />
