@@ -11,6 +11,7 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
 
 <InlineHighlighter courseId="book-into-an-outside-system" site="vendasta_learn">
 
@@ -33,9 +34,9 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 ## When the appointment has to land somewhere else
 
-Some clients run their entire day out of a scheduling system they already own. A multi location home services brand dispatches technicians from it, every location has its own services and its own crew, and the office staff live in it. When an AI receptionist books an appointment for that client, the booking has to appear there, not on a calendar beside it.
+Some clients run their entire day out of a scheduling system they already own. A multi-location home services brand dispatches technicians from it, every location has its own services and its own crew, and the office staff live in it. When an AI receptionist books an appointment for that client, the booking has to appear there, not on a calendar beside it.
 
-That is a different build from connecting a calendar and switching on a booking capability. The rest of this step walks one real integration of this shape, a franchise brand's field service system, because the pattern generalizes: the same questions come up with any scheduling system a client already runs.
+That is a different build from connecting a calendar and switching on a booking capability. One franchise brand's field-service system shows the shape of it, and most scheduling systems a client already runs raise the same questions.
 
 ## Two levels of key, and what each one opens
 
@@ -54,6 +55,8 @@ The rollout consequence is worth planning for early. A brand with forty location
 
 Authentication itself is a plain API key here, with no token exchange to run. That is the case a custom tool handles directly: the key travels in a header, exactly as the four parts of a tool describe.
 
+<LessonSection>
+
 ## The booking flow is three calls, not one
 
 *You are here: Business App, building a capability on the employee that takes these bookings.*
@@ -66,7 +69,9 @@ The system's own web interface makes three calls behind one screen, and an integ
 
 Two details save time here. Not every service a location offers is necessarily enabled for availability search through the API, so confirm the specific services a client wants bookable before you design around them. And the response times come back already localized to that location's configured time zone, so there is no per contact time zone for you to track or pass.
 
-One capability holds all three calls. The platform is explicit that a capability takes [as many tools as the job needs](/ai/ai-capabilities/creating-custom-capabilities), so the sequence lives in the capability prompt: which call runs first, what each one hands to the next, and what the employee says while it works.
+One capability holds all three calls, because a capability takes [as many tools as the job needs](/ai/ai-capabilities/creating-custom-capabilities), so the sequence lives in the capability prompt: which call runs first, what each one hands to the next, and what the employee says while it works.
+
+</LessonSection>
 
 ## The shortcut, and what it costs
 
@@ -82,6 +87,8 @@ Both paths are legitimate, and the choice belongs to the client:
 
 The shortcut is faster to build and it moves real work onto the people at the location. Decide it with them in the room, not just with the person who signed the contract.
 
+<LessonSection>
+
 ## Cancellation asks a question the API does not answer
 
 Cancelling has a direct path and a lookup path. With an appointment ID in hand, one call cancels it. Without one, the route is: search contacts by name, email, or phone, take the contact ID, query that contact's appointments, take the appointment ID, then cancel.
@@ -96,9 +103,11 @@ The safeguard is yours to build, and the capability prompt is where it goes. A p
 
 Pick the level that fits what the client's appointments are worth, and write it into the prompt as a condition rather than a suggestion. Then test it by trying to cancel an appointment that is not yours.
 
+</LessonSection>
+
 ## Test against a sandbox, not a live schedule
 
-Vendors that expect integrations usually have a way for you to build without touching a real dispatch board. In this case there were two: a self serve trial account with full API access that a partner can open independently, and a dedicated test location set up by the brand itself, carrying that brand's own realistic services. Using both gives you a clean room to fail in and a realistic one to prove in.
+Vendors that expect integrations usually have a way for you to build without touching a real dispatch board. In this case there were two: a self-serve trial account with full API access that you can open independently, and a dedicated test location set up by the brand itself, carrying that brand's own realistic services. Using both gives you a clean room to fail in and a realistic one to prove in.
 
 Ask for two things beyond the documentation. A vendor's API reference is often a list of endpoints and parameters, which is accurate and slow to work from, and their own solutions engineers will frequently send example request and response payloads or a ready made Postman collection instead. That single exchange moves faster than a day of reading.
 
@@ -109,13 +118,13 @@ Then keep the first version short. Get the simplest end to end flow working and 
 An integration like this crosses two vendors, the client's operations team, and whoever will maintain it. The sequence that keeps that manageable is the same one the field uses:
 
 1. **Write the scope.** Close to a statement of work: what you believe is doable, what is not, and what is still an open question.
-2. **Get sign off.** The client's stakeholders agree to that document before anyone builds.
+2. **Get sign-off.** The client's stakeholders agree to that document before anyone builds.
 3. **Prove it.** A proof of concept against the sandbox, confirming the doable list was true.
 
 The order matters more than the artifacts. Confirming with engineering that something is buildable, before you tell a client it is, is what makes the eventual yes worth something.
 
 :::tip Try it now
-Take a system one of your clients already runs and open its API documentation. Find three things: how it authenticates, which endpoint creates a contact, and whether it documents a way to search availability. Anything you cannot find is your first question for that vendor, and it is a faster question to ask than to answer yourself.
+Name a scheduling system one of your clients already runs, and say which of these you could not answer about it right now: how it authenticates, how it creates a contact, whether it can search availability. Whichever one it is, that is your first question for the vendor.
 :::
 
 <SectionFeedback courseId="book-into-an-outside-system" site="vendasta_learn" section="content" />
