@@ -5,13 +5,11 @@ sidebar_position: 3
 description: "An overview of the Accelerated Templated Website service built on Duda, available in two tiers: Accelerated Templated Website and Accelerated Templated Website Plus."
 ---
 
-# Accelerated Templated Website
-
 ## Overview
 
 The Accelerated Templated Website is a fast, professional, and functional website built on the Duda platform, ideal for delivering sites to your clients. It comes in two tiers: [**Accelerated Templated Website**](https://partners.vendasta.com/marketplace/products/MP-JPG6QNZHBQPKRX7KZ28XPM8X5BRZHJ3W) for a managed 10-page site, and [**Accelerated Templated Website Plus**](https://partners.vendasta.com/marketplace/products/MP-JPG6QNZHBQPKRX7KZ28XPM8X5BRZHJ3W/addon/A-DCFRQP8VHB), which adds eCommerce, booking, custom forms, and 60+ design enhancements. Whether your client is just starting out or needs advanced capabilities, each option is a fully managed, done-for-you build.
 
-## What's Included
+## What's included
 
 *   **10-page website based on Duda templates:** A professional website with 10 pages to showcase services, products, or company information.
 *   **Mix and match two templates:** Combine two Duda templates to get the perfect look and feel for the brand.
@@ -35,14 +33,14 @@ For more advanced features, **Accelerated Templated Website Plus** adds:
 ## Prerequisites
 
 *   **Hosting with us:** The site is hosted on our managed Duda environment (unless you have your own Duda account).
-*   **Domain:** Domains are not included and must be purchased separately—through a provider in our marketplace or directly with a domain provider (GoDaddy or Squarespace)—then give our team access.
+*   **Domain:** Domains are not included and must be purchased separately, through a provider in our marketplace or directly with a domain provider (GoDaddy or Squarespace), then give our team access.
 *   **Content and assets:** Any images or copy to use (we provide AI-written copy and stock images otherwise). For Plus eCommerce, provide products in CSV format.
 
-## Getting Started
+## Getting started
 
 1.  **Onboarding call:** Every build starts with an onboarding call where our design team collects important information about the client's goals and preferences.
 2.  **Design:** We create the site based on the selected Duda templates, with AI-written copy and stock images where needed.
-3.  **One major round of edits:** Review the initial design and request changes—you and your client can leave pins and feedback directly on the site using Duda's platform.
+3.  **One major round of edits:** Review the initial design and request changes. You and your client can leave pins and feedback directly on the site using Duda's platform.
 4.  **Go live:** Once finalized, we set the site live on the custom domain. Let us know if you'd like edit access afterward.
 5.  **Ongoing support:** After launch we provide hosting, technical support, monthly minor edits to text and images, and an annual redesign. Plus tiers also receive support for eCommerce and other enhanced features.
 
@@ -158,14 +156,14 @@ Domains are not included in this product and need to be purchased separately. Yo
 
 <summary>How is Accelerated Templated Website different from purchasing a Duda subscription directly?</summary>
 
-A direct Duda subscription provides access to the website builder and hosting but requires you to handle everything—design, development, setup, and ongoing maintenance. Accelerated Templated Website is a fully managed service that includes expert-built websites, hosting, ongoing support, and sales enablement, eliminating the need for you to do the work yourself.
+A direct Duda subscription provides access to the website builder and hosting but requires you to handle everything: design, development, setup, and ongoing maintenance. Accelerated Templated Website is a fully managed service that includes expert-built websites, hosting, ongoing support, and sales enablement, eliminating the need for you to do the work yourself.
 </details>
 
 <details>
 
 <summary>Why does Accelerated Templated Website cost more than a direct Duda subscription?</summary>
 
-While Duda's direct hosting is a lower price, it does not include website setup, design, customizations, content uploads, or expert support. This service is a done-for-you service that includes website creation, managed hosting, premium support—allowing you to focus on your business without the operational burden of building and managing websites.
+While Duda's direct hosting is a lower price, it does not include website setup, design, customizations, content uploads, or expert support. This service is a done-for-you service that includes website creation, managed hosting, premium support, allowing you to focus on your business without the operational burden of building and managing websites.
 </details>
 
 <details>
