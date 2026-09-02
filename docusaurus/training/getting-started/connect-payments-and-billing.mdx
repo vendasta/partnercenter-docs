@@ -150,17 +150,18 @@ Go to `Administration` → `Default billing settings`.
 <LabChecklist
   storageKey="connect-payments-lab-3"
   steps={[
+    <>Select your <code>Market</code>. The rest of the page appears only once you do.</>,
     <>Turn the <code>Subscriptions</code> toggle on. It is off by default, and it is what tracks and collects payment on each renewal.</>,
     <>Set <code>Subscription scheduling</code>: renew on each subscription's own start date, or put every new subscription on one shared day of the month.</>,
-    <>Set <code>Payment collection</code>: how you take the money.</>,
-    <>Set <code>Subscription renewal</code>: <code>Do nothing</code> leaves renewals alone, <code>Create a draft invoice</code> raises an invoice you send yourself.</>,
+    <>Set <code>Payment collection</code>: <code>Automatic</code> or <code>Manual</code>.</>,
+    <>Set <code>Subscription renewal</code>: <code>Email payable invoice to billing recipient</code> raises an invoice you send, with a required <code>Invoice due date</code>; <code>Automatically charge payment method on file</code> collects without you touching it.</>,
     <>Read the <strong>Billing summary</strong> panel on the right, then select <code>Save</code>.</>,
   ]}
   confirm={<>Every account you create from now on starts with collection handled, without you configuring it each time.</>}
 />
 </LabCallout>
 
-![The Default billing automation settings, with the subscription billing toggle on, the payment collection methods including Automatically charge payment method on file, and the choice of collecting on each subscription renewal](./img/default-billing-automation.png)
+![The Default billing settings page, with a Market selected, the Subscriptions toggle on, Subscription scheduling set to use the subscription start date, Payment collection set to Automatic, and Subscription renewal set to email a payable invoice with a 7-day due date](./img/default-billing-automation.png)
 
 The page carries a `Memo` field as well, which prints at the bottom of every invoice subscription billing creates. And one limit worth knowing, which the page states in a banner of its own: this applies to accounts created after you save. Accounts that already exist keep their current settings, and any single account can be switched from its own billing settings under `Accounts` → `Manage Accounts`. [This guide covers the options](/administration/commerce/default-billing-settings/).
 
