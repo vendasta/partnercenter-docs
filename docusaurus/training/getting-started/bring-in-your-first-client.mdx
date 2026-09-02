@@ -34,7 +34,7 @@ import LabChecklist from "@site/src/components/LabChecklist";
   outcomes={[
     "Create a client account with the fields that matter filled in",
     "Activate a product on the account and know what it costs you",
-    "Create the client's user and send the onboarding email at the right moment",
+    "Create the client's user, and know that inviting them is what sends the onboarding email",
     "Say what your client sees the first time they log in",
   ]}
 />
@@ -104,22 +104,21 @@ A **user** is a person who can log in to the account's Business App: the owner, 
 Order matters here, and the platform tells you why: a user with no active products logs in to an empty Business App. Activate first, create the user second, and their first login lands on working tools instead of a blank page.
 
 <LabCallout title="create the client's user">
-Go to the account's Overview, and select `Add users` on the `Users` card.
+Go to the account's Overview, and select `Invite users` on the `Users` card.
 
 <LabChecklist
   storageKey="first-client-lab-3"
   steps={[
-    <>Select <code>Create user</code> at the bottom of the panel. The search above it is for attaching a user who already exists.</>,
-    <>Enter their <code>Email</code>, first name, and last name.</>,
-    <>Leave <code>Send Onboarding Email</code> checked, and select <code>Preview</code> to read exactly what they will receive.</>,
-    <>Add a <code>Custom introductory message</code> if you want a personal line inside that email.</>,
-    <>Select <code>Create user</code>.</>,
+    <>Type their email. If they already exist as a CRM contact, select them from the suggestion; otherwise just enter the new address.</>,
+    <>Under <strong>Contact information</strong>, fill in <code>First name</code>, <code>Last name</code>, <code>Phone number</code>, <code>Correspondence language</code>, and <code>Greeting name</code>.</>,
+    <>Add a custom greeting under <strong>Onboarding Email</strong> if you want a personal line, and select <code>Preview</code> to read exactly what they will receive.</>,
+    <>Select <code>Save</code>, then select <code>Invite 1 user</code> to send it.</>,
   ]}
   confirm={<>The user appears on the <strong>Users</strong> card, and the onboarding email is on its way with a link to set their password.</>}
 />
 </LabCallout>
 
-That email is your setup work paying off: it sends from the domain you connected, carries the brand you uploaded, and links to a Business App wearing your name. If the moment is not right yet, clear the checkbox and the platform holds off; when you are ready, the `⋮` menu on the user's row sends it, and [this guide covers what the email contains](/accounts/manage-users/welcome-email).
+That email is your setup work paying off: it sends from the domain you connected, carries the brand you uploaded, and links to a Business App wearing your name. Inviting the user is what sends it, so if the moment is not right yet, leave them as a CRM contact and invite them when it is; once a user exists, the `⋮` menu on their row sends the email again, and [this guide covers what the email contains](/accounts/manage-users/welcome-email).
 
 <LessonSection>
 
@@ -169,13 +168,13 @@ From here the relationship runs on rails you already know: their conversations a
       type: 'mcq',
       question: 'The client is not ready to be invited yet, but you want their account and products in place today. What do you do?',
       options: [
-        'Set everything up now, and clear the Send Onboarding Email checkbox when you create the user',
+        'Set the account and products up now, and keep the person as a CRM contact until you are ready to invite them',
         'Wait to create the account until they are ready to log in',
         'Create the user with a fake email address as a placeholder',
         'Activate the products in your own Business App until they are ready'
       ],
       correctIndex: 0,
-      explanation: 'The onboarding email is a checkbox, not an obligation. Create everything now, leave the email unsent, and send it from the user\'s row when the moment is right.'
+      explanation: 'Inviting a user is what sends the onboarding email, so hold the invite rather than the setup. The account and products can be ready today; the panel will suggest the person by name from the CRM when you are ready to invite them.'
     },
     {
       type: 'mcq',
