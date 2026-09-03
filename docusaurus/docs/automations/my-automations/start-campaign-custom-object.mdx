@@ -1,0 +1,68 @@
+---
+title: Start a campaign for a custom object
+description: Learn how to use the Start a campaign for a custom object action to enroll the contacts associated with a custom object record in an email campaign.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, campaigns, email, custom-objects]
+keywords: [start campaign custom object, custom object campaign, associated contacts, enroll campaign, campaign automation, parent contact]
+---
+
+# Start a campaign for a custom object
+
+**Start a campaign for a custom object** enrolls the contacts associated with a custom object record in a specified email campaign. Use it when the record in your automation is a custom object, such as a class enrollment, a pet, or a vehicle, but the people you want to email are the contacts linked to that record, such as a parent or an owner.
+
+This action is available on custom-object-scoped triggers and requires **Campaigns Pro**.
+
+:::info
+This step is currently in **draft**, so it is available to Vendasta staff and trusted testers while it is being finalized.
+:::
+
+## How it works
+
+1. The automation reaches the step with a custom object record in scope
+2. The step looks up the contacts associated with that record
+3. Up to 50 associated contacts are enrolled in the selected campaign
+4. Each contact receives the campaign emails
+5. The automation continues to the next step
+
+If the record has no associated contacts, the step fails with the message *No contacts are associated with this record, so there was no one to enroll in the campaign*, and the failure appears in the automation activity. Nobody is enrolled. A campaign can only be started once for each contact, and a contact linked to the same record more than once is enrolled once.
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Campaigns and emails**, select **Start a campaign for a custom object**
+3. Select the campaign to start
+
+The custom object type is inferred from the trigger or from a preceding step such as **Find custom object**, so there is nothing else to configure.
+
+## Outputs
+
+| Output | Description |
+| --- | --- |
+| **Campaign** | The campaign that was started. |
+| **Contacts** | The contacts that were enrolled in the campaign. |
+
+## Use case example
+
+### Follow up with a parent after a class ends
+
+A tutoring business tracks each child's class registration as a custom object, and the parent is the contact associated with it. When a registration is added to a **Completed Art 101** list, the business wants to invite the parent to next season's class.
+
+**Step 1 — Set the trigger**
+
+Select **A custom object is added to a list** (under Custom objects) and choose the **Completed Art 101** list.
+
+**Step 2 — Add the Start a campaign for a custom object step**
+
+- Under **Campaigns and emails**, select **Start a campaign for a custom object**
+- Select the **Next season's classes** campaign
+
+The parent linked to the registration is enrolled in the campaign. If a registration has no parent linked to it, the step fails for that record and the automation activity shows the reason, so the team can fix the record.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Start a campaign for the contact](./start-campaign-contact.mdx) — Enroll a single contact
+- [Start a campaign for the company](./start-campaign-company.mdx) — Enroll all contacts on a company
+- [Find custom object](./find-custom-object.mdx) — Bring a custom object record into scope
+- [A custom object is added to a list](./trigger-custom-object-added-to-list.mdx) — Trigger on list membership
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows
