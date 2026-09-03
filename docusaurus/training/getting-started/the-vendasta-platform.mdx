@@ -13,8 +13,6 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import LessonSection from "@site/src/components/LessonSection";
-import LabCallout from "@site/src/components/LabCallout";
-import LabChecklist from "@site/src/components/LabChecklist";
 import KeyPoints from "@site/src/components/KeyPoints";
 import aiReceptionistFace from './img/ai-receptionist-face.png';
 import aiReputationSpecialistFace from './img/ai-reputation-specialist-face.png';
@@ -26,8 +24,7 @@ import aiReputationSpecialistFace from './img/ai-reputation-specialist-face.png'
 <LessonHeader
   difficulty="Beginner"
   topics={["Partner Center", "Business App", "AI Workforce"]}
-  time="about 12 minutes"
-  lab
+  time="about 10 minutes"
   required={["Partner Center admin access"]}
   pathName="Get set up"
   step={1}
@@ -37,7 +34,7 @@ import aiReputationSpecialistFace from './img/ai-reputation-specialist-face.png'
     "Name what the platform gives you beyond products: the CRM, Vendasta Services, and billing",
     "Say which workspace any task belongs to: Partner Center or Business App",
     "Place any AI Employee in the workspace it belongs to, before you configure it",
-    "Give each person on your team the right view of Partner Center",
+    "Say which view of Partner Center each role on your team gets",
   ]}
 />
 
@@ -73,7 +70,7 @@ And everything you run can be white label: the platform, the products you resell
 
 ## One platform to run your business
 
-The building blocks do the work; the toolkit around them runs the business. With Vendasta you get the full infrastructure: client management, a catalog of products to resell, automation, billing, and a fulfillment team, all under your own brand. You do not have to use all of it right away. Most partners get one AI Employee running for a client, or lead with a single package that bundles the products a vertical needs, and grow into the rest from there.
+The building blocks do the work; the toolkit around them runs the business. With Vendasta you get the full infrastructure: client management, a catalog of products to resell, automation, billing, and a fulfillment team, all under your own brand. You do not have to use all of it right away. Start where the value lands fastest: one AI Employee running for a client, or a single package that bundles the products a vertical needs, and grow into the rest from there.
 
 Alongside the products you resell, three pieces of that toolkit carry the day-to-day:
 
@@ -119,49 +116,7 @@ Here is how the split plays out in practice, side by side:
 | **Calendars** | Connect your calendar in My Meetings so booking works everywhere | Their meeting scheduler, once they have Conversations AI |
 | **Products** | Choose what to sell and build packages in the Marketplace | Every product you activate appears as a dashboard for them |
 
-Each row on this table becomes hands-on later in this learning path; for now, the pattern is the takeaway. Set yourself up once on the left, then repeat the client side of the ritual for every business you bring on.
-
-
-</LessonSection>
-
-## Two ways your team sees Partner Center
-
-Your team works in Partner Center, and each person's role decides how much of it they see. An **Admin** gets the full workspace: accounts, billing, branding, and administration, the right fit for decision-makers, managers, and operations. A **Salesperson** gets a focused view: Opportunities and My Meetings in Partner Center, for pipeline and client communication. (A third role, **Digital Agent**, sees only Task Manager rather than Partner Center; it belongs to fulfillment work later on.) Running solo? You are the Admin, and the CRM view is where your selling happens.
-
-Permissions go finer than the two roles. You can restrict an Admin from specific areas, such as billing reports, platform customization, or creating other Admins. Most people on your team should hold at least some admin access, because permissions can narrow it afterward; defaulting everyone to Salesperson just to limit access gives them less than they need.
-
-<LabCallout title="see your team, and add one person">
-Go to `Administration` → `My team`.
-
-<LabChecklist
-  storageKey="the-vendasta-platform-lab-1"
-  steps={[
-    <>Read the banner at the top. It names how many seats your plan includes and what an additional seat costs per month.</>,
-    <>Look at the list. Every person shows their role in the <strong>Role</strong> column: Admin, Salesperson, or Digital Agent.</>,
-    <>Select <code>Invite team member</code> in the upper right.</>,
-    <>Enter their first name, last name, and email.</>,
-    <>Tick the roles they need. They are checkboxes, so one person can hold more than one.</>,
-    <>Select <code>Send</code>.</>,
-  ]}
-  confirm={<>The person appears on My team with their roles beside their name, and a welcome email is on its way to them with a link to set a password.</>}
-/>
-</LabCallout>
-
-Permissions and market access are set after the person exists, not in the invite panel. Working solo today? Open `My team` anyway and read your own row. Knowing where roles live is what makes the first hire a two-minute job instead of a search. [This guide covers every role and permission in full](/getting-started/getting-started-guides/getting-started-with-your-team).
-
-![The My Team page in Partner Center, listing each team member with their role beside their name: Admin, Salesperson, or Digital Agent](./img/my-team-roles.jpg)
-
-<LessonSection>
-
-## The boundary in practice
-
-Two placements follow the whose-workspace rule and are worth knowing before they come up.
-
-**SMS registration lives with the client.** United States carriers require a business to register before it sends SMS messages (the registration is called A2P, application-to-person). The registration belongs to the business sending the texts, so it happens in that client's Business App, under `Administration` → `Conversation Settings`. [This guide covers the registration](/business-app/conversations/sms/us-businesses-sms-registration).
-
-![The SMS Registration card in Business App, showing a Not submitted status and the Register now button](./img/sms-registration-card.jpg)
-
-**A CRM contact is not a Business App user.** A contact is someone you are talking to: a record in your CRM. A user is someone you have invited into Business App, where they can log in and use their tools. Contacts never become users on their own; you invite them — the Invite users panel even suggests your CRM contacts as you type — and the onboarding email goes out when their products are ready for them.
+Set yourself up once on the left, then repeat the client side of the ritual for every business you bring on.
 
 </LessonSection>
 
@@ -184,13 +139,51 @@ Every AI Employee has a home base, and the rule for finding it is simple: **an A
   ]}
 />
 
-Pick the workspace first and everything downstream lands where you expect: channels, knowledge, conversations, and leads. Remember how they arrive: you sell products, and the AI Employee is what the product unlocks; there is no employee for sale on its own. When you are ready to configure one, [this guide will help](/ai).
+Pick the workspace first and everything downstream lands where you expect: channels, knowledge, conversations, and leads. When you are ready to configure one, [this guide will help](/ai).
+
+:::tip Start SMS registration early
+A client whose AI Employee texts United States numbers registers their business with the carriers first (the registration is called A2P). It happens in their Business App, under `Administration` → `Conversation Settings`, and verification runs from one week up to a month, so start it as soon as a client plans to text, with their website and privacy policy live before you submit. Businesses outside the United States have nothing to register today. [This guide covers what the carriers check](/business-app/conversations/sms/us-businesses-sms-registration).
+:::
+
+<LessonSection>
+
+## Three roles on your team
+
+One more piece of Partner Center is yours to set: who on your team gets into it, and how much of it they see. Three roles cover everyone. Flip each one:
+
+<IconFlipCardGrid>
+  <IconFlipCard
+    gradient="blue"
+    front="Admin"
+    back="The full workspace: accounts, billing, branding, and administration. The right fit for decision-makers, managers, and operations. Running solo, this is you."
+  />
+  <IconFlipCard
+    gradient="green"
+    front="Salesperson"
+    back="A focused view of Partner Center: Opportunities and My Meetings, for working pipeline and talking to clients."
+  />
+  <IconFlipCard
+    gradient="purple"
+    front="Digital Agent"
+    back="A fulfillment seat. It opens Task Manager rather than Partner Center, so it belongs to the people delivering work rather than selling or running it."
+  />
+</IconFlipCardGrid>
+
+Permissions go finer than the roles themselves. You can restrict an Admin from specific areas, such as billing reports, platform customization, or creating other Admins. Most people on your team should hold at least some admin access, because permissions can narrow it afterward; defaulting everyone to Salesperson just to limit access gives them less than they need.
+
+Your team lives under `Administration` → `My team`. Each person's row carries their role in the **Role** column, and a banner at the top of the page names how many seats your plan includes and what an additional seat costs per month. `Invite team member` in the upper right asks for a first name, last name, email, and the roles they hold; the roles are checkboxes, so one person can hold more than one. Permissions and market access are set after the person exists, rather than in the invite panel.
+
+[This guide covers every role and permission in full](/getting-started/getting-started-guides/getting-started-with-your-team).
+
+![The My Team page in Partner Center, listing each team member with their role beside their name: Admin, Salesperson, or Digital Agent](./img/my-team-roles.jpg)
+
+</LessonSection>
 
 <SectionFeedback courseId="the-vendasta-platform" site="vendasta_learn" section="content" />
 
 <KnowledgeCheck courseId="the-vendasta-platform" site="vendasta_learn"
   sessionSize={3}
-  intro="Three quick questions on the model, the two workspaces, and where things happen for you versus for a client."
+  intro="Three quick questions on the model, the two workspaces, where things happen for you versus for a client, and who on your team sees what."
   questions={[
     {
       type: 'mcq',
@@ -278,15 +271,15 @@ Pick the workspace first and everything downstream lands where you expect: chann
     },
     {
       type: 'mcq',
-      question: 'A business owner you have been emailing for weeks sits in your CRM. She asks why she cannot log in to the app you keep mentioning. What is going on?',
+      question: 'A new operations manager needs most of Partner Center, but should not be able to create other Admins. How do you set them up?',
       options: [
-        'A contact is not a user; she can log in once you invite her as a user and the onboarding email goes out',
-        'Her CRM company record has to sync overnight before her access begins',
-        'Her login activates automatically once her first invoice is generated in Commerce',
-        'Contacts log in through Vendor Center rather than Business App'
+        'Give them Admin, then restrict that one area in their permissions',
+        'Give them Salesperson, which leaves administration out entirely',
+        'Give them Digital Agent, then add the areas they need',
+        'Share an existing Admin login with them for the areas they need'
       ],
       correctIndex: 0,
-      explanation: 'A contact is someone you are talking to; a user is someone you have invited into Business App. You invite her as a user, and the onboarding email goes out when her products are ready for her.'
+      explanation: 'Permissions go finer than the roles themselves, and an Admin can be restricted from specific areas such as creating other Admins. That is why most of your team starts with some admin access rather than the narrower role.'
     }
   ]}
 />
