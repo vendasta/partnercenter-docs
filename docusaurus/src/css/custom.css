@@ -2559,3 +2559,108 @@ div[class*="language-"] pre {
   vertical-align: -0.12em;
   margin-right: 0.35rem;
 }
+
+/* ── Pitch scripts (Sell the AI Workforce, per-industry tabs) ─────────────── */
+
+/* Four-up stat cards, mirroring the marketing pitch guides' stat row. */
+.pitch-stats-wrap {
+  margin: 1.5rem 0;
+}
+.pitch-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.pitch-stat {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 1rem 0.9rem;
+  text-align: center;
+}
+.pitch-stat__figure {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #3f9b63;
+}
+.pitch-stat__caption {
+  font-size: 0.82rem;
+  line-height: 1.35;
+  margin-top: 0.35rem;
+  color: var(--ifm-color-emphasis-700);
+}
+.pitch-stats__source {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-600);
+  margin: 0.6rem 0 0;
+}
+@media (max-width: 768px) {
+  .pitch-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Numbered stage bar down the call. */
+.pitch-stage {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 1.75rem 0 0.9rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 6px;
+  background: #072337;
+}
+.pitch-stage__num {
+  flex: 0 0 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #3f9b63;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pitch-stage__title {
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* A line the rep says out loud. */
+.pitch-say {
+  border-left: 3px solid #3f9b63;
+  background: #f4f9f6;
+  border-radius: 0 6px 6px 0;
+  padding: 0.8rem 1rem;
+  margin: 0.9rem 0;
+  font-size: 1.02rem;
+  line-height: 1.5;
+}
+.pitch-say p:last-child {
+  margin-bottom: 0;
+}
+
+/* Buyer profile block. */
+.pitch-who {
+  border: 1px solid #e0e0e0;
+  border-left: 3px solid #072337;
+  border-radius: 0 8px 8px 0;
+  background: #fafafa;
+  padding: 0.9rem 1.1rem;
+  margin: 1.25rem 0;
+}
+.pitch-who p:last-child {
+  margin-bottom: 0;
+}
+
+[data-theme='dark'] .pitch-stat,
+[data-theme='dark'] .pitch-who {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+}
+[data-theme='dark'] .pitch-say {
+  background: rgba(63, 155, 99, 0.12);
+}

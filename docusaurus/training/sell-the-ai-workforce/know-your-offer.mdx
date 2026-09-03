@@ -15,6 +15,7 @@ import LessonFooter from "@site/src/components/LessonFooter";
 import LessonSection from "@site/src/components/LessonSection";
 import LabCallout from "@site/src/components/LabCallout";
 import LabChecklist from "@site/src/components/LabChecklist";
+import {PitchStats, PitchStage, PitchSay, PitchWho} from "@site/src/components/PitchScript";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import aiReceptionistFace from './img/ai-receptionist-face.png';
@@ -209,22 +210,31 @@ After 5pm, most businesses go dark, and that is when leads slip away. **Keep cap
 
 The default line. If your prospect does not map cleanly to an industry below, this is the one, and the conversation it opens is identical.
 
+<PitchWho>
+
 **Who you are talking to.** Any small or medium business outside the specific trades, retail, professional services, restaurants, B2B, local shops, startups. Usually a lean team where the owner or a couple of staff are doing double duty, answering the phone between everything else that needs doing. The pain is the same everywhere: missed opportunities during busy hours or after hours, and marketing that falls to the bottom of the list.
 
 **Talking to a multi-location owner?** The buyer usually is not the one missing the call personally, it is happening at every location. Lead with consistency across locations, not personal time savings.
 
-**The numbers that land.**
+</PitchWho>
 
-- ~7x more likely to qualify a lead contacted within an hour vs. the next hour
-- 23 percent of companies never respond to an inbound inquiry at all
-- 74 percent of consumers check two or more review sources before choosing a business
-- 32 percent of customers leave a brand they love after just one bad experience
+<PitchStats
+  items={[
+    {figure: '~7x', caption: 'more likely to qualify a lead contacted within an hour than the next hour'},
+    {figure: '23%', caption: 'of companies never respond to an inbound inquiry at all'},
+    {figure: '74%', caption: 'of consumers check two or more review sources before choosing'},
+    {figure: '32%', caption: 'of customers leave a brand they love after one bad experience'},
+  ]}
+  source='Sources: Oldroyd, "The Short Life of Online Sales Leads," Harvard Business Review, 2011; BrightLocal, Local Consumer Review Survey 2025; PwC, "Experience Is Everything" survey.'
+/>
 
-Sources: Oldroyd, "The Short Life of Online Sales Leads," Harvard Business Review, 2011; BrightLocal, Local Consumer Review Survey 2025; PwC, "Experience Is Everything" survey.
+<PitchStage n={1} title="Open the call" />
 
-**1. Open the call**
+<PitchSay>
 
 "Every time a potential customer reaches out and gets a voicemail or a generic 'we will get back to you' email, there is a good chance they are already clicking on your competitor's site. How much revenue is sitting in your voicemail box right now?"
+
+</PitchSay>
 
 Then confirm the pain, fast:
 
@@ -232,7 +242,7 @@ Then confirm the pain, fast:
 - Reviews are hit or miss, rarely asked for?
 - No real follow-up to keep customers coming back?
 
-**2. Discover the gap**
+<PitchStage n={2} title="Discover the gap" />
 
 Ask these in order. Each one has a branch and something to listen for.
 
@@ -255,39 +265,59 @@ Ask these in order. Each one has a branch and something to listen for.
 7. "If every inquiry got a fast response, even during your busiest hours, would that be worth a few minutes?"
    - A "yes" here is the bridge straight into the pitch below.
 
-Make it concrete: their answers to questions 2 and 6 are exactly what feeds the [AI Impact Calculator](https://www.vendasta.com/content-library/tools/ai-impact-calculator/). Plug them in during the call, or send the link after, for a projected annual revenue number instead of a mental estimate.
+:::tip Make it concrete
+Their answers to questions 2 and 6 are exactly what feeds the [AI Impact Calculator](https://www.vendasta.com/content-library/tools/ai-impact-calculator/). Plug them in during the call, or send the link after, for a projected annual revenue number instead of a mental estimate.
+:::
 
-**3. Present the fix**
+<PitchStage n={3} title="Present the fix" />
 
-Recap the gap in their own words: "So inquiries slip through during busy hours, reviews happen by accident, and repeat business is mostly luck. That is [their number] a month walking out the door before anyone even follows up." [PAUSE, let it land]
+Recap the gap in their own words:
 
-Optional: run their Q2 and Q6 numbers through the AI Impact Calculator. A real projected number beats a mental estimate if they push back.
+<PitchSay>
+
+"So inquiries slip through during busy hours, reviews happen by accident, and repeat business is mostly luck. That is [their number] a month walking out the door before anyone even follows up." [PAUSE, let it land]
+
+</PitchSay>
 
 Then three points:
 
-- "First, be the one they find, accurate listings, local SEO, and a review profile people trust before they ever reach out."
-- "Second, be the one they can actually reach, an AI receptionist answers every call, text, or chat, 24/7, so the inquiry does not just disappear. It only picks up after your team does not."
-- "Third, be the one they keep coming back to, once the sale is made or the job is done, review requests go out automatically, and follow-up campaigns keep customers coming back."
+<PitchSay>
 
-**4. Prove it works**
+"First, be the one they find, accurate listings, local SEO, and a review profile people trust before they ever reach out."
+
+"Second, be the one they can actually reach, an AI receptionist answers every call, text, or chat, 24/7, so the inquiry does not just disappear. It only picks up after your team does not."
+
+"Third, be the one they keep coming back to, once the sale is made or the job is done, review requests go out automatically, and follow-up campaigns keep customers coming back."
+
+</PitchSay>
+
+If they push back on the numbers, run their answers to questions 2 and 6 through the calculator right there. A real projected number beats a mental estimate.
+
+<PitchStage n={4} title="Prove it works" />
 
 Nearly a quarter of companies never respond to an inbound inquiry at all. Being the business that always answers, fast, is a real and measurable edge over everyone who does not.
 
 For most small businesses, that looks modest and real: hooking an AI receptionist up to a website typically surfaces 5 to 30 extra leads a month that would have otherwise gone unanswered, at a running cost of about 17 cents an hour.
 
-"Every time we hook it up, we see a minimum of five additional leads, and often as many as 30, that the business would have otherwise missed." — Mark Huffman, President & CEO, Next Level Digital Marketing
+> "Every time we hook it up, we see a minimum of five additional leads, and often as many as 30, that the business would have otherwise missed."
+>
+> Mark Huffman, President and CEO, Next Level Digital Marketing
 
 For a Shopify store, the same idea showed up as a 30 percent increase in sales once an AI receptionist started handling product questions and checkout help around the clock.
 
-Talking to a bigger business? A luxury retail showroom's AI receptionist drives over $200K in monthly pipeline from 80 booked appointments a month. Good to know, but scale the number down to match who you are talking to, the mechanism is the same either way, just fewer zeros for a smaller shop.
+Talking to a bigger business? A luxury retail showroom's AI receptionist drives over $200K in monthly pipeline from 80 booked appointments a month. Good to know, and scale the number down to match who you are talking to: the mechanism is the same either way, just fewer zeros for a smaller shop.
 
 The full versions of all three stories are on the [success stories](https://www.vendasta.com/ai-employee-success-stories/) page.
 
-**5. Close the call**
+<PitchStage n={5} title="Close the call" />
 
 What comes back first is usually worries about losing the personal touch, cost, or "I already have someone answering," all covered in the objection table below.
 
+<PitchSay>
+
 "Worth a few minutes to see this live on your own business number?"
+
+</PitchSay>
 
 Not ready to commit to a live demo? Offer to send the AI Impact Calculator instead: "I will send you a two-minute report with your own numbers so you can see it on paper."
 
