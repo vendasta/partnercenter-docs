@@ -82,8 +82,11 @@ All of this happens through a streaming interface — you see status updates, fi
 
 Every application Vibe generates is built on a modern, production-ready stack:
 
-- **React 18+** with TypeScript
+- **React 19** with TypeScript
+- **TanStack Start** for routing and server rendering
 - **Vite** for fast builds
 - **Tailwind CSS** for styling
 - **shadcn/ui** component library
 - **Lucide** icons
+
+Every one of these is open source. The complete source of any project can be downloaded and hosted anywhere that runs Node.js — see [Vibe portability and code ownership](./vibe-portability.md).
