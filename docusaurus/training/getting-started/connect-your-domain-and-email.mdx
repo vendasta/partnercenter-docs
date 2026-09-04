@@ -36,7 +36,7 @@ import LabChecklist from "@site/src/components/LabChecklist";
     "Set the sender name and address every platform email goes out under",
     "Generate your SPF, DKIM, and DMARC records and add them at your DNS host",
     "Confirm each record validated, and switch your sending over to your domain",
-    "Add the mailing address that keeps your campaigns compliant",
+    "Confirm the mailing address that keeps your campaigns compliant",
   ]}
 />
 
@@ -44,13 +44,15 @@ import LabChecklist from "@site/src/components/LabChecklist";
 
 Connecting your email domain once means every email the platform sends arrives from your business, with your name in the sender line. A Snapshot Report to a prospect, an order waiting for a client's approval, a welcome email to a new Business App user, a marketing campaign: all of it follows the same rule.
 
-Before you connect, platform email sends from a shared Vendasta domain. This is the setup task with the widest reach, because nearly everything you do in the platform produces email at some point. It is also what keeps you out of spam folders. An authenticated domain, a complete business address, and the CAN-SPAM basics on every campaign are the three legs of deliverability, and this step sets up the first two.
+Before you connect, platform email sends from a shared grey-label domain. Connecting your own puts your name in the sender line, which is what mail providers reward and what your clients recognize. A Snapshot Report that reaches the inbox starts a conversation. The same report in a spam folder does not. This is also the setup task with the widest reach, because nearly everything you do in the platform produces email at some point. An authenticated domain, a complete business address, and the CAN-SPAM basics on every campaign are the three legs of deliverability, and this step sets up the first two.
 
-One requirement before you start: your sending address has to live on a domain you own, such as hello@yourbusiness.com. Addresses from free providers like Gmail or Yahoo cannot be authenticated, because authentication records can only be added to a domain you control. If you do not own a domain yet, your own Marketplace carries domain products, and any registrar can sell you one in minutes.
+One requirement before you start: your sending address has to live on a domain you own, such as hello@yourbusiness.com. Addresses from free providers like Gmail or Yahoo cannot be authenticated, because authentication records can only be added to a domain you control. If you do not own one yet, your own Marketplace sells domains.
 
 <LessonSection>
 
-## Set your sender identity and generate your records
+## Choose who your email comes from
+
+Two decisions come first, and both are about what your recipient sees. The **sender name** is the name that shows in their inbox: who the email is from. The **reply address** is where their message goes when they hit reply. After that, the page generates the records that connect your domain, which is the next section.
 
 Three cards stack on this one page: **Sender and reply settings**, **Advanced email settings**, and **Email domains**. Work down them in order, and note that the first two cards each have their own `Save`.
 
@@ -80,6 +82,12 @@ One thing worth knowing about the sender: when a salesperson is assigned to an a
 
 ## Add the records at your DNS host
 
+Your DNS host is wherever your domain is managed: GoDaddy, Cloudflare, Namecheap, Google Workspace, or whoever you bought it from. DNS records are the lines that tell the rest of the internet what your domain is connected to. The ones in this section let the platform send email as your domain, so a message it sends carries your name. They do not change your own inbox, and they do not change how you send email day to day.
+
+:::tip No domain yet
+Start in your own Marketplace rather than going outside for it. `Marketplace` → `Discover Products` carries **GoDaddy Domains** and a general **Domains** product, and [Google Workspace](/marketplace/products/google-workspace-complete-guide), which is where a lot of businesses buy their branded email in the first place. Buying through the Marketplace means the same products are yours to resell to clients who turn up without a domain either.
+:::
+
 The platform generates four records: one DMARC and one SPF as TXT records, and two DKIM records as CNAMEs. Receiving mail servers check them on every incoming message to confirm that email from your domain is legitimate, and until they are in place at your DNS host, nothing changes.
 
 <LabCallout title="copy the four records across">
@@ -104,7 +112,7 @@ If your DNS lives with GoDaddy or Namecheap, [these guides walk through the exac
 
 ## Confirm it verified, then switch over
 
-DNS changes do not take effect the moment you save them. The page says so itself: changes to DNS records may take up to 72 hours to update. That wait is normal, and selecting the domain as your sending address is what actually moves your email across.
+DNS changes do not take effect the moment you save them. The page says so itself: changes to DNS records may take up to 72 hours to update. Most records validate within minutes. Some take closer to 48 or 72 hours, and that is normal. Selecting the domain as your sending address is what actually moves your email across.
 
 <LabCallout title="check the marks, then choose your domain">
 Go back to `Marketing` → `Email settings`.
@@ -113,7 +121,7 @@ Go back to `Marketing` → `Email settings`.
   storageKey="connect-domain-lab-3"
   steps={[
     <>Expand your domain in <strong>Email domains</strong> and read the <strong>Current value</strong> column. It shows the value found at your DNS host, or <code>Not found</code> in red.</>,
-    <>Fix anything reading <code>Not found</code> at your DNS host, and check again later in the day.</>,
+    <>Fix anything reading <code>Not found</code> at your DNS host, then check again. Corrected records often appear within minutes.</>,
     <>Watch the domain's own row header. It carries the overall status, and a <strong>Domain authorization required</strong> banner until every record lands.</>,
     <>Once the domain is authorized, set your <strong>Email address</strong> under <strong>Advanced email settings</strong> to that domain, and <code>Save</code> that card.</>,
   ]}
@@ -125,24 +133,11 @@ For a walkthrough of each validation, [this guide covers updating email settings
 
 </LessonSection>
 
-## The address at the bottom
+## The address on every email you send
 
-One more field completes the compliance picture. Commercial email must include your physical mailing address, and the platform prints it in the footer of what you send.
+One more field completes the compliance picture. Commercial email must include your physical mailing address, and the platform prints it in the footer of what you send. It is usually filled in when your account is created, so this is a check rather than a task.
 
-<LabCallout title="add your mailing address">
-Go to `Administration` → `Customize` → `Partner Defaults`.
-
-<LabChecklist
-  storageKey="connect-domain-lab-4"
-  steps={[
-    <>Open the <strong>Partner defaults</strong> tab, then expand the <strong>Email Settings</strong> accordion. The page opens with every section collapsed, so nothing is visible until you do.</>,
-    <>Scroll to <strong>Required contact information for campaigns</strong>.</>,
-    <>Fill in <code>Address</code>, <code>City</code>, <code>Country</code>, state or province, and <code>Zip / Postal Code</code>.</>,
-    <>Save.</>,
-  ]}
-  confirm={<>Your address is stored, and every campaign you send from here carries a compliant footer.</>}
-/>
-</LabCallout>
+It lives at `Administration` → `Customize` → `Partner Defaults`, on the **Partner defaults** tab, inside the **Email Settings** accordion, under **Required contact information for campaigns**: address, city, country, state or province, and postal code. The page opens with every section collapsed, so expand the accordion to see it.
 
 One requirement catches teams later, so it is worth knowing now: every user who sends email from the platform needs a verified email address. Yours verifies during signup, and as you add teammates, [the verification guide covers theirs](/administration/my-account/my-team/email-verification). [The requirements guide lists the full set](/marketing/email-settings/email-settings-requirements).
 

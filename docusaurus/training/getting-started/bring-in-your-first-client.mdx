@@ -26,7 +26,7 @@ import LabChecklist from "@site/src/components/LabChecklist";
   lab
   required={[
     "Partner Center admin access",
-    "A real local business to bring in, or one you invent for practice",
+    "A real or invented local business to bring in",
   ]}
   pathName="Get set up"
   step={6}
@@ -100,6 +100,8 @@ Editions matter more than they look: a client on the wrong edition is either mis
 ## Create the client's user
 
 A **user** is a person who can log in to the account's Business App: the owner, their office manager, anyone at the business who will work the tools you just activated. Products belong to the account; users are the people who use them. Until a user exists, everything you have set up is running with nobody from the business in it.
+
+A user is not the same as a CRM contact either. A contact is someone you are talking to, a record in your CRM inside Partner Center. A user is someone you have invited into Business App, where they can log in and use their tools. Contacts never become users on their own: you invite them, and the panel suggests your CRM contacts as you type.
 
 Order matters here, and the platform tells you why: a user with no active products logs in to an empty Business App. Activate first, create the user second, and their first login lands on working tools instead of a blank page.
 
@@ -199,6 +201,18 @@ From here the relationship runs on rails you already know: their conversations a
       ],
       correctIndex: 0,
       explanation: 'Business App shows the client their own business through your brand. Wholesale costs, margins, and other clients exist only on your side of the platform.'
+    },
+    {
+      type: 'mcq',
+      question: 'A business owner you have been emailing for weeks sits in your CRM. She asks why she cannot log in to the app you keep mentioning. What is going on?',
+      options: [
+        'A contact is not a user; she can log in once you invite her as a user and the onboarding email goes out',
+        'Her CRM company record has to sync overnight before her access begins',
+        'Her login activates automatically once her first invoice is generated in Commerce',
+        'Contacts log in through Vendor Center rather than Business App'
+      ],
+      correctIndex: 0,
+      explanation: 'A contact is someone you are talking to; a user is someone you have invited into Business App. You invite her as a user, and the onboarding email goes out when her products are ready for her.'
     },
     {
       type: 'truefalse',
