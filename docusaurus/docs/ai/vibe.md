@@ -1,5 +1,6 @@
 ---
 title: Vibe
+sidebar_position: 4
 description: Build fully functional web applications using plain language with Vibe, Vendasta's AI-powered application builder available in Business App.
 tags: [ai, vibe, app-builder, business-app]
 keywords: [Vibe, AI app builder, web application, React, natural language, no-code, low-code, Business App]

@@ -1,6 +1,7 @@
 ---
 id: vibe-portability
 title: Download and host a Vibe project elsewhere
+sidebar_position: 5
 description: Vibe projects are built on open frameworks. Download the complete source code and run it on any host that supports Node.js.
 tags: [ai, vibe, app-builder, hosting, portability, open-source]
 keywords: [Vibe portability, download Vibe project, self-host Vibe, TanStack Start, React, Vibe source code, Vibe hosting, Vibe export]
