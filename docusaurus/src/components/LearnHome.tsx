@@ -13,6 +13,11 @@
 // - Product courses: unmaintained LMS import pending retirement — see
 //   training/products/index.mdx.
 // - Build with Vibe: stub path, hidden via its _category_.json file.
+// - AI foundations: hidden 2026-09-03 (Cal) pending a decision on whether the
+//   path is needed at all, now that the AI Workforce paths carry the concepts
+//   where they are used. Restore by re-adding its card to PATHS, putting
+//   AI_FOUNDATIONS_ITEMS back into the "Putting AI to work" facet, and dropping
+//   className from training/ai-foundations/_category_.json.
 // (Builder and Build lab were merged into one visible path, Wire your AI
 //  Workforce to act, on 2026-08-29 and are no longer hidden.)
 
@@ -49,18 +54,6 @@ const PATHS: HomePathCard[] = [
     gate: "About 2 hours 10 minutes",
     cta: "Start",
     to: "/learn/getting-started",
-    tone: "purple",
-  },
-  {
-    id: "ai-foundations",
-    kicker: "Understand AI",
-    title: "AI foundations",
-    blurb: "How AI Employees actually work: models, knowledge, capabilities, tools, and automations.",
-    tag: "AI",
-    scope: ["6 lessons"],
-    gate: "About 40 minutes",
-    cta: "Start",
-    to: "/learn/ai-foundations",
     tone: "purple",
   },
   {
@@ -161,6 +154,9 @@ const GETTING_STARTED_ITEMS: ExplorerItem[] = [
   { title: "Get set up skill check", to: "/learn/getting-started/get-set-up-skill-check" },
 ];
 
+// Unused while AI foundations is hidden. Kept deliberately: the restore note at
+// the top of this file points at it, so the lesson list does not have to be
+// rebuilt by hand if the path comes back.
 const AI_FOUNDATIONS_ITEMS: ExplorerItem[] = [
   { title: "From work to AI workforce", to: "/learn/ai-foundations/from-work-to-ai-workforce" },
   { title: "How AI Employees think", to: "/learn/ai-foundations/how-ai-employees-think" },
@@ -238,7 +234,7 @@ const FOCUS_AREAS: ExplorerFacet[] = [
   { id: "setting-up", label: "Setting up your platform", items: GETTING_STARTED_ITEMS },
   { id: "selling-ai", label: "Selling the AI Workforce", items: SELL_AI_ITEMS },
   { id: "selling", label: "Learning how to sell", items: SALES_ITEMS },
-  { id: "ai-to-work", label: "Putting AI to work", items: [...AI_FOUNDATIONS_ITEMS, ...AI_WORKFORCE_ITEMS, ...GROW_AI_ITEMS] },
+  { id: "ai-to-work", label: "Putting AI to work", items: [...AI_WORKFORCE_ITEMS, ...GROW_AI_ITEMS] },
   { id: "connecting", label: "Connecting your own systems", items: BUILDER_ITEMS },
   { id: "delivering", label: "Partnering with our services team", items: SERVICES_ITEMS },
 ];
