@@ -1,0 +1,92 @@
+---
+description: "Requires an inline source citation on every new factual claim in Learn tab training content — numbers, limits, entitlements, defaults, and UI paths."
+globs: ["docusaurus/training/**/*.mdx"]
+---
+
+CRITICAL: In `docusaurus/training/**`, a new factual claim ships with its source or it does not ship.
+
+Partners act on this content without re-checking it, and a wrong number in a course is repeated by
+reps to clients. Someone has to be able to audit every claim later without guessing where it came
+from. That is the whole point of the rule.
+
+## What must carry a citation
+
+Add a citation when you introduce or change any of these:
+
+- **Any number tied to the product or the market** — counts, caps, limits, percentages, multipliers,
+  prices, word counts, page counts, language counts, turnaround times, SLAs, trial durations.
+- **Entitlement and availability claims** — a feature requiring, being gated behind, included in,
+  free on, or limited to a named SKU or tier.
+- **Product, SKU and tier names** when the claim is about what that product is or does, not just a
+  passing mention. "Reputation AI Standard limits review sources to Google and Facebook" needs a
+  source. "Open Reputation AI" does not.
+- **Defaults and settings values** — "defaults to Level 3: Autonomous", "the default sending domain
+  is smblogin.com".
+- **UI navigation paths** — "Administration → SMS configuration".
+- **Third-party and market statistics** — anything attributed to a research publisher, and anything
+  a reader would read as research even if unattributed.
+
+## What does not need one
+
+Skip general marketing copy, opinion and framing, In Practice narratives and sales anecdotes,
+learning objectives, and anything the reader will obviously take as illustrative rather than factual.
+Do not add placeholder comments like "SOURCE NEEDED" — either cite it, waive it explicitly, or cut
+the claim.
+
+## The two forms
+
+Use `Source:` when the source confirms the claim:
+
+```jsx
+{/* Source: https://docs.vendasta.com/crm/ — verified 2026-08-05 */}
+```
+
+Use `Audit:` when the source contradicts the claim, only partly supports it, or the claim is on hold
+pending a product team's answer. Say what the finding was, then give the source:
+
+```jsx
+{/* Audit 2026-08-05: the 25-widget cap appears nowhere outside the docs corpus — flagged to the MS team to confirm or remove. Source: https://vendasta.jira.com/wiki/spaces/MS/pages/3356491826/Change+Vendasta+Services+Website+Naming */}
+```
+
+Keeping the two distinct is what lets the next auditor tell a confirmation from a contradiction
+without re-reading the source.
+
+If a claim genuinely cannot be sourced and you are keeping it anyway, mark it so the reason survives:
+
+```jsx
+{/* no-source-needed: partner-reported field result, presented as an anecdote */}
+```
+
+## Where to put it
+
+- **List items and table rows:** append the comment inline at the end of the same line. A JSX
+  expression on its own line between bullets or table rows splits the list or table.
+- **Paragraphs:** put the comment on its own line directly after the paragraph.
+- Comments render as nothing on the site. They are for the next person reading the source.
+
+## Sourcing discipline
+
+- **Never compose a URL from memory.** Fetch the page and confirm it contains the claim before citing
+  it. A citation that does not support its claim is worse than no citation, because the next auditor
+  trusts it and moves on.
+- Prefer, highest to lowest: `docs.vendasta.com`, Confluence at `vendasta.jira.com/wiki`,
+  `support.vendasta.com`, `vendasta.com` and `servicesdocs.io`, then a named external publisher with
+  a date. Cite the best available source rather than skipping the claim.
+- Include the verification date. A source that was right in 2026 is evidence about 2026, not forever.
+- When two sources conflict, cite both in an `Audit:` comment and name the team who decides. Do not
+  silently pick one.
+
+## Keep every copy of the claim in sync
+
+Training pages repeat the same fact in body copy, FlipCards and Knowledge Check answers. When you
+change or cite a number, grep the file for it and update every instance. A corrected body paragraph
+sitting above a quiz that still teaches the old number is worse than either alone, because the
+learner is tested on the wrong answer.
+
+## Related
+
+- The [Learn tab content audit sheet](https://docs.google.com/spreadsheets/d/1p8mzuaFeZxkFPxKZR72ynybf5gShepfJGSRL0T7-CGU/edit) tracks which claims have been
+  verified, which are on hold, and who owns each open question. Add a row there when you leave
+  something unresolved.
+- `scripts/check_source_citations.py` flags uncited claims on pull requests. It is advisory, not a
+  gate, and it will miss things. It is not a substitute for citing as you write.
