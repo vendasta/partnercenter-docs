@@ -126,11 +126,24 @@ This part runs across several Stripe screens, it asks for government ID, and app
 
 ![The first screen of the Vendasta Payments application, a Stripe form asking for the type of business](./img/vendasta-payments-application.jpg)
 
-Once you are approved, payments your clients make appear under `Commerce` → `Payments`. Stripe holds your first payments while it verifies the bank account you added, which takes up to a week, and pays out on a seven-day rolling basis after that, into the account you just added. The full field-by-field detail is in [the Vendasta Payments guide](/administration/commerce/vendasta-payments/).
+Once you are approved, payments your clients make appear under `Commerce` → `Payments`. A payment normally reaches your bank 1 to 2 business days after it is charged. The first one is the exception: the bank runs its own verification on it, so that transaction can take 7 to 10 business days to land. The full field-by-field detail is in [the Vendasta Payments guide](/administration/commerce/vendasta-payments/).
 
-:::tip Try it now
-Get that first hold out of the way before a client is waiting on it. Put a one-dollar retail price on a product, activate it on an account of your own, and pay the invoice. Stripe runs its bank verification on that transaction, so the wait is behind you by the time real revenue arrives.
-:::
+That first wait is worth spending on yourself rather than on a client.
+
+<LabCallout title="clear the first-payment wait">
+Go to `Marketplace` → `Products`, with your own account to hand.
+
+<LabChecklist
+  storageKey="connect-payments-lab-2"
+  steps={[
+    <>Set a one dollar retail price on any product you can activate.</>,
+    <>Activate it on an account of your own.</>,
+    <>Pay the invoice, so a real transaction runs end to end.</>,
+    <>Put the retail price back to where you want it.</>,
+  ]}
+  confirm={<>The bank has run its verification on a one dollar charge of yours, so the 7 to 10 day wait is behind you before a client's money is in it.</>}
+/>
+</LabCallout>
 
 <LessonSection>
 
@@ -163,7 +176,7 @@ The page carries a `Memo` field as well, which prints at the bottom of every inv
 
 ## Where your retail prices live
 
-Pricing is yours to control, and automatic collection depends on it: without a retail price on an edition, there is no amount for it to calculate. Products arrive carrying the vendor's suggested retail price, so a number is already there and nothing is blocking your first sale.
+Pricing is yours to control, and automatic collection depends on it: without a retail price on an edition, there is no amount for it to calculate. Products arrive carrying the vendor's suggested retail price, so a number is already there and nothing is blocking your first sale. Those suggestions run on the conservative side, though, and raising them is the norm rather than the exception, so treat the number you inherit as a floor rather than a recommendation.
 
 Your prices live at `Marketplace` → `Products`, on a product's `Product info` tab, in the **Product settings** section, where **Retail price** lists each edition separately. Your **wholesale cost** lives elsewhere: `Marketplace` → `Discover Products` carries `Your cost` columns beside the vendor's suggested retail, which is where you check margin before you set a number.
 
