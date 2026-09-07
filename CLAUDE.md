@@ -57,6 +57,11 @@ URL redirects are managed in `docusaurus.config.ts` via `@docusaurus/plugin-clie
 - Sentence case headings: `## Set up a domain`
 - `code` for UI elements (buttons, tabs, menu paths, field names), commands, and filenames — e.g. `Save`, `Settings` → `Integrations`. **Bold** is for emphasis only, not a substitute for inline code on UI elements
 
+### Audience
+
+- **The reader IS the partner. Never describe them in the third person.** No "most partners," "many partners," "some partners," "partners often," "agencies," or "the agency" when the phrase means the person reading. Write "you" and "your clients". This applies to `docs/` and `training/` alike.
+- Aggregate framing ("most partners do X") is almost always there to soften a recommendation. Cut the clause, address the reader directly, or name the moment instead of the crowd.
+
 ### Frontmatter
 
 ```yaml

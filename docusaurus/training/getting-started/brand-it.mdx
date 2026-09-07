@@ -26,7 +26,8 @@ import LabChecklist from "@site/src/components/LabChecklist";
   lab
   required={[
     "Partner Center admin access",
-    "Your logo as a PNG with a transparent background, and your brand's hex color",
+    "Your logo as a PNG with a transparent background",
+    "Your brand's hex color",
   ]}
   pathName="Get set up"
   step={4}
@@ -92,11 +93,13 @@ Go to `Accounts` → `Manage Business App` → `Customize Business App` → `Bra
 
 The footer pulls your agency name and website from your Company Profile, so fill that in first if the fields look empty. That backlink is worth switching on deliberately: it earns SEO value from every client site running your widget.
 
+One thing to know before you rename: the client-facing documentation at [docs.businessapp.io](https://docs.businessapp.io) says "Business App" throughout. It stays a strong reference for you and your team, and once your clients know the workspace by your name, a link straight into it will not match what they see on screen. If the branding matters more to you, rename and keep product questions with your team or in the platform. Decide it now, while the rename is still in front of you.
+
 <LessonSection>
 
 ## Decide what clients see
 
-You choose which pages appear when a client logs in. Hiding a page removes it from their navigation without disabling anything underneath it, so this is about focus rather than restriction.
+You choose which pages appear when a client logs in. Hiding a page removes it from their navigation without disabling anything underneath it.
 
 <LabCallout title="set your page visibility">
 Go to `Customize Business App` → `Pages`.
@@ -122,7 +125,7 @@ A useful starting point, page by page:
 | **Projects** | You deliver project-based services | You do not run fulfillment workflows |
 | **Invoices** | Clients manage their own billing | You bill outside the platform |
 
-**Home** stays on for everyone, and **Executive Report** earns its place whenever a client wants proof of performance. Page visibility applies to every client at once, or per market if you use them, so this is a decision about how you work rather than about one client.
+**Home** stays on for everyone, and **Executive Report** earns its place whenever a client wants proof of performance. Page visibility applies to every client at once, or per market if you use them.
 
 </LessonSection>
 
@@ -134,7 +137,9 @@ Two pieces of the brand story are decided by your subscription rather than by th
 **White label** depends on your plan. On plans that include it, the platform carries your brand with no mention of Vendasta, in Partner Center and in every client's Business App. Free tiers do not include it, and some white-label options vary by plan. **Custom domains** are available on select plans as well. [Plan details are on the pricing page](https://www.vendasta.com/pricing).
 :::
 
-A **custom domain** is the piece most often mistaken for a first-day task. It lets clients and salespeople reach the platform through a link that carries your brand, such as app.youragency.com, instead of a default URL. Treat it as an upgrade to plan for rather than something to chase now, and set the expectation with clients accordingly.
+A **custom domain** lets clients and salespeople reach the platform through a link that carries your brand, such as app.youragency.com, instead of a default URL. It is also the one branding job that is not a switch you flip: you send your domain preferences on [this form](https://custom-domains-form.marketingservices.dev/), Vendasta emails you back the TXT and CNAME records, you add them at your DNS host, and Vendasta verifies them and completes the setup.
+
+Because it runs through people and DNS on both sides, start it early if a branded URL matters to you, rather than the week you need it. [This guide covers the domain options](/partner-center/#customize-your-domains).
 
 :::tip Try it now
 Open Business App the way a client would and look at it end to end: the name in the navigation, your logo, the color, the tab icon. That is the first thing every client you bring on will see.
