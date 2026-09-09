@@ -1,6 +1,7 @@
 ---
 title: Build a Custom AI Employee
 sidebar_position: 5
+sidebar_class_name: hide-from-sidebar
 description: Design an AI Employee from an outcome, set its role, connect knowledge and capabilities, add one custom tool, and test it before calling it done.
 ---
 
@@ -25,10 +26,7 @@ import LessonSection from "@site/src/components/LessonSection";
   time="about 18 minutes"
   required={["Partner Center access on a Professional plan or higher", "A simple API to test against, or dummyjson.com's free public order-lookup endpoint, used as the example in this step"]}
   lab
-  pathName="Hire your first AI Employee"
-  step={5}
-  totalSteps={7}
-  outcomes={[
+    outcomes={[
     "Start a custom AI Employee from an outcome statement, not a feature list",
     "Write a role and connect the knowledge and capabilities that outcome needs",
     "Shape what it will and won't do through its role and capabilities, not a dial",
@@ -60,7 +58,7 @@ Go to `AI` → `Workforce`, then `Create`.
   steps={[
     <>Give it a name and avatar that fit the role.</>,
     <>Note what it can do on its own. A custom employee runs at the same autonomy the platform sets for you: it manages full conversations, captures leads, and books, and every conversation stays reviewable. There is no level to choose here, so what shapes its behaviour is the role, the knowledge and the capabilities you give it next.</>,
-    <>In Purpose, write the role prompt: who it is, its tone, and the one outcome it exists for.</>,
+    <>In Purpose, write the behaviour prompt: who it is, its tone, and the one outcome it exists for.</>,
   ]}
   confirm={<>The employee now exists in your AI Workforce roster, with a profile you can open and edit.</>}
 />
@@ -205,7 +203,7 @@ One tool answering one outcome is a complete employee. Chaining several tools to
   ]}
 />
 
-<LessonFooter to="/learn/ai-workforce/autopilot" pathName="Hire your first AI Employee" step={5} totalSteps={7} />
+<LessonFooter to="/learn/ai-workforce/deploy-a-receptionist-for-a-client" pathName="Hire your first AI Employee" />
 
 </InlineHighlighter>
 <MarkComplete courseId="custom-employee-lab" site="vendasta_learn" />

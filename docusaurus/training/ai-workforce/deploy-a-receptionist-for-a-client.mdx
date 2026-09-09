@@ -1,0 +1,206 @@
+---
+title: Deploy a receptionist for a client
+sidebar_position: 5
+description: "Open a client's Business App from Partner Center, configure the receptionist that belongs to them, register their texting number, and prove it works before you hand it over."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
+
+<InlineHighlighter courseId="deploy-a-receptionist-for-a-client" site="vendasta_learn">
+
+<CourseProgressBar courseId="deploy-a-receptionist-for-a-client" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Intermediate"
+  topics={["AI Receptionist", "Business App", "Onboarding clients"]}
+  time="about 20 minutes"
+  required={["Partner Center admin access", "A client account with Conversations AI active", "Your own receptionist configured"]}
+  lab
+  pathName="Hire your first AI Employee"
+  step={5}
+  totalSteps={5}
+  outcomes={[
+    "Open a client's Business App from Partner Center and reach their AI Workforce",
+    "Configure the receptionist on their account, using the screens you already know",
+    "Register a United States client's texting number before a campaign needs it",
+    "Prove the receptionist works on their account before the client sees it",
+  ]}
+/>
+
+## Open their workspace from yours
+
+The receptionist you built belongs to your business. Your client's receptionist is a separate employee, living on their account, answering with their knowledge and their number. You configure it from their workspace.
+
+Go to `Partner Center` → `Accounts` → `Manage Accounts`, open the account, then select `Open in` → `Business App`. Inside their workspace, `AI` → `Workforce` lists the employees their editions cover.
+
+The Configure page there is the page you have been working on for four steps. On the left: the photo, the `Name` field, the `Autonomy` level, and a `View prompt` button. On the right, in order: **Triggers**, **Profile** holding the **Role**, **Capabilities**, **Knowledge sources**, and **Automations**.
+
+<LabCallout title="reach the client's receptionist">
+Go to `Partner Center` → `Accounts` → `Manage Accounts`.
+
+<LabChecklist
+  storageKey="deploy-for-client-lab-1"
+  steps={[
+    <>Open the client account you created, then select <code>Open in</code> → <code>Business App</code>.</>,
+    <>In their left navigation, open <code>AI</code> → <code>Workforce</code>.</>,
+    <>Find the Chat Receptionist card and select <code>Configure</code>.</>,
+  ]}
+  confirm={<>You are on the client's Configure page, and it is the same page you configured your own receptionist on.</>}
+/>
+</LabCallout>
+
+An employee the client's editions do not cover shows a single `Upgrade to gain access` button in place of `Chat` and `Configure`. That is the edition gate, and it is the fastest way to see what they bought.
+
+<LessonSection>
+
+## Make it theirs
+
+Three things change between your receptionist and your client's. Everything else follows the pattern you already know.
+
+- **The knowledge sources.** Their website, their price list, their policies. The **Business Profile** source is already attached and answers from their business details.
+- **The phone number.** Theirs, on their account.
+- **The website the widget goes on.** Theirs, which means a second embed on a site you may not control.
+
+The **Role** carries your craft, not your content. Write theirs in their words, about their business, with the same shape you used for your own.
+
+<LabCallout title="give the receptionist the client's knowledge">
+Stay on the client's Configure page.
+
+<LabChecklist
+  storageKey="deploy-for-client-lab-2"
+  steps={[
+    <>Under <strong>Knowledge sources</strong>, add the client's website in the <code>Add knowledge</code> field.</>,
+    <>Add their price list, so the answers on price come from a source you can correct.</>,
+    <>Open <strong>Profile</strong> → <strong>Role</strong> and write the client's guardrail in the words their customers use.</>,
+    <>Select <code>Save</code>.</>,
+  ]}
+  confirm={<>The receptionist answers from the client's own material, and the guardrail is theirs rather than a copy of yours.</>}
+/>
+</LabCallout>
+
+Then run the ten-question audit on their business, in `Chat`, the way you ran it on yours. The questions change because their customers ask different things.
+
+</LessonSection>
+
+## Register their texting number
+
+For a business in the United States to send SMS, carriers require registration first, and that registration is called A2P 10DLC. Calls and web chat work right away, and SMS begins only once registration is approved, so start it during onboarding. A client texting only within Canada has nothing to register.
+
+<LabCallout title="start a client's SMS registration">
+Go to that client's `Business App` → `Administration` → `Conversation`.
+
+<LabChecklist
+  storageKey="put-a-receptionist-lab-1"
+  steps={[
+    <>Find the SMS registration card. It shows a <strong>Not submitted</strong> status until the business completes it.</>,
+    <>Select <code>Register now</code> to open the form.</>,
+    <>Save your progress and stop there if you are missing any of the business's legal details. Drafts hold, so nothing you have entered is lost.</>,
+  ]}
+  confirm={<>The registration is open with a draft saved, and you know what you still need from the client to submit it.</>}
+/>
+</LabCallout>
+
+The form asks for the legal business details the carriers require. Fill it in one sitting once you have them. [This guide covers every field in US SMS registration](/business-app/conversations/sms/us-businesses-sms-registration).
+
+<LessonSection>
+
+## Prove it works on their account
+
+Configured is not the same as working. Three checks prove the receptionist before the client meets it, and each one depends on what they bought.
+
+:::info What their edition covers
+Voice needs Conversations AI Premium, and it is available in the United States and Canada. Missed-call text-back needs Conversations AI Pro, and it needs call forwarding set on the client's real line. Web chat works on every edition.
+:::
+
+<LabCallout title="run the go-live test">
+Go to the client's account, with a mobile phone in your hand.
+
+<LabChecklist
+  storageKey="deploy-for-client-lab-3"
+  steps={[
+    <>Send a test web chat from their site. The receptionist responds and the lead appears in their inbox.</>,
+    <>Call the receptionist from your mobile. It answers, greets correctly, and captures a lead.</>,
+    <>Trigger a missed-call text-back, once you have confirmed the edition and the call forwarding.</>,
+  ]}
+  confirm={<>Every channel the client bought has been proven live, on their account, before they have seen any of it.</>}
+/>
+</LabCallout>
+
+</LessonSection>
+
+## Hand it over
+
+Thirty minutes with the client, and they leave knowing where to look. Open `Conversations` and show them where every lead lands. Play back the test call so they hear how their receptionist sounds. Confirm who gets notified, and how. Then take questions.
+
+[Walk your client's first experience](/learn/getting-started/walk-your-clients-first-experience) covers what they saw the day their account opened.
+
+<SectionFeedback courseId="deploy-a-receptionist-for-a-client" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="deploy-a-receptionist-for-a-client" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on where a client's receptionist lives, what changes between theirs and yours, and the go-live test."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A client just bought Conversations AI. Where do you configure their receptionist?',
+      options: [
+        'In Partner Center, on the receptionist you already built',
+        'In their Business App, reached from the account through Open in',
+        'In the Marketplace, on the product listing',
+        'In their Business App, after they invite you as a user'
+      ],
+      correctIndex: 1,
+      explanation: 'Their receptionist is a separate employee on their account. You reach it from Partner Center through the account, using Open in and Business App, and the Configure page is the one you already know.'
+    },
+    {
+      type: 'mcq',
+      question: 'You open a client\'s AI Workforce and the Voice receptionist card shows only Upgrade to gain access. What does that tell you?',
+      options: [
+        'The receptionist is still provisioning and will appear shortly',
+        'Their edition of Conversations AI does not cover voice',
+        'You need to claim a phone number before it activates',
+        'Voice is unavailable in their country'
+      ],
+      correctIndex: 1,
+      explanation: 'A single Upgrade to gain access button in place of the action buttons is the edition gate. Voice needs Conversations AI Premium.'
+    },
+    {
+      type: 'mcq',
+      question: 'What carries across from your own receptionist to the client\'s?',
+      options: [
+        'The knowledge sources, so the answers stay consistent',
+        'The configuration itself, copied from your account to theirs',
+        'The way you write a role and choose knowledge, applied to their business',
+        'The phone number, once you release it'
+      ],
+      correctIndex: 2,
+      explanation: 'Nothing moves between accounts. What you carry is the craft: how you write a role, what you attach as knowledge, and how you audit it. The content is entirely theirs.'
+    },
+    {
+      type: 'mcq',
+      question: 'The client is in Canada and texts only Canadian numbers. What does SMS registration require?',
+      options: [
+        'The same A2P registration, submitted before any texting begins',
+        'Nothing to register',
+        'Registration, but only once they add a United States number',
+        'A separate Canadian carrier form'
+      ],
+      correctIndex: 1,
+      explanation: 'A2P 10DLC registration is a United States carrier requirement. A client texting only within Canada has nothing to register.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/grow-your-ai-workforce" pathName="Hire your first AI Employee" step={5} totalSteps={5} nextPathName="Grow your AI Workforce" />
+
+</InlineHighlighter>
+<MarkComplete courseId="deploy-a-receptionist-for-a-client" site="vendasta_learn" />

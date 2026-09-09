@@ -1,7 +1,7 @@
 ---
 title: Put a receptionist to work
 sidebar_position: 2
-description: "Hire for yourself first, choose chat or voice deliberately, register SMS before it is needed, audit before anyone meets it, and know where the leads land."
+description: "Hire for yourself first, choose chat or voice deliberately, audit before anyone meets it, and know where the leads land."
 ---
 
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
@@ -12,8 +12,6 @@ import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
 import LessonSection from "@site/src/components/LessonSection";
-import LabCallout from "@site/src/components/LabCallout";
-import LabChecklist from "@site/src/components/LabChecklist";
 import KeyPoints from "@site/src/components/KeyPoints";
 import ChatAiIcon from './img/chat-ai-icon.svg';
 import PhoneAiIcon from './img/phone-ai-icon.svg';
@@ -24,17 +22,15 @@ import PhoneAiIcon from './img/phone-ai-icon.svg';
 
 <LessonHeader
   difficulty="Beginner"
-  topics={["AI Receptionist", "AI Workforce", "A2P registration"]}
+  topics={["AI Receptionist", "AI Workforce", "Conversations AI"]}
   time="about 15 minutes"
   required={["Partner Center access", "A website you can add code to"]}
-  lab
   pathName="Hire your first AI Employee"
   step={2}
-  totalSteps={7}
+  totalSteps={5}
   outcomes={[
     "Run a receptionist for your own business, and use it to sell",
     "Choose chat, voice, or both for a given client, and know what the plans gate",
-    "Register a business for SMS before it needs it",
     "Audit any AI Employee with ten questions before clients meet it",
   ]}
 />
@@ -68,53 +64,33 @@ The decision is the client's channels, not the technology:
   ]}
 />
 
-A business can run both, and the same knowledge, purpose, and capabilities serve both channels.
+A business can run both, and the same knowledge, role, and capabilities serve both channels.
 
-Two gates to check before you promise anything: the Chat Receptionist is included from the **Starter** plan; the Voice Receptionist and social channels unlock at **Professional** and above.
+Two gates to check before you promise anything. Your own subscription decides what you can run: the Chat Receptionist is included from the **Starter** plan, and the Voice Receptionist and social channels unlock at **Professional** and above. A client gets whichever edition of Conversations AI is active on their account.
 
 </LessonSection>
-
-## SMS: register the business before it needs it
-
-For a US business to send SMS, carriers require registration first (A2P 10DLC). Calls and web chat work right away, and SMS begins only once registration is approved, so this belongs in onboarding rather than the week a campaign launches. This step assumes the client already has an account with Conversations AI active. [Bring in your first client](/learn/getting-started/bring-in-your-first-client) walks you through the steps required to activate a product on an account.
-
-<LabCallout title="start a client's SMS registration">
-Go to that client's `Business App` → `Administration` → `Conversation`.
-
-<LabChecklist
-  storageKey="put-a-receptionist-lab-1"
-  steps={[
-    <>Find the SMS registration card. It shows a <strong>Not submitted</strong> status until the business completes it.</>,
-    <>Select <code>Register now</code> to open the form.</>,
-    <>Save your progress and stop there if you are missing any of the business's legal details. Drafts hold, so nothing you have entered is lost.</>,
-  ]}
-  confirm={<>The registration is open with a draft saved, and you know what you still need from the client to submit it.</>}
-/>
-</LabCallout>
-
-The form asks for the legal business details the carriers require, and it is worth filling in one sitting once you have them. [This guide covers every field in US SMS registration](/business-app/conversations/sms/us-businesses-sms-registration). Once submitted, tell the client what happens next: approval takes time, and their calls and web chat are unaffected while they wait.
-
-<LessonSection>
 
 ## The ten-question audit
 
 Before a receptionist meets anyone, interview it the way you would interview a new hire. The `Chat` button in `AI` → `Workforce` opens a conversation with it directly, private to you, before any widget is installed.
 
 :::tip Try it now
-Open `Chat` in an incognito window so the conversation starts clean, and ask the ten questions a prospect is most likely to ask, prices included. Repeat the audit after every knowledge change. Every answer you sharpen now is a lead you keep later.
+Open `Chat` in an incognito window so the conversation starts clean, and ask the ten questions a prospect is most likely to ask, prices included. Repeat the audit after every knowledge change.
 :::
 
-</LessonSection>
+<LessonSection>
 
 ## Where the leads land
 
 Every conversation lands in **Conversations**, and captured visitors become contacts, so the receptionist feeds the CRM rather than a silo. Check the **Anonymous Visitors** tab for chats where no contact details were captured, and set up notifications so a person sees new leads quickly; [this guide covers lead capture notifications](/business-app/conversations/conversations-ai/understanding-lead-capture-notifications). For a client, all of this happens in their Business App, with **Conversations AI** active on their account.
 
+</LessonSection>
+
 <SectionFeedback courseId="put-a-receptionist-to-work" site="vendasta_learn" section="content" />
 
 <KnowledgeCheck courseId="put-a-receptionist-to-work" site="vendasta_learn"
   sessionSize={3}
-  intro="Three quick questions on channel choice, plan gates, SMS timing, and the audit."
+  intro="Three quick questions on channel choice, plan gates, and the audit."
   questions={[
     {
       type: 'mcq',
@@ -142,18 +118,6 @@ Every conversation lands in **Conversations**, and captured visitors become cont
     },
     {
       type: 'mcq',
-      question: 'A client plans a review-request campaign by text next month. When should their SMS registration start?',
-      options: [
-        'Now, because SMS begins only once carrier registration is approved',
-        'The day the campaign launches',
-        'After the first text fails to send',
-        'Never, registration is only for AI conversations'
-      ],
-      correctIndex: 0,
-      explanation: 'US carriers require A2P registration before a business can send SMS, and one registration covers both review requests and AI conversations. Start it during onboarding.'
-    },
-    {
-      type: 'mcq',
       question: 'You changed a receptionist\'s knowledge sources this morning. What happens before it talks to another prospect?',
       options: [
         'Nothing, knowledge changes are risk-free',
@@ -167,7 +131,7 @@ Every conversation lands in **Conversations**, and captured visitors become cont
   ]}
 />
 
-<LessonFooter to="/learn/ai-workforce/teach-it-to-book" pathName="Hire your first AI Employee" step={2} totalSteps={7} />
+<LessonFooter to="/learn/ai-workforce/teach-it-to-book" pathName="Hire your first AI Employee" step={2} totalSteps={5} />
 
 </InlineHighlighter>
 <MarkComplete courseId="put-a-receptionist-to-work" site="vendasta_learn" />

@@ -76,11 +76,18 @@ Deployment runs in two places, and the order matters: your side first, so the pr
 
 **On your side, in Partner Center.** Activate the products they bought from the `Products` card on the account's Overview, using `Create order`, then set their billing: the order, the subscription, and the retail pricing all live in `Commerce`. [Subscription management](/commerce/subscriptions/subscription-management) covers the billing detail.
 
-**On their side, in Business App.** Their branding, the AI Receptionist's hours and greeting and lead-capture questions, the chat widget on their website, review sources connected, social accounts connected with the first posts scheduled, and any CRM or scheduling tool they already run.
+**On their side, in Business App.** Set up each of these on the client's account:
 
-Each of those is a procedure in its own right, and none of them is a single click. [Bring in your first client](/learn/getting-started/bring-in-your-first-client) walks the account, the activation, and the user hands-on, [Hire your first AI Employee](/learn/ai-workforce) walks the AI pieces, and [Get set up](/learn/getting-started/turn-on-your-own-ai-receptionist) covers the receptionist and the widget. What this step adds is the order, because running them in any other one means redoing work.
+- Their branding
+- The AI Receptionist's hours, greeting, and lead-capture questions
+- The chat widget on their website
+- Review sources connected
+- Social accounts connected, with the first posts scheduled
+- Any CRM or scheduling tool they already run
 
-Configured is not the same as working. Setup is complete when every component has passed a live test, and running it takes ten minutes. Check the client's editions first: three of the five tests below only run on the right one, so a failure may be a missing product rather than a broken setup.
+Each of those is a procedure in its own right. [Deploy a receptionist for a client](/learn/ai-workforce/deploy-a-receptionist-for-a-client) takes you through the receptionist and the widget on a client's account, and it picks up from [Bring in your first client](/learn/getting-started/bring-in-your-first-client) and [Get set up](/learn/getting-started/turn-on-your-own-ai-receptionist). Finish your side before you start theirs.
+
+Configured is not the same as working. Setup is complete when every component has passed a live test, and running it takes ten minutes. Check the client's editions first: two of the three tests below only run on the right one, so a failure may be a missing product rather than a broken setup.
 
 <LabCallout title="run the go-live test">
 Go to the client's account, with a mobile phone in your hand.
@@ -91,14 +98,14 @@ Go to the client's account, with a mobile phone in your hand.
     <>Call the AI Receptionist from your mobile. It answers, greets correctly, and captures a lead. Voice needs Conversations AI Premium, available in the US and Canada.</>,
     <>Send a test web chat from their site. The AI responds and the lead appears in the inbox. This one works on every edition.</>,
     <>Trigger a missed-call text-back. Needs Conversations AI Pro, and call forwarding set on the client's real line, so confirm both before you test.</>,
-    <>Submit a review request manually and confirm it goes out. Needs Reputation AI Premium.</>,
-    <>Check the social post queue. The first post is scheduled.</>,
   ]}
-  confirm={<>Every component has been proven live, on their account, before the client has seen any of it.</>}
+  confirm={<>The receptionist answers a call, holds a chat, and follows up on a missed call, live on their account, before the client has seen any of it.</>}
 />
 </LabCallout>
 
-That test run is also the moment worth describing to the client on the handoff call: their own business, answering its own phone.
+A client who also bought Reputation AI or Social AI has a review request to send and a first scheduled post to confirm, both set up in [the AI Reputation Specialist setup guide](https://docs.businessapp.io/business-app/ai/ai-workforce/ai-reputation-specialist) and [the Social Media Manager setup guide](/ai/ai-workforce/social-media-manager).
+
+Describe that test run on the handoff call.
 
 <LessonSection>
 

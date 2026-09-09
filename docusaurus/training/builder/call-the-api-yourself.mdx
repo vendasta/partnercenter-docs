@@ -1,6 +1,6 @@
 ---
 title: Call the API yourself
-sidebar_position: 6
+sidebar_position: 7
 description: "Generate a scoped token in the browser, make a real read-only call from the API reference, and read back the lead your own AI Employee captured. No code required."
 ---
 
@@ -29,8 +29,8 @@ import LabChecklist from "@site/src/components/LabChecklist";
     "The test account you have been building in, and the contact your AI Employee captured",
   ]}
   pathName="Wire your AI Workforce to act"
-  step={6}
-  totalSteps={9}
+  step={7}
+  totalSteps={10}
   outcomes={[
     "Generate a scoped access token for yourself in the browser",
     "Request the narrowest scopes a call needs, and read the error when one is missing",
@@ -83,7 +83,7 @@ A scope is a single permission, and a token carries only the ones you asked for 
 
 That discipline is worth keeping past this step. Request the narrowest scopes that do the job, and what an integration is able to do stays obvious to whoever looks at it next year.
 
-Two errors tell you which half is wrong, and they are worth recognising on sight:
+Two errors tell you which half is wrong:
 
 | What comes back | What it means |
 |---|---|
@@ -133,7 +133,7 @@ Go to `CRM` → `CRMService` → `List Contacts` in the API reference.
 />
 </LabCallout>
 
-That is the whole point of this step. The conversation, the booking, the CRM record, and the API are one system, and you have now touched it from both ends.
+The conversation, the booking, the CRM record, and the API are one system.
 
 <LessonSection>
 
@@ -220,7 +220,7 @@ Generate one more token, this time with only `crm.schema:read`, and run `List Co
   ]}
 />
 
-<LessonFooter to="/learn/builder/book-into-an-outside-system" pathName="Wire your AI Workforce to act" step={6} totalSteps={9} />
+<LessonFooter to="/learn/builder/book-into-an-outside-system" pathName="Wire your AI Workforce to act" step={7} totalSteps={10} />
 
 </InlineHighlighter>
 <MarkComplete courseId="call-the-api-yourself" site="vendasta_learn" />
