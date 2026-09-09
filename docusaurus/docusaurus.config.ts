@@ -155,16 +155,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           // dissolved sections
           { from: '/learn/platform', to: '/learn/products' },
           { from: '/learn/automations-ai', to: '/learn/ai-workforce' },
-          { from: '/learn/automations-ai/AI-and-Automations-in-the-Vendasta-Platform', to: '/learn/ai-workforce/autopilot' },
-          { from: '/learn/automations-ai/Acquisition-Automation-AI', to: '/learn/ai-workforce/autopilot' },
+          { from: '/learn/automations-ai/AI-and-Automations-in-the-Vendasta-Platform', to: '/learn/builder/autopilot' },
+          { from: '/learn/automations-ai/Acquisition-Automation-AI', to: '/learn/builder/autopilot' },
+          { from: '/learn/ai-workforce/autopilot', to: '/learn/builder/autopilot' },
           { from: '/learn/platform/integrations/Integrations-101', to: '/learn/builder' },
+          // "Hire your first AI Employee" step 7 rebuilt (2026-09): the sell-and-manage
+          // step retired, its selling, pricing, and support content already covered by the
+          // Sell the AI Workforce and Vendasta Services paths.
+          { from: '/learn/ai-workforce/sell-and-manage', to: '/learn/ai-workforce/deploy-a-receptionist-for-a-client' },
           // AI Receptionist lessons consolidated into the AI Workforce path
           { from: '/learn/products/ai-receptionist/Meet-Your-First-AI-Employee-The-AI-Receptionist', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
           { from: '/learn/products/ai-receptionist/AI-Receptionist-Setup-and-Configuration', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
           { from: '/learn/products/ai-receptionist/Vendasta-AI-Receptionist-Walkthrough', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
           { from: '/learn/products/ai-receptionist/AI-Receptionist-Implementation-Essentials', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
           // marketplace lessons harvested into paths
-          { from: '/learn/platform/marketplace/Package-Digital-Products-with-Vendasta', to: '/learn/ai-workforce/sell-and-manage' },
+          { from: '/learn/platform/marketplace/Package-Digital-Products-with-Vendasta', to: '/learn/sell-the-ai-workforce/know-your-offer' },
           { from: '/learn/platform/marketplace/Billing-and-Payment-Basics', to: '/learn/getting-started/connect-payments-and-billing' },
           // library regroup: business-app
           { from: '/learn/platform/business-app/Introducing-Business-App', to: '/learn/products/engage/business-app/introduction-to-business-app' },
