@@ -39,7 +39,7 @@ import LessonSection from "@site/src/components/LessonSection";
 
 ## Start from the outcome
 
-By the end of this step, a custom AI Employee built for one outcome you chose is live, answering from its own knowledge and capable of one real action through a tool you configured. *You are here: Partner Center, on a Professional plan or higher.*
+*You are here: Partner Center, on a Professional plan or higher.* A Custom AI Employee starts from a blank slate. You choose the outcome, then give it the knowledge to answer from and one real action it can take.
 
 Every employee so far came pre-built. This one starts blank, so the first decision is the outcome, not the employee: "qualify inbound leads before booking" is a real brief, "build a sales bot" is not. Building one costs nothing extra, and there is no limit on how many you create, so the only real constraint is a clear outcome.
 If the outcome resembles a data analyst, an inside sales representative, or a support role, [the custom AI employee guide](/ai/ai-workforce/custom-ai-employees) has a worked example close to it, worth stealing from rather than starting from nothing.
@@ -89,7 +89,7 @@ Stay on the employee's **Configure** panel.
 
 Most outcomes need one more thing a built-in capability does not cover: a real action in another system, a price check, an order status, an inventory count. Knowledge only answers from what has been uploaded to it, so an outcome that depends on live information hits a ceiling fast without a live connection. That connection becomes a tool, added inside a custom capability.
 
-This step uses a real, working endpoint so you are testing against an actual response, not a hypothetical one: [dummyjson.com](https://dummyjson.com), a free public test API that needs no authentication. Its `/carts` endpoint stands in for an order-lookup system. Give it an order number from 1 to 50 and it returns that order's total, its discounted total, how many products and total items it contains, and the products themselves (name, quantity, and line total for each). It is not a real Vendasta or client order system — it exists so the tool you configure here behaves exactly like the one you would later point at a client's real order API, with a live response to check your work against instead of guessing whether the capability is wired up correctly.
+This step uses a real, working endpoint so you are testing against an actual response, not a hypothetical one: [dummyjson.com](https://dummyjson.com), a free public test API that needs no authentication. Its `/carts` endpoint stands in for an order-lookup system. Give it an order number and it returns that order's total, its discounted total, how many products and total items it contains, and the products themselves (name, quantity, and line total for each). It is not a real Vendasta or client order system: it stands in so the tool you configure here behaves exactly like one pointed at a client's real order API.
 
 <LabCallout title="add a capability with a tool">
 Go to your employee's `Configure` page → `Capabilities` → `+ Add a capability`.
@@ -133,7 +133,7 @@ Go to the employee's `Chat`, or its assigned channel.
 
 </LessonSection>
 
-## Where this stops, for now
+## Chain more tools when a job needs it
 
 One tool answering one outcome is a complete employee. Chaining several tools together, or connecting through middleware, is a deeper build for a job that genuinely needs it; the [Tools & Integrations Overview](/ai/ai-capabilities/tools-overview) is where to go next when that day comes.
 

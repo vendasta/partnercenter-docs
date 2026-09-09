@@ -1,7 +1,7 @@
 ---
 title: Get set up skill check
-sidebar_position: 8
-description: "Ten scenario questions covering the whole path: the platform map, email, payments, brand, your receptionist, and help."
+sidebar_position: 9
+description: "Ten scenario questions covering the whole path: the platform map, email, payments, brand, your receptionist, your first client and their first day, and help."
 ---
 
 import SkillCheck from "@site/src/components/SkillCheck";
@@ -17,14 +17,12 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 <LessonHeader
   difficulty="Beginner"
-  topics={["Partner Center", "Email domain", "Payments", "AI Receptionist"]}
-  time="about 10 minutes"
-  required={["The six steps of this path"]}
+  topics={["Partner Center", "Email domain", "Payments", "AI Receptionist", "Onboarding"]}
   pathName="Get set up"
-  step={8}
-  totalSteps={8}
+  step={9}
+  totalSteps={9}
   outcomes={[
-    "Apply the platform map, email, payments, brand, and receptionist material to situations you have not seen before",
+    "Apply the platform map, email, payments, brand, receptionist, and first-client material to situations you have not seen before",
     "Spot which setup a scenario calls for, rather than recalling a definition",
     "Find the steps worth a second pass before you bring your first client on",
   ]}
@@ -32,7 +30,7 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 <SkillCheck
   sessionSize={10}
-  intro="Ten scenario questions covering the whole path"
+  intro="Ten scenarios across the platform and your brand, the domain, email, and payments behind it, and the receptionist and first client you bring on."
   questions={[
     {
       type: 'mcq',
@@ -201,16 +199,40 @@ import LessonFooter from "@site/src/components/LessonFooter";
       ],
       correctIndex: 0,
       explanation: 'Activation charges you wholesale from that moment. What and when the client pays you is your retail pricing and billing setup, which is exactly why default billing was worth configuring early.'
+    },
+    {
+      type: 'mcq',
+      question: 'A roofing company you just signed has no website. You want the very first thing they read from you to be a live site with their name on it. What decides that?',
+      options: [
+        'Whether Vibe is active on the account when you invite them, since sending the onboarding email is what builds the site',
+        'Whether you tick Build website on the invite panel before you select Invite',
+        'Whether the account was created through Easy Account Create rather than Manage Accounts',
+        'Whether the client sets their password within 15 minutes of the email arriving'
+      ],
+      correctIndex: 0,
+      explanation: 'The starter website is built as the first step of sending the onboarding email, and only when Vibe is active on the account. Activate Vibe before you invite and the email leads with the live site.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client\'s Business App Home shows Get started on the Reputation AI card, and they buy the Pro edition from it. What happens on your side?',
+      options: [
+        'Vendasta bills the client directly and pays you the margin at month end',
+        'The upgrade waits in Marketplace until you approve the edition change',
+        'The card was a mistake: clients cannot buy products from Home without a salesperson',
+        'With Vendasta Payments connected the client pays by card in Business App; without it, an order arrives for you to process, at the retail price you set'
+      ],
+      correctIndex: 3,
+      explanation: 'The Recommended cards follow your existing commerce setup. Vendasta Payments collects the card in Business App; otherwise the purchase reaches you as an order, and either way the price is your retail price.'
     }
   ]}
 />
 
 <LessonFooter
-  to="/learn/ai-foundations"
+  to="/learn/ai-workforce"
   pathName="Get set up"
-  step={8}
-  totalSteps={8}
-  nextPathName="AI foundations"
+  step={9}
+  totalSteps={9}
+  nextPathName="Hire your first AI Employee"
 />
 
 </InlineHighlighter>
