@@ -1,0 +1,237 @@
+---
+title: Walk your client's first experience
+sidebar_position: 7
+description: "The onboarding email that lists finished work, what your client's landing page shows, where each link takes them, and the three settings on your side that decide what they see."
+---
+
+import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
+import { IconFlipCard, IconFlipCardGrid } from "@site/src/components/FlipCard";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import SectionFeedback from "@site/src/components/SectionFeedback";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
+import LabCallout from "@site/src/components/LabCallout";
+import LabChecklist from "@site/src/components/LabChecklist";
+
+<InlineHighlighter courseId="walk-your-clients-first-experience" site="vendasta_learn">
+
+<CourseProgressBar courseId="walk-your-clients-first-experience" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Beginner"
+  topics={["Business App", "Onboarding", "Upgrades"]}
+  time="about 18 minutes"
+  lab
+  required={[
+    "Partner Center admin access",
+    "A client account with at least one product active on it",
+  ]}
+  pathName="Get set up"
+  step={7}
+  totalSteps={9}
+  outcomes={[
+    "Say what the onboarding email and Business App Home show a new client, and where each line comes from",
+    "Follow the work card's links to the screens your client lands on, and say what is waiting on each",
+    "Choose what a client's first day leads with by deciding what is active before you invite them",
+    "Set the upgrade path on a product so the cards on Home sell it at your retail price, or hold it for your sales team",
+    "Turn the Home cards on or off for every client at once",
+    "Receive the exact email a client receives, in your own inbox",
+  ]}
+/>
+
+## Work is done before your client logs in
+
+The first email a new client gets from you is a list of finished work. While their account was being set up, AI read their website, prefilled their business profile, named their AI Chat Receptionist, scanned more than 40 directories for their listings, and gathered their reviews. When Vibe is active on the account, it built them a starter website as well. The email lists each item with a check mark and closes on one button, **See what's ready for you**, which opens their Business App. Setting a password happens on the way in, when they need one.
+
+Every line is generated from the business's own data and from the products active on the account, so two clients rarely receive the same list. A line about reviews appears when Reputation is active. A line about directories appears when Local SEO is active. The website and business profile lines appear for every business with a website on file. In the first 24 hours after the account is created, the review and visibility lines read as scanning, with results in about 24 hours, then switch to the finished wording once the results are in.
+
+<img src={require('./img/onboarding-email-preview.png').default} alt="The onboarding email preview in Partner Center: a checklist of finished work with green check marks, the line It's all ready for your review, and a See what's ready for you button" style={{width: '100%', maxWidth: '640px', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginBottom: '28px'}} />
+
+:::info Why the email takes a few minutes
+The onboarding email holds its send until the products on the account have finished activating, and when Vibe is active, until the website has been built. Allow 5 to 15 minutes for it to arrive. If a build runs long, the email still goes, without the website line.
+:::
+
+<LessonSection>
+
+## What their landing page shows
+
+A new user's first login lands on `Home`, and that page is organized around what AI already did.
+
+<img src={require('./img/onboarding-home-cards.png').default} alt="Business App Home for a heating and cooling company: the We already got to work card listing the website built, directories scanned, website read, and business profile prefilled, above four Recommended for your business cards for Local SEO, Conversations AI, Reputation AI, and Social AI" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginBottom: '28px'}} />
+
+Three sections do the work. Flip each one:
+
+<IconFlipCardGrid>
+  <IconFlipCard
+    gradient="blue"
+    front="We already got to work"
+    back="The same checklist as the email, now with links to act on each line: edit the website, draft the review responses, view the directory results. It shows work from roughly the last 30 days, so a brand new client sees a full card and a long-standing one sees a short list."
+  />
+  <IconFlipCard
+    gradient="green"
+    front="Recommended for your business"
+    back="Upgrade cards for Local SEO, Conversations AI, Reputation AI, and Social AI, each leading with a benefit headline. The button follows your Marketplace setup: Get started opens checkout at your retail price, Contact us reaches your team, and a product already on Pro or higher opens the product."
+  />
+  <IconFlipCard
+    gradient="purple"
+    front="Next steps"
+    back="Setup cards with a time estimate and one button each: meet the receptionist, connect Google, add web chat to the website, connect a tool, register a texting number, get the mobile app. A card clears itself when its task is done."
+  />
+</IconFlipCardGrid>
+
+Read together, the three sections carry a client from the work already done, to the next product at your retail price, to the short tasks that finish their setup, without leaving `Home`. The work card lists what is active on the account and the Recommended cards lead with what is not, so the two read as one screen: what your client already has, and what they can add next. Once the receptionist has a name, the **Meet your AI receptionist** card takes that name as its title. Your client can dismiss the work card and each upgrade card, and a dismissal lives in that browser only.
+
+</LessonSection>
+
+## Where each link takes your client
+
+Every line on the work card is a link, and each one opens the screen where that work continues. The directory line opens `Local SEO` → `Listing Sync`, where the scan's findings are waiting: the directories already carrying the business, and the ones with no listing yet. Connecting Google and Facebook is the first move there, and each source shows its own listing score once it is connected. The business profile line opens `Business Profile` → `Descriptions`, where a short description and a long one are already drafted and waiting for a `Save`.
+
+That is the shape of the whole card. It reports work that genuinely ran, and it hands the next step to whoever opens it. Naming that on your handoff call is what turns a first look into a to-do list your client can act on: the scan found where they are missing, and connecting those sources is the work it found.
+
+:::tip Try it now
+On your test account's `Home`, select `view your results` on the directory line and count the sources reading **Listing Not found**. That count is what your next client opens on, and it is the first thing worth explaining to them.
+:::
+
+<LessonSection>
+
+## Three settings decide what they see
+
+Everything on that first day traces back to three decisions on your side, and two of them are settings you make once.
+
+**What is active on the account when you invite.** Lines in the email and on `Home` are product-gated, so the products you activate before you invite decide what the client reads about. Vibe is the biggest single lever: when Vibe is active and the account has no site yet, sending the onboarding email builds the business a free starter website first, one per account, and the email leads with it. Activate Vibe before you invite, and a client without a website opens their first email to one that exists. If you build websites yourself, or theirs is already live, leave Vibe off the account and the email leads with the rest of the work.
+
+**The upgrade path on each product.** Each Recommended card follows the product's `Upgrade` setting in your Marketplace. `Self-serve upgrade` puts **Get started** on the card and opens checkout: with Vendasta Payments connected, the client pays by card inside Business App; without it, the purchase arrives as an order for you to process. `Contact a salesperson` puts **Contact us** on the card instead. A product you have never configured is treated as upgradeable and shows **Get started**. Turning `Upgrade` off removes that product's card from Home entirely.
+
+<LabCallout title="set the upgrade path on one product">
+Go to `Marketplace` → `Products` and open Local SEO.
+
+<LabChecklist
+  storageKey="client-sees-first-lab-1"
+  steps={[
+    <>Scroll to the <strong>Upgrade</strong> section and confirm the toggle reads <code>On (Recommended)</code>.</>,
+    <>Under <strong>What should happen when a user selects "Upgrade to Pro"?</strong>, choose <code>Self-serve upgrade</code>, or <code>Contact a salesperson</code> if your team sells this product by conversation.</>,
+    <>Select <code>Customize modal content</code>, read the title, selling points, and button text your client will see, and select <code>Save</code>. The price shown is the retail price you set.</>,
+  ]}
+  confirm={<>The Local SEO card on a client's <code>Home</code> shows <strong>Get started</strong>, or <strong>Contact us</strong> if you chose the salesperson route. Open the account's Overview and select <code>Open in</code> → <code>Business App</code> to see it.</>}
+/>
+</LabCallout>
+
+**The Home cards themselves.** Both the work card and the Recommended cards are on by default for every client. `Partner Center` → `Administration` → `Customize Business App` → `Pages` → `Home` carries one checkbox for each under **Page Features**: **"AI has done the work" card** and **"Recommended for your business" cards**. Clearing one hides that section for all of your clients. The setting controls display only, so a Vibe site still builds and an upgrade path still works underneath it.
+
+<img src={require('./img/onboarding-customize-home.png').default} alt="Customize Business App, Pages, Home in Partner Center, with the AI has done the work and Recommended for your business cards checkboxes at the top of Page Features, both checked" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', marginBottom: '28px'}} />
+
+<LabCallout title="confirm the Home cards are on">
+Go to `Partner Center` → `Administration` → `Customize Business App` → `Pages` → `Home`.
+
+<LabChecklist
+  storageKey="client-sees-first-lab-2"
+  steps={[
+    <>Find <strong>Page Features</strong> at the top of the page.</>,
+    <>Confirm <strong>"AI has done the work" card</strong> is checked.</>,
+    <>Confirm <strong>"Recommended for your business" cards</strong> is checked, then select <code>Save</code> if you changed anything.</>,
+  ]}
+  confirm={<>A client's <code>Home</code> opens on the work card, with the Recommended cards beneath it.</>}
+/>
+</LabCallout>
+
+</LessonSection>
+
+## Send the email to yourself
+
+The preview beside the invite panel is a static sample: your branding, the layout, and the button, with placeholder work. The real email is generated for the business. The one way to read exactly what a client receives is to receive it. Use a recently created account for this: the work card carries roughly the last 30 days of work, so an older account shows a shorter list.
+
+:::tip Try it now
+Open your test client account under `Accounts` → `Manage Accounts`, select `Invite users`, add your own email address, and select `Invite 1 user`. Allow 5 to 15 minutes, then read the email the way a client would and follow **See what's ready for you** through to Home. To send it again later, the `⋮` menu on your row carries `Send Onboarding Email`.
+:::
+
+[This guide lists every line the summary can show and the exact condition for each](/business-app/ai-onboarding-experience), and [this one covers how each Recommended card decides what to show](/business-app/recommended-cards-configuration).
+
+<SectionFeedback courseId="walk-your-clients-first-experience" site="vendasta_learn" section="content" />
+
+<KnowledgeCheck courseId="walk-your-clients-first-experience" site="vendasta_learn"
+  sessionSize={3}
+  intro="Three quick questions on what a new client sees, what on your side decides it, and how you check it yourself."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A new client has no website, and you want their first email to open on one. What do you do before you invite them?',
+      options: [
+        'Paste a website link into the custom greeting so the email has one to show',
+        'Ask Vendasta Support to build the starter site before the invite goes out',
+        'Activate Vibe on the account first, so sending the email builds the site and leads with it',
+        'Send the classic welcome email instead and add the website afterwards'
+      ],
+      correctIndex: 2,
+      explanation: 'A Vibe site is built as the first step of sending the onboarding email, and only when Vibe is active on the account. Activate it before you invite and the email leads with a live site.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client\'s Home shows Contact us on the Reputation AI card. You want them to be able to buy it themselves. What changes?',
+      options: [
+        'The product\'s Upgrade setting in your Marketplace, from Contact a salesperson to Self-serve upgrade',
+        'The Recommended cards checkbox in Customize Business App, which switches every card to checkout',
+        'The client\'s edition, since Contact us only appears on accounts that are still on Standard',
+        'Nothing on your side, because the client chooses checkout or contact from the card itself'
+      ],
+      correctIndex: 0,
+      explanation: 'The button on each card follows that product\'s Upgrade setting. Self-serve upgrade puts Get started on the card and opens checkout; Contact a salesperson routes the client to your team.'
+    },
+    {
+      type: 'mcq',
+      question: 'You do not want Social AI promoted on any client\'s Home at all. What do you do?',
+      options: [
+        'Choose Contact a salesperson on the product, so the card stops opening checkout',
+        'Clear the "AI has done the work" card checkbox in Customize Business App',
+        'Remove Social AI from your store so the card has nothing left to sell',
+        'Turn the product\'s Upgrade setting off, which removes its card from Home'
+      ],
+      correctIndex: 3,
+      explanation: 'Turning a product\'s Upgrade setting off removes its card entirely. Contact a salesperson keeps the card and changes the button, and the Customize Business App checkbox controls the whole section rather than one product.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client asks what the AI actually did for them. Where does the checklist in their email come from?',
+      options: [
+        'A fixed template every client receives, with the business name filled in',
+        'Their own business data and the products active on the account, listing only work that was done',
+        'The custom greeting you typed into the invite panel when you invited them',
+        'The Marketplace packages you have published to your store'
+      ],
+      correctIndex: 1,
+      explanation: 'Every line is generated from the business\'s real data and gated by the products active on the account, so the client only ever sees work that was genuinely done for them.'
+    },
+    {
+      type: 'mcq',
+      question: 'You want to read exactly what a new client receives. What works?',
+      options: [
+        'Invite yourself as a user on the account and read the email that arrives',
+        'Select Preview on the invite panel, which renders the client\'s real checklist',
+        'Send the classic welcome email to yourself, since both emails share one checklist',
+        'Ask the client to forward it to you once they have logged in'
+      ],
+      correctIndex: 0,
+      explanation: 'The preview is a static sample. The real email is generated for the business, so the way to read it is to be a user on the account and receive it.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client dismissed the Recommended cards on their laptop and now wants them back. What is true?',
+      options: [
+        'The cards are gone for that account until you re-enable them in Customize Business App',
+        'Dismissing a card turns off that product\'s upgrade path for the account',
+        'Dismissals live in that browser; the cards return in another browser or after clearing site data',
+        'Only Vendasta Support can restore cards a client has dismissed'
+      ],
+      correctIndex: 2,
+      explanation: 'A dismissal is stored in the client\'s browser, not on the account. Another browser or cleared site data brings the cards back, and your Customize Business App setting still controls display for everyone.'
+    }
+  ]}
+/>
+
+<LessonFooter to="/learn/getting-started/where-to-get-help" pathName="Get set up" step={7} totalSteps={9} />
+
+</InlineHighlighter>
+<MarkComplete courseId="walk-your-clients-first-experience" site="vendasta_learn" />
