@@ -122,17 +122,17 @@ The application itself is a Stripe identity check, and it goes fastest with ever
 - The **account representative's** legal name, home address, and government ID
 - The **bank account** your payouts land in: country, currency, transit number, institution number, and account number
 
-Two things on that page are yours to set rather than Stripe's, and both are easy to miss. The **`Account statement description`** is how charges appear on your customers' statements: replace the default with your own business name. And **`Receiving bank account`** is an in-platform form rather than a Stripe screen, which is where those bank details go.
+Two fields on that page are yours to set, not Stripe's. The **`Customer statement description`** is how charges appear on your customers' statements, and you have 22 characters for it: replace the default with your own business name. And **`Receiving bank account`** is an in-platform form rather than a Stripe screen, which is where those bank details go.
 
 This part runs across several Stripe screens, it asks for government ID, and approval typically takes one to two business days. Work through it with [the Vendasta Payments guide](/administration/commerce/vendasta-payments/) open beside you, which covers every field in order.
 
 ![The first screen of the Vendasta Payments application, a Stripe form asking for the type of business](./img/vendasta-payments-application.jpg)
 
-Once you are approved, payments your clients make appear under `Commerce` → `Payments`. A payment normally reaches your bank 1 to 2 business days after it is charged. The first one is the exception: the bank runs its own verification on it, so that transaction can take 7 to 10 business days to land. The full field-by-field detail is in [the Vendasta Payments guide](/administration/commerce/vendasta-payments/).
+Once you are approved, payments your clients make appear under `Commerce` → `Payments`. Stripe holds your first payments for up to a week, then pays out on a 7-day rolling basis into the bank account you added. The full field-by-field detail is in [the Vendasta Payments guide](/administration/commerce/vendasta-payments/).
 
-That first wait is worth spending on yourself rather than on a client.
+Run one real transaction on your own account before a client's money is in it.
 
-<LabCallout title="clear the first-payment wait">
+<LabCallout title="run one real transaction">
 Go to `Marketplace` → `Products`, with your own account to hand.
 
 <LabChecklist
@@ -143,7 +143,7 @@ Go to `Marketplace` → `Products`, with your own account to hand.
     <>Pay the invoice, so a real transaction runs end to end.</>,
     <>Put the retail price back to where you want it.</>,
   ]}
-  confirm={<>The bank has run its verification on a one dollar charge of yours, so the 7 to 10 day wait is behind you before a client's money is in it.</>}
+  confirm={<>You have seen checkout, the payment record, and the payout schedule on a charge of your own.</>}
 />
 </LabCallout>
 
@@ -172,7 +172,7 @@ Go to `Administration` → `Default billing settings`.
 
 ![The Default billing settings page, with a Market selected, the Subscriptions toggle on, Subscription scheduling set to use the subscription start date, Payment collection set to Automatic, and Subscription renewal set to email a payable invoice with a 7-day due date](./img/default-billing-automation.png)
 
-The page carries a `Memo` field as well, which prints at the bottom of every invoice subscription billing creates. And one limit worth knowing, which the page states in a banner of its own: this applies to accounts created after you save. Accounts that already exist keep their current settings, and any single account can be switched from its own billing settings under `Accounts` → `Manage Accounts`. That is how a client who needs net terms, or who should not be charged the moment an order lands, gets treatment different from your default. [This guide covers the options](/administration/commerce/default-billing-settings/).
+The page carries a `Memo` field as well, which prints at the bottom of every invoice subscription billing creates. This applies to accounts created after you save. Accounts that already exist keep their current settings, and any single account can be switched from its own billing settings under `Accounts` → `Manage Accounts`. That is how a client who needs net terms, or who should not be charged the moment an order lands, gets treatment different from your default. [This guide covers the options](/administration/commerce/default-billing-settings/).
 
 </LessonSection>
 
