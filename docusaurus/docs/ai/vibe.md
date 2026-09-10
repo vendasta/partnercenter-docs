@@ -1,5 +1,6 @@
 ---
 title: Vibe
+sidebar_position: 4
 description: Build fully functional web applications using plain language with Vibe, Vendasta's AI-powered application builder available in Business App.
 tags: [ai, vibe, app-builder, business-app]
 keywords: [Vibe, AI app builder, web application, React, natural language, no-code, low-code, Business App]
@@ -82,8 +83,11 @@ All of this happens through a streaming interface — you see status updates, fi
 
 Every application Vibe generates is built on a modern, production-ready stack:
 
-- **React 18+** with TypeScript
+- **React 19** with TypeScript
+- **TanStack Start** for routing and server rendering
 - **Vite** for fast builds
 - **Tailwind CSS** for styling
 - **shadcn/ui** component library
 - **Lucide** icons
+
+Every one of these is open source. On the Pro plan, the complete source of a project can be downloaded and hosted anywhere that runs Node.js — see [Download and host a Vibe project elsewhere](./vibe-portability.md).
