@@ -48,12 +48,12 @@ Instructions set behavior, knowledge supplies facts, and the conversation suppli
 
 ## A library, not a script
 
-The [Knowledge Base](/ai/knowledge-base) is the reference library your AI Employees search when answering. Four kinds of sources live in it:
+The [Knowledge Base](/ai/knowledge-base) is the reference library your AI Employees search when answering, and each employee's `Knowledge sources` section is where you choose what it can pull from. Four kinds of sources live in the library:
 
-- **The business profile**: hours, location, services, and attributes
-- **Website content**: the pages that already answer customer questions
-- **Uploaded documents**: price lists, FAQs, policies, procedures
-- **Written entries**: knowledge you type in directly, for exactly the questions customers ask
+- `Business Profile`: hours, location, services, and attributes, added to every AI Employee automatically
+- `Website`: the pages that already answer customer questions
+- `File Upload`: price lists, FAQs, policies, procedures
+- `Text`: knowledge you type in directly, for exactly the questions customers ask
 
 The word "search" is doing precise work here. The AI does not read the entire library for every message. When a question calls for business facts, it searches by meaning rather than by keyword, retrieves the most relevant pieces, and composes the answer from them. A question about "parking" can surface the entry about the lot behind the building even if the word "parking" never appears in it. General conversation may not touch the library at all.
 
@@ -73,7 +73,7 @@ Fresh beats abundant, too. A lean library of current documents outperforms a lar
 
 ## See exactly what an answer used
 
-Every AI Employee answer is auditable. Open any response in Conversations and select **[Explanation](/ai/ai-workforce)** to see which knowledge the AI retrieved and referenced for that specific reply. It is the fastest way to tune a library: when an answer misses, the Explanation shows you whether the right knowledge was missing, outdated, or crowded out.
+Every AI Employee answer is auditable. Open any response in `Conversations` and select [`Explanation`](/ai/ai-workforce) to see which knowledge the AI retrieved and referenced for that specific reply. It is the fastest way to tune a library: when an answer misses, `Explanation` shows you whether the right knowledge was missing, outdated, or crowded out.
 
 :::tip Try it now
 Open one client's website and write two short lists: three questions their customers ask that the site answers, and three it does not. The second list is the start of that client's written knowledge entries, and it took you two minutes.
