@@ -33,13 +33,16 @@ From each issue, extract:
 - The **file path** from the `File:` line in the issue body (e.g. `docusaurus/docs/administration/my-account/index.mdx`)
 - The **issue number** — store this alongside the file path so issues can be closed after verification
 
+**Skip any issue whose file path starts with `docusaurus/training/`.** That's Learn-tab content, which follows its own editorial process (see the `learning-path-writing` skill) and is not in scope for this verification pass — the flagging bot (`scripts/flag_articles.py` via `.github/workflows/article-review.yml`) is configured to only scan `docusaurus/docs`, so a `docusaurus/training/` issue showing up here means either an older issue predates that configuration or the workflow config has drifted. Don't verify it, don't comment on it, and don't close it — just note in your announcement that it was skipped and why, so the user can decide whether to redirect it manually.
+
 Announce what was found before proceeding:
 
 > "Found [N] open review-due issues. Verifying:
 > - `path/to/article.mdx` (issue #NNN)
-> - ..."
+> - ...
+> (Skipped: [M] issue(s) under docusaurus/training/ — out of scope, see note above.)"
 
-If no open issues are found, tell the user and stop.
+If no open issues are found (or all were skipped as Learn-tab content), tell the user and stop.
 
 ### Step 2: Read each article
 
