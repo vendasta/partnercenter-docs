@@ -65,6 +65,7 @@ Before initiating an import:
 - **Company name (first-row rule)**: In Partner Center imports, company name must be populated on the **first** contact row. It does not need to appear on every subsequent row — but the first row requires it or the import will fail with "Company name is required."
 - **Business categories**: If your CSV includes a business category, select it from the dropdown during field mapping — do not type it as free text. Free-text categories do not map to the CRM's category list and will silently break downstream syncing.
 - **No blank rows**: Blank rows in your CSV cause "No company or contact found" errors. Remove all empty rows before importing.
+- **Name columns**: Contact names are stored as separate **First name** and **Last name** fields, not a single combined name field. A CSV with one "Name" column can't be mapped — split it into two columns before importing.
 - **Import limits**: Maximum file size is 5 MB, which typically allows for up to 35,000 contacts per import
 - Prepare your data with unique identifiers for bulk updates (Contact ID, External ID, or email)
 
@@ -132,6 +133,10 @@ Users will only see the imports their user has actioned.
 - For each column, choose whether it relates to a contact or company, then select the specific CRM field to map it to. Once you've completed the mapping, click `Next`
 
 ![Field Mapping Interface](./img/crm/contacts/field-mapping.jpg)
+
+:::info
+Values mapped to a field with predefined options (like Lifecycle stage) or to Tags are automatically matched to the closest defined option regardless of case, so a CSV value like "lead" matches a "Lead" option.
+:::
 
 **Step 3: Review import**
 
