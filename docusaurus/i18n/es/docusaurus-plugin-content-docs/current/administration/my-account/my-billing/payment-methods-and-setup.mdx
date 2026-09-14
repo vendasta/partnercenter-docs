@@ -1,0 +1,223 @@
+---
+title: Métodos de pago y configuración de facturación
+sidebar_label: Métodos de pago y configuración
+description: Aprende a agregar, actualizar y gestionar métodos de pago e información de facturación en Partner Center.
+tags: [payment-methods, billing-setup, credit-card, administration]
+keywords: [agregar tarjeta de crédito, método de pago, contacto de facturación, información de facturación, reintentar pago, correo de factura]
+---
+
+## ¿Qué son los métodos de pago y la configuración de facturación?
+
+Los métodos de pago y la configuración de facturación en Partner Center te permiten gestionar todos los aspectos de tu información de pago y tus contactos de facturación. Esto incluye agregar tarjetas de crédito, actualizar información de facturación, cambiar direcciones de correo de facturación y reintentar pagos fallidos.
+
+## ¿Por qué es importante gestionar los métodos de pago?
+
+Contar con métodos de pago e información de facturación correctamente configurados garantiza:
+- Un servicio ininterrumpido para tus productos y suscripciones
+- Facturación precisa
+- Comunicación adecuada sobre asuntos de facturación
+- Resolución rápida de problemas de pago
+
+## Qué puedes hacer con los métodos de pago
+
+| Acción | Descripción |
+|--------|-------------|
+| **Agregar método de pago** | Agrega la información de tu tarjeta de crédito para realizar compras |
+| **Actualizar información de facturación** | Modifica los datos de tu contacto de facturación e información de la empresa |
+| **Cambiar correo de factura** | Actualiza a dónde se envían las facturas |
+| **Reintentar pagos fallidos** | Reintenta manualmente los pagos que hayan fallado |
+| **Gestionar problemas de pago** | Resuelve problemas de tarjeta rechazada y pagos |
+
+## Cómo configurar los métodos de pago
+
+### Agregar tu primera tarjeta de crédito
+
+Para realizar compras en la plataforma de Vendasta, debes agregar tu información de pago a la plataforma.
+
+Para agregar tu tarjeta de crédito a Partner Center:
+
+1. Ve a `Administration` → `My billing` → `Add Payment Method`
+
+![Add Payment Method screen](./img/add-payment-method.png)
+
+### Agregar información de facturación completa
+
+Si no has agregado tu información de facturación, puedes hacerlo en `Partner Center` → `Administration` → `My billing`.
+
+#### Paso 1: agregar contacto de facturación
+
+1. Desde la página My billing, selecciona `Add Billing Contact`
+
+![Add Billing Contact screen](./img/add-billing-contact.jpg)
+
+2. Completa el formulario, asegurándote de completar todos los campos marcados con un asterisco (*)
+3. Una vez hecho esto, haz clic en `Save`
+
+#### Paso 2: agregar método de pago
+
+1. Después de agregar la información del contacto de facturación, selecciona `Add Payment Method`
+2. Se mostrará el formulario del método de pago:
+
+![Add Payment Method form](./img/add-payment-method.jpg)
+
+3. Completa el formulario y selecciona `Save`
+
+:::note Problemas de tarjeta rechazada
+Si recibes un mensaje indicando que la tarjeta fue rechazada, la causa probable es que tu compañía de tarjeta de crédito está bloqueando la transacción por tratarse de un pago internacional. Comunícate con tu compañía de tarjeta de crédito y pídeles que permitan todas las transacciones de Vendasta Technologies Inc.
+
+![Card Declined Message](./img/card-declined.jpg)
+:::
+
+## Cómo actualizar información existente
+
+### Actualizar información de facturación
+
+Si necesitas actualizar tu información de facturación después de haberla ingresado:
+
+1. Ve a `Partner Center` → `Administration` → `My billing`
+2. Haz clic en `Edit` en la sección que deseas actualizar
+
+![Edit Billing Information](./img/edit-billing-info.jpg)
+
+:::tip
+Si actualizas tu tarjeta al confirmar un pedido en Partner Center, esto también actualizará la información de facturación en `My billing`.
+:::
+
+### Cambiar la dirección de correo de facturación
+
+Actualizar la dirección de correo a la que enviamos las facturas es tan sencillo como actualizar la información del contacto de facturación:
+
+1. Ve a `Partner Center` → `Administration` → `My billing` → `Edit Billing contact`
+
+![Edit Billing Contact screen](./img/edit-billing-contact.jpg)
+
+:::tip Varias direcciones de correo de contacto de facturación
+Puedes agregar más de una dirección de correo para recibir facturas y notificaciones de facturación. En el formulario de contacto de facturación, ingresa varias direcciones separadas por una **coma** o un **punto y coma** (por ejemplo, `billing@yourcompany.com, finance@yourcompany.com`).
+:::
+
+## Cómo gestionar problemas de pago
+
+### Varias tarjetas de crédito
+
+**¿Se pueden agregar varias tarjetas de crédito a Partner Center?**
+
+No, solo se puede agregar **una tarjeta de crédito** a Partner Center. Puedes agregar o editar tu método de pago yendo a `Administration` → `My billing` → `Add Payment Method`.
+
+![Screenshot showing Administration to My billing to Add Payment Method](./img/add-payment-method.png)
+
+Cualquier intento de agregar una segunda tarjeta reemplazará la anterior.
+
+### Reintentar pagos fallidos
+
+**¿Puedo reintentar un pago?**
+
+Sí, puedes reintentar un pago fallido:
+
+1. Ve a `Partner Center` → `Administration` → `My billing`
+2. Haz clic en los tres puntos junto a la compra que deseas pagar
+3. Selecciona `retry`
+
+:::note
+El sistema tarda un tiempo en actualizar el estado a `Succeeded` si el pago se realiza correctamente.
+:::
+
+## Qué sucede cuando falla un pago
+
+### Cronograma de reintentos
+
+Cuando falla el cobro de una tarjeta de crédito, la plataforma reintenta automáticamente el pago hasta **5 veces durante aproximadamente 14 días**. Recibirás una notificación por correo por cada intento fallido.
+
+### Suspensión de cuenta
+
+Si fallan todos los intentos:
+
+- **Partners con facturación instantánea**: después del día 14, se bloquea el acceso a Partner Center y Business App para los partners contratados. Los partners en planes Starter/Startup pasan al nivel gratuito.
+- **Partners con facturación por factura**: tu cuenta se suspende 30 días después de generarse la factura si no se recibe el pago.
+
+### Qué sucede con los productos activos
+
+Los productos permanecen activos hasta 30 días después de un fallo de pago, pero **no se renuevan automáticamente** si no se realiza el pago. Deberás reactivar los productos manualmente después de resolver el pago fallido.
+
+### Cómo resolver un pago fallido
+
+1. Ve a `Partner Center` → `Administration` → `My billing`
+2. Haz clic en `View Failed Payments`
+3. Actualiza tu tarjeta de crédito si es necesario (consulta [Actualizar información de facturación](#actualizar-información-de-facturación))
+4. Reintenta la compra fallida usando los tres puntos junto a la compra y seleccionando `Retry`
+
+Un pago exitoso restaura automáticamente el acceso a tu cuenta.
+
+## Requisitos de los métodos de pago
+
+### Métodos de pago aceptados
+
+- Se requiere una tarjeta de crédito registrada para todos los partners
+- Actualmente aceptamos Visa, Mastercard y Amex
+- Para más consultas, contacta a billingsupport@vendasta.com
+
+### Pagos internacionales
+
+Si tu compañía de tarjeta de crédito bloquea las transacciones internacionales:
+- Comunícate con tu compañía de tarjeta de crédito
+- Pídeles que permitan todas las transacciones de Vendasta Technologies Inc.
+- Esto resolverá la mayoría de los problemas de tarjeta rechazada
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Puedo usar varias tarjetas de crédito para diferentes compras?</summary>
+
+No, Partner Center solo admite una tarjeta de crédito a la vez. Cualquier tarjeta nueva que agregues reemplazará a la anterior. Sin embargo, puedes actualizar tu método de pago antes de realizar compras específicas si lo necesitas.
+
+</details>
+
+<details>
+<summary>¿Qué sucede si falla mi pago?</summary>
+
+Si un pago falla, recibirás una notificación. Puedes reintentar el pago manualmente yendo a `Partner Center` → `Administration` → `My billing`, haciendo clic en los tres puntos junto a la compra fallida y seleccionando `retry`.
+
+</details>
+
+<details>
+<summary>¿Cómo sé si mi información de facturación está completa?</summary>
+
+La información de facturación completa incluye tanto un contacto de facturación (información de la empresa) como un método de pago (tarjeta de crédito). Ambas secciones deben completarse para realizar compras y recibir facturas correctas.
+
+</details>
+
+<details>
+<summary>¿Puedo cambiar mi información de facturación después de configurarla?</summary>
+
+Sí, puedes actualizar tu información de facturación en cualquier momento yendo a `Partner Center` → `Administration` → `My billing` y haciendo clic en `Edit` en la sección que deseas modificar.
+
+</details>
+
+<details>
+<summary>¿Por qué se rechazó mi tarjeta?</summary>
+
+El motivo más común de los rechazos de tarjeta es que tu compañía de tarjeta de crédito está bloqueando transacciones internacionales. Comunícate con tu compañía de tarjeta de crédito y pídeles que permitan transacciones de Vendasta Technologies Inc.
+
+</details>
+
+<details>
+<summary>¿Cómo cambio a dónde se envían mis facturas?</summary>
+
+Para cambiar tu dirección de correo de facturación, actualiza la información de tu contacto de facturación yendo a `Partner Center` → `Administration` → `My billing` → `Edit Billing contact`.
+
+</details>
+
+<details>
+<summary>¿Puedo enviar facturas a varias direcciones de correo?</summary>
+
+Sí. En tu información de contacto de facturación, puedes ingresar varias direcciones de correo separadas por una coma o un punto y coma. Todas las direcciones indicadas recibirán facturas y notificaciones de facturación.
+
+</details>
+
+<details>
+<summary>¿Qué sucede si mi pago falla y no lo resuelvo?</summary>
+
+La plataforma reintenta tu pago hasta 5 veces durante aproximadamente 14 días. Si todos los intentos fallan, se suspende el acceso a tu cuenta. Los partners contratados pierden el acceso a Partner Center y Business App, mientras que los partners Starter/Startup pasan al nivel gratuito. Los partners con facturación por factura se suspenden 30 días después de la fecha de la factura si no se paga.
+
+Los productos activos permanecen disponibles hasta 30 días, pero no se renovarán. Para restaurar el acceso, actualiza tu método de pago y reintenta los pagos fallidos desde `Partner Center` → `Administration` → `My billing` → `View Failed Payments`.
+
+</details>
