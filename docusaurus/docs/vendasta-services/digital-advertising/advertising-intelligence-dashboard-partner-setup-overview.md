@@ -6,7 +6,7 @@ description: "Overview of setting up and using the Advertising Intelligence Dash
 
 This guide covers setting up and using the Advertising Intelligence Dashboard: connecting ad accounts, configuring metrics and conversions, and viewing campaign performance.
 
-### 1\. Connecting Accounts
+### 1. Connecting accounts
 
 *   To get started, ensure relevant accounts are connected under the settings section.
 *   Once an account is connected, you can edit and adjust management fees to be applied to the ad spend.
@@ -21,7 +21,7 @@ Our Ads team does not update ad management fees. These must be updated by a part
 
 Standard GA4 properties are supported. Google Analytics 360 sub-properties are not supported and cannot be connected.
 
-Once connected, GA data is pulled once per day from the Sessions column (not Users). Data in Advertising Intelligence may lag behind the live GA dashboard by up to 24 hours — small discrepancies between GA and Advertising Intelligence are expected.
+Once connected, GA data is pulled once per day from the Sessions column (not Users). Data in Advertising Intelligence may lag behind the live GA dashboard by up to 24 hours. Small discrepancies between GA and Advertising Intelligence are expected.
 
 #### CallRail
 
@@ -32,16 +32,16 @@ CallRail connection requires Advertising Intelligence Pro. To connect:
 3. Select a campaign.
 4. Choose `Connect Account`.
 
-Selecting a campaign is required — the connection will hang if this step is skipped. If no campaign list appears, confirm the account is on Advertising Intelligence Pro.
+Selecting a campaign is required. The connection will hang if this step is skipped. If no campaign list appears, confirm the account is on Advertising Intelligence Pro.
 
-### 2\. Metrics Control
+### 2. Metrics control
 
 *   You can customize the metrics you want to display in the dashboard.
 *   Each metric provides a brief description when you hover over it.
 *   You can edit, add, or remove metrics based on your preference. The top six chosen metrics will appear on the overview page.
-*   Default metrics across all accounts can also be adjusted in Partner Center under Marketplace > [Products](https://partners.vendasta.com/marketplace/manage-products) > Advertising Intelligence > Product Settings.
+*   Default metrics across all accounts can also be adjusted in `Partner Center` under `Marketplace` → [`Products`](https://partners.vendasta.com/marketplace/manage-products) → `Advertising Intelligence` → `Product Settings`.
 
-### 3\. Conversion Metrics
+### 3. Conversion metrics
 
 Conversions are not tracked automatically — setup is required in both the ad platform and Advertising Intelligence settings.
 
@@ -63,7 +63,7 @@ Advanced Reporting must be enabled before conversion metrics are available. Go t
 
 **Why Advertising Intelligence may show fewer conversions than Google Ads**
 
-Google Ads reports two figures: *Conversions* and *All Conversions*. Advertising Intelligence only pulls the *Conversions* value — a difference between the two is expected.
+Google Ads reports two figures: *Conversions* and *All Conversions*. Advertising Intelligence only pulls the *Conversions* value. A difference between the two is expected.
 
 #### Setting up conversions for Facebook Ads, LocalAds, and TikTok
 
@@ -73,7 +73,7 @@ In Advertising Intelligence, go to `Settings` → `Metrics` and select the conve
 
 Advertising Intelligence only ingests Lead-classified conversions from Meta. A campaign result is counted as a conversion when the campaign uses the `Lead Generation` objective (with an instant form), or when the Lead standard event is tracked via `Meta Pixel` or `Conversions API`.
 
-Campaigns using other objectives — such as Calls Placed, Link Clicks, or Engagement — will show zero conversions in Advertising Intelligence, even if Meta Ads Manager records results for those campaigns.
+Campaigns using other objectives, such as Calls Placed, Link Clicks, or Engagement, will show zero conversions in Advertising Intelligence, even if Meta Ads Manager records results for those campaigns.
 
 :::note
 
@@ -81,7 +81,7 @@ For campaigns not optimized for Lead Generation, export data directly from Meta 
 
 :::
 
-#### Troubleshooting: Conversions still showing zero
+#### Troubleshooting: conversions still showing zero
 
 If conversions still show zero after completing setup:
 
@@ -89,12 +89,12 @@ If conversions still show zero after completing setup:
 2. Confirm a Conversion Source and Category are selected.
 3. Clear your browser cache and refresh the dashboard.
 
-### 4\. ROI Calculation
+### 4. ROI calculation
 
 *   This feature helps estimate the return on investment.
 *   The calculation takes into account the average sale value and the close rate. This helps businesses gauge the effectiveness of their campaigns.
 
-### 5\. Viewing the Dashboard
+### 5. Viewing the dashboard
 
 *   If multiple ad platforms are connected, you can view data for each platform separately.
 *   You can adjust the timeline view and delve into specific metrics for detailed insights.

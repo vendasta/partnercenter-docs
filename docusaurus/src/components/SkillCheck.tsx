@@ -24,7 +24,6 @@ export interface SkillCheckProps {
   title?: string;
 }
 
-const PASS_THRESHOLD = 0.7;
 
 export default function SkillCheck({
   sessionSize,
@@ -95,7 +94,6 @@ export default function SkillCheck({
         <h3>{title}</h3>
         <p>
           {intro ?? `Test your understanding with ${served} questions`}
-          {`. You need ${Math.round(PASS_THRESHOLD * 100)}% to pass.`}
         </p>
         <button type="button" className={styles.startBtn} onClick={startSession}>
           Start
@@ -106,7 +104,6 @@ export default function SkillCheck({
 
   if (finished) {
     const score = records.filter((r) => r.correct).length;
-    const passed = score >= records.length * PASS_THRESHOLD;
     const missed = records.filter((r) => !r.correct);
     return (
       <div className={styles.container}>
@@ -114,11 +111,6 @@ export default function SkillCheck({
         <p className={styles.score}>
           You scored <strong>{score} of {records.length}</strong>
           {records.length > 0 ? ` (${Math.round((score / records.length) * 100)}%)` : ''}.
-        </p>
-        <p className={passed ? styles.passedText : styles.failedText}>
-          {passed
-            ? 'Nice work, you passed this skill check.'
-            : 'Not quite there yet. Review the material and try again.'}
         </p>
         {missed.length > 0 && (
           <div className={styles.missedList}>

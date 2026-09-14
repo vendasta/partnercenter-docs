@@ -1,6 +1,6 @@
 ---
 title: Where the platform ends
-sidebar_position: 8
+sidebar_position: 9
 description: "The line where a job becomes developer work, handing it off well, keeping changeable logic out of code, the developer surface, and turning a build into a product."
 ---
 
@@ -22,8 +22,8 @@ import LessonSection from "@site/src/components/LessonSection";
   topics={["Integrations", "Vendasta API", "Marketplace"]}
   time="about 8 minutes"
   pathName="Wire your AI Workforce to act"
-  step={8}
-  totalSteps={9}
+  step={9}
+  totalSteps={10}
   outcomes={[
     "Recognize when a task is genuinely developer work",
     "Hand it off with one reproducible example and a ticket that will not get lost",
@@ -34,7 +34,7 @@ import LessonSection from "@site/src/components/LessonSection";
 
 ## Almost all of this is work you do yourself
 
-Fields and objects, automations, custom tools, the API, webhooks: all of it is yours. Custom code is the rest, and it is a narrow rest. Reshaping data, reconciling records that do not match, validating a messy feed before it lands. That is development work, and the solution architecture team exists for exactly it.
+Fields and objects, automations, custom tools, the API, webhooks: all of it is yours. Custom code is the rest, and it is a narrow rest. Reshaping data, reconciling records that do not match, validating a messy feed before it lands. That is development work. Raise it as a support ticket and keep your Client Success contact in the loop.
 
 Knowing where the line sits is what lets you move fast on the near side of it. The expensive version is not asking for help; it is spending a week discovering a task was never a configuration in the first place.
 
@@ -42,7 +42,7 @@ Knowing where the line sits is what lets you move fast on the near side of it. T
 
 ## Put the logic in the platform, not your code
 
-One principle saves more grief than any other. When the platform is what sends a request or runs a workflow, let the platform hold the logic that decides who gets it.
+When the platform is what sends a request or runs a workflow, let the platform hold the logic that decides who gets it.
 
 A rule written into a setting, a tag, or a condition can be changed by anyone on your team in a minute. The same rule buried in custom code needs a developer every time it changes, and it will change the first time a client asks. Build so the everyday adjustments live where everyday people can reach them, and keep code for the work only code can do.
 
@@ -52,7 +52,7 @@ A rule written into a setting, a tag, or a condition can be changed by anyone on
 
 A good handoff is short and specific, and it has three parts: the outcome you want, one concrete example that reproduces the problem, and what you have already tried. A general request moves slowly because someone has to turn it into a specific one first.
 
-Two things keep it from getting lost. Confirm a support ticket exists and note its number, and keep your Customer Success contact in the loop so someone with context knows the request is open.
+Two things keep it from getting lost. Confirm a support ticket exists and note its number, and keep your Client Success contact in the loop so someone with context knows the request is open.
 
 <LessonSection>
 
@@ -60,7 +60,7 @@ Two things keep it from getting lost. Confirm a support ticket exists and note i
 
 [developers.vendasta.com](https://developers.vendasta.com) is the reference you keep open: the full API reference with a built-in client on every method, the OAuth scopes and their read-only variants, and the guides for the pieces you now recognise. The CRM API is the flagship there, with the fullest coverage. There is also an API for loading knowledge into an AI Employee in bulk, which is the route when a client has a hundred locations and their facts live in your system rather than in theirs.
 
-One split is worth knowing. The platform APIs are for working inside accounts; the vendor APIs are for building products to distribute through the Marketplace. Which one you reach for depends on whether you are integrating for your own clients or building something to sell.
+The platform APIs are for working inside accounts; the vendor APIs are for building products to distribute through the Marketplace. Which one you reach for depends on whether you are integrating for your own clients or building something to sell.
 
 And one boundary, restated because it is the thing people design around by mistake: you can start an automation from outside, and you cannot author one from outside. Automations, AI Employees, and Vibe apps are built in the interface.
 
@@ -90,7 +90,7 @@ Think of the last thing that stopped you. Ask the question this path opened with
       type: 'mcq',
       question: 'A client\'s records and yours use different formats, and something has to reconcile them before either system can use the other\'s data. What kind of work is that?',
       options: [
-        'Developer work, and the solution architecture team is who it goes to',
+        'Developer work, and it goes in as a support ticket',
         'A custom tool on the AI Employee',
         'A data expression inside an automation',
         'A condition on the automation trigger'
@@ -137,7 +137,7 @@ Think of the last thing that stopped you. Ask the question this path opened with
   ]}
 />
 
-<LessonFooter to="/learn/builder/wire-to-act-skill-check" pathName="Wire your AI Workforce to act" step={8} totalSteps={9} />
+<LessonFooter to="/learn/builder/wire-to-act-skill-check" pathName="Wire your AI Workforce to act" step={9} totalSteps={10} />
 
 </InlineHighlighter>
 <MarkComplete courseId="where-the-platform-ends" site="vendasta_learn" />

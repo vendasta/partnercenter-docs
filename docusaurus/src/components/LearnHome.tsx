@@ -48,10 +48,10 @@ const PATHS: HomePathCard[] = [
     id: "getting-started",
     kicker: "Start here",
     title: "Get set up",
-    blurb: "Run your business on Vendasta: the platform, the ecosystem, setup, and getting paid.",
+    blurb: "Run your business on Vendasta: the platform, setup, getting paid, your first client, and what they see on day one.",
     tag: "Platform",
-    scope: ["7 lessons", "1 video", "5 labs"],
-    gate: "About 2 hours",
+    scope: ["8 lessons", "1 video", "6 labs"],
+    gate: "About 2 hours 15 minutes",
     cta: "Start",
     to: "/learn/getting-started",
     tone: "purple",
@@ -150,6 +150,7 @@ const GETTING_STARTED_ITEMS: ExplorerItem[] = [
   { title: "Brand your platform", to: "/learn/getting-started/brand-it" },
   { title: "Turn on your own AI Receptionist", to: "/learn/getting-started/turn-on-your-own-ai-receptionist" },
   { title: "Bring in your first client", to: "/learn/getting-started/bring-in-your-first-client" },
+  { title: "Walk your client's first experience", to: "/learn/getting-started/walk-your-clients-first-experience" },
   { title: "Where to get help", to: "/learn/getting-started/where-to-get-help" },
   { title: "Get set up skill check", to: "/learn/getting-started/get-set-up-skill-check" },
 ];
@@ -171,9 +172,7 @@ const AI_WORKFORCE_ITEMS: ExplorerItem[] = [
   { title: "Put a receptionist to work", to: "/learn/ai-workforce/put-a-receptionist-to-work" },
   { title: "Teach it to book", to: "/learn/ai-workforce/teach-it-to-book" },
   { title: "Train your AI Employee", to: "/learn/ai-workforce/train-your-employee" },
-  { title: "Build a Custom AI Employee", to: "/learn/ai-workforce/custom-employee-lab" },
-  { title: "Put your workforce on autopilot", to: "/learn/ai-workforce/autopilot" },
-  { title: "Sell and manage your AI Workforce", to: "/learn/ai-workforce/sell-and-manage" },
+  { title: "Deploy a receptionist for a client", to: "/learn/ai-workforce/deploy-a-receptionist-for-a-client" },
 ];
 
 const GROW_AI_ITEMS: ExplorerItem[] = [
@@ -211,6 +210,7 @@ const BUILDER_ITEMS: ExplorerItem[] = [
   { title: "Build the doorway", to: "/learn/builder/build-the-doorway" },
   { title: "Watch it work", to: "/learn/builder/watch-it-work" },
   { title: "Hand off to the automation", to: "/learn/builder/hand-off-to-the-automation" },
+  { title: "Put your workforce on autopilot", to: "/learn/builder/autopilot" },
   { title: "Wire it to your own systems", to: "/learn/builder/wire-it-to-your-systems" },
   { title: "Call the API yourself", to: "/learn/builder/call-the-api-yourself" },
   { title: "Book into an outside system", to: "/learn/builder/book-into-an-outside-system" },

@@ -6,7 +6,7 @@ type Item = {
   icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   img?: string;
   title: string;
-  text: string;
+  text: React.ReactNode;
 };
 
 // Key-point rows: small illustration left, bold term + one-liner right.

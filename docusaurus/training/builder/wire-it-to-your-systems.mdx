@@ -1,6 +1,6 @@
 ---
 title: Wire it to your own systems
-sidebar_position: 5
+sidebar_position: 6
 description: "Push instead of poll: the Send a webhook step, reading the payload before you build on it, passing a response into later steps, and starting an automation from outside."
 ---
 
@@ -28,8 +28,8 @@ import LabChecklist from "@site/src/components/LabChecklist";
     "The Rain delay follow-up automation saved in your test account",
   ]}
   pathName="Wire your AI Workforce to act"
-  step={5}
-  totalSteps={9}
+  step={6}
+  totalSteps={10}
   outcomes={[
     "Send data out of the platform with the Send a webhook step",
     "Read the payload the step sends before building anything on it",
@@ -50,13 +50,13 @@ Everything so far has happened inside the platform. This is the rung where the b
 
 *You are here: Partner Center → `Automations`.*
 
-Inside any automation, the `Send a webhook` step posts to an endpoint you name. It is how a workflow reaches a system the platform has no built-in step for: a team chat, a job board, your own server. You can customize the query parameters, headers, cookies, and the JSON body.
+Inside any automation, the `Send a webhook` step sends data to an endpoint you name. It is how a workflow reaches a system the platform has no built-in step for: a team chat, a job board, your own server. You set the endpoint URL and the method, which can be POST, GET, PUT, or DELETE, and you customize the query parameters, custom headers, and the JSON body.
 
 Two facts shape what you put in it.
 
 **Send identifiers, not the data itself.** The request goes over HTTPS, but the platform cannot confirm that the destination is under your team's control, so anything sensitive is safer left out. Send the record's ID, then fetch the current version over the API on your side. That also means the data your system acts on is never a stale copy.
 
-**The body is a single JSON object.** Nested JSON is not supported unless you construct it yourself, so design the payload flat.
+**The body is a single flat JSON object, and every value is a string.** Nested JSON is not supported unless you construct it yourself. A number passed straight from dynamic content causes a runtime error, so send it through a `Format text` step first.
 
 <LabCallout title="add a Send a webhook step and fire it">
 Go to `Automations` → `My automations` → `Rain delay follow-up`.
@@ -65,9 +65,9 @@ Go to `Automations` → `My automations` → `Rain delay follow-up`.
   storageKey="wire-it-to-your-systems-lab-1"
   steps={[
     <>Open <a href="https://webhook.site">webhook.site</a> in another tab and copy the unique URL it gives you.</>,
-    <>Add a <code>Send a webhook</code> step to the automation and paste that URL in.</>,
+    <>Add a step, and under <strong>Advanced</strong> select <code>Send a webhook</code>. Paste that URL in.</>,
     <>Open <code>JSON Body</code> and use <code>Add Field</code> to build a flat payload carrying the contact's ID and the booked service.</>,
-    <>Select <code>Copy example request as curl</code> and run it from your own terminal. There is no test-fire button on the step itself.</>,
+    <>Save the automation and run one booking through the employee to fire the step. Afterwards the step exposes a <code>curl_command</code> output holding the exact request that was sent.</>,
     <>Read what landed on webhook.site: the headers, and every field in the body.</>,
   ]}
   confirm={<>You can see the exact request the platform sends, field by field, before anything downstream depends on it.</>}
@@ -86,7 +86,7 @@ The step also passes data back the other way. Whatever your endpoint returns can
 
 ## Start it from outside
 
-The same idea runs in reverse. An automation built with the `Triggered via API for an account` trigger can be started from your own code with a single call, for one business at a time. There is a sibling for orders, and a `Triggered via Zapier` trigger beside them. That turns a chain of platform actions into one request from wherever your work actually starts.
+The same idea runs in reverse. An automation built with the `Triggered via API for an account` trigger can be started from your own code with a single call, for one business at a time. `Triggered via API for an order` does the same for orders, and a `Triggered via Zapier` trigger beside them. That turns a chain of platform actions into one request from wherever your work actually starts.
 
 To hand it data as well, fill in the trigger's `Payload data` section to match the keys you intend to send: "Define the structure of the data that will be passed in via the webhook." Choose the right `Type` for each key and later steps can use those values directly as their inputs. Skip that configuration and the call still starts the automation, but the data does not reach the steps.
 
@@ -155,7 +155,7 @@ Look at the payload sitting on webhook.site and pick the one field your own syst
   ]}
 />
 
-<LessonFooter to="/learn/builder/call-the-api-yourself" pathName="Wire your AI Workforce to act" step={5} totalSteps={9} />
+<LessonFooter to="/learn/builder/call-the-api-yourself" pathName="Wire your AI Workforce to act" step={6} totalSteps={10} />
 
 </InlineHighlighter>
 <MarkComplete courseId="wire-it-to-your-systems" site="vendasta_learn" />
