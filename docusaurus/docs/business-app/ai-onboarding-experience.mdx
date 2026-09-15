@@ -111,15 +111,30 @@ The email waits for the site to finish building (allow **5–15 minutes** for it
 
 You shape this through what's active on the account at invite time: activate Vibe before inviting and the client's first touch leads with a live site; invite without Vibe and the email focuses on the rest of the work. One site per account — re-sending the email to an account with a published Vibe site never creates a second one. See the [FAQ](#frequently-asked-questions) for the full details.
 
-### Turning the email on
+### When the email is sent
 
-The onboarding email is **default-on** wherever you add a user, so it's selected automatically:
+Adding a user to an account is what sends the onboarding email. There is no checkbox to select or clear — the email goes out as part of creating the user, and it **replaces** the classic welcome email for that person. The two are never sent together.
+
+**Places you send it yourself:**
 
 - From an account: **Accounts → Manage Accounts →** select the account **→ Invite users** — this opens the **Invite users panel** (see [Inviting users with the Invite users panel](#inviting-users-with-the-invite-users-panel)). The same panel opens from the invite icon on the **Manage Accounts** list.
-- Or from **Accounts → Manage Users → Create user**.
-- Or from the **Users** panel of Easy Account Create, while you're creating the account itself — see [Creating users in Easy Account Create](#creating-users-in-easy-account-create).
+- From **Accounts → Manage Users → Create user**.
+- From the **Users** panel of Easy Account Create, while you're creating the account itself — see [Creating users in Easy Account Create](#creating-users-in-easy-account-create).
+- From a CSV import — see [Creating accounts in bulk](/accounts/manage-accounts/create-accounts).
+- From the CRM, on a contact or on a company's contact list — see [Sending it from the CRM](#sending-it-from-the-crm).
 
-When the onboarding email is enabled, it **replaces** the classic welcome email for that user — the two aren't sent together.
+**Places it sends on its own,** whenever a user is created on an account:
+
+- An automation that creates a user — see [Create a user from a contact](/automations/my-automations/create-a-user-from-contact).
+- A client signing themselves up for Business App.
+- A user created through the API, where that user is associated with an account.
+- A Business App user inviting another user from **Administration → Users** in their own Business App.
+
+Users created through single sign-on are not sent the email. When more than one of these paths would fire for the same person at the same time, only one email is sent.
+
+:::info
+Because the email follows user creation everywhere, the volume you send tracks how many users you create — not how often you choose to notify someone. If you're adding a person who shouldn't hear from Business App yet, keep them as a CRM contact and invite them when the time is right.
+:::
 
 ### Inviting users with the Invite users panel
 
@@ -153,9 +168,14 @@ The classic **welcome email** is always available too. To send it after a user h
 
 ### Sending it from the CRM
 
-You can also send the onboarding email without leaving the CRM. On a contact's **Access Business App** card, the action reads **Send Onboarding Email**, with a link underneath to preview the email first. Sending from here starts the same onboarding workflow as the create-user flow, including Vibe site generation where it applies.
+You can send the onboarding email without leaving the CRM, from two places:
 
-This is the fastest path when you're already working a contact record and want to bring them into Business App in the same motion.
+- **On a contact record** — the **Access Business App** card carries a **Send Onboarding Email** action, with a link underneath to preview the email first.
+- **On a company record** — each contact listed on the company offers the same **Send Onboarding Email** action, so you can work down a business's people without opening each record.
+
+Both open the same dialog used from Accounts, with a **Preview** and an optional custom greeting, and both start the same onboarding workflow as the create-user flow — including Vibe site generation where it applies.
+
+Because the action stays available after someone is already a user, it doubles as a way to **re-send** the email to a client who has gone quiet. Repeat sends to the same person are expected here, so count recipients rather than sends when you're judging reach.
 
 ### Adding a personal greeting
 
@@ -171,7 +191,6 @@ The custom greeting is available when creating a new user, when sending to an ex
 
 You can add an account's first users while you create the account, in the **Users** panel of Easy Account Create. Those users receive the onboarding email instead of the classic welcome email.
 
-- **Send Onboarding Email** is selected by default. Clear it and no email of either kind is sent.
 - **Custom introductory message** — an optional greeting added to the top of the email. It applies to this account creation only and isn't saved as a default.
 - **Preview email** — opens the email before the account exists. It's branded with your white label, stands in a placeholder business name for the account you're creating, and renders in the language Partner Center is displayed in.
 
@@ -195,7 +214,7 @@ The email uses the white-label branding of the **market selected on the account*
 
 ### Previewing before you send
 
-When the **Send Onboarding Email** checkbox is selected, a **Preview** button appears beside it so you can review the email in Partner Center before it goes out.
+Every place that sends the onboarding email offers a **Preview** so you can review it in Partner Center before it goes out.
 
 The preview is a **static example** — it shows the email's branding, layout, and subject line so you can confirm it's on-brand. The email your client actually receives is **generated dynamically** from the real work the AI has done for their business, so the specific checklist items reflect that business's website, listings, reviews, active products, and Vibe site. Partner Center notes this on the preview itself:
 
@@ -290,8 +309,9 @@ Go to **Partner Center → Administration → Customize Business App → Pages �
 
 - **"AI has done the work" card** — *"A dynamic list of tasks that AI has completed on account setup based on products active and work done."* Toggles the "We already got to work" summary card.
 - **"Recommended for your business" cards** — *"Allows users to access and upgrade some of Business App's top products. Follows your marketplace rules for sales and upgrades."* Toggles the recommended product upgrade cards.
+- **"Next steps" card** — *"A checklist of setup tasks for new users, such as connecting Google and adding web chat. Items clear as each task is completed or dismissed."* Toggles the [Next steps cards](#next-steps-cards).
 
-Both are **on by default**. Turning a checkbox off hides that section for all of your SMBs. Remember to click **Save**.
+All three are **on by default**. Turning a checkbox off hides that section for all of your SMBs. Remember to click **Save**.
 
 <img src={require('./img/ai-onboarding-customize-home.png').default} alt="Customize Business App → Pages → Home, showing the 'AI has done the work' and 'Recommended for your business cards' toggles at the top of Page Features, both on by default" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 

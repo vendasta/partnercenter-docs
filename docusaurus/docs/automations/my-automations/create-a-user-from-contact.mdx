@@ -15,14 +15,21 @@ keywords: [create user, user from contact, contact to user, business app user, u
 1. The automation reaches the **Create a user from a contact** step with a contact in scope
 2. The step creates a new Business App user using the contact's details (name, email)
 3. The user is associated with the contact's account
-4. The automation continues to the next step
+4. The [onboarding email](/business-app/ai-onboarding-experience) is sent to that user
+5. The automation continues to the next step
 
 ## Set up the action
 
 1. Open the automation builder and add a new step
 2. Under **Users**, select **Create a user from a contact**
+3. Select **Send Onboarding Email** to email the new user. **Preview email** shows what they'll receive.
+4. Optional: add a **Custom introductory message** — up to 1000 characters, placed at the top of the email
 
-This action uses the contact currently in scope — no additional configuration is needed.
+The contact currently in scope supplies the user's details, so nothing else needs configuring.
+
+:::info
+The onboarding email is sent whenever a user is created on an account, so the new user hears from Business App either way. The controls here let you preview the email and add a greeting to it.
+:::
 
 ## Outputs
 
@@ -30,6 +37,7 @@ This action produces no outputs available to downstream steps.
 
 ## Related resources
 
+- [The AI onboarding experience](/business-app/ai-onboarding-experience) — What the onboarding email contains and every way it's sent
 - [Actions overview](./actions-overview.mdx) — Browse all available actions
 - [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
 - [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows
