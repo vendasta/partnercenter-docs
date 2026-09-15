@@ -256,4 +256,3 @@ Vous pouvez surveiller la génération de rapports grâce aux fonctionnalités d
   height="480" 
   allowFullScreen
 ></iframe>
-</content>

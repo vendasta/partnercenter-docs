@@ -393,4 +393,3 @@ Rétablir les paramètres affecte le traitement futur des commandes, mais ne mod
 
 La fréquence de diffusion des fonctionnalités varie selon les cycles de développement. Les participants à l'accès anticipé voient généralement de nouvelles fonctionnalités chaque mois, bien que le moment puisse varier selon la complexité des fonctionnalités et les exigences de test.
 </details>
-</content>
