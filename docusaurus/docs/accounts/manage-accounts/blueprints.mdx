@@ -1,0 +1,99 @@
+---
+title: Blueprints
+sidebar_label: Blueprints
+sidebar_position: 7
+description: Create reusable account configurations and apply them automatically to new accounts at scale
+tags: [blueprints, account-setup, automations]
+keywords: [blueprint, bulk-setup, configured-accounts, onboarding]
+---
+
+# Blueprints
+
+Blueprints let you configure an account once and reuse that setup everywhere. When a blueprint is applied, it rolls out AI employees, web chat settings, CRM fields, campaigns, automations, forms, and more to the target account in seconds, without any manual steps.
+
+Blueprints are especially useful for partners onboarding clients at scale, standardizing setup across an industry vertical, or offering SMB self-signup.
+
+## What blueprints include
+
+A blueprint captures the full configuration of a source account, including:
+
+- AI employees
+- Web chat widgets and settings
+- Forms
+- CRM fields
+- CRM field layouts
+- Campaigns
+- Automations
+
+![Create blueprint dialog showing the Configure step with checkboxes for AI Employees, CRM Custom Fields, Promotions, and other components](./img/account-templates1.png)
+
+## How to access
+
+To view, create, update, or manually apply blueprints, go to Partner Center → `Accounts` → `Blueprints`. Two tabs are available:
+
+- **My Blueprints** — the blueprints your account has created. This tab always shows the list view, and your place in the list is kept as you page through it.
+- **Public Blueprints** — blueprints made available across accounts. You can switch between list and card view here; your choice is kept while you stay on this tab, and the view resets to the default the next time you visit. The list view shows each blueprint's version as a badge (for example, `v1`, `v2`).
+
+Only Vendasta can mark a blueprint's configuration as public, publish or unpublish a public blueprint, or update a public blueprint's configuration. This option isn't available on the blueprints your account creates.
+
+![Blueprints list showing a blueprint's name, source account, contents, and date created](./img/account-templates3.png)
+
+## Manually applying a blueprint
+
+To apply a blueprint directly to one or more accounts, open it from Partner Center → `Accounts` → `Blueprints`, select the target accounts, choose which features to apply, and click **Apply**. Choose **Select all companies** to apply the blueprint to every company matching your current search and filters, rather than only the companies on the current page.
+
+![Apply blueprint dialog showing target account selection and feature checkboxes](./img/account-templates2.png)
+
+## Applying blueprints automatically
+
+### Link a blueprint to a business category
+
+Link a blueprint to a business category and any new account created in that category, via API, manually, or through SMB self-signup, automatically gets the matching blueprint applied. No manual setup required.
+
+### Use the "Apply blueprint" automation action
+
+Blueprints can also be applied from inside an automation, giving you full control over when and how they are triggered.
+
+To set this up:
+
+1. Go to Partner Center → **Automations**.
+2. Select or create an automation.
+3. Add the **Apply blueprint** action.
+4. Select the blueprint to apply.
+
+This lets you apply or re-apply a blueprint based on any condition an automation can evaluate.
+
+## Including CRM field layouts
+
+A [field layout](/administration/data-management/crm-objects/field-layouts) — the grouping and ordering of fields on contact, company, opportunity, and custom object records — can be rolled out with a blueprint so every account presents its records the same way.
+
+- Only customized layouts are captured. Object types still on the standard layout are skipped.
+- If a layout references custom fields or a custom object type the target account doesn't have, those are created there first and the layout is repointed at them.
+- Applying a blueprint replaces the target account's layout for that object type. Any layout customization already made on the target account is overwritten.
+
+## Including forms and web chat widgets
+
+Forms and web chat widgets configured on the source account can be included in the blueprint and rolled out to every account the blueprint is applied to. This is particularly useful when:
+
+- An initial web chat message needs to be in another language.
+- Privacy statements differ by region.
+
+## Updating blueprints
+
+After improving the source account a blueprint was built from, click **Update blueprint** to refresh the blueprint with the latest changes. No rebuild required. The updates are applied the next time the blueprint is used.
+
+Every update is saved as a version. From the blueprint's version history, you can review earlier versions and switch the blueprint to one of them.
+
+## Using blueprint application as an automation trigger
+
+When a blueprint finishes applying, the target account receives an activity log entry. Automations can listen for that entry and chain downstream work off a completed blueprint application, such as rep assignment or coupon form setup.
+
+## Custom object limits
+
+Each account can have up to 3 [CRM custom objects](/crm/custom-objects). If applying a blueprint would push a target account past this limit, the application fails for that account and Partner Center shows an error identifying the cause, rather than failing silently.
+
+## Who this is for
+
+- Partners onboarding accounts at scale (enterprise rollouts, reseller channels, migrations)
+- Partners standardizing setup across multiple accounts in the same industry vertical
+- Partners offering SMB self-signup
