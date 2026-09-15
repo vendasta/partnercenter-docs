@@ -1,0 +1,194 @@
+---
+id: field-layouts
+title: Diseños de campos
+sidebar_label: Diseños de campos
+sidebar_position: 2
+description: Agrupa, reordena y oculta campos del CRM para controlar cómo se organizan los registros de contactos, empresas, oportunidades y objetos personalizados
+tags: [crm, custom-fields, field-layouts]
+keywords: [field layout, field groups, organize layout, hidden fields, unassigned fields, CRM fields]
+---
+
+# Diseños de campos
+
+Un diseño de campos controla cómo se agrupan y ordenan los campos del CRM en un registro. Cada grupo se convierte en una sección con etiqueta, y el orden de los grupos es el orden en que un usuario los lee.
+
+El diseño se aplica en todos los lugares donde se muestran los campos de un registro:
+
+- El formulario de **creación** para un registro nuevo
+- El formulario de **edición** para un registro existente
+- El panel de **perfil** del registro
+
+Cada tipo de objeto comienza con un diseño estándar. Cuando cambias el diseño, tu cambio se convierte en una anulación que se aplica solo a tu CRM; el diseño estándar sigue disponible y puedes volver a él en cualquier momento.
+
+## Qué puedes cambiar
+
+- Agrupar campos relacionados bajo un nombre que elijas
+- Reordenar grupos y reordenar campos dentro de un grupo
+- Elegir cómo se ordenan los campos sin agrupar
+- Ocultar campos que no usas, sin eliminarlos a ellos ni a sus datos
+
+## Antes de empezar
+
+Necesitas el mismo permiso que te permite crear y editar campos personalizados. Si puedes abrir `Administration` → `Custom Fields` y crear un campo, puedes editar el diseño.
+
+Los diseños se establecen por tipo de objeto. Contactos, Empresas, Oportunidades y cada tipo de objeto personalizado tienen su propio diseño, editado por separado.
+
+## Abrir el editor de diseño
+
+1. Ve a Partner Center → `Administration` → `Custom Fields`.
+2. Selecciona un objeto de la lista de la izquierda: **Contacts**, **Companies**, **Opportunities**, o uno de tus objetos personalizados.
+3. Haz clic en **Organize layout**.
+
+<img src={require('./img/organize-layout-button.png').default} alt="Página de objetos del CRM con Contactos seleccionado, mostrando el botón Organize layout junto a Create field encima de la tabla de campos" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## El editor
+
+El editor tiene tres paneles.
+
+| Panel | Qué contiene |
+| --- | --- |
+| **Unassigned** | Campos que no están en ningún grupo. Igual aparecen en los registros, debajo de cada grupo con nombre. |
+| **Field groups** | Tus grupos con nombre, en el orden en que aparecen en el registro. |
+| **Hidden fields** | Campos eliminados del registro. Sus datos se conservan. |
+
+Arrastra un campo entre dos paneles cualesquiera, o entre grupos. Para mover varios campos a la vez, selecciónalos y usa **Add to group** o **Hide field** desde el menú de selección.
+
+<img src={require('./img/organize-layout-editor.png').default} alt="El editor de diseño de campos Organize para Contactos, con el panel Unassigned y su control de orden a la izquierda, los grupos Basic information y About contact en el centro, y el panel Hidden fields a la derecha" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Grupos de campos
+
+- Haz clic en **Add group** y asígnale un nombre. Todo grupo necesita un nombre, y los nombres deben ser únicos.
+- Cambia el nombre de un grupo con el ícono de lápiz en su encabezado. Presiona Enter para confirmar o Escape para cancelar.
+- Elimina un grupo con el ícono de papelera. Los campos que contenía vuelven a **Unassigned**.
+- Haz clic en el nombre de un grupo, o en el chevron, para colapsarlo y expandirlo. El número junto al nombre indica cuántos campos contiene.
+- Arrastra un grupo por su asa para moverlo hacia arriba o hacia abajo. El orden aquí es el orden en el registro.
+- Arrastra campos dentro de un grupo para reordenarlos.
+- Usa el menú **⋮** de un campo para **Move to** otro grupo, **Remove to Unassigned**, u **Hide field**.
+- En **Unassigned**, el botón **+** de un campo es un atajo: enumera todos los grupos para que puedas colocar el campo directamente en uno, u ocultarlo.
+
+:::info
+Un grupo debe contener al menos un campo mostrado. Los grupos vacíos impiden guardar; agrega un campo o elimina el grupo.
+:::
+
+### Campos sin asignar
+
+Cualquier campo que no esté en un grupo y no esté oculto se ubica en **Unassigned**. Estos campos siguen apareciendo en el registro, después de todos los grupos con nombre.
+
+Usa **Sort unassigned by** para elegir su orden:
+
+- **By recent update**: los campos definidos más recientemente actualizados primero. Esta es la opción predeterminada.
+- **Alphabetical**: por nombre de campo, en orden ascendente.
+
+Un campo personalizado recién creado comienza sin asignar, por lo que aparece en los registros de inmediato sin que tengas que editar el diseño.
+
+### Campos ocultos
+
+Arrastra un campo a **Hidden fields** para quitarlo del registro. Ocultar no es eliminar: la definición del campo y todos sus datos almacenados permanecen exactamente igual, y el campo sigue disponible para importaciones, automatizaciones y la API.
+
+<img src={require('./img/organize-layout-hidden.png').default} alt="El panel Hidden fields con tres campos de contacto ocultos bajo el encabezado Fields here are hidden from contact records" style={{width: '400px', maxWidth: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Para recuperar un campo oculto, abre su menú **⋮** y elige **Restore to Unassigned**. Desde ahí, arrástralo al grupo que quieras.
+
+<img src={require('./img/organize-layout-restore.png').default} alt="El menú de un campo oculto abierto en el panel Hidden fields, mostrando la acción Restore to Unassigned" style={{width: '400px', maxWidth: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Campos que no verás en el editor
+
+Los campos de solo lectura no aparecen en el editor, y tampoco los campos que no están activos para tu CRM. Su posición en el diseño se conserva, así que no necesitas hacer nada con ellos.
+
+Por esto, un grupo cuyos únicos campos restantes sean de solo lectura se considera vacío e impide guardar.
+
+### Nombres de campos en el editor
+
+El editor muestra cada campo con el nombre que realmente ven tus usuarios. Si has anulado el título de un campo para filtros o columnas de tabla, el editor muestra ese título en lugar del nombre de campo subyacente.
+
+## Guarda tus cambios
+
+Haz clic en **Done**. El editor muestra **Saving...** y luego **All changes saved**.
+
+:::warning
+No se guarda nada hasta que hagas clic en **Done**. Salir del editor antes de guardar descarta tus cambios.
+:::
+
+Si falla el guardado, el mensaje te indica qué corregir:
+
+| Mensaje | Qué significa |
+| --- | --- |
+| Remove all empty groups before saving | Un grupo no tiene campos mostrados. Agrega uno o elimina el grupo. |
+| Group name is required | Un grupo quedó sin nombre. |
+| Two or more groups have the same ID — rename one before saving | Dos grupos comparten un nombre. Cambia el nombre de uno. |
+| A field appears in more than one group — each field can only belong to one group | Quita el campo de uno de los grupos. |
+| You don't have permission to modify this layout | Tu usuario no puede editar campos del CRM. |
+| Could not reach the server — check your connection and try again | Problema de red. Tus cambios siguen en pantalla, así que vuelve a intentar con **Done**. |
+
+## Restablecer al estándar
+
+**Reset to standard** elimina tus grupos personalizados y el orden de campos para el tipo de objeto que estás editando, y lo vuelve a colocar en el diseño estándar. Se te pedirá confirmación.
+
+Restablecer afecta solo al diseño. No se elimina ningún campo ni dato de campo, y los campos ocultos vuelven a ser visibles.
+
+## Campos eliminados
+
+Si un campo se elimina después de haberlo colocado en un grupo, simplemente deja de aparecer. No necesitas editar el diseño para limpiar después de una eliminación.
+
+## Registros multiubicación
+
+Las vistas multiubicación combinan campos de varias cuentas, por lo que siempre usan el diseño estándar. Una anulación de diseño que estableciste en una cuenta no se aplica a un resultado multiubicación combinado.
+
+## Diseños de campos en plantillas de cuenta
+
+Los diseños de campos se incluyen en las plantillas de cuenta. Consulta [Plantillas de cuenta](/accounts/manage-accounts/account-templates) para saber cómo se crean y aplican las plantillas.
+
+- Solo se capturan los diseños personalizados. Los tipos de objeto que siguen con el diseño estándar se omiten.
+- Si un diseño hace referencia a campos personalizados o a un tipo de objeto personalizado que la cuenta de destino no tiene, se crean allí primero y el diseño se redirige hacia ellos.
+- Al aplicar una plantilla, se reemplaza el diseño de la cuenta de destino para ese tipo de objeto.
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Ocultar un campo elimina sus datos?</summary>
+
+No. Ocultar solo elimina el campo de la vista del registro. La definición del campo y todos los valores almacenados se conservan, y el campo sigue funcionando en importaciones, automatizaciones y la API. Restáuralo en cualquier momento desde el panel **Hidden fields**.
+
+</details>
+
+<details>
+<summary>¿Dónde aparecen realmente los grupos?</summary>
+
+En el formulario de creación, el formulario de edición y el panel de perfil del registro, como secciones con etiqueta en el orden que estableciste.
+
+</details>
+
+<details>
+<summary>¿Qué pasa con los campos que no coloco en un grupo?</summary>
+
+Aparecen en el registro después de todos los grupos con nombre, en el orden que hayas elegido en **Sort unassigned by**.
+
+</details>
+
+<details>
+<summary>¿Puede cada tipo de objeto tener un diseño diferente?</summary>
+
+Sí. Contactos, Empresas, Oportunidades y cada tipo de objeto personalizado tienen su propio diseño, editado por separado.
+
+</details>
+
+<details>
+<summary>¿Por qué no puedo guardar?</summary>
+
+La causa más frecuente es un grupo vacío o un grupo sin nombre. Todo grupo necesita un nombre único y al menos un campo mostrado. El mensaje de error indica el problema específico.
+
+</details>
+
+<details>
+<summary>¿Un campo personalizado nuevo necesita agregarse al diseño?</summary>
+
+No. Los campos nuevos aparecen en **Unassigned** y se muestran en los registros de inmediato. Muévelos a un grupo cuando quieras que estén en una sección específica.
+
+</details>
+
+<details>
+<summary>¿Puedo deshacer un cambio de diseño?</summary>
+
+No hay un deshacer de un solo paso. Arrastra los campos de vuelta y haz clic en **Done**, o usa **Reset to standard** para descartar toda la anulación de ese tipo de objeto.
+
+</details>

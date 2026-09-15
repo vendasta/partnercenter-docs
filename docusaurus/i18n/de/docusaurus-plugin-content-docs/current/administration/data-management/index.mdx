@@ -1,0 +1,65 @@
+---
+title: Datenverwaltung
+description: Erfahren Sie mehr über die Datenverwaltung in der Plattform von Vendasta, einschließlich CRM-Objekten, Scoring und Pipelines
+---
+
+# Datenverwaltung
+
+Die Datenverwaltung bietet Tools zur Organisation Ihrer Geschäftsdaten über benutzerdefinierte Felder, Vertriebspipelines und Scoring-Systeme. Nutzen Sie sie, um unternehmensspezifische Informationen zu erfassen, Vertriebsprozesse zu verfolgen und Leads zu priorisieren.
+
+:::info Datensicherheit und Datenschutz
+Vendasta unterhält einen aktuellen SOC 2® Type 2-Bericht, der die Sicherheitskontrollen abdeckt. Details dazu, wie Ihre Daten gesichert und verarbeitet werden, finden Sie unter [Sicherheit und Datenschutz](/getting-started/security-and-privacy) oder auf dem [Vendasta Trust Center](https://trust.vendasta.com/).
+:::
+
+## Was es ist
+
+Die Datenverwaltung besteht aus drei Kernbereichen:
+
+- **Benutzerdefinierte Felder** – Speichern Sie einzigartige Geschäftsinformationen zu Konten, Benutzern, Bestellungen und Produkten
+- **Vertriebspipelines** – Verfolgen Sie den Fortschritt von Opportunities und Umsatzprognosen
+- **Scoring** – Priorisieren Sie Leads und Opportunities mit automatisierten Regeln und Gewichtungen
+
+Zusammen strukturieren sie Ihre Daten für bessere Segmentierung, Automatisierung und Entscheidungsfindung.
+
+## Was Sie tun können
+
+- **Benutzerdefinierte Felder erstellen** – Definieren Sie Felder mit fünf Typen (Text, Ganzzahl, Datum, Dropdown, Währung), die Filterung und Sortierung in Automatisierungen steuern
+- **Erweiterte Filter verwenden** – Filtern Sie in Automatisierungen nach Werten benutzerdefinierter Felder (z. B. Enthält, Enthält nicht, Ist einer von, Vor, Nach), abhängig vom Feldtyp
+- **Vertriebspipelines aufbauen** – Verwenden Sie die standardmäßige vierstufige Pipeline oder erstellen Sie benutzerdefinierte Pipelines mit eigenen Phasen und Prognoseprozentsätzen
+- **Marketing segmentieren** – Versenden Sie zielgerichtete Kampagnen anhand von Daten benutzerdefinierter Felder (z. B. „Einsteiger" vs. „etabliert" nach Größe oder Typ)
+- **Zuweisungen automatisieren** – Weisen Sie Vertriebsmitarbeitern oder Teams Konten basierend auf Kriterien wie geschätztem Umsatz in benutzerdefinierten Feldern zu
+- **Unternehmensspezifische Daten speichern** – Erfassen Sie Dinge wie „Lieblingsfußballteam", „Anzahl der Hotelzimmer" oder „Servicelevel"
+- **Lead- und Opportunity-Scoring verwalten** – Konfigurieren Sie Scoring-Regeln, Gewichtungen und Analysen; lösen Sie Aktionen aus, wenn Scores Schwellenwerte überschreiten
+- **Daten importieren und verwalten** – Befüllen Sie benutzerdefinierte Felder per Massenimport, über die Vendasta-API oder manuelle Eingabe
+
+## Funktionsweise
+
+Die Standardpipeline hat vier Phasen: **Lead**, **Kontakt**, **Qualifiziert** und **Angebot**, mit Prognoseprozentsätzen von 0 %, 20 %, 40 % und 60 %. Umsatzprognosen basieren auf der Wahrscheinlichkeit, die Sie für jede Phase festlegen.
+
+Benutzerdefinierte Felder müssen definiert werden, bevor Sie Daten speichern können. Sie wählen einen Objekttyp (Konto, Benutzer, Bestellung oder Produkt) und einen Feldtyp. Der Feldtyp bestimmt, welche Werte Sie speichern können und wie das Feld in Automatisierungsregeln gefiltert und sortiert werden kann.
+
+## Artikel in diesem Abschnitt
+
+- **[CRM-Objekte](./crm-objects/index.mdx)** – Benutzerdefinierte Felder und Datenstrukturen; Objekttypen, Feldtypen und Automatisierungsfilter
+- **[Feldlayouts](./crm-objects/field-layouts.mdx)** – Gruppieren, neu anordnen und ausblenden von CRM-Feldern, um die Anzeige von Datensätzen zu steuern
+- **[Pipelines](./pipelines/index.mdx)** – Verwaltung von Vertriebspipelines, Phasen und Vorlagen
+- **[Score](./score/index.mdx)** – Lead- und Opportunity-Scoring, Kriterien und CRM-Anzeige
+
+## Erste Schritte
+
+1. **Benutzerdefinierte Felder definieren** – Gehen Sie zu `Partner Center` → `Administration` → `Custom Fields`. Wählen Sie den Objekttyp und den Feldtyp (Text, Ganzzahl, Datum, Dropdown, Währung). Der Feldtyp wirkt sich darauf aus, wie Daten gespeichert und in Automatisierungen verwendet werden.
+
+2. **Pipelines erstellen oder anpassen** – Gehen Sie zu `Partner Center` → `Administration` → `Pipelines`. Bearbeiten Sie die Standardpipeline oder klicken Sie auf **Create pipeline**. Legen Sie Prognoseprozentsätze pro Phase fest; ordnen Sie die Phasen nach Erfolgswahrscheinlichkeit.
+
+3. **Scoring konfigurieren** – Gehen Sie zu `Partner Center` → `Administration` → `Score`. Richten Sie Kriterien für Lead- und Opportunity-Scoring ein; Scores erscheinen in der Unternehmenstabelle im CRM.
+
+## Fehlerbehebung und Problemlösung
+
+- **Feldtyp** – Wählen Sie sorgfältig aus; er beeinflusst, wie Daten gespeichert werden und welche Automatisierungsfilter verfügbar sind. Eine spätere Änderung kann sich auf bestehende Daten auswirken.
+- **Objektzuordnung** – Bestätigen Sie, dass sich jedes Feld auf dem richtigen Objekttyp befindet (Konto, Benutzer, Bestellung oder Produkt).
+- **Datenimport** – Ordnen Sie beim Importieren von Kontenlisten die Spalten den richtigen Definitionen benutzerdefinierter Felder zu.
+- **Pipelines** – Prüfen Sie, ob die Phasen nach Erfolgswahrscheinlichkeit geordnet sind und die Prozentsätze Ihren Konversionserwartungen entsprechen.
+
+:::warning
+Der Feldtyp beeinflusst erheblich, wie Daten in Automatisierungsregeln gespeichert und gefiltert werden können. Wählen Sie sorgfältig aus; Änderungen nach der Erstellung können sich auf bestehende Daten auswirken.
+:::

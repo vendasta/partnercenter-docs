@@ -1,0 +1,63 @@
+---
+id: notification-behaviors
+title: Cómo funcionan las notificaciones específicas
+description: Comprende el comportamiento de las notificaciones de Task Assignee Update, Daily Digest, activación de productos y carrito abandonado en Partner Center.
+sidebar_position: 2
+---
+
+Algunas notificaciones de Partner Center se comportan de manera diferente a lo esperado. Este artículo explica cómo funcionan cuatro tipos de notificaciones comúnmente malentendidos para que puedas configurarlos correctamente.
+
+## Task Assignee Update
+
+La notificación `Task Assignee Update` se activa cuando una tarea es **reasignada** a un usuario diferente. No se activa cuando una tarea se crea por primera vez y se asigna.
+
+- **Se activa con:** cambiar el responsable de una tarea existente
+- **No se activa con:** la creación inicial de una tarea con un responsable asignado
+
+Si quieres recibir notificaciones sobre toda la actividad de tareas, incluida la creación, usa las opciones de notificación de tareas más amplias disponibles en `Administration` → `Client Notifications` → `Task Manager`.
+
+## Notificaciones de activación de productos
+
+Cuando se activa un producto para un cliente, se envía una notificación a los destinatarios configurados. Sin embargo, **desactivar un producto no genera ninguna notificación**.
+
+- **Activa la notificación:** activación de un producto
+- **No activa la notificación:** desactivación de un producto
+
+Si tu equipo necesita hacer seguimiento de las desactivaciones, usa la sección de Orders de Partner Center o configura una automatización para registrar los eventos de desactivación.
+
+## Correo de Daily Digest
+
+El correo de Daily Digest resume la actividad del día anterior. Solo se envía **si hubo actividad** durante ese período. Si no ocurrió nada, no se envía ningún correo.
+
+- **Frecuencia:** una vez al día
+- **Condición:** solo se envía cuando hay actividad que reportar
+- **Contenido:** resumen de los eventos del día anterior en los tipos de notificación configurados
+
+Si dejas de recibir el Daily Digest, probablemente significa que no hubo actividad calificada el día anterior, no que la notificación esté fallando.
+
+## Notificaciones de carrito de compras abandonado
+
+Cuando un cliente deja artículos en su carrito de compras sin completar una compra, Partner Center envía notificaciones para ayudar a recuperar la venta:
+
+- **Notificación al vendedor:** se alerta al vendedor asignado de que un carrito ha sido abandonado
+- **Recordatorio al cliente:** el cliente recibe un recordatorio de seguimiento sobre su carrito
+
+**Importante:** la notificación al vendedor no incluye el contenido del carrito. El contenido del carrito es privado para el propietario del carrito y no se comparte con vendedores ni partners.
+
+:::info
+Las notificaciones de carrito abandonado ayudan a tu equipo a dar seguimiento a posibles ventas, pero no revelan qué estaba explorando o comprando el cliente.
+:::
+
+## Preguntas frecuentes
+
+**¿Por qué no recibí una notificación de Task Assignee Update cuando se creó la tarea?**
+Esta notificación solo se activa con la reasignación. La creación inicial de la tarea no la activa.
+
+**Desactivamos un producto pero nadie recibió una notificación.**
+Las desactivaciones de productos no generan notificaciones. Usa la sección de Orders para hacer seguimiento del historial de desactivaciones.
+
+**No he recibido el Daily Digest en algunos días.**
+Revisa si hubo alguna actividad en la plataforma esos días. El digest se omite por completo cuando no hay nada que reportar.
+
+**¿Puedo ver qué había en un carrito abandonado?**
+No. El contenido del carrito es privado para el propietario del carrito. Los vendedores solo ven que un carrito fue abandonado, no lo que contenía.

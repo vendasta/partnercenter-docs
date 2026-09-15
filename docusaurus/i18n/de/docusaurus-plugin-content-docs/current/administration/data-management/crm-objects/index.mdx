@@ -1,0 +1,107 @@
+---
+id: crm-objects
+title: CRM-Objekte
+description: Verwalten Sie CRM-Objekte und benutzerdefinierte Felder für Konten, Benutzer, Bestellungen und Produkte in der Plattform von Vendasta.
+sidebar_position: 1
+---
+
+# CRM-Objekte
+
+Mit CRM-Objekten und benutzerdefinierten Feldern können Sie unternehmensspezifische Daten zu Konten, Benutzern, Bestellungen und Produkten speichern und nutzen. Definieren Sie Felder einmal und verwenden Sie sie dann, um Marketing zu segmentieren, den Vertrieb zu automatisieren und Daten per Import oder API zu verwalten.
+
+## Was sind benutzerdefinierte Felder?
+
+<iframe src="//fast.wistia.com/embed/iframe/3vkidhas6i" width="560" height="315" frameborder="0" allowfullscreen=""></iframe>
+
+Mit benutzerdefinierten Feldern können Sie individuelle Felder für die Informationen erstellen, die für Sie bei Konten, Benutzern, Bestellungen und Produkten wichtig sind. So können Sie Marketing segmentieren und personalisieren, Vertriebsprozesse automatisieren und Arbeiten mit weniger Aufwand erledigen.
+
+## Warum benutzerdefinierte Felder wichtig sind
+
+Unterschiedliche Unternehmen benötigen unterschiedliche Daten. Mit benutzerdefinierten Feldern definieren Sie nur das, was Sie täglich verwenden. Zum Beispiel:
+
+- Senden Sie eine „Starter"-Kampagne an Zahnarztpraxen mit weniger als 100 Patienten und eine „Established"-Kampagne an solche mit mehr
+- Speichern Sie das Lieblingsfußballteam eines Benutzers als Gesprächseinstieg für den Vertrieb
+- Weisen Sie einem Konto automatisch einen Vertriebsmitarbeiter oder ein Team basierend auf dem geschätzten Umsatz zu
+
+![Beispiel für benutzerdefinierte Felder](../img/administration/data-management/custom-fields-example.jpg)
+
+## Wie benutzerdefinierte Felder funktionieren
+
+**Felder zuerst definieren**
+
+Bevor Sie Daten speichern können, definieren Sie das Feld unter `Partner Center` → `Administration` → `Custom Fields`. Wählen Sie, zu welchem Objekttyp die Daten gehören (Konto, Benutzer, Bestellung oder Produkt). Zum Beispiel passt „Anzahl der Hotelzimmer" zu einem Konto, nicht zu einzelnen Benutzern.
+
+![Erstellen eines benutzerdefinierten Feldes](../img/administration/data-management/custom-fields-create.jpg)
+
+Nachdem Sie auf **Create Custom Field** geklickt haben, geben Sie einen **Name** und **Field Type** ein. Der Feldtyp bestimmt, welche Werte gespeichert werden können und wie das Feld in Automatisierungen gefiltert und sortiert werden kann.
+
+![Typen benutzerdefinierter Felder](../img/administration/data-management/custom-fields-type.jpg)
+
+## Feldtypen
+
+| Feldtyp | Beispielnamen | Beispielwerte | Automatisierungsfiltertypen |
+| --- | --- | --- | --- |
+| Text | Lieblingshunderasse, letzter Veranstaltungstyp, erster Inhalte-Download | Golden Retriever, Basketball, Regelbuch | Ist ein beliebiger Wert, Fehlt, Enthält, Enthält nicht, Ist einer von, Ist keiner von |
+| Ganzzahl | Anzahl der Mitarbeiter, Kunden-Touchpoint-Score, Anzahl der Standorte | 4, -2, 100 | Kleiner oder gleich, Gleich, Größer als |
+| Datum | Geburtstag, bestes Tagesverkaufsdatum, manuell zu entfernen bis | 13. Aug. 1991, 14. Feb. 2022, 22. Mär. 2233 | Nach, Vor |
+| Dropdown | Servicelevel, ursprünglich gekauftes Paket, Anrufpriorität | Silber, Gold, Platin | Ist, Ist nicht |
+| Währung | bevorzugtes Monatsbudget, durchschnittlicher Umsatz pro Kunde, externe Ausgaben | USD 1000, CAD 10,50, THB 50000 | Kleiner oder gleich, Größer als |
+
+## Eingabe benutzerdefinierter Daten
+
+Sie können benutzerdefinierte Felder auf folgende Weise befüllen:
+
+- In großen Mengen durch den Import einer Kontenliste
+- Über die öffentliche API von Vendasta
+- Durch manuelles Bearbeiten von Datensätzen dort, wo die Felder angezeigt werden
+
+![Dateneingabe für benutzerdefinierte Felder](../img/administration/data-management/custom-fields-data-entry.jpg)
+
+## Kontofelder vs. Unternehmensfelder: Synchronisierungsverhalten
+
+Benutzerdefinierte Felder können für verschiedene Objekttypen erstellt werden. Bei der Arbeit mit **Konten** und **Unternehmen** unterscheidet sich das Synchronisierungsverhalten in einem wichtigen Punkt:
+
+- **Kontofelder** werden bidirektional mit verknüpften Unternehmensdatensätzen synchronisiert – Aktualisierungen am Konto erscheinen beim Unternehmen und umgekehrt.
+- **Unternehmensfelder** werden nicht mit Konten synchronisiert – Daten, die in den benutzerdefinierten Feldern eines Unternehmens eingegeben werden, erscheinen nicht bei verknüpften Kontodatensätzen.
+
+Wenn Daten zwischen Konten und Unternehmen fließen sollen, definieren Sie das Feld als **Konto**-Feld.
+
+### Ein doppeltes Feld archivieren
+
+Wenn Sie doppelte benutzerdefinierte Felder erstellt haben, archivieren Sie die überzähligen, um Ihre Feldliste übersichtlich zu halten:
+
+1. Gehen Sie zu `Partner Center` → `Administration` → `Custom Fields`
+2. Wählen Sie **Account** aus den Tabs oben
+3. Suchen Sie nach dem doppelten Feld
+4. Klicken Sie auf **⋮** neben dem Feldnamen
+5. Wählen Sie **Archive**
+
+Archivierte Felder werden bei neuen Datensätzen ausgeblendet, ihre Daten bleiben jedoch erhalten.
+
+## Organisieren, wie Felder in Datensätzen angezeigt werden
+
+Das Erstellen eines Feldes legt fest, was Sie speichern können. Ein **Feldlayout** legt fest, wo es angezeigt wird. Gruppieren Sie zusammengehörige Felder in benannten Abschnitten, ordnen Sie sie neu an, wählen Sie, wie ungrupppierte Felder sortiert werden, und blenden Sie nicht verwendete Felder aus, ohne deren Daten zu löschen.
+
+Um ein Layout zu bearbeiten, gehen Sie zu `Partner Center` → `Administration` → `Custom Fields`, wählen Sie ein Objekt aus und klicken Sie auf **Organize layout**.
+
+Die vollständige Anleitung finden Sie unter [Feldlayouts](./field-layouts.mdx).
+
+## Häufig gestellte Fragen
+
+<details>
+<summary>Können in Partner Center erstellte benutzerdefinierte Felder in Business App verwendet werden?</summary>
+
+Nein. In Partner Center erstellte benutzerdefinierte Felder sind nur für die Verwendung in Partner Center bestimmt. Um benutzerdefinierte Felder für Konten in Business App zu haben, erstellen Sie diese unter `Business App` → `Administration` → `CRM Objects` für jedes Konto.
+</details>
+
+<details>
+<summary>Gibt es ein Zeichenlimit für die Feldbeschreibung?</summary>
+
+Ja. Das Limit liegt bei 4000 Zeichen.
+</details>
+
+<details>
+<summary>Warum erscheinen meine benutzerdefinierten Felder auf Unternehmensebene nicht bei den Konten?</summary>
+
+Unternehmensfelder und Kontofelder werden unterschiedlich synchronisiert. Unternehmensfelder werden nicht mit Kontodatensätzen synchronisiert. Wenn Daten sowohl beim Konto als auch beim Unternehmen erscheinen sollen, erstellen Sie das Feld als **Konto**-Feld – Kontofelder werden bidirektional mit verknüpften Unternehmen synchronisiert.
+</details>

@@ -1,0 +1,193 @@
+---
+id: customize
+title: Personalizar
+description: Personaliza las funciones de la plataforma, los flujos de compra, la configuración de Business App y la experiencia del cliente en la plataforma de Vendasta.
+sidebar_label: Personalizar
+sidebar_position: 1
+tags: [customize, business-app, purchasing, platform-settings]
+keywords: [buy-it-yourself, platform-customization, business-app-settings, snapshot-configuration]
+---
+
+Esta guía cubre cómo personalizar las funciones y los ajustes de la plataforma que afectan a tus clientes, desde los flujos de compra hasta las interacciones en Business App y el acceso a los snapshots.
+
+## Qué es la personalización de la plataforma
+
+La personalización de la plataforma te permite controlar cómo interactúan los clientes con tu plataforma, incluyendo los procesos de compra, el acceso a Business App y otras funciones. Úsala para alinear la experiencia con tu modelo de negocio y las necesidades de tus clientes.
+
+## Por qué es importante
+
+- **Alineación con el modelo de negocio** – Adapta los flujos de compra y acceso a tu proceso de ventas
+- **Marca profesional** – Crea una experiencia coherente y con tu marca para los clientes
+- **Acceso controlado** – Gestiona cuándo y cómo pueden comprar o acceder a las funciones tus clientes
+- **Mejor experiencia de usuario** – Simplifica las interacciones con los clientes y reduce la confusión
+
+## Qué incluye
+
+- Controles de compra Buy-it-Yourself
+- Configuración de contactos y conversaciones de Business App
+- Gestión del acceso a snapshots de prospectos y cuentas
+- Personalización de acuerdos con clientes y carrito de compras
+- Configuración de fuentes de listados y reseñas
+
+## Cómo configurar la compra Buy-it-Yourself
+
+El proceso "BIY" o "Buy-it-Yourself" permite que los clientes compren y activen productos por su cuenta. Algunos partners prefieren controlar el momento o la financiación, por lo que puedes crear un flujo de trabajo controlado en su lugar.
+
+### Cómo funciona Buy-it-Yourself
+
+Cuando un cliente inicia un pedido de venta y paga el precio al público, el proceso de autoactivación te cobra el total al por mayor. Esto funciona bien para compras en cualquier momento, pero puede no ser adecuado para partners que quieren controlar el momento o la financiación variable al por mayor.
+
+:::info
+Los productos y servicios ofrecidos de forma gratuita no forman parte de la experiencia BIY.
+:::
+
+### Buy-it-Yourself frente a las actualizaciones de autoservicio
+
+Buy-it-Yourself cubre la primera compra y activación de un producto por parte de un cliente. Si un cliente ya tiene un producto y quiere pasar a un nivel superior, eso es en cambio una **actualización de autoservicio**, un ajuste independiente que se configura por producto en `Partner Center` → `Marketplace` → `Products` → *(selecciona el producto)* → `Product Info` → `Upgrade Path`. Consulta [Configuración de productos](/marketplace/products#product-info-tab) para conocer los pasos de configuración.
+
+### Cómo crear una experiencia de compra personalizada
+
+Para crear un flujo de compra controlado:
+
+1. Ve a `Partner Center` → `Administration` → `Customize` → menú desplegable `Sales`
+2. Selecciona `Configure Orders and Sales Processes`
+3. Desplázate hasta `Default Content` → `Custom fields` para los pedidos
+
+:::info
+Si tienes varios mercados, selecciona el mercado objetivo antes de continuar.
+:::
+
+4. Crea preguntas del formulario de pedido en la sección `Administrative Questions`
+5. Marca las preguntas como `required` y `hidden from end users` para que solo los usuarios del partner las vean
+6. Cuando los clientes hacen clic en `Buy` e ingresan el pago, los pedidos pasan a `Awaiting Partner Approval`
+7. Usa una casilla de verificación simple (por ejemplo, "este pedido está aprobado") para controlar el momento
+8. Cuando estés listo, completa el campo y haz clic en `Approve` para procesar el pedido
+
+## Cómo personalizar la configuración de contacto de Business App
+
+### Botón de Contáctanos
+
+Puedes personalizar el botón `Contact Us` en Business App para que los clientes puedan iniciar una conversación contigo.
+
+1. Ve a `Partner Center` → `Administration` → `Customize Business App`
+2. Abre `Conversation Messages` y activa o desactiva `Customers can start conversations with you`
+
+## Cómo configurar la experiencia de snapshot para prospectos
+
+Controla cómo interactúan los prospectos con los informes de snapshot y solicitan acceso a Business App.
+
+### Cómo configurar el acceso de los prospectos
+
+De forma predeterminada, los prospectos pueden solicitar acceso a Business App desde los informes de snapshot. Para personalizarlo:
+
+1. Ve a `Partner Center` → `Administration` → `Customize`
+2. Haz clic en la sección `Sales` para expandirla
+3. Selecciona `Edit Default Marketing and User Experience`
+4. Sigue el asistente: creación de cuenta, requisitos de acceso a Business App, preferencias de comunicación con el prospecto
+5. Haz clic en `Finish` (obtén una vista previa antes si lo deseas)
+
+### Ventajas
+
+- Los prospectos exploran los beneficios de la plataforma de primera mano
+- Flujo de creación de cuenta personalizable
+- Acceso controlado a las funciones de Business App
+- Comunicación con el prospecto con tu marca
+
+## Cómo gestionar los acuerdos con clientes
+
+### Acuerdo del carrito de compras
+
+Puedes cambiar los acuerdos con clientes que se muestran en el carrito de compras al finalizar la compra.
+
+1. Ve a `Partner Center` → `Administration` → `Customize`
+2. Abre `Sales` → `Configure Orders and Sales Processes`
+3. Desplázate hasta `Customer Agreements`
+4. Edita el texto según tus necesidades y guarda
+
+:::info
+Los acuerdos con clientes deben ser revisados por un asesor legal para garantizar el cumplimiento de las normativas locales.
+:::
+
+## Cómo configurar las fuentes de listados y reseñas
+
+### Descripción general
+
+La aplicación Listing Management te permite elegir qué sitios de listados y reseñas se monitorean para cada cliente según la industria y la ubicación. También puedes priorizar las fuentes que admiten medios para mejorar el SEO y la interacción.
+
+### Cómo acceder a las fuentes de listados
+
+1. Ve a `Partner Center` → `Administration` → `Customize`
+2. En `Product Settings`, selecciona `Listing Sources`
+
+### Cómo gestionar los sitios de listados
+
+- **Filtros** – Por categoría, país o industria
+- **Gestión de sitios** – Activa o desactiva plataformas específicas de listados y reseñas
+- **Acciones masivas** – Aplica cambios a varios sitios a la vez
+
+### Fuentes de listados con soporte de medios
+
+Las fuentes que permiten fotos y videos en los listados o en las reseñas pueden mejorar la interacción y el SEO.
+
+**Ventajas:** Mejor atractivo visual, mayor interacción, SEO más sólido, presencia en línea más completa.
+
+**Fuentes de medios disponibles:** Solo algunas fuentes de listados y reseñas admiten medios. Para ver la lista de Vendasta de fuentes con soporte de medios, usa:
+
+<a href="/attachments/Listing_Sources_that_Support_Media.pdf" target="_blank" rel="noopener">Listing_Sources_that_Support_Media.pdf</a> (40 KB)
+
+### Prácticas recomendadas
+
+- Prioriza las fuentes con soporte de medios donde ayude
+- Activa los sitios relevantes para las industrias y ubicaciones de tus clientes
+- Considera las fuentes que permiten reseñas visuales generadas por los clientes
+- Revisa y actualiza las selecciones a medida que aparecen nuevas plataformas
+- Prueba los listados para confirmar la funcionalidad y las cargas de medios
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Puedo desactivar por completo la compra Buy-it-Yourself?</summary>
+
+Sí. Usa preguntas administrativas obligatorias que estén ocultas para los usuarios finales, de modo que todos los pedidos pasen a `Awaiting Partner Approval`. Luego controlas cuándo aprobar y procesar cada pedido.
+</details>
+
+<details>
+<summary>¿Pueden los prospectos acceder a Business App sin completar un snapshot?</summary>
+
+De forma predeterminada, los prospectos solicitan acceso a Business App a través de los informes de snapshot. Puedes cambiar esto en `Edit Default Marketing and User Experience` para definir otras vías de acceso.
+</details>
+
+<details>
+<summary>¿Con qué frecuencia debo actualizar las fuentes de listados y reseñas?</summary>
+
+Revisa las fuentes de listados trimestralmente o al entrar en nuevos mercados. Aparecen nuevas plataformas con frecuencia y la relevancia para las industrias de tus clientes puede cambiar.
+</details>
+
+<details>
+<summary>¿Puedo establecer distintos acuerdos con clientes para distintos mercados?</summary>
+
+Sí. Con varios mercados, puedes establecer acuerdos con clientes por mercado en **Configure Orders and Sales Processes**.
+</details>
+
+<details>
+<summary>¿Qué debo incluir en las preguntas personalizadas del formulario de pedido?</summary>
+
+Incluye preguntas que apoyen tu proceso de ventas: casillas de aprobación, niveles de prioridad u otros requisitos. Mantenlas simples y relevantes.
+</details>
+
+<details>
+<summary>¿Puedo obtener una vista previa de los cambios antes de aplicarlos?</summary>
+
+Sí. La mayoría de los asistentes de personalización ofrecen una vista previa antes de finalizar. Revisa los cambios importantes en la vista previa para asegurarte de que coincidan con lo que deseas.
+</details>
+
+<details>
+<summary>¿Cómo me aseguro de que las fuentes de listados admitan cargas de medios?</summary>
+
+Consulta la configuración de la fuente de listados para ver el soporte de medios, o usa la lista descargable en PDF de fuentes con soporte de medios. Las plataformas principales (por ejemplo, Google Business Profile, Facebook) suelen admitir imágenes y videos; los directorios más pequeños pueden ser solo de texto.
+</details>
+
+## Artículos de esta sección
+
+- **[Gestión del equipo de ventas](./sales-team-management.md)** – Permisos de ventas, controles de acceso, visibilidad de precios y límites de informes
+- **[Mercados y configuración avanzada](./market-settings.md)** – Mercados, programas de acceso anticipado, prioridades de negocio y funciones avanzadas de la plataforma

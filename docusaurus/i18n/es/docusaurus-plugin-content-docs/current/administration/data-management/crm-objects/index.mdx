@@ -1,0 +1,107 @@
+---
+id: crm-objects
+title: Objetos de CRM
+description: Administra objetos de CRM y campos personalizados para cuentas, usuarios, pedidos y productos en la plataforma de Vendasta.
+sidebar_position: 1
+---
+
+# Objetos de CRM
+
+Los objetos de CRM y los campos personalizados te permiten almacenar y usar datos específicos de tu negocio en cuentas, usuarios, pedidos y productos. Define los campos una vez y luego úsalos para segmentar el marketing, automatizar las ventas y administrar datos mediante importaciones o la API.
+
+## ¿Qué son los campos personalizados?
+
+<iframe src="//fast.wistia.com/embed/iframe/3vkidhas6i" width="560" height="315" frameborder="0" allowfullscreen=""></iframe>
+
+Los campos personalizados te permiten crear campos únicos para la información que te importa en cuentas, usuarios, pedidos y productos. Luego puedes segmentar y personalizar el marketing, automatizar procesos de ventas y completar el trabajo con menos esfuerzo.
+
+## Por qué importan los campos personalizados
+
+Cada negocio necesita datos diferentes. Los campos personalizados te permiten definir solo lo que usas día a día. Por ejemplo:
+
+- Envía una campaña "inicial" a consultorios dentales con menos de 100 pacientes y una campaña "establecida" a los que tienen más
+- Guarda el equipo de fútbol favorito de un usuario para romper el hielo en las ventas
+- Asigna automáticamente un vendedor o equipo a una cuenta según los ingresos estimados
+
+![Ejemplo de campos personalizados](../img/administration/data-management/custom-fields-example.jpg)
+
+## Cómo funcionan los campos personalizados
+
+**Define los campos primero**
+
+Antes de poder almacenar datos, define el campo en `Partner Center` → `Administration` → `Custom Fields`. Elige a qué tipo de objeto pertenecen los datos (cuenta, usuario, pedido o producto). Por ejemplo, "número de habitaciones de hotel" corresponde a una cuenta, no a usuarios individuales.
+
+![Creación de un campo personalizado](../img/administration/data-management/custom-fields-create.jpg)
+
+Después de hacer clic en **Create Custom Field**, ingresa un **Name** y un **Field Type**. El tipo de campo determina qué valores se pueden almacenar y cómo se puede filtrar y ordenar el campo en las automatizaciones.
+
+![Tipos de campos personalizados](../img/administration/data-management/custom-fields-type.jpg)
+
+## Tipos de campos
+
+| Tipo de campo | Nombres de ejemplo | Valores de ejemplo | Tipos de filtro de automatización |
+| --- | --- | --- | --- |
+| Texto | raza de perro favorita, tipo del último evento, primera descarga de contenido | golden retriever, básquetbol, reglamento | Es cualquier valor, Falta, Contiene, No contiene, Es uno de, No es uno de |
+| Entero | número de empleados, puntaje de contacto del cliente, número de ubicaciones | 4, -2, 100 | Menor o igual que, Igual a, Mayor que |
+| Fecha | cumpleaños, mejor día de ventas, fecha límite para eliminar manualmente | 13 de agosto de 1991, 14 de febrero de 2022, 22 de marzo de 2233 | Después de, Antes de |
+| Lista desplegable | nivel de servicio, paquete comprado inicialmente, prioridad de llamada | Plata, Oro, Platino | Es, No es |
+| Moneda | presupuesto mensual preferido, ingreso promedio por cliente, gasto externo | USD 1000, CAD 10.50, THB 50000 | Menor o igual que, Mayor que |
+
+## Ingreso de datos personalizados
+
+Puedes completar los campos personalizados:
+
+- En masa, importando una lista de cuentas
+- A través de la API pública de Vendasta
+- Editando registros manualmente donde aparezcan los campos
+
+![Entrada de datos para campos personalizados](../img/administration/data-management/custom-fields-data-entry.jpg)
+
+## Campos de cuenta frente a campos de empresa: comportamiento de sincronización
+
+Los campos personalizados se pueden crear para distintos tipos de objeto. Al trabajar con **cuentas** y **empresas**, el comportamiento de sincronización difiere de una manera importante:
+
+- **Los campos de cuenta** se sincronizan de forma bidireccional con los registros de empresa vinculados: las actualizaciones en la cuenta aparecen en la empresa, y viceversa.
+- **Los campos de empresa** no se sincronizan hacia las cuentas: los datos ingresados en los campos personalizados de una empresa no aparecerán en los registros de cuenta vinculados.
+
+Si necesitas que los datos fluyan entre cuentas y empresas, define el campo como un campo de **cuenta**.
+
+### Archivar un campo duplicado
+
+Si has creado campos personalizados duplicados, archiva los sobrantes para mantener tu lista de campos ordenada:
+
+1. Ve a `Partner Center` → `Administration` → `Custom Fields`
+2. Selecciona **Account** en las pestañas de arriba
+3. Busca el campo duplicado
+4. Haz clic en **⋮** junto al nombre del campo
+5. Selecciona **Archive**
+
+Los campos archivados se ocultan de los registros nuevos, pero sus datos se conservan.
+
+## Organiza cómo aparecen los campos en los registros
+
+Crear un campo controla qué puedes almacenar. Un **diseño de campos** controla dónde aparece. Agrupa los campos relacionados en secciones con nombre, reordénalos, elige cómo se ordenan los campos sin agrupar y oculta los campos que no usas sin eliminar sus datos.
+
+Para editar un diseño, ve a `Partner Center` → `Administration` → `Custom Fields`, selecciona un objeto y haz clic en **Organize layout**.
+
+Consulta [Diseños de campos](./field-layouts.mdx) para la guía completa.
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Se pueden usar en Business App los campos personalizados creados en Partner Center?</summary>
+
+No. Los campos personalizados creados en Partner Center son solo para usarse en Partner Center. Para tener campos personalizados en las cuentas de Business App, créalos en `Business App` → `Administration` → `CRM Objects` para cada cuenta.
+</details>
+
+<details>
+<summary>¿Hay un límite de caracteres para la descripción del campo?</summary>
+
+Sí. El límite es de 4000 caracteres.
+</details>
+
+<details>
+<summary>¿Por qué no aparecen en las cuentas mis campos personalizados a nivel de empresa?</summary>
+
+Los campos de empresa y los campos de cuenta se sincronizan de manera diferente. Los campos de empresa no se sincronizan hacia los registros de cuenta. Si necesitas que los datos aparezcan tanto en la cuenta como en la empresa, crea el campo como un campo de **cuenta**: los campos de cuenta se sincronizan de forma bidireccional con las empresas vinculadas.
+</details>

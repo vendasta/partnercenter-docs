@@ -1,0 +1,189 @@
+---
+title: Notifications et campagnes dans Business App
+sidebar_label: Notifications et campagnes
+description: Configurez les notifications aux clients, les bannières d'annonces globales et les campagnes d'intégration automatisées.
+tags:
+  - business-app
+  - notifications
+  - campaigns
+  - onboarding
+keywords:
+  - notifications
+  - global banner
+  - announcement
+  - onboarding campaign
+  - welcome email
+---
+
+La section Notifications de Customize Business App contrôle la façon dont vous communiquez avec les clients via Business App. Configurez les autorisations de notification, affichez des bannières d'annonces et automatisez les campagnes d'intégration pour les nouveaux clients.
+
+![Paramètres de notifications dans Customize Business App](./img/notifications-settings.png)
+
+## Comment puis-je accéder à ces paramètres ?
+
+Accédez à `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Notifications`.
+
+## Comment activer ou désactiver les notifications aux clients ?
+
+Le paramètre de notification contrôle si les clients reçoivent des notifications de Business App et des produits.
+
+**Ce que cela contrôle :**
+- Les notifications par courriel envoyées aux clients
+- Les notifications intégrées dans Business App
+- Les alertes et mises à jour liées aux produits
+
+**Quand désactiver les notifications :**
+- Vous migrez des clients et ne voulez pas les déranger
+- Vous avez une stratégie de communication spécifique en dehors de la plateforme
+- Vous résolvez des problèmes de notification
+
+**Comment configurer :**
+
+1. Accédez à `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Notifications`.
+2. Repérez la case à cocher `Allow sending of notifications`.
+3. Activez ou désactivez-la.
+4. Cliquez sur `Save`.
+
+:::warning
+Désactiver les notifications arrête toutes les notifications pour les utilisateurs de Business App à partir de ce moment. Les utilisateurs ne pourront pas gérer ni s'abonner aux notifications tant que cette option est désactivée. Ce paramètre n'est disponible qu'au niveau du partenaire (pas par marché).
+:::
+
+**Paramètres connexes :**
+Pour un contrôle plus précis sur les notifications spécifiques envoyées, accédez à `Partner Center` → `Administration` → `Customize Design` → `Default Notifications`.
+
+## Comment afficher une bannière d'annonce globale ?
+
+La bannière de notification globale affiche un message en bas de toutes les pages de Business App pour tous les clients jusqu'à une date d'expiration que vous définissez.
+
+**Ce que cela fait :**
+- Affiche un message de bannière persistant sur toutes les pages de Business App
+- Visible par tous les clients jusqu'à la date d'expiration
+- Prend en charge le contenu en texte brut ou en HTML
+
+**Quand utiliser les bannières :**
+- Pour annoncer une maintenance ou une interruption planifiée
+- Pour promouvoir une vente ou une offre spéciale
+- Pour informer les clients de changements de politique importants
+- Pour partager les fermetures de bureau pour les congés ou les heures de support réduites
+
+**Comment créer une bannière :**
+
+1. Accédez à `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Notifications`.
+2. Repérez la section `Global notification banner`.
+3. Saisissez votre message dans le champ `Message`. Vous pouvez utiliser du texte brut ou du HTML.
+4. Définissez la `Expiry date` à laquelle la bannière doit cesser de s'afficher.
+5. Cliquez sur `Save`.
+
+**Ce que voient les clients :**
+Une bannière apparaît en bas de chaque page de Business App avec votre message. La bannière disparaît automatiquement après la date d'expiration.
+
+:::tip Bonnes pratiques pour les bannières
+- **Gardez les messages concis** : les bannières doivent pouvoir être lues rapidement d'un coup d'œil
+- **Définissez toujours une date d'expiration** : des bannières obsolètes réduisent la confiance des clients
+- **Utilisez-les uniquement pour des informations urgentes** : n'utilisez pas les bannières pour des annonces permanentes
+- **Testez le HTML avec soin** : prévisualisez votre bannière pour vous assurer que la mise en forme s'affiche correctement
+:::
+
+:::info
+Les bannières globales sont configurées uniquement au niveau du partenaire et s'appliquent à tous les clients sur tous les marchés. Les bannières spécifiques à un marché ne sont pas prises en charge.
+:::
+
+## Comment envoyer automatiquement des courriels d'intégration aux nouveaux clients ?
+
+Le paramètre de campagne d'intégration inscrit automatiquement les nouveaux clients à une campagne de courriels après leur première connexion.
+
+**Ce que cela fait :**
+- Déclenche une campagne de courriels lorsqu'un client se connecte pour la première fois à Business App
+- Envoie une série de courriels d'intégration pour aider les clients à démarrer
+- Fonctionne avec les campagnes configurées dans Marketing : Product Adoption
+
+**Quand activer cette option :**
+- Vous voulez automatiser l'intégration des clients
+- Vous avez du contenu utile de prise en main à partager
+- Vous voulez réduire le suivi manuel avec les nouveaux clients
+
+**Comment configurer :**
+
+1. Créez d'abord une campagne d'intégration dans `Partner Center` → `Marketing` → `Campaigns` → `Product Adoption`.
+2. Accédez à `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Notifications`.
+3. Repérez la section `New customer experience`.
+4. Activez la case à cocher `Onboarding campaign`.
+5. Sélectionnez votre campagne dans le menu déroulant `New customer experience`.
+6. Cliquez sur `Save`.
+
+**Comment cela fonctionne avec l'auto-inscription :**
+Combinée avec l'[auto-inscription](/docs/accounts/manage-business-app/self-signup), la campagne d'intégration crée un parcours d'acquisition de clients entièrement automatisé :
+1. Le client s'inscrit via le lien d'auto-inscription
+2. Le client se connecte à Business App pour la première fois
+3. La campagne d'intégration démarre automatiquement
+4. Le client reçoit une série de courriels utiles
+
+:::tip Créer des campagnes d'intégration efficaces
+Votre campagne d'intégration devrait :
+- Accueillir le client et confirmer que son compte est prêt
+- Expliquer les fonctionnalités clés et comment démarrer
+- Mettre en avant les gains rapides qu'il peut obtenir immédiatement
+- Fournir les coordonnées du support
+- Inclure des liens vers la documentation d'aide ou des tutoriels
+
+Accédez à `Partner Center` → `Marketing` → `Campaigns` → `Product Adoption` pour créer et gérer vos campagnes d'intégration.
+:::
+
+## FAQ
+
+<details>
+<summary>Les bannières apparaissent-elles sur les appareils mobiles ?</summary>
+
+Oui. Les bannières globales apparaissent à la fois sur les versions bureau et mobile de Business App. Gardez votre message concis pour vous assurer qu'il s'affiche bien sur les petits écrans.
+
+</details>
+
+<details>
+<summary>Puis-je avoir des bannières différentes selon les marchés ?</summary>
+
+Non. Les bannières globales sont configurées au niveau du partenaire et s'affichent pour tous les clients sur tous les marchés. Si vous avez besoin d'une messagerie spécifique à un marché, envisagez plutôt d'utiliser des campagnes de courriels ciblées.
+
+</details>
+
+<details>
+<summary>Que se passe-t-il lorsqu'une bannière expire ?</summary>
+
+La bannière cesse automatiquement de s'afficher après la date d'expiration. Aucune action n'est requise. Le message reste dans vos paramètres afin que vous puissiez le réutiliser ou le modifier pour de futures annonces.
+
+</details>
+
+<details>
+<summary>Puis-je prévisualiser la campagne d'intégration avant de l'activer ?</summary>
+
+Oui. Accédez à `Partner Center` → `Marketing` → `Campaigns` → `Product Adoption` et sélectionnez votre campagne pour prévisualiser son contenu et sa séquence de courriels avant de l'activer dans les paramètres Notifications.
+
+</details>
+
+<details>
+<summary>Combien de courriels y a-t-il dans une campagne d'intégration ?</summary>
+
+Cela dépend de la façon dont vous configurez votre campagne. Vous créez et contrôlez le contenu de la campagne d'intégration dans `Partner Center` → `Marketing` → `Campaigns` → `Product Adoption`. Vous pouvez inclure autant de courriels que nécessaire pour votre processus d'intégration.
+
+</details>
+
+<details>
+<summary>La campagne d'intégration se déclenche-t-elle à chaque connexion ?</summary>
+
+Non. La campagne d'intégration ne se déclenche qu'à la première connexion du client à Business App. Les connexions suivantes ne redéclenchent pas la campagne.
+
+</details>
+
+<details>
+<summary>Puis-je utiliser du HTML dans le message de la bannière ?</summary>
+
+Oui. Le champ de message accepte le HTML, ce qui vous permet d'ajouter des liens, de la mise en forme ou du style. Testez votre HTML avec soin pour vous assurer qu'il s'affiche correctement sur différents navigateurs et appareils.
+
+</details>
+
+<details>
+<summary>Quelle est la différence entre les paramètres de notifications ici et dans Customize Design ?</summary>
+
+- `Customize Business App` → `Notifications` : contrôle si des notifications sont envoyées ou non, ainsi que les paramètres de bannière et de campagne d'intégration
+- `Customize Design` → `Default Notifications` : contrôle quels types de notifications spécifiques sont activés par défaut (par exemple, alertes d'avis, notifications de messages)
+
+</details>

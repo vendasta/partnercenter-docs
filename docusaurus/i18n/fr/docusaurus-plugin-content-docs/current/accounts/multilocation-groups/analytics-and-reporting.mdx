@@ -1,0 +1,74 @@
+---
+title: Analytics and Reporting
+sidebar_label: Analytics and Reporting
+sidebar_position: 4
+description: Découvrez les rapports par mots-clés et les synthèses de niveau direction entre les emplacements.
+tags: [multi-location, analytics, reporting]
+keywords: [keyword-reporting, executive-report]
+---
+
+Les analyses et rapports dans Multi-Location Business App (MLBA) offrent un moyen centralisé de surveiller, analyser et générer des rapports sur les indicateurs de performance de plusieurs emplacements commerciaux à partir d'une seule interface. Les données des différents emplacements sont regroupées dans des tableaux de bord et des rapports unifiés, ce qui permet des comparaisons entre emplacements, un suivi des tendances et des rapports de preuve de performance.
+
+Les rapports sont en marque blanche, ce qui vous permet de les personnaliser avec vos propres logos et votre propre style pour les présentations client.
+
+## Executive Report
+
+L'Executive Report est le rapport phare de MLBA. Il consolide les indicateurs de tous les emplacements d'un groupe multi-emplacements et inclut des lignes de tendance et des chiffres de variation pour montrer à la fois les changements à court terme et les tendances de performance à long terme.
+
+**Sources de données incluses :**
+- Google Business Profile
+- Advertising Intelligence
+- Google Analytics (GA4)
+- Reputation (avis et notes)
+- Données de fiches d'établissement
+- Performance sur les réseaux sociaux
+
+Les rapports peuvent être filtrés par zone géographique, catégorie d'entreprise, région, groupes d'emplacements ou sources de fiches et d'avis. Des plages de dates personnalisées sont prises en charge.
+
+## Rapports par mots-clés
+
+Consultez la répartition du classement des mots-clés entre les emplacements :
+
+1. Allez dans `Accounts` → `Multi-Location Groups`
+2. Sélectionnez un groupe, puis ouvrez `Keyword Rankings`
+3. Utilisez les filtres pour les emplacements, les mots-clés, le fournisseur et la zone géographique
+
+## Intégration Google Analytics (GA4)
+
+Les données GA4 sont connectées au niveau de l'emplacement unique. L'Executive Report multi-emplacements regroupe les données GA4 de chaque Business App d'emplacement individuel.
+
+**Recommandations de configuration :**
+
+- **Un site Web partagé :** Connectez GA4 à un seul emplacement du siège social. Le rapport multi-emplacements affichera uniquement les données de cet emplacement.
+- **Plusieurs sites Web ou microsites :** Utilisez des flux de données GA4 distincts pour chaque site, chacun connecté à son Business App d'emplacement unique correspondant.
+
+:::warning
+Ne connectez pas la même propriété GA4 à plusieurs comptes. Cela entraîne une duplication des données dans le regroupement multi-emplacements.
+:::
+
+## Données de fiches d'établissement et de réputation
+
+Les données de fiches provenant de Google Business Profile et d'autres annuaires sont incluses dans les rapports. Notez que la soumission manuelle d'URL de fiches Google n'est pas prise en charge dans MLBA. Les fiches doivent être détectées automatiquement ou soumises au niveau de l'emplacement unique.
+
+Les scores de fiches dans le rapport multi-emplacements excluent les citations, ce qui peut entraîner des écarts par rapport aux rapports d'emplacement unique.
+
+Les indicateurs de réputation incluent :
+- Principales sources d'avis
+- Avis récents et note moyenne
+- Volume d'avis
+- Temps de réponse moyen
+
+## Analyses des réseaux sociaux
+
+Les données des réseaux sociaux de Facebook, Instagram (comptes Pro uniquement) et Google Business Profile sont incluses. Les indicateurs de publication et d'engagement social peuvent être suivis sur plusieurs emplacements, et les publications peuvent être composées et programmées pour plusieurs emplacements avec une personnalisation dynamique du contenu.
+
+## Accès et autorisations
+
+Vous pouvez basculer entre les emplacements individuels dans MLBA à l'aide du sélecteur d'emplacement. Les autorisations peuvent être définies au niveau du groupe ou de l'emplacement pour contrôler l'accès aux données d'analyse et de rapport.
+
+## Limites et considérations
+
+- Les statistiques de Google Business Profile (vues, actions, recherches) nécessitent des connexions Google Search Console au niveau de l'emplacement.
+- Le tableau de bord multi-emplacements ne prend pas en charge les noms de produits personnalisés. Des éléments de menu génériques sont affichés à la place.
+- Les notifications par e-mail de synthèse quotidienne sont envoyées depuis les comptes individuels, et non depuis le groupe multi-emplacements.
+- Il n'existe pas d'intégration GA4 multi-emplacements native. L'agrégation des données repose sur le regroupement des données d'emplacement unique.

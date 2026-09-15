@@ -1,0 +1,81 @@
+---
+title: Personalizar el correo de bienvenida
+sidebar_label: Correo de bienvenida
+description: Aprende qué contiene el correo de bienvenida de Business App, qué se puede personalizar y cómo usar las Campañas de marketing como solución recomendada para contenido de incorporación personalizado.
+tags: [users, welcome-email, campaigns, onboarding]
+keywords: [welcome email, customize, onboarding, marketing campaigns, white label]
+---
+
+## Qué es el correo de bienvenida
+
+El correo de bienvenida le da a un usuario de Business App un enlace para establecer su contraseña y acceder a su panel. Se envía cuando se crea un usuario con la opción de correo de bienvenida seleccionada, y sigue disponible después como la acción **Send Set Password email (Welcome email)**. Cuando se selecciona en su lugar el [correo de incorporación](/business-app/ai-onboarding-experience) — que es la opción predeterminada en todos los lugares donde se invita a usuarios — ese correo reemplaza al correo de bienvenida para ese envío. Este correo usa la configuración de marca blanca del mercado al que está asignada la cuenta (logotipo, colores de marca, nombre del remitente).
+
+## Qué puedes y no puedes personalizar
+
+| Elemento | ¿Personalizable? |
+|---------|--------------|
+| Logotipo y colores de marca | Sí, mediante la configuración de marca blanca del mercado |
+| Nombre del remitente | Sí, mediante la configuración del dominio de correo |
+| Dominio de envío | No, se selecciona automáticamente |
+| Línea de asunto | No, está codificada de forma fija |
+| Contenido del cuerpo del correo | No, está codificado de forma fija |
+| Mensaje introductorio personalizado | Sí, se puede agregar un mensaje breve al crear el usuario (se adjunta al correo que se seleccione, ya sea el de bienvenida o el de incorporación) |
+
+El cuerpo del correo de bienvenida es fijo y no se puede editar directamente. La solución más común es usar una **Campaña de marketing** para enviar un correo de incorporación totalmente personalizado después de que el usuario inicie sesión por primera vez.
+
+## Cómo se elige el dominio de envío
+
+La plataforma selecciona automáticamente el mejor dominio de envío para ti, según los dominios configurados para tu cuenta. No hay un selector de dominio que configurar al momento del envío.
+
+:::tip
+Para influir en qué dominio se usa, configura tus dominios de envío en `Marketing` → `Email settings`. Un dominio verificado y configurado correctamente mejora la capacidad de entrega.
+:::
+
+## Solución recomendada: Campañas de marketing
+
+La mayoría de los partners usan una Campaña de marketing para entregar contenido de incorporación personalizado. Esto te permite controlar el mensaje por completo y enviar una serie de correos en lugar de una única nota de bienvenida.
+
+**Cómo configurarlo:**
+
+1. Ve a `Partner Center` → `Marketing` → `Campaigns` → `Product Adoption`.
+2. Crea una nueva campaña con el contenido de bienvenida que quieres que reciban tus clientes.
+3. Ve a `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Notifications`.
+4. Activa la casilla `Onboarding campaign` y selecciona tu campaña en el menú desplegable.
+5. Haz clic en `Save`.
+
+Los nuevos clientes se inscribirán automáticamente en la campaña cuando inicien sesión por primera vez.
+
+## Qué marca blanca de mercado se usa
+
+El correo de bienvenida usa la configuración de marca blanca del mercado al que está asignada la cuenta, con una excepción:
+
+- **Reenvío desde Account Details**: usa la marca del mercado asignado a la cuenta
+- **Reenvío desde la página Users**: usa la marca del mercado predeterminado
+- **Correo de creación inicial**: siempre usa la marca del mercado predeterminado, sin importar el mercado asignado a la cuenta
+
+Si tus mercados tienen marcas diferentes, asegúrate de que el mercado correcto esté asignado a la cuenta antes de enviar o reenviar el correo de bienvenida.
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Puedo reenviar el correo de bienvenida?</summary>
+
+Sí. Desde la lista de usuarios de la cuenta, haz clic en el menú de tres puntos junto al usuario y selecciona `Send Set Password email (Welcome email)`. También puedes reenviarlo desde `Accounts` → `Manage Users`.
+
+El cuadro de diálogo de confirmación muestra qué marca de mercado se usará y ofrece un botón `Preview` para que puedas revisar el correo antes de que se envíe.
+</details>
+
+<details>
+<summary>Un usuario no recibió su correo de bienvenida: ¿qué debo revisar?</summary>
+
+1. Confirma que la dirección de correo electrónico en la cuenta del usuario sea correcta.
+2. Pide al usuario que revise su carpeta de spam o correo no deseado.
+3. Verifica que las notificaciones estén activadas en `Customize Business App` → `Notifications` → `Allow sending of notifications`.
+4. Comprueba que tu dominio de correo esté configurado correctamente en `Marketing` → `Email settings`.
+</details>
+
+<details>
+<summary>¿Puedo agregar un mensaje personalizado al correo de bienvenida?</summary>
+
+Sí, se puede agregar un breve mensaje introductorio personalizado al crear un usuario o al reenviar el correo. Se adjunta al correo que estés enviando — el de bienvenida o el de incorporación — y aparece encima del contenido estándar. Para contenido totalmente personalizado, usa una Campaña de marketing como se describe arriba.
+</details>
