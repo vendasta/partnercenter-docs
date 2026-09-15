@@ -25,11 +25,9 @@ When working on our ads fulfillment form, the accuracy and detail you provide ar
 
 ## Follow Google's advertising policies
 
-* For ads run on Google, there are advertising policies regarding pertinent advertising categories, required business verifications and restrictions. Ensure that your requested campaign does not violate these policies.
-* Click [here](https://examples.yourdigitalagents.com/wp-content/uploads/2024/04/Google-Ads-Policies-and-Restrictions.pdf) to see more detail on Google's advertising policies and required certifications
+* Google has advertising policies covering restricted ad categories, required business verifications, and other restrictions. Ensure that your requested campaign does not violate these policies.
+* Review [Google's advertising policies and required certifications](https://examples.yourdigitalagents.com/wp-content/uploads/2024/04/Google-Ads-Policies-and-Restrictions.pdf) for more detail.
 
 * * *
 
 Lastly, we appreciate the time and effort you invest in filling out the form. The clearer and more detailed you are, the better equipped our team will be to execute your vision.
-
-Thank you for choosing us for your advertising needs, and we look forward to collaborating with you on many successful campaigns!
