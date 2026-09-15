@@ -5,39 +5,21 @@ sidebar_position: 2
 description: Create lists or import CSVs to organize accounts for bulk actions
 ---
 
-## Create a List
+## Create a list
 
 To create a new account List:
 
-1. Go to **Partner Center** > **Accounts** > **Lists**.
-2. Click **Create List** in the upper right corner of the screen.
+1. Go to `Partner Center` → `Accounts` → `Lists`.
+2. Click `Create List` in the upper right corner of the screen.
 
 ![Create List button](./img/accounts/lists/create-list-button.png)
 
 3. Enter a name for the List.
-4. Click **Create**.
+4. Click `Create`.
 
-<div style={{textAlign: 'center', paddingBottom: '15px'}}>
-  <a 
-    style={{
-      fontSize: '16px',
-      fontWeight: 'bold',
-      color: '#ffffff',
-      backgroundColor: '#33ace2',
-      textDecoration: 'none',
-      borderRadius: '5px',
-      padding: '10px 30px 9px 30px',
-      border: '1px solid #33ACE2',
-      display: 'inline-block',
-      textAlign: 'center'
-    }}
-    href="https://partners.vendasta.com/action-lists/manage"
-    target="_blank"
-    rel="noopener"
-  >
-    Create Lists 
-  </a>
-</div>
+:::tip Quick access
+You can directly manage your lists at [partners.vendasta.com/action-lists/manage](https://partners.vendasta.com/action-lists/manage)
+:::
 
 Now, you can [add accounts to the List](./add-accounts-to-lists).
 
@@ -45,10 +27,10 @@ Now, you can [add accounts to the List](./add-accounts-to-lists).
 You can also import existing account lists into Partner Center. See the Import section below.
 :::
 
-## Import a List (CSV)
+## Import a list (CSV)
 
-1. Go to **Partner Center** > **Accounts** > **Lists**.
-2. Click **Import Lists**.
+1. Go to `Partner Center` → `Accounts` → `Lists`.
+2. Click `Import Lists`.
 3. Download the CSV template or choose a file, then map fields.
 4. Configure user settings (Business App access, notifications, Welcome Email) for new users added by the import.
 
@@ -66,16 +48,16 @@ There are several CSV templates depending on what you are importing:
 
 | What you're importing | Template to use |
 |-----------------------|-----------------|
-| Business accounts (create or update) | `import_list_template.csv` — downloaded from the Import Lists dialog |
-| Bulk-update existing accounts | Bulk Update CSV template — available at **Partner Center > Accounts > Bulk Update** |
-| Users for Business App access | `user-import-template.csv` — see [Create User Lists & Bulk Import Users](./create-user-lists-bulk-import-users) |
-| CRM contacts and companies | `Contacts_Companies_Import_template` — downloaded from **CRM > Contacts > Import** |
+| Business accounts (create or update) | `import_list_template.csv`, downloaded from the Import Lists dialog |
+| Bulk-update existing accounts | Bulk Update CSV template, available at `Partner Center` → `Accounts` → `Bulk Update` |
+| Users for Business App access | `user-import-template.csv`, see [Create User Lists & Bulk Import Users](./create-user-lists-bulk-import-users) |
+| CRM contacts and companies | `Contacts_Companies_Import_template`, downloaded from `CRM` → `Contacts` → `Import` |
 
 Using the wrong template is a common cause of import failures. Always start from the template for your specific import type.
 
 ### Understanding key column names
 
-**`UserGreetingName1`** — This column maps to the **Greeting name** field on the user record, not a job title. It is the informal name the platform uses when addressing the user (e.g., in emails). Do not put a job title here; use the `job_title` column for that.
+**`UserGreetingName1`**: This column maps to the `Greeting name` field on the user record, not a job title. It is the informal name the platform uses when addressing the user (e.g., in emails). Do not put a job title here; use the `job_title` column for that.
 
 ### Country codes: UK must be entered as `GB`
 

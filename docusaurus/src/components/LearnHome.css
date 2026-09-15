@@ -1,0 +1,352 @@
+/* Learn tab homepage — path cards + role/focus explorer.
+   Ported from the internal Vendasta Learn homepage (vendastalearn
+   internal-docs-site HomeCatalog/home.css) on 2026-08-19.
+   Infima variables throughout so light and dark mode both work. */
+
+.vd-home__section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 0 0 1.25rem;
+}
+
+.vd-home__section-title {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.vd-home__count {
+  font-size: 0.95rem;
+  color: var(--ifm-color-emphasis-500);
+}
+
+/* ---- Path cards ---- */
+
+.vd-home__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.vd-home-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--ifm-card-background-color);
+  border-radius: 14px;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(7, 35, 55, 0.05), 0 3px 10px rgba(7, 35, 55, 0.06);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.vd-home-card:hover {
+  color: inherit;
+  text-decoration: none;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(7, 35, 55, 0.12), 0 16px 40px rgba(7, 35, 55, 0.1);
+}
+
+/* Fixed height so every card hero is the same size regardless of title length;
+   the title size below is chosen so a two-line title still fits. */
+.vd-home-card__hero {
+  padding: 1.4rem 1.5rem 1.6rem;
+  color: #fff;
+  height: 8rem;
+  overflow: hidden;
+}
+
+.vd-home-card__hero--purple { background: linear-gradient(120deg, #c026d3, #2563eb); }
+.vd-home-card__hero--green  { background: linear-gradient(135deg, #2e8555, #256e46); }
+.vd-home-card__hero--navy   { background: linear-gradient(135deg, #1c2b3a, #101b28); }
+.vd-home-card__hero--teal   { background: linear-gradient(135deg, #0f5f4c, #0a4a3b); }
+.vd-home-card__hero--blue   { background: linear-gradient(120deg, #1d4ed8, #3b82f6); }
+.vd-home-card__hero--forest { background: linear-gradient(135deg, #14532d, #166534); }
+.vd-home-card__hero--slate  { background: linear-gradient(135deg, #334155, #1e293b); }
+
+.vd-home-card__kicker {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 0.45rem;
+}
+
+.vd-home-card__title {
+  font-family: var(--ifm-heading-font-family);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.vd-home-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.85rem;
+  padding: 1.3rem 1.5rem 1.4rem;
+}
+
+.vd-home-card__blurb {
+  font-size: 0.95rem;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+}
+
+.vd-home-card__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.vd-home-card__chip {
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 0.28rem 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-700);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.vd-home-card__chip--dark {
+  background: rgba(46, 133, 85, 0.1);
+  border-color: rgba(46, 133, 85, 0.18);
+  color: var(--ifm-color-primary-darker);
+}
+
+[data-theme='dark'] .vd-home-card__chip--dark {
+  background: rgba(63, 155, 99, 0.2);
+  border-color: rgba(63, 155, 99, 0.3);
+  color: var(--ifm-color-primary-light);
+}
+
+.vd-home-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 0.25rem;
+}
+
+.vd-home-card__gate {
+  font-size: 0.82rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.vd-home-card__cta {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary-darker);
+  white-space: nowrap;
+}
+
+[data-theme='dark'] .vd-home-card__cta {
+  color: var(--ifm-color-primary-light);
+}
+
+/* ---- Explorer: role/focus facets + results ---- */
+
+.vd-explore {
+  margin-top: 3rem;
+}
+
+.vd-explore__kicker {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary-darker);
+  margin-bottom: 0.5rem;
+}
+
+[data-theme='dark'] .vd-explore__kicker {
+  color: var(--ifm-color-primary-light);
+}
+
+.vd-explore__title {
+  font-size: 1.9rem;
+  margin: 0 0 0.5rem;
+}
+
+.vd-explore__blurb {
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 640px;
+  margin: 0 0 1.75rem;
+}
+
+.vd-explore__layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .vd-explore__layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.vd-explore__rail {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.vd-explore__group {
+  background: var(--ifm-card-background-color);
+  border-radius: 14px;
+  padding: 1.25rem 1rem;
+  box-shadow: 0 1px 2px rgba(7, 35, 55, 0.05), 0 3px 10px rgba(7, 35, 55, 0.06);
+}
+
+.vd-explore__group-title {
+  font-size: 1.02rem;
+  margin: 0 0 0.75rem;
+  padding: 0 0.5rem;
+}
+
+.vd-explore__facets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vd-explore__facet {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  border: none;
+  background: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-family: inherit;
+  font-size: 0.92rem;
+  color: var(--ifm-color-emphasis-800);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.12s, color 0.12s;
+}
+
+.vd-explore__facet:hover {
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-primary-darker);
+}
+
+.vd-explore__facet--active,
+.vd-explore__facet--active:hover {
+  background: rgba(46, 133, 85, 0.1);
+  color: var(--ifm-color-primary-darker);
+  font-weight: 700;
+}
+
+[data-theme='dark'] .vd-explore__facet:hover {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-primary-light);
+}
+
+[data-theme='dark'] .vd-explore__facet--active,
+[data-theme='dark'] .vd-explore__facet--active:hover {
+  background: rgba(63, 155, 99, 0.2);
+  color: var(--ifm-color-primary-light);
+}
+
+.vd-explore__facet-count {
+  font-size: 0.82rem;
+  color: var(--ifm-color-emphasis-500);
+  font-weight: 400;
+}
+
+.vd-explore__facet-badge {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-600);
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  white-space: nowrap;
+}
+
+.vd-explore__results-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 0 0 1rem;
+}
+
+.vd-explore__results-title {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.vd-explore__empty {
+  background: var(--ifm-card-background-color);
+  border-radius: 14px;
+  padding: 2rem 1.75rem;
+  color: var(--ifm-color-emphasis-600);
+  box-shadow: 0 1px 2px rgba(7, 35, 55, 0.05), 0 3px 10px rgba(7, 35, 55, 0.06);
+}
+
+.vd-explore__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.85rem;
+}
+
+.vd-explore__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: var(--ifm-card-background-color);
+  border-radius: 12px;
+  padding: 1.05rem 1.2rem;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(7, 35, 55, 0.05), 0 3px 10px rgba(7, 35, 55, 0.06);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.vd-explore__item:hover {
+  color: inherit;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(7, 35, 55, 0.1), 0 12px 30px rgba(7, 35, 55, 0.08);
+}
+
+.vd-explore__item-title {
+  font-family: var(--ifm-heading-font-family);
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+  line-height: 1.35;
+}
+
+.vd-explore__item-cta {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary-darker);
+}
+
+[data-theme='dark'] .vd-explore__item-cta {
+  color: var(--ifm-color-primary-light);
+}

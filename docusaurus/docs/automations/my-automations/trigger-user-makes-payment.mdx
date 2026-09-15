@@ -1,0 +1,48 @@
+---
+title: "Trigger: A user makes a payment"
+description: Start an automation when a customer makes a payment, with options to filter on success, failure, or both.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, billing]
+keywords: [payment trigger, user payment, payment success, payment failure, billing automation, payment received trigger]
+---
+
+# A user makes a payment
+
+**A user makes a payment** fires whenever a customer submits a payment on an account. You can configure the trigger to respond to successful payments, failed payments, or both — giving you control over how the workflow responds to each payment outcome.
+
+Use this trigger to send payment confirmations, alert staff to failed transactions, or kick off fulfillment workflows after a successful charge.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account and contact actions are available downstream.
+:::
+
+## How it works
+
+1. A customer submits a payment on an account.
+2. The trigger evaluates the payment outcome (success, failure, or both) against your configured filter.
+3. If the outcome matches, the workflow starts with the account and payment event data in context.
+4. Downstream steps can use **Add dynamic content** to reference payment amount, status, and account fields.
+
+## Available data
+
+Standard account fields and payment event fields are available via **Add dynamic content**.
+
+| Output | Description |
+|---|---|
+| **Payment amount** | The amount submitted by the customer |
+| **Payment status** | Whether the payment succeeded or failed |
+| **Payment date** | The date and time the payment was submitted |
+| **Account name** | The name of the account associated with the payment |
+| **Contact email** | The email of the customer who made the payment |
+
+## Tips
+
+- Use the **success/failure** filter on the trigger to create separate automations for each outcome rather than using condition steps — this keeps workflows simpler.
+- For failed payment workflows, add a delay before retrying outreach to give customers time to resolve payment issues.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

@@ -1,0 +1,39 @@
+---
+title: "Trigger: A contact is created or modified"
+description: Start an automation when a contact record is created or any field on it changes.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, contact]
+keywords: [contact created trigger, contact modified trigger, contact field changed, new contact automation, CRM contact trigger]
+---
+
+# A contact is created or modified
+
+**A contact is created or modified** starts a workflow whenever a contact record is created in the CRM or any field on an existing contact changes. Use this trigger to respond to new contacts entering your system or to keep records and downstream processes in sync as contact data evolves.
+
+Because this trigger fires on any field change, use trigger conditions to narrow down exactly which changes should start the workflow — for example, only when the lifecycle stage field changes to a specific value.
+
+:::info Trigger scope
+This trigger operates at the **contact** scope. Contact, company, and account actions are available downstream.
+:::
+
+## How it works
+
+1. A contact is created, or a field on an existing contact is updated — whether by a user, an integration, or another automation.
+2. The automation evaluates any trigger conditions you've configured (for example, filtering on a specific field name or value).
+3. If all conditions are met, the workflow starts with the contact, their associated company, and the account in context.
+4. Downstream steps can use **Add dynamic content** to reference the contact's current field values.
+
+## Available data
+
+All standard contact, company, and account fields are available downstream via **Add dynamic content**. This includes fields such as contact name, email, phone, lifecycle stage, assigned salesperson, company name, and account tags.
+
+:::info
+To react only to specific field changes, add a trigger condition filtering on the field you care about. Without conditions, the automation fires on every create or update event for any contact.
+:::
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx) — trigger types, scoping, and how to choose the right trigger
+- [Automation triggers reference](./automation-triggers-reference.mdx) — full reference for every available trigger
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — entry settings, conditions, and error handling
+- [Actions overview](./actions-overview.mdx) — what can happen after a trigger fires

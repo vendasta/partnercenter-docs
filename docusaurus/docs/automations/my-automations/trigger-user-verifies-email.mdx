@@ -1,0 +1,40 @@
+---
+title: "Trigger: User verifies email"
+description: Start an automation whenever a user completes email verification for their Business App account.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, users]
+keywords: [user email verification trigger, email verified, Business App user, automation trigger, account scope]
+---
+
+# User verifies email
+
+The **User verifies email** trigger starts an automation the moment a user confirms their email address for **Business App**. Use this trigger to send a tailored welcome, unlock next steps, or record the verification event in your CRM.
+
+This trigger operates at the account scope, so account and user data are available to downstream steps.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account fields and user details are available downstream.
+:::
+
+## How it works
+
+1. A user clicks the verification link sent to their email address.
+2. The email is confirmed and the verification event fires.
+3. The account and user are brought into scope.
+4. Downstream steps execute using the account and user context.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **User name** | First and last name of the user who verified their email |
+| **User email** | The email address that was verified |
+| **Account name** | The account the user belongs to |
+| **Verified at** | Timestamp when the email verification was completed |
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

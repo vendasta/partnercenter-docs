@@ -1,0 +1,39 @@
+---
+title: "Trigger: A call activity is created or modified for a contact"
+description: Start an automation when a call is logged or updated on a contact record.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, contact]
+keywords: [call activity trigger, contact call logged, call updated, CRM activity, automation trigger]
+---
+
+# A call activity is created or modified for a contact
+
+**A call activity is created or modified for a contact** starts a workflow whenever a call is logged or an existing call record is updated on a contact. Use this trigger to respond automatically when your team records outreach or follow-up calls.
+
+This trigger fires for both new call logs and edits to existing ones, so you can keep downstream records and tasks in sync as call details are refined.
+
+:::info Trigger scope
+This trigger operates at the **contact** scope. Contact, company, and account actions are available downstream.
+:::
+
+## How it works
+
+1. A team member logs a new call — or edits an existing call — on a contact record in the CRM.
+2. The automation evaluates any trigger conditions you've configured (for example, filtering on call outcome or assigned user).
+3. If all conditions are met, the workflow starts with the contact, their associated company, and the account in context.
+4. Downstream steps can use **Add dynamic content** to reference call details, contact fields, and company fields.
+
+## Available data
+
+All standard contact, company, and account fields are available downstream via **Add dynamic content**. This includes fields such as contact name, email, phone, assigned salesperson, company name, and account tags.
+
+:::info
+Call activity fields (such as call notes, duration, and outcome) are available as dynamic data in steps that follow this trigger.
+:::
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx) — trigger types, scoping, and how to choose the right trigger
+- [Automation triggers reference](./automation-triggers-reference.mdx) — full reference for every available trigger
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — entry settings, conditions, and error handling
+- [Actions overview](./actions-overview.mdx) — what can happen after a trigger fires

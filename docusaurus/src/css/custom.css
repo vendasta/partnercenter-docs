@@ -240,12 +240,11 @@ ul.theme-doc-sidebar-menu.menu__list li.theme-doc-sidebar-item-link-level-1:firs
 }
 
 .navbar__inner {
-  display: grid !important;
-  grid-template-columns: 1fr auto 1fr !important;
+  display: flex !important;
   align-items: center !important;
-  justify-items: start !important;
   width: 100% !important;
   max-width: 100% !important;
+  position: relative;
 }
 
 .navbar__brand {
@@ -259,11 +258,40 @@ ul.theme-doc-sidebar-menu.menu__list li.theme-doc-sidebar-item-link-level-1:firs
   width: 280px !important;
 }
 
+/* The search bar and language dropdown live together inside
+   .navbar__items--right. Overlay it across the full navbar width (instead
+   of sitting in a column next to the logo) so search can be centered on
+   the whole bar while the dropdown stays pinned to the far right. Empty
+   grid cells get pointer-events:none so clicks still reach the logo. */
 .navbar__items--right {
-  justify-self: center !important;
-  align-self: center !important;
-  display: flex !important;
-  justify-content: center !important;
+  position: absolute !important;
+  inset: 0;
+  display: grid !important;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  pointer-events: none;
+}
+
+.navbar__items--right .dropdown,
+.navbar__items--right .navbarSearchContainer_Bca1 {
+  pointer-events: auto;
+}
+
+/* Positioned independently of the grid/flex alignment (which kept
+   rendering low) — dead-centered on the navbar bar via transform. */
+.navbarSearchContainer_Bca1 {
+  position: absolute !important;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.navbar__items--right .dropdown {
+  grid-column: 3;
+  justify-self: end;
+  margin-right: 20px;
 }
 
 /* ========================  Sidebar Pill Placeholder + Footer (swizzled DocSidebar) ======================== */
@@ -354,7 +382,6 @@ ul.theme-doc-sidebar-menu.menu__list li.theme-doc-sidebar-item-link-level-1:firs
 }
 
 /* Hide the theme toggle */
-.navbar__items--right .navbar__item:last-child,
 .navbar__items--right button[class*="colorModeToggle"],
 .navbar__items--right button[class*="darkToggle"],
 .navbar__items--right button[class*="lightToggle"],
@@ -366,6 +393,50 @@ button[title*="light"],
 button[title*="theme"] {
   display: none !important;
   visibility: hidden !important;
+}
+
+/* Language switcher (locale dropdown) styled as a pill button */
+.navbar__items--right .dropdown > .navbar__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
+  padding: 6px 12px !important;
+  background: transparent;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.navbar__items--right .dropdown > .navbar__link:hover,
+.navbar__items--right .dropdown > .navbar__link:focus {
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none !important;
+}
+
+.navbar__items--right .dropdown > .navbar__link::after {
+  filter: invert(1) brightness(2);
+}
+
+/* Swap the built-in language icon for a small globe */
+.navbar__items--right .dropdown > .navbar__link svg {
+  display: none;
+}
+
+.navbar__items--right .dropdown > .navbar__link::before {
+  content: "\1F310";
+  font-size: 13px;
+  line-height: 1;
+}
+
+.navbar__items--right .dropdown__menu {
+  min-width: 8rem;
 }
 
 @media screen and (max-width: 996px) {
@@ -1762,11 +1833,6 @@ div[class*="language-"] pre {
   font-weight: 600;
 }
 
-/* Hide docs that opt-in via frontmatter `sidebar_class_name: hide-from-sidebar` */
-.theme-doc-sidebar-item-link.hide-from-sidebar,
-.theme-doc-sidebar-item-category.hide-from-sidebar {
-  display: none !important;
-}
 /* ── Training: section-label bars and in-practice callouts ── */
 .principle-area {
   display: flex;
@@ -1927,8 +1993,8 @@ div[class*="language-"] pre {
 }
 
 .lesson-header__tag--video {
-  background: #cfe2ff;
-  color: #084298;
+  background: var(--lab-purple-bg);
+  color: var(--lab-purple);
 }
 
 .lesson-header__tag--lab {
@@ -2381,4 +2447,291 @@ div[class*="language-"] pre {
 /* Learning paths hidden from the sidebar pending review (still reachable by URL) */
 .hidden-sidebar-item {
   display: none !important;
+}
+
+/* Path landing header: pills, meta bar, objective/outcomes panel.
+   Reuses .lesson-header__* tag, bar, and outcome styles. */
+.path-header {
+  margin: 0.5rem 0 1.5rem;
+}
+
+.path-header__count {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.path-header__topic {
+  background: #cfe2ff;
+  color: #084298;
+  border-radius: 6px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.path-header__panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  background: var(--ifm-color-emphasis-100);
+  border-left: 4px solid #2e8555;
+  border-radius: 0 0 8px 8px;
+  padding: 0.25rem 1.25rem 1.25rem;
+  font-size: 0.85rem;
+}
+
+.path-header__objective {
+  line-height: 1.6;
+}
+
+/* Path landing "What you will learn" card grid. */
+.path-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.path-cards__card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: var(--ifm-background-surface-color);
+}
+
+.path-cards__title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.path-cards__rule {
+  margin: 1rem 0;
+  border: none;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  background: none;
+  height: 0;
+}
+
+.path-cards__description {
+  margin: 0 0 1rem;
+}
+
+.path-cards__topics-label {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+
+.path-cards__topics {
+  margin: 0 0 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.path-cards__link {
+  margin-top: auto;
+  font-weight: 700;
+}
+
+/* ===== Learn course styling pilot (2026-08-25) ===== */
+
+/* Wistia embeds: the responsive wrapper carries no margin of its own, so
+   following text sits flush under the player. Applies site-wide. */
+.wistia_responsive_padding {
+  margin-bottom: 1.75rem;
+}
+
+/* Tinted section bands: alternate lesson sections wrapped in <LessonSection> */
+.lesson-band {
+  background: #f6f7f8;
+  border-radius: 16px;
+  padding: 1.75rem 2rem 1.25rem;
+  margin: 2.5rem -1rem;
+}
+[data-theme='dark'] .lesson-band {
+  background: #1b1f23;
+}
+.lesson-band > h2:first-child {
+  margin-top: 0;
+}
+@media (max-width: 996px) {
+  .lesson-band {
+    margin-inline: 0;
+    padding: 1.25rem 1.25rem 1rem;
+  }
+}
+
+/* Key-point rows: small illustration beside a bold term and one-liner */
+.keypoints {
+  display: grid;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.keypoints__row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.keypoints__icon {
+  width: 72px;
+  height: 72px;
+  flex: 0 0 72px;
+}
+.keypoints__title {
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+.keypoints__text {
+  margin: 0;
+}
+
+/* Boxed tab skin for lesson tabs: wrap <Tabs> in <div className="learn-tabs"> */
+.learn-tabs .tabs {
+  border: 0;
+  gap: 0;
+}
+.learn-tabs .tabs__item {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 0;
+  margin: 0;
+  padding: 0.8rem 1.3rem;
+  font-weight: 600;
+}
+.learn-tabs .tabs__item--active {
+  background: #1976d2;
+  border-color: #1976d2;
+  color: #fff;
+}
+.learn-tabs [role='tabpanel'] {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0 0 8px 8px;
+  padding: 1.25rem 1.5rem;
+}
+
+/* Vendasta AI Assistant sparkle, used in lesson copy and beside a heading.
+   max-width:none keeps the icon from being squeezed by the global image rule. */
+.learn-sparkle-inline {
+  width: 1.25em;
+  height: 1.25em;
+  max-width: none;
+  vertical-align: -0.22em;
+  margin: 0 0.12em;
+}
+
+.learn-sparkle-heading {
+  width: 1em;
+  height: 1em;
+  max-width: none;
+  vertical-align: -0.12em;
+  margin-right: 0.35rem;
+}
+
+/* ── Pitch scripts (Sell the AI Workforce, per-industry tabs) ─────────────── */
+
+/* Four-up stat cards, mirroring the marketing pitch guides' stat row. */
+.pitch-stats-wrap {
+  margin: 1.5rem 0;
+}
+.pitch-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.pitch-stat {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 1rem 0.9rem;
+  text-align: center;
+}
+.pitch-stat__figure {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #3f9b63;
+}
+.pitch-stat__caption {
+  font-size: 0.82rem;
+  line-height: 1.35;
+  margin-top: 0.35rem;
+  color: var(--ifm-color-emphasis-700);
+}
+.pitch-stats__source {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-600);
+  margin: 0.6rem 0 0;
+}
+@media (max-width: 768px) {
+  .pitch-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Numbered stage bar down the call. */
+.pitch-stage {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 1.75rem 0 0.9rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 6px;
+  background: #072337;
+}
+.pitch-stage__num {
+  flex: 0 0 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #3f9b63;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pitch-stage__title {
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* A line the rep says out loud. */
+.pitch-say {
+  border-left: 3px solid #3f9b63;
+  background: #f4f9f6;
+  border-radius: 0 6px 6px 0;
+  padding: 0.8rem 1rem;
+  margin: 0.9rem 0;
+  font-size: 1.02rem;
+  line-height: 1.5;
+}
+.pitch-say p:last-child {
+  margin-bottom: 0;
+}
+
+/* Buyer profile block. */
+.pitch-who {
+  border: 1px solid #e0e0e0;
+  border-left: 3px solid #072337;
+  border-radius: 0 8px 8px 0;
+  background: #fafafa;
+  padding: 0.9rem 1.1rem;
+  margin: 1.25rem 0;
+}
+.pitch-who p:last-child {
+  margin-bottom: 0;
+}
+
+[data-theme='dark'] .pitch-stat,
+[data-theme='dark'] .pitch-who {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+}
+[data-theme='dark'] .pitch-say {
+  background: rgba(63, 155, 99, 0.12);
 }

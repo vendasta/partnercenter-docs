@@ -17,13 +17,15 @@ export interface FlipCardProps {
   back: string;
   subtext?: string;
   href?: string;
+  /** 'large' gives a taller card, for back text too long to fit without scrolling at the default size */
+  size?: 'default' | 'large';
 }
 
-export function FlipCard({ front, back, subtext, href }: FlipCardProps) {
+export function FlipCard({ front, back, subtext, href, size = 'default' }: FlipCardProps) {
   const [flipped, setFlipped] = useState(false);
   return (
     <div
-      className={`${styles.card} ${flipped ? styles.flipped : ''}`}
+      className={`${styles.card} ${size === 'large' ? styles.cardLarge : ''} ${flipped ? styles.flipped : ''}`}
       onClick={() => setFlipped(!flipped)}
       role="button"
       tabIndex={0}
@@ -66,6 +68,67 @@ const MAX_CARDS = 3;
 export function FlipCardGrid({ children }: FlipCardGridProps) {
   const cards = React.Children.toArray(children).slice(0, MAX_CARDS);
   return <div className={styles.grid}>{cards}</div>;
+}
+
+/* --- Icon variant, ported from the Vendasta LEARN AI Foundations path --- */
+
+export type IconFlipCardGradient = 'blue' | 'green' | 'sunrise' | 'purple';
+
+export interface IconFlipCardProps {
+  /** The product or feature name: the whole front of the card */
+  front: string;
+  /** What it is and the one consequence worth remembering */
+  back: React.ReactNode;
+  /**
+   * Optional icon element. Left empty on purpose: we have no Vendasta product
+   * icon set, and generic stand-ins read as the wrong product. Pass a real
+   * product icon here when one exists.
+   */
+  icon?: React.ReactNode;
+  /** Gradient used for the back face, and for the icon tile when an icon is passed */
+  gradient?: IconFlipCardGradient;
+  /** 'large' gives a taller card with a left-aligned back, which fits list content */
+  size?: 'default' | 'large';
+}
+
+export function IconFlipCard({
+  front,
+  back,
+  icon,
+  gradient = 'green',
+  size = 'default',
+}: IconFlipCardProps) {
+  const [flipped, setFlipped] = useState(false);
+  const iconNode = icon;
+  const gradientClass = styles[`gradient_${gradient}`];
+  return (
+    <div
+      className={`${styles.card} ${styles.showcase} ${iconNode ? '' : styles.noIcon} ${size === 'large' ? styles.showLarge : ''} ${flipped ? styles.flipped : ''}`}
+      onClick={() => setFlipped(!flipped)}
+      role="button"
+      tabIndex={0}
+      aria-expanded={flipped}
+      onKeyDown={(e) => e.key === 'Enter' && setFlipped(!flipped)}
+    >
+      <div className={styles.cardInner}>
+        <div className={styles.showFront}>
+          {iconNode && <div className={`${styles.iconTile} ${gradientClass}`}>{iconNode}</div>}
+          <span className={styles.showFrontLabel}>{front}</span>
+          <span className={styles.flipHint} aria-hidden="true">&#8600;</span>
+        </div>
+        <div className={`${styles.showBack} ${gradientClass}`}>
+          <span className={styles.showBackTitle}>{front}</span>
+          <div className={styles.showBackText}>{back}</div>
+          <span className={styles.flipHintBack} aria-hidden="true">&#8601;</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function IconFlipCardGrid({ children }: FlipCardGridProps) {
+  const cards = React.Children.toArray(children).slice(0, MAX_CARDS);
+  return <div className={styles.showGrid}>{cards}</div>;
 }
 
 export default FlipCard;

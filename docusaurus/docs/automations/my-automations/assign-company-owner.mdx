@@ -1,0 +1,53 @@
+---
+title: Assign company owner
+description: Learn how to use the Assign a company owner / salesperson action to set a team member as the owner of a CRM company record in an automation.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, crm, company, owner, salesperson, workflows]
+keywords: [assign company owner, assign salesperson, company owner automation, crm company owner, assign owner company, set company owner]
+---
+
+# Assign company owner
+
+**Assign a company owner / salesperson** sets a team member as the owner of a CRM company record. Use it in company-scoped automations to route new or updated companies to the right person automatically — without manual reassignment.
+
+This action is available on any trigger that brings a company into scope, such as **A company is created or modified** or **A form is submitted for a company**.
+
+## How it works
+
+1. The automation reaches the **Assign a company owner / salesperson** step with a company in scope
+2. You specify the team member to assign — either a static selection or a dynamic value from a previous step
+3. The action updates the company record's owner field in the CRM
+4. The assigned user ID is returned as an output available to downstream steps
+5. If the company already has an owner, the previous owner is replaced
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Companies**, select **Assign a company owner / salesperson**
+3. Configure the field:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Owner** | Yes | The team member to assign as the company owner. Select a user from the list or use dynamic content to pass a user ID from a previous step. |
+
+:::tip
+Use **Add dynamic content** to assign ownership based on data from the trigger or an earlier step. For example, pass a salesperson user ID from a webhook payload or a form submission to route the company to the right person automatically.
+:::
+
+## Outputs
+
+After the step runs, one value is available to downstream steps:
+
+| Output | Description |
+| --- | --- |
+| **owner_id** | The user ID of the newly assigned company owner. |
+
+Reference this output in later steps using **Add dynamic content** and selecting this step's **owner_id**.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Find company](./find-company.mdx) — Locate a company record to bring it into scope
+- [Assign contact owner](./assign-contact-owner.mdx) — Assign an owner to a CRM contact record
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

@@ -1,0 +1,47 @@
+---
+title: Assign a sales team
+description: Learn how to use the Assign a sales team action to randomly assign a salesperson from a selected team to an account.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, sales, salesperson, assignment]
+keywords: [assign sales team, assign salesperson team, random salesperson, sales team automation, round robin salesperson]
+---
+
+# Assign a sales team
+
+**Assign a sales team** picks a random member from the sales team you select and assigns them as the salesperson on the account. This gives you round-robin-style distribution without manual routing. This action is available on account-scoped triggers.
+
+## How it works
+
+1. The automation reaches the **Assign a sales team** step with an account in scope
+2. The step reads the selected sales team and the reassignment preference
+3. A random member of that team is chosen
+4. That person is assigned as the salesperson on the account
+5. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Sales**, select **Assign a sales team**
+3. Configure the fields:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Sales team** | Yes | The team to draw from. One member will be randomly selected and assigned to the account. |
+| **Should reassign** | No | When enabled, replaces the account's current salesperson. When disabled (default), accounts that already have a salesperson are skipped. |
+
+## Outputs
+
+This action produces no outputs available to downstream steps.
+
+## Tips
+
+- **Accounts with an existing salesperson are skipped by default** — enable **Should reassign** only if you intentionally want to overwrite the current assignment.
+- **The assignment is random, not sequential** — if you need strict round-robin ordering, track assignments externally.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Assign a salesperson](./assign-a-salesperson.mdx) — Assign a specific person instead of a random team member
+- [Unassign salespeople](./unassign-salespeople.mdx) — Remove all salesperson assignments from an account
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

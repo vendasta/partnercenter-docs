@@ -10,7 +10,7 @@ We have a host of information and marketing assets available in the Marketplace.
     
 *   [Social Media Management Standard](https://partners.vendasta.com/marketplace/products/MP-GKVMGQFB5HBKXNNKDX7SFVQPK7364FB7)
     
-*   [MatchCraft Managed Ads Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN)
+*   [Specialty Ad Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN)
     
 *   [Templated Website](https://partners.vendasta.com/marketplace/products/MP-FG7W5FPWG4VWLRVPWM8GX2MJ4MTC7D8H)
     

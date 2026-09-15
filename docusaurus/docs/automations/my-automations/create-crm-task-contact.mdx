@@ -1,0 +1,46 @@
+---
+title: Create a CRM sales task for the contact
+description: Learn how to use the Create a CRM sales task for the contact action to create a task on a contact record.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, crm, contact, tasks, advanced]
+keywords: [create task contact, crm task, sales task, contact task, task automation]
+---
+
+# Create a CRM sales task for the contact
+
+**Create a CRM sales task for the contact** creates a task on the contact record in scope. Use it to automatically generate follow-up tasks when contacts reach specific stages. This action is available on contact-scoped triggers.
+
+## How it works
+
+1. The automation reaches the step with a contact in scope
+2. The step creates a CRM sales task with the details you configured
+3. The task appears on the contact record and in the assigned person's task list
+4. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Advanced**, select **Create a CRM sales task for the contact**
+3. Configure the task details:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Task title** | Yes | The name of the task. Supports dynamic content. |
+| **Description** | No | Additional details about the task. Supports dynamic content. |
+| **Assignee** | No | The team member to assign the task to. |
+| **Due date** | No | When the task is due. |
+
+:::tip
+Use **Add dynamic content** in the title and description to include context from previous steps.
+:::
+
+## Outputs
+
+This action produces no outputs available to downstream steps.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Create a CRM sales task for the company](./create-crm-task-company.mdx) — Create a task on a company record
+- [Add a note to the contact](./add-note-to-contact.mdx) — Log a note instead of a task
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

@@ -1,0 +1,42 @@
+---
+title: "Trigger: Account updated"
+description: Start an automation whenever account details change in Partner Center.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, accounts]
+keywords: [account updated trigger, account changed, account fields updated, automation trigger, account scope]
+---
+
+# Account updated
+
+The **Account updated** trigger starts an automation whenever any detail on an account record changes in Partner Center. Use this trigger to keep downstream systems in sync or to react to data changes in real time.
+
+This trigger operates at the account scope, so all standard account fields — including the updated values — are available to downstream steps.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account fields, tags, and product data are available downstream.
+:::
+
+## How it works
+
+1. Any field on an account record is changed — for example, an address update, phone number correction, or industry change.
+2. The account is brought into scope with its updated field values.
+3. Account data, including the newly changed values, becomes available as dynamic content.
+4. Downstream steps execute using the updated account data.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Account name** | Current name of the account |
+| **Account ID** | Unique identifier for the account |
+| **Updated at** | Timestamp of the most recent change |
+| **Account fields** | All standard fields reflecting current values after the update |
+
+Use trigger conditions to filter for changes to specific fields if you only want the automation to run for certain types of updates.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

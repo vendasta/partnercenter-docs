@@ -11,7 +11,8 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
-import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import { IconFlipCard, IconFlipCardGrid } from "@site/src/components/FlipCard";
+import LessonSection from "@site/src/components/LessonSection";
 
 <InlineHighlighter courseId="context-is-everything" site="vendasta_learn">
 
@@ -19,6 +20,7 @@ import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
 
 <LessonHeader
   difficulty="Beginner"
+  topics={["AI fundamentals", "Knowledge Base", "AI Workforce"]}
   time="about 7 minutes"
   pathName="AI foundations"
   step={3}
@@ -34,13 +36,15 @@ import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
 
 An AI Employee is only as good as the context it is given, and that context is assembled from the same three places every time. Know them and you can diagnose almost any answer an AI Employee gives. Flip each one:
 
-<FlipCardGrid>
-  <FlipCard front="Its instructions" back="How it behaves: its role, its rules, and the skills it applies. Always present, in every answer." />
-  <FlipCard front="Its knowledge" back="What it knows about the business: the reference library it searches when a question calls for facts." />
-  <FlipCard front="The conversation" back="What is happening right now: the live thread it holds in working memory, from the first message to the current one." />
-</FlipCardGrid>
+<IconFlipCardGrid>
+  <IconFlipCard gradient="blue" front="Its instructions" back="How it behaves: its role, its rules, and the skills it applies. Always present, in every answer." />
+  <IconFlipCard gradient="green" front="Its knowledge" back="What it knows about the business: the reference library it searches when a question calls for facts." />
+  <IconFlipCard gradient="purple" front="The conversation" back="What is happening right now: the live thread it holds in working memory, from the first message to the current one." />
+</IconFlipCardGrid>
 
 Instructions set behavior, knowledge supplies facts, and the conversation supplies the moment.
+
+<LessonSection>
 
 ## A library, not a script
 
@@ -53,6 +57,8 @@ The [Knowledge Base](/ai/knowledge-base) is the reference library your AI Employ
 
 The word "search" is doing precise work here. The AI does not read the entire library for every message. When a question calls for business facts, it searches by meaning rather than by keyword, retrieves the most relevant pieces, and composes the answer from them. A question about "parking" can surface the entry about the lot behind the building even if the word "parking" never appears in it. General conversation may not touch the library at all.
 
+</LessonSection>
+
 ## Instructions lead, knowledge informs
 
 The two configured sources have a clear order of authority: **instructions lead, knowledge informs.** When the two say different things, the instructions win. That gives you a clean placement rule:
@@ -63,6 +69,8 @@ The two configured sources have a clear order of authority: **instructions lead,
 
 Fresh beats abundant, too. A lean library of current documents outperforms a large one where old and new price lists compete to be retrieved. When information changes, replace it rather than pile on top of it.
 
+<LessonSection>
+
 ## See exactly what an answer used
 
 Every AI Employee answer is auditable. Open any response in Conversations and select **[Explanation](/ai/ai-workforce)** to see which knowledge the AI retrieved and referenced for that specific reply. It is the fastest way to tune a library: when an answer misses, the Explanation shows you whether the right knowledge was missing, outdated, or crowded out.
@@ -70,6 +78,8 @@ Every AI Employee answer is auditable. Open any response in Conversations and se
 :::tip Try it now
 Open one client's website and write two short lists: three questions their customers ask that the site answers, and three it does not. The second list is the start of that client's written knowledge entries, and it took you two minutes.
 :::
+
+</LessonSection>
 
 ## The data is the moat
 

@@ -1,0 +1,44 @@
+---
+title: "Trigger: Fulfillment project for an order changes status"
+description: Start an automation whenever a fulfillment project linked to a sales order changes status.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, fulfillment]
+keywords: [fulfillment order trigger, order project status, Task Manager order, automation trigger, account scope]
+---
+
+# Fulfillment project for an order changes status
+
+The **Fulfillment project for an order changes status** trigger starts an automation whenever a **Task Manager** project that is linked to a sales order moves to a new status. Use this trigger to keep order-related workflows moving — such as notifying a customer when their order enters fulfillment or flagging delays for internal review.
+
+This trigger operates at the account scope, so account, order, and project data are all available to downstream steps.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account fields, order data, and fulfillment project data are available downstream.
+:::
+
+## How it works
+
+1. A fulfillment project linked to a sales order changes status in **Task Manager**.
+2. The account associated with the order is brought into scope.
+3. Project status, order details, and account data become available as dynamic content.
+4. Downstream steps execute using that combined context.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Project name** | Name of the fulfillment project |
+| **Project status** | The new status the project moved to |
+| **Previous status** | The status the project was in before the change |
+| **Order ID** | Identifier of the linked sales order |
+| **Account name** | The account associated with the order and project |
+| **Status changed at** | Timestamp of the status change |
+
+Use trigger conditions to target a specific status if you only want the automation to run at a particular point in the fulfillment lifecycle.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

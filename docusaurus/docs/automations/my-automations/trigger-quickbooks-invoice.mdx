@@ -1,0 +1,43 @@
+---
+title: "Trigger: A QuickBooks invoice event occurs"
+description: Start an automation when a QuickBooks invoice event is detected for a contact.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, integrations]
+keywords: [QuickBooks trigger, QuickBooks invoice trigger, QuickBooks integration, invoice event trigger, accounting automation]
+---
+
+# A QuickBooks invoice event occurs
+
+**A QuickBooks invoice event occurs** fires when a QuickBooks invoice event is detected for a contact — such as an invoice being created, sent, paid, or voided. Use this trigger to automate follow-ups, update CRM records, or notify team members based on invoice activity synced from QuickBooks.
+
+This trigger requires an active QuickBooks integration connected to your Partner Center account.
+
+:::info Trigger scope
+This trigger operates at the **contact** scope. Contact, company, and account actions are available downstream.
+:::
+
+## How it works
+
+1. A QuickBooks invoice event occurs and is synced to Partner Center via the QuickBooks integration.
+2. The automation evaluates any trigger conditions you've configured, such as filtering on a specific event type.
+3. If conditions are met, the workflow starts with the associated contact in context.
+4. Downstream steps can use **Add dynamic content** to reference invoice fields, contact fields, and company fields.
+
+## Available data
+
+QuickBooks invoice fields and standard contact, company, and account fields are available via **Add dynamic content**.
+
+| Output | Description |
+|---|---|
+| **Invoice number** | The QuickBooks invoice number |
+| **Invoice amount** | The total amount on the invoice |
+| **Invoice status** | The current status of the invoice (e.g., paid, overdue) |
+| **Due date** | The payment due date on the invoice |
+| **Contact name** | The contact the invoice is associated with |
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

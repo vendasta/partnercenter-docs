@@ -1,0 +1,42 @@
+---
+title: "Trigger: A CRM sales task is created or modified for a company"
+description: Start an automation whenever a CRM sales task is created or updated on a company record.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, company]
+keywords: [CRM task trigger, sales task created trigger, company sales task, automation trigger task, company scope trigger]
+---
+
+# A CRM sales task is created or modified for a company
+
+The **A CRM sales task is created or modified for a company** trigger starts an automation whenever a sales task is created on a company record or an existing task on that record is updated. Use this trigger to keep your team informed and your workflows moving whenever task activity occurs on a company.
+
+:::info Trigger scope
+This trigger operates at the **company** scope. Company, account, and contact actions are available downstream.
+:::
+
+## How it works
+
+1. A sales task is created on a company record, or an existing task on that record is modified (for example, its status, due date, or assignee changes).
+2. The company and its associated account are brought into scope.
+3. The task data — including title, due date, status, and assignee — becomes available as dynamic content.
+4. Downstream steps execute using the company, account, and task context.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Task title** | The name or subject of the sales task |
+| **Task status** | The current status of the task (e.g., Open, Completed) |
+| **Due date** | The date the task is due |
+| **Assignee** | The user the task is assigned to |
+| **Task notes** | Any notes or description on the task |
+| **Associated company** | Name, ID, and standard fields of the company the task is linked to |
+
+Standard company and account fields are also available to downstream steps via **Add dynamic content**.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Trigger: A CRM sales task is overdue for a company](./trigger-crm-task-overdue-company.mdx)

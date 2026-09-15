@@ -1,0 +1,47 @@
+---
+title: "Trigger: Account added to a list"
+description: Start an automation whenever an account is added to a list in Partner Center.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, accounts]
+keywords: [account added to list, account list trigger, account segmentation, automation trigger, account scope]
+---
+
+# Account added to a list
+
+The **Account added to a list** trigger starts an automation whenever an account is placed into a list in Partner Center. Use this trigger to act on accounts the moment they're segmented or grouped, without waiting for a manual follow-up.
+
+This trigger operates at the account scope, so all standard account fields are available to downstream steps.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account fields, tags, and product data are available downstream.
+:::
+
+## How it works
+
+1. An account is added to a list, either manually or through another automation step.
+2. The account is brought into scope.
+3. Account data and list context become available as dynamic content.
+4. Downstream steps execute using the account data.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Account name** | Name of the account added to the list |
+| **Account ID** | Unique identifier for the account |
+| **List name** | The name of the list the account was added to |
+| **Added at** | Timestamp when the account was added to the list |
+| **Account fields** | Standard fields such as address, phone, website, and industry |
+
+## Tips
+
+:::warning Accounts already on the list
+This trigger only fires when an account is added after the automation is activated. Accounts that were already on the list when you set up the trigger will not cause it to fire. To process existing list members, use a bulk action instead.
+:::
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

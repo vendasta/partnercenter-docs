@@ -52,7 +52,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'fr', 'es', 'de'],
   },
 
   presets: [
@@ -111,28 +111,66 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/security-and-compliance', to: '/getting-started/security-and-privacy' },
           // Commerce: order processing/activation article merged into Creating and Managing Orders
           { from: '/commerce/orders/order-processing-and-activation', to: '/commerce/orders/creating-and-managing-orders' },
+          // Vendasta Ads in Partner Center promoted to its own top-level "Ads" sidebar item (2026-08)
+          { from: '/vendasta-services/digital-advertising/vendasta-ads-partner-center', to: '/ads' },
           // --- Learn restructure (2026-07): TRAINING -> LEARN, paths + lifecycle libraries ---
-          // builder lab broken out into its own path (2026-07)
-          { from: '/learn/builder/the-builder-lab', to: '/learn/build-lab' },
+          // Builder merge (2026-08-29): the builder and build-lab paths became one
+          // eight-step path under /learn/builder. Steps that only re-taught AI
+          // foundations material land on the closest surviving step.
+          { from: '/learn/builder/the-builder-lab', to: '/learn/builder' },
+          { from: '/learn/builder/how-systems-talk', to: '/learn/builder' },
+          { from: '/learn/builder/the-integration-landscape', to: '/learn/builder/start-with-what-exists' },
+          { from: '/learn/builder/capabilities-in-depth', to: '/learn/builder/build-the-doorway' },
+          { from: '/learn/builder/custom-tools', to: '/learn/builder/build-the-doorway' },
+          { from: '/learn/builder/authenticate-and-first-api-call', to: '/learn/builder/call-the-api-yourself' },
+          { from: '/learn/builder/webhooks-and-platform-events', to: '/learn/builder/wire-it-to-your-systems' },
+          { from: '/learn/builder/advanced-automations', to: '/learn/builder/hand-off-to-the-automation' },
+          { from: '/learn/builder/beyond-the-platform', to: '/learn/builder/where-the-platform-ends' },
+          { from: '/learn/build-lab', to: '/learn/builder' },
+          { from: '/learn/build-lab/switch-on-the-platform', to: '/learn/builder/start-with-what-exists' },
+          { from: '/learn/build-lab/build-the-custom-tool', to: '/learn/builder/build-the-doorway' },
+          { from: '/learn/build-lab/test-and-run-it', to: '/learn/builder/watch-it-work' },
+          // Master Sales Series (2026-08): path scoped to the Master Sales Training Series only.
+          // These four steps had no series episode behind them and were removed.
+          { from: '/learn/sales/run-a-discovery-call', to: '/learn/sales' },
+          { from: '/learn/sales/close-and-open-the-relationship', to: '/learn/sales' },
+          { from: '/learn/sales/sell-socially', to: '/learn/sales' },
+          { from: '/learn/sales/consult-dont-just-pitch', to: '/learn/sales' },
           // getting-started renames
           { from: '/learn/getting-started/A-Brief-Introduction-to-the-Vendasta-Platform', to: '/learn/getting-started/the-vendasta-platform' },
-          { from: '/learn/getting-started/Organize-Teams-in-the-Platform', to: '/learn/getting-started/organize-your-team' },
-          { from: '/learn/getting-started/Add-Your-Customer-Accounts-and-Users', to: '/learn/getting-started/accounts-and-users' },
-          { from: '/learn/getting-started/Customize-and-Brand-Your-Platform', to: '/learn/getting-started/customize-and-brand' },
+          // "Get set up" rebuild (2026-08): walkthrough/team/accounts steps retired,
+          // branding shrunk to brand-it, payments rebuilt as connect-payments-and-billing.
+          { from: '/learn/getting-started/Organize-Teams-in-the-Platform', to: '/learn/getting-started' },
+          { from: '/learn/getting-started/Add-Your-Customer-Accounts-and-Users', to: '/learn/getting-started' },
+          { from: '/learn/getting-started/Customize-and-Brand-Your-Platform', to: '/learn/getting-started/brand-it' },
+          { from: '/learn/getting-started/partner-center-walkthrough', to: '/learn/getting-started' },
+          { from: '/learn/getting-started/organize-your-team', to: '/learn/getting-started' },
+          { from: '/learn/getting-started/accounts-and-users', to: '/learn/getting-started' },
+          { from: '/learn/getting-started/customize-and-brand', to: '/learn/getting-started/brand-it' },
+          { from: '/learn/getting-started/get-set-up-to-get-paid', to: '/learn/getting-started/connect-payments-and-billing' },
+          // Vendasta Services library rebuilt as the "Work with Vendasta Services" path (2026-08)
+          { from: '/learn/vendasta-services/grow-your-agency-with-marketing-experts', to: '/learn/vendasta-services/what-vendasta-services-does' },
+          { from: '/learn/vendasta-services/fulfilling-websites-with-marketing-services', to: '/learn/vendasta-services/order-and-launch-a-service' },
+          { from: '/learn/vendasta-services/introduction-to-digital-ads', to: '/learn/vendasta-services/choose-how-the-work-gets-done' },
           // dissolved sections
           { from: '/learn/platform', to: '/learn/products' },
           { from: '/learn/automations-ai', to: '/learn/ai-workforce' },
-          { from: '/learn/automations-ai/AI-and-Automations-in-the-Vendasta-Platform', to: '/learn/ai-workforce/autopilot' },
-          { from: '/learn/automations-ai/Acquisition-Automation-AI', to: '/learn/ai-workforce/autopilot' },
+          { from: '/learn/automations-ai/AI-and-Automations-in-the-Vendasta-Platform', to: '/learn/builder/autopilot' },
+          { from: '/learn/automations-ai/Acquisition-Automation-AI', to: '/learn/builder/autopilot' },
+          { from: '/learn/ai-workforce/autopilot', to: '/learn/builder/autopilot' },
           { from: '/learn/platform/integrations/Integrations-101', to: '/learn/builder' },
+          // "Hire your first AI Employee" step 7 rebuilt (2026-09): the sell-and-manage
+          // step retired, its selling, pricing, and support content already covered by the
+          // Sell the AI Workforce and Vendasta Services paths.
+          { from: '/learn/ai-workforce/sell-and-manage', to: '/learn/ai-workforce/deploy-a-receptionist-for-a-client' },
           // AI Receptionist lessons consolidated into the AI Workforce path
           { from: '/learn/products/ai-receptionist/Meet-Your-First-AI-Employee-The-AI-Receptionist', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
           { from: '/learn/products/ai-receptionist/AI-Receptionist-Setup-and-Configuration', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
           { from: '/learn/products/ai-receptionist/Vendasta-AI-Receptionist-Walkthrough', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
           { from: '/learn/products/ai-receptionist/AI-Receptionist-Implementation-Essentials', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
           // marketplace lessons harvested into paths
-          { from: '/learn/platform/marketplace/Package-Digital-Products-with-Vendasta', to: '/learn/ai-workforce/sell-and-manage' },
-          { from: '/learn/platform/marketplace/Billing-and-Payment-Basics', to: '/learn/getting-started/get-set-up-to-get-paid' },
+          { from: '/learn/platform/marketplace/Package-Digital-Products-with-Vendasta', to: '/learn/sell-the-ai-workforce/know-your-offer' },
+          { from: '/learn/platform/marketplace/Billing-and-Payment-Basics', to: '/learn/getting-started/connect-payments-and-billing' },
           // library regroup: business-app
           { from: '/learn/platform/business-app/Introducing-Business-App', to: '/learn/products/engage/business-app/introduction-to-business-app' },
           { from: '/learn/platform/business-app/Introduction-to-Business-App-Pro', to: '/learn/products/engage/business-app/introduction-to-business-app' },
@@ -189,7 +227,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/learn/products/websites/Get-your-Clients-Selling-Online-with-Accelerated-Templated-Website-Plus', to: '/learn/products/engage/websites/get-your-clients-selling-online' },
           { from: '/learn/products/websites/Websites-An-Introduction', to: '/learn/products/engage/websites/websites-an-introduction' },
           // vendasta-services renames (case-only renames live in nginx.conf - they collide with real pages on case-insensitive local filesystems)
-          { from: '/learn/vendasta-services/Grow-Your-Agency-with-our-Team-of-Marketing-Experts', to: '/learn/vendasta-services/grow-your-agency-with-marketing-experts' },
+          { from: '/learn/vendasta-services/Grow-Your-Agency-with-our-Team-of-Marketing-Experts', to: '/learn/vendasta-services/what-vendasta-services-does' },
           // --- end Learn restructure ---
           // Vendasta Services: AI Workforce section renamed (dropped "setup" from URLs)
           { from: '/vendasta-services/ai-workforce-setup', to: '/vendasta-services/ai-workforce/' },
@@ -202,10 +240,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           // Vendasta Services: social media onboarding + timeline folded into the section index
           { from: '/vendasta-services/social-media-management/social-media-management-onboarding', to: '/vendasta-services/social-media-management/' },
           { from: '/vendasta-services/social-media-management/social-media-marketing-timeline', to: '/vendasta-services/social-media-management/' },
+          // Vendasta Services: manual blog writing retired; blog content is now delivered by the AI Blogger
+          { from: '/vendasta-services/blogs', to: '/vendasta-services/ai-workforce/ai-blogger' },
+          { from: '/vendasta-services/blogs/blog-post-service-expectations', to: '/vendasta-services/ai-workforce/ai-blogger' },
           // Vendasta Services: expectation brochures article removed
           { from: '/vendasta-services/expectations/expectation-brochures', to: '/vendasta-services/expectations/' },
-          // Vendasta Services digital advertising: MatchCraft overview split into Express Ads + Managed Ads Campaign
+          // Vendasta Services digital advertising: MatchCraft overview replaced by Specialty Ad Campaign
           { from: '/vendasta-services/digital-advertising/matchcraft-services-overview', to: '/vendasta-services/digital-advertising/' },
+          // Vendasta Services digital advertising: Express Ads retired
+          { from: '/vendasta-services/digital-advertising/express-ads', to: '/vendasta-services/digital-advertising/' },
           // Vendasta Services digital advertising: short articles merged into the section FAQ
           { from: '/vendasta-services/digital-advertising/matchcraft-ad-services-refund-policy', to: '/vendasta-services/digital-advertising/' },
           { from: '/vendasta-services/digital-advertising/criteria-for-unskippable-youtube-ads', to: '/vendasta-services/digital-advertising/' },
@@ -221,8 +264,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/administration/my-account/my-plan/cancelling-your-subscription', to: '/administration/my-account/my-plan/' },
           // My Billing: billing-overview-and-model is now the index
           { from: '/administration/my-account/my-billing/billing-overview-and-model', to: '/administration/my-account/my-billing/' },
-          // Affiliate Program: terms merged into index
-          { from: '/administration/my-account/affiliate-program/vendasta-affiliate-program-terms-and-conditions', to: '/administration/my-account/affiliate-program/' },
+          // Affiliate Program: page removed
+          { from: '/administration/my-account/affiliate-program/vendasta-affiliate-program-terms-and-conditions', to: '/administration/my-account/' },
+          { from: '/administration/my-account/affiliate-program/', to: '/administration/my-account/' },
           // Data Management: CRM Objects and Custom Fields merged into one page
           { from: '/administration/data-management/crm-objects/custom-fields', to: '/administration/data-management/crm-objects/' },
           // Data Management: Pipelines and Create a new Pipeline merged into one page
@@ -323,30 +367,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/automations/email-campaign-automations', to: '/automations/' },
           // Automations: sales-and-crm-integration walkthrough merged into templates overview
           { from: '/automations/sales-and-crm-integration', to: '/automations/templates/' },
-          // Automations: step deep-dives moved under /automations/my-automations/steps/
-          { from: '/automations/categorize-with-ai', to: '/automations/my-automations/ai-actions/categorize-with-ai' },
-          { from: '/automations/steps/categorize-with-ai', to: '/automations/my-automations/ai-actions/categorize-with-ai' },
-          { from: '/automations/ai-actions/categorize-with-ai', to: '/automations/my-automations/ai-actions/categorize-with-ai' },
-          { from: '/automations/ai-actions/summarize-with-ai', to: '/automations/my-automations/ai-actions/summarize-with-ai' },
-          { from: '/automations/ai-actions/analyze-sentiment-with-ai', to: '/automations/my-automations/ai-actions/analyze-sentiment-with-ai' },
-          { from: '/automations/ai-actions/send-a-prompt-to-ai', to: '/automations/my-automations/ai-actions/send-a-prompt-to-ai' },
-          { from: '/automations/ai-actions/send-a-request-to-an-ai-employee', to: '/automations/my-automations/ai-actions/send-a-request-to-an-ai-employee' },
-          { from: '/automations/ai-actions', to: '/automations/my-automations/ai-actions/' },
-          { from: '/automations/find-company', to: '/automations/my-automations/steps/find-company' },
-          { from: '/automations/find-custom-object', to: '/automations/my-automations/steps/find-custom-object' },
-          { from: '/automations/copy-assistant-automation', to: '/automations/my-automations/steps/copy-assistant-automation' },
-          { from: '/automations/steps/find-company', to: '/automations/my-automations/steps/find-company' },
-          { from: '/automations/steps/find-custom-object', to: '/automations/my-automations/steps/find-custom-object' },
-          { from: '/automations/steps/copy-assistant-automation', to: '/automations/my-automations/steps/copy-assistant-automation' },
-          { from: '/automations/steps', to: '/automations/my-automations/steps/' },
-          // Automations: sort-text-with-ai → categorize-with-ai (now under my-automations/ai-actions/)
-          { from: '/automations/sort-text-with-ai', to: '/automations/my-automations/ai-actions/categorize-with-ai' },
-          { from: '/automations/categorize-text-with-ai', to: '/automations/my-automations/ai-actions/categorize-with-ai' },
+          // Automations: ai-actions and steps flattened into my-automations/
+          { from: '/automations/categorize-with-ai', to: '/automations/my-automations/categorize-with-ai' },
+          { from: '/automations/steps/categorize-with-ai', to: '/automations/my-automations/categorize-with-ai' },
+          { from: '/automations/ai-actions/categorize-with-ai', to: '/automations/my-automations/categorize-with-ai' },
+          { from: '/automations/ai-actions/summarize-with-ai', to: '/automations/my-automations/summarize-with-ai' },
+          { from: '/automations/ai-actions/analyze-sentiment-with-ai', to: '/automations/my-automations/analyze-sentiment-with-ai' },
+          { from: '/automations/ai-actions/send-a-prompt-to-ai', to: '/automations/my-automations/send-a-prompt-to-ai' },
+          { from: '/automations/ai-actions/send-a-request-to-an-ai-employee', to: '/automations/my-automations/send-a-request-to-an-ai-employee' },
+          { from: '/automations/ai-actions', to: '/automations/my-automations/actions-overview' },
+          { from: '/automations/find-company', to: '/automations/my-automations/find-company' },
+          { from: '/automations/find-custom-object', to: '/automations/my-automations/find-custom-object' },
+          { from: '/automations/copy-assistant-automation', to: '/automations/my-automations/copy-assistant-automation' },
+          { from: '/automations/steps/find-company', to: '/automations/my-automations/find-company' },
+          { from: '/automations/steps/find-custom-object', to: '/automations/my-automations/find-custom-object' },
+          { from: '/automations/steps/copy-assistant-automation', to: '/automations/my-automations/copy-assistant-automation' },
+          { from: '/automations/steps', to: '/automations/my-automations/actions-overview' },
+          // Automations: old subfolder paths redirect to flat
+          { from: '/automations/my-automations/ai-actions/categorize-with-ai', to: '/automations/my-automations/categorize-with-ai' },
+          { from: '/automations/my-automations/ai-actions/summarize-with-ai', to: '/automations/my-automations/summarize-with-ai' },
+          { from: '/automations/my-automations/ai-actions/analyze-sentiment-with-ai', to: '/automations/my-automations/analyze-sentiment-with-ai' },
+          { from: '/automations/my-automations/ai-actions/send-a-prompt-to-ai', to: '/automations/my-automations/send-a-prompt-to-ai' },
+          { from: '/automations/my-automations/ai-actions/send-a-request-to-an-ai-employee', to: '/automations/my-automations/send-a-request-to-an-ai-employee' },
+          { from: '/automations/my-automations/ai-actions', to: '/automations/my-automations/actions-overview' },
+          { from: '/automations/my-automations/steps/find-company', to: '/automations/my-automations/find-company' },
+          { from: '/automations/my-automations/steps/find-custom-object', to: '/automations/my-automations/find-custom-object' },
+          { from: '/automations/my-automations/steps/copy-assistant-automation', to: '/automations/my-automations/copy-assistant-automation' },
+          { from: '/automations/my-automations/steps', to: '/automations/my-automations/actions-overview' },
+          { from: '/automations/sort-text-with-ai', to: '/automations/my-automations/categorize-with-ai' },
+          { from: '/automations/categorize-text-with-ai', to: '/automations/my-automations/categorize-with-ai' },
           // Automations: flat pages moved into /automations/my-automations/
           { from: '/automations/creating-and-configuring-automations', to: '/automations/my-automations/creating-and-configuring-automations' },
           { from: '/automations/automation-triggers-reference', to: '/automations/my-automations/automation-triggers-reference' },
           { from: '/automations/automation-steps-reference', to: '/automations/my-automations/automation-steps-reference' },
-          { from: '/automations/advanced-automation-features', to: '/automations/my-automations/advanced-automation-features' },
+          { from: '/automations/advanced-automation-features', to: '/automations/my-automations/logic-and-flow-control' },
           { from: '/automations/data-expressions', to: '/automations/my-automations/data-expressions' },
           { from: '/automations/time-based-triggers', to: '/automations/my-automations/time-based-triggers' },
           { from: '/automations/navigating-the-automation-canvas', to: '/automations/my-automations/navigating-the-automation-canvas' },
@@ -370,10 +424,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/automations/my-automations/manually-triggered-automations', to: '/automations/my-automations/automation-triggers-reference' },
           { from: '/automations/my-automations/form-submission-trigger', to: '/automations/my-automations/automation-triggers-reference' },
           { from: '/automations/my-automations/web-chat-lead-capture-trigger', to: '/automations/my-automations/automation-triggers-reference' },
-          { from: '/automations/my-automations/logic-steps', to: '/automations/my-automations/advanced-automation-features' },
-          { from: '/automations/my-automations/action-sets-in-automations', to: '/automations/my-automations/advanced-automation-features' },
-          { from: '/automations/my-automations/delay-until-steps-in-automation-workflows', to: '/automations/my-automations/advanced-automation-features' },
-          { from: '/automations/my-automations/grouping-of-automation-steps', to: '/automations/my-automations/advanced-automation-features' },
+          { from: '/automations/my-automations/logic-steps', to: '/automations/my-automations/logic-and-flow-control' },
+          { from: '/automations/my-automations/action-sets-in-automations', to: '/automations/my-automations/reusable-workflows' },
+          { from: '/automations/my-automations/delay-until-steps-in-automation-workflows', to: '/automations/my-automations/logic-and-flow-control' },
+          { from: '/automations/my-automations/grouping-of-automation-steps', to: '/automations/my-automations/reusable-workflows' },
+          // Automations: advanced-automation-features split into logic-and-flow-control + reusable-workflows
+          { from: '/automations/my-automations/advanced-automation-features', to: '/automations/my-automations/logic-and-flow-control' },
           { from: '/automations/my-automations/automation-activity', to: '/automations/automation-history/managing-your-automations' },
           { from: '/automations/my-automations/turn-off-an-automation', to: '/automations/automation-history/managing-your-automations' },
           { from: '/automations/my-automations/duplicating-automations', to: '/automations/automation-history/managing-your-automations' },
@@ -437,8 +493,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/getting-started/intro-to-vendasta/vendasta-platform-overview', to: '/getting-started' },
           { from: '/getting-started/intro-to-vendasta/partner-onboarding', to: '/getting-started/partner-onboarding' },
           { from: '/getting-started/intro-to-vendasta/partner-troubleshooting-guide', to: '/getting-started/partner-troubleshooting-guide' },
-          { from: '/getting-started/intro-to-vendasta/vendasta-affiliate-program', to: '/administration/my-account/affiliate-program/' },
-          { from: '/getting-started/vendasta-affiliate-program', to: '/administration/my-account/affiliate-program/' },
+          { from: '/getting-started/intro-to-vendasta/vendasta-affiliate-program', to: '/administration/my-account/' },
+          { from: '/getting-started/vendasta-affiliate-program', to: '/administration/my-account/' },
           { from: '/partner-center/partner-center-getting-started-guide', to: '/partner-center' },
           { from: '/partner-center/AI-receptionist-features-by-plan', to: '/ai/ai-workforce/ai-receptionist-features-by-plan' },
           // AI Workforce Optimization Plan content is now on every service page
@@ -465,6 +521,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       },
       items: [
         // Moved to DocSidebar swizzle (src/theme/DocSidebar/index.tsx)
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
       ],
     },
     footer: {

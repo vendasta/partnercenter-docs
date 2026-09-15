@@ -1,0 +1,194 @@
+---
+title: Send a request to an AI employee
+description: Learn how to use the Send a request to an AI employee action to send prompts to your AI employees and use their responses in automation workflows.
+sidebar_position: 5
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, ai, ai-employee, workflows]
+keywords: [send request ai employee, ai employee automation, ai employee prompt, ai action, ai employee step, automation ai employee]
+---
+
+# Send a request to an AI employee
+
+**Send a request to an AI employee** lets you bring your AI employees into any automation. Pick an AI employee, write a prompt with dynamic content from earlier steps, and the AI employee processes it using its own knowledge base, capabilities, and instructions. The response flows back into your automation as dynamic content — ready for emails, CRM notes, tasks, or any downstream action. This means your automations can tap into the same AI employees that handle chat, voice, and other channels.
+
+## How it works
+
+1. You **select an AI employee** — any pre-built or custom AI employee available in your account
+2. You write a **prompt** with context from previous steps (contact data, form responses, trigger data, etc.)
+3. When the automation runs, the prompt is sent to the AI employee, which processes it using its knowledge base, capabilities, and configured instructions
+4. The AI employee's **Answer** and **Thinking** are returned and available as dynamic content in later steps
+
+The AI employee processes the prompt using a reasoning approach — it thinks through the problem step by step, then produces an answer. Both outputs are available in later steps.
+
+:::warning
+The prompt is rendered with template variables before being sent to the AI employee. If all variables resolve to empty and the prompt itself is empty, the step will fail with an error. Always include static text in your prompt alongside dynamic content to prevent this.
+:::
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **AI actions**, select **Send a request to an AI employee**
+3. Configure the fields:
+
+### 1. Select your AI employee
+
+In the **Employee** field, choose the AI employee you want to use. The dropdown lists all AI employees available in the account — both pre-built and custom AI employees. Voice receptionists are excluded from the list since they are designed for phone interactions, not prompt-based requests.
+
+:::info
+The AI employee you select determines what knowledge, capabilities, and instructions are used when processing the prompt. A custom AI employee trained on your product catalog will give different answers than a general-purpose one.
+:::
+
+### 2. Name the prompt (optional)
+
+In the **Prompt name** field, enter a short label that identifies this prompt. This is optional — the name is displayed in the automation editor alongside the step, making it easier to tell which request is which when you have multiple AI employee steps in the same workflow.
+
+### 3. Write your prompt
+
+In the **Prompt** field, write the instruction you want the AI employee to process. Select the variable insertion button to insert dynamic content from previous steps — contact names, company details, chat summaries, form responses, or any other available data. Variables are resolved before the prompt is sent.
+
+:::tip
+Think of the prompt as a message you are sending to the AI employee. Write it the way you would ask a team member to do something — clear instructions with the context they need.
+:::
+
+:::info
+The prompt must not exceed 4,000 characters (including resolved variable values). A character counter below the field shows your current count.
+:::
+
+### Example configuration
+
+**Scenario:** When a company is created, have an AI employee research the company and create a summary note.
+
+**Trigger:** An account is created
+
+**AI employee:** Your custom research assistant AI employee
+
+**Prompt:** "Research the following company and write a brief summary for the sales team. Company name: [Add dynamic content: Company Name]. Website: [Add dynamic content: Website URL]. Include the industry, approximate size, and any relevant information that would help with the first sales conversation."
+
+## Outputs
+
+After the step runs, two values are available to downstream steps:
+
+| Output | Description |
+| --- | --- |
+| **Answer** | The AI employee's text response to the prompt. |
+| **Thinking** | The AI employee's internal reasoning process — how it arrived at the answer. |
+
+Reference these outputs in later steps using **Add dynamic content** and selecting this step's outputs. The **Answer** is the primary output you will use in most cases. The **Thinking** output is useful for debugging or logging why the AI employee responded the way it did.
+
+## Tips for effective prompts
+
+- **Leverage the AI employee's specialization** — If your AI employee is trained on your product catalog, ask product-specific questions. If it handles support, ask it to diagnose issues. Play to its strengths.
+- **Provide context via dynamic content** — The AI employee can only work with what you give it. Insert relevant contact, company, or trigger data so it has the full picture.
+- **Include static text** — Always include descriptive text in your prompt alongside dynamic content placeholders. This prevents empty-prompt errors if a variable resolves to blank.
+- **Be specific about the output format** — "Write a 2-sentence summary" or "Return a bulleted list" produces more predictable results than open-ended requests
+- **Test with real data** — Run a test automation to see how your AI employee responds before deploying to production
+
+## Use case examples
+
+### Categorize a lead, then get AI employee recommendations
+
+Pair with [Categorize with AI](./categorize-with-ai) to route leads by intent, then have a specialized AI employee generate next steps based on its product knowledge.
+
+**Step 1 — Set the trigger**
+
+Select **Webchat captures a lead**.
+
+**Step 2 — Categorize the lead**
+
+- Add a **Categorize with AI** step
+- **Input text**: select **Add dynamic content** and choose **Chat Summary** from the trigger
+- Add categories: **Pricing**, **Support**, **General inquiry**
+
+**Step 3 — Get AI employee recommendations on the Pricing branch**
+
+- On the **Pricing** branch, add a **Send a request to an AI employee** step
+- **AI employee**: Select your sales AI employee (trained on your product catalog and pricing)
+- **Prompt**: "A lead asked about pricing. Their inquiry: [Add dynamic content: Chat Summary]. Based on what they asked about, recommend the best product or plan and write a 3-sentence pitch. Include relevant pricing details from our catalog."
+
+**Step 4 — Notify the salesperson**
+
+- Add a **Notify a salesperson** step with the AI employee's **Answer** in the notification body
+
+:::tip
+Categorize with AI handles the routing — the AI employee handles the recommendation. The salesperson gets a qualified lead with a product-specific pitch already written, using your actual pricing and product details.
+:::
+
+### Summarize a conversation, then generate a tailored estimate
+
+Use [Summarize with AI](./summarize-with-ai) to condense a long chat transcript, then pass the summary to a job estimator AI employee that knows your services and pricing.
+
+**Step 1 — Set the trigger**
+
+Select **Webchat captures a lead**.
+
+**Step 2 — Summarize the conversation**
+
+- Add a **Summarize with AI** step
+- **Text to summarize**: select **Add dynamic content** and choose **Chat Summary** from the trigger
+- **Prompt**: "Summarize the customer's request. Focus on what service they need, any specifics they mentioned (size, timeline, location), and their budget expectations."
+
+**Step 3 — Generate an estimate**
+
+- Add a **Send a request to an AI employee** step
+- **AI employee**: Select your job estimator AI employee
+- **Prompt**: "Based on this customer request summary, generate a preliminary cost estimate. Customer: [Add dynamic content: Contact Name]. Request: [Add dynamic content: Response from Summarize step]. Provide a price range based on our service catalog, list what is included, and note any details you still need from the customer."
+
+**Step 4 — Send the estimate and create a task**
+
+- Add a **Send an email** step to the contact with the AI employee's **Answer** as the email body
+- Add a **Create a CRM sales task for the contact** step so a team member can follow up and refine the estimate
+
+:::tip
+Summarize with AI distills the conversation into a clean brief. The AI employee — trained on your services and pricing — turns that brief into a real estimate. No one had to read the full transcript or look up pricing manually.
+:::
+
+### Analyze sentiment, then draft a context-aware response
+
+Pair with [Analyze sentiment with AI](./analyze-sentiment-with-ai) to detect customer mood, then have an AI employee draft a response that matches the tone and uses your business context.
+
+**Step 1 — Set the trigger**
+
+Select **Webchat captures a lead** or **A contact communication summary is created**.
+
+**Step 2 — Analyze sentiment**
+
+- Add an **Analyze sentiment with AI** step
+- **Input text**: select **Add dynamic content** and choose the chat summary
+
+**Step 3 — Draft a response on the Negative branch**
+
+- On the **Negative** branch, add a **Send a request to an AI employee** step
+- **AI employee**: Select your customer success AI employee (trained on your policies, refund process, and escalation procedures)
+- **Prompt**: "A customer had a negative experience. Their conversation: [Add dynamic content: Chat Summary]. The sentiment reason was: [Add dynamic content: Reason from Analyze sentiment step]. Draft a recovery email that acknowledges their concern, explains what we can do based on our policies, and offers a concrete next step. Keep it to 4 sentences."
+
+**Step 4 — Send and log**
+
+- Add a **Send an email** step with the AI employee's **Answer**
+- Add a **Create a CRM sales task for the contact** step marked urgent, assigned to a senior rep
+
+:::tip
+Analyze sentiment with AI flags the mood. The AI employee — knowing your policies and escalation procedures — writes a response grounded in what your business can actually do, not generic apology text.
+:::
+
+## Send a prompt to AI vs. Send a request to an AI employee
+
+| | Send a prompt to AI | Send a request to an AI employee |
+| --- | --- | --- |
+| **What processes the prompt** | A general-purpose AI model | A specific AI employee with its own knowledge base and capabilities |
+| **Knowledge base** | None — only knows what you include in the prompt | Has access to its configured knowledge base, training, and capabilities |
+| **Outputs** | Response | Answer + Thinking (reasoning process) |
+| **Best for** | General text generation, formatting, and transformation | Tasks that require your business context, product knowledge, or specialized skills |
+| **Setup** | Write a prompt | Select an AI employee, optionally name the prompt, write a prompt |
+
+Use **Send a prompt to AI** for general-purpose tasks like formatting text or generating generic content. Use **Send a request to an AI employee** when you need the AI to use your business knowledge, product catalog, or specialized capabilities.
+
+## Related resources
+
+- [Automation steps reference](./automation-steps-reference.mdx) — Full list of available actions
+- [Send a prompt to AI](./send-a-prompt-to-ai) — Send a free-form prompt to a general AI model
+- [Summarize with AI](./summarize-with-ai) — Condense text into a concise summary
+- [Categorize with AI](./categorize-with-ai) — Classify text into custom categories and branch your automation
+- [AI Workforce overview](/ai/ai-workforce) — Learn about AI employees and their capabilities
+- [Creating custom AI employees](/ai/ai-workforce/custom-ai-employees) — Build specialized AI employees for your business
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Time-based triggers](./time-based-triggers.mdx) — Set up scheduled automations

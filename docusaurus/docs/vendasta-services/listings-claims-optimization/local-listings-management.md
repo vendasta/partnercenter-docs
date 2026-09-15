@@ -1,18 +1,27 @@
 ---
 title: "Local Listings Management"
 sidebar_label: "Local Listings Management"
-description: "An overview of the fully managed Local Listings Management service, detailing the process for claiming, optimizing, and monitoring your business listings on Google, Apple, and Bing."
+description: "An overview of the Local Listings Management service: setup and claiming, guided verification, ownership transfer, and ongoing monitoring on Google, Apple, and Bing."
 ---
 
 # Local Listings Management
 
 ## Overview
 
-Local Listings Management is a fully managed solution where a team of specialists claims, optimizes, and monitors your business listings on Google Business Profile, Apple Business Connect, and Bing Places.
+Local Listings Management is a service where a team of specialists creates and claims your client's business listings on Google Business Profile, Apple Business Connect, and Bing Places, guides them through each platform's verification, then optimizes and monitors the listings on an ongoing basis.
+
+:::warning The client completes the verification
+
+Google, Apple, and Bing all require the **business itself** to verify — by answering the primary business line, recording a video, or reading a postcard PIN. Our team cannot complete verification on their behalf. We set the listings up, tell the client exactly what each platform is asking for, and follow up until they are through. Set this expectation before the order.
+
+:::
 
 ## What's Included
 
-Fully managed listings across Google Business Profile, Apple Business Connect, and Bing Places, plus ongoing monthly monitoring, posting, uploads, and retroactive review responses.
+* **Listing creation, claiming, and initial setup** on Google Business Profile, Apple Business Connect, and Bing Places
+* **Dedicated, hands-on support through each platform's verification requirements**
+* **Complete ownership transfer and dashboard connectivity** once the listings are verified
+* **Ongoing monthly monitoring**, posting, uploads, and retroactive review responses
 
 ### Ongoing profile monitoring
 
@@ -62,7 +71,7 @@ An onboarding call is required for all customers to verify key business informat
 
 ### 3. Listing verification
 
-Each listing site has its own methods for verifying a business. You may be presented with one or more of the following options:
+Each listing site has its own methods for verifying a business, and each one has to be completed by someone at the business — our team cannot complete them on the client's behalf. We start the request, explain what the platform is asking for, and stay with them until it is done. The client may be presented with one or more of the following options:
 
 * Phone call verification
 * SMS verification
@@ -81,9 +90,9 @@ If a physical postcard is the only option, it will be mailed to the business add
 ## FAQ
 
 <details>
-<summary> Can someone claim my listings completely on my behalf?</summary>
+<summary> Can the listings be claimed completely on the client's behalf?</summary>
 
-The process often requires sending a verification phone call to the primary business line, so it is necessary for someone to be present at the business location to complete the claim.
+Not entirely. Our team creates and claims the listings, sets them up, and guides the client through verification — but the verification step belongs to the business on all three platforms. It often requires answering a verification phone call to the primary business line, so someone needs to be present at the business location to complete the claim. Once verified, our team takes over ownership and ongoing management.
 </details>
 
 <details>

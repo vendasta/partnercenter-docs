@@ -1,0 +1,40 @@
+---
+title: "Trigger: Shopping cart updated"
+description: Start an automation whenever items are added to or removed from a shopping cart.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, products]
+keywords: [shopping cart trigger, cart updated, cart abandoned, automation trigger, account scope]
+---
+
+# Shopping cart updated
+
+The **Shopping cart updated** trigger starts an automation whenever items are added to or removed from a shopping cart in **Business App**. Use this trigger to send timely cart reminders, surface relevant offers, or track purchasing intent as it happens.
+
+This trigger operates at the account scope, so account and cart data are available to downstream steps.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account fields and shopping cart data are available downstream.
+:::
+
+## How it works
+
+1. A user adds or removes an item from their shopping cart in **Business App**.
+2. The cart update event fires and the account is brought into scope.
+3. Cart contents and account data become available as dynamic content.
+4. Downstream steps execute using that context.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Cart items** | The products currently in the cart at the time of the update |
+| **Update type** | Whether an item was added or removed |
+| **Account name** | The account associated with the cart |
+| **Updated at** | Timestamp when the cart was updated |
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

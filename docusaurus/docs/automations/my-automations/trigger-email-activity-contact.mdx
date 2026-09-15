@@ -1,0 +1,39 @@
+---
+title: "Trigger: An email activity is created or modified for a contact"
+description: Start an automation when an email activity is logged or updated on a contact record.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, contact]
+keywords: [email activity trigger, contact email logged, email updated, CRM email activity, automation trigger]
+---
+
+# An email activity is created or modified for a contact
+
+**An email activity is created or modified for a contact** starts a workflow whenever an email is logged — or an existing email activity is updated — on a contact record. Use this trigger to automate follow-up tasks, record updates, or notifications based on email interactions with your contacts.
+
+This trigger fires for both newly logged emails and edits to existing email activity records, so workflows stay current as details are added or corrected.
+
+:::info Trigger scope
+This trigger operates at the **contact** scope. Contact, company, and account actions are available downstream.
+:::
+
+## How it works
+
+1. A team member logs a new email activity — or edits an existing one — on a contact record in the CRM.
+2. The automation evaluates any trigger conditions you've configured (for example, filtering on email direction or subject).
+3. If all conditions are met, the workflow starts with the contact, their associated company, and the account in context.
+4. Downstream steps can use **Add dynamic content** to reference email activity details, contact fields, and company fields.
+
+## Available data
+
+All standard contact, company, and account fields are available downstream via **Add dynamic content**. This includes fields such as contact name, email address, phone, assigned salesperson, company name, and account tags.
+
+:::info
+Email activity fields (such as subject, direction, and notes) are available as dynamic data in steps that follow this trigger.
+:::
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx) — trigger types, scoping, and how to choose the right trigger
+- [Automation triggers reference](./automation-triggers-reference.mdx) — full reference for every available trigger
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — entry settings, conditions, and error handling
+- [Actions overview](./actions-overview.mdx) — what can happen after a trigger fires

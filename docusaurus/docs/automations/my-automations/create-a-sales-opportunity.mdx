@@ -1,0 +1,58 @@
+---
+title: Create a sales opportunity
+description: Learn how to use the Create a sales opportunity action to create a CRM opportunity on an account with pipeline, stage, and custom field configuration.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, sales, crm, opportunity, pipeline]
+keywords: [create opportunity, sales opportunity, crm opportunity, pipeline automation, opportunity automation, create deal]
+---
+
+# Create a sales opportunity
+
+**Create a sales opportunity** adds a new opportunity to the CRM on the account in scope. You select the pipeline and stage, name the opportunity, and optionally fill in additional CRM fields. The new opportunity's ID is available to downstream steps. This action is available on account-scoped triggers.
+
+## How it works
+
+1. The automation reaches the **Create a sales opportunity** step with an account in scope
+2. The step creates an opportunity record using the pipeline, stage, name, and any additional fields you configured
+3. The opportunity is associated with the company and/or contact currently in scope
+4. The new opportunity ID is returned as an output for downstream steps
+5. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Sales**, select **Create a sales opportunity**
+3. Configure the fields:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Opportunity name** | Yes | The name for the new opportunity. Supports dynamic content from previous steps. |
+| **Pipeline** | Yes | The sales pipeline to create the opportunity in. |
+| **Stage** | Yes | The initial pipeline stage. Defaults to the first stage in the selected pipeline. |
+| **Additional CRM fields** | No | Click **Add field** to select and populate additional opportunity fields (e.g., expected close date, probability, assigned salesperson, line items). |
+
+:::tip
+Use **Add dynamic content** in the opportunity name and CRM fields to pull values from previous steps — for example, include the company name or trigger data in the opportunity name.
+:::
+
+## Outputs
+
+After the step runs, one value is available to downstream steps:
+
+| Output | Description |
+| --- | --- |
+| **opportunity_id** | The ID of the newly created CRM opportunity. |
+
+Reference this output in later steps using **Add dynamic content** and selecting this step's **opportunity_id**.
+
+## Tips
+
+- **A company or contact must be in scope** — the opportunity is associated with whatever entity the trigger or a preceding lookup step brought into context. If neither exists, the step will fail.
+- **Each run creates a new opportunity** — this action does not check for duplicates. If you want to avoid creating duplicate opportunities, add an **If/else** branch that checks for existing opportunities first.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Find company](./find-company.mdx) — Bring a company into scope before creating an opportunity
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

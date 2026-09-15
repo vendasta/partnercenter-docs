@@ -17,7 +17,7 @@ Before you begin:
 
 ## Step 1: Access AI Employee Configuration
 
-1. Navigate to <AISparkleIcon /> **AI** › **AI Workforce** in your Business App dashboard.
+1. Navigate to <AISparkleIcon /> `AI` → `Workforce` in your Business App dashboard.
 2. Locate the AI Employee you want to configure.
 3. Click the **Configure** button next to the employee's name.
 
@@ -27,7 +27,7 @@ If you don't see the Configure button, verify you have the necessary permissions
 
 ## Step 2: Open the Capabilities Section
 
-1. In the AI Employee configuration panel, scroll down to the **Capabilities** section.
+1. On the AI Employee's `Configure` page, scroll down to the `Capabilities` section.
 2. Click to expand the section if it's collapsed.
 3. You'll see a list of capabilities already added to the AI Employee.
 
@@ -160,7 +160,7 @@ If you can't find the answer in the knowledge base, say: "I don't have that spec
 
 ## Step 5: Save and Test Your Configuration
 
-1. **Click "Save Changes"** at the bottom of the configuration panel.
+1. Click `Save Changes` at the bottom of the `Configure` page.
 2. **Test the capabilities** by starting a conversation with your AI Employee.
 3. **Try different scenarios** to ensure capabilities activate correctly:
    - Ask questions that should trigger knowledge base access
@@ -231,9 +231,9 @@ Track key metrics to measure capability effectiveness:
 
 Need help with specific capability configurations? Check our [troubleshooting guide](#troubleshooting-common-issues) or contact support for personalized assistance.
 
-<div style={{display: 'flex', alignItems: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px 0'}}>
+<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
   <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
-  <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)'}}>
+  <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>
     New to how AI Employees work? Take the <a href="/learn/ai-foundations" style={{color: '#3C9A63', fontWeight: 600}}>AI foundations</a> course in Vendasta Learn — Beginner, 6 lessons.
   </span>
 </div>

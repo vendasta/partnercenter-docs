@@ -1,0 +1,41 @@
+---
+title: "Trigger: A form is submitted for a contact (company scope)"
+description: Start an automation whenever a form is submitted by a contact associated with a company. Runs at the company scope.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, company]
+keywords: [form submitted contact company trigger, contact form company scope, form submission automation, company scope trigger, contact form trigger]
+---
+
+# A form is submitted for a contact (company scope)
+
+The **A form is submitted for a contact (company scope)** trigger starts an automation whenever a form is submitted by a contact who is associated with a company. Unlike the contact-scoped form trigger, this version runs at the company scope — making company and account data the primary context for downstream steps.
+
+:::info Trigger scope
+This trigger operates at the **company** scope. Company, account, and contact actions are available downstream.
+:::
+
+## How it works
+
+1. A contact associated with a company submits a form.
+2. The company the contact belongs to, along with its associated account, are brought into scope.
+3. Form field responses and the submitting contact's data become available as dynamic content.
+4. Downstream steps execute using the company, account, and form submission context.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Form name** | The name of the form that was submitted |
+| **Form field responses** | Individual field values captured in the submission |
+| **Submission date** | The date and time the form was submitted |
+| **Submitting contact** | Name, email, and standard fields of the contact who submitted the form |
+| **Associated company** | Name, ID, and standard fields of the company the contact belongs to |
+
+Standard company and account fields are also available to downstream steps via **Add dynamic content**.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

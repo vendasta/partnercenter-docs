@@ -1,0 +1,43 @@
+---
+title: "Trigger: A ServiceMonster invoice event occurs"
+description: Start an automation when a ServiceMonster invoice event is detected for a contact.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, integrations]
+keywords: [ServiceMonster trigger, ServiceMonster invoice, field service automation, ServiceMonster integration, invoice event trigger]
+---
+
+# A ServiceMonster invoice event occurs
+
+**A ServiceMonster invoice event occurs** fires when a ServiceMonster invoice event is detected for a contact — such as an invoice being created, updated, or completed. Use this trigger to automate post-service follow-ups, send review requests, or update CRM records when service jobs are invoiced in ServiceMonster.
+
+This trigger requires an active ServiceMonster integration connected to your Partner Center account.
+
+:::info Trigger scope
+This trigger operates at the **contact** scope. Contact, company, and account actions are available downstream.
+:::
+
+## How it works
+
+1. A ServiceMonster invoice event occurs and is synced to Partner Center via the ServiceMonster integration.
+2. The automation evaluates any trigger conditions you've configured, such as filtering on a specific event type or invoice status.
+3. If conditions are met, the workflow starts with the associated contact in context.
+4. Downstream steps can use **Add dynamic content** to reference invoice fields, contact fields, and company fields.
+
+## Available data
+
+ServiceMonster invoice fields and standard contact, company, and account fields are available via **Add dynamic content**.
+
+| Output | Description |
+|---|---|
+| **Invoice number** | The ServiceMonster invoice number |
+| **Invoice amount** | The total amount on the invoice |
+| **Invoice status** | The current status of the invoice |
+| **Service date** | The date the service was performed |
+| **Contact name** | The contact the invoice is associated with |
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

@@ -5,13 +5,11 @@ sidebar_position: 2
 description: "An overview of the Templated Website service: choose a template, complete onboarding, and launch a WordPress site of up to 10 pages."
 ---
 
-# Templated Website
-
 ## Overview
 
 The [Templated Website](https://partners.vendasta.com/marketplace/products/MP-XQC6XC2VMV3B4ZJZLD6Z6ZDXKN2VTC86) is a WordPress build where you choose a professionally designed template and our team customizes it with your colors, fonts, images, and content. It includes an onboarding call, a homepage mock for review, and one round of major revisions before go-live. The structure is fixed, but the visual touches make it your own.
 
-## What's Included
+## What's included
 
 * **Template-based WordPress site:** Choose a template; the structure is fixed, with customizable colors, fonts, and images.
 * **3 to 10 pages:** A 3-page site by default, with up to 10 pages available.
@@ -28,13 +26,13 @@ Three components are necessary to build your website, plus your content. Think o
 * **Hosting:** Your site is hosted on our secure, state-of-the-art infrastructure to keep it protected and fast.
 * **Domain:** If you already have a domain, you'll be given instructions to delegate access. If not, our team can recommend where to purchase one.
 * **Template:** Choose a template based on the aesthetic that best suits your business. [Explore all of our templates here.](https://frameworks.yourdigitalagents.com/)
-* **Onboarding details:** Have these ready for your call—chosen template and color scheme, logo and font(s), preferred images (optional), business information, and an email address for contact forms.
+* **Onboarding details:** Have these ready for your call: chosen template and color scheme, logo and font(s), preferred images (optional), business information, and an email address for contact forms.
 
-## Getting Started
+## Getting started
 
 ### 1. Onboarding
 
-After you submit the fulfillment form with your business details, you'll schedule an onboarding call with a website developer. This call is strongly recommended to ensure a clear understanding of the project—we'll discuss your business, what you offer, and how to best convey that to your customers, and review your chosen template to understand what you like and what can be adapted.
+After you submit the fulfillment form with your business details, you'll schedule an onboarding call with a website developer. This call is strongly recommended to ensure a clear understanding of the project: we'll discuss your business, what you offer, and how to best convey that to your customers, and review your chosen template to understand what you like and what can be adapted.
 
 ### 2. Publication timelines
 

@@ -5,7 +5,7 @@ sidebar_position: 3
 description: Learn how to set up, configure, test, and troubleshoot your AI Voice Receptionist, including call routing, capabilities, knowledge sources, and frequently asked questions.
 ---
 
-import { AISparkleIcon, SettingsIcon, CRMIcon } from '@site/src/components/Icons';
+import { AISparkleIcon, SettingsIcon, CRMIcon, GraduationCapIcon } from '@site/src/components/Icons';
 
 Your AI Voice Receptionist helps answer your calls 24/7, captures new-lead info, gives callers fast and accurate answers, and helps get questions to the right person when they don't have an answer. 
 
@@ -57,11 +57,14 @@ Once a call reaches your AI Voice Receptionist, there are a number of potential 
   
 2. **Forward calls**  
    The call is routed to another phone number automatically. See [Transfer calls to other numbers](#transfer-calls-to-other-numbers-from-your-ai-voice-receptionist) to configure rules and destinations.
+
+3. **Dispatch to on-call staff**  
+   The caller is placed on hold while the AI calls an on-call number and announces the caller before connecting. See [Dispatch calls to on-call staff](#dispatch-calls-to-on-call-staff) to configure rules and destinations.
   
-3. **End with a custom message**  
+4. **End with a custom message**  
    A branded or informational message is played before the call is ended automatically.
   
-4. **Missed-call SMS**  
+5. **Missed-call SMS**  
    A text message is sent to callers, prompting them to leave a voicemail or schedule a callback.
 
 :::note
@@ -74,14 +77,14 @@ Before you begin, make sure you've completed these prerequisites so your AI Voic
 
 | What you need                     | Where to find it              | Notes                                                |
 | --------------------------------- | ----------------------------- | ---------------------------------------------------- |
-| AI Voice Receptionist access      | <AISparkleIcon /> `AI` → `AI Workforce`             | See the [AI Workforce Overview](./index.mdx) for edition and region availability.           |
+| AI Voice Receptionist access      | <AISparkleIcon /> `AI` → `Workforce`             | See the [AI Workforce Overview](./index.mdx) for edition and region availability.           |
 | Conversations AI phone number        | <SettingsIcon /> `Administration` → `Conversations Settings` | You will need this number for call-forwarding and publishing. This number is assigned after activating an eligible edition of Conversations AI.                |
 | *(Optional)* Calendar connection    | <CRMIcon /> `CRM` → `My Meetings` → <SettingsIcon /> `Settings` → `Defaults` → `Connect Calendar`   | Lets your AI Voice Receptionist book meetings and appointments on the connected calendar.                          |
 
 ### Step 1: Set up your AI Voice Receptionist persona and communication channels
 While your AI Voice Receptionist is capable of being a great representative for your business with very little configuration, there are a few things you can do to make them feel more on brand with your business and ensure they are set up correctly.
 
-To get started, go to <AISparkleIcon /> `AI` → `AI Workforce` and click `Configure` on the Voice Receptionist. 
+To get started, go to <AISparkleIcon /> `AI` → `Workforce` and click `Configure` on the Voice Receptionist. 
 
 #### Set your AI Voice Receptionist's name and image
 
@@ -169,8 +172,8 @@ For more details on creating custom capabilities, see [Creating Custom Capabilit
 Enable your AI Voice Receptionist to live-transfer callers to one or more phone numbers based on caller intent and conditions you define. For example, route callers asking for "billing" to your billing department, send incoming calls to different teams based on the time of day, or transfer VIP clients directly to their account manager.
 
 How to enable:
-1. Go to `AI` → `AI Workforce` → `Voice Receptionist` → `Configure`
-2. In Capabilities, click `Add new capability`
+1. Go to `AI` → `Workforce` → `Voice Receptionist` → `Configure`
+2. In `Capabilities`, click `+ Add a capability`
 3. Select `Transfer call`
 4. Add one or more destination numbers and define criteria (e.g., sales vs. support, business hours)
 
@@ -182,6 +185,23 @@ Best practices:
 
 :::warning
 Once a call is transferred, recording ends and the system does not record or transcribe the destination leg. If the destination doesn't answer, the transfer is not reverted; the caller would need to call again to speak with the AI.
+:::
+
+#### Dispatch calls to on-call staff
+
+The `Dispatch` capability routes qualifying calls to an on-call team member instead of transferring the caller directly. Add a destination phone number and the criteria for when a call should dispatch, for example, an after-hours emergency line.
+
+When a call meets the dispatch criteria, the AI Voice Receptionist collects the caller's information the same way it does for default lead capture, then places the caller on hold and calls the destination number. Once the destination number answers, the AI announces the caller using a message you define, with placeholders for details like the caller's name, location, and the reason for the call, then connects the call.
+
+How to enable:
+1. Go to `AI` → `Workforce` → `Voice Receptionist` → `Configure`
+2. In `Capabilities`, click `+ Add a capability`
+3. Select `Dispatch`
+4. Add the destination phone number and the criteria for when a call should dispatch
+5. Customize the announcement message the AI Voice Receptionist reads to the destination number when connecting the call
+
+:::tip Automate what happens next
+Dispatching a call starts an automation trigger with the call details, so you can notify the on-call team member through other channels or log the dispatch. See [Automation triggers reference](/automations/my-automations/automation-triggers-reference#conversations).
 :::
 
 ### Step 3: Add knowledge sources to your AI Voice Receptionist
@@ -196,7 +216,7 @@ Essential details like services, hours, and contact information that you provide
 
 If you need to add more detailed information for your AI Receptionist, you can use the `Add knowledge` bar to `+ Add new knowledge`. From here you can add text, website, or file information to your Knowledge Base and immediately have it available to your AI Voice Receptionist.
 
-:::tip Learn more about Knowledge Sources
+:::tip Learn more about Knowledge sources
 For more details on knowledge sources and adding them to the Knowledge Base, see the [Knowledge Base Overview](../knowledge-base/index.md).
 :::
 ---
@@ -207,7 +227,7 @@ Once your AI Voice Receptionist is set up, it's important to test how it handles
 
 ### Testing and reviewing the AI Voice Receptionist's responses
 
-Click the `Try it` button on your AI Voice Receptionist's card from <AISparkleIcon /> `AI` → `AI Workforce` to quickly see the phone number assigned to your AI Voice Receptionist.
+Click the `Chat` button on your AI Voice Receptionist's card from <AISparkleIcon /> `AI` → `Workforce` to open a private conversation with it and test its responses. The phone number assigned to your AI Voice Receptionist is listed under <SettingsIcon /> `Administration` → `Conversations Settings`.
 
 Before going live with your AI Voice Receptionist, you should test their responses to make sure they are performing how you would like when:
 - Greeting callers 
@@ -339,7 +359,7 @@ You can track your AI Voice Receptionist's performance by:
 
 1. **Reviewing call recordings and transcripts** in your `Conversations` tab
 2. **Checking lead capture success** in your CRM
-3. **Testing regularly** using the `Try it` button on your AI's configuration card
+3. **Testing regularly** using the `Chat` button on your AI's card
 4. **Updating knowledge sources** based on common questions you notice
 5. **Adjusting capabilities and instructions** as needed
 
@@ -377,7 +397,7 @@ Adjust this setting in your AI Voice Receptionist configuration if callers repor
 
 `Missed Call Text-Back` sends an SMS to a caller when their call is not answered. To configure it:
 
-1. Go to `AI` → `AI Workforce` → `Voice Receptionist` → `Configure`
+1. Go to `AI` → `Workforce` → `Voice Receptionist` → `Configure`
 2. Find the `Missed Call Text-Back` toggle and enable it
 3. Choose the timing option:
    - `Immediately`: sends the text as soon as the call is not answered by a human
@@ -443,3 +463,10 @@ AI Voice Receptionist is currently available for businesses located in the **Uni
 For the most up-to-date region availability, see the [AI Workforce Overview](./index.mdx).
 
 </details>
+
+<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
+  <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
+  <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>
+    New to hiring and running an AI Employee? Take the <a href="/learn/ai-workforce" style={{color: '#3C9A63', fontWeight: 600}}>Hire your first AI Employee</a> course in Vendasta Learn — Beginner to Intermediate, 7 lessons.
+  </span>
+</div>

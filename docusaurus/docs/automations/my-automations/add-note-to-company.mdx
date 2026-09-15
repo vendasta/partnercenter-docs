@@ -1,0 +1,43 @@
+---
+title: Add a note to the company
+description: Learn how to use the Add a note to the company action to log a note on a company record in an automation.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, crm, company, notes, advanced]
+keywords: [add note company, company note, crm note, log note automation, company activity]
+---
+
+# Add a note to the company
+
+**Add a note to the company** creates a note on the company record in scope. Use it to log milestones, summarize conversations, or capture context from earlier automation steps. This action is available on company-scoped triggers.
+
+## How it works
+
+1. The automation reaches the step with a company in scope
+2. The step creates a note with the content you configured
+3. The note appears on the company's activity timeline
+4. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Advanced**, select **Add a note to the company**
+3. Configure the fields:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Note** | Yes | The text content of the note. Supports dynamic content from previous steps. |
+
+:::tip
+Use **Add dynamic content** to include data from earlier steps — for example, an AI-generated summary or a form submission body. This creates a rich, contextual note without manual input.
+:::
+
+## Outputs
+
+This action produces no outputs available to downstream steps.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Add a note to the contact](./add-note-to-contact.mdx) — Log a note on a contact record instead
+- [Create a CRM sales task for the company](./create-crm-task-company.mdx) — Create a task on the company
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

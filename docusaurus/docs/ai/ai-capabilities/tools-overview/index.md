@@ -14,6 +14,8 @@ tags:
   - Integrations
 ---
 
+import { GraduationCapIcon } from '@site/src/components/Icons';
+
 Tools enable your AI Employees to interact with external systems, retrieve real-time information, and automate workflows across different platforms. Understanding how Tools work is essential for building powerful AI capabilities that go beyond simple conversation.
 
 ## What are Tools?
@@ -175,4 +177,11 @@ Create custom Tools when AI Employees need to:
 :::tip Ready to Build?
 Now that you understand what Tools are and how they work, follow our step-by-step tutorial to build your first custom Tool: [Building Custom Tools](./building-custom-tools)
 :::
+
+<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
+  <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
+  <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>
+    New to hiring and running an AI Employee? Take the <a href="/learn/ai-workforce" style={{color: '#3C9A63', fontWeight: 600}}>Hire your first AI Employee</a> course in Vendasta Learn — Beginner to Intermediate, 7 lessons.
+  </span>
+</div>
 

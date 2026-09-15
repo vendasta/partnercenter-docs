@@ -15,7 +15,7 @@ You will also gain access to Vendasta Services’ Website Support team when we i
 
 For the full list of what Website Support+ covers, see the [Website Support](./vendasta-services-website-support.md) article.
 
-## **What benefits are there when importing a site through Vendasta Services?**
+## What benefits are there when importing a site through Vendasta Services?
 
 With Vendasta Services, your website is in trusted hands! To import the site, our Website Support+ team will:
 
@@ -28,7 +28,7 @@ _\*Plugins or themes may require a license key to update._
 
 
 
-## **Vetting Process for Importing & Support:**
+## Vetting process for importing & support
 
 **Vetting:**
 
@@ -100,7 +100,7 @@ If you request work beyond the standard import and support scope, the following 
 These timelines pause while we wait on information or assets from you. We will send up to two reminders (about one per week); if we do not hear back, the request is placed on hold. Content, logins, and any paid plugins must be provided before work begins.
 :::
 
-## Exporting a Website
+## Exporting a website
 
 If you have decided you wish to move a website to a new host and discontinue support, we are able to provide you with the file for your website.
 
@@ -115,10 +115,9 @@ Our team can provide you with the necessary file and credentials for the existin
 
 **Important Note:** Once you have discontinued your hosting with us, we will only have access to the website on our servers for six months, after which it will be permanently deleted.
 
-## **Frequently asked questions (FAQs):**
+## Frequently asked questions (FAQs)
 
 <details>
-
 <summary>Is my site eligible for Website Support+?</summary>
 
 We support the following for Website Support+:
@@ -134,7 +133,6 @@ Website support requests can be sent to [marketingservices@yourdigitalagents.com
 </details>
 
 <details>
-
 <summary>My site is already on WordPress Hosting Pro, can you support it?</summary>
 
 If your site is already hosted on WordPress Hosting Pro, activate the standalone Website Support+ product. If the site is rejected for Website Support+, once we vet it, we will reject the product, and you will be automatically refunded. Rejected sites can be rebuilt with our website design team.
@@ -144,7 +142,6 @@ Website support requests can be sent to [marketingservices@yourdigitalagents.com
 </details>
 
 <details>
-
 <summary>Can you install the AI Chat Receptionist on my imported website?</summary>
 
 Yes! Website Support+ includes installation of the AI Chat Receptionist on your imported website. Our Website Support+ team will:
@@ -159,7 +156,6 @@ If you need advanced features such as full brand configuration beyond basic bran
 </details>
 
 <details>
-
 <summary>What type of forms will you set up on my site?</summary>
 
 As part of Website Support+, we can convert an existing third-party contact form into a CRM form so that submissions flow directly into your CRM as leads. We set up standard contact and lead-capture forms.
@@ -180,7 +176,6 @@ If you need any of these advanced features, reach out and our team can scope the
 </details>
 
 <details>
-
 <summary>What will happen to my existing form and submission data?</summary>
 
 When we convert your form to a CRM form, the legacy form is deactivated and removed from the front end of your site, so visitors only see the new CRM form. We do not remove the legacy form plugin, so any previously collected submissions remain viewable in your WordPress backend. Your existing form entries are also migrated into the CRM.

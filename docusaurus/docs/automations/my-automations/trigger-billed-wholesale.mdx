@@ -1,0 +1,42 @@
+---
+title: "Trigger: Billed wholesale cost of a product"
+description: Start an automation when a wholesale cost is billed for a product on an account.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, billing]
+keywords: [billed wholesale trigger, wholesale cost trigger, product billing, billing automation, account billing trigger]
+---
+
+# Billed wholesale cost of a product
+
+**Billed wholesale cost of a product** fires whenever a wholesale billing event occurs for a product on an account. Use this trigger to automate financial record-keeping, notify account managers of billing events, or kick off fulfillment workflows when a charge is processed.
+
+This trigger is scoped to individual product billing events, so it fires once per billed product per cycle.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account and contact actions are available downstream.
+:::
+
+## How it works
+
+1. A wholesale cost is billed for a product associated with an account.
+2. The automation evaluates any trigger conditions you've configured, such as filtering on a specific product.
+3. If conditions are met, the workflow starts with the account and billing event data in context.
+4. Downstream steps can use **Add dynamic content** to reference the product name, wholesale amount, and account fields.
+
+## Available data
+
+Standard account fields and billing event fields are available via **Add dynamic content**.
+
+| Output | Description |
+|---|---|
+| **Product name** | The name of the product that was billed |
+| **Wholesale amount** | The wholesale cost charged for the billing period |
+| **Billing date** | The date the wholesale cost was billed |
+| **Account name** | The name of the account associated with the billing event |
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

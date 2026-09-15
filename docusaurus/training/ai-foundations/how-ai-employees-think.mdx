@@ -11,6 +11,7 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
+import LessonSection from "@site/src/components/LessonSection";
 
 <InlineHighlighter courseId="how-ai-employees-think" site="vendasta_learn">
 
@@ -18,6 +19,7 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 <LessonHeader
   difficulty="Beginner"
+  topics={["AI fundamentals", "AI Workforce"]}
   time="about 7 minutes"
   pathName="AI foundations"
   step={2}
@@ -40,11 +42,15 @@ The engine inside an AI Employee is a different beast entirely: a large language
 
 Here is what that second point looks like in the field.
 
+<LessonSection>
+
 ## What a guess looks like
 
 A business sells a service package for $499. A generic chatbot with no access to that fact gets asked the price. It answers with a range: somewhere between $800 and $2,000. The number sounds reasonable, which is exactly the point: plausible-sounding numbers are what pattern prediction produces when the real number is not in front of it.
 
 Nothing in that story is a malfunction. The model did what models do: it composed the most likely-sounding answer available to it. The fix is not a smarter model. The fix is handing the model the business's real facts.
+
+</LessonSection>
 
 ## Surround the model with the business's facts
 
@@ -58,6 +64,8 @@ This is what everything around an AI Employee is actually for. On its own, the m
 
 Ask the version on the right about the package and it says $499, because $499 is in the material it was handed. Every AI Employee on the platform is built this way.
 
+<LessonSection>
+
 ## Working memory
 
 One more piece completes the picture: the model also carries the conversation itself. Everything said so far in a chat or call is part of what it draws on, which is why an AI Employee can handle "and how much is the second one?" without asking what "the second one" means. Think of it as working memory: it holds the thread of the current conversation while the conversation is happening.
@@ -65,6 +73,8 @@ One more piece completes the picture: the model also carries the conversation it
 :::tip Try it now
 Ask any general-purpose chatbot a specific question about one of your clients' businesses: their hours, their prices, their service area. Read the answer knowing what you now know. You are watching a model compose a plausible guess in real time, with no facts in front of it.
 :::
+
+</LessonSection>
 
 ## Where the data goes: three facts
 

@@ -1,0 +1,48 @@
+---
+title: Create a company
+description: Learn how to use the Create a company action to create a new company record in your CRM.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, crm, company, businesses]
+keywords: [create company, new company, crm company, company automation, create business]
+---
+
+# Create a company
+
+**Create a company** creates a new company record in your CRM. Use it to automatically create companies from webhook data, form submissions, or other external sources.
+
+## How it works
+
+1. The automation reaches the **Create a company** step
+2. The step creates a new company record using the fields you configured
+3. The new company is brought into scope for downstream steps
+4. Company-scoped actions become available in subsequent steps
+
+:::info
+This action does not check for duplicate companies. If you want to avoid duplicates, use a **Find company** step first with an **If/else** branch to check whether a matching company already exists.
+:::
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Businesses**, select **Create a company**
+3. Configure the fields:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Company name** | Yes | The name for the new company record. |
+| **Additional fields** | No | Additional CRM fields to populate on the new company. |
+
+:::tip
+Use **Add dynamic content** to populate fields from previous steps — for example, pull a company name from a webhook payload or form submission.
+:::
+
+## Outputs
+
+After the step runs, the new company record is available in scope. Downstream steps can act on it directly via **Add dynamic content**.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Find company](./find-company.mdx) — Check for existing companies before creating
+- [Update company](./update-company.mdx) — Update fields on an existing company
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

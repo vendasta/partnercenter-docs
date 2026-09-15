@@ -1,0 +1,49 @@
+---
+title: "Trigger: An opportunity is created or changes stage"
+description: Start an automation when an opportunity is created, moves to a new stage, or is marked won or lost.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, sales]
+keywords: [opportunity trigger, opportunity stage changed, deal won, deal lost, CRM opportunity, sales pipeline trigger]
+---
+
+# An opportunity is created or changes stage
+
+**An opportunity is created or changes stage** fires whenever a new opportunity is created in the CRM, an existing opportunity moves to a different pipeline stage, or an opportunity is marked as won or lost. Use this trigger to automate follow-ups, notifications, and handoff tasks as deals progress through your pipeline.
+
+You can configure the trigger to respond to a specific stage transition, all stage changes, or only won/lost outcomes — giving you precise control over when the workflow starts.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account and contact actions are available downstream.
+:::
+
+## How it works
+
+1. An opportunity is created, its stage is updated, or it is closed as won or lost in the CRM.
+2. The automation evaluates any trigger conditions you've set, such as a specific stage name or pipeline.
+3. If conditions are met, the workflow starts with the account and opportunity data in context.
+4. Downstream steps can use **Add dynamic content** to reference opportunity fields, account fields, and contact details.
+
+## Available data
+
+Standard account and opportunity fields are available via **Add dynamic content**.
+
+| Output | Description |
+|---|---|
+| **Opportunity name** | The name of the opportunity record |
+| **Stage** | The current pipeline stage |
+| **Pipeline** | The pipeline the opportunity belongs to |
+| **Close date** | Expected or actual close date |
+| **Value** | Monetary value of the opportunity |
+| **Assigned salesperson** | The rep assigned to the opportunity |
+
+:::warning
+This trigger will not fire if the opportunity is created or updated in a stage that is already the stage specified in your trigger condition. Configure your stage filter accordingly to avoid missed firings.
+:::
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)
+- [Logic and flow control](./logic-and-flow-control.mdx)

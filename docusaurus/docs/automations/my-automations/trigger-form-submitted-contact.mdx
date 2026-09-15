@@ -1,0 +1,39 @@
+---
+title: "Trigger: A form is submitted for a contact"
+description: Start an automation when a form linked to a contact is submitted.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, contact]
+keywords: [form submitted trigger, contact form submission, form trigger, CRM form automation, contact form trigger]
+---
+
+# A form is submitted for a contact
+
+**A form is submitted for a contact** starts a workflow whenever a form associated with a contact is submitted. Use this trigger to act immediately on inbound form responses — routing leads, creating tasks, sending confirmations, or updating contact records without any manual steps.
+
+You can scope this trigger to a specific form or leave it open to fire on any form submission linked to a contact.
+
+:::info Trigger scope
+This trigger operates at the **contact** scope. Contact, company, and account actions are available downstream.
+:::
+
+## How it works
+
+1. A contact submits a form that is linked to their contact record.
+2. The automation evaluates any trigger conditions you've configured (for example, filtering on a specific form or a field value from the submission).
+3. If all conditions are met, the workflow starts with the contact, their associated company, and the account in context.
+4. Downstream steps can use **Add dynamic content** to reference form response data, contact fields, and company fields.
+
+## Available data
+
+All standard contact, company, and account fields are available downstream via **Add dynamic content**. This includes fields such as contact name, email, phone, lifecycle stage, company name, and account tags.
+
+:::info
+Form response fields are available as dynamic data in steps that follow this trigger, so you can use submission answers to personalize notifications, set field values, or route the workflow conditionally.
+:::
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx) — trigger types, scoping, and how to choose the right trigger
+- [Automation triggers reference](./automation-triggers-reference.mdx) — full reference for every available trigger
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — entry settings, conditions, and error handling
+- [Actions overview](./actions-overview.mdx) — what can happen after a trigger fires

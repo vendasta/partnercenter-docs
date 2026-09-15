@@ -1,0 +1,47 @@
+---
+title: "Trigger: Activity on a campaign email"
+description: Start an automation whenever a campaign email is opened or a CTA link is clicked.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, campaigns]
+keywords: [campaign email trigger, email opened, email clicked, CTA click, automation trigger, account scope]
+---
+
+# Activity on a campaign email
+
+The **Activity on a campaign email** trigger starts an automation when a campaign email is opened or a call-to-action link is clicked. Use this trigger to follow up with engaged recipients while their interest is highest.
+
+This trigger operates at the account scope, so account data is available to downstream steps.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account fields and campaign email data are available downstream.
+:::
+
+## How it works
+
+1. A campaign email is delivered to a recipient.
+2. The recipient opens the email or clicks a CTA link within it.
+3. The activity event fires and the account is brought into scope.
+4. Downstream steps execute using the account and email activity context.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Activity type** | Whether the event was an open or a click |
+| **Campaign name** | The name of the campaign the email belongs to |
+| **Email subject** | Subject line of the email that was interacted with |
+| **Account name** | The account associated with the recipient |
+| **Activity at** | Timestamp of the open or click event |
+
+## Tips
+
+:::warning Click tracking and first-click behavior
+Only clicks on CTA (call-to-action) links are tracked — general unsubscribe or footer links do not count. By default, this trigger fires only for the first user to click unless **Run multiple times** is enabled on the automation. Enable that setting if you want the trigger to fire for every individual click event.
+:::
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

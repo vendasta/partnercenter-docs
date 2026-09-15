@@ -1,0 +1,39 @@
+---
+title: "Trigger: Run manually on an order"
+description: Run an automation on demand from an order detail page.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, manual]
+keywords: [manual trigger, run manually, order trigger, on demand automation, manual order automation]
+---
+
+# Run manually on an order
+
+**Run manually on an order** allows you to start an automation on demand directly from an order detail page. Use this trigger for workflows that should only run when a team member explicitly initiates them against a specific order — such as custom fulfillment steps, escalation workflows, or order-specific communications.
+
+This trigger does not fire automatically. A team member must navigate to the order and trigger the run manually.
+
+:::info Trigger scope
+This trigger operates at the **order** scope. Order and account actions are available downstream.
+:::
+
+## How it works
+
+1. A team member opens an order detail page in Partner Center.
+2. They locate the automation and click **Run**.
+3. The workflow starts immediately with the order in context.
+4. Downstream steps can use **Add dynamic content** to reference order fields and associated account details.
+
+## Available data
+
+Standard order and account fields are available via **Add dynamic content** once the automation starts.
+
+:::info
+Because this trigger is manual, no event-specific data is passed in. All available data comes from the order record and its associated account at the time of the run.
+:::
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

@@ -1,0 +1,46 @@
+---
+title: Remove tags from account
+description: Learn how to use the Remove tags from account action to strip one or more tags from an account to keep segmentation accurate as accounts progress through stages.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, tags, account, segmentation, workflows]
+keywords: [remove tags, account tags, untag account, automation tags, account segmentation, tag cleanup]
+---
+
+# Remove tags from account
+
+**Remove tags from account** strips one or more tags from an account when the automation step runs. The tags are removed from the account record immediately, keeping your segmentation and reporting accurate as accounts move through stages. This action is available on account-scoped triggers.
+
+Use this step to clean up tags that no longer apply — for example, removing an **Active Trial** tag when a trial period ends without conversion.
+
+## How it works
+
+1. The automation reaches the **Remove tags from account** step
+2. You define one or more tags to remove in the step configuration
+3. When the step runs, each matching tag is deleted from the account record
+4. If a specified tag does not exist on the account, the step skips it without error
+5. Downstream steps reflect the updated tag state immediately
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Tags**, select **Remove tags from account**
+3. Configure the fields:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Tags** | Yes | One or more tags to remove from the account. Enter each tag and press Enter to add it to the list. |
+
+:::tip
+Use **Add dynamic content** in the tag field to insert a tag value from a previous step — for example, a tag name passed in from the trigger. Dynamic values are resolved at runtime, so the correct tag is always targeted.
+:::
+
+## Outputs
+
+This action has no outputs available to downstream steps.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Add tags to account](./add-tags-to-account.mdx) — Apply one or more tags to an account
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

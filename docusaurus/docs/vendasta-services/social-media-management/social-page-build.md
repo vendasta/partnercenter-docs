@@ -7,13 +7,11 @@ tags: [vendasta-services, social-media, social-page-builds, facebook, instagram,
 keywords: [social page build, social profile, Facebook business page, Instagram business account, LinkedIn business page, NAP]
 ---
 
-# Social Page Build
-
 ## Overview
 
 Social Page Build is a fully managed service that creates a professional social media profile for a business on **Facebook**, **Instagram**, or **LinkedIn**. Other channels are available too, as long as they're free to create or claim. Our team gathers the details on a short onboarding call, then builds and verifies the page so it's ready to use.
 
-## What's Included
+## What's included
 
 Every page build includes business ownership/access, correct NAP (name, address, phone) and business name, a business description, a logo and header photo, and verification of the page. Platform specifics:
 
@@ -21,7 +19,7 @@ Every page build includes business ownership/access, correct NAP (name, address,
 
 Creating a Facebook Business Page requires access to a personal Facebook account. The build includes:
 
-- Accurate business data — name, address, phone, website, hours
+- Accurate business data: name, address, phone, website, hours
 - Business description
 - Business handle (@businessname)
 - Logo (provided by you)
@@ -31,7 +29,7 @@ Creating a Facebook Business Page requires access to a personal Facebook account
 
 We use Facebook Business Manager to create the Instagram account and connect it to Facebook. The build includes:
 
-- Accurate business data — name, address, phone, website, hours
+- Accurate business data: name, address, phone, website, hours
 - Business description
 - A profile picture
 - Converting the account to a business account (business.instagram.com)
@@ -59,19 +57,19 @@ If there's another social channel you'd like built out, we can accommodate the r
 
 ## Prerequisites
 
-- **Exact business name and full address** — verified on the onboarding call to ensure the page is accurate.
-- **Access to an email account** — used to create the social profile and as a login method.
+- **Exact business name and full address**: verified on the onboarding call to ensure the page is accurate.
+- **Access to an email account**: used to create the social profile and as a login method.
 - **Personal account credentials for Facebook or LinkedIn** (if building those pages). For LinkedIn, the personal profile must have **at least one connection** and be **at least one day old**; extra business verification may be required. Prepare these ahead of time for a smooth process.
 - **Your logo** (and a header image).
-- **Availability for verification** — verifying the social site may require an automated phone call or email sent to the business.
+- **Availability for verification**: verifying the social site may require an automated phone call or email sent to the business.
 
-## Getting Started
+## Getting started
 
 1. **Complete the fulfillment form** before the onboarding call.
-2. **Scheduling** — A strategist reaches out within **2 business days** to schedule the onboarding call (up to twice by email and twice by phone).
-3. **Onboarding call (15–30 minutes)** — We verify the exact business name and full address, gather the remaining details, and claim or verify the page. Pages are most often claimable during the call; if extenuating circumstances require follow-up, the strategist stays in touch by phone or email.
-4. **Build** — Once the page is accessible, we update it with all applicable information (see What's Included).
-5. **Follow-up** — After the call, the strategist emails a recap and confirms when the page is complete.
+2. **Scheduling**: A strategist reaches out within **2 business days** to schedule the onboarding call (up to twice by email and twice by phone).
+3. **Onboarding call (15–30 minutes)**: We verify the exact business name and full address, gather the remaining details, and claim or verify the page. Pages are most often claimable during the call; if extenuating circumstances require follow-up, the strategist stays in touch by phone or email.
+4. **Build**: Once the page is accessible, we update it with all applicable information (see What's included).
+5. **Follow-up**: After the call, the strategist emails a recap and confirms when the page is complete.
 
 Our team is available to answer questions about this product by phone or email.
 

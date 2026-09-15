@@ -1,0 +1,70 @@
+---
+title: Find contact
+description: Learn how to use the Find contact action to search for an existing CRM contact by field criteria and bring it into scope for downstream steps.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, crm, contact, lookup, search]
+keywords: [find contact, lookup contact, search contact, crm contact, automation contact, find record, contact search criteria]
+---
+
+# Find contact
+
+**Find contact** searches for an existing contact record in your CRM based on field criteria you define. When a match is found, the contact is brought into scope so downstream steps can act on it — send an email, assign an owner, add to a list, or branch based on whether a match was found.
+
+This works the same way as [Find company](./find-company.mdx) but searches contact records instead.
+
+## How it works
+
+1. You define one or more **search fields** — each with a contact field, a comparison operator, and a value
+2. If you add multiple search fields, you choose whether **all** criteria must match (AND) or **any** criterion is enough (OR)
+3. When the automation runs, the step searches your CRM for contacts matching those criteria
+4. The step outputs whether a match was found and brings the contact into scope
+5. If multiple contacts match, the most recently created contact is used
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Businesses**, select **Find contact**
+3. Configure the search fields:
+
+### Define search criteria
+
+For each search field, provide:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Contact field** | Yes | The CRM contact field to search on (e.g., Email, Name, Phone). |
+| **Operator** | Yes | The comparison operator (e.g., "is", "contains", "starts with"). |
+| **Value** | Yes | The value to match against. Can be a static value or dynamic content from a previous step. |
+
+- Click **+ Add additional fields** to add more criteria
+- Click the **X** button to remove a criterion
+
+:::tip
+Use **Add dynamic content** to insert values from a previous step. Dynamic values are resolved at runtime, so the search always uses the actual data.
+:::
+
+## Outputs
+
+After the step runs, three values are available to downstream steps:
+
+| Output | Description |
+| --- | --- |
+| **Contact** | The matched contact record, brought into scope for contact-scoped steps. |
+| **Found** | `true` if at least one contact matched the criteria, `false` otherwise. |
+| **Multiple Found** | `true` if more than one contact matched. The step uses the most recently created match. |
+
+Use **Found** and **Multiple Found** in an **If/else** step to branch your automation based on the search result.
+
+## Tips
+
+- **Start specific, broaden if needed** — searching on email gives the most reliable single match
+- **Branch on the result** — add an **If/else** step after to handle found vs. not-found scenarios separately
+- **Handle multiple matches** — check **Multiple Found** to flag duplicates if your criteria could match several contacts
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Find company](./find-company.mdx) — Search for a company by field criteria
+- [Find custom object](./find-custom-object.mdx) — Search for a custom object by criteria
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

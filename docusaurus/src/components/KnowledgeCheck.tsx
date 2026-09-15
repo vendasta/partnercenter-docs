@@ -132,7 +132,7 @@ export default function KnowledgeCheck({ sessionSize, questions, intro }: Knowle
   );
 }
 
-function getCorrectAnswer(q: Question): string | number | Record<string, string> {
+export function getCorrectAnswer(q: Question): string | number | Record<string, string> {
   switch (q.type) {
     case 'mcq':
       return q.correctIndex;
@@ -151,7 +151,7 @@ function getCorrectAnswer(q: Question): string | number | Record<string, string>
   }
 }
 
-function checkCorrectness(q: Question, userAnswer: string | number | Record<string, string>, correct: string | number | Record<string, string>): boolean {
+export function checkCorrectness(q: Question, userAnswer: string | number | Record<string, string>, correct: string | number | Record<string, string>): boolean {
   if (q.type === 'mcq') return userAnswer === correct;
   if (q.type === 'truefalse') return String(userAnswer) === String(correct);
   if (q.type === 'whicharea') {
@@ -352,7 +352,7 @@ interface QuestionRendererProps {
   correct: boolean;
 }
 
-function QuestionRenderer({ question, onAnswer, showFeedback, userAnswer, correct }: QuestionRendererProps) {
+export function QuestionRenderer({ question, onAnswer, showFeedback, userAnswer, correct }: QuestionRendererProps) {
   switch (question.type) {
     case 'mcq':
       return (

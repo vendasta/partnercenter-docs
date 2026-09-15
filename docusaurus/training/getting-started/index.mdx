@@ -1,46 +1,132 @@
 ---
-title: Get started
+title: Get set up
 sidebar_position: 0
 sidebar_label: Overview
-description: Run your business on Vendasta - the platform introduction, the ecosystem, setup, and getting paid.
+pagination_label: Get set up
+description: Set up your business on Vendasta - the platform map, your email domain, payments, brand, your own AI Receptionist, your first client, and their first day.
 hide_table_of_contents: true
 ---
 
-import PathRoadmap from "@site/src/components/PathRoadmap";
+import PathCards from "@site/src/components/PathCards";
+import PathHeader from "@site/src/components/PathHeader";
 
-This learning path makes the platform yours: the white-label model, how everything connects, your walkthrough, branding, accounts, team setup, and payment readiness. Each step hands off to the next.
+<PathHeader
+  parts={9}
+  difficulty="Beginner"
+  topics={["Partner Center", "Email domain", "Payments", "Branding", "AI Receptionist", "Accounts", "Onboarding"]}
+  time="about 2 hours 15 minutes"
+  required={[
+    "Partner Center admin access",
+    "A paid subscription",
+    "Access to your domain's DNS settings",
+  ]}
+  objective="Make the platform yours, then bring your first client into it. The map of the two workspaces, email that sends from your own domain, and payments that collect on their own. Then your brand across everything clients see, a working AI Receptionist on your own website, your first client account with a product live on it, the first email and Home page that client sees, and every help channel by name."
+  outcomes={[
+    "You can say which workspace any task belongs to, for you and for each client",
+    "Your platform sends email from your domain, collects payment automatically, and carries your brand",
+    "Your own AI Receptionist is configured, installed on your website, and tested",
+    "Your first client exists in the platform: account created, a product activated, and their user invited",
+    "You know what that client sees on day one, and you have set what leads, what they can buy, and at what price",
+  ]}
+/>
 
-<PathRoadmap
-  steps={[
+:::tip Where you will be working
+Everything in these lessons is done from your main administration workspace: **Partner Center**, at [partners.vendasta.com](https://partners.vendasta.com).
+:::
+
+## What you will learn
+
+<PathCards
+  cards={[
     {
       title: "The Vendasta Platform",
       description: "The white-label model, who works where, and how the two workspaces connect.",
+      topics: [
+        "Your mental model for the platform",
+        "Partner Center versus Business App",
+        "Your team, and where AI Employees live",
+      ],
       to: "/learn/getting-started/the-vendasta-platform",
     },
     {
-      title: "Partner Center walkthrough",
-      description: "A guided tour of your workspace, top to bottom.",
-      to: "/learn/getting-started/partner-center-walkthrough",
+      title: "Connect your domain and email",
+      description: "Every email the platform sends arrives from your business.",
+      topics: [
+        "Setting your sender name and address",
+        "Adding SPF, DKIM, and DMARC at your DNS host",
+        "Confirming each record validated",
+      ],
+      to: "/learn/getting-started/connect-your-domain-and-email",
     },
     {
-      title: "Customize and brand",
-      description: "Your logo, your colors, your platform's look and feel.",
-      to: "/learn/getting-started/customize-and-brand",
+      title: "Connect payments and billing",
+      description: "The two prices, the Stripe decision, and billing that collects on its own.",
+      topics: [
+        "The wholesale-to-retail model",
+        "Completing the Payments application",
+        "Default billing, where retail prices live, and your monthly estimate",
+      ],
+      to: "/learn/getting-started/connect-payments-and-billing",
     },
     {
-      title: "Accounts and users",
-      description: "Add customer accounts and invite the people who use them.",
-      to: "/learn/getting-started/accounts-and-users",
+      title: "Brand your platform",
+      description: "Your logo and color across both workspaces, and what clients see.",
+      topics: [
+        "Partner Branding, top to bottom",
+        "Renaming Business App",
+        "Choosing which pages clients see",
+      ],
+      to: "/learn/getting-started/brand-it",
     },
     {
-      title: "Organize your team",
-      description: "Teams, roles, and permissions in Partner Center.",
-      to: "/learn/getting-started/organize-your-team",
+      title: "Turn on your own AI Receptionist",
+      description: "Configure it, give it knowledge, test it, then put the widget on your site.",
+      topics: [
+        "Role, capabilities, and knowledge",
+        "Testing it before anyone else meets it",
+        "The widget, and where the leads land",
+      ],
+      to: "/learn/getting-started/turn-on-your-own-ai-receptionist",
     },
     {
-      title: "Get set up to get paid",
-      description: "Connect payments, set your retail prices, and know what you owe.",
-      to: "/learn/getting-started/get-set-up-to-get-paid",
+      title: "Bring in your first client",
+      description: "The account, a product live on it, and the invite that opens their Business App.",
+      topics: [
+        "Creating the account that carries everything",
+        "Activating a product and choosing its edition",
+        "The onboarding email, sent at the right moment",
+      ],
+      to: "/learn/getting-started/bring-in-your-first-client",
+    },
+    {
+      title: "Walk your client's first experience",
+      description: "The email that lists finished work, what their landing page shows, and the three settings on your side that decide it.",
+      topics: [
+        "The onboarding email and the Business App Home cards",
+        "What is active before you invite, and the Vibe website",
+        "Upgrade paths, retail prices, and the Home card toggles",
+      ],
+      to: "/learn/getting-started/walk-your-clients-first-experience",
+    },
+    {
+      title: "Where to get help",
+      description: "The AI assistant, two documentation sites, your Client Success team, and webinars.",
+      topics: [
+        "The fastest first stop for any question",
+        "Client-safe documentation you can share",
+        "Booking time with a real person",
+      ],
+      to: "/learn/getting-started/where-to-get-help",
+    },
+    {
+      title: "Get set up skill check",
+      description: "Ten scenario questions drawn from every step in the path.",
+      topics: [
+        "Scenarios, not definitions",
+        "Every step represented",
+        "Find what deserves a second pass",
+      ],
+      to: "/learn/getting-started/get-set-up-skill-check",
     },
   ]}
 />

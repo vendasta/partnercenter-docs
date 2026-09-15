@@ -6,15 +6,13 @@ tags: [yext, listing-sync, troubleshooting, marketplace]
 keywords: [yext error, invalid entity field categories, listing sync, yext troubleshooting]
 ---
 
-# Yext Listing Sync troubleshooting
-
 ## Error: "Invalid Entity Field Categories"
 
 ### What this error means
 
 The error "Invalid Entity Field Categories" appears in Yext Listing Sync when the business category assigned to the account is not in Yext's category catalog. Yext maintains its own list of supported business categories, and categories that don't map to a valid Yext category will cause this error.
 
-This is a configuration issue — it does not indicate a problem with the sync service itself.
+This is a configuration issue. It does not indicate a problem with the sync service itself.
 
 ### How to fix it
 
@@ -24,9 +22,9 @@ Update the account's business category to one that Yext supports. Choose a categ
 
 **Steps:**
 
-1. Navigate to **Partner Center** > **Accounts** > **Manage Accounts**.
+1. Navigate to `Partner Center` → `Accounts` → `Manage Accounts`.
 2. Open the account with the error.
-3. Click **Edit Account** and go to **Business Profile** > **Categories**.
+3. Click `Edit Account` and go to `Business Profile` → `Categories`.
 4. Remove the unsupported category and select a similar category from the available list.
 5. Save the account.
 6. Retry the Yext Listing Sync from the account's product settings.
@@ -50,7 +48,7 @@ Yes. The business category is shared across all listing products on the account.
 </details>
 
 <details>
-<summary>The category looks correct — why is Yext still rejecting it?</summary>
+<summary>The category looks correct: why is Yext still rejecting it?</summary>
 
 Some categories that appear valid in Partner Center are not in Yext's specific catalog. Even if a category works for other listing products, Yext may not support it. Try a similar category or a broader parent category.
 </details>

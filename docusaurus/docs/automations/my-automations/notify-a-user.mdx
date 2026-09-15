@@ -1,0 +1,57 @@
+---
+title: Notify a user
+description: Learn how to use the Notify a user action to send in-app and email notifications to one or more users in an automation.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, notifications, user]
+keywords: [notify user, user notification, automation notification, alert user, in-app notification, email notification, dynamic user]
+---
+
+# Notify a user
+
+**Notify a user** sends an in-app and email notification to one or more users. Unlike the salesperson notification, this action accepts a dynamic user ID from a previous step, making it useful in account templates where the recipient isn't known in advance.
+
+## How it works
+
+1. The automation reaches the **Notify a user** step
+2. You select a notification type and configure the message content
+3. The step sends both an in-app notification and an email to the target user(s)
+4. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Notifications**, select **Notify a user**
+3. Configure the fields:
+
+### Notification type
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Notification type** | Yes | The priority level of the notification. Options: **Generic** (standard notification) or **High priority** (elevated visibility). |
+
+### Notification content
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **In-app message** | Yes | The text displayed in the in-app notification. |
+| **In-app link** | Yes | The URL the notification links to when clicked in-app. |
+| **Email subject** | Yes | The subject line of the email notification. |
+| **Email message** | Yes | The body of the email notification. Supports rich text formatting. |
+| **Email button text** | Yes | The label on the email's call-to-action button. |
+| **Email link** | Yes | The URL the email button links to. |
+
+:::tip
+The **Users** field accepts a dynamic user ID from a previous step via **Add dynamic content**. This is especially useful in account templates — use a **Get my team member** step to look up the right person, then pass their ID into this notification so the same automation works across every account.
+:::
+
+## Outputs
+
+This action produces no outputs available to downstream steps.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Notify a salesperson](./notify-a-salesperson.mdx) — Notify salespeople assigned to the account
+- [Notify all account users](./notify-all-account-users.mdx) — Notify every user on the account
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

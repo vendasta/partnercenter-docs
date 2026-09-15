@@ -1,0 +1,45 @@
+---
+title: "Trigger: A sales task status is changed (legacy)"
+description: Start an automation when the status of a legacy sales task changes.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, sales]
+keywords: [sales task trigger, legacy task trigger, task status changed, CRM task, sales task automation]
+---
+
+# A sales task status is changed (legacy)
+
+**A sales task status is changed** fires whenever the status of a legacy sales task is updated on an account. This trigger applies to tasks created in the legacy sales task system — not to CRM activities or newer task management features.
+
+If your team is still using legacy sales tasks, use this trigger to automate notifications or follow-up actions when a task is marked complete, in progress, or changes to any other status.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account and contact actions are available downstream.
+:::
+
+## How it works
+
+1. A legacy sales task on an account has its status updated.
+2. The automation evaluates any trigger conditions you've configured, such as filtering on the target status.
+3. If conditions are met, the workflow starts with the account in context.
+4. Downstream steps can use **Add dynamic content** to reference account fields.
+
+## Available data
+
+Standard account fields are available via **Add dynamic content**. Legacy task fields (task name, status, and due date) may be available depending on your account configuration.
+
+:::warning Legacy trigger limitations
+The **Delay until event** step does not support filtering by assignee or task name for this trigger. If your workflow uses a **Delay until event** step, those filter options will not apply — the step will wait for any matching task status change regardless of assignee or task name.
+:::
+
+## Tips
+
+- If you are building new automations, consider using CRM activities and the [A sales activity is created](./trigger-sales-activity-created.mdx) trigger instead of legacy tasks.
+- Use **Condition** steps downstream to branch logic based on task status if your workflow handles multiple status transitions.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Logic and flow control](./logic-and-flow-control.mdx)
+- [Actions overview](./actions-overview.mdx)

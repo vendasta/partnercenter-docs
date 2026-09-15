@@ -1,0 +1,43 @@
+---
+title: "Trigger: A salesperson is assigned to an account"
+description: Start an automation when a salesperson is assigned to an account record.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, sales]
+keywords: [salesperson assigned trigger, account assignment, sales rep assigned, CRM trigger, account scope trigger]
+---
+
+# A salesperson is assigned to an account
+
+**A salesperson is assigned to an account** fires whenever a salesperson is assigned — or reassigned — to an account record. Use this trigger to automate onboarding tasks, send introductory messages, or notify the new rep with relevant account context the moment an assignment is made.
+
+This trigger fires on both initial assignments and reassignments, so it covers account handoffs as well as new account creation.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account and contact actions are available downstream.
+:::
+
+## How it works
+
+1. A salesperson is assigned to an account in Partner Center or the CRM.
+2. The automation evaluates any trigger conditions you've configured, such as filtering on a specific salesperson.
+3. If conditions are met, the workflow starts with the account and newly assigned salesperson in context.
+4. Downstream steps can use **Add dynamic content** to reference account fields and the assigned salesperson's details.
+
+## Available data
+
+Standard account and salesperson fields are available via **Add dynamic content**.
+
+| Output | Description |
+|---|---|
+| **Account name** | The name of the account |
+| **Assigned salesperson** | The name of the salesperson assigned to the account |
+| **Salesperson email** | The email address of the assigned salesperson |
+| **Account tags** | Any tags applied to the account record |
+| **Account ID** | The unique identifier for the account |
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

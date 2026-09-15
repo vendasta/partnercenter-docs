@@ -11,7 +11,10 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
-import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import { IconFlipCard, IconFlipCardGrid } from "@site/src/components/FlipCard";
+import LessonSection from "@site/src/components/LessonSection";
+import KeyPoints from "@site/src/components/KeyPoints";
+import aiReceptionistFace from './img/ai-receptionist-face.png';
 
 <InlineHighlighter courseId="from-work-to-ai-workforce" site="vendasta_learn">
 
@@ -19,6 +22,7 @@ import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
 
 <LessonHeader
   difficulty="Beginner"
+  topics={["AI fundamentals", "AI Workforce", "Automations"]}
   time="about 6 minutes"
   pathName="AI foundations"
   step={1}
@@ -30,11 +34,23 @@ import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
   ]}
 />
 
-## Automation is not the new part
+## Automations meet AI Employees
 
-AI arrived into businesses that were already partly automated. Your clients have run workflows for years: the appointment reminder that sends itself, the invoice that follows the job, the message that routes to the right inbox. A workflow is fixed logic. A trigger fires, the steps run, and the result is the same every time. Dependable, instant, and tireless.
+<KeyPoints
+  items={[
+    {
+      img: aiReceptionistFace,
+      title: 'The AI Employee',
+      text: 'A worker, not software you operate: it holds the conversation, weighs the situation, and chooses the response that fits, around the clock. You brief it, train it, and supervise it like any new hire.',
+    },
+  ]}
+/>
 
-And every workflow, however clever, ran into the same wall: the step that needed judgment. The reminder could send itself, but when the customer replied "any chance we could do Thursday instead?", the workflow was finished. A person had to pick it up. Automation could move work along; it could not hold the conversation, weigh the situation, or choose the response that fit. So every automated process in every business ended the same way: at a person, during staffed hours.
+They arrived into businesses that were already partly automated. Your clients have run workflows for years: the appointment reminder that sends itself, the invoice that follows the job, the message that routes to the right inbox. A workflow is fixed logic. A trigger fires, the steps run, and the result is the same every time. Dependable, instant, and tireless.
+
+And every workflow, however clever, ran into the same wall: the step that needed judgment. The reminder could send itself, but when the customer replied "any chance we could do Thursday instead?", the workflow was finished. A person had to pick it up. Automation could move work along; it could not hold the conversation, weigh the situation, or choose the response that fit. So every automated process in every business ended the same way: at a person, during staffed hours. That wall is exactly where an AI Employee goes to work.
+
+<LessonSection>
 
 ## Two shapes of work
 
@@ -47,18 +63,22 @@ That wall has a name. Every task in a business is one of two shapes:
 Think of the most repetitive process in your week or in a client's business. Find the point in it where a person has to step in, and ask why: is it a missing rule, or is it judgment?
 :::
 
+</LessonSection>
+
 ## What changed: a worker on the other end
 
 Generative AI is the new part, and it is genuinely different from every kind of software before it. Traditional software, including traditional AI, selects from outcomes someone defined in advance: it classifies, routes, and follows its rules. Generative AI produces a response that did not exist before, shaped to the situation in front of it, by predicting what comes next from patterns learned across enormous amounts of text.
 
 One example makes it concrete. A rule can route every email containing the word "invoice" to the bookkeeper, instantly and forever. Generative AI can read the email and draft the reply, fitted to what the sender actually asked. Flip each card for the one-line version:
 
-<FlipCardGrid>
-  <FlipCard front="Traditional software" back="Follows rules. It classifies, routes, and selects from outcomes defined in advance. Perfect for the rule-shaped work, and stops where judgment begins." />
-  <FlipCard front="Generative AI" back="Creates a new response fitted to the situation, by predicting from learned patterns. For the first time, judgment-shaped work can be delegated." />
-</FlipCardGrid>
+<IconFlipCardGrid>
+  <IconFlipCard gradient="blue" front="Traditional software" back="Follows rules. It classifies, routes, and selects from outcomes defined in advance. Perfect for the rule-shaped work, and stops where judgment begins." />
+  <IconFlipCard gradient="green" front="Generative AI" back="Creates a new response fitted to the situation, by predicting from learned patterns. For the first time, judgment-shaped work can be delegated." />
+</IconFlipCardGrid>
 
 For the first time, there is something to put on the other end of a workflow: a worker that can hold a nuanced conversation, make the sensible call, and answer in words that fit.
+
+<LessonSection>
 
 ## The merger is the platform
 
@@ -66,9 +86,11 @@ Put the two together and you have the platform's whole story. **[Automations](/a
 
 The whole story fits in three sentences: a business already automates the routine; what it could never automate was the conversation and the judgment, so that work always waited for staffed hours; now there is a worker for it, it never clocks out, and it works hand in hand with the automation already in place.
 
+</LessonSection>
+
 ## People run the show
 
-Notice who never leaves the story: people. An AI Employee joins a business the way a new hire does. It gets briefed on its job, trained on the business, and supervised while it earns trust. Nobody operates it keystroke by keystroke; someone directs it. That someone is the owner for their business, and you for yours and your clients'. This is the model you met in Get started, now with its reasons attached: **AI does the work, you orchestrate.**
+Notice who never leaves the story: people. An AI Employee joins a business the way a new hire does. It gets briefed on its job, trained on the business, and supervised while it earns trust. Nobody operates it keystroke by keystroke; someone directs it. That someone is the owner for their business, and you for yours and your clients'. This is the model you met in Get set up, now with its reasons attached: **AI does the work, you orchestrate.**
 
 One business reality sits underneath all of it: the AI is available to everyone. Your judgment about where to apply it, and the knowledge you feed it, is the product.
 

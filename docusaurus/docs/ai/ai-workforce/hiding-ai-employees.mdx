@@ -1,0 +1,154 @@
+---
+id: hiding-ai-employees
+title: Hiding AI Employees
+sidebar_position: 9
+description: Choose which AI Employees your clients get in Business App, market by market, from Customize Business App. Hiding an AI Employee turns it off for every account in that market.
+tags: [ai, ai-workforce, ai-employees, business-app, markets, customize-business-app]
+keywords: [hide AI employee, AI employee visibility, visible in app, customize business app AI, AI employees per market, turn off AI employee, AI workforce visibility]
+---
+
+The **AI Workforce** page in Business App advertises every AI Employee your clients could have, including the ones they haven't bought yet. If you've decided not to take a particular AI Employee to market, you can remove it from Business App entirely, market by market, from **Customize Business App**.
+
+:::warning Hiding turns an AI Employee off
+Hiding isn't a display setting. A hidden AI Employee is switched off for every account in that market: it stops responding in chat, its automated work stops, and it disappears from every part of Business App, including accounts that already have it set up. Nothing is deleted, and showing the AI Employee again turns it back on.
+:::
+
+## Where the setting lives
+
+Go to **Partner Center → Administration → Customize Business App → Pages → AI**. Below the **Show this page** setting you'll find the **AI employees** section.
+
+<img src={require('./img/hide-ai-employees-settings.png').default} alt="The AI page of Customize Business App, showing the AI employees section with a checkbox row for each AI Employee, a visible count, and Show all and Hide all actions" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Each AI Employee gets a row with a **Visible in app** checkbox. The header above the list counts how many are visible, and **Show all** and **Hide all** set every row at once.
+
+## Which AI Employees you can hide
+
+Every AI Employee on the Business App AI Workforce page can be hidden, including the Chat receptionist and the Custom employee. The rows come from the same catalog the AI Workforce page renders from, so the list you see always matches what's available to your clients, and an AI Employee added to the platform appears as a visible row without any action from you. AI Employees start visible, so curate after a launch rather than before it.
+
+Two of the rows are worth a closer look before you clear them.
+
+### Consider the Chat receptionist carefully
+
+The Chat receptionist powers the web chat widget and message replies, so hiding it stops AI responses in conversations your clients' customers are already having. Hide it only if you don't want AI answering messages at all in that market.
+
+### Hiding the Custom employee
+
+Hiding **Custom employee** removes the whole custom AI surface, not just the placeholder card:
+
+- The **Create** button disappears from the AI Workforce page.
+- Custom AI Employees your clients already built no longer appear in the workforce list, the AI Employee picker, or the Inbox chat picker, and their configuration pages don't open.
+
+Show the Custom employee again and both the button and the existing Custom AI Employees come back.
+
+## Hide an AI Employee
+
+1. Go to **Partner Center → Administration → Customize Business App → Pages → AI**.
+2. Choose the market you're configuring from the market selector at the top of the page. See [Markets and defaults](#markets-and-defaults) below.
+3. In the **AI employees** section, clear the **Visible** checkbox for each AI Employee you want to remove. Use **Hide all** if you want to start from nothing and show only a few.
+4. Click **Save**.
+5. Read the confirmation, then click **Confirm**.
+
+<img src={require('./img/hide-ai-employees-warning.png').default} alt="The Hide and turn off AI employees confirmation dialog, explaining that hiding turns the AI Employee off for every account in the market, with Cancel and Confirm buttons" style={{width: '100%', maxWidth: '620px', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+The confirmation only appears on a save that hides something that wasn't hidden before. Saves that show more AI Employees, or that change nothing, go straight through.
+
+Changes reach Business App within about ten seconds. Have your client refresh Business App if they're looking at the AI Workforce page while you save.
+
+## What your clients see
+
+Once an AI Employee is hidden for a market, in every account in that market:
+
+- **AI Workforce page**: no card, in any state. The active card, the locked **Upgrade to gain access** card, and the **Coming soon** badge all go away. This is what separates hiding from [marketplace gating](./upgrading-ai-employees.mdx#marketplace-gating-which-locked-cards-appear), which suppresses a locked card but leaves an active one.
+- **AI Employee pickers**: the AI Employee is gone from the chat picker in Business App and from the AI Employee dropdowns in the automation builder.
+- **Chat**: the AI Employee stops answering. Existing conversations stay in place, but the AI no longer replies in them.
+- **Automated work**: scheduled and triggered work the AI Employee ran stops.
+
+What doesn't change:
+
+- **Products, orders, and billing.** Hiding is not stop-selling. The product that powers the AI Employee stays active on the accounts that bought it, stays in your store, and keeps billing as before.
+- **Your own workforce page.** The AI Workforce page in Partner Center is unaffected and keeps showing every AI Employee.
+- **Configuration you've already done.** Nothing is deleted. Names, personalities, capabilities, knowledge sources, and connections are all still there when you show the AI Employee again.
+
+:::warning Hiding is not a substitute for cancelling
+Because the product stays active and keeps billing, a client who is paying for an AI Employee you've hidden loses access without losing the charge. If a client shouldn't have the product at all, change their subscription instead of hiding the AI Employee.
+:::
+
+## Markets and defaults
+
+The setting is per market, and follows the same pattern as the rest of Customize Business App:
+
+- Pick the market you're configuring from the selector at the top of the page.
+- A market with the **Use All Markets Default** toggle on follows whatever the default market has set, and its checkboxes are read-only.
+- Turn **Use All Markets Default** off to give that market its own list.
+- Setting the list on the default market applies to every market that hasn't overridden it. Check what your other markets inherit before you save a default.
+
+Switching a market back to **Use All Markets Default** can hide more than its own list did, if the default market hides more. The confirmation dialog accounts for this and appears in that case too.
+
+If you have a single market, set the list once on the default market and it applies everywhere.
+
+## Show an AI Employee again
+
+Select the **Visible** checkbox, or click **Show all**, and click **Save**. There's no confirmation for showing an AI Employee. It reappears in Business App, resumes answering, and picks up any configuration it already had.
+
+## Choosing the right control
+
+Several settings affect what your clients see on the AI Workforce page. They do different jobs:
+
+| Goal | Use this |
+|---|---|
+| Remove one AI Employee from Business App and turn it off | **AI employees** checkboxes, described on this page |
+| Remove the whole AI section from Business App | The **Show this page** setting on the same **AI** page |
+| Keep a locked card but remove its upgrade button | The product's `Upgrade` toggle in the Marketplace. See [Upgrading AI Employees](./upgrading-ai-employees.mdx#turn-the-upgrade-experience-on-or-off) |
+| Stop offering a product entirely, including to clients who have it | Stop selling the product in the Marketplace |
+
+Hiding is the only one of these that removes a single AI Employee's card while leaving the rest of the page, the product, and your store intact.
+
+## Frequently asked questions
+
+<details>
+<summary>Does hiding an AI Employee stop my client from being billed for the product behind it?</summary>
+
+No. Hiding only affects the AI Employee in Business App. The product stays active on the account and keeps billing. Change the client's subscription if you want the charge to stop.
+
+</details>
+
+<details>
+<summary>Can I hide an AI Employee for one account instead of a whole market?</summary>
+
+No. The setting is per market. Every account in the market gets the same list.
+
+</details>
+
+<details>
+<summary>What happens to a client who already had a hidden AI Employee set up?</summary>
+
+They lose access to it while it's hidden, including AI replies in chat and any automated work it was doing. Their configuration is kept, so showing the AI Employee again restores it as it was.
+
+</details>
+
+<details>
+<summary>Do hidden AI Employees come back after a new one launches?</summary>
+
+No. Your hidden list is unaffected by launches. A newly launched AI Employee starts visible and appears as a new row you can clear.
+
+</details>
+
+<details>
+<summary>Does this change the AI Workforce page in Partner Center?</summary>
+
+No. The setting applies to Business App accounts only. Your own workforce page in Partner Center keeps showing every AI Employee.
+
+</details>
+
+<details>
+<summary>Why did the AI Employee reappear after I saved?</summary>
+
+Check whether the market has **Use All Markets Default** turned on. A market following the default can't hold its own list. Turn the toggle off, set the checkboxes, and save again.
+
+</details>
+
+## Related
+
+- [AI Workforce Overview](./index.mdx)
+- [Upgrading AI Employees](./upgrading-ai-employees.mdx)
+- [Creating Custom AI Employees](./custom-ai-employees.md)

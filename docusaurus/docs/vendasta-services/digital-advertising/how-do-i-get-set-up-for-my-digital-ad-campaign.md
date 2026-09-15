@@ -1,10 +1,10 @@
 ---
 title: "Tips for a Successful Campaign"
 sidebar_label: "Campaign Tips"
-description: "Learn how to prepare for a MatchCraft Managed Ads campaign, including promotions, tracking setup, and Facebook Page access."
+description: "Learn how to prepare for a Specialty Ad Campaign campaign, including promotions, tracking setup, and Facebook Page access."
 ---
 
-You want your client's MatchCraft Managed Ads Campaign to succeed as quickly as possible. During the first month of the campaign, the advertising platform and our specialists are going through a learning phase to understand and optimize the ad. Here's what you can do to help your client's ad succeed as quickly as possible.
+You want your client's Specialty Ad Campaign to succeed as quickly as possible. During the first month of the campaign, the advertising platform and our specialists are going through a learning phase to understand and optimize the ad. Here's what you can do to help your client's ad succeed as quickly as possible.
 
 ### Consider doing a promotion
 

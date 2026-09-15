@@ -1,0 +1,39 @@
+---
+title: "Trigger: A note activity is created or modified for a contact"
+description: Start an automation when a note is added or modified on a contact record.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, contact]
+keywords: [note activity trigger, contact note added, note modified, CRM note activity, automation trigger]
+---
+
+# A note activity is created or modified for a contact
+
+**A note activity is created or modified for a contact** starts a workflow whenever a note is added — or an existing note is edited — on a contact record. Use this trigger to capture important context added by your team and route it to the right place automatically, such as updating a task, notifying a colleague, or tagging the contact.
+
+This trigger fires for both new notes and edits to existing ones, so workflows can respond to evolving context as your team refines their notes.
+
+:::info Trigger scope
+This trigger operates at the **contact** scope. Contact, company, and account actions are available downstream.
+:::
+
+## How it works
+
+1. A team member adds a new note — or edits an existing note — on a contact record in the CRM.
+2. The automation evaluates any trigger conditions you've configured (for example, filtering on note content or author).
+3. If all conditions are met, the workflow starts with the contact, their associated company, and the account in context.
+4. Downstream steps can use **Add dynamic content** to reference the note content, contact fields, and company fields.
+
+## Available data
+
+All standard contact, company, and account fields are available downstream via **Add dynamic content**. This includes fields such as contact name, email, phone, assigned salesperson, company name, and account tags.
+
+:::info
+Note content is available as dynamic data in steps that follow this trigger, so you can include note text in notifications, task descriptions, or other downstream actions.
+:::
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx) — trigger types, scoping, and how to choose the right trigger
+- [Automation triggers reference](./automation-triggers-reference.mdx) — full reference for every available trigger
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — entry settings, conditions, and error handling
+- [Actions overview](./actions-overview.mdx) — what can happen after a trigger fires

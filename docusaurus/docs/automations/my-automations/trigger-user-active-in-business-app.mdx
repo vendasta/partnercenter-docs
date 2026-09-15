@@ -1,0 +1,42 @@
+---
+title: "Trigger: User active in Business App"
+description: Start an automation whenever a user logs into or becomes active in Business App.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, users]
+keywords: [user active trigger, Business App login, user engagement, automation trigger, account scope]
+---
+
+# User active in Business App
+
+The **User active in Business App** trigger starts an automation whenever a user logs into **Business App**. Use this trigger to surface timely tips, prompt next steps, or record engagement events based on user activity.
+
+This trigger operates at the account scope, so account and user data are available to downstream steps.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account fields and user details are available downstream.
+:::
+
+## How it works
+
+1. A user logs into **Business App** and their session becomes active.
+2. The account associated with that user is brought into scope.
+3. User and account data become available as dynamic content.
+4. Downstream steps execute using the account and user context.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **User name** | First and last name of the active user |
+| **User email** | Email address of the user |
+| **Account name** | The account the user belongs to |
+| **Active at** | Timestamp of the login or activity event |
+
+To avoid running too frequently, enable the **Run once per contact per period** setting or add conditions that limit when downstream actions execute.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

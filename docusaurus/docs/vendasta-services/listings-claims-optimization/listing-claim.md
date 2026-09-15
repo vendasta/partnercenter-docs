@@ -1,7 +1,7 @@
 ---
 title: "Listing Claim"
 sidebar_label: "Listing Claim"
-description: "Fully managed claiming for one listing site of your choice or a medical package on medical directories—verification, timelines, what's included, and FAQs."
+description: "Managed setup and claiming for one listing site of your choice or a medical package on medical directories—guided verification, timelines, what's included, and FAQs."
 sidebar_position: 1
 tags: [vendasta-services, listings, claims, listing-claim, google-business-profile, medical]
 keywords: [listing claim, claim listing, medical listing claim, Google Business Profile, Yelp, Bing, RateMDs, verification, postcard, NPI]
@@ -11,15 +11,21 @@ keywords: [listing claim, claim listing, medical listing claim, Google Business 
 
 ## Overview
 
-The **Listing Claim** service is a fully managed, manual claim of business listings so your information is accurate and discoverable online. You can choose a **listing claim** (one site of your choice) or a **medical listing claim** (medical-focused directories for one practitioner).
+The **Listing Claim** service is a manual, hands-on claim of business listings so the client's information is accurate and discoverable online. Our team creates or claims the listing and guides the business through verification; the listing site requires the business itself to complete the verification step. You can choose a **listing claim** (one site of your choice) or a **medical listing claim** (medical-focused directories for one practitioner).
 
-**What to expect:** order and fulfillment form → Listing Fulfillment team receives your information → verification attempted **within 48 hours** (where the process allows) → claim completed and data corrected → final email with login credentials when applicable.
+**What to expect:** order and fulfillment form → Listing Fulfillment team receives your information → verification started **within 48 hours** (where the process allows) → the business completes the site's verification with our guidance → claim completed and data corrected → final email with login credentials when applicable.
+
+:::warning The client completes the verification
+
+Listing sites require the **business itself** to verify — by answering the primary business line, receiving a postcard PIN, or supplying practitioner credentials. Our team cannot complete these steps on their behalf. We set the claim up, tell the client exactly what the site is asking for, and follow up until it is done. Set this expectation before the order.
+
+:::
 
 ## What's Included
 
-- **One fully claimed listing on any one site**, **or** up to **three medical-specific sites** for one practitioner (medical package), as applicable to your order
-- **Verification** through an offered method (such as phone, email, or postcard verification—and for medical sites, the additional items listed under [Prerequisites](#prerequisites))
-- **Correction** of an existing listing
+- **Listing creation, claiming, and initial setup** on any one site, **or** up to **three medical-specific sites** for one practitioner (medical package), as applicable to your order
+- **Dedicated, hands-on support through the site's verification requirements** — phone, email, or postcard verification, and for medical sites the additional items listed under [Prerequisites](#prerequisites)
+- **Correction** of an existing listing, and login credentials handed over once the claim is complete
 
 ### What listings can be claimed through this service
 
@@ -71,11 +77,11 @@ What our team does: we log in to the new email, create a Google location group, 
 
 ### Fulfillment form
 
-When you purchase a Listing Claim, the Listing Fulfillment team receives the **fulfillment form** and uses it to attempt verification with the information you provide.
+When you purchase a Listing Claim, the Listing Fulfillment team receives the **fulfillment form** and uses it to set up the claim and start verification with the information you provide.
 
 ### Verification methods (general listing sites)
 
-Each listing site has its own method for validating the legitimacy of a business. Common options include:
+Each listing site has its own method for validating the legitimacy of a business, and each one has to be completed by someone at the business. Our team sets the request in motion and walks the client through it. Common options include:
 
 - **Phone call / text message** – An automated call or text from the listing site is sent to the business phone number. A PIN is provided to enter into the listing site for validation. Until the listing is verified, changes may not appear to the public.
 - **Postcard** – A physical postcard is mailed to the listed business address with a PIN to enter on the listing site. This can take **two weeks or more**. **Do not change the listing** after a postcard has been requested until the PIN is received and entered. Changes may not appear publicly until the listing is verified.
@@ -150,9 +156,9 @@ For **medical listing claims**, the same applies: a blank-slate Gmail account us
 </details>
 
 <details>
-<summary>Can someone assist with claiming on behalf of the business?</summary>
+<summary>Can the listing be claimed completely on the business's behalf?</summary>
 
-The claiming process may require a **phone call or text to the primary business line**, so the listing usually needs to be completed with **someone present at the business location** who can complete verification steps when required.
+Not entirely. Our team handles creation, claiming, and setup, and stays with the client through verification — but the verification step belongs to the business. It commonly requires a **phone call or text to the primary business line**, so the claim needs **someone present at the business location** who can complete those steps when required.
 </details>
 
 <details>

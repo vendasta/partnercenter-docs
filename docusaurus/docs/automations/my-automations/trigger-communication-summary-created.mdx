@@ -1,0 +1,43 @@
+---
+title: "Trigger: An AI communication summary is created"
+description: Start an automation when an AI communication summary is generated for a contact.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, conversations]
+keywords: [communication summary trigger, AI summary trigger, contact summary, conversations automation, AI communication trigger]
+---
+
+# An AI communication summary is created
+
+**An AI communication summary is created** fires whenever the platform generates an AI-powered summary of communications for a contact. Use this trigger to automatically distribute summaries, update CRM records, or notify team members when fresh communication intelligence is ready.
+
+This trigger fires each time a new summary is created, whether generated on a schedule or on demand.
+
+:::info Trigger scope
+This trigger operates at the **contact** scope. Contact, company, and account actions are available downstream.
+:::
+
+## How it works
+
+1. The platform generates an AI communication summary for a contact.
+2. The automation evaluates any trigger conditions you've configured.
+3. If conditions are met, the workflow starts with the contact, their associated company, and the account in context.
+4. Downstream steps can use **Add dynamic content** to reference the summary content, contact fields, and company fields.
+
+## Available data
+
+The AI-generated summary and standard contact, company, and account fields are available via **Add dynamic content**.
+
+| Output | Description |
+|---|---|
+| **Summary content** | The AI-generated text summary of communications |
+| **Contact name** | Full name of the contact the summary was created for |
+| **Contact email** | Primary email address for the contact |
+| **Company name** | The company associated with the contact |
+| **Summary date** | The date and time the summary was generated |
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

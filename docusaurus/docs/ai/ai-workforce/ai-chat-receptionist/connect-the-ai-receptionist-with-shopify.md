@@ -51,9 +51,9 @@ You can get more detailed help on gathering this information from the Shopify he
 
 This step creates the capability your AI Receptionist will reference when someone asks about items or stock. These are the "instructions" given to your AI Receptionist that help it know what it can do and when it should do it.
 
-1. In your Business App, navigate to <AISparkleIcon /> `AI` → `AI Workforce`
+1. In your Business App, navigate to <AISparkleIcon /> `AI` → `Workforce`
 2. Select your AI Employee and click `Configure`.
-3. Under `Custom Capabilities`, click `Add a capability`.
+3. Open `Capabilities`, click `+ Add a capability`, then choose `+ New capability`.
 4. Fill in the following fields:
    - `Name`: `Get Shopify Product Info`
    - `Description`: Searches the Shopify store for products matching a keyword and returns product names, descriptions, prices, and availability using the Storefront API.
@@ -524,7 +524,7 @@ The platform's Custom Capabilities are designed to be easily updated as external
 
 Absolutely! Use these testing methods:
 
-**AI employee testing:** Use the "Try it" button in [AI Workforce](../index.mdx) to test your AI Employee with sample product questions
+**AI employee testing:** Use the `Chat` button on the employee's card in [`Workforce`](../index.mdx) to open a private conversation and test your AI Employee with sample product questions
 
 **Tool testing:** Review the "Explanation" feature in conversations to see raw API calls and responses
 

@@ -1,0 +1,44 @@
+---
+title: "Trigger: Fulfillment task status changed"
+description: Start an automation whenever a Task Manager task changes status.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, fulfillment]
+keywords: [fulfillment task trigger, task status changed, Task Manager task, automation trigger, account scope]
+---
+
+# Fulfillment task status changed
+
+The **Fulfillment task status changed** trigger starts an automation whenever an individual task in **Task Manager** moves to a new status. Use this trigger to react to task-level progress — such as sending a notification when a task is marked complete or escalating tasks that are blocked.
+
+This trigger operates at the account scope, so account and task data are available to downstream steps.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account fields and fulfillment task data are available downstream.
+:::
+
+## How it works
+
+1. A task in **Task Manager** changes from one status to another.
+2. The account associated with the task's project is brought into scope.
+3. Task details — including the new status — become available as dynamic content.
+4. Downstream steps execute using the account and task context.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Task name** | Name of the fulfillment task |
+| **Task status** | The new status the task moved to |
+| **Previous status** | The status the task was in before the change |
+| **Project name** | The project the task belongs to |
+| **Account name** | The account associated with the project |
+| **Status changed at** | Timestamp of the status change |
+
+Use trigger conditions to filter for a specific status or task name if you only want the automation to run for certain tasks.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

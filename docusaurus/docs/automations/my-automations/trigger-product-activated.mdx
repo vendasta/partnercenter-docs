@@ -1,0 +1,46 @@
+---
+title: "Trigger: Product activated"
+description: Start an automation whenever a product is activated on an account.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, products]
+keywords: [product activated trigger, product activation, account product, automation trigger, account scope]
+---
+
+# Product activated
+
+The **Product activated** trigger starts an automation whenever a product is activated on an account. Use this trigger to kick off onboarding sequences, send confirmation messages, or provision resources the moment a product goes live.
+
+This trigger operates at the account scope, so account and product data are available to downstream steps.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account fields and activated product data are available downstream.
+:::
+
+## How it works
+
+1. A product is activated on an account — either manually by an admin or through an order.
+2. The account is brought into scope along with the product details.
+3. Account and product data become available as dynamic content.
+4. Downstream steps execute using that context.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Product name** | Name of the product that was activated |
+| **Product ID** | Unique identifier for the activated product |
+| **Account name** | The account the product was activated on |
+| **Activated at** | Timestamp when the product was activated |
+
+## Tips
+
+:::tip Run once per account
+Enable the **Run only once per account** option if you want the automation to fire just the first time a product is activated — for example, to send a one-time onboarding email rather than triggering again on reactivation.
+:::
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

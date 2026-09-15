@@ -4,6 +4,8 @@ description: Comprehensive tools for managing business relationships, tracking c
 sidebar_position: 2
 ---
 
+import { GraduationCapIcon } from '@site/src/components/Icons';
+
 # Companies
 
 The Companies section in Vendasta's CRM provides comprehensive tools to manage your business relationships effectively. This centralized hub enables you to track company information, log activities, and monitor engagement throughout your sales process. With advanced features like lead scoring and activity logging, you can prioritize prospects and maintain detailed records of all interactions. The Companies section serves as your primary workspace for building and nurturing business relationships that drive revenue growth.
@@ -15,7 +17,7 @@ Companies in the CRM enable you to maintain comprehensive records, score leads f
 ## What's included
 
 - **Activity logging**: Track sales communications and create detailed activity records
-- **Lead scoring**: Automated lead prioritization based on buyer profile and intention (configured in `Administration` > `Score`)
+- **Lead scoring**: Automated lead prioritization based on buyer profile and intention (configured in `Administration` → `Score`)
 - **Find leads**: Discover and identify potential business opportunities using local business search
 - **Advanced filtering & search**: Filter companies by various criteria and search across multiple fields
 - **Parent-child company relationships**: Manage corporate hierarchies and filter child companies by their parent company
@@ -25,7 +27,7 @@ Companies in the CRM enable you to maintain comprehensive records, score leads f
 ## Get started
 
 1. **Navigate to companies**
-   - Go to `Partner Center` > `CRM` > `Companies`
+   - Go to `Partner Center` → `CRM` → `Companies`
    - Access your business relationship management workspace
 
 2. **Set up company profiles**
@@ -33,7 +35,7 @@ Companies in the CRM enable you to maintain comprehensive records, score leads f
    - Configure custom fields based on your business needs
 
 3. **Configure lead scoring**
-   - Navigate to `Partner Center` > `Administration` > `Score`
+   - Navigate to `Partner Center` → `Administration` → `Score`
    - Set up positive and negative scoring criteria
    - Enable automated lead prioritization
 
@@ -147,7 +149,7 @@ The CRM supports parent-child company relationships, allowing you to organize an
 Once parent-child relationships are established, you can easily find all companies within a corporate hierarchy:
 
 **Using the Parent company filter:**
-1. Go to `CRM` > `Companies`
+1. Go to `CRM` → `Companies`
 2. Click `Add filter` and select **Parent company**
 3. Choose the parent company from the dropdown
 4. View all child companies that belong to the selected parent organization
@@ -217,7 +219,7 @@ Identifying and qualifying potential clients within your local market is crucial
 ### How to use the "Find Leads" feature
 
 1. **Access the lead finder**
-   - Go to `CRM` > `Companies`
+   - Go to `CRM` → `Companies`
    - Click `Find Leads` (previously "Find Accounts")
 
 2. **Search for potential prospects**
@@ -265,7 +267,7 @@ Identifying and qualifying potential clients within your local market is crucial
 
 Lead scoring empowers customer-facing representatives with precise and customizable lead prioritization tools. This feature allows CRM users to create different scores as a contact or company field based on buyer profile fit and buyer intention. By incorporating these critical dimensions, representatives can efficiently prioritize their outreach, improving their chances of closing deals.
 
-**Configuration**: Lead scoring is configured in `Partner Center` > `Administration` > `Score`. See the [Score documentation](../../administration/data-management/score/index.mdx) for detailed setup instructions.
+**Configuration**: Lead scoring is configured in `Partner Center` → `Administration` → `Score`. See the [Score documentation](../../administration/data-management/score/index.mdx) for detailed setup instructions.
 
 **Availability**: Lead scoring works out of the box for all users on the Professional subscription or above.
 
@@ -281,11 +283,11 @@ Bulk deletion is **permanent and cannot be undone**. Any notes attached to delet
 
 **Steps:**
 
-1. Go to **Partner Center** > **CRM** > **Companies**.
+1. Go to `Partner Center` → `CRM` → `Companies`.
 2. Increase the items-per-page setting to show more records (up to 100).
 3. Use filters or search to narrow to the records you want to delete.
 4. Click the top-left checkbox to select all visible records.
-5. Click **Actions** > **Delete**.
+5. Click `Actions` → `Delete`.
 6. In the confirmation modal, type `Delete` and confirm.
 
 Repeat for additional batches if you need to delete more than 100 companies.
@@ -304,9 +306,21 @@ If a company was accidentally deleted, you can trigger the system to recreate it
 
 **How to recreate:**
 
-1. Go to the associated account in **Partner Center** > **Accounts** > **Manage Accounts**.
+1. Go to the associated account in `Partner Center` → `Accounts` → `Manage Accounts`.
 2. Open the account and click **Edit Account**.
 3. Make a minor change to the Business Profile — the recommended approach is to add a tag and then remove it.
 4. Save the account.
 
 Saving triggers a sync that recreates the Company record linked to that account. The recreated company will have a fresh activity timeline with no previous notes.
+
+{/* growth-engine callout — commented out 2026-08-19 (Cal, Learn tab refresh) because the
+    Your growth engine path is hidden until its remaining steps and Snapshot videos ship.
+    Restore at relaunch; see training/growth-engine/index.mdx. */}
+{/*
+<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
+  <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
+  <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>
+    New to running the full sales motion? Take the <a href="/learn/growth-engine" style={{color: '#3C9A63', fontWeight: 600}}>Your growth engine</a> course in Vendasta Learn — Beginner, 6 lessons.
+  </span>
+</div>
+*/}

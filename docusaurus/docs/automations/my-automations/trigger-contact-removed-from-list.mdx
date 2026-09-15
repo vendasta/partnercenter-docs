@@ -1,0 +1,39 @@
+---
+title: "Trigger: A contact is removed from a list"
+description: Start an automation when a contact is removed from a specified CRM list.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, contact]
+keywords: [contact removed from list, list removal trigger, CRM list, contact list automation, segment exit trigger]
+---
+
+# A contact is removed from a list
+
+**A contact is removed from a list** starts a workflow the moment a contact leaves a specified CRM list. Use this trigger to react when contacts exit a segment — for example, to update their record, notify a team member, or move them into a different workflow.
+
+You configure the trigger to watch one specific list, so removals from other lists will not start the automation.
+
+:::info Trigger scope
+This trigger operates at the **contact** scope. Contact, company, and account actions are available downstream.
+:::
+
+## How it works
+
+1. You select the target list when configuring the trigger — only removals from that list will fire the automation.
+2. A contact is removed from the list, either manually, by another automation, or through a bulk action.
+3. The automation evaluates any trigger conditions you've configured before proceeding.
+4. The workflow starts with the contact, their associated company, and the account in context.
+
+## Available data
+
+All standard contact, company, and account fields are available downstream via **Add dynamic content**. This includes fields such as contact name, email, phone, lifecycle stage, company name, and account tags.
+
+:::info
+This trigger fires at the moment of removal. If you need to capture why a contact was removed, add a **Condition** step or use trigger conditions to filter by the contact's current field values.
+:::
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx) — trigger types, scoping, and how to choose the right trigger
+- [Automation triggers reference](./automation-triggers-reference.mdx) — full reference for every available trigger
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — entry settings, conditions, and error handling
+- [Actions overview](./actions-overview.mdx) — what can happen after a trigger fires

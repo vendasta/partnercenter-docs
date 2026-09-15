@@ -1,29 +1,29 @@
 ---
 title: "Finding Vendasta Services Products in the Vendasta Marketplace"
 sidebar_label: "Finding Vendasta Services Products in the Vendasta Marketplace"
-description: "Vendasta Services is Vendasta's in-house fulfillment vendor. Fulfilling with Vendasta Services allows you to enhance your agency efficiencies by leveraging o"
+description: "Learn two ways to identify Vendasta Services products while browsing the Vendasta Marketplace: filtering by vendor and recognizing product logos."
 ---
 
 Vendasta Services is Vendasta's in-house fulfillment team. Partnering with us gives you access to skilled digital professionals who handle the work for you, so your clients maintain a strong online presence, a well-managed reputation, and an active presence across social platforms.
 
 Our products don't include "Vendasta Services" in the title, so they may not be immediately recognizable. Here are two ways to identify them while browsing the Marketplace.
 
-### Filtering by vendor
+## Filtering by vendor
 
 1.  Open [Partner Center](https://partners.vendasta.com/login) and log in to your account.
 
-2.  In the left navigation, click **Marketplace** to expand the menu, then click **Discover Products**.
-    1.  The Discover Products page shows all available products in the Vendasta Marketplace, regardless of whether you're selling them in your store.
+2.  In the left navigation, click `Marketplace` to expand the menu, then click `Discover Products`.
+    *   The Discover Products page shows all available products in the Vendasta Marketplace, regardless of whether you're selling them in your store.
 
-3.  On the Discover Products page, use the left navigation menu. Under **Explore**, select **All** if it is not already selected.
+3.  On the Discover Products page, use the left navigation menu. Under `Explore`, select `All` if it is not already selected.
 
-4.  In the table, click the blue **Add filter** button and apply the following filter:
-    1.  **Vendor** > **Vendasta Services**
-    2.  Click **Apply**.
+4.  In the table, click the blue `Add filter` button and apply the following filter:
+    1.  `Vendor` → `Vendasta Services`
+    2.  Click `Apply`.
 
 5.  The table will now display all products and services fulfilled by Vendasta Services.
 
-### Recognizing product logos
+## Recognizing product logos
 
 Aside from using filters, you can recognize Vendasta Services products by their distinct logos.
 

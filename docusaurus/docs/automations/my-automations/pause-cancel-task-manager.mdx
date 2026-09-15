@@ -1,0 +1,40 @@
+---
+title: Pause or cancel Task Manager account
+description: Learn how to use the Pause or cancel Task Manager account action to stop task generation for an account.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, fulfillment, task-manager]
+keywords: [pause task manager, cancel task manager, task manager automation, stop tasks, fulfillment automation]
+---
+
+# Pause or cancel Task Manager account
+
+**Pause or cancel the Task Manager account** stops task generation for the account in scope. Choose between pausing (temporarily stopping product-based tasks) or cancelling (permanently closing all tasks and projects). This action is available on account-scoped triggers.
+
+## How it works
+
+1. The automation reaches this step with an account in scope
+2. You choose **Pause** or **Cancel**:
+   - **Pause** — stops generating product-based tasks and projects. Manually created tasks can still be added.
+   - **Cancel** — stops all new tasks and projects from being created and closes all existing ones.
+3. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Fulfillment**, select **Pause or cancel the Task Manager account**
+3. Configure the field:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Action** | Yes | Whether to **Pause** or **Cancel** Task Manager for the account. |
+
+## Outputs
+
+This action produces no outputs available to downstream steps.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Add account to Task Manager](./add-account-to-task-manager.mdx) — Activate Task Manager for an account
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

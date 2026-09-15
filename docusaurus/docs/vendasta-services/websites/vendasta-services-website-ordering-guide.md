@@ -52,7 +52,7 @@ The emails that you supply in the Account Representative Email and the Primary C
 
 :::note
 
-One of the questions will ask “What is the AGID for this Website?” The AGID is the account’s unique identification code inside of the Vendasta platform. We receive many forms that may contain similar business names, and so this code allows our team to tie your Website Creation & Content Form to the correct account and product activation. The AGID can be found on your client's Account page under their Business Details. (Navigation: **Partner Center** → **Businesses** → **Accounts** → **Client account**)
+One of the questions will ask “What is the AGID for this Website?” The AGID is the account’s unique identification code inside of the Vendasta platform. We receive many forms that may contain similar business names, and so this code allows our team to tie your Website Creation & Content Form to the correct account and product activation. The AGID can be found on your client's Account page under their Business Details. (Navigation: `Partner Center` → `Businesses` → `Accounts` → `Client account`)
 
 ![Finding the AGID on the Account page](./img/19127162749463-de8c3b1267.png)
 
@@ -63,7 +63,7 @@ One of the questions will ask “What is the AGID for this Website?” The AGID 
 In this section, you will be able to provide the login credentials for your domain registrar (eg. GoDaddy, NameCheap, etc). If you do not have a domain, you will need to purchase one before we set the website live. To purchase a domain, you can purchase it directly from the domain registrar of choice, or via one of the following products within the product Marketplace:
 
 *   [Domains](https://partners.vendasta.com/marketplace/products/MP-L3DHRP5Z2RP4QVWLLTQGJLLVSH232WR5?tab=0)
-*   [GoDaddy Domains](https://partners.vendasta.com/marketplace/products/MP-https://partners.vendasta.com/marketplace/products/MP-4TMLZSQ5FMJQX5T75TPC43FQBWD2VXLB)
+*   [GoDaddy Domains](https://partners.vendasta.com/marketplace/products/MP-4TMLZSQ5FMJQX5T75TPC43FQBWD2VXLB)
 
 ### Navigation
 

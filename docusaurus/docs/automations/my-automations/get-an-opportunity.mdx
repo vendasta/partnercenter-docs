@@ -1,0 +1,35 @@
+---
+title: Get an opportunity
+description: Learn how to use the Get an opportunity action to retrieve an opportunity and bring it into scope for downstream steps.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, crm, opportunity, lookup, advanced]
+keywords: [get opportunity, opportunity lookup, bring opportunity into scope, crm opportunity]
+---
+
+# Get an opportunity
+
+**Get an opportunity** retrieves an opportunity on the account in scope and makes it available to downstream steps. Use it when you need to act on or inspect an opportunity — for example, before updating its stage or closing it. This action is available on account-scoped triggers.
+
+## How it works
+
+1. The automation reaches the step with an account in scope
+2. The step retrieves an opportunity associated with the account
+3. The opportunity record is brought into scope for downstream steps
+4. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Advanced**, select **Get an opportunity**
+
+## Outputs
+
+After the step runs, the opportunity record is available in scope. Downstream steps can reference opportunity fields via **Add dynamic content**.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Create a sales opportunity](./create-a-sales-opportunity.mdx) — Create a new opportunity
+- [Reopen opportunity](./reopen-opportunity.mdx) — Reopen a closed opportunity
+- [Close all sales opportunities](./close-all-sales-opportunities.mdx) — Close all open opportunities
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

@@ -1,0 +1,60 @@
+---
+title: Send a webhook
+description: Learn how to use the Send a webhook action to send an HTTP POST request with custom data to an external URL.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, advanced, webhook, integration]
+keywords: [send webhook, outgoing webhook, http post, external url, webhook automation, api call, external integration]
+---
+
+# Send a webhook
+
+**Send a webhook** sends an HTTP POST request with custom data to an external URL. Use it to notify external systems, trigger Zapier Zaps, or push data to third-party APIs when events occur in your automations.
+
+## How it works
+
+1. The automation reaches the **Send a webhook** step
+2. The step sends an HTTP request to the URL you configured with the data you specified
+3. The external system receives and processes the request
+4. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Advanced**, select **Send a webhook**
+3. Configure the fields:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Endpoint URL** | Yes | The URL to send the request to. Must use HTTPS. |
+| **Method** | Yes | The HTTP method. Options: POST, GET, PUT, DELETE. |
+| **JSON body** | No | Key-value pairs sent as JSON in the request body. |
+| **Custom headers** | No | Key-value pairs sent as HTTP headers. |
+| **Query parameters** | No | Key-value pairs appended to the URL as query string parameters. |
+
+:::tip
+Use **Add dynamic content** in any field to insert values from previous steps. All mapped values must be strings — passing integers causes a runtime error.
+:::
+
+## Outputs
+
+After the step runs, two values are available to downstream steps:
+
+| Output | Description |
+| --- | --- |
+| **endpoint_url** | The URL the request was sent to. |
+| **curl_command** | A cURL representation of the request that was made. |
+
+## Tips
+
+- **Send data as JSON body, not headers** — sending data as headers is the most common misconfiguration
+- **All values must be strings** — if you're passing numbers from dynamic content, wrap them in a **Format text** step first
+- **File attachments are not supported** — this action sends JSON data only
+- **HTTPS required** — HTTP URLs are not accepted
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Format text](./format-text.mdx) — Transform values before sending
+- [Data expressions in automations](./data-expressions.mdx) — Extract and transform data between steps
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

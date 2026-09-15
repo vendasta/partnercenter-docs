@@ -1,0 +1,43 @@
+---
+title: "Trigger: A call activity is created or modified for a company"
+description: Start an automation whenever a call is logged or updated on a company record in the CRM.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, company]
+keywords: [call activity trigger, company call logged, CRM call activity, automation trigger call, company scope trigger]
+---
+
+# A call activity is created or modified for a company
+
+The **A call activity is created or modified for a company** trigger starts an automation whenever a call is logged or an existing call activity is updated on a company record in the CRM. Use this trigger to respond instantly to outbound or inbound call activity without any manual steps.
+
+This trigger operates at the company scope, so all company and account context is available to downstream steps.
+
+:::info Trigger scope
+This trigger operates at the **company** scope. Company, account, and contact actions are available downstream.
+:::
+
+## How it works
+
+1. A call activity is created on a company record, or an existing call activity on that record is modified.
+2. The company and its associated account are brought into scope.
+3. The call activity data — including call outcome, notes, and duration — becomes available as dynamic content.
+4. Downstream steps execute using the company, account, and call activity context.
+
+## Available data
+
+| Output | Description |
+|---|---|
+| **Call outcome** | The result recorded for the call (e.g., Connected, No answer) |
+| **Call notes** | Notes logged on the call activity |
+| **Call duration** | Duration of the call, if recorded |
+| **Activity date** | The date and time the call activity was created or last modified |
+| **Associated company** | Name, ID, and standard fields of the company the call is logged on |
+
+Standard company and account fields are also available to downstream steps via **Add dynamic content**.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Actions overview](./actions-overview.mdx)

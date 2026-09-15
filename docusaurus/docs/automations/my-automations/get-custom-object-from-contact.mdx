@@ -1,0 +1,34 @@
+---
+title: Get custom object from contact
+description: Learn how to use the Get custom object from contact action to retrieve a custom object record linked to a contact.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, crm, custom-objects, contact, lookup]
+keywords: [get custom object contact, custom object lookup, contact custom object, bring custom object into scope]
+---
+
+# Get custom object from contact
+
+**Get custom object from contact** retrieves a custom object record linked to the contact in scope. Use it when you need to access or update custom object data in a contact-scoped automation. This action is available on contact-scoped triggers.
+
+## How it works
+
+1. The automation reaches the step with a contact in scope
+2. The step looks up custom object records associated with the contact
+3. The custom object record is brought into scope for downstream steps
+4. The automation continues to the next step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Businesses**, select **Get custom object from contact**
+
+## Outputs
+
+After the step runs, a custom object record is available in scope. Downstream steps can reference custom object fields via **Add dynamic content**.
+
+## Related resources
+
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Get custom object from company](./get-custom-object-from-company.mdx) — Retrieve a custom object from a company instead
+- [Find custom object](./find-custom-object.mdx) — Search for a custom object by criteria
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

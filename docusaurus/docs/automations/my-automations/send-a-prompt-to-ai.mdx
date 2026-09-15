@@ -1,0 +1,149 @@
+---
+title: Send a prompt to AI
+description: Learn how to use the Send a prompt to AI action to send a text prompt to an AI model and use the response in later automation steps.
+sidebar_position: 4
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, ai, prompt, workflows]
+keywords: [send prompt to ai, ai prompt, ai action, generate text, ai response, automation ai, send prompt]
+---
+
+# Send a prompt to AI
+
+**Send a prompt to AI** lets you add a free-form AI prompt step to any automation. Write a prompt, feed it dynamic content from earlier steps, and the AI returns a text response you can use downstream — in emails, CRM notes, notifications, or any other action. No code, no integrations, no separate AI tool. Just write what you need and the AI handles it.
+
+## How it works
+
+1. You write a **prompt** — a text instruction telling the AI what to generate (a follow-up email, a research summary, a formatted response, etc.)
+2. You insert **dynamic content** from previous steps into the prompt so the AI has the context it needs
+3. When the automation runs, the AI processes the prompt and returns a text **Response**
+4. The response is available as dynamic content in any later step
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **AI actions**, select **Send a prompt to AI**
+3. Configure the prompt:
+
+### Write your prompt
+
+In the **Prompt text** field, write your instruction to the AI. Be specific about what you want — the format, the tone, and what information to include.
+
+Select the variable insertion button to insert dynamic content from a previous step — for example, a contact's name, a company description, or a form response. Variables are resolved before the AI reads the prompt, so the AI always sees the actual data.
+
+:::tip
+The more specific your prompt, the more consistent the output. Instead of "Write an email," try "Write a 3-sentence follow-up email in a professional tone that references the customer's inquiry and suggests booking a call."
+:::
+
+:::info
+The prompt must not exceed 4,000 characters (including resolved variable values). A character counter below the field shows your current count. If your input data is long, use a [Summarize with AI](./summarize-with-ai) step first to condense it before passing it to the prompt.
+:::
+
+:::warning Caution
+Verify the AI response content before sending it to customers, as errors and misinterpretations may occur. You can verify a response by sending the data to yourself.
+:::
+
+## Outputs
+
+After the step runs, one value is available to downstream steps:
+
+| Output | Description |
+| --- | --- |
+| **Response** | The AI-generated text output from the prompt. |
+
+Reference this output in later steps using **Add dynamic content** and selecting this step's **Response**.
+
+## Tips for writing effective prompts
+
+- **Be explicit about format** — "Write a 3-sentence paragraph" or "Return a bulleted list of 5 items" produces more predictable results than open-ended instructions
+- **Include context via dynamic content** — Insert contact names, company details, or data from previous steps so the AI can personalize its response
+- **Set the tone** — "Use a professional tone" or "Keep it casual and friendly" guides the AI's writing style
+- **Specify what to include and exclude** — "Include the customer's name and the product they asked about. Do not include pricing." reduces irrelevant output
+- **Test with real data** — Run your automation with sample data to verify the AI generates the kind of response you expect before going live
+
+## Use case examples
+
+### Generate a personalized follow-up email after sentiment analysis
+
+Pair with [Analyze sentiment with AI](./analyze-sentiment-with-ai) to craft a follow-up email that matches the customer's mood — empathetic for negative sentiment, enthusiastic for positive.
+
+**Step 1 — Set the trigger**
+
+Select **Webchat captures a lead**.
+
+**Step 2 — Analyze sentiment**
+
+- Add an **Analyze sentiment with AI** step
+- **Input text**: select **Add dynamic content** and choose **Chat Summary** from the trigger
+
+**Step 3 — Generate a tailored email on each branch**
+
+On the **Negative** branch:
+- Add a **Send a prompt to AI** step
+- **Prompt**: "Write a 3-sentence follow-up email to [Add dynamic content: Contact First Name]. They had a frustrating experience: [Add dynamic content: Chat Summary]. Acknowledge their concern, apologize, and offer to connect them with a senior team member. Use an empathetic, professional tone. Do not include a subject line."
+
+On the **Positive** branch:
+- Add a **Send a prompt to AI** step
+- **Prompt**: "Write a 3-sentence follow-up email to [Add dynamic content: Contact First Name]. They had a great conversation: [Add dynamic content: Chat Summary]. Thank them, reinforce the value they showed interest in, and suggest booking a demo. Use an upbeat, professional tone. Do not include a subject line."
+
+**Step 4 — Send the email**
+
+- On each branch, add a **Send an email** step using the **Response** from the Send a prompt to AI step as the email body
+
+:::tip
+Analyze sentiment with AI detects the tone — Send a prompt to AI writes the response. Together they produce emails that feel human without anyone manually drafting them.
+:::
+
+### Reformat a summary for different channels
+
+Use [Summarize with AI](./summarize-with-ai) to condense a long form submission, then use Send a prompt to AI to reformat the summary for a specific channel — a Slack-style internal alert, a CRM note, or a customer-facing email.
+
+**Step 1 — Set the trigger**
+
+Select **A form is submitted for a contact** (under Contacts).
+
+**Step 2 — Summarize the submission**
+
+- Add a **Summarize with AI** step
+- **Text to summarize**: select **Add dynamic content** and choose the form field containing the customer's message
+- **Prompt**: "Summarize the key points in 3 sentences."
+
+**Step 3 — Reformat for an internal alert**
+
+- Add a **Send a prompt to AI** step
+- **Prompt**: "Reformat the following summary into a short internal alert for the support team. Use this format: CUSTOMER: [Add dynamic content: Contact Name] | ISSUE: [one line] | ACTION NEEDED: [one line]. Summary: [Add dynamic content: Response from Summarize step]."
+
+**Step 4 — Notify the team**
+
+- Add a **Notify a salesperson** step with the **Response** from the Send a prompt to AI step in the notification body
+
+### Prepare a handoff brief when a conversation needs a human
+
+When an AI employee conversation or form submission requires human follow-up, use Send a prompt to AI to generate a structured handoff brief so the person picking up knows exactly what happened and what to do next.
+
+**Step 1 — Set the trigger**
+
+Select **Webchat captures a lead** or **A form is submitted for a contact** (under Contacts).
+
+**Step 2 — Generate the handoff brief**
+
+- Add a **Send a prompt to AI** step
+- **Prompt**: "Write a handoff brief for a team member who needs to follow up with this customer. Customer name: [Add dynamic content: Contact Name]. Conversation or submission: [Add dynamic content: Chat Summary or form response field]. Include: (1) What the customer needs in one sentence, (2) What has already been done or discussed, (3) Recommended next action for the team member. Keep it to 4 lines."
+
+**Step 3 — Create a task with the brief**
+
+- Add a **Create a CRM sales task for the contact** step
+- In the description, select **Add dynamic content** and choose **Response** from the Send a prompt to AI step
+- Assign to the contact's owner
+
+:::tip
+The team member opens the task and sees a clear brief — not a raw chat transcript or wall of form text. They know what the customer wants, what already happened, and what to do next without re-reading everything.
+:::
+
+## Related resources
+
+- [Automation steps reference](./automation-steps-reference.mdx) — Full list of available actions
+- [Summarize with AI](./summarize-with-ai) — Condense text into a concise summary
+- [Categorize with AI](./categorize-with-ai) — Classify text into custom categories and branch your automation
+- [Send a request to an AI employee](./send-a-request-to-an-ai-employee) — Send a prompt to a specific AI employee with its own knowledge base
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Data expressions in automations](./data-expressions.mdx) — Extract and transform data between steps

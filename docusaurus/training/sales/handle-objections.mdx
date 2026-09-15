@@ -1,8 +1,8 @@
 ---
-title: "Handle objections without flinching"
+title: "Handle objections like a master"
+sidebar_label: "Handle objections like a master"
 sidebar_position: 5
 description: "The five objections you will hear most, and what to say back."
-sidebar_class_name: hide-from-sidebar
 ---
 
 import KnowledgeCheck from "@site/src/components/KnowledgeCheck";
@@ -12,112 +12,271 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
-import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import Accordion from "@site/src/components/Accordion";
+import LessonSection from "@site/src/components/LessonSection";
 
 <InlineHighlighter courseId="handle-objections" site="vendasta_learn">
 
 <CourseProgressBar courseId="handle-objections" site="vendasta_learn" />
 
-{/* VIDEO SLOT 1 (place under "The LAIR sequence"): "Breaking Down Objections using the 'LAIR'
-    Strategy" — Wistia, embed ID `59g98gwzj6`, one of the two clips embedded in the 360Learning
-    course "Handle Sales Objections like an Expert" (619). Transcript filed as
-    Recognizing-Common-Sales-Objections-eng.srt.
-
-    VIDEO SLOT 2 (place under "Five ways to bounce back"): "Five Ways to Bounce Back after
-    Objection" — Wistia, embed ID `bm47k8n12o`, the second clip in the same course. Transcript
-    filed as Five-Ways-to-Bounce-Back-after-Objection-eng.srt.
-
-    Both IDs come from the same 360Learning export that produced several known mismatched IDs, so
-    verify each resolves to the expected clip in Wistia before embedding. Neither shows product
-    UI, so no accuracy pass is expected to be needed. */}
+{/* Two video embeds in this step, each under the heading it actually covers.
+    Shiva's 2026-08-14 verification found the two IDs originally listed here were swapped:
+    `bm47k8n12o` is the "5 Common Sales Objections" clip (price/authority/trust/complacency/
+    competitor), and `59g98gwzj6` is the "five ways to bounce back" clip.
+    2026-08-21 fix: `bm47k8n12o` had been embedded under a "LAIR sequence" heading, but its
+    transcript never mentions LAIR. The embed now sits under the five objections, and LAIR,
+    which has no video of its own, is presented as a table rather than as video content. */}
 
 <LessonHeader
   difficulty="Intermediate"
+  topics={["Objections", "Closing"]}
   time="about 15 minutes"
-  required={["A strategy already presented to this prospect (Lesson 4's endpoint)"]}
+  required={["A strategy already presented to this prospect"]}
   video={true}
-  pathName="How to sell"
+  pathName="The master sales series"
   step={5}
-  totalSteps={9}
+  totalSteps={6}
   outcomes={[
     "Recognize that an objection is a request for more information, not a rejection",
-    "Work through any objection using the LAIR sequence",
-    "Recognize the five most common objections and know what to say back to each",
-    "Reach for five specific bounce-back techniques when you need one",
+    "Name the five most common objections and what each one actually means",
+    "Reach for five specific bounce-back techniques when a deal stalls",
+    "Work any objection through the LAIR sequence before you answer it",
   ]}
 />
 
 ## An objection is information, not a no
 
-You have done the work — discovery, a strategy that fits, a presentation you were proud of. Then, right as you go to close, the prospect gets cold feet. *"I'm not sure." "We don't have the budget for that." "I already have someone for this."*
+An objection almost never means what it sounds like on the surface. *"I don't know you"* means "reassure me." *"It's not my decision"* means "I do not want to decide alone." *"I need to think about it"* means "I have doubts I have not said out loud."
 
-It is tempting to hear that as failure. It is not. An objection almost never means what it sounds like on the surface:
+Every one of them is a request for information, not a locked door. The reps who close more are not the ones who avoid objections. They are the ones with a process for working through them.
 
-- *"I don't know you"* usually means "I'm skeptical about your reputation and I need reassurance."
-- *"It's not my decision"* usually means "I don't feel comfortable deciding this alone."
-- *"I need to think about it"* usually means "I have doubts I haven't said out loud yet."
-
-Every objection is a request for more information, an unmet need, or an unaddressed concern — not a locked door. The reps who close more deals are not the ones who avoid objections. They are the ones who have built a process for working through them.
-
-## The LAIR sequence
-
-LAIR gives you a repeatable order of operations for any objection, before you even know which specific one you are dealing with.
-
-**Listen.** Let the prospect finish, uninterrupted. Do not jump straight to a rebuttal — on the phone, show you are listening with a "mm-hmm" or "I see" rather than silence.
-
-**Acknowledge and clarify.** Tell them their concern is valid, then ask a probing question if you suspect there is more underneath it: *"It sounds like you're concerned about X — can you tell me more?"*
-
-**Identify.** Repeat their concern back in your own words and confirm you have it right. This is the step that proves you were actually listening, not just waiting for your turn to talk.
-
-**Redirect.** Here is the order that matters: respond first with a *question*, not an answer. Only once the prospect is out of that defensive mode will they actually hear your solution. Then redirect — give context, data, or a customer story that speaks to the specific doubt they raised.
-
-<FlipCardGrid>
-  <FlipCard front="Listen" back="Let them finish. Signal you are there, but do not interrupt with a rebuttal." subtext="L" />
-  <FlipCard front="Acknowledge & Identify" back="Validate the concern, then say it back in your own words to confirm you have it right." subtext="A + I" />
-  <FlipCard front="Redirect" back="Answer with a question first. A defensive prospect cannot hear your solution yet." subtext="R" />
-</FlipCardGrid>
+<LessonSection>
 
 ## The five objections you will hear most
 
-**1. Price** — *"I can find something cheaper." "This isn't in my budget."*
-They do not see the value yet. "Too expensive" is usually code for "not worth what you're charging." Do not reach for a discount — that just confirms the price was inflated. Highlight the long-term savings, break the cost into smaller units so the number feels less abstract, and offer social proof of customers who came out ahead.
+Two short videos cover this. The first names the five objections you will hear most and what each one is really telling you.
 
-**2. Authority** — *"I need to ask my boss." "It's not my decision."*
-They do not feel confident deciding alone. This is often a stalling tactic rather than a lie, but do not challenge it even if you suspect otherwise — that creates conflict without moving anything forward. Keep the process moving instead: *"I absolutely understand — could we set up a group meeting with the other decision-makers?"*
+<div
+  className="wistia_responsive_padding"
+  style={{ padding: '56.25% 0 0 0', position: 'relative' }}
+>
+  <div
+    className="wistia_responsive_wrapper"
+    style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
+  >
+    <iframe
+      src="https://fast.wistia.net/embed/iframe/bm47k8n12o?web_component=true&seo=true"
+      title="5 Common Sales Objections"
+      allow="autoplay; fullscreen"
+      allowTransparency
+      frameBorder="0"
+      scrolling="no"
+      className="wistia_embed"
+      name="wistia_embed"
+      width="100%"
+      height="100%"
+    ></iframe>
+  </div>
+</div>
+<script src="https://fast.wistia.net/player.js" async></script>
 
-**3. Trust** — *"I only work with brands I know." "I've read bad reviews."*
-They are skeptical of your reputation and need reassurance, not a defense. Demonstrate capability (know your solution cold), show integrity (real examples of putting the customer first), and give objective proof — case studies, testimonials, references, not just your word.
+Almost every push-back is one of five. Naming which one you are facing tells you what to say back. Expand each one:
 
-**4. Complacency** — *"I'm fine with how things are." "Not a priority right now."*
-They are content with the status quo and what you are selling is not urgent to them yet. Highlight the specific positive changes that come from saying yes, then build urgency: the industry is moving, competitors are adapting, and standing still has a cost.
+<Accordion
+  items={[
+    {
+      id: 'price',
+      title: 'Price: "I can find something cheaper"',
+      badge: '1',
+      content: (
+        <>
+          <p>They do not see the value yet. "Too expensive" is usually code for "not worth what you are charging." Highlight the long-term savings, break the cost into smaller units so the number stops feeling abstract, and offer proof of customers who came out ahead. Reaching for a discount just confirms the price was padded.</p>
+          <ul>
+            <li>Ask "too expensive compared to what?" to find out whether they are benchmarking you against a rival or against nothing.</li>
+            <li>Then ask whether it is a cash flow issue or a budget issue, because those need different answers.</li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 'authority',
+      title: 'Authority: "I need to ask my boss"',
+      badge: '2',
+      content: (
+        <>
+          <p>They do not feel confident deciding alone. Often a stall rather than a lie, and challenging it creates conflict without moving anything. Keep the process going instead: <em>"I absolutely understand. Could we set up a meeting with the other decision-makers?"</em></p>
+          <ul>
+            <li>Ask what objections they will face internally, then offer to build their business case for them.</li>
+            <li>Ask to be in the room where the decision happens, rather than handing over a summary and waiting.</li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 'trust',
+      title: 'Trust: "I only work with brands I know"',
+      badge: '3',
+      content: (
+        <>
+          <p>They need reassurance, not a defense. Demonstrate capability by knowing your solution cold, show integrity with real examples of putting the customer first, and give objective proof: case studies, testimonials, and references rather than your own word.</p>
+          <ul>
+            <li>Give a count plus one name: "we work with 15 companies like yours, including X."</li>
+            <li>If they raise a bad review, state what you changed because of it rather than explaining it away.</li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 'complacency',
+      title: 'Complacency: "I\'m fine with how things are"',
+      badge: '4',
+      content: (
+        <>
+          <p>The status quo is comfortable and what you sell is not urgent yet. Name the specific changes that come from saying yes, then build urgency: the industry is moving, competitors are adapting, and standing still has a cost.</p>
+          <ul>
+            <li>Ask "how are you solving for that today?" so the prospect names the gap instead of you.</li>
+            <li>Remove the risk of choosing wrong, which is usually the real blocker, rather than pushing harder.</li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 'competitor',
+      title: 'Competitor: "We already have someone for that"',
+      badge: '5',
+      content: (
+        <>
+          <p>Good news. They already believe they need this, they just do not think it comes from you. Ask about their experience with the incumbent, let them name the gaps themselves, then show how you differ on those specific points. Competitor-bashing reads as petty and costs you credibility.</p>
+          <ul>
+            <li>Ask what they like best about working with them, then stay quiet and let them keep going.</li>
+            <li>Get the renewal date, then ask how they would move forward if the contract did not exist.</li>
+          </ul>
+        </>
+      )
+    }
+  ]}
+/>
 
-**5. Competitor** — *"We already have someone for that."*
-Good news, actually. They already believe they need what you are selling — they just do not think it should come from you. Ask targeted questions about their experience with the incumbent (*"What's working? What isn't?"*), let them talk their way into naming the gaps, then show how you are different for their specific pain points. Competitor-bashing reads as petty at best and destroys your credibility at worst.
+## Then five ways to bounce back
 
-## Five ways to bounce back
+The second video covers higher-level techniques for when an objection stalls the deal, whichever of the five you are facing.
 
-These techniques are not tied to one specific objection. Reach for whichever fits the moment, or combine more than one.
+<div
+  className="wistia_responsive_padding"
+  style={{ padding: '56.25% 0 0 0', position: 'relative' }}
+>
+  <div
+    className="wistia_responsive_wrapper"
+    style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
+  >
+    <iframe
+      src="https://fast.wistia.net/embed/iframe/59g98gwzj6?web_component=true&seo=true"
+      title="5 Higher Level Strategies for Overcoming Objections"
+      allow="autoplay; fullscreen"
+      allowTransparency
+      frameBorder="0"
+      scrolling="no"
+      className="wistia_embed"
+      name="wistia_embed"
+      width="100%"
+      height="100%"
+    ></iframe>
+  </div>
+</div>
 
-**1. Express curiosity.** Ask an open-ended question instead of accepting the objection at face value: *"Out of curiosity, why doesn't this work for you?"* People like explaining themselves, and the act of explaining often surfaces the real issue.
+Reach for whichever fits the moment, or combine more than one. Expand each one:
 
-**2. Offer a conditional close.** *"If I can show you this saves you money, can we keep talking?"* A yes to the condition is a soft yes to the sale.
+<Accordion
+  items={[
+    {
+      id: 'curiosity',
+      title: 'Express curiosity',
+      badge: '1',
+      content: (
+        <>
+          <p>Answer an objection with a question rather than a rebuttal, so the prospect explains themselves and surfaces the real issue on their own. People like explaining their reasoning, and the explanation is usually more useful than the objection was.</p>
+          <ul>
+            <li>Avoid opening with "why", which sounds like a challenge. Try "can you help me understand what's driving that?"</li>
+            <li>Ask something that cannot be answered yes or no, so there is somewhere to go next.</li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 'conditional',
+      title: 'Offer a conditional close',
+      badge: '2',
+      content: (
+        <>
+          <p>Make a social agreement in a fixed shape: "if I do this, will you agree to that." It ties the objection directly to the solution, so a yes to the condition is a soft yes to the sale.</p>
+          <ul>
+            <li>Lead with the "if I can" half, since opening on "will you" invites a fresh objection first.</li>
+            <li>Isolate before you condition: "aside from that, is anything else holding this up?"</li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 'reframe',
+      title: 'Reframe the objection',
+      badge: '3',
+      content: (
+        <>
+          <p>Agree with the fact, then change what it means. You are not arguing the point, you are shifting the lens from negative to positive: <em>"Yes, the cost is higher, and that is a testament to how it is built."</em></p>
+          <ul>
+            <li>Ask "can I bounce a few thoughts off you?" rather than "can I make a suggestion?", which invites defensiveness.</li>
+            <li>Close the loop afterwards: "what part of that still feels unresolved?" stops false agreement resurfacing later.</li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 'boomerang',
+      title: 'Come back with a boomerang',
+      badge: '4',
+      content: (
+        <>
+          <p>Repeat the objection back, then make it the very reason to buy. <em>"I get that you're busy. That is exactly why this is worth it, because it takes five hours a week off you."</em></p>
+          <ul>
+            <li>The hinge phrase is "that's exactly why", which turns the objection into your evidence.</li>
+            <li>Always attach a real proof point. A bare boomerang reads as brushing the concern aside.</li>
+          </ul>
+        </>
+      )
+    },
+    {
+      id: 'feel-felt-found',
+      title: 'Show empathy with feel, felt, found',
+      badge: '5',
+      content: (
+        <>
+          <p>Take three steps that put a prospect at ease: show you understand how they feel, note that others felt the same, then tell them what those others found once they went ahead. Validate, normalize, resolve.</p>
+          <ul>
+            <li>Say "some people feel" rather than "I understand how you feel", which invites "no you don't".</li>
+            <li>Put real names and numbers in the "found" step, because a vague outcome exposes the script.</li>
+          </ul>
+        </>
+      )
+    }
+  ]}
+/>
 
-**3. Reframe the objection.** Agree first, then shift the lens: *"Yes, the colour's unusual — that's exactly what makes it memorable."* Do not argue the fact. Change what it means.
+</LessonSection>
 
-**4. Come back with a boomerang.** Repeat their objection, then use it as the reason to buy: *"You're right, you are busy — that's exactly why this saves you five hours a week."*
+## Work the sequence before you answer
 
-**5. Show empathy with feel, felt, found.** *"I understand how you feel. Other customers felt the same way. But once they got started, they found [the actual outcome]."* Validate, normalize, resolve.
+Neither video names an order of operations, so here is one worth borrowing. LAIR runs before you reach for any specific response, and the sequence matters more than any single line inside it.
+
+| Step | What it means | What it sounds like |
+|---|---|---|
+| **L**: Listen | Let them finish, uninterrupted. Do not jump to a rebuttal. | On the phone, "mm-hmm" or "I see" rather than dead silence. |
+| **A**: Acknowledge | Tell them the concern is valid, then probe for what sits under it. | "It sounds like you're worried about X. Can you tell me more?" |
+| **I**: Identify | Repeat the concern back in your own words and confirm you have it right. | "So it's the contract length, not the price itself?" |
+| **R**: Redirect | Respond with a question first, then the answer, then the proof. | "Can I bounce a few thoughts off you?" |
 
 :::tip Try it now
-Pick an objection you heard this week. Run it through LAIR out loud — what would Listen, Acknowledge, Identify, and Redirect actually sound like for that exact conversation? Then pick one of the five bounce-back techniques you did not use in the moment and rewrite your response with it.
+Take an objection you heard this week. Name which of the five it was, then run it through LAIR out loud. Now pick one bounce-back technique you did not use in the moment and rewrite your response with it.
 :::
-
-## What you now have
-
-- The LAIR sequence for working through any objection, in order
-- What each of the five most common objections actually means, and a specific move for each
-- Five bounce-back techniques to combine with the above
-- The reframe that makes all of it work: an objection is a request for information, not a closed door
 
 <SectionFeedback courseId="handle-objections" site="vendasta_learn" section="content" />
 
@@ -151,7 +310,7 @@ Pick an objection you heard this week. Run it through LAIR out loud — what wou
     },
     {
       type: 'mcq',
-      question: 'A prospect says "I can find this cheaper somewhere else." What does this lesson say NOT to do?',
+      question: 'A prospect says "I can find this cheaper somewhere else." What should you NOT do?',
       options: [
         'Offer social proof from other customers',
         'Break the cost into smaller units',
@@ -163,7 +322,7 @@ Pick an objection you heard this week. Run it through LAIR out loud — what wou
     },
     {
       type: 'mcq',
-      question: 'A prospect mentions they already use a competitor. Why does this lesson call that good news?',
+      question: 'A prospect mentions they already use a competitor. Why is that good news?',
       options: [
         'It means the deal is definitely lost',
         'They already believe they need what you sell — they just need convincing it should come from you',
@@ -202,7 +361,7 @@ Pick an objection you heard this week. Run it through LAIR out loud — what wou
   ]}
 />
 
-<LessonFooter to="/learn/sales/close-and-open-the-relationship" pathName="How to sell" step={5} totalSteps={9} />
+<LessonFooter to="/learn/sales/master-sales-skill-check" pathName="The master sales series" step={5} totalSteps={6} />
 
 </InlineHighlighter>
 <MarkComplete courseId="handle-objections" site="vendasta_learn" />

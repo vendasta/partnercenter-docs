@@ -1,0 +1,142 @@
+---
+title: Analyze sentiment with AI
+description: Learn how to use the Analyze sentiment with AI action to detect customer tone and branch your automation based on positive, neutral, or negative sentiment.
+sidebar_position: 3
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, ai, sentiment, workflows, branching]
+keywords: [analyze sentiment, sentiment analysis, ai sentiment, customer tone, positive negative neutral, automation branching, ai action]
+---
+
+# Analyze sentiment with AI
+
+**Analyze sentiment with AI** reads a block of text and classifies its tone — positive, neutral, or negative. Each sentiment creates a separate branch in your automation, so different tones trigger different follow-up actions. The AI also returns a short reason explaining its classification. No code, no keyword lists, no manual triage.
+
+## How it works
+
+1. You provide **input text** — the content the AI should analyze (a message, review, form response, etc.)
+2. The AI reads the input and classifies the sentiment as **positive**, **neutral**, or **negative**
+3. The automation continues down the matching sentiment's branch
+4. A **Reason** output explains why the AI chose that sentiment
+
+If the AI cannot determine the sentiment, it returns an empty result and the automation follows the default path.
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **AI actions**, select **Analyze sentiment with AI**
+3. Configure the fields:
+
+### 1. Provide the text to analyze
+
+In the **Input text** field, enter or insert the content you want analyzed. Select **Add dynamic content** to insert data from a previous step — for example, a customer message from a trigger, a review, or a form response.
+
+:::tip
+Dynamic content values are resolved before the AI reads the text, so the AI always sees the actual data — not the placeholder.
+:::
+
+### 2. Customize the categories (optional)
+
+Expand **View or edit AI configuration** to see or modify the sentiment categories. The defaults handle most use cases:
+
+| Category | Description |
+| --- | --- |
+| **positive** | The text expresses satisfaction, enthusiasm, gratitude, or approval |
+| **neutral** | The text is factual or informational, or the tone is unclear or mixed |
+| **negative** | The text expresses dissatisfaction, frustration, anger, or disapproval |
+
+You can add, remove, rename, or reorder categories to match your workflow. Each category creates a separate branch in the automation.
+
+:::info
+Each category you define creates a separate branch. After classification, the automation continues down the matching branch only.
+:::
+
+## Outputs
+
+After the step runs, two values are available to downstream steps:
+
+| Output | Description |
+| --- | --- |
+| **Sentiment** | The matched category key (e.g., "positive", "neutral", "negative"). Empty if the text could not be classified. |
+| **Reason** | A one-sentence explanation of why the AI chose that sentiment. |
+
+Reference these outputs in later steps using **Add dynamic content** and selecting this step's outputs.
+
+## Tips for effective sentiment analysis
+
+- **Use the defaults first** — The built-in positive/neutral/negative categories work well for most customer-facing text. Only customize if you have a specific need.
+- **Provide enough text** — A single word like "fine" is ambiguous. The more context the AI has, the more accurate the classification.
+- **Add custom categories sparingly** — Too many categories make the AI's job harder. 3 to 5 well-defined categories produce the most consistent results.
+- **Use the Reason output** — Include it in notifications or CRM notes so the person acting on the sentiment understands why the AI flagged it.
+
+## Use case examples
+
+### Escalate negative AI employee conversations
+
+Route frustrated customers to a senior rep while positive and neutral conversations follow the standard path.
+
+**Step 1 — Set the trigger**
+
+Select **Webchat captures a lead**.
+
+**Step 2 — Add the Analyze sentiment with AI step**
+
+- Under **AI actions**, select **Analyze sentiment with AI**
+- **Input text**: select **Add dynamic content** and choose **Chat Summary** from the trigger
+
+**Step 3 — Configure each branch**
+
+- **Negative** — Add a **Notify a salesperson** step targeted at a team lead, with the **Reason** output in the notification body and a link to the full conversation
+- **Positive / Neutral** — Add a **Notify a salesperson** step with standard follow-up routing to the contact's owner
+
+:::tip
+Include the **Reason** output in the notification body so the rep knows why the conversation was flagged — e.g., "Customer expressed frustration about repeated billing errors and threatened to cancel."
+:::
+
+### Route form submissions by customer tone
+
+Send angry customers to immediate human attention, log neutral inquiries, and funnel happy customers into referral campaigns.
+
+**Step 1 — Set the trigger**
+
+Select **A form is submitted for a contact** (under Contacts).
+
+**Step 2 — Add the Analyze sentiment with AI step**
+
+- Under **AI actions**, select **Analyze sentiment with AI**
+- **Input text**: select **Add dynamic content** and choose the form field containing the customer's message
+
+**Step 3 — Configure each branch**
+
+- **Negative** — Add a **Create a CRM sales task for the contact** step marked urgent, assigned to the account manager, with the **Reason** in the description
+- **Neutral** — Add a **Create a CRM note** step to log the submission on the contact record
+- **Positive** — Add a **Start a campaign for the contact** step that enrolls them in a referral or testimonial request campaign
+
+### Prioritize AI employee handoffs by customer mood
+
+Automatically set task priority based on whether the customer was frustrated or calm during the AI employee conversation.
+
+**Step 1 — Set the trigger**
+
+Select **Webchat captures a lead** or **Call activity added** with a conditional filter for AI voice receptionist.
+
+**Step 2 — Analyze sentiment**
+
+- Under **AI actions**, select **Analyze sentiment with AI**
+- **Input text**: select **Add dynamic content** and choose the chat summary
+
+**Step 3 — Create prioritized tasks**
+
+- **Negative** — Add a **Create a CRM sales task for the contact** step with high priority, assigned to a senior rep, description: "Negative sentiment — [Reason]"
+- **Neutral / Positive** — Add a **Create a CRM sales task for the contact** step with normal priority, assigned to the contact's owner
+
+:::tip
+Agents see at a glance which contacts need careful, urgent handling and which are routine follow-ups — no more guessing which tasks to pick up first.
+:::
+
+## Related resources
+
+- [Automation steps reference](./automation-steps-reference.mdx) — Full list of available actions
+- [Summarize with AI](./summarize-with-ai) — Condense text into a concise summary
+- [Categorize with AI](./categorize-with-ai) — Classify text into custom categories and branch your automation
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

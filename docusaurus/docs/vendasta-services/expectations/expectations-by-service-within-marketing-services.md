@@ -5,23 +5,22 @@ description: "With Vendasta's Vendasta Services, you have access to a team of di
 draft: true
 ---
 
-With Vendasta Services, you have access to a team of AI and marketing experts. Leveraging our team, you can claim and optimize your online listings, boost your reputation, engage your followers with content on social and blogs, build your website, and drive awareness of your business with digital advertising. All the while, our team will communicate with you to help set service expectations, inform you about updates, and respond to questions related to your service.
+With Vendasta Services, you have access to a team of AI and marketing experts. Leveraging our team, you can claim and optimize your online listings, boost your reputation, engage your followers with social content, build your website, and drive awareness of your business with digital advertising. All the while, our team will communicate with you to help set service expectations, inform you about updates, and respond to questions related to your service.
 
 With so many services available, it's important to understand what to expect from each one. This article will break down what you can expect based on each product line.
 
 # Expectation by Managed Service
 
-| Service Feature | Listings | Reputation | Social | Blogs | Websites | DigitalAds |
-|---|---|---|---|---|---|---|
-| **Order confirmation email within 48 hours** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Pre-launch call** | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Post-launch call** | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| **Direct-to-customer communication is available** | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| **Project tracking in Business App** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Business App connections required** | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ |
-| **External credentials (passwords) required** | ❌ | ✅ | ✅ | ❌ | ✅\* | ❌ |
-| **Digital Agents access required** | ✅ | ✅ | ✅ | ❌ | ✅\* | ✅\* |
-| **Business days to launch after assets received** | **3**\* | **1-2** | **5** | **5** | **5-10** | **1-10** |
+| Service Feature | Listings | Reputation | Social | Websites | DigitalAds |
+|---|---|---|---|---|---|
+| **Order confirmation email within 48 hours** | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **Post-launch call** | ❌ | ❌ | ❌ | ❌ | ✅ |
+| **Direct-to-customer communication is available** | ✅ | ✅ | ✅ | ✅ | ❌ |
+| **Project tracking in Business App** | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **Business App connections required** | ✅ | ✅ | ✅ | ❌ | ✅ |
+| **External credentials (passwords) required** | ❌ | ✅ | ✅ | ✅\* | ❌ |
+| **Digital Agents access required** | ✅ | ✅ | ✅ | ✅\* | ✅\* |
+| **Business days to launch after assets received** | **3**\* | **1-2** | **5** | **5-10** | **1-10** |
 
 \*See more in definitions below.
 
@@ -43,12 +42,12 @@ This call happens before the launch or completion of a service and in many cases
 
 ## Post-launch call
 
-This is unique to MatchCraft Managed Ads orders. All work is completed and the ads are made ready to launch, after which a post-launch call is set up with you to discuss expectations around campaign performance, optimizations, and future strategy calls (when applicable).
+This is unique to Specialty Ad Campaign orders. All work is completed and the ads are made ready to launch, after which a post-launch call is set up with you to discuss expectations around campaign performance, optimizations, and future strategy calls (when applicable).
 
 
 ## Project tracking in Business App
 
-All services will showcase a tracker found in Business App > Projects that showcases the tasks to be completed, expected completion dates, and notes.
+All services will showcase a tracker found in `Business App` → `Projects` that showcases the tasks to be completed, expected completion dates, and notes.
 
 ![MS-Project-Notes.png](./img/19299630230423-96eb40105b.png)
 

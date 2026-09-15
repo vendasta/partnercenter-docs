@@ -4,13 +4,13 @@ sidebar_label: Lead capture notifications
 description: Learn when leads are captured from web chat, what notifications you receive, and how duplicate contacts are handled.
 ---
 
-# Understanding lead capture notifications
-
-When visitors chat with your business through the web chat widget, your AI Receptionist (or custom AI) can automatically capture their contact information and notify you about new leads. This requires the **Capture leads** capability to be active on your AI Receptionist.
+When visitors chat with your business through the web chat widget, your AI Receptionist (or custom AI) can automatically capture their contact information and notify you about new leads. This requires the `Capture leads` capability to be active on your AI Receptionist.
 
 This guide explains when leads are captured, what notifications you'll receive, and how to interpret them.
 
-> **Note:** For lead capture to work, your AI Receptionist must be active on the channel the customer is using—whether that's an enabled web chat widget, SMS responses enabled, or a connected voice number.
+:::note
+For lead capture to work, your AI Receptionist must be active on the channel the customer is using, whether that's an enabled web chat widget, SMS responses enabled, or a connected voice number.
+:::
 
 ## When a lead is captured
 
@@ -19,7 +19,7 @@ A lead is captured when **all** of the following conditions are met:
 | Condition | Requirement |
 |-----------|-------------|
 | Visitor shares contact info | The visitor mentions their name, email, or phone number in the conversation |
-| AI Receptionist is connected | Your web chat widget has an AI Receptionist (or custom AI) with the **Capture leads** capability enabled |
+| AI Receptionist is connected | Your web chat widget has an AI Receptionist (or custom AI) with the `Capture leads` capability enabled |
 | Conversation has activity | The visitor has sent at least one message |
 
 ### Examples of lead capture
@@ -32,7 +32,7 @@ A lead is captured when **all** of the following conditions are met:
 **Lead is NOT captured:**
 - Visitor only asks a question without sharing any contact info: "What are your hours?"
 - Visitor leaves before sharing any identifying information
-- AI Receptionist doesn't have the **Capture leads** capability enabled
+- AI Receptionist doesn't have the `Capture leads` capability enabled
 
 ## Types of notifications
 
@@ -126,9 +126,13 @@ By default, the following information is extracted from the conversation when a 
 | Phone | "555-123-4567" |
 | Address | "123 Main St, City, State 12345" |
 
-> **Note:** Only information the visitor explicitly shares is captured. If they only provide their name, only the name field is filled in.
+:::note
+Only information the visitor explicitly shares is captured. If they only provide their name, only the name field is filled in.
+:::
 
-> **Tip:** You can customize which fields are captured by modifying the **Capture leads** capability settings on your AI Receptionist.
+:::tip
+You can customize which fields are captured by modifying the `Capture leads` capability settings on your AI Receptionist.
+:::
 
 ## Conversation summary
 
@@ -139,17 +143,18 @@ Every notification includes an AI-generated conversation summary. This summary:
 - Helps you prepare before following up
 
 **Example summary:**
-> "Visitor is interested in getting a quote for backyard landscaping. They have a 500 sq ft area and want low-maintenance plants. Prefers to be contacted by phone in the afternoon."
+
+*"Visitor is interested in getting a quote for backyard landscaping. They have a 500 sq ft area and want low-maintenance plants. Prefers to be contacted by phone in the afternoon."*
 
 ## Notification timing: new leads vs. follow-ups
 
-New lead notifications fire **only when a brand-new contact is created**. If the same person messages again — from a known number, email, or device — you receive a "Conversation Update" instead of a "New Lead."
+New lead notifications fire **only when a brand-new contact is created**. If the same person messages again, from a known number, email, or device, you receive a "Conversation Update" instead of a "New Lead."
 
 Follow-up messages from existing contacts do not trigger a notification by default. To get alerted on follow-ups, set up an Automation:
 
-1. Go to **Automations** and create a new automation
-2. Set the trigger to **"A contact communication summary is created"**
-3. Add the action **"Send notification"** to the appropriate team member(s)
+1. Go to `Automations` and create a new automation
+2. Set the trigger to `A contact communication summary is created`
+3. Add the action `Send notification` to the appropriate team member(s)
 
 This fires after each conversation summary is generated, covering both new leads and returning contacts.
 
@@ -167,20 +172,20 @@ You are automatically set to follow a conversation when:
 - You **send a message** in that conversation
 - You are **assigned as Salesperson** to the account (follows all past and future conversations for that account)
 
-Auto-following means you will receive notifications for that conversation even when "Only my events" is selected. To stop receiving notifications for a conversation you don't need to track, click the **star (★)** in the conversation header to unfollow it.
+Auto-following means you will receive notifications for that conversation even when "Only my events" is selected. To stop receiving notifications for a conversation you don't need to track, click the `★` star icon in the conversation header to unfollow it.
 
 If someone other than the intended Salesperson is receiving Inbox notifications, check whether they participated in a conversation (and were auto-followed) or were assigned as Salesperson to the account.
 
 ## Closed conversations reopening
 
-When a customer sends a new inbound message on a number or channel tied to a conversation that was previously marked as closed, the conversation automatically **reopens**. This is expected behavior — there is no separate notification type for a reopened conversation; it appears as a new inbound message in the conversation thread.
+When a customer sends a new inbound message on a number or channel tied to a conversation that was previously marked as closed, the conversation automatically **reopens**. This is expected behavior. There is no separate notification type for a reopened conversation; it appears as a new inbound message in the conversation thread.
 
 ## Frequently asked questions
 
 **Q: Why didn't I get a "New Lead" notification?**
 - The visitor may not have shared any contact information
 - They might be an existing contact (you'd get "Conversation Update" instead)
-- Check that your AI Receptionist has the **Capture leads** capability enabled
+- Check that your AI Receptionist has the `Capture leads` capability enabled
 
 **Q: Why am I getting "Conversation Update" instead of "New Lead"?**
 - The visitor is already in your CRM
@@ -189,7 +194,7 @@ When a customer sends a new inbound message on a number or channel tied to a con
 **Q: Where is this conversation? Why is it in anonymous?**
 - Conversations appear in "Anonymous" when the visitor hasn't shared any contact information yet
 - Once the visitor provides their name, email, or phone, the conversation will be linked to a contact
-- [Duplicate conversations](#how-duplicate-conversations-are-handled) also remain in Anonymous—the original contact's conversation will have a link to the new anonymous conversation
+- [Duplicate conversations](#how-duplicate-conversations-are-handled) also remain in Anonymous. The original contact's conversation will have a link to the new anonymous conversation
 - Check the Anonymous section in your Inbox to find these conversations
 
 **Q: Can I see all conversations from the same contact?**
@@ -208,12 +213,12 @@ When a customer sends a new inbound message on a number or channel tied to a con
 - Only missing postal code may be added automatically
 - You can manually update other fields in the CRM if needed
 
-**Q: Someone other than the Salesperson is getting Inbox notifications — why?**
+**Q: Someone other than the Salesperson is getting Inbox notifications. Why?**
 - Any user who sends a message in a conversation is automatically set to follow it
 - Users assigned as Salesperson to an account follow all conversations for that account
 - To stop receiving notifications, the user can unfollow the conversation by clicking the ★ in the conversation header
 
-**Q: I'm not getting any notifications at all — what should I check?**
+**Q: I'm not getting any notifications at all. What should I check?**
 - Confirm your user account exists and is active in Partner Center
 - Verify Conversations AI is activated for the account
-- Check that notification preferences are enabled (bell icon > gear icon > enable "All events" or "Only my events")
+- Check that notification preferences are enabled (`bell icon` → `gear icon` → enable `All events` or `Only my events`)

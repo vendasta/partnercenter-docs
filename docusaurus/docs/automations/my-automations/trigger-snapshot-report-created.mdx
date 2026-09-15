@@ -1,0 +1,45 @@
+---
+title: "Trigger: A Snapshot Report is created or refreshed"
+description: Start an automation when a Snapshot Report is generated or refreshed for an account.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, triggers, sales]
+keywords: [snapshot report trigger, snapshot created, snapshot refreshed, business report trigger, account snapshot automation]
+---
+
+# A Snapshot Report is created or refreshed
+
+**A Snapshot Report is created or refreshed** fires whenever a new Snapshot Report is generated for an account, or an existing report is refreshed with updated data. Use this trigger to automate outreach, assign tasks, or notify sales reps the moment fresh prospect intelligence is available.
+
+This trigger fires on both first-time report creation and subsequent refreshes, so any update to a Snapshot generates a new run.
+
+:::info Trigger scope
+This trigger operates at the **account** scope. Account and contact actions are available downstream.
+:::
+
+## How it works
+
+1. A Snapshot Report is generated or refreshed for an account.
+2. The automation evaluates any trigger conditions you've configured.
+3. If conditions are met, the workflow starts with the account and Snapshot data in context.
+4. Downstream steps can use **Add dynamic content** to reference Snapshot scores, grades, and account fields.
+
+## Available data
+
+Snapshot Report fields and standard account fields are available via **Add dynamic content**. This includes overall grade, category scores, and the account's contact and location details.
+
+:::warning Snapshot data may start as F ratings
+When a Snapshot Report is first created, many category grades default to **F** until the system has collected and scored the account's data. If your automation uses Snapshot data in conditions or actions, add a **Delay** step of several minutes after the trigger fires before reading Snapshot field values — this gives the report time to populate with real scores.
+:::
+
+## Tips
+
+- Use a **Delay** step (5–10 minutes) immediately after this trigger before branching on Snapshot grades to avoid acting on incomplete data.
+- Combine with a **Condition** step to route accounts differently based on their overall Snapshot grade.
+
+## Related resources
+
+- [Triggers overview](./triggers-overview.mdx)
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation triggers reference](./automation-triggers-reference.mdx)
+- [Logic and flow control](./logic-and-flow-control.mdx)
+- [Actions overview](./actions-overview.mdx)
