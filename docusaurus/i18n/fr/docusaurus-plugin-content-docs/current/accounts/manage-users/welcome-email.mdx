@@ -1,0 +1,81 @@
+---
+title: Personnaliser l'e-mail de bienvenue
+sidebar_label: E-mail de bienvenue
+description: Découvrez ce que contient l'e-mail de bienvenue de Business App, ce qui peut être personnalisé, et comment utiliser les campagnes marketing comme solution de contournement recommandée pour un contenu d'intégration personnalisé.
+tags: [users, welcome-email, campaigns, onboarding]
+keywords: [welcome email, customize, onboarding, marketing campaigns, white label]
+---
+
+## Qu'est-ce que l'e-mail de bienvenue?
+
+L'e-mail de bienvenue donne à un utilisateur de Business App un lien pour définir son mot de passe et accéder à son tableau de bord. Il est envoyé lorsqu'un utilisateur est créé avec l'option e-mail de bienvenue sélectionnée, et il reste disponible par la suite en tant qu'action **Send Set Password email (Welcome email)**. Lorsque l'[e-mail d'intégration](/business-app/ai-onboarding-experience) est sélectionné à la place — c'est l'option par défaut partout où des utilisateurs sont invités — cet e-mail remplace l'e-mail de bienvenue pour cet envoi. Cet e-mail utilise les paramètres de marque blanche du marché auquel le compte est assigné (logo, couleurs de marque, nom de l'expéditeur).
+
+## Ce que vous pouvez et ne pouvez pas personnaliser
+
+| Élément | Personnalisable? |
+|---------|--------------|
+| Logo et couleurs de marque | Oui, via les paramètres de marque blanche du marché |
+| Nom de l'expéditeur | Oui, via les paramètres du domaine e-mail |
+| Domaine d'envoi | Non, sélectionné automatiquement |
+| Ligne d'objet | Non, codé en dur |
+| Contenu du corps de l'e-mail | Non, codé en dur |
+| Message d'introduction personnalisé | Oui, un court message peut être ajouté au moment de la création de l'utilisateur (il s'attache à l'e-mail sélectionné — bienvenue ou intégration) |
+
+Le corps de l'e-mail de bienvenue est fixe et ne peut pas être modifié directement. La solution de contournement la plus courante consiste à utiliser une **campagne marketing** pour envoyer un e-mail d'intégration entièrement personnalisé après la première connexion de l'utilisateur.
+
+## Comment le domaine d'envoi est choisi
+
+La plateforme sélectionne automatiquement le meilleur domaine d'envoi pour vous, en fonction des domaines configurés pour votre compte. Il n'y a pas de sélecteur de domaine à définir au moment de l'envoi.
+
+:::tip
+Pour influencer le domaine utilisé, configurez vos domaines d'envoi sous `Marketing` → `Email settings`. Un domaine vérifié et correctement configuré améliore la délivrabilité.
+:::
+
+## Solution de contournement recommandée : les campagnes marketing
+
+Utilisez une campagne marketing pour diffuser un contenu d'intégration personnalisé. Cela vous permet de contrôler entièrement le message et d'envoyer une série d'e-mails plutôt qu'un simple mot de bienvenue.
+
+**Comment configurer cela :**
+
+1. Allez dans `Partner Center` → `Marketing` → `Campaigns` → `Product Adoption`.
+2. Créez une nouvelle campagne avec le contenu de bienvenue que vous voulez que vos clients reçoivent.
+3. Allez dans `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Notifications`.
+4. Activez la case à cocher `Onboarding campaign` et sélectionnez votre campagne dans le menu déroulant.
+5. Cliquez sur `Save`.
+
+Les nouveaux clients seront automatiquement inscrits à la campagne lors de leur première connexion.
+
+## Quel marché de marque blanche est utilisé
+
+L'e-mail de bienvenue utilise les paramètres de marque blanche du marché auquel le compte est assigné, à une exception près :
+
+- **Renvoi depuis les détails du compte** : utilise la marque du marché assigné au compte
+- **Renvoi depuis la page Users** : utilise la marque du marché par défaut
+- **E-mail de création initiale** : utilise toujours la marque du marché par défaut, quel que soit le marché assigné au compte
+
+Si vos marchés ont des marques différentes, assurez-vous que le bon marché est assigné au compte avant d'envoyer ou de renvoyer l'e-mail de bienvenue.
+
+## Questions fréquentes
+
+<details>
+<summary>Puis-je renvoyer l'e-mail de bienvenue?</summary>
+
+Oui. Depuis la liste des utilisateurs du compte, cliquez sur le menu à trois points à côté de l'utilisateur et sélectionnez `Send Set Password email (Welcome email)`. Vous pouvez aussi renvoyer l'e-mail depuis `Accounts` → `Manage Users`.
+
+La boîte de dialogue de confirmation indique quelle marque de marché sera utilisée et propose un bouton `Preview` pour vérifier l'e-mail avant son envoi.
+</details>
+
+<details>
+<summary>Un utilisateur n'a pas reçu son e-mail de bienvenue : que dois-je vérifier?</summary>
+
+1. Confirmez que l'adresse e-mail du compte utilisateur est correcte.
+2. Demandez à l'utilisateur de vérifier son dossier de courrier indésirable ou spam.
+3. Vérifiez que les notifications sont activées sous `Customize Business App` → `Notifications` → `Allow sending of notifications`.
+4. Vérifiez que votre domaine e-mail est correctement configuré sous `Marketing` → `Email settings`.
+</details>
+
+<details>
+<summary>Puis-je ajouter un message personnalisé à l'e-mail de bienvenue?</summary>
+
+Oui, un bref message d'introduction personnalisé peut être ajouté lors de la création d'un utilisateur ou du renvoi de l'e-mail. Il s'attache à l'e-mail que vous envoyez — l'e-mail de bienvenue ou l'e-mail d'intégration — et apparaît au-dessus du contenu standard. Pour un contenu entièrement personnalisé, utilisez une campagne marketing comme décrit ci-dessus.
+</details>

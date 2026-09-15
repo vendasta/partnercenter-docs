@@ -1,0 +1,86 @@
+---
+title: Créer et importer des listes
+sidebar_label: Créer et importer des listes
+sidebar_position: 2
+description: Créez des listes ou importez des fichiers CSV pour organiser les comptes en vue d'actions groupées
+---
+
+## Créer une liste
+
+Pour créer une nouvelle liste de comptes :
+
+1. Allez dans `Partner Center` → `Accounts` → `Lists`.
+2. Cliquez sur `Create List` dans le coin supérieur droit de l'écran.
+
+![Create List button](./img/accounts/lists/create-list-button.png)
+
+3. Entrez un nom pour la liste.
+4. Cliquez sur `Create`.
+
+:::tip Accès rapide
+Vous pouvez gérer directement vos listes sur [partners.vendasta.com/action-lists/manage](https://partners.vendasta.com/action-lists/manage)
+:::
+
+Vous pouvez maintenant [ajouter des comptes à la liste](./add-accounts-to-lists).
+
+:::note
+Vous pouvez également importer des listes de comptes existantes dans Partner Center. Consultez la section Import ci-dessous.
+:::
+
+## Importer une liste (CSV)
+
+1. Allez dans `Partner Center` → `Accounts` → `Lists`.
+2. Cliquez sur `Import Lists`.
+3. Téléchargez le modèle CSV ou choisissez un fichier, puis associez les champs.
+4. Configurez les paramètres utilisateur (accès à Business App, notifications, e-mail de bienvenue) pour les nouveaux utilisateurs ajoutés par l'import.
+
+:::info
+Les champs CSV requis incluent CompanyName et Zip. Laissez les champs inconnus vides ; le système peut tenter de compléter les données manquantes si vous sélectionnez l'option de remplissage des cellules vides pendant l'import.
+:::
+
+Les balises pour les contacts, les entreprises et les comptes ont une longueur maximale de 50 caractères et ne peuvent inclure que des caractères alphanumériques standard (A-Z, 0-9), des tirets (-), des espaces ( ) ou des traits de soulignement (_).
+
+Veuillez éviter d'utiliser des caractères spéciaux tels que @, #, $, %, &, etc., car ils peuvent interférer avec les fonctionnalités de filtrage et de recherche.
+
+### Choisir le bon modèle d'import
+
+Il existe plusieurs modèles CSV selon ce que vous importez :
+
+| Ce que vous importez | Modèle à utiliser |
+|-----------------------|-----------------|
+| Comptes professionnels (création ou mise à jour) | `import_list_template.csv`, téléchargé depuis la boîte de dialogue Import Lists |
+| Mise à jour groupée de comptes existants | Modèle CSV Bulk Update, disponible dans `Partner Center` → `Accounts` → `Bulk Update` |
+| Utilisateurs pour l'accès à Business App | `user-import-template.csv`, voir [Créer des listes d'utilisateurs et importer des utilisateurs en masse](./create-user-lists-bulk-import-users) |
+| Contacts et entreprises CRM | `Contacts_Companies_Import_template`, téléchargé depuis `CRM` → `Contacts` → `Import` |
+
+Utiliser le mauvais modèle est une cause fréquente d'échec des imports. Partez toujours du modèle correspondant à votre type d'import spécifique.
+
+### Comprendre les noms de colonnes clés
+
+**`UserGreetingName1`** : Cette colonne correspond au champ `Greeting name` de la fiche utilisateur, et non à un titre de poste. Il s'agit du nom informel utilisé par la plateforme pour s'adresser à l'utilisateur (par exemple, dans les e-mails). N'y indiquez pas de titre de poste ; utilisez la colonne `job_title` à cette fin.
+
+### Codes de pays : le Royaume-Uni doit être saisi comme `GB`
+
+Le système d'import utilise les codes pays à deux caractères **ISO 3166-1 alpha-2**. Le code du Royaume-Uni est **`GB`**, et non `UK`. Saisir `UK` entraînera l'échec de la ligne ou un import avec un pays vide.
+
+Codes courants à retenir :
+
+| Pays | Code correct |
+|---------|-------------|
+| Royaume-Uni | `GB` |
+| États-Unis | `US` |
+| Canada | `CA` |
+| Australie | `AU` |
+
+### Limites de taille d'import
+
+L'import depuis l'interface accepte un maximum de **5 000 enregistrements par fichier**. Si votre liste dépasse 5 000 lignes, divisez-la en plusieurs fichiers et importez-les l'un après l'autre. Pour les imports uniques très volumineux, contactez le support pour demander un import en masse en tant que tâche gérée.
+
+### Erreurs d'import courantes
+
+| Erreur | Cause | Correction |
+|-------|-------|-----|
+| La ligne échoue avec une erreur de pays | `UK` utilisé au lieu de `GB` (ou autre code invalide) | Remplacez par le code ISO alpha-2 correct |
+| L'import du numéro de téléphone échoue | Les numéros de téléphone contiennent des caractères de formatage comme `(`, `)`, ou des espaces | Utilisez uniquement des chiffres ou le format E.164 : `+14165551234` |
+| L'import se termine mais les données sont incorrectes | Mauvais modèle utilisé pour ce type d'import | Réexportez avec le modèle correct et réimportez |
+| Erreur de fichier CSV mal formé | Le CSV a été modifié dans une application qui a changé l'encodage ou les délimiteurs | Ouvrez-le dans un éditeur de texte brut pour vérifier les virgules et l'encodage UTF-8 |

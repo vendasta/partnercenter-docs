@@ -1,0 +1,193 @@
+---
+id: customize
+title: Anpassen
+description: Passen Sie Plattformfunktionen, Kaufprozesse, Business-App-Einstellungen und das Kundenerlebnis in der Vendasta-Plattform an.
+sidebar_label: Anpassen
+sidebar_position: 1
+tags: [customize, business-app, purchasing, platform-settings]
+keywords: [buy-it-yourself, platform-customization, business-app-settings, snapshot-configuration]
+---
+
+Dieser Leitfaden erklärt, wie Sie Plattformfunktionen und Einstellungen anpassen, die sich auf Ihre Kunden auswirken – von Kaufprozessen über Interaktionen in der Business App bis hin zum Zugriff auf Snapshots.
+
+## Was ist Plattformanpassung?
+
+Mit der Plattformanpassung steuern Sie, wie Kunden mit Ihrer Plattform interagieren, einschließlich Kaufprozessen, Zugriff auf die Business App und weiteren Funktionen. Nutzen Sie sie, um das Erlebnis an Ihr Geschäftsmodell und die Bedürfnisse Ihrer Kunden anzupassen.
+
+## Warum das wichtig ist
+
+- **Ausrichtung am Geschäftsmodell** – Passen Sie Kauf- und Zugriffsabläufe an Ihren Vertriebsprozess an
+- **Professionelles Branding** – Schaffen Sie ein einheitliches, gebrandetes Erlebnis für Kunden
+- **Kontrollierter Zugriff** – Verwalten Sie, wann und wie Kunden Funktionen kaufen oder darauf zugreifen können
+- **Verbesserte Benutzererfahrung** – Optimieren Sie Kundeninteraktionen und reduzieren Sie Verwirrung
+
+## Was enthalten ist
+
+- Kaufsteuerung für Buy-it-Yourself
+- Kontakt- und Konversationseinstellungen der Business App
+- Verwaltung von Interessenten-Snapshots und Kontozugriff
+- Anpassung von Kundenvereinbarungen und Warenkorb
+- Konfiguration von Listing- und Bewertungsquellen
+
+## So konfigurieren Sie Buy-it-Yourself-Käufe
+
+Der „BIY"- oder „Buy-it-Yourself"-Prozess ermöglicht es Kunden, Produkte selbstständig zu kaufen und zu aktivieren. Manche Partner möchten das Timing oder die Finanzierung lieber selbst steuern, daher können Sie stattdessen einen kontrollierten Workflow aufbauen.
+
+### So funktioniert Buy-it-Yourself
+
+Wenn ein Kunde eine Bestellung beginnt und den Einzelhandelspreis zahlt, belastet der Auto-Aktivierungsprozess Ihnen den Großhandelsbetrag. Das funktioniert gut für jederzeitige Käufe, eignet sich aber möglicherweise nicht für Partner, die das Timing kontrollieren oder die Großhandelsfinanzierung variabel gestalten möchten.
+
+:::info
+Kostenlos angebotene Produkte und Dienstleistungen sind nicht Teil des BIY-Erlebnisses.
+:::
+
+### Buy-it-Yourself vs. Self-Service-Upgrades
+
+Buy-it-Yourself deckt den ersten Kauf und die Aktivierung eines Produkts durch einen Kunden ab. Wenn ein Kunde ein Produkt bereits besitzt und auf eine höhere Stufe wechseln möchte, handelt es sich stattdessen um ein **Self-Service-Upgrade** – eine separate Einstellung, die pro Produkt unter `Partner Center` → `Marketplace` → `Products` → *(Produkt auswählen)* → `Product Info` → `Upgrade Path` konfiguriert wird. Die Einrichtungsschritte finden Sie unter [Produktkonfiguration](/marketplace/products#product-info-tab).
+
+### Ein individuelles Kauferlebnis aufbauen
+
+So erstellen Sie einen kontrollierten Kaufworkflow:
+
+1. Gehen Sie zu `Partner Center` → `Administration` → `Customize` → Dropdown `Sales`
+2. Wählen Sie `Configure Orders and Sales Processes`
+3. Scrollen Sie zu `Default Content` → `Custom fields` für Orders
+
+:::info
+Wenn Sie mehrere Märkte haben, wählen Sie zunächst Ihren Zielmarkt aus.
+:::
+
+4. Erstellen Sie Fragen für das Bestellformular im Abschnitt `Administrative Questions`
+5. Markieren Sie Fragen als `required` und `hidden from end users`, damit nur Partnernutzer sie sehen
+6. Wenn Kunden auf `Buy` klicken und die Zahlung eingeben, gehen Bestellungen in den Status `Awaiting Partner Approval`
+7. Verwenden Sie ein einfaches Kontrollkästchen (z. B. „diese Bestellung ist genehmigt"), um das Timing zu steuern
+8. Füllen Sie das Feld aus und klicken Sie auf `Approve`, um die Bestellung zu verarbeiten, sobald Sie bereit sind
+
+## So passen Sie die Kontakteinstellungen der Business App an
+
+### Kontakt-Button
+
+Sie können den `Contact Us`-Button in der Business App anpassen, damit Kunden eine Konversation mit Ihnen beginnen können.
+
+1. Gehen Sie zu `Partner Center` → `Administration` → `Customize Business App`
+2. Öffnen Sie `Conversation Messages` und aktivieren oder deaktivieren Sie `Customers can start conversations with you`
+
+## So konfigurieren Sie das Snapshot-Erlebnis für Interessenten
+
+Steuern Sie, wie Interessenten mit Snapshot-Berichten interagieren und Zugriff auf die Business App anfordern.
+
+### Zugriff für Interessenten einrichten
+
+Standardmäßig können Interessenten über Snapshot-Berichte Zugriff auf die Business App anfordern. So passen Sie das an:
+
+1. Gehen Sie zu `Partner Center` → `Administration` → `Customize`
+2. Klicken Sie auf den Abschnitt `Sales`, um ihn zu erweitern
+3. Wählen Sie `Edit Default Marketing and User Experience`
+4. Folgen Sie dem Assistenten: Kontoerstellung, Anforderungen für den Business-App-Zugriff, Präferenzen für die Kommunikation mit Interessenten
+5. Klicken Sie auf `Finish` (bei Bedarf zuerst eine Vorschau ansehen)
+
+### Vorteile
+
+- Interessenten erkunden die Plattformvorteile aus erster Hand
+- Anpassbarer Workflow für die Kontoerstellung
+- Kontrollierter Zugriff auf Business-App-Funktionen
+- Gebrandete Kommunikation mit Interessenten
+
+## So verwalten Sie Kundenvereinbarungen
+
+### Warenkorb-Vereinbarung
+
+Sie können die im Warenkorb an der Kasse angezeigten Kundenvereinbarungen ändern.
+
+1. Gehen Sie zu `Partner Center` → `Administration` → `Customize`
+2. Öffnen Sie `Sales` → `Configure Orders and Sales Processes`
+3. Scrollen Sie zu `Customer Agreements`
+4. Bearbeiten Sie den Text entsprechend Ihren Anforderungen und speichern Sie
+
+:::info
+Kundenvereinbarungen sollten von einem Rechtsberater auf die Einhaltung lokaler Vorschriften geprüft werden.
+:::
+
+## So konfigurieren Sie Listing- und Bewertungsquellen
+
+### Überblick
+
+Mit der Listing-Management-App wählen Sie aus, welche Listing- und Bewertungsseiten für jeden Kunden nach Branche und Standort überwacht werden. Sie können auch Quellen priorisieren, die Medien unterstützen, um SEO und Engagement zu verbessern.
+
+### Zugriff auf Listing-Quellen
+
+1. Gehen Sie zu `Partner Center` → `Administration` → `Customize`
+2. Wählen Sie unter `Product Settings` die Option `Listing Sources`
+
+### Listing-Seiten verwalten
+
+- **Filter** – Nach Kategorie, Land oder Branche
+- **Seitenverwaltung** – Bestimmte Listing- und Bewertungsplattformen aktivieren oder deaktivieren
+- **Massenaktionen** – Änderungen auf mehrere Seiten gleichzeitig anwenden
+
+### Medienunterstützte Listing-Quellen
+
+Quellen, die Fotos und Videos in Listings oder Bewertungen zulassen, können Engagement und SEO verbessern.
+
+**Vorteile:** Bessere visuelle Attraktivität, höheres Engagement, stärkere SEO, vollständigere Online-Präsenz.
+
+**Verfügbare Medienquellen:** Nur einige Listing- und Bewertungsquellen unterstützen Medien. Für Vendastas Liste medienunterstützter Quellen nutzen Sie:
+
+<a href="/attachments/Listing_Sources_that_Support_Media.pdf" target="_blank" rel="noopener">Listing_Sources_that_Support_Media.pdf</a> (40 KB)
+
+### Best Practices
+
+- Priorisieren Sie medienunterstützte Quellen, wo es hilfreich ist
+- Aktivieren Sie Seiten, die für die Branchen und Standorte Ihrer Kunden relevant sind
+- Berücksichtigen Sie Quellen, die von Kunden erstellte visuelle Bewertungen zulassen
+- Überprüfen und aktualisieren Sie Ihre Auswahl, wenn neue Plattformen erscheinen
+- Testen Sie Listings, um Funktionalität und Medien-Uploads zu bestätigen
+
+## Häufig gestellte Fragen
+
+<details>
+<summary>Kann ich Buy-it-Yourself-Käufe vollständig deaktivieren?</summary>
+
+Ja. Verwenden Sie erforderliche administrative Fragen, die vor Endnutzern verborgen sind, damit alle Bestellungen in den Status `Awaiting Partner Approval` gelangen. Sie steuern dann, wann Sie jede Bestellung genehmigen und verarbeiten.
+</details>
+
+<details>
+<summary>Können Interessenten ohne Abschluss eines Snapshots auf die Business App zugreifen?</summary>
+
+Standardmäßig fordern Interessenten den Zugriff auf die Business App über Snapshot-Berichte an. Sie können dies unter `Edit Default Marketing and User Experience` ändern, um andere Zugriffswege festzulegen.
+</details>
+
+<details>
+<summary>Wie oft sollte ich Listing- und Bewertungsquellen aktualisieren?</summary>
+
+Überprüfen Sie Listing-Quellen vierteljährlich oder beim Eintritt in neue Märkte. Neue Plattformen erscheinen häufig, und die Relevanz für die Branchen Ihrer Kunden kann sich ändern.
+</details>
+
+<details>
+<summary>Kann ich für verschiedene Märkte unterschiedliche Kundenvereinbarungen festlegen?</summary>
+
+Ja. Bei mehreren Märkten können Sie Kundenvereinbarungen pro Markt in **Configure Orders and Sales Processes** festlegen.
+</details>
+
+<details>
+<summary>Was sollte ich in individuelle Fragen des Bestellformulars aufnehmen?</summary>
+
+Fügen Sie Fragen hinzu, die Ihren Vertriebsprozess unterstützen: Genehmigungs-Kontrollkästchen, Prioritätsstufen oder andere Anforderungen. Halten Sie sie einfach und relevant.
+</details>
+
+<details>
+<summary>Kann ich Änderungen vor der Anwendung in der Vorschau ansehen?</summary>
+
+Ja. Die meisten Anpassungsassistenten bieten eine Vorschau, bevor Sie abschließen. Sehen Sie sich größere Änderungen in der Vorschau an, um sicherzustellen, dass sie Ihren Vorstellungen entsprechen.
+</details>
+
+<details>
+<summary>Wie stelle ich sicher, dass Listing-Quellen Medien-Uploads unterstützen?</summary>
+
+Prüfen Sie die Konfiguration der Listing-Quelle auf Medienunterstützung, oder verwenden Sie die herunterladbare PDF-Liste medienunterstützter Quellen. Große Plattformen (z. B. Google Business Profile, Facebook) unterstützen in der Regel Bilder und Videos; kleinere Verzeichnisse sind möglicherweise nur textbasiert.
+</details>
+
+## Artikel in diesem Abschnitt
+
+- **[Sales Team Management](./sales-team-management.md)** – Vertriebsberechtigungen, Zugriffskontrollen, Preistransparenz und Berichtslimits
+- **[Markets and Advanced Configuration](./market-settings.md)** – Märkte, Programme für frühzeitigen Zugriff, Geschäftsprioritäten und erweiterte Plattformfunktionen

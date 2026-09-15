@@ -1,0 +1,126 @@
+---
+id: tax-rates
+title: Gestión de impuestos
+description: "Configura las tasas de impuestos, gestiona las exenciones de artículos y cuentas, y garantiza cálculos de impuestos precisos para facturas y pedidos de venta."
+sidebar_position: 4
+tags: [tax, configuration, exemptions, rates]
+keywords: [tax-rates, tax-exemptions, tax-configuration, sales-tax, invoice-tax]
+---
+
+Configura las tasas de impuestos, aplica exenciones y garantiza cálculos de impuestos precisos en facturas, pedidos de venta, facturación por suscripción y compras del carrito de compras. El sistema aplica las reglas de impuestos automáticamente según las direcciones de los clientes y el estado de exención.
+
+## Qué puedes configurar
+
+- **Tasas de impuestos**: establece y edita tasas por región; el sistema las aplica según las direcciones de los clientes
+- **Exenciones de artículos**: excluye productos o paquetes específicos de tasas de impuestos seleccionadas
+- **Exenciones de cuenta**: exime cuentas completas (por ejemplo, gobierno, tribales, ONG, educación, religiosas)
+- **Lógica basada en dirección**: el impuesto se determina según el código postal; si no hay dirección o código postal, no se muestra ningún impuesto en las oportunidades
+
+## Crear una tasa de impuesto
+
+1. Ve a `Partner Center` → `Administration` → `Tax Rates`
+2. Haz clic en `Create Tax Rate`
+3. Ingresa el país, el estado o provincia, el nombre y la tasa, además de una descripción opcional
+4. Haz clic en `Save`
+
+## Editar tasas de impuestos
+
+1. Ve a `Partner Center` → `Administration` → `Tax Rates`
+2. Busca la tasa de impuesto que deseas cambiar y abre el `kebab menu` (tres puntos)
+3. Elige `Edit`, actualiza los campos y luego haz clic en `Save`
+
+![Pestaña Administración en la navegación](./img/tax-rates/administration-tab.jpg)
+
+![Ubicación del panel Tasa de impuesto](./img/tax-rates/tax-rate-tile.jpg)
+
+![Menú kebab para editar](./img/tax-rates/kebab-menu.jpg)
+
+![Opción para editar la tasa de impuesto](./img/tax-rates/edit-tax-rate.jpg)
+
+![Campos de edición de la tasa de impuesto](./img/tax-rates/edit-tax-rate-fields.jpg)
+
+![Ubicación del botón Guardar](./img/tax-rates/save-button.jpg)
+
+Los cambios se aplican solo a las transacciones nuevas; las facturas existentes conservan su impuesto original.
+
+## Requisitos de dirección para el impuesto
+
+Los cálculos de impuestos requieren una dirección de cliente completa con código postal. Si una cuenta no tiene una dirección con código postal, el sistema no mostrará ninguna tasa de impuesto en las oportunidades. Mantén las direcciones completas y actualizadas para que se apliquen la jurisdicción y las tasas correctas.
+
+## Exenciones de artículos
+
+Excluye productos o paquetes específicos de tasas de impuestos seleccionadas:
+
+1. Ve a `Partner Center` → `Administration` → `Tax Rates`
+2. Abre `Item Exemptions` y haz clic en `Add Items`
+3. Selecciona los productos o paquetes a eximir y elige de qué tasas de impuestos están exentos
+4. Haz clic en `Save`
+
+Los artículos exentos omiten automáticamente esos impuestos en los pedidos de venta y la facturación por suscripción.
+
+![Página de exenciones de artículos](./img/tax-exemptions/tax-exemptions-item-exemptions.jpg)
+
+![Agregar artículos para exención](./img/tax-exemptions/tax-exemptions-add-items.jpg)
+
+![Seleccionar tasas de impuestos para exención](./img/tax-exemptions/tax-exemptions-select-rates.jpg)
+
+## Exenciones de cuenta
+
+Para clientes exentos de impuestos (por ejemplo, agencias gubernamentales, consejos tribales, ONG):
+
+1. Ve a `Partner Center` → `Administration` → `Tax Rates`
+2. Abre `Account Exemptions` y haz clic en `Add Account`
+3. Selecciona la cuenta y elige qué tasas de impuestos eximir (solo se muestran las tasas aplicables a la ubicación de la cuenta)
+4. Haz clic en `Save`
+
+La cuenta queda entonces exenta de los impuestos seleccionados en todos los productos y servicios.
+
+![Configuración de exenciones de cuenta](./img/tax-exemptions/tax-exemptions-account.jpg)
+
+## Escenarios complejos
+
+- **Productos digitales**: las reglas pueden variar según el tipo de producto, el método de entrega y la jurisdicción; configura las tasas y exenciones según tus reglas.
+- **Múltiples jurisdicciones**: usa diferentes tasas y reglas de exención por región; conserva los certificados de exención cuando se requieran.
+- **Organizaciones exentas de impuestos**: usa las exenciones de cuenta para entidades gubernamentales, tribales, ONG, educativas y religiosas según corresponda.
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Qué pasa si una cuenta de cliente no tiene dirección?</summary>
+
+Sin una dirección que incluya un código postal, el sistema no muestra ninguna tasa de impuesto en las oportunidades, por lo que no se aplica ningún impuesto hasta que la dirección esté completa.
+</details>
+
+<details>
+<summary>¿Puedo eximir productos específicos de todos los impuestos?</summary>
+
+Sí. Usa **Item Exemptions** para seleccionar productos o paquetes y elegir de qué tasas de impuestos están exentos.
+</details>
+
+<details>
+<summary>¿Cómo gestiono a los clientes exentos de impuestos, como las agencias gubernamentales?</summary>
+
+Usa **Account Exemptions** en **Tax Rates**. Agrega la cuenta y selecciona qué tasas de impuestos eximir según su estado y ubicación.
+</details>
+
+<details>
+<summary>¿Las exenciones se aplican a la facturación recurrente?</summary>
+
+Sí. Las exenciones de artículos y cuentas se aplican automáticamente a los pedidos de venta y la facturación por suscripción una vez configuradas.
+</details>
+
+<details>
+<summary>¿Puedo cambiar las tasas de impuestos después de que existan facturas?</summary>
+
+Sí. Las ediciones se aplican solo a las transacciones nuevas; las facturas existentes conservan sus cálculos de impuestos originales.
+</details>
+
+<details>
+<summary>¿Qué pasa si las tasas de impuestos cambian en mi jurisdicción?</summary>
+
+Edita la tasa en `Administration` → `Tax Rates` (menú kebab → `Edit`). Las nuevas tasas se aplican solo a transacciones futuras.
+</details>
+
+## Video: Aplicar exenciones de impuestos
+
+<iframe src="https://www.youtube-nocookie.com/embed/zEUKJFFfh1k" width="560" height="315" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>

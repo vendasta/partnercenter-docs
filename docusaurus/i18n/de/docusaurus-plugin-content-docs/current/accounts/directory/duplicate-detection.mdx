@@ -1,0 +1,242 @@
+---
+title: Duplicate Detection und Verwaltung
+sidebar_label: Duplicate Detection
+sidebar_position: 4
+description: Doppelte Unternehmenskonten identifizieren, verhindern und beheben für eine saubere Datenverwaltung
+tags: [duplicate-accounts, data-management, account-cleanup, data-quality]
+keywords: [duplicate-detection, merge-accounts, account-cleanup, data-deduplication]
+---
+
+## Was ist Duplikaterkennung?
+
+Die Duplikaterkennung identifiziert Unternehmenskonten, die möglicherweise dieselbe Geschäftseinheit darstellen, aber als separate Datensätze in Ihrem System existieren. Dies trägt zur Datenqualität bei, verhindert Verwirrung und sorgt für eine genaue Berichterstattung und Kundenverwaltung.
+
+## Warum ist Duplikaterkennung wichtig?
+
+Ein effektives Duplikatmanagement bietet:
+
+- **Datenqualität**: Saubere, genaue Unternehmensdatensätze ohne Redundanz
+- **Kundenerlebnis**: Vermeidung von Verwirrung und Problemen bei der Leistungserbringung durch mehrere Konten
+- **Berichtsgenauigkeit**: Sicherstellung, dass Analysen und Berichte die tatsächliche Unternehmensleistung widerspiegeln
+- **Ressourceneffizienz**: Vermeidung von unnötigem Aufwand bei der Verwaltung mehrerer Konten für dasselbe Unternehmen
+- **Abrechnungsintegrität**: Vermeidung von doppelter Abrechnung oder Problemen bei der Leistungserbringung
+- **Teamkoordination**: Sicherstellung, dass alle Teammitglieder mit demselben Unternehmensdatensatz arbeiten
+
+## Wodurch entstehen doppelte Konten?
+
+### Häufige Duplikatszenarien
+
+**Abweichungen bei Unternehmensinformationen:**
+- Geringfügige Namensunterschiede (z. B. „Joe's Pizza" vs. „Joe's Pizzeria")
+- Unterschiede bei der Rechtsform (z. B. „Smith Law Firm" vs. „Smith Law Firm, LLC")
+- Unterschiede bei der Adressformatierung (z. B. „123 Main St" vs. „123 Main Street")
+- Unterschiede beim Telefonnummernformat (z. B. „(555) 123-4567" vs. „555-123-4567")
+
+**Betriebliche Faktoren:**
+- Mehrere Teammitglieder erstellen Konten für dasselbe Unternehmen
+- Namensänderungen oder Umbenennungen des Unternehmens führen zu neuen Konten
+- Unterschiedliche Standorte derselben Unternehmenskette
+- Saisonale oder vorübergehende Geschäftstätigkeiten
+
+**Probleme bei der Dateneingabe:**
+- Tippfehler oder Schreibvarianten bei Unternehmensnamen
+- Unvollständige Adressinformationen bei der Erstellung
+- Unterschiedliche Kontaktinformationen für dasselbe Unternehmen
+- Manuelle Eingabe, wenn die Unternehmenssuche keine bestehenden Konten findet
+
+## Doppelte Konten identifizieren
+
+### Automatisierte Duplikaterkennung
+
+Partner Center kann Ihre Konten scannen und einen Bericht über potenzielle Duplikate erstellen.
+
+1. Gehen Sie zu `Accounts`
+2. Wählen Sie ⋮ in der oberen rechten Ecke aus
+3. Klicken Sie auf `Manage Duplicates`
+
+Partner Center erstellt einen Bericht mit Konten, die möglicherweise Duplikate sind. Klicken Sie auf ein beliebiges Paar, um die Details zu prüfen, und löschen Sie dann das Konto, das Sie entfernen möchten.
+
+### Manuelle Duplikatidentifizierung
+
+**Suchbasierte Erkennung:**
+1. **Suchen Sie nach Varianten** von Unternehmensnamen während der Kontoerstellung
+2. **Überprüfen Sie ähnliche Adressen** im selben geografischen Gebiet
+3. **Suchen Sie nach übereinstimmenden Telefonnummern** über verschiedene Konten hinweg
+4. **Prüfen Sie ähnliche Geschäftskategorien** an bestimmten Standorten
+
+**Regelmäßige Prüfverfahren:**
+- **Monatliche Duplikatüberprüfungen** mit systematischen Suchansätzen
+- **Geografische Gebietsprüfungen** für Unternehmen in bestimmten Städten oder Regionen
+- **Kategoriebasierte Überprüfungen** für häufige Unternehmenstypen, bei denen Duplikate auftreten können
+- **Teambasierte Prüfungen**, bei denen mehrere Teammitglieder mit ähnlichen Konten arbeiten
+
+### Bewährte Verfahren zur Erkennung
+
+**Während der Kontoerstellung:**
+1. **Durchsuchen Sie bestehende Konten gründlich**, bevor Sie neue erstellen
+2. **Probieren Sie mehrere Suchvarianten aus** (abgekürzte Namen, gebräuchliche Spitznamen)
+3. **Überprüfen Sie ähnliche Adressen** und Telefonnummern
+4. **Prüfen Sie kürzlich erstellte Konten** im selben geografischen Gebiet
+
+**Laufende Überwachung:**
+- **Richten Sie automatisierte Benachrichtigungen ein** zur Erkennung potenzieller Duplikate
+- **Regelmäßige Überprüfungen der Datenqualität**, um Muster zu erkennen
+- **Teamschulungen** zu Techniken zur Duplikatvermeidung
+- **Dokumentation** bekannter Namensvarianten oder häufiger Duplikate
+
+## Doppelte Konten auflösen
+
+### Prozess zur Duplikatauflösung
+
+**Schritt 1: Duplikatstatus überprüfen**
+1. **Vergleichen Sie die Unternehmensinformationen** nebeneinander
+2. **Überprüfen Sie, ob die Konten** dasselbe physische Unternehmen darstellen
+3. **Prüfen Sie auf legitime Gründe** für mehrere Konten (unterschiedliche Standorte, Geschäftsbereiche)
+4. **Bestätigen Sie den Duplikatstatus**, bevor Sie mit der Auflösung fortfahren
+
+**Schritt 2: Primäres Konto identifizieren**
+1. **Bestimmen Sie, welches Konto** die vollständigsten Informationen enthält
+2. **Berücksichtigen Sie den Kontoverlauf** und bestehende Beziehungen
+3. **Prüfen Sie den Benutzerzugriff** und bestehende Integrationen
+4. **Wählen Sie das Konto aus**, das als primärer Datensatz erhalten bleiben soll
+
+**Schritt 3: Datenkonsolidierung**
+1. **Exportieren Sie wichtige Daten** aus den doppelten Konten vor dem Löschen
+2. **Übertragen Sie wichtige Informationen** auf das primäre Konto:
+   - Fehlende Kontaktdaten oder Unternehmensinformationen
+   - Benutzerzugangsdaten und Berechtigungen
+   - Produktverlauf und Konfigurationen
+   - Wichtige Notizen und Dateianhänge
+   - Tag-Zuweisungen und Listenmitgliedschaften
+
+### Zusammenführen von Kontoinformationen
+
+**Prozess zur Informationsübertragung:**
+1. **Öffnen Sie beide Konten** zum Vergleich
+2. **Identifizieren Sie eindeutige Informationen** im doppelten Konto
+3. **Aktualisieren Sie das primäre Konto** mit fehlenden Details:
+   - Zusätzliche Telefonnummern oder Kontaktmethoden
+   - Alternative Unternehmensnamen oder Geschäftsbezeichnungen („doing business as")
+   - Weitere Standorte oder Einsatzgebiete
+   - Zusätzliche Geschäftskategorien oder Dienstleistungen
+4. **Überprüfen Sie die Genauigkeit der Informationen** nach der Konsolidierung
+5. **Dokumentieren Sie die Zusammenführung** in den Kontonotizen
+
+**Benutzer- und Zugriffsverwaltung:**
+1. **Prüfen Sie die Benutzerkonten**, die mit den doppelten Datensätzen verknüpft sind
+2. **Übertragen Sie Benutzer** auf das primäre Konto oder führen Sie Benutzerinformationen zusammen
+3. **Aktualisieren Sie die Benutzerberechtigungen**, damit sie den vorgesehenen Zugriffsebenen entsprechen
+4. **Benachrichtigen Sie betroffene Benutzer** über die Kontokonsolidierung
+5. **Testen Sie den Benutzerzugriff** nach der Konsolidierung
+
+### Sicheres Löschen von Duplikaten
+
+**Checkliste vor dem Löschen:**
+- [ ] Primäres Konto mit allen wichtigen Informationen aktualisiert
+- [ ] Benutzer auf das primäre Konto übertragen oder neu angelegt
+- [ ] Produktverlauf und Einstellungen dokumentiert oder übertragen
+- [ ] Wichtige Dateien und Notizen gesichert
+- [ ] Teammitglieder über die Kontokonsolidierung informiert
+- [ ] Kunde bei Bedarf informiert
+
+**Löschvorgang:**
+1. **Letzte Überprüfung**, dass das doppelte Konto nicht mehr benötigt wird
+2. **Dokumentieren Sie den Löschgrund** in den Notizen des primären Kontos
+3. **Löschen Sie das doppelte Konto** gemäß den Standardlöschverfahren
+4. **Überprüfen Sie, ob das primäre Konto** alle erforderlichen Informationen enthält
+5. **Aktualisieren Sie alle externen Verweise**, damit sie auf das primäre Konto verweisen
+
+## Zukünftige Duplikate verhindern
+
+### Bewährte Verfahren bei der Kontoerstellung
+
+**Erweiterte Suchverfahren:**
+1. **Verwenden Sie umfassende Suchbegriffe**, einschließlich Namensvarianten
+2. **Suchen Sie nach Telefonnummer** und Adresse, um bestehende Konten zu finden
+3. **Prüfen Sie kürzlich erstellte Konten** im selben geografischen Gebiet
+4. **Probieren Sie alternative Schreibweisen** und abgekürzte Unternehmensnamen aus
+
+**Teamschulung und Richtlinien:**
+- **Legen Sie Suchprotokolle fest**, bevor Sie Konten erstellen
+- **Schulen Sie Teammitglieder** zu häufigen Duplikatszenarien
+- **Erstellen Sie Referenzleitfäden** für schwierige Unternehmenstypen
+- **Regelmäßige Teambesprechungen** zur Duplikatvermeidung
+
+### Systemkonfiguration
+
+**Automatisierte Präventionstools:**
+1. **Aktivieren Sie Duplikatwarnungen** bei der Kontoerstellung
+2. **Konfigurieren Sie Algorithmen für unscharfen Abgleich** zur Erkennung ähnlicher Unternehmensnamen
+3. **Richten Sie Benachrichtigungen** für den Abgleich von Adressen und Telefonnummern ein
+4. **Implementieren Sie Genehmigungsworkflows** für potenzielle Duplikaterstellungen
+
+**Datenqualitätsstandards:**
+- **Standardisieren Sie die Formatierungskonventionen** für Unternehmensnamen
+- **Legen Sie Richtlinien zur Adressformatierung** fest
+- **Erstellen Sie Standards zur Formatierung** von Telefonnummern
+- **Implementieren Sie Regeln zur Datenvalidierung** für die Kontoerstellung
+
+### Laufende Pflege
+
+**Regelmäßige Duplikatprüfungen:**
+1. **Planen Sie monatliche Duplikatüberprüfungen** mithilfe von Systemtools
+2. **Weisen Sie Verantwortung zu** für die Erkennung und Auflösung von Duplikaten
+3. **Verfolgen Sie Kennzahlen zur Duplikatauflösung** zur Prozessverbesserung
+4. **Dokumentieren Sie häufige Duplikatmuster** zur Prävention
+
+**Prozessverbesserung:**
+- **Analysieren Sie die Grundursachen von Duplikaten**, um die Prävention zu verbessern
+- **Aktualisieren Sie Such- und Erstellungsverfahren** basierend auf den Erkenntnissen
+- **Verbessern Sie Teamschulungen** zu identifizierten Problembereichen
+- **Verfeinern Sie automatisierte Erkennungsalgorithmen** für eine höhere Genauigkeit
+
+## Häufig gestellte Fragen (FAQs)
+
+<details>
+<summary>Wie kann ich erkennen, ob zwei Konten wirklich Duplikate oder legitime separate Unternehmen sind?</summary>
+
+Vergleichen Sie Unternehmensadressen, Telefonnummern, Eigentümerinformationen und Geschäftstätigkeiten. Echte Duplikate weisen identische oder sehr ähnliche Kerninformationen zum Unternehmen auf, während separate Unternehmen (auch mit ähnlichen Namen) unterschiedliche betriebliche Details aufweisen.
+</details>
+
+<details>
+<summary>Was soll ich tun, wenn ich während der Duplikatauflösung versehentlich das falsche Konto lösche?</summary>
+
+Das Löschen eines Kontos ist in der Regel dauerhaft. Wenden Sie sich daher sofort an den Vendasta-Support. Einige Systeme bieten möglicherweise Sicherungs- oder Wiederherstellungsoptionen, aber es ist besser, dies zu vermeiden, indem Sie vor dem Löschen sorgfältig überprüfen, welches Konto erhalten bleiben soll.
+</details>
+
+<details>
+<summary>Können zwei Standorte derselben Unternehmenskette als Duplikate gelten?</summary>
+
+Nein, unterschiedliche physische Standorte desselben Unternehmens sollten separate Konten haben, auch wenn sie denselben Unternehmensnamen tragen. Jeder Standort bedient unterschiedliche Kunden und kann unterschiedliche betriebliche Merkmale aufweisen.
+</details>
+
+<details>
+<summary>Wie gehe ich mit Duplikaten um, wenn Unternehmen ihren Namen oder Eigentümer geändert haben?</summary>
+
+Wenn es sich um dasselbe Unternehmen mit einer Namensänderung handelt, führen Sie die Konten zusammen und aktualisieren Sie den Unternehmensnamen. Wenn sich der Eigentümer erheblich geändert hat, prüfen Sie, ob separate Konten für die Nachverfolgung unterschiedlicher Geschäftseinheiten besser geeignet sind.
+</details>
+
+<details>
+<summary>Sollte ich Konten zusammenführen, wenn sie unterschiedliche Kontaktinformationen für dasselbe Unternehmen enthalten?</summary>
+
+Ja, aber bewahren Sie alle Kontaktinformationen im zusammengeführten Konto auf. Unterschiedliche Kontaktmethoden (mehrere Telefonnummern, verschiedene E-Mail-Adressen) können wertvoll sein, um das Unternehmen zu erreichen, und sollten konsolidiert statt verloren werden.
+</details>
+
+<details>
+<summary>Was passiert mit dem Benutzerzugriff, wenn ich doppelte Konten zusammenführe?</summary>
+
+Benutzer aus doppelten Konten müssen möglicherweise neu angelegt oder auf das primäre Konto übertragen werden. Planen Sie diesen Prozess sorgfältig und informieren Sie betroffene Benutzer über etwaige Änderungen an ihren Zugangsdaten.
+</details>
+
+<details>
+<summary>Wie oft sollte ich Duplikaterkennungsprüfungen durchführen?</summary>
+
+Monatliche Duplikatüberprüfungen sind für die meisten Organisationen in der Regel ausreichend, aber bei einer hohen Anzahl an Kontoerstellungen können häufigere Prüfungen erforderlich sein. Legen Sie einen Zeitplan fest, der Gründlichkeit und verfügbare Ressourcen ausgewogen berücksichtigt.
+</details>
+
+<details>
+<summary>Kann ich Duplikate durch Systemeinstellungen vollständig verhindern?</summary>
+
+Systemeinstellungen können zwar dabei helfen, potenzielle Duplikate zu identifizieren und Warnungen auszugeben, aber aufgrund von Datenabweichungen oder manuellen Überschreibungen können dennoch einige Duplikate entstehen. Kombinieren Sie automatisierte Tools mit guten Prozessen und Schulungen, um die besten Ergebnisse zu erzielen.
+</details>
+

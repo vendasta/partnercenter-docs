@@ -1,0 +1,349 @@
+---
+title: Create Accounts
+sidebar_label: Create Accounts
+sidebar_position: 2
+description: Schritt-für-Schritt-Anleitung zum Erstellen einzelner und massenhafter Unternehmenskonten in Business App
+tags: [account-creation, business-profile, bulk-import]
+keywords: [create-account, add-business, account-setup, bulk-import]
+---
+
+import { GraduationCapIcon } from '@site/src/components/Icons';
+
+# Konten erstellen
+
+## Was ist Kontoerstellung?
+
+Die Kontoerstellung ist der Prozess, mit dem Sie neue Unternehmensstandorte zu Ihrem Business App-System hinzufügen. Jedes Konto repräsentiert ein einzelnes Unternehmen oder einen Unternehmensstandort, den Sie betreuen, mit dem vollständigen Unternehmensprofil, den Kontaktinformationen und den Serviceeinstellungen.
+
+## Warum ist die Kontoerstellung wichtig?
+
+Genaue Unternehmenskonten zu erstellen ist unerlässlich, weil:
+
+- **Grundlage für alle Dienste**: Konten sind erforderlich, um Produkte zu aktivieren und Dienstleistungen anzubieten
+- **Datengenauigkeit**: Korrekte Unternehmensinformationen sorgen für eine effektive Serviceerbringung und Berichterstattung
+- **Kundenerlebnis**: Vollständige Profile ermöglichen personalisierte Dashboards und Kommunikation
+- **Integrationserfolg**: Genaue Daten verbessern die Integration mit Drittanbieterdiensten und -plattformen
+
+## Was ist bei der Kontoerstellung enthalten?
+
+### Einzelne Kontoerstellung
+- Unternehmenssuche und automatische Datenübernahme
+- Manuelle Eingabe des Unternehmensprofils
+- Konfiguration von Pflicht- und optionalen Feldern
+- Zuweisung von Kategorie und Markt
+
+### Bulk-Kontoimport
+- CSV-vorlagenbasiertes Importsystem
+- Datenvalidierung und Fehlerprüfung
+- Stapelverarbeitung mehrerer Konten
+- Anwendung von Standardeinstellungen
+
+## So erstellen Sie einzelne Konten
+
+### Mit der Unternehmenssuche
+
+Der schnellste Weg, Konten für bekannte Unternehmen zu erstellen:
+
+1. Navigieren Sie zu `Accounts` → `Manage Accounts`
+2. Klicken Sie oben rechts auf `Create Account`
+3. **Suchen Sie nach dem Unternehmen**:
+   - Geben Sie Unternehmensname und Standort ein (z. B. „Starbucks, Broadway, New York, NY“)
+   - Verwenden Sie spezifische Suchbegriffe für bessere Ergebnisse
+   - Geben Sie Stadt und Bundesland zur Unterscheidung an
+4. **Überprüfen Sie die Suchergebnisse**:
+   - Wählen Sie das richtige Unternehmen aus den Ergebnissen aus
+   - Überprüfen Sie Adresse und Kontaktinformationen
+   - Notieren Sie sich etwaige Vorschläge zu Mitbewerbern für Berichte
+5. **Vervollständigen Sie bei Bedarf zusätzliche Informationen**
+6. Klicken Sie auf `Create Account`
+
+:::info
+Die Unternehmenssuche füllt Adresse, Telefonnummer und Kategorieinformationen automatisch aus, wenn Unternehmen in öffentlichen Verzeichnissen gefunden werden.
+:::
+
+### Manuelle Kontoerstellung
+
+Wenn Unternehmen nicht in den Suchergebnissen erscheinen:
+
+1. Klicken Sie in der Suchoberfläche auf `Go to Account Creation`
+2. **Vervollständigen Sie die erforderlichen Unternehmensinformationen**:
+   - `Business Name`: Offizieller Unternehmensname, wie er öffentlich erscheint
+   - `Street Address`: Physischer Unternehmensstandort
+   - `City, State/Province, ZIP`: Vollständige Standortdetails
+   - `Country/Region`: Land des Unternehmensstandorts
+   - `Phone Number`: Primäre geschäftliche Kontaktnummer
+   - `Business Categories`: Wählen Sie bis zu 3 relevante Kategorien aus
+
+:::info Referenz zu Unternehmenskategorien  
+Eine vollständige Liste der verfügbaren Unternehmenskategorien sowie Hinweise zur korrekten Klassifizierung finden Sie unter [Business Categories](../directory/business-categories.mdx). Die korrekte Kategorisierung sorgt für optimale Produktfunktionen und Integrationsmöglichkeiten.
+:::
+
+:::warning
+Wenn keine passende Kategorie existiert, wählen Sie „Other“ – beachten Sie jedoch, dass einige Produktfunktionen dadurch eingeschränkt sein können.
+:::
+
+3. **Fügen Sie optionale Informationen hinzu**:
+   - `Website URL`: Website-Adresse des Unternehmens
+   - `Customer Identifier`: Ihre interne Tracking-ID
+   - `Business Description`: Kurze Beschreibung der Dienstleistungen
+   - `Additional Contact Info`: Zweite Telefonnummer, Fax, E-Mail
+4. **Konfigurieren Sie die Kontoeinstellungen**:
+   - `Market Assignment`: Wählen Sie den passenden geografischen Markt aus
+   - `Service Area`: Legen Sie fest, ob das Unternehmen Kunden an deren Standort bedient
+   - `Business Hours`: Angaben zu den Öffnungszeiten
+5. Klicken Sie auf `Create Account`, um zu speichern
+
+### Umgang mit speziellen Unternehmenstypen
+
+**Service Area Businesses (SABs)**: Unternehmen, die Kunden am Standort des Kunden bedienen und kein festes, öffentliches Ladengeschäft haben (Klempner, Landschaftsgärtner, mobile Tierpfleger usw.):
+
+SABs erscheinen häufig nicht in der Suchleiste der Kontoerstellung. Das ist zu erwarten. Die Suche verwendet die Locations API von Google, die nur Unternehmen mit einer verifizierten physischen Adresse anzeigt. Ein SAB, das keine Straßenadresse öffentlich angibt, erscheint nicht in den Ergebnissen.
+
+**So erstellen Sie ein Konto für ein SAB:**
+
+1. Geben Sie in der `Create Account`-Suche den Unternehmensnamen ein. Wenn er nicht erscheint, klicken Sie auf `Skip to Account Creation` (oder `Go to Account Creation`).
+2. Geben Sie den Unternehmensnamen und eine gültige Straßenadresse ein. Wenn das SAB keine öffentliche Adresse hat, verwenden Sie die Adresse des Inhabers oder einen Platzhalter für Stadt/Postleitzahl.
+3. Sobald das Konto erstellt ist, aktualisieren Sie den Eintrag, um einen Radius für den Servicebereich festzulegen, und entfernen oder verbergen Sie bei Bedarf die öffentliche Straßenadresse.
+
+:::warning
+Das Erstellen eines Kontos **ohne Straßenadresse** schränkt Listing Sync und andere listungsabhängige Produkte ein. Diese Produkte benötigen eine physische Adresse, um Daten zu synchronisieren. Fügen Sie eine gültige Straßenadresse hinzu, bevor Sie Listing-Produkte aktivieren.
+:::
+
+**Unternehmen mit mehreren Standorten**:
+
+**Unternehmen mit mehreren Standorten**: Erstellen Sie für jeden physischen Standort ein separates Konto, verwenden Sie eine einheitliche Namenskonvention (z. B. „Unternehmensname – Standort“) und planen Sie, diese später mit Multi-Location Groups zu gruppieren.
+
+## So importieren Sie mehrere Konten
+
+### Vorbereitung des Bulk-Imports
+
+Bevor Sie Konten importieren:
+
+1. Navigieren Sie zu `Accounts` → `Manage Accounts`
+2. Klicken Sie auf `Import Accounts`
+3. **Laden Sie die CSV-Vorlage herunter**, um die richtige Formatierung sicherzustellen
+4. **Sammeln Sie die erforderlichen Daten** für alle Unternehmen:
+   - Unternehmensnamen und Adressen
+   - Telefonnummern und Kontaktinformationen
+   - Unternehmenskategorien und Klassifizierungen
+   - Marktzuweisungen (falls zutreffend)
+
+### Vorbereitung der CSV-Datei
+
+**Erforderliche Spalten:**
+- Business Name
+- Street Address
+- City
+- State/Province
+- ZIP/Postal Code
+- Phone Number
+- Business Category (gültige Optionen finden Sie im [Leitfaden zu Business Categories](../directory/business-categories.mdx) oder [laden Sie die vollständige Liste herunter](../directory/downloads/business-categories-list.csv))
+
+**Optionale Spalten:**
+- Customer Identifier
+- Website URL
+- Business Description
+- Market Assignment
+- Additional Contact Information
+- Business Hours
+- `ServiceAreaBusiness`: auf `TRUE` setzen, wenn das Konto ein Service Area Business ist; andernfalls `FALSE` oder leer lassen. Dieses Feld unterscheidet **Groß- und Kleinschreibung**: Nur `TRUE` und `FALSE` (in Großbuchstaben) sind gültig. Die Verwendung von `true`, `True`, `yes` oder einem anderen Wert führt dazu, dass die Zeile die Validierung nicht besteht.
+
+**Speicherformat:** Speichern Sie Ihre Datei als **CSV UTF-8** (nicht als Standard-CSV oder Excel-Format), um Zeichenkodierungsfehler beim Import zu vermeiden.
+
+:::info
+Verwenden Sie eine einheitliche Formatierung für Telefonnummern, Adressen und Kategorien, um eine erfolgreiche Importverarbeitung sicherzustellen.
+:::
+
+:::warning
+Die automatische Produktaktivierung **läuft nicht bei per CSV hochgeladenen Konten**. Produkte, die für importierte Konten aktiviert werden sollen, müssen nach dem Import separat per Bulk-Aktivierung über Kontolisten oder die Aktion „Produkt aktivieren“ aktiviert werden.
+:::
+
+### Durchführung des Imports
+
+1. **Laden Sie Ihre vorbereitete CSV-Datei hoch**
+2. **Überprüfen Sie die Importvorschau**:
+   - Prüfen Sie auf Datenvalidierungsfehler
+   - Überprüfen Sie die Zuweisungen der Unternehmenskategorien
+   - Bestätigen Sie die Adressformatierung
+3. **Konfigurieren Sie die Importeinstellungen**:
+   - Standardmarktzuweisung für alle Konten
+   - Präferenzen zur Benutzererstellung
+   - Einstellungen für die Willkommens-E-Mail
+4. **Behandeln Sie die Duplikaterkennung**:
+   - Überprüfen Sie potenzielle doppelte Unternehmen
+   - Wählen Sie zwischen Zusammenführen oder Erstellen separater Konten
+   - Lösen Sie Adresskonflikte auf
+5. Klicken Sie auf `Import Accounts`, um den Vorgang zu starten
+
+### Aufgaben nach dem Import
+
+Nach einem erfolgreichen Import:
+
+1. **Überprüfen Sie die erstellten Konten** auf Genauigkeit
+2. **Korrigieren Sie etwaige Datenprobleme**, die während des Imports festgestellt wurden
+3. **Weisen Sie Konten den passenden Listen zu** zur Organisation
+4. **Konfigurieren Sie Produkte und Dienste** für neue Konten
+5. **Richten Sie den Benutzerzugriff ein** für den Zugriff auf das Kunden-Dashboard
+
+### Anreicherung nach dem Import
+
+Nach dem Import versucht das System, jedes Konto mit Daten von Google anzureichern (Adresse, Telefonnummer, Kategorien, Öffnungszeiten). Einige Konten werden übersprungen und nicht angereichert:
+
+- Land oder Bundesland des Unternehmens stimmen nicht mit den Angaben bei Google überein
+- Firmenname oder Adresse in der CSV weichen deutlich vom Google-Eintrag ab (niedriger Ähnlichkeitswert)
+- Für das Unternehmen existiert kein Google-Eintrag
+- Das Konto hat keine Straßenadresse (SABs ohne Adresse werden nicht angereichert)
+
+Konten, die nicht angereichert werden, werden dennoch erfolgreich importiert. Sie behalten lediglich nur die Daten aus Ihrer CSV.
+
+## Umgang mit Problemen bei der Kontoerstellung
+
+### Unternehmen wird bei der Suche nicht gefunden
+
+**Häufige Ursachen und Lösungen:**
+
+**Abweichungen beim Unternehmensnamen:**
+- Versuchen Sie verkürzte Namen oder gängige Abkürzungen
+- Suchen Sie ohne Rechtsformzusätze (z. B. „LLC“, „Inc.“)
+- Verwenden Sie Namen des Inhabers oder Managers, wenn der Unternehmensname unklar ist
+
+**Neue oder nicht gelistete Unternehmen:**
+- Verwenden Sie den Prozess der manuellen Kontoerstellung
+- Überprüfen Sie die Unternehmensinformationen direkt mit dem Kunden
+- Prüfen Sie auf kürzliche Namensänderungen oder Rebranding
+
+**Adressbezogene Probleme:**
+- Versuchen Sie, nach Adresse statt nach Unternehmensname zu suchen
+- Überprüfen Sie die aktuelle Adresse mit Kartendiensten
+- Prüfen Sie auf kürzliche Umzüge oder Schließungen
+
+### Lösung von Importfehlern
+
+**Datenvalidierungsfehler:**
+- **Fehlende Pflichtfelder**: Vervollständigen Sie alle erforderlichen Spalten in der CSV
+- **Ungültige Telefonformate**: Verwenden Sie eine einheitliche Formatierung (z. B. (555) 123-4567)
+- **Fehler bei der Adressvalidierung**: Überprüfen Sie, dass Adressen existieren und korrekt formatiert sind
+- **Fehler bei der Kategoriezuweisung**: Verwenden Sie exakte Kategorienamen aus dem System (siehe [Business Categories](../directory/business-categories.mdx) oder [laden Sie die vollständige Liste herunter](../directory/downloads/business-categories-list.csv) für alle gültigen Kategorieoptionen)
+- **Validierungsfehler bei `ServiceAreaBusiness`**: Dieses Feld akzeptiert nur `TRUE` oder `FALSE` (in Großbuchstaben). Jeder andere Wert, einschließlich `true`, `yes`, `1` oder ein nicht leerer Wert, der weder `TRUE` noch `FALSE` ist, führt zum Fehlschlagen der Zeile. Ein leerer Wert wird als `FALSE` behandelt.
+
+**Umgang mit doppelten Unternehmen:**
+- **Ähnliche Namen**: Prüfen Sie sorgfältig, ob es sich um echte Duplikate oder ähnliche Unternehmen handelt
+- **Gleiche Adressen**: Prüfen Sie auf Unternehmen, die sich einen Standort teilen (z. B. Einkaufszentren)
+- **Konflikte bei Telefonnummern**: Überprüfen Sie, welches Unternehmen die Nummer derzeit verwendet
+
+### Best Practices für die Kontoerstellung
+
+**Datenqualität:**
+- Überprüfen Sie Unternehmensinformationen immer, bevor Sie Konten erstellen
+- Verwenden Sie offizielle Unternehmensnamen, wie sie in rechtlichen Dokumenten erscheinen
+- Geben Sie vollständige Adressinformationen für standortbasierte Dienste an
+- Wählen Sie die spezifischsten verfügbaren Unternehmenskategorien
+
+**Organisation:**
+- Verwenden Sie einheitliche Namenskonventionen für ähnliche Unternehmen
+- Wenden Sie relevante Tags unmittelbar nach der Erstellung an
+- Weisen Sie passende Märkte basierend auf den Servicegebieten zu
+- Planen Sie die künftige Listenorganisation und Gruppierung
+
+**Kundenkommunikation:**
+- Bereiten Sie Willkommensmaterialien für neue Kontoinhaber vor
+- Richten Sie den anfänglichen Benutzerzugriff zeitnah nach der Kontoerstellung ein
+- Konfigurieren Sie passende Benachrichtigungseinstellungen
+
+## Bulk-Import-Einstellungen (Benutzer und Benachrichtigungen)
+
+Beim Import per CSV können Sie den Benutzerzugriff und die Benachrichtigungen für neu erstellte Benutzer konfigurieren:
+
+- Zugriff auf Business App erlauben
+- Benachrichtigungen senden
+- Die Willkommens-E-Mail senden
+
+Diese Optionen sehen Sie im Importassistenten, nachdem Sie die Felder zugeordnet haben. Der Bulk-Import versendet nur die klassische Willkommens-E-Mail – er sendet nicht die [Onboarding-E-Mail](/business-app/ai-onboarding-experience).
+
+:::info
+Sie können die Benutzerberechtigungen bei Bedarf später über „Benutzer verwalten“ anpassen.
+:::
+
+## Fehlerbehebung bei der Unternehmenssuche
+
+Wenn ein Unternehmen nicht in der Suche unter `Create Account` erscheint:
+
+- **Service Area Business**: SABs ohne öffentliche Adresse werden von der Locations API von Google, die die Suche antreibt, nicht zurückgegeben. Das ist zu erwarten und kein Fehler. Klicken Sie auf `Skip to Account Creation`, um das Konto manuell hinzuzufügen.
+- **Neue oder kürzlich gelistete Unternehmen**: Neue Unternehmen erscheinen möglicherweise noch nicht in der Datenbank von Google. Verwenden Sie die manuelle Erstellung.
+- **Namensvarianten**: Versuchen Sie verkürzte Namen (lassen Sie „LLC“, „Inc.“ usw. weg) oder suchen Sie stattdessen nach der Adresse.
+
+Ein Klick auf `Skip to Account Creation` ermöglicht Ihnen jederzeit die manuelle Kontoerstellung, unabhängig davon, ob das Unternehmen in den Suchergebnissen erscheint.
+
+## Häufig gestellte Fragen (FAQs)
+
+<details>
+<summary>Was ist der Unterschied zwischen der Suche nach einem Unternehmen und der manuellen Erstellung?</summary>
+
+Die Unternehmenssuche füllt Informationen automatisch aus öffentlichen Verzeichnissen aus, spart Zeit und sorgt für Genauigkeit. Die manuelle Erstellung erfordert, dass Sie alle Informationen eingeben, funktioniert aber für jedes Unternehmen, einschließlich neuer oder nicht gelisteter.
+</details>
+
+<details>
+<summary>Kann ich Kontoinformationen nach der Erstellung bearbeiten?</summary>
+
+Ja, die meisten Kontoinformationen können nach der Erstellung bearbeitet werden. Änderungen am Unternehmensstandort oder an der Marktzuweisung können sich jedoch auf Integrationen und Berichte auswirken. Nehmen Sie diese Änderungen daher mit Vorsicht vor.
+</details>
+
+<details>
+<summary>Was passiert, wenn ich die falsche Unternehmenskategorie auswähle?</summary>
+
+Sie können Unternehmenskategorien nach der Kontoerstellung ändern, indem Sie das Konto bearbeiten. Da einige Produktfunktionen jedoch kategoriespezifisch sind, wählen Sie von Anfang an die genauesten Kategorien.
+</details>
+
+<details>
+<summary>Wie gehe ich bei der Erstellung mit Unternehmen mit mehreren Standorten um?</summary>
+
+Erstellen Sie für jeden physischen Standort separate Konten und verwenden Sie dann Multi-Location Groups, um sie gemeinsam zu verwalten. So erhalten Sie standortspezifische Daten und gleichzeitig ein konsolidiertes Reporting.
+</details>
+
+<details>
+<summary>Kann ich Konten mit unterschiedlichen Marktzuweisungen importieren?</summary>
+
+Ja, fügen Sie eine Spalte „Market“ in Ihre CSV-Datei ein, um beim Import unterschiedliche Märkte zuzuweisen. Konten ohne Marktangabe verwenden die Standardmarkteinstellung.
+</details>
+
+<details>
+<summary>Was soll ich tun, wenn der CSV-Import fehlschlägt?</summary>
+
+Überprüfen Sie die Fehlermeldungen, korrigieren Sie Formatierungsprobleme in Ihrer CSV-Datei und versuchen Sie den Import erneut. Häufige Probleme sind fehlende Pflichtfelder, ungültige Telefonformate oder doppelte Einträge.
+</details>
+
+<details>
+<summary>Wie erstelle ich Konten für Service Area Businesses ohne Adressen?</summary>
+
+SABs erscheinen oft nicht in der Suche unter „Create Account“, da die Locations API von Google Unternehmen ohne verifizierte öffentliche Adresse nicht anzeigt. So erstellen Sie das Konto:
+
+1. Geben Sie den Unternehmensnamen in die Suchleiste ein. Wenn er nicht erscheint, klicken Sie auf `Skip to Account Creation`.
+2. Geben Sie den Unternehmensnamen und eine Straßenadresse ein (verwenden Sie die Adresse des Inhabers oder eine Platzhalter-Stadt/Postleitzahl, wenn keine öffentliche Adresse existiert).
+3. Aktualisieren Sie nach der Kontoerstellung den Eintrag, um einen Servicebereich festzulegen und bei Bedarf die Straßenadresse zu verbergen.
+
+Das Erstellen eines Kontos ohne Straßenadresse schränkt Listing Sync und andere Listing-Produkte ein, bis eine Adresse hinzugefügt wird.
+</details>
+
+<details>
+<summary>Kann ich den Benutzerzugriff während der Kontoerstellung einrichten?</summary>
+
+Ja. Beim Erstellen eines einzelnen Kontos können Sie über das Panel **Users** die ersten Benutzer des Kontos bereits während der Erstellung hinzufügen – sie erhalten die [Onboarding-E-Mail](/business-app/ai-onboarding-experience), sobald das Konto und seine Produkte bereit sind. Bei Bulk-Importen können Sie Standardbenutzereinstellungen konfigurieren, einschließlich ob die Willkommens-E-Mail gesendet wird.
+</details>
+
+<details>
+<summary>Woher stammen die Informationen, die bei der Kontoerstellung per Suche gesammelt werden?</summary>
+
+Die Google Locations API wird verwendet, um Name, Adresse, Telefonnummer, Website, Geoposition, Unternehmenskategorie und Öffnungszeiten zu erfassen. Die URLs der Social-Profile werden von der Unternehmenswebsite erfasst.
+</details>
+
+{/* growth-engine callout — commented out 2026-08-19 (Cal, Learn tab refresh) because the
+    Your growth engine path is hidden until its remaining steps and Snapshot videos ship.
+    Restore at relaunch; see training/growth-engine/index.mdx. */}
+{/*
+<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
+  <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
+  <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>
+    New to running the full sales motion? Take the <a href="/learn/growth-engine" style={{color: '#3C9A63', fontWeight: 600}}>Your growth engine</a> course in Vendasta Learn — Beginner, 6 lessons.
+  </span>
+</div>
+*/}

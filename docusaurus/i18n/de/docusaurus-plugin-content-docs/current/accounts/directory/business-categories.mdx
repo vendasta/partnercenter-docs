@@ -1,0 +1,266 @@
+---
+title: Business Categories und Taxonomien
+sidebar_label: Business Categories
+sidebar_position: 3
+description: Verständnis und Verwaltung von Geschäftskategorien und Taxonomien für die korrekte Kontoklassifizierung
+tags: [business-categories, taxonomies, classification, account-setup]
+keywords: [business-categories, account-classification, taxonomies, business-types]
+---
+
+## Was sind Geschäftskategorien und Taxonomien?
+
+Geschäftskategorien und Taxonomien sind Klassifizierungssysteme, die dabei helfen, verschiedene Arten von Unternehmen in Ihrer Kontodatenbank zu organisieren und zu identifizieren. Kategorien definieren, welche Art von Unternehmen ein Konto darstellt, während Taxonomien detailliertere Unterkategorien und branchenspezifische Klassifizierungen bieten.
+
+## Warum sind Geschäftskategorien wichtig?
+
+Die richtige Geschäftskategorisierung ermöglicht Folgendes:
+
+- **Optimierung von Produktfunktionen**: Viele Produkte bieten kategoriespezifische Funktionen
+- **Genaue Berichterstattung**: Kategoriebasierte Analysen und Benchmarking im Vergleich zu ähnlichen Unternehmen
+- **Wettbewerbsanalyse**: Identifizierung relevanter Wettbewerber innerhalb derselben Geschäftskategorie
+- **Zielgerichtetes Marketing**: Kategoriespezifische Kampagnen und Kommunikation
+- **Serviceanpassung**: Maßgeschneiderte Servicebereitstellung basierend auf Branchenanforderungen
+- **Erfolgreiche Integration**: Kategoriegerechte Drittanbieterintegrationen und Datenquellen
+
+## Was ist in Geschäftskategorien enthalten?
+
+### Kategorieklassifizierungssystem
+- Primäre Geschäftskategorien für den Hauptfokus des Unternehmens
+- Sekundäre Kategorien für zusätzliche Geschäftsaktivitäten
+- Branchenspezifische Unterkategorien und Spezialisierungen
+- Unterscheidung zwischen Dienstleistungs- und Einzelhandelsunternehmen
+
+### Taxonomiehierarchie
+- Breite Branchenklassifizierungen (z. B. Gesundheitswesen, Einzelhandel, professionelle Dienstleistungen)
+- Spezifische Unternehmenstypen innerhalb von Branchen (z. B. Restaurants, Autoreparatur, Rechtsdienstleistungen)
+- Spezialisierte Unterkategorien (z. B. italienische Restaurants, Bremsenreparatur, Personenschadenrecht)
+- Geografische und demografische Modifikatoren, sofern zutreffend
+
+## Vollständige Liste der Geschäftskategorien
+
+📋 **[Vollständige CSV-Datei der Geschäftskategorien herunterladen](./downloads/business-categories-list.csv)**
+
+Die vollständige Liste aller verfügbaren Geschäftskategorien (über 4.000 Kategorien) steht als herunterladbare CSV-Datei zur Verfügung und enthält:
+- **Kategoriename**: Für Menschen lesbarer Name der Geschäftskategorie
+- **Externe ID**: Systemkennung für die API-Integration und Massenimporte
+
+:::tip Verwendung der Kategorienliste
+- Verwenden Sie den **Kategorienamen**, wenn Sie Kategorien manuell in der Oberfläche auswählen
+- Verwenden Sie die **externe ID** für Massenimporte, API-Integrationen oder automatisierte Prozesse
+- Kategorien reichen von breiten Klassifizierungen (z. B. „Restaurant") bis hin zu sehr spezifischen (z. B. „Koreanisches Barbecue-Restaurant")
+:::
+
+## Auswahl von Geschäftskategorien
+
+### Die Kategoriestruktur verstehen
+
+**Primäre Kategorien** (am wichtigsten):
+- **Professionelle Dienstleistungen**: Recht, Medizin, Beratung, Buchhaltung
+- **Einzelhandel**: Bekleidung, Elektronik, Haushaltswaren, Fachhandel
+- **Essen & Gastronomie**: Restaurants, Cafés, Catering, Food Trucks
+- **Gesundheit & Medizin**: Ärzte, Zahnärzte, Kliniken, Wellnesszentren
+- **Automobil**: Autohäuser, Werkstätten, Ersatzteillieferanten
+- **Haushaltsdienstleistungen**: Handwerker, Klempner, Elektriker, Gartenbau
+- **Schönheit & Körperpflege**: Salons, Spas, Fitnessstudios
+- **Immobilien**: Makler, Immobilienverwaltung, Hypothekendienstleistungen
+
+**Sekundäre Kategorien** (zusätzliche Dienstleistungen):
+- Ergänzende Dienstleistungen des Unternehmens
+- Saisonale oder gelegentliche Geschäftsaktivitäten
+- Neue Geschäftsbereiche oder Erweiterungen
+- Frühere Dienstleistungen, die nicht mehr im Fokus stehen
+
+### Prozess der Kategorieauswahl
+
+**Bei der Erstellung neuer Konten:**
+1. **Den primären Geschäftsfokus identifizieren**: Wofür ist das Unternehmen hauptsächlich bekannt?
+2. **Die spezifischste verfügbare Kategorie auswählen**, die zum Unternehmen passt
+3. **Sekundäre Kategorien hinzufügen** für bedeutende zusätzliche Dienstleistungen (insgesamt bis zu 2 bis 3)
+4. **Die Kundenperspektive berücksichtigen**: Wie finden Kunden dieses Unternehmen normalerweise?
+5. **Die Auswirkungen der Kategorie** auf Produktfunktionen und Integrationen prüfen
+
+**Bewährte Verfahren bei der Kategorieauswahl:**
+- **Spezifität statt Allgemeinheit wählen**: Wählen Sie „Italienisches Restaurant" statt „Restaurant", wenn verfügbar
+- **Die Kundenperspektive priorisieren**: Wie suchen und kategorisieren Kunden dieses Unternehmen?
+- **Das Servicemodell berücksichtigen**: online, persönlich, Einsatzgebiet oder Ladengeschäft
+- **Die primäre Einnahmequelle berücksichtigen**: Kategorisieren Sie basierend auf der Haupteinnahmequelle
+
+:::info
+Wenn keine passende Kategorie für ein Unternehmen existiert, wählen Sie „Sonstiges". Beachten Sie jedoch, dass einige Produktfunktionen dadurch eingeschränkt oder nicht verfügbar sein können.
+:::
+
+## Verwaltung kategoriespezifischer Funktionen
+
+### Kategorieabhängige Produktfunktionen
+
+**Standortbasierte Funktionen:**
+- **Einzelhandel/Restaurant**: Optimierung der lokalen Suche, Verwaltung der Öffnungszeiten, standortbasierte Werbeaktionen
+- **Einsatzgebiet**: Gebietskartierung, Optimierung des Einsatzradius, Verwaltung mobiler Teams
+- **Professionelle Dienstleistungen**: Terminplanung, Buchung von Beratungen, berufliches Networking
+
+**Branchenspezifische Integrationen:**
+- **Gesundheitswesen**: HIPAA-Compliance-Funktionen, Terminsysteme, Patientenverwaltung
+- **Automobil**: Fahrzeugspezifische Dienstleistungen, Ersatzteilkataloge, Terminplanung für Services
+- **Immobilien**: MLS-Integrationen, Immobilienangebote, Marktanalysetools
+- **Gastronomie**: Menüverwaltung, Online-Bestellungen, Lieferintegrationen
+
+### Funktionen nach Kategorie optimieren
+
+**Verfügbare Funktionen prüfen:**
+1. **Zu den Produkteinstellungen des Kontos navigieren**
+2. **Die kategoriespezifischen Optionen prüfen**, die für den Unternehmenstyp verfügbar sind
+3. **Relevante Funktionen aktivieren**, die auf das Geschäftsmodell zutreffen
+4. **Branchenspezifische Einstellungen konfigurieren** für optimale Leistung
+5. **Die Funktionalität testen**, um den ordnungsgemäßen Betrieb sicherzustellen
+
+**Häufige Kategorieoptimierungen:**
+- **Restaurants**: Menüverwaltung, Online-Bestellungen und Bewertungsverwaltung aktivieren
+- **Arztpraxen**: Terminbuchung und Tools zur Patientenkommunikation konfigurieren
+- **Einzelhandelsgeschäfte**: Bestandsverwaltung und E-Commerce-Integrationen einrichten
+- **Dienstleistungsunternehmen**: Gebietskartierung und Tools für mobile Teams aktivieren
+
+## Umgang mit besonderen Unternehmenstypen
+
+### Unternehmen mit mehreren Kategorien
+
+**Unternehmen mit mehreren Schwerpunktbereichen:**
+1. **Die primäre Einnahmequelle identifizieren** für die Auswahl der Hauptkategorie
+2. **Sekundäre Kategorien hinzufügen** für bedeutende zusätzliche Dienstleistungen
+3. **Die Erstellung separater Konten erwägen** für deutlich unterschiedliche Geschäftsbereiche
+4. **Das Geschäftsmodell dokumentieren** in den Kontonotizen für zukünftige Referenz
+
+**Beispielszenarien:**
+- **Restaurant mit Catering**: Primär = Restaurant, Sekundär = Catering
+- **Autohändler mit Werkstatt**: Primär = Autohändler, Sekundär = Autoreparatur
+- **Arztpraxis mit Spa**: Separate Konten erwägen oder Primär = Medizin
+
+### Einsatzgebiet- vs. Ladengeschäfte
+
+**Unternehmen mit Einsatzgebiet:**
+- Fokus auf Kategorien der Serviceerbringung statt auf standortbasierte Kategorien
+- Betonung von Fachwissen und Dienstleistungsart statt geografischer Präsenz
+- Berücksichtigung der Gebietsabdeckung bei der Kategorieauswahl
+- Beispiele: Klempnerarbeiten, Heizung/Lüftung/Klima, Beratung, Hausreinigung
+
+**Ladengeschäfte:**
+- Betonung standortbasierter Kategorien und Kundengewinnung
+- Fokus auf Produkt- oder Dienstleistungskategorien, für die Kunden das Geschäft physisch aufsuchen
+- Berücksichtigung von Kundenlaufstrom und Auswirkungen auf die lokale Suche
+- Beispiele: Einzelhandelsgeschäfte, Restaurants, Salons, Arztpraxen
+
+### Franchise- und Kettenunternehmen
+
+**Franchise-Standorte:**
+- Verwenden Sie eine spezifische Geschäftskategorie statt der allgemeinen Kategorie „Franchise"
+- Berücksichtigen Sie die Markenmerkmale des Franchise bei der Kategorieauswahl
+- Berücksichtigen Sie lokale Marktunterschiede im Dienstleistungsangebot
+- Sorgen Sie für Konsistenz zwischen den Franchise-Standorten und lassen Sie dabei lokale Unterschiede zu
+
+**Filialen von Ladenketten:**
+- Wenden Sie eine konsistente Kategorisierung für alle Filialen der Kette an
+- Berücksichtigen Sie regionale Unterschiede im Produkt- oder Dienstleistungsangebot
+- Verwenden Sie standortspezifische Unterkategorien, sofern verfügbar
+- Koordinieren Sie Kategorieänderungen über mehrere Standorte hinweg
+
+## Kategorien aktualisieren und pflegen
+
+### Wann Geschäftskategorien überprüft werden sollten
+
+**Auslöser für regelmäßige Überprüfungen:**
+- **Jährliche Kontoüberprüfungen**: Überprüfen Sie, ob die Kategorien das Unternehmen weiterhin korrekt darstellen
+- **Änderungen des Geschäftsmodells**: Wenn Unternehmen expandieren, ihre Ausrichtung ändern oder den Fokus verlagern
+- **Produktaktualisierungen**: Wenn neue kategoriespezifische Funktionen verfügbar werden
+- **Leistungsanalyse**: Wenn die kategoriebasierte Berichterstattung inkonsistent erscheint
+
+**Indikatoren für Kategorieänderungen:**
+- Kundenfeedback zur Dienstleistungskategorisierung
+- Erhebliche Änderungen der Einnahmequellen des Unternehmens
+- Hinzufügen wichtiger neuer Dienstleistungsbereiche
+- Verschiebungen bei der Wettbewerbspositionierung
+
+### Prozess zur Aktualisierung von Kategorien
+
+**Kategorien ändern:**
+1. **Aktuelle Kategorien überprüfen** und deren Genauigkeit bewerten
+2. **Die Auswirkungen bewerten**, die Kategorieänderungen auf bestehende Funktionen und Integrationen haben
+3. **Primäre und sekundäre Kategorien aktualisieren**, sofern angemessen
+4. **Kategorieabhängige Funktionen testen** nach den Änderungen
+5. **Die Gründe dokumentieren** für Kategorieänderungen in den Kontonotizen
+6. **Änderungen kommunizieren** an die relevanten Teammitglieder
+
+:::warning
+Kategorieänderungen können sich auf verfügbare Produktfunktionen, Integrationen und Berichte auswirken. Testen Sie die Funktionalität nach Änderungen, um den weiterhin ordnungsgemäßen Betrieb sicherzustellen.
+:::
+
+### Bewährte Verfahren für die Kategoriepflege
+
+**Dokumentation:**
+- Halten Sie die Gründe für Kategorieauswahlen in den Kontonotizen fest
+- Verfolgen Sie Kategorieänderungen und deren geschäftliche Begründungen
+- Sorgen Sie für Konsistenz bei ähnlichen Unternehmenstypen
+- Dokumentieren Sie benutzerdefinierte oder ungewöhnliche Kategorieauswahlen
+
+**Teamkoordination:**
+- Legen Sie Richtlinien für die Kategorieauswahl für Ihr Team fest
+- Erstellen Sie Referenzmaterialien für häufige Unternehmenstypen
+- Schulen Sie Teammitglieder zu den Auswirkungen von Kategorien
+- Führen Sie regelmäßige Teamüberprüfungen der Kategoriegenauigkeit und -konsistenz durch
+
+## Häufig gestellte Fragen (FAQs)
+
+<details>
+<summary>Was passiert, wenn ich die falsche Geschäftskategorie auswähle?</summary>
+
+Sie können Geschäftskategorien nach der Kontoerstellung ändern, indem Sie das Konto bearbeiten. Da jedoch einige Produktfunktionen kategoriespezifisch sind, können Änderungen die verfügbare Funktionalität oder Integrationen beeinflussen.
+
+</details>
+
+<details>
+<summary>Kann ein Unternehmen mehrere primäre Kategorien haben?</summary>
+
+Die meisten Systeme erlauben eine primäre Kategorie und mehrere sekundäre Kategorien. Die primäre Kategorie sollte den Hauptfokus des Unternehmens darstellen, während sekundäre Kategorien zusätzliche wichtige Dienstleistungen abdecken.
+
+</details>
+
+<details>
+<summary>Wie kategorisiere ich ein Unternehmen, das nicht in die Standardkategorien passt?</summary>
+
+Wählen Sie die nächstliegende verfügbare Kategorie oder „Sonstiges", falls keine passende Option existiert. Beachten Sie, dass die Auswahl von „Sonstiges" den Zugriff auf kategoriespezifische Produktfunktionen einschränken kann.
+
+</details>
+
+<details>
+<summary>Wirken sich Geschäftskategorien auf die Suchmaschinenoptimierung aus?</summary>
+
+Ja, die richtige Kategorisierung unterstützt die lokale Suchoptimierung und stellt sicher, dass das Unternehmen in relevanten kategoriebasierten Suchen und Verzeichnissen erscheint.
+
+</details>
+
+<details>
+<summary>Sollte ich separate Konten für Unternehmen mit mehreren Standorten erstellen, die unterschiedliche Dienstleistungen anbieten?</summary>
+
+Wenn die Standorte deutlich unterschiedliche Dienstleistungen anbieten oder unterschiedliche Märkte ansprechen, sollten Sie separate Konten in Betracht ziehen. Bei ähnlichen Dienstleistungen an verschiedenen Standorten verwenden Sie ein Konto pro Standort mit konsistenter Kategorisierung.
+
+</details>
+
+<details>
+<summary>Wie spezifisch sollte ich bei der Auswahl von Geschäftskategorien sein?</summary>
+
+Wählen Sie die spezifischste verfügbare Kategorie, die das Unternehmen genau darstellt. Spezifische Kategorien bieten oft bessere Produktfunktionen und relevantere Wettbewerbsanalysen.
+
+</details>
+
+<details>
+<summary>Kann ich Kategorien ändern, wenn sich das Geschäftsmodell ändert?</summary>
+
+Ja, aktualisieren Sie die Kategorien, wenn Unternehmen ihren Fokus oder ihr Dienstleistungsangebot erheblich ändern. Prüfen Sie die Auswirkungen auf bestehende Produktfunktionen und Integrationen, bevor Sie Änderungen vornehmen.
+
+</details>
+
+<details>
+<summary>Was ist der Unterschied zwischen Geschäftskategorien und Tags?</summary>
+
+Kategorien sind strukturierte Klassifizierungen, die sich auf Produktfunktionen und Integrationen auswirken, während Tags flexible Labels für Organisation und Filterung sind. Kategorien sind eher dauerhaft, während Tags leicht hinzugefügt oder entfernt werden können.
+
+</details>
+
