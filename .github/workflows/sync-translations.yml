@@ -12,6 +12,8 @@
 #      translations reach partners.
 #
 # Requires a repo secret: ANTHROPIC_API_KEY
+# If that secret is absent the workflow skips translation and logs a warning
+# rather than failing, so a missing key does not mark every master merge red.
 
 name: Sync Translations
 
@@ -56,7 +58,20 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Check translation API key is configured
+        id: preflight
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ] || [ -n "$ANTHROPIC_API_KEY" ]; then
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+            echo "::warning title=Translations skipped::ANTHROPIC_API_KEY is not configured on this repository, so the fr/es/de translations were not updated for this push. Add the secret under Settings > Secrets and variables > Actions to re-enable translation sync."
+          fi
+
       - name: Run translation sync script
+        if: steps.preflight.outputs.should_run == 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           DRY_RUN: ${{ inputs.dry_run || 'false' }}
@@ -64,7 +79,7 @@ jobs:
           python scripts/sync_translations.py
 
       - name: Open pull request with updated translations
-        if: ${{ inputs.dry_run != 'true' }}
+        if: ${{ steps.preflight.outputs.should_run == 'true' && inputs.dry_run != 'true' }}
         uses: peter-evans/create-pull-request@v7
         with:
           commit-message: "docs(i18n): sync fr/es/de translations with latest English docs"

@@ -207,8 +207,14 @@ def mirror_new_assets(relative_path):
 
 
 def main():
-    if not DRY_RUN and "ANTHROPIC_API_KEY" not in os.environ:
-        print("ANTHROPIC_API_KEY is not set.", file=sys.stderr)
+    if not DRY_RUN and not os.environ.get("ANTHROPIC_API_KEY"):
+        print(
+            "ANTHROPIC_API_KEY is not set, or is set to an empty value.\n"
+            "GitHub Actions sets a missing secret to an empty string rather than "
+            "leaving it unset, so check that the ANTHROPIC_API_KEY repository "
+            "secret exists under Settings > Secrets and variables > Actions.",
+            file=sys.stderr,
+        )
         sys.exit(1)
 
     base, head = get_commit_range()
