@@ -412,6 +412,15 @@ If the forwarded call rings through to voicemail and the voicemail system picks 
 ### Troubleshooting
 
 <details>
+<summary>I tested my AI Voice Receptionist but never received the text message</summary>
+
+Text messages are sent to the phone number captured during the call. If you place the test call from a conferencing tool, a softphone, or any service without an SMS-capable number, there is no number for the AI to text and no message arrives — even though the call itself behaves normally.
+
+Test text messages by calling from a mobile phone that can receive SMS.
+
+</details>
+
+<details>
 <summary>My AI isn't answering calls - what should I check?</summary>
 
 If your AI Voice Receptionist isn't answering calls, verify:

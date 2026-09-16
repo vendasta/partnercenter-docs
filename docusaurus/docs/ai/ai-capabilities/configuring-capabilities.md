@@ -103,6 +103,22 @@ Get contact info when needed.
 - **Test and iterate** - Try different phrasings and see what produces better results
 :::
 
+#### Write instructions as directives, not descriptions
+
+Write every instruction as an order addressed to the AI employee. An instruction phrased as a description of what the employee does reads as background information, and the AI may not connect the described behavior to itself.
+
+| Avoid | Use instead |
+|-------|-------------|
+| `The receptionist says "I'll text you a booking link."` | `Respond with "I'll text you a booking link."` |
+| `The assistant will offer to take a message.` | `Offer to take a message.` |
+| `Bookings are handled by the call center.` | `Tell the caller that bookings are handled by the call center.` |
+
+This applies anywhere you write instructions: capability prompts, goals, and the instructions attached to individual capabilities.
+
+:::tip Back up a prompt before you rewrite it
+Capability prompts have no version history. Before making substantial edits, copy the existing prompt into a separate document so you can restore it. Experimenting is otherwise safe — you can adjust a prompt and re-test as many times as you need, and un-assign a capability from the AI employee if it is not behaving the way you want.
+:::
+
 ### Tailor a capability to specific channels
 
 Your AI Employee knows which channel it's responding on, so a capability's instructions can reference the channel by name. This is useful when a task should behave differently depending on where the customer reaches out — for example, collecting fewer details for lead capture over SMS than by email:
@@ -200,6 +216,21 @@ After initial setup:
 - **Review capability priorities**: Some capabilities may override others
 - **Clarify instructions**: Make trigger conditions more specific
 - **Remove conflicting capabilities**: Remove capabilities that interfere and re-add them once instructions are refined
+
+### The AI has the information but never acts on it
+
+Knowledge and capabilities do different jobs. A Knowledge Base entry is reference material the AI retrieves when it judges a lookup would help — it does not guarantee the AI takes a particular action or uses particular wording. When a question should trigger the same process every time, that content belongs in a capability rather than in knowledge.
+
+To turn a knowledge entry into a capability:
+
+1. Open the knowledge entry and copy its content.
+2. Go to the `Capabilities` section and click `+ Add Capability`.
+3. Name the capability after the task it performs, such as `Booking workflow`.
+4. Paste the content into the prompt and restructure it as a workflow, using `##` for each instruction and `###` for the steps beneath it.
+5. Rewrite any descriptive lines as directives. See [Write instructions as directives, not descriptions](#write-instructions-as-directives-not-descriptions).
+6. Save, then test with the phrasings a customer would actually use.
+
+Leave the original knowledge entry in place. Knowledge continues to answer open-ended questions; the capability governs the process.
 
 ## Advanced configuration tips
 
