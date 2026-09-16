@@ -14,7 +14,7 @@ Every project Vibe generates is a standard web application built on open framewo
 Publishing with Vibe remains the fastest and least expensive way to put a project online. This article covers what the download contains and what is involved in hosting a project somewhere else.
 
 :::info
-Downloading a project requires the Pro plan. On the Free and Standard plans, the `Download` button is not available.
+Downloading a project requires the Pro plan. On the Free and Standard plans, `Download` shows a lock and opens an upgrade prompt instead.
 :::
 
 :::warning
@@ -120,7 +120,7 @@ The complete entry file, along with the HTTPS and restart configuration a produc
 <details>
 <summary>Which plan includes downloading a project?</summary>
 
-The Pro plan. The `Download` button is not available on the Free or Standard plans. See the plan comparison in [Vibe credits](https://docs.businessapp.io/business-app/ai/vibe/credits).
+The Pro plan. On the Free and Standard plans, `Download` shows a lock and opens an upgrade prompt instead. See the plan comparison in [Vibe credits](https://docs.businessapp.io/business-app/ai/vibe/credits).
 
 </details>
 
