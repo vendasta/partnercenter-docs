@@ -1,8 +1,8 @@
 ---
-id: vibe-portability
+id: download-and-host-vibe
 title: Download and host a Vibe project elsewhere
 sidebar_position: 5
-description: Vibe projects are built on open frameworks. Download the complete source code and run it on any host that supports Node.js.
+description: Vibe projects are built on open frameworks. On the Pro plan, download the complete source code and run it on any host that supports Node.js.
 tags: [ai, vibe, app-builder, hosting, portability, open-source]
 keywords: [Vibe portability, download Vibe project, self-host Vibe, TanStack Start, React, Vibe source code, Vibe hosting, Vibe export]
 ---
@@ -13,13 +13,17 @@ Every project Vibe generates is a standard web application built on open framewo
 
 Publishing with Vibe remains the fastest and least expensive way to put a project online. This article covers what the download contains and what is involved in hosting a project somewhere else.
 
-:::warning
+:::info
 Downloading a project requires the Pro plan. On the Free and Standard plans, the `Download` button is not available.
+:::
+
+:::warning
+Deactivating a base subscription removes the Vibe projects from Business App. Download a copy of anything worth keeping before a subscription lapses.
 :::
 
 ## What the download contains
 
-The `Download` button in the editor toolbar produces a `.vibe.tar.gz` archive:
+The `Download` button in the editor toolbar produces a `.vibe.tar.gz` archive named after the project:
 
 | Contents | Description |
 | --- | --- |
@@ -28,7 +32,15 @@ The `Download` button in the editor toolbar produces a `.vibe.tar.gz` archive:
 | Checkpoint history | A `.git` folder with a commit for every checkpoint |
 | Project metadata | A `.vibe-meta/` folder describing the project name, template, and enabled connectors |
 
-Supabase credentials are replaced with placeholders in the archive, so a self-hosted copy connects to a database configured separately.
+Three things are not in the archive:
+
+- **Generated images.** Images Vibe created are served from a hosted media URL that the code points at. They keep loading after a move, but they are not files in the project. Saving them into the project's `public/` folder and updating the paths makes the copy fully independent.
+- **Discovery files.** `robots.txt`, `sitemap.xml`, and `llms.txt` are generated on each publish with Vibe. A build run elsewhere does not produce them.
+- **Database credentials.** Vibe projects can store data in a Supabase database through the Supabase connector. The archive carries placeholder values in place of the real connection details, so a self-hosted copy points at a database the client controls.
+
+:::warning
+The `.git` folder holds earlier versions of every file. A credential that was written into a project at any point can remain readable in that history even when the current files show a placeholder. Treat a downloaded archive as sensitive.
+:::
 
 ## What runs elsewhere, and what does not
 
@@ -36,7 +48,7 @@ Everything Vibe generated — pages, layout, components, styling, form interface
 
 Connector-backed features depend on Vendasta platform services and stop working once the application is hosted elsewhere:
 
-- Forms submissions routing into CRM
+- Form submissions routing into CRM
 - Analytics data
 - Reviews content
 - Webchat
@@ -44,8 +56,6 @@ Connector-backed features depend on Vendasta platform services and stop working 
 - Single sign-on
 
 The screens continue to render after a move. Reconnecting them to another service is development work.
-
-Generated images are served from a hosted media URL. To make a self-hosted copy fully independent of it, save those images into the project's `public/` folder and update the code to reference the local paths.
 
 ## Requirements for hosting elsewhere
 
@@ -55,10 +65,11 @@ Generated images are served from a hosted media URL. To make a self-hosted copy 
 
 ## Run a downloaded project
 
-Extract the archive and install the dependencies:
+The archive has no folder of its own inside it, so extract it into one you create. The file name below is an example; use the name of the downloaded file:
 
 ```bash
-tar -xzf my-project.vibe.tar.gz
+mkdir my-project
+tar -xzf my-project.vibe.tar.gz -C my-project
 cd my-project
 npm install --legacy-peer-deps
 ```
@@ -73,7 +84,7 @@ Start the development server:
 npm run dev
 ```
 
-The terminal prints a local address, such as `http://localhost:8080`, which serves the application with live reload.
+The terminal prints a local address, which serves the application with live reload.
 
 ## Build for production
 
@@ -81,23 +92,25 @@ The terminal prints a local address, such as `http://localhost:8080`, which serv
 npm run build
 ```
 
-The build writes a self-contained `dist/` folder:
+The build writes a `dist/` folder:
 
 - `dist/client` — the static files a browser downloads
 - `dist/server` — the bundle that renders each page as complete HTML
 
-The `dist/` folder does not require `node_modules`, so it is the only artifact that has to reach a server.
+`dist/` does not require `node_modules`. The server bundle exports a standard web request handler rather than starting a server itself, so hosting it also needs a small entry file that serves static assets from `dist/client` and passes every other request to the renderer. Those two things — the `dist/` folder and that entry file — are what reach the server.
 
-The server bundle exports a standard web request handler rather than starting a server itself, so hosting it requires a small entry file that serves static assets from `dist/client` and passes every other request to the renderer. The complete entry file is in the [Business App help article](https://docs.businessapp.io/business-app/ai/vibe/guides/download-and-self-host).
+The complete entry file, along with the HTTPS and restart configuration a production server needs, is in the Business App help article linked below.
 
 ## What changes after a move
 
 | Publishing with Vibe | Hosting elsewhere |
 | --- | --- |
 | Servers, scaling, and uptime are managed | Infrastructure is provisioned, monitored, and paid for separately |
+| A failed process is restarted automatically | The process is monitored and restarted manually |
 | SSL certificates are issued and renewed automatically | Certificates are managed separately |
 | Custom domains are configured with guided DNS verification | DNS and certificates are configured manually |
 | A new version is live seconds after each publish | Each change requires a rebuild and redeploy |
+| Discovery files are generated on every publish | `robots.txt`, `sitemap.xml`, and `llms.txt` are produced and maintained separately |
 | Connectors are already wired to platform data | Forms, analytics, reviews, chat, CRM, and sign-on are rebuilt against other services |
 | Platform security updates are applied automatically | The server and its dependencies are patched manually |
 | Changes are made by describing them in chat | Changes are made by editing source code |
@@ -121,7 +134,7 @@ React 19 with TypeScript, TanStack Start for routing and server rendering, Vite 
 <details>
 <summary>Does a downloaded archive keep working after a subscription ends?</summary>
 
-A downloaded archive runs independently of Business App. Download a copy before deactivating a subscription, because projects are removed from Business App when a base subscription is deactivated.
+A downloaded archive runs independently of Business App. Download a copy before deactivating a subscription, because projects are removed from Business App when a base subscription is deactivated. Generated images are the exception — they are served from a hosted URL rather than stored in the archive.
 
 </details>
 
