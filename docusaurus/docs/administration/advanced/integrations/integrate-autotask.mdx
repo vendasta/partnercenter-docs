@@ -32,7 +32,7 @@ You will need:
 - Your Autotask API user's **User Name** and **Secret** (API key)
 
 :::info How to get API credentials
-In Autotask, go to `Admin` → `Resources (Human Resources)` → `API User`. Create a dedicated API-only user, selecting **AMP - Automated Marketing Platform** as the integration vendor during creation.
+In Autotask, go to `Admin` → `Resources (Human Resources)` → `API User`. Create a dedicated API-only user, selecting `AMP - Automated Marketing Platform` as the integration vendor during creation.
 :::
 
 ### Step 1 — Create a Security Level in Autotask
@@ -77,7 +77,7 @@ The integration connects with a dedicated API user, not a personal login.
 2. Click **Create New**.
 3. Fill in basic details like Name, Email.
 4. Go to the **Security** tab. Assign the **Vendasta API Access** security level (created in Step 1).
-5. In the **API Tracking Identifier** section, choose **Integration Vendor** and select **AMP - Automated Marketing Platform**. This is the vendor the platform identifies itself with — if a different vendor is selected, or the identifier is set to **Custom**, Autotask rejects the connection.
+5. In the `API Tracking Identifier` section, choose `Integration Vendor` and select `AMP - Automated Marketing Platform`. This is the vendor the platform identifies itself with. If a different vendor is selected, or the identifier is set to `Custom`, Autotask rejects the connection.
 6. Save the user.
 7. Record the **Username** and **Secret** — you will need these in the next section.
 
@@ -276,7 +276,7 @@ Roll the integration out gradually so you can confirm it behaves as expected bef
 | What you see | What is happening | How to fix it |
 |-------------|-------------------|--------------|
 | 500 error when connecting | API credentials are invalid or the user is disabled | Verify credentials in Autotask Admin. Re-enter. |
-| "Credential validation failed: Integration Code is invalid." | The API user's Integration Vendor is not set to **AMP - Automated Marketing Platform** | In Autotask, open the API User → **API Tracking Identifier** → **Integration Vendor** → select **AMP - Automated Marketing Platform**, then reconnect. If the vendor cannot be changed on the existing user, create a new API user with that vendor selected. |
+| "Credential validation failed: Integration Code is invalid." | The API user's `Integration Vendor` is not set to `AMP - Automated Marketing Platform` | In Autotask, open the API User → `API Tracking Identifier` → `Integration Vendor` → select `AMP - Automated Marketing Platform`, then reconnect. If the vendor cannot be changed on the existing user, create a new API user with that vendor selected. |
 | "Connected" but nothing syncs | Webhooks are not enabled on the security level | Open the security level in Autotask → Other Settings → enable webhooks with limit of 5+ |
 | Contacts not appearing | Contact is not linked to a company in Autotask | Link the contact to a company in Autotask. Unlinked contacts are skipped. |
 | Duplicate records after connecting | Records existed in both systems without Autotask IDs | Disconnect. Clean up duplicates. Bulk import with external_id. Reconnect. See [Recovery](#recovery--already-have-duplicates) section. |
