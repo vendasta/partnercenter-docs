@@ -21,6 +21,10 @@ Go to **Partner Center → Administration → Customize Business App → Pages �
 
 Each AI Employee gets a row with a **Visible in app** checkbox. The header above the list counts how many are visible, and **Show all** and **Hide all** set every row at once.
 
+:::info Show this page vs. AI employees
+**Show this page** only controls whether the **AI** page appears in Business App. It doesn't turn any AI Employee off: an AI Employee you haven't hidden below keeps answering and keeps doing its automated work even while the page is hidden. Use the **AI employees** list below to actually turn an AI Employee off. The list stays fully editable whether or not the page is shown.
+:::
+
 ## Which AI Employees you can hide
 
 Every AI Employee on the Business App AI Workforce page can be hidden, including the Chat receptionist and the Custom employee. The rows come from the same catalog the AI Workforce page renders from, so the list you see always matches what's available to your clients, and an AI Employee added to the platform appears as a visible row without any action from you. AI Employees start visible, so curate after a launch rather than before it.
@@ -59,7 +63,7 @@ Changes reach Business App within about ten seconds. Have your client refresh Bu
 Once an AI Employee is hidden for a market, in every account in that market:
 
 - **AI Workforce page**: no card, in any state. The active card, the locked **Upgrade to gain access** card, and the **Coming soon** badge all go away. This is what separates hiding from [marketplace gating](./upgrading-ai-employees.mdx#marketplace-gating-which-locked-cards-appear), which suppresses a locked card but leaves an active one.
-- **AI Employee pickers**: the AI Employee is gone from the chat picker in Business App and from the AI Employee dropdowns in the automation builder.
+- **AI Employee pickers**: the AI Employee is gone from the chat picker in Business App and from the AI Employee dropdowns in the automation builder. For the web chat widget specifically: a hidden Chat receptionist can't be set as a widget's assistant, and if both the Chat receptionist and Custom employee are hidden, web chat widget setup doesn't appear on the Conversations settings page at all.
 - **Chat**: the AI Employee stops answering. Existing conversations stay in place, but the AI no longer replies in them.
 - **Automated work**: scheduled and triggered work the AI Employee ran stops.
 
