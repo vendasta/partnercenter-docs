@@ -88,4 +88,4 @@ Every application Vibe generates is built on a modern, production-ready stack:
 - **shadcn/ui** component library
 - **Lucide** icons
 
-Every one of these is open source.
+Every one of these is open source. On the Pro plan, the complete source of a project can be downloaded and hosted anywhere that runs Node.js — see [Download & Host Your Project Elsewhere](https://docs.businessapp.io/business-app/ai/vibe/guides/download-and-self-host/).
