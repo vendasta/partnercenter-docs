@@ -67,7 +67,7 @@ Go to `Automations` → `My automations` → `Rain delay follow-up`.
     <>Open <a href="https://webhook.site">webhook.site</a> in another tab and copy the unique URL it gives you.</>,
     <>Add a step, and under <strong>Advanced</strong> select <code>Send a webhook</code>. Paste that URL in.</>,
     <>Open <code>JSON Body</code> and use <code>Add Field</code> to build a flat payload carrying the contact's ID and the booked service.</>,
-    <>Save the automation and run one booking through the employee to fire the step. Afterwards the step exposes a <code>curl_command</code> output holding the exact request that was sent.</>,
+    <>Select <code>Publish</code>, turn the automation <code>On</code>, and run one booking through the employee to fire the step. Afterwards the step exposes a <code>curl_command</code> output holding the exact request that was sent.</>,
     <>Read what landed on webhook.site: the headers, and every field in the body.</>,
   ]}
   confirm={<>You can see the exact request the platform sends, field by field, before anything downstream depends on it.</>}
