@@ -14,7 +14,7 @@ Every project Vibe generates is a standard web application built on open framewo
 Publishing with Vibe remains the fastest and least expensive way to put a project online. This article covers what the download contains and what is involved in hosting a project somewhere else.
 
 :::info
-Downloading a project requires the Pro plan. On the Free and Standard plans, `Download` is not available. See the plan comparison in [Vibe credits](https://docs.businessapp.io/business-app/ai/vibe/credits).
+Downloading a project requires the Pro plan. On the Free and Standard plans, `Download` shows a lock and opens an upgrade prompt instead. See the plan comparison in [Vibe credits](https://docs.businessapp.io/business-app/ai/vibe/credits).
 :::
 
 :::warning
@@ -36,10 +36,10 @@ Three things are not in the archive:
 
 - **Generated images.** Images Vibe created are served from a hosted media URL that the code points at. They keep loading after a move, but they are not files in the project, and they are not under the client's control. Save them into the project's `public/` folder and update the paths before a move or a deactivation, and the copy is fully independent.
 - **Discovery files.** `robots.txt`, `sitemap.xml`, and `llms.txt` are generated on each publish with Vibe. A build run elsewhere does not produce them.
-- **Database credentials.** Vibe projects can store data in a Supabase database through the Supabase connector. The archive carries placeholder values such as `YOUR_SUPABASE_PROJECT` in place of the real connection details. A developer searches the project for those placeholders and fills in the client's own Supabase URL and key before the self-hosted copy can reach a database.
+- **Database credentials.** Vibe projects can store data in a Supabase database through the Supabase connector. The archive carries placeholder values such as `YOUR_SUPABASE_PROJECT` in place of the real connection details. A developer searches the project for those placeholders and fills in the client's own Supabase project URL and keys before the self-hosted copy can reach a database. A Supabase project has two keys, and they are not interchangeable: the anon key is meant for code that runs in the browser, and the service-role key bypasses row-level security and belongs only in server code. Never give the service-role key a `VITE_` prefix, because Vite puts every `VITE_` variable into the browser bundle, where any visitor can read it.
 
 :::warning
-The `.git` folder holds earlier versions of every file. A credential that was written into a project at any point can remain readable in that history even when the current files show a placeholder. Before sharing an extracted folder with anyone, including a contractor: delete the `.git` folder with `rm -rf .git` if the checkpoint history is not needed, or rotate every key that was ever used in the project if it is.
+The `.git` folder holds earlier versions of every file. A credential that was written into a project at any point can remain readable in that history even when the current files show a placeholder. Do this before sharing the folder with anyone, pushing the project to a git host, or deploying it: delete the `.git` folder with `rm -rf .git` if the checkpoint history is not needed, or rotate every key that was ever used in the project if it is. Delete the original `.vibe.tar.gz` file as well, because it carries the same history.
 :::
 
 ## What runs elsewhere, and what does not
@@ -56,7 +56,7 @@ Connector-backed features depend on Vendasta platform services and stop working 
 
 The screens continue to render after a move. Reconnecting them to another service is development work.
 
-Single sign-on is different, because it decides who sees a page rather than what a page displays. The OAuth client stays on the Vendasta platform, so a moved copy cannot complete a sign-in. Open every gated page in a private browser window after a move and confirm it does not show its contents to a visitor who is not signed in.
+Single sign-on is different, because it decides who sees a page rather than what a page displays. The OAuth client stays on the Vendasta platform, so a moved copy cannot complete a sign-in. Open every gated page in a private browser window after a move and confirm it does not show its contents to a visitor who is not signed in. If one does, stop the move: leave the domain pointed at the published site until a developer repairs the sign-in check.
 
 ## Requirements for hosting elsewhere
 
@@ -64,9 +64,10 @@ Single sign-on is different, because it decides who sees a page rather than what
 - A host that runs Node.js — a virtual server, a container platform, or a managed Node hosting service. Pages are rendered on the server so that search engines and AI assistants receive complete HTML, so static file hosting is not sufficient on its own.
 - A developer to run the build, deploy it, and maintain the server
 
-<!-- These commands also appear in businessapp-docs at
-     docusaurus/docs/business-app/ai/vibe/guides/download-and-self-host.md.
-     Change both. -->
+<!-- The commands in this section and in "Build for production" below also
+     appear in businessapp-docs at
+     docusaurus/docs/business-app/ai/vibe/guides/download-and-self-host.md,
+     which is the canonical copy and owns the server entry file. Change both. -->
 
 ## Run a downloaded project
 
@@ -93,6 +94,8 @@ npm run dev
 
 The terminal prints a local address, which serves the application with live reload.
 
+<!-- Second copy: see the note above "Run a downloaded project". -->
+
 ## Build for production
 
 ```bash
@@ -110,7 +113,7 @@ The complete entry file, along with the HTTPS and restart configuration a produc
 
 ## Moving a live site
 
-A site on a custom domain is moved in this order, so that neither the domain nor the client's site is down in between:
+A site on a custom domain is moved in this order, which makes the interruption as short as it can be:
 
 1. Download the project and save the generated images into `public/`.
 2. Build the new host and test it on a temporary address.
@@ -119,7 +122,7 @@ A site on a custom domain is moved in this order, so that neither the domain nor
 5. Test the domain over HTTPS, including every page that sits behind a sign-in.
 6. Deactivate the Business App subscription.
 
-Deactivating first takes the published site down while the new host is not yet serving the domain. Pointing the DNS first without a certificate leaves the domain serving an HTTPS error.
+There is a gap between steps 3 and 4 on a host that uses an HTTP-01 challenge: the domain points at the new host, and the certificate is not issued yet, so visitors see an HTTPS error for the minutes that takes. A host that uses a DNS-01 challenge issues the certificate before the DNS change and removes the gap. Getting the order wrong costs more than the gap does: deactivating first takes the published site down while the new host is not yet serving the domain.
 
 ## What changes after a move
 
