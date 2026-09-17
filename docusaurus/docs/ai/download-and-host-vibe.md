@@ -36,7 +36,7 @@ Three things are not in the archive:
 
 - **Generated images.** Images Vibe created are served from a hosted media URL that the code points at. They keep loading after a move, but they are not files in the project. Saving them into the project's `public/` folder and updating the paths makes the copy fully independent.
 - **Discovery files.** `robots.txt`, `sitemap.xml`, and `llms.txt` are generated on each publish with Vibe. A build run elsewhere does not produce them.
-- **Database credentials.** Vibe projects can store data in a Supabase database through the Supabase connector. The archive carries placeholder values in place of the real connection details, so a self-hosted copy points at a database the client controls.
+- **Database credentials.** Vibe projects can store data in a Supabase database through the Supabase connector. The archive carries placeholder values such as `YOUR_SUPABASE_PROJECT` in place of the real connection details. A developer searches the project for those placeholders and fills in the client's own Supabase URL and key before the self-hosted copy can reach a database.
 
 :::warning
 The `.git` folder holds earlier versions of every file. A credential that was written into a project at any point can remain readable in that history even when the current files show a placeholder. Treat a downloaded archive as sensitive.
