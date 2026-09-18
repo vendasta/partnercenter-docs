@@ -15,7 +15,7 @@ Ordering Vendasta Services products is the same as [ordering any product](../../
 4.  Click `Proceed to Next Step`
 5.  Review and fill in any contact information
 6.  Click `Next`
-7.  `Review and Purchase`
+7.  Click `Review and Purchase`
 
 After completing the purchase, you will be presented with a [fulfillment form](./important-completing-fulfillment-forms). This form contains necessary details to be completed so that Vendasta Services teams can successfully complete the work that has been purchased.
 
