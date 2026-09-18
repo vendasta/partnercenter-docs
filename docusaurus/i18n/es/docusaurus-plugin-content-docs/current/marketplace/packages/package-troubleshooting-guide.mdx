@@ -1,0 +1,283 @@
+---
+title: "Package Troubleshooting & Advanced Guide"
+sidebar_label: "Troubleshooting & Advanced Guide"
+sidebar_position: 3
+description: "Pasos de solución de problemas para la visibilidad de paquetes, duplicados, enlaces, precios, sincronización multimercado y escalamiento a soporte"
+tags: [marketplace, packages, troubleshooting, package-visibility, duplicates]
+keywords: [package troubleshooting, package visibility, duplicate packages, package problems, marketplace issues, store problems]
+---
+
+Esta guía aborda los problemas comunes de paquetes con soluciones paso a paso para problemas de visibilidad, duplicados, enlaces, precios, sincronización multimercado y cuándo escalar.
+
+## Restricciones de visibilidad y activación de productos
+
+### `Available in store` está configurado como Yes pero el producto no aparece
+
+Configurar un producto como `Available in store` lo hace elegible para la tienda, pero los clientes no pueden encontrarlo ni comprarlo hasta que se agregue a un **paquete publicado** que esté asignado a una categoría de tienda visible. Sin ese paso del paquete, el producto permanece invisible para los clientes sin importar la configuración de disponibilidad.
+
+### El producto personalizado falta en Order Products
+
+Si tu producto personalizado no aparece en la lista `Order Products` al crear un pedido para una cuenta, la causa más probable es que la cuenta **no tenga una dirección registrada**. Los productos personalizados usan la dirección del perfil de negocio de la cuenta para determinar la disponibilidad. Agrega una dirección al perfil de negocio de la cuenta y el producto debería aparecer.
+
+### Activación de producto específica por país
+
+Algunos productos del Marketplace están restringidos a países específicos. Si una cuenta podía activar antes un producto pero ya no puede, verifica si el **país del perfil de negocio** de la cuenta ha cambiado. El país de la cuenta debe coincidir con la disponibilidad por país configurada en el producto. Actualiza la dirección del perfil de negocio si es necesario.
+
+### El carrusel de Review Widget requiere Review Widget Pro
+
+La opción de visualización Carousel en Review Widget no está disponible en el Review Widget estándar. Requiere el complemento **Review Widget Pro**. Activa Review Widget Pro en la cuenta para habilitar la opción Carousel.
+
+### Encontrar el SKU de un producto
+
+Todos los productos del Vendasta Marketplace tienen un identificador SKU. Para encontrarlo:
+
+1. Ve a `Marketplace` → `Discover Products`
+2. Haz clic en el producto
+3. Observa la URL en tu navegador: el SKU es la cadena de caracteres al final (por ejemplo, `MP-XXXXXXXXXXXXXXXX`)
+
+Los SKU siguen el formato `MP-` seguido de caracteres alfanuméricos. Al contactar a Support sobre un producto específico, incluir el SKU acelera la identificación.
+
+## Problemas comunes de visibilidad de paquetes
+
+Los problemas de visibilidad de paquetes se encuentran entre los más frecuentes en la gestión del marketplace. Comprender las causas raíz y las soluciones sistemáticas garantiza que tus paquetes lleguen a los clientes de forma efectiva.
+
+### Problema 1: los paquetes no aparecen en la tienda de Business App
+
+Síntomas:
+
+- Los paquetes publicados faltan en la tienda orientada al cliente
+- Los paquetes son visibles en Partner Center pero no en Business App
+- Los clientes no pueden encontrar ni comprar paquetes
+
+Causas raíz:
+1. **Falta de asignación de categoría**: el paquete se creó sin seleccionar una categoría de tienda
+2. **Configuración de visualización de categoría**: las categorías no están configuradas para mostrarse en la tienda
+3. **Problemas de asignación de mercado**: el paquete no está asignado correctamente a los mercados objetivo
+
+#### Solución 1: corregir la asignación de categoría
+
+Pasos
+1. Ve a `Marketplace` → `Packages`
+2. Busca el paquete faltante usando el nombre del paquete o los filtros
+3. Haz clic en el `menú de opciones` (⋮) en la tarjeta del paquete
+4. Selecciona `Change Categories` en el menú desplegable
+5. Elige las categorías de tienda correspondientes de la lista disponible
+6. Haz clic en `Save` para aplicar las asignaciones de categoría
+
+Resultado: el paquete aparece en la tienda de Business App bajo las categorías seleccionadas
+
+<img src={require('./img/marketplace/packages/troubleshooting-package-visibility-1.jpg').default} alt="Change Categories menu option for packages" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+#### Solución 2: configuración de categoría de la tienda
+
+Pasos
+1. Ve a `Marketplace` → `Manage Store` → `Categories`
+2. Revisa la configuración de categorías actual y los ajustes de visibilidad
+3. **Agregar categorías faltantes**: crea las categorías necesarias para la organización de paquetes
+4. **Configurar asignaciones de paquetes**: asegúrate de que los paquetes estén correctamente asignados a categorías
+5. **Activar visibilidad en la tienda**: activa `Show in store` para todas las categorías relevantes
+6. **Guardar configuración**: aplica los cambios para actualizar la visualización de la tienda
+
+Verificación: revisa la tienda de Business App para confirmar la visibilidad de categorías y paquetes
+
+#### Solución 3: corrección de la asignación de mercado
+
+Para configuraciones multimercado
+1. Ve a `Marketplace` → `Packages`
+2. Verifica la selección de mercado actual en el menú desplegable de mercado
+3. Ubica el paquete que debería aparecer en el mercado objetivo
+4. Haz clic en el `menú de opciones` (⋮) junto al paquete → `Copy`
+5. Selecciona el mercado objetivo requerido en el menú desplegable
+6. Haz clic en `Save & Publish` para crear el paquete en el mercado objetivo
+7. Cambia la vista de mercado para confirmar la disponibilidad del paquete
+
+<img src={require('./img/marketplace/packages/troubleshooting-package-visibility-2.jpg').default} alt="Copy package to a different market" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Problema 2: paquetes duplicados en Public Store
+
+Síntomas:
+
+- El mismo paquete aparece varias veces en la tienda del cliente
+- Listados duplicados con contenido y precios idénticos
+- Confusión del cliente debido a opciones de paquete repetidas
+
+Causa raíz:
+
+Los paquetes duplicados suelen ocurrir cuando las opciones **Business App** y **Public Store** están activadas para el mismo producto, lo que hace que el sistema muestre varias instancias.
+
+Resolución completa
+
+#### Paso 1: identificar los productos afectados
+1. **Ve al panel principal de Partner Center**
+2. **Accede a la sección de productos**: ve al área principal de gestión de productos
+3. **Busca el producto duplicado**: usa la función de búsqueda para ubicar el producto que causa la duplicación
+4. **Documenta la configuración actual**: anota la configuración actual antes de hacer cambios
+
+#### Paso 2: modificar la configuración del producto
+1. **Haz clic en el producto objetivo**: selecciona el producto que muestra comportamiento duplicado
+2. **Accede a la página Product Overview**: ve a la configuración principal del producto
+3. **Ubica los ajustes de visualización**: encuentra las casillas de Business App y Public Store
+4. **Desmarca ambas opciones**: desactiva temporalmente las opciones **Business App** y **Public Store**
+5. **Guarda los cambios**: aplica las actualizaciones de configuración
+
+#### Paso 3: verificación y restauración
+1. **Actualiza la página**: borra la caché del navegador y recarga la página
+2. **Revisa Public Store**: ve a la tienda orientada al cliente para verificar que se eliminó el duplicado
+3. **Reactiva la configuración correspondiente**: activa solo las opciones de visualización necesarias
+4. **Verificación final**: confirma que el paquete aparece una sola vez en la tienda
+
+Estrategia de prevención
+- **Configuración sistemática**: usa un enfoque consistente para la configuración de visualización de productos y paquetes
+- **Auditorías regulares**: revisa periódicamente la tienda en busca de contenido duplicado
+- **Documentación**: mantén registros de las configuraciones de paquetes y productos
+
+### Problema 3: los enlaces de paquete no funcionan
+
+Síntomas:
+
+- Los enlaces directos al paquete devuelven errores o no cargan
+- Los enlaces Buy it Now redirigen a páginas incorrectas
+- Los clientes no pueden acceder a los paquetes a través de enlaces compartidos
+
+Causas comunes y soluciones
+
+#### Causa 1: estado de publicación del paquete
+Verifica: que el paquete esté publicado y no en estado de borrador
+
+Solución: ve a la gestión de paquetes y confirma el estado de publicación
+
+#### Causa 2: configuración del comportamiento de compra
+Verifica: que el comportamiento de compra del paquete esté configurado como **Add to Shopping Cart**
+
+Solución: edita la configuración del paquete y configura el comportamiento de compra correspondiente
+
+#### Causa 3: permisos de acceso de usuario
+Verifica: para enlaces Buy it Now, que el usuario objetivo exista y tenga los permisos correspondientes
+
+Solución: revisa la configuración del usuario y los derechos de acceso
+
+#### Causa 4: restricciones de mercado
+Verifica: que el paquete esté disponible en el mercado objetivo del cliente
+
+Solución: revisa las asignaciones de mercado y la configuración de disponibilidad
+
+#### Causa 5: intento de compra mientras se suplanta a un usuario
+Verifica: si `Get it now` no está disponible o la compra no se puede completar en **Business App**, confirma si el partner está suplantando al cliente
+
+Solución:
+- Pide al cliente que inicie sesión directamente con su propio usuario de **Business App** para completar la compra
+- Si un partner necesita realizar el pedido en nombre del cliente, hazlo desde **Partner Center**
+
+#### Causa 6: el comportamiento de compra del paquete necesita volver a publicarse
+Verifica: si el precio o las acciones de compra del paquete no coinciden con tu configuración prevista en la tienda, revisa la configuración de `Purchase behavior` del paquete en `Marketplace` → `Packages`
+
+Solución:
+1. Abre el paquete en `Marketplace` → `Packages`
+2. Configura explícitamente la opción `Purchase behavior` prevista
+3. Confirma que la visibilidad de elementos y las opciones de precio sean correctas
+4. `Save & Publish` el paquete
+
+### Problema 4: el precio del paquete cambió después de editarlo
+
+Síntomas:
+
+- El precio del paquete se ve diferente después de abrir y guardar un paquete existente
+- Las líneas ahora muestran precios individuales que antes no eran visibles
+- El precio total parece haberse redistribuido entre los elementos
+
+Causa raíz:
+
+Los paquetes existentes se migran automáticamente al modelo de precios por línea la primera vez que se editan y guardan en el constructor de paquetes. Esta migración distribuye el precio total del paquete entre las líneas individuales usando un desglose ponderado basado en el valor de venta al público y la frecuencia de facturación de cada elemento.
+
+Resolución
+1. Abre el paquete en `Marketplace` → `Packages`
+2. Revisa los precios de las líneas individuales para confirmar que se vean correctos
+3. Ajusta los precios a nivel de elemento según sea necesario, o establece un nuevo precio total del paquete para activar la asignación inteligente de precios
+4. Guarda el paquete
+
+Esta migración es una conversión única. Después de guardar, el paquete usa el modelo de precios por línea de ahí en adelante. El precio general del paquete se conserva durante la migración. Solo cambia el desglose por elemento.
+
+### Package Profit se muestra como no disponible
+
+Si el campo `Package Profit` se muestra como no disponible, la causa más común es una **discrepancia de moneda**: la moneda del paquete no coincide con la moneda configurada para tu mercado. Ve a `Manage Store` → `Currency` y confirma que la moneda del mercado coincida con la moneda usada en el paquete.
+
+### El precio de venta al público no se actualiza después de editar un paquete
+
+En el nuevo editor de paquetes, actualizar el precio de venta al público de un elemento dentro de un paquete no recalcula ni muestra automáticamente el total actualizado en las vistas de lista y cuadrícula de inmediato. Este es un comportamiento conocido. Para aplicar el precio actualizado:
+
+1. Abre el paquete en `Marketplace` → `Packages`
+2. Quita el producto afectado del paquete
+3. Vuelve a agregar el producto y establece el precio de venta al público correcto
+4. Guarda y publica el paquete
+
+Nota: las actualizaciones masivas de precios en varios paquetes actualmente no son compatibles. Cada paquete debe actualizarse individualmente.
+
+### El paquete no aparece al agregarlo a una factura
+
+Los paquetes deben usar el **modelo de precios por línea** para ser compatibles con facturas y el pago mediante el carrito de compras. Si un paquete se creó con el modelo de precios heredado, ábrelo y guárdalo en el editor de paquetes. Se migrará automáticamente al modelo de precios por línea. Después de guardarlo, el paquete debería aparecer como opción al crear facturas.
+
+## Escenarios avanzados de solución de problemas
+
+### Sincronización de paquetes multimercado
+
+Escenario complejo: los paquetes aparecen de forma inconsistente entre mercados, con disponibilidad y precios variables.
+
+Proceso de diagnóstico
+1. **Revisión mercado por mercado**: revisa sistemáticamente la configuración de cada mercado
+2. **Comparación de paquetes**: compara la configuración de paquetes entre mercados
+3. **Disponibilidad de productos**: verifica que todos los componentes del paquete estén disponibles en cada mercado
+4. **Consistencia de precios**: verifica que las variaciones de precios regionales sean adecuadas
+
+Estrategia de resolución
+1. **Estandarizar la configuración base**: establece una configuración base consistente del paquete
+2. **Personalización específica por mercado**: aplica solo las variaciones regionales necesarias
+3. **Proceso de sincronización**: usa la función de copiar para mantener la consistencia
+4. **Monitoreo continuo**: auditorías regulares para evitar desviaciones de configuración
+
+**Consideraciones**
+
+- **Precios localizados**: ajusta el precio del paquete para mercados regionales
+- **Disponibilidad de productos**: asegúrate de que todos los componentes del paquete estén disponibles en los mercados objetivo
+- **Cumplimiento normativo**: considera las regulaciones y requisitos locales
+- **Adaptación cultural**: modifica los mensajes y el posicionamiento para las audiencias locales
+
+**Estrategia entre mercados**
+
+- **Estandarización**: mantén ofertas principales consistentes entre mercados
+- **Localización**: adapta los precios, mensajes y combinación de productos según las necesidades regionales
+- **Monitoreo del rendimiento**: haz seguimiento del rendimiento del paquete en los diferentes mercados
+- **Optimización**: mejora continuamente los paquetes según los datos específicos de cada mercado
+
+## Recursos de soporte y escalamiento
+
+Si nada en esta guía soluciona el problema, usa las opciones a continuación.
+
+### Cuándo escalar
+
+Escala o abre un hilo de soporte cuando veas cualquiera de los siguientes casos:
+
+- Problemas de configuración que no se pueden resolver después de seguir los pasos anteriores
+- Problemas a nivel de sistema que afectan a varios paquetes o clientes
+- Problemas de integración técnica que necesitan ayuda de API o ingeniería (comienza con [Developer APIs and integrations](../../administration/advanced/developer-apis/index.mdx) cuando corresponda)
+- Comportamiento similar a una interrupción de rendimiento que bloquea las ventas o el cumplimiento
+
+Antes de asumir que es un error, revisa el **[estado del sistema de Vendasta](https://status.vendasta.com/)** para ver incidentes a nivel de plataforma.
+
+### Contactar al soporte de Vendasta
+
+- **Conversations**: en Partner Center, abre la tarjeta de contacto en la parte inferior izquierda y elige **Send Message**. Consulta [Contactar al soporte de Vendasta](../../conversations/conversations-in-partner-center.mdx#contacting-vendasta-support).
+- **Correo electrónico**: [support@vendasta.com](mailto:support@vendasta.com)
+
+### Más ayuda en la documentación
+
+- **[Partner Troubleshooting Guide](../../getting-started/partner-troubleshooting-guide.mdx)**: orientación sobre **cuándo** contactar a los diferentes equipos y **qué incluir en un ticket** (Partner ID, pasos para reproducir, capturas de pantalla, etc.).
+- **[Package Management & Store Integration](./package-management-store-integration.mdx)**: configuración normal de paquetes, categorías de la tienda y uso compartido (muchos "problemas" se originan en la configuración de esa página).
+
+### Comunicación con el cliente
+
+Cuando necesites informar a **tus** clientes sobre un problema de paquete o de la tienda:
+
+- **Actualizaciones proactivas**: cuéntales a los clientes afectados lo que sabes antes de que todos contacten a soporte
+- **Explicaciones claras**: describe el impacto y lo que estás haciendo en lenguaje sencillo
+- **Expectativas de tiempo**: da un plazo realista cuando lo tengas; indica cuándo darás seguimiento si no lo tienes
+- **Seguimiento**: confirma que el problema esté resuelto o que la solución alternativa siga funcionando para ellos
