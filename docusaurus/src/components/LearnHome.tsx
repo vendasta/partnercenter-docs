@@ -164,7 +164,7 @@ const AI_FOUNDATIONS_ITEMS: ExplorerItem[] = [
   { title: "Context is everything", to: "/learn/ai-foundations/context-is-everything" },
   { title: "Instructions that scale", to: "/learn/ai-foundations/instructions-that-scale" },
   { title: "Taking action", to: "/learn/ai-foundations/taking-action" },
-  { title: "Agents and automations, together", to: "/learn/ai-foundations/agents-and-automations-together" },
+  { title: "AI Employees and automations, together", to: "/learn/ai-foundations/ai-employees-and-automations-together" },
 ];
 
 const AI_WORKFORCE_ITEMS: ExplorerItem[] = [
