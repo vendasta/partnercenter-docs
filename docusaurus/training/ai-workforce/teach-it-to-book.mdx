@@ -118,7 +118,7 @@ Go to `Capabilities` → `+ Add a capability` → `+ New capability`.
   steps={[
     <>Name it something like <code>BusinessHoursCheck</code> and describe what it does.</>,
     <>Write the prompt in markdown: numbered steps, with a branch for during hours and a branch for after hours.</>,
-    <>Inside each branch, reference other capabilities by their exact capitalized name, for example "call the Transfer Call capability," rather than restating what that capability already does.</>,
+    <>Inside each branch, reference other capabilities by their exact name, for example "call the Transfer calls capability," rather than restating what that capability already does.</>,
     <>Point the hours check at the business's own knowledge sources instead of a hardcoded list, so a holiday or a seasonal change never needs a manual edit here.</>,
   ]}
   confirm={<>The capability checks the time against the business's real hours and branches correctly, every time it runs.</>}
@@ -202,12 +202,12 @@ If a client needs bookings to land in a scheduling system they already run, that
       question: 'Your business-hours routing capability needs to transfer a call. What should its prompt do?',
       options: [
         'Restate the entire transfer process inline',
-        'Reference the Transfer Call capability by its exact name',
+        'Reference the Transfer calls capability by its exact name',
         'Ask the caller to call back during business hours',
         'Hand the call to Capture leads instead'
       ],
       correctIndex: 1,
-      explanation: 'Referencing another capability by its exact capitalized name keeps each capability doing one job, rather than duplicating logic that already exists elsewhere.'
+      explanation: 'Referencing another capability by its exact name keeps each capability doing one job, rather than duplicating logic that already exists elsewhere.'
     }
   ]}
 />
