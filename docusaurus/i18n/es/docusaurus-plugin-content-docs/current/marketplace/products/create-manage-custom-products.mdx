@@ -1,0 +1,258 @@
+---
+title: "Creating & Managing Your Own Products"
+sidebar_label: "Create & Manage Custom Products"
+sidebar_position: 2
+description: "Guía completa para crear, configurar y gestionar tus propios productos en el Vendasta Marketplace"
+tags: [marketplace, create-product, custom-products, product-creation, vendor-center]
+keywords: [create product, custom products, product creation, vendor center, product integration, webhooks, SSO, marketing pages, order forms]
+---
+
+# Creating & Managing Your Own Products
+
+El marketplace incluye más de 250 soluciones seleccionadas que puedes revender, y también capacidades sólidas para crear, comercializar, vender, facturar y cumplir tus propios productos y servicios. Esta guía cubre desde la creación rápida hasta la gestión y optimización avanzadas.
+
+## ¿Por qué crear tus propios productos?
+
+**Amplía tu portafolio de servicios**
+- Aprovecha la infraestructura del marketplace
+- Intégrate con la plataforma
+- Usa herramientas de facturación, cobro y gestión de clientes
+- Utiliza los marcos de ventas y marketing
+
+**Integración avanzada con la plataforma**
+- Categorías de producto para el descubrimiento
+- Facturación robusta
+- Páginas de marketing personalizadas (HTML completo)
+- Formularios de pedido sofisticados
+- Complementos ilimitados
+- Webhooks y SSO
+
+## Métodos de creación de productos
+
+### Creación rápida de productos
+
+La forma más rápida de llevar tu producto al marketplace con las funciones esenciales configuradas.
+
+Acceso: `Marketplace` → `Products` → `Create Product`.
+
+#### Paso 1: información básica
+
+- **Product Name** (obligatorio): un nombre claro y descriptivo que se muestra a administradores, vendedores y clientes (máximo 75 caracteres).
+- **Product Type** (obligatorio): elige **Product** o **Service** según lo que ofrezcas.
+- **Icon**: sube un ícono de producto. Formato recomendado: 240x240px (proporción 1:1), JPG o PNG, mostrado como círculo. Tamaño máximo de archivo: 5 MB.
+- **Short description**: describe tu producto en 200 caracteres o menos.
+- **Vendor contact email**: agrega uno o más correos electrónicos de contacto para la comunicación con el proveedor.
+
+#### Paso 2: configuración de precios
+
+**Pricing**
+- **Pricing model** (obligatorio): selecciona un modelo de precios (por ejemplo, Fixed price).
+- **Wholesale price**: lo que se les cobra a los resellers por cada activación de este producto.
+- **Retail price**: lo que se les cobra a los clientes por este producto.
+
+Todos los precios se establecen en USD.
+
+**Setup fee**: cobra una tarifa única opcional cuando un cliente compra este producto.
+- **Wholesale setup fee**: la tarifa de configuración cobrada a los resellers por una activación.
+- **Suggested setup fee**: la tarifa de configuración predeterminada usada por los resellers.
+
+**Billing period**: con qué frecuencia se factura a los clientes por su suscripción (por ejemplo, mensual).
+
+**Subscription term**: durante cuánto tiempo se comprometen los clientes con su suscripción, expresado en períodos de facturación. Al final del período de suscripción, elige:
+- *Renew with same term*: la suscripción se renueva con la misma duración de compromiso.
+- *Renew with a different subscription term*: la suscripción se renueva con una duración de término diferente.
+
+#### Paso 3: contenido de marketing
+**Marketing Description:**
+- Resumen conciso y atractivo de 1 o 2 párrafos
+- Comunica qué es el producto y su valor único
+- Explica por qué a los clientes les encantará usarlo
+- Enfócate en los beneficios en lugar de las características
+
+**Key Selling Points:**
+- 3 a 6 propuestas de valor únicas
+- Beneficios específicos y medibles cuando sea posible
+- Aborda los puntos débiles comunes de los clientes
+- Diferénciate de las soluciones de la competencia
+
+#### Paso 4: decisión de publicación
+**Continue Editing in Vendor Center:**
+- Guarda el producto como borrador para una configuración avanzada
+- Acceso a funciones adicionales: formularios de pedido, integraciones avanzadas, marketing en HTML
+- Recomendado para productos complejos que requieren una configuración detallada
+
+**Publish and Enable:**
+- Publica y activa el producto de inmediato
+- Hace que el producto esté disponible para empaquetarlo y agregarlo a la tienda
+- Se puede editar más tarde, pero se activa de inmediato
+
+### Creación avanzada de productos
+
+Para una configuración de producto integral con acceso completo a las funciones, usa Vendor Center para las opciones de configuración avanzada.
+
+Acceso: a través de **Vendor Center** para la configuración avanzada.
+
+
+## Product info
+
+La pestaña **Product info** contiene la configuración principal de tu producto.
+
+### Editions
+
+Activa **Offer editions** para crear varios planes de precios, conjuntos de funciones o niveles de servicio para tu producto. Cada edición tiene un nombre, un costo (mayorista) y un precio de venta al público. Usa **+ Add edition** para agregar más.
+
+En **Advanced settings**, puedes marcar **Allow multiple purchases per account**, lo que desactiva la compatibilidad con complementos.
+
+<img src={require('./img/editions.png').default} alt="Editions settings showing name, cost, and retail price columns with advanced settings" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Product activation
+
+Configura los pasos que se toman al aprovisionar tu producto:
+
+- **Activation message**: un mensaje que se muestra al cliente al activar el producto (por ejemplo, "Gracias por tu compra, ¡disfrútalo!").
+- **Notifications**: agrega una o más direcciones de correo de destinatarios para recibir notificaciones cuando el producto se active, cancele o desactive.
+- **Required products**: selecciona los productos que deben comprarse antes de que se pueda activar tu producto.
+
+#### Interruptor Auto Activation
+
+El interruptor **Auto Activation** (que se encuentra en **Marketplace > Products > [tu producto] > Product Info**) permite que el producto se active automáticamente sin necesidad de que un administrador procese manualmente un pedido.
+
+:::info Dependencia del Order Form
+Auto Activation solo funciona si el producto **no tiene un Order Form** configurado. Si hay un Order Form adjunto, el interruptor no tiene efecto: el pedido debe procesarse manualmente para que se pueda completar el formulario. Quita el Order Form primero si quieres que se aplique la activación automática.
+:::
+
+#### Activar automáticamente un producto al crear una cuenta nueva
+
+Para activar un producto personalizado automáticamente cada vez que se crea una cuenta nueva:
+
+1. Ve a `Partner Center` → `Administration` → `Customize` → `Account Creation`
+2. En **Products to activate on account creation**, agrega tu producto personalizado
+
+El producto se activará en cada cuenta nueva sin necesidad de un pedido independiente.
+
+#### Comportamiento de los destinatarios de notificaciones
+
+Las direcciones de correo electrónico agregadas en **Notifications** reciben alertas cada vez que el producto se activa, cancela o desactiva. Estos destinatarios permanecen en el registro del producto sin importar si la dirección de correo sigue siendo un usuario activo en tu plataforma. Si alguien inesperado está recibiendo correos de activación, revisa la lista de Notifications en Vendor Center y elimina cualquier dirección desactualizada.
+
+### Order form
+
+Crea un formulario de pedido personalizado para recopilar información cuando los clientes compran tu producto. El formulario incluye:
+
+- **Basic information**: se envía automáticamente según la Business Information guardada de la cuenta. Puedes seleccionar qué campos incluir en las categorías Business (Account ID, Company Name, Address, Company Phone, Website), Primary Contact (Name, Email, Phone) y Salesperson (Name, Email, Phone).
+- **Additional information**: campos que no se envían automáticamente. La información enviada en estos campos actualizará la Business Information guardada de la cuenta. Las opciones incluyen Short Description, Long Description, Hours of Operation, Services Offered y Brands Carried.
+- **Form Fields**: agrega campos de formulario personalizados para recopilar cualquier información adicional que necesites.
+- **Order Form Footer**: un campo de texto enriquecido que aparece en la parte inferior del formulario de pedido. Úsalo para incluir información sobre el pedido o su cumplimiento.
+
+<img src={require('./img/order-form.png').default} alt="Order form showing basic information, additional information, and form fields sections" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Fulfillment form
+
+Crea un formulario de cumplimiento para uso interno al aprovisionar el producto:
+
+- **Form Fields**: agrega campos de formulario personalizados para información específica del cumplimiento.
+- **Fulfillment form footer**: un campo de texto enriquecido que aparece en la parte inferior del formulario de cumplimiento. Úsalo para incluir información sobre el pedido o su cumplimiento.
+
+<img src={require('./img/fulfillment-form.png').default} alt="Fulfillment form showing form fields and fulfillment form footer" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Country availability
+
+Define en qué países está disponible tu producto. De forma predeterminada, los productos están disponibles en todos los países.
+
+### Gestión de pruebas gratuitas
+
+Puedes ofrecer un período de prueba para que los clientes prueben tu producto antes de comprarlo. Activa **Offer a trial period** para habilitar las pruebas y configura lo siguiente:
+
+- **Duration**: establece el número de días del período de prueba.
+- **At end of trial**: elige qué sucede cuando finaliza la prueba:
+  - *Do nothing*: el producto permanece activo sin ninguna acción automática.
+  - *Deactivate*: el producto se desactiva automáticamente cuando finaliza la prueba.
+
+<img src={require('./img/trial-settings.png').default} alt="Trial settings showing duration and end-of-trial options" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## Marketing
+
+Puedes personalizar completamente cómo aparece tu producto ante los clientes editando la pestaña **Marketing** dentro de un producto en Vendor Center. Pasa el cursor sobre cualquier elemento para ver qué controla. Los siguientes elementos están disponibles para personalizar:
+
+- **Banner image**: la imagen principal que se muestra en la parte superior del listado de tu producto.
+- **Categories**: asigna tu producto a las categorías de tienda relevantes.
+- **Description**: la descripción general principal del producto que se muestra a los clientes.
+- **Key selling points**: destaca los beneficios principales y las propuestas de valor.
+- **FAQs**: agrega preguntas y respuestas comunes sobre el producto.
+- **Video content**: incrusta videos para demostrar o promocionar el producto.
+- **Contact information**: proporciona detalles de contacto de soporte o ventas.
+
+También hay una pestaña separada para **Screenshots and more files**, donde puedes subir imágenes y documentos adicionales.
+
+También está disponible una pestaña **Reseller**, que te permite personalizar todos los mismos elementos específicamente para cómo aparece el producto ante los resellers.
+
+Usa el interruptor **Preview** en la parte superior de la pestaña Marketing para ver cómo se verá el listado de tu producto para tus clientes antes de publicarlo.
+
+Todos estos elementos se pueden adaptar para que coincidan con tus lineamientos de marca, lo que te da una experiencia de marca consistente en todos los listados de tus productos.
+
+<img src={require('./img/marketing-tab.png').default} alt="Marketing tab showing the preview of a product listing with product information, screenshots, and pricing tabs" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## Integration
+
+La pestaña **Integration** contiene tres secciones para conectar tu producto con sistemas externos y automatizar flujos de trabajo.
+
+### Integration settings
+
+Configura los ajustes y webhooks relacionados con la autenticación de la API de Vendasta, la automatización del flujo de compra y activación, y la modificación de cuentas de usuario. Activa **Enable integration** para activarlo.
+
+- **API Authentication**: ingresa tu RSA Public Key, usada para decodificar los payloads del proveedor que han sido codificados con la Vendor Private Key.
+- **Purchasing, Activation and Cancellation**:
+  - **Purchase URL**: se envía cuando el producto se activa o desactiva.
+  - **Add-on Purchase URL**: se envía cuando se activa o desactiva alguno de los complementos del producto. Los mensajes se envían individualmente para complementos de activación múltiple.
+  - **Cancellation URL**: se envía cuando se cancela el producto o alguno de sus complementos. Los mensajes se envían individualmente para complementos de activación múltiple.
+- **Manually Approve Purchases via API**: configura tu producto para usar el Pending Purchase Workflow (requiere Public Key).
+- **Reseller's users**: permite que los usuarios del reseller accedan a tu producto.
+- **Other Webhooks**: expande para configurar puntos de conexión de webhook adicionales.
+
+### Access and SSO
+
+Elige una URL de acceso básica para tu producto, o permite que los usuarios usen SSO desde la plataforma de Vendasta mediante OAuth2 y OpenID Connect.
+
+- **Access type**: selecciona cómo los usuarios inician tu producto:
+  - *Public webpage*: redirige a los usuarios a una URL pública.
+  - *Activation-specific URL*: redirige a una URL única para cada activación.
+  - *OAuth2*: autentica a los usuarios mediante OAuth2.
+  - *SAML*: autentica a los usuarios mediante SAML.
+- **Product access URL**: la URL a la que se redirige a los usuarios al iniciar tu producto. Opcionalmente puedes incluir `<accountId>` como marcador de posición en la URL.
+
+### Task Manager integration
+
+Estandariza tu proceso de cumplimiento automatizando la creación de proyectos y tareas en Task Manager. Activa **Integrate with Task Manager** para activarlo.
+
+- **Projects**: crea automáticamente un proyecto en Task Manager cada vez que se compra este producto. Selecciona una plantilla de proyecto y elige quién lo cumple:
+  - *Vendor*: crea proyectos en tu Task Manager.
+  - *Reseller*: crea proyectos en el Task Manager del reseller.
+- **Event-generated tasks and projects**: crea automáticamente una tarea o proyecto cuando ocurre un evento en un producto diferente:
+  - *Reviews*: cuando un cliente deja una reseña para negocios.
+  - *Mentions*: cuando se menciona al negocio en la web.
+  - *Listings*: cuando falta un listado o es inexacto.
+  - Elige si esto lo cumple el *Vendor* o el *Reseller*.
+
+## Add-ons
+
+Los complementos te permiten crear funciones o servicios adicionales que los clientes pueden comprar junto con tu producto. Cada complemento es esencialmente su propio producto vinculado al producto principal. Haz clic en **Create Add-on** para comenzar.
+
+## Compare product
+
+La pestaña **Compare product** muestra el estado de activación de tu producto y te permite comparar tu producto publicado con tu borrador actual. Si has hecho ediciones, las diferencias aparecerán aquí para que puedas revisar los cambios antes de publicar.
+
+- **Suspend new activations**: evita que nuevos clientes activen el producto mientras sigue disponible para los usuarios existentes.
+- **Open**: abre el producto (y todos sus complementos) al marketplace para que se pueda activar.
+
+## Productos personalizados y los botones Start/Stop Selling
+
+Los productos personalizados (privados) que creas en Vendor Center no tienen botones **Start Selling** ni **Stop Selling**. Esto es intencional: tus propios productos ya están habilitados para la venta en tu marketplace. Para evitar que se pida un producto personalizado, usa **Suspend new activations** en la pestaña **Compare product** de Vendor Center en su lugar.
+
+## Buenas prácticas
+
+- Comienza con un nombre de producto claro y una descripción corta que comuniquen el valor rápidamente.
+- Establece precios mayoristas y de venta al público competitivos; revisa ofertas comparables del marketplace como referencia.
+- Usa la pestaña Marketing para crear listados de producto atractivos con banners, puntos de venta y preguntas frecuentes.
+- Configura los formularios de pedido para recopilar solo la información que necesitas para cumplir el producto.
+- Configura correos de notificación para que tu equipo reciba alertas cuando los productos se activen o cancelen.
+- Si ofreces ediciones, mantén claros los nombres de los niveles y las diferencias de precio para los clientes.
+- Prueba el flujo de compra de tu producto de extremo a extremo antes de publicar.

@@ -1,0 +1,113 @@
+---
+title: "Customer experience"
+sidebar_label: "Customer experience"
+sidebar_position: 3
+description: "Cómo interactúan los clientes con tu Public Store, incluyendo la creación de cuentas, el carrito de compras y la solución de problemas"
+tags: [marketplace, manage-store, customer-experience, public-store]
+keywords: [customer experience, account creation, shopping cart, salesperson assignment, contact form, product visibility]
+---
+
+Esta página cubre lo que los clientes ven y hacen en tu Public Store: desde crear una cuenta y explorar hasta comprar, además de cómo configurar la asignación automática y solucionar problemas comunes.
+
+## Gestión de cuentas de clientes
+
+Los clientes pueden interactuar con tu Public Store de varias maneras según tu configuración:
+
+- **Embedded Sign-In**: autenticación en la parte superior de la tienda para clientes existentes
+- **Checkout Authentication**: inicio de sesión requerido durante el proceso de compra
+- **New Account Creation**: configuración de cuenta simplificada para prospectos
+
+### Creación de cuenta nueva
+
+Los clientes sin cuentas existentes pueden crear cuentas mediante dos métodos:
+
+**Búsqueda automática de negocio**
+1. El cliente hace clic en `Create an Account`
+2. Ingresa su dirección de correo electrónico y busca su negocio
+3. La cuenta se crea automáticamente si se encuentra el negocio
+4. Hay una opción de creación manual disponible si no se encuentra el negocio
+
+**Creación manual de cuenta**
+
+Información requerida:
+- Dirección de correo electrónico y nombre completo
+- Nombre y categoría del negocio
+- Dirección completa (país, calle, ciudad, estado, código postal)
+- Número de teléfono del negocio
+
+**Después de crear la cuenta**
+- Se envía al cliente un correo electrónico de configuración de contraseña
+- Se otorga acceso completo a Business App al configurar la contraseña
+- El contenido del carrito de compras se conserva durante la creación de la cuenta
+- Ocurre una asignación automática de vendedor si está configurada
+
+## Asignación automática y gestión de clientes potenciales
+
+Asigna automáticamente las cuentas nuevas creadas a través de tu Public Store a miembros del equipo de ventas:
+
+1. Ve a `Partner Center` → `Marketplace` → `Manage Store` → `Contact Form`
+2. Selecciona un vendedor en el menú desplegable
+
+:::info
+Si no aparece ningún vendedor en el menú desplegable, verifica la configuración de vendedores en la cuenta o el mercado seleccionado.
+:::
+
+Las cuentas nuevas siguen las mismas reglas de asignación automática que la creación de cuentas en Partner Center, incluyendo la inscripción en campañas de correo electrónico y la asignación basada en territorio.
+
+## Formulario de contacto y captación de clientes potenciales
+
+El formulario de contacto captura información de prospectos y dirige las consultas al miembro del equipo correspondiente. Configura la asignación de vendedor y las notificaciones automáticas en `Manage Store` → `Contact Form`.
+
+## Visibilidad de productos
+
+Para que los productos individuales aparezcan en tu Public Store:
+
+- El producto debe estar activado mediante `Start Selling` en `Marketplace` → `Discover Products`
+- El producto debe estar disponible en el mercado objetivo
+- La categoría `ALL` debe estar activada en `Manage Store` → `Categories`
+
+## Solución de problemas
+
+### El producto no aparece en la tienda
+
+**Verifica la activación del producto**
+1. Ve a `Marketplace` → `Discover Products`
+2. Busca el producto faltante
+3. Confirma que el botón `Start Selling` muestre `Selling` (atenuado)
+4. Activa el producto si aún no se está vendiendo
+
+**Verifica la disponibilidad en el mercado**
+1. Ve a `Marketplace` → `Products`
+2. Revisa la sección `Available in Store` en la pestaña `Overview` del producto
+3. Verifica que el producto esté activado para el mercado correcto
+
+**Verifica la configuración de categorías**
+1. Ve a `Marketplace` → `Manage Store`
+2. Expande la sección `Categories`
+3. Confirma que la categoría `ALL` esté activada
+
+:::info
+Los productos individuales que no están en paquetes no aparecen en Categories y no se pueden reorganizar a través de la categoría ALL.
+:::
+
+<img src={require('./img/marketplace/product-visibility-troubleshooting.png').default} alt="Categories menu in Marketplace Manage Store showing the ALL category toggle" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Problemas de inicio de sesión y de cuenta
+
+- **Problemas de inicio de sesión**: confirma que la cuenta del cliente exista y esté configurada correctamente; ofrece ayuda para restablecer la contraseña si es necesario
+- **Creación de cuenta nueva**: ayuda con la creación manual cuando falla la búsqueda automática de negocio; verifica que los correos de configuración de contraseña no estén bloqueados
+- **Vinculación de cuentas**: asegúrate de que haya una conexión adecuada entre las cuentas de Public Store y Business App
+
+### La tienda incrustada no se muestra
+
+- Verifica que el código de incrustación se haya copiado completo y colocado en el lugar correcto de tu sitio web
+- Prueba diferentes temas o elimina estilos y scripts del sitio web que puedan estar en conflicto
+- Verifica en distintos navegadores y dispositivos para descartar problemas específicos del entorno
+- Escala a soporte si los problemas persisten
+
+### Problemas de sincronización de datos entre Public Store y Business App
+
+1. Verifica la consistencia de los datos para la cuenta afectada
+2. Revisa los procesos de sincronización e intenta una sincronización manual si está disponible
+3. Confirma que los permisos de usuario y los niveles de acceso sean correctos
+4. Contacta a soporte si las inconsistencias continúan
