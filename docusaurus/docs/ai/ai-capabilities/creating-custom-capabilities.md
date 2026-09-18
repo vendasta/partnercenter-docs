@@ -62,7 +62,7 @@ You can create entirely custom AI Employees with specialized capabilities. Custo
 
 **Basic Steps:**
 1. On the `Workforce` page, click `Create` 
-2. Set up the basic profile (name, avatar, purpose)
+2. Set up the basic profile (name, avatar, role)
 3. Configure communication channels (web chat, SMS, phone, etc.)
 4. Add knowledge sources (website, documents, custom text)
 5. Add both built-in and custom capabilities
@@ -295,9 +295,9 @@ When refining custom capabilities, follow this systematic approach:
 - **Prompt issues**: The AI doesn't know when to use the capability or how to handle responses
 - **Tool configuration issues**: API calls fail, wrong parameters are sent, or authentication fails
 - **Knowledge issues**: The AI needs context it doesn't have (add to knowledge base, not capability)
-- **Purpose issues**: The AI's overall behavior conflicts with the capability (adjust AI Employee purpose)
+- **`Role` issues**: The AI's overall behavior conflicts with the capability (adjust the AI Employee's `Role`)
 
-Start with the most specific fix (tool configuration) before adjusting broader elements (prompts or purpose).
+Start with the most specific fix (tool configuration) before adjusting broader elements (prompts or the `Role`).
 :::
 
 ### Performance monitoring

@@ -9,7 +9,7 @@ import { GraduationCapIcon } from '@site/src/components/Icons';
 
 AI Employees are digital team members you can configure to automate conversations, answer customer questions, capture leads, book appointments, and more. Each works well out of the box, but can be tailored to fit your business needs.
 
-All AI Employees share a common structure, with configurable elements like their name, purpose, communication channels, capabilities, and knowledge sources. Specific roles (like Chat Receptionist or Voice Receptionist) may include additional options, but the basics are always the same.
+All AI Employees share a common structure, with configurable elements like their name, `Role`, communication channels, capabilities, and knowledge sources. Specific roles (like Chat Receptionist or Voice Receptionist) may include additional options, but the basics are always the same.
 
 See these guides for step-by-step setup or details on specific AI Employees:
 - [Set up the AI Chat Receptionist](./ai-chat-receptionist/)
@@ -46,7 +46,7 @@ If you're just getting started, review the sections below for an overview of the
 
 ## AI Employee elements
 
-AI Employees all share a similar structure, no matter what role they play in your business. This applies to pre-built AI Employees (eg. Chat Receptionist, Voice Receptionist) and Custom AI Employees you create. Each one comes with common parts you can review and configure, such as their name, purpose, communication channels, capabilities, and what knowledge they use to answer questions. 
+AI Employees all share a similar structure, no matter what role they play in your business. This applies to pre-built AI Employees (eg. Chat Receptionist, Voice Receptionist) and Custom AI Employees you create. Each one comes with common parts you can review and configure, such as their name, `Role`, communication channels, capabilities, and what knowledge they use to answer questions. 
 
 ### Profile
 
@@ -56,7 +56,7 @@ The `Profile` section is where you set the basics for your AI Employee: how they
   **What this is:** The display name and image used for your AI Employee across your channels.  
   **What to do:** Choose a friendly, memorable name and a profile image (like your logo or a custom avatar) that fits the role or your brand. This helps customers and your team instantly recognize who they're interacting with.
 
-- `Purpose`:  
+- `Role`:  
   **What this is:** The job description and behavioral "guidelines" for your AI Employee. This sets the tone, goals, and important instructions for every conversation.  
   **What to do:** Write a clear, short summary of what your AI Employee should do. Be specific about their tone, greeting, and key tasks.
 
@@ -202,10 +202,10 @@ There's no separate menu for per-channel behavior. Instead, you write **channel-
 **What to do:**  
 Add channel-specific instructions in either (or both) of these places:
 
-- The `Purpose` field (labeled `Role` on the Chat and Voice Receptionists): best for behavior that should apply across everything the employee does, such as tone, greeting style, or reply length per channel.
+- The `Role` field: best for behavior that should apply across everything the employee does, such as tone, greeting style, or reply length per channel.
 - A capability's instructions: best for shaping a single task, such as how much information to collect for lead capture on SMS versus email.
 
-Reference the channel by name in your instructions and describe how you want the AI to behave there. For example, add lines like these to your Purpose field or a capability's instructions:
+Reference the channel by name in your instructions and describe how you want the AI to behave there. For example, add lines like these to your `Role` field or a capability's instructions:
 
 ```text wrap
 When responding on SMS, keep replies short and conversational. Use plain text only (no bullet points, headings, or markdown), since text messages display them as raw symbols. Aim for one or two sentences.
@@ -216,7 +216,7 @@ When responding on web chat, keep answers brief and friendly, and offer to conti
 ```
 
 :::tip
-Only add channel-specific instructions for the channels where the default behavior isn't quite right. For everything else, your AI Employee falls back to its general Purpose and capability instructions.
+Only add channel-specific instructions for the channels where the default behavior isn't quite right. For everything else, your AI Employee falls back to its general `Role` and capability instructions.
 :::
 
 :::info Instructions shape communication, not actions
@@ -265,7 +265,7 @@ After initial setup, regularly test and optimize your AI Employees to ensure the
 - Tone or behavior that doesn't match expectations
 
 **2. Determine the Root Cause**
-- `Purpose` issue: Adjust if it affects overall behavior across all conversations
+- `Role` issue: Adjust if it affects overall behavior across all conversations
 - `Capability` issue: Refine when specific actions aren't working correctly
 - `Knowledge` issue: Update when facts are missing or incorrect
 - `Tool` issue: Fix when API calls fail or return wrong data
