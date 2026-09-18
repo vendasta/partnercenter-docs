@@ -81,7 +81,7 @@ Managing multiple locations under one brand or franchise? With a [multi-location
 :::
 
 :::tip Respond differently on each channel
-Your AI Chat Receptionist knows which channel it's replying on, so it can adapt its tone and reply length per channel. To set this up, add channel-specific instructions to the `Purpose` prompt or to a capability's instructions. For example, "When responding on SMS, keep replies to one or two sentences with no formatting; when responding on web chat, you can use short lists and links." Both places work. See [Adjust responses by channel](../index.mdx#adjust-responses-by-channel) for examples.
+Your AI Chat Receptionist knows which channel it's replying on, so it can adapt its tone and reply length per channel. To set this up, add channel-specific instructions to the `Role` prompt or to a capability's instructions. For example, "When responding on SMS, keep replies to one or two sentences with no formatting; when responding on web chat, you can use short lists and links." Both places work. See [Adjust responses by channel](../index.mdx#adjust-responses-by-channel) for examples.
 :::
 
 ### Step 2: Configure your AI Chat Receptionist capabilities
@@ -99,7 +99,7 @@ Capabilities are like instructions that guide how your AI Chat Receptionist beha
 
   When a visitor provides a phone number without a country code, the system defaults to +1 (US). When a visitor includes a country code (for example, +44 for the UK), it is stored as provided.
 
-  If your business serves international customers, you can add an instruction to your Q&A or Purpose prompt asking visitors to include their country code when sharing a phone number. For example:
+  If your business serves international customers, you can add an instruction to your Q&A or `Role` prompt asking visitors to include their country code when sharing a phone number. For example:
 
   ```text
   Please include your country code when sharing your phone number (for example, +44 for the UK or +61 for Australia).
@@ -110,7 +110,7 @@ Capabilities are like instructions that guide how your AI Chat Receptionist beha
 
   **Setting up a booking link via Q&A instructions**
 
-  If you want the AI to share a booking link rather than book directly, add an instruction to your Q&A or Purpose that includes the link text. For example:
+  If you want the AI to share a booking link rather than book directly, add an instruction to your Q&A or `Role` that includes the link text. For example:
 
   ```text
   When a visitor asks to book a meeting or schedule an appointment, share this link: [your booking link here]
@@ -145,7 +145,7 @@ With multi-service booking enabled, the AI can:
 - `Custom Capabilities`
   Expand your AI Chat Receptionist's skills by adding custom capabilities tailored to your unique business needs. You can learn more about [Custom Capabilities](../../ai-capabilities/creating-custom-capabilities.md) in depth.
 
-### Step 3: Add purpose and business knowledge to the AI Chat Receptionist
+### Step 3: Add role and business knowledge to the AI Chat Receptionist
 
 To respond accurately to general inquiries, your AI Chat Receptionist needs context about your business.
 
@@ -157,7 +157,7 @@ To respond accurately to general inquiries, your AI Chat Receptionist needs cont
 
 When a visitor chats through the Web Chat widget, the AI Chat Receptionist receives the URL of the page they're currently on with every message they send. The AI can use this URL to answer vague, context-dependent questions ("is this still available?", "what's the price?", "tell me more") without making the visitor re-explain what they're looking at.
 
-This works automatically. No configuration is required for the AI to receive the URL. To get the most out of it, make sure the relevant pages of the SMB's website are in the AI's knowledge base, and consider tuning the Purpose or a capability prompt to tell the AI how to interpret the URL pattern for that business.
+This works automatically. No configuration is required for the AI to receive the URL. To get the most out of it, make sure the relevant pages of the SMB's website are in the AI's knowledge base, and consider tuning the `Role` or a capability prompt to tell the AI how to interpret the URL pattern for that business.
 
 :::info The AI sees the URL, not the page content
 The AI is only given the URL string itself, not a rendered view of the page. To answer detailed questions about what's on a page, the AI needs that page's content in its knowledge base, or a [custom capability](../../ai-capabilities/creating-custom-capabilities.md) that can look up the data (for example, an inventory lookup tool keyed off the URL).
@@ -165,7 +165,7 @@ The AI is only given the URL string itself, not a rendered view of the page. To 
 
 ### Tune a prompt to use the current URL
 
-To teach the AI Chat Receptionist how the SMB's URLs map to specific products, vehicles, or pages, add instructions to the Purpose field or to a capability prompt.
+To teach the AI Chat Receptionist how the SMB's URLs map to specific products, vehicles, or pages, add instructions to the `Role` field or to a capability prompt.
 
 #### Example: Auto dealer inventory pages
 
@@ -250,7 +250,7 @@ The Explanation feature is your most valuable debugging tool. Each response expl
 **Using explanations to improve performance:**
 - If the AI didn't use a tool you expected, check if the capability prompt clearly defines when to use it
 - If wrong knowledge was referenced, consider refining your knowledge base or adding more specific content
-- If the reasoning seems off, your Purpose or capability instructions may need clarification
+- If the reasoning seems off, your `Role` or capability instructions may need clarification
 
 ### Systematic iteration workflow
 
@@ -262,13 +262,13 @@ Improving your AI Chat Receptionist is an iterative process. Follow this workflo
 - Review the AI explanation to understand why it happened
 
 **Step 2: Determine the Fix Location**
-- **Purpose issue**: The AI's overall tone, greeting, or general behavior needs adjustment
+- **`Role` issue**: The AI's overall tone, greeting, or general behavior needs adjustment
 - **Capability issue**: The AI didn't take an action when it should have, or did something unexpected
 - **Knowledge issue**: The AI gave incorrect information or couldn't find relevant facts
 - **Tool issue**: An API call failed or returned unexpected data
 
 **Step 3: Make One Change at a Time**
-- Adjust only one element (Purpose, one capability, or one knowledge source)
+- Adjust only one element (`Role`, one capability, or one knowledge source)
 - Save your changes
 - Document what you changed and why
 
@@ -288,13 +288,13 @@ Improving your AI Chat Receptionist is an iterative process. Follow this workflo
 - Track if your fix improved the overall experience
 - Be ready to iterate further if needed
 
-:::tip When to adjust Purpose vs. Capabilities vs. Knowledge
-- **Adjust Purpose** when the issue affects all conversations (tone, general behavior, introduction)
+:::tip When to adjust Role vs. Capabilities vs. Knowledge
+- **Adjust `Role`** when the issue affects all conversations (tone, general behavior, introduction)
 - **Adjust Capabilities** when the issue is about when/how to take specific actions in certain situations
 - **Adjust Knowledge** when the issue is about incorrect facts or missing information
 - **Adjust Tools** when API calls are failing or returning unexpected data
 
-If you're unsure, start with the most specific element (capabilities or knowledge) before adjusting the broad Purpose.
+If you're unsure, start with the most specific element (capabilities or knowledge) before adjusting the broad `Role`.
 :::
 
 ### Testing across multiple channels
@@ -321,16 +321,16 @@ If you've enabled your AI Chat Receptionist on multiple channels (web chat, SMS,
 ## Frequently asked questions about setting up your AI Chat Receptionist
 
 <details>
-<summary>What should I include in the Purpose prompt?</summary>
+<summary>What should I include in the `Role` prompt?</summary>
 
-Your Purpose prompt sets the tone and behavior of your AI Chat Receptionist. Include instructions about your business's voice, how the AI should greet visitors, and any important policies or information it should share.
+Your `Role` prompt sets the tone and behavior of your AI Chat Receptionist. Include instructions about your business's voice, how the AI should greet visitors, and any important policies or information it should share.
 
 </details>
 
 <details>
 <summary>How often should I update my AI Chat Receptionist's knowledge?</summary>
 
-Regularly review and update your AI's Purpose prompt and knowledge sources to ensure the responses stay accurate and aligned with your latest business offerings and policies. Once a month is a good starting point for many businesses, but your business might need to do it more or less often. 
+Regularly review and update your AI's `Role` prompt and knowledge sources to ensure the responses stay accurate and aligned with your latest business offerings and policies. Once a month is a good starting point for many businesses, but your business might need to do it more or less often. 
 
 </details>
 
@@ -350,7 +350,7 @@ You know your business best! To improve your AI's accuracy, take a moment to wri
 - The most common questions your customers ask  
 - The key information the AI should always collect from visitors
 
-Use this info to write clear Purpose prompts and add any relevant content to your AI's knowledge base that might be missing.
+Use this info to write clear `Role` prompts and add any relevant content to your AI's knowledge base that might be missing.
 
 </details>
 
@@ -367,7 +367,7 @@ No. The AI is given the URL of the page the visitor is on, but it does not see t
 It depends on the outcomes the SMB is after.
 
 - If they only want a smoother experience, the AI naturally picks up that the visitor is on a specific page and references it. No tuning is required.
-- If they want specific behavior tied to specific URL patterns (e.g. always look up inventory when the customer is on a `/inventory/[id]` page), add instructions to the Purpose or a capability prompt that explain the URL pattern and how the AI should react.
+- If they want specific behavior tied to specific URL patterns (e.g. always look up inventory when the customer is on a `/inventory/[id]` page), add instructions to the `Role` or a capability prompt that explain the URL pattern and how the AI should react.
 
 </details>
 
