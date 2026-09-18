@@ -46,7 +46,6 @@ I18N_DOCS_PLUGIN = "docusaurus-plugin-content-docs"
 LOCALES = {
     "fr": "French",
     "es": "Spanish",
-    "de": "German",
 }
 ANTHROPIC_MODEL = "claude-sonnet-5"
 ANTHROPIC_API_URL = "https://api.anthropic.com/v1/messages"
