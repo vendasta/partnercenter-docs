@@ -35,5 +35,12 @@ images:
   - 'us-central1-docker.pkg.dev/repcore-prod/docs-repo/partnercenter-docs:$COMMIT_SHA'
   - 'us-central1-docker.pkg.dev/repcore-prod/docs-repo/partnercenter-docs:latest'
 
+# Use a bigger machine so the docusaurus build (multiple locales' worth of
+# content) isn't CPU-bound on the default E2_MEDIUM (1 vCPU)
+options:
+  machineType: 'E2_HIGHCPU_8'
+  # Non-default machine types aren't supported with the legacy logging mode
+  logging: 'CLOUD_LOGGING_ONLY'
+
 # Set a longer timeout for the build
 timeout: '3600s'
