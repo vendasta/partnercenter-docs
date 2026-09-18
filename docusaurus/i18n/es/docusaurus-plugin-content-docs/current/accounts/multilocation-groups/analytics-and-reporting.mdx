@@ -1,0 +1,74 @@
+---
+title: Analytics and Reporting
+sidebar_label: Analytics and Reporting
+sidebar_position: 4
+description: Explora los informes de palabras clave y los resúmenes a nivel ejecutivo entre ubicaciones.
+tags: [multi-location, analytics, reporting]
+keywords: [keyword-reporting, executive-report]
+---
+
+Los análisis y reportes en Multi-Location Business App (MLBA) ofrecen una forma centralizada de monitorear, analizar y reportar métricas de rendimiento entre múltiples ubicaciones de negocio desde una sola interfaz. Los datos de cada ubicación individual se agregan en paneles e informes unificados, lo que permite comparaciones entre ubicaciones, seguimiento de tendencias e informes de prueba de rendimiento.
+
+Los informes tienen marca blanca, lo que te permite personalizarlos con tu propio logotipo y estilo para las presentaciones a tus clientes.
+
+## Executive Report
+
+El Executive Report es el informe insignia de MLBA. Consolida las métricas de todas las ubicaciones de un grupo multiubicación e incluye líneas de tendencia y cifras de cambio delta para mostrar tanto los cambios a corto plazo como las tendencias de rendimiento a largo plazo.
+
+**Fuentes de datos incluidas:**
+- Google Business Profile
+- Advertising Intelligence
+- Google Analytics (GA4)
+- Reputation (reseñas y calificaciones)
+- Datos de listados
+- Rendimiento en redes sociales
+
+Los informes se pueden filtrar por geografía, categoría de negocio, región, grupos de ubicaciones o fuentes de listados y reseñas. Se admiten rangos de fechas personalizados.
+
+## Informes de palabras clave
+
+Consulta la distribución del posicionamiento de palabras clave entre ubicaciones:
+
+1. Ve a `Accounts` → `Multi-Location Groups`
+2. Selecciona un grupo y luego abre `Keyword Rankings`
+3. Usa los filtros de ubicaciones, palabras clave, proveedor y geografía
+
+## Integración con Google Analytics (GA4)
+
+Los datos de GA4 se conectan a nivel de ubicación individual. El Executive Report multiubicación consolida los datos de GA4 de la Business App de cada ubicación individual.
+
+**Recomendaciones de configuración:**
+
+- **Un sitio web compartido:** Conecta GA4 a una única ubicación central (sede). El informe multiubicación mostrará datos solo de esa ubicación.
+- **Varios sitios web o micrositios:** Usa flujos de datos de GA4 separados para cada sitio, cada uno conectado a su correspondiente Business App de ubicación individual.
+
+:::warning
+No conectes la misma propiedad de GA4 a varias cuentas. Esto provoca duplicación de datos en la consolidación multiubicación.
+:::
+
+## Datos de listados y reputación
+
+Los datos de listados de Google Business Profile y otros directorios se incluyen en los informes. Ten en cuenta que el envío manual de URL de listados de Google no es compatible en MLBA. Los listados deben detectarse automáticamente o enviarse a nivel de ubicación individual.
+
+Las puntuaciones de listados (Listing Scores) en el informe multiubicación excluyen las citaciones, lo que puede causar discrepancias en comparación con los informes de ubicación individual.
+
+Las métricas de reputación incluyen:
+- Principales fuentes de reseñas
+- Reseñas recientes y calificación promedio
+- Volumen de reseñas
+- Tiempo promedio de respuesta
+
+## Análisis de redes sociales
+
+Se incluyen los datos de redes sociales de Facebook, Instagram (solo cuentas Pro) y Google Business Profile. Las métricas de publicación e interacción en redes sociales se pueden hacer un seguimiento en múltiples ubicaciones, y las publicaciones se pueden redactar y programar para varias ubicaciones con personalización dinámica del contenido.
+
+## Acceso y permisos
+
+Puedes cambiar entre ubicaciones individuales dentro de MLBA usando el selector de ubicaciones. Los permisos se pueden establecer a nivel de grupo o de ubicación para controlar el acceso a los datos de análisis e informes.
+
+## Limitaciones y consideraciones
+
+- Las estadísticas de Google Business Profile (vistas, acciones, búsquedas) requieren conexiones de Google Search Console a nivel de ubicación.
+- El panel multiubicación no admite nombres de producto personalizados. En su lugar, se muestran elementos de menú genéricos.
+- Las notificaciones por correo del resumen diario se envían desde las cuentas individuales, no desde el grupo multiubicación.
+- No existe una integración nativa de GA4 multiubicación. La agregación de datos depende de la consolidación de los datos de ubicación individual.

@@ -1,0 +1,270 @@
+---
+title: Eliminar cuentas
+sidebar_label: Eliminar cuentas
+sidebar_position: 6
+description: Pautas y procedimientos para eliminar de forma segura cuentas de negocio de tu sistema
+tags: [account-deletion, account-removal, data-management]
+keywords: [delete-account, remove-business, account-cleanup, data-retention]
+---
+
+## ¿Qué es la eliminación de cuentas?
+
+La eliminación de cuentas es la eliminación permanente de cuentas de negocio de tu sistema de Business App. Este proceso elimina todos los datos asociados, incluido el acceso de usuarios, el historial de productos, los datos de reportes y la configuración de la cuenta.
+
+## ¿Por qué considerar la eliminación de una cuenta?
+
+La eliminación de cuentas puede ser necesaria por:
+
+- **Limpieza de datos**: eliminar cuentas duplicadas o de prueba que saturan tu sistema
+- **Cierre del negocio**: eliminar de forma permanente cuentas de negocios que han cerrado definitivamente
+- **Terminación de contrato**: eliminar cuentas cuando las relaciones de servicio finalizan de forma permanente
+- **Requisitos de cumplimiento**: cumplir con las regulaciones de retención de datos y privacidad
+- **Mantenimiento del sistema**: limpiar cuentas obsoletas o inactivas
+
+:::warning
+La eliminación de cuentas es permanente e irreversible. Se perderán todos los datos asociados con la cuenta, incluidos los datos históricos de reportes, los registros de acceso de usuarios y las configuraciones de productos.
+:::
+
+## ¿Qué sucede cuando eliminas una cuenta?
+
+### Eliminación de datos
+- Perfil de negocio completo e información de contacto
+- Todas las cuentas de usuario y credenciales de acceso
+- Historial de productos y configuraciones
+- Datos de reportes e historial de analítica
+- Notas de la cuenta y archivos adjuntos
+- Conexiones de integración y acceso a la API
+
+### Impacto en el sistema
+- La cuenta se elimina de todas las listas y grupos
+- Se detienen las campañas y comunicaciones automatizadas
+- El acceso de usuarios se revoca de inmediato
+- Los productos activos se cancelan y desactivan automáticamente
+
+### Facturación después de la eliminación
+
+Eliminar una cuenta **no cancela los compromisos de facturación activos**. Si un producto tenía un periodo de compromiso (por ejemplo, un contrato anual), la facturación continúa hasta el final de ese periodo de compromiso incluso después de eliminar la cuenta y el producto. Verás cargos en tu factura hasta el final del compromiso.
+
+:::warning
+Si eliminas una cuenta con productos en compromisos activos, seguirás siendo facturado por esos productos hasta que finalice el periodo de compromiso. Cancela los compromisos antes de eliminar la cuenta si deseas detener la facturación de inmediato (sujeto a los términos de cancelación).
+:::
+
+### Qué sucede con las cuentas bajo un mercado desactivado
+
+Si se desactiva un mercado, todas las cuentas asignadas a ese mercado se reasignan automáticamente al **mercado predeterminado** dentro del mismo Partner ID. Las cuentas en sí no se eliminan.
+
+## Cómo eliminar cuentas individuales
+
+### Lista de verificación previa a la eliminación
+
+Antes de eliminar cualquier cuenta, completa estos pasos:
+
+1. **Verifica la necesidad de eliminar**: confirma que la cuenta realmente necesita eliminarse de forma permanente
+2. **Exporta los datos importantes**: guarda cualquier información que puedas necesitar más adelante
+3. **Notifica a las partes interesadas**: informa a los miembros del equipo que trabajan con esta cuenta
+4. **Revisa las dependencias**: verifica si otras cuentas o sistemas dependen de esta cuenta
+5. **Documenta el motivo**: registra por qué se elimina la cuenta
+
+### Proceso de eliminación de cuentas
+
+Para eliminar una sola cuenta:
+
+1. Navega a `Accounts` → `Manage Accounts`
+2. **Localiza la cuenta objetivo** usando la búsqueda o los filtros
+3. **Haz clic en el nombre de la cuenta** para abrir los detalles de la cuenta
+4. Haz clic en `Edit Account`
+5. **Desplázate hasta la parte inferior** del formulario de edición
+6. **Ubica la sección de eliminación** (generalmente marcada con colores de advertencia)
+7. **Lee atentamente la advertencia de eliminación**
+8. **Escribe el texto de confirmación** si se requiere (a menudo el nombre del negocio)
+9. Haz clic en `Delete Account` y confirma la acción
+
+:::warning
+Algunos sistemas requieren escribir el nombre del negocio o el ID de la cuenta para confirmar la eliminación. Esto evita eliminaciones accidentales.
+:::
+
+### Efectos inmediatos posteriores a la eliminación
+
+Después de la eliminación:
+- La cuenta desaparece de todas las listas de cuentas de inmediato
+- Los usuarios pierden el acceso a los paneles de Business App
+- Los servicios e integraciones automatizados se detienen
+- Los datos de la cuenta se vuelven inaccesibles
+- Los procesos de facturación se terminan
+
+## Cómo gestionar las solicitudes de eliminación de cuentas
+
+### Eliminaciones solicitadas por el cliente
+
+Cuando los clientes solicitan la eliminación de una cuenta:
+
+1. **Comprende el motivo** de la solicitud de eliminación
+2. **Explica las alternativas**, como la desactivación de la cuenta o la pausa del servicio
+3. **Revisa los términos del contrato** relacionados con la retención y eliminación de datos
+4. **Obtén confirmación por escrito** de la solicitud de eliminación
+5. **Establece un cronograma apropiado** para la eliminación (considera los periodos de aviso)
+6. **Completa la exportación de datos** si el cliente solicita sus datos
+7. **Ejecuta la eliminación** siguiendo los procedimientos internos
+
+### Decisiones internas de eliminación
+
+Para eliminaciones iniciadas por el negocio:
+
+1. **Documenta la justificación del negocio** para la eliminación
+2. **Obtén las aprobaciones apropiadas** de la gerencia
+3. **Revisa los requisitos legales y de cumplimiento**
+4. **Planifica la retención de datos** si lo requieren las regulaciones
+5. **Comunica a los equipos afectados** antes de la eliminación
+6. **Ejecuta la eliminación** durante las ventanas de mantenimiento apropiadas
+
+## Alternativas a la eliminación de cuentas
+
+### Desactivación de la cuenta
+
+En lugar de eliminar, considera la desactivación:
+
+**Beneficios de la desactivación:**
+- Preserva los datos históricos para los reportes
+- Permite la reactivación si las circunstancias cambian
+- Mantiene el cumplimiento con los requisitos de retención de datos
+- Reduce el riesgo de pérdida accidental de datos
+
+**Cómo desactivar cuentas:**
+1. Edita la configuración de la cuenta
+2. Cambia el estado de la cuenta a "Inactive" o "Deactivated"
+3. Elimina los productos y servicios activos
+4. Deshabilita el acceso de usuarios
+5. Elimina de las listas de cuentas activas
+
+### Archivado de cuentas
+
+Para cuentas inactivas a largo plazo:
+
+1. **Mueve las cuentas a listas de archivo**
+2. **Elimina de los flujos de trabajo activos**
+3. **Mantén la información básica de la cuenta**
+4. **Preserva los datos de reportes**
+5. **Documenta el motivo y la fecha del archivado**
+
+### Suspensión del servicio
+
+Para problemas temporales:
+
+1. **Pausa los servicios activos** sin eliminar los datos
+2. **Suspende el acceso de usuarios** temporalmente
+3. **Mantén la estructura de la cuenta** para una fácil reactivación
+4. **Establece la duración de la suspensión** y las fechas de revisión
+
+## Cómo gestionar la limpieza de cuentas duplicadas
+
+### Identificación de cuentas duplicadas
+
+Señales comunes de cuentas duplicadas:
+- Nombres de negocio similares con ligeras variaciones
+- Misma dirección pero diferentes nombres de negocio
+- Números de teléfono o información de contacto idénticos
+- Mismo propietario del negocio con múltiples variaciones de cuenta
+
+### Proceso de resolución de duplicados
+
+1. **Identifica la cuenta principal** con la información más completa
+2. **Exporta los datos de las cuentas duplicadas** antes de eliminar
+3. **Combina la información importante** en la cuenta principal
+4. **Transfiere cualquier usuario activo** a la cuenta principal
+5. **Traslada el historial de productos** y las notas importantes
+6. **Elimina las cuentas duplicadas** después de la consolidación de datos
+
+### Prevención de futuros duplicados
+
+- Implementa procedimientos de búsqueda exhaustivos durante la creación de cuentas
+- Capacita a los miembros del equipo en la detección de duplicados
+- Usa convenciones de nomenclatura consistentes
+- Realiza auditorías de datos regulares para identificar posibles duplicados
+
+## Recuperación de datos y consideraciones de respaldo
+
+### Respaldo de datos previo a la eliminación
+
+Antes de eliminar cuentas importantes:
+
+1. **Exporta los datos completos de la cuenta**, incluida la información de contacto y la configuración
+2. **Guarda las listas de usuarios y la información de acceso**
+3. **Descarga los archivos y documentos importantes**
+4. **Exporta los datos de reportes** para los registros históricos
+5. **Documenta las configuraciones de productos** como referencia
+
+### Limitaciones de la recuperación
+
+Después de eliminar una cuenta:
+- Los datos no se pueden recuperar del sistema
+- El acceso de usuarios no se puede restaurar
+- El historial de productos se pierde de forma permanente
+- Las conexiones de integración deben volver a crearse
+
+## Preguntas frecuentes (FAQ)
+
+<details>
+<summary>¿Puedo recuperar una cuenta después de eliminarla?</summary>
+
+No, la eliminación de cuentas es permanente e irreversible. Una vez eliminada, todos los datos de la cuenta se eliminan de forma permanente del sistema y no se pueden recuperar.
+</details>
+
+<details>
+<summary>¿Cuál es la diferencia entre eliminar y desactivar una cuenta?</summary>
+
+La eliminación elimina de forma permanente todos los datos de la cuenta, mientras que la desactivación conserva los datos de la cuenta pero la deja inactiva. Las cuentas desactivadas se pueden reactivar más tarde si es necesario.
+</details>
+
+<details>
+<summary>¿Cuánto tiempo debo esperar antes de eliminar una cuenta inactiva?</summary>
+
+Esto depende de tus políticas de negocio y requisitos legales. Muchas organizaciones esperan de 6 a 12 meses después de finalizar el servicio antes de considerar la eliminación, lo que permite tiempo para una posible reactivación.
+</details>
+
+<details>
+<summary>¿Qué sucede con el acceso de usuarios cuando elimino una cuenta?</summary>
+
+Todo el acceso de usuarios se revoca de inmediato cuando se elimina una cuenta. Los usuarios ya no podrán iniciar sesión en su panel de Business App ni acceder a ningún servicio relacionado con la cuenta.
+</details>
+
+<details>
+<summary>¿Debería eliminar cuentas de negocios que han cerrado?</summary>
+
+Considera el tipo de cierre del negocio: los cierres temporales pueden justificar la desactivación, mientras que los cierres permanentes después de periodos de espera apropiados pueden justificar la eliminación. Siempre verifica primero los requisitos legales y de cumplimiento.
+</details>
+
+<details>
+<summary>¿Puedo eliminar varias cuentas a la vez de forma masiva?</summary>
+
+La mayoría de los sistemas no admiten la eliminación masiva debido a la naturaleza permanente de la acción. Cada cuenta normalmente requiere confirmación de eliminación individual para evitar eliminaciones masivas accidentales.
+</details>
+
+<details>
+<summary>¿Qué debo hacer con las cuentas que tienen problemas de facturación pendientes?</summary>
+
+Resuelve los asuntos de facturación antes de eliminar la cuenta. La eliminación puede complicar las disputas de facturación o los procesos de cobro. La desactivación puede ser más apropiada hasta que se resuelvan los asuntos financieros.
+</details>
+
+<details>
+<summary>¿Cómo gestiono las solicitudes de eliminación de excolaboradores?</summary>
+
+Solo los usuarios autorizados actuales o los administradores de la cuenta deberían poder solicitar eliminaciones de cuentas. Verifica la autorización y sigue los procedimientos de aprobación de tu organización para las solicitudes de eliminación.
+</details>
+
+<details>
+<summary>¿Eliminar la compañía asociada también eliminará la cuenta?</summary>
+
+No, eliminar la compañía asociada no eliminará también la cuenta. Sin embargo, eliminar una cuenta sí eliminará la compañía asociada.
+</details>
+
+<details>
+<summary>Eliminé mi cuenta pero se me sigue facturando: ¿por qué?</summary>
+
+Si un producto de esa cuenta tenía un compromiso activo (como un contrato anual), la facturación continúa hasta el final del periodo de compromiso incluso después de eliminar la cuenta. La eliminación cancela el acceso al producto pero no termina la facturación del compromiso de forma anticipada. Contacta al soporte si crees que el compromiso ya venció y la facturación debería haberse detenido.
+</details>
+
+<details>
+<summary>¿Qué pasa si quiero detener los productos pero conservar la cuenta?</summary>
+
+Puedes cancelar o desactivar productos individuales desde la página de gestión de productos de la cuenta sin eliminar la cuenta. Esto conserva los datos y el historial de la cuenta mientras detiene los servicios del producto.
+</details>

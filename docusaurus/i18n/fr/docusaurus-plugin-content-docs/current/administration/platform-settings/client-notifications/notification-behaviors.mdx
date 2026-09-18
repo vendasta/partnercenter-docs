@@ -1,0 +1,63 @@
+---
+id: notification-behaviors
+title: Fonctionnement des notifications spécifiques
+description: Comprenez le comportement des notifications Task Assignee Update, Daily Digest, d'activation de produit et de panier abandonné dans Partner Center.
+sidebar_position: 2
+---
+
+Certaines notifications de Partner Center se comportent différemment de ce à quoi on pourrait s'attendre. Cet article explique le fonctionnement de quatre types de notification souvent mal compris, afin que vous puissiez les configurer correctement.
+
+## Task Assignee Update
+
+La notification `Task Assignee Update` se déclenche lorsqu'une tâche est **réattribuée** à un autre utilisateur. Elle ne se déclenche pas lors de la création initiale d'une tâche avec un responsable assigné.
+
+- **Se déclenche :** lors du changement de responsable sur une tâche existante
+- **Ne se déclenche pas :** lors de la création initiale d'une tâche avec un responsable défini
+
+Si vous souhaitez être informé de toute l'activité liée aux tâches, y compris leur création, utilisez les options de notification de tâches plus larges disponibles dans `Administration` → `Client Notifications` → `Task Manager`.
+
+## Notifications d'activation de produit
+
+Lorsqu'un produit est activé pour un client, une notification est envoyée aux destinataires configurés. Toutefois, **la désactivation d'un produit ne génère pas de notification**.
+
+- **Déclenche une notification :** activation d'un produit
+- **Ne déclenche pas de notification :** désactivation d'un produit
+
+Si votre équipe doit suivre les désactivations, utilisez la section Commandes de Partner Center ou mettez en place une automatisation pour consigner les événements de désactivation.
+
+## Courriel Daily Digest
+
+Le courriel Daily Digest résume l'activité de la veille. Il n'est envoyé que **s'il y a eu de l'activité** durant cette période. S'il ne s'est rien passé, aucun courriel n'est envoyé.
+
+- **Fréquence :** une fois par jour
+- **Condition :** envoyé uniquement lorsqu'il y a de l'activité à signaler
+- **Contenu :** résumé des événements de la veille pour les types de notification configurés
+
+Si vous cessez de recevoir le Daily Digest, cela signifie probablement qu'il n'y a eu aucune activité admissible la veille, et non que la notification est défaillante.
+
+## Notifications de panier d'achat abandonné
+
+Lorsqu'un client laisse des articles dans son panier d'achat sans terminer un achat, Partner Center envoie des notifications pour aider à récupérer la vente :
+
+- **Notification au vendeur :** le vendeur assigné est alerté qu'un panier a été abandonné
+- **Rappel au client :** le client reçoit un rappel de suivi concernant son panier
+
+**Important :** la notification au vendeur n'inclut pas le contenu du panier. Le contenu du panier est privé et n'est partagé ni avec les vendeurs ni avec les partenaires.
+
+:::info
+Les notifications de panier abandonné aident votre équipe à effectuer un suivi des ventes potentielles, mais elles ne révèlent pas ce que le client consultait ou souhaitait acheter.
+:::
+
+## Questions courantes
+
+**Pourquoi n'ai-je pas reçu de notification Task Assignee Update lors de la création de la tâche ?**
+Cette notification ne se déclenche que lors d'une réattribution. La création initiale d'une tâche ne la déclenche pas.
+
+**Nous avons désactivé un produit, mais personne n'a été notifié.**
+Les désactivations de produit ne génèrent pas de notification. Utilisez la section Commandes pour suivre l'historique des désactivations.
+
+**Je n'ai pas reçu le Daily Digest depuis quelques jours.**
+Vérifiez s'il y a eu de l'activité sur la plateforme ces jours-là. Le résumé est entièrement ignoré lorsqu'il n'y a rien à signaler.
+
+**Puis-je voir ce qui se trouvait dans un panier abandonné ?**
+Non. Le contenu du panier est privé et appartient uniquement à son propriétaire. Les vendeurs voient seulement qu'un panier a été abandonné, pas ce qu'il contenait.

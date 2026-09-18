@@ -1,0 +1,167 @@
+---
+title: Acciones de listas de cuentas  
+description: "Las siguientes acciones administrativas están disponibles desde Partner Center > Accounts > Account Lists al hacer clic en el icono Menu junto a la lista de cuentas."
+sidebar_label: Acciones de listas
+sidebar_position: 4
+---
+
+Las siguientes acciones administrativas están disponibles desde **Partner Center > Accounts > Lists > haz clic en los tres puntos junto a la lista deseada**.
+
+## Personalizar una vista de lista estática
+
+Puedes cambiar qué columnas aparecen en tu vista de lista para mostrar la información que más te importa (correo electrónico, teléfono, etiquetas, etc.):
+
+1. Abre tu lista en **Partner Center > Accounts > Lists**
+2. Haz clic en el **icono de engranaje** en la esquina superior derecha de la tabla de la lista
+3. Marca o desmarca las columnas que quieras mostrar u ocultar (por ejemplo, Email, Phone, Tags)
+4. Cierra el panel: la vista se guarda automáticamente
+
+Las vistas de columnas personalizadas son por usuario y por lista, así que cada miembro del equipo puede configurar su propia vista preferida.
+
+## Límites de las listas de cuentas
+
+| Límite | Valor | Solución alternativa |
+|-------|-------|------------|
+| Máximo de cuentas por lista | 5,000 | Crea varias listas y aplica una etiqueta compartida a todas las cuentas en todas las listas. Usa la etiqueta para filtrar y trabajar con el conjunto completo. |
+| Límite de activación masiva de productos | 500 cuentas por acción | Divide las cuentas en varias listas y actívalas por lotes. |
+
+   [Exportar datos de cuentas](#export-account-data)
+
+   [Agregar etiquetas](#add-tags)
+
+   [Agregar a campaña](#add-to-campaign)
+
+   [Pausar campañas](#pause-campaigns)
+
+   [Crear grupo multiubicación](#create-multi-location-group)
+
+   [Crear/actualizar snapshot](#createrefresh-snapshot)
+
+   [Activar automatización](#trigger-automation)
+
+   [Activar producto](#activate-product)
+
+   [Activar complemento](#activate-add-on)
+
+   [Cambiar mercado](#change-market)
+
+   [Eliminar](#delete)
+
+## Export Account Data
+
+Crea un archivo CSV descargable con los datos actuales de todas las cuentas de la lista. Esta exportación contiene la siguiente información:
+
+- Nombre de la empresa
+- Dirección
+- Ciudad
+- Estado/provincia
+- Código de país
+- Código postal
+- Número(s) de trabajo
+- Sitio web
+- Correo electrónico del vendedor
+- Identificador de cliente
+- Productos activos (Listing Builder, Social AI, Reputation AI)
+- Identificador de cuenta
+- Etiquetas
+- Número gratuito
+- Descripción
+- Descripción breve
+- Punto de referencia
+- Métodos de pago
+- Servicios
+- Marcas
+- Horario de atención
+- Campos de salud (si aplica)
+
+Después de seleccionar **Export Account Data**, se te llevará a la página **History** de la lista. Una vez que finalice la exportación, podrás descargar el CSV haciendo clic en el icono **Menu** ![Icono de menú](./img/accounts/lists/menu-icon.png) y luego en **Account NAP/Product CSV**.
+
+:::note Limitaciones de la exportación
+El CSV exportado es solo información de referencia. **No** incluye enlaces con los que puedas hacer clic para volver a los registros de la cuenta en Partner Center; no puedes acceder directamente a una cuenta desde la hoja de cálculo.
+:::
+
+### Exportar detalles de usuarios (nombres y correos electrónicos)
+
+La exportación estándar de Export Account Data contiene datos de la cuenta/empresa (NAP + productos), no nombres ni direcciones de correo electrónico de usuarios individuales. Para exportar una lista de los usuarios asociados a tus cuentas, contacta a Support y solicita una exportación de detalles de usuarios.
+
+## Add Tags
+
+Agrega una etiqueta a cada cuenta de la lista. Esto es útil para filtrar cuentas más adelante o para combinar varias listas en un grupo lógico.
+
+**Para agregar una etiqueta de forma masiva sin sobrescribir las etiquetas existentes:**
+
+1. Ve a `Partner Center` → `Accounts` → `Lists`.
+2. Haz clic en los tres puntos junto a la lista.
+3. Selecciona **Add Tags**.
+4. Elige una etiqueta existente o crea una nueva.
+5. Haz clic en **Apply**.
+
+Las etiquetas se agregan sin eliminar las etiquetas existentes en las cuentas.
+
+## Add To Campaign
+
+Te permite agregar la lista a una campaña de email marketing. Esto agregará a todos los usuarios y contactos asignados a las cuentas de la lista a esa campaña. [Más información](../../marketing/campaigns)
+
+## Pause Campaigns
+
+Te permite pausar una campaña activa para todos los usuarios y contactos asignados a las cuentas de la lista.  
+El estado puede resultar un poco confuso cuando se pausa. "Paused" no aparecerá como un estado separado, pero si hay una campaña en estado "ongoing", pausarla cambiará el estado a "published".
+
+![Campaña con estado ongoing](./img/accounts/lists/campaign-status-ongoing.png)
+![Campaña con estado published después de pausarse](./img/accounts/lists/campaign-status-published.png)
+
+## Create Multi-Location Group
+
+Te permite crear un grupo multiubicación basado en la lista. Después de seleccionar esta opción, podrás elegir cómo quieres segmentar el grupo. Aquí puedes elegir entre **Geographic Region** o **Account Tag(s)**.
+
+## Create/Refresh Snapshot
+
+Dependiendo del estado de la cuenta, ocurrirá una de tres cosas:
+
+- Si nunca se ha creado un Snapshot Report para la cuenta, se creará uno nuevo.
+- Si una cuenta tuvo previamente un Snapshot Report que ha caducado, ese Snapshot Report se actualizará.
+- Si una cuenta ya tiene un Snapshot Report activo (creado en los últimos 7 días), esa cuenta se omitirá.
+
+## Trigger Automation
+
+Te permite activar una automatización específica para cada cuenta dentro de la lista. Hay varias formas útiles de utilizar automatizaciones con las listas. Consulta la sección [Manual triggers](../../automations/my-automations/automation-triggers-reference.mdx#manual) de la referencia de disparadores de automatizaciones.
+
+## Merge Two Lists (Using Tags)
+
+Para combinar listas:
+
+1. Agrega una etiqueta común a todas las cuentas de la primera lista.
+2. Agrega la misma etiqueta a todas las cuentas de la segunda lista.
+3. Ve a `Accounts > Manage Accounts`, filtra por la etiqueta, selecciona las cuentas y agrégalas a una nueva lista.
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Puedo cambiar el nombre de una lista?</summary>
+
+No existe una opción para editar el nombre. Elimina la lista y vuelve a crearla. Eliminar una lista no elimina sus cuentas.
+</details>
+
+## Activate Product
+
+Te permite activar un solo producto en cada cuenta dentro de la lista. Si una cuenta ya tiene activado el producto seleccionado, esa cuenta se omitirá. Sin embargo, con esta función puedes hacer una activación nueva, no un cambio de edición.
+
+:::note
+Ten en cuenta que activar un producto generará un cargo en tu próxima factura. Por esta razón, asegúrate de que en la lista solo estén las cuentas para las que deseas activar el producto.
+:::
+
+## Activate Add-On
+
+Te permite activar un solo complemento en cada cuenta dentro de la lista. Si una cuenta ya tiene activado el complemento seleccionado, esa cuenta se omitirá.
+
+:::note
+Ten en cuenta que activar un complemento generará un cargo en tu próxima factura. Por esta razón, asegúrate de que en la lista solo estén las cuentas para las que deseas activar el complemento.
+:::
+
+## Change Market
+
+Te permite cambiar el mercado al que están asignadas las cuentas de la lista. Esto es útil si has creado un nuevo mercado y quieres mover cuentas hacia él.
+
+## Delete
+
+Te permite eliminar la lista. Ten en cuenta que las cuentas de la lista en sí no se eliminarán; solo se eliminará la lista a la que están asignadas las cuentas. Esta acción es irreversible, así que asegúrate de querer eliminar por completo la lista antes de seleccionarla.

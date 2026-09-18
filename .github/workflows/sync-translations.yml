@@ -1,0 +1,90 @@
+# .github/workflows/sync-translations.yml
+#
+# Keeps the French, Spanish, and German translations under
+# docusaurus/i18n/ in sync whenever English docs change on master.
+#
+# On every push to master that touches docusaurus/docs/**, this:
+#   1. Diffs the push to find added, modified, deleted, and renamed doc files.
+#   2. Machine-translates added/modified files into fr/es/de via the Claude API
+#      (scripts/sync_translations.py), and removes translations for deleted files.
+#   3. Opens a pull request with the resulting changes for human review.
+#      Nothing is auto-merged — a person approves the PR before the
+#      translations reach partners.
+#
+# Requires a repo secret: ANTHROPIC_API_KEY
+
+name: Sync Translations
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "docusaurus/docs/**"
+
+  # Allow manual runs from the GitHub Actions tab (useful for backfilling
+  # after this workflow itself changes, or after a manual translation fix)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (log only — no API calls, no files written, no PR)"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+jobs:
+  sync-translations:
+    name: Translate changed docs into fr/es/de
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write        # To push the translation branch
+      pull-requests: write   # To open the review PR
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          # Need the parent commit(s) of this push to diff against
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run translation sync script
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+        run: |
+          python scripts/sync_translations.py
+
+      - name: Open pull request with updated translations
+        if: ${{ inputs.dry_run != 'true' }}
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "docs(i18n): sync fr/es/de translations with latest English docs"
+          branch: sync-translations
+          delete-branch: true
+          title: "Sync translations with latest English docs"
+          body: |
+            Automated translation update from the `Sync Translations` workflow.
+
+            This re-translates every English `docusaurus/docs/` file that changed in
+            the triggering push, into French, Spanish, and German, and removes
+            translations for any deleted files.
+
+            **Please review before merging** — this is machine translation and has
+            not been checked by a human or a native speaker. Pay particular
+            attention to:
+            - Any inline `code` spans (these should stay in English, matching the
+              actual product UI)
+            - Product/brand names (should stay in English)
+            - Overall tone and accuracy for partner-facing content
+          labels: |
+            translations
+            needs-review

@@ -1,0 +1,319 @@
+---
+title: Selbstregistrierungs-Workflow – Kundenselbstregistrierung aktivieren
+sidebar_label: Selbstregistrierung
+description: Konfigurieren Sie die Selbstregistrierung, damit Kunden ihre eigenen Business-App-Konten erstellen und sich selbst onboarden können.
+tags:
+  - business-app
+  - self-signup
+  - onboarding
+  - customer-acquisition
+keywords:
+  - self signup
+  - self-signup
+  - customer registration
+  - add your clients
+  - create account
+---
+
+## Einführung
+
+Mit der Selbstregistrierung können Ihre Kunden ihre eigenen Business-App-Konten ohne manuellen Eingriff erstellen. Teilen Sie einen Registrierungslink oder aktivieren Sie die Registrierung auf Ihrer Anmeldeseite, damit sich neue Kunden jederzeit selbst onboarden können.
+
+## Was ist Selbstregistrierung?
+
+Die Selbstregistrierung ist eine Funktion, mit der Endnutzer sich eigenständig für ein Business-App-Konto registrieren können. Wenn sich ein Kunde registriert, wird in Ihrem CRM ein neuer Firmendatensatz mit der Record Source „Self Signup“ erstellt, wodurch sich diese Kunden leicht identifizieren und Follow-ups automatisieren lassen.
+
+Sie können den Registrierungslink direkt teilen, ihn in Marketingmaterialien einbetten oder die Option **Create Account** auf Ihrer Business-App-Anmeldeseite aktivieren.
+
+## Welche Informationen werden bei der Selbstregistrierung erfasst?
+
+Die Selbstregistrierung ist darauf ausgelegt, Hürden zu reduzieren und Kunden so schnell wie möglich in die Business App zu bringen. Das Registrierungsformular erfasst nur die minimal erforderlichen Informationen:
+
+- **Contact email**: Die E-Mail-Adresse des Hauptbenutzers
+- **Company name**: Wird verwendet, um das Unternehmen über Google Places nachzuschlagen
+
+### Registrierung mit Google oder Microsoft
+
+Kunden können die Registrierung auf zwei Arten starten:
+
+- Eine E-Mail-Adresse direkt im Registrierungsformular eingeben, oder
+- **Sign up with Google** oder **Sign up with Microsoft** mit einem bestehenden Konto verwenden
+
+Wenn ein Kunde **Sign up with Google** oder **Sign up with Microsoft** wählt, autorisiert er die Business App auf dem Anmeldebildschirm von Google bzw. Microsoft, und seine verifizierte E-Mail-Adresse wird zur Erstellung des Kontos verwendet. Da der Kontoanbieter die E-Mail-Adresse bereits bestätigt hat, überspringt der Kunde den separaten Schritt der E-Mail-Bestätigung und gelangt sofort in den Registrierungsablauf. Er bestätigt weiterhin seinen Firmennamen, damit die Plattform das Unternehmensprofil über Google Places anreichern kann.
+
+:::info
+Von dem Google- oder Microsoft-Konto wird ausschließlich die E-Mail-Adresse abgerufen – es wird nicht auf Kontakte, Kalender oder andere Daten zugegriffen.
+:::
+
+:::tip
+Die soziale Registrierung entfällt bei der Passworterstellung und der E-Mail-Bestätigung, was Hürden reduziert und die Abschlussrate bei der Registrierung verbessern kann. Kunden können später zurückkehren und sich mit demselben Google- oder Microsoft-Konto über Ihre Business-App-Anmeldeseite anmelden.
+:::
+
+### Automatische Anreicherung von Unternehmensdaten
+
+Wenn ein Kunde seinen Firmennamen eingibt, durchsucht das System Google Places, um sein Unternehmen zu finden:
+
+- **Wenn es über Google Places gefunden wird**: Unternehmensdaten werden automatisch ausgefüllt, einschließlich Adresse, Telefonnummer, Öffnungszeiten und weiterer Profilinformationen
+- **Wenn eine Website oder Telefonnummer nicht erfasst werden kann** – das Unternehmen wird nicht gefunden, hat kein Google Business-Profil, oder das Profil enthält diese Angaben nicht – wird der Kunde gebeten, optional seine Website und Telefonnummer anzugeben
+
+Dieser Ansatz sorgt für ein Gleichgewicht zwischen einer einfachen Registrierung und der Erfassung wertvoller Unternehmensinformationen.
+
+### Sofortiges KI-Onboarding
+
+Wenn ein Kunde die Registrierung abschließt, richtet die Plattform die KI auf zwei Arten ein:
+
+**Im Hintergrund** richtet das System, sobald Unternehmensdaten von Google Places erfasst oder eine Website angegeben wurde, automatisch Folgendes ein:
+
+- Fügt Informationen aus dem **Business Profile** zur AI Knowledge Base hinzu
+- Fügt **Website Knowledge** hinzu, indem die angegebene Website gecrawlt wird
+- Aktiviert den **AI Receptionist** sofort mit diesem Wissen
+
+Das bedeutet, dass die KI einsatzbereit ist, sobald der Kunde in der Business App landet.
+
+**Im Registrierungsablauf** wird dem Kunden, nachdem er seine E-Mail-Adresse bestätigt hat (oder sich mit einem Google- oder Microsoft-Konto registriert hat, wodurch die Bestätigung entfällt), eine Live-Vorschau seines AI Receptionist gezeigt – bereits trainiert mit dem Business-Profil und den während der Registrierung erfassten Website-Daten. Er kann sofort mit ihm chatten und sehen, wie er *als sein Unternehmen* antwortet, noch bevor er die Startseite der Business App erreicht. Das verschafft neuen Kunden einen sofortigen „Wow-Moment“ und zeigt den Wert der KI bereits bei ihrer ersten Interaktion.
+
+Die AI Employee Preview kann pro Markt unter `Customize Business App` → `Add Your Clients` ein- oder ausgeschaltet werden. Details finden Sie unter [Add Your Clients Settings](/administration/platform-settings/customize-business-app/add-your-customers-settings#how-do-i-show-new-signups-a-preview-of-their-ai-receptionist).
+
+:::tip
+Das automatische KI-Onboarding hilft, den Nutzen sofort zu demonstrieren. Kunden können ihren AI Receptionist in der Business App testen, sobald sie die Registrierung abgeschlossen haben – und mit aktivierter AI Employee Preview erleben sie die KI, noch bevor sie das Onboarding beendet haben.
+:::
+
+## Warum ist Selbstregistrierung wichtig?
+
+Selbstregistrierung ermöglicht:
+
+- **Automatisierte Kundengewinnung**: Kunden können sich registrieren, ohne darauf zu warten, dass Sie ihr Konto erstellen
+- **Weniger manueller Aufwand**: Sie müssen nicht für jeden neuen Kunden manuell ein Konto anlegen
+- **Verfügbarkeit rund um die Uhr**: Kunden können sich jederzeit registrieren, auch außerhalb der Geschäftszeiten
+- **Skalierbares Wachstum**: Bewältigen Sie mehr Registrierungen ohne zusätzlichen Verwaltungsaufwand
+- **Sofortiges Engagement**: Kunden können Ihre Angebote sofort erkunden
+
+## Was Sie mit der Selbstregistrierung tun können
+
+Mit der Selbstregistrierung können Sie:
+
+- Einen individuellen Registrierungslink per E-Mail, über soziale Medien oder Ihre Website teilen
+- Die Option **Create Account** auf der Business-App-Anmeldeseite aktivieren
+- Unterschiedliche Registrierungserlebnisse pro Markt konfigurieren
+- Onboarding-Workflows für Selbstregistrierungskunden automatisieren
+- Conversions aus der Selbstregistrierung über das Feld Record Source nachverfolgen
+- [Featured Packages](./featured-packages) präsentieren, um Upgrades während des Onboardings zu fördern
+- Neuen Registrierungen direkt nach der E-Mail-Bestätigung eine Live-Vorschau ihres AI Receptionist zeigen, der mit ihren Unternehmensinformationen trainiert wurde
+
+## So richten Sie die Selbstregistrierung ein {#how-to-set-up-self-signup}
+
+### Ihren Registrierungslink abrufen
+
+1. Gehen Sie in Partner Center zu `Accounts` → `Manage Business App`.
+2. Wählen Sie **Customize Business App** aus.
+3. Scrollen Sie zum Abschnitt **Add Your Clients**.
+4. Suchen Sie den Bereich **Self Sign-Up**.
+5. Kopieren Sie den angezeigten **Sign-Up Link**.
+
+Der Registrierungslink folgt diesem Format:
+```
+{your-business-app-url}/public/business/{partner-id}/{market-id}/sign-up
+```
+
+:::tip
+Sie können direkt zu dieser Seite navigieren unter [partners.vendasta.com/customize-business-app/add-your-customers](https://partners.vendasta.com/customize-business-app/add-your-customers).
+:::
+
+### „Create Account“ auf der Anmeldeseite aktivieren
+
+Damit sich Kunden direkt über Ihre Business-App-Anmeldeseite registrieren können:
+
+1. Navigieren Sie zu `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App`.
+2. Scrollen Sie zum Abschnitt **Add Your Clients**.
+3. Aktivieren Sie das Kontrollkästchen **Show Create Account**.
+4. Speichern Sie Ihre Änderungen.
+
+Wenn diese Option aktiviert ist, sehen Kunden, die Ihre Business-App-Anmeldeseite besuchen, neben dem Anmeldeformular die Option **Create Account**.
+
+:::info
+Die Option **Show Create Account** wird auf Partnerebene konfiguriert und gilt für Ihren Standardmarkt. Für marktspezifische Konfigurationen wählen Sie vor der Änderung den entsprechenden Markt aus.
+:::
+
+## So aktivieren Sie die Selbstregistrierung für Kleinunternehmenskunden
+
+Führen Sie diese Schritte aus, um einen vollständigen Self-Service-Registrierungs- und Kaufablauf einzurichten. Dieser Leitfaden führt Sie durch die integrierten Automatisierungsvorlagen und empfohlenen E-Mail-Kampagnen der Plattform, damit Sie schnell loslegen können.
+
+### Schritt 1: Featured Packages konfigurieren
+
+Bevor Sie Registrierungen fördern, stellen Sie sicher, dass neue Kunden etwas zu kaufen haben. [Featured Packages](./featured-packages) werden auf der Startseite der Business App für Kunden ohne aktive Produkte angezeigt und bieten ihnen einen klaren Weg von der Registrierung zum Kauf.
+
+1. Gehen Sie in Partner Center zu `Accounts` → `Manage Business App` → `Customize Business App`.
+2. Scrollen Sie zu **Add Your Clients** und konfigurieren Sie Ihre **Featured Packages**.
+3. Wählen Sie Pakete aus, die für Selbstregistrierungskunden relevant sind – beginnen Sie mit Ihren beliebtesten oder Einstiegsangeboten.
+
+### Schritt 2: Platzieren Sie Ihren Registrierungslink
+
+Holen Sie sich Ihren Registrierungslink unter `Customize Business App` → `Add Your Clients` → `Self Sign-Up` (siehe [So richten Sie die Selbstregistrierung ein](#how-to-set-up-self-signup) oben) und platzieren Sie ihn dort, wo Interessenten ihn finden:
+
+- **Ihre Website**: Fügen Sie einen CTA-Button auf Ihrer Startseite, im Footer oder auf einer eigenen Landingpage hinzu
+- **E-Mail-Signaturen**: Nehmen Sie den Link in die E-Mail-Signaturen Ihres Teams auf
+- **Soziale Medien**: Fügen Sie ihn zu Ihren Bio-Links auf LinkedIn, Facebook oder Google Business Profile hinzu
+- **Marketingkampagnen**: Verwenden Sie ihn in Anzeigen, Newslettern oder Partnerverzeichnissen
+- **Anmeldeseite**: Aktivieren Sie den Schalter **Show Create Account**, damit Besucher Ihrer Business-App-Anmeldeseite sich direkt registrieren können
+
+:::tip
+Erstellen Sie eine eigene Landingpage, die Ihre Dienstleistungen erklärt und den Registrierungslink als primären Call-to-Action enthält. So erhalten Sie eine einzige URL, die Sie über alle Kanäle bewerben können.
+:::
+
+### Schritt 3: Aktivieren Sie die Automatisierung der Registrierungskampagne
+
+Die Plattform enthält eine vorgefertigte Automatisierungsvorlage, die neue Selbstregistrierungskunden automatisch bearbeitet.
+
+1. Gehen Sie in Partner Center zu **Automations**.
+2. Klicken Sie auf **Automation Templates**.
+3. Suchen Sie die Vorlage **Signup campaign | Drive self-serve revenue** und klicken Sie auf **Use template**.
+4. Konfigurieren Sie die Vorlage:
+   - **Owner assignment**: Wählen Sie aus, welcher Vertriebsmitarbeiter oder welches Team neuen Selbstregistrierungskunden zugewiesen werden soll
+   - **Email campaign**: Wählen Sie die Kampagne **Self Signup - Welcome** (siehe Schritt 5) oder Ihre eigene aus
+5. Speichern und aktivieren Sie die Automatisierung.
+
+Diese Automatisierung wird ausgelöst, wenn ein Unternehmen mit der Quelle **Self Signup** erstellt wird. Sie weist einen Owner/Vertriebsmitarbeiter zu und sendet die von Ihnen gewählte Willkommens-E-Mail-Kampagne – so erhält jede neue Registrierung sofort Aufmerksamkeit, ohne manuellen Aufwand.
+
+### Schritt 4: Aktivieren Sie die Automatisierung für Käufe und abgebrochene Warenkörbe
+
+Eine zweite Automatisierungsvorlage regelt, was passiert, nachdem ein Selbstregistrierungskunde mit Ihrem Store interagiert.
+
+1. Klicken Sie in **Automations** auf **Automation Templates**.
+2. Suchen Sie die Vorlage **Purchases & abandoned carts for self serve** und klicken Sie auf **Use template**.
+3. Konfigurieren Sie die Vorlage:
+   - **Purchased branch**: Wählen Sie eine Onboarding-Kampagne aus, die nach einem erfolgreichen Kauf gesendet wird. Verwenden Sie **Purchase Complete - Generic** oder **Purchase - Conversations AI Setup** aus den Recommended Campaigns, oder erstellen Sie Ihre eigene.
+   - **Not purchased branch**: Wählen Sie eine Kampagne für abgebrochene Warenkörbe aus. Verwenden Sie **Purchase Incomplete - Generic** aus den Recommended Campaigns, oder erstellen Sie Ihre eigene.
+4. Speichern und aktivieren Sie die Automatisierung.
+
+Diese Automatisierung wird ausgelöst, wenn ein Nutzer einen Artikel in seinem Warenkorb hinzufügt, entfernt oder aktualisiert. Sie wartet 30 Minuten, um zu sehen, ob der Kauf abgeschlossen wird, und sendet dann je nach Ergebnis die passende Kampagne.
+
+:::tip
+Fügen Sie jedem Zweig Benachrichtigungen hinzu, um Ihr Vertriebs- und Success-Team zu informieren. So weiß Ihr Team, wenn ein Kunde einen Kauf abschließt oder seinen Warenkorb abbricht, und kann bei Bedarf persönlich nachfassen.
+:::
+
+### Schritt 5: Richten Sie E-Mail-Kampagnen ein
+
+Die Plattform bietet empfohlene E-Mail-Kampagnen, die für den Self-Service-Ablauf konzipiert sind. Sie finden sie unter `Partner Center` → `Email Campaigns` → `Recommended Campaigns`.
+
+| Kampagne | Zweck | Verwendung mit |
+|----------|---------|----------|
+| **Self Signup - Welcome** | Begrüßt neue Selbstregistrierungskunden, stellt Ihre Dienstleistungen vor und führt sie zum Einstieg | Automatisierung der Registrierungskampagne (Schritt 3) |
+| **Purchase Complete - Generic** | Onboardet Kunden nach einem erfolgreichen Kauf | Kaufautomatisierung – abgeschlossener Kauf (Schritt 4) |
+| **Purchase - Conversations AI Setup** | Führt Kunden nach dem Kauf durch die Einrichtung KI-gestützter Konversationen | Kaufautomatisierung – abgeschlossener Kauf (Schritt 4) |
+| **Purchase Incomplete - Generic** | Reaktiviert Kunden, die Artikel in den Warenkorb gelegt, den Kauf aber nicht abgeschlossen haben | Kaufautomatisierung – abgebrochener Kauf (Schritt 4) |
+
+So verwenden Sie eine empfohlene Kampagne:
+
+1. Gehen Sie zu `Email Campaigns` → `Recommended Campaigns`.
+2. Klicken Sie auf den Kampagnennamen, um eine Vorschau anzuzeigen.
+3. Verwenden Sie sie unverändert, oder duplizieren Sie sie, um den Inhalt an Ihre Marke anzupassen.
+
+### Schritt 6: Überwachen und optimieren
+
+Sobald Ihr Self-Service-Ablauf live ist, verfolgen Sie die Leistung und passen Sie an:
+
+- **Registrierungsvolumen**: Filtern Sie Ihre Kontoliste nach **Record Source** = „Self Signup“, um zu sehen, wie viele Kunden hinzukommen
+- **Warenkorb- und Kaufaktivität**: Prüfen Sie den Ausführungsverlauf der Automatisierung in **Automations**, um zu sehen, wie viele Kunden kaufen bzw. ihren Warenkorb abbrechen
+- **E-Mail-Performance**: Prüfen Sie die Öffnungs- und Klickraten Ihrer Kampagnen in **Email Campaigns**
+- **Featured Packages**: Passen Sie Ihre Paketauswahl basierend auf den Conversions an – testen Sie unterschiedliche Angebote oder Preise, um die Akzeptanz zu verbessern
+
+## Eigene Automatisierungen erstellen
+
+Wenn Sie mehr Kontrolle benötigen, als die vorgefertigten Vorlagen bieten, können Sie Automatisierungen von Grund auf erstellen.
+
+### Eine eigene Automatisierung einrichten
+
+1. Gehen Sie in Partner Center zu **Automations**.
+2. Klicken Sie auf **Create Automation**.
+3. Wählen Sie den Trigger **A company is created**.
+4. Fügen Sie eine Bedingung hinzu, die nach **Record Source** gleich **Self Signup** filtert.
+5. Fügen Sie die gewünschten Aktionen hinzu.
+
+### Weitere Automatisierungsaktionen, die Sie in Betracht ziehen können
+
+- **Create a follow-up task**: Planen Sie einen Check-in-Anruf oder eine Demo
+- **Add to a list**: Organisieren Sie Selbstregistrierungskunden für gezielte Kampagnen
+- **Create an opportunity**: Verfolgen Sie den potenziellen Umsatz jedes Selbstregistrierungskunden
+
+Ausführliche Anleitungen finden Sie unter [Automations overview](/automations/) und in der [Automation Triggers Reference](/automations/my-automations/automation-triggers-reference).
+
+## Tipps und bewährte Vorgehensweisen
+
+### Marktspezifische Konfigurationen verwenden
+
+Wenn Sie unterschiedliche Kundensegmente bedienen, konfigurieren Sie die Selbstregistrierungseinstellungen pro Markt:
+
+- Unterschiedliche Registrierungslinks für jeden Markt
+- Marktspezifische Featured Packages
+- Maßgeschneiderte Automatisierungs-Workflows je nach Markt
+
+## FAQs
+
+<details>
+<summary>Wo finde ich den Registrierungslink?</summary>
+
+Navigieren Sie zu `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Add Your Clients`. Der Registrierungslink wird im Abschnitt **Self Sign-Up** angezeigt.
+</details>
+
+<details>
+<summary>Können sich Kunden ohne direkten Link registrieren?</summary>
+
+Ja. Aktivieren Sie die Option **Show Create Account**, um Ihrer Business-App-Anmeldeseite einen Registrierungslink hinzuzufügen. Kunden können dann auf **Create Account** klicken, um sich zu registrieren.
+</details>
+
+<details>
+<summary>Können sich Kunden mit einem Google- oder Microsoft-Konto registrieren?</summary>
+
+Ja. Im Registrierungsformular können Kunden eine E-Mail-Adresse eingeben oder **Sign up with Google** bzw. **Sign up with Microsoft** wählen. Verwenden sie ein Google- oder Microsoft-Konto, wird die verifizierte E-Mail-Adresse dieses Kontos zur Erstellung ihres Business-App-Kontos verwendet, und der separate Schritt zur E-Mail-Bestätigung entfällt. Es wird nur die E-Mail-Adresse verwendet – auf keine anderen Kontodaten wird zugegriffen. Kunden können später zurückkehren und sich mit demselben Konto über Ihre Business-App-Anmeldeseite anmelden.
+</details>
+
+<details>
+<summary>Wie erkenne ich Kunden, die sich selbst registriert haben?</summary>
+
+Bei Selbstregistrierungskunden ist die Record Source im CRM auf „Self Signup“ gesetzt. Sie können Konten anhand dieses Felds filtern oder Automatisierungen erstellen.
+</details>
+
+<details>
+<summary>Kann ich für unterschiedliche Märkte unterschiedliche Registrierungslinks haben?</summary>
+
+Ja. Jeder Markt hat seinen eigenen Registrierungslink. Wählen Sie den Markt in **Customize Business App** aus, um die spezifische Registrierungs-URL zu sehen.
+</details>
+
+<details>
+<summary>Was passiert, wenn ein Kunde die Selbstregistrierung abschließt?</summary>
+
+In Ihrem CRM werden ein neues Unternehmen und ein neuer Benutzer erstellt. Die Record Source des Unternehmens wird auf „Self Signup“ gesetzt. Wenn Sie Automatisierungen für diesen Trigger konfiguriert haben, werden diese automatisch ausgeführt.
+</details>
+
+<details>
+<summary>Kann ich anpassen, was Kunden nach der Registrierung sehen?</summary>
+
+Ja. Konfigurieren Sie [Featured Packages](./featured-packages), um Upgrade-Optionen anzuzeigen. Sie können das Business-App-Erlebnis auch in den Einstellungen von **Customize Business App** anpassen.
+</details>
+
+<details>
+<summary>Welche Informationen erfasst das Registrierungsformular?</summary>
+
+Das Formular erfasst die Kontakt-E-Mail und den Firmennamen. Wird das Unternehmen über Google Places gefunden, werden zusätzliche Unternehmensdaten (Adresse, Telefon, Öffnungszeiten) automatisch ausgefüllt. Können eine Website oder Telefonnummer nicht aus dem Google Business-Profil des Unternehmens erfasst werden – oder besitzt das Unternehmen keines – wird der Kunde gebeten, optional seine Website und Telefonnummer anzugeben.
+</details>
+
+<details>
+<summary>Warum fragt die Selbstregistrierung nur minimale Informationen ab?</summary>
+
+Weniger Formularfelder verringern die Hürden und erhöhen die Abschlussrate bei der Registrierung. Unternehmensdaten werden automatisch über die Google-Places-Suche angereichert, sodass Kunden sie nicht manuell eingeben müssen.
+</details>
+
+<details>
+<summary>Richtet die Selbstregistrierung KI-Funktionen automatisch ein?</summary>
+
+Ja, auf zwei Arten:
+
+- **AI Knowledge Base und AI Receptionist:** Wenn Unternehmensdaten von Google Places erfasst oder eine Website angegeben wird, fügt das System diese Informationen automatisch zur AI Knowledge Base hinzu und aktiviert den AI Receptionist. Kunden können KI-Funktionen sofort nach der Registrierung nutzen.
+- **AI Employee Preview:** Nach der Bestätigung ihrer E-Mail-Adresse wird neuen Registrierungen eine Live-Chat-Vorschau ihres AI Receptionist gezeigt – bereits trainiert mit dem Business-Profil und den während der Registrierung erfassten Website-Daten. Sie können damit als ihre eigene KI chatten, bevor sie die Startseite der Business App erreichen. Dies kann pro Markt unter `Customize Business App` → `Add Your Clients` ein- oder ausgeschaltet werden.
+</details>
+
+<details>
+<summary>Was passiert, wenn das Unternehmen des Kunden nicht bei Google Places gefunden wird?</summary>
+
+Können eine Website oder Telefonnummer nicht aus dem Google Business-Profil des Unternehmens erfasst werden – oder besitzt das Unternehmen keines – wird der Kunde gebeten, optional seine Website und Telefonnummer anzugeben. Das System nutzt stattdessen die Website, um die AI Knowledge Base zu befüllen.
+</details>

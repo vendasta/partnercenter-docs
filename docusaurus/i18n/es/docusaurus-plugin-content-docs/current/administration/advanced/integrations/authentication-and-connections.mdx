@@ -1,0 +1,57 @@
+---
+title: Autenticación y conexiones
+sidebar_label: Autenticación y conexiones
+description: Comprende las integraciones basadas en clave API, SSO y las gestionadas por el proveedor. Configuración, gestión y preguntas frecuentes.
+slug: /administration/advanced/integrations/authentication-and-connections
+sidebar_position: 1
+---
+
+Conoce los tres modelos de conexión y cómo trabajar con cada uno.
+
+## Integraciones con clave API
+
+1. Ve a `Administration` → `Integrations` → `Browse` y abre una integración marcada como "API-Key Based".
+2. Haz clic en `Add Connection` y proporciona la clave API o las credenciales.
+3. Configura los ajustes según sea necesario.
+
+Gestiona las integraciones desde la página `Integrations`; verifica los indicadores de estado (Connected, Pending, Issue).
+
+## Integraciones basadas en SSO
+
+1. Busca la aplicación en `Integrations` y haz clic en `Connect`.
+2. Completa cualquier formulario previo a la conexión.
+3. Sigue el flujo de SSO para crear o vincular una cuenta y autorizar el uso compartido de datos.
+4. Gestiona la configuración desde la pestaña `Manage` y los ajustes de conexión.
+
+## Integraciones gestionadas por el proveedor
+
+Algunas integraciones son configuradas y mantenidas por el proveedor. Sigue la guía de configuración del proveedor y supervisa el estado en Business App.
+
+## Solución de problemas
+
+- Las claves API inválidas o los permisos faltantes son causas comunes de fallos.
+- Vuelve a ejecutar el flujo de SSO para reautorizar si el acceso expira.
+- Contacta al proveedor si la configuración es gestionada por el proveedor.
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Qué modelo debo usar?</summary>
+
+Usa el modelo requerido por la integración específica. La clave API se basa en credenciales, el SSO delega la autenticación y el modelo gestionado por el proveedor es manejado por este.
+
+</details>
+
+<details>
+<summary>¿El SSO admite la suplantación de identidad del partner?</summary>
+
+No. Te autenticas directamente con el tercero durante el proceso de SSO.
+
+</details>
+
+<details>
+<summary>¿Existen buenas prácticas de seguridad?</summary>
+
+Limita el acceso al mínimo privilegio necesario, rota las claves API y reautoriza las conexiones cuando se te solicite.
+
+</details>

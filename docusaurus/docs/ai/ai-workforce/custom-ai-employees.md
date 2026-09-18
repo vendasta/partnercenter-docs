@@ -1,7 +1,7 @@
 ---
 title: Creating Custom AI Employees
 sidebar_label: Custom AI Employees
-sidebar_position: 7
+sidebar_position: 8
 description: Learn how to create specialized AI employees tailored to specific business functions like job estimation, project management, sales enablement, and payment coordination.
 tags: [ai-workforce, custom-capabilities, ai-employees]
 keywords: [custom AI employees, AI workforce, capabilities, tools, deployment, web chat]

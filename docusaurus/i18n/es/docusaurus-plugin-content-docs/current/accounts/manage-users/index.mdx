@@ -1,0 +1,175 @@
+---
+id: manage-users
+title: Administrar usuarios
+description: Crea usuarios, asígnalos a cuentas y configura los permisos para el acceso a Business App.
+tags: [users, access, permissions]
+keywords: [create-users, invite-users, add-user-to-account, user-permissions, onboarding-email]
+---
+
+# Administrar usuarios
+
+Manage Users te permite crear cuentas de usuario, asignarlas a cuentas de negocio y configurar sus permisos para Business App. Esta guía cubre la creación de usuarios (desde una cuenta o desde **Manage Users**), la edición de permisos, las actualizaciones masivas y la eliminación de usuarios.
+
+## ¿Qué son los usuarios?
+
+Los usuarios son personas que pueden iniciar sesión en Business App y acceder a paneles, productos y herramientas según los permisos que les asignes. Cada usuario está vinculado a una dirección de correo y puede recibir acceso a pestañas y productos específicos.
+
+Los usuarios pueden incluir propietarios de negocios, empleados o gerentes, consultores o personal de agencia, y miembros internos del equipo que apoyan la cuenta.
+
+## ¿Por qué administrar usuarios?
+
+Administrar usuarios te permite:
+
+- Dar acceso a Business App a las personas correctas
+- Controlar qué productos y pestañas puede ver cada usuario
+- Reducir las solicitudes de soporte habilitando el acceso de autoservicio
+- Mantener la seguridad eliminando o limitando el acceso cuando cambian los roles
+- Aplicar actualizaciones a varios usuarios a la vez mediante acciones masivas
+
+## Creación de usuarios
+
+Los usuarios se pueden crear de dos maneras en Partner Center: desde una cuenta individual o desde la página **Manage Users**. Ambos flujos de trabajo crean el mismo tipo de usuario y te permiten administrar el acceso después de la creación.
+
+### Invitar usuarios desde una cuenta
+
+Invitar usuarios desde una cuenta abre el panel **Invite users**:
+
+1. Navega a **Partner Center**.
+2. Ve a `Accounts` → `Manage Accounts`.
+3. Selecciona la cuenta donde se debe agregar el usuario y haz clic en `Invite users`. También puedes abrir el panel directamente desde el icono de invitación en la lista de `Manage Accounts`.
+4. En el campo `Users`, escribe una dirección de correo. Los contactos del CRM que coincidan se sugieren mientras escribes; selecciona uno para crear el usuario a partir de ese contacto con sus datos prellenados, o ingresa una dirección completa para invitar a alguien nuevo. Agrega tantos usuarios como necesites.
+5. Opcional: en `Customize users`, selecciona un usuario para editar su información de contacto (nombre, teléfono, idioma de correspondencia, nombre de saludo) o agrega un saludo personalizado a su correo de incorporación, con una vista previa.
+6. Haz clic en `Invite [count] users`.
+
+Los usuarios se agregan a la cuenta, y cada uno recibe el [correo de incorporación](/business-app/ai-onboarding-experience); invitarlos es lo que lo envía. Si alguien aún no está listo para Business App, mantenlo como contacto en el CRM e invítalo cuando llegue el momento adecuado; el panel lo sugerirá por nombre.
+
+### Crear un usuario desde Manage Users
+
+1. Navega a `Accounts` → `Manage Users`.
+2. Haz clic en **Create user**.
+3. Completa la información del usuario (dirección de correo, nombre y otros campos requeridos). La casilla **Send Onboarding Email** está seleccionada de forma predeterminada; un botón **Preview** muestra el correo, y puedes agregar un mensaje introductorio personalizado. Desmarca la casilla si no quieres notificar al usuario de inmediato.
+4. Asigna el usuario a la cuenta correspondiente.
+5. Haz clic en **Save** para crear el usuario.
+
+Este flujo de trabajo es útil cuando administras usuarios de forma centralizada en lugar de partir de una cuenta específica.
+
+## Administración de permisos de usuario
+
+Los permisos determinan qué pestañas y productos puede acceder un usuario dentro de Business App. Los permisos se administran a nivel de usuario individual.
+
+### Editar permisos de un solo usuario
+
+1. Ve a `Accounts` → `Manage Users`.
+2. Localiza el usuario que deseas actualizar.
+3. Haz clic en el menú de tres puntos junto al nombre del usuario.
+4. Selecciona **Edit Permissions**.
+5. Elige a qué pestañas y productos puede acceder el usuario.
+6. Guarda los cambios.
+
+Los cambios se aplican de inmediato.
+
+## Actualización masiva de la configuración de usuarios
+
+Puedes actualizar la configuración de varios usuarios a la vez usando **Bulk Update**.
+
+### Actualización masiva de permisos y notificaciones
+
+1. Navega a `Accounts` → `Manage Users`.
+2. Haz clic en **Bulk update**.
+3. Selecciona los usuarios que deseas actualizar.
+4. Elige la configuración que quieres aplicar (acceso a pestañas, notificaciones de usuario).
+5. Haz clic en **Apply changes**.
+
+Este flujo de trabajo es útil al incorporar equipos o estandarizar el acceso entre muchos usuarios.
+
+## Eliminación de usuarios
+
+Los usuarios se pueden eliminar de Partner Center cuando el acceso ya no es necesario. Las razones comunes incluyen que la persona deje el negocio, que el acceso ya no sea necesario, o que la persona se administre como contacto del CRM en su lugar.
+
+Para eliminar un usuario, haz clic en el menú de tres puntos junto al usuario y luego selecciona **Delete**.
+
+## Administración de usuarios de autoservicio para pymes
+
+Los usuarios de Business App que tienen habilitado el permiso de la pestaña **User Management** pueden administrar usuarios directamente desde Business App, sin necesidad de acceso a Partner Center. Desde `Administration` → `Users`, pueden:
+
+- Ver todos los usuarios de la cuenta
+- Invitar a nuevos miembros del equipo
+- Editar permisos (acceso a pestañas) de usuarios existentes
+- Eliminar usuarios
+
+Cuando se agrega o elimina un usuario, ya sea por un partner o por un usuario de la pyme, el evento se registra automáticamente en el feed de actividad del CRM, tanto en el registro de la empresa como en el del contacto. El registro incluye quién realizó la acción y para qué cuenta fue.
+
+:::tip
+Para controlar si un usuario de la pyme puede administrar a otros usuarios, habilita o deshabilita la pestaña **User Management** en los permisos de ese usuario. Los usuarios sin esta pestaña no pueden ver la página de Users ni hacer cambios.
+:::
+
+## Administración del ciclo de vida del usuario
+
+**Escenarios comunes:**
+
+- **Cambios de rol** – Actualiza el acceso a pestañas y productos a medida que cambian las responsabilidades.
+- **Acceso temporal** – Otorga y luego elimina el acceso para usuarios de corto plazo.
+- **Salida de un empleado** – Elimina al usuario para proteger la seguridad de la cuenta.
+
+**Mejores prácticas:**
+
+- Revisa el acceso de los usuarios con regularidad.
+- Elimina a los usuarios que ya no necesitan acceso.
+- Usa las actualizaciones masivas para mantener los permisos consistentes.
+- Limita el acceso solo a los productos y pestañas necesarios.
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Puedo crear varios usuarios para la misma cuenta de negocio?</summary>
+
+Sí, puedes crear varias cuentas de usuario para el mismo negocio, cada una con sus propias credenciales de inicio de sesión y, potencialmente, diferentes niveles de permiso según sus roles dentro de la empresa.
+</details>
+
+<details>
+<summary>¿Qué sucede si uso una dirección de correo que ya está en el sistema?</summary>
+
+En el panel **Invite users**, escribir el correo de un usuario existente es la forma de agregar a esa persona a la cuenta; su inicio de sesión existente sigue funcionando, y el panel simplemente lo asocia con la cuenta (te avisa si ya es usuario de esa cuenta). En el formulario **Create user** de Manage Users, un correo que ya pertenece a un usuario muestra un error; en su lugar, invita a esa persona desde una cuenta.
+</details>
+
+<details>
+<summary>¿Cómo establecen los usuarios sus contraseñas después de que creo sus cuentas?</summary>
+
+Los usuarios invitados reciben un [correo de incorporación](/business-app/ai-onboarding-experience) (o el correo de bienvenida clásico, si seleccionaste eso en su lugar) con un enlace seguro. El enlace los lleva a una página donde establecen su propia contraseña y continúan a Business App.
+</details>
+
+<details>
+<summary>¿Puedo crear usuarios que tengan acceso a varias cuentas de negocio?</summary>
+
+Sí, algunos sistemas admiten el acceso multicuenta para usuarios como consultores o gerentes de franquicia que necesitan acceder a varias cuentas de clientes. Esto normalmente se configura mediante ajustes avanzados de usuario.
+</details>
+
+<details>
+<summary>¿Qué debo hacer si un usuario no recibe su correo de incorporación o de bienvenida?</summary>
+
+Verifica que la dirección de correo sea correcta y pídele que revise las carpetas de spam o correo no deseado. Para reenviarlo, abre el menú de opciones (⋮) junto al usuario, en la cuenta o en **Accounts → Manage Users**, y elige **Send Onboarding Email** o **Send Set Password email (Welcome email)**.
+</details>
+
+<details>
+<summary>¿Cómo manejo a los usuarios que dejan su empresa?</summary>
+
+Desactiva o elimina la cuenta de usuario para evitar el acceso no autorizado. Considera si algún dato o configuración necesita transferirse a otros usuarios antes de eliminar el acceso.
+</details>
+
+<details>
+<summary>¿Pueden los usuarios cambiar sus propios niveles de permiso?</summary>
+
+Los usuarios que tienen habilitada la pestaña **User Management** en sus permisos pueden editar los permisos de sí mismos y de otros usuarios en la misma cuenta. Sin embargo, no pueden eliminar su propia cuenta de usuario ni revocar su propio acceso a la pestaña Users. Los partners también pueden administrar los permisos desde Partner Center.
+</details>
+
+<details>
+<summary>¿Pueden los usuarios de pymes administrar a otros usuarios sin Partner Center?</summary>
+
+Sí. Si la pestaña **User Management** está habilitada en los permisos de un usuario, puede invitar, editar permisos y eliminar a otros usuarios directamente desde Business App en `Administration` → `Users`.
+</details>
+
+<details>
+<summary>¿Se registran las adiciones y eliminaciones de usuarios?</summary>
+
+Sí. Cuando se agrega o elimina un usuario de una cuenta, se registra en el feed de actividad del CRM, tanto en el registro de la empresa asociada como en el del contacto. El registro indica quién realizó la acción y para qué cuenta fue.
+</details>

@@ -1,0 +1,130 @@
+---
+id: default-billing-settings
+title: Paramètres de facturation par défaut
+description: "Configurez la facturation par défaut des abonnements pour les nouveaux comptes : collecte des paiements, renouvellement de l'abonnement, planification et mémo de facture."
+sidebar_position: 2
+tags: [billing, automation, subscriptions, configuration]
+keywords: [billing-automation, default-settings, recurring-billing, invoice-automation, collection-methods]
+---
+
+Les paramètres de facturation par défaut appliquent la configuration de facturation d'abonnement de votre choix à chaque nouveau compte que vous créez. Vous les définissez une seule fois ; les nouveaux comptes reçoivent automatiquement ces paramètres. Les comptes existants ne sont pas modifiés.
+
+## Ce que c'est
+
+La facturation d'abonnement crée et envoie des factures ou débite les moyens de paiement enregistrés pour les abonnements récurrents. Les paramètres par défaut dans `Administration` → `Default billing settings` s'appliquent à tous les nouveaux comptes afin que vous n'ayez pas à configurer la facturation manuellement pour chaque compte.
+
+## Pourquoi c'est important
+
+- **Moins de travail manuel** – Les nouveaux comptes reçoivent automatiquement votre configuration de facturation préférée
+- **Cohérence** – Mêmes pratiques de facturation pour tous les nouveaux clients
+- **Flexibilité** – Modifiez n'importe quel compte individuel à partir de ses propres paramètres de facturation sous `Accounts` → `Manage Accounts`
+
+## Ce que vous pouvez configurer
+
+- **`Subscriptions`** – Un bouton qui active la facturation d'abonnement pour les nouveaux comptes. Il est désactivé (`Off`) par défaut
+- **`Payment collection`** – La méthode utilisée pour percevoir le paiement d'un abonnement
+- **`Subscription renewal`** – Ce qui se passe lors du renouvellement d'un abonnement. Les options incluent `Do nothing` et `Create a draft invoice`
+- **`Subscription scheduling`** – Indique si chaque abonnement se renouvelle à sa propre date de début, ou si tous les abonnements sont alignés sur une date commune
+- **`Memo`** – Texte libre imprimé au bas de chaque facture générée par la facturation d'abonnement
+
+La page affiche une bannière indiquant que ces paramètres s'appliquent uniquement aux comptes créés **après** l'enregistrement. Les comptes existants conservent leurs paramètres actuels.
+
+## Comment configurer la facturation par défaut
+
+1. Allez dans `Partner Center` → `Administration` → `Default billing settings`
+2. Activez le bouton `Subscriptions`. Il est désactivé (`Off`) par défaut
+3. Réglez `Payment collection` sur la méthode que vous souhaitez utiliser pour percevoir le paiement
+4. Réglez `Subscription renewal`. Choisissez `Do nothing` si vous ne voulez rien générer au renouvellement, ou `Create a draft invoice` si vous souhaitez une facture que vous examinez avant envoi
+5. Réglez `Subscription scheduling`. Renouvelez chaque abonnement à sa propre date de début, ou alignez les abonnements sur une date commune
+6. Ajoutez un `Memo` si vous souhaitez un texte fixe au bas de chaque facture générée par la facturation d'abonnement
+7. Vérifiez les paramètres et sélectionnez `Save`
+
+![Page de configuration des paramètres de facturation par défaut](./img/administration/default-billing-settings/default-billing-settings.png)
+
+Les nouveaux comptes recevront automatiquement ces paramètres dans leur configuration de facturation.
+
+:::warning
+Les paramètres de facturation par défaut ne modifient pas les comptes existants. Seuls les comptes créés après l'enregistrement utiliseront ces valeurs par défaut.
+:::
+
+## Modifier la facturation d'un compte individuel
+
+Vous pouvez modifier la facturation de n'importe quel compte à tout moment :
+
+1. Allez dans `Partner Center` → `Accounts` → `Manage Accounts`
+2. Ouvrez le compte
+3. Modifiez les paramètres de facturation propres à ce compte
+
+Pour en savoir plus sur la facturation par compte, consultez [Gestion des abonnements](/commerce/subscriptions/subscription-management).
+
+## Valeurs par défaut spécifiques à un marché
+
+Avec plusieurs marchés, vous pouvez définir des paramètres de facturation par défaut différents pour chaque marché. Utilisez le sélecteur de marché sur la page `Default billing settings`.
+
+## Exigence relative à la tarification des produits
+
+Pour que l'automatisation facture correctement :
+
+- Les **prix de vente** doivent être définis pour chaque produit
+- Les **paramètres d'abonnement** doivent être corrects pour les produits récurrents
+
+:::info
+Pour facturer automatiquement en fonction des produits actifs, vous devez définir les prix de vente pour chaque produit. Sans tarification, l'automatisation ne peut pas calculer les montants.
+:::
+
+## Foire aux questions
+
+<details>
+<summary>Les paramètres de facturation par défaut affectent-ils les comptes existants ?</summary>
+
+Non. Ils s'appliquent uniquement aux comptes créés après l'enregistrement. Les comptes existants conservent leurs paramètres de facturation actuels.
+</details>
+
+<details>
+<summary>Puis-je modifier la facturation d'un compte après avoir appliqué les valeurs par défaut ?</summary>
+
+Oui. Allez dans `Accounts` → `Manage Accounts`, ouvrez le compte et modifiez les paramètres de facturation propres à ce compte.
+</details>
+
+<details>
+<summary>Dois-je définir les prix des produits pour que l'automatisation fonctionne ?</summary>
+
+Oui. Définissez les prix de vente pour chaque produit afin que la facturation automatique puisse calculer les montants.
+</details>
+
+<details>
+<summary>Puis-je avoir des valeurs par défaut différentes par marché ?</summary>
+
+Oui. Sélectionnez chaque marché sur la page `Default billing settings` et enregistrez des paramètres différents pour chaque marché.
+</details>
+
+<details>
+<summary>À quoi sert le paramètre `Payment collection` ?</summary>
+
+`Payment collection` définit la méthode utilisée pour percevoir le paiement d'un abonnement sur un nouveau compte. Ouvrez le champ sur la page `Default billing settings` pour voir les méthodes disponibles pour votre compte, et choisissez celle qui correspond à la façon dont vous souhaitez être payé.
+</details>
+
+<details>
+<summary>À quoi sert le champ `Memo` ?</summary>
+
+Tout ce que vous saisissez dans `Memo` s'imprime au bas de chaque facture générée par la facturation d'abonnement. Utilisez-le pour un texte fixe tel que des conditions de paiement ou une note de remise.
+</details>
+
+<details>
+<summary>Puis-je désactiver la facturation d'abonnement par défaut plus tard ?</summary>
+
+Oui. Allez dans `Default billing settings`, réglez le bouton `Subscriptions` sur `Off`, puis enregistrez. Les nouveaux comptes ne recevront plus les valeurs par défaut ; les comptes existants ne sont pas modifiés.
+</details>
+
+<details>
+<summary>Mes clients reçoivent des e-mails de facture inattendus : comment puis-je arrêter cela ?</summary>
+
+Cela se produit lorsque la facturation d'abonnement est activée et configurée pour générer des factures au renouvellement. Pour arrêter l'envoi des e-mails de facture :
+
+1. Allez dans `Partner Center` → `Administration` → `Default billing settings` et vérifiez si le bouton `Subscriptions` est activé
+2. Réglez `Subscription renewal` sur `Do nothing` afin que les renouvellements ne génèrent plus de facture, puis sélectionnez `Save`
+3. Cela ne modifie la valeur par défaut que pour les nouveaux comptes. Pour un compte qui envoie déjà des factures, modifiez les paramètres de facturation propres à ce compte
+
+Les paramètres de compte se trouvent sous `Partner Center` → `Accounts` → `Manage Accounts`, puis ouvrez le compte concerné.
+
+</details>

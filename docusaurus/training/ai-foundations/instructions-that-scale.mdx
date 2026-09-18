@@ -33,7 +33,7 @@ import LessonSection from "@site/src/components/LessonSection";
 
 ## Skills you switch on
 
-Instructions are the context source you shape most directly, and the platform organizes them into [capabilities](/ai/ai-capabilities): discrete skills you enable for an AI Employee, like capture a lead, book an appointment, or answer from knowledge. Each capability is a set of instructions, sometimes with a tool attached, and an employee can carry several at once. Here is where they sit in the whole:
+Instructions are the context source you shape most directly, and they live in two places. The `Role`, in the employee's `Profile`, is the job description: who it is, its tone, and the guidelines that hold across everything it does. The rest are organized into [capabilities](/ai/ai-capabilities): discrete skills you enable for an AI Employee, like capture a lead, book an appointment, or answer from knowledge. Each capability is a set of instructions, sometimes with a tool attached, and an employee can carry several at once. Here is where they sit in the whole:
 
 <div style={{border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', padding: '8px', background: '#ffffff', marginBottom: '28px'}}>
 
@@ -49,7 +49,7 @@ The employee reads each situation and applies the capability that fits: a questi
 
 If you have used any AI chat tool, you have felt the difference between two layers of communication. There are the ground rules you would set once ("you are a data analyst; keep answers concise and plain") and there is the request of the moment ("summarize this report"). The ground rules stay constant; the requests keep changing.
 
-An AI Employee has exactly this structure. Capabilities are the ground rules, written once and present in every interaction. The customer's message is the request of the moment. This is why instructions are worth real craft: a conversational request is used once, but a capability instruction runs on every conversation, every day, for as long as the employee works. Write it well once and it scales.
+An AI Employee has exactly this structure. The `Role` is the ground rules, written once and present in every interaction, and its capabilities add the skills it applies when the moment calls for them. The customer's message is the request of the moment. This is why instructions are worth real craft: a conversational request is used once, but a `Role` or capability instruction runs on every conversation, every day, for as long as the employee works. Write it well once and it scales.
 
 </LessonSection>
 
@@ -66,7 +66,7 @@ Run the test and the pieces land where they work: rules where they are always pr
 
 ## Short beats long
 
-Everything an AI Employee is told, across all of its capabilities, lands in one working memory. Instructions do not queue up politely and wait their turn; they are all present at once, together with the retrieved knowledge and the conversation. Two long capabilities with overlapping instructions compete with each other, and the answers show it. Partners in the field have a phrase for an employee configured this way: it gets its wires crossed.
+Everything an AI Employee is told, across all of its capabilities, lands in one working memory. Instructions do not queue up politely and wait their turn; they are all present at once, together with the retrieved knowledge and the conversation. Two long capabilities with overlapping instructions compete with each other, and the answers show it. An employee configured this way gets its wires crossed.
 
 The practice that follows is simple and reliable: **keep instructions short, specific, and action-oriented.** Every sentence in a capability should change what the employee does. If a sentence repeats another capability, restates the obvious, or narrates background, cut it. A tight capability is easier for the model to follow and easier for the next person to maintain.
 

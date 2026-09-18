@@ -1,0 +1,52 @@
+---
+id: administration-commerce
+title: Commerce
+description: "Verwalten Sie Zahlungsabwicklung, Abrechnungseinstellungen, Bestellungen und Steuerkonfigurationen in der Administration."
+sidebar_position: 2
+---
+
+# Commerce
+
+Mit Commerce in **Administration** richten Sie die Zahlungsabwicklung, die automatische Standard-Abrechnung, Bestelleinstellungen und Steuersätze ein. Diese gelten plattformweit, damit neue Konten ein einheitliches Verhalten bei Abrechnung, Steuern und Bestellungen erhalten.
+
+## Was Sie tun können
+
+- **Vendasta Payments einrichten** – Erstellen Sie neue Zahlungskonten oder verbinden Sie bestehende Stripe-Standard-Konten; Unterstützung für Karten, ACH und PADs in mehreren Ländern
+- **Standard-Abrechnung konfigurieren** – Wählen Sie automatische Abbuchung oder Rechnungserstellung für alle neuen Konten; die Einstellungen gelten nur für Konten, die nach dem Speichern erstellt werden
+- **Bestelleinstellungen verwalten** – Konfigurieren Sie Bestellabläufe, Auftragsabwicklung und Bestellverwaltung
+- **Steuersätze bearbeiten** – Ändern Sie Steuersätze und verwalten Sie Befreiungen; Sätze gelten je nach Postleitzahl des Kunden
+
+## Wie es funktioniert
+
+- **Zahlungsabwicklung** – Vendasta Payments (oder verbundenes Stripe) übernimmt die Abwicklung; 0,75 % Plattformgebühr bei Verbindung mit Stripe. Verfügbar in den USA, Kanada, Neuseeland, Australien, Großbritannien, Tschechien (und weiteren mit Vertriebsunterstützung).
+- **Abonnementabrechnung** – Standardwerte gelten nur für neue Konten; Sie können jedes einzelne Konto über dessen eigene Abrechnungseinstellungen unter `Accounts` → `Manage Accounts` ändern.
+- **Steuer** – Die Steuer wird automatisch angewendet, wenn die Kundenadresse eine Postleitzahl enthält; sie wird auf Rechnungen, Positionen, im Warenkorb und bei Verkaufsaufträgen verwendet.
+
+## Artikel in diesem Abschnitt
+
+- **[Vendasta Payments](./vendasta-payments/index.mdx)** – Neue Kontoerstellung, Stripe-Verbindung, Verifizierung, Bankverbindung, Zahlungsmethoden und regionale Unterstützung
+- **[Default billing settings](./default-billing-settings/index.mdx)** – Standard-Abonnementabrechnung für neue Konten: Zahlungseinzug, Abonnementverlängerung, Terminierung und der Rechnungsvermerk
+- **[Order Settings](./order-settings/index.mdx)** – Bestellabläufe, Auftragsabwicklung und Bestellverwaltung
+- **[Tax Management](./tax-rates/index.mdx)** – Steuersätze, Befreiungen und adressbasierte Steuerberechnung
+
+## Erste Schritte
+
+1. **Zahlungsabwicklung** – Gehen Sie zu `Partner Center` → `Administration` → `Commerce Settings` → `Vendasta Payments`. Erstellen Sie ein neues Konto oder verbinden Sie Stripe; schließen Sie Verifizierung und Bankverbindung ab.
+2. **Standard-Abrechnung** – Gehen Sie zu `Administration` → `Default billing settings`. Aktivieren Sie den Schalter `Subscriptions`, legen Sie dann `Payment collection`, `Subscription renewal`, `Subscription scheduling` und optional ein `Memo` fest; wenden Sie dies bei Bedarf auf Märkte an.
+3. **Steuer** – Gehen Sie zu `Administration` → `Tax Rates`. Bearbeiten Sie Sätze (Kebab-Menü); stellen Sie sicher, dass Kundenadressen Postleitzahlen enthalten, damit die Steuer angewendet wird.
+
+:::tip
+Vendasta Payments ist auf Free- oder Trial-Stufen nicht verfügbar (Betrugsprävention). Vervollständigen Sie die Rechnungskontaktdaten unter `Administration` → `My billing`; eine fehlende Adresse kann die Aktivierung in unterstützten Regionen blockieren.
+:::
+
+## Fehlerbehebung
+
+- **Zahlung: „Unsupported in Your Area“** – Vervollständigen Sie den Rechnungskontakt und die Adresse (mit Postleitzahl) unter `Administration` → `My billing`.
+- **Zahlung: Keine Einrichtungsoption** – Das Konto ist möglicherweise Free/Trial, befindet sich in einer nicht unterstützten Region oder ist eingeschränkt.
+- **Abrechnungsstandardwerte werden nicht angewendet** – Standardwerte betreffen nur Konten, die *nach* dem Speichern erstellt werden; bestehende Konten behalten ihre aktuellen Einstellungen.
+- **Keine Steuer angewendet** – Das Kundenkonto muss über eine vollständige Adresse mit Postleitzahl verfügen.
+- **Falsche Steuer** – Prüfen Sie die Einrichtung des Steuersatzes und ob die Adresse der vorgesehenen Zuständigkeit entspricht.
+
+:::warning
+Fehlende Angaben zur Rechnungsadresse können die Aktivierung von Vendasta Payments verhindern. Vervollständigen Sie alle Rechnungskontaktdaten vor der Einrichtung.
+:::
