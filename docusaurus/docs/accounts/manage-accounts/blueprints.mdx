@@ -9,169 +9,207 @@ keywords: [blueprint, account-template, bulk-setup, configured-accounts, onboard
 
 # Blueprints
 
-Blueprints let you configure an account once and reuse that setup everywhere. When a Blueprint is applied, it rolls out AI employees, web chat settings, CRM fields, campaigns, automations, forms, and more to the target account in seconds, without any manual steps.
+A blueprint lets you configure an account once and reuse that setup everywhere. When a blueprint is applied, it rolls out AI employees, web chat settings, CRM fields, campaigns, automations, forms, and more to the target account in seconds, without any manual steps.
 
 Blueprints are especially useful for partners onboarding clients at scale, standardizing setup across an industry vertical, or offering SMB self-signup.
 
 :::info
-Blueprints were previously called **account templates**. The capability is the same — only the name has changed. You may still see the old name in some places while the rename rolls out.
+Blueprints were previously called **account templates**. The capability is the same, only the name has changed. Until the rename finishes rolling out you may still see the old name in some places, including the automation action and the activity it logs.
 :::
 
-## What a Blueprint includes
+## What a blueprint includes
 
-A Blueprint captures the full configuration of a source account, including:
+A blueprint captures the configuration of a source account as a set of components:
 
-- AI employees
+- AI employees, AI capabilities, and AI tools
 - Web chat widgets and settings
 - Forms
-- CRM fields
-- CRM field layouts
-- Campaigns
+- CRM custom fields, custom objects, and field layouts
+- Pipelines
+- Campaigns, email templates, and review request templates
+- Promotions
 - Automations
+- Lists
 
-<img src={require('./img/blueprints1.png').default} alt="Create Blueprint dialog showing the Configure step with checkboxes for AI Employees, CRM Custom Fields, Promotions, and other components" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+Default capabilities that come with every AI employee are not listed as components.
 
-## How to access
+<img src={require('./img/blueprints1.png').default} alt="Create blueprint dialog showing the Configure step with checkboxes for AI Employees, CRM Custom Fields, Promotions, and other components" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-To view, create, update, or manually apply Blueprints, go to Partner Center → `Accounts` → `Blueprints`.
+## Where to find blueprints
 
-The list shows each Blueprint's name, the version currently being deployed, its source account, what it contains, and the date it was created.
+Go to Partner Center → `Blueprints`. The page has two views:
 
-<img src={require('./img/blueprints3.png').default} alt="Blueprints list showing each Blueprint's name, applied version, source account, contents, and date created" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+- `My blueprints` holds the blueprints your partner account owns.
+- `Public blueprints` holds blueprints that have been published for every partner to use.
 
-## Manually applying a Blueprint
+Filter either view by tag from the sidebar. The list shows each blueprint's name, the version being deployed, its source account, what it contains, and the date it was created.
 
-To apply a Blueprint directly to an account, open it from Partner Center → `Accounts` → `Blueprints`, select a target account, choose which components to apply, and click `Apply`.
+<img src={require('./img/blueprints3.png').default} alt="Blueprints list showing each blueprint's name, version, source account, contents, and date created" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-<img src={require('./img/blueprints2.png').default} alt="Apply Blueprint dialog showing target account selection and component checkboxes" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+## Create a blueprint
 
-## Applying Blueprints automatically
+1. Click `Create blueprint`.
+2. Pick the **source account**. Partner Center scans it for everything that can be captured.
+3. Give the blueprint a **name** and a **description** of what it sets up. The description can be up to 500 characters.
+4. Add **tags** so it can be filtered later. Up to 10 tags, 50 characters each.
+5. Select the **components** to include.
+6. Save. Creating a blueprint takes a moment while the source account is captured.
 
-### Link a Blueprint to a business category
+## Apply a blueprint
 
-Link a Blueprint to a business category and any new account created in that category — via API, manually, or through SMB self-signup — automatically gets the matching Blueprint applied. No manual setup required.
+Open a blueprint and click `Apply blueprint`. The dialog has two steps.
 
-### Use the "Apply Blueprint" automation action
+**Select targets.** Choose one of:
+
+- `Individual accounts` to pick accounts from your CRM, or to select every account matching your current filters.
+- `Multi-location groups` to apply to every location in one or more groups.
+
+Rows with no linked account are skipped, and the dialog tells you how many.
+
+**Select components.** Choose which of the blueprint's components to apply.
+
+<img src={require('./img/blueprints2.png').default} alt="Apply blueprint dialog showing target account selection and component checkboxes" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+:::info
+Applying a blueprint only adds or updates. Nothing already configured on the target account is removed.
+:::
+
+### Public blueprints
+
+Turn on `Public configuration` when editing a blueprint to make it available to all partners. Publishing makes it visible and applicable by every partner, and you can unpublish it again at any time.
+
+When you apply a public blueprint you do not own, a copy is created in your `My blueprints`. That copy is what gets used for this and every future application, so later changes to the original do not reach your accounts.
+
+## Applying blueprints automatically
+
+### Link a blueprint to a business category
+
+Link a blueprint to a business category and any new account created in that category, via API, manually, or through SMB self-signup, automatically gets the matching blueprint applied. No manual setup required.
+
+### Use the automation action
 
 Blueprints can also be applied from inside an automation, giving you full control over when and how they are triggered.
 
-To set this up:
-
 1. Go to Partner Center → `Automations`.
 2. Select or create an automation.
-3. Add the [Apply Blueprint](/automations/my-automations/apply-blueprint) action.
-4. Select the Blueprint to apply.
+3. Add the [Apply blueprint](/automations/my-automations/apply-blueprint) action.
+4. Select the blueprint to apply.
 
-This lets you apply or re-apply a Blueprint based on any condition an automation can evaluate.
+This lets you apply or re-apply a blueprint based on any condition an automation can evaluate. The action deploys the blueprint's current version.
 
 ## Versions
 
-Every time you save changes to a Blueprint, a new version is created. Versions are numbered in order — `v1`, `v2`, `v3` — and each one records the date it was created, who created it, and what changed.
+Every time you update a blueprint, a new version is created. Versions are numbered in order, `v1`, `v2`, `v3`, and each records the date, the author, and which components changed.
 
-One version is always the **current version**. That is the version used by every new apply: manual applies, business-category applies, and the `Apply Blueprint` automation action. Accounts that were applied earlier stay on the version they received until you move them.
+One version is always the **current version**. That is the version used by every new apply, including the automation action. Accounts applied earlier stay on the version they received until you move them.
+
+To create a version, open the blueprint and click `Update blueprint`. Partner Center confirms that a new version will be created, then recaptures the current configuration from the source account.
 
 ### Version history
 
-Open a Blueprint and select the `Version history` tab to see the full timeline. Each entry shows:
+Select the `Version history` tab. Each entry shows:
 
-- The version number and the date it was created
-- Who created it, and the description they gave it
-- Which components were added and removed compared with the previous version
-- How many accounts are currently running that version
+- `Version {N}`, and `Current` on the version new applies use
+- `Updated by {author} on {date}`
+- The components added and removed compared with the previous version, or `No changes from previous version`
+- `{N} accounts on this version`
 
-Expand a version to see its full configuration, grouped by component type.
+Expand a version to see its full component list, including whether each automation is `Active` or `Inactive`.
 
-### Change the current version
+### Change which version new applies use
 
-From the `Version history` tab, any version that is not current offers `Change current version to vN`.
+On any version that is not current, click `Make v{N} current`.
 
-This repoints the Blueprint so future applies use the version you chose. It does **not** touch accounts that have already been applied — nothing is deployed and no account changes. Use it to stage a rollout, or to stop a bad version from reaching any more accounts while you remediate.
+Future applies will use that version instead. Applied accounts are not affected, nothing is deployed, and no account changes. Use it to stage a rollout, or to stop a bad version from reaching more accounts while you remediate.
 
-## Tracking where a Blueprint is deployed
+## Track where a blueprint is deployed
 
-The `Applied accounts` tab lists every account the Blueprint has been applied to, with the version that account is running, its status, and the date it was applied. Summary cards across the top break the rollout down by status and act as filters, and you can search the list by account name.
-
-Each account shows one of these statuses:
+The `Applied accounts` tab lists every account the blueprint has been applied to. Summary cards across the top break the rollout down by status, show the percentage of accounts in each, and act as filters. You can also search the list by account name.
 
 | Status | Meaning |
 | --- | --- |
-| `Up to date` | The account is running the Blueprint's current version. |
-| `Out of sync` | The account is running an older version. The row shows the move that is available, for example `v3 → v4`. |
-| `Failed` | The last apply did not complete. Expand the row to see which components failed and why. |
+| `Up to date` | The account is running the blueprint's current version. |
+| `Out of sync` | The account is running an older version. The row shows `v3 → v4 available`. |
+| `Failed` | The last apply did not complete. |
 | `Applying` | An apply is in progress. |
 
-Accounts running a version newer than the current version are not flagged as out of date, and are not prompted to change.
+Accounts running a version newer than the current version are not flagged and are not prompted to change.
 
-## Upgrading and rolling back accounts
+## Upgrade and roll back accounts
 
 ### A single account
 
-In the `Applied accounts` table, open the `⋮` menu on any row:
+Open the `⋮` menu on any row in `Applied accounts`:
 
-- `Upgrade` re-applies a newer version to that account.
-- `Roll back this account` re-applies an older version to that account.
+- `Apply latest version (v{N})` moves that account to the newest version.
+- `Roll back...` opens a version picker so you can restore that account to an earlier version.
 
-Both actions are framed relative to that account's own version, and the row updates to show the new version and status once the apply completes.
+The row updates to show the new version and status once the apply completes.
 
 :::warning
-Applying a Blueprint adds and overwrites — it never removes. Rolling an account back to an earlier version restores that version's components, but components that a later version introduced remain on the account and have to be removed manually.
+Apply only adds and overwrites, it never removes. Rolling an account back to an earlier version restores that version's components, but components a later version introduced stay on the account and have to be removed by hand.
 :::
 
 ### Many accounts at once
 
-Select accounts with the checkboxes in the `Applied accounts` table to get a bulk action bar:
+Select accounts with the checkboxes to get the bulk action bar:
 
-- `Reapply to latest version` moves every selected account to the current version.
-- `Roll back to version…` moves every selected account to a version you pick.
-- `Export errors` downloads one combined CSV covering every failed account in the selection.
+- `Re-apply to latest version`
+- `Roll back...`, then pick the version to restore the selection to
+- `Export errors`, which downloads one CSV covering the failed accounts in the selection
 
-Each row updates independently as its account finishes.
+You can select up to 100 accounts at a time. Each row updates independently as its account finishes. A roll back across a large selection runs in the background and can take a while.
 
-## Diagnosing a failed apply
+## Diagnose a failed apply
 
-Hover a `Failed` status to see a summary of what went wrong — either the number of components that failed, or a single top-level message when the apply failed before it reached any component.
-
-Expand the row for the per-component breakdown:
+A `Failed` row shows how many components failed. Click `View error details` to expand it:
 
 | Column | Description |
 | --- | --- |
-| Object Name | The name of the component that failed |
-| Object Type | The kind of component, such as an automation, form, or AI employee |
-| Error Stage | The point in the apply where it failed |
-| Error Message | The reason the component could not be applied |
+| Object name | The component that failed |
+| Object type | The kind of component, such as an automation, form, or AI employee |
+| Error message | Why the component could not be applied |
 
-To take errors elsewhere, select the affected accounts and click `Export errors`. The CSV contains one row per failed component, with the account, object name, object type, object ID, error stage, and error message. It is generated on demand each time, so there is nothing to expire.
+The panel is headed `Apply v{N} failed`, so you can tell which version broke. `Retry apply` re-runs the apply for that account.
+
+To work outside Partner Center, select the affected accounts and click `Export errors`. The CSV carries the account, object name, object type, object ID, error stage, and error message, and is generated fresh each time, so there is nothing to expire.
 
 :::info
-Error detail is recorded from the point this feature shipped forward. Applies that failed before then do not have per-component detail.
+Error detail is recorded going forward from the release of this feature. Applies that failed earlier do not have per-component detail.
 :::
+
+### Common errors
+
+| Message | What to do |
+| --- | --- |
+| This AI Employee does not exist in the target account. It must be created there before this configuration can be applied. | The target account is missing the product that creates that AI employee. Activate it on the account, then retry. |
+| This account has reached the maximum of 3 custom object types. Remove one before deploying another. | Each account can have up to 3 [CRM custom objects](/crm/custom-objects). Remove one on the target account, then retry. |
+| Campaign updates are not yet supported. | A campaign that already exists on the target account is not updated by a later version. Only campaigns that do not exist yet are created. |
+| Automation was created but could not be activated. | The automation landed on the account but is `Inactive`. Turn it on from the account's automations list. |
+| Failed to copy promotion images to target namespace. | A promotion image could not be copied. Retry the apply, and contact support if it persists. |
 
 ## Including CRM field layouts
 
-A [field layout](/administration/data-management/crm-objects/field-layouts) — the grouping and ordering of fields on contact, company, opportunity, and custom object records — can be rolled out with a Blueprint so every account presents its records the same way.
+A [field layout](/administration/data-management/crm-objects/field-layouts), the grouping and ordering of fields on contact, company, opportunity, and custom object records, can be rolled out with a blueprint so every account presents its records the same way.
 
 - Only customized layouts are captured. Object types still on the standard layout are skipped.
 - If a layout references custom fields or a custom object type the target account doesn't have, those are created there first and the layout is repointed at them.
-- Applying a Blueprint replaces the target account's layout for that object type. Any layout customization already made on the target account is overwritten.
+- Applying a blueprint replaces the target account's layout for that object type. Any layout customization already made on the target account is overwritten.
 
 ## Including forms and web chat widgets
 
-Forms and web chat widgets configured on the source account can be included in the Blueprint and rolled out to every account it is applied to. This is particularly useful when:
+Forms and web chat widgets configured on the source account can be included in the blueprint and rolled out to every account it is applied to. This is particularly useful when:
 
 - An initial web chat message needs to be in another language.
 - Privacy statements differ by region.
 
-## Updating accounts in bulk
+## Managing tags
 
-After improving the source account a Blueprint was built from, click `Update Blueprint` to capture the latest changes. No rebuild required. This creates a new version, which becomes the current version for future applies — accounts already applied stay where they are until you upgrade them from the `Applied accounts` tab.
+From the blueprints sidebar, click `Manage tags` to add, rename, or delete tags across all your blueprints. Renaming a tag to a name that already exists merges the two. Deleting a tag removes it from every blueprint that carries it.
 
-## Using Blueprint application as an automation trigger
+## Using blueprint application as an automation trigger
 
-When a Blueprint finishes applying, the target account receives an activity log entry. Automations can listen for that entry and chain downstream work off a completed Blueprint application, such as rep assignment or coupon form setup.
-
-## Custom object limits
-
-Each account can have up to 3 [CRM custom objects](/crm/custom-objects). If applying a Blueprint would push a target account past this limit, the application fails for that account and Partner Center shows an error identifying the cause, rather than failing silently.
+When a blueprint finishes applying, the target account receives an activity log entry. Automations can listen for that entry and chain downstream work off a completed application, such as rep assignment or coupon form setup.
 
 ## Who this is for
 
