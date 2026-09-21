@@ -248,6 +248,15 @@ Resolution strategy
 - **Performance monitoring** - Track package performance across different markets
 - **Optimization** - Continuously improve packages based on market-specific data
 
+## Frequently asked questions
+
+<details>
+<summary>Why does activating a package fail with an "editions not supported" error?</summary>
+
+This usually means a SKU in the package was stamped with editions when the package was built, and those editions were later turned off on the SKU. The package still carries the old editions stamp, so activation fails. Recreate or update the package so it no longer references unsupported editions, then activate again. If it keeps failing, contact support with the SKU and package details.
+
+</details>
+
 ## Support resources and escalation
 
 If nothing in this guide fixes the issue, use the options below.
