@@ -37,12 +37,9 @@ Default capabilities that come with every AI employee are not listed as componen
 
 ## Where to find blueprints
 
-Go to Partner Center → `Blueprints`. The page has two views:
+Go to Partner Center → `Blueprints` to see the blueprints your partner account owns. Filter the list by tag from the sidebar.
 
-- `My blueprints` holds the blueprints your partner account owns.
-- `Public blueprints` holds blueprints that have been published for every partner to use.
-
-Filter either view by tag from the sidebar. The list shows each blueprint's name, the version being deployed, its source account, what it contains, and the date it was created.
+The list shows each blueprint's name, the version being deployed, its source account, what it contains, and the date it was created.
 
 <img src={require('./img/blueprints3.png').default} alt="Blueprints list showing each blueprint's name, version, source account, contents, and date created" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -62,7 +59,7 @@ Open a blueprint and click `Apply blueprint`. The dialog has two steps.
 **Select targets.** Choose one of:
 
 - `Individual accounts` to pick accounts from your CRM, or to select every account matching your current filters.
-- `Multi-location groups` to apply to every location in one or more groups.
+- `Multi-location groups` to apply to every account under the selected groups.
 
 Rows with no linked account are skipped, and the dialog tells you how many.
 
@@ -73,12 +70,6 @@ Rows with no linked account are skipped, and the dialog tells you how many.
 :::info
 Applying a blueprint only adds or updates. Nothing already configured on the target account is removed.
 :::
-
-### Public blueprints
-
-Turn on `Public configuration` when editing a blueprint to make it available to all partners. Publishing makes it visible and applicable by every partner, and you can unpublish it again at any time.
-
-When you apply a public blueprint you do not own, a copy is created in your `My blueprints`. That copy is what gets used for this and every future application, so later changes to the original do not reach your accounts.
 
 ## Applying blueprints automatically
 
@@ -184,9 +175,27 @@ Error detail is recorded going forward from the release of this feature. Applies
 | --- | --- |
 | This AI Employee does not exist in the target account. It must be created there before this configuration can be applied. | The target account is missing the product that creates that AI employee. Activate it on the account, then retry. |
 | This account has reached the maximum of 3 custom object types. Remove one before deploying another. | Each account can have up to 3 [CRM custom objects](/crm/custom-objects). Remove one on the target account, then retry. |
-| Campaign updates are not yet supported. | A campaign that already exists on the target account is not updated by a later version. Only campaigns that do not exist yet are created. |
+| Campaign updates are not yet supported. | Expected on any re-apply to an account that already has that campaign. See [Campaigns are created once, never updated](#campaigns-are-created-once-never-updated). |
 | Automation was created but could not be activated. | The automation landed on the account but is `Inactive`. Turn it on from the account's automations list. |
 | Failed to copy promotion images to target namespace. | A promotion image could not be copied. Retry the apply, and contact support if it persists. |
+
+## Campaigns are created once, never updated
+
+Campaigns behave differently from every other component, and it matters most when you are versioning a blueprint.
+
+The first time a blueprint is applied to an account, its campaigns are created there. On any later apply to that same account, whether an upgrade, a roll back, or a re-apply of the same version, the campaign already exists, so the apply tries to update it and stops with `Campaign updates are not yet supported.`
+
+What that means in practice:
+
+- The account is reported as `Failed`, with the campaign listed as the failed component, even when every other component applied correctly. Check the other components in the error panel before assuming the whole apply was lost.
+- The failure is immediate and is not retried, so the account does not sit in `Applying`.
+- Campaign edits made in the source account after a blueprint has been applied never reach accounts that already received it. New accounts that have not had the blueprint applied yet do get the edited campaign.
+
+To push a campaign change to an account that already has it, either edit the campaign directly on that account, or delete it there and re-apply the blueprint.
+
+:::tip
+If you version a blueprint often, keep campaigns in a blueprint of their own. That way a campaign in the shared blueprint cannot fail every upgrade of the components you do change regularly.
+:::
 
 ## Including CRM field layouts
 
