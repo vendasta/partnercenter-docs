@@ -32,3 +32,26 @@ Use Multi-Location Business App to view roll-up reputation insights and Net Prom
 - Per-location NPS with promoters, passives, and detractors
 - Feedback volume and recent NPS feedback
 
+## Frequently asked questions
+
+<details>
+<summary>How can I tell whether an NPS click was a bot click rather than a real customer?</summary>
+
+Check the email-events data for the `probable_bot` flag and reconcile it with the NPS score and the matching email event. If there is no bot flag and no matching score event, treat the click as a real customer action. You can remove the score record if your client requests it.
+
+</details>
+
+<details>
+<summary>How do I change the Google review threshold for an NPS review request from 7 to 8?</summary>
+
+Open the default NPS review-request templates, set the redirect threshold to a value from 7 to 9, and save. Update both the SMS and email templates if your clients use both channels. The new threshold applies only to requests sent after you save; links already sent keep the threshold they were created with.
+
+</details>
+
+<details>
+<summary>Why does an NPS rating appear without contact information?</summary>
+
+The contact linked to that NPS score was deleted from the CRM. When the CRM contact is removed, the score remains but no contact details are shown.
+
+</details>
+

@@ -205,4 +205,39 @@ If you have the AI Workforce Optimization Plan active, it includes adjustments t
 
 </details>
 
+<details>
+<summary>Why do Google reviews briefly show as deleted, and why might AI responses post later than configured?</summary>
+
+Google can briefly quarantine a newly published review and return a temporary 404. During that window the platform shows the review as deleted. AI may attempt to respond within your configured timing, but posting succeeds only after Google restores the review. Wait for the review to reappear, then retry if needed. Multi-hour or multi-day delays usually come from Google's side, not from your clients' response settings.
+
+</details>
+
+<details>
+<summary>If reviews that were incorrectly marked deleted are unmarked, will AI respond to them automatically?</summary>
+
+No. Auto-response runs only within 48 hours of publication. Reviews outside that window need a manual backfill or re-run. Unmarking deleted status alone does not restart the auto-response flow.
+
+</details>
+
+<details>
+<summary>Can I change default SMS and email review templates in bulk for every account under a PID?</summary>
+
+You can deploy templates to selected locations from `Partner Center`, but there is no bulk option that changes the default template state across every account at once. Update defaults per account, or deploy to the locations you select.
+
+</details>
+
+<details>
+<summary>Where does the SMS review-template logo come from, and can the SMS landing page be customized?</summary>
+
+The template uses the logo uploaded in the Business Profile under `Images` → `Main Image`. Without a main image, you cannot enable the logo option on the template. SMS review-request landing pages are not customizable.
+
+</details>
+
+<details>
+<summary>Is the Reputation AI check-in kiosk generally available, and where do I find it?</summary>
+
+Yes. The check-in kiosk is a request workflow included with the Premium edition. Open it from the Business App rather than from the standalone Reputation product.
+
+</details>
+
 <OptimizationPlanFaq />
