@@ -1,0 +1,54 @@
+---
+title: Apply Blueprint
+description: Learn how to use the Apply Blueprint action to deploy a Blueprint to the target account.
+sidebar_class_name: hidden-sidebar-item
+tags: [automations, account, blueprints, templates, advanced]
+keywords: [apply blueprint, deploy blueprint, blueprint automation, apply account template, account template automation]
+---
+
+# Apply Blueprint
+
+**Apply Blueprint** deploys a [Blueprint](/accounts/manage-accounts/blueprints) to the target account, applying AI assistants, CRM fields, automations, and more. The Blueprint runs asynchronously — the automation continues immediately without waiting for it to finish deploying. This action is available on account-scoped triggers.
+
+:::info
+This action was previously called **Apply account template**. Existing automations continue to work; only the name has changed.
+:::
+
+## How it works
+
+1. The automation reaches the step with an account in scope
+2. You select the Blueprint to deploy
+3. The step triggers the deployment asynchronously
+4. The automation continues to the next step immediately — deployment happens in the background
+
+The Blueprint's [current version](/accounts/manage-accounts/blueprints#versions) is the one applied. To deploy a different version, change the current version on the Blueprint first.
+
+## Set up the action
+
+1. Open the automation builder and add a new step
+2. Under **Advanced**, select **Apply Blueprint**
+3. Configure the field:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| **Blueprint** | Yes | The Blueprint to deploy to the account. Select from your available Blueprints. |
+
+:::tip
+Use data passing for dynamic Blueprint selection — this lets you choose different Blueprints based on trigger data or earlier step outputs.
+:::
+
+## Outputs
+
+This action produces no outputs available to downstream steps.
+
+## Tips
+
+- **Deployment is asynchronous** — the automation does not wait for the Blueprint to finish. If downstream steps depend on resources created by the Blueprint (like AI assistants or automations), add a **Delay** step to allow time for deployment.
+- **Check the result in the audit view** — the Blueprint's `Applied accounts` tab shows whether the apply succeeded, which version landed, and per-component errors when it failed.
+
+## Related resources
+
+- [Blueprints](/accounts/manage-accounts/blueprints) — Build, version, and roll out Blueprints
+- [Actions overview](./actions-overview.mdx) — Browse all available actions
+- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows

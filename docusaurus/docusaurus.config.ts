@@ -105,6 +105,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
+          // Account templates renamed to Blueprints (2026-09, CRMAAS-3221)
+          { from: '/accounts/manage-accounts/account-templates', to: '/accounts/manage-accounts/blueprints' },
+          { from: '/automations/my-automations/apply-account-template', to: '/automations/my-automations/apply-blueprint' },
           // Security & privacy: convenience aliases to the Security and privacy page
           { from: '/security', to: '/getting-started/security-and-privacy' },
           { from: '/trust-center', to: '/getting-started/security-and-privacy' },
