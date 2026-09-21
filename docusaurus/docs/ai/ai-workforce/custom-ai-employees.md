@@ -48,13 +48,13 @@ Set up the basic identity and behavior of your Custom AI Employee:
 - Upload a photo or icon that helps identify this AI Employee
 - Example: "Job Estimator" or "Project Manager"
 
-**Purpose:**
+**Role:**
 
 - Write clear instructions about what this AI Employee should do
 - Define their tone, greeting, and key tasks
 - Be specific about their role and responsibilities
 
-:::tip Writing Effective Purpose Instructions
+:::tip Writing Effective Role Instructions
 Use bullets or numbered lists to make instructions clear. Be specific about what you want, not just general goals.
 
 
@@ -169,7 +169,7 @@ Provide instant, accurate answers about products, pricing, and processes for int
 
 - **Knowledge Sources**: Product catalogs, pricing sheets, sales processes, SOPs
 - **Channels**: In-platform chat (internal use)
-- **Purpose**: "You are a sales enablement assistant. Help team members find accurate information about products, pricing, and processes quickly. Always reference official documentation when answering questions."
+- **Role**: "You are a sales enablement assistant. Help team members find accurate information about products, pricing, and processes quickly. Always reference official documentation when answering questions."
 
 **Use Cases:**
 
@@ -197,7 +197,7 @@ Keep customers and your team members informed by sending regular updates based o
 </TabItem>
 <TabItem value="payment-coordinator" label="Payment Coordinator">
 
-**Purpose:** Monitor for failed payments, follow up with customers, and retry payments based on business rules.
+**Role:** Monitor for failed payments, follow up with customers, and retry payments based on business rules.
 
 **Configuration:**
 
@@ -260,7 +260,7 @@ For details on automation integration, see [Reusable workflows](../../automation
 
 Custom AI Employees use the same framework as pre-built AI Employees. All AI Employees share:
 
-- **Profile**: Name, avatar, purpose
+- **Profile**: Name, avatar, role
 - **Channels**: Where they can interact
 - **Capabilities**: What they can do
 - **Tools**: API integrations
