@@ -473,6 +473,13 @@ For the most up-to-date region availability, see the [AI Workforce Overview](./i
 
 </details>
 
+<details>
+<summary>Can missed calls from multiple business lines automatically forward to the AI Voice Receptionist?</summary>
+
+Yes, when those lines are configured to forward to the Business App number that serves the AI Voice Receptionist. Forwarding is set up on the customer or carrier side; regular phone providers usually document conditional or missed-call forwarding, though carrier support varies. Use the call-forwarding setup documentation for the exact steps for each provider.
+
+</details>
+
 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
   <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
   <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>
