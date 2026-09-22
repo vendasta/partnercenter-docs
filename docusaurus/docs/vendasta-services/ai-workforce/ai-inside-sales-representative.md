@@ -18,7 +18,7 @@ Want to hand this to a client? The **grey-labeled guide** has the same informati
 **Conversations AI** must be active on your account. See the full [requirements](#requirements) below.
 :::
 
-The AI Inside Sales Representative (ISR) Setup is a do-it-with-me service where our experts configure, train, and launch the AI Inside Sales Representative for your business. Our team handles the technical setup, configures a sales-qualified persona, sets up lead discovery and qualification logic, enables lead capture and appointment booking capabilities, and connects your knowledge sources — including your services list, website, and FAQs.
+The AI Inside Sales Representative (ISR) Setup is a do-it-with-me service where our experts configure, train, and launch the AI Inside Sales Representative for your business. Our team handles the technical setup, configures a sales-qualified persona, sets up lead discovery and qualification logic, enables lead capture and appointment booking capabilities, and connects your knowledge sources, including your services list, website, and FAQs.
 
 :::info Two ways to get the AI Inside Sales Representative
 
@@ -35,25 +35,25 @@ Choose one or the other:
 
 #### 1. AI Employee profile
 
-We create a custom AI Employee with a name and avatar that represents your business. Customers interact with a professional sales persona rather than a generic bot. The profile is configured within the **AI Workforce** section of Business App.
+We create a custom AI Employee with a name and avatar that represents your business. Customers interact with a professional sales persona rather than a generic bot. The profile is configured within the `AI Workforce` section of Business App.
 
 #### 2. Sales role prompt
 
-We configure a confident, empathetic inbound sales consultant persona for your ISR. The prompt is designed to guide customers toward a solution — an appointment or consultation — rather than simply collecting a message. Every conversation is kept moving forward with qualifying questions and clear next steps.
+We configure a confident, empathetic inbound sales consultant persona for your ISR. The prompt is designed to guide customers toward a solution, an appointment or consultation, rather than simply collecting a message. Every conversation is kept moving forward with qualifying questions and clear next steps.
 
 #### 3. Lead discovery and qualification
 
-We set up a custom capability that defines the qualification logic: the ISR confirms your business can actually serve the customer's need before capturing their contact information. If a customer asks about a service you do not offer, the ISR politely informs them and stops the lead capture process — no wasted time for your sales team.
+We set up a custom capability that defines the qualification logic: the ISR confirms your business can actually serve the customer's need before capturing their contact information. If a customer asks about a service you do not offer, the ISR politely informs them and stops the lead capture process, saving time for your sales team.
 
 :::tip
-The quality of your services list directly affects qualification accuracy. A specific services list — for example, 'furnace repair, AC installation, duct cleaning' rather than 'HVAC services' — allows the ISR to make faster, more accurate qualification decisions.
+The quality of your services list directly affects qualification accuracy. A specific services list, for example 'furnace repair, AC installation, duct cleaning' rather than 'HVAC services,' allows the ISR to make faster, more accurate qualification decisions.
 :::
 
 #### 4. Lead capture and appointment booking
 
-Built-in capabilities manage the full lead capture sequence: Name → Phone → Email. Phone number validation and objection handling are included — if a customer says 'just email me,' the ISR acknowledges their preference, explains the value of a quick call, and pivots. If they object a second time, the ISR accepts email as a fallback.
+Built-in capabilities manage the full lead capture sequence: Name → Phone → Email. Phone number validation and objection handling are included: if a customer says 'just email me,' the ISR acknowledges their preference, explains the value of a quick call, and pivots. If they object a second time, the ISR accepts email as a fallback.
 
-When a calendar is connected, the ISR checks availability and books appointments directly in the conversation — presenting up to three time options, confirming the selection, and sending a confirmation.
+When a calendar is connected, the ISR checks availability and books appointments directly in the conversation, presenting up to three time options, confirming the selection, and sending a confirmation.
 
 :::note
 Appointment booking requires a connected Google, Outlook, or Microsoft calendar in Business App. Without it, the ISR qualifies and captures leads but cannot schedule meetings.
@@ -61,7 +61,7 @@ Appointment booking requires a connected Google, Outlook, or Microsoft calendar 
 
 #### 5. Knowledge base setup
 
-We connect your business profile, website, services list, and any FAQs to the ISR's knowledge base. This allows the ISR to answer questions about your services, pricing, hours, and location accurately — without fabricating information.
+We connect your business profile, website, services list, and any FAQs to the ISR's knowledge base. This allows the ISR to answer questions about your services, pricing, hours, and location accurately, without fabricating information.
 
 ### The setup process
 
@@ -81,12 +81,12 @@ Our team of experts will lead an onboarding call to understand your business nee
 * **For U.S. businesses:** A2P registration is required to validate the business' use of SMS. Please be ready with your business legal information if you'd like to use SMS. Registration for A2P can take up to two weeks to complete.
 
 :::note
-If you are unable to attend the onboarding call, our team will proceed with setup using the information provided in your fulfillment form and will follow up via email and phone to review and refine. If we are unable to reach you after our follow-up process, the project will be closed — but can be reopened at any time by reaching back out to us.
+If you are unable to attend the onboarding call, our team will proceed with setup using the information provided in your fulfillment form and will follow up via email and phone to review and refine. If we are unable to reach you after our follow-up process, the project will be closed, but can be reopened at any time by reaching back out to us.
 :::
 
 #### 3. ISR setup
 
-Using the information gathered during the onboarding call, we will configure your AI Employee with a sales-qualified persona, set up lead discovery and qualification logic, enable lead capture and appointment booking capabilities, and connect your knowledge sources — including your services list, website, and FAQs.
+Using the information gathered during the onboarding call, we will configure your AI Employee with a sales-qualified persona, set up lead discovery and qualification logic, enable lead capture and appointment booking capabilities, and connect your knowledge sources, including your services list, website, and FAQs.
 
 * **Timeline:** Your AI Inside Sales Representative will be complete in 1 business day, or 3 business days for setups with custom integrations or complex knowledge bases.
 
@@ -126,7 +126,7 @@ A connected calendar is required for the appointment booking capability. Without
 
 ### Services list
 
-A clear, specific list of what your business does — and does not — offer. This is the single most critical input for lead qualification accuracy. The ISR uses this to determine whether a customer's need is a fit before capturing their information.
+A clear, specific list of what your business does, and does not, offer. This is the single most critical input for lead qualification accuracy. The ISR uses this to determine whether a customer's need is a fit before capturing their information.
 
 :::tip
 'Furnace repair, AC installation, duct cleaning' allows the ISR to qualify leads far more accurately than 'HVAC services.' The more specific, the better.
@@ -160,9 +160,9 @@ We will also need the following information for an Authorized Business Represent
 
 <details>
 
-<summary>How is the AI Inside Sales Representative different from the AI Chat Receptionist?</summary>
+<summary>How is the AI Inside Sales Representative different from the AI Receptionist?</summary>
 
-The [AI Chat Receptionist](./ai-receptionist.md) is designed to capture leads from anyone who contacts your business through web chat. The AI Inside Sales Representative goes further — it qualifies leads first by confirming your business can actually serve the customer's need before asking for any contact information. If a customer asks about a service you don't offer, the ISR politely informs them and stops the process. This means your sales team only receives leads that are genuinely a fit.
+The [AI Receptionist](./ai-receptionist.md) is designed to capture leads from anyone who contacts your business through web chat. The AI Inside Sales Representative goes further: it qualifies leads first by confirming your business can actually serve the customer's need before asking for any contact information. If a customer asks about a service you don't offer, the ISR politely informs them and stops the process. This means your sales team only receives leads that are genuinely a fit.
 
 </details>
 
@@ -170,7 +170,7 @@ The [AI Chat Receptionist](./ai-receptionist.md) is designed to capture leads fr
 
 <summary>What happens if a customer asks about a service we don't offer?</summary>
 
-The ISR will politely let the customer know the business doesn't offer that service and stop the lead capture process. It will not ask for contact information. The accuracy of this depends on how clearly your services are described in your knowledge sources — which is why a specific services list is the most critical input we need from you.
+The ISR will politely let the customer know the business doesn't offer that service and stop the lead capture process. It will not ask for contact information. The accuracy of this depends on how clearly your services are described in your knowledge sources, which is why a specific services list is the most critical input we need from you.
 
 </details>
 
@@ -178,7 +178,7 @@ The ISR will politely let the customer know the business doesn't offer that serv
 
 <summary>Does the ISR need a calendar to work?</summary>
 
-A connected calendar is required for appointment booking. Without it, the ISR will still qualify leads and capture name, phone, and email — it just won't be able to check availability or book meetings directly in the conversation. You can connect a calendar at any time to unlock booking. We support Google, Outlook, and Microsoft calendars connected through Business App.
+A connected calendar is required for appointment booking. Without it, the ISR will still qualify leads and capture name, phone, and email, it just won't be able to check availability or book meetings directly in the conversation. You can connect a calendar at any time to enable booking. We support Google, Outlook, and Microsoft calendars connected through Business App.
 
 </details>
 
@@ -186,7 +186,7 @@ A connected calendar is required for appointment booking. Without it, the ISR wi
 
 <summary>How does the ISR handle lead capture? What's the sequence?</summary>
 
-Once a lead qualifies, the ISR collects contact information in a structured sequence: Name → Phone → Email. The ISR validates phone number format and includes built-in objection handling. If a customer says 'just email me,' the ISR acknowledges their preference, explains the value of a brief call, and pivots back to phone. If they object a second time, the ISR accepts email as the fallback. You do not need to configure these rules manually — they are built into the Lead Capture capability.
+Once a lead qualifies, the ISR collects contact information in a structured sequence: Name → Phone → Email. The ISR validates phone number format and includes built-in objection handling. If a customer says 'just email me,' the ISR acknowledges their preference, explains the value of a brief call, and pivots back to phone. If they object a second time, the ISR accepts email as the fallback. You do not need to configure these rules manually, they are built into the Lead Capture capability.
 
 </details>
 
@@ -267,7 +267,7 @@ Unfortunately, this is a limitation of our SMS provider and we are unable to use
 
 If you are unable to attend the onboarding call, our team will proceed with setup using the information provided in your fulfillment form and demo the configuration when we connect. We will then follow up via email and phone to review, refine, and answer any questions you have.
 
-If we are unable to reach you after our follow-up process (4 emails and 4 phone calls), the project will be closed. However, the project can be reopened at any time by reaching back out to us — no need to start over from scratch.
+If we are unable to reach you after our follow-up process (4 emails and 4 phone calls), the project will be closed. However, the project can be reopened at any time by reaching back out to us, with no need to start over from scratch.
 
 </details>
 
@@ -275,7 +275,7 @@ If we are unable to reach you after our follow-up process (4 emails and 4 phone 
 
 <summary>Can the ISR qualify leads and capture contacts through both web chat and SMS?</summary>
 
-Yes. The AI Inside Sales Representative can be configured to operate through web chat, SMS, or both — depending on your preferences. Please let our team know during the onboarding call which channels you'd like to activate. If you're a U.S.-based business, A2P registration is required before SMS can be enabled.
+Yes. The AI Inside Sales Representative can be configured to operate through web chat, SMS, or both, depending on your preferences. Please let our team know during the onboarding call which channels you'd like to activate. If you're a U.S.-based business, A2P registration is required before SMS can be enabled.
 
 </details>
 

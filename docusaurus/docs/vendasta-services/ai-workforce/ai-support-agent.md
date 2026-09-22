@@ -35,9 +35,9 @@ Choose one or the other:
 
 #### 1. AI Employee profile
 
-We configure the AI Employee with a name and avatar that represents your business. Customers interact with a professional support persona rather than a generic bot. The profile is configured within the **AI Workforce** section of Business App.
+We configure the AI Employee with a name and avatar that represents your business. Customers interact with a professional support persona rather than a generic bot. The profile is configured within the `AI Workforce` section of Business App.
 
-#### 2. HEARD Support Framework
+#### 2. HEARD support framework
 
 We configure the HEARD framework, a structured support methodology that guides every conversation through five stages:
 
@@ -98,7 +98,7 @@ To ensure a smooth and efficient setup, please fill out the fulfillment form wit
 
 #### 2. Onboarding call
 
-Our team will lead a structured onboarding call to understand your support needs, common customer inquiries, and escalation preferences. We'll configure the HEARD Support Framework, a structured approach that guides your AI through direct answers for simple questions, empathetic resolution for complaints, and a smooth handoff to your team when human support is needed. We'll come to the call with an initial setup ready to demo and refine together.
+Our team will lead a structured onboarding call to understand your support needs, common customer inquiries, and escalation preferences. We'll configure the HEARD support framework, a structured approach that guides your AI through direct answers for simple questions, empathetic resolution for complaints, and a smooth handoff to your team when human support is needed. We'll come to the call with an initial setup ready to demo and refine together.
 
 * **Timeline:** An onboarding call can be booked in as little as 1 business day, depending on availability.
 * **For U.S. businesses:** A2P registration is required to validate the business' use of SMS. Please be ready with your business legal information if you'd like to use SMS. Registration for A2P can take up to two weeks to complete.

@@ -35,27 +35,27 @@ Choose one or the other:
 
 #### 1. AI Employee profile
 
-We create a custom AI Employee with a name and avatar that represents your HR team. Employees interact with a professional HR persona that is warm, accurate, and appropriately cautious with sensitive topics. The profile is configured within the **AI Workforce** section of Business App.
+We create a custom AI Employee with a name and avatar that represents your HR team. Employees interact with a professional HR persona that is warm, accurate, and appropriately cautious with sensitive topics. The profile is configured within the `AI Workforce` section of Business App.
 
 #### 2. PolicyScope framework
 
-We configure the PolicyScope framework — a three-level routing system that governs how the AI handles every HR inquiry:
+We configure the PolicyScope framework, a three-level routing system that governs how the AI handles every HR inquiry:
 
 * **Level 1 (General questions):** The AI answers directly from the knowledge base and links to the relevant policy document.
 * **Level 2 (Personal or sensitive questions):** The AI acknowledges the question, explains that it requires a human, and redirects warmly to your designated HR contact.
 * **Level 3 (Out of scope):** The AI declines the question politely and directs the employee to the appropriate department (IT, Finance, Legal, etc.).
 
 :::note
-The AI will never guess or fabricate answers to personal questions — it is designed to redirect before it over-reaches.
+The AI will never guess or fabricate answers to personal questions: it is designed to redirect before it over-reaches.
 :::
 
 #### 3. Escalation contact configuration
 
-We populate the Level 2 redirect language with your actual HR contact's name, role, phone, and email — so employees receive a clear, specific direction rather than a generic "speak to HR" message. Additional escalation contacts for Level 3 (IT, Finance, Legal) can be added at any time.
+We populate the Level 2 redirect language with your actual HR contact's name, role, phone, and email, so employees receive a clear, specific direction rather than a generic "speak to HR" message. Additional escalation contacts for Level 3 (IT, Finance, Legal) can be added at any time.
 
 #### 4. Knowledge base setup
 
-We upload every policy document, employee handbook, benefit guide, onboarding checklist, and FAQ provided during setup. This is the most critical step — the AI can only answer questions it has been given the information to answer.
+We upload every policy document, employee handbook, benefit guide, onboarding checklist, and FAQ provided during setup. This is the most critical step: the AI can only answer questions it has been given the information to answer.
 
 :::note
 The AI HR Coordinator is an internal tool and does not require a chat widget or website installation. No code will be added to your public website.
@@ -75,18 +75,18 @@ The process involves a fulfillment form, a series of calls, and configuration st
 
 #### 1. Fulfillment form
 
-To ensure a smooth and efficient setup, please fill out the fulfillment form with as much detail as possible. Include your escalation contact's full name, role, and contact information — this is required to configure the AI's handoff logic.
+To ensure a smooth and efficient setup, please fill out the fulfillment form with as much detail as possible. Include your escalation contact's full name, role, and contact information. This is required to configure the AI's handoff logic.
 
 * **Timeline:** We'll review the order and start the process within 2 business days.
 
 #### 2. Onboarding call
 
-Our team will lead a structured onboarding call to understand your HR workflows, the types of questions employees most commonly ask, and how you'd like sensitive or personal inquiries handled. We'll configure the PolicyScope framework — a three-level routing system that answers general questions directly, redirects personal inquiries to your HR contact, and declines out-of-scope questions gracefully. We will come to the call with an initial setup ready to demo and refine together.
+Our team will lead a structured onboarding call to understand your HR workflows, the types of questions employees most commonly ask, and how you'd like sensitive or personal inquiries handled. We'll configure the PolicyScope framework, a three-level routing system that answers general questions directly, redirects personal inquiries to your HR contact, and declines out-of-scope questions gracefully. We will come to the call with an initial setup ready to demo and refine together.
 
 * **Timeline:** An onboarding call can be booked in as little as 1 business day, depending on availability.
 
 :::note
-If you are unable to attend the onboarding call, our team will proceed with setup using the information provided in your fulfillment form and will follow up via email and phone to review and refine. If we are unable to reach you after our follow-up process, the project will be closed — but can be reopened at any time by reaching back out to us.
+If you are unable to attend the onboarding call, our team will proceed with setup using the information provided in your fulfillment form and will follow up via email and phone to review and refine. If we are unable to reach you after our follow-up process, the project will be closed, but can be reopened at any time by reaching back out to us.
 :::
 
 #### 3. HR Coordinator setup
@@ -97,7 +97,7 @@ Using the information gathered during the onboarding call, we will configure you
 
 #### 4. Training call
 
-This call will walk you through your AI HR Coordinator — how it handles general policy questions, how it redirects personal or sensitive inquiries, and where it declines out-of-scope requests. We'll test it live together and answer any questions your team has before go-live.
+This call will walk you through your AI HR Coordinator: how it handles general policy questions, how it redirects personal or sensitive inquiries, and where it declines out-of-scope requests. We'll test it live together and answer any questions your team has before go-live.
 
 * **Timeline:** This call can be booked in as little as 1 business day after HR Coordinator Setup completion, depending on availability.
 
@@ -131,7 +131,7 @@ If there are multiple escalation contacts for different departments (e.g. IT for
 
 ### HR policy documents and handbook
 
-All HR policies, employee handbooks, benefit guides, onboarding and offboarding documentation, and any other materials employees regularly ask about. These documents form the AI's entire knowledge base — the more complete and current they are, the more accurately the AI can respond.
+All HR policies, employee handbooks, benefit guides, onboarding and offboarding documentation, and any other materials employees regularly ask about. These documents form the AI's entire knowledge base: the more complete and current they are, the more accurately the AI can respond.
 
 :::tip
 The AI HR Coordinator cannot answer questions about information it has not been given. We strongly recommend providing current, written versions of all policies before the setup call.
@@ -139,7 +139,7 @@ The AI HR Coordinator cannot answer questions about information it has not been 
 
 ### No website installation required
 
-The AI HR Coordinator is an internal tool — no chat widget or website embed code is required. There are no external accounts, social integrations, or customer-facing installations involved in this setup.
+The AI HR Coordinator is an internal tool: no chat widget or website embed code is required. There are no external accounts, social integrations, or customer-facing installations involved in this setup.
 
 ## Frequently asked questions (FAQs)
 
@@ -155,7 +155,7 @@ The AI HR Coordinator is designed to answer general, policy-based HR questions: 
 
 <summary>What happens when an employee asks something personal or sensitive?</summary>
 
-When a question is personal — such as a salary inquiry, a performance concern, or a disciplinary matter — the AI will not attempt to answer. Instead, it acknowledges the question warmly, explains that this type of question requires a human, and provides your designated HR contact's name, role, and contact information directly in the response. Employees always leave the conversation knowing exactly who to speak with.
+When a question is personal, such as a salary inquiry, a performance concern, or a disciplinary matter, the AI will not attempt to answer. Instead, it acknowledges the question warmly, explains that this type of question requires a human, and provides your designated HR contact's name, role, and contact information directly in the response. Employees always leave the conversation knowing exactly who to speak with.
 
 </details>
 
@@ -179,15 +179,15 @@ At a minimum: your employee handbook, leave and time-off policies, benefits docu
 
 <summary>What is the PolicyScope framework?</summary>
 
-PolicyScope is the structured routing system we configure for your AI HR Coordinator. It governs how the AI handles every incoming question across three levels. Level 1 covers general, policy-based questions the AI can answer directly from your documentation. Level 2 covers personal or sensitive inquiries that require human judgment — the AI redirects warmly to your HR contact. Level 3 covers out-of-scope questions (IT, Finance, Legal, etc.) that the AI politely declines and routes to the right department.
+PolicyScope is the structured routing system we configure for your AI HR Coordinator. It governs how the AI handles every incoming question across three levels. Level 1 covers general, policy-based questions the AI can answer directly from your documentation. Level 2 covers personal or sensitive inquiries that require human judgment: the AI redirects warmly to your HR contact. Level 3 covers out-of-scope questions (IT, Finance, Legal, etc.) that the AI politely declines and routes to the right department.
 
 </details>
 
 <details>
 
-<summary>Can the AI take action — like submitting a form, sending an email, or opening a ticket?</summary>
+<summary>Can the AI take action, like submitting a form, sending an email, or opening a ticket?</summary>
 
-No. The AI HR Coordinator is an information and direction tool only. It will answer questions, link to documents, and redirect employees to the right person — but it cannot submit forms, send emails on behalf of employees, or create tickets in any system. If an action is required, the AI will clearly explain what the employee needs to do and who they need to contact.
+No. The AI HR Coordinator is an information and direction tool only. It will answer questions, link to documents, and redirect employees to the right person, but it cannot submit forms, send emails on behalf of employees, or create tickets in any system. If an action is required, the AI will clearly explain what the employee needs to do and who they need to contact.
 
 </details>
 
@@ -195,7 +195,7 @@ No. The AI HR Coordinator is an information and direction tool only. It will ans
 
 <summary>Can employees book a meeting with HR through the AI?</summary>
 
-Yes, if your HR team has a Google, Outlook, or Microsoft calendar connected in Business App. When this is set up, the AI can check availability and book a meeting directly in the conversation — presenting available times, confirming the selection, and sending a confirmation. Please let our team know during the onboarding call if you'd like to enable this capability.
+Yes, if your HR team has a Google, Outlook, or Microsoft calendar connected in Business App. When this is set up, the AI can check availability and book a meeting directly in the conversation, presenting available times, confirming the selection, and sending a confirmation. Please let our team know during the onboarding call if you'd like to enable this capability.
 
 </details>
 
@@ -203,7 +203,7 @@ Yes, if your HR team has a Google, Outlook, or Microsoft calendar connected in B
 
 <summary>Does this require a chat widget on our website or company portal?</summary>
 
-No. The AI HR Coordinator is an internal tool — it does not require any website embed code, widget installation, or public-facing setup. There are no customer-facing components, no social media integrations, and no external accounts required as part of this setup.
+No. The AI HR Coordinator is an internal tool, it does not require any website embed code, widget installation, or public-facing setup. There are no customer-facing components, no social media integrations, and no external accounts required as part of this setup.
 
 </details>
 
@@ -211,7 +211,7 @@ No. The AI HR Coordinator is an internal tool — it does not require any websit
 
 <summary>What happens when our HR policies change after setup?</summary>
 
-Whenever your policies are updated, you can send the revised documents to our team and we will update the knowledge base. If you have Google Drive sync configured, policy updates made in your designated Drive folder will be reflected automatically — no manual update required. We recommend reviewing the AI's knowledge base any time a significant policy changes.
+Whenever your policies are updated, you can send the revised documents to our team and we will update the knowledge base. If you have Google Drive sync configured, policy updates made in your designated Drive folder will be reflected automatically, no manual update required. We recommend reviewing the AI's knowledge base any time a significant policy changes.
 
 </details>
 
@@ -229,7 +229,7 @@ Yes. If your HR policies are maintained in Google Drive, we can configure an aut
 
 If you are unable to attend the onboarding call, our team will proceed with setup using the information provided in your fulfillment form and demo the configuration when we connect. We will then follow up via email and phone to review, refine, and answer any questions you have.
 
-If we are unable to reach you after our follow-up process (4 emails and 4 phone calls), the project will be closed. However, the project can be reopened at any time by reaching back out to us — no need to start over from scratch.
+If we are unable to reach you after our follow-up process (4 emails and 4 phone calls), the project will be closed. However, the project can be reopened at any time by reaching back out to us, with no need to start over from scratch.
 
 </details>
 
@@ -237,7 +237,7 @@ If we are unable to reach you after our follow-up process (4 emails and 4 phone 
 
 <summary>How is this different from just having a shared FAQ document or HR knowledge base page?</summary>
 
-A shared document or FAQ page requires employees to know it exists, find it, and search through it themselves. The AI HR Coordinator responds conversationally in real time — employees ask a question and get a direct answer, often with a link to the relevant policy, without needing to search. It is also available at any hour, reduces repetitive questions to your HR team, and consistently applies the same routing logic for sensitive or out-of-scope inquiries.
+A shared document or FAQ page requires employees to know it exists, find it, and search through it themselves. The AI HR Coordinator responds conversationally in real time: employees ask a question and get a direct answer, often with a link to the relevant policy, without needing to search. It is also available at any hour, reduces repetitive questions to your HR team, and consistently applies the same routing logic for sensitive or out-of-scope inquiries.
 
 </details>
 
