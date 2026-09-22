@@ -199,6 +199,27 @@ Go to **Partner Center > Administration > Customize Business App > Conversations
 **Q: What about spam messages?**
 Currently, there's no spam blocking feature. If clients experience unusually high spam, contact support for number reassignment.
 
+<details>
+<summary>Does spam detection apply to chat only, or to voice as well?</summary>
+
+Spam detection focuses on items that surface in the Inbox and may flag spam after a short delay. It is unlikely to block inbound calls. Voice-transcript spam handling is a separate path from Inbox spam detection, and a true call block must be performed by the calling service rather than by inbox-side guards alone.
+
+</details>
+
+<details>
+<summary>Why do old migrated conversations appear as active, and can I bulk-close them?</summary>
+
+Migrated conversations can show as active because their database creation date reflects when they were imported, not when the original messages were sent. Close each conversation individually. There is no bulk-close action and no date filter for closing migrated threads in bulk.
+
+</details>
+
+<details>
+<summary>Why is a Conversations summary missing when an external SMS or webinar flow sends a conversation into the platform?</summary>
+
+Conversation summaries are powered by Lead Capture. If Lead Capture is not enabled on the AI employee, the platform does not produce a summary for that conversation. Confirm Lead Capture is configured on the AI employee before expecting summaries or downstream automations that depend on them.
+
+</details>
+
 ## Setup Process
 
 1. **Product Activation**: Enable Conversations AI edition through marketplace

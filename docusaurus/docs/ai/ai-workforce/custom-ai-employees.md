@@ -316,6 +316,13 @@ Yes! You can add Custom AI Employees to automation workflows using the "Send a p
 
 </details>
 
+<details>
+<summary>Can a custom AI agent read a PDF that an end user uploads in chat?</summary>
+
+No. Custom AI agents cannot read PDFs that end users upload during a chat. You can use a PDF as a knowledge source for the agent, but chat attachments are not read as input. Submit the request through the AI Workforce feedback page if you want the product team to consider it.
+
+</details>
+
 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
   <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
   <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>
