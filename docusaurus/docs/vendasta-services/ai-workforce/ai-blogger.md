@@ -2,6 +2,7 @@
 title: "AI Blogger: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Blogger"
 description: "An overview of the AI Blogger service: how setup works, how your autonomous blog calendar is built, and ongoing optimization."
+last_reviewed: 2026-09-21
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';
