@@ -1,0 +1,72 @@
+---
+title: Discounts in Invoices and Subscriptions
+description: Aprende a aplicar y gestionar descuentos para facturas únicas y suscripciones recurrentes para reducir los costos de los clientes.
+sidebar_position: 3
+---
+
+Como comerciante, puedes aplicar descuentos a tus facturas en la sección Billing de Commerce. Los descuentos se pueden aplicar como un porcentaje del total o un monto fijo, y se pueden aplicar a facturas únicas o suscripciones recurrentes.
+
+## Descuento único
+
+Para agregar un descuento único a una factura:
+
+1. Ve a la sección `Billing` en Commerce
+2. Selecciona `Invoices`
+3. Haz clic en la factura que quieres modificar
+4. Haz clic en el botón `Discount` en la esquina superior derecha
+
+5. En la página de configuración, elige:
+   - `Name`: una etiqueta para el descuento (obligatorio); se muestra en la factura
+   - `Type`: Percentage o Fixed Amount
+   - `Value`: el porcentaje o monto en dólares
+
+<img src={require('./img/commerce/invoices/discount-setup-page.png').default} alt="Discount setup page" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+6. Haz clic en `Apply`
+
+El descuento se aplicará al total de la factura.
+
+<img src={require('./img/commerce/invoices/discount-applied-to-invoice.png').default} alt="Discount applied to invoice" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## Descuento en suscripción
+
+Para suscripciones recurrentes, puedes aplicar descuentos que se aplicarán a todas las facturas futuras generadas a partir de esa suscripción.
+
+1. Ve a la sección `Billing` en Commerce
+2. Selecciona `Subscriptions`
+3. Haz clic en la suscripción que quieres modificar
+4. Haz clic en el botón `Discount`
+
+<img src={require('./img/commerce/invoices/subscription-discount-1.png').default} alt="Subscription discount button" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+5. En la página de configuración, elige:
+   - `Name`: una etiqueta para el descuento (obligatorio); se muestra en la factura
+   - `Type`: Percentage o Fixed Amount
+   - `Value`: el porcentaje o monto en dólares
+   - `Duration`:
+     - `Forever`: se aplica a todas las facturas futuras
+     - `For a limited time`: selecciona el número de ciclos de facturación para aplicar el descuento
+     - `Once`: se aplica solo a la próxima factura
+     - `Custom`: selecciona una fecha de inicio y fin específicas para el descuento
+
+<img src={require('./img/commerce/invoices/subscription-discount-settings.png').default} alt="Subscription discount settings" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+6. Haz clic en `Apply`
+
+## Editar o cancelar un descuento
+
+Para modificar o eliminar un descuento existente:
+
+1. Ve a la factura o suscripción con el descuento
+2. Haz clic en el menú ⋮ junto al descuento y selecciona `Edit discount` o `Cancel discount`
+
+<img src={require('./img/commerce/invoices/edit-cancel-discount.png').default} alt="Edit or cancel discount" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+3. Si estás editando, ajusta los valores y guarda tus cambios
+
+## Notas sobre los descuentos
+
+- Los descuentos se aplican después de los impuestos
+- Solo puedes tener un descuento por factura o suscripción a la vez
+- Los descuentos no se aplican a facturas pasadas, solo a las actuales o futuras
+- Para las suscripciones, puedes ver qué facturas futuras tendrán descuentos aplicados en la página de detalles de la suscripción
