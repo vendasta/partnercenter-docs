@@ -1,0 +1,224 @@
+---
+title: Understanding lead capture notifications
+sidebar_label: Lead capture notifications
+description: Aprende cuándo se captan los clientes potenciales del chat web, qué notificaciones recibes, y cómo se gestionan los contactos duplicados.
+---
+
+Cuando los visitantes conversan con tu negocio a través del widget de chat web, tu AI Receptionist (o IA personalizada) puede captar automáticamente su información de contacto y notificarte sobre nuevos clientes potenciales. Esto requiere que la capacidad `Capture leads` esté activa en tu AI Receptionist.
+
+Esta guía explica cuándo se captan los clientes potenciales, qué notificaciones recibirás, y cómo interpretarlas.
+
+:::note
+Para que la captación de clientes potenciales funcione, tu AI Receptionist debe estar activo en el canal que usa el cliente, ya sea un widget de chat web habilitado, respuestas de SMS habilitadas, o un número de voz conectado.
+:::
+
+## Cuándo se capta un cliente potencial
+
+Se capta un cliente potencial cuando se cumplen **todas** las siguientes condiciones:
+
+| Condición | Requisito |
+|-----------|-------------|
+| El visitante comparte información de contacto | El visitante menciona su nombre, correo, o número de teléfono en la conversación |
+| El AI Receptionist está conectado | Tu widget de chat web tiene un AI Receptionist (o IA personalizada) con la capacidad `Capture leads` habilitada |
+| La conversación tiene actividad | El visitante ha enviado al menos un mensaje |
+
+### Ejemplos de captación de clientes potenciales
+
+**El cliente potencial SÍ se capta:**
+- El visitante dice "Hi, I'm John Smith. My email is john@email.com. I'd like a quote for landscaping."
+- El visitante proporciona un número de teléfono: "You can reach me at 555-123-4567"
+- El visitante comparte información parcial: "My name is Sarah" (se capta el nombre, otros campos quedan vacíos)
+
+**El cliente potencial NO se capta:**
+- El visitante solo hace una pregunta sin compartir ninguna información de contacto: "What are your hours?"
+- El visitante se va antes de compartir cualquier información identificativa
+- El AI Receptionist no tiene habilitada la capacidad `Capture leads`
+
+## Tipos de notificaciones
+
+### Notificación de nuevo cliente potencial
+
+**Qué significa:** se ha creado un contacto completamente nuevo en tu CRM.
+
+**Cuándo la ves:** la primera vez que un visitante comparte su información de contacto y no existe un contacto coincidente en tu CRM.
+
+**Título de notificación:** "New Lead: [Name/Email/Phone]"
+
+**Qué incluye:**
+- Información de contacto (nombre, teléfono, correo)
+- Resumen de conversación generado por IA
+- Enlace para ver la conversación completa en Inbox
+
+**Acción a tomar:** revisa el cliente potencial y haz seguimiento según su consulta.
+
+### Notificación de actualización de conversación
+
+**Qué significa:** un contacto existente ha iniciado una nueva conversación o ha vuelto a chatear.
+
+**Cuándo la ves:**
+- Un contacto conocido te envía un mensaje de nuevo
+- Una situación de contacto duplicado (ver a continuación)
+
+**Título de notificación:** "Conversation Update: [Name/Email/Phone]"
+
+**Qué incluye:**
+- Información de contacto
+- Resumen de la nueva conversación
+- Enlace para ver la conversación
+
+**Acción a tomar:** revisa qué necesita el cliente que regresa y continúa la relación.
+
+## Entender los contactos duplicados y las conversaciones anónimas
+
+### ¿Qué es un contacto duplicado?
+
+Un contacto duplicado ocurre cuando alguien que ya está en tu CRM inicia una **nueva conversación** desde un **punto de entrada diferente**. El sistema lo reconoce como un contacto existente en lugar de crear uno nuevo.
+
+### ¿Qué es una conversación anónima?
+
+Una conversación anónima ocurre cuando un visitante conversa sin proporcionar ninguna información de contacto. Estas conversaciones aparecen en la sección "Anonymous" de tu Inbox hasta que el visitante comparte detalles identificativos.
+
+Además, cuando se detecta una [conversación duplicada](#how-duplicate-conversations-are-handled), la nueva conversación permanece en Anonymous mientras se vincula a la conversación del contacto original.
+
+### Escenarios comunes de contacto duplicado
+
+| Escenario | Qué sucede |
+|----------|--------------|
+| Misma persona, navegador diferente | El visitante borra las cookies o usa un dispositivo nuevo, comienza a conversar de nuevo |
+| Misma persona, canal diferente | Un contacto que antes conversó ahora te envía un mensaje de texto por SMS |
+| Visitante que regresa | Alguien que conversó hace meses regresa para hacer una nueva pregunta |
+
+### Cómo se gestionan las conversaciones duplicadas {#how-duplicate-conversations-are-handled}
+
+Cuando el sistema detecta que una nueva conversación proviene de alguien que ya está en tu CRM:
+
+1. **No se crea un contacto duplicado en el CRM**: el sistema reconoce el contacto existente
+2. **Recibes una "Conversation Update"** en lugar de "New Lead"
+3. **La nueva conversación permanece en Anonymous**: la conversación duplicada permanece en la sección Anonymous de tu Inbox
+4. **La conversación original se vincula a la nueva**: se agrega un evento a la conversación original del contacto con un enlace a la nueva conversación anónima
+5. **La información de contacto NO se sobrescribe**: se conserva el registro de contacto existente (solo se puede agregar el código postal faltante)
+
+### Ver conversaciones duplicadas
+
+Cuando se detecta un duplicado:
+- La nueva conversación permanece en la sección **Anonymous** con un enlace a la conversación original
+- La conversación original (bajo el contacto) muestra "A new conversation has occurred" con un resumen y un enlace a la conversación anónima
+- También aparece un resumen de conversación en el registro de contacto del CRM
+- Para encontrar la nueva conversación, revisa la sección Anonymous o sigue el enlace desde la conversación original
+
+## Resumen de notificaciones
+
+| Tipo de notificación | Cuándo aparece | Qué significa |
+|-------------------|-----------------|---------------|
+| **New Lead** | El visitante comparte información de contacto por primera vez | Se agregó un contacto completamente nuevo al CRM |
+| **Conversation Update** | Un contacto existente regresa | Un contacto conocido inició una nueva conversación |
+| **Conversation Update** (duplicado) | Misma persona, nuevo hilo de conversación | El sistema vinculó las conversaciones |
+
+## Qué información se capta
+
+De forma predeterminada, se extrae la siguiente información de la conversación cuando se capta un cliente potencial:
+
+| Campo | Ejemplo |
+|-------|---------|
+| First Name | "John" |
+| Last Name | "Smith" |
+| Email | "john@email.com" |
+| Phone | "555-123-4567" |
+| Address | "123 Main St, City, State 12345" |
+
+:::note
+Solo se capta la información que el visitante comparte explícitamente. Si solo proporciona su nombre, solo se completa el campo de nombre.
+:::
+
+:::tip
+Puedes personalizar qué campos se captan modificando los ajustes de la capacidad `Capture leads` en tu AI Receptionist.
+:::
+
+## Resumen de conversación
+
+Cada notificación incluye un resumen de conversación generado por IA. Este resumen:
+
+- Destaca lo que el visitante busca
+- Capta los detalles clave de la conversación
+- Te ayuda a prepararte antes de hacer seguimiento
+
+**Ejemplo de resumen:**
+
+*"Visitor is interested in getting a quote for backyard landscaping. They have a 500 sq ft area and want low-maintenance plants. Prefers to be contacted by phone in the afternoon."*
+
+## Momento de la notificación: nuevos clientes potenciales vs. seguimientos
+
+Las notificaciones de nuevo cliente potencial se activan **solo cuando se crea un contacto completamente nuevo**. Si la misma persona envía un mensaje de nuevo, desde un número, correo, o dispositivo conocido, recibes una "Conversation Update" en lugar de un "New Lead".
+
+Los mensajes de seguimiento de contactos existentes no activan una notificación de forma predeterminada. Para recibir alertas sobre seguimientos, configura una Automation:
+
+1. Ve a `Automations` y crea una nueva automatización
+2. Establece el disparador en `A contact communication summary is created`
+3. Agrega la acción `Send notification` al miembro (o miembros) del equipo correspondiente
+
+Esto se activa después de generar cada resumen de conversación, cubriendo tanto los nuevos clientes potenciales como los contactos que regresan.
+
+## Dirección de respuesta en los correos de notificación de nuevo cliente potencial
+
+Cuando recibes una notificación por correo de "New Lead from Web Chat", la dirección de respuesta es `noreply@<tu-dominio>`. Responder a ese correo no llegará a tu cliente. En su lugar:
+
+- **Reenvía la notificación** para compartirla con un colega
+- **Haz clic en el enlace de la notificación** para abrir la conversación en Conversations AI y responder desde ahí
+
+## Seguimiento y dejar de seguir conversaciones automáticamente
+
+Se te configura automáticamente para seguir una conversación cuando:
+
+- **Envías un mensaje** en esa conversación
+- Estás **asignado como vendedor** a la cuenta (sigue todas las conversaciones pasadas y futuras de esa cuenta)
+
+El seguimiento automático significa que recibirás notificaciones de esa conversación incluso cuando esté seleccionado "Only my events". Para dejar de recibir notificaciones de una conversación que no necesitas seguir, haz clic en el ícono de estrella `★` en el encabezado de la conversación para dejar de seguirla.
+
+Si alguien que no es el vendedor previsto está recibiendo notificaciones de Inbox, verifica si participó en una conversación (y fue seguido automáticamente) o si fue asignado como vendedor de la cuenta.
+
+## Reapertura de conversaciones cerradas
+
+Cuando un cliente envía un nuevo mensaje entrante en un número o canal vinculado a una conversación previamente marcada como cerrada, la conversación se **reabre** automáticamente. Este es el comportamiento esperado. No hay un tipo de notificación separado para una conversación reabierta; aparece como un nuevo mensaje entrante en el hilo de conversación.
+
+## Preguntas frecuentes
+
+**P: ¿Por qué no recibí una notificación de "New Lead"?**
+- Es posible que el visitante no haya compartido ninguna información de contacto
+- Podría ser un contacto existente (recibirías "Conversation Update" en su lugar)
+- Verifica que tu AI Receptionist tenga habilitada la capacidad `Capture leads`
+
+**P: ¿Por qué recibo "Conversation Update" en lugar de "New Lead"?**
+- El visitante ya está en tu CRM
+- Esto es normal para clientes que regresan
+
+**P: ¿Dónde está esta conversación? ¿Por qué está en anonymous?**
+- Las conversaciones aparecen en "Anonymous" cuando el visitante aún no ha compartido ninguna información de contacto
+- Una vez que el visitante proporciona su nombre, correo, o teléfono, la conversación se vinculará a un contacto
+- Las [conversaciones duplicadas](#how-duplicate-conversations-are-handled) también permanecen en Anonymous. La conversación del contacto original tendrá un enlace a la nueva conversación anónima
+- Revisa la sección Anonymous en tu Inbox para encontrar estas conversaciones
+
+**P: ¿Puedo ver todas las conversaciones del mismo contacto?**
+- Debería haber solo una conversación por contacto
+- Las conversaciones duplicadas muestran eventos que las vinculan entre sí
+
+**P: ¿Con qué rapidez se me notificará?**
+- Las notificaciones se envían después de que el visitante deja de enviar mensajes durante unos minutos
+- Esto garantiza que se capte la conversación completa antes de notificarte
+
+**P: ¿Qué pasa si el visitante proporciona información incorrecta?**
+- De todos modos puedes actualizar manualmente el registro de contacto en tu CRM
+
+**P: Si un visitante que regresa proporciona información de contacto actualizada, ¿se actualizará su registro?**
+- Para los contactos duplicados (reconocidos por coincidencia de correo/teléfono), se conserva el registro existente
+- Solo se puede agregar automáticamente el código postal faltante
+- Puedes actualizar manualmente otros campos en el CRM si es necesario
+
+**P: Alguien que no es el vendedor está recibiendo notificaciones de Inbox. ¿Por qué?**
+- Cualquier usuario que envíe un mensaje en una conversación se configura automáticamente para seguirla
+- Los usuarios asignados como vendedor de una cuenta siguen todas las conversaciones de esa cuenta
+- Para dejar de recibir notificaciones, el usuario puede dejar de seguir la conversación haciendo clic en el ★ en el encabezado de la conversación
+
+**P: No recibo ninguna notificación. ¿Qué debo revisar?**
+- Confirma que tu cuenta de usuario exista y esté activa en Partner Center
+- Verifica que Conversations AI esté activado para la cuenta
+- Verifica que las preferencias de notificación estén habilitadas (`ícono de campana` → `ícono de engranaje` → habilita `All events` o `Only my events`)
