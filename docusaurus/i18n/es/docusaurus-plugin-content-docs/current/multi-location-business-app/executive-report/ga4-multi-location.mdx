@@ -1,0 +1,45 @@
+---
+title: Set up Google Analytics (GA4) for multi-location accounts
+sidebar_label: GA4 for multi-location
+sidebar_position: 2
+description: Cómo conectar Google Analytics GA4 a cuentas multiubicación sin duplicar datos ni mezclar señales entre sitios.
+---
+
+Google Analytics (GA4) se conecta a nivel de **una sola ubicación** en Vendasta. Cada cuenta individual de Business App puede tener su propia propiedad o flujo de datos de GA4 conectado. Luego, el Multi-Location Executive Report consolida esos datos en todas las ubicaciones del grupo.
+
+Cómo configuras GA4 depende de si tu marca multiubicación tiene un sitio web compartido o sitios web separados para cada ubicación.
+
+## Configuración recomendada: un sitio web compartido
+
+Si todas tus ubicaciones comparten un solo sitio web (por ejemplo, una marca nacional con un dominio y páginas de ubicación), conecta GA4 a una sola cuenta designada, típicamente una cuenta de sede central o ubicación principal.
+
+- Conecta el sitio compartido solo a **una** cuenta. Conectar el mismo sitio a varias cuentas de ubicación generará datos duplicados en Executive Report.
+- Las demás cuentas de ubicación no necesitan una conexión de GA4 si todas usan el mismo sitio web.
+
+## Configuración recomendada: varios sitios web o microsites
+
+Si cada ubicación tiene su propio sitio web o microsite, configura un **flujo de datos de GA4 separado** para cada sitio y conéctalo a la Business App de una sola ubicación correspondiente.
+
+- Cada cuenta de ubicación debe conectarse solo al flujo de datos del sitio específico de esa ubicación.
+- No uses una sola propiedad de GA4 compartida entre dominios no relacionados. Esto mezcla el tráfico de diferentes sitios y produce datos poco confiables en Executive Report.
+
+:::tip
+Si las ubicaciones comparten un dominio pero tienen rutas o subdominios distintos (por ejemplo, `marca.com/toronto` y `marca.com/vancouver`), considera usar una sola propiedad de GA4 con filtrado entre dominios o subdirectorios, conectada a una cuenta de ubicación representativa.
+:::
+
+## Evitar errores comunes
+
+| Error | Qué sale mal |
+|---|---|
+| Conectar el mismo sitio a varias cuentas de ubicación | Los datos aparecen varias veces en Executive Report |
+| Usar una propiedad de GA4 en dominios no relacionados | El tráfico se mezcla, haciendo que los datos por ubicación no sean confiables |
+| No conectar GA4 a ninguna ubicación | Los datos de GA4 no aparecerán en Multi-Location Executive Report |
+
+## Cómo conectar GA4 a una ubicación
+
+1. Ve a `Partner Center` → `Accounts` → `Manage Accounts` y abre la cuenta de la ubicación.
+2. Ve a la `Business App` de la cuenta.
+3. En Business App, ve a `Executive Report` → `Connections`.
+4. Selecciona `Google Analytics` y sigue las indicaciones para conectar la propiedad o flujo de datos de GA4 del sitio web de esa ubicación.
+
+Repite este proceso para cada ubicación que tenga su propio sitio web o microsite.
