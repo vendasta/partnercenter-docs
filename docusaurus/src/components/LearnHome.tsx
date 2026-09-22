@@ -18,6 +18,13 @@
 //   where they are used. Restore by re-adding its card to PATHS, putting
 //   AI_FOUNDATIONS_ITEMS back into the "Putting AI to work" facet, and dropping
 //   className from training/ai-foundations/_category_.json.
+// - The master sales series: hidden 2026-09-22 (ET-933, at Rylan's request)
+//   while product and platform knowledge lands in the Learn paths. Hidden, not
+//   deleted, so it comes back without a rebuild. Restore by re-adding its card
+//   to PATHS, putting SALES_ITEMS back into FOCUS_AREAS as "Learning how to
+//   sell", returning position 7 and dropping className from
+//   training/sales/_category_.json, and repointing the Wire your AI Workforce
+//   to act skill-check footer back to /learn/sales.
 // (Builder and Build lab were merged into one visible path, Wire your AI
 //  Workforce to act, on 2026-08-29 and are no longer hidden.)
 
@@ -102,18 +109,6 @@ const PATHS: HomePathCard[] = [
     gate: "About 1 hour 40 minutes",
     cta: "Start",
     to: "/learn/builder",
-    tone: "purple",
-  },
-  {
-    id: "sales",
-    kicker: "Learn to sell",
-    title: "The master sales series",
-    blurb: "Sales craft with George Leith: prospecting, the pitch, the presentation, and handling objections.",
-    tag: "Sales",
-    scope: ["5 lessons", "6 videos"],
-    gate: "About 1 hour 20 minutes",
-    cta: "Start",
-    to: "/learn/sales",
     tone: "purple",
   },
   {
@@ -233,7 +228,6 @@ const SERVICES_ITEMS: ExplorerItem[] = [
 const FOCUS_AREAS: ExplorerFacet[] = [
   { id: "setting-up", label: "Setting up your platform", items: GETTING_STARTED_ITEMS },
   { id: "selling-ai", label: "Selling the AI Workforce", items: SELL_AI_ITEMS },
-  { id: "selling", label: "Learning how to sell", items: SALES_ITEMS },
   { id: "ai-to-work", label: "Putting AI to work", items: [...AI_WORKFORCE_ITEMS, ...GROW_AI_ITEMS] },
   { id: "connecting", label: "Connecting your own systems", items: BUILDER_ITEMS },
   { id: "delivering", label: "Partnering with our services team", items: SERVICES_ITEMS },
