@@ -1,0 +1,188 @@
+---
+title: Gestionar la configuración de visibilidad de reuniones grabadas
+sidebar_label: Configuración de visibilidad
+description: Gestiona el acceso, la privacidad, y el registro en el CRM de las grabaciones de reunión, transcripciones, resúmenes, y asesoramiento de ventas.
+tags: [visibility-settings, meeting-recordings, sales-coaching, notetaker]
+keywords: [private meetings, meeting visibility, recording settings]
+---
+
+Visibility Settings te permite gestionar el acceso y controlar la privacidad de contenido sensible, incluidas las grabaciones, transcripciones, resúmenes, y el asesoramiento de ventas. Estos ajustes ayudan a proteger las discusiones sensibles aplicando reglas de privacidad según si las reuniones son internas o externas.
+
+Esta función te permite categorizar las reuniones como privadas o de acceso público dentro del CRM. Esta flexibilidad se adapta a varias necesidades de grabación de reunión, incluidas las reuniones 1 a 1, discusiones confidenciales, reuniones de producto, reuniones de RR. HH., y sesiones de capacitación que requieren privacidad.
+
+Esto respalda la confianza y habilita casos de uso más allá de las ventas, como RR. HH., producto, y reuniones de capacitación.
+
+### Beneficios clave
+
+- Equilibra la privacidad y la colaboración para las reuniones grabadas y los resúmenes.  
+- Protege las discusiones confidenciales mientras preserva la automatización del CRM para las discusiones no privadas.  
+- Te permite configurar, anular, y revertir decisiones de privacidad en cualquier momento.
+
+### Conceptos y definiciones clave
+
+| Término | Definición |
+|------|------------|
+| **Notetaker** | un bot que se une a las reuniones (a través de Google Meet) para grabar y transcribir las sesiones. |
+| **Página Meeting Details** | página centralizada que muestra la grabación de la reunión, la transcripción, el resumen, y el asesoramiento de ventas. |
+| **Reunión interna** | una reunión se considera interna cuando todos los invitados tienen el mismo dominio de correo electrónico. |
+| **Reunión externa** | una reunión se considera externa cuando al menos un invitado tiene un dominio de correo electrónico diferente. |
+| **Visibility Settings** | se refiere al grado en que las grabaciones y resúmenes de reunión son accesibles. |
+| **Invitees** | personas invitadas al evento de Google Calendar por el organizador. |
+| **Host and Co-hosts** | el organizador es automáticamente el host principal de la llamada de Meet. |
+| **Ad-hoc Meeting** | una reunión en la que no se programó un Notetaker automáticamente. Estas suelen ser reuniones creadas por organizadores de reuniones externos. |
+
+## Cómo funciona Visibility Settings
+
+1. Cuando conectas tu Google Calendar a través de BookMeNow, la plataforma escanea los próximos eventos de calendario. Los Notetakers se programan automáticamente para estas reuniones para que puedan unirse en el momento apropiado.
+
+2. Una vez que se aprueba el Notetaker en Google Meet, la reunión se graba y se transcribe.
+
+3. La plataforma usa infraestructura de IA para resumir la reunión y registrar actividades en el CRM según tu configuración predeterminada de Visibility Settings.
+
+4. Todas las grabaciones y resúmenes son accesibles en la página My Meetings, sujetos a la accesibilidad de la reunión.
+
+## Opciones de Visibility Settings
+
+### Las 3 configuraciones de visibilidad
+
+`Private`  
+Solo los invitados a la reunión del evento de calendario en el mismo namespace/Partner ID pueden ver la grabación de la reunión o la página Meeting Details.
+
+`All`  
+Cualquiera en el mismo namespace/Partner ID puede ver la grabación de la reunión o la página Meeting Details. Se registra una actividad de CRM.
+
+`Anyone with the link`  
+Cualquiera en el mismo namespace/Partner ID con acceso al enlace de la página Meeting Details puede verla. La reunión no aparecerá en el CRM.
+
+### Configurar Visibility Settings predeterminados para reuniones grabadas
+
+Puedes configurar ajustes predeterminados para tus reuniones grabadas. Los valores predeterminados se pueden aplicar a dos tipos de reunión:
+
+- **Reuniones internas** (todos los invitados comparten el mismo dominio de correo electrónico)  
+- **Reuniones externas** (al menos un invitado tiene un dominio de correo electrónico diferente)
+
+Los ajustes de Visibility Settings para cualquier reunión específica se pueden ajustar en cualquier momento.
+
+Puedes configurar los valores predeterminados en:
+
+`My Meetings` → `Meeting Settings` → `Recording Settings`
+
+Esta es una configuración a nivel de usuario y no afecta a otros en el mismo namespace/Partner ID.
+
+:::note
+Las reuniones marcadas como *Private* en Google Calendar todavía se graban.
+:::
+
+### Lógica predeterminada
+
+| Tipo de reunión | Visibility Settings | Registro en CRM |
+|--------------|---------------------|-------------|
+| Reunión externa | All | Registrada |
+| Reunión interna | Private | No registrada |
+| Reunión ad-hoc | Private | No registrada |
+
+Puedes anular estos valores predeterminados en cualquier momento, ya sea desde la página Meeting Details o la página My Meetings.
+
+## Anular la configuración predeterminada de Visibility Settings
+
+Puedes actualizar Visibility Settings antes o después de una reunión.
+
+### Antes de la reunión
+
+1. Navega a `My Meetings` → `Recordings` → `Upcoming`.  
+2. Selecciona la reunión y elige la configuración de visibilidad preferida: `Use default` o `Override defaults`.  
+3. La plataforma indica si la reunión se grabará y registrará.
+
+**Demostración:**
+
+<div style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+  <iframe 
+    src="https://www.loom.com/embed/31f465c7127645969c796507ca19bb36" 
+    frameBorder="0" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true" 
+    allowFullScreen 
+    style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}>
+  </iframe>
+</div>
+
+### Después de la reunión
+
+- En la pestaña `Recorded Meetings`, cambia entre las vistas de cuadrícula y tabla para ajustar la configuración.  
+- En la **página Meeting Details**, cambia Visibility Settings según sea necesario.
+
+**Demostración:**
+
+<div style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+  <iframe 
+    src="https://www.loom.com/embed/c59d4ee82f4a446789fe03c317cf8cff" 
+    frameBorder="0" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true" 
+    allowFullScreen 
+    style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}>
+  </iframe>
+</div>
+
+## Cambios retroactivos y lógica de registro en el CRM
+
+Cuando Visibility Settings se cambia retroactivamente, el registro en el CRM se actualiza automáticamente.
+
+| Transición | Comportamiento del sistema |
+|-----------|------------------|
+| **Private → All** | la reunión se registra retroactivamente en el CRM |
+| **All → Private** | la actividad del CRM se elimina |
+| **All → Anyone with the link** | la actividad del CRM se elimina |
+
+## La pestaña Recordings
+
+### Upcoming meetings
+
+Muestra todas las reuniones de tu Google Calendar, **incluidas las reuniones no reservadas a través de BookMeNow.** Estas son reuniones donde se ha programado un Notetaker para unirse.
+
+Incluye indicadores para:
+
+- Visibility Settings con la capacidad de modificar antes de que comience la reunión  
+- Información adicional de la reunión de Google Calendar  
+
+### Past meetings
+
+Muestra todas las grabaciones de reunión en las que eres organizador o invitado. Esta es la vista predeterminada para revisar tus reuniones grabadas.
+
+Usa el Activity Feed del CRM para las actividades relacionadas con el equipo.
+
+:::note
+Para las reuniones creadas por alguien fuera de tu namespace/Partner ID, debes agregar manualmente al Notetaker.
+:::
+
+Incluye indicadores para:
+
+- Título de la reunión, fecha, y configuración de visibilidad  
+- Capacidad de cambiar Visibility Settings  
+- Enlace a la página Meeting Details  
+
+## Preguntas frecuentes
+
+<details>
+  <summary>¿Quién puede ver una reunión privada?</summary>
+  
+  Solo los invitados dentro del mismo Partner ID, si los hay.
+</details>
+
+<details>
+  <summary>¿Los gerentes de venta pueden ver las reuniones privadas de los miembros del equipo?</summary>
+  
+  Actualmente no es compatible.
+</details>
+
+<details>
+  <summary>¿Las reuniones privadas siguen generando resúmenes de IA?</summary>
+  
+  Sí, solo visibles para los participantes de la reunión o los invitados con ese Partner ID.
+</details>
+
+<details>
+  <summary>¿Qué pasa si una reunión se hace pública por accidente?</summary>
+  
+  Si una reunión se hace pública por accidente, cámbiala a Private. La actividad del CRM se eliminará automáticamente.
+</details>
