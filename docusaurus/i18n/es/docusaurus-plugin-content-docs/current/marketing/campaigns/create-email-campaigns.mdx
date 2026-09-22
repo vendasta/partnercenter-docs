@@ -1,0 +1,404 @@
+---
+title: Create marketing emails
+description: Aprende a crear correos de marketing profesionales usando plantillas y Email Builder, e implementarlos a través de campañas o automatizaciones.
+sidebar_label: Create Marketing Emails
+sidebar_position: 1
+---
+
+Crea correos de marketing profesionales que interactúen con tus contactos e impulsen resultados de negocio. Los correos de marketing se pueden implementar a través de campañas para envíos programados o automatizaciones para entrega basada en disparadores.
+
+## Descripción general
+
+El proceso de creación de correos de marketing implica:
+1. Diseñar el contenido de tu correo usando Email Builder
+2. Agregar personalización dinámica con datos de contacto y empresa
+3. Implementar a través de campañas (secuencias de goteo) o automatizaciones (flujos de trabajo condicionales avanzados)
+4. Probar y optimizar el rendimiento
+
+## Entender las opciones de implementación
+
+Las **campañas (Campaigns)** son automatizaciones de marketing tipo goteo que envían secuencias de correo programadas a tu audiencia. Son ideales para marketing por correo electrónico simple y basado en tiempo.
+
+Las **automatizaciones (Automations)** son flujos de trabajo avanzados e inteligentes que admiten tanto secuencias de goteo COMO lógica condicional basada en acciones de contacto, eventos de negocio y cambios de datos. Proporcionan capacidades de segmentación y personalización más sofisticadas.
+
+## Usar el constructor de correo
+
+Email Builder te permite diseñar correos atractivos que se ven muy bien en cualquier dispositivo. Con Email Builder puedes crear rápidamente campañas de correo efectivas utilizando todos los puntos de datos disponibles mientras optimizas para varios dispositivos con retroalimentación visual instantánea.
+
+### Por qué es importante el constructor de correo
+
+Con más del [80% de los correos abiertos en dispositivos móviles](https://www.litmus.com/blog/email-client-market-share-infographic/), es crucial asegurarte de que tus correos se muestren correctamente en todos los dispositivos. Email Builder proporciona retroalimentación visual instantánea para que puedas ver exactamente cómo aparecerán tus correos a los destinatarios.
+
+### Personaliza tu logotipo
+
+Usa esta función para ocultar o personalizar el logotipo de cada correo que diseñes. El logotipo se puede ocultar o cambiar para cada correo diferente dentro de tus campañas, permitiendo contenido más personalizado.
+
+<img src={require('./img/marketing/campaigns/email_builder_logo_customization.jpg').default} alt="Email Builder Logo Customization" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+El bloque de personalización de logotipo tiene tres opciones:
+- **Default**: usa el logotipo del partner configurado en tus ajustes de marca.
+- **Custom**: sube una imagen diferente. Puedes establecer el ancho y la alineación, y agregar una URL para que al hacer clic en el logotipo se lleve a los destinatarios a un destino de tu elección.
+- **Hide**: elimina el logotipo de este correo por completo.
+
+### Ajustar el espaciado entre bloques de contenido
+
+Si tienes dos imágenes apiladas una sobre otra y hay un espacio no deseado entre ellas, esto se debe al espaciado predeterminado de cada bloque. Para eliminar el espacio:
+
+1. Haz clic en el bloque superior para seleccionarlo.
+2. En el panel de configuración del bloque, establece **Bottom Padding** en `0`.
+3. Haz clic en el bloque inferior para seleccionarlo.
+4. Establece **Top Padding** en `0`.
+
+Esto elimina el espacio entre los dos bloques. El mismo enfoque funciona para cualquier bloque adyacente donde quieras un espaciado más ajustado.
+
+### Trabajar con bloques de contenido
+
+Todo el contenido del correo se coloca en "bloques" de contenido. Email Builder proporciona varios bloques que puedes hacer clic y agregar. Los bloques determinan qué tipo de contenido se puede ingresar, así como las opciones de estilo y edición disponibles. Haz clic en `+Add new block` para comenzar a crear tu correo.
+
+<img src={require('./img/marketing/campaigns/email_builder_add_block.jpg').default} alt="Email Builder Add Block" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Después de crear los bloques de contenido, se pueden arrastrar y soltar para reordenar el contenido.
+
+<img src={require('./img/marketing/campaigns/email_builder_drag_drop.jpg').default} alt="Email Builder Drag and Drop" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+¡Haz clic en `Preview` en la esquina superior derecha para ver tu correo!
+
+<img src={require('./img/marketing/campaigns/email_builder_preview.jpg').default} alt="Email Builder Preview" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Vista previa en diferentes dispositivos
+
+Puedes ver cómo se verá tu correo en diferentes dispositivos en tiempo real con solo un clic. Esto garantiza que tus correos se vean muy bien ya sea que se abran en escritorio, tableta o móvil.
+
+<img src={require('./img/marketing/campaigns/email_builder_logo_personalization.jpg').default} alt="Email Builder Logo Personalization" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Funciones adicionales del constructor de correo
+
+- **Contenido lado a lado**: presenta imágenes y texto lado a lado con una simple selección de clic
+- **Personalización de color**: cambia los colores del texto, títulos, subtítulos, enlaces, texto de pie de página, fondo de contenido y fondo de página
+- **Botones personalizables**: elige colores, enlaza a URLs, personaliza el texto del botón y agrega componentes dinámicos
+- **Tablas**: agrega tablas simples para organizar datos de manera intuitiva en tus correos
+- **Tarjetas de contacto**: personaliza los correos con imágenes y datos de contacto
+
+### Limitaciones del constructor de correo
+
+:::warning
+- Un correo solo se puede editar en la versión de Email Builder en la que se creó originalmente. No se puede mover a una versión diferente.
+- No puedes cambiar un correo a una versión diferente de Email Builder a mitad de su creación.
+:::
+
+## Método 1: usar plantillas de correo en campañas (marketing por goteo)
+
+Las campañas son automatizaciones de marketing tipo goteo que envían secuencias de correo programadas a tus contactos y empresas. Son perfectas para marketing basado en tiempo donde quieres enviar una serie de correos en intervalos predeterminados. Puedes usar plantillas prediseñadas o crear correos personalizados.
+
+### Usar plantillas de campaña recomendadas
+
+Hemos creado plantillas de correo probadas que están listas para usar y han demostrado éxito de interacción.
+
+**Para usar plantillas recomendadas:**
+
+1. Ve a `Partner Center` → `Marketing` → `Campaigns`
+2. Ve a la pestaña `Recommended Campaigns`
+
+<img src={require('./img/marketing/marketing-campaigns/recommended-campaigns-tab.jpg').default} alt="Recommended Campaigns Tab" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+3. Explora la selección de campañas ya creadas
+
+:::note
+Puedes previsualizar cada plantilla de correo dentro de una campaña haciendo clic en el nombre de la campaña.
+:::
+
+4. Cuando encuentres una plantilla de campaña que te guste:
+   - Haz clic en el nombre de la campaña, luego haz clic en `Actions` → `Copy`
+
+<img src={require('./img/marketing/marketing-campaigns/copy-campaign-action.png').default} alt="Copy Campaign Action" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+5. Ve a la campaña duplicada y personalízala según sea necesario
+
+<img src={require('./img/marketing/marketing-campaigns/duplicate-campaign.png').default} alt="Duplicate Campaign" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+6. Edita las plantillas de correo y los detalles de la campaña. La campaña debe estar en estado Draft para permitir la edición
+7. Cuando esté lista, haz clic en `Publish`
+
+<img src={require('./img/marketing/marketing-campaigns/publish-button.png').default} alt="Publish Button" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Crear correos de campaña personalizados
+
+Crea campañas de correo personalizadas con control total sobre el diseño y el contenido.
+
+1. Ve a `Partner Center` → `Marketing` → `Campaigns`
+2. Haz clic en `Create Campaign` en la parte superior derecha.
+
+<img src={require('./img/marketing/marketing-campaigns/create-campaign-button.png').default} alt="Create Campaign Button" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+3. Ingresa un nombre descriptivo para la campaña que tus vendedores reconocerán. Haz clic en `Create`.
+4. Haz clic en `Add existing email` o `Create new email`
+
+<img src={require('./img/marketing/marketing-campaigns/add-existing-email.jpg').default} alt="Add Existing Email" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+5. Si seleccionas `Create new email`, entrarás en Email Builder.
+
+<img src={require('./img/marketing/marketing-campaigns/email-builder.png').default} alt="Email Builder" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+**Proceso de configuración de campaña:**
+
+6. Continúa agregando eventos de correo hasta que hayas terminado de crear la campaña
+7. Configura la temporización y los ajustes de entrega de la campaña (intervalos fijos entre correos):
+   - Ajusta los "days before starting" o "days before previous event"
+
+   <img src={require('./img/marketing/marketing-campaigns/days-before-settings.png').default} alt="Days Before Settings" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+   - Configura los ajustes de entrega de tu campaña
+
+   <img src={require('./img/marketing/marketing-campaigns/campaign-configuration.png').default} alt="Campaign Configuration" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+8. Previsualiza y prueba tus correos antes de publicar
+
+:::note
+**Limitaciones de las campañas**: las campañas proporcionan secuencias de goteo directas pero carecen de ramificación condicional, respuestas a disparadores o temporización dinámica. Para un marketing por correo electrónico más sofisticado con lógica condicional y disparadores inteligentes, considera usar [Automations](/automations) en su lugar.
+:::
+
+## Método 2: usar plantillas de correo en automatizaciones (marketing inteligente avanzado)
+
+Las automatizaciones son flujos de trabajo de marketing inteligentes que admiten tanto secuencias de goteo COMO lógica condicional. A diferencia de las campañas simples, las automatizaciones pueden responder a acciones de contacto, envíos de formulario, eventos de negocio y cambios de datos en tiempo real. Este enfoque avanzado permite tanto secuencias programadas como comunicación inteligente y receptiva basada en el comportamiento del contacto y la inteligencia de negocio.
+
+### Configurar automatización de correo
+
+**Para crear secuencias de correo automatizadas:**
+
+1. Ve a `Partner Center` → `Automations`
+2. Haz clic en `Create Automation` o selecciona una plantilla de automatización existente
+3. Elige tu disparador (envío de formulario, creación de contacto, cambio de etapa de oportunidad, etc.)
+4. Agrega pasos de correo a tu flujo de trabajo de automatización:
+
+**Pasos de automatización de correo:**
+- **Send Email to Contact**: envía correos personalizados a contactos individuales
+- **Send Email to Company**: envía correos enfocados en el negocio a todos los contactos de una empresa (hasta 50 contactos)
+- **Start Campaign for Contact**: activa una secuencia de campaña existente para el contacto
+- **Start Campaign for Company**: activa una secuencia de campaña existente para la empresa
+- **Campaign Step**: usa campañas existentes como bloques de construcción dentro de los flujos de trabajo de automatización
+
+### Creación de plantillas de correo en automatizaciones
+
+Al agregar pasos de correo a las automatizaciones:
+
+1. **Selecciona el paso de correo**: elige "Send Email to Contact", "Send Email to Company", o usa el paso "Campaign"
+2. **Crea la plantilla de correo**: haz clic en `Create new email` para acceder a Email Builder, o selecciona campañas existentes
+3. **Diseña tu correo**: usa la misma interfaz de Email Builder con capacidades de personalización completas
+4. **Agrega contenido dinámico**: incluye datos de contacto, empresa y negocio relevantes para el disparador
+5. **Establece condiciones**: agrega lógica para determinar cuándo se deben enviar los correos
+
+**Usar pasos de campaña en automatizaciones:**
+El paso "Campaign" te permite incorporar campañas de goteo existentes como bloques de construcción dentro de tus flujos de trabajo de automatización. Esto te permite combinar la simplicidad de las campañas prediseñadas con la lógica condicional avanzada de las automatizaciones.
+
+### Beneficios del correo de automatización
+
+**Capacidades de secuencia de goteo (como las campañas, pero más inteligentes):**
+- Crea secuencias de correo basadas en tiempo con ramificación condicional
+- Agrega períodos de espera, puntos de decisión y temporización dinámica
+- Admite lógica de goteo compleja que las campañas no pueden manejar
+
+**Lógica condicional avanzada:**
+- Ramifica flujos de trabajo según las respuestas o acciones del contacto
+- Crea diferentes rutas de correo según los datos del contacto/empresa
+- Detén, pausa o redirige secuencias según condiciones en tiempo real
+
+**Entrega basada en disparadores:**
+- Responde de inmediato a las acciones del contacto (envíos de formulario, actividad de inicio de sesión, clics en correo)
+- Envía contenido relevante según eventos de negocio (activación de producto, cambios de oportunidad)
+- Nutre a los clientes potenciales automáticamente según los patrones de interacción y comportamiento
+
+**Personalización avanzada:**
+- Usa datos del disparador en el contenido del correo (respuestas de formulario, detalles de oportunidad, estado de activación de producto)
+- Haz referencia a eventos de negocio específicos que activaron el correo
+- Incluye datos en tiempo real como informes de snapshot o métricas de uso de producto
+- Contenido dinámico que se actualiza según el estado actual del contacto/empresa
+
+
+:::tip
+**Elige el método correcto:**
+
+**Usa Campaigns (marketing por goteo) cuando:**
+- Necesitas secuencias de correo simples y basadas en tiempo
+- Estás haciendo campañas de marketing directas con temporización predeterminada
+- Quieres configurar rápidamente secuencias de goteo básicas sin lógica compleja
+- Tu flujo de correo no requiere ramificación condicional ni respuestas a disparadores
+
+**Usa Automations (marketing inteligente avanzado) cuando:**
+- Necesitas lógica condicional y ramificación en tus secuencias de correo
+- Quieres respuestas basadas en disparadores a acciones de contacto o eventos de negocio
+- Necesitas tanto secuencias de goteo COMO comunicaciones receptivas
+- Quieres personalización avanzada basada en datos de contacto/empresa en tiempo real
+- Estás implementando nutrición de clientes potenciales sofisticada con múltiples rutas
+- Necesitas correos que se adapten y respondan dinámicamente al comportamiento del contacto
+
+**Recomendación**: las automatizaciones ofrecen flexibilidad e inteligencia superiores. Considera usar automatizaciones para la mayoría de las necesidades de marketing por correo electrónico, ya que admiten todo lo que pueden hacer las campañas más capacidades condicionales avanzadas.
+:::
+
+## Ajustes de configuración de campaña
+
+En la sección **Campaign configuration** de una campaña, puedes configurar los siguientes ajustes:
+
+<img src={require('./img/marketing/marketing-campaigns/configure-campaigns/campaign-config-1-v2.png').default} alt="Campaign configuration settings" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+<img src={require('./img/marketing/marketing-campaigns/configure-campaigns/campaign-config-2-v2.png').default} alt="Campaign configuration settings" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Ajustes de zona horaria
+
+De forma predeterminada, las campañas se envían en tu zona horaria local. Para cambiar este ajuste:
+
+1. Selecciona una zona horaria en el menú desplegable
+2. Haz clic en `Save`
+
+### Días incluidos
+
+De forma predeterminada, los correos solo se envían de lunes a viernes. Sin embargo, los retrasos que se establecen entre los eventos de campaña cuentan todos los días de la semana. Si un correo está programado para enviarse en un día que no está incluido, el correo se enviará el siguiente día incluido.
+
+:::note
+Por ejemplo, una campaña incluye dos correos: el primer correo ocurre el Day 1, y el segundo correo ocurre el Day 4. Los días incluidos son de lunes a viernes.
+- Si el primer correo se envía un lunes, el segundo correo se enviará el jueves.
+- Si el primer correo se envía un miércoles, el segundo correo se enviará el lunes.
+- Si el primer correo se envía un viernes, el segundo correo se enviará el lunes.
+:::
+
+Para cambiar este ajuste:
+
+1. Selecciona los días en que se deben enviar los correos
+2. Haz clic en `Save`
+
+### Límite de tasa {#rate-limiting}
+
+Esta opción limita el número de correos que se pueden enviar en nombre de cada vendedor por día. El límite solo se aplica al agregar una lista a una campaña (no al agregar cuentas individuales). Solo se ve afectado el primer paso de correo de una campaña. Los correos restantes de una campaña se envían con los retrasos establecidos en la campaña. Pausar y reanudar una campaña omitirá el límite.
+
+:::note
+Por ejemplo, si una empresa tiene 4 vendedores, y el límite se establece en 2 destinatarios por día, entonces se agregarán 8 destinatarios a la campaña por día. Cada destinatario recibirá los correos posteriores de la campaña con los retrasos establecidos en la campaña.
+:::
+
+De forma predeterminada, el límite está deshabilitado. Para activar el límite:
+
+1. Activa `Rate limit` en `ON`
+2. Ingresa el número máximo de destinatarios que se deben agregar a la campaña por vendedor por día (desde una lista)
+3. Haz clic en `Save`
+
+### Ajustes del remitente de campaña
+
+Puedes cambiar el nombre del remitente en `Sender name` en la tarjeta `Sender and reply settings`, y la dirección de correo del remitente en `Email address` en la tarjeta `Advanced email settings`. Ambas están en `Partner Center` → `Marketing` → `Email settings`, y cada tarjeta tiene su propio botón `Save`.
+
+<img src={require('./img/marketing-campaigns/campaign_email_settings.jpg').default} alt="Campaign email settings" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Video explicativo de programación de campañas
+
+<iframe 
+  src="https://drive.google.com/file/d/17wY5cNDUF8X4WQ2nVLBn5BaSvFA4RoEe/preview" 
+  width="640" 
+  height="480" 
+  allowFullScreen
+></iframe>
+
+## Probar y optimizar correos de marketing
+
+Ya sea que uses campañas o automatizaciones, una prueba exhaustiva garantiza que tus correos se muestren de manera efectiva en diferentes clientes de correo y dispositivos.
+
+### Proceso de prueba de correo
+
+Los clientes de correo como Gmail, Apple Mail y Outlook muestran los correos de manera diferente. Prueba siempre tus correos antes de enviarlos para garantizar una presentación y funcionalidad óptimas.
+
+**Métodos de prueba:**
+
+**Para correos de campaña:**
+1. Haz clic en `Preview` debajo de cualquier correo en tu campaña
+
+<img src={require('./img/marketing/marketing-campaigns/preview-button.jpg').default} alt="Preview Button" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+2. Haz clic en `Send Yourself a Test Email`
+
+<img src={require('./img/marketing/marketing-campaigns/send-test-email.png').default} alt="Send Test Email" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+3. Ingresa la dirección de correo de prueba, luego haz clic en `Send Test`
+4. Prueba cada correo en tu secuencia
+
+<img src={require('./img/marketing/marketing-campaigns/send-test-button.png').default} alt="Send Test Button" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Vista previa avanzada: probar como cuentas específicas
+
+Puedes previsualizar campañas de correo como una cuenta específica para asegurar la funcionalidad adecuada y ver exactamente cómo aparecerá el contenido dinámico para diferentes negocios.
+
+<img src={require('./img/marketing/marketing-campaigns/preview-email-campaigns-1.jpg').default} alt="Preview email campaigns as a specific account" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+**Para previsualizar campañas como una cuenta específica:**
+
+1. Desde la página de detalles de la campaña, haz clic en los `3 puntos` junto al correo que quieres previsualizar
+2. Selecciona `Preview`
+3. Haz clic en `Send test email`
+
+<img src={require('./img/marketing/marketing-campaigns/preview-email-campaigns-2.jpg').default} alt="Send test email button" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+4. De forma predeterminada, el correo se previsualizará como una cuenta genérica. Para cambiar esto, haz clic en el campo y selecciona una cuenta como la cual quieras previsualizar el correo
+
+<img src={require('./img/marketing/marketing-campaigns/preview-email-campaigns-3.jpg').default} alt="Select account to preview" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+5. En el siguiente campo, ingresa las direcciones de correo a las que enviar la vista previa. Puedes enviarte a ti mismo o a revisores de confianza
+6. Haz clic en `Send`
+
+El correo de prueba se personalizará con los datos de la cuenta seleccionada, mostrándote exactamente cómo aparecerá el contenido dinámico.
+
+:::note
+**Limitaciones de la vista previa:**
+- La vista previa no se aplica a los componentes dinámicos basados en el destinatario (nombres de destinatario, números de teléfono, direcciones de correo)
+- En los correos de prueba, verás información genérica para los campos de contacto, pero los destinatarios verán su información personal real
+- Esta función no está disponible al editar un correo directamente
+:::
+
+:::note
+**Nota:** para que las campañas de prueba se envíen con éxito, debe haber una cuenta vinculada al usuario que recibe el correo.
+:::
+
+### Publicación y activación
+
+**Para campañas:**
+Una vez que se completa la prueba, haz clic en `Publish` para que tu campaña esté disponible para el envío.
+
+<img src={require('./img/marketing/marketing-campaigns/publish-campaign.png').default} alt="Publish Campaign" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+**Para automatizaciones:**
+Activa tu automatización para comenzar la entrega de correo basada en disparadores o usa el disparador "Manual" para activar la automatización manualmente. Supervisa los envíos iniciales para garantizar la funcionalidad adecuada.
+
+## Solución de problemas comunes
+
+### Error: "Your company hasn't set up campaigns yet"
+
+Si obtienes el error "Your company hasn't set up campaigns yet. To use them, reach out to your administrator", esto se debe a que la información de contacto requerida para las campañas no está configurada.
+
+**Por qué sucede esto:**
+La información de contacto es necesaria para enviar campañas de marketing. Este error ocurre cuando no hay un perfil de contacto seleccionado para usarse en la campaña (cuando se selecciona "None", las campañas se deshabilitan).
+
+**Cómo solucionarlo:**
+
+1. **Ve a Administration**: ve a `Administration` → `Customize` → `Market`
+2. **Edita los ajustes del mercado**: haz clic en el ícono de lápiz (editar)
+3. **Accede a los ajustes de correo**: haz clic en la pestaña `Email settings`
+4. **Configura la información de contacto**: en **Required Contact Information for Campaigns**, selecciona:
+   - **Partner's Contact Information**: usa los detalles de contacto de tu cuenta de partner
+   - **Market's Contact Information**: usa los detalles de contacto específicos del mercado
+
+<img src={require('./img/marketing/marketing-campaigns/error-company-hasnt-set-up-campaigns/contact-info-settings.jpg').default} alt="Contact information settings" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+**Video explicativo:**
+
+<iframe 
+  src="https://drive.google.com/file/d/1BQJev1pT2N5cA7-MPpIIqAEFBHJBau5G/preview" 
+  width="640" 
+  height="480"
+  allowFullScreen
+></iframe>
+
+### Otros problemas de configuración comunes
+
+**La campaña no se publica:**
+- Asegúrate de que todo el contenido de correo requerido esté completo
+- Verifica que la información de contacto esté configurada (ver arriba)
+- Comprueba que la campaña tenga al menos un evento de correo
+
+**El contenido dinámico no funciona:**
+- Verifica que los [campos de contacto del CRM](/crm/contacts/crm-default-contact-fields) y los [campos de empresa del CRM](/crm/companies/crm-default-company-fields) estén completos
+- Prueba los correos de vista previa con cuentas específicas que tengan datos completos
+- Comprueba que la sintaxis del contenido dinámico sea correcta
+
