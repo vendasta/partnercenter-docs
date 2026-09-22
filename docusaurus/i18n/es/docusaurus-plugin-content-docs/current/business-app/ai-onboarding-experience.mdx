@@ -1,0 +1,429 @@
+---
+title: AI onboarding experience
+sidebar_label: AI onboarding
+sidebar_position: 3
+description: Un correo de incorporación y un conjunto de tarjetas de Business App Home que muestran a las pymes el trabajo que la IA ya ha hecho por ellas, recomiendan próximos pasos, y presentan opciones de actualización.
+tags: [business-app, onboarding, home, ai, upgrades]
+keywords: [onboarding email, AI work done, home cards, upgrade cards, recommended next steps, Vibe, activation, custom greeting, receptionist name, business profile, easy account create]
+---
+
+# Experiencia de incorporación con IA
+
+La experiencia de incorporación con IA le da a las pymes recién invitadas una sensación inmediata de valor. En lugar de iniciar sesión en un panel vacío, reciben un correo de incorporación que muestra el trabajo que tu IA ya ha hecho por su negocio, y llegan a una página Home de Business App que lo refuerza con tarjetas dinámicas, próximos pasos recomendados, y opciones de actualización con un solo clic.
+
+El objetivo es una activación más rápida y más compras recurrentes de producto: la pyme ve resultados antes de mover un dedo, entiende qué hacer a continuación, y puede agregar productos sin salir de Home.
+
+## Qué incluye
+
+La experiencia tiene dos mitades conectadas:
+
+1. **El correo de incorporación**: reemplaza el correo de bienvenida estándar cuando creas un usuario, y muestra el trabajo que la IA ya ha completado para el negocio.
+2. **Las tarjetas de Business App Home**: nuevas secciones en el panel Home: una tarjeta de "trabajo que tu IA ha hecho", próximos pasos recomendados, y tarjetas de actualización de producto.
+
+Ambas están controladas por ti, el partner, y ambas pueden ser descartadas por la pyme. Detalles a continuación.
+
+## El correo de incorporación
+
+Cuando invitas a un nuevo usuario de Business App, recibe un **correo de incorporación** en lugar del correo de bienvenida clásico. En lugar de una simple nota de "establece tu contraseña", guía a la pyme a través de lo que tu IA ya ha logrado para su negocio, y luego la invita a entrar, y puedes personalizarlo con un **mensaje introductorio personalizado** en cada envío. Se selecciona de forma predeterminada en cualquier lugar donde invites usuarios; el correo de bienvenida clásico sigue disponible cuando prefieras enviar ese en su lugar.
+
+<img src={require('./img/ai-onboarding-email-preview.png').default} alt="The onboarding email, shown in the in-app preview: a subject line, a checklist of the work the AI has completed, and a 'See what's ready for you' call to action" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Qué contiene el correo
+
+- Una línea de asunto de **"Welcome to \[your Business App name\]"**: el mismo asunto que el correo de bienvenida clásico. El texto de vista previa debajo del asunto saluda al destinatario por su nombre.
+- Una breve introducción, luego un resumen **"We already got to work"**: la misma lista de verificación de trabajo completado que aparece en la página Home de la pyme (consulta [Qué muestra el resumen de trabajo](#what-the-work-summary-shows)). El contenido se genera a partir de la información propia del negocio: nombre del negocio, sitio web, número de páginas leídas, reseñas encontradas, productos activos, y demás.
+- Si se ha construido un sitio web de Vibe, una **imagen de vista previa de esa página de destino** cerca de la parte superior, enlazada al sitio en vivo.
+- Un solo llamado a la acción: **See what's ready for you**, que lleva a la pyme a su página Home de Business App. El enlace funciona ya sea que el usuario aún necesite establecer una contraseña o pueda iniciar sesión directamente. Cuando se necesita una contraseña primero, la página de creación de contraseña muestra la dirección de correo del usuario, le permite establecer una contraseña, y continúa con un botón **Get started**.
+
+El correo se adapta a los **productos que están actualmente activos** en la cuenta, por lo que no necesariamente dos negocios reciben la misma lista de verificación. La siguiente sección detalla cada línea que puede contener.
+
+## Qué muestra el resumen de trabajo {#what-the-work-summary-shows}
+
+Este es el corazón de la experiencia, y la parte sobre la que más preguntan los partners: *¿qué exactamente verá mi cliente?* El resumen "We already got to work", mostrado tanto en el correo de incorporación como en la página Home, es **totalmente dinámico**. Cada línea está impulsada por los datos reales del negocio y los productos activos en la cuenta, por lo que la pyme solo ve trabajo que realmente se hizo.
+
+Algunas reglas rigen todo el resumen:
+
+- **Las líneas están condicionadas por producto.** La línea de un producto solo aparece cuando ese producto está **activo** en la cuenta. Las líneas de lectura del sitio web y de perfil de negocio son las excepciones; siempre aparecen (la línea del sitio web necesita un sitio web registrado).
+- **El texto se adapta a la edición del producto** (por ejemplo, Reputation Standard vs. Pro vs. Premium, o Local SEO Standard vs. Pro).
+- **Las cuentas nuevas muestran un estado de "escaneo".** En las primeras 24 horas después de crear la cuenta, el trabajo de reseñas y visibilidad se lee como "escaneando… resultados en aproximadamente 24 horas", y luego cambia al texto de completado una vez que llegan los resultados.
+- **La tarjeta solo muestra trabajo reciente.** Una línea desaparece aproximadamente 30 días después de que se hizo el trabajo, para que la tarjeta se mantenga relevante para cuentas genuinamente nuevas.
+- **Sin acceso, sin enlace.** Si la pyme no tiene acceso a un producto, el trabajo se sigue mostrando, pero el enlace asociado se oculta (el enlace "see it live" de Vibe es la única excepción: un sitio publicado siempre es enlazable).
+
+La siguiente tabla enumera cada línea que puede contener el resumen, la condición exacta para que aparezca, y el texto que ve la pyme.
+
+| Lo que ve la pyme | Aparece cuando | Enlace ofrecido |
+|---|---|---|
+| **Built you a free website** so you can see what we can do! | Vibe está activo **y** existe un sitio de Vibe para la cuenta | **see it live** (cuando el sitio está publicado), **edit here** (cuando la pyme tiene acceso a Vibe) |
+| …**- Ready to connect your domain** (agregado a la línea anterior) | La edición de Vibe es **Standard** | — |
+| …**- With unlimited projects and potential available** (agregado) | La edición de Vibe es **Pro** | — |
+| **Scanning your online reviews** - results in about 24 hours | Reputation está activo **y** la cuenta tiene menos de 24 horas | connect your accounts to pull in reviews |
+| **Scanned the web for reviews** | Reputation está activo, pasadas las primeras 24 horas, y aún no se encontraron reseñas | connect your accounts to pull in reviews |
+| **Gathered and analyzed your reviews** | Reputation **Standard** está activo y se encontraron reseñas | check for insights |
+| **Read your \{count\} reviews** and ready to draft responses. | Reputation **Pro** está activo y se encontraron reseñas | ready to draft responses |
+| **Analyzed your business reputation** | Reputation **Premium** está activo y se encontraron reseñas (se muestra *además* de la línea "Read your reviews") | ask your AI specialist for a report |
+| **Started your online visibility scan** - results in about 24 hours | Local SEO está activo **y** la cuenta tiene menos de 24 horas | view the dashboard as results come in |
+| **Scanned 40+ directories** and found where you're missing | Local SEO está activo, pasadas las primeras 24 horas | view your results |
+| **Calculated your local visibility and Google search rankings** | Local SEO **Pro/Premium** está activo (se muestra además de la línea de directorios) | ask your local search specialist for a report |
+| **Drafted your first week's social posts** - ready for you to review and approve | Social AI **Premium** está activo y hay publicaciones en borrador esperando | **review and approve**: abre los borradores para aprobación (solo dentro de la app; el correo muestra esta línea sin enlace) |
+| Read your website (**\{count\} pages** from \{domain\}) and taught your AI everything about your business | El negocio tiene un sitio web registrado | el dominio del sitio web |
+| Prefilled your **business profile** | Siempre | **review suggestions** cuando la descripción del negocio está vacía y la IA ha redactado una, de lo contrario **ready for you to review** |
+| Named your AI Chat Receptionist **\{name\}** | Se le ha puesto nombre al recepcionista para la cuenta | **change it** |
+
+:::note
+El correo de incorporación muestra esta misma lista de verificación. Mantiene la menor cantidad de enlaces en línea, típicamente solo el enlace **see it live** de Vibe y el dominio del sitio web, porque los enlaces más completos dentro de la app (redactar respuestas, abrir un chat con un especialista, etc.) están detrás del inicio de sesión.
+:::
+
+### Tu IA recibe un nombre
+
+Cuando se crea una cuenta, la IA lee lo que se conoce sobre el negocio, comenzando por su sitio web, y le da al AI Chat Receptionist un nombre **real y de sonido humano** en lugar de uno genérico. El nombre se elige para adaptarse al negocio y evita reutilizar el nombre de cualquier persona encontrada en el sitio.
+
+La pyme lo ve en dos lugares:
+
+- En el resumen de trabajo, como **"Named your AI Chat Receptionist \[name\]"**, con un enlace **change it** hacia la página de configuración del recepcionista.
+- En la tarjeta de próximo paso **Meet your AI receptionist**, cuyo título se convierte en **"Meet \[name\]"** una vez que se ha ejecutado el nombramiento.
+
+La línea de nombramiento espera hasta que el nombre realmente se haya establecido, para que la pyme nunca vea un marcador de posición. Si el negocio no tiene un sitio web registrado, igual se genera un nombre adecuado a partir de los otros detalles del negocio. La pyme o tu equipo pueden cambiar el nombre del recepcionista en cualquier momento, y un cambio de nombre posterior nunca se sobrescribe.
+
+### La IA completa el perfil de negocio
+
+La línea de **perfil de negocio** lleva a la pyme directamente a la pestaña **Business Description** de su perfil. Cuando la descripción está vacía, la IA redacta una sugerencia de antemano para que la pyme llegue a un borrador ya completado en lugar de un campo en blanco, y el enlace dice **review suggestions**.
+
+La sugerencia todavía debe ser revisada y guardada por la pyme; nada se escribe en el perfil de negocio en su nombre sin aprobación.
+
+## Cómo se inicia un sitio web de Vibe {#how-a-vibe-website-is-kicked-off}
+
+Cuando Vibe está activo, enviar el correo de incorporación puede construir automáticamente para el negocio un **sitio web de demostración de Vibe gratuito** antes de que se envíe el correo, para que el primer contacto de la pyme apunte a una página de destino en vivo, construida con IA. Partner Center indica esto directamente en la vista previa del correo:
+
+:::info
+Cuando Vibe está activo, enviar este correo crea un sitio web de demostración (uno por cuenta).
+:::
+
+Esto es exactamente lo que lo activa. Un sitio de Vibe se genera **solo cuando se cumplen todas las siguientes condiciones**:
+
+1. **Envías el correo de incorporación.** La generación de Vibe es el primer paso del proceso del correo de incorporación; nunca sucede por sí sola. Enviar el correo es lo único que puede iniciarla.
+2. **Vibe está activo** en la cuenta (cualquier edición, incluida Free).
+3. **La cuenta aún no tiene un sitio de Vibe en vivo.** Un sitio de demostración por cuenta:
+   - No existe ningún proyecto de Vibe → se genera un nuevo sitio.
+   - Ya se está construyendo un sitio (por ejemplo, un compañero de equipo acaba de activar uno) → la plataforma espera a esa construcción en lugar de iniciar una segunda.
+   - Ya existe un sitio de Vibe publicado → no se genera nada; el correo simplemente lo enlaza.
+
+El correo espera a que el sitio termine de construirse (permite de **5 a 15 minutos** para que llegue). Si la construcción es lenta o falla, **el correo se envía de todos modos**; simplemente no incluirá la línea del sitio web ni la imagen de vista previa. La generación del sitio nunca bloquea el resto del correo de incorporación más allá de esa ventana.
+
+Esto lo defines a través de lo que está activo en la cuenta en el momento de la invitación: activa Vibe antes de invitar y el primer contacto del cliente comienza con un sitio en vivo; invita sin Vibe y el correo se enfoca en el resto del trabajo. Un sitio por cuenta: reenviar el correo a una cuenta con un sitio de Vibe publicado nunca crea un segundo. Consulta las [preguntas frecuentes](#frequently-asked-questions) para conocer todos los detalles.
+
+### Cuándo se envía el correo
+
+Agregar un usuario a una cuenta es lo que envía el correo de incorporación. No hay una casilla para seleccionar o desmarcar: el correo se envía como parte de la creación del usuario, y **reemplaza** al correo de bienvenida clásico para esa persona. Los dos nunca se envían juntos.
+
+**Lugares donde lo envías tú mismo:**
+
+- Desde una cuenta: **Accounts → Manage Accounts →** selecciona la cuenta **→ Invite users**: esto abre el **panel Invite users** (consulta [Invitar usuarios con el panel Invite users](#inviting-users-with-the-invite-users-panel)). El mismo panel se abre desde el ícono de invitación en la lista **Manage Accounts**.
+- Desde **Accounts → Manage Users → Create user**.
+- Desde el panel **Users** de Easy Account Create, mientras creas la cuenta misma: consulta [Crear usuarios en Easy Account Create](#creating-users-in-easy-account-create).
+- Desde una importación de CSV: consulta [Creating accounts in bulk](/accounts/manage-accounts/create-accounts).
+- Desde el CRM, en un contacto o en la lista de contactos de una empresa: consulta [Enviarlo desde el CRM](#sending-it-from-the-crm).
+
+**Lugares donde se envía por sí solo,** cada vez que se crea un usuario en una cuenta:
+
+- Una automatización que crea un usuario: consulta [Create a user from a contact](/automations/my-automations/create-a-user-from-contact).
+- Un cliente que se registra por sí mismo en Business App.
+- Un usuario creado a través de la API, cuando ese usuario está asociado con una cuenta.
+- Un usuario de Business App que invita a otro usuario desde **Administration → Users** en su propia Business App.
+
+Los usuarios creados a través de inicio de sesión único no reciben el correo. Cuando más de una de estas rutas se activaría para la misma persona al mismo tiempo, solo se envía un correo.
+
+:::info
+Debido a que el correo sigue a la creación de usuarios en todas partes, el volumen que envías corresponde a cuántos usuarios creas, no a con qué frecuencia eliges notificar a alguien. Si estás agregando a una persona que aún no debería tener noticias de Business App, mantenla como contacto en el CRM e invítala cuando llegue el momento adecuado.
+:::
+
+### Invitar usuarios con el panel Invite users {#inviting-users-with-the-invite-users-panel}
+
+El panel lateral **Invite users** es la forma más rápida de invitar a uno o varios usuarios a una cuenta. Se abre desde el botón **Invite users** de la cuenta y desde el ícono de invitación en la lista **Manage Accounts**.
+
+<img src={require('./img/invite-users-panel.png').default} alt="The Invite users panel open on an account, with an email typed in the Users field and an 'Invite email@example.com' suggestion below it" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+1. En el campo **Users**, escribe una dirección de correo. A medida que escribes, se sugieren contactos coincidentes del CRM: selecciona uno para crear el usuario a partir de ese contacto, con sus datos precompletados, o escribe una dirección completa para invitar a alguien nuevo. Repite para invitar a más usuarios en el mismo lote.
+2. Opcional: en **Customize users**, selecciona un usuario para ajustar sus datos:
+   - **Contact information**: nombre, apellido, correo, número de teléfono, **Correspondence language** (el idioma de la plataforma y sus correos, incluida la plantilla del correo de incorporación), y **Greeting name** (el nombre usado para dirigirse a ellos en los correos).
+   - **Email**: un **Custom greeting** para el correo de incorporación, con un botón **Preview**.
+3. Haz clic en **Invite \[count\] users**.
+
+<img src={require('./img/invite-users-customize-user.png').default} alt="Customizing a user in the Invite users panel: contact information fields, correspondence language, greeting name, and the onboarding email's custom greeting with a Preview link" style={{width: '55%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Invitar es lo que envía el correo: todos en el lote reciben el correo de incorporación, personalizado con lo que hayas ajustado; el panel lo indica de antemano. Si alguien aún no está listo para Business App, mantenlo como **contacto en el CRM**; cuando llegue el momento adecuado, el panel lo sugerirá por su nombre y podrás invitarlo con un saludo personalizado.
+
+### Enviarlo a un usuario existente
+
+No tienes que crear un usuario completamente nuevo para usar el correo de incorporación. Puedes enviarlo a cualquier usuario existente en una cuenta:
+
+1. Ve a los usuarios de la cuenta (**Accounts → Manage Accounts →** selecciona la cuenta **→ Users**, o **Accounts → Manage Users**). Si la persona aún no es usuario, agrégala primero a la cuenta.
+2. Abre el **menú de opciones (⋮)** junto al usuario.
+3. Elige **Send Onboarding Email**, luego confirma.
+
+Esto es útil para volver a activar la experiencia para alguien que ya está configurado, y también es la forma más fácil de ver el correo real tú mismo: agrégate como usuario en la cuenta y envíatelo a tu propia bandeja de entrada.
+
+:::note
+El **correo de bienvenida** clásico también está siempre disponible. Para enviarlo después de que se ha creado un usuario, abre el **menú de opciones (⋮)** junto al nombre del usuario, ya sea en la cuenta o en **Accounts → Manage Users**, y haz clic en **Send Set Password email (Welcome email)**.
+:::
+
+### Enviarlo desde el CRM {#sending-it-from-the-crm}
+
+Puedes enviar el correo de incorporación sin salir del CRM, desde dos lugares:
+
+- **En un registro de contacto**: la tarjeta **Access Business App** tiene una acción **Send Onboarding Email**, con un enlace debajo para previsualizar el correo primero.
+- **En un registro de empresa**: cada contacto listado en la empresa ofrece la misma acción **Send Onboarding Email**, para que puedas recorrer a las personas de un negocio sin abrir cada registro.
+
+Ambos abren el mismo diálogo usado desde Accounts, con una **Preview** y un saludo personalizado opcional, y ambos inician el mismo flujo de incorporación que el flujo de creación de usuario, incluida la generación de sitios de Vibe donde corresponda.
+
+Debido a que la acción permanece disponible después de que alguien ya es usuario, también funciona como una forma de **reenviar** el correo a un cliente que ha dejado de responder. Los reenvíos a la misma persona son esperados aquí, así que cuenta destinatarios en lugar de envíos al evaluar el alcance.
+
+### Agregar un saludo personal
+
+Cada vez que envías el correo de incorporación, puedes incluir un **saludo personalizado**: útil para referirte a una conversación que ya has tenido, o para preparar lo que el cliente está por ver.
+
+- Tu mensaje se agrega en la **parte superior del correo**, después del saludo y antes del contenido estándar.
+- Aparece en la **vista previa**, para que puedas revisarlo antes de enviar.
+- Se aplica **solo a ese envío**. No se guarda como predeterminado para correos futuros.
+
+El saludo personalizado está disponible al crear un nuevo usuario, al enviar a un usuario existente desde el menú de opciones, al enviar desde el CRM, y en el panel **Users** de Easy Account Create. Esto coincide con cómo funciona el mensaje personalizado en el correo de bienvenida clásico.
+
+### Crear usuarios en Easy Account Create {#creating-users-in-easy-account-create}
+
+Puedes agregar los primeros usuarios de una cuenta mientras la creas, en el panel **Users** de Easy Account Create. Esos usuarios reciben el correo de incorporación en lugar del correo de bienvenida clásico.
+
+- **Custom introductory message**: un saludo opcional agregado en la parte superior del correo. Se aplica solo a esta creación de cuenta y no se guarda como predeterminado.
+- **Preview email**: abre el correo antes de que exista la cuenta. Tiene tu marca blanca, muestra un nombre de negocio de marcador de posición para la cuenta que estás creando, y se renderiza en el idioma en que se muestra Partner Center.
+
+Cada usuario que agregas también tiene un **Correspondence language**, que establece el idioma en que se envía su correo, y un **Greeting name**, el nombre usado para dirigirse a ellos. El inglés es el idioma predeterminado.
+
+**Un envío para toda la cuenta.** Todos los que agregaste reciben el correo juntos, una vez que la cuenta está lista:
+
+1. La cuenta y sus usuarios se crean, y los productos que seleccionaste comienzan a activarse.
+2. Si Vibe está activo, se construye el sitio web de demostración: consulta [Cómo se inicia un sitio web de Vibe](#how-a-vibe-website-is-kicked-off).
+3. Una vez que esos productos están activos y el sitio está construido, o después de **15 minutos**, lo que ocurra primero, el correo de incorporación se envía a cada usuario que agregaste.
+
+Esa espera es lo que permite que un solo correo enumere los productos que el cliente acaba de comprar y enlace a su nuevo sitio web, en lugar de que cada usuario reciba un correo separado que llegó antes de que existiera cualquiera de estas cosas. Si los 15 minutos transcurren primero, el correo se envía de todos modos; simplemente omite lo que no estaba listo.
+
+El correo usa la marca blanca del **mercado seleccionado en la cuenta**, por lo que los partners que gestionan varios mercados obtienen el remitente y el logotipo correctos sin un paso adicional.
+
+**Si algo no se completa:**
+
+- Si no se puede crear o asociar un usuario, un mensaje nombra a los usuarios específicos que fallaron, para que puedas reintentar solo esos en lugar de volver a ejecutar todo el lote.
+- Si el correo no se puede enviar a alguien, el mensaje nombra su dirección de correo para que sepas a quién hacer seguimiento. La cuenta y los demás destinatarios no se ven afectados.
+- Ingresar una dirección de correo que ya pertenece a un usuario muestra un error en el campo. Agrega a esa persona desde la pestaña **Add existing user** en su lugar; los usuarios existentes se incorporan junto con los nuevos.
+
+### Previsualizar antes de enviar
+
+Cada lugar que envía el correo de incorporación ofrece una **Preview** para que puedas revisarlo en Partner Center antes de que se envíe.
+
+La vista previa es un **ejemplo estático**: muestra la marca, el diseño y la línea de asunto del correo para que puedas confirmar que está alineado con tu marca. El correo que realmente recibe tu cliente se **genera dinámicamente** a partir del trabajo real que la IA ha hecho por su negocio, por lo que los elementos específicos de la lista de verificación reflejan el sitio web, los listados, las reseñas, los productos activos y el sitio de Vibe de ese negocio. Partner Center señala esto en la propia vista previa:
+
+:::info
+Sample content – the real email is personalized with the business's branding, products, and completed AI work (allow 5-15 minutes for the email to arrive).
+:::
+
+:::tip
+¿Quieres ver el correo exacto que verá tu nuevo cliente? Agrégate como usuario en la cuenta y envíate el correo de incorporación.
+:::
+
+Si hoy dependes de contenido de incorporación personalizado, aún puedes agregar una [Marketing Campaign](/accounts/manage-users/welcome-email) encima para una mensajería que controlas completamente.
+
+## Las tarjetas de Business App Home
+
+Cuando una pyme llega a su página Home de Business App, estas secciones la reciben. Todas están controladas por ti y pueden ser descartadas por la pyme.
+
+Los nuevos usuarios van **directamente a Home** la primera vez que inician sesión: el resumen de trabajo es lo primero que ven.
+
+<img src={require('./img/ai-onboarding-home-cards.png').default} alt="Business App Home showing the 'We already got to work' card above the 'Recommended for your business' upgrade cards" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Tarjeta "We already got to work"
+
+Esta tarjeta se ubica en la parte superior de la página Home y muestra la misma lista de verificación de trabajo completado descrita en [Qué muestra el resumen de trabajo](#what-the-work-summary-shows). Comienza con **"We already got to work"** y la línea **"While you signed up, your AI got started on \[business name\]. All of this is done."**
+
+En Home, cada línea puede tener sus enlaces dentro de la app, por ejemplo **edit here** en el sitio de Vibe, **ready to draft responses** en las reseñas, o **view your results** en el escaneo de directorios, para que la pyme pueda actuar sobre el trabajo de inmediato. Si el producto subyacente de una línea no es accesible para esa pyme, el trabajo se sigue mostrando pero el enlace se oculta. La tarjeta solo aparece cuando hay al menos una línea reciente para mostrar.
+
+### Tarjetas de próximos pasos {#next-steps-cards}
+
+Una sección **"Next steps — get started in minutes"** muestra tarjetas de configuración que permanecen en el panel hasta que la pyme las descarta. Cada tarjeta nombra la acción, qué hace por el negocio, una estimación de tiempo, y un botón de un clic:
+
+- **Meet your AI receptionist**: Start a chat (2 min)
+- **Show up when customers search**: Connect Google (2 min)
+- **Add web chat to your website**: Add web chat (3 min)
+- **Connect the tools you already use**: Connect a tool (3 min)
+- **Register your texting number**: Register number (5 min)
+- **Get leads on your phone**: Get the app (1 min)
+
+Completar una tarea elimina su tarjeta, y la pyme puede descartar una tarjeta que no necesite. Mientras se muestran las tarjetas de próximos pasos, ocupan el lugar del banner de bienvenida en la parte superior de Home.
+
+Una vez que se le ha puesto nombre al AI Chat Receptionist, la tarjeta **Meet your AI receptionist** se titula **"Meet \[name\]"** en su lugar; un pequeño detalle que hace que el recepcionista se sienta más como un colega que como un ajuste.
+
+### Tarjetas de actualización de producto
+
+Debajo de la tarjeta de trabajo hecho, una sección **Recommended for \[business name\]** presenta tus productos de IA principales para que las pymes puedan agregarlos sin salir de Home. Cada tarjeta comienza con un título de beneficio:
+
+- **Local SEO**: "Get found first when customers search nearby"
+- **Conversations AI**: "Never miss another customer call"
+- **Reputation AI**: "Win more 5-star reviews, reply to every one"
+- **Social AI**: "Stay active on social without the work"
+
+El botón de cada tarjeta se adapta al estado de la cuenta:
+
+| Situación | Qué muestra la tarjeta |
+|-----------|--------------------|
+| Producto disponible con una ruta de actualización de autoservicio | **Get started**: abre el flujo de actualización/checkout para ese producto |
+| Producto disponible, pero diriges las actualizaciones a tu equipo de ventas | **Contact us**: abre la tarjeta de contacto en Business App |
+| Producto ya activo (nivel Pro o superior) | **Open \[producto\]**: un enlace hacia la app del producto |
+| Producto actualmente en aprovisionamiento | **Activating. This will only take a few moments.** (sin botón) |
+| **Has desactivado la opción de actualización para ese producto** | La tarjeta no se muestra |
+| Producto no está en tu catálogo, o la cuenta está suspendida | La tarjeta no se muestra |
+
+Desactivar la opción de actualización de un producto en **Marketplace → Manage Products** elimina la tarjeta de ese producto de Home por completo en lugar de recurrir a un botón **Contact us**. Esto mantiene el significado de **Contact us**: solo aparece cuando has elegido deliberadamente dirigir las actualizaciones de ese producto a tu equipo de ventas.
+
+:::info
+Si no has configurado en absoluto los ajustes de actualización de un producto, la ruta de actualización se trata como **activada** y la tarjeta muestra **Get started**. Para suprimir una tarjeta, desactiva explícitamente la opción de actualización.
+:::
+
+Cuando una pyme completa una actualización, el pago se cobra a través de **Vendasta Payments** si lo tienes habilitado: la pyme ingresa su tarjeta y hace el checkout directamente desde Home. Si no usas Vendasta Payments, la actualización se te envía como un **pedido** para procesar a través de tu flujo normal.
+
+:::tip
+Para conocer en detalle cómo decide cada tarjeta qué mostrar y cómo configurar la ruta de actualización por producto, consulta [Personalizar las tarjetas "Recommended for your business"](/business-app/recommended-cards-configuration).
+:::
+
+## Cómo descartan las pymes las tarjetas {#how-smbs-dismiss-the-cards}
+
+Las pymes mantienen el control de su propio panel. Tanto la tarjeta de trabajo hecho como las tarjetas de actualización de producto se pueden descartar:
+
+- Cada sección descartable tiene una pequeña **✕** (etiquetada **Dismiss**) alineada con su encabezado.
+- La **tarjeta de trabajo hecho** se descarta como un todo.
+- Las **tarjetas de actualización se descartan una a la vez**: la sección solo desaparece una vez que la pyme ha descartado (o no es elegible para) cada tarjeta en ella.
+- Los descartes se almacenan **por navegador** (en el almacenamiento local del navegador), por lo que no siguen a la pyme a otro dispositivo. Para recuperar las tarjetas descartadas, la pyme puede borrar los datos del sitio de su navegador para Business App.
+- Las tarjetas de próximos pasos recomendados se eliminan cuando la pyme las descarta o completa la tarea subyacente.
+
+Esto le permite a los usuarios recurrentes limpiar y optimizar su experiencia de Business App una vez que ya no necesitan el contenido de incorporación.
+
+## Cómo personalizan los partners lo que ven las pymes {#how-partners-customize-what-smbs-see}
+
+Defines la experiencia de Home para tus pymes desde **Customize Business App**.
+
+Ve a **Partner Center → Administration → Customize Business App → Pages → Home**. En **Page Features**:
+
+- **Tarjeta "AI has done the work"**: *"A dynamic list of tasks that AI has completed on account setup based on products active and work done."* Activa/desactiva la tarjeta de resumen "We already got to work".
+- **Tarjetas "Recommended for your business"**: *"Allows users to access and upgrade some of Business App's top products. Follows your marketplace rules for sales and upgrades."* Activa/desactiva las tarjetas de actualización de producto recomendadas.
+- **Tarjeta "Next steps"**: *"A checklist of setup tasks for new users, such as connecting Google and adding web chat. Items clear as each task is completed or dismissed."* Activa/desactiva las [tarjetas de próximos pasos](#next-steps-cards).
+
+Las tres están **activadas de forma predeterminada**. Desactivar una casilla oculta esa sección para todas tus pymes. Recuerda hacer clic en **Save**.
+
+<img src={require('./img/ai-onboarding-customize-home.png').default} alt="Customize Business App → Pages → Home, showing the 'AI has done the work' and 'Recommended for your business cards' toggles at the top of Page Features, both on by default" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+:::info
+Estos interruptores controlan **solo la visualización**. Ocultan las tarjetas para **todas** tus pymes, y las pymes individuales aún pueden descartar las tarjetas por sí mismas incluso cuando las dejas activadas.
+:::
+
+## Beneficios y cómo aprovecharlo al máximo
+
+- **Tiempo más rápido hasta el primer valor.** La pyme ve trabajo concreto (investigación realizada, un sitio web construido, listados escaneados) antes de haber configurado nada, lo que genera confianza en la plataforma y en ti.
+- **Mayor activación.** Los próximos pasos recomendados convierten un panel vacío en una ruta guiada, empujando a las pymes a completar la configuración.
+- **Más ingresos recurrentes.** Las tarjetas de actualización ponen tus productos de IA principales a un clic del checkout, justo donde la pyme ya está interactuando.
+
+Para aprovecharlo al máximo:
+
+1. **Asegúrate de que los productos correctos estén activos o tengan rutas de actualización habilitadas** para que el resumen de trabajo hecho sea rico y las tarjetas de actualización muestren **Get started** en lugar de **Contact us**. Configura las rutas de actualización de producto en **Marketplace → Manage Products**.
+2. **Activa Vibe** en la cuenta antes de invitar a la pyme para que el correo de incorporación pueda comenzar con un sitio web en vivo, construido con IA.
+3. **Previsualiza el correo de incorporación** para confirmar la marca, y agrégate como usuario para ver el correo dinámico exacto que recibirá un cliente.
+4. **Deja las tarjetas de Home activadas** para las nuevas pymes durante sus primeras semanas, y luego déjalas descartar lo que ya no necesiten.
+
+## Preguntas frecuentes {#frequently-asked-questions}
+
+<details>
+<summary>¿Qué exactamente verá mi cliente en el correo y en Home?</summary>
+
+Solo el trabajo que realmente se hizo para su negocio. El resumen es totalmente dinámico; consulta [Qué muestra el resumen de trabajo](#what-the-work-summary-shows) para conocer la lista completa de líneas posibles y la condición exacta para cada una. Las líneas están impulsadas por los productos activos en la cuenta y los datos reales del negocio, y el texto se adapta a la edición del producto.
+
+</details>
+
+<details>
+<summary>¿Cómo controlo cuándo se crea un sitio de demostración de Vibe?</summary>
+
+A través de lo que está activo en la cuenta cuando invitas. Un sitio de Vibe solo se crea como un paso del *envío del correo de incorporación*, y solo cuando Vibe está activo en la cuenta y aún no tiene un sitio en vivo:
+
+- **Activa Vibe antes de invitar** y el correo de incorporación del cliente comienza con su sitio de demostración en vivo.
+- **Invita sin Vibe activo** y el correo se envía normalmente, enfocado en el resto del trabajo de la IA; no se construye ningún sitio.
+- Si la cuenta **ya tiene un sitio de Vibe publicado**, reenviar el correo de incorporación es seguro; nunca crea un segundo.
+
+El interruptor de la tarjeta "AI has done the work" en Customize Business App controla solo si se muestra la tarjeta, no la generación del sitio.
+
+</details>
+
+<details>
+<summary>¿Qué correo debo enviar: incorporación o bienvenida?</summary>
+
+El correo de incorporación es el predeterminado porque muestra valor por adelantado, y admite un **mensaje introductorio personalizado** por envío para que puedas hacerlo personal. El correo de bienvenida clásico es adecuado para un envío simple de establecer contraseña: un restablecimiento de contraseña, o un usuario que ya está familiarizado con la plataforma. El que selecciones reemplaza al otro para ese envío. Para mensajería completamente personalizada, agrega una Marketing Campaign encima.
+
+</details>
+
+<details>
+<summary>Creé una cuenta y agregué usuarios de una vez: ¿cuándo llega el correo?</summary>
+
+En aproximadamente 15 minutos. La plataforma retiene el envío hasta que los productos que seleccionaste en esa cuenta hayan terminado de activarse y, si Vibe está activo, se haya construido el sitio web de demostración. Luego envía un correo a todos los que agregaste, todos a la vez, para que cada persona reciba el mismo resumen que enumera los productos recién comprados y un enlace al nuevo sitio web.
+
+Quince minutos es el límite máximo, no el objetivo; la mayoría de los envíos salen tan pronto como todo se estabiliza. Si la espera se agota primero, el correo se envía de todos modos; simplemente omite lo que no estaba listo.
+
+</details>
+
+<details>
+<summary>Agregué varios usuarios mientras creaba una cuenta. ¿Cada uno recibe su propio correo?</summary>
+
+Cada persona recibe su propia copia, dirigida a ella en su idioma de correspondencia, pero todas se envían juntas como un solo envío para esa cuenta. Por eso un mensaje introductorio personalizado que escribes en el formulario de creación de cuenta llega a todos los que agregaste, y por qué la lista de productos es idéntica para todos ellos.
+
+</details>
+
+<details>
+<summary>¿Puedo seguir enviando el correo de bienvenida clásico después de crear un usuario?</summary>
+
+Sí. El correo de bienvenida clásico siempre está disponible. Abre el **menú de opciones (⋮)** junto al nombre del usuario, ya sea en la cuenta o en **Accounts → Manage Users**, y haz clic en **Send Set Password email (Welcome email)**. Esto es útil para restablecimientos de contraseña o cualquier vez que prefieras el correo de bienvenida estándar en lugar del correo de incorporación.
+
+Ya no se te pide elegir un dominio de envío al enviarlo; la plataforma selecciona automáticamente el mejor.
+
+</details>
+
+<details>
+<summary>¿Podemos cambiar el nombre que la IA le da al recepcionista?</summary>
+
+Sí. El nombre es un punto de partida, no un ajuste fijo. La pyme puede usar el enlace **change it** en el resumen de trabajo, y tú o la pyme pueden cambiar el nombre del recepcionista desde su página de configuración en cualquier momento. Una vez que se ha cambiado un nombre, permanece cambiado; las actualizaciones posteriores a la cuenta no lo sobrescribirán.
+
+</details>
+
+<details>
+<summary>¿Qué pasa si el negocio no tiene un sitio web o Vibe no está activo?</summary>
+
+El resumen se adapta a lo que realmente es cierto para la cuenta. Las líneas que dependen de un producto específico (el sitio web de Vibe, el análisis de reseñas, la visibilidad local) solo aparecen cuando ese producto está activo. La línea de lectura del sitio web aparece siempre que hay un sitio web registrado, y la línea de perfil de negocio siempre aparece.
+
+</details>
+
+<details>
+<summary>¿Necesito Vendasta Payments para que funcionen las tarjetas de actualización?</summary>
+
+No. Sin Vendasta Payments, la actualización de una pyme te llega como un **pedido** para procesar con tu flujo de facturación existente. Con Vendasta Payments habilitado, la pyme paga con tarjeta directamente en Business App. De cualquier manera, tú estableces los precios minoristas y eliges qué productos aparecen.
+
+</details>
+
+<details>
+<summary>¿Qué fechas usa el resumen de trabajo?</summary>
+
+Las fechas reales en que se hizo el trabajo (impulsadas por la activación del producto), no la fecha en que se lanzó la función. Debido a que las líneas desaparecen aproximadamente 30 días después del trabajo, un cliente de larga data ve una lista mucho más corta que uno completamente nuevo; el resumen nunca muestra elementos obsoletos.
+
+</details>
+
+<details>
+<summary>¿Puede una pyme recuperar una tarjeta descartada?</summary>
+
+Sí. Los descartes se almacenan en el almacenamiento local del navegador, por lo que una pyme puede restaurar las tarjetas descartadas borrando los datos del sitio de Business App en ese navegador, o abriendo Business App en un navegador o dispositivo diferente. Si quieres controlar la visibilidad para todos, usa los interruptores a nivel de partner en **Customize Business App → Home**.
+
+</details>
+
+## Relacionado
+
+- [Personalizar las tarjetas "Recommended for your business"](/business-app/recommended-cards-configuration): cómo deciden las tarjetas de actualización qué mostrar, y cómo configurar la ruta de actualización de cada producto
+- [Home Overview](/business-app/home): el panel Home de Business App que ven tus clientes
+- [Customizing the welcome email](/accounts/manage-users/welcome-email): el correo de bienvenida clásico y la solución alternativa de Marketing Campaign
+- [Manage Users](/accounts/manage-users): crear y gestionar usuarios de Business App
