@@ -35,9 +35,9 @@ Choose one or the other:
 
 #### 1. AI Employee profile
 
-We create a custom AI Employee with a name and avatar that represents your analytical team. Business owners and managers interact directly with the Data Analyst through Business App to ask questions and receive structured insights. The profile is configured within the **AI Workforce** section of Business App.
+We create a custom AI Employee with a name and avatar that represents your analytical team. You and your team interact directly with the Data Analyst through Business App to ask questions and receive structured insights. The profile is configured within the `AI Workforce` section of Business App.
 
-#### 2. AIR Analysis Framework
+#### 2. AIR analysis framework
 
 We configure the AIR framework, the structured methodology that guides every AI response:
 
@@ -162,7 +162,7 @@ AIR stands for Analyze, Interpret, Recommend. Every response from the AI Data An
 
 <summary>What editions are required?</summary>
 
-**Conversations AI** must be active (any edition is supported). In addition, at least one of the following data-source editions must be active: **CRM AI**, **Reputation AI**, **Social AI**, or **Local SEO**. These editions unlock the data access and platform capabilities the AI Data Analyst relies on to generate insights. If you are unsure which editions are currently active on your account, please check with your account manager before the onboarding call.
+**Conversations AI** must be active (any edition is supported). In addition, at least one of the following data-source editions must be active: **CRM AI**, **Reputation AI**, **Social AI**, or **Local SEO**. These editions provide the data access and platform capabilities the AI Data Analyst relies on to generate insights. If you are unsure which editions are currently active on your account, please check with your account manager before the onboarding call.
 
 </details>
 
