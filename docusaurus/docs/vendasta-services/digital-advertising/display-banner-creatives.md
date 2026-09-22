@@ -2,6 +2,7 @@
 title: "Display Banner Creative Services: Expectations"
 sidebar_label: "Display Banner Creatives"
 description: "A comprehensive guide to the Display Banner creative services, detailing the process for creating both animated and standard static banners for your advertising campaigns."
+last_reviewed: 2026-09-22
 ---
 
 This guide outlines the process and expectations for our Standard and Animated Display Banners creative services. This is designed to complement your ad campaigns with professional, captivating visuals that encourage your target audience to take action. A strong display ad campaign relies on its creative assets, and this service provides professionally made graphics to add value to your campaign budget.

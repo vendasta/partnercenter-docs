@@ -14,7 +14,7 @@ Want to hand this to a client? The **grey-labeled guide** has the same informati
 :::
 
 :::info Requirements
-**Conversations AI** must be active on your account (any edition — Standard, Pro, or Premium).
+**Conversations AI** must be active on your account (any edition: Standard, Pro, or Premium).
 :::
 
 The AI Receptionist Setup is a done-for-you service where our experts configure, train, and launch the AI Receptionist for your business. Our team handles the technical setup, installs the chat widget on your website, builds out your CRM pipeline and lead management, configures booking and service-area connections, and sets up automations so you never miss a lead.
@@ -82,35 +82,35 @@ This call is scheduled to review your conversations, determine what knowledge or
 
 <details>
 
-<summary> How does the AI-assisted web chat capture leads?</summary>
+<summary>How does the AI-assisted web chat capture leads?</summary>
 
 When a customer interacts with the chat on your website, the AI will reply with simple conversational behavior designed to get a name and mobile phone number. This ensures you capture the lead and can follow up later. The AI can answer basic questions about your business, such as location and hours, based on your business profile and website.
 </details>
 
 <details>
 
-<summary> How much does the chatbot know about the business?</summary>
+<summary>How much does the chatbot know about the business?</summary>
 
 The chatbot can be given "knowledge" from the business profile to answer basic questions about services, location, and hours. You can also upload additional text to add FAQs, service details, and instructions on how to book appointments so the web chat can converse accurately with website visitors.
 </details>
 
 <details>
 
-<summary> How do I know when a new lead comes in?</summary>
+<summary>How do I know when a new lead comes in?</summary>
 
 You will receive an email or SMS notification (or both) when a customer uses the web chat or lead form on your website. The customer will also receive a message letting them know a team member will be in touch soon. All of these messages can be customized.
 </details>
 
 <details>
 
-<summary> Can you create custom automations for me?</summary>
+<summary>Can you create custom automations for me?</summary>
 
 We do not currently offer custom automation creation. The setup includes a standardized list of workflows designed to get your business running quickly. During the onboarding call, we will discuss your needs and make adjustments to our pre-built lead-capture automation templates.
 </details>
 
 <details>
 
-<summary> Is there a simpler option for web chat installation?</summary>
+<summary>Is there a simpler option for web chat installation?</summary>
 
 If you are looking for a simple code installation and have our [Website Support](../websites/vendasta-services-website-support.md) service active, our Website Support team can install the web chat code. This does not offer a full end-to-end configuration of the web chat, and is only for basic code installation.
 
@@ -118,15 +118,15 @@ If you are looking for a simple code installation and have our [Website Support]
 
 <details>
 
-<summary> Can the AI Receptionist create a quote or book an appointment?</summary>
+<summary>Can the AI Receptionist create a quote or book an appointment?</summary>
 
-Using the knowledge base, we can give the chatbot the information it needs to create a basic quote or estimate. If you use the platform's calendar, the AI Receptionist can book appointments on your behalf.
+Using the knowledge base, we can give the chatbot the information it needs to create a basic quote or estimate. If you connect a Google, Outlook, or Microsoft calendar in Business App, the AI Receptionist can book appointments on your behalf.
 
 </details>
 
 <details>
 
-<summary> Is the AI Receptionist HIPAA compliant?</summary>
+<summary>Is the AI Receptionist HIPAA compliant?</summary>
 
 The AI Receptionist is not HIPAA compliant, which means it should not handle **PHI**. PHI (Protected Health Information) is any personal information about someone's health that can identify them, such as medical conditions, treatments, test results, insurance details, or a name combined with a medical question.
 
