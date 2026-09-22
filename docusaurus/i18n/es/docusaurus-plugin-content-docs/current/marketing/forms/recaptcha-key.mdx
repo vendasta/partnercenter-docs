@@ -1,0 +1,49 @@
+---
+title: Use Google reCAPTCHA with forms
+sidebar_label: Use Google reCAPTCHA With Forms
+sidebar_position: 4
+description: Obtén una clave de Google reCAPTCHA y habilítala en Forms para bloquear el spam.
+keywords: [reCAPTCHA, Google reCAPTCHA, forms, spam protection, site key, secret key]
+---
+
+## ¿Qué es reCAPTCHA?
+
+[Google reCAPTCHA](https://google.com/recaptcha) detiene a los spammers y bots que intentan enviar el formulario.
+
+El reCAPTCHA de Google le pide a los visitantes que marquen una casilla para demostrar que son humanos antes de enviar sus resultados. A veces, se les pide que completen otra tarea (por ejemplo, identificar una serie de letras). reCAPTCHA dificulta que los bots automaticen los envíos de formularios.
+
+## Obtén tu Site Key y Secret Key
+
+### Paso 1: abre el panel de administración de reCAPTCHA
+Ve a [https://google.com/recaptcha/admin/create](https://google.com/recaptcha/admin/create)
+
+<img src={require('./img/marketing/forms/recaptcha/recaptcha-admin-page.jpg').default} alt="Google reCAPTCHA admin page" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Paso 2: registra tu sitio
+En tu panel de administración de Google reCAPTCHA, deberías ver la pantalla `Register a new site` de forma predeterminada (si ya tienes sitios de reCAPTCHA configurados, haz clic en el ícono `Create` (+) en la parte superior derecha).
+
+- `Label`: ingresa el nombre de tu sitio
+- `reCAPTCHA type`: elige `reCAPTCHA v3`
+- `Domains`: agrega el dominio (o dominios) en los que planeas colocar el formulario
+- Acepta los Términos de servicio de reCAPTCHA: asegúrate de aceptar los términos y marcar la casilla, luego haz clic en `Submit`.
+
+<img src={require('./img/marketing/forms/recaptcha/recaptcha-registration-form.jpg').default} alt="reCAPTCHA registration form" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Paso 3: copia tus claves
+Luego deberías poder ver la pantalla 'Adding reCAPTCHA to your site'. Copia los valores de Site Key y Secret Key para usarlos en Forms.
+
+<img src={require('./img/marketing/forms/recaptcha/recaptcha-keys.jpg').default} alt="reCAPTCHA keys" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## Habilita reCAPTCHA en Forms
+
+1. Ve a `Marketing` → `Forms` y abre tu formulario.
+2. Abre la pestaña `Settings`.
+3. Activa `reCAPTCHA` (`Enable reCAPTCHA`).
+4. Pega tu `Site Key` y `Secret Key` en los campos.
+5. Haz clic en `Save reCAPTCHA`, luego haz clic en `Save Changes`.
+6. Publica (incorpora/comparte) el formulario.
+
+### Probar tu formulario
+
+- Envía una entrada de prueba para confirmar que reCAPTCHA aparece (para tipos visibles) o verifica de forma invisible (v3) y que el envío tenga éxito.
+- Si ocurren errores, verifica la lista de dominios en tu configuración de reCAPTCHA y que las claves se hayan pegado correctamente.

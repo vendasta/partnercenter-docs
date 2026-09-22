@@ -1,0 +1,44 @@
+---
+title: Add SPF, DKIM, and DMARC records (GoDaddy)
+sidebar_label: Add SPF, DKIM, DMARC Records (GoDaddy)
+sidebar_position: 1
+description: Aprende a agregar registros SPF, DKIM y DMARC en GoDaddy para mejorar la entregabilidad de correo
+---
+
+Antes de continuar con las instrucciones a continuación, sigue esto primero y luego continúa con esta guía: [Connect Domain](../connecting-domains)
+
+## Agregar registro SPF
+
+Al agregar los registros de verificación a tu dominio de GoDaddy, ten en cuenta que GoDaddy agregará automáticamente .yourdomain.com al final de cualquier nombre de host agregado. Aunque nuestros registros incluyen tu dominio en el nombre de host, debe eliminarse antes de agregarlo a tus registros DNS.
+
+Un nombre de host en nuestro sistema que dice `@.yourdomain.com` simplemente se agregaría como `@` a tus registros DNS.
+
+1. Ve a tu cuenta de GoDaddy
+2. Ve a la sección Domain
+3. Haz clic en Manage DNS
+4. Busca la sección de gestión de registros DNS
+5. Agrega los registros SPF requeridos que se encuentran en `Partner Center` → `Marketing` → `Email settings` → `SPF`. Este será un registro TXT.
+
+## Agregar registros DKIM
+
+1. Ve a tu cuenta de GoDaddy
+2. Ve a la sección Domain
+3. Haz clic en Manage DNS
+4. Busca la sección de gestión de registros DNS
+5. Agrega los registros DKIM requeridos que se encuentran en `Partner Center` → `Marketing` → `Email settings` → `DKIM`. Hay **dos** registros DKIM separados, ambos agregados como registros CNAME. Ambos son obligatorios, así que no te detengas después del primero.
+
+## Agregar registro DMARC
+
+1. Ve a tu cuenta de GoDaddy
+2. Ve a la sección Domain
+3. Haz clic en Manage DNS
+4. Busca la sección de gestión de registros DNS
+5. Agrega los registros DMARC requeridos que se encuentran en `Partner Center` → `Marketing` → `Email settings` → `DMARC`. Esto se agregará como un registro TXT.
+
+## Valida tus registros DNS
+
+- Los cambios de DNS pueden tardar hasta 48 horas en propagarse por internet
+- Deberías haber agregado cuatro registros en total: un SPF (TXT), dos DKIM (CNAME) y un DMARC (TXT)
+- Desde `Partner Center` → `Marketing` → `Email settings`, encuentra el dominio en la tarjeta `Email domains`. Cada fila de registro tiene una columna `Current value` que muestra el valor encontrado en tu host de DNS, o `Not found` en rojo si aún no se ha detectado. El encabezado de fila del propio dominio lleva el estado general, y un banner `Domain authorization required` permanece en la página hasta que todos los registros se completen.
+- Si tienes problemas con la entregabilidad de correo después de agregar estos registros, espera al menos 48 horas antes de continuar solucionando problemas
+- Para obtener ayuda adicional con la configuración de correo, contacta al soporte de GoDaddy o consulta su documentación

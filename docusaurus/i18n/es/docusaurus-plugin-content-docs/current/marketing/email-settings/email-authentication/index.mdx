@@ -1,0 +1,165 @@
+---
+title: Email authentication
+sidebar_label: Email Authentication
+description: Aprende a configurar la autenticación de correo electrónico para tus correos de marketing
+sidebar_position: 1
+---
+
+# Email Authentication
+
+La autenticación de correo electrónico es una forma de indicarle a los servidores de correo receptores que los correos enviados desde tu dominio son legítimos. Esto ayuda a evitar que tus correos se marquen como spam o se rechacen.
+
+Para configurar la autenticación de correo, necesitas agregar registros DNS específicos al dominio que usas para enviar correos. Esta guía te llevará a través del proceso.
+
+## Entender la autenticación de correo electrónico
+
+La autenticación de correo electrónico consta de tres protocolos principales:
+
+1. **SPF (Sender Policy Framework)**: especifica qué servidores de correo están autorizados para enviar correo en nombre de tu dominio
+2. **DKIM (DomainKeys Identified Mail)**: agrega una firma digital a tus correos que verifica que fueron enviados por un remitente autorizado
+3. **DMARC (Domain-based Message Authentication, Reporting & Conformance)**: le indica a los servidores de correo receptores qué hacer con los correos que fallan las verificaciones SPF o DKIM
+
+Tres protocolos, pero cuatro registros DNS. La plataforma genera un registro SPF (TXT), un registro DMARC (TXT) y **dos** registros DKIM (CNAME). La autenticación no se completa hasta que se publican los cuatro, incluidos ambos CNAME de DKIM.
+
+## Guías de configuración por proveedor de dominio
+
+Elige tu proveedor de dominio para instrucciones de configuración paso a paso:
+
+- **[Add SPF, DKIM, DMARC Records (GoDaddy)](./adding-spf-dkim-dmarc-records-godaddy.mdx)**: guía de configuración para dominios de GoDaddy
+- **[Add SPF, DKIM, DMARC Records (cPanel/Namecheap)](./adding-spf-dkim-dmarc-records-cpanel-namecheap.mdx)**: guía paso a paso para cPanel/Namecheap
+
+## Guías de solución de problemas
+
+- **[Google Workspace Emails Not Reaching Yahoo](./google-workspace-emails-not-reaching-yahoo.mdx)**: pasos de autodiagnóstico para un cliente cuyo correo de Google Workspace no llega a los destinatarios de Yahoo
+
+## Por qué importa la autenticación de correo
+
+### Entregabilidad mejorada
+La autenticación adecuada aumenta significativamente la probabilidad de que tus correos lleguen a las bandejas de entrada de los destinatarios en lugar de ser filtrados a las carpetas de spam.
+
+### Protección contra la suplantación
+La autenticación evita que actores maliciosos envíen correos que parecen provenir de tu dominio, protegiendo la reputación de tu marca.
+
+### Requisitos de cumplimiento
+Muchos proveedores de correo ahora requieren una autenticación adecuada, y algunos rechazarán automáticamente los correos de dominios sin registros SPF, DKIM y DMARC adecuados.
+
+## Antes de comenzar
+
+Antes de configurar la autenticación de correo, asegúrate de tener:
+
+1. **Acceso a tu proveedor de DNS**: generalmente es donde compraste tu dominio (GoDaddy, Namecheap, etc.) o donde se gestiona tu DNS
+2. **Tu nombre de dominio**: el dominio desde el que quieres enviar correos (por ejemplo, tunegocio.com)
+3. **Acceso administrativo**: necesitarás permiso para modificar los registros DNS de tu dominio
+
+## Obtener tus registros DNS
+
+Para obtener los registros DNS específicos que necesitas agregar:
+
+1. Ve a `Partner Center` → `Marketing` → `Email settings`
+2. Encuentra tu dominio en la tarjeta `Email domains`
+3. Copia los valores mostrados. La plataforma genera cuatro registros en total: un registro DMARC (TXT), un registro SPF (TXT) y dos registros DKIM (CNAME). Ambos CNAME de DKIM son obligatorios, así que cópialos ambos
+4. Sigue la guía de configuración para tu proveedor de dominio específico
+
+:::tip
+Los cambios de DNS suelen propagarse dentro de 48 horas, y puede tardar hasta 72 horas para que la autenticación se muestre como verificada en Partner Center. Ten paciencia si tus registros no se verifican de inmediato.
+:::
+
+## Solución de problemas de SPF
+
+### Solo puedes tener un registro SPF por dominio
+
+DNS te permite crear varios registros TXT, pero SPF requiere un solo registro. Si agregas la entrada SPF de Vendasta como un segundo registro `TXT v=spf1 ...`, se rompe la validación SPF y la entrega de correo fallará.
+
+**Cómo solucionarlo:** combina todas las entradas `include:` en un solo registro SPF. Por ejemplo:
+
+```
+v=spf1 include:sendgrid.net include:mail.otherprovider.com -all
+```
+
+Si usas un host como DreamHost que ya envía a través de MailChannels, tu registro combinado sería:
+
+```
+v=spf1 include:sendgrid.net include:mailchannels.net -all
+```
+
+### `-all` vs. `~all`
+
+| Mecanismo | Significado | Efecto |
+|-----------|---------|--------|
+| `-all` | Fallo estricto | Los correos no autenticados se rechazan |
+| `~all` | Fallo suave | Los correos no autenticados se aceptan pero pueden marcarse como spam |
+
+Usa `-all` para la protección más fuerte. Si ves correos que llegan silenciosamente a spam sin un rebote claro, revisa si tu registro termina en `~all` en lugar de `-all`.
+
+### El límite de 10 búsquedas DNS
+
+SPF tiene un límite estricto de 10 búsquedas DNS por evaluación. Cada `include:` cuenta para este límite. Si tu registro encadena demasiados proveedores, la evaluación SPF fallará incluso si la sintaxis del registro es correcta.
+
+**Para verificar:** usa una herramienta como [MXToolbox SPF Lookup](https://mxtoolbox.com/spf.aspx) para contar tus búsquedas e identificar qué entradas `include:` se pueden consolidar o reemplazar con rangos de IP aplanados.
+
+### Problemas comunes de SPF
+
+| Síntoma | Causa probable |
+|---------|-------------|
+| SPF no se verifica en Partner Center | Varios registros SPF, o el DNS aún no se ha propagado (permite hasta 72 horas) |
+| Los correos fallan después de agregar el registro DNS de Vendasta | Creaste un segundo registro SPF; combínalos en uno |
+| SPF pasa pero los correos siguen yendo a spam | Fallo suave `~all`; cambia a `-all`, y revisa también DKIM y DMARC |
+
+## Solución de problemas de DMARC
+
+### Elegir una política DMARC
+
+| Política | Significado |
+|--------|---------|
+| `p=none` | Solo supervisión: los correos fallidos se entregan de todos modos |
+| `p=quarantine` | Los correos fallidos van a spam/correo no deseado |
+| `p=reject` | Los correos fallidos se rechazan por completo |
+
+**Punto de partida recomendado:** comienza con `p=none` para recopilar informes sin afectar la entrega, luego ajústalo a `p=quarantine` o `p=reject` una vez que hayas confirmado que SPF y DKIM están alineados.
+
+### Detener los informes de fallo de DMARC
+
+Si estás recibiendo una avalancha de correos de informes DMARC, es porque tu registro DMARC incluye una etiqueta `ruf=mailto:` (informes forenses) o `rua=mailto:` (informes agregados). Para detenerlos, elimina esas etiquetas del valor del registro.
+
+Por ejemplo, cambia:
+
+```
+v=DMARC1; p=none; rua=mailto:reports@yourdomain.com; ruf=mailto:forensics@yourdomain.com
+```
+
+a:
+
+```
+v=DMARC1; p=none
+```
+
+### Solo puedes tener un registro DMARC por dominio
+
+Al igual que SPF, solo puedes tener un registro TXT de DMARC en `_dmarc.<tudominio>`. Si usas varios servicios de supervisión, combina sus direcciones de informes en una sola etiqueta `rua` usando direcciones `mailto:` separadas por comas:
+
+```
+v=DMARC1; p=none; rua=mailto:service1@vendor.com,mailto:service2@vendor.com
+```
+
+### Verificar tu registro DMARC en Partner Center
+
+Ve a `Partner Center` → `Marketing` → `Email settings` y encuentra tu dominio en la tarjeta `Email domains`. Cada fila de registro tiene una columna `Current value`. Si muestra el valor encontrado en tu host de DNS, el registro se detecta. Si muestra `Not found` en rojo, el registro falta, tiene un problema de sintaxis, o la propagación de DNS aún está en progreso (permite hasta 72 horas). El encabezado de fila del propio dominio lleva el estado general, y un banner `Domain authorization required` permanece en la página hasta que todos los registros se completen.
+
+### Problemas comunes de DMARC
+
+| Síntoma | Causa probable |
+|---------|-------------|
+| Los correos rebotan con rechazo de DMARC | La política es `p=reject` y la alineación de SPF o DKIM está fallando; verifica que ambos pasen antes de endurecer la política |
+| Recibir informes DMARC por cada entrega fallida | `ruf=mailto:` está configurado en el registro; elimínalo |
+| Varios registros DMARC rompieron la verificación | Consolida en un solo registro TXT `_dmarc.<dominio>` |
+
+## Solución de problemas general
+
+- **Verifica tus registros DNS**: asegúrate de haber copiado los valores exactamente como se muestran en Partner Center
+- **Espera la propagación**: los cambios de DNS pueden tardar hasta 72 horas en surtir efecto a nivel global
+- **Contacta a tu proveedor de DNS**: pueden verificar que los registros se agregaron correctamente
+- **Revisa si hay registros en conflicto**: busca registros SPF o DMARC existentes que necesiten combinarse en lugar de reemplazarse
+
+## ¿Necesitas ayuda?
+
+Si encuentras problemas durante la configuración, contacta a soporte de Vendasta para obtener asistencia con tu configuración específica.

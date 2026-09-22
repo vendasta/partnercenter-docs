@@ -1,0 +1,213 @@
+---
+title: Self-troubleshooting - Google Workspace emails not reaching Yahoo
+sidebar_label: Google Workspace Emails Not Reaching Yahoo
+sidebar_position: 3
+description: Ayuda a un cliente a solucionar problemas de correos de Google Workspace que rebotan, se retrasan o no llegan a los destinatarios de Yahoo.
+---
+
+Si el correo de negocio de un cliente está alojado en Google Workspace y los mensajes a direcciones de Yahoo están fallando, retrasándose o rebotando, usa esta guía para revisar las causas más comunes antes de contactar a soporte.
+
+Esta guía está dirigida a propietarios de dominio, administradores o cualquier persona que pueda acceder a la configuración de DNS y a la consola de administración de Google. Si tu cliente no gestiona su propio dominio o ajustes de correo, comparte esta página con su proveedor de TI o administrador de sitio web.
+
+## Qué suele significar este problema
+
+En la mayoría de los casos, Yahoo rechaza los mensajes cuando el dominio de envío no está completamente autenticado o cuando los registros DNS están incompletos o en conflicto. Las causas más comunes son:
+
+- Registros MX incorrectos u obsoletos
+- Registro SPF faltante o inválido
+- Configuración de DKIM faltante
+- Registro DMARC faltante
+- Una cuenta de Google Workspace que no está completamente activada
+- Un problema de reputación de dominio o política de spam
+
+Incluso si el correo funciona con algunos proveedores, Yahoo puede seguir rechazando mensajes porque aplica verificaciones de autenticación más estrictas que muchos otros proveedores de buzones.
+
+## Antes de comenzar
+
+Reúne lo siguiente:
+
+- El nombre de dominio, como `tuempresa.com`
+- Acceso al proveedor de DNS, como GoDaddy, Cloudflare o el host del sitio web
+- Acceso a la cuenta de Google Admin en [admin.google.com](https://admin.google.com)
+- Un mensaje reciente de rebote o no entrega, si hay uno disponible
+
+También puedes usar [MXToolbox](https://mxtoolbox.com) para revisar los registros DNS públicos.
+
+## Pasos de autodiagnóstico
+
+### 1. Confirma que la cuenta de Google Workspace esté activa
+
+Si Google Workspace se compró o configuró recientemente, la cuenta puede requerir aún la activación final.
+
+1. Inicia sesión en [admin.google.com](https://admin.google.com).
+2. Revisa si la suscripción de Google Workspace está activa.
+3. Asegúrate de que el administrador haya aceptado los Términos de servicio de Google.
+4. Confirma que el usuario afectado tenga una licencia de Google Workspace que incluya Gmail.
+
+Si el buzón puede enviar a algunos dominios pero no a Yahoo, la cuenta generalmente está activa. En ese caso, continúa con las verificaciones de autenticación DNS a continuación.
+
+### 2. Revisa los registros MX
+
+Los registros MX le indican a internet qué servidor de correo gestiona el correo de un dominio. Si son incorrectos o se mezclan con otro proveedor, el flujo de correo puede romperse.
+
+Usa MXToolbox para ejecutar una búsqueda MX del dominio.
+
+El dominio debe apuntar solo a los servidores de correo de Google Workspace. Muchas configuraciones antiguas de Google Workspace usan cinco registros MX, mientras que las configuraciones más nuevas pueden usar un solo destino MX de Google. Lo más importante es que el DNS apunte solo a Google y no incluya registros sobrantes de otro proveedor.
+
+- Elimina los registros MX de servicios antiguos como Microsoft 365, cPanel, Zoho u otro host de correo
+- Asegúrate de que no haya entradas MX duplicadas o en conflicto
+- Permite tiempo para que los cambios de DNS se propaguen después de las actualizaciones
+
+:::warning
+Si no estás seguro de si los registros MX son correctos, no adivines. Los cambios incorrectos de MX pueden interrumpir todo el correo entrante del dominio.
+:::
+
+### 3. Revisa el registro SPF
+
+SPF le indica a los sistemas de correo receptores qué servidores están autorizados para enviar correo por un dominio. Yahoo revisa esto de cerca.
+
+Ejecuta una búsqueda TXT para el dominio en MXToolbox y localiza el registro SPF.
+
+Un registro SPF válido generalmente comienza con `v=spf1`. Si el correo se envía desde Google Workspace, el registro SPF debe incluir a Google. Si el dominio también usa otro servicio como SendGrid o Mailchimp, ese servicio debe incluirse en el mismo registro SPF.
+
+**Importante:** un dominio debe tener solo un registro SPF. Varios registros SPF pueden causar fallos de correo.
+
+Ejemplo de un registro SPF combinado:
+
+```
+v=spf1 include:_spf.google.com include:sendgrid.net ~all
+```
+
+### 4. Revisa si DKIM está habilitado
+
+DKIM agrega una firma digital a los mensajes salientes. Esto ayuda a Yahoo a verificar que el mensaje realmente fue enviado por el dominio y no fue alterado en tránsito.
+
+1. Inicia sesión en [admin.google.com](https://admin.google.com).
+2. Ve a los ajustes de Gmail para la autenticación de correo.
+3. Revisa si DKIM se ha generado y habilitado para el dominio.
+4. Verifica que el registro DNS requerido se haya agregado en el proveedor de DNS.
+
+Si DKIM falta o no está activado, Yahoo puede rechazar el correo incluso si SPF es correcto.
+
+:::tip
+Algunos proveedores de DNS agregan automáticamente el nombre de dominio al valor de host de un registro. Si el host de DKIM se ingresa dos veces, se crea un registro inválido. Si el proveedor de DNS agrega automáticamente el nombre de dominio, ingresa solo el valor de host solicitado por Google en lugar del dominio completo.
+:::
+
+#### Solución: configurar DKIM para Google Workspace
+
+Si MXToolbox muestra "DNS record not found" para `google._domainkey.yourdomain.com`, sigue estos pasos:
+
+**Paso 1: genera la clave DKIM en Google Admin**
+
+1. Inicia sesión en [admin.google.com](https://admin.google.com).
+2. Ve a `Apps` → `Google Workspace` → `Gmail` → `Authenticate Email`.
+3. Selecciona el dominio y haz clic en **Generate New Record**.
+4. Establece la longitud de la clave en **2048-bit** (recomendado).
+5. Deja el prefijo del selector DKIM como `google` (predeterminado).
+
+**Paso 2: agrega el registro CNAME al proveedor de DNS**
+
+Agrega el siguiente registro en la configuración de DNS (por ejemplo, GoDaddy o Cloudflare):
+
+| Campo | Valor |
+| --- | --- |
+| Type | CNAME |
+| Host / Name | `google._domainkey` |
+| Points to / Value | Copia el valor exacto mostrado en la consola de Google Admin |
+| TTL | 3600 (o predeterminado) |
+
+**Paso 3: activa y verifica**
+
+1. Regresa a Google Admin → **Authenticate Email**.
+2. Haz clic en **Start Authentication**.
+3. Espera de 24 a 48 horas para la propagación de DNS.
+4. Verifica ejecutando una búsqueda CNAME en [MXToolbox](https://mxtoolbox.com) para `google._domainkey.yourdomain.com`.
+
+**Resumen de DNS esperado después de la solución:**
+
+| Registro | Tipo | Host | Valor |
+| --- | --- | --- | --- |
+| MX | MX | @ | `aspmx.l.google.com` (pri 1), `alt1.aspmx.l.google.com` (pri 5), `alt2.aspmx.l.google.com` (pri 5), `alt3.aspmx.l.google.com` (pri 10), `alt4.aspmx.l.google.com` (pri 10) |
+| SPF | TXT | @ | `v=spf1 include:_spf.google.com include:sendgrid.net ~all` |
+| DKIM | CNAME | `google._domainkey` | Valor de la consola de Google Admin |
+| DMARC | TXT | `_dmarc` | `v=DMARC1; p=none; rua=mailto:postmaster@yourdomain.com; pct=100;` |
+
+### 5. Revisa si existe un registro DMARC
+
+DMARC le indica a los sistemas receptores cómo gestionar los mensajes que fallan las verificaciones SPF o DKIM. También ayuda a mejorar la confianza en el dominio.
+
+Ejecuta una búsqueda TXT para `_dmarc.yourdomain.com`.
+
+Un registro DMARC debe comenzar con `v=DMARC1`. Incluso una política básica es mejor que no tener ningún registro DMARC.
+
+Ejemplo:
+
+```
+v=DMARC1; p=none; rua=mailto:postmaster@yourdomain.com
+```
+
+Si el propietario del dominio no supervisa los informes DMARC, comienza con una política simple y revisa con cuidado antes de hacer cambios más estrictos.
+
+### 6. Si el dominio usa Cloudflare, revisa la configuración de proxy
+
+Si el dominio usa Cloudflare, algunos registros DNS deben permanecer configurados como **DNS only** en lugar de con proxy.
+
+Para registros relacionados con correo, como las entradas CNAME de DKIM, asegúrate de que Cloudflare no las esté redirigiendo con proxy. El DNS con proxy puede interferir con la autenticación de correo.
+
+### 7. Revisa el mensaje de rebote
+
+Si Yahoo rechazó el mensaje, el aviso de rebote o error generalmente explica por qué. Busca palabras clave como:
+
+- SPF fail
+- DKIM fail
+- DMARC fail
+- Policy rejection
+- Message blocked
+- Spam content
+
+Este mensaje suele ser la forma más rápida de identificar si el problema está relacionado con la autenticación o con la reputación.
+
+## Cuándo contactar a soporte
+
+Contacta a soporte si las verificaciones anteriores están completas y se cumple alguna de las siguientes condiciones:
+
+- Los registros MX, SPF, DKIM y DMARC parecen correctos, pero Yahoo sigue rechazando los mensajes
+- Se muestra un error específico de política o reputación de Yahoo
+- El propietario del dominio no se siente cómodo editando los registros DNS por sí mismo
+- El problema afecta solo a un usuario o un buzón y no a todo el dominio
+
+Para agilizar el soporte, envía el nombre de dominio, una captura de pantalla de los registros DNS actuales y el mensaje de rebote completo de Yahoo.
+
+## Lista de verificación rápida
+
+- [ ] La cuenta de Google Workspace está activa
+- [ ] Se asignó una licencia habilitada para Gmail al usuario
+- [ ] Los registros MX apuntan solo a Google
+- [ ] Existe exactamente un registro SPF
+- [ ] DKIM está generado, publicado y habilitado
+- [ ] El registro DMARC está publicado
+- [ ] Los registros relacionados con correo de Cloudflare están configurados como DNS only
+- [ ] Se ha revisado y guardado el mensaje de rebote
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Google Workspace tiene problemas para enviar a Yahoo en general?</summary>
+
+No. Google Workspace puede enviar a Yahoo normalmente. Si Yahoo está rechazando mensajes de un dominio, generalmente apunta a un problema de configuración específico del dominio, como SPF, DKIM, DMARC o reputación del remitente.
+
+</details>
+
+<details>
+<summary>¿Los registros MX incorrectos podrían estar causando que los mensajes salientes a Yahoo fallen?</summary>
+
+Sí y no. Los registros MX afectan el enrutamiento de correo entrante, pero Yahoo puede rechazar mensajes salientes si el dominio de envío no está correctamente autenticado con SPF, DKIM y DMARC.
+
+</details>
+
+<details>
+<summary>¿Cuánto tiempo tarda en surtir efecto una corrección de DNS?</summary>
+
+Algunos cambios aparecen rápidamente, pero la propagación completa de DNS puede tardar varias horas y, a veces, hasta 48 horas, según el proveedor de DNS y el TTL del registro.
+
+</details>
