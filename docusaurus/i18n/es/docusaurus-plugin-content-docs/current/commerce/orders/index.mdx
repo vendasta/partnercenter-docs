@@ -1,0 +1,69 @@
+---
+sidebar_position: 1
+title: Orders
+description: Aprende sobre la creación, gestión y procesamiento de pedidos en la plataforma Commerce de Vendasta
+---
+
+# Orders
+
+Crea, gestiona y procesa pedidos de venta con herramientas para flujos de trabajo de pedidos, cobro de pagos y activación de productos. Los pedidos son la forma principal de activar productos y servicios para tus clientes, ya sea que los crees desde `Partner Center` → `Commerce` → `Orders` o desde un perfil de empresa. Los pedidos impulsan las suscripciones y la facturación, por lo que todo el flujo desde la venta hasta la activación y la renovación permanece en un solo lugar.
+
+## ¿Por qué usar Orders?
+
+- **Un solo lugar de la venta a la activación**: crea pedidos de venta, obtén la aprobación del cliente o del administrador, cobra pagos y activa productos. Los pedidos crean automáticamente suscripciones y gestionan la facturación en las fechas de renovación.
+- **Flujos de trabajo flexibles**: usa estados de borrador y guardado automático, envía para aprobación del cliente o del administrador, y gestiona pedidos pendientes, aprobados y activados. Los pedidos masivos y la activación masiva reducen el trabajo repetitivo.
+- **Pago y facturación integrados**: cobra los primeros pagos en el pedido, guarda métodos de pago para las suscripciones y configura las condiciones de facturación por línea de artículo para que la activación y la facturación permanezcan alineadas.
+- **Control y visibilidad**: configura flujos de trabajo, permisos y formularios de cumplimiento en `Administration` → `Order Settings`. Haz seguimiento del estado desde borrador hasta activado (o rechazado/archivado) y resuelve errores de activación cuando ocurran.
+
+## Qué hay en esta sección
+
+- **[Creating and Managing Orders](./creating-and-managing-orders.mdx)**: crea pedidos de venta desde Commerce o perfiles de empresa, agrega productos y establece precios, usa flujos de trabajo simplificados y pedidos masivos, y envía para aprobación del cliente o del administrador. También abarca los estados de pedido (draft, pending, approved, processing, activated, declined, archived, y más), las líneas de artículo de prueba, los flujos de aprobación, la activación de productos, la programación de activación y la resolución de errores de activación.
+- **[Order Payments and Billing](./order-payments-and-billing.mdx)**: cobra los primeros pagos en los pedidos, habilita el pago del cliente durante la aprobación, guarda métodos de pago para las suscripciones y configura los permisos de pago y facturación.
+- **[Order Configuration and Administration](./order-configuration-and-administration.mdx)**: configura los flujos de trabajo de pedidos, los permisos de vendedores y administradores, los formularios de cumplimiento, las notificaciones por correo electrónico y los ajustes de pedidos en `Administration` → `Order Settings`.
+- **[Working with packages](./how-to-work-with-packages.mdx)**: agrupa productos en pedidos y suscripciones minoristas, distribuye precios entre artículos, gestiona tarifas de configuración, y establece la visibilidad y las frecuencias de facturación mixtas.
+- **[Item billing terms](./item-billing-terms.mdx)**: establece fechas de inicio y límites de renovación en las líneas de artículo para programar la activación, definir la duración del contrato y automatizar la facturación y desactivación con Vendasta Payments.
+- **[Order PDF](./order-pdf.mdx)**: genera y descarga un resumen en PDF de cualquier pedido, incluidas las respuestas del formulario de pedido y las respuestas del formulario de cumplimiento.
+
+## Primeros pasos
+
+1. **Crea un pedido**: ve a `Partner Center` → `Commerce` → `Orders` → `Create Sales Order` (o **Create Order** desde un perfil de empresa). Agrega productos, establece precios y condiciones de facturación, y luego envía para aprobación del cliente o del administrador.
+2. **Procesa y activa**: después de la aprobación, cobra el pago si es necesario, luego activa. Usa **Order Processing and Activation** para entender los estados y gestionar errores de activación.
+3. **Configura tu flujo de trabajo**: en `Administration` → `Order Settings`, establece flujos de aprobación, permisos, formularios de cumplimiento y opciones de cobro de pagos para que los pedidos coincidan con la forma en que vende tu equipo.
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Dónde creo un pedido?</summary>
+
+Puedes crear pedidos desde `Partner Center` → `Commerce` → `Orders` → `Create Sales Order`, o desde un perfil de empresa (`Orders` → `Create Order`), o desde `Accounts` → `Manage Accounts` → abre una cuenta → **Order Products**. Consulta [Creating and Managing Orders](./creating-and-managing-orders.mdx) para conocer los flujos paso a paso.
+</details>
+
+<details>
+<summary>¿Cuál es la diferencia entre la aprobación del cliente y la aprobación del administrador?</summary>
+
+**La aprobación del cliente** envía el pedido a un contacto que elijas para que pueda revisar y aprobar (y opcionalmente pagar) antes de la activación. **La aprobación del administrador** envía el pedido a administradores con permisos "Can Manage Orders" para una revisión interna primero. Eliges la vía al enviar el pedido. Los detalles están en [Creating and Managing Orders](./creating-and-managing-orders.mdx).
+</details>
+
+<details>
+<summary>¿Puedo editar un pedido después de enviarlo?</summary>
+
+Los vendedores no pueden editar pedidos una vez enviados. Los administradores pueden agregar o eliminar artículos de pedidos **pendientes** antes de la aprobación. De lo contrario, rechaza y recrea el pedido con las correcciones, o duplica y edita un borrador. Consulta [Creating and Managing Orders](./creating-and-managing-orders.mdx).
+</details>
+
+<details>
+<summary>¿Cancelar un pedido cancela las suscripciones del cliente?</summary>
+
+No. Cancelar un pedido no cancela las suscripciones minoristas o mayoristas existentes. Los pedidos cancelados y archivados son solo para seguimiento e historial. Consulta [Creating and Managing Orders](./creating-and-managing-orders.mdx) para conocer los detalles de estado.
+</details>
+
+<details>
+<summary>¿Qué sucede si se rechaza un pago?</summary>
+
+El pedido se marca como **Declined**, los detalles del pago se registran en la pestaña **PAYMENT** del pedido, y puedes convertir el pedido a borrador para actualizar la información de pago y volver a procesarlo. Consulta [Order Payments and Billing](./order-payments-and-billing.mdx).
+</details>
+
+<details>
+<summary>¿Dónde configuro los flujos de aprobación y el cobro de pagos?</summary>
+
+Ve a `Administration` → `Order Settings` (o `Administration` → `Customize` → `Sales` → `Configure sales orders and processes`). Ahí puedes establecer la aprobación del cliente vs. del administrador, si los clientes pueden pagar durante la aprobación, los formularios de cumplimiento y los permisos de vendedores. Consulta [Order Configuration and Administration](./order-configuration-and-administration.mdx).
+</details>

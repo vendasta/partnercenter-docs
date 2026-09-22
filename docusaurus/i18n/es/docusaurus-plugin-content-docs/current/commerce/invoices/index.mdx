@@ -1,0 +1,70 @@
+---
+id: invoices
+title: Invoices
+description: Crea, envía y gestiona facturas; aplica tasas de impuestos y descuentos en Vendasta Commerce
+sidebar_position: 3
+---
+
+# Invoices
+
+Crea, envía y gestiona facturas desde `Partner Center` → `Commerce` → `Invoices`. Las facturas te permiten solicitar y cobrar el pago de productos y servicios, ya sea como cobros puntuales o desde suscripciones recurrentes. Puedes crear facturas manualmente o desde la pestaña de facturas de una cuenta; las renovaciones de suscripción también pueden generar facturas automáticamente. El comportamiento de las facturas (incluido si los clientes pueden pagar en línea) depende de si tienes [Vendasta Payments](/commerce/payments/setting-up-vendasta-payments) configurado.
+
+## ¿Por qué usar Invoices?
+
+- **Un solo lugar para la facturación**: crea y envía facturas desde Commerce o desde una cuenta, aplica impuestos y descuentos, y haz seguimiento del estado (Draft, Due, Paid, Void) en una sola tabla.
+- **Creación flexible**: agrega líneas de artículo desde tu Marketplace o texto personalizado, establece fechas de vencimiento y destinatarios, y cobra un método de pago registrado o envía la factura para que el cliente pague.
+- **Vinculado a suscripciones**: las facturas se pueden generar a partir de renovaciones de suscripción; aplica descuentos a nivel de suscripción para que se transfieran a las facturas futuras.
+- **Control de impuestos y descuentos**: crea tasas de impuestos por región en `Administration` → `Tax Rates`, aplícalas por línea de artículo en las facturas, y aplica descuentos porcentuales o de monto fijo a facturas individuales o suscripciones recurrentes.
+
+## Qué hay en esta sección
+
+- **[Create and Manage Invoices](./create-and-send-invoices.mdx)**: crea facturas en borrador desde Commerce o una cuenta, agrega artículos y establece la fecha de vencimiento y el destinatario, envía o cobra la factura y gestiona el estado. Abarca los números de factura, la configuración de correo electrónico, los estados (Draft, Due, Paid, Void) y cómo difiere el comportamiento con o sin Vendasta Payments.
+- **[Create and Apply Tax Rates](./create-and-apply-tax-rates.mdx)**: crea tasas de impuestos por país y estado/provincia en `Administration` → `Tax Rates`, luego aplícalas a las líneas de artículo de las facturas (y al Shopping Cart y los pedidos de venta). Incluye cuándo se aplica el impuesto y videos explicativos.
+- **[Discounts in Invoices and Subscriptions](./discounts-in-invoices-and-subscriptions.mdx)**: aplica descuentos únicos a una factura (porcentaje o monto fijo) o descuentos recurrentes a una suscripción (para siempre, por tiempo limitado o una vez). Edita o elimina descuentos; notas sobre un descuento por factura/suscripción y el comportamiento de impuestos después del descuento.
+
+## Primeros pasos
+
+1. **Abre Invoices**: ve a `Partner Center` → `Commerce` → `Invoices` para ver todas las facturas y crear nuevas.
+2. **Crea una factura**: haz clic en `New` → `Invoice`, selecciona una cuenta, establece la fecha de vencimiento y el destinatario, y luego usa **Add Item** (o **Add Custom Item**) para armar la factura. Usa el menú **⋮** de la línea de artículo para establecer el impuesto o eliminar artículos.
+3. **Envía o cobra**: revisa el subtotal y el total, luego haz clic en **Send Invoice** para enviarla por correo al destinatario (o **Charge invoice** si tienes habilitado "Automatically charge a payment method on file" y el cliente tiene un método de pago guardado).
+4. **Configura impuestos y descuentos**: crea tasas de impuestos en `Administration` → `Tax Rates` para poder aplicarlas en las líneas de artículo de las facturas. Usa el botón **Discount** en una factura o suscripción para aplicar descuentos porcentuales o de monto fijo.
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Puedo crear una factura sin Vendasta Payments?</summary>
+
+Sí. Puedes crear, editar y enviar facturas sin Vendasta Payments. Sin él, los clientes no pueden pagar directamente desde el correo de la factura; te pagan fuera de la plataforma y puedes marcar la factura como **Paid** manualmente (Options `⋮` → `Change invoice status` → `Paid`). Con Vendasta Payments, los clientes pueden hacer clic en **Pay this invoice** y pagar con tarjeta. Consulta [Create and Manage Invoices](./create-and-send-invoices.mdx).
+</details>
+
+<details>
+<summary>¿Puedo editar una factura después de enviarla?</summary>
+
+No. Una vez que se envía una factura, no se puede editar. Puedes **Resend Invoice** al mismo destinatario o a uno diferente, o anularla (Options `⋮` → `Change invoice status` → `Void`) si se envió por error. Para correcciones, crea y envía una nueva factura. Consulta [Create and Manage Invoices](./create-and-send-invoices.mdx).
+</details>
+
+<details>
+<summary>¿De dónde provienen las facturas?</summary>
+
+Las facturas se pueden crear manualmente desde `Commerce` → `Invoices` o desde la pestaña de facturas de una cuenta. También se pueden generar automáticamente a partir de [renovaciones de suscripción](/commerce/subscriptions/subscription-management). Consulta [Create and Manage Invoices](./create-and-send-invoices.mdx).
+</details>
+
+<details>
+<summary>¿Cómo aplico un descuento a una factura o suscripción?</summary>
+
+En una factura: abre la factura, haz clic en **Discount**, elige Percentage o Fixed Amount y el valor, agrega un motivo opcional y luego haz clic en **Apply**. En una suscripción: abre la suscripción, haz clic en **Discount**, establece el tipo y el valor, elige la duración (Forever, For a limited time o Once) y luego haz clic en **Apply**. Solo un descuento por factura o suscripción a la vez. Consulta [Discounts in Invoices and Subscriptions](./discounts-in-invoices-and-subscriptions.mdx).
+</details>
+
+<details>
+<summary>¿Dónde creo y aplico tasas de impuestos?</summary>
+
+Crea tasas de impuestos en `Partner Center` → `Administration` → `Tax Rates` → `Create Tax Rate` (país, estado/provincia, nombre, tasa, descripción opcional). En una factura, usa el menú **⋮** en una línea de artículo y elige **Set Item Tax** (o **Set Item Tax rate**) para aplicar una tasa. Consulta [Create and Apply Tax Rates](./create-and-apply-tax-rates.mdx).
+</details>
+
+## ¿Necesitas más ayuda?
+
+Si no encuentras lo que buscas en esta sección:
+
+- [Pregunta a la comunidad](https://www.facebook.com/groups/vendasta)
+- [Toma un curso](/learn/)
+- [Da tu opinión sobre el producto](https://roadmap.vendasta.com)
