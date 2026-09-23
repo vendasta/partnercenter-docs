@@ -17,16 +17,16 @@ Triggers marked **(draft)** are in development and may change or be removed befo
 
 | Trigger | Overview | Special Cases | Example Use Cases |
 | --- | --- | --- | --- |
-| A call activity is created or modified for a company | Starts the workflow when a call activity is logged or updated on a company. | | When a discovery call is logged, notify the assigned salesperson to prepare follow-up materials. |
+| A call activity is created or modified for a company | Starts the workflow when a call activity is logged or updated on a company. | Fires only for the activity's primary association unless **Fire for secondary associations** is enabled. | When a discovery call is logged, notify the assigned salesperson to prepare follow-up materials. |
 | A company is added to a list | Starts the workflow when a company is added to a specified list. | | When a company is added to the **Enterprise Prospects** list, assign it to the enterprise sales team. |
 | A company is created or modified | Starts the workflow when a company is created or its details change. | | When a company's industry field is updated, re-evaluate its segmentation tags. |
 | A company is created *(draft)* | Starts the workflow when a company is created. | | |
 | A form is submitted for a company | Starts the workflow when a form is submitted in association with a company. | | When a company submits a pricing-request form, create a follow-up task for the account owner. |
 | A company is removed from a list | Starts the workflow when a company is removed from a specified list. | | When a company is removed from the **Active Trials** list, log the drop in the CRM. |
 | A form is submitted for a contact | Starts the workflow when a form is submitted by a contact associated with a company. | | When a contact submits a demo-request form, alert the assigned salesperson. |
-| An email activity is created or modified for a company | Starts the workflow when an email activity is logged or updated on a company. | | When an inbound reply is logged, mark the company as engaged. |
-| A meeting activity is created or modified for a company | Starts the workflow when a meeting activity is logged or updated on a company. | | When a meeting is logged, advance the associated opportunity to the next pipeline stage. |
-| A note activity is created or modified for a company | Starts the workflow when a note is added or modified on a company. | | |
+| An email activity is created or modified for a company | Starts the workflow when an email activity is logged or updated on a company. | Fires only for the activity's primary association unless **Fire for secondary associations** is enabled. | When an inbound reply is logged, mark the company as engaged. |
+| A meeting activity is created or modified for a company | Starts the workflow when a meeting activity is logged or updated on a company. | Fires only for the activity's primary association unless **Fire for secondary associations** is enabled. | When a meeting is logged, advance the associated opportunity to the next pipeline stage. |
+| A note activity is created or modified for a company | Starts the workflow when a note is added or modified on a company. | Fires only for the activity's primary association unless **Fire for secondary associations** is enabled. | |
 | A CRM sales task is created or modified for a company | Starts the workflow when a sales task is created or updated on a company. | | When a sales task is completed, create the next task in the sequence. |
 | A CRM sales task is overdue for a company | Starts the workflow when a sales task on a company becomes overdue. | | When a task is overdue, notify the assignee's manager. |
 
@@ -34,14 +34,14 @@ Triggers marked **(draft)** are in development and may change or be removed befo
 
 | Trigger | Overview | Special Cases | Example Use Cases |
 | --- | --- | --- | --- |
-| A call activity is created or modified for a contact | Starts the workflow when a call activity is logged or updated on a contact. | | |
+| A call activity is created or modified for a contact | Starts the workflow when a call activity is logged or updated on a contact. | Fires only for the activity's primary association unless **Fire for secondary associations** is enabled. | |
 | A contact is added to a list | Starts the workflow when a contact is added to a specified list. | | When a contact is added to the **VIP** list, start a personalized onboarding campaign. |
 | A contact is created or modified | Starts the workflow when a contact is created or their details change. | | When a contact's lifecycle stage changes to **Lead**, route them to the qualification workflow. |
 | A contact is created *(draft)* | Starts the workflow when a contact is created. | | |
 | A contact is removed from a list | Starts the workflow when a contact is removed from a specified list. | | |
-| An email activity is created or modified for a contact | Starts the workflow when an email activity is logged or updated on a contact. | | |
-| A meeting activity is created or modified for a contact | Starts the workflow when a meeting activity is logged or updated on a contact. | | |
-| A note activity is created or modified for a contact | Starts the workflow when a note is added or modified on a contact. | | |
+| An email activity is created or modified for a contact | Starts the workflow when an email activity is logged or updated on a contact. | Fires only for the activity's primary association unless **Fire for secondary associations** is enabled. | |
+| A meeting activity is created or modified for a contact | Starts the workflow when a meeting activity is logged or updated on a contact. | Fires only for the activity's primary association unless **Fire for secondary associations** is enabled. | |
+| A note activity is created or modified for a contact | Starts the workflow when a note is added or modified on a contact. | Fires only for the activity's primary association unless **Fire for secondary associations** is enabled. | |
 | A CRM sales task is created or modified for a contact | Starts the workflow when a sales task is created or updated on a contact. | | |
 | A CRM sales task is overdue for a contact | Starts the workflow when a sales task on a contact becomes overdue. | | |
 
