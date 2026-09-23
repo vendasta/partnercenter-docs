@@ -318,6 +318,13 @@ Once the recipient marks the email as Not Spam, future calendar invitations from
 
 </details>
 
+<details>
+<summary>Why do contact-form messages go to Microsoft 365 junk when SPF, DKIM, and DMARC pass?</summary>
+
+If Microsoft accepts the message (SMTP 250) and the sending domain is configured correctly, junk classification is happening inside the recipient's Microsoft 365 tenant, not because authentication failed. Ask for the original Internet headers or an M365 message trace to see which filtering rule applied.
+
+</details>
+
 ## Need more help?
 
 If you're experiencing deliverability issues or have questions about how to optimize your email campaigns, please contact support.

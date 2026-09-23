@@ -212,3 +212,31 @@ If you need any of these advanced features, reach out and our team can scope the
 When we convert your form to a CRM form, the legacy form is deactivated and removed from the front end of your site, so visitors only see the new CRM form. We do not remove the legacy form plugin, so any previously collected submissions remain viewable in your WordPress backend. Your existing form entries are also migrated into the CRM.
 
 </details>
+
+<details>
+<summary>Does DNSSEC block SSL certificates on WordPress hosting?</summary>
+
+No. SSL uses Let's Encrypt HTTP-01, so a correctly signed DNSSEC zone does not block certificates. Certificate problems with DNSSEC usually mean the zone is misconfigured, often an old DS record left after a nameserver change, which can take the domain offline until DNSSEC is fixed.
+
+</details>
+
+<details>
+<summary>Why do old A records still show after I update DNS?</summary>
+
+A-record updates depend on the DNS registry and can take additional time to propagate. Wait for propagation to finish before treating the old value as a hosting failure.
+
+</details>
+
+<details>
+<summary>Can SSL be forced if I connected a custom domain before DNS finished propagating?</summary>
+
+Wait until DNS for the custom domain has fully propagated, then retry SSL. If the certificate still does not issue, contact support so SSL can be installed for the custom domains and the domain can be set as primary.
+
+</details>
+
+<details>
+<summary>Why does the site show "Site Not Found" after I switch to a custom domain?</summary>
+
+Confirm who controls DNS. If the domain uses custom nameservers, you cannot fix records only at the registrar. Point the hostname that should serve the site to the correct hosting IP (or use the default hosting domain until DNS is updated). Automatic subdomain provisioning for every case is not available as a self-serve fix.
+
+</details>
