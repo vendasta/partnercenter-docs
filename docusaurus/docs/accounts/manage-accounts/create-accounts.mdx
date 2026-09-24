@@ -32,7 +32,7 @@ Creating accurate business accounts is essential because:
 ### Individual account creation
 - Business search and automatic data population
 - Manual business profile entry
-- Required and optional field configuration
+- Required and recommended field configuration
 - Category and market assignment
 
 ### Bulk account import
@@ -69,13 +69,13 @@ Business search automatically populates address, phone, and category information
 When businesses don't appear in search results:
 
 1. Click `Go to Account Creation` from the search interface
-2. **Complete required business information**:
+2. **Complete the required business information**:
    - `Business Name`: Official business name as it appears publicly
-   - `Street Address`: Physical business location
-   - `City, State/Province, ZIP`: Complete location details
-   - `Country/Region`: Business location country
+3. **Fill in the recommended business information**:
+   - `Street Address`, `City, State/Province, ZIP`, and `Country/Region`: Complete location details
    - `Phone Number`: Primary business contact number
    - `Business Categories`: Select up to 3 relevant categories
+   - `Website URL`: Business website address
 
 :::info Business Categories Reference  
 For a complete list of available business categories and guidance on proper classification, see [Business Categories](../directory/business-categories.mdx). Proper categorization ensures optimal product features and integration capabilities.
@@ -85,16 +85,17 @@ For a complete list of available business categories and guidance on proper clas
 If no suitable category exists, select "Other" - but note that some product features may be limited.
 :::
 
-3. **Add optional information**:
-   - `Website URL`: Business website address
+`Business Name` is the only field required to create the account. The fields above are recommended rather than required — if you leave any of them blank and click `Create Account`, a warning lets you choose to continue or go back and complete them. Going back highlights the incomplete recommended fields.
+
+4. **Add optional information**:
    - `Customer Identifier`: Your internal tracking ID
    - `Business Description`: Brief description of services
    - `Additional Contact Info`: Secondary phone, fax, email
-4. **Configure account settings**:
+5. **Configure account settings**:
    - `Market Assignment`: Select appropriate geographic market
    - `Service Area`: Choose if business serves customers at their location
    - `Business Hours`: Operating schedule information
-5. Click `Create Account` to save
+6. Click `Create Account` to save
 
 ### Handling special business types
 
@@ -105,7 +106,7 @@ SABs commonly don't appear in the account creation search bar. This is expected.
 **To create an account for an SAB:**
 
 1. In the `Create Account` search, type the business name. If it doesn't appear, click `Skip to Account Creation` (or `Go to Account Creation`).
-2. Fill in the business name and a valid street address. If the SAB has no public address, use the owner's address or a city/ZIP placeholder.
+2. Fill in the business name and, if available, a street address. If the SAB has no public address, use the owner's address or a city/ZIP placeholder.
 3. Once the account is created, update the listing to define a service area radius and remove or hide the public street address if needed.
 
 :::warning
@@ -322,7 +323,7 @@ Review the error messages, correct data formatting issues in your CSV file, and 
 SABs often won't appear in the Create Account search because Google's Locations API doesn't surface businesses without a verified public address. To create the account:
 
 1. Type the business name in the search bar. If it doesn't appear, click `Skip to Account Creation`.
-2. Enter the business name and a street address (use the owner's address or a placeholder city/ZIP if there's no public address).
+2. Enter the business name and, if available, a street address (use the owner's address or a placeholder city/ZIP if there's no public address).
 3. After the account is created, update the listing to define a service area and hide the street address if needed.
 
 Creating an account with no street address will limit Listing Sync and other listing products until an address is added.
@@ -338,6 +339,12 @@ Yes. When creating an individual account, the **Users** panel lets you add the a
 <summary>Where is the information gathered when creating an account by search?</summary>
 
 The Google Locations API is used to gather the Name, Address, Phone Number, Website, geo-location, Business Category and Hours of Operation.  The social profile URLs are gathered from the business website.
+</details>
+
+<details>
+<summary>Can I create an account without a phone number, address, category, or website?</summary>
+
+Yes. `Business Name` is the only required field when creating an account manually. Leaving the others blank shows a warning when you click `Create Account`, but doesn't block you from creating the account. Keep in mind that missing information — like a street address — can limit which products work correctly until it's added later.
 </details>
 
 {/* growth-engine callout — commented out 2026-08-19 (Cal, Learn tab refresh) because the
