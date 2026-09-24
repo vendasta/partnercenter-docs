@@ -62,6 +62,19 @@ URL redirects are managed in `docusaurus.config.ts` via `@docusaurus/plugin-clie
 - **The reader IS the partner. Never describe them in the third person.** No "most partners," "many partners," "some partners," "partners often," "agencies," or "the agency" when the phrase means the person reading. Write "you" and "your clients". This applies to `docs/` and `training/` alike.
 - Aggregate framing ("most partners do X") is almost always there to soften a recommendation. Cut the clause, address the reader directly, or name the moment instead of the crowd.
 
+### Evergreen content
+
+Write only about the product as it works today, in present tense. If a detail can't be written without referring to the past or the future, leave it out.
+
+- **Never use historical language:** previously, formerly, used to, before this update, earlier versions, renamed, legacy, deprecated, has since changed
+- **Never use future language:** coming soon, on the roadmap, will be available, planned feature
+- **Watch for subtle change language:** "the new dashboard", "now supports", "recently added", "updated to include", "you can now"
+- **Never mention a former product name**, including in `keywords`. Use only the current name (e.g. Fulfillment, not Task Manager; Conversations, not Inbox)
+- Don't rename UI labels in instructions until the UI itself changes
+- **Exception:** articles in `docs/legacy/` document retired tools and may describe them as legacy. KM handles their retire or redirect decisions
+
+This matches the businessapp-docs evergreen rule and KM's Write for AI and AEO Standard (knowledge-management Artifact 14, rules W11 and W13). AI assistants can't tell when a sentence was written, so "now supports" or "coming soon" gets repeated as current fact.
+
 ### Frontmatter
 
 ```yaml
