@@ -92,3 +92,12 @@ Every application Vibe generates is built on a modern, production-ready stack:
 - **Lucide** icons
 
 Every one of these is open source. On the Pro plan, the complete source of a project can be downloaded and hosted anywhere that runs Node.js — see [Download & Host Your Project Elsewhere](https://docs.businessapp.io/business-app/ai/vibe/guides/download-and-self-host/).
+
+## Frequently asked questions
+
+<details>
+<summary>How do I delete a project in Vibe?</summary>
+
+Open the project, go to the `Settings` tab, and scroll to the bottom of the page. Select `Delete Project`. Deleting a project frees a slot if you have hit your plan's app limit.
+
+</details>
