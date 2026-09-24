@@ -217,7 +217,25 @@ Google does not allow transfers to resellers that previously hosted the same Goo
 
 ## Transferring Google Workspace out of Vendasta
 
-You can transfer Google Workspace account(s) **out of the Vendasta platform** by cancelling the product.
+You can transfer Google Workspace account(s) **out of the Vendasta platform** by cancelling the product. This is the usual path when a client stops working with you but wants to keep their branded email.
+
+:::info
+Moving out does **not** use a transfer token. The transfer token in [Transferring existing Google Workspace subscriptions](#transferring-existing-google-workspace-subscriptions) is only for moving a subscription **into** Vendasta.
+:::
+
+### Before you cancel
+
+Make sure the client can take over billing on the Google side — otherwise their email is at risk once the 7-day window below starts:
+
+1. **Confirm who the client's Google Workspace super administrator is.** Setting up billing with Google requires a super administrator (or an administrator with billing privileges) in the [Google Admin Console](https://admin.google.com). Being an admin in Business App or Partner Center does not grant any Google Workspace admin role.
+2. **Make sure that person can sign in to the Google Admin Console.** If nobody at the client holds the super administrator role, an existing super administrator must assign it in the Google Admin Console under `Directory` → `Users` → the user → `Admin roles and privileges` before you cancel.
+3. **Tell the client to expect an email from Google** prompting them to set up billing, and that they have 7 days to act on it.
+
+### Cancel the product
+
+Cancel Google Workspace on the client's account as you would any other product. See [Cancel products](/accounts/manage-accounts/product-management#cancel-products).
+
+If the cancellation is blocked with a message that licenses are still assigned in Google Workspace, contact **support@vendasta.com** with the account ID and the exact message rather than deleting users to get past it — deleting a Google Workspace user deletes that user's mailbox.
 
 ### What happens after cancellation?
 

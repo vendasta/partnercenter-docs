@@ -112,14 +112,38 @@ To cancel a product for your customer:
 
 1. Go to `Accounts` → `Manage Accounts` and open the account.
 2. In the `Products` card on the Overview, click the menu icon beside the product and select `Cancel product`.
-3. Confirm cancellation, or choose `Schedule deactivation` and select one of:
-   - Cancel at the end of the current period
-   - Cancel immediately
-   - Cancel after a specified number of renewals
+3. Choose when the product stops, then confirm.
+
+### Choose when the product stops
+
+| Option | When access ends | What you are billed |
+|---|---|---|
+| `Cancel at the end of the current period` | On the product's next renewal date | Nothing further — the product does not renew |
+| `Cancel immediately` | Right away | The current period was charged when it started and is not refunded automatically |
+| `Cancel after a specified number of renewals` | After the renewals you choose | Each of those renewals, then nothing |
+
+A product cancelled for the end of the period keeps working until its renewal date — this is expected, not an error. If the client needs the product to stop now (for example, an AI receptionist that should stop answering their customers), choose `Cancel immediately`.
 
 :::info
-The product remains active until the date shown in the cancellation card. You can re-activate during this period.
+The cancellation card on the account shows the date the product will deactivate. You can also find it on the account's `Activation History` page.
 :::
+
+### What cancelling does and does not stop
+
+- **Future renewals stop.** You are not charged for the product again after it deactivates.
+- **Charges already incurred still appear.** Vendasta invoices at the start of each month for everything activated or renewed in the previous month, so a product cancelled this month can still appear on your next invoice for a renewal that already happened. See [My billing](/administration/my-account/my-billing).
+- **Commitments continue.** A product on a commitment (for example, an annual contract) bills through the end of the commitment, even if it is cancelled or the account is deleted.
+- **Your client's billing is separate.** Every activated product creates a wholesale subscription (you to Vendasta) and a retail subscription (you to your client). After cancelling, check the client's retail subscription in `Commerce` → `Subscriptions` so they are not invoiced for a product they no longer have. See [Subscription management](/commerce/subscriptions/subscription-management).
+
+To ask for money back on a charge that has already been made, submit a [billing request](/administration/my-account/my-billing/submit-a-billing-request).
+
+### Undo a cancellation
+
+Until the deactivation date, click the menu icon beside the product and select `Undo Cancellation`. The product continues renewing as before.
+
+### Cancel products or delete the account?
+
+If a client is leaving, cancel their products — do not delete the account to stop billing. Deleting an account cancels its products and removes all of its data permanently, but it does not end commitment billing early. See [Delete accounts](/accounts/manage-accounts/delete-accounts).
 
 ## Manage products FAQs
 
@@ -141,56 +165,6 @@ Some products support multiple domains per account. Review the product’s confi
 - Confirm understanding of limitations after downgrades
 - Document edition change reasons for future reference
 
-## How to handle product cancellations
-
-### Understanding cancellation types
-
-**Temporary Suspension:**
-- Customer requests service pause for specific period
-- Billing suspended but account and data preserved
-- Easy reactivation when customer is ready to resume
-
-**Product Replacement:**
-- Switching from one product to another
-- Data migration and transition planning required
-- Minimizing service interruption during transition
-
-**Permanent Cancellation:**
-- Complete product discontinuation
-- Data retention and export considerations
-- Final billing and contract closure
-
-### Cancellation process
-
-**Pre-Cancellation Steps:**
-1. **Understand cancellation reason** and explore alternatives
-2. **Review contract terms** for cancellation procedures and timing
-3. **Discuss alternative solutions** (downgrades, suspensions, different products)
-4. **Obtain written cancellation confirmation** if required
-5. **Plan transition timeline** and customer communication
-
-**Executing Cancellations:**
-1. **Schedule cancellation** for appropriate date (often end of billing period)
-2. **Prepare data export** if customer requests their information
-3. **Disable product access** according to cancellation terms
-4. **Process final billing** and handle any prorated charges
-5. **Confirm cancellation completion** with customer
-6. **Document cancellation** reasons and process for future reference
-
-### Post-cancellation considerations
-
-**Data Handling:**
-- Export customer data if requested before cancellation
-- Follow data retention policies for cancelled accounts
-- Securely delete customer data according to privacy requirements
-- Maintain necessary records for business and legal purposes
-
-**Relationship Management:**
-- Maintain professional relationship despite cancellation
-- Leave door open for future business opportunities
-- Request feedback on improvement opportunities
-- Consider win-back campaigns for appropriate situations
-
 ## Frequently asked questions (FAQs)
 
 <details>
@@ -209,12 +183,6 @@ Most systems allow immediate upgrades with pro-rated billing adjustments. Check 
 <summary>What happens to customer data when I downgrade their product edition?</summary>
 
 Data is typically preserved, but access to advanced features may be restricted. Some advanced reports or configurations may become unavailable. Always communicate these limitations before processing downgrades.
-</details>
-
-<details>
-<summary>How do I handle customers who want to cancel products temporarily?</summary>
-
-Consider offering product suspension instead of cancellation. This preserves their account setup and data while pausing billing, making reactivation much easier when they're ready to resume service.
 </details>
 
 <details>
