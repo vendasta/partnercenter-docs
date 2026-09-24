@@ -3,6 +3,9 @@ title: "Templated Website"
 sidebar_label: "Templated"
 sidebar_position: 2
 description: "An overview of the Templated Website service: choose a template, complete onboarding, and launch a WordPress site of up to 10 pages."
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 ## Overview

@@ -3,6 +3,9 @@ title: "Vendasta Services resource overview"
 sidebar_label: "Vendasta Services resource overview"
 description: "An overview of Vendasta’s teams, contacts, and resources for partners working with Vendasta Services."
 last_reviewed: 2026-09-21
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 This article provides an overview of Vendasta's teams and resources, which are helpful when working with Vendasta Services, the company's in-house fulfillment vendor.

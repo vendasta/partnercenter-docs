@@ -3,6 +3,9 @@ title: AI Voice Receptionist Overview
 sidebar_label: AI Voice Receptionist
 sidebar_position: 3
 description: Learn how to set up, configure, test, and troubleshoot your AI Voice Receptionist, including call routing, capabilities, knowledge sources, and frequently asked questions.
+brand: vendasta
+product: ai-workforce
+audience: partners
 ---
 
 import { AISparkleIcon, SettingsIcon, CRMIcon, GraduationCapIcon } from '@site/src/components/Icons';

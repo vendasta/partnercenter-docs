@@ -11,6 +11,9 @@ tags:
   - search-ads
   - display-ads
   - social-ads
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 With the [Specialty Ad Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN), Vendasta Services offers advertising across a diverse range of platforms for advertising, catering to different needs and budgets.

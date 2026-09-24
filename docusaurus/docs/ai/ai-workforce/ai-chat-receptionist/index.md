@@ -2,6 +2,9 @@
 title: AI Chat Receptionist Overview
 sidebar_position: 2
 description: Set up, train, and monitor the AI Chat Receptionist to capture leads and answer visitor questions across web chat and SMS.
+brand: vendasta
+product: ai-workforce
+audience: partners
 ---
 
 import { AISparkleIcon, GraduationCapIcon } from '@site/src/components/Icons';

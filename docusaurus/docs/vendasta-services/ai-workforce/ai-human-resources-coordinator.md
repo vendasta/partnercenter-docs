@@ -2,6 +2,9 @@
 title: "AI Human Resources Coordinator: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Human Resources Coordinator"
 description: "An overview of the AI Human Resources Coordinator service, detailing the process from the fulfillment form through onboarding, HR Coordinator configuration, training, and the 30-day check-in."
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';

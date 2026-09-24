@@ -5,6 +5,9 @@ sidebar_position: 3
 description: Step-by-step guide to building custom AI capabilities that connect AI Employees to external systems using tools and APIs.
 tags: [ai-capabilities, custom-capabilities, ai-workforce, integrations]
 keywords: [custom capabilities, AI capabilities, tools, integrations, API, AI Employees, prompts, testing]
+brand: vendasta
+product: ai-workforce
+audience: partners
 ---
 
 import { AISparkleIcon, GraduationCapIcon } from '@site/src/components/Icons';

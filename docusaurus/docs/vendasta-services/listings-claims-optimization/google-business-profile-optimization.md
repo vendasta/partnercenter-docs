@@ -4,6 +4,9 @@ sidebar_label: "Google Business Profile Optimization"
 description: "An overview of the Google Business Profile Optimization service: creation and claiming, hands-on guidance through Google's verification, ownership transfer, and monthly maintenance."
 tags: [vendasta-services, listings, google-business-profile, optimization, gbp, verification]
 keywords: [Google Business Profile, GBP optimization, listing claim, verification, postcard, suspension, reinstatement, bulk verification, Social AI]
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 # Google Business Profile Optimization

@@ -7,6 +7,9 @@ updated_at: "2025-06-03T17:16:27Z"
 labels: []
 section_id: 18536913508375
 locale: "en-us"
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 If you have an existing WordPress website and would like to move it onto Vendasta’s hosting platform (WordPress Hosting Pro), Vendasta Services can help!

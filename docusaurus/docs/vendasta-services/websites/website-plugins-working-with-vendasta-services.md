@@ -3,6 +3,9 @@ title: "Website Plugins | Working with Vendasta Services"
 sidebar_label: "Plugins"
 sidebar_position: 8
 description: "What website plugins are, which ones Vendasta Services can integrate into your website build, and what to expect for cost and setup."
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 ## What are website plugins?

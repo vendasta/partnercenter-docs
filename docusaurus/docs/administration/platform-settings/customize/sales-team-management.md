@@ -4,6 +4,9 @@ sidebar_label: Sales Team Management
 description: Configure sales team permissions, access controls, pricing visibility, and reporting limits for effective team management
 tags: [sales-management, team-permissions, access-controls, snapshot-reports]
 keywords: [sales-permissions, team-management, wholesale-pricing, snapshot-limits, email-campaigns]
+brand: vendasta
+product: partner-center-core
+audience: partners
 ---
 
 ## What is sales team management?

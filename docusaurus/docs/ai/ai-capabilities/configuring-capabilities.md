@@ -2,6 +2,9 @@
 title: How to Configure AI Capabilities
 sidebar_label: Configuring Capabilities
 sidebar_position: 2
+brand: vendasta
+product: ai-workforce
+audience: partners
 ---
 
 import { AISparkleIcon, GraduationCapIcon } from '@site/src/components/Icons';

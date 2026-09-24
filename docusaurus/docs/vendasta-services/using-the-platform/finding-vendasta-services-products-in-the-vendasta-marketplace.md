@@ -2,6 +2,9 @@
 title: "Finding Vendasta Services Products in the Vendasta Marketplace"
 sidebar_label: "Finding Vendasta Services Products in the Vendasta Marketplace"
 description: "Learn two ways to identify Vendasta Services products while browsing the Vendasta Marketplace: filtering by vendor and recognizing product logos."
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 Vendasta Services is Vendasta's in-house fulfillment team. Partnering with us gives you access to skilled digital professionals who handle the work for you, so your clients maintain a strong online presence, a well-managed reputation, and an active presence across social platforms.

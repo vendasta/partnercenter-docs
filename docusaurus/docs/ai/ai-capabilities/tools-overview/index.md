@@ -12,6 +12,9 @@ tags:
   - AI Tools
   - Capabilities
   - Integrations
+brand: vendasta
+product: ai-workforce
+audience: partners
 ---
 
 import { GraduationCapIcon } from '@site/src/components/Icons';

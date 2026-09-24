@@ -5,6 +5,9 @@ sidebar_position: 8
 description: Learn how to create specialized AI employees tailored to specific business functions like job estimation, project management, sales enablement, and payment coordination.
 tags: [ai-workforce, custom-capabilities, ai-employees]
 keywords: [custom AI employees, AI workforce, capabilities, tools, deployment, web chat]
+brand: vendasta
+product: ai-workforce
+audience: partners
 ---
 
 import { GraduationCapIcon } from '@site/src/components/Icons';

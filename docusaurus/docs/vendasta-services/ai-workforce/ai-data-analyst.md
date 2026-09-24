@@ -2,6 +2,9 @@
 title: "AI Data Analyst: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Data Analyst"
 description: "An overview of the AI Data Analyst service, detailing the process from the fulfillment form through data source configuration, training, and the 30-day check-in."
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';

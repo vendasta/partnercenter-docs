@@ -2,6 +2,9 @@
 title: "AI Reputation Specialist: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Reputation Specialist"
 description: "An overview of the AI Reputation Specialist service, detailing the process from the fulfillment form to the final configuration and ongoing support."
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';

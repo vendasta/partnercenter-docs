@@ -3,6 +3,9 @@ title: "Express Website Build"
 sidebar_label: "Express build"
 sidebar_position: 1
 description: "An overview of the Express Website Build service, a do-it-for-me solution for creating an affordable, AI-generated website with a same-day first draft."
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 ## Overview

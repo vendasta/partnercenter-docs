@@ -3,6 +3,9 @@ title: "Accelerated Templated Website"
 sidebar_label: "Accelerated templated"
 sidebar_position: 3
 description: "An overview of the Accelerated Templated Website service built on Duda, available in two tiers: Accelerated Templated Website and Accelerated Templated Website Plus."
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 ## Overview

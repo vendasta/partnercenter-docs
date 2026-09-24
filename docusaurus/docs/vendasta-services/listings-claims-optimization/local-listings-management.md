@@ -2,6 +2,9 @@
 title: "Local Listings Management"
 sidebar_label: "Local Listings Management"
 description: "An overview of the Local Listings Management service: setup and claiming, guided verification, ownership transfer, and ongoing monitoring on Google, Apple, and Bing."
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 # Local Listings Management
