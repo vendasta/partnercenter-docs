@@ -5,6 +5,9 @@ description: "Managed setup and claiming for one listing site of your choice or 
 sidebar_position: 1
 tags: [vendasta-services, listings, claims, listing-claim, google-business-profile, medical]
 keywords: [listing claim, claim listing, medical listing claim, Google Business Profile, Yelp, Bing, RateMDs, verification, postcard, NPI]
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 # Listing Claim

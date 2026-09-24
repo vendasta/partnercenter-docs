@@ -2,6 +2,9 @@
 title: "Ordering Vendasta Services products: best practices"
 sidebar_label: "Ordering Vendasta Services products: best practices"
 description: "Learn best practices for ordering Vendasta Services products, including how to complete fulfillment forms and ordering tips for website and digital ads services."
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 ## Ordering products - general

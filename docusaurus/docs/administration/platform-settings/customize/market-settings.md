@@ -4,6 +4,9 @@ sidebar_label: Markets & Advanced Configuration
 description: Configure markets, early access programs, business priorities, and advanced platform features
 tags: [markets, early-access, business-priorities, advanced-configuration]
 keywords: [market-configuration, market-management, early-access-program, business-priorities, marketplace-vendor-control]
+brand: vendasta
+product: partner-center-core
+audience: partners
 ---
 
 This comprehensive guide covers market configuration, advanced platform settings, and specialized features including Early Access Program enrollment, business priorities customization, and marketplace vendor controls.

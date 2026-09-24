@@ -3,6 +3,9 @@ title: Building Custom Tools
 sidebar_label: "Tutorial: Building Custom Tools"
 sidebar_position: 2
 description: Step-by-step guide for building custom tools using API documentation, including best practices and troubleshooting tips
+brand: vendasta
+product: ai-workforce
+audience: partners
 ---
 
 import { AISparkleIcon } from '@site/src/components/Icons';

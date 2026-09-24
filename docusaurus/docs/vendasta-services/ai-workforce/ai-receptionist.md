@@ -2,6 +2,9 @@
 title: "AI Receptionist: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Receptionist"
 description: "An overview of the AI Receptionist service, detailing the process from the initial call to the final configuration and ongoing support."
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';

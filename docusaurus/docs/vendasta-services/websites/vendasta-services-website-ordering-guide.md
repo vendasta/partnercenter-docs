@@ -7,6 +7,9 @@ updated_at: "2024-07-02T16:39:52Z"
 labels: []
 section_id: 18536913508375
 locale: "en-us"
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 ## Guide

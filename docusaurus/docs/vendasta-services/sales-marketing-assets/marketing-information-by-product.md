@@ -2,6 +2,9 @@
 title: "Marketing Information By Product"
 sidebar_label: "Marketing Information By Product"
 description: "Find marketing information and assets for each product in the Marketplace, including quick links to the main product pages."
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 We have a host of information and marketing assets available in the Marketplace. Go to `Screenshots and Files` at the top of each page to find valuable resources. For quick access and easy reference, here is a list of the main product pages:

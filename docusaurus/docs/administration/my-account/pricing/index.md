@@ -4,6 +4,9 @@ description: View pricing information and manage your product pricing strategies
 sidebar_position: 6
 tags: [pricing, administration, partner-center]
 keywords: [pricing, wholesale prices, discounts, billing models]
+brand: vendasta
+product: partner-center-core
+audience: partners
 ---
 
 import Tabs from '@theme/Tabs';

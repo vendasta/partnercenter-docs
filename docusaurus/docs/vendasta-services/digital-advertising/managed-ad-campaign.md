@@ -5,6 +5,9 @@ sidebar_position: 1
 description: "Managed Ad Campaign is a do-it-for-me, single-network ad campaign built, launched the same day, and managed by certified ads specialists on Google/Bing Search, Google Display, or Meta. Available for businesses in the United States and Canada only."
 tags: [vendasta-services, digital-advertising, managed-ads, vendasta-ads, campaigns]
 keywords: [Managed Ad Campaign, single network, same-day launch, Google Search, Bing, Google Display, Meta, call tracking, conversion tracking, Advertising Intelligence]
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 # Managed Ad Campaign

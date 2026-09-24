@@ -4,6 +4,9 @@ sidebar_label: Visual Branding Guide
 description: Logos, colors, favicons, and white-label customization for your platform.
 tags: [branding, visual-identity, logos, white-label, customization]
 keywords: [partner-branding, white-label, logo-customization, favicon, brand-identity, login-page]
+brand: vendasta
+product: partner-center-core
+audience: partners
 ---
 
 Customize your platform’s appearance with your own logos, colors, company name, and visual elements. White-label branding keeps your identity consistent everywhere customers see the platform: Business App, email campaigns, and client communications.

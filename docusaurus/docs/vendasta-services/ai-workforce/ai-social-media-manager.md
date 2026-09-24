@@ -3,6 +3,9 @@ title: "AI Social Media Manager: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Social Media Manager"
 description: "An overview of the AI Social Media Manager service: how setup works, how your autonomous content calendar is built, and ongoing optimization."
 last_reviewed: 2026-09-21
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';

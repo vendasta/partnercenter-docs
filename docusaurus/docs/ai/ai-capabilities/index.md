@@ -4,6 +4,9 @@ sidebar_label: AI Capabilities
 description: Learn how AI capabilities work as specialized skills that enable AI employees to handle specific business tasks and automate customer interactions.
 tags: [ai-capabilities, capabilities, ai-employees, custom-capabilities, automation]
 keywords: [AI capabilities, capabilities, custom capabilities, AI employees, automation, tools, integrations, lead capture, appointment booking]
+brand: vendasta
+product: ai-workforce
+audience: partners
 ---
 
 import { GraduationCapIcon } from '@site/src/components/Icons';

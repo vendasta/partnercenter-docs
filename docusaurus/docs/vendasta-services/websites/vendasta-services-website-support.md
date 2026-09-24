@@ -3,6 +3,9 @@ title: "Vendasta Services Website Support"
 sidebar_label: "Support"
 sidebar_position: 6
 description: "This article details the inclusions of Vendasta Services' Website Support product and the process/best practices for submitting requests to our Website Support team."
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 This article details the inclusions of Vendasta Services’ [Website Support](https://partners.vendasta.com/marketplace/products/MP-5FTSXB8XVSDRJW4RFQ84B8H3SGKG56JC) product and the process/best practices for submitting requests to our Website Support team.

@@ -2,6 +2,9 @@
 title: "AI Support Agent: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Support Agent"
 description: "An overview of the AI Support Agent service, detailing the process from the fulfillment form through channel configuration, knowledge base setup, training, and the 30-day check-in."
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';

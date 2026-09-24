@@ -2,6 +2,9 @@
 title: "Connect the AI Chat Receptionist with ServiceTitan"
 sidebar_label: Connect with ServiceTitan
 description: Connect the AI Chat Receptionist to ServiceTitan to look up customers, schedule appointments, and provide job status updates.
+brand: vendasta
+product: ai-workforce
+audience: partners
 ---
 
 import {AISparkleIcon} from '@site/src/components/Icons'

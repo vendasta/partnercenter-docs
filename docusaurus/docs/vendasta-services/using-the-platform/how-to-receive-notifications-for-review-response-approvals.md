@@ -2,6 +2,9 @@
 title: "How to Receive Notifications for Review Response Approvals"
 sidebar_label: "Configuring User Notifications"
 description: "How to configure user notifications to receive review response approval emails for reputation management services."
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 Vendasta Services offers reputation management services that can include an optional approval process for responses to negative reviews. Users can receive notifications with proposed responses to negative reviews.

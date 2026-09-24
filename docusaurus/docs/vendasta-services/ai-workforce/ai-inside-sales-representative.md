@@ -2,6 +2,9 @@
 title: "AI Inside Sales Representative: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Inside Sales Representative"
 description: "An overview of the AI Inside Sales Representative service, detailing the process from the fulfillment form through onboarding, ISR configuration, training, and the 30-day check-in."
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';
