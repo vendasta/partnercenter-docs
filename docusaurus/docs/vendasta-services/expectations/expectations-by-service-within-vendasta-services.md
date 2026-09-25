@@ -1,13 +1,22 @@
 ---
 title: "Expectations by Service within Vendasta Services"
 sidebar_label: "By service (Vendasta)"
-description: "With Vendasta's Vendasta Services, you have access to a team of digital marketing experts. Leveraging our team, you can claim and optimize your online listings"
+description: "What to expect from each Vendasta Services product line: order confirmation, calls, client communication, required access, and launch timelines."
 brand: vendasta-services
 product: vendasta-services-core
-audience: smb
+audience: partners
+content_type: reference
+kb_id: KB-00155
+answer_snippet: "Every Vendasta Services order gets an order confirmation email within 48 hours and a project tracker in Business App. Launch takes 1 to 10 business days after assets are received, depending on the service."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-With Vendasta Services, you have access to a team of AI and marketing experts. Leveraging our team, you can claim and optimize your online listings, boost your reputation, engage your followers with social content, build your website, and drive awareness of your business with digital advertising. All the while, our team will communicate with you to help set service expectations, inform you about updates, and respond to questions related to your service.
+Every Vendasta Services order gets an order confirmation email within 48 hours and a project tracker in Business App. Launch takes 1 to 10 business days after assets are received, depending on the service.
+
+Vendasta Services gives you a team of AI and marketing experts who can claim and optimize your clients' online listings, manage their reputation, post social content, build websites, and run digital advertising. The team communicates with you to set service expectations, share updates, and answer questions about each service.
 
 With so many services available, it's important to understand what to expect from each one. This article will break down what you can expect based on each product line.
 
@@ -48,7 +57,7 @@ This is unique to Specialty Ad Campaign orders. All work is completed and the ad
 
 ## Direct-to-customer communication
 
-For all services, with the exception of Digital Ads, partners have the option of having our team communicate directly with the customer at the business. This includes all emails and calls. For Digital Ads, due to the sensitive nature of discussions around budgets, wholesale prices, and retail prices, all communication is kept partner-only to protect this sensitive information.
+For all services, with the exception of Digital Ads, you have the option of having our team communicate directly with the customer at the business. This includes all emails and calls. For Digital Ads, due to the sensitive nature of discussions around budgets, wholesale prices, and retail prices, all communication is kept partner-only to protect this sensitive information.
 
 ## Project tracking in Business App
 
@@ -81,3 +90,40 @@ _\*Note that for Website services, either credentials are required or delegate a
 Timelines for delivery can vary depending on additional services ordered and project complexity. If you are concerned that a business may require complex services (e.g. a high volume of social posts, a listing claim requiring intervention from the source’s support team, or a highly customized website), reach out to your account contact with Vendasta for more information and assistance.
 
 _\*Note that complex listing claims, including Google Business Profile claims and optimization, may take up to 90 days to complete._
+
+## Frequently asked questions
+
+<details>
+<summary>When should I expect an update after placing a Vendasta Services order?</summary>
+
+All points of contact included on the order form receive an order confirmation email within 48 hours. The email includes an order reference number and requests the details fulfillment needs to complete the service.
+
+</details>
+
+<details>
+<summary>Where can I track the progress of a Vendasta Services order?</summary>
+
+Every service has a project tracker in `Business App` → `Projects` that shows the tasks to be completed, expected completion dates, and notes.
+
+</details>
+
+<details>
+<summary>Can the Vendasta Services team communicate directly with my client?</summary>
+
+Yes, for every service except Digital Ads. For Digital Ads, all communication is partner-only to protect budget and pricing information.
+
+</details>
+
+<details>
+<summary>Why am I getting requests from Digital Agency or an @yourdigitalagents.com email address?</summary>
+
+Many services need access granted to the team under the Digital Agency name, for example for Google Business Profile claims, Facebook access, or domain registrar delegate access. This name can't be changed, even if you use white-label communications.
+
+</details>
+
+<details>
+<summary>How long does a listing claim take?</summary>
+
+Listings launch in about 3 business days after assets are received. Complex listing claims, including Google Business Profile claims and optimization, may take up to 90 days.
+
+</details>
