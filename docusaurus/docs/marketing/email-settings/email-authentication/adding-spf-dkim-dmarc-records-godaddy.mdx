@@ -1,16 +1,25 @@
 ---
-title: Add SPF, DKIM, and DMARC records (GoDaddy)
+title: "How do I add SPF, DKIM, and DMARC records in GoDaddy?"
 sidebar_label: Add SPF, DKIM, DMARC Records (GoDaddy)
 sidebar_position: 1
-description: Learn how to add SPF, DKIM, and DMARC records on GoDaddy to improve email deliverability
+description: "Add the SPF, DKIM, and DMARC records from Partner Center email settings to your GoDaddy DNS, and check that each record is detected."
 brand: vendasta
 product: marketing
 audience: partners
+content_type: how-to
+kb_id: KB-00147
+answer_snippet: "To authenticate your email domain for Partner Center in GoDaddy, add four DNS records from Marketing → Email settings: one SPF (TXT), two DKIM (CNAME), and one DMARC (TXT). Remove your domain from each hostname, because GoDaddy adds it automatically."
+doc_owner: marketing
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
+
+To authenticate your email domain for Partner Center in GoDaddy, add four DNS records from `Marketing` → `Email settings`: one SPF (TXT), two DKIM (CNAME), and one DMARC (TXT). Remove your domain from each hostname, because GoDaddy adds it automatically.
 
 Before proceeding with the instructions below, follow this first and then continue with this guide: [Connect Domain](../connecting-domains)
 
-## Add SPF record
+## How do I add the SPF record? {#add-spf-record}
 
 When adding the verification records to your GoDaddy domain, note that GoDaddy will automatically add .yourdomain.com to the end of any hostnames added. While our records include your domain in the hostname, it should be removed before adding it to your DNS records. 
 
@@ -22,7 +31,7 @@ A hostname in our system that reads `@.yourdomain.com` would simply be added as 
 4. Look for the DNS records management section
 5. Add the required SPF records found in `Partner Center` → `Marketing` → `Email settings` → `SPF`. This will be a TXT record.
 
-## Adding DKIM records
+## How do I add the DKIM records? {#adding-dkim-records}
 
 1. Go to your GoDaddy account
 2. Navigate to your Domain section
@@ -30,7 +39,7 @@ A hostname in our system that reads `@.yourdomain.com` would simply be added as 
 4. Look for the DNS records management section
 5. Add the required DKIM records found in `Partner Center` → `Marketing` → `Email settings` → `DKIM`. There are **two** separate DKIM records, both added as CNAME records. Both are required, so do not stop after the first one.
 
-## Adding DMARC record
+## How do I add the DMARC record? {#adding-dmarc-record}
 
 1. Go to your GoDaddy account
 2. Navigate to your Domain section
@@ -38,10 +47,37 @@ A hostname in our system that reads `@.yourdomain.com` would simply be added as 
 4. Look for the DNS records management section
 5. Add the required DMARC records found in `Partner Center` → `Marketing` → `Email settings` → `DMARC`. This will be added as a TXT record.
 
-## Validate your DNS records
+## How do I validate my DNS records? {#validate-your-dns-records}
 
 - DNS changes can take up to 48 hours to propagate throughout the internet
 - You should have added four records in total: one SPF (TXT), two DKIM (CNAME), and one DMARC (TXT)
 - From `Partner Center` → `Marketing` → `Email settings`, find the domain in the `Email domains` card. Each record row has a `Current value` column showing the value found at your DNS host, or `Not found` in red if it has not been detected yet. The domain's own row header carries the overall status, and a `Domain authorization required` banner stays on the page until every record lands.
 - If you're experiencing issues with email deliverability after adding these records, please wait at least 48 hours before troubleshooting further
 - For additional help with email configuration, contact GoDaddy support or refer to their documentation
+
+
+## Frequently asked questions
+
+<details>
+<summary>How do I enter the hostname in GoDaddy?</summary>
+
+GoDaddy adds `.yourdomain.com` to the end of every hostname, so remove your domain from the hostname shown in Partner Center. For example, a hostname of `@.yourdomain.com` is added as `@`.
+</details>
+
+<details>
+<summary>How many DNS records do I need to add?</summary>
+
+Add four records in total: one SPF (TXT), two DKIM (CNAME), and one DMARC (TXT). Both DKIM records are required.
+</details>
+
+<details>
+<summary>I added the records. How long until they're detected?</summary>
+
+DNS changes can take up to 48 hours to propagate. Check the `Current value` column in the `Email domains` card in `Partner Center` → `Marketing` → `Email settings`; a record that hasn't been detected yet shows `Not found`.
+</details>
+
+<details>
+<summary>Where do I find the DNS records to add?</summary>
+
+Find the SPF, DKIM, and DMARC records in `Partner Center` → `Marketing` → `Email settings`.
+</details>

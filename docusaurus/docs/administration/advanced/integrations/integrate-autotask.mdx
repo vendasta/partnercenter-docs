@@ -1,31 +1,40 @@
 ---
-title: Integrate Autotask with Partner Center
+title: "How do I integrate Autotask with Partner Center?"
 sidebar_label: Autotask
 sidebar_position: 6
 description: Connect your Datto Autotask PSA account with Vendasta to automatically sync company and contact records in both directions.
 brand: vendasta
 product: partner-center-core
 audience: partners
+content_type: how-to
+kb_id: KB-00144
+answer_snippet: "The Autotask integration in Partner Center syncs company and contact records between your Datto Autotask PSA account and the Vendasta CRM in both directions. You set up an API user and security level in Autotask, then connect it from Administration → Integrations."
+doc_owner: partner-center-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-# Integrate Autotask with Partner Center
+# How do I integrate Autotask with Partner Center? {#integrate-autotask-with-partner-center}
 
-Connect your Datto Autotask PSA account with Vendasta to automatically sync company and contact records in both directions. When a record changes in Autotask, it appears in Vendasta within seconds — and vice versa. No Zapier. No manual data entry. No copy-pasting between systems.
+The Autotask integration in Partner Center syncs company and contact records between your Datto Autotask PSA account and the Vendasta CRM in both directions. You set up an API user and security level in Autotask, then connect it from `Administration` → `Integrations`.
+
+When a record changes in Autotask, it appears in Vendasta within seconds, and changes in Vendasta can sync back to Autotask. You don't need Zapier or manual data entry to keep the two systems aligned.
 
 This integration keeps your customer data aligned across both platforms so your team always works with current information.
 
-## Who can use it
+## Who can use the Autotask integration? {#who-can-use-it}
 
 Both Partners and their SMB clients. Partners manage the connection in Partner Center, while SMBs benefit from synced data inside Business App.
 
-## What gets synced
+## What gets synced? {#what-gets-synced}
 
 | Data | Autotask to Platform | Platform to Autotask |
 |------|---------------------|---------------------|
 | Companies (clients) | Auto-synced | Auto-synced (when enabled) |
 | Contacts | Auto-synced | Auto-synced (when enabled) |
 
-## Before you begin — Autotask permissions
+## What Autotask permissions do I need before I begin? {#before-you-begin--autotask-permissions}
 
 Before connecting, your Autotask account must be set up with the correct permissions. Without these, the connection may not work, and sync will fail silently.
 
@@ -98,7 +107,7 @@ Before connecting, answer this question: Do you already have companies and conta
 | Yes — records exist in both systems | You must import Autotask IDs first to prevent duplicates. Follow the [Bulk Import](#bulk-import--preventing-duplicate-records) section below BEFORE connecting. |
 | Already connected and seeing duplicates | Follow the [Recovery](#recovery--already-have-duplicates) section at the bottom of this page. |
 
-## Bulk import — preventing duplicate records
+## How do I prevent duplicate records with a bulk import? {#bulk-import--preventing-duplicate-records}
 
 If your Vendasta CRM already has companies and contacts that also exist in Autotask, you must link them with Autotask IDs before connecting. Without this, the sync creates duplicate records as records change in Autotask.
 
@@ -168,7 +177,7 @@ Proceed to the next section. When the sync runs, it matches records by external_
 If you skip this step and connect first, the sync will create duplicate records for every company and contact. See the [Recovery](#recovery--already-have-duplicates) section at the bottom of this page if this has already happened.
 :::
 
-## Setting up the Autotask Integration
+## How do I set up the Autotask integration? {#setting-up-the-autotask-integration}
 
 With your Autotask permissions configured and bulk import complete (if needed), you are ready to connect.
 
@@ -233,7 +242,7 @@ Companies and contacts from Autotask sync into Vendasta automatically whenever c
 
 Done. Your Autotask integration is live. Changes sync in real time from this point forward.
 
-## Manage synced data
+## How do I manage synced data? {#manage-synced-data}
 
 The integration syncs the following data types:
 
@@ -254,7 +263,7 @@ To manage what syncs, go to **Settings** on your Autotask connection page:
 | One-way sync | Autotask is your primary source of truth and you want changes to flow into Vendasta only. | Updates made in Autotask sync into Vendasta. Changes made only in Vendasta do not write back to Autotask. |
 | Two-way sync | Your team actively works in both systems and wants updates to stay aligned. | Changes move in both directions. Agree ahead of time on who owns data quality and where edits normally happen, to avoid conflicting updates. |
 
-## Integration example
+## What does the sync look like in practice? {#integration-example}
 
 Here is a real-world example of the integration in action:
 
@@ -264,7 +273,7 @@ Here is a real-world example of the integration in action:
 
 <img src={require('./img/integrations/autotask/autotask_sync_example.png').default} alt="Sneha Iyer contact profile with Autotask sync activity notes" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-## Recommended rollout approach
+## How should I roll out the integration? {#recommended-rollout-approach}
 
 Roll the integration out gradually so you can confirm it behaves as expected before relying on it for every record:
 
@@ -286,7 +295,7 @@ Roll the integration out gradually so you can confirm it behaves as expected bef
 | "Broken" status on connection card | API credentials expired or revoked | Click **Re-authenticate**. Re-enter credentials. |
 | Sync back to Autotask not working | The record is missing its Autotask ID | Check the record in Vendasta. If autotask-company-id or autotask-contact-id is empty, use bulk import to add external IDs. |
 
-## Recovery — already have duplicates?
+## How do I recover if I already have duplicates? {#recovery--already-have-duplicates}
 
 If you connected Autotask before importing company and contact external IDs and now have duplicate records:
 

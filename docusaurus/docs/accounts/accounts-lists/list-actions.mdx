@@ -1,20 +1,27 @@
 ---
 title: Account List Actions  
-description: "The following administrative actions are available from Partner Center > Accounts > Account Lists by clicking the Menu icon next to the Account List."
+description: "Actions you can run on a Partner Center account list: export account data, add tags, add to campaigns, activate products, change market, and delete."
 sidebar_label: List Actions
 sidebar_position: 4
 brand: vendasta
 product: partner-center-core
 audience: partners
+content_type: reference
+kb_id: KB-00160
+answer_snippet: "To run an action on an account list in Partner Center, go to Accounts → Lists and click the three dots next to the list. You can export account data, add tags, add the list to a campaign, create Snapshot Reports, trigger automations, activate products, change market, or delete the list."
+doc_owner: partner-center-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-The following administrative actions are available from **Partner Center > Accounts > Lists >  click the three dots next to the desired list**.
+To run an action on an account list in Partner Center, go to `Accounts` → `Lists` and click the three dots next to the list. You can export account data, add tags, add the list to a campaign, create Snapshot Reports, trigger automations, activate products, change market, or delete the list.
 
 ## Customizing a static list view
 
 You can change which columns appear in your list view to surface the information that matters most to you (email, phone, tags, etc.):
 
-1. Open your list in **Partner Center > Accounts > Lists**
+1. Open your list in `Partner Center` → `Accounts` → `Lists`
 2. Click the **gear icon** in the upper-right corner of the list table
 3. Check or uncheck the columns you want to show or hide (e.g., Email, Phone, Tags)
 4. Close the panel — the view saves automatically
@@ -107,8 +114,8 @@ Allows you to add the List to an email marketing campaign. This will add all the
 
 ## Pause Campaigns
 
-Allows you to pause a currently active campaign for all the users and contacts that are assigned to the accounts in the List.  
-It's a little confusing with the status when it's paused. "Paused" will not appear as a separate status, but if there is a campaign in "ongoing" status, pausing it will change the status to "published".
+Allows you to pause an active campaign for all the users and contacts that are assigned to the accounts in the List.  
+"Paused" doesn't appear as a separate status. If a campaign is in "ongoing" status, pausing it changes the status to "published".
 
 ![Campaign with ongoing status](./img/accounts/lists/campaign-status-ongoing.png)
 ![Campaign with published status after being paused](./img/accounts/lists/campaign-status-published.png)
@@ -123,7 +130,7 @@ Depending on the state of the account, one of three things will happen:
 
 - If there has never been a Snapshot Report created for the account, a new Snapshot Report will be created.
 - If an account has previously had a Snapshot Report that has expired, that Snapshot Report will be refreshed.
-- If an account currently has an active Snapshot Report (created in the last 7 days), that account will be skipped.
+- If an account has an active Snapshot Report (created in the last 7 days), that account will be skipped.
 
 ## Trigger Automation
 
@@ -135,7 +142,7 @@ To merge lists:
 
 1. Add a common tag to all accounts in the first list.
 2. Add the same tag to all accounts in the second list.
-3. Go to `Accounts > Manage Accounts`, filter by the tag, select accounts, and add to a new list.
+3. Go to `Accounts` → `Manage Accounts`, filter by the tag, select accounts, and add to a new list.
 
 ## FAQs
 
@@ -143,6 +150,36 @@ To merge lists:
 <summary>Can I change a list name?</summary>
 
 There isn’t an edit-name option. Delete and recreate the list. Deleting a list does not remove its accounts.
+</details>
+
+<details>
+<summary>How do I export the accounts in a list?</summary>
+
+Click the three dots next to the list and select **Export Account Data**. You're taken to the list's **History** page. When the export finishes, click the **Menu** icon, then **Account NAP/Product CSV** to download the CSV.
+</details>
+
+<details>
+<summary>Does the account data export include user names and email addresses?</summary>
+
+No. **Export Account Data** contains account and business data (NAP and products), not individual user names and email addresses. To export users associated with your accounts, contact Support and request a user details export.
+</details>
+
+<details>
+<summary>Can I add a tag to every account in a list?</summary>
+
+Yes. Click the three dots next to the list, select **Add Tags**, choose an existing tag or create a new one, and click **Apply**. The tag is added to each account without removing its existing tags.
+</details>
+
+<details>
+<summary>How many accounts can a list hold?</summary>
+
+A list can hold up to 5,000 accounts, and bulk product activation is capped at 500 accounts per action. For larger sets, create multiple lists and apply a shared tag to all of their accounts.
+</details>
+
+<details>
+<summary>Can I create Snapshot Reports for a whole list?</summary>
+
+Yes. Use **Create/Refresh Snapshot**. Accounts with no Snapshot Report get a new one, expired reports are refreshed, and accounts with an active report (created in the last 7 days) are skipped.
 </details>
 
 ## Activate Product
