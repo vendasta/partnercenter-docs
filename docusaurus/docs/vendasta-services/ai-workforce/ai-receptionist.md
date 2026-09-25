@@ -4,7 +4,14 @@ sidebar_label: "AI Receptionist"
 description: "An overview of the AI Receptionist service, detailing the process from the initial call to the final configuration and ongoing support."
 brand: vendasta-services
 product: vendasta-services-core
-audience: smb
+audience: partners
+content_type: overview
+kb_id: KB-00048
+answer_snippet: "AI Receptionist Setup is a done-for-you Vendasta Services offering where our experts configure, train, and launch the AI Receptionist, including web chat, CRM lead management, booking connections, and automations. It requires Conversations AI (Standard, Pro, or Premium)."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';
@@ -20,7 +27,9 @@ Want to hand this to a client? The **grey-labeled guide** has the same informati
 **Conversations AI** must be active on your account (any edition: Standard, Pro, or Premium).
 :::
 
-The AI Receptionist Setup is a done-for-you service where our experts configure, train, and launch the AI Receptionist for your business. Our team handles the technical setup, installs the chat widget on your website, builds out your CRM pipeline and lead management, configures booking and service-area connections, and sets up automations so you never miss a lead.
+AI Receptionist Setup is a done-for-you Vendasta Services offering where our experts configure, train, and launch the AI Receptionist, including web chat, CRM lead management, booking connections, and automations. It requires **Conversations AI** (Standard, Pro, or Premium).
+
+Our team handles the technical setup, installs the chat widget on your website, builds out your CRM pipeline and lead management, configures booking and service-area connections, and sets up automations so you never miss a lead.
 
 :::info Two ways to get the AI Receptionist
 
@@ -108,7 +117,7 @@ You will receive an email or SMS notification (or both) when a customer uses the
 
 <summary>Can you create custom automations for me?</summary>
 
-We do not currently offer custom automation creation. The setup includes a standardized list of workflows designed to get your business running quickly. During the onboarding call, we will discuss your needs and make adjustments to our pre-built lead-capture automation templates.
+We do not offer custom automation creation. The setup includes a standardized list of workflows designed to get your business running quickly. During the onboarding call, we will discuss your needs and make adjustments to our pre-built lead-capture automation templates.
 </details>
 
 <details>
@@ -134,6 +143,22 @@ Using the knowledge base, we can give the chatbot the information it needs to cr
 The AI Receptionist is not HIPAA compliant, which means it should not handle **PHI**. PHI (Protected Health Information) is any personal information about someone's health that can identify them, such as medical conditions, treatments, test results, insurance details, or a name combined with a medical question.
 
 The AI Receptionist is HIPAA-pursuant, which means it can be used in a way that supports HIPAA rules **as long as no PHI is shared**. It's safe to use for simple tasks like answering general questions, sharing office hours, or helping book appointments without medical details. Healthcare organizations are responsible for making sure the AI is used this way.
+
+</details>
+
+<details>
+
+<summary>How long does the AI Receptionist setup take?</summary>
+
+An onboarding call can be booked in as little as one business day. After that call, the AI Receptionist is complete in 1 business day, or 3 business days for workflows with custom integrations. For U.S. businesses, A2P registration for SMS can take up to two weeks.
+
+</details>
+
+<details>
+
+<summary>What is the difference between AI Employee Setup and the AI Workforce Optimization Plan?</summary>
+
+AI Employee Setup is a one-time fee for the configuration, training, and launch of the AI Receptionist. The AI Workforce Optimization Plan is an ongoing monthly fee that includes the same setup plus monthly check-ins, unlimited change requests, and a live training session. Choose one or the other.
 
 </details>
 

@@ -1,10 +1,17 @@
 ---
 title: "AI Data Analyst: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Data Analyst"
-description: "An overview of the AI Data Analyst service, detailing the process from the fulfillment form through data source configuration, training, and the 30-day check-in."
+description: "What the AI Data Analyst Setup service includes, its requirements, and the setup process from fulfillment form through training and the 30-day check-in."
 brand: vendasta-services
 product: vendasta-services-core
-audience: smb
+audience: partners
+content_type: overview
+kb_id: KB-00043
+answer_snippet: "AI Data Analyst Setup is a done-for-you service where our experts configure, train, and launch the AI Data Analyst, an AI Employee in Business App that answers questions about your CRM, review, and social data with a finding, an interpretation, and a next step."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';
@@ -21,7 +28,9 @@ Want to hand this to a client? The **grey-labeled guide** has the same informati
 **Conversations AI** (any edition) must be active, plus at least one of **CRM AI**, **Reputation AI**, **Social AI**, or **Local SEO** as a data source. See the full [requirements](#requirements) below.
 :::
 
-The AI Data Analyst Setup is a done-for-you service where our experts configure, train, and launch the AI Data Analyst for your business. Our team handles the technical setup, connects your active data sources (CRM, Reviews/NPS, Social), and configures the AIR Analysis Framework so every response delivers a clear finding, a plain-language interpretation, and a recommended next step.
+AI Data Analyst Setup is a done-for-you service where our experts configure, train, and launch the AI Data Analyst, an AI Employee in Business App that answers questions about your CRM, review, and social data with a finding, an interpretation, and a next step.
+
+Our team handles the technical setup, connects your active data sources (CRM, Reviews/NPS, Social), and configures the AIR Analysis Framework that structures every response.
 
 :::info Two ways to get the AI Data Analyst
 
@@ -99,7 +108,7 @@ Using the information gathered during the onboarding call, we will configure you
 
 #### 4. Training call
 
-This call will walk you through your new AI Data Analyst: how to ask questions, how to interpret the structured AIR responses, and how to act on the recommendations provided. We'll run live examples together using your actual data.
+This call will walk you through your AI Data Analyst: how to ask questions, how to interpret the structured AIR responses, and how to act on the recommendations provided. We'll run live examples together using your actual data.
 
 * **Timeline:** This call can be booked in as little as 1 business day after Data Analyst setup completion, depending on availability.
 
@@ -136,7 +145,7 @@ The more data sources that are active and populated, the richer and more actiona
 If CRM AI is active, your contacts, companies, and activities should be populated in Business App before the onboarding call. The AI cannot analyze pipeline data it hasn't been given access to.
 
 :::note
-The AI Data Analyst cannot access custom objects or pipeline opportunities through CRM queries at this time.
+The AI Data Analyst cannot access custom objects or pipeline opportunities through CRM queries.
 :::
 
 ### No website installation required
@@ -165,7 +174,7 @@ AIR stands for Analyze, Interpret, Recommend. Every response from the AI Data An
 
 <summary>What editions are required?</summary>
 
-**Conversations AI** must be active (any edition is supported). In addition, at least one of the following data-source editions must be active: **CRM AI**, **Reputation AI**, **Social AI**, or **Local SEO**. These editions provide the data access and platform capabilities the AI Data Analyst relies on to generate insights. If you are unsure which editions are currently active on your account, please check with your account manager before the onboarding call.
+**Conversations AI** must be active (any edition is supported). In addition, at least one of the following data-source editions must be active: **CRM AI**, **Reputation AI**, **Social AI**, or **Local SEO**. These editions provide the data access and platform capabilities the AI Data Analyst relies on to generate insights. If you are unsure which editions are active on your account, please check with your account manager before the onboarding call.
 
 </details>
 
@@ -189,7 +198,7 @@ You can ask questions about your business performance across any connected data 
 
 <summary>Can the AI access custom pipeline data or opportunities?</summary>
 
-At this time, the AI Data Analyst cannot access custom objects or pipeline opportunity data through CRM queries. It can access contacts, companies, and activities in Business App. If this is a key requirement for your business, please let our team know during the onboarding call and we will confirm what is possible within your account configuration.
+The AI Data Analyst cannot access custom objects or pipeline opportunity data through CRM queries. It can access contacts, companies, and activities in Business App. If this is a key requirement for your business, please let our team know during the onboarding call and we will confirm what is possible within your account configuration.
 
 </details>
 
