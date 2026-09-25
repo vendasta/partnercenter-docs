@@ -2,13 +2,22 @@
 title: "Vendasta Services Website Support"
 sidebar_label: "Support"
 sidebar_position: 6
-description: "This article details the inclusions of Vendasta Services' Website Support product and the process/best practices for submitting requests to our Website Support team."
+description: "What Vendasta Services Website Support includes for WordPress Hosting Pro sites, what costs extra, and how to submit requests or report a website outage."
 brand: vendasta-services
 product: vendasta-services-core
-audience: smb
+audience: partners
+content_type: overview
+kb_id: KB-00022
+answer_snippet: "Website Support is a Vendasta Services fulfillment service for WordPress websites hosted on WordPress Hosting Pro that covers technical support, minor design and content changes, plugin and theme updates, and uptime monitoring. You submit requests to the Website Support team by email."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-This article details the inclusions of Vendasta Services’ [Website Support](https://partners.vendasta.com/marketplace/products/MP-5FTSXB8XVSDRJW4RFQ84B8H3SGKG56JC) product and the process/best practices for submitting requests to our Website Support team.
+Website Support is a Vendasta Services fulfillment service for WordPress websites hosted on WordPress Hosting Pro that covers technical support, minor design and content changes, plugin and theme updates, and uptime monitoring. You submit requests to the Website Support team by email.
+
+You can find the [Website Support](https://partners.vendasta.com/marketplace/products/MP-5FTSXB8XVSDRJW4RFQ84B8H3SGKG56JC) product in the Partner Center Marketplace.
 
 ## What's included in Vendasta Services Website Support
 
@@ -59,7 +68,7 @@ The monthly charge does not include:
 
 If you need help with any of these features, please reach out and our team can provide you with a quote for how many hours of custom work it will take.
 
-## How to submit a website support request to Vendasta Services
+## How do I submit a website support request to Vendasta Services? {#how-to-submit-a-website-support-request-to-vendasta-services}
 
 1.  Send an email to our team at [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com) 
     1.  Sending edits via email ensures that your request is properly documented, as our teams use a ticketing system. This is the best forum to communicate with us.  
@@ -79,7 +88,7 @@ _What is an update?_ It consists of one of the two:
 
 Please keep an eye out for our emails. Our team may request further clarification or need additional assistance (access to a link you shared, etc.). Our goal is to complete this work to your satisfaction in a timely manner, and your responsiveness is appreciated.
 
-## In the event that your website goes down
+## What should I do if my website goes down? {#in-the-event-that-your-website-goes-down}
   
 _If you notice your website is down, first:_
 
@@ -213,5 +222,29 @@ If you need any of these advanced features, reach out and our team can scope the
 <summary>What will happen to my existing form and submission data?</summary>
 
 When we convert your form to a CRM form, the legacy form is deactivated and removed from the front end of your site, so visitors only see the new CRM form. We do not remove the legacy form plugin, so any previously collected submissions remain viewable in your WordPress backend. Your existing form entries are also migrated into the CRM.
+
+</details>
+
+<details>
+
+<summary>When is the Website Support team available?</summary>
+
+The Vendasta Services phone line, **1-866-378-8031**, is monitored Monday to Friday, 8 am to 5 pm CST. Outside those hours, you can reach Vendasta's Support on Demand team through `Live Chat` in the WordPress Hosting Pro dashboard `Help` menu, which is monitored 24/7.
+
+</details>
+
+<details>
+
+<summary>Does Website Support include adding new pages to my website?</summary>
+
+No. Creating additional sections or website pages isn't included in the monthly charge. Reach out to the team for a quote on the hours of custom work needed.
+
+</details>
+
+<details>
+
+<summary>My website is down. What should I do?</summary>
+
+First, confirm that WordPress Hosting Pro is still active on the account in Partner Center, because deactivating it while the DNS records point to it takes the website offline. Then note whether the issue affects one page or the whole site and one device or all devices. Email the details and any error message to [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com), then call 1-866-378-8031 so the team can flag it right away.
 
 </details>

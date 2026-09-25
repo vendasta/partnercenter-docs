@@ -1,10 +1,17 @@
 ---
 title: "AI Support Agent: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Support Agent"
-description: "An overview of the AI Support Agent service, detailing the process from the fulfillment form through channel configuration, knowledge base setup, training, and the 30-day check-in."
+description: "What the AI Support Agent Setup service includes, the setup process from fulfillment form to 30-day check-in, and what you need to provide."
 brand: vendasta-services
 product: vendasta-services-core
-audience: smb
+audience: partners
+content_type: overview
+kb_id: KB-00027
+answer_snippet: "AI Support Agent Setup is a done-for-you service where our experts configure, train, and launch your AI Support Agent, which answers customer support questions from your knowledge base and hands off to your team when it can't help."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';
@@ -21,7 +28,9 @@ Want to hand this to a client? The **grey-labeled guide** has the same informati
 **Conversations AI** must be active on your account. The edition that is active will affect which channels our team is able to connect. See the full [requirements](#requirements) below.
 :::
 
-The AI Support Agent Setup is a done-for-you service where our experts configure, train, and launch the AI Support Agent for your business. Our team handles the technical setup, configures the HEARD support framework, connects your requested channels (web chat, SMS, Facebook, Instagram, WhatsApp, and email), installs the chat widget on your website, and builds out the knowledge base so the AI can resolve customer inquiries without fabricating information.
+AI Support Agent Setup is a done-for-you service where our experts configure, train, and launch your AI Support Agent, which answers customer support questions from your knowledge base and hands off to your team when it can't help.
+
+Our team handles the technical setup, configures the HEARD support framework, connects your requested channels (web chat, SMS, Facebook, Instagram, WhatsApp, and email), installs the chat widget on your website, and builds out the knowledge base so the AI can resolve customer inquiries without fabricating information.
 
 :::info Two ways to get the AI Support Agent
 
@@ -118,7 +127,7 @@ Using the information gathered during the onboarding call, we will configure you
 
 #### 4. Training call
 
-This call will walk you through your new AI Support Agent: how it handles simple questions, complaints, and escalations, where to find captured leads and conversation summaries, and how to manage and respond to conversations in Business App.
+This call will walk you through your AI Support Agent: how it handles simple questions, complaints, and escalations, where to find captured leads and conversation summaries, and how to manage and respond to conversations in Business App.
 
 * **Timeline:** This call can be booked in as little as 1 business day after Agent setup completion, depending on availability.
 
@@ -152,7 +161,7 @@ If you are unable to provide website access, we will provide the embed code and 
 
 ### Knowledge base content
 
-Any FAQs, policies, help articles, or support documentation you would like the AI to reference. The more specific and comprehensive your knowledge base, the more accurately the AI can resolve customer inquiries without escalation.
+Any FAQs, policies, help articles, or support documentation you would like the AI to reference. The more specific and complete your knowledge base, the more accurately the AI can resolve customer inquiries without escalation.
 
 ### Completing SMS registration
 
@@ -265,7 +274,7 @@ We will also need the following information for an Authorized Business Represent
 
 <summary>I don't have an EIN for my business. Can you still set up A2P?</summary>
 
-Unfortunately, this is a limitation of our SMS provider and we are unable to use a SIN/SSN instead of the EIN at this time. Our team is aware of this limitation and is looking into solutions to ensure you are still able to manage SMS conversations with your customers.
+No. This is a limitation of our SMS provider: A2P registration requires an EIN, and a SIN/SSN can't be used instead.
 
 </details>
 

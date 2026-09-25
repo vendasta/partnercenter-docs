@@ -1,14 +1,21 @@
 ---
-title: Create marketing emails
-description: Learn how to create professional marketing emails using templates and the Email Builder, and deploy them through campaigns or automations.
+title: "How do I create marketing emails?"
+description: "Design marketing emails in the Email Builder, send them through Campaigns or Automations, configure send settings, and test before publishing."
 sidebar_label: Create Marketing Emails
 sidebar_position: 1
 brand: vendasta
 product: campaigns
 audience: partners
+content_type: how-to
+kb_id: KB-00037
+answer_snippet: "You create marketing emails in the Email Builder and send them through Campaigns, at Marketing → Campaigns in Partner Center, for scheduled drip sequences, or through Automations for trigger-based delivery."
+doc_owner: campaigns
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-Create professional marketing emails that engage your contacts and drive business results. Marketing emails can be deployed through campaigns for scheduled sends or automations for trigger-based delivery. 
+You create marketing emails in the Email Builder and send them through Campaigns, at `Marketing` → `Campaigns` in Partner Center, for scheduled drip sequences, or through Automations for trigger-based delivery.
 
 ## Overview
 
@@ -18,13 +25,13 @@ The process of creating marketing emails involves:
 3. Deploying through campaigns (drip sequences) or automations (advanced conditional workflows)
 4. Testing and optimizing performance
 
-## Understanding deployment options
+## What's the difference between campaigns and automations? {#understanding-deployment-options}
 
 **Campaigns** are drip-style marketing automation that send scheduled email sequences to your audience. They're ideal for straightforward, time-based email marketing.
 
 **Automations** are advanced, intelligent workflows that support both drip sequences AND conditional logic based on contact actions, business events, and data changes. They provide more sophisticated targeting and personalization capabilities.
 
-## Using the email builder
+## How do I use the Email Builder? {#using-the-email-builder}
 
 The Email Builder allows you to design engaging emails that look great on any device. With the Email Builder you can quickly create effective email campaigns utilizing all available data points while optimizing for various devices with instant visual feedback.
 
@@ -89,13 +96,13 @@ You can see how your email will appear on different devices in real-time with th
 - You can't switch an email to a different Email Builder version partway through creating it.
 :::
 
-## Method 1: Using email templates in campaigns (drip marketing)
+## How do I use email templates in campaigns? {#method-1-using-email-templates-in-campaigns-drip-marketing}
 
 Campaigns are drip-style marketing automation that send scheduled email sequences to your contacts and companies. They're perfect for time-based marketing where you want to send a series of emails at predetermined intervals. You can use pre-built templates or create custom emails.
 
 ### Using recommended campaign templates
 
-We've built proven email templates that are ready to use and have demonstrated engagement success.
+Recommended campaigns are ready-made email templates that you can copy and customize.
 
 **To use recommended templates:**
 
@@ -159,7 +166,7 @@ Build custom email campaigns with complete control over design and content.
 **Campaign Limitations**: Campaigns provide straightforward drip sequences but lack conditional branching, trigger responses, or dynamic timing. For more sophisticated email marketing with conditional logic and smart triggers, consider using [Automations](/automations) instead.
 :::
 
-## Method 2: Using email templates in automations (advanced smart marketing)
+## How do I use email templates in automations? {#method-2-using-email-templates-in-automations-advanced-smart-marketing}
 
 Automations are intelligent marketing workflows that support both drip sequences AND conditional logic. Unlike simple campaigns, automations can respond to contact actions, form submissions, business events, and data changes in real-time. This advanced approach enables both scheduled sequences and smart, responsive communication based on contact behavior and business intelligence.
 
@@ -233,10 +240,10 @@ The "Campaign" step allows you to incorporate existing drip campaigns as buildin
 - You're implementing sophisticated lead nurturing with multiple pathways
 - You need emails that adapt and respond to contact behavior dynamically
 
-**Recommendation**: Automations provide superior flexibility and intelligence. Consider using automations for most email marketing needs, as they support everything campaigns can do plus advanced conditional capabilities.
+**Recommendation**: Consider using automations for most email marketing needs, as they support everything campaigns can do plus advanced conditional capabilities.
 :::
 
-## Campaign configuration settings
+## How do I configure campaign settings? {#campaign-configuration-settings}
 
 In the **Campaign configuration** section of a campaign, you can configure the following settings:
 
@@ -296,7 +303,7 @@ You can change the sender name in `Sender name` on the `Sender and reply setting
   allowFullScreen
 ></iframe>
 
-## Testing and optimizing marketing emails
+## How do I test marketing emails before sending? {#testing-and-optimizing-marketing-emails}
 
 Whether you're using campaigns or automations, thorough testing ensures your emails perform effectively across different email clients and devices.
 
@@ -364,7 +371,7 @@ Once testing is complete, click `Publish` to make your campaign available for se
 **For Automations:**
 Turn on your automation to begin trigger-based email delivery or use the "Manual" trigger to trigger the automation manually. Monitor initial sends to ensure proper functionality.
 
-## Troubleshooting common issues
+## How do I fix common campaign issues? {#troubleshooting-common-issues}
 
 ### Error: "Your company hasn't set up campaigns yet"
 
@@ -405,4 +412,67 @@ The contact information is required to send marketing campaigns. This error occu
 - Test preview emails with specific accounts that have complete data
 - Check that dynamic content syntax is correct
 
+## Frequently asked questions
 
+<details>
+<summary>Can I send a test email to someone other than myself?</summary>
+
+Yes. When you send a test email from a campaign email's `Preview`, enter the test email address you want, or enter the email addresses of trusted reviewers when previewing as a specific account. For test emails to send successfully, there needs to be an account linked to the user receiving the email.
+
+</details>
+
+<details>
+<summary>How do I change which day an email in my campaign sends?</summary>
+
+Adjust the "days before starting" or "days before previous event" setting on the email in the campaign. The campaign must be in Draft status to allow editing.
+
+</details>
+
+<details>
+<summary>Do the included days control how many times a campaign sends?</summary>
+
+No. Included days set which days of the week emails can be sent, and emails are only sent Monday to Friday by default. The delays between campaign events count all days of the week, and an email scheduled for a day that isn't included is sent on the next included day.
+
+</details>
+
+<details>
+<summary>What's the difference between a campaign and an automation?</summary>
+
+Campaigns send scheduled, time-based email sequences at fixed intervals. Automations support drip sequences and also conditional logic that responds to contact actions, business events, and data changes.
+
+</details>
+
+<details>
+<summary>Can I send the next email only when a contact clicks a link?</summary>
+
+Not with a campaign, because campaigns don't support conditional branching or trigger responses. Use [Automations](/automations) instead, which can respond to contact actions such as email clicks.
+
+</details>
+
+<details>
+<summary>What does rate limiting do in a campaign?</summary>
+
+Rate limiting caps the number of recipients added to a campaign per salesperson per day when you add a list. It only affects the first email step, and pausing and resuming a campaign bypasses the limit.
+
+</details>
+
+<details>
+<summary>How do I change the sender name and email address for campaigns?</summary>
+
+Go to `Partner Center` → `Marketing` → `Email settings`. Change `Sender name` on the `Sender and reply settings` card and `Email address` on the `Advanced email settings` card, then click `Save` on each card.
+
+</details>
+
+<details>
+<summary>Why does my campaign say my company hasn't set up campaigns yet?</summary>
+
+The required contact information for campaigns isn't configured. Go to `Administration` → `Customize` → `Market`, edit the market, open the `Email settings` tab, and select either Partner's or Market's contact information under **Required Contact Information for Campaigns**.
+
+</details>
+
+<details>
+<summary>Why isn't the contact's name showing in my email?</summary>
+
+Verify that the [CRM contact fields](/crm/contacts/crm-default-contact-fields) are populated and that the dynamic content syntax is correct. Test emails show generic information for contact fields, while recipients see their real personal information.
+
+</details>
