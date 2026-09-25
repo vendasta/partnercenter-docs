@@ -1,15 +1,23 @@
 ---
-title: Troubleshooting automations
+title: "How do I troubleshoot automations?"
 description: Diagnose common automation problems — why an automation isn't running, campaign errors, and whether you can undo a run.
 sidebar_position: 2
 brand: vendasta
+sidebar_label: Troubleshooting automations
 product: automations
 audience: partners
+content_type: troubleshooting
+kb_id: KB-00118
+answer_snippet: "Most Partner Center automation problems come from an automation that's turned off, a Run once per account entry setting, a step error that stopped the run, trigger conditions that don't match, or a step that runs before its data is ready."
+doc_owner: automations
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-# Troubleshooting automations
+# How do I troubleshoot automations? {#troubleshooting-automations}
 
-This page covers the issues you're most likely to hit. For a full picture of activity and error details, see [Managing your automations](./managing-your-automations.mdx).
+Most Partner Center automation problems come from an automation that's turned off, a `Run once per account` entry setting, a step error that stopped the run, trigger conditions that don't match, or a step that runs before its data is ready. Check the **Activity** tab for error details. For a full picture of activity and error details, see [Managing your automations](./managing-your-automations.mdx).
 
 ## Why isn't my automation running?
 
@@ -52,28 +60,28 @@ Some steps can only run once per account regardless of settings. For example, an
 
 Design around these limits by using different campaigns or by using pause/resume campaign steps instead.
 
-## Webhook action isn't sending data correctly
+## Why isn't my webhook action sending data correctly? {#webhook-action-isnt-sending-data-correctly}
 
-### External system receives no data
+### Why does the external system receive no data? {#external-system-receives-no-data}
 
 The most common cause is that fields were mapped as **request headers** instead of in the **request body**. Webhook data must be sent as JSON in the request body.
 
 Open the **Send Webhook** step and verify that your field mappings are in the **Body** section as JSON key–value pairs, not in a headers section. Remove any header mappings and re-add the fields to the body.
 
-### `id.trim is not a function` error
+### What does the `id.trim is not a function` error mean? {#idtrim-is-not-a-function-error}
 
 This error means a mapped field value is an integer rather than a string. All webhook body values must be strings. Re-map the affected field as text, or use the `toString()` expression to convert the value before passing it.
 
-### Webhook URL is not responding
+### What if the webhook URL is not responding? {#webhook-url-is-not-responding}
 
 Confirm the URL is reachable from outside your network and accepts HTTP POST requests. Test it with a tool like [webhook.site](https://webhook.site) before connecting it to the automation.
 
-### Limitations
+### What are the webhook limitations? {#limitations}
 
 - File attachments (PDFs, images, etc.) cannot be sent via webhook. Pass a URL to the file instead.
 - The Send Webhook step is not available on all contact-based triggers.
 
-## Campaign failed to start
+## Why did my campaign fail to start? {#campaign-failed-to-start}
 
 When starting an email campaign from an automation, you may see this error:
 
@@ -105,7 +113,7 @@ Once an automation has started processing an account, the completed steps can't 
 
 To prevent unintended runs going forward, add conditions or exclusion lists to the trigger so the affected accounts aren't eligible.
 
-## Getting help
+## How do I get help with an automation issue? {#getting-help}
 
 If the above doesn't resolve the issue, reach out to support with:
 
@@ -116,6 +124,38 @@ If the above doesn't resolve the issue, reach out to support with:
 - Timeline of when the issue started
 
 You can also ask in the [Vendasta community](https://www.facebook.com/groups/vendasta).
+
+## Frequently asked questions
+
+<details>
+<summary>Where can I see why an automation didn't do what I expected?</summary>
+
+Open the automation and check the **Activity** tab for the specific error on that run. For more on activity and error details, see [Managing your automations](./managing-your-automations.mdx).
+</details>
+
+<details>
+<summary>Why does my automation only run once for each account?</summary>
+
+By default, the entry setting is **Run once per account**, so the automation only runs the first time the trigger conditions are met for an account. Change **Entry settings** in the automation's **Advanced** section to **Run every time**.
+</details>
+
+<details>
+<summary>Why isn't my automation firing even though it's turned on?</summary>
+
+The trigger conditions may not match the record. Check whether you used **AND** when you meant **OR** (or the reverse), whether the conditions are too restrictive, and test with a record you know should qualify.
+</details>
+
+<details>
+<summary>Why does the Send campaign step fail on later runs?</summary>
+
+An email campaign can only be sent to the same account once. If your automation runs multiple times per account, later runs of a "Send campaign" step will error, so use different campaigns or pause/resume campaign steps instead.
+</details>
+
+<details>
+<summary>Can I send a file through a webhook step?</summary>
+
+No. File attachments such as PDFs and images can't be sent via webhook. Pass a URL to the file instead.
+</details>
 
 ## Related resources
 
