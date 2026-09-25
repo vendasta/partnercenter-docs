@@ -1,16 +1,25 @@
 ---
 title: "Listing Claim"
 sidebar_label: "Listing Claim"
-description: "Managed setup and claiming for one listing site of your choice or a medical package on medical directories—guided verification, timelines, what's included, and FAQs."
+description: "Listing Claim service: managed claiming of one listing site or up to three medical sites, with verification methods, prerequisites, timelines, and FAQs."
 sidebar_position: 1
 tags: [vendasta-services, listings, claims, listing-claim, google-business-profile, medical]
 keywords: [listing claim, claim listing, medical listing claim, Google Business Profile, Yelp, Bing, RateMDs, verification, postcard, NPI]
 brand: vendasta-services
 product: vendasta-services-core
-audience: smb
+audience: partners
+content_type: overview
+kb_id: KB-00089
+answer_snippet: "Listing Claim is a Vendasta Services offering where the Listing Fulfillment team creates or claims a business listing on one site of your choice, or on up to three medical sites for one practitioner, and guides the business through verification."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 # Listing Claim
+
+Listing Claim is a Vendasta Services offering where the Listing Fulfillment team creates or claims a business listing on one site of your choice, or on up to three medical sites for one practitioner, and guides the business through verification.
 
 ## Overview
 
