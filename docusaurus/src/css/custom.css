@@ -2672,15 +2672,27 @@ div[class*="language-"] pre {
   }
 }
 
-/* Numbered stage bar down the call. */
+/* Numbered stage bar down the call. The stages run one to five in order, so
+   they carry a connecting rail to read as a sequence rather than five
+   unrelated headings. */
 .pitch-stage {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.7rem;
-  margin: 1.75rem 0 0.9rem;
-  padding: 0.5rem 0.85rem;
+  margin: 2.25rem 0 1rem;
+  padding: 0.6rem 0.95rem;
   border-radius: 6px;
   background: #072337;
+}
+.pitch-stage--linked::before {
+  content: '';
+  position: absolute;
+  left: 1.7rem;
+  bottom: 100%;
+  width: 2px;
+  height: 1.35rem;
+  background: linear-gradient(to bottom, rgba(63, 155, 99, 0), #3f9b63);
 }
 .pitch-stage__num {
   flex: 0 0 1.5rem;
@@ -2725,6 +2737,93 @@ div[class*="language-"] pre {
 }
 .pitch-who p:last-child {
   margin-bottom: 0;
+}
+
+/* The discovery questions. Each numbered question becomes its own card and its
+   branches sit inside it, so seven questions read as seven things to ask
+   rather than one twenty-line bullet wall. */
+.pitch-ask ol {
+  list-style: none;
+  counter-reset: pitch-ask;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+.pitch-ask ol > li {
+  counter-increment: pitch-ask;
+  position: relative;
+  border: 1px solid #e0e0e0;
+  border-left: 3px solid #072337;
+  border-radius: 0 8px 8px 0;
+  background: #ffffff;
+  padding: 0.85rem 1rem 0.85rem 2.9rem;
+  margin: 0 0 0.6rem;
+  font-weight: 600;
+}
+.pitch-ask ol > li::before {
+  content: counter(pitch-ask);
+  position: absolute;
+  left: 0.85rem;
+  top: 0.85rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background: #072337;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pitch-ask ol > li > ul {
+  margin: 0.55rem 0 0;
+  padding-left: 1.1rem;
+  font-weight: 400;
+  font-size: 0.93rem;
+  color: var(--ifm-color-emphasis-800);
+}
+.pitch-ask ol > li > ul > li {
+  margin: 0.2rem 0;
+}
+.pitch-ask ol > li > ul > li::marker {
+  color: #3f9b63;
+}
+
+/* Partner testimonial in the proof stage. */
+.pitch-quote {
+  margin: 1.1rem 0;
+  padding: 0;
+}
+.pitch-quote__body {
+  margin: 0;
+  border: 0;
+  border-left: 3px solid #072337;
+  background: #fafafa;
+  border-radius: 0 8px 8px 0;
+  padding: 0.9rem 1.1rem;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--ifm-font-color-base);
+}
+.pitch-quote__body p:last-child {
+  margin-bottom: 0;
+}
+.pitch-quote__author {
+  margin: 0.45rem 0 0 1.1rem;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme='dark'] .pitch-ask ol > li,
+[data-theme='dark'] .pitch-quote__body {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+  border-left-color: #3f9b63;
+}
+/* The navy badge disappears into a dark card, so take the stage bar's green. */
+[data-theme='dark'] .pitch-ask ol > li::before {
+  background: #3f9b63;
 }
 
 [data-theme='dark'] .pitch-stat,
