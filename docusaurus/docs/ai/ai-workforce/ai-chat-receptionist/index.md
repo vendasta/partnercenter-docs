@@ -5,11 +5,18 @@ description: Set up, train, and monitor the AI Chat Receptionist to capture lead
 brand: vendasta
 product: ai-workforce
 audience: partners
+content_type: overview
+kb_id: KB-00018
+answer_snippet: "To set up the AI Chat Receptionist, go to AI → Workforce in Partner Center and click Configure on the AI Chat Receptionist. It answers website visitors' questions 24/7, captures their contact details in your CRM, and responds in over 40 languages."
+doc_owner: ai-workforce
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 import { AISparkleIcon, GraduationCapIcon } from '@site/src/components/Icons';
 
-The AI Chat Receptionist helps you capture leads and respond to website visitors 24/7. In this guide, you'll learn how to set up, train, and monitor your AI assistant to work for your business.
+To set up the AI Chat Receptionist, go to `AI` → `Workforce` in Partner Center and click `Configure` on the AI Chat Receptionist. It answers website visitors' questions 24/7, captures their contact details in your CRM, and responds in over 40 languages. This guide covers how to set up, train, and monitor it.
 
 **By default, the AI Chat Receptionist:**
 - Answers questions about your business using information from your knowledge base and website
@@ -61,7 +68,7 @@ The AI detects the visitor's language automatically from their messages. No conf
 If a visitor writes in a language not listed above, the AI will still attempt to respond, but results may vary. To get the best results for a specific language, check whether it appears in the table above.
 :::
 
-## Set up the AI Chat Receptionist
+## How do I set up the AI Chat Receptionist? {#set-up-the-ai-chat-receptionist}
 
 Follow these simple steps to configure your AI Chat Receptionist so it effectively engages visitors and captures valuable leads.
 
@@ -199,7 +206,7 @@ The same pattern works for any business with structured URLs: e-commerce product
 The visitor's current URL is provided on the Web Chat channel. Other channels (SMS, voice, email) don't have a "current page" concept, so this context isn't available there.
 :::
 
-## Test and monitor your AI Chat Receptionist
+## How do I test and monitor my AI Chat Receptionist? {#test-and-monitor-your-ai-chat-receptionist}
 
 Once your AI Chat Receptionist is set up, it's important to test how it handles real conversations and monitor its interactions over time. This helps you ensure the AI is answering questions accurately, capturing leads, and creating a positive experience for your website visitors. Regular testing and review will help you catch issues early and continuously improve your AI's performance as your business evolves.
 
@@ -409,6 +416,27 @@ For any other channel that the chat receptionist can respond to, the AI is confi
 :::info
 This only applies to conversations where messages have been sent from Conversations AI. For example, the chat receptionist would respond instantly to an SMS message from a new contact if it was assigned to monitor the SMS channel.
 :::
+
+</details>
+
+<details>
+<summary>Where do I get the code to add the AI Chat Receptionist to my website?</summary>
+
+The Web Chat widget isn't added to your website automatically. In Partner Center, go to `Conversations` → `More` → `Conversations Settings`, click `Manage widgets`, and create a `New Web Chat`, then use `Embed` to copy the code. See [How do I set up the AI web chat widget on my website?](/conversations/ai-assisted-web-chat-widget).
+
+</details>
+
+<details>
+<summary>What languages does the AI Chat Receptionist speak?</summary>
+
+It detects and responds in over 40 languages, including English, French, and Spanish. See [Supported languages](#supported-languages) for the full list.
+
+</details>
+
+<details>
+<summary>Why are web chat contacts showing as anonymous visitors?</summary>
+
+Check that the Lead Capture capability is on. Go to `AI` → `Workforce`, click `Configure` on the Chat Receptionist, open `Capabilities`, and make sure `Capture Lead Information` is enabled.
 
 </details>
 

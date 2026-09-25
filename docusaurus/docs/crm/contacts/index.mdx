@@ -1,15 +1,22 @@
 ---
 title: Contacts
-description: Comprehensive contact management in Vendasta's CRM system including importing/exporting, campaign management, and contact field customization
+description: "Manage contacts in the Partner Center CRM: import and export in bulk, schedule campaigns, bulk delete, and create custom contact fields."
 sidebar_position: 1
 brand: vendasta
 product: crm
 audience: partners
+content_type: overview
+kb_id: KB-00003
+answer_snippet: "Contacts in the Vendasta CRM, at CRM → Contacts in Partner Center, store the people you sell to and work with. You can import and export contacts in bulk, schedule email campaigns, and add custom fields."
+doc_owner: crm
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 # Contacts
 
-Manage your contacts effectively with Vendasta's CRM system. This comprehensive contact management solution enables you to import and export contacts in bulk, schedule targeted email campaigns, and customize contact fields to match your business needs. The Contacts section provides powerful tools for organizing, segmenting, and engaging with your audience throughout the customer journey. With advanced campaign scheduling and contact field management, you can ensure timely communication and maintain detailed records of all prospect interactions.
+Contacts in the Vendasta CRM, at `CRM` → `Contacts` in Partner Center, store the people you sell to and work with. You can import and export contacts in bulk, schedule email campaigns, and add custom fields.
 
 ## Why use contacts?
 
@@ -39,13 +46,13 @@ The Contacts section eliminates manual processes through bulk import/export capa
 
 4. **Send your first marketing email**
    - Select contacts for campaign targeting
-   - Navigate to `Partner Center` → `Contacts` > Select contacts
+   - Navigate to `Partner Center` → `Contacts` and select contacts
    - Click `Actions` → `Add to Campaign`
    - Learn more about [sending marketing emails](../../marketing/campaigns/send-marketing-emails.mdx)
 
 ## Importing and exporting contacts and companies
 
-In the Vendasta CRM, you can efficiently add or update multiple contacts and companies at once by importing them in a single file. This powerful feature streamlines contact management and ensures data accuracy through proper field mapping during the import process.
+In the Vendasta CRM, you can efficiently add or update multiple contacts and companies at once by importing them in a single file. This streamlines contact management and ensures data accuracy through proper field mapping during the import process.
 
 ### Partner Center vs. Business App imports
 
@@ -57,7 +64,7 @@ The import rules differ depending on where you import:
 | Company name required? | Yes, on the first contact row | No |
 | Use case | Sales CRM, account management | Consumer/client-facing lists |
 
-If you're importing contacts for B2B sales work, import through **Partner Center > CRM > Contacts**. If you're managing consumer contacts for a Business App client, import through Business App.
+If you're importing contacts for B2B sales work, import through `Partner Center` → `CRM` → `Contacts`. If you're managing consumer contacts for a Business App client, import through Business App.
 
 ### Before you begin
 
@@ -113,7 +120,7 @@ To import records, follow these steps:
 
 **Step 1: Upload CSV**
 
-To import CRM records, go to CRM > Contacts in Partner Center. In the top-right corner of the Contacts table, click Import. This opens the Import History page, where all previous uploads are displayed.
+To import CRM records, go to `CRM` → `Contacts` in Partner Center. In the top-right corner of the Contacts table, click Import. This opens the Import History page, where all previous uploads are displayed.
 
 :::caution
 Uploaded import files are automatically deleted after 30 days. After this period, files can no longer be downloaded from the import history. Save a local copy of any import file you may need to reference later.
@@ -207,7 +214,7 @@ When creating an email marketing campaign, you have the ability to schedule it f
 
 #### How to schedule campaigns for CRM contacts
 
-**Step 1:** Navigate to `Partner Center` → `Contacts` > Select the contacts you wish to send the campaigns to. Click `Actions` → `Add to Campaign`.
+**Step 1:** Navigate to `Partner Center` → `Contacts` and select the contacts you wish to send the campaigns to. Click `Actions` → `Add to Campaign`.
 
 ![Schedule Campaigns Step 1](./img/crm/crm-contacts/schedule_campaigns_step1.jpg)
 
@@ -401,4 +408,28 @@ Yes, you can select multiple contacts from the contact table and use the `Action
 <summary>What information is required when importing contacts?</summary>
 
 Each contact entry must include at least one of the following: First name, last name, email, or phone number. For companies, a company name is required.
+</details>
+
+<details>
+<summary>How do I export contacts from the CRM?</summary>
+
+Go to `CRM` → `Contacts`, click the top-left checkbox, then click the blue `select all [N] contacts` link. Click `Actions` → `Export`.
+</details>
+
+<details>
+<summary>How do I create a custom contact field?</summary>
+
+Go to `Administration` → `CRM objects`, select `Contact`, and click `Create field`. Choose the field type and set its label and external identifier. The external identifier can't be changed after you save.
+</details>
+
+<details>
+<summary>Why did my import update existing contacts instead of creating new ones?</summary>
+
+The CRM matches imported rows to existing contacts by contact ID, external ID, email, or phone number. When it finds a match, it updates that contact instead of creating a duplicate. You can choose to skip existing records during the import.
+</details>
+
+<details>
+<summary>How do I delete contacts in bulk?</summary>
+
+Select up to 100 contacts at a time in `CRM` → `Contacts`, then click `Actions` → `Delete` and type `Delete` to confirm. Deletion is permanent, so export any records you need first.
 </details>

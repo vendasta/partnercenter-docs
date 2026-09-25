@@ -1,15 +1,22 @@
 ---
 title: Vibe
 sidebar_position: 4
-description: Build fully functional web applications using plain language with Vibe, Vendasta's AI-powered application builder available in Business App.
+description: "Vibe is Vendasta's AI app builder in Business App. Describe an app in plain English and Vibe builds it, with forms, CRM, and analytics built in."
 tags: [ai, vibe, app-builder, business-app]
 keywords: [Vibe, AI app builder, web application, React, natural language, no-code, low-code, Business App]
 brand: vendasta
 product: vibe
 audience: partners
+content_type: overview
+kb_id: KB-00013
+answer_snippet: "Vibe is Vendasta's AI-powered application builder in Business App. Describe what you want in plain English, and Vibe generates a working web application with components, routing, styling, and a live preview."
+doc_owner: vibe
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-Vibe is Vendasta's AI-powered application builder. Describe what you want in plain English, and Vibe generates a fully functional web application, complete with components, routing, styling, and a live preview.
+Vibe is Vendasta's AI-powered application builder in Business App. Describe what you want in plain English, and Vibe generates a working web application with components, routing, styling, and a live preview.
 
 :::tip Learn more about Vibe
 For a deeper dive into Vibe, visit the [Vibe documentation in Business App Help Center](https://docs.businessapp.io/business-app/ai/vibe/).
@@ -67,7 +74,7 @@ Switch to Code mode to view and edit the generated source code directly. Browse 
 ### Checkpoints
 Vibe automatically creates checkpoints as you iterate. You can view diffs between versions and restore previous states if needed.
 
-## How it works
+## How does Vibe build an application? {#how-it-works}
 
 When you send a prompt, Vibe's orchestrator coordinates multiple AI agents:
 
@@ -80,7 +87,7 @@ When you send a prompt, Vibe's orchestrator coordinates multiple AI agents:
 
 All of this happens through a streaming interface: you see status updates, file changes, and the live preview updating in real-time.
 
-## Technical stack
+## What is a Vibe app built on? {#technical-stack}
 
 Every application Vibe generates is built on a modern, production-ready stack:
 
@@ -92,3 +99,40 @@ Every application Vibe generates is built on a modern, production-ready stack:
 - **Lucide** icons
 
 Every one of these is open source. On the Pro plan, the complete source of a project can be downloaded and hosted anywhere that runs Node.js — see [Download & Host Your Project Elsewhere](https://docs.businessapp.io/business-app/ai/vibe/guides/download-and-self-host/).
+
+## Frequently asked questions
+
+<details>
+<summary>Is a Vibe app a WordPress site?</summary>
+
+No. Vibe apps are built on React, TanStack Start, Vite, and Tailwind CSS. On the Pro plan, you can download the complete source code and host it anywhere that runs Node.js.
+
+</details>
+
+<details>
+<summary>Can Vibe create images for my app?</summary>
+
+Yes. Describe the image you want and Vibe generates it with Gemini and embeds it in the project.
+
+</details>
+
+<details>
+<summary>Can I add a contact form to a Vibe app?</summary>
+
+Yes. Vibe connects to Forms, analytics, sign-in, and CRM, so you can embed contact forms and send submissions to the CRM without a manual embed or configuration step.
+
+</details>
+
+<details>
+<summary>Can I edit a Vibe app's code directly?</summary>
+
+Yes. Switch to Code mode to browse the file tree and edit files. Code mode supports GitHub sync for version control.
+
+</details>
+
+<details>
+<summary>Where can I find the full Vibe documentation?</summary>
+
+See the [Vibe documentation in the Business App Help Center](https://docs.businessapp.io/business-app/ai/vibe/).
+
+</details>
