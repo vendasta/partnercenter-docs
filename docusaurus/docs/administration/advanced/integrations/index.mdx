@@ -6,11 +6,20 @@ sidebar_position: 0
 brand: vendasta
 product: partner-center-core
 audience: partners
+content_type: overview
+kb_id: KB-00192
+answer_snippet: "Integrations in Partner Center, at Administration → Integrations, connect Partner Center to QuickBooks, Google Meet, Zoom, Zapier, HubSpot, Salesforce, Autotask, and other third-party tools."
+doc_owner: partner-center-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 # Integrations
 
-Integrations in **Administration** let you connect Partner Center to QuickBooks, Google Meet, Zoom, Zapier, HubSpot, Salesforce, and other third-party tools. You manage connections from `Partner Center` → `Administration` → `Integrations` (or `Advanced` → `Integrations`).
+Integrations in Partner Center, at `Administration` → `Integrations`, connect Partner Center to QuickBooks, Google Meet, Zoom, Zapier, HubSpot, Salesforce, Autotask, and other third-party tools.
+
+You manage connections from `Partner Center` → `Administration` → `Integrations` (or `Advanced` → `Integrations`).
 
 ## What you can do
 
@@ -35,16 +44,53 @@ Connections use one of three models: **API key** (you provide credentials), **SS
 - **[Salesforce](./integrate-salesforce.mdx)** – Two-way sync of Contact and Company records between Partner Center / Business App and Salesforce
 - **[Autotask](./integrate-autotask.mdx)** – Two-way sync of Contact and Company records between Partner Center and Autotask
 
-## Get started
+## How do I set up an integration? {#get-started}
 
 1. **Open Integrations** – Go to `Partner Center` → `Administration` → `Integrations`. Use **Browse** to see available integrations and their connection type.
 2. **Connection type** – Read [Authentication and connections](./authentication-and-connections.mdx) to choose API key, SSO, or vendor-managed; then click **Add Connection** or **Connect** on the integration you need.
 3. **QuickBooks, Meet/Zoom, or Zapier** – Follow the setup in [QuickBooks](./integrate-quickbooks.mdx), [Google Meet and Zoom](./google-meet-zoom-integrations.mdx), or [Zapier](./create-or-update-contact-using-zapier.mdx) and complete the connection flow.
 
-## Error handling and troubleshooting
+## How do I troubleshoot an integration connection? {#error-handling-and-troubleshooting}
 
 - **Connection failures** – For API key integrations, check that the key is valid and has the right permissions; re-enter or rotate if needed.
 - **SSO or access expired** – Re-run the SSO flow to reauthorize; complete any pre-connect form and sign in again.
 - **Vendor-managed** – Follow the vendor's setup guide and check status in Business App; contact the vendor if the integration shows an issue.
 
 For more help, see [Authentication and connections](./authentication-and-connections.mdx) or contact support with the integration name and error details.
+
+## Frequently asked questions
+
+<details>
+<summary>Where do I find integrations in Partner Center?</summary>
+
+Go to `Partner Center` → `Administration` → `Integrations` (or `Advanced` → `Integrations`). Use **Browse** to see available integrations and their connection type.
+
+</details>
+
+<details>
+<summary>What connection types do integrations use?</summary>
+
+Each integration uses one of three models: **API key** (you provide credentials), **SSO** (users sign in via the provider), or **vendor-managed** (the vendor configures and maintains it). The integration's type shows in `Administration` → `Integrations` → `Browse`.
+
+</details>
+
+<details>
+<summary>What do the status indicators on the Integrations page mean?</summary>
+
+The Connected, Pending, and Issue status indicators show the health of each connection on the Integrations page.
+
+</details>
+
+<details>
+<summary>Which integrations sync data in both directions?</summary>
+
+HubSpot, Salesforce, and Autotask sync Contact and Company records in both directions. QuickBooks syncs contacts and data one way, from QuickBooks to the CRM.
+
+</details>
+
+<details>
+<summary>What do I do if an SSO connection expires?</summary>
+
+Re-run the SSO flow to reauthorize: complete any pre-connect form and sign in again. For API key integrations, check that the key is valid and has the right permissions, and re-enter or rotate it if needed.
+
+</details>

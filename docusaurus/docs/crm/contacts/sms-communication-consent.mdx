@@ -1,5 +1,5 @@
 ---
-title: SMS communication consent
+title: "Why aren't SMS campaign messages delivered to my contacts?"
 sidebar_label: SMS consent
 description: Why SMS campaign messages aren't delivered, what the consent states mean, and how to update SMS consent for a contact.
 tags: [crm, contacts, sms, consent, campaigns]
@@ -7,15 +7,22 @@ keywords: [SMS consent, communication consent, unset, subscribed, SMS not delive
 brand: vendasta
 product: crm
 audience: partners
+content_type: troubleshooting
+kb_id: KB-00185
+answer_snippet: "Campaign SMS messages from the Partner Center CRM are only delivered to contacts whose SMS consent is Subscribed. Contacts with SMS consent set to Unset or Unsubscribed are skipped, so check a contact's consent status first when an SMS isn't delivered."
+doc_owner: crm
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-## Why SMS messages from campaigns aren't delivered
+## Why aren't SMS messages from campaigns delivered? {#why-sms-messages-from-campaigns-arent-delivered}
+
+Campaign SMS messages from the Partner Center CRM are only delivered to contacts whose SMS consent is Subscribed. Contacts with SMS consent set to Unset or Unsubscribed are skipped, so check a contact's consent status first when an SMS isn't delivered.
 
 The most common reason campaign SMS messages aren't delivered to a contact is that their SMS consent is set to **Unset**. Unlike email, SMS legally requires **explicit opt-in consent** (Subscribed status) before messages can be sent. Contacts without confirmed consent are skipped by the campaign delivery system.
 
-If you've sent an SMS campaign and some contacts didn't receive it, check their SMS consent status first.
-
-## What the consent states mean
+## What do the SMS consent states mean? {#what-the-consent-states-mean}
 
 | Status | What it means | Can receive SMS? |
 |--------|--------------|-----------------|
@@ -25,7 +32,7 @@ If you've sent an SMS campaign and some contacts didn't receive it, check their 
 
 **Unset is not the same as opted in.** A contact who hasn't explicitly opted out still cannot receive SMS until they are moved to Subscribed. This is a regulatory requirement. Sending SMS without explicit consent can violate laws such as TCPA (US) and similar regulations in other jurisdictions.
 
-## How to update SMS consent for a contact
+## How do I update SMS consent for a contact? {#how-to-update-sms-consent-for-a-contact}
 
 1. Go to `Partner Center` → `CRM` → `Contacts`.
 2. Open the contact's profile.
@@ -38,7 +45,7 @@ If you've sent an SMS campaign and some contacts didn't receive it, check their 
 Only update a contact's SMS consent to Subscribed if you have a documented record that the contact has explicitly opted in to receive SMS messages from your organization. Setting consent without actual opt-in creates legal and compliance risk.
 :::
 
-## Collecting SMS consent
+## How do I collect SMS consent? {#collecting-sms-consent}
 
 Contacts can opt in to SMS through:
 
@@ -53,7 +60,7 @@ Do not manually mark contacts as Subscribed unless you have a record of their co
 <details>
 <summary>Can I bulk-update SMS consent for multiple contacts?</summary>
 
-Contact your Vendasta account team to confirm the current bulk consent update options. For large lists, the recommended approach is to run a re-consent campaign that lets contacts opt in themselves, which creates a documented opt-in record.
+Contact your Vendasta account team to confirm the bulk consent update options available to you. For large lists, the recommended approach is to run a re-consent campaign that lets contacts opt in themselves, which creates a documented opt-in record.
 </details>
 
 <details>
@@ -66,4 +73,22 @@ When a contact replies STOP to an SMS, their consent is automatically updated to
 <summary>Why can't I just set all contacts to Subscribed?</summary>
 
 Sending SMS to contacts who haven't explicitly consented violates telecommunications regulations in most jurisdictions (including TCPA in the US). Violations can result in significant fines. Only contacts with a verifiable opt-in record should be set to Subscribed.
+</details>
+
+<details>
+<summary>Can I add a contact without SMS consent to an SMS campaign?</summary>
+
+A contact whose SMS consent is Unset or Unsubscribed is skipped by the campaign delivery system and won't receive the SMS. Only contacts with SMS consent set to Subscribed receive campaign SMS messages.
+</details>
+
+<details>
+<summary>Do I still need SMS consent if I don't have a website form?</summary>
+
+Yes. Contacts still need to explicitly opt in before you send them SMS. Besides a form with an SMS opt-in checkbox, you can collect consent through a keyword opt-in or written consent at point of sale or during onboarding.
+</details>
+
+<details>
+<summary>How do I make sure I have consent before sending SMS?</summary>
+
+Collect explicit opt-in through a form with an SMS opt-in checkbox, a keyword opt-in, or written consent, and keep a record of it. Only set a contact's SMS consent to Subscribed when you have that documented opt-in.
 </details>
