@@ -1,18 +1,27 @@
 ---
-title: Create Accounts
+title: "How do I create accounts in Partner Center?"
 sidebar_label: Create Accounts
 sidebar_position: 2
-description: Step-by-step guide to creating individual and bulk business accounts in Business App
+description: "Create business accounts in Partner Center one at a time with business search or manual entry, or in bulk with a CSV import."
 tags: [account-creation, business-profile, bulk-import]
 keywords: [create-account, add-business, account-setup, bulk-import]
 brand: vendasta
 product: partner-center-core
 audience: partners
+content_type: how-to
+kb_id: KB-00178
+answer_snippet: "To create an account in Partner Center, go to Accounts → Manage Accounts and click Create Account to search for the business or enter it manually. To create many accounts at once, click Import Accounts and upload a CSV file."
+doc_owner: partner-center-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 import { GraduationCapIcon } from '@site/src/components/Icons';
 
 # Create Accounts
+
+To create an account in Partner Center, go to `Accounts` → `Manage Accounts` and click `Create Account` to search for the business or enter it manually. To create many accounts at once, click `Import Accounts` and upload a CSV file.
 
 ## What is account creation?
 
@@ -41,7 +50,7 @@ Creating accurate business accounts is essential because:
 - Batch processing for multiple accounts
 - Default settings application
 
-## How to create individual accounts
+## How do I create an individual account? {#how-to-create-individual-accounts}
 
 ### Using business search
 
@@ -112,11 +121,9 @@ SABs commonly don't appear in the account creation search bar. This is expected.
 Creating an account with **no street address** limits Listing Sync and other listing-dependent products. Those products require a physical address to sync data. Add a valid street address before activating listing products.
 :::
 
-**Multi-Location Businesses**:
-
 **Multi-Location Businesses**: create separate accounts for each physical location, use a consistent naming convention (e.g., "Business Name - Location"), and plan to group them using Multi-Location Groups later.
 
-## How to import multiple accounts
+## How do I import multiple accounts? {#how-to-import-multiple-accounts}
 
 ### Preparing for bulk import
 
@@ -171,7 +178,7 @@ Automatic product activation **does not run on CSV-uploaded accounts**. Products
 3. **Configure import settings**:
    - Default market assignment for all accounts
    - User creation preferences
-   - Welcome email settings
+   - Default email language for the onboarding email (every imported user receives it)
 4. **Handle duplicate detection**:
    - Review potential duplicate businesses
    - Choose merge or create separate account options
@@ -199,7 +206,7 @@ After import, the system attempts to enrich each account with data from Google (
 
 Accounts that aren't enriched still import successfully. They just retain only the data from your CSV.
 
-## How to handle account creation issues
+## How do I handle account creation issues? {#how-to-handle-account-creation-issues}
 
 ### Business not found in search
 
@@ -253,7 +260,7 @@ Accounts that aren't enriched still import successfully. They just retain only t
 - Set up initial user access promptly after account creation
 - Configure appropriate notification settings
 
-## Bulk import settings (users and notifications)
+## Which user and notification settings can I set during a bulk import? {#bulk-import-settings-users-and-notifications}
 
 When importing via CSV, you can configure user access and notifications for newly created users:
 
@@ -268,7 +275,7 @@ Every user created by the import is sent the [onboarding email](/business-app/ai
 You can adjust user permissions later from Manage Users if needed.
 :::
 
-## Troubleshooting business search
+## Why doesn't a business appear in the account search? {#troubleshooting-business-search}
 
 If a business doesn’t appear in the `Create Account` search:
 
@@ -331,13 +338,19 @@ Creating an account with no street address will limit Listing Sync and other lis
 <details>
 <summary>Can I set up user access during account creation?</summary>
 
-Yes. When creating an individual account, the **Users** panel lets you add the account's first users during creation — they receive the [onboarding email](/business-app/ai-onboarding-experience) once the account and its products are ready. For bulk imports, you can configure default user settings, including whether the welcome email is sent.
+Yes. When creating an individual account, the **Users** panel lets you add the account's first users during creation — they receive the [onboarding email](/business-app/ai-onboarding-experience) once the account and its products are ready. For bulk imports, every user created by the import receives the onboarding email; you can set a default email language, but you can't turn the email off.
 </details>
 
 <details>
 <summary>Where is the information gathered when creating an account by search?</summary>
 
 The Google Locations API is used to gather the Name, Address, Phone Number, Website, geo-location, Business Category and Hours of Operation.  The social profile URLs are gathered from the business website.
+</details>
+
+<details>
+<summary>How do I create multiple accounts at once?</summary>
+
+Go to `Accounts` → `Manage Accounts`, click `Import Accounts`, and download the CSV template. Fill in the required columns, save the file as CSV UTF-8, and upload it. Automatic product activation doesn't run on CSV-uploaded accounts, so activate products separately after the import.
 </details>
 
 {/* growth-engine callout — commented out 2026-08-19 (Cal, Learn tab refresh) because the
