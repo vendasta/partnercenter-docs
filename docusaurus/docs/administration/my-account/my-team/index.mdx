@@ -1,28 +1,35 @@
 ---
 title: My team
-description: Manage your team members, roles, and permissions in Vendasta Partner Center
+description: "Add, edit, and delete Partner Center team members, including Admins, Salespeople, and Digital Agents, and manage passwords, login activity, and seats."
 sidebar_position: 1
 tags: [my-team, administration, partner-center]
 keywords: [my team, team members, roles, permissions]
 brand: vendasta
 product: partner-center-core
 audience: partners
+content_type: overview
+kb_id: KB-00079
+answer_snippet: "The My team page in Partner Center, at Administration → My team, lists your Admins, Salespeople, and Digital Agents with their roles and last login date. From there you can invite, edit, and delete team members, resend welcome emails, and view login activity."
+doc_owner: partner-center-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-On the `My team` page, you can see and manage your whole team at a glance, including Admins, Salespeople, and Digital Agents (Task Manager users).
+The `My team` page in Partner Center, at `Administration` → `My team`, lists your Admins, Salespeople, and Digital Agents with their roles and last login date. From there you can invite, edit, and delete team members, resend welcome emails, and view login activity.
 
 <img src={require('./img/administration/my-team/manage-my-team-overview.jpg').default} alt="My team overview" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-You can access the page from `Partner Center` → `Administration` → [`My team`](https://partners.vendasta.com/my-team). On this page, you can see a list of your team members, along with their roles and last login date. 
+You can access the page from `Partner Center` → `Administration` → [`My team`](https://partners.vendasta.com/my-team). Digital Agents are Task Manager/Fulfillment users. 
 
 ## Creating team members
 
 You can create different types of team members depending on their role: Partner Center Admins, Salespeople, or Digital Agents. Each role has different access levels and permissions.
 
-### Create a Partner Center Admin
+### How do I create a Partner Center Admin? {#create-a-partner-center-admin}
 
 Partner Center Admins access the platform via [partners.vendasta.com](https://partners.vendasta.com). It's a best practice to give the majority of your internal team *some* level of admin access. 
 
@@ -55,7 +62,7 @@ Once a new Partner Center Admin is created, they will receive a Welcome Email at
 
 <img src={require('./img/administration/my-team/welcome-email.jpg').default} alt="Welcome Email" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-### Create a Salesperson {#create-a-salesperson}
+### How do I create a Salesperson? {#create-a-salesperson}
 
 To create a Salesperson:
 
@@ -76,14 +83,14 @@ To create a Salesperson:
 
 You can view detailed information about team members and make changes to their profiles, roles, and permissions.
 
-### View a team member's profile
+### How do I view a team member's profile? {#view-a-team-members-profile}
 
 - Click on a team member's name, OR click on the menu icon at the end of the row, then click `View profile`.
 
-### Edit a team member
+### How do I edit a team member? {#edit-a-team-member}
 
 1. Click on the menu icon at the end of the row, then click `Edit member`.
-2. In the side panel, edit the team member's name, email address, or role.
+2. In the side panel, edit the team member's name or role. You can't change a team member's email address. To use a different email, create a new team member with that email and delete the old one.
 
 :::note
 If you deselect a role, the team member will lose the permissions associated with that role.
@@ -99,7 +106,7 @@ You can remove team members from your organization when they no longer need acce
 Once an Admin is deleted, it cannot be restored. Before deleting a team member, determine if the member needs to be deleted or if just the Admin role needs to be removed. If a member is not required to be an Admin anymore, then the Admin role can be removed by unchecking the Admin role and NOT deleting the member itself.
 :::
 
-### Delete a team member
+### How do I delete a team member? {#delete-a-team-member}
 
 1. Go to `Partner Center` → `Administration` → `My team`
 2. Click the icon next to the **Admin** you want to delete, then select `Delete member`.
@@ -114,7 +121,7 @@ It's not possible to delete the user you are currently logged in as.
 
 You can manage team member accounts by resetting passwords and resending welcome emails to help team members access the platform.
 
-### Reset password
+### How do I reset a password? {#reset-password}
 
 There are two ways to reset passwords:
 
@@ -141,7 +148,7 @@ The team member will receive an email with instructions to set or reset their pa
 </TabItem>
 </Tabs>
 
-## Viewing team member login activity
+## How do I view team member login activity? {#viewing-team-member-login-activity}
 
 Partner Center logs activity for each team member, which is useful for troubleshooting access issues or investigating suspicious login behavior.
 
@@ -180,7 +187,7 @@ Once in this area, you can use the `Invite Team Member` button and fill out the 
 <details>
 <summary>Can I change a Partner Center admin's email address?</summary>
 
-Currently, there is no option to update/edit an admin's email address in Partner Center. The best option is to create a new admin profile using the new desired email address and then delete the old admin profile if it's no longer needed.
+No. You can't change a team member's email address in Partner Center. The best option is to create a new admin profile using the new desired email address and then delete the old admin profile if it's no longer needed.
 
 Navigate to the `Administration` tab → `My team` to create/delete an admin profile.
 
@@ -252,5 +259,33 @@ You'll be able to see events such as:
 - Successful logins
 - Failed login attempts
 - Password resets
+
+</details>
+
+<details>
+<summary>What happens if I remove a role from a team member?</summary>
+
+If you deselect a role, the team member loses the permissions associated with that role. To remove access without deleting the person, edit the team member and uncheck the role instead of deleting the member.
+
+</details>
+
+<details>
+<summary>Why don't I see the Invite Team Member button?</summary>
+
+If you don't see the `Invite Team Member` button, you don't have permission to create new Admins. Contact another Admin at your organization who has this permission, or have them contact support.
+
+</details>
+
+<details>
+<summary>Can I restrict what an Admin can do in Partner Center?</summary>
+
+Yes. When you create or edit an Admin, you can select which permissions to grant and which Markets they can access. You can restrict Admins from actions such as creating additional Admins, accessing billing reports, customizing the platform, customizing the marketplace, and managing salespeople.
+
+</details>
+
+<details>
+<summary>Will I be charged for adding team members?</summary>
+
+Your subscription tier includes a number of free Team Member seats, and you may be charged for additional seats over that limit. The seat count is usually displayed in a banner at the top of the `My team` page.
 
 </details>

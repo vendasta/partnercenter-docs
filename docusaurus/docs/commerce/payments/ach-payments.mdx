@@ -1,15 +1,24 @@
 ---
-title: ACH payments
+title: "How do I collect ACH payments from clients?"
 sidebar_label: ACH Payments
-description: Learn about Vendasta's ACH payment solutions for billing clients through direct debit payments facilitated by Stripe.
+description: "Set up ACH direct debit payments through Vendasta Payments and Stripe for invoices, subscription billing, and orders, including fees, disputes, and refunds."
 brand: vendasta
 product: commerce
 audience: partners
+content_type: how-to
+kb_id: KB-00064
+answer_snippet: "Vendasta Payments lets US-based partners bill US clients by ACH direct debit through Stripe. You select ACH direct debit transfer as a payment option on invoices, subscription billing, or orders, and your client pays from a US bank account."
+doc_owner: commerce
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 ## Overview
 
-Vendasta offers a streamlined solution for billing clients through ACH direct debit payments facilitated by Stripe. This functionality allows you to create invoices and facilitate payments using the Automated Clearing House (ACH) network.
+Vendasta Payments lets US-based partners bill US clients by ACH direct debit through Stripe. You select `ACH direct debit transfer` as a payment option on invoices, subscription billing, or orders, and your client pays from a US bank account.
+
+ACH payments use the Automated Clearing House (ACH) network.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QxHVZPZ3p5A?si=FzARS_FtFzcig_vA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -20,7 +29,7 @@ Before leveraging ACH payments with Vendasta, ensure the following:
 1. Vendasta Payments are set up.
 2. You are based in the US and serve clients located in the US.
 
-## Compliance and mandates
+## What authorization do I need before debiting a client's bank account? {#compliance-and-mandates}
 
 Compliance with regulations, including those set forth by the National Automated Clearing House Association (NACHA) and federal legislation, mandates that an Authorization Agreement be established with clients before charging their bank accounts. Vendasta Payments, in partnership with Stripe, facilitates this process by presenting clients with an authorization agreement upon initiating ACH payments. This agreement grants permission for future automatic charges, but it's advisable to obtain explicit consent from clients before debiting their accounts.
 
@@ -35,7 +44,7 @@ ACH Agreement:
 
 *[View these terms on Stripe.com](https://stripe.com/en-ca/legal/end-customer-ach-payments-authorization)*
 
-## Fees associated with ACH payments
+## What fees apply to ACH payments? {#fees-associated-with-ach-payments}
 
 Transactions processed via ACH entail the following fees:
 
@@ -44,7 +53,7 @@ Transactions processed via ACH entail the following fees:
 3. $4.00 per failed ACH direct debit payment.
 4. $15.00 per disputed ACH direct debit payment.
 
-## Requesting ACH payments in an invoice
+## How do I request an ACH payment on an invoice? {#requesting-ach-payments-in-an-invoice}
 
 1. Create an invoice (one-time or recurring invoice) for a client account and select `Email the invoice to the customer to pay` under collection method. Under the payment options, select `Debit or Credit Cards` and/or `ACH direct debit transfer`. You can select one or both options depending on how you would like your client to pay.
    - You can also automatically charge a payment method on file. Select `Charge a payment method on file` and select the desired payment method.
@@ -59,7 +68,7 @@ Transactions processed via ACH entail the following fees:
 3. Your client sees the payment options you selected. With the ACH option, they see `US Bank Account`.
    - Your client is prompted to log in and accept the mandate agreement, which authorizes you to auto-charge future invoices.
 
-## Requesting ACH payments in subscription billing
+## How do I request ACH payments in subscription billing? {#requesting-ach-payments-in-subscription-billing}
 
 1. Select the client account and go to `Subscriptions` → `Billing Settings` to enable subscription billing if you haven't already done so. 
 
@@ -76,7 +85,7 @@ Transactions processed via ACH entail the following fees:
 
 5. The configured payment options will also be the default for new manual invoices you create on the account.
 
-## Collecting payment on an order
+## How do I collect payment on an order before products are activated? {#collecting-payment-on-an-order}
 
 You can request payment from clients using ACH or Pre-Authorized Debits (PADs) before products are activated and wholesale charges are incurred. Clients will enter their payment information just as they would with an invoice. Products are automatically activated once the payment is successfully processed.
 
@@ -101,7 +110,7 @@ Clients will see the payment options configured in step 2 and can proceed accord
 
 <img src={require('./img/commerce/commerce-payments/24312620054423.png').default} alt="Order form with the option to send the order for customer review and collect payment online" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-## ACH workflow
+## How does the ACH payment workflow work? {#ach-workflow}
 
 ACH payments take up to 5 days to be processed and paid out into your account. Unlike card payments that are instant, ACH payments can be a little hard to track. It is therefore important to know the workflow for this type of payment.
 
@@ -123,7 +132,7 @@ The Vendasta name appears briefly in the client payment flow (see sample below).
 
 <img src={require('./img/commerce/commerce-payments/23289897398551.png').default} alt="Stripe bank account selection screen showing the Vendasta name in the client payment flow" style={{width: '400px', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-## Disputes and refunds
+## How do ACH disputes and refunds work? {#disputes-and-refunds}
 
 It should be noted that Vendasta has no contractual relationship with your clients and is not liable for any disputed transactions.
 
@@ -147,3 +156,47 @@ Refer to Stripe support article [here](https://support.stripe.com/questions/resp
 - **Early Refunds:**
   - If you request a refund for a payment that hasn't completed yet (within a few hours of creating the Payment Intent), Stripe cancels the original payment by not submitting the charge to the bank, effectively voiding the transaction rather than processing a refund.
   - Refer to [Issue Credit Notes to Clients](../credit-notes/index.mdx#issue-credit-notes) for how to issue a refund.
+
+## Frequently asked questions
+
+<details>
+<summary>Can a client pay for an order by ACH?</summary>
+
+Yes. In the client account, go to `Subscriptions` → `Billing settings`, enable subscription billing, select `Email the invoice to the customer to pay`, and choose `ACH direct debit transfer` under payment options. Your client sees only the payment options you selected, so if ACH isn't selected they see card options only.
+
+</details>
+
+<details>
+<summary>Are products activated after the client pays?</summary>
+
+Yes. When you collect payment on an order, products are automatically activated once the payment is successfully processed.
+
+</details>
+
+<details>
+<summary>What are the ACH processing fees?</summary>
+
+ACH transactions cost 1% of the invoice amount plus a $1 instant verification fee. A failed ACH direct debit payment costs $4.00, and a disputed one costs $15.00.
+
+</details>
+
+<details>
+<summary>How long does an ACH payment take?</summary>
+
+ACH payments can take up to 5 working days. The payment shows as pending in `Billing` → `Payments` until the funds are received, then it's marked successful or failed and the invoice status updates.
+
+</details>
+
+<details>
+<summary>How do I refund an ACH payment?</summary>
+
+You can refund an ACH direct debit payment up to 180 days from the original payment date, and refunds take at least 3 business days to process. See [Issue Credit Notes to Clients](../credit-notes/index.mdx#issue-credit-notes) for how to issue a refund.
+
+</details>
+
+<details>
+<summary>Can I use ACH payments outside the US?</summary>
+
+No. ACH payments require Vendasta Payments to be set up and your agency to be based in the US, serving clients also located in the US.
+
+</details>

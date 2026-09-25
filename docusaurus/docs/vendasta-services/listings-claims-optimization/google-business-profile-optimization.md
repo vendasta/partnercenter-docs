@@ -1,19 +1,26 @@
 ---
 title: "Google Business Profile Optimization"
 sidebar_label: "Google Business Profile Optimization"
-description: "An overview of the Google Business Profile Optimization service: creation and claiming, hands-on guidance through Google's verification, ownership transfer, and monthly maintenance."
+description: "The GBP Optimization service: listing creation and claiming, guidance through Google's verification, ownership transfer, and monthly profile updates."
 tags: [vendasta-services, listings, google-business-profile, optimization, gbp, verification]
 keywords: [Google Business Profile, GBP optimization, listing claim, verification, postcard, suspension, reinstatement, bulk verification, Social AI]
 brand: vendasta-services
 product: vendasta-services-core
-audience: smb
+audience: partners
+content_type: overview
+kb_id: KB-00069
+answer_snippet: "Google Business Profile (GBP) Optimization is a Vendasta service where the Listing Fulfillment team creates and claims your client's Google Business Profile, guides the client through Google's verification, and then maintains and optimizes the profile every month."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 # Google Business Profile Optimization
 
-## Overview
+Google Business Profile (GBP) Optimization is a Vendasta service where the Listing Fulfillment team creates and claims your client's Google Business Profile, guides the client through Google's verification, and then maintains and optimizes the profile every month.
 
-Google Business Profile (GBP) Optimization is a service where the Listing Fulfillment team creates and claims the business listing, guides the client through Google's verification, then maintains and optimizes the profile on a monthly basis.
+## Overview
 
 **What to expect:** order confirmation → completed fulfillment form → profile creation and claiming → the client completes Google's verification with our guidance → ownership transfer → initial optimization → monthly updates and posting.
 
