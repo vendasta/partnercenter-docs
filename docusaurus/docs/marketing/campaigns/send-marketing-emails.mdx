@@ -1,15 +1,22 @@
 ---
-title: Send marketing emails
-description: Learn the different ways to send email campaigns to contacts, companies, lists, and through automation in Vendasta's platform.
+title: "How do I send marketing emails?"
+description: "Send email campaigns to CRM contacts, companies, and lists, through automation steps, or to account lists and individual users in Partner Center."
 sidebar_label: Send Marketing Emails
 sidebar_position: 2
 
 brand: vendasta
 product: campaigns
 audience: partners
+content_type: how-to
+kb_id: KB-00026
+answer_snippet: "To send marketing emails with Campaigns in Partner Center, add CRM contacts or companies to a campaign, start a campaign from a CRM list, or use automation steps. You can also send campaigns to account lists or individual account users."
+doc_owner: campaigns
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-Email campaigns can be sent to contacts, companies, and lists through various methods in the Vendasta platform. The CRM-based approaches provide the most comprehensive functionality and tracking capabilities.
+To send marketing emails with Campaigns in Partner Center, add CRM contacts or companies to a campaign, start a campaign from a CRM list, or use automation steps. You can also send campaigns to account lists or individual account users.
 
 ## Prerequisites
 
@@ -20,11 +27,11 @@ Before sending email campaigns, ensure you have:
 - **Prepared your audience** - Identify contacts, companies, or lists to receive the campaign. Learn about [CRM contact fields](/crm/contacts/crm-default-contact-fields) and [CRM company fields](/crm/companies/crm-default-company-fields) for targeting options
 - **Verified mailing address** - Ensure your business mailing address is configured in Partner Center. See [Email settings requirements](/marketing/email-settings/email-settings-requirements) for details
 
-## Primary methods (recommended)
+## What are the recommended ways to send campaigns? {#primary-methods-recommended}
 
 ### 1. Send to CRM contacts
 
-The primary and recommended way to send campaigns is through CRM contacts, which provides full field support and comprehensive tracking:
+The primary and recommended way to send campaigns is through CRM contacts, which provides full field support and tracking:
 
 **Via Contact Selection:**
 1. Go to `Partner Center` → `CRM` → `Contacts`
@@ -53,7 +60,7 @@ Send campaigns to entire companies through the CRM system. When you target a com
 - Target the company as an entity
 - Emails are automatically delivered to associated contacts at that company (up to 50 contacts per company)
 - All emails use the company's data for dynamic content and personalization
-- Perfect for account-based marketing and business-level messaging
+- Suited to account-based marketing and business-level messaging
 
 **Via CRM Company Lists:**
 1. Go to `Partner Center` → `CRM` → `Lists`
@@ -70,7 +77,7 @@ Send campaigns to entire companies through the CRM system. When you target a com
 
 ### 3. Send through CRM automation (advanced)
 
-Set up sophisticated automated campaigns with business logic:
+Set up automated campaigns with business logic:
 
 1. Go to `Partner Center` → `Automations`
 2. Create automation workflows with triggers like:
@@ -85,7 +92,7 @@ Set up sophisticated automated campaigns with business logic:
 - **Send Email to Contact/Company** – Sends a direct email to the selected contact or company
 - **Campaign Step** - Use existing campaigns as building blocks within automation workflows
 
-## Benefits of CRM-based sending
+## Why should I send campaigns through the CRM? {#benefits-of-crm-based-sending}
 
 - **Complete Field Access** - Use all [CRM contact fields](/crm/contacts/crm-default-contact-fields) and [CRM company fields](/crm/companies/crm-default-company-fields) in dynamic content
 - **Primary Company Data** - Company fields automatically use the contact's primary company information  
@@ -93,7 +100,7 @@ Set up sophisticated automated campaigns with business logic:
 - **Smart Segmentation** - Create dynamic lists that automatically update based on criteria
 - **Advanced Automation** - Trigger campaigns based on complex business rules and contact behavior
 
-## Choosing between contact vs company targeting
+## Should I target contacts or companies? {#choosing-between-contact-vs-company-targeting}
 
 ### Send to CRM contacts when:
 - **Individual Focus**: Personalizing content for specific roles, interests, or individual behavior
@@ -122,7 +129,7 @@ All [CRM company fields](/crm/companies/crm-default-company-fields) are availabl
 - **Snapshot Report details**: Enrichment from the Snapshot Report, the section's grades and the details
 - **Product details**: The active products on a company
 
-## Alternative methods
+## What other ways can I send campaigns? {#alternative-methods}
 
 ### Account/user-based sending
 
@@ -143,7 +150,7 @@ For specific use cases, you can also send campaigns through account management:
 5. Find the campaign and click `Start` next to the campaign name  
 ![Start campaign](./img/marketing/marketing-campaigns/recipient-campaigns/start-campaign.jpg)
 
-## Smart automation examples
+## What are some examples of automated campaigns? {#smart-automation-examples}
 
 ### Product upselling campaigns
 Filter companies with no active product (such as Conversation AI) and automatically send upselling campaigns highlighting the benefits and ROI potential for their business size and industry.
@@ -154,7 +161,7 @@ Use snapshot report data to identify companies with low listing scores or poor o
 ### Engagement recovery campaigns
 Target contacts who haven't engaged recently, sending re-engagement campaigns with personalized incentives.
 
-## Campaign configuration options
+## How do I configure campaign sending options? {#campaign-configuration-options}
 
 ### Scheduling options
 When sending campaigns, you can:
@@ -185,7 +192,7 @@ Ensure successful delivery by:
 - **Include correct physical address** - CAN-SPAM law requires a valid physical postal address in all commercial emails. Configure your business address in [Email settings requirements](/marketing/email-settings/email-settings-requirements)
 - **Testing campaigns** - Always send test emails before launching to full audience. Learn about [Email Deliverability best practices](/marketing/email-settings/email-deliverability) which includes troubleshooting common delivery errors
 
-## Monitor campaign performance
+## How do I monitor campaign performance? {#monitor-campaign-performance}
 
 After sending campaigns:
 - Track open rates and click-through rates in campaign analytics
@@ -193,10 +200,10 @@ After sending campaigns:
 - Review delivery status for each recipient
 - Use performance data to optimize future campaigns
 
-For detailed guidance on analyzing your campaign results, see [Track Email Campaign Performance](./track-email-campaign-performance.mdx) for comprehensive metrics and optimization strategies.
+For detailed guidance on analyzing your campaign results, see [Track Email Campaign Performance](./track-email-campaign-performance.mdx) for metrics and optimization strategies.
 
 :::tip Recommendation
-Use CRM-based methods whenever possible for better data integration, tracking capabilities, and automation potential. The CRM approach provides more granular control and comprehensive contact management.
+Use CRM-based methods whenever possible for better data integration, tracking capabilities, and automation potential. The CRM approach provides more granular control over contact management.
 :::
 
 ## Frequently asked questions
@@ -236,6 +243,42 @@ When you send a campaign to a CRM company, the system automatically sends emails
 This company-level approach is ideal for account-based marketing where you want to ensure all decision-makers and stakeholders receive consistent messaging.
 </details>
 
+<details>
+<summary>How do I send a campaign to a list of contacts?</summary>
+
+Go to `Partner Center` → `CRM` → `Lists` and create or select a contact list. Click `Three dots` → `More action`, select `Start Campaign for Contact` or `Send Email to Contact`, then choose your campaign and start sending.
+</details>
+
+<details>
+<summary>How do I send a campaign automatically, for example when someone submits a form?</summary>
+
+Go to `Partner Center` → `Automations` and create a workflow with a trigger such as a form submission. Add a `Start Campaign for Contact` or `Send Email to Contact` step to send the campaign or email when the trigger fires.
+</details>
+
+<details>
+<summary>What is the difference between the automation email steps?</summary>
+
+`Start Campaign for Contact` launches a campaign targeting an individual contact, and `Start Campaign for Company` initiates a campaign for the entire company. `Send Email to Contact/Company` sends a direct email to the selected contact or company, and the `Campaign Step` uses an existing campaign as a building block within a workflow.
+</details>
+
+<details>
+<summary>How do I send a campaign to an account list?</summary>
+
+Go to `Partner Center` → `Marketing` → `Campaigns`, find your campaign, and click the **3-dot menu**. Select **Add account list to campaign**, then configure the sending options.
+</details>
+
+<details>
+<summary>Who are campaign emails sent from?</summary>
+
+By default, campaigns use the sender in your configured email settings, and you can override it with custom sender details for a campaign. When an account has an assigned salesperson, campaign emails go out from the salesperson's email address and name instead. To send from your partner-level sender, remove the salesperson assignment from the account before starting the campaign.
+</details>
+
+<details>
+<summary>Where do replies to campaign emails go?</summary>
+
+Campaign replies go to the sender address, which is either the assigned salesperson or your partner-level sender. The `Reply Address` field in `Marketing` → `Email settings` → `Sender and reply settings` applies only to system emails, such as Daily Digest notifications.
+</details>
+
 :::tip Pro Tip
-All email activity from CRM-based campaigns is automatically tracked in the contact and company records, enabling sophisticated follow-up automation and lead scoring based on engagement patterns.
+All email activity from CRM-based campaigns is automatically tracked in the contact and company records, enabling follow-up automation and lead scoring based on engagement patterns.
 :::

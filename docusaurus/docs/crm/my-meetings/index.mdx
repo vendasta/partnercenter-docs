@@ -1,18 +1,27 @@
 ---
-title: My Meetings
+title: "How do I set up and book meetings in My Meetings?"
 sidebar_label: My Meetings
-description: Learn how to create and customize booking links in the Meeting Scheduler to set up different types of meetings with your prospects.
+description: "Book meetings, create booking links and event types, connect a calendar, and set availability, buffers, and reminders in CRM My Meetings in Partner Center."
 sidebar_position: 6
 brand: vendasta
 product: crm
 audience: partners
+content_type: how-to
+kb_id: KB-00024
+answer_snippet: "My Meetings, at CRM → My Meetings in Partner Center, lets you book meetings with contacts and create booking links for different event types. You connect your Google or Microsoft 365 calendar, choose a meeting app, and set your availability."
+doc_owner: crm
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-# My Meetings
+# How do I set up and book meetings in My Meetings?
 
-Meetings don't necessarily fit into a one size fits all format, which is why the Meeting Scheduler allows you to create your own booking links. Want a quick 15-minute coffee meeting? You got it! How about a 60-minute consultation call? We've got you covered.
+My Meetings, at `CRM` → `My Meetings` in Partner Center, lets you book meetings with contacts and create booking links for different event types. You connect your Google or Microsoft 365 calendar, choose a meeting app, and set your availability.
 
-## Create booking link
+Each booking link is tied to an event type, so you can offer different meeting lengths and formats, such as a 15-minute call or a 60-minute consultation.
+
+## How do I book a meeting with a contact? {#create-booking-link}
 
 1. Go to `CRM` → `My Meetings`
 2. Click `Book a meeting`
@@ -34,7 +43,7 @@ Once booked, the meeting appears under the **Bookings** tab on the **My Meetings
 
 ![Upcoming booked meeting](./img/crm/my-meetings/upcoming-meeting-booked.png)
 
-## Initial setup
+## How do I set up My Meetings for the first time? {#initial-setup}
 
 When you first log in to **My Meetings**, you'll be guided through a setup wizard to configure your meeting preferences. The wizard walks you through four steps:
 
@@ -47,7 +56,7 @@ When you first log in to **My Meetings**, you'll be guided through a setup wizar
 
 Once the setup is complete, you can update any of these settings at any time from **Meeting settings**.
 
-## Meeting settings
+## How do I change my meeting settings? {#meeting-settings}
 
 To configure your general meeting preferences, click the **three-dot menu** in the top-right corner of the **My Meetings** page and select **Meeting settings**.
 
@@ -73,13 +82,13 @@ From here you can configure:
 
 ![Meeting settings - availability and timezone](./img/crm/my-meetings/meeting-settings-availability.png)
 
-## Manage booking links
+## How do I manage my booking links? {#manage-booking-links}
 
 Click **Manage booking links** to view all of your event types. This page lists each event type along with its link, duration, and whether it is a personal or team event.
 
 ![Booking links list](./img/crm/my-meetings/booking-links-list.png)
 
-### Create a new event type
+### How do I create a new event type? {#create-a-new-event-type}
 
 Click **Create event type** to set up a new type of meeting. Fill in the event type details:
 
@@ -130,3 +139,47 @@ Once you create a new event type, it appears as an option when you go to book a 
 :::note
 If a meeting type is deleted, it will not cancel any appointments already booked using that link. The link will be deactivated and will no longer allow new bookings. If it was deleted in error, there is no way to restore it — you will need to create a new booking link.
 :::
+
+## Frequently asked questions
+
+<details>
+<summary>Which calendars can I connect to My Meetings?</summary>
+
+You can connect Google Calendar or Microsoft 365 / Outlook. My Meetings checks the connected calendar for conflicts and creates events in it. Connect it during initial setup or later in **Meeting settings** → **Calendar settings**.
+
+</details>
+
+<details>
+<summary>Which meeting apps does My Meetings support?</summary>
+
+You can choose Google Meet, Zoom, or Microsoft Teams as your default meeting app. For event types with the **Video** location, the meeting link is inserted automatically.
+
+</details>
+
+<details>
+<summary>Why are only some time slots showing on my booking link?</summary>
+
+The slots shown depend on your connected calendar's conflicts and your availability increment, meeting buffers, advance notice, general availability, and any limit on future meetings. Settings on an event type override your defaults for that event type, so check both **Meeting settings** and the event type's options.
+
+</details>
+
+<details>
+<summary>Can I book in-person meetings or on-site visits?</summary>
+
+Yes. Set the event type's location to **In Person**, then choose **I'll set the location** to use your address or **Invitee sets the location** so the person booking provides their address, which is useful for on-site service calls.
+
+</details>
+
+<details>
+<summary>Can invitees get SMS confirmations and reminders?</summary>
+
+Yes. Make **Phone Number** a required question on the event type, then choose **SMS** or **Both** for the confirmation and reminder channels. SMS requires an active subscription to Conversations AI Pro or Premium (Reputation AI Premium and Campaigns Pro also unlock this) and a business phone number registered at `Administration` → `SMS Configuration`.
+
+</details>
+
+<details>
+<summary>What happens to booked meetings if I delete an event type?</summary>
+
+Meetings already booked with that link aren't canceled, but the link is deactivated and no longer accepts new bookings. A deleted event type can't be restored, so you'd need to create a new booking link.
+
+</details>
