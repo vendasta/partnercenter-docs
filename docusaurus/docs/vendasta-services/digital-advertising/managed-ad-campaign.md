@@ -2,15 +2,24 @@
 title: "Managed Ad Campaign"
 sidebar_label: "Managed Ad Campaign"
 sidebar_position: 1
-description: "Managed Ad Campaign is a do-it-for-me, single-network ad campaign built, launched the same day, and managed by certified ads specialists on Google/Bing Search, Google Display, or Meta. Available for businesses in the United States and Canada only."
+description: "Managed Ad Campaign: a same-day, single-network ad campaign on Google/Bing Search, Google Display, or Meta, managed by Vendasta Services (US and Canada only)."
 tags: [vendasta-services, digital-advertising, managed-ads, vendasta-ads, campaigns]
 keywords: [Managed Ad Campaign, single network, same-day launch, Google Search, Bing, Google Display, Meta, call tracking, conversion tracking, Advertising Intelligence]
 brand: vendasta-services
 product: vendasta-services-core
-audience: smb
+audience: partners
+content_type: overview
+kb_id: KB-00174
+answer_snippet: "Managed Ad Campaign is a Vendasta Services do-it-for-me ad campaign on one network (Google/Bing Search, Google Display, or Meta) that certified ads specialists launch the same day the order is placed and manage for you. It's available only for businesses in the United States and Canada."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 # Managed Ad Campaign
+
+Managed Ad Campaign is a Vendasta Services do-it-for-me ad campaign on one network (Google/Bing Search, Google Display, or Meta) that certified ads specialists launch the same day the order is placed and manage for you. It's available only for businesses in the United States and Canada.
 
 ## Overview
 

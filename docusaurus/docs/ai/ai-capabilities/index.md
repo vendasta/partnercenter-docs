@@ -1,17 +1,24 @@
 ---
 title: AI Capabilities Overview
 sidebar_label: AI Capabilities
-description: Learn how AI capabilities work as specialized skills that enable AI employees to handle specific business tasks and automate customer interactions.
+description: "How AI Capabilities work in AI Workforce: built-in and custom capabilities, prompts and tools, and how to test and optimize them for AI Employees."
 tags: [ai-capabilities, capabilities, ai-employees, custom-capabilities, automation]
 keywords: [AI capabilities, capabilities, custom capabilities, AI employees, automation, tools, integrations, lead capture, appointment booking]
 brand: vendasta
 product: ai-workforce
 audience: partners
+content_type: overview
+kb_id: KB-00175
+answer_snippet: "AI Capabilities are skills you enable or disable for an AI Employee in AI Workforce to define what it can do and how it behaves with customers. Each capability is a section of prompt, optionally with a tool that calls an API."
+doc_owner: ai-workforce
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 import { GraduationCapIcon } from '@site/src/components/Icons';
 
-AI Capabilities are specialized skills that define what your AI Employees can do and how they behave when interacting with customers. Think of capabilities as building blocks that transform a basic AI assistant into a skilled employee who can handle specific business tasks.
+AI Capabilities are skills you enable or disable for an AI Employee in AI Workforce to define what it can do and how it behaves with customers. Each capability is a section of prompt, optionally with a tool that calls an API.
 
 ## What are AI Capabilities?
 
@@ -133,6 +140,32 @@ Use the Explanations feature in Conversations to understand:
 - When the AI chooses not to use a capability and why
 - How well your trigger conditions are working in practice
 :::
+
+## Frequently asked questions
+
+<details>
+<summary>Which built-in capabilities are available for AI Employees?</summary>
+
+The Vendasta platform provides pre-configured capabilities for common business functions, such as Lead Capture, Appointment Booking, and Transfer Call. For specialized workflows, you can create your own custom capabilities.
+</details>
+
+<details>
+<summary>What's the difference between a capability and a tool?</summary>
+
+A capability is a section of prompt that tells the AI Employee when and how to act, along with an optional tool. A tool is the technical part of a custom capability that calls an API, defining the endpoints, authentication, data parameters, and response processing.
+</details>
+
+<details>
+<summary>Can I create my own capabilities?</summary>
+
+Yes. Custom capabilities can simply add new instructions for the AI Employee to follow with no tools needed, or connect to external systems via APIs using tools. See [Building Custom Tools](./tools-overview/building-custom-tools) for a step-by-step guide.
+</details>
+
+<details>
+<summary>How do I check whether a capability is working as expected?</summary>
+
+Test that it activates when it should and not when it shouldn't, using various phrasings, and confirm the AI asks for required information before using tools. Use the Explanations feature in Conversations to see which capabilities are used, where they conflict, and when the AI chooses not to use one.
+</details>
 
 ---
 
