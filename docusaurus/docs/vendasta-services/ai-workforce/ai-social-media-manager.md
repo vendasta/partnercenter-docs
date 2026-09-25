@@ -2,10 +2,16 @@
 title: "AI Social Media Manager: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Social Media Manager"
 description: "An overview of the AI Social Media Manager service: how setup works, how your autonomous content calendar is built, and ongoing optimization."
-last_reviewed: 2026-09-21
 brand: vendasta-services
 product: vendasta-services-core
-audience: smb
+audience: partners
+content_type: overview
+kb_id: KB-00199
+answer_snippet: "The AI Social Media Manager Setup is a done-with-you service where our experts configure, train, and launch the AI Social Media Manager for your business, including a content calendar that drafts, schedules, or publishes posts across your networks. Social AI Premium is required."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';
@@ -21,7 +27,7 @@ Want to hand this to a client? The **grey-labeled guide** has the same informati
 **Social AI Premium** must be active on the account.
 :::
 
-The AI Social Media Manager Setup is a done-with-you service where our experts configure, train, and launch the AI Social Media Manager for your business. Our team handles the branding, trains the AI on your voice and content, connects your social accounts, and sets up an autonomous content calendar that drafts, schedules, or publishes posts across your networks.
+The AI Social Media Manager Setup is a done-with-you service where our experts configure, train, and launch the AI Social Media Manager for your business, including a content calendar that drafts, schedules, or publishes posts across your networks. Social AI Premium is required. Our team handles the branding, trains the AI on your voice and content, and connects your social accounts.
 
 :::info Two ways to get the AI Social Media Manager
 
@@ -32,7 +38,7 @@ Choose one or the other:
 
 :::
 
-## Setup
+## How does setup work? {#setup}
 
 Setup runs through a short series of calls where our experts configure, train, and launch your AI Social Media Manager. Here is how it works and what we set up along the way.
 
@@ -59,13 +65,13 @@ Using the refinements from the onboarding call, we configure and launch your AI 
 
 ### 3. Walkthrough and training call
 
-We walk you through the new workflow: where to find your generated calendar and individual posts, how drafts, scheduled posts, and published posts are managed in Business App, and how to chat with your AI Social Media Manager directly to generate posts, pull performance insights, or adjust content conversationally.
+We walk you through the workflow: where to find your generated calendar and individual posts, how drafts, scheduled posts, and published posts are managed in Business App, and how to chat with your AI Social Media Manager directly to generate posts, pull performance insights, or adjust content conversationally.
 
 ### 4. 30-day review
 
 At your 30-day check-in, we review how your calendar is performing, highlighting top-performing posts surfaced by the AI, and confirm whether your posting cadence, content split, and approval setting still make sense as your business evolves.
 
-## Your social content calendar
+## How does your social content calendar work? {#your-social-content-calendar}
 
 Your AI Social Media Manager runs on a recurring trigger (daily, weekly, or monthly) that generates a fresh content calendar. Each time it runs, we configure:
 
@@ -108,7 +114,7 @@ Not included: manually reviewing and editing every social post and image the AI 
 
 :::
 
-## What we'll need from you
+## What do we need from you? {#what-well-need-from-you}
 
 To set your business up for success, we will need the following:
 
@@ -172,6 +178,24 @@ We train it using your website, business profile, and any brand documents you pr
 <summary>What happens after the first 30 days?</summary>
 
 We complete a 30-day review to walk through performance, including top-performing posts and engagement trends, and confirm whether your cadence, content split, or approval setting should be adjusted.
+</details>
+
+<details>
+<summary>What is required to use the AI Social Media Manager?</summary>
+
+Social AI Premium must be active on the account.
+</details>
+
+<details>
+<summary>Do I need both the AI Employee Setup and the AI Workforce Optimization Plan?</summary>
+
+No, choose one or the other. The AI Employee Setup is a one-time fee for configuring, training, and launching the AI Social Media Manager. The AI Workforce Optimization Plan is an ongoing monthly fee that includes the same setup plus continued optimization.
+</details>
+
+<details>
+<summary>Does the AI Social Media Manager publish posts automatically?</summary>
+
+It depends on the approval workflow you choose. Draft holds every post for your review in Business App, Schedule queues posts to publish without manual approval, and Publish posts immediately.
 </details>
 
 <OptimizationPlanFaq />
