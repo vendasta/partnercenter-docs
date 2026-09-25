@@ -5,9 +5,18 @@ description: Learn when leads are captured from web chat, what notifications you
 brand: vendasta
 product: conversations
 audience: partners
+content_type: overview
+kb_id: KB-00060
+answer_snippet: "In Conversations, your AI Receptionist captures a web chat visitor's name, email, or phone number as a lead when its Capture leads capability is enabled. You get a New Lead notification when a new CRM contact is created, or a Conversation Update when the visitor is an existing contact."
+doc_owner: conversations
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-When visitors chat with your business through the web chat widget, your AI Receptionist (or custom AI) can automatically capture their contact information and notify you about new leads. This requires the `Capture leads` capability to be active on your AI Receptionist.
+In Conversations, your AI Receptionist captures a web chat visitor's name, email, or phone number as a lead when its `Capture leads` capability is enabled. You get a New Lead notification when a new CRM contact is created, or a Conversation Update when the visitor is an existing contact.
+
+Lead capture works with your AI Receptionist or a custom AI on the web chat widget.
 
 This guide explains when leads are captured, what notifications you'll receive, and how to interpret them.
 
@@ -50,7 +59,7 @@ A lead is captured when **all** of the following conditions are met:
 **What's included:**
 - Contact information (name, phone, email)
 - AI-generated conversation summary
-- Link to view the full conversation in Inbox
+- Link to view the full conversation in Conversations
 
 **Action to take:** Review the lead and follow up based on their inquiry.
 
@@ -79,7 +88,7 @@ A duplicate contact occurs when someone who is already in your CRM starts a **ne
 
 ### What is an anonymous conversation?
 
-An anonymous conversation occurs when a visitor chats without providing any contact information. These conversations appear in the "Anonymous" section of your Inbox until the visitor shares identifying details.
+An anonymous conversation occurs when a visitor chats without providing any contact information. These conversations appear in the "Anonymous" section of Conversations until the visitor shares identifying details.
 
 Additionally, when a [duplicate conversation](#how-duplicate-conversations-are-handled) is detected, the new conversation remains in Anonymous while being linked to the original contact's conversation.
 
@@ -88,7 +97,7 @@ Additionally, when a [duplicate conversation](#how-duplicate-conversations-are-h
 | Scenario | What happens |
 |----------|--------------|
 | Same person, different browser | Visitor clears cookies or uses a new device, starts chatting again |
-| Same person, different channel | Contact who previously chatted now texts you via SMS |
+| Same person, different channel | Contact who previously chatted texts you via SMS |
 | Returning visitor | Someone who chatted months ago returns to ask a new question |
 
 ### How duplicate conversations are handled
@@ -97,7 +106,7 @@ When the system detects that a new conversation is from someone already in your 
 
 1. **No duplicate CRM contact is created** - The system recognizes the existing contact
 2. **You receive a "Conversation Update"** instead of "New Lead"
-3. **The new conversation stays in Anonymous** - The duplicate conversation remains in the Anonymous section of your Inbox
+3. **The new conversation stays in Anonymous** - The duplicate conversation remains in the Anonymous section of Conversations
 4. **The original conversation links to the new one** - An event is added to the contact's original conversation with a link to the new anonymous conversation
 5. **Contact info is NOT overwritten** - The existing contact record is preserved (only missing postal code may be added)
 
@@ -177,7 +186,7 @@ You are automatically set to follow a conversation when:
 
 Auto-following means you will receive notifications for that conversation even when "Only my events" is selected. To stop receiving notifications for a conversation you don't need to track, click the `★` star icon in the conversation header to unfollow it.
 
-If someone other than the intended Salesperson is receiving Inbox notifications, check whether they participated in a conversation (and were auto-followed) or were assigned as Salesperson to the account.
+If someone other than the intended Salesperson is receiving Conversations notifications, check whether they participated in a conversation (and were auto-followed) or were assigned as Salesperson to the account.
 
 ## Closed conversations reopening
 
@@ -198,7 +207,7 @@ When a customer sends a new inbound message on a number or channel tied to a con
 - Conversations appear in "Anonymous" when the visitor hasn't shared any contact information yet
 - Once the visitor provides their name, email, or phone, the conversation will be linked to a contact
 - [Duplicate conversations](#how-duplicate-conversations-are-handled) also remain in Anonymous. The original contact's conversation will have a link to the new anonymous conversation
-- Check the Anonymous section in your Inbox to find these conversations
+- Check the Anonymous section in Conversations to find these conversations
 
 **Q: Can I see all conversations from the same contact?**
 - There should only be one conversation per contact
@@ -216,7 +225,7 @@ When a customer sends a new inbound message on a number or channel tied to a con
 - Only missing postal code may be added automatically
 - You can manually update other fields in the CRM if needed
 
-**Q: Someone other than the Salesperson is getting Inbox notifications. Why?**
+**Q: Someone other than the Salesperson is getting Conversations notifications. Why?**
 - Any user who sends a message in a conversation is automatically set to follow it
 - Users assigned as Salesperson to an account follow all conversations for that account
 - To stop receiving notifications, the user can unfollow the conversation by clicking the ★ in the conversation header
@@ -225,3 +234,8 @@ When a customer sends a new inbound message on a number or channel tied to a con
 - Confirm your user account exists and is active in Partner Center
 - Verify Conversations AI is activated for the account
 - Check that notification preferences are enabled (`bell icon` → `gear icon` → enable `All events` or `Only my events`)
+
+**Q: Can I be notified every time a returning lead messages again?**
+- Follow-up messages from existing contacts don't trigger a notification by default
+- To get alerted on follow-ups, create an Automation with the trigger `A contact communication summary is created` and the action `Send notification`
+- This fires after each conversation summary is generated, for both new leads and returning contacts

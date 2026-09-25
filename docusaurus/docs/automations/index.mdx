@@ -1,7 +1,7 @@
 ---
 id: automations
 title: Automations overview
-description: Learn the fundamentals of automations, how to create them, and understand triggers and workflows in Vendasta's platform.
+description: "How Partner Center Automations work: triggers, trigger options, AND/OR conditions, example workflows, and the steps to create your first automation."
 sidebar_position: 1
 sidebar_label: Automations overview
 tags: [automations, workflows, automation, partner-center]
@@ -9,6 +9,13 @@ keywords: [automations, workflows, triggers, automation steps, email campaigns, 
 brand: vendasta
 product: automations
 audience: partners
+content_type: overview
+kb_id: KB-00047
+answer_snippet: "Automations in Partner Center run actions for you when a trigger happens, such as assigning a salesperson when a new client account is created. You build each workflow from a trigger, optional conditions, and the actions to perform."
+doc_owner: automations
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 import { Cards, Card } from '@site/src/components/Cards';
@@ -16,7 +23,7 @@ import { GraduationCapIcon } from '@site/src/components/Icons';
 
 # Automations overview
 
-Automations help you automate sales and marketing processes. Define workflows in the builder so that when a trigger happens, the platform runs your chosen actions — for example, "When a new client is added, assign a salesperson to the account."
+Automations in Partner Center run actions for you when a trigger happens, such as assigning a salesperson when a new client account is created. You build each workflow from a trigger, optional conditions, and the actions to perform.
 
 <iframe
   src="//www.youtube-nocookie.com/embed/AdLMXuGvGDE"
@@ -45,7 +52,7 @@ An automation workflow is a set of instructions: **when** this trigger happens, 
   </Card>
 </Cards>
 
-## What you can do with automations
+## What can you do with automations? {#what-you-can-do-with-automations}
 
 ### Welcome new clients
 When an account is created, send a welcome email campaign, assign a salesperson, and create a task for the salesperson to connect with the client.
@@ -58,7 +65,7 @@ When a customer has a failed payment, receive a notification so you can follow u
 
 ![Automation workflow example](./my-automations/img/automations/automation-workflow.jpg)
 
-## Understanding automation triggers
+## How do automation triggers work? {#understanding-automation-triggers}
 
 Triggers are the events that start a workflow. Some are ready to use (e.g. **An account is created**). Others need **trigger options** — for example, **A sales order status is changed** requires you to set the order origin and the status it changes to.
 
@@ -75,7 +82,7 @@ Conditions filter when the workflow runs. You can filter on tags, salespeople, a
 When you choose a CRM field while building a condition, its field description appears below the field selector so you can confirm you've picked the right field, including any expected format or unit. The description only appears for fields that have one set. See [CRM Objects](/administration/data-management/crm-objects) to add or edit field descriptions.
 For a complete list of triggers and how to choose the right one, see [Triggers overview](./my-automations/triggers-overview.mdx).
 
-## Creating your first automation
+## How do I create my first automation? {#creating-your-first-automation}
 
 1. In Business App go to **Settings** then **Automations**.
 2. Click **Create** (top right).
@@ -103,6 +110,50 @@ The automation runs whenever the trigger conditions are met (if it's turned on).
 - **Monitor regularly** — Check that automations are running as expected.
 - **Consider impact** — Think through how automations affect the rest of your workflow.
 - **Test first** — Run with a small group before enabling for all accounts.
+
+## Frequently asked questions
+
+<details>
+<summary>What is an automation?</summary>
+
+An automation is a workflow that follows a set of instructions: **when** this trigger happens, **then** perform this action. For example, when a new client is added, assign a salesperson to the account.
+
+</details>
+
+<details>
+<summary>How do I add a trigger to an automation?</summary>
+
+When you create an automation, define the **trigger** (When) and any optional **conditions** (If), then set up the **action**. Some triggers are ready to use, such as **An account is created**, while others need trigger options, such as the order origin and status for **A sales order status is changed**.
+
+</details>
+
+<details>
+<summary>Can I limit which accounts an automation runs for?</summary>
+
+Yes. Add trigger conditions to filter on tags, salespeople, account location, account categories, active products, and more. With multiple conditions, choose **OR** to run when any condition is met or **AND** to run only when all conditions are met.
+
+</details>
+
+<details>
+<summary>Can I start from a pre-built automation instead of building one?</summary>
+
+Yes. [Templates](/automations/templates/) give you pre-built workflows to get started quickly, and [System automations](/automations/system-automations/) are pre-built workflows provided by Vendasta that you can enable or disable per account.
+
+</details>
+
+<details>
+<summary>Does an automation run as soon as I create it?</summary>
+
+The automation runs whenever its trigger and conditions are met, as long as its **Status** is turned on.
+
+</details>
+
+<details>
+<summary>Where can I check whether my automations ran?</summary>
+
+Use [Automation history](/automations/automation-history/) to monitor runs, troubleshoot errors, retry failed automations, and fix permissions.
+
+</details>
 
 ## Next steps
 
