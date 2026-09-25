@@ -1,36 +1,43 @@
 ---
-title: "Package Troubleshooting & Advanced Guide"
+title: "How do I fix common Marketplace package problems?"
 sidebar_label: "Troubleshooting & Advanced Guide"
 sidebar_position: 3
-description: "Troubleshooting steps for package visibility, duplicates, links, pricing, multi-market sync, and support escalation"
+description: "Fix Marketplace package problems in Partner Center: store visibility, duplicates, broken links, pricing changes, multi-market sync, and support escalation."
 tags: [marketplace, packages, troubleshooting, package-visibility, duplicates]
 keywords: [package troubleshooting, package visibility, duplicate packages, package problems, marketplace issues, store problems]
 brand: vendasta
 product: marketplace
 audience: partners
+content_type: troubleshooting
+kb_id: KB-00083
+answer_snippet: "Most Marketplace package problems come from package setup: a missing store category, the wrong market, duplicate display settings, the purchase behavior, or the pricing model. Find your symptom below and follow the fix."
+doc_owner: marketplace
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-This guide addresses common package issues with step-by-step solutions for visibility problems, duplicates, links, pricing, multi-market sync, and when to escalate.
+Most Marketplace package problems come from package setup: a missing store category, the wrong market, duplicate display settings, the purchase behavior, or the pricing model. Find your symptom below and follow the fix.
 
-## Product visibility and activation constraints
+## Why isn't a product visible or available to activate? {#product-visibility-and-activation-constraints}
 
-### `Available in store` is set to Yes but the product isn't appearing
+### Why isn't my product appearing when `Available in store` is set to Yes? {#available-in-store-is-set-to-yes-but-the-product-isnt-appearing}
 
 Setting a product to `Available in store` makes it eligible for the store, but customers cannot find or purchase it until it is added to a **published package** that is assigned to a visible store category. Without that package step, the product remains invisible to customers regardless of the availability setting.
 
-### Custom product missing from Order Products
+### Why is my custom product missing from Order Products? {#custom-product-missing-from-order-products}
 
 If your custom product doesn't appear in the `Order Products` list when creating an order for an account, the most likely cause is that the account has **no address on file**. Custom products use the account's business profile address to determine availability. Add an address to the account's business profile and the product should appear.
 
-### Country-specific product activation
+### Why can't an account activate a product anymore? {#country-specific-product-activation}
 
 Some Marketplace products are restricted to specific countries. If an account could previously activate a product but can no longer do so, check whether the **business profile country** on the account has changed. The account's country must match the country availability configured on the product. Update the business profile address if needed.
 
-### Review Widget Carousel requires Review Widget Pro
+### Why isn't the Review Widget Carousel option available? {#review-widget-carousel-requires-review-widget-pro}
 
 The Carousel display option in the Review Widget is not available on the standard Review Widget. It requires the **Review Widget Pro** add-on. Activate Review Widget Pro on the account to enable the Carousel option.
 
-### Finding a product's SKU
+### How do I find a product's SKU? {#finding-a-products-sku}
 
 Every product in the Vendasta Marketplace has a SKU identifier. To find it:
 
@@ -40,11 +47,11 @@ Every product in the Vendasta Marketplace has a SKU identifier. To find it:
 
 SKUs follow the format `MP-` followed by alphanumeric characters. When contacting Support about a specific product, including the SKU speeds up identification.
 
-## Common package visibility issues
+## How do I fix common package issues? {#common-package-visibility-issues}
 
-Package visibility problems are among the most frequent issues encountered in marketplace management. Understanding the root causes and systematic solutions ensures your packages reach customers effectively.
+Package visibility problems are the most common package issues. Use the symptoms, root causes, and solutions below to get your packages in front of customers.
 
-### Issue 1: Packages not appearing in Business App Store
+### Why aren't my packages appearing in the Business App Store? {#issue-1-packages-not-appearing-in-business-app-store}
 
 Symptoms:
 
@@ -96,7 +103,7 @@ For multi-market configurations
 
 <img src={require('./img/marketplace/packages/troubleshooting-package-visibility-2.jpg').default} alt="Copy package to a different market" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-### Issue 2: Duplicate packages in Public Store
+### Why do duplicate packages appear in the Public Store? {#issue-2-duplicate-packages-in-public-store}
 
 Symptoms:
 
@@ -134,7 +141,7 @@ Prevention strategy
 - **Regular Audits** - Periodically review store for duplicate content
 - **Documentation** - Maintain records of package and product configurations
 
-### Issue 3: Package links not working
+### Why aren't my package links working? {#issue-3-package-links-not-working}
 
 Symptoms:
 
@@ -180,7 +187,7 @@ Solution:
 3. Confirm item visibility and pricing options are correct
 4. `Save & Publish` the package
 
-### Issue 4: Package pricing changed after editing
+### Why did my package pricing change after editing? {#issue-4-package-pricing-changed-after-editing}
 
 Symptoms:
 
@@ -200,26 +207,26 @@ Resolution
 
 This migration is a one-time conversion. After saving, the package uses the line-item pricing model going forward. The overall package price is preserved during migration. Only the per-item breakdown changes.
 
-### Package Profit showing as unavailable
+### Why is Package Profit showing as unavailable? {#package-profit-showing-as-unavailable}
 
 If the `Package Profit` field shows as unavailable, the most common cause is a **currency mismatch**: the package currency does not match the currency configured for your market. Go to `Manage Store` → `Currency` and confirm the market currency matches the currency used in the package.
 
-### Retail price not updating after editing a package
+### Why isn't the retail price updating after I edit a package? {#retail-price-not-updating-after-editing-a-package}
 
-In the new package editor, updating the retail price of an item inside a package does not automatically recalculate and display the updated total in the list and grid views immediately. This is a known behavior. To apply the updated price:
+In the package editor, updating the retail price of an item inside a package does not automatically recalculate and display the updated total in the list and grid views immediately. This is a known behavior. To apply the updated price:
 
 1. Open the package in `Marketplace` → `Packages`
 2. Remove the affected product from the package
 3. Re-add the product and set the correct retail price
 4. Save and publish the package
 
-Note: bulk pricing updates across multiple packages are not currently supported. Each package must be updated individually.
+Note: bulk pricing updates across multiple packages are not supported. Each package must be updated individually.
 
-### Package not appearing when adding it to an invoice
+### Why isn't my package appearing when I add it to an invoice? {#package-not-appearing-when-adding-it-to-an-invoice}
 
 Packages must use the **line-item pricing model** to be compatible with invoices and the Shopping Cart checkout. If a package was created with the legacy pricing model, open and save it in the package editor. It will automatically migrate to the line-item pricing model. After saving, the package should appear as an option when creating invoices.
 
-## Advanced troubleshooting scenarios
+## How do I fix packages that differ across markets? {#advanced-troubleshooting-scenarios}
 
 ### Multi-market package synchronization
 
@@ -251,7 +258,7 @@ Resolution strategy
 - **Performance monitoring** - Track package performance across different markets
 - **Optimization** - Continuously improve packages based on market-specific data
 
-## Support resources and escalation
+## When should I contact support about a package issue? {#support-resources-and-escalation}
 
 If nothing in this guide fixes the issue, use the options below.
 
@@ -284,3 +291,40 @@ When you need to update **your** customers about a package or store problem:
 - **Clear explanations**: Describe impact and what you are doing in plain language
 - **Timeline expectations**: Give a realistic window when you have one; say when you will follow up if not
 - **Follow-up**: Confirm the issue is resolved or the workaround still works for them
+
+## Frequently asked questions
+
+<details>
+<summary>Why can't I see my package when I create an invoice?</summary>
+
+Packages must use the line-item pricing model to be compatible with invoices and the Shopping Cart checkout. Open and save a legacy package in the package editor to migrate it automatically, and it should then appear when you create invoices.
+
+</details>
+
+<details>
+<summary>Why is my package showing a different price than I set up?</summary>
+
+Existing packages migrate to the line-item pricing model the first time they are edited and saved, which redistributes the total price across line items. The overall package price is preserved; review and adjust the item-level prices in `Marketplace` → `Packages` if needed.
+
+</details>
+
+<details>
+<summary>Can I update pricing across multiple packages at once?</summary>
+
+No. Bulk pricing updates across multiple packages are not supported, so each package must be updated individually.
+
+</details>
+
+<details>
+<summary>How do I find a product's SKU?</summary>
+
+Go to `Marketplace` → `Discover Products` and click into the product. The SKU is the string at the end of the URL in your browser, in the format `MP-` followed by alphanumeric characters.
+
+</details>
+
+<details>
+<summary>Why can't I find a product to add to an order?</summary>
+
+If a custom product is missing from `Order Products`, add an address to the account's business profile. Some products are also restricted to specific countries, so the account's business profile country must match the product's country availability.
+
+</details>

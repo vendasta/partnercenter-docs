@@ -1,17 +1,26 @@
 ---
 title: "Local Listings Management"
 sidebar_label: "Local Listings Management"
-description: "An overview of the Local Listings Management service: setup and claiming, guided verification, ownership transfer, and ongoing monitoring on Google, Apple, and Bing."
+description: "Overview of the Local Listings Management service: listing setup and claiming, guided verification, ownership transfer, and monthly monitoring."
 brand: vendasta-services
 product: vendasta-services-core
-audience: smb
+audience: partners
+content_type: overview
+kb_id: KB-00084
+answer_snippet: "Local Listings Management is a Vendasta Services offering where specialists create and claim your client's listings on Google Business Profile, Apple Business Connect, and Bing Places, guide the client through verification, and then optimize and monitor the listings monthly."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 # Local Listings Management
 
+Local Listings Management is a Vendasta Services offering where specialists create and claim your client's listings on Google Business Profile, Apple Business Connect, and Bing Places, guide the client through verification, and then optimize and monitor the listings monthly.
+
 ## Overview
 
-Local Listings Management is a service where a team of specialists creates and claims your client's business listings on Google Business Profile, Apple Business Connect, and Bing Places, guides them through each platform's verification, then optimizes and monitors the listings on an ongoing basis.
+The service runs in two phases: initial setup, claiming, and verification, followed by ongoing monthly monitoring and content updates.
 
 :::warning The client completes the verification
 
@@ -55,7 +64,7 @@ Have the following ready for your onboarding call and verification:
 * **Someone available at the business** who can answer the primary business phone line for verification steps
 * **Content for the monthly Google Business Profile post** (you supply this each month)
 
-## Getting Started
+## How does Local Listings Management get started? {#getting-started}
 
 The initial phase involves submitting your business information, participating in a required onboarding call, and completing the verification process for each listing platform.
 
