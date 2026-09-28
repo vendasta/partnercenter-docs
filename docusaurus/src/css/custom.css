@@ -2636,6 +2636,10 @@ div[class*="language-"] pre {
 /* Four-up stat cards, mirroring the marketing pitch guides' stat row. */
 .pitch-stats-wrap {
   margin: 1.5rem 0;
+  /* The row breaks on how much space it actually has, not on screen size.
+     A narrow laptop with the sidebar and the table of contents both open
+     leaves the content column tighter than a tablet does with neither. */
+  container-type: inline-size;
 }
 .pitch-stats {
   display: grid;
@@ -2666,7 +2670,15 @@ div[class*="language-"] pre {
   color: var(--ifm-color-emphasis-600);
   margin: 0.6rem 0 0;
 }
+/* Fallback for browsers without container queries: two-up on a phone. */
 @media (max-width: 768px) {
+  .pitch-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Under about 720px of row, four cards drop below 170px each and the
+   captions stack five lines or more. Two-up instead. */
+@container (max-width: 720px) {
   .pitch-stats {
     grid-template-columns: repeat(2, 1fr);
   }
