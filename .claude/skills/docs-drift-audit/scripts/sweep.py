@@ -7,10 +7,21 @@ Handles the separators `>`, `&gt;`, and the stray `›` alongside the correct ar
 normalises bold tokens to backticks. This is the convention pile from the
 docs-drift-audit skill: mechanical, high volume, zero judgment.
 
+Handles two shapes of chain:
+
+    **A** > **B** > **C**     separate bold spans
+    **A > B > C**             one bold span wrapping the whole chain
+
+The second shape was invisible to this script until 2026-09-18, which made it
+report "0 lines in 0 files" on corpora that were full of it. See SKILL.md,
+Phase 5 Pass A.
+
 Deliberately skips:
   - fenced code blocks (``` and ~~~)
   - lines that are markdown blockquotes (a leading >)
   - any token containing [ or ] or a backtick, which keeps markdown links intact
+  - bold spans whose segments do not look like UI labels (empty, over 45
+    characters, or containing no letter), so prose like **10 > 5** is left alone
 
 Usage:
     python3 sweep.py docs/            # dry run, prints samples
@@ -32,6 +43,40 @@ STRAY = "›"          # a third separator found in the wild
 TOKEN = r"(?:\*\*[^*\n\[\]`]{1,45}\*\*|`[^`\n\[\]]{1,45}`)"
 SEP = rf"(?:{ARROW}|{STRAY}|&gt;|>)"
 RUN = re.compile(rf"{TOKEN}(?:\s*{SEP}\s*{TOKEN})+")
+
+# One bold span containing the whole chain: **A > B > C**
+# Wider than TOKEN because the cap applies per segment, not to the whole run.
+BOLD_SPAN = re.compile(r"\*\*([^*\n\[\]`]{1,200})\*\*")
+HAS_LETTER = re.compile(r"[A-Za-z]")
+SPLIT_SEP = re.compile(SEP)
+
+
+def looks_like_ui_label(text: str) -> bool:
+    """True if this segment reads like a UI element rather than prose.
+
+    Nav labels in these repos are short and start capitalised. Requiring both
+    is what stops a bold sentence containing a > from being rewritten into a
+    navigation chain that does not exist.
+    """
+    if not text or len(text) > 45 or not HAS_LETTER.search(text):
+        return False
+    if not text[0].isupper() and not text[0].isdigit():
+        return False
+    return len(text.split()) <= 5
+
+
+def expand_bold_chain(match: "re.Match") -> str:
+    """Rewrite **A > B > C** as `A` -> `B` -> `C`, or leave it untouched.
+
+    Returns the original text unless every segment reads like a UI label, so a
+    bold sentence that merely contains a > is not mangled into fake navigation.
+    """
+    parts = [p.strip() for p in SPLIT_SEP.split(match.group(1))]
+    if len(parts) < 2:
+        return match.group(0)
+    if not all(looks_like_ui_label(p) for p in parts):
+        return match.group(0)
+    return f" {ARROW} ".join("`" + p + "`" for p in parts)
 
 
 def normalise(run: str) -> str:
@@ -77,7 +122,11 @@ def main() -> int:
                     new_lines.append(line)
                     continue
 
-                rewritten = RUN.sub(lambda m: normalise(m.group(0)), line)
+                # Expand single-span chains first; RUN then picks up any
+                # mixed line such as **A** > **B > C**, since it accepts
+                # already-backticked tokens.
+                rewritten = BOLD_SPAN.sub(expand_bold_chain, line)
+                rewritten = RUN.sub(lambda m: normalise(m.group(0)), rewritten)
                 if rewritten != line:
                     touched = True
                     changed_lines += 1
