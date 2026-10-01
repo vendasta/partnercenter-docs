@@ -103,6 +103,13 @@ Every one of these is open source. On the Pro plan, the complete source of a pro
 ## Frequently asked questions
 
 <details>
+<summary>How do I delete a project in Vibe?</summary>
+
+Open the project, go to the `Settings` tab, and scroll to the bottom of the page. Select `Delete Project`. Deleting a project frees a slot if you have hit your plan's app limit.
+
+</details>
+
+<details>
 <summary>Is a Vibe app a WordPress site?</summary>
 
 No. Vibe apps are built on React, TanStack Start, Vite, and Tailwind CSS. On the Pro plan, you can download the complete source code and host it anywhere that runs Node.js.
