@@ -1,0 +1,66 @@
+---
+title: Consentimiento de comunicación por SMS
+sidebar_label: Consentimiento de SMS
+description: Por qué no se entregan los mensajes SMS de campañas, qué significan los estados de consentimiento, y cómo actualizar el consentimiento de SMS de un contacto.
+tags: [crm, contacts, sms, consent, campaigns]
+keywords: [SMS consent, communication consent, unset, subscribed, SMS not delivered]
+---
+
+## Por qué no se entregan los mensajes SMS de las campañas
+
+La razón más común por la que los mensajes SMS de campañas no se entregan a un contacto es que su consentimiento de SMS está configurado como **Unset**. A diferencia del correo electrónico, el SMS requiere legalmente un **consentimiento explícito de suscripción** (estado Subscribed) antes de poder enviar mensajes. El sistema de entrega de campañas omite a los contactos sin un consentimiento confirmado.
+
+Si enviaste una campaña de SMS y algunos contactos no la recibieron, verifica primero su estado de consentimiento de SMS.
+
+## Qué significan los estados de consentimiento
+
+| Estado | Qué significa | ¿Puede recibir SMS? |
+|--------|--------------|-----------------|
+| **Subscribed** | El contacto ha optado explícitamente por recibir SMS | Sí |
+| **Unset** | No se ha registrado ningún consentimiento, ni de aceptación ni de rechazo | No |
+| **Unsubscribed** | El contacto ha rechazado los SMS | No |
+
+**Unset no es lo mismo que aceptado.** Un contacto que no ha rechazado explícitamente todavía no puede recibir SMS hasta que se mueva a Subscribed. Este es un requisito regulatorio. Enviar SMS sin consentimiento explícito puede infringir leyes como la TCPA (EE. UU.) y regulaciones similares en otras jurisdicciones.
+
+## Cómo actualizar el consentimiento de SMS de un contacto
+
+1. Ve a `Partner Center` → `CRM` → `Contacts`.
+2. Abre el perfil del contacto.
+3. Busca la sección `Communication consent` (generalmente en el panel de detalles del contacto).
+4. Localiza `SMS consent`.
+5. Cambia el estado a **Subscribed**.
+6. Guarda el registro.
+
+:::warning
+Actualiza el consentimiento de SMS de un contacto a Subscribed únicamente si tienes un registro documentado de que el contacto ha optado explícitamente por recibir mensajes SMS de tu organización. Establecer el consentimiento sin una suscripción real crea un riesgo legal y de cumplimiento.
+:::
+
+## Recopilación de consentimiento de SMS
+
+Los contactos pueden suscribirse a SMS a través de:
+
+- Un formulario con una casilla de verificación explícita de suscripción a SMS
+- Una suscripción por palabra clave (el contacto envía una palabra clave por mensaje de texto a tu número)
+- Consentimiento por escrito recopilado en el punto de venta o durante la incorporación
+
+No marques manualmente a los contactos como Subscribed a menos que tengas un registro de su consentimiento.
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Puedo actualizar el consentimiento de SMS de forma masiva para varios contactos?</summary>
+
+Contacta a tu equipo de cuenta de Vendasta para confirmar las opciones actuales de actualización masiva de consentimiento. Para listas grandes, el enfoque recomendado es ejecutar una campaña de reconsentimiento que permita a los contactos suscribirse por sí mismos, lo que crea un registro documentado de suscripción.
+</details>
+
+<details>
+<summary>Un contacto respondió "STOP": ¿qué sucede?</summary>
+
+Cuando un contacto responde STOP a un SMS, su consentimiento se actualiza automáticamente a Unsubscribed. La plataforma respeta las cancelaciones de suscripción de inmediato. No restablezcas manualmente su consentimiento a Subscribed. Hacerlo anula su solicitud explícita de cancelación de suscripción.
+</details>
+
+<details>
+<summary>¿Por qué no puedo simplemente configurar a todos los contactos como Subscribed?</summary>
+
+Enviar SMS a contactos que no han dado su consentimiento explícito infringe las regulaciones de telecomunicaciones en la mayoría de las jurisdicciones (incluida la TCPA en EE. UU.). Las infracciones pueden resultar en multas significativas. Solo los contactos con un registro de suscripción verificable deben configurarse como Subscribed.
+</details>

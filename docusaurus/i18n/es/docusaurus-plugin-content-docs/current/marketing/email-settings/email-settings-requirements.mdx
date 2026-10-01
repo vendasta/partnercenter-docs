@@ -1,0 +1,101 @@
+---
+title: Email settings requirements
+description: Aprende sobre los requisitos para configurar Email settings en Vendasta Partner Center, incluidos los requisitos de dominio y el cumplimiento de CAN-SPAM.
+sidebar_label: Email settings requirements  
+sidebar_position: 2
+---
+
+Para enviar correos de marketing con éxito a través de la plataforma de Vendasta, debes cumplir con varios requisitos técnicos y legales.
+
+## Requisitos técnicos
+
+### Se requiere correo de dominio personalizado
+
+En `Partner Center` → `Marketing` → `Email settings` se encuentran los ajustes de autenticación DNS que ayudan a garantizar que tus correos se entreguen con éxito y eviten los filtros de spam.
+
+**Requisitos de dominio:**
+- **Se requiere dominio personalizado**: debes tener una dirección de correo de dominio personalizado (por ejemplo, tunombre@tunegocio.com)
+- **Acceso a DNS**: necesitas acceso administrativo a la configuración de DNS de tu dominio para agregar registros de autenticación
+- **Propiedad del dominio**: debes ser propietario o tener control del dominio desde el que quieres enviar correos
+
+**No se pueden usar proveedores de correo gratuitos:**
+No puedes usar registros de autenticación con proveedores de correo gratuitos como:
+- Direcciones de Gmail.com
+- Direcciones de Yahoo.com
+- Direcciones de Hotmail.com
+- Direcciones de Outlook.com
+- Otros servicios de correo gratuitos
+
+Si no tienes un dominio personalizado, considera comprar uno a través de un registrador de dominios como GoDaddy, Namecheap o tu proveedor de hospedaje. Un dominio personalizado te permite crear direcciones de correo profesionales e implementar la autenticación de correo adecuada.
+
+### Registros de autenticación DNS
+
+Debes configurar estos registros de autenticación en tu DNS:
+- **SPF (Sender Policy Framework)**: autoriza a Vendasta a enviar correos en nombre de tu dominio
+- **DKIM (DomainKeys Identified Mail)**: agrega firmas digitales para verificar la autenticidad del correo
+- **DMARC (Domain-based Message Authentication)**: especifica cómo gestionar los correos que fallan la autenticación
+
+Aprende a configurar estos registros en [Email Authentication](/marketing/email-settings/email-authentication).
+
+## Requisitos de cumplimiento legal
+
+### Cumplimiento de la ley CAN-SPAM
+
+Todos los correos comerciales enviados a través de la plataforma deben cumplir con los requisitos de la ley CAN-SPAM:
+
+**Dirección postal física (obligatoria)**
+- **Dirección de negocio válida**: incluye una dirección postal física legítima para tu negocio
+- **Dirección completa**: debe incluir dirección, ciudad, estado y código postal
+- **Dirección actual**: la dirección debe ser actual y donde puedas recibir correo postal
+- **Visible en los correos**: la dirección se incluye automáticamente en los pies de página de los correos cuando está configurada
+
+**Requisitos adicionales de CAN-SPAM:**
+- **Identificación clara del remitente**: los correos deben identificar claramente quién los envía
+- **Líneas de asunto veraces**: las líneas de asunto deben reflejar con precisión el contenido del correo
+- **Opción de cancelación de suscripción**: cada correo debe incluir un mecanismo de cancelación de suscripción funcional
+- **Respetar las cancelaciones**: las solicitudes de cancelación de suscripción deben procesarse dentro de 10 días hábiles
+
+### Información de negocio requerida
+
+Configura la información de tu negocio en `Partner Center` → `Administration` → `Customize` → `Partner Defaults`:
+
+- **Nombre del negocio**: nombre legal del negocio o DBA
+- **Dirección postal completa**: dirección, ciudad, estado, código postal, país
+- **Información de contacto**: número de teléfono y dirección de correo del negocio
+- **Detalles del remitente**: se establecen por separado en `Marketing` → `Email settings`. Usa `Sender name` y `Reply Address` en la tarjeta `Sender and reply settings`, y `Sender domain` y `Email address` en la tarjeta `Advanced email settings`. Consulta [Update email settings](/marketing/email-settings/update-email-settings)
+
+## Requisitos de verificación de usuario
+
+Todos los usuarios que envíen correos deben tener direcciones de correo verificadas:
+- **Verificación de correo**: todos los usuarios de la plataforma deben verificar sus direcciones de correo
+- **Acceso a la cuenta**: los usuarios no verificados pueden tener acceso limitado a la plataforma
+- **Seguridad**: la verificación ayuda a mantener la seguridad de la plataforma y la reputación del remitente
+
+Aprende más sobre los requisitos de [Email Verification](/administration/my-account/my-team/email-verification).
+
+## Requisitos de contenido de correo
+
+### Limitaciones de tamaño
+- **Límite de caracteres HTML**: las plantillas de correo no pueden superar los 32,000 caracteres de código fuente HTML
+- **Optimización de plantillas**: mantén el contenido conciso y optimiza las imágenes para una carga más rápida
+- **Manejo de errores**: los correos que superen el límite fallarán al enviarse con un error de conteo de caracteres
+
+### Buenas prácticas de contenido
+- **Diseño profesional**: usa plantillas de correo limpias y profesionales
+- **Optimización móvil**: asegúrate de que los correos se muestren correctamente en dispositivos móviles
+- **Llamados a la acción claros**: incluye llamados a la acción claros y atractivos
+- **Contenido relevante**: envía contenido dirigido y valioso a tu audiencia
+
+## Lista de verificación para comenzar
+
+Antes de enviar tu primera campaña:
+
+- [ ] **Comprar un dominio personalizado** (si no tienes uno)
+- [ ] **Configurar registros DNS**: agrega los registros SPF, DKIM y DMARC
+- [ ] **Configurar la dirección del negocio**: agrega la dirección postal completa en Partner Center
+- [ ] **Verificar la dirección de correo**: asegúrate de que tu correo de remitente esté verificado
+- [ ] **Probar la autenticación**: verifica que todos los registros DNS estén correctamente configurados
+- [ ] **Crear una plantilla de correo**: diseña tu primer correo de marketing
+- [ ] **Enviar correos de prueba**: prueba siempre antes de enviar a tu audiencia
+
+Para instrucciones de configuración paso a paso, consulta [Update email settings](/marketing/email-settings/update-email-settings).

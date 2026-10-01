@@ -1,0 +1,134 @@
+---
+id: ai-receptionist-multi-service-booking
+title: Reservar citas multiservicio (chat y voz)
+sidebar_label: Reserva con AI Receptionist
+sidebar_position: 9
+description: Configura la capacidad Book Multi-Service Appointment para tus AI Chat y Voice Receptionists directamente en Partner Center, para que los prospectos puedan reservar por sí mismos uno o más servicios en una sola conversación.
+tags: [ai, ai-workforce, chat-receptionist, voice-receptionist, meetings, booking, multi-service, partner-center]
+keywords: [Book Multi-Service Appointment, AI receptionist booking, chat receptionist booking, voice receptionist booking, multi-service booking Partner Center, appointment booking capability]
+---
+
+Tu AI Chat Receptionist y tu AI Voice Receptionist ahora pueden reservar citas directamente desde **Partner Center**; ya no necesitas abrir la cuenta de Business App de un cliente para activar esto. Asigna la capacidad **Book Multi-Service Appointment** a un receptionist, elige un tipo de evento o menú de servicio reservable, y un prospecto puede reservar uno o varios servicios en una sola conversación, ya sea que esté chateando en el sitio web o llamando.
+
+:::info Dónde encaja esto
+Esta capacidad usa los mismos tipos de evento, grupos, y menús de servicio que configuraste en [Mis reuniones](./index.mdx). Si un cliente todavía no ha creado ningún tipo de evento, el menú desplegable de la capacidad muestra un estado vacío limpio en lugar de un error; configura los tipos de evento primero, luego vuelve para asignar la capacidad.
+:::
+
+## De un vistazo
+
+| Qué puede hacer un prospecto | Chat | Voice |
+|---|---|---|
+| Reservar una nueva cita | Disponible | Disponible |
+| Reprogramar una cita existente | Disponible | Planeado |
+| Cancelar una cita | Disponible | Planeado |
+| Reservar varios servicios en una conversación | Disponible | Disponible |
+| Cómo se identifica al prospecto | Dirección de correo electrónico | Dirección de correo electrónico; el agente la pide en voz alta |
+| Confirmación | Correo electrónico | Correo electrónico |
+| Recordatorio | Correo electrónico, en el tiempo de recordatorio predeterminado | Correo electrónico, en el tiempo de recordatorio predeterminado |
+| Modelo de IA recomendado | Sin requisito específico | **OpenAI GPT Realtime (2.0)** |
+
+---
+
+## Book Multi-Service Appointment (Chat)
+
+Chat admite el ciclo completo de citas. Un prospecto puede reservar una nueva cita, reprogramar una existente, o cancelarla, todo dentro de la misma conversación, sin que tú o tu cliente tengan que intervenir.
+
+- **Todo funciona por correo electrónico.** El prospecto proporciona su dirección de correo electrónico como parte de la reserva, y así es como el asistente encuentra su cita de nuevo cuando regresa para reprogramar o cancelar.
+- **Reprogramar y cancelar en la conversación.** Un prospecto que regresa puede cambiar o cancelar su cita simplemente preguntándole al asistente de chat, en lugar de buscar el correo electrónico de confirmación.
+- **Todos tus tipos de evento, agrupados como esperarías.** El menú desplegable de tipos de evento reservables enumera los tipos de evento personales, de equipo, y de menú de servicio, agrupados exactamente como en Business App.
+- **Multiservicio en una sola reserva.** Con el interruptor de multiservicio activado, un prospecto puede seleccionar varios servicios en una sola conversación de chat y se crea una cita que los cubre todos.
+
+<img src={require('./img/ai-receptionist-book-multi-service-chat.png').default} alt="La sección Capabilities de la página Configure de un Chat Receptionist en Partner Center, mostrando la tarjeta de capacidad Book Multi-Service Appointment (Chat) con un menú desplegable Select event link to book with" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Configurar la reserva por Chat
+
+1. En Partner Center, abre la cuenta del cliente y ve a `AI` → `Workforce`.
+2. Haz clic en `Configure` en el Chat Receptionist.
+3. En `Capabilities`, haz clic en `+ Add a capability` y selecciona `Book Multi-Service Appointment (Chat)`.
+4. En `Select event link to book with`, elige un tipo de evento personal, de equipo, o un menú de servicio.
+5. Revisa los requisitos de campo en el tipo de evento: `Email` es obligatorio y no se puede desactivar. `Phone number` es opcional; actívalo si lo necesitas. Lo que configures se conserva después de guardar.
+6. Para permitir que los prospectos reserven más de un servicio a la vez, activa el interruptor de `multi-service` en el menú de servicio o grupo correspondiente. Consulta [Grupos y menús de servicio](./groups-and-service-menus.mdx).
+7. Haz clic en `Save changes`.
+
+---
+
+## Book Multi-Service Appointment (Voice)
+
+Voice admite nuevas reservas en esta versión. Reprogramar y cancelar a través de una llamada de Partner Center están **planeados, aún no disponibles**; hasta que se lancen, un prospecto puede reprogramar o cancelar a través del chat, o desde los enlaces en su correo de confirmación.
+
+- **El agente pide una dirección de correo electrónico, no un número de teléfono.** Las reservas de Partner Center se confirman por correo electrónico, así que el agente de voz le pide al que llama su dirección de correo electrónico, la lee en voz alta, y solo reserva una vez que quien llama la confirma. Esta es la diferencia clave con Business App voice, donde el número de teléfono es el identificador.
+- **Número de teléfono solo cuando el tipo de evento lo requiere.** El agente pide un número de teléfono solo si el tipo de evento seleccionado lo requiere, y omite la pregunta en caso contrario.
+- **Todos los tipos de evento son reservables.** El menú desplegable de tipos de evento de voz de Partner Center enumera todos los tipos de evento y menús de servicio de un cliente, no solo los que notifican por SMS; esa restricción todavía se aplica en Business App.
+- **Multiservicio en una sola llamada.** Una selección multiservicio reserva cada servicio elegido en una sola cita.
+
+<img src={require('./img/ai-receptionist-book-multi-service-voice.png').default} alt="La sección Capabilities de la página Configure de un Voice Receptionist en Partner Center, mostrando la tarjeta de capacidad Book Multi-Service Appointment (Voice) con un menú desplegable Select event link to book with" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Configurar la reserva por Voice
+
+1. En Partner Center, abre la cuenta del cliente y ve a **AI** → **Workforce**.
+2. Haz clic en **Configure** en el Voice Receptionist.
+3. En **Capabilities**, haz clic en **+ Add a capability** y selecciona **Book Multi-Service Appointment (Voice)**.
+4. En **Select event link to book with**, elige el tipo de evento o menú de servicio reservable.
+5. Establece el modelo del receptionist en **OpenAI GPT Realtime (2.0)**. Capturar correctamente el correo electrónico de quien llama es el paso decisivo en este flujo, y este es el modelo recomendado para ello; otros modelos funcionarán, pero no se recomiendan para esta capacidad.
+6. Para permitir que quienes llaman reserven más de un servicio a la vez, activa el interruptor de **multi-service** en el menú de servicio o grupo correspondiente. Consulta [Grupos y menús de servicio](./groups-and-service-menus.mdx).
+7. Haz clic en **Save changes**.
+
+---
+
+## Lo que ambas capacidades comparten
+
+- **El correo electrónico siempre es obligatorio** en un tipo de evento de Partner Center. El interruptor **Required** para el correo electrónico está activado y no se puede desactivar, ya que el correo electrónico es cómo se entregan las confirmaciones y recordatorios aquí.
+- **El número de teléfono es opcional.** Su interruptor **Required** está desactivado de forma predeterminada. Actívalo si necesitas un número; se conserva después de guardar y sigue configurado cuando vuelves a abrir el tipo de evento.
+- **Las confirmaciones y recordatorios se envían solo por correo electrónico.** No hay un selector de medio de notificación en Partner Center. Cada tipo de evento creado o actualizado aquí envía una confirmación por correo electrónico y un recordatorio por correo electrónico en el tiempo de recordatorio predeterminado, se requiera o no un número de teléfono. Esto también se aplica a nivel de API, así que la regla se mantiene incluso para las reservas creadas fuera de la interfaz.
+- **La reserva multiservicio** está disponible en un menú de servicio y en un grupo.
+- Las citas se crean en la zona horaria correcta para el prospecto.
+- **Business App no se ve afectado.** Los menús desplegables de tipo de evento, la reserva por voz, la reprogramación, la cancelación, y los flujos basados en SMS se comportan exactamente como hoy en Business App. Una llamada de voz de Business App nunca pide una dirección de correo electrónico, y su menú desplegable de voz todavía enumera solo los tipos de evento que notifican por SMS.
+
+:::note Sin SMS en Partner Center
+Las confirmaciones y recordatorios son solo por correo electrónico para las reservas de Partner Center, en ambas capacidades. No hay confirmación ni recordatorio por SMS aquí.
+:::
+
+---
+
+## Bueno saberlo
+
+- **El correo electrónico de confirmación debe aceptarse** para que la cita aparezca en el propio calendario del prospecto; vale la pena saberlo si estás haciendo seguimiento de las inasistencias.
+- **Mantén los roles y el conocimiento livianos.** Si un receptionist carga un gran conjunto de instrucciones de rol y conocimiento junto con la capacidad de reserva, es posible que las herramientas de reserva no se activen en absoluto. Dirige las instrucciones de rol a la capacidad de reserva multiservicio por su nombre o ID de reunión único, y mantén las instrucciones detalladas de reserva fuera de tu capacidad general de calificación y comportamiento.
+- **La reprogramación y cancelación por voz están planeadas, no lanzadas.** Establece expectativas con tu cliente en consecuencia si la voz es su canal principal.
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Un prospecto puede reprogramar o cancelar una cita por voz?</summary>
+
+Todavía no. Voice solo admite nuevas reservas en esta versión. Reprogramar y cancelar están planeados pero no disponibles; un prospecto puede reprogramar o cancelar a través del chat en su lugar, o desde los enlaces en su correo de confirmación.
+
+</details>
+
+<details>
+<summary>¿Asignar esta capacidad en Partner Center cambia algo en Business App?</summary>
+
+No. Asignar y usar la capacidad equivalente en Business App funciona exactamente como antes, incluidas sus opciones de notificación basadas en SMS y su menú desplegable de tipo de evento, que todavía enumera los tipos de evento del account group.
+
+</details>
+
+<details>
+<summary>¿Puedo requerir confirmaciones por SMS para una reserva de Partner Center?</summary>
+
+No. Las confirmaciones y recordatorios para las reservas de Partner Center siempre se envían por correo electrónico, independientemente de si se requiere un número de teléfono en el tipo de evento. Esto se aplica a nivel de API, así que se cumple incluso para las reservas creadas fuera de la interfaz.
+
+</details>
+
+<details>
+<summary>¿Por qué mi Voice Receptionist no está activando la capacidad de reserva?</summary>
+
+Verifica cuánto más está cargado en ese receptionist. Un gran conjunto de instrucciones de rol o una base de conocimiento pesada que compite con la capacidad de reserva puede impedir que se activen las herramientas de reserva. Haz referencia a la capacidad por su nombre o ID de reunión único en tus instrucciones de rol, y mantén las instrucciones generales de calificación separadas de las instrucciones de reserva.
+
+</details>
+
+## Relacionado
+
+- [Mis reuniones](./index.mdx)
+- [Grupos y menús de servicio](./groups-and-service-menus.mdx)
+- [AI Chat Receptionist](../../ai/ai-workforce/ai-chat-receptionist/index.md)
+- [AI Voice Receptionist](../../ai/ai-workforce/ai-voice-receptionist.md)

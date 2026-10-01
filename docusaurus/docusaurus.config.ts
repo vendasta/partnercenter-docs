@@ -105,6 +105,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
+          // Account templates renamed to Blueprints (2026-09, CRMAAS-3221)
+          { from: '/accounts/manage-accounts/account-templates', to: '/accounts/manage-accounts/blueprints' },
+          { from: '/automations/my-automations/apply-account-template', to: '/automations/my-automations/apply-blueprint' },
           // Security & privacy: convenience aliases to the Security and privacy page
           { from: '/security', to: '/getting-started/security-and-privacy' },
           { from: '/trust-center', to: '/getting-started/security-and-privacy' },
@@ -114,6 +117,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           // Vendasta Ads in Partner Center promoted to its own top-level "Ads" sidebar item (2026-08)
           { from: '/vendasta-services/digital-advertising/vendasta-ads-partner-center', to: '/ads' },
           // --- Learn restructure (2026-07): TRAINING -> LEARN, paths + lifecycle libraries ---
+          // AI foundations step 6 renamed (2026-09-18, DOC-966): "agent" as a noun for
+          // an AI Employee was retired in the terminology pass, so the step and its
+          // route follow. The path is hidden, but the old URL may be bookmarked.
+          { from: '/learn/ai-foundations/agents-and-automations-together', to: '/learn/ai-foundations/ai-employees-and-automations-together' },
           // Builder merge (2026-08-29): the builder and build-lab paths became one
           // eight-step path under /learn/builder. Steps that only re-taught AI
           // foundations material land on the closest surviving step.

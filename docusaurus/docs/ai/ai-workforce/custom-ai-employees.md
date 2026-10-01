@@ -1,17 +1,29 @@
 ---
-title: Creating Custom AI Employees
+title: "How do I create a Custom AI Employee?"
 sidebar_label: Custom AI Employees
 sidebar_position: 8
-description: Learn how to create specialized AI employees tailored to specific business functions like job estimation, project management, sales enablement, and payment coordination.
+description: "Create a Custom AI Employee in AI Workforce: set its profile, channels, knowledge sources, and capabilities, then deploy it to chat or automations."
 tags: [ai-workforce, custom-capabilities, ai-employees]
 keywords: [custom AI employees, AI workforce, capabilities, tools, deployment, web chat]
+brand: vendasta
+product: ai-workforce
+audience: partners
+content_type: how-to
+kb_id: KB-00071
+answer_snippet: "Custom AI Employees in AI Workforce are AI workers you build for a specific business function, such as job estimation or payment coordination. To create one in Partner Center, go to AI → Workforce, click Create, and set up its profile, channels, knowledge sources, and capabilities."
+doc_owner: ai-workforce
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 import { GraduationCapIcon } from '@site/src/components/Icons';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Custom AI Employees allow you to create specialized AI workers tailored to specific business functions using the same framework as pre-built AI Employees. Whether you need a job estimator, project manager, sales enablement assistant, or payment coordinator, Custom AI Employees give you complete control over their behavior, knowledge, and capabilities.
+Custom AI Employees in AI Workforce are AI workers you build for a specific business function, such as job estimation or payment coordination. To create one in Partner Center, go to `AI` → `Workforce`, click `Create`, and set up its profile, channels, knowledge sources, and capabilities.
+
+Custom AI Employees use the same framework as pre-built AI Employees, and you control their behavior, knowledge, and capabilities.
 
 
 ![](assets/20251216_134110_image.png)
@@ -30,7 +42,7 @@ Custom AI Employees are AI workers you create from scratch to handle specialized
 To create a Custom AI Employee in Partner Center, your account must be on a Professional plan or higher, as well as equivalent legacy subscriptions.
 :::
 
-## Step-by-step: creating a Custom AI Employee
+## How do I create a Custom AI Employee? {#step-by-step-creating-a-custom-ai-employee}
 
 ### Step 1: navigate to Workforce
 
@@ -48,13 +60,13 @@ Set up the basic identity and behavior of your Custom AI Employee:
 - Upload a photo or icon that helps identify this AI Employee
 - Example: "Job Estimator" or "Project Manager"
 
-**Purpose:**
+**Role:**
 
 - Write clear instructions about what this AI Employee should do
 - Define their tone, greeting, and key tasks
 - Be specific about their role and responsibilities
 
-:::tip Writing Effective Purpose Instructions
+:::tip Writing Effective Role Instructions
 Use bullets or numbered lists to make instructions clear. Be specific about what you want, not just general goals.
 
 
@@ -110,7 +122,7 @@ Teach your Custom AI Employee about your business:
 - FAQs specific to the AI Employee's role
 - Any business-specific information relevant to their function
 
-For comprehensive guidance on knowledge sources, see the [Knowledge Base documentation](../knowledge-base/).
+For guidance on knowledge sources, see the [Knowledge Base documentation](../knowledge-base/).
 
 ### Step 5: configure capabilities
 
@@ -169,7 +181,7 @@ Provide instant, accurate answers about products, pricing, and processes for int
 
 - **Knowledge Sources**: Product catalogs, pricing sheets, sales processes, SOPs
 - **Channels**: In-platform chat (internal use)
-- **Purpose**: "You are a sales enablement assistant. Help team members find accurate information about products, pricing, and processes quickly. Always reference official documentation when answering questions."
+- **Role**: "You are a sales enablement assistant. Help team members find accurate information about products, pricing, and processes quickly. Always reference official documentation when answering questions."
 
 **Use Cases:**
 
@@ -197,7 +209,7 @@ Keep customers and your team members informed by sending regular updates based o
 </TabItem>
 <TabItem value="payment-coordinator" label="Payment Coordinator">
 
-**Purpose:** Monitor for failed payments, follow up with customers, and retry payments based on business rules.
+**Role:** Monitor for failed payments, follow up with customers, and retry payments based on business rules.
 
 **Configuration:**
 
@@ -214,7 +226,7 @@ Keep customers and your team members informed by sending regular updates based o
 </TabItem>
 </Tabs>
 
-## Deployment options
+## How do I deploy a Custom AI Employee? {#deployment-options}
 
 ### In-platform chat
 
@@ -260,7 +272,7 @@ For details on automation integration, see [Reusable workflows](../../automation
 
 Custom AI Employees use the same framework as pre-built AI Employees. All AI Employees share:
 
-- **Profile**: Name, avatar, purpose
+- **Profile**: Name, avatar, role
 - **Channels**: Where they can interact
 - **Capabilities**: What they can do
 - **Tools**: API integrations
@@ -287,7 +299,7 @@ Custom AI Employees use the same framework as pre-built AI Employees but give yo
 <details>
 <summary>Can I use Custom Capabilities with Custom AI Employees?</summary>
 
-Yes! Custom Capabilities work seamlessly with Custom AI Employees. You can create custom capabilities specifically for your Custom AI Employee, or reuse custom capabilities across multiple AI Employees (both pre-built and custom). This allows you to build specialized workflows that combine multiple capabilities.
+Yes! Custom Capabilities work with Custom AI Employees. You can create custom capabilities specifically for your Custom AI Employee, or reuse custom capabilities across multiple AI Employees (both pre-built and custom). This allows you to build specialized workflows that combine multiple capabilities.
 
 </details>
 
@@ -313,6 +325,34 @@ While you can assign an AI Employee to multiple web chat widgets, you can't assi
 <summary>Can I use Custom AI Employees in automation workflows?</summary>
 
 Yes! You can add Custom AI Employees to automation workflows using the "Send a prompt to an AI Employee" step. This allows you to use AI-powered decision-making in your automated processes. For more details, see [Reusable workflows](../../automations/my-automations/reusable-workflows.mdx).
+
+</details>
+
+<details>
+<summary>Can a custom AI agent read a PDF that an end user uploads in chat?</summary>
+
+No. Custom AI agents cannot read PDFs that end users upload during a chat. You can use a PDF as a knowledge source for the agent, but chat attachments are not read as input. Submit the request through the AI Workforce feedback page if you want the product team to consider it.
+
+</details>
+
+<details>
+<summary>Which plan do I need to create a Custom AI Employee?</summary>
+
+To create a Custom AI Employee in Partner Center, your account must be on a Professional plan or higher, or an equivalent legacy subscription.
+
+</details>
+
+<details>
+<summary>How do I add knowledge sources to a Custom AI Employee?</summary>
+
+In the Custom AI Employee's configuration, add knowledge sources such as your website, uploaded files (PDFs, spreadsheets, documents), or custom text. Your Business Profile is included automatically. Add pricing, service descriptions, policies, and FAQs relevant to the AI Employee's role.
+
+</details>
+
+<details>
+<summary>How do I put a Custom AI Employee on my website chat?</summary>
+
+Go to `Conversations` → `Settings`, click `Manage widgets` on the `Web Chat` card, and open or create a widget. In the `AI employee` card, click `Select employee`, choose your Custom AI Employee, and click `Ok`. This requires Conversations AI Standard, Pro, or Premium.
 
 </details>
 

@@ -1,0 +1,123 @@
+---
+title: Configurar la integración de calendario
+sidebar_label: Integración de calendario
+description: Aprende a conectar tu Google Calendar o tu calendario de Microsoft 365 / Outlook para habilitar la programación de reuniones y la función automática de tomador de notas.
+tags: [calendar-integration, google-calendar, outlook, microsoft, meetings, notetaker]
+keywords: [calendar sync, google calendar, outlook calendar, microsoft 365, meeting integration, calendar setup]
+---
+
+## Descripción general
+
+La integración de calendario conecta tu Google Calendar o tu calendario de Microsoft 365 / Outlook a la plataforma, habilitando la verificación de disponibilidad, la detección de conflictos, y la creación automática de eventos de reunión cuando se confirman las reservas.
+
+:::note
+Solo un calendario puede estar activo a la vez: Google Calendar o Microsoft 365 / Outlook. Cambiar de calendario más adelante no migra retroactivamente las reuniones existentes.
+:::
+
+## Requisitos previos
+
+Antes de configurar la integración de calendario, asegúrate de tener:
+
+- Una cuenta de Google Workspace / personal de Google **o** una cuenta de Microsoft 365 / Outlook.com
+- Acceso a la función My Meetings en tu cuenta de Partner Center
+
+## Conectar tu calendario
+
+Puedes conectar tu calendario durante el asistente de configuración inicial o en cualquier momento desde Meeting Settings.
+
+### Opción A: durante la configuración inicial
+
+Cuando visitas `My Meetings` por primera vez, el asistente de configuración te guía a través de cuatro pasos. En el paso 2 (`Connect calendar`), selecciona tu proveedor de calendario:
+
+- **Google Calendar**: haz clic en `Sign in with Google` y otorga los permisos requeridos.
+- **Microsoft 365 / Outlook.com**: selecciona `Microsoft 365 / Outlook.com`, luego haz clic en `Sign in with Microsoft` y otorga los permisos requeridos.
+
+### Opción B: desde Meeting Settings
+
+1. Navega a `My Meetings` desde el menú principal.
+2. Haz clic en el `menú de tres puntos` en la esquina superior derecha y selecciona `Meeting settings`.
+3. En `Calendar settings`, selecciona tu proveedor de calendario e inicia sesión.
+
+**Demostración:**
+
+<div style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+  <iframe 
+    src="https://www.loom.com/embed/9443d4bedfc84c6e9849c6e42e2358da" 
+    frameBorder="0" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true" 
+    allowFullScreen 
+    style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}>
+  </iframe>
+</div>
+
+## Qué sucede después de conectar
+
+Una vez que tu calendario está conectado:
+
+- **Verificación de disponibilidad**: la plataforma revisa tu calendario en busca de conflictos cuando los invitados intentan reservar, para que solo se muestren los horarios genuinamente libres.
+- **Creación automática de eventos**: las reservas confirmadas crean eventos de calendario en tu calendario conectado automáticamente.
+- **Programación de tomadores de notas**: la plataforma programa automáticamente a los tomadores de notas para tus próximas reuniones.
+- **Perspectivas de reunión**: se generan resúmenes y transcripciones impulsados por IA para las reuniones grabadas.
+
+## Elegir una app de reunión
+
+Después de conectar tu calendario, selecciona tu app de videoconferencia predeterminada:
+
+- **Google Meet**: recomendado para usuarios de Google Workspace.
+- **Zoom**: requiere una cuenta de Zoom.
+- **Microsoft Teams**: recomendado para usuarios de Microsoft 365 / Outlook y organizaciones basadas en Teams.
+
+Tu app elegida se usa para generar enlaces de videoconferencia para todos los tipos de evento de Video.
+
+## Gestionar tu conexión de calendario
+
+### Ver tu calendario conectado
+
+Navega a `My Meetings` → `Meeting Settings` para ver el estado de tu calendario conectado.
+
+### Desconectar tu calendario
+
+1. Ve a `My Meetings` → `Meeting Settings`.
+2. Haz clic en tu calendario conectado.
+3. Selecciona `Disconnect`.
+
+:::note
+Desconectar tu calendario detendrá la programación automática de tomadores de notas para futuras reuniones.
+:::
+
+### Cambiar de proveedor de calendario
+
+Para cambiar de Google a Microsoft (o viceversa):
+
+1. Desconecta tu calendario actual en `Meeting Settings`.
+2. Conecta el nuevo proveedor de calendario siguiendo los pasos anteriores.
+
+Las reuniones ya programadas a través de la plataforma no se migran al nuevo calendario. Solo las nuevas reservas en adelante usarán el nuevo calendario.
+
+## Solución de problemas
+
+<details>
+  <summary>Mis eventos de calendario no se sincronizan</summary>
+
+  Intenta desconectar y volver a conectar tu calendario. Asegúrate de haber otorgado todos los permisos requeridos durante el proceso de conexión.
+
+</details>
+
+<details>
+  <summary>No veo la opción Connect Calendar</summary>
+
+  Asegúrate de tener los permisos apropiados en tu cuenta. Contacta a tu administrador si la opción no está disponible.
+
+</details>
+
+<details>
+  <summary>El inicio de sesión de Microsoft está fallando</summary>
+
+  Asegúrate de que tu cuenta de Microsoft 365 tenga los permisos de acceso al calendario habilitados por tu administrador de TI. Usa tu correo electrónico de trabajo al autenticarte. Las cuentas personales de Outlook.com también son compatibles.
+
+</details>
+
+## Artículos relacionados
+
+- [Gestionar la configuración de visibilidad](./visibility-settings.mdx)

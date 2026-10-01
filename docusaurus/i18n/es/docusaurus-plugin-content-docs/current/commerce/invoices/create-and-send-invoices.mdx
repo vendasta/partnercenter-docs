@@ -1,0 +1,337 @@
+---
+title: Create and Manage Invoices
+description: Aprende a crear, enviar y gestionar facturas, personalizar la configuración de facturas y configurar las preferencias de correo electrónico para tus operaciones de facturación.
+sidebar_position: 2
+---
+
+<img src={require('./img/commerce/invoices/create-send-invoices-header.jpg').default} alt="Create and send invoices" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Puedes usar las facturas para solicitar y cobrar el pago de los productos y servicios que ofreces a tus clientes. Las facturas se pueden crear manualmente o [generarse automáticamente](/commerce/subscriptions/subscription-management) según las suscripciones y las fechas de renovación de productos de una cuenta.
+
+Las facturas funcionarán de manera diferente según si tienes [configurado Vendasta Payments](/commerce/payments/setting-up-vendasta-payments). Si no has configurado Vendasta Payments, puedes crear, editar y enviar facturas a tus clientes, pero no puedes cobrar pagos directamente desde el correo de la factura.
+
+Ten en cuenta que es posible facturar a un cliente por cualquier producto que estés vendiendo o cualquier paquete (en borrador o publicado) en tu Store. Sin embargo, si estás facturando a un cliente por un producto que aún no está activo en su cuenta, el producto no se activará automáticamente una vez que se pague la factura. En su lugar, puedes activar el producto siguiendo los [pasos habituales de activación de productos](/accounts/manage-accounts/product-management) en cualquier etapa del proceso de facturación
+
+<div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+  <iframe 
+    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} 
+    src="https://www.loom.com/embed/1d669023e0ed44ef96cebb6a115616d5" 
+    frameBorder="0" 
+    allowFullScreen
+  ></iframe>
+</div>
+
+### Prepararse para usar facturas
+
+Las facturas se usan con mayor eficacia cuando se cumplen los siguientes criterios:
+
+- Has establecido precios de venta y agregado el producto/paquete a tu Store
+- Tu Store usa paquetes con precios por línea de artículo (los paquetes existentes se migran automáticamente cuando se editan y guardan en el constructor de paquetes)
+- Existe una cuenta para el negocio al que planeas facturar
+- Has configurado Vendasta Payments y puedes aceptar pagos y recibir pagos a tu cuenta
+- Has creado [tasas de impuestos](/administration/commerce/tax-rates/) (si corresponde)
+
+### Crear una factura
+
+Las facturas se pueden crear en cualquier momento desde la pestaña **Commerce → Invoices** en Partner Center, o simplemente yendo a la cuenta para la que deseas crear una factura y haciendo clic en la pestaña de facturas.
+
+:::note Monto mínimo de factura
+El monto mínimo de factura es **$1.00**. Intentar cobrar o enviar una factura por debajo de este umbral generará un error.
+:::
+
+- Haz clic en **New → Invoice** y selecciona una cuenta para crear una factura en borrador
+- Selecciona una **Due date** para la factura. La fecha de vencimiento controla la fecha que se muestra al cliente en la factura, no determina cuándo se cobra el pago. Si usas el cobro automático, el pago se cobra de inmediato cuando se cobra la factura, independientemente de la fecha de vencimiento.
+- Selecciona un **User** (destinatario) para la factura
+- Haz clic en **Add Item** para agregar un producto individual a la factura. Puedes agregar cualquier producto que estés vendiendo actualmente en tu Marketplace, o escribir cualquier texto en el cuadro de texto para representar una línea de artículo que no existe en tu Marketplace
+  - Si el producto que seleccionas ya tiene un precio de venta establecido, completará automáticamente el Unit Price y la moneda de ese artículo. El precio y la moneda también se pueden sobrescribir en una factura individual (ten en cuenta que las facturas actualmente solo pueden aceptar pagos en USD y CAD)
+  - Para agregar un descuento como línea de artículo, ingresa la descripción del descuento e introduce un monto negativo en dólares. El valor negativo ingresado se restará del total de la factura
+- También puedes hacer clic en **Add Custom Item** para crear tu propia línea de artículo.
+- Si tu factura incluye más de un artículo determinado, esto se puede especificar usando la columna Quantity
+- Usa el menú Options **⋮** para eliminar un artículo de la factura o [aplicar una tasa de impuesto](/administration/commerce/tax-rates/) a una línea de artículo. **Nota:** las tasas de impuestos no se aplican automáticamente a las facturas; deben agregarse manualmente a cada línea de artículo individualmente.
+- Si es necesario, agrega información adicional a la factura usando el campo **Memo** en la parte inferior de la factura
+
+Las facturas también se pueden crear en cualquier momento al ver una cuenta individual en **Partner Center → Manage Accounts** haciendo clic en el menú Options **⋮** junto al botón **Open Business App**.
+
+### Crear una factura desde una oportunidad {#creating-an-invoice-from-an-opportunity}
+
+También puedes crear una factura directamente desde una [oportunidad](/crm/opportunities/create-and-edit-opportunities) haciendo clic en **Create invoice** en la oportunidad. La factura se crea con los productos de la oportunidad ya agregados como líneas de artículo, y permanece vinculada a la oportunidad, de modo que su estado es visible desde la oportunidad a medida que pasa de vencida a pagada.
+
+### Enviar o cobrar una factura
+
+<img src={require('./img/commerce/invoices/send-invoice.jpg').default} alt="Sending an invoice" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Antes de enviar una factura, te recomendamos revisar los campos Subtotal, Discount y Total para asegurarte de que la factura se haya armado correctamente. Una factura en borrador se puede editar tantas veces como sea necesario, pero una vez que se ha enviado una factura, no se puede editar.
+
+Cuando tu factura esté lista, haz clic en **Send Invoice** para elegir uno o más destinatarios entre los usuarios que existen en la cuenta dada. La ventana también mostrará una vista previa del correo electrónico que recibirá cada destinatario.
+
+Alternativamente, puedes cobrar instantáneamente a tu cliente por el contenido de la factura seleccionando **Automatically charge a payment method on file** en la sección **Collection**. Esto cambiará el botón **Send Invoice** en la parte superior derecha de la página a **Charge invoice**. Después de un cobro exitoso, tu cliente recibirá un recibo por correo electrónico. Esto requiere que tu cliente tenga al menos un método de pago guardado en Vendasta Payments. Tu cliente tendrá un método de pago guardado si previamente ha pagado una factura o realizado una compra usando el Shopping Cart. Si tu cliente no tiene un método de pago guardado, es posible ingresar un método de pago en su nombre haciendo clic en **Edit** junto al campo de método de pago en la sección **Collection**.
+
+Las facturas enviadas se pueden ver en cualquier momento desde la tabla en **Partner Center → Commerce → Invoices**.
+
+Si una factura ha sido perdida o extraviada por su destinatario, se puede volver a enviar en cualquier momento. Al hacer clic en **Resend Invoice** mientras ves una factura Due, podrás elegir a cualquier destinatario de la cuenta para reenviar la factura.
+
+### Pagar una factura
+
+Después de enviar una factura, se le enviará por correo electrónico una copia digital de la factura al destinatario que hayas elegido. Las facturas enviadas a una cuenta también aparecerán en la pestaña **Invoices** en Business App.
+
+Si Vendasta Payments está habilitado cuando se envía la factura, el destinatario tendrá la opción de pagar la factura directamente haciendo clic en **Pay this invoice** mientras ve la factura. Esto dirigirá al destinatario a una página de destino que muestra todas las líneas de artículo de la factura y le permite pagar con tarjeta de crédito.
+
+<div style={{display: 'flex', gap: '16px', alignItems: 'flex-start'}}>
+<img src={require('./img/commerce/invoices/paying-invoice-email.jpg').default} alt="Invoice email" style={{width: '55%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+<img src={require('./img/commerce/invoices/invoice-payment-page.jpg').default} alt="Invoice payment page" style={{width: '40%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+</div>
+
+Después de que se paga una factura, el destinatario puede hacer clic en **Download as PDF** para guardar un recibo en formato PDF.
+
+### Gestionar facturas
+
+Todas las facturas se pueden ver en cualquier momento desde la tabla en **Partner Center → Commerce → Invoices**. Al hacer clic en el menú Options **⋮** de una factura, los usuarios pueden editar o eliminar una factura en borrador, descargar una copia de una factura en formato PDF, o descargar un recibo de una factura pagada en formato PDF.
+
+Los usuarios de Business App pueden ver la lista completa de facturas que han recibido usando la pestaña **Invoices** en Business App.
+
+Puedes descargar una tabla completa de todas las facturas enviadas no anuladas haciendo clic en el botón **Export as CSV** en la esquina superior derecha de la tabla de Invoices.
+
+### Estados de factura
+
+El estado de una factura se muestra en la columna Status de la tabla en **Partner Center → Commerce → Invoices**. Una factura puede tener uno de los siguientes estados.
+
+- **Draft**: una factura en borrador se puede editar y aún no se ha enviado a un destinatario.
+- **Due**: una factura Due se ha enviado a un destinatario y ya no se puede editar. Al hacer clic en **Resend Invoice** puedes volver a seleccionar un destinatario y enviar la factura de nuevo.
+- **Paid**: una factura Due se marcará como Paid cuando su destinatario la pague a través del botón **Pay this invoice**. Alternativamente, si el pago se cobró fuera de Vendasta Payments, una factura se puede marcar como Paid haciendo clic en el menú Options **⋮**, seleccionando **Change invoice status** y seleccionando **Paid**.
+- **Void**: si una factura se ha enviado por error o ya no es relevante, se puede marcar como Void haciendo clic en el menú Options **⋮**, seleccionando **Change invoice status** y seleccionando **Void**.
+
+Ten en cuenta que la configuración **Invoicing settings** de una cuenta está desactivada de forma predeterminada. Para editar estos ajustes de una cuenta en particular, ve a la sección **Products** en la página de la cuenta en **Partner Center → Accounts → Manage Accounts → Select account** y haz clic en **Invoices**.
+
+### Personalizar números de factura
+
+La personalización del próximo número de factura permite a los partners nuevos y existentes definir la próxima secuencia de números para sus futuras facturas. Esta personalización garantiza transiciones fluidas, mejora la apariencia profesional y mantiene un sistema de facturación coherente para tu negocio.
+
+**Motivos comunes para personalizar los números de factura:**
+
+1. **Continuidad de plataformas anteriores:** los partners nuevos pueden continuar la secuencia de numeración de su sistema de facturación anterior.
+2. **Apariencia profesional:** los partners nuevos pueden evitar comenzar su secuencia de números de factura desde 001.
+
+**Para personalizar el próximo número de factura:**
+
+1. Ve a **Partner Center → Commerce → Invoices**
+2. Para acceder al ajuste, selecciona los **tres puntos** en la esquina superior derecha de la página y haz clic en **Set new invoice number**
+3. Ingresa el **next invoice number** deseado. **Nota:** el número debe ser mayor que cualquier número de factura usado previamente
+
+<img src={require('./img/commerce/invoices/set-new-invoice-number.png').default} alt="Setting a new invoice number" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+4. Haz clic en **Confirm**, y tu próxima factura generada seguirá la nueva secuencia de números
+
+**Notas sobre la personalización de números de factura:**
+
+- El número de factura solo admite valores numéricos (sin prefijos alfanuméricos)
+- Solo puedes establecer el próximo número de factura en un valor mayor que cualquier número ya usado en una factura
+- La secuencia de números de factura se aplica a todas tus transacciones en todos los clientes
+
+### Cambiar la configuración de correo electrónico de facturas
+
+La dirección de correo electrónico que se muestra en la parte inferior de la factura enviada a los clientes se puede cambiar yendo a **Partner Center → Administration → Customize →** en la pestaña de valores predeterminados del partner; haz clic en **Email Settings → Sender Email → cámbialo y luego aplica los cambios**.
+
+<img src={require('./img/commerce/invoices/change-email-invoice.jpg').default} alt="Email settings screenshot" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Esta también es la dirección de correo electrónico desde la que la plataforma enviará informes, a la que los destinatarios pueden responder.
+
+Para partners con varios mercados, repite los mismos pasos en el encabezado '**Markets**' → haz clic en el ícono de lápiz para seleccionar el mercado y actualizar el correo electrónico en consecuencia, o simplemente aplica las configuraciones de marca del partner al mercado (o mercados) adicionales.
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Puedo cambiar el estado de una factura después de que se marca como "paid"?</summary>
+
+**No**: una vez que una factura se ha marcado como "paid", no se puede ajustar a otro estado (como "due" o "past due"). Si necesitas enviar una factura a un cliente de nuevo, recrea la factura original y envíala de nuevo.
+
+<img src={require('./img/commerce/invoices/invoice-status-paid.jpg').default} alt="Invoice status cannot be changed after marked as paid" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+</details>
+
+<details>
+<summary>¿Puedo eliminar una factura?</summary>
+
+Las **facturas en borrador** se pueden eliminar usando el menú Options **⋮** de la factura.
+
+Las **facturas enviadas o pagadas** no se pueden eliminar; son registros financieros. Si necesitas revertir el cargo de una factura pagada, [emite una nota de crédito](/commerce/credit-notes) en su lugar. Si una factura enviada se creó por error y no se ha pagado, anúlala seleccionando **Change invoice status → Void** en el menú Options **⋮**.
+
+Actualmente, los partners no pueden retractar ni eliminar una factura que ya se ha enviado.
+
+Si has enviado una factura incorrecta, crea y envía una nueva factura a tu cliente.
+
+Si has enviado una factura al destinatario incorrecto, se puede enviar una factura a un destinatario diferente en cualquier momento haciendo clic en **Send Invoice** y eligiendo un destinatario diferente.
+
+<img src={require('./img/commerce/invoices/send-invoice-option.jpg').default} alt="Send invoice option" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Si la factura todavía tiene el estado 'due', también se puede anular.
+
+Para anular la factura, ve a **Partner Center → Commerce → Invoices → haz clic en los 3 puntos junto a la factura y selecciona Change Invoice Status.** Selecciona el estado **void** y **guarda**.
+
+<img src={require('./img/commerce/invoices/change-invoice-status-option.jpg').default} alt="Change invoice status option" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+<img src={require('./img/commerce/invoices/void-invoice-status.jpg').default} alt="Void invoice status selection" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+</details>
+
+<details>
+<summary>¿Cómo marco una factura como "paid" si no se ha pagado a través de Vendasta Payments?</summary>
+
+Si quieres generar una factura en una cuenta pero no quieres enviarla a tu cliente, o el cliente ya ha pagado, puedes marcar el estado de la factura como "Paid" para tus registros:
+
+En **Partner Center → Commerce → Invoices → Select the invoice** (cualquier factura en estado Past Due o Due) → **Click the three dots at the end of the row → Change invoice status → Paid:**
+
+<img src={require('./img/commerce/invoices/mark-invoice-paid-1.png').default} alt="Mark invoice as paid step 1" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+<img src={require('./img/commerce/invoices/mark-invoice-paid-2.png').default} alt="Mark invoice as paid step 2" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+***Ten en cuenta que las facturas con estado "Paid" o "Void" no tienen la opción de cambiar el estado de la factura.***
+
+</details>
+
+<details>
+<summary>¿Se pueden enviar facturas y recibos de Vendasta a varios usuarios?</summary>
+
+**Sí**: se puede agregar una lista de direcciones de correo electrónico separadas por comas a la tarjeta Billing Contact Information en **Partner Center → Administration → My billing**. Las direcciones incluidas aquí recibirán facturas y notificaciones por correo electrónico sobre pagos exitosos y fallidos, etc.
+
+<img src={require('./img/commerce/invoices/billing-contact-information.png').default} alt="Billing Contact Information in Partner Center" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+</details>
+
+<details>
+<summary>¿Se me notificará cuando se envíe una factura a mi cliente?</summary>
+
+**¡Sí!** Recibirás un correo electrónico cada vez que se genere y envíe una factura a tu cliente.
+
+<img src={require('./img/commerce/invoices/invoice-notification-email-1.jpg').default} alt="Invoice notification email sent to merchant" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+El cliente también recibirá una factura por correo electrónico (si elegiste la opción de pago **Email Invoice**). De lo contrario, el cliente recibirá un recibo por correo electrónico del cargo a su tarjeta de crédito.
+
+<img src={require('./img/commerce/invoices/invoice-notification-email-2.jpg').default} alt="Invoice email sent to customer" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+<img src={require('./img/commerce/invoices/invoice-notification-email-3.jpg').default} alt="Invoice receipt email sent to customer" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+</details>
+
+<details>
+<summary>¿Por qué mi factura muestra la moneda incorrecta?</summary>
+
+Si la factura aparece en una moneda diferente a la esperada, es posible que la factura haya sido **duplicada**. Cuando se duplica una factura, conserva la moneda de la factura original junto con los mismos valores de línea de artículo.
+
+Si creas una nueva factura desde cero, la moneda predeterminada será **CAD**, que se puede identificar por el prefijo **"CA$"** en los valores en dólares.
+
+**Cómo diferenciar entre CAD y USD:**
+- **CA$**: indica que la factura está en **CAD (dólares canadienses)**.
+- **$ (sin "CA")**: indica que la factura está en **USD (dólares estadounidenses)**.
+
+</details>
+
+<details>
+<summary>¿Por qué no aparece mi paquete cuando intento agregarlo a una factura?</summary>
+
+Los paquetes deben usar el modelo de precios por línea de artículo para poder agregarse a una factura. Si tu paquete se creó antes de que este modelo estuviera disponible, ábrelo en el constructor de paquetes, revisa el precio y guarda. El paquete se migrará automáticamente al modelo de precios por línea de artículo al guardar.
+
+**Nota:** los paquetes que aún no se han migrado tampoco se pueden comprar a través del Shopping Cart.
+
+</details>
+
+<details>
+<summary>¿La tarifa de transacción del pago del cliente se calcula antes o después del impuesto?</summary>
+
+Las tarifas de transacción se calculan según el **monto total** que ha pagado el cliente.
+
+Si un partner ha configurado su facturación para incluir impuestos, la tarifa de transacción se calcula a partir del monto total que ya incluye impuestos.
+
+Si no se han configurado impuestos, la tarifa de transacción se sigue basando en el monto total de la factura que pagó el cliente, pero sin impuestos, ya que no se indicaron impuestos en la factura.
+
+</details>
+
+<details>
+<summary>¿Los propietarios de cuentas de clientes pueden eliminar la tarjeta de crédito guardada?</summary>
+
+Sí, la funcionalidad de Billing Settings dentro de Business App permite a los usuarios de una cuenta 'reemplazar' una tarjeta de crédito siempre que se haya agregado otra.
+
+</details>
+
+<details>
+<summary>¿Qué es una plantilla de factura recurrente?</summary>
+
+:::caution Función descontinuada
+La funcionalidad de Recurring Invoice se ha descontinuado para los nuevos partners. Familiarízate con la función mejorada de Subscription Billing, que se ha introducido como reemplazo.
+:::
+
+Las plantillas no solo pueden aliviar tu carga de trabajo, sino también hacerte sentir menos estresado y, al mismo tiempo, aumentar tu eficiencia. Ayudan a ahorrar tiempo y dinero mientras mejoran la consistencia.
+
+Una plantilla de factura recurrente se puede usar para facturar repetidamente a un cliente por productos o servicios que ha comprado y que tienen una renovación mensual, y se puede facturar automáticamente cada mes.
+
+Los procesos se ejecutarán continuamente según el cronograma que hayas establecido en la plantilla.
+
+<img src={require('./img/commerce/invoices/recurring-invoice-template.jpg').default} alt="Recurring invoice template" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+</details>
+
+<details>
+<summary>¿Por qué mi factura muestra como vencida antes de la fecha de vencimiento?</summary>
+
+Si tu factura se muestra como vencida antes de la fecha de vencimiento real, esto podría deberse a diferencias de zona horaria o al tiempo de procesamiento del sistema. Revisa la fecha de vencimiento y la configuración de zona horaria en tu configuración de facturas.
+
+</details>
+
+<details>
+<summary>¿Por qué mi producto de paquete tiene un precio inesperado cuando lo agrego a una factura?</summary>
+
+Si un paquete muestra un precio inesperado al agregarlo a una factura, es posible que aún no se haya migrado al modelo de precios por línea de artículo. Abre el paquete en el constructor de paquetes, revisa el precio y guarda para activar la migración automática. Una vez migrado, la factura reflejará el precio por línea de artículo correcto según el precio de venta y la frecuencia de facturación de cada producto.
+
+</details>
+
+<details>
+<summary>¿Dónde puedo encontrar el enlace de pago de una factura?</summary>
+
+El enlace de pago se puede encontrar para cualquier factura enviada desde **Partner Center → Commerce → haz clic en los tres puntos a la izquierda de la factura deseada → Copy payment link**. Las facturas en borrador no tienen un enlace de pago.
+
+</details>
+
+<details>
+<summary>¿Por qué el correo electrónico de mi factura no llega a mi cliente?</summary>
+
+Si tu cliente no está recibiendo un correo electrónico de factura, revisa lo siguiente:
+
+1. **Estado de la factura**: solo las facturas en estado **Open (Due)** se pueden enviar. Las facturas en borrador no se pueden enviar por correo hasta que se envíen.
+2. **Dirección de correo electrónico válida**: confirma que el contacto de la cuenta tenga una dirección de correo electrónico válida y con el formato correcto.
+3. **Selección de destinatario**: al hacer clic en **Send Invoice**, asegúrate de haber seleccionado al menos un destinatario de la lista.
+4. **Carpeta de spam o correo no deseado**: pídele al cliente que revise su carpeta de spam o correo no deseado, ya que los correos de facturas a veces se filtran.
+
+Si el cliente se ha dado de baja previamente de los correos de la plataforma, es posible que su dirección esté suprimida. En ese caso, deberá contactar a [support@vendasta.com](mailto:support@vendasta.com) para volver a suscribirse.
+
+</details>
+
+<details>
+<summary>El filtro de fecha parece estar omitiendo facturas del último día de mi rango seleccionado</summary>
+
+Este es un comportamiento conocido. Al filtrar facturas por rango de fechas, la fecha de fin se trata como exclusiva, lo que significa que las facturas con fecha del último día del rango pueden no aparecer. Para solucionar esto, establece tu fecha de fin un día después de tu rango previsto. Por ejemplo, para ver todas las facturas hasta el 30 de junio, establece la fecha de fin en el 1 de julio.
+
+</details>
+
+<details>
+<summary>¿Por qué el monto neto en mi informe de facturas no coincide después de emitir una nota de crédito?</summary>
+
+Las notas de crédito se informan por separado de las facturas. Una exportación de facturas desde `Commerce` → `Invoices` → `Export as CSV` muestra solo los montos brutos de las facturas; no deduce las notas de crédito de los totales.
+
+Para calcular los ingresos netos precisos, exporta tus facturas y tus notas de crédito por separado, y luego resta los totales de las notas de crédito de los totales de las facturas.
+
+</details>
+
+<details>
+<summary>Veo "Failed to charge invoice: An invalid request occurred": ¿cómo lo soluciono?</summary>
+
+Este error es causado por una factura que contiene una línea de artículo vacía, una línea sin descripción de producto y con un valor de $0.00. Para resolverlo:
+
+1. Abre la factura que muestra el error
+2. Revisa todas las líneas de artículo y busca una línea con descripción en blanco y un monto de $0.00
+3. **Duplica la factura** usando el menú Options **⋮**
+4. En el duplicado, elimina la línea de artículo vacía
+5. Cobra la factura duplicada
+6. Anula la factura original
+
+Para evitar esto en el futuro, asegúrate de que cada línea de artículo tenga una descripción de producto y un valor mayor a $0.00 antes de guardar.
+
+</details>
