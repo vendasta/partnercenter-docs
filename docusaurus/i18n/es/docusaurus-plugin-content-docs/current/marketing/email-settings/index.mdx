@@ -1,0 +1,251 @@
+---
+title: Email settings
+description: Configura la autenticación de correo, la entregabilidad y los ajustes para una entrega de campañas confiable
+sidebar_label: Email settings
+sidebar_position: 5
+---
+
+Los ajustes de correo electrónico son fundamentales para garantizar que tus campañas de correo lleguen con éxito a las bandejas de entrada de los destinatarios. La configuración adecuada de los protocolos de autenticación, la información del remitente y los ajustes de entregabilidad ayuda a evitar los filtros de spam y a mantener tu reputación de remitente.
+
+## Descripción general
+
+Los ajustes de correo electrónico abarcan todas las configuraciones técnicas y de política necesarias para una entrega de correo exitosa. Esto incluye la autenticación de dominio (SPF, DKIM, DMARC), la verificación del remitente, la optimización de la entregabilidad y los requisitos de cumplimiento normativo.
+
+## Por qué importan los ajustes de correo
+
+Una configuración de correo adecuada es esencial porque:
+
+- **Entregabilidad**: garantiza que los correos lleguen a las bandejas de entrada en lugar de a las carpetas de spam
+- **Autenticación**: demuestra que estás autorizado para enviar correos desde tu dominio
+- **Reputación**: mantiene una reputación positiva de remitente con los proveedores de correo
+- **Cumplimiento**: cumple con los requisitos legales para el correo comercial
+- **Confianza**: los destinatarios confían en los correos debidamente autenticados
+
+## Requisitos principales
+
+Antes de enviar campañas de correo electrónico, debes configurar:
+
+1. **Autenticación de dominio**: cuatro registros DNS: un SPF (TXT), dos DKIM (CNAME) y un DMARC (TXT)
+2. **Información del remitente**: `Sender name` y `Reply Address` en la tarjeta `Sender and reply settings`, además de `Sender domain` y `Email address` en la tarjeta `Advanced email settings`
+3. **Dirección postal**: dirección de negocio requerida para el cumplimiento normativo
+4. **Verificación de usuario**: verificación de correo electrónico para todos los usuarios de la plataforma
+
+## Áreas principales de configuración
+
+### Configuración y autenticación del remitente
+
+Configura tu dominio y ajustes de autenticación:
+
+- **[Connect Domains](./connecting-domains.mdx)**: vincula el dominio de tu negocio para el envío de correo
+- **[Update email settings](./update-email-settings.mdx)**: configura la información del remitente y la autenticación
+- **[Email Authentication](./email-authentication/index.mdx)**: entiende los protocolos SPF, DKIM y DMARC
+
+### Configuración de DNS y dominio
+
+Configura los registros DNS para la autenticación de correo:
+
+- **[Add SPF, DKIM, and DMARC Records (cPanel Namecheap)](./email-authentication/adding-spf-dkim-dmarc-records-cpanel-namecheap.mdx)**: guía paso a paso para cPanel/Namecheap
+- **[Guide - Add SPF, DKIM, & DMARC Records (GoDaddy)](./email-authentication/adding-spf-dkim-dmarc-records-godaddy.mdx)**: guía de configuración para GoDaddy
+
+### Preferencias de suscripción de correo
+
+Gestiona cómo los destinatarios controlan sus preferencias de correo:
+
+- **[Email Subscription Preferences](./email-subscription-preferences.mdx)**: aprende cómo los destinatarios gestionan las preferencias de correo de marketing, producto y sitio web por categoría
+
+### Entregabilidad y optimización de correo
+
+Garantiza que tus correos lleguen a los destinatarios con éxito:
+
+- **[Email Deliverability](./email-deliverability.mdx)**: guía completa que incluye funciones de la plataforma, buenas prácticas, solución de problemas, configuración de autenticación y códigos de error de entrega comunes
+
+### Gestión y verificación de usuarios
+
+Para el acceso de usuarios y la verificación de correo, consulta la sección [My team](/administration/my-account/my-team) en Administration.
+
+### Requisitos técnicos y cumplimiento
+
+Comprende los requisitos, limitaciones y cumplimiento legal de la plataforma:
+
+- **[Email settings requirements](./email-settings-requirements.mdx)**: requisitos completos de configuración, cumplimiento de CAN-SPAM, requisitos de dominio personalizado y limitaciones de tamaño de correo
+
+## Lista de verificación para comenzar
+
+### 1. Configuración de dominio
+- [ ] Conecta tu dominio de negocio
+- [ ] Verifica la propiedad del dominio
+- [ ] Configura los ajustes de DNS
+
+### 2. Configuración de autenticación
+- [ ] Agrega el registro SPF (TXT) al DNS
+- [ ] Agrega **ambos** registros DKIM (CNAME) al DNS
+- [ ] Agrega el registro DMARC (TXT) al DNS
+- [ ] Verifica que los cuatro registros muestren un `Current value` en `Email domains`
+
+### 3. Configuración del remitente
+- [ ] Establece el nombre y la dirección de correo del remitente
+- [ ] Configura la dirección postal del negocio
+- [ ] Prueba la funcionalidad de envío de correo
+
+### 4. Gestión de usuarios
+- [ ] Verifica todas las direcciones de correo de los usuarios
+- [ ] Configura los permisos adecuados
+- [ ] Configura las preferencias de notificación de los usuarios
+
+### 5. Optimización de entregabilidad
+- [ ] Revisa las buenas prácticas de entregabilidad
+- [ ] Configura supervisión y alertas
+- [ ] Configura límites de tasa si es necesario
+
+## Autenticación de correo explicada
+
+### SPF (Sender Policy Framework)
+Especifica qué servidores están autorizados para enviar correos desde tu dominio. Esto previene la suplantación de correo al permitir que los destinatarios verifiquen que los correos realmente provienen de tus servidores autorizados.
+
+### DKIM (DomainKeys Identified Mail)
+Agrega una firma digital a tus correos que demuestra que no han sido manipulados durante el tránsito. Esto ayuda a establecer la autenticidad y mejora la entregabilidad.
+
+### DMARC (Domain-based Message Authentication, Reporting & Conformance)
+Le indica a los servidores de correo receptores qué hacer con los correos que fallan las verificaciones SPF o DKIM. También proporciona informes sobre la actividad de autenticación de correo de tu dominio.
+
+## Problemas comunes y soluciones
+
+### Problemas de autenticación
+- **Registro SPF inválido**: revisa la configuración y sintaxis del DNS
+- **Fallo de firma DKIM**: verifica que las claves DKIM estén correctamente configuradas
+- **Violaciones de política DMARC**: revisa y ajusta los ajustes de DMARC
+
+### Problemas de entregabilidad
+- **Tasas de rebote altas**: limpia las listas de correo y verifica las direcciones
+- **Entrega en la carpeta de spam**: revisa el contenido y la autenticación
+- **Limitación de tasa**: ajusta la frecuencia y el volumen de envío
+
+### Errores de configuración
+- **Fallo de verificación de dominio**: confirma que los registros DNS estén publicados
+- **Autenticación del remitente**: verifica que la información del remitente coincida con el dominio
+- **Problemas de acceso de usuario**: revisa el estado de verificación de correo
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Puedo enviar campañas desde varios dominios o bajo una marca diferente?</summary>
+
+Sí. Hay dos enfoques según lo que intentes hacer.
+
+**Opción 1: autorizar un dominio de remitente adicional**
+
+Si quieres enviar campañas desde un segundo dominio (por ejemplo, una submarca o una unidad de negocio diferente), puedes autenticar ese dominio en `Marketing` → `Email settings` → [Connect Domains](./connecting-domains.mdx). Cada dominio requiere cuatro registros DNS: un SPF (TXT), dos DKIM (CNAME) y un DMARC (TXT). Los cambios de DNS pueden tardar hasta 72 horas en propagarse, y la verificación no se completará hasta que los cuatro registros estén publicados correctamente, incluidos ambos CNAME de DKIM.
+
+Una vez verificado, puedes seleccionar el dominio como tu remitente en Email settings.
+
+**Opción 2: crear un mercado separado**
+
+Si necesitas una marca completamente separada, un logotipo, nombre e identidad de remitente diferentes, puedes crear un nuevo mercado en Partner Center. Cada mercado puede tener sus propios ajustes de correo y marca. Cuando creas una campaña, seleccionar el mercado correcto garantiza que se envíe con la marca de ese mercado.
+
+:::note
+Crear mercados adicionales requiere un plan Custom. Contacta a tu representante de Vendasta para conversar sobre las opciones de plan.
+:::
+
+**Solución de problemas:**
+- *Gmail muestra "via yourdomain.com" en la línea del remitente*: esto aparece cuando el dominio de envío no coincide con el dominio de la `Email address` establecida en `Advanced email settings`. Asegúrate de que el dominio desde el que envías sea el autenticado en `Email settings`.
+- *El dominio está atascado en "Pending"*: verifica que los cuatro registros DNS (un SPF, dos DKIM, un DMARC) estén publicados en tu proveedor de DNS y permite hasta 72 horas para la propagación. Un solo CNAME de DKIM faltante es la causa más común.
+</details>
+
+<details>
+<summary>¿Debo agregar el registro DMARC exacto proporcionado por la plataforma?</summary>
+
+No, el registro DMARC proporcionado es una recomendación, no un requisito. Cualquier registro DMARC válido funcionará, incluso si lo proporciona otro servicio. El requisito clave es que el registro debe ser válido para que la verificación tenga éxito.
+</details>
+
+<details>
+<summary>¿La plataforma tiene límites en el tamaño del correo?</summary>
+
+Sí, la plataforma tiene un límite de 32,000 caracteres de código fuente HTML por correo. Si un correo supera este límite, recibirás un mensaje de error pidiéndote que reduzcas la longitud del contenido.
+</details>
+
+<details>
+<summary>¿Necesito registrar mi dominio en Google Postmaster Tools?</summary>
+
+Aunque no es obligatorio, registrar tu dominio con Google Postmaster Tools proporciona información valiosa sobre tu entregabilidad y reputación de correo con los usuarios de Gmail, lo que puede ayudar a optimizar el rendimiento de tu correo.
+</details>
+
+<details>
+<summary>¿Puedo usar un dominio diferente para los ajustes de correo de Marketing vs. los ajustes de correo de marca del partner?</summary>
+
+No. Los ajustes de correo de Marketing y los ajustes de correo de marca del partner están vinculados: comparten el mismo dominio de envío. No puedes configurar un dominio separado para los envíos de campaña frente a las notificaciones de marca (como los Daily Digests o los Executive Reports). Si cambias el dominio en un lugar, afecta a ambos.
+
+</details>
+
+<details>
+<summary>¿Por qué la dirección de respuesta siempre coincide con mi correo de remitente?</summary>
+
+La dirección de respuesta se establece automáticamente para que coincida con el correo del remitente del mercado. Esto es intencional: evita rupturas de marca blanca en correos automatizados como los Daily Digests y los Executive Reports, que necesitan responder a la identidad del remitente configurada en lugar de a una dirección diferente.
+
+Si necesitas diferentes direcciones de respuesta entre audiencias, el enfoque compatible es crear mercados separados, cada uno con su propio correo de remitente. La plataforma admite de forma nativa hasta dos dominios de envío autenticados.
+
+</details>
+
+<details>
+<summary>Recibo un error "Invalid DNS zone file" al agregar un registro CNAME. ¿Cómo lo soluciono?</summary>
+
+Este error generalmente significa que hay un registro A en conflicto en el mismo nombre de host donde intentas agregar un CNAME. DNS no permite que un CNAME y un registro A coexistan en el mismo nombre.
+
+Para solucionarlo:
+
+1. Inicia sesión en tu proveedor de DNS (GoDaddy, Namecheap, etc.)
+2. Busca un registro A existente en el mismo nombre de host que el CNAME que intentas agregar
+3. Elimina el registro A, luego agrega el CNAME
+
+Si no estás seguro de qué registro está en conflicto, usa una herramienta de búsqueda de DNS como [MXToolbox](https://mxtoolbox.com/DNSLookup.aspx) para ver todos los registros existentes del nombre de host antes de hacer cambios.
+
+</details>
+
+<details>
+<summary>¿La anulación de la dirección de correo en Admin → Email se aplica a las solicitudes de reseñas, o solo a las campañas de correo?</summary>
+
+Se aplica tanto a las solicitudes de reseñas como a las solicitudes de NPS, además de a las campañas de correo. La dirección de visualización establecida en `Admin` → `Email` se usa para esos envíos.
+
+</details>
+
+## Buenas prácticas
+
+### Gestión de dominio
+
+**Supervisión automática de dominio:**
+Para garantizar que tus correos lleguen a las bandejas de entrada en lugar de a las carpetas de spam, Vendasta supervisa y gestiona automáticamente los ajustes de tu dominio de correo:
+
+- **Cada 2 semanas**: los administradores de Partner Center reciben notificaciones cuando los ajustes de correo usan un dominio no verificado
+- **Después de 8 semanas**: los ajustes de correo vuelven automáticamente a enviarse desde el dominio de marca gris de Vendasta (con notificación)
+
+Las notificaciones se envían tanto como alertas dentro de la plataforma como mensajes de correo electrónico a los administradores de Partner Center.
+
+**Buenas prácticas:**
+- Usa un subdominio dedicado para el marketing por correo electrónico (por ejemplo, mail.tunegocio.com)
+- Completa la verificación de dominio con prontitud para evitar la reversión automática
+- Mantén los registros DNS actualizados
+- Supervisa la reputación del dominio regularmente
+- Responde rápidamente a las notificaciones de verificación
+
+### Configuración de autenticación
+- Implementa los tres protocolos de autenticación (SPF, DKIM, DMARC), lo que significa publicar cuatro registros DNS: un SPF, dos DKIM y un DMARC
+- Comienza con una política DMARC permisiva y fortalécela gradualmente
+- Revisa regularmente los informes de autenticación
+
+### Optimización de entregabilidad
+- Mantén listas de correo limpias
+- Supervisa las tasas de rebote y elimina las direcciones inválidas
+- Sigue las buenas prácticas de marketing por correo electrónico
+- Prueba los correos en diferentes clientes y dispositivos
+
+### Seguridad y cumplimiento
+- Mantén seguros los registros de autenticación
+- Audita regularmente el acceso y los permisos de los usuarios
+- Mantente informado sobre las regulaciones y requisitos de correo electrónico
+- Usa [preferencias de suscripción basadas en categoría](./email-subscription-preferences.mdx) para dar a los destinatarios un control granular sobre los tipos de correo
+
+## ¿Necesitas más ayuda?
+
+- **Creación de campañas**: aprende a crear campañas efectivas con [personalización de campos del CRM](/marketing/campaigns) usando [campos de contacto](/crm/contacts/crm-default-contact-fields) y [campos de empresa](/crm/companies/crm-default-company-fields)
+- **Soporte técnico**: contacta a soporte para problemas avanzados de DNS o autenticación
+- **Consultoría de entregabilidad**: obtén ayuda experta con desafíos complejos de entregabilidad
+- **Recursos de capacitación**: accede a materiales de capacitación adicionales y guías de buenas prácticas

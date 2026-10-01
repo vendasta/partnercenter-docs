@@ -2,6 +2,9 @@
 title: "Connect the AI Chat Receptionist with Shopify"
 sidebar_label: Connect with Shopify
 description: Connect the AI Chat Receptionist to Shopify to search products, share details, and check inventory in chat.
+brand: vendasta
+product: ai-workforce
+audience: partners
 ---
 
 import {AISparkleIcon} from '@site/src/components/Icons'

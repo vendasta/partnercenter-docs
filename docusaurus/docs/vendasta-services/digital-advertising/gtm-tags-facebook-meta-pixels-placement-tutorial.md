@@ -2,6 +2,9 @@
 title: "Google Tag Manager & Facebook Meta Pixels Overview"
 sidebar_label: "GTM Tags & Facebook Meta Pixels"
 description: "This article guides you through the essentials of Google Tag Manager (GTM) tags and Facebook Meta Pixels, and how to install and verify them on your website."
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 This article guides you through the essentials of Google Tag Manager (GTM) tags and Facebook Meta Pixels. Understanding and implementing these tools is crucial for tracking and optimizing your digital marketing campaigns, ensuring you get the most out of your advertising efforts.

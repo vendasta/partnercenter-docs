@@ -1,0 +1,219 @@
+---
+title: Order payments and billing
+sidebar_label: Order payments and billing
+description: Cobra pagos directamente desde los pedidos, habilita el cobro de pagos del cliente, y optimiza los procesos de facturación con la gestión automatizada de pagos.
+tags: [commerce, orders, payments, billing, credit-cards]
+keywords: [order payments, payment collection, billing, credit cards, customer approval payments, automated billing]
+---
+
+## ¿Qué son los pagos de pedidos?
+
+Los pagos de pedidos en Partner Center te permiten cobrar y procesar pagos directamente dentro del flujo de trabajo del pedido. Esto incluye cobrar los primeros pagos cuando se crean los pedidos, habilitar el cobro de pagos del cliente durante los procesos de aprobación, y automatizar la configuración de facturación para las suscripciones continuas. El sistema gestiona de forma segura la información de tarjetas de crédito y optimiza el procesamiento de pagos para reducir el esfuerzo manual.
+
+## ¿Por qué son importantes los pagos de pedidos?
+
+El cobro de pagos dentro de los pedidos elimina pasos manuales, reduce el tiempo de procesamiento y garantiza el manejo seguro de la información de pago sensible. Al cobrar pagos directamente en el flujo de trabajo del pedido, puedes activar automáticamente pedidos, crear suscripciones y establecer relaciones de facturación. Este enfoque optimizado mejora el flujo de caja y reduce el riesgo de retrasos o errores en los pagos.
+
+## Qué puedes hacer con los pagos de pedidos
+
+Con las funciones de pago de pedidos, puedes:
+
+- Cobrar los primeros pagos directamente dentro de los pedidos
+- Habilitar el cobro de pagos del cliente durante la aprobación
+- Guardar la información de tarjetas de crédito de forma segura para futuras facturaciones
+- Procesar pagos automáticamente y activar pedidos
+- Configurar ajustes de facturación predeterminados durante la creación del pedido
+- Gestionar rechazos de pago y reprocesamiento
+- Configurar permisos de cobro de pagos para vendedores
+- Generar facturas automáticamente tras un pago exitoso
+
+## Cómo configurar los pagos de pedidos
+
+### Cómo cobrar los primeros pagos directamente desde los pedidos
+
+Esta función te permite cobrar y cargar información de tarjeta de crédito directamente dentro de un pedido:
+
+**Beneficios clave:**
+- Almacenamiento seguro de tarjetas de crédito dentro de los pedidos
+- Procesamiento de pagos y activación de pedidos automatizados
+- Gestión de permisos eficiente para usuarios que no son administradores
+- Menor esfuerzo manual en el cobro de pagos
+- Visibilidad del método de pago para clientes existentes
+- Configuración de facturación simplificada para suscripciones continuas
+
+**Proceso:**
+1. **Accede al pedido**: abre el pedido que requiere el cobro de pago
+2. **Ingresa o selecciona una tarjeta de crédito**:
+   - Si hay una tarjeta de crédito registrada, selecciónala
+   - Si se requiere una tarjeta nueva, ingresa los detalles de la tarjeta de crédito
+3. **Envía el pedido**: envíalo para su procesamiento
+
+**Acciones automáticas del sistema: tarjeta de crédito aprobada**
+- El pedido se activa (o se programa para activación)
+- Los productos se activan según las fechas programadas
+- Se actualiza el historial del pedido
+- Se crean las suscripciones
+- Se genera la factura
+- Los detalles de pago se registran en la pestaña `PAYMENT`
+- La información de facturación se convierte en predeterminada si no había ninguna establecida previamente
+
+**Acciones automáticas del sistema: tarjeta de crédito rechazada**
+- Los detalles de pago se registran en la pestaña `PAYMENT`
+- Se agrega la etiqueta `Payment declined` al pedido
+- El estado del pedido se establece en `DECLINED`
+- Se actualiza el historial del pedido
+- El pedido se puede convertir a `draft` para reprocesamiento
+
+:::tip
+Todos los detalles de pago se pueden encontrar en la pestaña `PAYMENT` del pedido.
+:::
+
+### Cómo habilitar el cobro de pagos del cliente
+
+Partner Center permite que los pedidos de venta enviados para aprobación del cliente incluyan capacidades de cobro de pagos:
+
+**Funciones:**
+- Cobro de tarjeta de crédito durante la aprobación del cliente
+- Entrada de firma del cliente para la aprobación del pedido
+- Proceso de transacción optimizado
+- Seguridad mejorada para los pagos de clientes
+
+<img src={require('./img/collect-payment-example.png').default} alt="Example of order approval with payment collection" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+**Pasos de configuración para administradores:**
+
+1. **Ve a Administration**:
+   - Ve a `Administration` → `Customize` → `Sales` → `Configure sales orders and processes`
+
+2. **Configura los pedidos de venta**:
+   - Encuentra la tarjeta `Salesperson submit actions`
+
+3. **Habilita la aprobación del cliente y el pago**:
+   - Asegúrate de que `Allow salespeople to send an order to customers for approval` esté marcado
+   - Marca `Orders sent for approval by salespeople can accept payment`
+
+<img src={require('./img/salespeople-config.png').default} alt="Configuration settings for salespeople" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+**Flujo de trabajo del vendedor:**
+1. Los vendedores pueden seleccionar `Submit for customer approval` en un pedido
+2. El pedido se envía al cliente para aprobación y pago
+3. El cliente aprueba el pedido y proporciona la información de pago
+4. Tras un pago exitoso, se genera una factura con estado `Paid`
+5. El pedido se procesa y cambia a estado `Activated`
+
+## Proceso de cobro de pagos
+
+### Cobro de pago directo
+
+**Para usuarios de ventas y administradores:**
+- Puedes usar las funciones de cobro de pagos con los permisos necesarios
+- Almacenamiento seguro de tarjetas de crédito dentro del sistema de pedidos
+- Procesamiento y activación automáticos tras un pago exitoso
+- Seguimiento claro de pagos en una pestaña `PAYMENT` dedicada
+
+### Aprobación del cliente con pago
+
+**Experiencia del cliente mejorada:**
+- Los clientes reciben una solicitud de aprobación con capacidad de cobro de pago
+- La entrada de firma garantiza un proceso de transacción seguro
+- Aprobación y pago optimizados en un solo flujo de trabajo
+- Generación automática de factura y procesamiento del pedido
+
+## Gestión de pagos
+
+### Pagos exitosos
+
+Cuando los pagos se procesan con éxito:
+- Los pedidos se activan automáticamente (o programan la activación)
+- Los productos quedan disponibles para los clientes
+- Se crean suscripciones para la facturación continua
+- Se generan facturas con estado `Paid`
+- La información de pago se almacena de forma segura
+- Se establecen los ajustes de facturación predeterminados
+
+### Rechazos de pago
+
+Cuando se rechazan los pagos:
+- Indicación clara del motivo del rechazo en la pestaña `PAYMENT`
+- El estado del pedido se actualiza para reflejar el problema de pago
+- Opción de convertir el pedido a `draft` para reprocesamiento
+- Oportunidad de actualizar la información de pago
+- Capacidad de reintentar el cobro de pago
+
+## Permisos de usuario
+
+### Usuarios de ventas
+- Pueden cobrar pagos con los permisos adecuados
+- Pueden enviar pedidos para aprobación del cliente con pago
+- Pueden ver el estado del pago en los pedidos
+- No pueden acceder a las funciones administrativas completas de pago
+
+### Usuarios administradores
+- Acceso completo a las funciones de cobro de pagos
+- Pueden configurar los ajustes de cobro de pagos
+- Pueden habilitar/deshabilitar el cobro de pagos del cliente
+- Pueden gestionar los permisos relacionados con pagos para los vendedores
+
+## Buenas prácticas
+
+- Verifica la información de pago del cliente antes de procesar
+- Usa la aprobación del cliente con pago para una mejor experiencia del cliente
+- Supervisa los rechazos de pago y da seguimiento con prontitud
+- Asegúrate de que los permisos adecuados estén establecidos para el cobro de pagos
+- Revisa los detalles de pago en la pestaña `PAYMENT` para todas las transacciones
+- Configura la información de facturación predeterminada durante el primer cobro de pago
+- Usa el procesamiento de pagos seguro para todas las transacciones de tarjeta de crédito
+
+<details>
+<summary>¿Qué sucede si se rechaza el pago de un cliente durante la aprobación?</summary>
+
+El estado del pedido se establece en `DECLINED`, los detalles del pago se registran en la pestaña `PAYMENT`, y el pedido se puede convertir a `draft` para reprocesamiento con la información de pago actualizada.
+</details>
+
+<details>
+<summary>¿Puedo cobrar pagos sin permisos completos de administrador?</summary>
+
+Sí, los usuarios de ventas y administradores con los permisos necesarios pueden usar las funciones de cobro de pagos sin requerir acceso administrativo completo.
+</details>
+
+<details>
+<summary>¿Cómo sé si un cliente tiene un método de pago existente?</summary>
+
+El sistema proporciona visibilidad del método de pago, mostrando si un cliente tiene una tarjeta de crédito registrada durante el proceso de creación del pedido.
+</details>
+
+<details>
+<summary>¿Qué sucede con la información de facturación después del primer pago?</summary>
+
+Si no había ajustes de facturación predeterminados previamente establecidos, la información de pago ingresada durante el cobro del pedido se convierte en la predeterminada para futuras facturaciones, sujeta a tus configuraciones de facturación.
+</details>
+
+<details>
+<summary>¿Los vendedores pueden cobrar pagos de forma independiente?</summary>
+
+Los vendedores pueden cobrar pagos si los administradores han habilitado `Orders sent for approval by salespeople can accept payment` en los ajustes de configuración de pedidos de venta.
+</details>
+
+<details>
+<summary>¿Dónde puedo encontrar todos los detalles de pago de un pedido?</summary>
+
+Toda la información de pago, incluidos los pagos exitosos y los rechazos, se puede encontrar en la pestaña `PAYMENT` de los detalles del pedido.
+</details>
+
+<details>
+<summary>¿Qué tan segura es el almacenamiento de tarjetas de crédito en los pedidos?</summary>
+
+Partner Center usa métodos seguros de almacenamiento de tarjetas de crédito que cumplen con los estándares de la industria de pagos, garantizando que la información de pago sensible esté debidamente protegida.
+</details>
+
+<details>
+<summary>¿Puedo reprocesar un pago rechazado?</summary>
+
+Sí, los pedidos con pagos rechazados se pueden convertir al estado `draft`, lo que te permite actualizar la información de pago y reprocesar el pedido.
+</details>
+
+<details>
+<summary>¿Qué activa la generación automática de facturas?</summary>
+
+El cobro exitoso de un pago genera automáticamente una factura con estado `Paid`, proporcionando un registro completo de la transacción.
+</details>

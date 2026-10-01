@@ -5,6 +5,9 @@ sidebar_position: 2
 description: "A fully managed service that builds a professional social media profile on Facebook, Instagram, LinkedIn, or other free-to-access channels."
 tags: [vendasta-services, social-media, social-page-builds, facebook, instagram, linkedin]
 keywords: [social page build, social profile, Facebook business page, Instagram business account, LinkedIn business page, NAP]
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 ## Overview

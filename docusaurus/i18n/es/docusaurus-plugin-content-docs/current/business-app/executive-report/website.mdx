@@ -1,0 +1,87 @@
+---
+title: "Executive Report: Website Performance"
+slug: /business-app/executive-report/website
+sidebar_label: Website
+sidebar_position: 10
+description: Supervisa el rendimiento del sitio web a través de la presencia de WordPress Hosting y las métricas de Google Analytics en el Executive Report.
+---
+
+## ¿Qué es el informe de rendimiento del sitio web?
+
+¡La información de WordPress Hosting (Standard, Premium, o Pro) se puede encontrar en el Executive Report! Puedes ver analíticas de sitio web integrales, incluidos los datos de Google Analytics de los sitios de WordPress de tu cliente, directamente en el Executive Report. Esto incluye estadísticas sobre visitantes, vistas de página, tiempo en el sitio web, fuentes de referencia, y más.
+
+## ¿Por qué es importante el informe de rendimiento del sitio web?
+
+El Executive Report es una herramienta clave para mostrar tu comprobación de rendimiento y demostrar el progreso de tus clientes en todos los canales de marketing. Puedes usar el Executive Report para mostrarles a tus clientes el rendimiento de su sitio web junto con los otros productos que les ofreces, dándoles una vista consolidada del valor que entregas.
+
+Si tienes una cuenta de Google Analytics conectada a Business App, encontrarás el Executive Report aún más útil para supervisar el rendimiento de tu sitio web. Puedes ver mediciones mejoradas del tráfico de tu sitio, las fuentes de referencia, la tasa de rebote, y más.
+
+## Cómo funciona el informe de rendimiento del sitio web
+
+### Integración con WordPress Hosting
+La información de rendimiento del sitio web aparecerá en el Executive Report cuando actives WordPress Hosting (Standard, Premium, o Pro) para una cuenta y conectes un sitio de WordPress.
+
+![Website Performance in Executive Report](./img/website-performance.jpg)
+
+### Integración con Google Analytics
+
+Puedes mejorar tus informes de sitio web conectando una cuenta de Google Analytics. Algunas cosas importantes que debes saber antes de conectar:
+
+- **WordPress Hosting no es necesario**: cualquier cuenta con una propiedad GA4 puede conectar Google Analytics al Executive Report.
+- **GA4 es la versión admitida**: Universal Analytics (UA) ya no es compatible con Google. Conecta una propiedad GA4.
+- **Se extraen 12 meses de historial** cuando se conecta una propiedad por primera vez.
+- **Permite de 24 a 48 horas** para que los datos se completen después de conectar.
+
+Para conectar:
+
+1. Ve a `Business App` → `Administration` → `Connections`
+2. Agrega Google Analytics desde la página `Browse Integrations`
+3. Inicia sesión con una cuenta de Google que tenga acceso a la propiedad GA4
+4. Selecciona la propiedad GA4 y completa la conexión
+
+Una vez conectados, los datos recopilados de Google Analytics se mostrarán en la sección Website del Executive Report. Si no aparecen datos después de 48 horas, verifica que la conexión siga activa en `Business App` → `Administration` → `Connections`.
+
+## Métricas de sitio web disponibles
+
+Cuando Google Analytics está conectado, se supervisan y muestran las siguientes métricas en el Executive Report:
+
+- **Users**: el número de visitantes únicos que ha recibido tu sitio web
+- **Sessions**: el número de veces que se ha visitado tu sitio
+- **Page Views**: el número de veces que un usuario ha visto una página en tu sitio web
+- **Average Time on Website**: la duración promedio que un usuario pasa navegando tu sitio web
+- **Bounce Rate**: el porcentaje de usuarios que abandonaron tu sitio después de ver solo una página
+- **Pages per Session**: el número promedio de páginas vistas en una sola sesión
+- **Traffic Sources**: los tipos de comportamiento de navegación que llevan a los visitantes a tu sitio web
+- **Top Referral Sources**: los sitios que dirigen la mayor cantidad de tráfico a tu sitio web
+
+![Google Analytics in the Website section](./img/google-analytics-website-section.jpg)
+
+## Requisitos de configuración
+
+Para obtener datos de rendimiento del sitio web en tu Executive Report:
+
+1. **Para datos de WordPress Hosting**: activa WordPress Hosting (Standard, Premium, o Pro) para la cuenta y conecta un sitio de WordPress
+2. **Para datos mejorados de Google Analytics**: conecta una cuenta de Google Analytics a través de `Business App` → `Administration` → `Connections` → `Browse Integrations`
+
+Ambas fuentes de datos proporcionan información valiosa sobre el rendimiento del sitio web que se puede compartir con los clientes para demostrar el valor de tus servicios de sitio web y marketing digital.
+
+## Solución de problemas: los datos de Google Analytics difieren del panel de GA
+
+Es común ver números ligeramente diferentes entre el Executive Report y el panel de Google Analytics. Esto no indica un problema: resulta de diferencias en cómo cada vista calcula los mismos datos.
+
+### Causas comunes
+
+- **Diferencias de zona horaria**: el Executive Report puede usar una zona horaria diferente a la de tu propiedad GA4. Verifica la zona horaria de informes de la propiedad GA4 en `Admin` → `Property Settings`.
+- **Usuarios activos vs. usuarios nuevos**: las vistas del panel de GA4 usan de forma predeterminada Active Users. El Executive Report puede mostrar una métrica de usuario diferente, y estos dos números pueden divergir según con qué frecuencia regresan los usuarios existentes.
+- **Resumen del panel vs. Explore**: el resumen de la página de inicio de GA4 usa estimaciones que pueden diferir de un informe Explore detallado. Compara los números del Executive Report con un informe Explore adecuado, no con la página de inicio de GA4.
+- **Datos que llegan con retraso**: tanto GA4 como el Executive Report se actualizan retroactivamente después de que cierra un período. Un número extraído el día 5 del mes puede diferir ligeramente del mismo número el día 20.
+
+### Configurar una comparación equivalente en GA4
+
+1. En GA4, ve a `Explore` (navegación izquierda) y haz clic en `Blank`
+2. Establece el rango de fechas para que coincida exactamente con el período del Executive Report
+3. Agrega la misma métrica mostrada en el Executive Report (por ejemplo, Users)
+4. Establece la zona horaria para que coincida con el Executive Report (generalmente UTC)
+5. Compara el resultado con el Executive Report
+
+Pequeñas discrepancias (1-5%) son normales. Si la discrepancia es grande (más del 10-15%), verifica si la propiedad GA4 correcta está conectada y si la conexión sigue activa en `Business App` → `Administration` → `Connections`.
