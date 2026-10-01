@@ -116,6 +116,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/commerce/orders/order-processing-and-activation', to: '/commerce/orders/creating-and-managing-orders' },
           // Vendasta Ads in Partner Center promoted to its own top-level "Ads" sidebar item (2026-08)
           { from: '/vendasta-services/digital-advertising/vendasta-ads-partner-center', to: '/ads' },
+          // Account templates renamed to Blueprints (2026-08, CRMAAS-3153)
+          { from: '/accounts/manage-accounts/account-templates', to: '/accounts/manage-accounts/blueprints' },
+          { from: '/automations/my-automations/apply-account-template', to: '/automations/my-automations/apply-blueprint' },
           // --- Learn restructure (2026-07): TRAINING -> LEARN, paths + lifecycle libraries ---
           // AI foundations step 6 renamed (2026-09-18, DOC-966): "agent" as a noun for
           // an AI Employee was retired in the terminology pass, so the step and its
