@@ -1,0 +1,65 @@
+---
+title: Administración de datos
+description: Aprende sobre la administración de datos en la plataforma de Vendasta, incluidos los objetos de CRM, la puntuación y los pipelines
+---
+
+# Administración de datos
+
+La administración de datos ofrece herramientas para organizar los datos de tu negocio mediante campos personalizados, pipelines de ventas y sistemas de puntuación. Úsalos para capturar información específica de tu negocio, hacer seguimiento de los procesos de ventas y priorizar clientes potenciales.
+
+:::info Seguridad y privacidad de los datos
+Vendasta mantiene un informe SOC 2® Tipo 2 vigente que cubre sus controles de seguridad. Para obtener detalles sobre cómo se protegen y procesan tus datos, consulta [Seguridad y privacidad](/getting-started/security-and-privacy) o visita el [Centro de confianza de Vendasta](https://trust.vendasta.com/).
+:::
+
+## Qué es
+
+La administración de datos tiene tres partes principales:
+
+- **Campos personalizados** – Almacena información única de tu negocio en cuentas, usuarios, pedidos y productos
+- **Pipelines de ventas** – Haz seguimiento de la progresión de oportunidades y de los pronósticos de ingresos
+- **Puntuación** – Prioriza clientes potenciales y oportunidades con reglas y ponderaciones automatizadas
+
+Juntos, estructuran tus datos para una mejor segmentación, automatización y toma de decisiones.
+
+## Qué puedes hacer
+
+- **Crear campos personalizados** – Define campos con cinco tipos (texto, entero, fecha, lista desplegable, moneda) que impulsan el filtrado y el ordenamiento en las automatizaciones
+- **Usar filtros avanzados** – En las automatizaciones, filtra por valores de campos personalizados (por ejemplo, Contiene, No contiene, Es uno de, Antes de, Después de) según el tipo de campo
+- **Crear pipelines de ventas** – Usa el pipeline predeterminado de cuatro etapas o crea pipelines personalizados con tus propias etapas y porcentajes de pronóstico
+- **Segmentar el marketing** – Envía campañas dirigidas usando datos de campos personalizados (por ejemplo, "inicial" frente a "establecida" según tamaño o tipo)
+- **Automatizar asignaciones** – Asigna vendedores o equipos a cuentas según criterios como los ingresos estimados en campos personalizados
+- **Almacenar datos específicos del negocio** – Captura información como el "equipo de fútbol favorito", el "número de habitaciones de hotel" o el "nivel de servicio"
+- **Administrar la puntuación de clientes potenciales y oportunidades** – Configura reglas de puntuación, ponderaciones y análisis; activa acciones cuando los puntajes crucen ciertos umbrales
+- **Importar y administrar datos** – Completa campos personalizados mediante importaciones masivas, la API de Vendasta o el ingreso manual
+
+## Cómo funciona
+
+El pipeline predeterminado tiene cuatro etapas: **Lead**, **Contact**, **Qualified** y **Proposal**, con porcentajes de pronóstico de 0 %, 20 %, 40 % y 60 %. Los pronósticos de ingresos usan la probabilidad que establezcas para cada etapa.
+
+Los campos personalizados deben definirse antes de poder almacenar datos. Eliges un tipo de objeto (cuenta, usuario, pedido o producto) y un tipo de campo. El tipo de campo controla qué valores puedes almacenar y cómo se puede filtrar y ordenar el campo en las reglas de automatización.
+
+## Artículos en esta sección
+
+- **[Objetos de CRM](./crm-objects/index.mdx)** – Campos personalizados y estructuras de datos; tipos de objeto, tipos de campo y filtros de automatización
+- **[Diseños de campos](./crm-objects/field-layouts.mdx)** – Agrupa, reordena y oculta campos de CRM para controlar cómo se muestran los registros
+- **[Pipelines](./pipelines/index.mdx)** – Administración de pipelines de ventas, etapas y plantillas
+- **[Puntuación](./score/index.mdx)** – Puntuación de clientes potenciales y oportunidades, criterios y visualización en el CRM
+
+## Primeros pasos
+
+1. **Define campos personalizados** – Ve a `Partner Center` → `Administration` → `Custom Fields`. Elige el tipo de objeto y el tipo de campo (texto, entero, fecha, lista desplegable, moneda). El tipo de campo afecta cómo se almacenan y usan los datos en las automatizaciones.
+
+2. **Crea o personaliza pipelines** – Ve a `Partner Center` → `Administration` → `Pipelines`. Edita el pipeline predeterminado o haz clic en **Create pipeline**. Establece los porcentajes de pronóstico por etapa; ordena las etapas según la probabilidad de éxito.
+
+3. **Configura la puntuación** – Ve a `Partner Center` → `Administration` → `Score`. Configura los criterios de puntuación de clientes potenciales y oportunidades; los puntajes aparecen en la tabla de empresas del CRM.
+
+## Manejo de errores y solución de problemas
+
+- **Tipo de campo** – Elígelo con cuidado; afecta cómo se almacenan los datos y qué filtros de automatización están disponibles. Cambiarlo más adelante puede afectar los datos existentes.
+- **Asignación de objeto** – Confirma que cada campo esté en el tipo de objeto correcto (cuenta, usuario, pedido o producto).
+- **Importación de datos** – Al importar listas de cuentas, asigna las columnas a las definiciones de campos personalizados correctas.
+- **Pipelines** – Verifica que las etapas estén ordenadas según la probabilidad de éxito y que los porcentajes coincidan con tus expectativas de conversión.
+
+:::warning
+El tipo de campo afecta significativamente cómo se pueden almacenar y filtrar los datos en las reglas de automatización. Elígelo con cuidado; los cambios después de la creación pueden afectar los datos existentes.
+:::

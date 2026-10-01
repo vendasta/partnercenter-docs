@@ -1,0 +1,174 @@
+---
+id: multi-location-web-chat
+title: Widget de chat web multiubicación
+sidebar_label: Multi-location web chat
+sidebar_position: 2
+description: Agrega un widget de chat web a un sitio de marca o franquicia que permite a los visitantes elegir una ubicación y conversar con el AI Chat Receptionist de esa ubicación.
+keywords: [multi-location, web chat, franchise, brand, location picker, Conversations AI, Chat Receptionist]
+---
+
+El widget de chat web multiubicación te permite agregar un solo chat web a un sitio de marca o franquicia donde los visitantes pueden elegir con qué ubicación quieren hablar. Cuando un visitante selecciona una ubicación, conversa con el AI Chat Receptionist propio de esa ubicación, de modo que cada conversación, contacto y cliente potencial permanece con el negocio correcto.
+
+Esto es ideal para marcas, franquicias y negocios con varias ubicaciones que tienen un sitio web principal, pero quieren que cada ubicación gestione sus propias conversaciones con clientes.
+
+## Cómo funciona
+
+El widget de chat web multiubicación tiene dos vistas:
+
+1. `Location picker`: cuando un visitante abre el widget, ve una lista con función de búsqueda de tus ubicaciones. Cada ubicación muestra su nombre de negocio y dirección. Los visitantes pueden buscar por nombre de negocio o dirección para encontrar rápidamente la ubicación que desean.
+2. `Chat`: cuando un visitante selecciona una ubicación, el widget abre una conversación con el AI Chat Receptionist de esa ubicación. Una flecha de retroceso le permite al visitante volver a la lista de ubicaciones en cualquier momento.
+
+Cada ubicación responde con su propio AI Chat Receptionist y su propio conocimiento, y la conversación se entrega a la bandeja de entrada de esa ubicación.
+
+## En qué se diferencia de un widget de chat web estándar
+
+| | Widget de chat web estándar | Widget de chat web multiubicación |
+| --- | --- | --- |
+| **Dónde se configura** | Una sola cuenta de negocio | Un grupo multiubicación (marca o franquicia) |
+| **Qué ve el visitante** | Un chat con un negocio | Un selector de ubicación y luego un chat con la ubicación que elija |
+| **Quién responde** | El AI Chat Receptionist de ese negocio | El AI Chat Receptionist propio de la ubicación seleccionada |
+| **Dónde se usa mejor** | El sitio web de un solo negocio | Un sitio de marca, franquicia o corporativo que abarca varias ubicaciones |
+
+:::tip
+Puedes seguir instalando un widget de chat web estándar independiente en el sitio web de cada ubicación individual. Usa el widget multiubicación cuando tengas **un** sitio web (como un sitio de marca o corporativo) que necesite dirigir a los visitantes hacia varias ubicaciones.
+:::
+
+## Antes de comenzar
+
+Antes de crear un widget de chat web multiubicación, asegúrate de que:
+
+- **Multi-location Conversations esté activado para el grupo.** Si aún no has empezado, abre `Conversations` para el grupo y selecciona `Start using multi-location Conversations`.
+- **Cada ubicación que quieras incluir tenga Conversations AI activo.** Cualquier versión de Conversations AI califica. Solo las ubicaciones con un AI Chat Receptionist activo se pueden agregar al widget; las ubicaciones sin él aparecen como `Conversations AI not active` y no se pueden seleccionar.
+
+## Crear un widget de chat web multiubicación
+
+### Paso 1: abre la página de configuración de Web Chat
+
+Desde el grupo multiubicación, abre la página `Web Chat configuration` (en `Administration`) y selecciona `New Web Chat`.
+
+<img src={require('./img/multi-location-web-chat/empty-state.png').default} alt="Web Chat configuration page with the New Web Chat button" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Paso 2: nombra el widget
+
+Ingresa un `Widget name`. Este es un nombre único usado para identificar el widget internamente; tus visitantes no lo ven.
+
+### Paso 3: agrega los negocios a incluir
+
+En `Businesses included`, selecciona `Add locations` para abrir la ventana `Choose businesses` y luego elige las ubicaciones con las que los visitantes pueden conversar.
+
+- Usa `Search` para encontrar un negocio por nombre o dirección.
+- Cada fila muestra el nombre y la dirección del `Business` y su `AI Employee`.
+- Las ubicaciones con un recepcionista activo muestran una insignia verde con el nombre del empleado (por ejemplo, `Chat Receptionist`). Las ubicaciones sin uno muestran una insignia amarilla `Conversations AI not active` y no se pueden seleccionar.
+- Para agregar a todos a la vez, usa `Select all eligible` (o `Select all matching` cuando hay una búsqueda activa).
+
+Selecciona `Done` cuando termines.
+
+:::note
+Solo se pueden agregar negocios con Conversations AI activo. Si falta una ubicación o muestra `Conversations AI not active`, configura y activa su AI Chat Receptionist y luego vuelve a abrir la ventana.
+:::
+
+A medida que armas el widget, una vista previa en vivo a la derecha muestra el selector de ubicación de los visitantes.
+
+<img src={require('./img/multi-location-web-chat/configuration.png').default} alt="New Web Chat form showing Widget name, Businesses included, and Welcome greeting, with a live preview of the location picker" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Paso 4: agrega un saludo de bienvenida (opcional)
+
+El `Welcome greeting` aparece en el encabezado del widget de chat para animar a los visitantes a participar, por ejemplo, "Hola, ¿en qué podemos ayudarte hoy?".
+
+### Paso 5: crea el widget
+
+Selecciona `Next` para crear el widget. Su código de instalación aparece de inmediato (consulta la siguiente sección). Después de cerrarlo, el widget aparece en tu lista de chat web, donde su `Status` muestra si está activo.
+
+<img src={require('./img/multi-location-web-chat/widget-list.png').default} alt="Web chat list showing the new multi-location widget with an Active status" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## Instala el widget en tu sitio web
+
+Cuando creas el widget, su código de instalación aparece en `Floating chat widget`. Agrega el código al sitio de marca o corporativo donde quieres que aparezca el selector de ubicación.
+
+El código de instalación de un widget multiubicación incluye un atributo `data-widget-type="group"`; esto es lo que le indica al widget que muestre el selector de ubicación.
+
+<img src={require('./img/multi-location-web-chat/embed-code.png').default} alt="Installation code for the multi-location widget, with the Website tab showing the data-widget-type group attribute" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Pega este código en el `<head>` de tu sitio web (o justo antes de la etiqueta de cierre `</body>`), en cada página donde quieras que aparezca el widget:
+
+```html
+<script
+  src="https://cdn.apigateway.co/webchat-client/sdk.js"
+  data-widget-id="YOUR_WIDGET_ID"
+  data-widget-type="group"
+  defer
+></script>
+```
+
+El panel de instalación también incluye pestañas para los constructores de sitios `Google Tag Manager`, `WordPress` y `GoDaddy`, cada una con el mismo atributo `data-widget-type="group"` incluido automáticamente. Copia la opción que coincida con la forma en que está construido tu sitio web.
+
+:::note
+El código exacto se genera para tu widget específico. Cópialo siempre desde el panel de instalación del widget en lugar de escribirlo a mano, para que el ID del widget sea correcto.
+:::
+
+:::info
+La opción de instalación de `embedded widget` independiente y las `Widget Actions` (enlaces de prellenado o envío automático) que ofrecen los widgets de chat web estándar no están disponibles para los widgets multiubicación.
+:::
+
+## Qué ven tus visitantes
+
+Cuando un visitante abre el widget, ve el selector de ubicación:
+
+- El encabezado muestra tu saludo de bienvenida y `We respond immediately`.
+- Un cuadro de búsqueda les permite filtrar tus ubicaciones por nombre o dirección.
+- Cada ubicación aparece como una tarjeta con su nombre de negocio y dirección.
+
+Cuando seleccionan una ubicación, el chat se abre con el AI Chat Receptionist de esa ubicación. El encabezado muestra `Chatting with` esa ubicación, y una flecha de retroceso los devuelve a la lista de ubicaciones.
+
+<img src={require('./img/multi-location-web-chat/visitor-chat.png').default} alt="Visitor view: chatting with a selected location, with a back arrow to return to the location list" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## Cómo se enrutan los clientes potenciales y las conversaciones
+
+Cada ubicación mantiene sus propias conversaciones:
+
+- Una conversación iniciada desde el widget se entrega a la bandeja de entrada de la **ubicación seleccionada**.
+- Los contactos y las notificaciones se gestionan a nivel de **una sola ubicación**; cada ubicación hace seguimiento de sus propios clientes potenciales.
+- Aún puedes ver y gestionar todas estas conversaciones juntas en la vista de [Multi-location Conversations](./inbox-in-multi-location.mdx) del grupo.
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Sigo necesitando un widget de chat web separado en el sitio web de cada ubicación?</summary>
+
+No. Si cada ubicación tiene su propio sitio web, puedes seguir instalando un widget de chat web estándar en cada uno. El widget multiubicación es para un **único** sitio web de marca o corporativo que necesita dirigir a los visitantes hacia varias ubicaciones. Puedes usar cualquiera de los dos enfoques, o ambos.
+
+</details>
+
+<details>
+<summary>¿Por qué falta una de mis ubicaciones en la lista "Choose businesses"?</summary>
+
+Una ubicación solo se puede agregar si tiene Conversations AI activo. Si falta una ubicación o muestra una insignia amarilla `Conversations AI not active`, configura y activa su AI Chat Receptionist, luego vuelve a abrir el widget y agrégala.
+
+</details>
+
+<details>
+<summary>¿Cada ubicación puede tener un AI Chat Receptionist diferente?</summary>
+
+Sí. Cada ubicación usa su propio AI Chat Receptionist, con su propio nombre, conocimiento y configuración. El visitante conversa con el recepcionista que pertenece a la ubicación que seleccionó.
+
+</details>
+
+<details>
+<summary>¿Qué sucede con la configuración de apariencia: es por ubicación?</summary>
+
+No. Los colores, el nombre, el mensaje de bienvenida, la posición y la imagen del asistente que configuras en el widget se aplican a todo el widget, incluido el chat de cada ubicación. El recepcionista individual (nombre y avatar) proviene de cada ubicación.
+
+</details>
+
+<details>
+<summary>¿Puedo agregar o quitar ubicaciones más tarde?</summary>
+
+Sí. Edita el widget y vuelve a abrir `Choose businesses` para actualizar qué ubicaciones están incluidas. No necesitas cambiar el código instalado en tu sitio web.
+
+</details>
+
+## Artículos relacionados
+
+- [Conversations en Multi-Location](./inbox-in-multi-location.mdx)
+- [Descripción general de AI Chat Receptionist](/ai/ai-workforce/ai-chat-receptionist/)
+- [Widget de chat web asistido por IA para partners de Vendasta](/conversations/ai-assisted-web-chat-widget)

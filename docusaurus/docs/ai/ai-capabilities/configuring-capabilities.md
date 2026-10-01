@@ -1,12 +1,23 @@
 ---
-title: How to Configure AI Capabilities
+title: "How do I configure AI Employee capabilities?"
+description: "Add, remove, and write instructions for AI Employee capabilities such as Lead Capture and Appointment Booking in Business App, then test them."
 sidebar_label: Configuring Capabilities
 sidebar_position: 2
+brand: vendasta
+product: ai-workforce
+audience: partners
+content_type: how-to
+kb_id: KB-00191
+answer_snippet: "To configure capabilities for an AI Employee, go to AI → Workforce in Business App, click Configure on the employee, and add capabilities in the Capabilities section. You can add instructions to each capability to control how it behaves, then save and test."
+doc_owner: ai-workforce
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 import { AISparkleIcon, GraduationCapIcon } from '@site/src/components/Icons';
 
-This guide walks you through enabling and configuring built-in capabilities for your AI Employees. Follow these steps to set up capabilities that handle common business tasks like lead capture and appointment booking.
+To configure capabilities for an AI Employee, go to `AI` → `Workforce` in Business App, click `Configure` on the employee, and add capabilities in the `Capabilities` section. You can add instructions to each capability to control how it behaves, then save and test.
 
 ## Prerequisites
 
@@ -15,7 +26,7 @@ Before you begin:
 - You have appropriate permissions to configure AI settings
 - You understand which capabilities align with your business needs
 
-## Step 1: Access AI Employee Configuration
+## Step 1: How do I open the AI Employee configuration? {#step-1-access-ai-employee-configuration}
 
 1. Navigate to <AISparkleIcon /> `AI` → `Workforce` in your Business App dashboard.
 2. Locate the AI Employee you want to configure.
@@ -25,13 +36,13 @@ Before you begin:
 If you don't see the Configure button, verify you have the necessary permissions to modify AI Employee settings.
 :::
 
-## Step 2: Open the Capabilities Section
+## Step 2: How do I open the Capabilities section? {#step-2-open-the-capabilities-section}
 
 1. On the AI Employee's `Configure` page, scroll down to the `Capabilities` section.
 2. Click to expand the section if it's collapsed.
 3. You'll see a list of capabilities already added to the AI Employee.
 
-## Step 3: Add Desired Capabilities
+## Step 3: How do I add capabilities? {#step-3-add-desired-capabilities}
 
 Capabilities that appear in the Capabilities section are active. To add a new one:
 
@@ -71,7 +82,7 @@ To remove a capability, click the three-dot menu next to it and select **Remove*
   Refer to our company as "we" and "our team."
   ```
 
-## Step 4: Add Goals and Instructions (Optional)
+## Step 4: How do I add goals and instructions? {#step-4-add-goals-and-instructions-optional}
 
 For more precise control over capability behavior:
 
@@ -103,6 +114,22 @@ Get contact info when needed.
 - **Test and iterate** - Try different phrasings and see what produces better results
 :::
 
+#### Write instructions as directives, not descriptions
+
+Write every instruction as an order addressed to the AI employee. An instruction phrased as a description of what the employee does reads as background information, and the AI may not connect the described behavior to itself.
+
+| Avoid | Use instead |
+|-------|-------------|
+| `The receptionist says "I'll text you a booking link."` | `Respond with "I'll text you a booking link."` |
+| `The assistant will offer to take a message.` | `Offer to take a message.` |
+| `Bookings are handled by the call center.` | `Tell the caller that bookings are handled by the call center.` |
+
+This applies anywhere you write instructions: capability prompts, goals, and the instructions attached to individual capabilities.
+
+:::tip Back up a prompt before you rewrite it
+Capability prompts have no version history. Before making substantial edits, copy the existing prompt into a separate document so you can restore it. Experimenting is otherwise safe — you can adjust a prompt and re-test as many times as you need, and un-assign a capability from the AI employee if it is not behaving the way you want.
+:::
+
 ### Tailor a capability to specific channels
 
 Your AI Employee knows which channel it's responding on, so a capability's instructions can reference the channel by name. This is useful when a task should behave differently depending on where the customer reaches out — for example, collecting fewer details for lead capture over SMS than by email:
@@ -132,7 +159,7 @@ The second version gives the AI a concrete pattern to follow, leading to more co
 
 ### Instruction patterns that work
 
-Use these proven patterns when writing capability instructions:
+Use these patterns when writing capability instructions:
 
 #### Conditional Logic: "If X, then Y"
 ```
@@ -158,7 +185,7 @@ Never transfer calls unless the customer specifically requests to speak with som
 If you can't find the answer in the knowledge base, say: "I don't have that specific information, but I'd be happy to connect you with someone who does."
 ```
 
-## Step 5: Save and Test Your Configuration
+## Step 5: How do I save and test my configuration? {#step-5-save-and-test-your-configuration}
 
 1. Click `Save Changes` at the bottom of the `Configure` page.
 2. **Test the capabilities** by starting a conversation with your AI Employee.
@@ -175,7 +202,7 @@ If you can't find the answer in the knowledge base, say: "I don't have that spec
 - [ ] Error scenarios are handled gracefully
 - [ ] Customer experience feels natural and helpful
 
-## Step 6: Monitor and Refine
+## Step 6: How do I monitor and refine capabilities? {#step-6-monitor-and-refine}
 
 After initial setup:
 
@@ -184,7 +211,7 @@ After initial setup:
 3. **Adjust instructions** based on what you learn.
 4. **Add or remove capabilities** as your business needs evolve.
 
-## Troubleshooting common issues
+## How do I troubleshoot common capability issues? {#troubleshooting-common-issues}
 
 ### Capability not activating
 - **Check trigger conditions**: Ensure customer requests match capability parameters
@@ -200,6 +227,21 @@ After initial setup:
 - **Review capability priorities**: Some capabilities may override others
 - **Clarify instructions**: Make trigger conditions more specific
 - **Remove conflicting capabilities**: Remove capabilities that interfere and re-add them once instructions are refined
+
+### The AI has the information but never acts on it
+
+Knowledge and capabilities do different jobs. A Knowledge Base entry is reference material the AI retrieves when it judges a lookup would help — it does not guarantee the AI takes a particular action or uses particular wording. When a question should trigger the same process every time, that content belongs in a capability rather than in knowledge.
+
+To turn a knowledge entry into a capability:
+
+1. Open the knowledge entry and copy its content.
+2. Go to the `Capabilities` section and click `+ Add Capability`.
+3. Name the capability after the task it performs, such as `Booking workflow`.
+4. Paste the content into the prompt and restructure it as a workflow, using `##` for each instruction and `###` for the steps beneath it.
+5. Rewrite any descriptive lines as directives. See [Write instructions as directives, not descriptions](#write-instructions-as-directives-not-descriptions).
+6. Save, then test with the phrasings a customer would actually use.
+
+Leave the original knowledge entry in place. Knowledge continues to answer open-ended questions; the capability governs the process.
 
 ## Advanced configuration tips
 
@@ -222,6 +264,50 @@ Track key metrics to measure capability effectiveness:
 - Completion rate (successful information collection)
 - Customer satisfaction scores
 - Conversion rates for lead capture
+
+## Frequently asked questions
+
+<details>
+<summary>Where do I find the capabilities for an AI Employee?</summary>
+
+Go to `AI` → `Workforce` in Business App, click `Configure` next to the AI Employee, and scroll to the `Capabilities` section. Capabilities that appear there are active.
+
+</details>
+
+<details>
+<summary>How do I remove a capability from an AI Employee?</summary>
+
+On the AI Employee's `Configure` page, open the `Capabilities` section, click the three-dot menu next to the capability, and select **Remove**.
+
+</details>
+
+<details>
+<summary>What do I need before using the Appointment Booking capability?</summary>
+
+Connect your calendar in your Business App settings. Appointment Booking schedules meetings using your connected calendar.
+
+</details>
+
+<details>
+<summary>Do capability prompts have version history?</summary>
+
+No. Capability prompts have no version history, so copy the existing prompt into a separate document before you make substantial edits.
+
+</details>
+
+<details>
+<summary>Why does my AI Employee have the information but never act on it?</summary>
+
+A Knowledge Base entry is reference material the AI retrieves when it judges a lookup would help, so it doesn't guarantee a particular action. When a question should trigger the same process every time, put that content in a capability instead.
+
+</details>
+
+<details>
+<summary>Can a capability behave differently on SMS and email?</summary>
+
+Yes. Your AI Employee knows which channel it's responding on, so a capability's instructions can reference the channel by name, for example to ask for fewer details over SMS than by email.
+
+</details>
 
 ## Next steps
 

@@ -1,0 +1,238 @@
+---
+title: Send marketing emails
+description: Aprende las diferentes formas de enviar campañas de correo electrónico a contactos, empresas, listas y a través de automatización en la plataforma de Vendasta.
+sidebar_label: Send Marketing Emails
+sidebar_position: 2
+
+---
+
+Las campañas de correo electrónico se pueden enviar a contactos, empresas y listas a través de varios métodos en la plataforma de Vendasta. Los enfoques basados en CRM ofrecen la funcionalidad y las capacidades de seguimiento más completas.
+
+## Requisitos previos
+
+Antes de enviar campañas de correo electrónico, asegúrate de tener:
+
+- **Ajustes de correo configurados**: configura tu autenticación de dominio (registros SPF, DKIM, DMARC). Consulta [Email settings](/marketing/email-settings) para las instrucciones de configuración completas
+- **Una plantilla de correo creada**: diseña un correo de marketing usando el [Email Builder](/marketing/campaigns/create-email-campaigns)
+- **Tu audiencia preparada**: identifica los contactos, empresas o listas que recibirán la campaña. Conoce los [campos de contacto del CRM](/crm/contacts/crm-default-contact-fields) y los [campos de empresa del CRM](/crm/companies/crm-default-company-fields) para las opciones de segmentación
+- **Dirección postal verificada**: asegúrate de que la dirección postal de tu negocio esté configurada en Partner Center. Consulta [Email settings requirements](/marketing/email-settings/email-settings-requirements) para más detalles
+
+## Métodos principales (recomendados)
+
+### 1. Enviar a contactos del CRM
+
+La forma principal y recomendada de enviar campañas es a través de los contactos del CRM, que ofrece soporte completo de campos y seguimiento integral:
+
+**Mediante la selección de contactos:**
+1. Ve a `Partner Center` → `CRM` → `Contacts`
+2. Selecciona los contactos que quieres incluir (o aplica un filtro y haz clic en Select All)
+3. Haz clic en `Actions` → `Add to campaign`
+4. Elige tu campaña y configura las opciones de envío
+5. Haz clic en **Start Campaign**
+
+**Mediante listas de contactos del CRM (inteligentes o estáticas):**
+1. Ve a `Partner Center` → `CRM` → `Lists`
+2. Crea o selecciona una lista de contactos (las listas inteligentes se actualizan automáticamente según los criterios)
+3. Haz clic en `Three dots` → `More action` en el menú de la lista
+4. Selecciona `Start Campaign for Contact` o `Send Email to Contact`
+5. Elige tu campaña y comienza a enviar
+
+**Mediante pasos de automatización:**
+- Usa el paso de automatización `Start Campaign for Contact`
+- Usa el paso de automatización `Send Email to Contact`
+- Activa campañas según las acciones de contacto, los envíos de formulario o los cambios de datos
+
+### 2. Enviar a empresas del CRM
+
+Envía campañas a empresas completas a través del sistema CRM. Cuando te diriges a una empresa, la campaña envía automáticamente correos a todos los contactos asociados de esa empresa (hasta 50 contactos por empresa) mientras usa los datos a nivel de empresa para la personalización.
+
+**Cómo funcionan las campañas por empresa:**
+- Se dirige a la empresa como entidad
+- Los correos se entregan automáticamente a los contactos asociados de esa empresa (hasta 50 contactos por empresa)
+- Todos los correos usan los datos de la empresa para el contenido dinámico y la personalización
+- Ideal para marketing basado en cuentas y mensajería a nivel de negocio
+
+**Mediante listas de empresas del CRM:**
+1. Ve a `Partner Center` → `CRM` → `Lists`
+2. Crea o selecciona una lista de empresas
+3. Haz clic en `Three dots` → `More action` en el menú de la lista
+4. Selecciona `Start Campaign for Company` o `Send Email to Company`
+5. Elige tu campaña dirigida a empresas
+
+**Mediante pasos de automatización:**
+- Usa el paso de automatización `Start Campaign for Company`
+- Usa el paso de automatización `Send Email to Company`
+- Usa el paso `Get Associated Company` si usas un disparador de cuenta
+- Dirígete según las características de la empresa, el uso del producto o los datos de negocio
+
+### 3. Enviar a través de automatización del CRM (avanzado)
+
+Configura campañas automatizadas sofisticadas con lógica de negocio:
+
+1. Ve a `Partner Center` → `Automations`
+2. Crea flujos de automatización con disparadores como:
+   - Envíos de formulario
+   - Patrones de interacción de contacto
+   - Cambios de etapa de oportunidad
+   - Eventos de activación de producto
+
+**Pasos de correo de automatización:**
+- **Start Campaign for Contact**: inicia una campaña dirigida a un contacto individual
+- **Start Campaign for Company**: inicia una campaña para toda la empresa
+- **Send Email to Contact/Company**: envía un correo directo al contacto o empresa seleccionados
+- **Campaign Step**: usa campañas existentes como bloques de construcción dentro de los flujos de trabajo de automatización
+
+## Beneficios del envío basado en CRM
+
+- **Acceso completo a campos**: usa todos los [campos de contacto del CRM](/crm/contacts/crm-default-contact-fields) y [campos de empresa del CRM](/crm/companies/crm-default-company-fields) en el contenido dinámico
+- **Datos de empresa principal**: los campos de empresa usan automáticamente la información de la empresa principal del contacto
+- **Integración con CRM**: toda la actividad de correo se captura en el CRM para segmentación y automatización futura
+- **Segmentación inteligente**: crea listas dinámicas que se actualizan automáticamente según los criterios
+- **Automatización avanzada**: activa campañas según reglas de negocio complejas y comportamiento del contacto
+
+## Elegir entre segmentación por contacto o por empresa
+
+### Envía a contactos del CRM cuando:
+- **Enfoque individual**: personalizas contenido para roles, intereses o comportamiento individual específicos
+- **Mensajería por rol**: envías contenido diferente a diferentes funciones de trabajo (propietario vs. personal)
+- **Relaciones personales**: construyes relaciones individuales y puntos de contacto personales
+- **Basado en interacción**: te diriges según el inicio de sesión individual, el uso o el historial de interacción
+- **Basado en permisos**: envías solo a contactos que se han suscrito específicamente
+
+### Envía a empresas del CRM cuando:
+- **Marketing basado en cuentas**: te diriges a cuentas de negocio completas como unidades estratégicas
+- **Decisiones de negocio**: promocionas productos/servicios que requieren toma de decisiones a nivel de negocio
+- **Rendimiento de la empresa**: usas métricas de negocio, clasificaciones o datos de rendimiento para la mensajería
+- **Cobertura completa**: garantizas que todos los responsables de decisiones e influenciadores reciban el mismo mensaje
+- **Oportunidades de ingresos**: te diriges según el tamaño del negocio, el potencial de crecimiento o las brechas de producto
+- **Campañas por industria**: envías contenido específico de la industria relevante para todo el negocio
+
+### Datos de empresa disponibles para la personalización
+
+Todos los [campos de empresa del CRM](/crm/companies/crm-default-company-fields) están disponibles para el contenido dinámico, incluyendo:
+- **Información de la empresa**: nombre de la empresa, sitio web, detalles de dirección, número de teléfono, número de empleados
+- **Datos de interacción**: fecha de última actividad, últimas interacciones de correo de campaña, etapa del ciclo de vida
+- **Redes sociales**: URL de LinkedIn, URL de Facebook, URL de X, URL de Instagram
+- **Datos de seguimiento**: parámetros UTM, ID de lugar de Google, puntuación de reseñas de Google
+- **Organización personalizada**: etiquetas (hasta 25 etiquetas, 50 caracteres cada una), categorías personalizadas
+- **Información del sistema**: fecha de creación, zona horaria, detalles de origen del registro
+- **Detalles de Snapshot Report**: enriquecimiento del Snapshot Report, las calificaciones de la sección y los detalles
+- **Detalles del producto**: los productos activos en una empresa
+
+## Métodos alternativos
+
+### Envío basado en cuenta/usuario
+
+Para casos de uso específicos, también puedes enviar campañas a través de la gestión de cuentas:
+
+**Enviar a Account Lists:**
+1. Ve a `Partner Center` → `Marketing` → `Campaigns`
+2. Encuentra tu campaña y haz clic en el **menú de 3 puntos**
+3. Selecciona **Add account list to campaign**
+4. Configura las opciones de envío
+
+**Enviar a cuentas individuales:**
+1. Ve a `Partner Center` → `Accounts` → [`Manage Accounts`](https://partners.vendasta.com/manage-accounts)
+2. Encuentra la cuenta de la empresa, luego haz clic en el nombre de la cuenta
+3. En la página de detalles de la cuenta, desplázate hacia abajo hasta la sección `Users`. Haz clic en el ícono `menu` ![Menu icon](./img/marketing/marketing-campaigns/recipient-campaigns/menu-icon.jpg) junto al usuario
+4. Selecciona `Campaigns` en el menú
+![Select Campaigns from menu](./img/marketing/marketing-campaigns/recipient-campaigns/select-campaigns.jpg)
+5. Encuentra la campaña y haz clic en `Start` junto al nombre de la campaña
+![Start campaign](./img/marketing/marketing-campaigns/recipient-campaigns/start-campaign.jpg)
+
+## Ejemplos de automatización inteligente
+
+### Campañas de venta adicional de productos
+Filtra empresas sin un producto activo (como Conversation AI) y envía automáticamente campañas de venta adicional destacando los beneficios y el potencial de ROI según el tamaño de su negocio e industria.
+
+### Campañas basadas en rendimiento
+Usa los datos de Snapshot Report para identificar empresas con puntuaciones de listado bajas o poca visibilidad en línea, luego envía automáticamente campañas de mejora con recomendaciones prácticas.
+
+### Campañas de recuperación de interacción
+Dirígete a contactos que no han interactuado recientemente, enviando campañas de reactivación con incentivos personalizados.
+
+## Opciones de configuración de campaña
+
+### Opciones de programación
+Al enviar campañas, puedes:
+- **Enviar de inmediato**: la campaña comienza de inmediato
+- **Programar para después**: establece una fecha y hora específicas
+
+### Configuración del remitente
+Configura desde quién se envía la campaña:
+1. **Remitente predeterminado**: usa tus ajustes de correo configurados
+2. **Asignación de vendedor**: cuando se asigna un vendedor a una cuenta, su información se usará como remitente, anulando tus ajustes de remitente a nivel de partner
+3. **Remitente personalizado**: anula con detalles de remitente específicos para la campaña
+
+**Cómo funciona la anulación del remitente del vendedor:**
+
+Cuando una cuenta tiene un vendedor asignado, los correos de campaña se envían desde la dirección de correo y el nombre del vendedor, no desde tu dirección "de" a nivel de partner. Esto es intencional para que las respuestas vayan directamente al vendedor que gestiona la relación.
+
+Si el correo del vendedor está en un dominio no verificado o no autenticado, la plataforma envía automáticamente el correo desde tu dominio verificado mientras conserva el nombre del vendedor como nombre para mostrar (por ejemplo, `Jane Smith via yourdomain.com`). Esto puede aparecer en Gmail como "via yourdomain.com" en la línea del remitente.
+
+**Para enviar campañas desde tu remitente a nivel de partner en su lugar:** quita la asignación de vendedor de la cuenta antes de iniciar la campaña.
+
+**Direcciones de respuesta:**
+
+El campo `Reply Address` en `Marketing` → `Email settings` → `Sender and reply settings` se aplica solo a correos del sistema (como las notificaciones de Daily Digest), no a los correos de campaña. Las respuestas de campaña van a la dirección del remitente (vendedor o remitente a nivel de partner, como se describió anteriormente).
+
+### Ajustes de entregabilidad de correo
+Garantiza una entrega exitosa mediante:
+- **Verificar la autenticación de dominio**: comprueba que los registros SPF, DKIM y DMARC estén correctamente configurados. Consulta [Email Authentication](/marketing/email-settings/email-authentication) y [Update email settings](/marketing/email-settings/update-email-settings) para las instrucciones de configuración
+- **Incluir la dirección física correcta**: la ley CAN-SPAM requiere una dirección postal física válida en todos los correos comerciales. Configura la dirección de tu negocio en [Email settings requirements](/marketing/email-settings/email-settings-requirements)
+- **Probar campañas**: envía siempre correos de prueba antes de lanzar a toda la audiencia. Conoce las [buenas prácticas de entregabilidad de correo](/marketing/email-settings/email-deliverability), que incluyen la solución de errores de entrega comunes
+
+## Supervisar el rendimiento de la campaña
+
+Después de enviar campañas:
+- Haz seguimiento de las tasas de apertura y clics en las analíticas de la campaña
+- Supervisa las tasas de rebote y las cancelaciones de suscripción
+- Revisa el estado de entrega de cada destinatario
+- Usa los datos de rendimiento para optimizar futuras campañas
+
+Para obtener orientación detallada sobre cómo analizar los resultados de tu campaña, consulta [Track Email Campaign Performance](./track-email-campaign-performance.mdx) para conocer métricas integrales y estrategias de optimización.
+
+:::tip Recomendación
+Usa métodos basados en CRM siempre que sea posible para una mejor integración de datos, capacidades de seguimiento y potencial de automatización. El enfoque de CRM proporciona un control más granular y una gestión de contactos integral.
+:::
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Puedo personalizar qué usuarios de una cuenta reciben una campaña de correo electrónico?</summary>
+
+No, esto no es posible cuando se usan métodos de envío basados en cuenta. Si se agrega una cuenta a una campaña, todos los usuarios de la cuenta se agregarán a la campaña.
+
+**Enfoques alternativos para el envío dirigido:**
+- **Usa CRM Contacts**: envía campañas directamente a contactos específicos a través del sistema CRM para una segmentación precisa
+- **Usa Contact Lists**: crea listas dirigidas de contactos específicos y envía campañas a esas listas
+- **Envío individual de campaña**: envía campañas a usuarios individuales a través de `Partner Center` → `Accounts` → `Manage Accounts` → `User menu` → `Campaigns`
+
+Los métodos de segmentación de contactos basados en CRM proporcionan mucha más flexibilidad y control sobre exactamente quién recibe tus campañas.
+</details>
+
+<details>
+<summary>Cuando envío una campaña a una empresa del CRM, ¿quién recibe los correos?</summary>
+
+Cuando envías una campaña a una empresa del CRM, el sistema envía automáticamente correos a **hasta 50 contactos asociados** de esa empresa. No puedes personalizar qué contactos específicos de la empresa reciben la campaña.
+
+**Cómo funciona la segmentación a nivel de empresa:**
+- **Selección de destino**: seleccionas empresas de tu CRM
+- **Distribución automática**: el sistema identifica los contactos asociados en cada empresa seleccionada
+- **Límite de contactos**: un máximo de 50 contactos por empresa recibirá la campaña
+- **Entrega de correo**: los correos de la campaña se envían a los contactos elegibles de cada empresa objetivo
+- **Contenido dinámico**: todos los correos usan los campos de datos de la empresa para la personalización
+
+**Limitación importante**: si una empresa tiene más de 50 contactos, solo hasta 50 recibirán los correos de la campaña. El sistema seleccionará qué contactos reciben los correos.
+
+**Para una segmentación de contactos selectiva:**
+- **Usa CRM Contact Lists**: crea listas con contactos específicos de las empresas a las que quieres dirigirte
+- **Selección de contacto individual**: selecciona contactos específicos directamente desde la tabla de contactos del CRM
+- **Smart Lists**: configura criterios para incluir/excluir contactos automáticamente según sus propiedades
+
+Este enfoque a nivel de empresa es ideal para el marketing basado en cuentas donde quieres asegurarte de que todos los responsables de decisiones y las partes interesadas reciban una mensajería consistente.
+</details>
+
+:::tip Consejo profesional
+Toda la actividad de correo de las campañas basadas en CRM se registra automáticamente en los registros de contacto y empresa, permitiendo un seguimiento sofisticado y una puntuación de clientes potenciales basada en los patrones de interacción.
+:::

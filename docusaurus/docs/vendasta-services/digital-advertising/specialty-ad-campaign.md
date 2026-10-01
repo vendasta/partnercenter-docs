@@ -5,6 +5,9 @@ sidebar_position: 2
 description: "Specialty Ad Campaign is a do-it-with-me, multi-platform advertising campaign built and optimized by our specialists across search, social, display, and video."
 tags: [vendasta-services, digital-advertising, matchcraft, specialty-ads, campaigns]
 keywords: [Specialty Ad Campaign, MatchCraft, multi-platform, conversions, onboarding call, campaign assets, call tracking, boost, landing page, strategy call]
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 # Specialty Ad Campaign

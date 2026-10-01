@@ -1,0 +1,167 @@
+---
+title: Actions de la liste de comptes  
+description: "Les actions administratives suivantes sont disponibles depuis Partner Center > Accounts > Account Lists en cliquant sur l'icône Menu à côté de la liste de comptes."
+sidebar_label: Actions de liste
+sidebar_position: 4
+---
+
+Les actions administratives suivantes sont disponibles depuis **Partner Center > Accounts > Lists > cliquez sur les trois points à côté de la liste souhaitée**.
+
+## Personnaliser une vue de liste statique
+
+Vous pouvez modifier les colonnes qui apparaissent dans votre vue de liste pour faire ressortir les informations qui comptent le plus pour vous (email, téléphone, tags, etc.) :
+
+1. Ouvrez votre liste dans **Partner Center > Accounts > Lists**
+2. Cliquez sur l'**icône d'engrenage** dans le coin supérieur droit du tableau de la liste
+3. Cochez ou décochez les colonnes que vous voulez afficher ou masquer (par exemple, Email, Phone, Tags)
+4. Fermez le panneau — la vue s'enregistre automatiquement
+
+Les vues de colonnes personnalisées sont propres à chaque utilisateur et à chaque liste, de sorte que chaque membre de l'équipe peut configurer sa propre vue préférée.
+
+## Limites des listes de comptes
+
+| Limite | Valeur | Solution de contournement |
+|-------|-------|------------|
+| Nombre maximum de comptes par liste | 5 000 | Créez plusieurs listes et appliquez un tag partagé à tous les comptes de ces listes. Utilisez le tag pour filtrer et travailler avec l'ensemble complet. |
+| Plafond d'activation groupée de produits | 500 comptes par action | Répartissez les comptes dans plusieurs listes et activez par lots. |
+
+   [Exporter les données de comptes](#exporter-les-données-de-comptes)
+
+   [Ajouter des tags](#ajouter-des-tags)
+
+   [Ajouter à une campagne](#ajouter-à-une-campagne)
+
+   [Mettre en pause les campagnes](#mettre-en-pause-les-campagnes)
+
+   [Créer un groupe multi-emplacements](#créer-un-groupe-multi-emplacements)
+
+   [Créer/actualiser un snapshot](#créeractualiser-un-snapshot)
+
+   [Déclencher une automatisation](#déclencher-une-automatisation)
+
+   [Activer un produit](#activer-un-produit)
+
+   [Activer un module complémentaire](#activer-un-module-complémentaire)
+
+   [Changer de marché](#changer-de-marché)
+
+   [Supprimer](#supprimer)
+
+## Exporter les données de comptes
+
+Crée un CSV téléchargeable avec les données actuelles de tous les comptes de la liste. Cet export contient les informations suivantes :
+
+- Nom de l'entreprise
+- Adresse
+- Ville
+- État/Province
+- Code du pays
+- Code postal
+- Numéro(s) professionnel(s)
+- Site web
+- Email du vendeur
+- Identifiant client
+- Produits actifs (Listing Builder, Social AI, Reputation AI)
+- Identifiant de compte
+- Tags
+- Numéro sans frais
+- Description
+- Description courte
+- Point de repère
+- Modes de paiement
+- Services
+- Marques
+- Heures d'ouverture
+- Champs liés à la santé (le cas échéant)
+
+Après avoir sélectionné **Export Account Data**, vous serez dirigé vers la page **History** de la liste. Une fois l'export terminé, vous pourrez télécharger le CSV en cliquant sur l'icône **Menu** ![Icône Menu](./img/accounts/lists/menu-icon.png), puis **Account NAP/Product CSV**.
+
+:::note Limites de l'export
+Le CSV exporté contient uniquement des données informatives. Il n'inclut **pas** de liens cliquables renvoyant vers les fiches de compte dans Partner Center — vous ne pouvez pas accéder directement à un compte depuis le tableur.
+:::
+
+### Exporter les détails des utilisateurs (noms et emails)
+
+L'export standard Export Account Data contient des données de compte/entreprise (NAP + produits), et non les noms et adresses email des utilisateurs individuels. Pour exporter une liste des utilisateurs associés à vos comptes, contactez le Support et demandez un export des détails utilisateurs.
+
+## Ajouter des tags
+
+Ajoute un tag à chaque compte de la liste. C'est utile pour filtrer les comptes ultérieurement ou pour fusionner plusieurs listes en un groupe logique.
+
+**Pour ajouter un tag en masse sans écraser les tags existants :**
+
+1. Allez dans `Partner Center` → `Accounts` → `Lists`.
+2. Cliquez sur les trois points à côté de la liste.
+3. Sélectionnez **Add Tags**.
+4. Choisissez un tag existant ou créez-en un nouveau.
+5. Cliquez sur **Apply**.
+
+Les tags sont ajoutés — les tags existants sur les comptes ne sont pas supprimés.
+
+## Ajouter à une campagne
+
+Vous permet d'ajouter la liste à une campagne d'email marketing. Cela ajoutera tous les utilisateurs et contacts assignés aux comptes de la liste à cette campagne. [En savoir plus](../../marketing/campaigns)
+
+## Mettre en pause les campagnes
+
+Vous permet de mettre en pause une campagne actuellement active pour tous les utilisateurs et contacts assignés aux comptes de la liste.  
+Le statut peut prêter à confusion une fois en pause. « Paused » n'apparaîtra pas comme un statut distinct, mais si une campagne est au statut « ongoing », la mettre en pause changera son statut en « published ».
+
+![Campagne avec le statut ongoing](./img/accounts/lists/campaign-status-ongoing.png)
+![Campagne avec le statut published après mise en pause](./img/accounts/lists/campaign-status-published.png)
+
+## Créer un groupe multi-emplacements
+
+Vous permet de créer un groupe multi-emplacements basé sur la liste. Après avoir sélectionné cette option, vous aurez le choix de la façon dont vous souhaitez segmenter le groupe. Ici, vous pouvez choisir soit **Geographic Region** soit **Account Tag(s)**.
+
+## Créer/actualiser un snapshot
+
+Selon l'état du compte, l'une des trois situations suivantes se produira :
+
+- Si aucun rapport Snapshot n'a jamais été créé pour le compte, un nouveau rapport Snapshot sera créé.
+- Si un compte a déjà eu un rapport Snapshot qui a expiré, ce rapport Snapshot sera actualisé.
+- Si un compte a actuellement un rapport Snapshot actif (créé au cours des 7 derniers jours), ce compte sera ignoré.
+
+## Déclencher une automatisation
+
+Vous permet de déclencher une automatisation spécifique pour chaque compte de la liste. Il existe de nombreuses façons utiles d'utiliser les automatisations avec les listes. Consultez la section [Déclencheurs manuels](../../automations/my-automations/automation-triggers-reference.mdx#manual) de la référence des déclencheurs d'automatisation.
+
+## Fusionner deux listes (à l'aide de tags)
+
+Pour fusionner des listes :
+
+1. Ajoutez un tag commun à tous les comptes de la première liste.
+2. Ajoutez le même tag à tous les comptes de la seconde liste.
+3. Allez dans `Accounts > Manage Accounts`, filtrez par le tag, sélectionnez les comptes, puis ajoutez-les à une nouvelle liste.
+
+## FAQ
+
+<details>
+<summary>Puis-je changer le nom d'une liste ?</summary>
+
+Il n'existe pas d'option pour modifier le nom. Supprimez la liste et recréez-la. La suppression d'une liste ne supprime pas ses comptes.
+</details>
+
+## Activer un produit
+
+Vous permet d'activer un seul produit sur chaque compte de la liste. Si un compte a déjà le produit sélectionné actif, ce compte sera ignoré. Cependant, vous pouvez effectuer une nouvelle activation et non un changement d'édition avec cette fonctionnalité.
+
+:::note
+Veuillez noter que l'activation d'un produit entraînera l'apparition d'un frais sur votre prochaine facture. Pour cette raison, assurez-vous que seuls les comptes pour lesquels vous souhaitez activer le produit figurent dans la liste.
+:::
+
+## Activer un module complémentaire
+
+Vous permet d'activer un seul module complémentaire sur chaque compte de la liste. Si un compte a déjà le module complémentaire sélectionné actif, ce compte sera ignoré.
+
+:::note
+Veuillez noter que l'activation d'un module complémentaire entraînera l'apparition d'un frais sur votre prochaine facture. Pour cette raison, assurez-vous que seuls les comptes pour lesquels vous souhaitez activer le module complémentaire figurent dans la liste.
+:::
+
+## Changer de marché
+
+Vous permet de changer le marché auquel les comptes de la liste sont assignés. C'est utile si vous avez créé un nouveau marché et que vous cherchez à y déplacer des comptes.
+
+## Supprimer
+
+Vous permet de supprimer la liste. Veuillez noter que les comptes de la liste elle-même ne seront pas supprimés ; seule la liste à laquelle les comptes sont assignés sera supprimée. Cette action est irréversible, alors assurez-vous de vouloir totalement supprimer la liste avant de la sélectionner.

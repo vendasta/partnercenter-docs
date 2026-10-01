@@ -26,15 +26,15 @@ import LabChecklist from "@site/src/components/LabChecklist";
   lab
   required={[
     "Partner Center admin access",
-    "A real local business to bring in, or one you invent for practice",
+    "A real or invented local business to bring in",
   ]}
   pathName="Get set up"
   step={6}
-  totalSteps={8}
+  totalSteps={9}
   outcomes={[
     "Create a client account with the fields that matter filled in",
     "Activate a product on the account and know what it costs you",
-    "Create the client's user and send the onboarding email at the right moment",
+    "Create the client's user, and know that inviting them is what sends the onboarding email",
     "Say what your client sees the first time they log in",
   ]}
 />
@@ -101,37 +101,44 @@ Editions matter more than they look: a client on the wrong edition is either mis
 
 A **user** is a person who can log in to the account's Business App: the owner, their office manager, anyone at the business who will work the tools you just activated. Products belong to the account; users are the people who use them. Until a user exists, everything you have set up is running with nobody from the business in it.
 
+A user is not the same as a CRM contact either. A contact is someone you are talking to, a record in your CRM inside Partner Center. A user is someone you have invited into Business App, where they can log in and use their tools. Contacts never become users on their own: you invite them, and the panel suggests your CRM contacts as you type.
+
 Order matters here, and the platform tells you why: a user with no active products logs in to an empty Business App. Activate first, create the user second, and their first login lands on working tools instead of a blank page.
 
 <LabCallout title="create the client's user">
-Go to the account's Overview, and select `Add users` on the `Users` card.
+Go to the account's Overview, and select `Invite users` on the `Users` card.
 
 <LabChecklist
   storageKey="first-client-lab-3"
   steps={[
-    <>Select <code>Create user</code> at the bottom of the panel. The search above it is for attaching a user who already exists.</>,
-    <>Enter their <code>Email</code>, first name, and last name.</>,
-    <>Leave <code>Send Onboarding Email</code> checked, and select <code>Preview</code> to read exactly what they will receive.</>,
-    <>Add a <code>Custom introductory message</code> if you want a personal line inside that email.</>,
-    <>Select <code>Create user</code>.</>,
+    <>Type their email. If they already exist as a CRM contact, select them from the suggestion; otherwise just enter the new address.</>,
+    <>Under <strong>Contact information</strong>, fill in <code>First name</code>, <code>Last name</code>, <code>Phone number</code>, <code>Correspondence language</code>, and <code>Greeting name</code>.</>,
+    <>Add a custom greeting under <strong>Onboarding Email</strong> if you want a personal line, and select <code>Preview</code> to read exactly what they will receive.</>,
+    <>Select <code>Save</code>, then select <code>Invite 1 user</code> to send it.</>,
   ]}
   confirm={<>The user appears on the <strong>Users</strong> card, and the onboarding email is on its way with a link to set their password.</>}
 />
 </LabCallout>
 
-That email is your setup work paying off: it sends from the domain you connected, carries the brand you uploaded, and links to a Business App wearing your name. If the moment is not right yet, clear the checkbox and the platform holds off; when you are ready, the `⋮` menu on the user's row sends it, and [this guide covers what the email contains](/accounts/manage-users/welcome-email).
+That email is your setup work paying off: it sends from the domain you connected, carries the brand you uploaded, and links to a Business App wearing your name. Inviting the user is what sends it, so if the moment is not right yet, leave them as a CRM contact and invite them when it is; once a user exists, the `⋮` menu on their row sends the email again, and [this guide covers what the email contains](/accounts/manage-users/welcome-email).
+
+:::info Vibe builds them a website on the way in
+When Vibe is active on the account, inviting the user builds that business a free starter website and the onboarding email leads with it: for a client with no website, the first thing they see is one that exists. If you build websites yourself, or theirs is already live, leave Vibe off the account until you have decided which site they should see first.
+:::
 
 <LessonSection>
 
-## What they see when they log in
+## The workspace they land in
 
 Your client lands in their own Business App: your brand on the workspace, their business inside it. The pages you chose to show them are the navigation, and every product you activated is a working dashboard. Nothing about your wholesale costs, your margins, or your other clients is anywhere in sight.
 
+Their conversations and leads land in that workspace with full visibility for you, and the account's Overview stays your one place to manage what they have.
+
 :::tip Try it now
-Open the account's Overview and select `Open in` → `Business App`. You are now looking at exactly what your client will see on their first login. Check it the way they would: the name, the logo, the products, the pages.
+Open the account's Overview and select `Open in` → `Business App`. Check the workspace the way your client will: the name, the logo, the pages in the navigation, and each product you activated.
 :::
 
-From here the relationship runs on rails you already know: their conversations and leads land in their Business App with full visibility for you, and the account's Overview stays your one place to manage what they have.
+Their landing page opens on a list of the work AI has already finished for the business, and the next moves sit beside it.
 
 </LessonSection>
 
@@ -169,13 +176,13 @@ From here the relationship runs on rails you already know: their conversations a
       type: 'mcq',
       question: 'The client is not ready to be invited yet, but you want their account and products in place today. What do you do?',
       options: [
-        'Set everything up now, and clear the Send Onboarding Email checkbox when you create the user',
+        'Set the account and products up now, and keep the person as a CRM contact until you are ready to invite them',
         'Wait to create the account until they are ready to log in',
         'Create the user with a fake email address as a placeholder',
         'Activate the products in your own Business App until they are ready'
       ],
       correctIndex: 0,
-      explanation: 'The onboarding email is a checkbox, not an obligation. Create everything now, leave the email unsent, and send it from the user\'s row when the moment is right.'
+      explanation: 'Inviting a user is what sends the onboarding email, so hold the invite rather than the setup. The account and products can be ready today; the panel will suggest the person by name from the CRM when you are ready to invite them.'
     },
     {
       type: 'mcq',
@@ -202,6 +209,18 @@ From here the relationship runs on rails you already know: their conversations a
       explanation: 'Business App shows the client their own business through your brand. Wholesale costs, margins, and other clients exist only on your side of the platform.'
     },
     {
+      type: 'mcq',
+      question: 'A business owner you have been emailing for weeks sits in your CRM. She asks why she cannot log in to the app you keep mentioning. What is going on?',
+      options: [
+        'A contact is not a user; she can log in once you invite her as a user and the onboarding email goes out',
+        'Her CRM company record has to sync overnight before her access begins',
+        'Her login activates automatically once her first invoice is generated in Commerce',
+        'Contacts log in through Vendor Center rather than Business App'
+      ],
+      correctIndex: 0,
+      explanation: 'A contact is someone you are talking to; a user is someone you have invited into Business App. You invite her as a user, and the onboarding email goes out when her products are ready for her.'
+    },
+    {
       type: 'truefalse',
       statement: 'Creating an account also creates a linked CRM company for the business.',
       correct: true,
@@ -210,7 +229,7 @@ From here the relationship runs on rails you already know: their conversations a
   ]}
 />
 
-<LessonFooter to="/learn/getting-started/where-to-get-help" pathName="Get set up" step={6} totalSteps={8} />
+<LessonFooter to="/learn/getting-started/walk-your-clients-first-experience" pathName="Get set up" step={6} totalSteps={9} />
 
 </InlineHighlighter>
 <MarkComplete courseId="bring-in-your-first-client" site="vendasta_learn" />

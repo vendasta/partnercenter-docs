@@ -1,0 +1,112 @@
+---
+title: Managing Payments
+description: Aprende a gestionar las notificaciones de pago y manejar disputas de facturación en Vendasta Payments
+sidebar_label: Payments
+sidebar_position: 1
+---
+
+# Gestionar pagos
+
+Esta guía cubre cómo gestionar tus procesos de pago, incluida la configuración de notificaciones para la actividad de pago y el manejo efectivo de disputas de facturación.
+
+## Notificaciones de pago
+
+Si usas Vendasta Payments, puedes recibir notificaciones dentro de la plataforma cuando uno de tus clientes paga una factura o realiza una compra a través del Shopping Cart. Si un pago falla, recibirás una notificación por correo electrónico. Ten en cuenta que solo los administradores de Partner Center pueden recibir estas notificaciones.
+
+Las notificaciones de facturas y pagos se pueden configurar o cambiar usando la página **Notification Settings** en Partner Center.
+
+### Configurar notificaciones de pago
+
+Para acceder a **Notification Settings** en Partner Center:
+
+1. Haz clic en el ícono **Notifications** en la barra superior
+2. Haz clic en el ícono **Settings**
+3. Desplázate hacia abajo hasta la sección **Billing**
+
+En el ajuste **Retail Payments**, marca la notificación **App** en la columna **Platform Settings** para que te notifiquen cuando un cliente pague una factura o realice una compra a través del Shopping Cart.
+
+También puedes recibir notificaciones cuando se genera automáticamente una factura habilitando las notificaciones para **Invoice Auto-generated**.
+
+### Notificaciones de facturación de suscripciones fallidas o no pagadas
+
+Cómo Vendasta gestiona la facturación de suscripciones fallida o no pagada depende de tu tipo de facturación.
+
+**Partners con facturación instantánea**
+
+Si falla un cargo de renovación de suscripción, Vendasta inicia un proceso de gestión de morosidad de 14 días. Durante este período, el sistema reintenta automáticamente el cargo de 5 a 6 veces. Los partners reciben notificaciones por correo electrónico por cada intento de pago fallido. Si todos los reintentos no tienen éxito, la suscripción se marca como **Failed**.
+
+**Partners facturados**
+
+La facturación se gestiona al final de cada mes. La suspensión por falta de pago la gestiona manualmente el equipo de Finanzas de Vendasta en lugar de mediante reintentos automatizados.
+
+**Seguimiento de estados de pago**
+
+Puedes supervisar los estados de pago, incluidos los cargos fallidos y las facturas vencidas, en la pestaña **Payments** del **Billing Center** en Partner Center.
+
+:::tip
+Estar atento a las notificaciones de pagos fallidos te permite contactar a los clientes a tiempo para actualizar sus datos de pago y evitar interrupciones en la suscripción.
+:::
+
+### Preguntas frecuentes sobre notificaciones de pago
+
+**¿Se me notificará si un pago fue exitoso o no?**
+
+**Sí**, tanto tú como tu cliente recibirán notificaciones de pagos exitosos y fallidos.
+
+Correo de ejemplo a un partner mostrando un pago fallido:
+
+<img src={require('./img/commerce/commerce-payments/partner-failed-payment-email.png').default} alt="Sample email to a Partner showing failed payment" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Correo de ejemplo al cliente mostrando un pago fallido:
+
+<img src={require('./img/commerce/commerce-payments/customer-failed-payment-email.png').default} alt="Sample email to the Customer showing failed payment" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## Disputas de facturación
+
+Cuando un cliente disputa un pago, verás un estado "Disputed" en ese pago en Partner Center. Tienes dos opciones: proporcionar evidencia para contrarrestar la disputa, o aceptar la disputa para reembolsar al cliente.
+
+Gestionar disputas es parte de las responsabilidades que conlleva ofrecer pagos con tarjeta de crédito.
+
+### Cómo responder a un pago en disputa
+
+1. En **Partner Center**, ve a `Commerce` → `Payments`
+2. Haz clic en el pago en disputa
+3. Elige tu respuesta:
+   - Haz clic en **Provide Evidence** para impugnar la disputa
+   - Haz clic en **Accept Dispute** para aceptar reembolsar al cliente
+
+### Proporcionar evidencia
+
+Se te presentará un formulario para enviar evidencia que respalde tu caso. Ingresa detalles de la transacción como:
+- Nombre, correo electrónico y dirección de facturación del cliente
+- Detalles del producto o servicio
+- Documentos de respaldo: comunicaciones con el cliente, firmas, recibos u otra evidencia (máximo 5 MB por archivo)
+
+Los campos específicos variarán según el motivo de la disputa. Haz clic en **Submit evidence** cuando termines.
+
+### Aceptar una disputa
+
+Aceptar la disputa confirma que aceptas reembolsar al cliente. Se aplica una **tarifa de disputa de $15** cuando aceptas una disputa.
+
+### Resultados posibles
+
+Después de enviar evidencia, hay dos resultados posibles:
+
+1. **Ganas la disputa**: el banco del cliente resuelve la disputa a tu favor y libera los fondos de vuelta a ti
+2. **Pierdes la disputa**: el banco decide a favor del cliente y los fondos se devuelven a él
+
+### Tasa de disputas
+
+Stripe requiere que todas las cuentas mantengan su tasa general de disputas por debajo del 1% del total de transacciones. Es posible que se contacte a las cuentas que se acercan a este umbral para ayudar a reducir las disputas.
+
+### Buenas prácticas para prevenir disputas
+
+Para ayudar a prevenir disputas:
+
+- Usa un nombre de negocio claro que los clientes reconozcan en su estado de cuenta de tarjeta de crédito
+- Comunica claramente tus políticas de devolución y reembolso
+- Brinda un excelente servicio al cliente y responde rápidamente a las consultas de los clientes
+- Mantén registros detallados de todas las transacciones y comunicaciones con clientes
+- Emite reembolsos con prontitud cuando se soliciten y sean apropiados
+
+Siguiendo estas pautas y respondiendo adecuadamente a las disputas, puedes proteger tu negocio mientras mantienes buenas relaciones con los clientes.

@@ -1,0 +1,56 @@
+---
+title: Processing Refunds
+description: "Para solicitar un reembolso para un cliente en Vendasta, sigue estos pasos y pautas detallados"
+sidebar_label: Processing Refunds
+sidebar_position: 3
+---
+
+Esta guía explica cómo emitir reembolsos para un cliente en Vendasta, incluidos los límites de reembolso, los pasos para iniciar un reembolso, los detalles requeridos para reembolsos de alto valor, los plazos de procesamiento y las tarifas de Stripe.
+
+Para reembolsar un pago dentro del límite de $1000:
+
+1. Inicia sesión en `Partner Center`.
+2. Ve a `Commerce` → `Payments`.
+3. Haz clic en el ícono kebab de tres puntos para acceder a la opción `Refund` de la factura o pago que quieres reembolsar.
+4. Ingresa el monto del reembolso (se admiten reembolsos parciales).
+5. Confirma y `submit` el reembolso.
+
+## Solución de errores de reembolso
+
+Puedes encontrar mensajes de error como:
+
+- `Unable to refund due to balance`
+- `Invalid merchant health`
+
+Estos pueden ocurrir debido a limitaciones de saldo, problemas de salud del comerciante o restricciones en los montos de reembolso.
+Si esto sucede, contacta a `Vendasta Support` para asistencia.
+
+## Reembolsos superiores a $1000
+
+Los reembolsos que superen los $1000 deben enviarse a `Vendasta Finance`.
+
+Incluye los siguientes detalles en tu solicitud:
+
+- Nombre de la cuenta del cliente
+- Monto del reembolso
+- Motivo del reembolso
+- Número de factura
+
+El equipo de finanzas procesará el reembolso en tu nombre.
+
+## Tiempo de procesamiento del reembolso
+
+Los reembolsos generalmente tardan de **5 a 10 días hábiles** desde la fecha en que se emiten.
+Los clientes recibirán los fondos reembolsados dentro de este plazo.
+
+Una vez procesado, se enviará automáticamente por correo electrónico un **recibo o notificación de reembolso** al cliente.
+
+## Tarifas de reembolso
+
+Vendasta **no cobra una tarifa** por el procesamiento de reembolsos.
+
+Sin embargo, Stripe cobra una **tarifa de transacción no reembolsable** en todos los reembolsos:
+
+- **2.99% + $0.30** por transacción
+
+Esta tarifa se deduce de la cuenta de Stripe del partner y **no se devuelve** cuando se emite un reembolso.

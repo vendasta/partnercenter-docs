@@ -2,16 +2,28 @@
 title: "Vendasta Services Website Support"
 sidebar_label: "Support"
 sidebar_position: 6
-description: "This article details the inclusions of Vendasta Services' Website Support product and the process/best practices for submitting requests to our Website Support team."
+description: "What Vendasta Services Website Support includes for WordPress Hosting Pro sites, what costs extra, and how to submit requests or report a website outage."
+brand: vendasta-services
+product: vendasta-services-core
+audience: partners
+content_type: overview
+kb_id: KB-00022
+answer_snippet: "Website Support is a Vendasta Services fulfillment service for WordPress websites hosted on WordPress Hosting Pro that covers technical support, minor design and content changes, plugin and theme updates, and uptime monitoring. You submit requests to the Website Support team by email."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-This article details the inclusions of Vendasta Services’ [Website Support](https://partners.vendasta.com/marketplace/products/MP-5FTSXB8XVSDRJW4RFQ84B8H3SGKG56JC) product and the process/best practices for submitting requests to our Website Support team.
+Website Support is a Vendasta Services fulfillment service for WordPress websites hosted on WordPress Hosting Pro that covers technical support, minor design and content changes, plugin and theme updates, and uptime monitoring. You submit requests to the Website Support team by email.
 
-**What is Included in Vendasta Services Website Support+?**
+You can find the [Website Support](https://partners.vendasta.com/marketplace/products/MP-5FTSXB8XVSDRJW4RFQ84B8H3SGKG56JC) product in the Partner Center Marketplace.
 
-Website Support+ is a fulfillment service offered by Vendasta Services for WordPress websites hosted on Vendasta’s WordPress Hosting Pro platform. Website Support+ includes the following:
+## What's included in Vendasta Services Website Support
 
-**Website Support+ includes:**
+Website Support is a fulfillment service offered by Vendasta Services for WordPress websites hosted on Vendasta’s WordPress Hosting Pro platform.
+
+## What's included
 
 *   Access to the team for technical support
 *   Minor changes to the website's appearance, such as:
@@ -30,7 +42,7 @@ Website Support+ is a fulfillment service offered by Vendasta Services for WordP
 *   AI Chat Receptionist installation
 
 
-**AI Chat Receptionist**
+## AI Chat Receptionist
 
 At no additional cost, our team will install the AI Chat Receptionist on your new website build or with an imported website. This includes:
 *   Web chat code added to the website
@@ -39,9 +51,9 @@ At no additional cost, our team will install the AI Chat Receptionist on your ne
 
 This service is not a full end-to-end configuration of the AI Chat Receptionist, and is only for basic code installation. If you need advanced features such as full brand configuration beyond basic brand colours, SMS messaging, voice calls, or custom conversation flows, please explore our [AI Receptionist Setup & Support](../ai-workforce/ai-receptionist.md) service.
 
-**What's not included in monthly support**
+## What's not included in monthly support
 
-Website Support+ is designed for ongoing maintenance and scoped updates, not full rebuilds or complex custom development.
+Website Support is designed for ongoing maintenance and scoped updates, not full rebuilds or complex custom development.
 
 The monthly charge does not include:
 
@@ -54,9 +66,9 @@ The monthly charge does not include:
 *   Creating additional sections or website pages
 *   Integrating payments outside of Square, Stripe and PayPal
 
-If you need help with any of these features, please reach out and our team can provide you a quote for how many hours of custom work it might take.
+If you need help with any of these features, please reach out and our team can provide you with a quote for how many hours of custom work it will take.
 
-**How to submit a website support request to Vendasta Services:**
+## How do I submit a website support request to Vendasta Services? {#how-to-submit-a-website-support-request-to-vendasta-services}
 
 1.  Send an email to our team at [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com) 
     1.  Sending edits via email ensures that your request is properly documented, as our teams use a ticketing system. This is the best forum to communicate with us.  
@@ -72,11 +84,11 @@ If you need help with any of these features, please reach out and our team can p
 _What is an update?_ It consists of one of the two:
 
 *   The request is completed and you are informed of the work done.
-*   If not complete, the update will provide information on the current status of the request and insights on any delays (eg. complexity, volume of requests received, additional assets/clarification required, etc.)
+*   If not complete, the update will provide information on the current status of the request and insights on any delays (e.g. complexity, volume of requests received, additional assets/clarification required, etc.)
 
 Please keep an eye out for our emails. Our team may request further clarification or need additional assistance (access to a link you shared, etc.). Our goal is to complete this work to your satisfaction in a timely manner, and your responsiveness is appreciated.
 
-**In the event that your website goes down:**
+## What should I do if my website goes down? {#in-the-event-that-your-website-goes-down}
   
 _If you notice your website is down, first:_
 
@@ -99,10 +111,10 @@ _If you notice your website is down, first:_
 5.  After sending your email, please also give us a call. Our team does our best to catch urgent emails right away, but giving us a call will allow us to check in on your request and flag it with the website support specialists immediately:  
     Vendasta Services: **1-866-378-8031** _(Monitored Mondays-Fridays, 8 am - 5 pm CST)_
     1.  If your website is down outside of these hours, you can alternatively contact Vendasta’s Support on Demand team:
-        1.  Open the WordPress Hosting Pro dashboard and click on the blue **Help** button at the bottom right:![](./img/18930123215127-2ef55fe49f.png)  
+        1.  Open the WordPress Hosting Pro dashboard and click on the blue `Help` button at the bottom right:![](./img/18930123215127-2ef55fe49f.png)  
               
             
-        2.  Click **Live Chat** at the bottom of the pop-up window:  
+        2.  Click `Live Chat` at the bottom of the pop-up window:  
             ![](./img/18930123215127-95f3f6e7f2.png)  
             This live chat is monitored 24/7, and they can assist with downed websites outside of Vendasta Services' operating hours.
 
@@ -175,7 +187,7 @@ If you have received an email from Google regarding an indexing error, forward i
 
 <summary>Can you install AI Chat Receptionist on my website?</summary>
 
-Yes! Website Support+ includes installation of the AI Chat Receptionist on your new website build or with an imported website. This includes:
+Yes! Website Support includes installation of the AI Chat Receptionist on your new website build or with an imported website. This includes:
 *   Web chat code added to the website
 *   Basic test (open chat, confirm a message can be sent)
 *   Add brand colours to the AI Chat Receptionist
@@ -188,7 +200,7 @@ This service is not a full end-to-end configuration of the AI Chat Receptionist,
 
 <summary>What type of forms will you set up on my site?</summary>
 
-As part of Website Support+, we can convert an existing third-party contact form into a CRM form so that submissions flow directly into your CRM as leads. We set up standard contact and lead-capture forms.
+As part of Website Support, we can convert an existing third-party contact form into a CRM form so that submissions flow directly into your CRM as leads. We set up standard contact and lead-capture forms.
 
 We do not build advanced form functionality, including:
 
@@ -210,5 +222,29 @@ If you need any of these advanced features, reach out and our team can scope the
 <summary>What will happen to my existing form and submission data?</summary>
 
 When we convert your form to a CRM form, the legacy form is deactivated and removed from the front end of your site, so visitors only see the new CRM form. We do not remove the legacy form plugin, so any previously collected submissions remain viewable in your WordPress backend. Your existing form entries are also migrated into the CRM.
+
+</details>
+
+<details>
+
+<summary>When is the Website Support team available?</summary>
+
+The Vendasta Services phone line, **1-866-378-8031**, is monitored Monday to Friday, 8 am to 5 pm CST. Outside those hours, you can reach Vendasta's Support on Demand team through `Live Chat` in the WordPress Hosting Pro dashboard `Help` menu, which is monitored 24/7.
+
+</details>
+
+<details>
+
+<summary>Does Website Support include adding new pages to my website?</summary>
+
+No. Creating additional sections or website pages isn't included in the monthly charge. Reach out to the team for a quote on the hours of custom work needed.
+
+</details>
+
+<details>
+
+<summary>My website is down. What should I do?</summary>
+
+First, confirm that WordPress Hosting Pro is still active on the account in Partner Center, because deactivating it while the DNS records point to it takes the website offline. Then note whether the issue affects one page or the whole site and one device or all devices. Email the details and any error message to [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com), then call 1-866-378-8031 so the team can flag it right away.
 
 </details>

@@ -2,12 +2,22 @@
 title: AI Voice Receptionist Overview
 sidebar_label: AI Voice Receptionist
 sidebar_position: 3
-description: Learn how to set up, configure, test, and troubleshoot your AI Voice Receptionist, including call routing, capabilities, knowledge sources, and frequently asked questions.
+description: "The AI Voice Receptionist answers calls 24/7, captures leads, and books appointments. Set up call routing, capabilities, and knowledge, then test it."
+brand: vendasta
+product: ai-workforce
+audience: partners
+content_type: overview
+kb_id: KB-00011
+answer_snippet: "The AI Voice Receptionist answers your business calls 24/7: it answers callers' questions from your knowledge base, captures lead details, books appointments, and routes calls to the right person."
+doc_owner: ai-workforce
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 import { AISparkleIcon, SettingsIcon, CRMIcon, GraduationCapIcon } from '@site/src/components/Icons';
 
-Your AI Voice Receptionist helps answer your calls 24/7, captures new-lead info, gives callers fast and accurate answers, and helps get questions to the right person when they don't have an answer. 
+The AI Voice Receptionist answers your business calls 24/7: it answers callers' questions from your knowledge base, captures lead details, books appointments, and routes calls to the right person. Calls reach it through your Conversations phone number, either directly or forwarded from your existing business line.
 
 **In this guide, you will learn:**
 - What you need to get started with your AI Voice Receptionist
@@ -21,7 +31,7 @@ When a customer calls a business, they are usually a high-intent lead that wants
 
 Having an AI Voice Receptionist helps stop customers from moving on to the next business by at minimum answering their questions and potentially even booking an appointment. While some customers may prefer speaking to a human, being able to speak to someone representing the business is an improvement over not being able to answer the phone at all.
 
-## Setting up the AI Voice Receptionist
+## How do I set up the AI Voice Receptionist? {#setting-up-the-ai-voice-receptionist}
 
 ### AI Voice Receptionist call flow & routing
 
@@ -129,7 +139,7 @@ The `Book appointments with calendar` capability connects to your integrated cal
 On the `Book appointments with calendar` panel, use the `Select event link to book with` dropdown to choose which calendar your receptionist should use to determine availability as well as which kind of appointments they can offer.
 
 :::note
-If an AI Employee's configuration shows a `Book appointments` capability with an `Upgrade available` badge, that is a legacy capability being deprecated. Switch to `Book appointments: Voice` (this capability) for the latest features and multi-service booking.
+If an AI Employee's configuration shows a `Book appointments` capability with an `Upgrade available` badge, switch to `Book appointments: Voice` (this capability), which supports multi-service booking.
 :::
 
 #### Book multiple services in one session
@@ -221,7 +231,7 @@ For more details on knowledge sources and adding them to the Knowledge Base, see
 :::
 ---
 
-## Test and monitor your AI Voice Receptionist
+## How do I test and monitor my AI Voice Receptionist? {#test-and-monitor-your-ai-voice-receptionist}
 
 Once your AI Voice Receptionist is set up, it's important to test how it handles real calls and monitor its performance over time. This helps you ensure the AI is providing accurate answers, capturing leads, and delivering a professional experience to your callers. Regular testing and review will also help you spot opportunities to improve your AI's responses as your business grows.
 
@@ -256,7 +266,7 @@ If the AI Voice Receptionist is unable to capture a caller's contact information
 <summary>What do I need before setting up my AI Voice Receptionist?</summary>
 
 Before getting started, make sure you have:
-- **AI Voice Receptionist access** through an eligible edition (see [AI Workforce Overview](./index.mdx) for edition and region availability)
+- **AI Voice Receptionist access** through the Premium edition of Conversations AI (see [AI Workforce Overview](./index.mdx) for region availability)
 - **Conversations AI phone number** assigned after activating Pro or Premium (found under `Administration` → `Conversations Settings`)
 - **Basic business information** added to your knowledge base
 - *(Optional)* **Calendar connection** for appointment booking (set up under `CRM` → `My Meetings` → `Settings`)
@@ -412,6 +422,15 @@ If the forwarded call rings through to voicemail and the voicemail system picks 
 ### Troubleshooting
 
 <details>
+<summary>I tested my AI Voice Receptionist but never received the text message</summary>
+
+Text messages are sent to the phone number captured during the call. If you place the test call from a conferencing tool, a softphone, or any service without an SMS-capable number, there is no number for the AI to text and no message arrives — even though the call itself behaves normally.
+
+Test text messages by calling from a mobile phone that can receive SMS.
+
+</details>
+
+<details>
 <summary>My AI isn't answering calls - what should I check?</summary>
 
 If your AI Voice Receptionist isn't answering calls, verify:
@@ -461,6 +480,13 @@ AI Voice Receptionist is currently available for businesses located in the **Uni
 - Phone number assignment through Conversations
 
 For the most up-to-date region availability, see the [AI Workforce Overview](./index.mdx).
+
+</details>
+
+<details>
+<summary>Can missed calls from multiple business lines automatically forward to the AI Voice Receptionist?</summary>
+
+Yes, when those lines are configured to forward to the Business App number that serves the AI Voice Receptionist. Forwarding is set up on the customer or carrier side; regular phone providers usually document conditional or missed-call forwarding, though carrier support varies. Use the call-forwarding setup documentation for the exact steps for each provider.
 
 </details>
 

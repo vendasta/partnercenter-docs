@@ -1,7 +1,7 @@
 ---
 title: Get set up skill check
-sidebar_position: 8
-description: "Ten scenario questions covering the whole path: the platform map, email, payments, brand, your receptionist, and help."
+sidebar_position: 9
+description: "Ten scenario questions covering the whole path: the platform map, email, payments, brand, your receptionist, your first client and their first day, and help."
 ---
 
 import SkillCheck from "@site/src/components/SkillCheck";
@@ -17,14 +17,12 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 <LessonHeader
   difficulty="Beginner"
-  topics={["Partner Center", "Email domain", "Payments", "AI Receptionist"]}
-  time="about 10 minutes"
-  required={["The six steps of this path"]}
+  topics={["Partner Center", "Email domain", "Payments", "AI Receptionist", "Onboarding"]}
   pathName="Get set up"
-  step={8}
-  totalSteps={8}
+  step={9}
+  totalSteps={9}
   outcomes={[
-    "Apply the platform map, email, payments, brand, and receptionist material to situations you have not seen before",
+    "Apply the platform map, email, payments, brand, receptionist, and first-client material to situations you have not seen before",
     "Spot which setup a scenario calls for, rather than recalling a definition",
     "Find the steps worth a second pass before you bring your first client on",
   ]}
@@ -32,16 +30,16 @@ import LessonFooter from "@site/src/components/LessonFooter";
 
 <SkillCheck
   sessionSize={10}
-  intro="Ten scenario questions covering the whole path"
+  intro="Ten scenarios across the platform and your brand, the domain, email, and payments behind it, and the receptionist and first client you bring on."
   questions={[
     {
       type: 'mcq',
-      question: 'You built and polished a chat receptionist for your newest client, working from the AI menu in your own Partner Center. It now answers as if it works for your agency. What happened?',
+      question: 'You built and polished a Chat Receptionist for your newest client, working from the AI menu in your own Partner Center. It now answers as if it works for your agency. What happened?',
       options: [
         'You configured your own receptionist; the client\'s belongs in their Business App, the workspace of the business it serves',
         'The client\'s knowledge sources have not finished training yet, so it falls back to your details',
         'The receptionist needs the client\'s logo uploaded before it can represent them',
-        'Chat receptionists always represent the partner until the client buys Conversations AI'
+        'Chat Receptionists always represent the partner until the client buys Conversations AI'
       ],
       correctIndex: 0,
       explanation: 'An AI Employee lives in the workspace of the business it serves. Your Partner Center AI menu configures the receptionist serving your agency; a client\'s receptionist is configured in their Business App.'
@@ -136,7 +134,7 @@ import LessonFooter from "@site/src/components/LessonFooter";
       options: [
         'Trim the knowledge to current sources only, and keep the set lean from here on',
         'Add more documents so the correct price outweighs the outdated one',
-        'Rewrite the purpose to instruct the AI to average conflicting prices',
+        'Rewrite the role to instruct the AI to average conflicting prices',
         'Turn off the lead capture capability until the answers stabilize'
       ],
       correctIndex: 0,
@@ -148,7 +146,7 @@ import LessonFooter from "@site/src/components/LessonFooter";
       options: [
         'Interview it like a customer: services, hours, prices, something ambiguous, and a booking request, then tune and repeat',
         'Send one test message saying hello, and go live if it responds at all',
-        'Read through its purpose and capabilities carefully instead of chatting with it',
+        'Read through its role and capabilities carefully instead of chatting with it',
         'Wait a week of live traffic and review the transcripts afterward'
       ],
       correctIndex: 0,
@@ -182,7 +180,7 @@ import LessonFooter from "@site/src/components/LessonFooter";
       type: 'mcq',
       question: 'A signed client is ready to start Monday. You have created their account and activated their products. What is the last move before they log in?',
       options: [
-        'Create their user from the Users card, with Send Onboarding Email checked',
+        'Invite them as a user on the account, since inviting is what sends the onboarding email',
         'Send them your Partner Center password so they can look around',
         'Add them as a contact in your CRM and wait for the platform to invite them',
         'Nothing: activating a product emails the client automatically'
@@ -201,16 +199,40 @@ import LessonFooter from "@site/src/components/LessonFooter";
       ],
       correctIndex: 0,
       explanation: 'Activation charges you wholesale from that moment. What and when the client pays you is your retail pricing and billing setup, which is exactly why default billing was worth configuring early.'
+    },
+    {
+      type: 'mcq',
+      question: 'A roofing company you just signed has no website. You want the very first thing they read from you to be a live site with their name on it. What decides that?',
+      options: [
+        'Whether Vibe is active on the account when you invite them, since sending the onboarding email is what builds the site',
+        'Whether you tick Build website on the invite panel before you select Invite',
+        'Whether the account was created through Easy Account Create rather than Manage Accounts',
+        'Whether the client sets their password within 15 minutes of the email arriving'
+      ],
+      correctIndex: 0,
+      explanation: 'The starter website is built as the first step of sending the onboarding email, and only when Vibe is active on the account. Activate Vibe before you invite and the email leads with the live site.'
+    },
+    {
+      type: 'mcq',
+      question: 'A client\'s Business App Home shows Get started on the Reputation AI card, and they buy the Pro edition from it. What happens on your side?',
+      options: [
+        'Vendasta bills the client directly and pays you the margin at month end',
+        'The upgrade waits in Marketplace until you approve the edition change',
+        'The card was a mistake: clients cannot buy products from Home without a salesperson',
+        'With Vendasta Payments connected the client pays by card in Business App; without it, an order arrives for you to process, at the retail price you set'
+      ],
+      correctIndex: 3,
+      explanation: 'The Recommended cards follow your existing commerce setup. Vendasta Payments collects the card in Business App; otherwise the purchase reaches you as an order, and either way the price is your retail price.'
     }
   ]}
 />
 
 <LessonFooter
-  to="/learn/ai-foundations"
+  to="/learn/ai-workforce"
   pathName="Get set up"
-  step={8}
-  totalSteps={8}
-  nextPathName="AI foundations"
+  step={9}
+  totalSteps={9}
+  nextPathName="Hire your first AI Employee"
 />
 
 </InlineHighlighter>

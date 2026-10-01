@@ -4,6 +4,9 @@ sidebar_label: Knowledge Base
 description: Understand how the Knowledge Base works with AI employees and the types of knowledge sources you can add.
 tags: [knowledge-base, ai-employees, knowledge-sources, conversations-ai]
 keywords: [knowledge base, knowledge sources, business profile, ai employees, conversations ai]
+brand: vendasta
+product: ai-knowledge-base
+audience: partners
 ---
 
 import { GraduationCapIcon } from '@site/src/components/Icons';

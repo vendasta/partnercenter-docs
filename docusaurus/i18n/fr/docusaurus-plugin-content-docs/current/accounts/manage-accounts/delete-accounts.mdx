@@ -1,0 +1,270 @@
+---
+title: Supprimer des comptes
+sidebar_label: Supprimer des comptes
+sidebar_position: 6
+description: Directives et procédures pour supprimer en toute sécurité des comptes d'entreprise de votre système
+tags: [account-deletion, account-removal, data-management]
+keywords: [delete-account, remove-business, account-cleanup, data-retention]
+---
+
+## Qu'est-ce que la suppression d'un compte?
+
+La suppression d'un compte est le retrait permanent des comptes d'entreprise de votre système Business App. Ce processus supprime toutes les données associées, y compris l'accès des utilisateurs, l'historique des produits, les données de rapport et les paramètres du compte.
+
+## Pourquoi envisager la suppression d'un compte?
+
+La suppression d'un compte peut être nécessaire pour:
+
+- **Nettoyage des données**: Supprimer les comptes en double ou les comptes de test qui encombrent votre système
+- **Fermeture d'entreprise**: Supprimer définitivement les comptes des entreprises qui ont fermé de façon permanente
+- **Résiliation de contrat**: Supprimer les comptes lorsque les relations de service prennent fin de façon permanente
+- **Exigences de conformité**: Respecter les réglementations en matière de conservation des données et de confidentialité
+- **Maintenance du système**: Nettoyer les comptes obsolètes ou inactifs
+
+:::warning
+La suppression d'un compte est permanente et irréversible. Toutes les données associées au compte seront perdues, y compris les données de rapport historiques, les enregistrements d'accès des utilisateurs et les configurations de produits.
+:::
+
+## Que se passe-t-il lorsque vous supprimez un compte?
+
+### Suppression des données
+- Profil d'entreprise complet et coordonnées
+- Tous les comptes utilisateurs et identifiants d'accès
+- Historique des produits et paramètres de configuration
+- Données de rapport et historique analytique
+- Notes de compte et pièces jointes
+- Connexions d'intégration et accès API
+
+### Impact sur le système
+- Le compte est retiré de toutes les listes et de tous les groupes
+- Les campagnes et communications automatisées sont arrêtées
+- L'accès des utilisateurs est immédiatement révoqué
+- Les produits actifs sont automatiquement annulés et désactivés
+
+### Facturation après la suppression
+
+La suppression d'un compte **n'annule pas les engagements de facturation actifs**. Si un produit avait une période d'engagement (par exemple, un contrat annuel), la facturation se poursuit jusqu'à la fin de cette période d'engagement, même après la suppression du compte et du produit. Des frais continueront d'apparaître sur votre facture jusqu'à la fin de l'engagement.
+
+:::warning
+Si vous supprimez un compte comportant des produits sous engagement actif, vous continuerez d'être facturé pour ces produits jusqu'à la fin de la période d'engagement. Annulez les engagements avant de supprimer le compte si vous souhaitez arrêter la facturation immédiatement (sous réserve des conditions d'annulation).
+:::
+
+### Que se passe-t-il pour les comptes rattachés à un marché désactivé
+
+Si un marché est désactivé, tous les comptes assignés à ce marché sont automatiquement réassignés au **marché par défaut** au sein du même identifiant partenaire. Les comptes eux-mêmes ne sont pas supprimés.
+
+## Comment supprimer des comptes individuels
+
+### Liste de vérification avant suppression
+
+Avant de supprimer un compte, effectuez les étapes suivantes:
+
+1. **Vérifiez la nécessité de la suppression**: Confirmez que le compte doit vraiment être supprimé de façon permanente
+2. **Exportez les données importantes**: Enregistrez toute information dont vous pourriez avoir besoin plus tard
+3. **Informez les parties prenantes**: Avisez les membres de l'équipe qui travaillent avec ce compte
+4. **Vérifiez les dépendances**: Déterminez si d'autres comptes ou systèmes dépendent de ce compte
+5. **Documentez la raison**: Consignez pourquoi le compte est supprimé
+
+### Processus de suppression d'un compte
+
+Pour supprimer un seul compte:
+
+1. Accédez à `Accounts` → `Manage Accounts`
+2. **Repérez le compte visé** à l'aide de la recherche ou des filtres
+3. **Cliquez sur le nom du compte** pour ouvrir les détails du compte
+4. Cliquez sur `Edit Account`
+5. **Faites défiler jusqu'au bas** du formulaire d'édition
+6. **Repérez la section de suppression** (généralement signalée par des couleurs d'avertissement)
+7. **Lisez attentivement l'avertissement de suppression**
+8. **Saisissez le texte de confirmation** si demandé (souvent le nom de l'entreprise)
+9. Cliquez sur `Delete Account` et confirmez l'action
+
+:::warning
+Certains systèmes exigent de saisir le nom de l'entreprise ou l'identifiant du compte pour confirmer la suppression. Cela évite les suppressions accidentelles.
+:::
+
+### Effets immédiats après la suppression
+
+Après la suppression:
+- Le compte disparaît immédiatement de toutes les listes de comptes
+- Les utilisateurs perdent l'accès aux tableaux de bord Business App
+- Les services et intégrations automatisés s'arrêtent
+- Les données du compte deviennent inaccessibles
+- Les processus de facturation sont interrompus
+
+## Comment gérer les demandes de suppression de compte
+
+### Suppressions demandées par le client
+
+Lorsque des clients demandent la suppression d'un compte:
+
+1. **Comprenez la raison** de la demande de suppression
+2. **Expliquez les alternatives**, comme la désactivation du compte ou la mise en pause du service
+3. **Examinez les conditions contractuelles** concernant la conservation et la suppression des données
+4. **Obtenez une confirmation écrite** de la demande de suppression
+5. **Établissez un échéancier approprié** pour la suppression (tenez compte des délais de préavis)
+6. **Effectuez l'exportation des données** si le client demande ses données
+7. **Exécutez la suppression** en suivant les procédures internes
+
+### Décisions internes de suppression
+
+Pour les suppressions initiées par l'entreprise:
+
+1. **Documentez la justification commerciale** de la suppression
+2. **Obtenez les approbations appropriées** de la direction
+3. **Examinez les exigences légales et de conformité**
+4. **Prévoyez la conservation des données** si les règlements l'exigent
+5. **Communiquez avec les équipes concernées** avant la suppression
+6. **Exécutez la suppression** pendant des fenêtres de maintenance appropriées
+
+## Alternatives à la suppression de compte
+
+### Désactivation de compte
+
+Au lieu de la suppression, envisagez la désactivation:
+
+**Avantages de la désactivation:**
+- Préserve les données historiques pour les rapports
+- Permet la réactivation si les circonstances changent
+- Maintient la conformité aux exigences de conservation des données
+- Réduit le risque de perte de données accidentelle
+
+**Comment désactiver des comptes:**
+1. Modifiez les paramètres du compte
+2. Changez le statut du compte à « Inactif » ou « Désactivé »
+3. Retirez les produits et services actifs
+4. Désactivez l'accès des utilisateurs
+5. Retirez le compte des listes de comptes actifs
+
+### Archivage de compte
+
+Pour les comptes inactifs à long terme:
+
+1. **Déplacez les comptes vers des listes d'archives**
+2. **Retirez-les des flux de travail actifs**
+3. **Conservez les informations de base du compte**
+4. **Préservez les données de rapport**
+5. **Documentez la raison et la date de l'archivage**
+
+### Suspension de service
+
+Pour les problèmes temporaires:
+
+1. **Mettez en pause les services actifs** sans supprimer les données
+2. **Suspendez temporairement l'accès des utilisateurs**
+3. **Maintenez la structure du compte** pour faciliter la réactivation
+4. **Établissez la durée de la suspension** et les dates de révision
+
+## Comment gérer le nettoyage des comptes en double
+
+### Repérer les comptes en double
+
+Signes courants de comptes en double:
+- Noms d'entreprise similaires avec de légères variations
+- Même adresse mais noms d'entreprise différents
+- Numéros de téléphone ou coordonnées identiques
+- Même propriétaire d'entreprise avec plusieurs variantes de compte
+
+### Processus de résolution des doublons
+
+1. **Déterminez le compte principal** possédant les informations les plus complètes
+2. **Exportez les données des comptes en double** avant leur suppression
+3. **Fusionnez les informations importantes** dans le compte principal
+4. **Transférez tous les utilisateurs actifs** vers le compte principal
+5. **Déplacez l'historique des produits** et les notes importantes
+6. **Supprimez les comptes en double** après la consolidation des données
+
+### Prévenir les futurs doublons
+
+- Mettez en place des procédures de recherche approfondies lors de la création de comptes
+- Formez les membres de l'équipe à la détection des doublons
+- Utilisez des conventions de nommage cohérentes
+- Effectuez des audits de données réguliers pour repérer les doublons potentiels
+
+## Considérations sur la récupération et la sauvegarde des données
+
+### Sauvegarde des données avant la suppression
+
+Avant de supprimer des comptes importants:
+
+1. **Exportez toutes les données du compte**, y compris les coordonnées et les paramètres
+2. **Enregistrez les listes d'utilisateurs et les informations d'accès**
+3. **Téléchargez les fichiers et documents importants**
+4. **Exportez les données de rapport** pour vos dossiers historiques
+5. **Documentez les configurations de produits** pour référence
+
+### Limites de la récupération
+
+Après la suppression d'un compte:
+- Les données ne peuvent pas être récupérées du système
+- L'accès des utilisateurs ne peut pas être restauré
+- L'historique des produits est perdu de façon permanente
+- Les connexions d'intégration doivent être recréées
+
+## Foire aux questions (FAQ)
+
+<details>
+<summary>Puis-je récupérer un compte après sa suppression?</summary>
+
+Non, la suppression d'un compte est permanente et irréversible. Une fois supprimées, toutes les données du compte sont retirées définitivement du système et ne peuvent pas être récupérées.
+</details>
+
+<details>
+<summary>Quelle est la différence entre supprimer et désactiver un compte?</summary>
+
+La suppression retire définitivement toutes les données du compte, tandis que la désactivation préserve les données du compte tout en le rendant inactif. Les comptes désactivés peuvent être réactivés plus tard si nécessaire.
+</details>
+
+<details>
+<summary>Combien de temps devrais-je attendre avant de supprimer un compte inactif?</summary>
+
+Cela dépend de vos politiques d'entreprise et des exigences légales. De nombreuses organisations attendent de 6 à 12 mois après la fin du service avant d'envisager la suppression, ce qui laisse le temps à une éventuelle réactivation.
+</details>
+
+<details>
+<summary>Qu'advient-il de l'accès des utilisateurs lorsque je supprime un compte?</summary>
+
+Tout l'accès des utilisateurs est immédiatement révoqué lorsqu'un compte est supprimé. Les utilisateurs ne pourront plus se connecter à leur tableau de bord Business App ni accéder à aucun service lié au compte.
+</details>
+
+<details>
+<summary>Devrais-je supprimer les comptes des entreprises qui ont fermé?</summary>
+
+Tenez compte du type de fermeture: les fermetures temporaires peuvent justifier une désactivation, tandis que les fermetures permanentes, après des délais d'attente appropriés, peuvent justifier une suppression. Vérifiez toujours d'abord les exigences légales et de conformité.
+</details>
+
+<details>
+<summary>Puis-je supprimer plusieurs comptes en même temps?</summary>
+
+La plupart des systèmes ne prennent pas en charge la suppression en masse en raison de la nature permanente de cette action. Chaque compte nécessite généralement une confirmation de suppression individuelle pour éviter les suppressions massives accidentelles.
+</details>
+
+<details>
+<summary>Que devrais-je faire avec les comptes ayant des problèmes de facturation en suspens?</summary>
+
+Réglez les questions de facturation avant de supprimer le compte. La suppression peut compliquer les litiges de facturation ou les processus de recouvrement. La désactivation peut être plus appropriée jusqu'à ce que les questions financières soient réglées.
+</details>
+
+<details>
+<summary>Comment dois-je traiter les demandes de suppression provenant d'anciens employés?</summary>
+
+Seuls les utilisateurs actuellement autorisés ou les administrateurs de compte devraient pouvoir demander la suppression d'un compte. Vérifiez l'autorisation et suivez les procédures d'approbation de votre organisation pour les demandes de suppression.
+</details>
+
+<details>
+<summary>La suppression de l'entreprise associée entraînera-t-elle aussi la suppression du compte?</summary>
+
+Non, la suppression de l'entreprise associée n'entraîne pas la suppression du compte. Cependant, la suppression d'un compte entraînera la suppression de l'entreprise associée.
+</details>
+
+<details>
+<summary>J'ai supprimé mon compte, mais je continue d'être facturé: pourquoi?</summary>
+
+Si un produit de ce compte avait un engagement actif (comme un contrat annuel), la facturation se poursuit jusqu'à la fin de la période d'engagement, même après la suppression du compte. La suppression annule l'accès au produit, mais ne met pas fin prématurément à la facturation de l'engagement. Contactez le soutien si vous pensez que l'engagement a déjà expiré et que la facturation aurait dû cesser.
+</details>
+
+<details>
+<summary>Que faire si je veux arrêter des produits tout en conservant le compte?</summary>
+
+Vous pouvez annuler ou désactiver des produits individuels depuis la page de gestion des produits du compte sans supprimer le compte. Cela préserve les données et l'historique du compte tout en arrêtant les services du produit.
+</details>

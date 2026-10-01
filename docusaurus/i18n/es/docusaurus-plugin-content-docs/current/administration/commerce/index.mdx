@@ -1,0 +1,52 @@
+---
+id: administration-commerce
+title: Comercio
+description: "Administra el procesamiento de pagos, la configuración de facturación, los pedidos y las configuraciones de impuestos en Administration."
+sidebar_position: 2
+---
+
+# Comercio
+
+Commerce dentro de **Administration** te permite configurar el procesamiento de pagos, la automatización de facturación predeterminada, la configuración de pedidos y las tasas de impuestos. Estas se aplican en toda tu plataforma para que las cuentas nuevas tengan un comportamiento coherente de facturación, impuestos y pedidos.
+
+## Qué puedes hacer
+
+- **Configurar Vendasta Payments** – Crea cuentas de pago nuevas o conecta cuentas existentes de Stripe Standard; admite tarjetas, ACH y PAD en varios países
+- **Configurar la facturación predeterminada** – Elige el cobro automático o la generación de facturas para todas las cuentas nuevas; la configuración solo se aplica a las cuentas creadas después de que guardes
+- **Administrar la configuración de pedidos** – Configura los flujos de trabajo de pedidos, el cumplimiento y la gestión de pedidos
+- **Editar tasas de impuestos** – Cambia las tasas de impuestos y administra las exenciones; las tasas se aplican según el código postal del cliente
+
+## Cómo funciona
+
+- **Procesamiento de pagos** – Vendasta Payments (o Stripe conectado) se encarga del procesamiento; se aplica una comisión de plataforma del 0.75% al conectar Stripe. Disponible en Estados Unidos, Canadá, Nueva Zelanda, Australia, el Reino Unido, la República Checa (y más países con el apoyo de ventas)
+- **Facturación de suscripción** – Los valores predeterminados se aplican solo a las cuentas nuevas; puedes cambiar cualquier cuenta individual desde su propia configuración de facturación en `Accounts` → `Manage Accounts`
+- **Impuestos** – El impuesto se aplica automáticamente cuando las direcciones de los clientes incluyen códigos postales; se usa en facturas, líneas de partida, el carrito y los pedidos de venta
+
+## Artículos en esta sección
+
+- **[Vendasta Payments](./vendasta-payments/index.mdx)** – Creación de cuentas nuevas, conexión con Stripe, verificación, información bancaria, métodos de pago y soporte regional
+- **[Configuración de facturación predeterminada](./default-billing-settings/index.mdx)** – Facturación de suscripción predeterminada para cuentas nuevas: cobro de pagos, renovación de suscripción, programación y el memo de la factura
+- **[Configuración de pedidos](./order-settings/index.mdx)** – Flujos de trabajo de pedidos, cumplimiento y gestión de pedidos
+- **[Gestión de impuestos](./tax-rates/index.mdx)** – Tasas de impuestos, exenciones y cálculo de impuestos basado en la dirección
+
+## Primeros pasos
+
+1. **Procesamiento de pagos** – Ve a `Partner Center` → `Administration` → `Commerce Settings` → `Vendasta Payments`. Crea una cuenta nueva o conecta Stripe; completa la verificación y la información bancaria.
+2. **Facturación predeterminada** – Ve a `Administration` → `Default billing settings`. Activa el interruptor `Subscriptions` y luego establece `Payment collection`, `Subscription renewal`, `Subscription scheduling` y, opcionalmente, un `Memo`; aplícalo a los mercados si es necesario.
+3. **Impuestos** – Ve a `Administration` → `Tax Rates`. Edita las tasas (menú kebab); asegúrate de que las direcciones de los clientes tengan códigos postales para que se aplique el impuesto.
+
+:::tip
+Vendasta Payments no está disponible en los niveles Free o Trial (prevención de fraude). Completa los datos de contacto de facturación en `Administration` → `My billing`; la falta de dirección puede bloquear la activación en las regiones admitidas.
+:::
+
+## Manejo de errores y solución de problemas
+
+- **Pago: "Unsupported in Your Area"** – Completa el contacto de facturación y la dirección (con código postal) en `Administration` → `My billing`.
+- **Pago: sin opción de configuración** – Es posible que la cuenta sea Free/Trial, esté en una región no admitida o tenga restricciones.
+- **Los valores predeterminados de facturación no se aplican** – Los valores predeterminados afectan solo a las cuentas creadas *después* de que guardes; las cuentas existentes mantienen su configuración actual.
+- **No se aplica ningún impuesto** – La cuenta del cliente debe tener una dirección completa con código postal.
+- **Impuesto incorrecto** – Revisa la configuración de la tasa de impuestos y que la dirección coincida con la jurisdicción prevista.
+
+:::warning
+La falta de información de la dirección de facturación puede impedir la activación de Vendasta Payments. Completa todos los datos de contacto de facturación antes de la configuración.
+:::

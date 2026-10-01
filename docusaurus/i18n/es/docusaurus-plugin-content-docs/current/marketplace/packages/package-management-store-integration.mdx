@@ -1,0 +1,312 @@
+---
+title: "Package Management & Store Integration"
+sidebar_label: "Package Management & Store Integration"
+sidebar_position: 2
+description: "Guía sobre el ciclo de vida del paquete, cómo conectar los paquetes con la tienda (categorías y visibilidad) y cómo compartirlos con los clientes. La solución de problemas para paquetes faltantes, duplicados y problemas multimercado está en la guía de Package Troubleshooting."
+tags: [marketplace, packages, package-management, store-organization, package-sharing]
+keywords: [package management, edit packages, archive packages, arrange store, share package links, store integration, package lifecycle]
+---
+
+## ¿Qué es Package Management & Store Integration?
+
+Package Management & Store Integration abarca todo el ciclo de vida del paquete: edición, optimización, organización en la tienda y uso compartido con los clientes. Esto garantiza que tus paquetes funcionen de manera efectiva e impulsen las ventas.
+
+## ¿Por qué es importante Package Management & Store Integration?
+
+Una gestión efectiva de paquetes genera mejores resultados:
+
+- Responde rápidamente a los cambios del mercado y la retroalimentación de los clientes
+- Optimiza el rendimiento y la visibilidad del paquete
+- Organiza los paquetes estratégicamente en tu tienda
+- Comparte los paquetes de forma efectiva con los clientes
+- Controla el ciclo de vida y la disponibilidad del paquete
+
+## Qué incluye Package Management & Store Integration
+
+### Gestión del ciclo de vida del paquete
+- Edita paquetes publicados y borradores
+- Archiva y restaura paquetes
+- Elimina paquetes de forma permanente
+- Control de publicación en tiempo real
+
+### Organización de la tienda
+- Posicionamiento estratégico de paquetes
+- Configuración del orden de los paquetes
+- Gestión de categorías
+- Control de la jerarquía visual
+
+### Uso compartido de paquetes
+- Enlaces Buy it Now para clientes específicos
+- Enlaces directos al paquete para uso general
+- Enlaces a paquetes desde `Marketing` → `Campaigns`
+- Seguimiento del rendimiento
+
+## Cómo gestionar el ciclo de vida del paquete
+
+### Agregar varias instancias de un producto a un paquete
+
+No puedes agregar el mismo producto más de una vez a un paquete directamente. Para vender varias unidades de un producto, usa **complementos** en su lugar:
+
+1. En Vendor Center, crea un complemento para el producto
+2. Activa `Allow multiple purchases per account` en el complemento si es necesario
+3. Agrega el producto base más el complemento al paquete
+
+Alternativamente, si el producto tiene activado `Allow multiple purchases per account` (en la configuración avanzada de Editions), los clientes pueden comprarlo varias veces, pero ten en cuenta que esto desactiva la compatibilidad con complementos para ese producto.
+
+### Modelo de precios del paquete y compatibilidad con facturas/carrito de compras
+
+Los paquetes deben usar el **modelo de precios por línea** para funcionar con facturas y el pago mediante el carrito de compras. Los paquetes heredados (creados antes de la actualización del modelo de precios) se migran automáticamente la primera vez que se abren y guardan en el editor de paquetes. Si un paquete no aparece como opción al crear una factura, ábrelo en `Marketplace` → `Packages`, guárdalo e inténtalo de nuevo.
+
+### Visibilidad del precio en la vista previa de la tienda
+
+Para que el precio del paquete se muestre a los clientes en la tienda, el `Purchase behaviour` del paquete debe estar configurado como `Add to Shopping Cart`. Si se selecciona otra opción (Contact Sales, External URL), el precio se oculta intencionalmente en la vista previa y en el listado de la tienda.
+
+### Copiar un paquete entre mercados
+
+Para hacer que un paquete esté disponible en un mercado diferente:
+
+1. Ve a `Marketplace` → `Packages`
+2. Cambia al mercado que contiene el paquete que quieres copiar
+3. Haz clic en el `menú de opciones` (⋮) en el paquete
+4. Selecciona `Copy`
+5. Elige el mercado objetivo en el menú desplegable
+6. Haz clic en `Save & Publish`
+
+El paquete copiado aparece en el mercado objetivo. Ajusta el precio o el contenido según sea necesario para ese mercado.
+
+### Editar paquetes
+1. Ve a `Partner Center` → `Marketplace` → `Packages`
+2. Selecciona el mercado objetivo (si usas Markets)
+3. Haz clic en el paquete para modificarlo
+4. Edita cualquier elemento:
+   - Nombre y descripción del paquete
+   - Contenido y cantidades de productos
+   - Precio y frecuencia de facturación por línea individual
+   - Precio total del paquete con asignación inteligente de precios
+   - Configuración de visibilidad predeterminada
+   - Configuración del comportamiento de compra
+   - Contenido de marketing
+5. Elige la opción de guardado:
+   - `Save & Publish`: actualizaciones en vivo inmediatas
+   - `Save as Draft`: conserva los cambios sin publicar
+
+:::info Migración automática
+Los paquetes existentes que usan el modelo de precios heredado se convertirán automáticamente al modelo de precios por línea la primera vez que se abran y guarden en el constructor de paquetes. El precio y el contenido se conservan; revísalos antes de guardar para confirmar que todo se vea correcto.
+:::
+
+### Archivar paquetes
+1. Ve a `Partner Center` → `Marketplace` → `Packages`
+2. Selecciona el mercado correspondiente (si aplica)
+3. Busca el paquete objetivo
+4. Haz clic en el `menú de opciones` (⋮) → `Archive`
+5. Confirma la decisión de archivar
+
+**Beneficios**:
+- Eliminación inmediata de la tienda del cliente
+- Conserva toda la configuración y los ajustes
+- Mantiene los datos históricos de rendimiento
+- Permite una restauración rápida
+- Visible en Partner Center con el filtro `Archived`
+
+#### Restaurar paquetes archivados
+La restauración devuelve los paquetes archivados al estado activo, haciéndolos disponibles para la compra del cliente.
+
+**Proceso de restauración**
+1. Ve a `Partner Center` → `Marketplace` → `Packages`
+2. Accede al menú `Filters`
+3. Selecciona el filtro `Archived` para ver los paquetes archivados
+4. Ubica el paquete para restaurar
+5. Haz clic en el `menú de opciones` (⋮) → `Restore`
+6. El paquete vuelve de inmediato al estado activo
+
+#### Eliminar paquetes de forma permanente
+
+:::warning
+La eliminación quita los paquetes del sistema de forma permanente. Esta acción no se puede deshacer y solo debe usarse para paquetes que nunca se volverán a necesitar.
+:::
+
+**Requisitos**
+- Los paquetes deben estar archivados antes de eliminarlos
+- La eliminación es permanente e irreversible
+- Considera las necesidades de negocio a largo plazo antes de eliminar
+
+**Proceso de eliminación**
+1. Ve a `Partner Center` → `Marketplace` → `Packages`
+2. Aplica el filtro `Archived` en el menú Filters
+3. Ubica el paquete para eliminar
+4. Haz clic en el `menú de opciones` (⋮) → `Delete`
+5. Confirma la eliminación permanente
+
+### Video: archivar, restaurar y eliminar paquetes
+
+Este recorrido muestra cómo archivar un paquete, restaurarlo desde el filtro `Archived` y eliminar permanentemente un paquete archivado.
+
+<iframe 
+  src="https://drive.google.com/file/d/1reJejr8GPxZHrIfRwBDPboxQUln36N-H/preview" 
+  width="640" 
+  height="480" 
+  allowFullScreen
+></iframe>
+
+## Uso compartido de paquetes e interacción con el cliente
+
+### Métodos para compartir enlaces de paquetes
+
+Partner Center ofrece tres métodos distintos para compartir enlaces de paquetes con clientes y prospectos, cada uno diseñado para casos de uso e interacciones con el cliente específicos.
+
+#### Método 1: enlaces Buy it Now
+
+**Propósito**: crear enlaces específicos de cuenta y usuario que permiten la compra inmediata del paquete sin iniciar sesión en Business App.
+
+**Casos de uso**
+- Conversaciones de venta directa con prospectos específicos
+- Contacto por correo electrónico personalizado a clientes objetivo
+- Seguimiento del equipo de ventas con clientes potenciales calificados
+- Compra simplificada para clientes conocidos
+
+**Crear un enlace**
+1. Ve a `Partner Center` → `Marketplace` → `Packages`
+2. Haz clic en el `menú de opciones` (⋮) en el paquete objetivo
+3. Selecciona `Create Buy it Now link`
+4. Elige el `Account` y `User` específicos
+5. Copia el enlace generado para distribuirlo
+
+**Requisitos**
+- El paquete debe estar publicado
+- El comportamiento de compra debe estar configurado como `Add to Shopping Cart`
+- El usuario objetivo ya debe existir en el sistema
+
+**Configuración de usuario**
+Antes de crear enlaces Buy it Now, asegúrate de que existan los usuarios objetivo:
+1. Ve a `Partner Center` → `Accounts` → `Manage Accounts`
+2. Selecciona la cuenta objetivo y haz clic en `Invite users`
+3. Escribe el correo electrónico de cada usuario en el panel Invite users (los usuarios existentes se emparejan mientras escribes) y envía el lote. Cada usuario invitado recibe el [correo de incorporación](/business-app/ai-onboarding-experience).
+4. Configura los permisos y el acceso del usuario
+
+<img src={require('./img/marketplace/packages/add-user-to-account.jpg').default} alt="Adding a user to an account" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+**Experiencia del cliente**
+- No se requiere iniciar sesión en Business App para comprar
+- Acceso directo a la información del paquete y al proceso de pago
+- Se solicita la configuración de contraseña después de completar la compra (para usuarios nuevos)
+- Transición fluida al acceso completo de Business App
+
+<img src={require('./img/marketplace/packages/buy-it-now-link.jpg').default} alt="Buy it Now link interface" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+#### Método 2: enlaces directos al paquete
+
+**Propósito**: enlaces de propósito general que funcionan para cualquier cliente pero requieren autenticación en Business App.
+
+**Casos de uso**
+- Integración con el sitio web y botones de llamado a la acción
+- Campañas de marketing generales y anuncios
+- Uso compartido y promoción en redes sociales
+- Marketing por correo electrónico a audiencias amplias
+
+**Generar enlace**
+Los enlaces directos están disponibles automáticamente para todos los paquetes publicados con el comportamiento de compra `Add to Shopping Cart`. Accede a estos enlaces al ver o editar paquetes en `Partner Center` → `Marketplace` → `Packages`.
+
+**Distribuir el enlace**
+- Copia la URL acortada usando el botón `Copy link`
+- Incrústalo en sitios web, correos electrónicos o materiales de marketing
+- Compártelo a través de cualquier canal de comunicación
+
+**Experiencia del cliente**
+- Adición automática del paquete al carrito de compras
+- Redirección a la página `Cart Contents` para revisión
+- Se requiere iniciar sesión para usuarios no autenticados
+- Opción de creación rápida de cuenta para clientes nuevos
+
+<img src={require('./img/marketplace/packages/direct-link-to-package.jpg').default} alt="Direct link to package interface" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+#### Método 3: Marketing → Campaigns
+
+**Propósito**: agregar enlaces de paquetes o productos a los correos electrónicos que creas en `Partner Center` → `Marketing` → `Campaigns`.
+
+**Pasos**
+1. Ve a `Partner Center` → `Marketing` → `Campaigns`
+2. Crea una campaña nueva o edita un borrador de campaña
+3. Haz clic en `Add new block` → `Button`
+4. Ingresa el `Button text` tú mismo, o haz clic en `Add dynamic content` y elige `Product details` → `Product name` (u otro campo dinámico que prefieras)
+5. Para `Button link`, agrega contenido dinámico o pega el enlace al producto
+6. Ajusta el resto del correo electrónico como quieras, luego `Save` y envía la campaña
+
+<div style={{display: 'flex', gap: '16px', alignItems: 'flex-start'}}>
+<img src={require('./img/marketplace/packages/email-campaign-add-block.png').default} alt="Email composer with Add new block to start composing your email and the Add new block control" style={{width: '50%', flexShrink: 0, border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+<img src={require('./img/marketplace/packages/email-campaign-button-block.png').default} alt="Button block settings for button text and button link, including Add dynamic content" style={{width: '30%', flexShrink: 0, border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+</div>
+
+**Beneficios**
+- Recomendaciones de paquetes personalizadas
+- El mismo editor y flujo de campañas que el resto de **Marketing**
+- Seguimiento del rendimiento y analíticas
+- Segmentación y orientación automatizada de clientes
+
+#### Flujo de trabajo del enlace Buy it Now
+
+Cuando un cliente hace clic en un enlace Buy it Now, el flujo actual es:
+
+1. Se le pide al cliente que inicie sesión (o cree una cuenta)
+2. Después de iniciar sesión, se le dirige a `Business App` → `Store`, donde el paquete ya está precargado
+3. Completa el pago desde ahí
+
+El enlace no lleva a los clientes directamente a una página de pago. Se dirige a través de Business App.
+
+#### Agregar un botón Contact Sales a un paquete
+
+Para que el botón `Contact Sales` aparezca en un paquete en la tienda, el paquete debe tener un **vendedor asignado a través de un Contact Form**. Sin un vendedor configurado, la opción `Contact Sales` no se mostrará, incluso si `Contact Sales` está seleccionado como opción de compra. Configura esto en `Manage Store` → `[paquete]` → `Purchase behaviour` → `Contact Sales`.
+
+#### Texto de Upgrade Path y Call to Action
+
+El ajuste `Upgrade Path` (a qué producto se hace la venta adicional) y el texto del botón `Call to Action` se configuran de forma independiente. Cambiar el Upgrade Path no actualiza automáticamente el texto del CTA. Actualiza la etiqueta del botón manualmente para que coincida.
+
+#### URL de vista previa de paquetes en borrador
+
+Los enlaces de vista previa para paquetes en borrador (no publicados) son accesibles para cualquiera que tenga la URL, aunque el paquete no esté en la Store pública. Esto es intencional. Te permite compartir una vista previa con las partes interesadas para su revisión antes de publicar. El paquete no aparecerá en la tienda ni se podrá comprar hasta que se publique.
+
+#### Requisitos previos del botón `Check out` de Business App
+
+El botón `Check out` en la Store de Business App requiere que dos cosas estén activas:
+
+- **Orders** debe estar activado para el partner
+- **Vendasta Payments** debe estar configurado
+
+Si falta alguno de los dos, el botón `Check out` no funcionará o no aparecerá.
+
+### Buenas prácticas para compartir paquetes
+
+**Estrategia de comunicación**
+- **Establecer contexto**: explica el valor y la relevancia del paquete antes de compartir enlaces
+- **Planificación de seguimiento**: establece un plan de comunicación para la interacción posterior al envío
+- **Múltiples puntos de contacto**: usa diferentes métodos de uso compartido para un alcance integral
+- **Seguimiento del rendimiento**: supervisa el uso de enlaces y las tasas de conversión
+
+**Seguridad y acceso**
+- Los enlaces Buy it Now son específicos de usuario y no deben compartirse ampliamente
+- Los enlaces directos se pueden compartir públicamente pero requieren autenticación del cliente
+- Revisión y optimización periódica del rendimiento de los enlaces
+- Considera la expiración de enlaces para ofertas sensibles al tiempo
+
+## Integración con la tienda y gestión de visibilidad
+
+:::info Impacto en el cliente
+
+El orden de los paquetes determina cómo ven los clientes tus ofertas tanto en la tienda de Business App como en Public Store. Un orden estratégico puede afectar significativamente las tasas de conversión y los valores de pedido promedio.
+
+:::
+
+### Gestión y organización de categorías
+
+**Asignar categorías para la visibilidad**
+La asignación adecuada de categorías garantiza que los paquetes aparezcan en secciones lógicas de la tienda y se puedan descubrir mediante la exploración del cliente. Para crear categorías, asignar paquetes y controlar la visibilidad por mercado, consulta **[Manage Store](../manage-store/index.mdx)** → **Categories**.
+
+**Configuración**
+- **Package Categories**: asigna paquetes a categorías de función de negocio relevantes
+- **Store Categories**: controla qué categorías aparecen en la tienda orientada al cliente
+- **Market Categories**: personaliza la visibilidad de categorías por mercado geográfico
+
+### Problemas de tienda y visibilidad
+
+Para paquetes que no aparecen en la tienda de Business App, aparecen más de una vez en Public Store, o se ven incorrectos entre mercados, usa la **[Package Troubleshooting & Advanced Guide](./package-troubleshooting-guide.mdx)**. Comienza con **Common package visibility issues**, **Duplicate packages in Public Store** y **Multi-market package synchronization**.
+
+Una gestión efectiva de paquetes requiere atención continua a las necesidades del cliente, las condiciones del mercado y los objetivos de negocio. Las herramientas y estrategias descritas en esta guía proporcionan la base para construir un negocio exitoso basado en paquetes que impulse el crecimiento de ingresos y la satisfacción del cliente.

@@ -1,0 +1,194 @@
+---
+id: field-layouts
+title: Dispositions des champs
+sidebar_label: Dispositions des champs
+sidebar_position: 2
+description: Regroupez, réorganisez et masquez les champs CRM pour contrôler la disposition des fiches de contact, d'entreprise, d'opportunité et d'objet personnalisé
+tags: [crm, custom-fields, field-layouts]
+keywords: [field layout, field groups, organize layout, hidden fields, unassigned fields, CRM fields]
+---
+
+# Dispositions des champs
+
+Une disposition de champs contrôle la façon dont les champs CRM sont regroupés et ordonnés sur une fiche. Chaque groupe devient une section étiquetée, et l'ordre des groupes correspond à l'ordre dans lequel un utilisateur les lit.
+
+La disposition s'applique partout où les champs d'une fiche sont affichés :
+
+- Le formulaire de **création** d'une nouvelle fiche
+- Le formulaire de **modification** d'une fiche existante
+- Le panneau de **profil** de la fiche
+
+Chaque type d'objet démarre sur une disposition standard. Lorsque vous modifiez la disposition, votre modification devient une substitution qui s'applique uniquement à votre CRM — la disposition standard reste disponible et vous pouvez y revenir à tout moment.
+
+## Ce que vous pouvez modifier
+
+- Regrouper des champs liés sous un nom que vous choisissez
+- Réorganiser les groupes, et réorganiser les champs au sein d'un groupe
+- Choisir comment les champs non groupés sont triés
+- Masquer les champs que vous n'utilisez pas, sans supprimer leurs données ni le champ lui-même
+
+## Avant de commencer
+
+Vous avez besoin de la même autorisation que celle qui vous permet de créer et de modifier des champs personnalisés. Si vous pouvez ouvrir `Administration` → `Custom Fields` et créer un champ, vous pouvez modifier la disposition.
+
+Les dispositions sont définies par type d'objet. Les contacts, les entreprises, les opportunités et chaque type d'objet personnalisé ont leur propre disposition, modifiée séparément.
+
+## Ouvrir l'éditeur de disposition
+
+1. Allez dans Partner Center → `Administration` → `Custom Fields`.
+2. Sélectionnez un objet dans la liste de gauche — **Contacts**, **Companies**, **Opportunities**, ou l'un de vos objets personnalisés.
+3. Cliquez sur **Organize layout**.
+
+<img src={require('./img/organize-layout-button.png').default} alt="Page des objets CRM avec Contacts sélectionné, montrant le bouton Organize layout à côté de Create field au-dessus du tableau des champs" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## L'éditeur
+
+L'éditeur comporte trois panneaux.
+
+| Panneau | Ce qu'il contient |
+| --- | --- |
+| **Unassigned** | Les champs qui ne sont dans aucun groupe. Ils apparaissent quand même sur les fiches, sous chaque groupe nommé. |
+| **Field groups** | Vos groupes nommés, dans l'ordre où ils apparaissent sur la fiche. |
+| **Hidden fields** | Les champs retirés de la fiche. Leurs données sont conservées. |
+
+Faites glisser un champ entre deux panneaux, ou entre des groupes. Pour déplacer plusieurs champs à la fois, sélectionnez-les et utilisez **Add to group** ou **Hide field** depuis le menu de sélection.
+
+<img src={require('./img/organize-layout-editor.png').default} alt="L'éditeur de disposition Organize field layout pour Contacts, avec le panneau Unassigned et son contrôle de tri à gauche, les groupes Basic information et About contact au centre, et le panneau Hidden fields à droite" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Groupes de champs
+
+- Cliquez sur **Add group** et donnez-lui un nom. Chaque groupe a besoin d'un nom, et les noms doivent être uniques.
+- Renommez un groupe avec l'icône crayon dans son en-tête. Appuyez sur Entrée pour confirmer ou sur Échap pour annuler.
+- Supprimez un groupe avec l'icône poubelle. Les champs qu'il contenait retournent dans **Unassigned**.
+- Cliquez sur le nom d'un groupe, ou sur le chevron, pour le réduire ou l'agrandir. Le nombre à côté du nom indique combien de champs il contient.
+- Faites glisser un groupe par sa poignée pour le déplacer vers le haut ou vers le bas. L'ordre ici est l'ordre sur la fiche.
+- Faites glisser des champs au sein d'un groupe pour les réorganiser.
+- Utilisez le menu **⋮** d'un champ pour **Move to** un autre groupe, **Remove to Unassigned**, ou **Hide field**.
+- Dans **Unassigned**, le bouton **+** sur un champ est un raccourci : il liste chaque groupe afin que vous puissiez y déposer le champ directement, ou le masquer.
+
+:::info
+Un groupe doit contenir au moins un champ affiché. Les groupes vides empêchent l'enregistrement — ajoutez un champ ou supprimez le groupe.
+:::
+
+### Champs non assignés
+
+Tout champ qui n'est ni dans un groupe ni masqué se trouve dans **Unassigned**. Ces champs apparaissent quand même sur la fiche, après tous les groupes nommés.
+
+Utilisez **Sort unassigned by** pour choisir leur ordre :
+
+- **By recent update** — les définitions de champ les plus récemment mises à jour en premier. C'est l'option par défaut.
+- **Alphabetical** — par nom de champ, ordre croissant.
+
+Un champ personnalisé nouvellement créé démarre non assigné, il apparaît donc immédiatement sur les fiches sans que vous ayez à modifier la disposition.
+
+### Champs masqués
+
+Faites glisser un champ vers **Hidden fields** pour le retirer de la fiche. Masquer n'est pas supprimer : la définition du champ et toutes ses données stockées restent exactement telles quelles, et le champ reste disponible pour les imports, les automatisations et l'API.
+
+<img src={require('./img/organize-layout-hidden.png').default} alt="Le panneau Hidden fields contenant trois champs de contact masqués sous le titre Fields here are hidden from contact records" style={{width: '400px', maxWidth: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Pour réintégrer un champ masqué, ouvrez son menu **⋮** et choisissez **Restore to Unassigned**. À partir de là, faites-le glisser dans le groupe de votre choix.
+
+<img src={require('./img/organize-layout-restore.png').default} alt="Le menu d'un champ masqué ouvert dans le panneau Hidden fields, montrant l'action Restore to Unassigned" style={{width: '400px', maxWidth: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Champs que vous ne verrez pas dans l'éditeur
+
+Les champs en lecture seule n'apparaissent pas dans l'éditeur, pas plus que les champs qui ne sont pas actifs pour votre CRM. Leur position dans la disposition est préservée, vous n'avez donc rien à faire à leur sujet.
+
+Pour cette raison, un groupe dont les seuls champs restants sont en lecture seule est considéré comme vide et empêche l'enregistrement.
+
+### Noms des champs dans l'éditeur
+
+L'éditeur affiche chaque champ sous le nom que vos utilisateurs voient réellement. Si vous avez remplacé le titre d'un champ pour les filtres ou les colonnes de tableau, l'éditeur affiche ce titre plutôt que le nom de champ sous-jacent.
+
+## Enregistrer vos modifications
+
+Cliquez sur **Done**. L'éditeur affiche **Saving...** puis **All changes saved**.
+
+:::warning
+Rien n'est enregistré tant que vous n'avez pas cliqué sur **Done**. Quitter l'éditeur avant d'enregistrer annule vos modifications.
+:::
+
+En cas d'échec de l'enregistrement, le message vous indique quoi corriger :
+
+| Message | Ce qu'il signifie |
+| --- | --- |
+| Remove all empty groups before saving | Un groupe n'a aucun champ affiché. Ajoutez-en un ou supprimez le groupe. |
+| Group name is required | Un groupe a été laissé sans nom. |
+| Two or more groups have the same ID — rename one before saving | Deux groupes partagent le même nom. Renommez-en un. |
+| A field appears in more than one group — each field can only belong to one group | Retirez le champ de l'un des groupes. |
+| You don't have permission to modify this layout | Votre utilisateur ne peut pas modifier les champs CRM. |
+| Could not reach the server — check your connection and try again | Problème réseau. Vos modifications sont toujours à l'écran, donc réessayez **Done**. |
+
+## Réinitialiser à la disposition standard
+
+**Reset to standard** supprime vos groupes personnalisés et l'ordre des champs pour le type d'objet en cours de modification, et le remet sur la disposition standard. Une confirmation vous sera demandée.
+
+La réinitialisation n'affecte que la disposition. Aucun champ ni aucune donnée de champ n'est supprimé, et les champs masqués redeviennent visibles.
+
+## Champs supprimés
+
+Si un champ est supprimé après que vous l'avez placé dans un groupe, il cesse simplement d'apparaître. Vous n'avez pas besoin de modifier la disposition pour nettoyer après une suppression.
+
+## Fiches multi-établissements
+
+Les vues multi-établissements combinent des champs provenant de plusieurs comptes, elles utilisent donc toujours la disposition standard. Une substitution de disposition définie sur un compte ne s'applique pas à un résultat multi-établissements fusionné.
+
+## Dispositions des champs dans les modèles de compte
+
+Les dispositions des champs sont incluses dans les modèles de compte. Consultez [Modèles de compte](/accounts/manage-accounts/account-templates) pour savoir comment les modèles sont créés et appliqués.
+
+- Seules les dispositions personnalisées sont capturées. Les types d'objet toujours sur la disposition standard sont ignorés.
+- Si une disposition fait référence à des champs personnalisés ou à un type d'objet personnalisé que le compte cible ne possède pas, ils y sont créés au préalable et la disposition est repointée vers eux.
+- L'application d'un modèle remplace la disposition du compte cible pour ce type d'objet.
+
+## Questions fréquentes
+
+<details>
+<summary>Masquer un champ supprime-t-il ses données ?</summary>
+
+Non. Masquer retire uniquement le champ de l'affichage de la fiche. La définition du champ et toutes les valeurs stockées sont conservées, et le champ continue de fonctionner dans les imports, les automatisations et l'API. Vous pouvez le restaurer à tout moment depuis le panneau **Hidden fields**.
+
+</details>
+
+<details>
+<summary>Où les groupes apparaissent-ils réellement ?</summary>
+
+Sur le formulaire de création, le formulaire de modification et le panneau de profil de la fiche, sous forme de sections étiquetées dans l'ordre que vous avez défini.
+
+</details>
+
+<details>
+<summary>Qu'advient-il des champs que je ne place pas dans un groupe ?</summary>
+
+Ils apparaissent sur la fiche après tous les groupes nommés, dans l'ordre que vous avez choisi sous **Sort unassigned by**.
+
+</details>
+
+<details>
+<summary>Chaque type d'objet peut-il avoir une disposition différente ?</summary>
+
+Oui. Les contacts, les entreprises, les opportunités et chaque type d'objet personnalisé ont leur propre disposition, modifiée séparément.
+
+</details>
+
+<details>
+<summary>Pourquoi ne puis-je pas enregistrer ?</summary>
+
+Le plus souvent, il s'agit d'un groupe vide ou d'un groupe sans nom. Chaque groupe a besoin d'un nom unique et d'au moins un champ affiché. Le message d'erreur précise le problème exact.
+
+</details>
+
+<details>
+<summary>Un nouveau champ personnalisé doit-il être ajouté à la disposition ?</summary>
+
+Non. Les nouveaux champs atterrissent dans **Unassigned** et apparaissent immédiatement sur les fiches. Déplacez-les dans un groupe lorsque vous voulez qu'ils figurent dans une section spécifique.
+
+</details>
+
+<details>
+<summary>Puis-je annuler une modification de disposition ?</summary>
+
+Il n'y a pas d'annulation en une seule étape. Faites glisser les champs à leur position d'origine et cliquez sur **Done**, ou utilisez **Reset to standard** pour annuler l'ensemble de la substitution pour ce type d'objet.
+
+</details>

@@ -1,0 +1,115 @@
+---
+title: Integra Salesforce con Partner Center
+sidebar_label: Salesforce
+sidebar_position: 3
+description: Conecta Salesforce con Partner Center y Business App para una sincronización bidireccional de contactos y empresas.
+---
+
+# Integra Salesforce con Partner Center
+
+La integración de Salesforce habilita la sincronización bidireccional de datos de contactos y empresas entre Business App/Partner Center y Salesforce. Una vez conectada, las actualizaciones realizadas en cualquiera de los dos sistemas se sincronizan automáticamente con el otro, manteniendo los registros alineados entre plataformas.
+
+## Por qué usar la integración de Salesforce
+
+Muchos equipos dependen tanto de Salesforce como de Business App para gestionar las relaciones con los clientes. Sin automatización, mantener los datos alineados requiere trabajo manual y a menudo genera errores. Esta integración:
+
+- Elimina la entrada manual de datos entre sistemas
+- Mantiene la información de contactos y empresas precisa y actualizada
+- Reduce los registros duplicados o en conflicto
+- Ayuda a los equipos de ventas, marketing y cumplimiento a trabajar con una fuente de información coherente
+
+## Quién puede usarla
+
+Tanto tú como tus clientes SMB. Tú administras la conexión en **Partner Center**, mientras que tus clientes se benefician de los datos sincronizados dentro de **Business App**.
+
+## Qué se sincroniza
+
+| Objeto | Dirección |
+| --- | --- |
+| Contactos | Bidireccional (Salesforce ↔ Business App/Partner Center) |
+| Empresas | Bidireccional (Salesforce ↔ Business App/Partner Center) |
+
+:::info
+Solo los contactos y las empresas se incluyen en la sincronización.
+:::
+
+## Acceso a Salesforce para empleados de IA
+
+También hay disponible un **Salesforce MCP** en [Capacidades de IA](../../../ai/ai-capabilities/index.md). Agrégalo a cualquier empleado de IA para darle acceso directo a los datos del CRM de Salesforce (contactos, empresas y leads), de modo que el empleado de IA pueda consultar registros durante una conversación, hacer referencia a actividad reciente o responder preguntas basadas en datos en vivo de Salesforce.
+
+### Qué puede hacer el MCP
+
+El MCP expone herramientas de búsqueda de Salesforce que el empleado de IA usa según sea necesario. Puede:
+
+- **Buscar contactos** y devolver el nombre, el correo electrónico y el teléfono.
+- **Buscar empresas** y devolver el nombre, la industria y el sitio web.
+- **Buscar leads** y devolver el nombre, el correo electrónico, la empresa y el estado.
+- **Aplicar filtros** (nombre, correo electrónico, industria, etc.) para acotar los resultados cuando el usuario proporciona criterios específicos.
+
+### MCP frente a sincronización bidireccional
+
+El MCP es independiente de la sincronización bidireccional descrita anteriormente:
+
+- La **sincronización bidireccional** mantiene los registros de contactos y empresas alineados automáticamente entre ambos sistemas.
+- El **MCP** permite que un empleado de IA consulte Salesforce a demanda, y también cubre los leads, algo que la sincronización no hace.
+
+Puedes usar cualquiera de las dos opciones, o ambas juntas.
+
+### Agrega el MCP a un empleado de IA
+
+Abre tu empleado de IA, agrega una nueva capacidad y elige la conexión **Salesforce MCP**. Consulta [Creación de capacidades personalizadas](../../../ai/ai-capabilities/creating-custom-capabilities.md) para conocer el flujo de configuración completo.
+
+## Conecta Salesforce
+
+1. En Partner Center, ve a `Administration` → `Connections` → `Browse`.
+2. Selecciona `Salesforce` y luego haz clic en `Connect Salesforce`.
+3. En el formulario previo a la conexión, elige las opciones de sincronización que quieras habilitar y luego haz clic en `Continue`.
+4. Autoriza la conexión usando `Salesforce OAuth`. Inicia sesión en tu cuenta de Salesforce y otorga los permisos solicitados.
+5. En la página `Connection Configuration`, confirma que la sincronización esté habilitada para `Contacts` y `Companies`.
+
+Una vez establecida la conexión, los registros comienzan a sincronizarse automáticamente.
+
+## Verifica la sincronización
+
+Prueba la conexión en ambas direcciones:
+
+- Crea o actualiza un **contacto** o una **empresa** en Salesforce y confirma que el registro aparezca en Business App/Partner Center.
+- Crea o actualiza un **contacto** o una **empresa** en Business App/Partner Center y confirma que el registro aparezca en Salesforce.
+
+Los cambios normalmente se sincronizan en unos minutos.
+
+## Notas importantes
+
+:::warning Las eliminaciones no se sincronizan
+Eliminar un registro en un sistema **no** elimina automáticamente el registro correspondiente en el otro. Elimina los registros manualmente en cada plataforma si quieres que se eliminen de ambos.
+:::
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Qué hace la integración de Salesforce?</summary>
+
+Habilita una sincronización bidireccional de información de contactos y empresas entre Salesforce, Partner Center y Business App, manteniendo los datos coherentes entre plataformas.
+
+</details>
+
+<details>
+<summary>¿Quién puede usar esta integración?</summary>
+
+Tanto tú como tus clientes SMB. Tú la administras en Partner Center, mientras que tus clientes se benefician de los datos sincronizados dentro de Business App.
+
+</details>
+
+<details>
+<summary>¿Qué datos se incluyen en la sincronización?</summary>
+
+Contactos y empresas.
+
+</details>
+
+<details>
+<summary>¿Cómo desconecto Salesforce?</summary>
+
+Ve a `Administration` → `Connections`, abre la conexión de Salesforce y elige desconectar. Después de desconectar, no se sincronizarán más cambios entre los dos sistemas.
+
+</details>

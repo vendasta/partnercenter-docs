@@ -1,0 +1,152 @@
+---
+title: "Permisos: ¿qué hace cada permiso?"
+sidebar_label: Permisos
+description: "Aprende sobre los diferentes permisos y qué controlan en Partner Center."
+sidebar_position: 2
+tags: [permissions, administration, partner-center]
+keywords: [permissions, admin permissions, salesperson permissions]
+---
+
+Es posible que necesites restringir el acceso de un Partner Center admin o Salesperson a cuentas o funciones, por ejemplo, para limitar la lista de acciones, mantener privada la información del cliente o simplificar la experiencia.
+
+## Acceder a la pantalla de permisos
+
+1. Ve a `Partner Center` → `Administration` → `My team` y busca al usuario.
+2. Haz clic en `⋮` → `Edit member`. Para ver la lista completa de permisos, el usuario debe ser un admin. Si la casilla de admin está marcada, haz clic en **Show more permissions** para ver todos los permisos editables.
+
+![Pantalla de edición de permisos de un miembro](./img/administration/my-team/edit-member-permissions.jpg)
+
+## Permisos de admin
+
+Los permisos de admin controlan qué puede ver y hacer un admin en Partner Center, desde Automations y Marketplace hasta cuentas, facturación y administración de equipo.
+
+#### Can view and edit Automations
+
+- **Off**: la pestaña Automations está oculta en la navegación izquierda.
+- **On**: la pestaña Automations se muestra; el admin puede ver, administrar y editar todas las automatizaciones.
+
+#### Access to Dashboard
+
+Cuando está activado, el admin tiene acceso a **Home** y **Reports** en la navegación de Partner Center. El acceso adicional a informes se controla mediante otros permisos de admin.
+
+#### Access to company billing reports
+
+- **On**: acceso a My billing, Financial documents, Reports, My Plan y Billing pricing.
+- **Off**: sin acceso a esas áreas.
+
+#### Able to customize the platform
+
+- **Off**: sin acceso al enlace **Customize** bajo `Partner Center` → `Administration`.
+- **On**: acceso completo a **Customize** y todo lo que contiene.
+
+#### Can view and edit company profile
+
+- **Off**: sin acceso al enlace **Company Profile** bajo `Partner Center` → `Administration`.
+- **On**: acceso completo a **Company Profile** y todo lo que contiene.
+
+#### Can access Marketplace
+
+- **Off**: la pestaña Marketplace está oculta; el precio mayorista se elimina de los pedidos.
+- **On**: la pestaña Marketplace se muestra; el admin puede acceder a Discover Products, Products, Packages, Manage Store y Open Vendor Center. El precio mayorista es visible en los pedidos.
+
+#### Can manage accounts and users
+
+- **Off**: **Users** y **Accounts** bajo la pestaña Businesses están ocultos.
+- **On**: **Users** y **Accounts** se muestran.
+
+#### Can manage Marketing
+
+- **Off**: la pestaña Marketing está oculta.
+- **On**: la pestaña Marketing se muestra.
+
+#### Can manage Sales
+
+Permiso heredado; será retirado.
+
+#### Can manage Task Manager
+
+- **Off**: la pestaña Tasks está oculta.
+- **On**: la pestaña Tasks se muestra; el admin puede acceder a Task Manager.
+
+#### Can manage groups
+
+Permite al admin crear y ver grupos multiubicación.
+
+#### Can create and manage admins
+
+- **Off**: sin acceso al enlace **My team** bajo `Partner Center` → `Administration`.
+- **On**: acceso completo a **My team** y todo lo que contiene.
+
+#### Can manage orders
+
+- **Off**: el admin puede ver pedidos y tiene las mismas capacidades de pedidos que un Salesperson (crear y enviar pedidos), pero no puede aprobar ni activar pedidos, a menos que la configuración del sistema lo permita a través de flujos de aceptación de pagos.
+- **On**: el admin puede aprobar, rechazar y activar pedidos, y administrarlos por completo, incluido cobrar pedidos en los Markets a los que tiene acceso (incluidos todos los Markets cuando su acceso de usuario está configurado para cobertura de todos los mercados).
+
+#### Can manage retail billing
+
+Cuando se usa Vendasta Payments, este permiso permite al admin:
+
+- Crear una factura desde `Commerce` → `Invoices`
+- Establecer el precio minorista en `Marketplace` → `Products` → `Product info`
+- Acceder a Subscriptions, Invoices, Payments, Payouts, notas de crédito, configuración de facturación predeterminada y tasas de impuestos
+
+#### Premium Reports
+
+Un menú desplegable que controla el acceso de un miembro del equipo a los [Premium Reports](/reports/premium-reports/):
+
+- **No access to reports**: no puede abrir Premium Reports.
+- **View all unrestricted reports**: puede abrir cualquier informe compartido con todo el equipo. No puede cambiar quién tiene acceso.
+- **Manage permissions for all unrestricted reports**: puede abrir cualquier informe compartido con todo el equipo y puede cambiar su configuración de uso compartido por informe.
+
+Los informes también pueden restringirse a personas específicas de forma individual. Consulta [Controles de acceso de Premium Reports](/reports/premium-reports/access-controls) para la guía completa.
+
+## Permisos de Salesperson
+
+Los permisos de Salesperson controlan el acceso a Proposals, Inbox, Leaderboard, Pricing, Opportunities y Orders, para que puedas limitar lo que ve un miembro del equipo o simplificar su experiencia.
+
+#### Can access Proposals
+
+- **Off**: la pestaña Proposals está oculta.
+- **On**: la pestaña Proposals se muestra; el Salesperson puede ver, administrar y editar todas las propuestas.
+
+#### Can access Inbox
+
+- **Off**: Inbox está oculto en toda la plataforma (navegación, página de perfil de contacto y de empresa).
+- **On**: Inbox está disponible; el Salesperson puede ver e interactuar con todas las conversaciones del Inbox.
+
+#### Can access Leaderboard
+
+- **Off**: la pestaña Leaderboard está oculta.
+- **On**: la pestaña Leaderboard se muestra; el Salesperson puede ver el Leaderboard.
+
+#### Can access Pricing
+
+- **Off**: la pestaña Pricing está oculta.
+- **On**: la pestaña Pricing se muestra; el Salesperson puede ver el precio minorista y los detalles de los productos.
+
+#### Can manage Opportunities
+
+- **All opportunities**: el Salesperson puede ver todas las oportunidades.
+- **Opportunities assigned to the user**: el Salesperson solo ve las oportunidades que tiene asignadas.
+
+#### Can manage Orders
+
+- **All orders**: el Salesperson puede ver todos los pedidos.
+- **Orders assigned to the user**: el Salesperson solo ve los pedidos que tiene asignados.
+
+## Solución de problemas: ¿por qué un admin no puede ver cierta área?
+
+Si un admin informa que no puede ver una función o sección a la que otro admin sí tiene acceso, la causa más probable es una configuración de permisos diferente, no un error.
+
+### Cómo verificar y actualizar los permisos de un admin
+
+1. Ve a `Partner Center` → `Administration` → `My team`
+2. Busca al admin afectado
+3. Haz clic en `⋮` → `Edit member`
+4. Si la casilla **Admin** está marcada, haz clic en **Show more permissions** para ver la lista completa
+5. Compara su configuración con la de un admin que sí tiene acceso y ajusta según sea necesario
+6. Haz clic en **Save**
+
+:::note
+Solo los admins con el permiso **Can create and manage admins** pueden ver o modificar los permisos de otro usuario.
+:::

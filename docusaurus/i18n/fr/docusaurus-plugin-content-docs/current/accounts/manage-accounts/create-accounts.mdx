@@ -1,0 +1,349 @@
+---
+title: Créer des comptes
+sidebar_label: Créer des comptes
+sidebar_position: 2
+description: Guide étape par étape pour créer des comptes d'entreprise individuels et en masse dans Business App
+tags: [account-creation, business-profile, bulk-import]
+keywords: [create-account, add-business, account-setup, bulk-import]
+---
+
+import { GraduationCapIcon } from '@site/src/components/Icons';
+
+# Créer des comptes
+
+## Qu'est-ce que la création de compte?
+
+La création de compte est le processus d'ajout de nouveaux établissements d'entreprise à votre système Business App. Chaque compte représente une entreprise individuelle ou un établissement que vous servez, contenant son profil d'entreprise complet, ses coordonnées et ses paramètres de service.
+
+## Pourquoi la création de compte est-elle importante?
+
+Créer des comptes d'entreprise précis est essentiel car :
+
+- **Fondement de tous les services** : les comptes sont requis pour activer les produits et fournir les services
+- **Précision des données** : des informations d'entreprise appropriées garantissent une prestation de service et des rapports efficaces
+- **Expérience client** : des profils complets permettent des tableaux de bord et des communications personnalisés
+- **Réussite de l'intégration** : des données précises améliorent l'intégration avec les services et plateformes tiers
+
+## Que comprend la création de compte?
+
+### Création de compte individuel
+- Recherche d'entreprise et remplissage automatique des données
+- Saisie manuelle du profil d'entreprise
+- Configuration des champs obligatoires et facultatifs
+- Attribution de catégorie et de marché
+
+### Importation de comptes en masse
+- Système d'importation basé sur un modèle CSV
+- Validation des données et vérification des erreurs
+- Traitement par lots pour plusieurs comptes
+- Application des paramètres par défaut
+
+## Comment créer des comptes individuels
+
+### Utiliser la recherche d'entreprise
+
+Le moyen le plus rapide de créer des comptes pour des entreprises connues :
+
+1. Accédez à `Accounts` → `Manage Accounts`
+2. Cliquez sur `Create Account` dans le coin supérieur droit
+3. **Recherchez l'entreprise** :
+   - Saisissez le nom de l'entreprise et son emplacement (p. ex. « Starbucks, Broadway, New York, NY »)
+   - Utilisez des termes de recherche précis pour de meilleurs résultats
+   - Incluez la ville et l'état/la province pour lever toute ambiguïté
+4. **Passez en revue les résultats de recherche** :
+   - Sélectionnez la bonne entreprise parmi les résultats
+   - Vérifiez l'adresse et les coordonnées
+   - Notez les suggestions de concurrents pour les rapports
+5. **Complétez les informations supplémentaires** au besoin
+6. Cliquez sur `Create Account`
+
+:::info
+La recherche d'entreprise remplit automatiquement l'adresse, le téléphone et les informations de catégorie lorsque les entreprises sont trouvées dans des répertoires publics.
+:::
+
+### Création manuelle de compte
+
+Lorsque les entreprises n'apparaissent pas dans les résultats de recherche :
+
+1. Cliquez sur `Go to Account Creation` depuis l'interface de recherche
+2. **Complétez les informations d'entreprise obligatoires** :
+   - `Business Name` : nom officiel de l'entreprise tel qu'il apparaît publiquement
+   - `Street Address` : emplacement physique de l'entreprise
+   - `City, State/Province, ZIP` : détails complets de l'emplacement
+   - `Country/Region` : pays de l'emplacement de l'entreprise
+   - `Phone Number` : numéro de contact principal de l'entreprise
+   - `Business Categories` : sélectionnez jusqu'à 3 catégories pertinentes
+
+:::info Référence des catégories d'entreprise
+Pour une liste complète des catégories d'entreprise disponibles et des conseils sur la classification appropriée, voir [Catégories d'entreprise](../directory/business-categories.mdx). Une catégorisation appropriée garantit des fonctionnalités de produit et des capacités d'intégration optimales.
+:::
+
+:::warning
+Si aucune catégorie appropriée n'existe, sélectionnez « Other » - mais notez que certaines fonctionnalités de produit peuvent être limitées.
+:::
+
+3. **Ajoutez des informations facultatives** :
+   - `Website URL` : adresse du site Web de l'entreprise
+   - `Customer Identifier` : votre identifiant de suivi interne
+   - `Business Description` : brève description des services
+   - `Additional Contact Info` : téléphone secondaire, télécopieur, courriel
+4. **Configurez les paramètres du compte** :
+   - `Market Assignment` : sélectionnez le marché géographique approprié
+   - `Service Area` : choisissez si l'entreprise sert des clients à leur emplacement
+   - `Business Hours` : informations sur l'horaire d'exploitation
+5. Cliquez sur `Create Account` pour enregistrer
+
+### Gérer les types d'entreprise particuliers
+
+**Entreprises à zone de service (SAB)** : entreprises qui servent des clients à l'emplacement de ces derniers et n'ont pas de vitrine publique fixe (plombiers, paysagistes, toiletteurs d'animaux mobiles, etc.) :
+
+Les SAB n'apparaissent généralement pas dans la barre de recherche de création de compte. C'est normal. La recherche utilise l'API Locations de Google, qui ne fait ressortir que les entreprises ayant une adresse physique vérifiée. Une SAB qui ne publie pas d'adresse municipale n'apparaîtra pas dans les résultats.
+
+**Pour créer un compte pour une SAB :**
+
+1. Dans la recherche `Create Account`, saisissez le nom de l'entreprise. S'il n'apparaît pas, cliquez sur `Skip to Account Creation` (ou `Go to Account Creation`).
+2. Remplissez le nom de l'entreprise et une adresse municipale valide. Si la SAB n'a pas d'adresse publique, utilisez l'adresse du propriétaire ou un espace réservé pour la ville/le code postal.
+3. Une fois le compte créé, mettez à jour la fiche pour définir un rayon de zone de service et retirer ou masquer l'adresse municipale publique si nécessaire.
+
+:::warning
+Créer un compte **sans adresse municipale** limite Listing Sync et d'autres produits dépendant des fiches. Ces produits nécessitent une adresse physique pour synchroniser les données. Ajoutez une adresse municipale valide avant d'activer les produits de fiches.
+:::
+
+**Entreprises multi-établissements** :
+
+**Entreprises multi-établissements** : créez des comptes distincts pour chaque emplacement physique, utilisez une convention de nommage cohérente (p. ex. « Nom de l'entreprise - Emplacement »), et prévoyez de les regrouper à l'aide de Multi-Location Groups plus tard.
+
+## Comment importer plusieurs comptes
+
+### Se préparer pour l'importation en masse
+
+Avant d'importer des comptes :
+
+1. Accédez à `Accounts` → `Manage Accounts`
+2. Cliquez sur `Import Accounts`
+3. **Téléchargez le modèle CSV** pour garantir un formatage approprié
+4. **Rassemblez les données requises** pour toutes les entreprises :
+   - Noms et adresses des entreprises
+   - Numéros de téléphone et coordonnées
+   - Catégories et classifications d'entreprise
+   - Attributions de marché (le cas échéant)
+
+### Préparation du fichier CSV
+
+**Colonnes obligatoires :**
+- Business Name
+- Street Address
+- City
+- State/Province
+- ZIP/Postal Code
+- Phone Number
+- Business Category (voir le [guide des catégories d'entreprise](../directory/business-categories.mdx) pour les options valides ou [téléchargez la liste complète](../directory/downloads/business-categories-list.csv))
+
+**Colonnes facultatives :**
+- Customer Identifier
+- Website URL
+- Business Description
+- Market Assignment
+- Additional Contact Information
+- Business Hours
+- `ServiceAreaBusiness` : définissez à `TRUE` si le compte est une entreprise à zone de service; `FALSE` ou vide sinon. Ce champ est **sensible à la casse** : seules les valeurs `TRUE` et `FALSE` (en majuscules) sont valides. L'utilisation de `true`, `True`, `yes` ou de toute autre valeur fera échouer la validation de la ligne.
+
+**Format d'enregistrement :** enregistrez votre fichier au format **CSV UTF-8** (et non au format CSV standard ou Excel) pour éviter les erreurs d'encodage de caractères pendant l'importation.
+
+:::info
+Utilisez un formatage cohérent pour les numéros de téléphone, les adresses et les catégories afin de garantir un traitement d'importation réussi.
+:::
+
+:::warning
+L'activation automatique de produits **ne s'exécute pas sur les comptes importés par CSV**. Les produits que vous souhaitez activer pour les comptes importés doivent être activés en masse séparément après l'importation à l'aide de listes de comptes ou de l'action Activate Product.
+:::
+
+### Exécuter l'importation
+
+1. **Téléchargez votre fichier CSV préparé**
+2. **Passez en revue l'aperçu de l'importation** :
+   - Vérifiez les erreurs de validation des données
+   - Vérifiez les attributions de catégories d'entreprise
+   - Confirmez le formatage des adresses
+3. **Configurez les paramètres d'importation** :
+   - Attribution de marché par défaut pour tous les comptes
+   - Préférences de création d'utilisateur
+   - Paramètres de courriel de bienvenue
+4. **Gérez la détection des doublons** :
+   - Passez en revue les entreprises potentiellement en double
+   - Choisissez de fusionner ou de créer des comptes distincts
+   - Résolvez les conflits d'adresse
+5. Cliquez sur `Import Accounts` pour traiter
+
+### Tâches après l'importation
+
+Après une importation réussie :
+
+1. **Passez en revue les comptes créés** pour en vérifier l'exactitude
+2. **Corrigez tout problème de données** relevé pendant l'importation
+3. **Attribuez les comptes aux listes appropriées** pour l'organisation
+4. **Configurez les produits et services** pour les nouveaux comptes
+5. **Configurez l'accès des utilisateurs** pour l'accès au tableau de bord client
+
+### Enrichissement après l'importation
+
+Après l'importation, le système tente d'enrichir chaque compte avec des données provenant de Google (adresse, téléphone, catégories, heures). Certains comptes sont ignorés et ne seront pas enrichis :
+
+- Le pays ou l'état/la province de l'entreprise ne correspond pas à ce qui figure sur Google
+- Le nom de l'entreprise ou l'adresse dans le CSV est significativement différent de la fiche Google (faible score de similarité)
+- Aucune fiche Google n'existe pour l'entreprise
+- Le compte n'a pas d'adresse municipale (les SAB sans adresse ne sont pas enrichies)
+
+Les comptes qui ne sont pas enrichis s'importent tout de même avec succès. Ils conservent simplement uniquement les données de votre CSV.
+
+## Comment gérer les problèmes de création de compte
+
+### Entreprise introuvable dans la recherche
+
+**Causes courantes et solutions :**
+
+**Variations du nom de l'entreprise :**
+- Essayez des noms abrégés ou des abréviations courantes
+- Effectuez la recherche sans les suffixes de type d'entreprise (p. ex. « LLC », « Inc. »)
+- Utilisez le nom du propriétaire ou du gestionnaire si le nom de l'entreprise n'est pas clair
+
+**Entreprises nouvelles ou non répertoriées :**
+- Utilisez le processus de création manuelle de compte
+- Vérifiez les informations de l'entreprise directement avec le client
+- Vérifiez s'il y a eu des changements de nom ou un rebranding récents
+
+**Problèmes liés à l'adresse :**
+- Essayez de rechercher par adresse plutôt que par nom d'entreprise
+- Vérifiez l'adresse actuelle à l'aide de services de cartographie
+- Vérifiez s'il y a eu des relocalisations ou des fermetures récentes
+
+### Résolution des erreurs d'importation
+
+**Erreurs de validation des données :**
+- **Champs obligatoires manquants** : complétez toutes les colonnes obligatoires dans le CSV
+- **Formats de téléphone invalides** : utilisez un formatage cohérent (p. ex. (555) 123-4567)
+- **Échecs de validation d'adresse** : vérifiez que les adresses existent et sont correctement formatées
+- **Erreurs d'attribution de catégorie** : utilisez les noms de catégorie exacts du système (consultez [Catégories d'entreprise](../directory/business-categories.mdx) ou [téléchargez la liste complète](../directory/downloads/business-categories-list.csv) pour toutes les options de catégorie valides)
+- **Erreur de validation `ServiceAreaBusiness`** : ce champ n'accepte que `TRUE` ou `FALSE` (en majuscules). L'utilisation de toute autre valeur, y compris `true`, `yes`, `1`, ou le fait de la laisser à une valeur non vide autre que `TRUE`/`FALSE`, fera échouer la ligne. Une valeur vide est traitée comme `FALSE`.
+
+**Gestion des entreprises en double :**
+- **Noms similaires** : vérifiez attentivement s'il s'agit de doublons légitimes ou d'entreprises similaires
+- **Adresses identiques** : vérifiez si des entreprises partagent des emplacements (comme des centres commerciaux)
+- **Conflits de numéro de téléphone** : vérifiez quelle entreprise utilise actuellement le numéro
+
+### Bonnes pratiques pour la création de compte
+
+**Qualité des données :**
+- Vérifiez toujours les informations de l'entreprise avant de créer des comptes
+- Utilisez les noms d'entreprise officiels tels qu'ils apparaissent dans les documents légaux
+- Incluez des informations d'adresse complètes pour les services basés sur l'emplacement
+- Sélectionnez les catégories d'entreprise les plus précises disponibles
+
+**Organisation :**
+- Utilisez des conventions de nommage cohérentes pour les entreprises similaires
+- Appliquez les étiquettes pertinentes immédiatement après la création
+- Attribuez les marchés appropriés en fonction des territoires de service
+- Prévoyez l'organisation et le regroupement futurs en listes
+
+**Communication client :**
+- Préparez le matériel de bienvenue pour les nouveaux titulaires de compte
+- Configurez rapidement l'accès initial des utilisateurs après la création du compte
+- Configurez les paramètres de notification appropriés
+
+## Paramètres d'importation en masse (utilisateurs et notifications)
+
+Lors d'une importation par CSV, vous pouvez configurer l'accès des utilisateurs et les notifications pour les utilisateurs nouvellement créés :
+
+- Autoriser l'accès à Business App
+- Envoyer des notifications
+- Envoyer le Welcome Email
+
+Vous verrez ces options pendant l'assistant d'importation après la mise en correspondance des champs. L'importation en masse envoie uniquement le courriel de bienvenue classique - elle n'envoie pas le [courriel d'intégration](/business-app/ai-onboarding-experience).
+
+:::info
+Vous pouvez ajuster les autorisations des utilisateurs plus tard depuis Manage Users si nécessaire.
+:::
+
+## Dépannage de la recherche d'entreprise
+
+Si une entreprise n'apparaît pas dans la recherche `Create Account` :
+
+- **Entreprise à zone de service** : les SAB sans adresse publique ne sont pas retournées par l'API Locations de Google, qui alimente la recherche. C'est normal, pas un bogue. Cliquez sur `Skip to Account Creation` pour ajouter le compte manuellement.
+- **Entreprises nouvelles ou récemment répertoriées** : les nouvelles entreprises peuvent ne pas encore apparaître dans la base de données de Google. Utilisez la création manuelle.
+- **Variations de nom** : essayez des noms abrégés (retirez « LLC », « Inc. », etc.) ou effectuez une recherche par adresse à la place.
+
+Cliquer sur `Skip to Account Creation` vous permet toujours de créer le compte manuellement, que celui-ci apparaisse ou non dans les résultats de recherche.
+
+## Foire aux questions (FAQ)
+
+<details>
+<summary>Quelle est la différence entre rechercher une entreprise et la créer manuellement?</summary>
+
+La recherche d'entreprise remplit automatiquement les informations à partir de répertoires publics, ce qui fait gagner du temps et garantit l'exactitude. La création manuelle exige que vous saisissiez toutes les informations, mais fonctionne pour n'importe quelle entreprise, y compris les nouvelles ou les non répertoriées.
+</details>
+
+<details>
+<summary>Puis-je modifier les informations du compte après sa création?</summary>
+
+Oui, la plupart des informations du compte peuvent être modifiées après sa création. Cependant, les changements d'emplacement d'entreprise ou d'attribution de marché peuvent affecter les intégrations et les rapports, alors procédez à ces changements avec prudence.
+</details>
+
+<details>
+<summary>Que se passe-t-il si je sélectionne la mauvaise catégorie d'entreprise?</summary>
+
+Vous pouvez changer les catégories d'entreprise après la création du compte en modifiant le compte. Cependant, certaines fonctionnalités de produit sont spécifiques à une catégorie, alors choisissez les catégories les plus précises dès le départ.
+</details>
+
+<details>
+<summary>Comment dois-je gérer les entreprises ayant plusieurs établissements lors de la création?</summary>
+
+Créez des comptes distincts pour chaque emplacement physique, puis utilisez Multi-Location Groups pour les gérer ensemble. Cela fournit des données propres à chaque emplacement tout en permettant des rapports consolidés.
+</details>
+
+<details>
+<summary>Puis-je importer des comptes avec différentes attributions de marché?</summary>
+
+Oui, incluez une colonne Market dans votre fichier CSV pour attribuer différents marchés pendant l'importation. Les comptes sans indication de marché utiliseront le paramètre de marché par défaut.
+</details>
+
+<details>
+<summary>Que dois-je faire si l'importation CSV échoue?</summary>
+
+Passez en revue les messages d'erreur, corrigez les problèmes de formatage des données dans votre fichier CSV, et essayez d'importer à nouveau. Les problèmes courants incluent des champs obligatoires manquants, des formats de téléphone invalides ou des entrées en double.
+</details>
+
+<details>
+<summary>Comment dois-je créer des comptes pour des entreprises à zone de service sans adresse?</summary>
+
+Les SAB n'apparaissent souvent pas dans la recherche Create Account, car l'API Locations de Google ne fait pas ressortir les entreprises sans adresse publique vérifiée. Pour créer le compte :
+
+1. Saisissez le nom de l'entreprise dans la barre de recherche. S'il n'apparaît pas, cliquez sur `Skip to Account Creation`.
+2. Saisissez le nom de l'entreprise et une adresse municipale (utilisez l'adresse du propriétaire ou une ville/un code postal comme espace réservé s'il n'y a pas d'adresse publique).
+3. Une fois le compte créé, mettez à jour la fiche pour définir une zone de service et masquer l'adresse municipale si nécessaire.
+
+Créer un compte sans adresse municipale limitera Listing Sync et d'autres produits de fiches jusqu'à ce qu'une adresse soit ajoutée.
+</details>
+
+<details>
+<summary>Puis-je configurer l'accès des utilisateurs pendant la création du compte?</summary>
+
+Oui. Lors de la création d'un compte individuel, le panneau **Users** vous permet d'ajouter les premiers utilisateurs du compte pendant la création - ils reçoivent le [courriel d'intégration](/business-app/ai-onboarding-experience) une fois le compte et ses produits prêts. Pour les importations en masse, vous pouvez configurer les paramètres d'utilisateur par défaut, y compris si le courriel de bienvenue est envoyé.
+</details>
+
+<details>
+<summary>Où sont recueillies les informations lors de la création d'un compte par recherche?</summary>
+
+L'API Locations de Google est utilisée pour recueillir le nom, l'adresse, le numéro de téléphone, le site Web, la géolocalisation, la catégorie d'entreprise et les heures d'exploitation. Les URL de profils sociaux sont recueillies à partir du site Web de l'entreprise.
+</details>
+
+{/* growth-engine callout — commented out 2026-08-19 (Cal, Learn tab refresh) because the
+    Your growth engine path is hidden until its remaining steps and Snapshot videos ship.
+    Restore at relaunch; see training/growth-engine/index.mdx. */}
+{/*
+<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
+  <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
+  <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>
+    New to running the full sales motion? Take the <a href="/learn/growth-engine" style={{color: '#3C9A63', fontWeight: 600}}>Your growth engine</a> course in Vendasta Learn — Beginner, 6 lessons.
+  </span>
+</div>
+*/}
