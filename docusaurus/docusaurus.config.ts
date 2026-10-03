@@ -140,6 +140,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/learn/build-lab/switch-on-the-platform', to: '/learn/builder/start-with-what-exists' },
           { from: '/learn/build-lab/build-the-custom-tool', to: '/learn/builder/build-the-doorway' },
           { from: '/learn/build-lab/test-and-run-it', to: '/learn/builder/watch-it-work' },
+          { from: '/learn/sell-the-ai-workforce/go-to-market-playbook', to: '/learn/sales-assets' },
           // Master Sales Series (2026-08): path scoped to the Master Sales Training Series only.
           // These four steps had no series episode behind them and were removed.
           { from: '/learn/sales/run-a-discovery-call', to: '/learn/sales' },
