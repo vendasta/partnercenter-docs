@@ -282,3 +282,17 @@ Campaign replies go to the sender address, which is either the assigned salesper
 :::tip Pro Tip
 All email activity from CRM-based campaigns is automatically tracked in the contact and company records, enabling follow-up automation and lead scoring based on engagement patterns.
 :::
+
+<details>
+<summary>How do I send an email campaign to only a subset of contacts?</summary>
+
+Tag imported contacts with a custom field (for example "Database origin") or a tag. In `CRM` → `Contacts`, click `Add filter` and filter by that field or tag. Select all with the header checkbox, then `Select all`, then `Actions` → `Add to campaign`. To exclude a group from another send, filter with "is not" on the same field.
+
+</details>
+
+<details>
+<summary>Are there sending limits on email campaigns?</summary>
+
+There is no hard limit. Very large sends are released in batches by the sending service (SendGrid) and can take 1 to 3 days. Small sends (under about 100) usually go out the same hour. The email builder includes an HTML block and dynamic content fields.
+
+</details>
