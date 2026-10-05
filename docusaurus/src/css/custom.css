@@ -2703,8 +2703,10 @@ div[class*="language-"] pre {
   left: 1.7rem;
   bottom: 100%;
   width: 2px;
-  height: 1.35rem;
-  background: linear-gradient(to bottom, rgba(63, 155, 99, 0), #3f9b63);
+  /* Matches the 2.25rem margin above the bar, so the rail runs the full gap
+     and meets the previous stage's script instead of stopping short. */
+  height: 2.25rem;
+  background: linear-gradient(to bottom, rgba(63, 155, 99, 0), #3f9b63 70%);
 }
 .pitch-stage__num {
   flex: 0 0 1.5rem;
