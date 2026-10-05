@@ -440,6 +440,13 @@ Check that the Lead Capture capability is on. Go to `AI` → `Workforce`, click 
 
 </details>
 
+<details>
+<summary>Why does the in-app Chat test behave differently from the chat widget on my website?</summary>
+
+The in-app `Chat` button uses a different mode than the website chat widget. Booking is not fully enabled in that mode, so the AI cannot see the real calendar and may suggest times that are not available. Test booking functionality on the actual chat widget instead.
+
+</details>
+
 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
   <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
   <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>

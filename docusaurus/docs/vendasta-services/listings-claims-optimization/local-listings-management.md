@@ -168,3 +168,10 @@ Responding to both positive and negative reviews helps establish credibility and
 
 Please upload all attachments in the fulfillment form. Alternatively, you can email them to our team.
 </details>
+
+<details>
+<summary>Why don't I see an Apple listing for a client's account?</summary>
+
+Apple does not support listings for service-area businesses. If the account is set up as a service-area business, the Apple card does not appear in Local SEO.
+
+</details>
