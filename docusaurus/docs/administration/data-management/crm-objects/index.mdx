@@ -151,3 +151,9 @@ No. Built-in CRM fields are fixed. Add custom fields for the objects you need (f
 
 Yes. Create the custom fields first, then use the Data management upload template so spreadsheet columns map to those fields. Built-in fields stay read-only for structure; custom fields are what you extend and import into.
 </details>
+
+<details>
+<summary>Why does bulk updating a custom field say the field is not supported?</summary>
+
+Check the field type. A `String list` field accepts multiple values, so `Set value` in a bulk update would overwrite them, and the update is blocked. If the field is meant to be a single choice from a few options, create it as a `String` field with those options instead.
+</details>
