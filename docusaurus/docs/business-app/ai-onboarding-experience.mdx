@@ -45,7 +45,7 @@ When you invite a new Business App user, they receive an **onboarding email** in
 - A subject line of **"Welcome to \[your Business App name\]"** — the same subject as the classic welcome email. The preview text under the subject greets the recipient by name.
 - A short intro, then a **"We already got to work"** summary — the same checklist of completed work that appears on the SMB's Home page (see [What the work summary shows](#what-the-work-summary-shows)). The content is generated from the business's own information — business name, website, number of pages read, reviews found, active products, and so on.
 - If a Vibe website has been built, a **preview image of that landing page** near the top, linked to the live site.
-- A single call to action — **See what's ready for you** — that takes the SMB to their Business App Home page. The link works whether the user still needs to set a password or can log in directly. When a password is needed first, the create-password page shows the user's email address, lets them set a password, and continues with a **Get started** button.
+- A single call to action — **See what's ready for you** — that takes the SMB to their Business App Home page. The link works whether the user still needs to set a password or can log in directly. When a password is needed first, the create-password page shows the user's email address, lets them set a password, and continues with a **Get started** button. For a user who still needs to set a password, a line under the button reads *Already set your password? Log in any time at \[your Business App URL\]*, so the email keeps working as a way back to Business App after the password is set.
 - A sign-off with the **Sender Name** from the account's market email settings, or your partner name if no sender name is set. The same name appears in the email header when no logo is set.
 
 The email adapts to the **products that are active** on the account, so no two businesses necessarily receive the same checklist. The next section lays out every line it can contain.
@@ -123,6 +123,13 @@ Here is exactly what triggers it. A Vibe site is generated **only when all of th
 The email waits for the site to finish building (allow **5–15 minutes** for it to arrive). If the build is slow or fails, **the email is still sent** — it just won't include the website line or preview image. Site generation never blocks the rest of the onboarding email beyond that window.
 
 You shape this through what's active on the account at invite time: activate Vibe before inviting and the client's first touch leads with a live site; invite without Vibe and the email focuses on the rest of the work. One site per account — re-sending the email to an account with a published Vibe site never creates a second one. See the [FAQ](#frequently-asked-questions) for the full details.
+
+### What the demo website includes
+
+The demo website is built from the business's own information and is set up to capture leads from day one:
+
+- **A lead capture form.** Every demo site includes a form that asks visitors for their name, email address (required), and a message. Each submission is saved to the business's CRM as a new contact and shows up as a lead. The form doesn't ask for a phone number.
+- **The business's web chat.** When Conversations AI is active on the account, the site also embeds the account's web chat widget, so visitors can chat with the business's AI receptionist. If Conversations AI is still activating when the build starts, the build waits a few minutes for it so the chat can be included. Activate Conversations AI before inviting and the client's demo site opens with a working web chat.
 
 ### When the email is sent
 
