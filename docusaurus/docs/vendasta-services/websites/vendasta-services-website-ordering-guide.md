@@ -1,20 +1,29 @@
 ---
-title: "Vendasta Services Website Ordering Guide"
+title: "How do I order a website from Vendasta Services?"
 sidebar_label: "Ordering"
 sidebar_position: 5
-description: "There are a few steps that need to be taken to order a website from Vendasta Services. By following this guide, you will ensure that your website is delivered as quickly as possible." 
+description: "Order a Vendasta Services website: complete and download the Website Creation & Content Form, then activate the product and upload the form PDF."
 updated_at: "2024-07-02T16:39:52Z"
 labels: []
 section_id: 18536913508375
 locale: "en-us"
 brand: vendasta-services
 product: vendasta-services-core
-audience: smb
+audience: partners
+content_type: how-to
+kb_id: KB-00057
+answer_snippet: "To order a website from Vendasta Services, complete and download the Website Creation & Content Form, then activate the website product in the Partner Center Marketplace. Both steps are required, and missing either one delays the website."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-## Guide
+## How does ordering a website work? {#guide}
 
-There are a few steps that need to be taken to order a website from Vendasta Services. By following this guide, you will ensure that your website is delivered as quickly as possible. You can check out our [**walkthrough video**](https://www.loom.com/share/18352d523eea4be88fe1489adf1d5116?sid=bee977b3-758f-49a0-919b-60278214822f) for a quick overview and **read ahead for the full details**!
+To order a website from Vendasta Services, complete and download the Website Creation & Content Form, then activate the website product in the Partner Center Marketplace. Both steps are required, and missing either one delays the website.
+
+You can watch the [**walkthrough video**](https://www.loom.com/share/18352d523eea4be88fe1489adf1d5116?sid=bee977b3-758f-49a0-919b-60278214822f) for a quick overview, or read ahead for the full details.
 
 Ordering a website requires two steps:
 
@@ -27,7 +36,7 @@ The Website Creation & Content Form provides our teams with all of the necessary
 
 Product activation must be completed in the platform before any work is started. This step requires you to pay the wholesale cost of the website and kicks off the project for our team. Upon activation, you will be asked to confirm the contact details of anyone who will be communicating with our team about the website. After activation, you can upload a PDF of your completed Website Creation & Content Form.
 
-## Complete and download the Website Creation & Content Form
+## How do I complete and download the Website Creation & Content Form? {#complete-and-download-the-website-creation--content-form}
 
 **You can access the form [here.](https://1l.ink/XQ3D4T7)**
 
@@ -116,10 +125,47 @@ While a copy of the form is sent to our team and the specified emails provided, 
 
 :::
 
-## Activate the product
+## How do I activate the website product? {#activate-the-product}
 
 Part of the activation process will ensure that you are activating dependent products like [WordPress Hosting](https://partners.vendasta.com/marketplace/products/MP-ee4ea04e553a4b1780caf7aad7be07cd). You will also need to fill in a few fields, like the contact information for onboarding. After activation, you will see a fulfillment form that requests information that you may have already filled out in the Creation & Content form. You do not need to fill this information out, and instead, you will be given the option to upload the PDF of the completed form. Because the completion of the previous Website Creation & Content Form does not tie directly to the product activation, uploading the PDF in the fulfillment form will ensure a faster launch of your website project.
 
 Once the product is activated, it will kick off a project that can be tracked in your Business App. Our team will process the order and book an onboarding call with the contacts provided during the activation to go over the expectations and discuss required assets and design choices.
 
 And there you have it! By following these steps (completing the Website Content & Creation Form and then activating the product), you will be set up for success for your new website!
+
+## Frequently asked questions
+
+<details>
+<summary>Where do I find the Website Creation & Content Form?</summary>
+
+You can access the form [here](https://1l.ink/XQ3D4T7). It is outside of the platform and unbranded, so you can complete it at your own pace, in steps.
+
+</details>
+
+<details>
+<summary>Does a Vendasta Services website include web copy?</summary>
+
+Depending on the size of the site purchased, the Vendasta Services team writes copy for the website. The team can also use web copy you upload in the form or copy from your existing website.
+
+</details>
+
+<details>
+<summary>What happens if I haven't chosen a website template yet?</summary>
+
+The team can't start building the website until a template is selected. In the meantime, the team can set up an "Under Construction" branded landing page.
+
+</details>
+
+<details>
+<summary>How long does the Save and Continue link for the form stay active?</summary>
+
+The Save and Continue link stays active for 30 days. If you pause again before submitting, save your changes and use the new link you receive.
+
+</details>
+
+<details>
+<summary>Do I need a domain before ordering a website?</summary>
+
+You need a domain before the website goes live. You can buy one from the domain registrar of your choice, or through the Domains or GoDaddy Domains products in the Marketplace.
+
+</details>

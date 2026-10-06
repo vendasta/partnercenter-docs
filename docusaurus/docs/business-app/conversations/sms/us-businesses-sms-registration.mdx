@@ -1,63 +1,66 @@
 ---
-title: "Conversations: US Businesses required to register to use Conversations SMS Messaging"
+title: "How do US businesses register to use Conversations SMS messaging?"
 sidebar_label: "US SMS Registration"
 sidebar_position: 2
-description: "Learn about US businesses registration requirements and unified SMS numbers for Conversations SMS Messaging"
+description: "Register a US business for Conversations SMS (A2P 10DLC), find its assigned SMS number, and fix common registration rejections."
 brand: vendasta
 product: conversations
 audience: partners
+content_type: how-to
+kb_id: KB-00150
+answer_snippet: "US businesses must register their phone numbers with carriers (A2P 10DLC) before sending SMS messages in Conversations AI Pro. To register, go to Business App → Administration → Conversation, click Register now on the registration card, and submit the form."
+doc_owner: conversations
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-To prevent spam and other widespread SMS abuse, phone carriers in the United States now require businesses to register their phone numbers before sending SMS messages to customers (A2P 10DLC).
+US businesses must register their phone numbers with carriers (A2P 10DLC) before sending SMS messages in Conversations AI Pro. To register, go to `Business App` → `Administration` → `Conversation`, click `Register now` on the registration card, and submit the form.
 
-For US-based businesses to use Conversations SMS messaging in Conversations AI Pro, they are now required to register their business.
+Phone carriers in the United States require this registration to prevent spam and other widespread SMS abuse.
 
-## How to register
+## How do I register a US business for SMS? {#how-to-register}
 
-To register a US-based business, a business can go to Business App → Administration → Conversation to see a new registration card. Click "register now" to view the form.
+To register a US-based business, a business can go to `Business App` → `Administration` → `Conversation` to see the registration card. Click "register now" to view the form.
 
 ![US Business SMS Registration](../img/inbox/us-businesses-sms-registration.jpg)
 
 Fill out the form completely, and then click "Submit information". You can also save your progress if you are unsure of some fields and return to complete the registration later.
 
-## Unified SMS Numbers
+## How do unified SMS numbers work? {#unified-sms-numbers}
 
-Businesses often prefer using a single number to communicate with their customers to streamline interactions and ensure consistency. Sending review requests and managing customer responses has become more efficient and integrated.
+Businesses often prefer using a single number to communicate with their customers to streamline interactions and ensure consistency.
 
-### **How It Worked Before**
+### **How it works** {#the-improved-process}
 
-Previously, review requests were sent using a different number than the one used for Conversations AI communications. This setup required separate A2P registration for each number. Additionally, if a customer replied to a review request via SMS, the response would not be visible in the business's Conversations AI, leading to potential missed communications and fragmented customer interactions.
-
-### **The Improved Process**
-
-Now, review requests are sent from the same SMS number used for Conversations AI communications. This integration offers several advantages:
+Review requests are sent from the same SMS number used for Conversations AI communications. This offers several advantages:
 
 1. **Single A2P Registration:** Businesses only need to register one number for both sending review requests and using Conversations AI, simplifying the registration process.
 2. **Unified Communication:** Review events are logged directly in the Conversations AI conversation, ensuring that all interactions with a customer are in one place.
-3. **Visible Replies:** If a customer replies to a review request, their response will appear in the Conversations AI, allowing businesses to engage and respond seamlessly.
+3. **Visible Replies:** If a customer replies to a review request, their response will appear in the Conversations AI, allowing businesses to engage and respond.
 
 ### **Important Note**
 
-- **Credits and Usage:** There have been no changes to the credits system. Conversations AI remains unlimited, and Reputation AI Premium still uses credits as before.
+- **Credits and Usage:** Conversations AI is unlimited, and Reputation AI Premium uses credits.
 
-By unifying the SMS number for both review requests and Conversations AI communications, businesses can enjoy a more streamlined and efficient communication process, ensuring that all customer interactions are easily accessible and manageable from a single platform.
+Because review requests and Conversations AI communications share one SMS number, all customer interactions are accessible from one place.
 
 <iframe src="//www.loom.com/embed/af8eae1a260e4b5b93879c91fc09f16f" width="560" height="315" frameBorder="0" allowFullScreen></iframe>
 
-## Finding your assigned SMS phone number
+## How do I find my assigned SMS phone number? {#finding-your-assigned-sms-phone-number}
 
 After activating Conversations AI Pro, your business is automatically assigned an SMS number based on the business profile address. To find it:
 
-1. Go to **Business App → Administration → Conversation**
+1. Go to `Business App` → `Administration` → `Conversation`
 2. Look for **Your SMS number**
 
 If a local number is unavailable for your area code, a neighboring area number is assigned. Contact support to request a different area code or a toll-free number as an alternative.
 
-## Responding via SMS: Partner Center vs. Business App
+## Can I reply to SMS messages from Partner Center? {#responding-via-sms-partner-center-vs-business-app}
 
 Conversations AI in **Business App** supports two-way SMS with customers. **Partner Center** does not support replying via SMS to customer messages — if you receive an SMS lead in Partner Center, open Business App to reply.
 
-## SMS campaign failures
+## Why did my SMS campaign fail to send? {#sms-campaign-failures}
 
 SMS campaigns will fail to send if the account's mailing address is incomplete. The following fields are required:
 
@@ -67,15 +70,15 @@ SMS campaigns will fail to send if the account's mailing address is incomplete. 
 
 Update the business profile address to resolve the issue before resending.
 
-## SMS automation delivery timing
+## Why are SMS automations slower than email? {#sms-automation-delivery-timing}
 
 SMS automations deliver more slowly than email because each message undergoes carrier verification and rate-limiting. This is expected behavior — the **"Sent"** status in automation logs reflects when the message was queued, not when it was delivered.
 
 For large automations, batch no more than **250 contacts per trigger** to avoid queue congestion and ensure timely delivery.
 
-## Messaging Templates and the "SMS Configuration" label
+## Are templates under the "SMS Configuration" label SMS-only? {#messaging-templates-and-the-sms-configuration-label}
 
-The **Messaging Templates** section in Inbox Settings includes a label called "SMS Configuration," but the templates created there are not SMS-only. They are available across **all messaging channels** in Conversations AI, including web chat, email, and SMS. You can use any template regardless of which channel the conversation is on.
+The **Messaging Templates** section in Conversations settings includes a label called "SMS Configuration," but the templates created there are not SMS-only. They are available across **all messaging channels** in Conversations AI, including web chat, email, and SMS. You can use any template regardless of which channel the conversation is on.
 
 ## FAQs
 
@@ -163,7 +166,7 @@ Not at this time. We are investigating supporting this in the future, for both U
 <details>
 <summary><strong>The business has already registered through the Customer Voice app. Do they need to register again?</strong></summary>
 
-Yes, for now. In the future, we will be automatically registering businesses for both products when they fill out the form the first time. Right now, you will need to submit the form a second time, but you will see your data that was previously entered is saved for the second submission.
+Yes. Submit the form a second time. The data you entered previously is saved for the second submission.
 </details>
 
 <details>
@@ -199,11 +202,11 @@ US phone carriers block SMS registration for certain industries regardless of wh
 <details>
 <summary><strong>Do I need to reset A2P registration after a client changes their business name?</strong></summary>
 
-Usually no. The registered business name shows in the app UI and is not customer-facing today, so a name change alone does not require a new A2P registration. If you still need the registered name updated, open a Twilio support request (it can take up to four weeks), then ask Vendasta support to complete the internal update.
+Usually no. The registered business name shows in the app UI and is not customer-facing, so a name change alone does not require a new A2P registration. If you still need the registered name updated, open a Twilio support request (it can take up to four weeks), then ask Vendasta support to complete the internal update.
 </details>
 
 <details>
 <summary><strong>Which Business Type should I choose for a sole proprietor in SMS registration?</strong></summary>
 
-Sole proprietorships are not supported for SMS registration in Partner Center. That registration path is not available yet, so there is no Business Type that completes the flow for a sole proprietor.
+Sole proprietorships are not supported for SMS registration in Partner Center. That registration path is not available, so there is no Business Type that completes the flow for a sole proprietor.
 </details>

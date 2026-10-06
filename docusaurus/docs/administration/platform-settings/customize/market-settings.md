@@ -7,9 +7,16 @@ keywords: [market-configuration, market-management, early-access-program, busine
 brand: vendasta
 product: partner-center-core
 audience: partners
+content_type: overview
+kb_id: KB-00061
+answer_snippet: "Markets in Partner Center let you segment your accounts by region, brand, industry, or custom criteria, each with its own branding, sales order settings, and Snapshot Report limits. This article also covers the Early Access Program, Business Priorities, and Marketplace vendor contact settings."
+doc_owner: partner-center-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-This comprehensive guide covers market configuration, advanced platform settings, and specialized features including Early Access Program enrollment, business priorities customization, and marketplace vendor controls.
+Markets in Partner Center let you segment your accounts by region, brand, industry, or custom criteria, each with its own branding, sales order settings, and Snapshot Report limits. This article also covers the Early Access Program, Business Priorities, and Marketplace vendor contact settings.
 
 ## What are Markets and advanced configuration settings?
 
@@ -47,7 +54,7 @@ Markets and advanced configuration settings help you organize your business stru
 Markets are only available on certain subscription tiers. Contact your account representative or support to activate Markets for your platform or add additional markets.
 :::
 
-## How to understand market structure
+## How is market structure organized? {#how-to-understand-market-structure}
 
 ### Market organization principles
 
@@ -75,11 +82,11 @@ Different user types interact with markets differently:
 
 ### URL and portal management
 - **Consistent URLs**: Portal URLs remain consistent with your original setup
-- **Custom domains**: Per-market custom domains are currently unavailable
+- **Custom domains**: Per-market custom domains are not available
 - **Login branding**: Pre-login portals display your white-label branding
 - **Market switching**: Branding updates dynamically based on selected accounts
 
-## How to configure market-specific branding
+## How do I configure market-specific branding? {#how-to-configure-market-specific-branding}
 
 ### Access market branding settings
 
@@ -102,7 +109,7 @@ To customize branding for individual markets:
 - **Inheritance model**: New markets inherit default settings but can be modified
 - **Consistent elements**: Maintain brand consistency across markets while allowing differentiation
 
-## How to manage market settings and configuration
+## How do I manage market settings and configuration? {#how-to-manage-market-settings-and-configuration}
 
 ### Configure market-specific features
 
@@ -137,7 +144,7 @@ If you need to reset market-specific configurations:
 The `Restore Back to Partner Defaults` option only appears if you've previously configured market-specific sales order settings. This ensures you don't accidentally reset markets that are using default configurations.
 :::
 
-## How to configure market-based reporting limits
+## How do I configure market-based reporting limits? {#how-to-configure-market-based-reporting-limits}
 
 ### Set market-specific Snapshot Report limits
 
@@ -159,7 +166,7 @@ While there's no direct market-wide snapshot limit, you can control reporting pe
 - **Individual tracking**: Each salesperson's usage is tracked separately within the market total
 - **Monthly reset**: All limits reset monthly regardless of market configuration
 
-## How to add and manage Markets
+## How do I add and manage Markets? {#how-to-add-and-manage-markets}
 
 ### Adding new Markets
 To expand your market structure:
@@ -186,7 +193,7 @@ Market names can be changed at any time. Contact [Vendasta Support](https://supp
 - **Regular review**: Periodically assess market structure effectiveness
 - **User training**: Ensure team members understand market assignments and implications
 
-## How to join the Early Access Program
+## How do I join the Early Access Program? {#how-to-join-the-early-access-program}
 
 ### What is the Early Access Program?
 
@@ -224,7 +231,7 @@ Market-specific settings override partner defaults unless explicitly defined.
 
 If you leave the program, you'll no longer have access to Early Access features. Consider this carefully as some features may be removed from your platform.
 
-## How to manage Business Priorities
+## How do I manage Business Priorities? {#how-to-manage-business-priorities}
 
 ### Customizing Business Priority options
 
@@ -246,7 +253,7 @@ You can customize the business priority options available to your clients, allow
 - **Regular Review**: Update priorities as your client base evolves
 - **Clear Descriptions**: Ensure priority descriptions are easily understood
 
-## How to control Marketplace vendor contact
+## How do I control Marketplace vendor contact? {#how-to-control-marketplace-vendor-contact}
 
 ### Preventing direct vendor contact
 
@@ -269,7 +276,7 @@ To prevent direct marketplace vendor contact:
 - **Brand Protection**: Ensure consistent messaging from your organization
 - **Client Protection**: Shield clients from unsolicited vendor outreach
 
-## How to restore market sales order settings
+## How do I restore market sales order settings? {#how-to-restore-market-sales-order-settings}
 
 ### Understanding default vs custom settings
 
@@ -328,7 +335,7 @@ Business App users are assigned to accounts, not markets. They see branding from
 <details>
 <summary>Can I use custom domains for different markets?</summary>
 
-Custom domains per market are currently unavailable. All markets use URLs consistent with your original platform setup, but with market-specific branding applied.
+Custom domains per market are not available. All markets use URLs consistent with your original platform setup, but with market-specific branding applied.
 </details>
 
 <details>
@@ -374,9 +381,9 @@ Yes, business priorities can be configured differently for each market, allowing
 </details>
 
 <details>
-<summary>How do I know which Early Access features are currently active?</summary>
+<summary>How do I know which Early Access features are active?</summary>
 
-Early Access features are typically announced in partner communications and release notes. Check your partner dashboard and communication preferences to stay informed about new releases.
+Early Access features are typically announced in partner communications and release notes. Check your partner dashboard and communication preferences to stay informed about releases.
 </details>
 
 <details>

@@ -2,13 +2,19 @@
 title: "Vendasta Services resource overview"
 sidebar_label: "Vendasta Services resource overview"
 description: "An overview of Vendasta’s teams, contacts, and resources for partners working with Vendasta Services."
-last_reviewed: 2026-09-21
 brand: vendasta-services
 product: vendasta-services-core
-audience: smb
+audience: partners
+content_type: overview
+kb_id: KB-00074
+answer_snippet: "Vendasta Services, Vendasta's in-house fulfillment team, can be reached at marketingservices@yourdigitalagents.com or 1-866-378-8031 (Monday to Friday, 8:00 AM to 5:00 PM CST). This page lists partner contacts and request forms."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-This article provides an overview of Vendasta's teams and resources, which are helpful when working with Vendasta Services, the company's in-house fulfillment vendor.
+Vendasta Services, Vendasta's in-house fulfillment team, can be reached at marketingservices@yourdigitalagents.com or 1-866-378-8031 (Monday to Friday, 8:00 AM to 5:00 PM CST). This page lists partner contacts and request forms.
 
 ---
 
@@ -51,3 +57,26 @@ This article provides an overview of Vendasta's teams and resources, which are h
 
 ### Social
 * **Social Content & Creation Form:** [https://socialcontentquestionnaire.yourdigitalagents.com/](https://socialcontentquestionnaire.yourdigitalagents.com/) (to be filled out by the client before the onboard call)
+
+## Frequently asked questions
+
+<details>
+<summary>Is there a phone number for Vendasta Services?</summary>
+
+Yes. Call 1-866-378-8031, Monday to Friday, 8:00 AM to 5:00 PM CST. This line is for partners with active Marketing Services products.
+
+</details>
+
+<details>
+<summary>How do I find my Vendasta sales representative?</summary>
+
+Your assigned representative is shown in the bottom left corner of Partner Center. If your agency works with the Customer Success team, you can book a meeting there by clicking `Talk to Sales` → `Book`.
+
+</details>
+
+<details>
+<summary>How do I contact Vendasta support about the platform?</summary>
+
+Email support@vendasta.com or submit a ticket through Partner Center. Support on Demand handles questions about Partner Center, Business App, and Social AI.
+
+</details>

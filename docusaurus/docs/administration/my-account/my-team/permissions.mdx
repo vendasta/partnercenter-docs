@@ -1,18 +1,27 @@
 ---
 title: "Permissions: What does each permission do?"
 sidebar_label: Permissions
-description: "Learn about the different permissions and what they control in Partner Center."
+description: "Reference for each admin and salesperson permission in Partner Center, what it shows or hides, and how to change a team member's permissions."
 sidebar_position: 2
 tags: [permissions, administration, partner-center]
 keywords: [permissions, admin permissions, salesperson permissions]
 brand: vendasta
 product: partner-center-core
 audience: partners
+content_type: reference
+kb_id: KB-00066
+answer_snippet: "Partner Center permissions control what each admin and salesperson on your team can see and do. You set them in Administration → My team → ⋮ → Edit member: admin permissions cover areas like Automations, Marketplace, and billing, and salesperson permissions cover Proposals, Pricing, and Orders."
+doc_owner: partner-center-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
+
+Partner Center permissions control what each admin and salesperson on your team can see and do. You set them in `Administration` → `My team` → `⋮` → `Edit member`: admin permissions cover areas like Automations, Marketplace, and billing, and salesperson permissions cover Proposals, Pricing, and Orders.
 
 You may need to restrict a Partner Center admin's or salesperson's access to accounts or features—for example, to limit the list of actions, keep client information private, or simplify the experience.
 
-## Accessing the permissions screen
+## How do I open the permissions screen? {#accessing-the-permissions-screen}
 
 1. Go to `Partner Center` → `Administration` → `My team` and find the user.
 2. Click `⋮` → `Edit member`. To see the full list of permissions, the user must be an admin. If the admin box is checked, click **Show more permissions** to see all editable permissions.
@@ -66,10 +75,10 @@ When on, the admin has access to **Home** and **Reports** in Partner Center navi
 
 Legacy permission; will be retired.
 
-#### Can manage Task Manager
+#### Can manage Task Manager/Fulfillment {#can-manage-task-manager}
 
 - **Off** – Tasks tab is hidden.
-- **On** – Tasks tab is shown; admin can access Task Manager.
+- **On** – Tasks tab is shown; admin can access Task Manager/Fulfillment.
 
 #### Can manage groups
 
@@ -105,17 +114,17 @@ Reports can also be restricted to specific people on a per-report basis. See [Pr
 
 ## Salesperson permissions
 
-Salesperson permissions control access to Proposals, Inbox, Leaderboard, Pricing, Opportunities, and Orders—so you can limit what a team member sees or simplify their experience.
+Salesperson permissions control access to Proposals, Conversations, Leaderboard, Pricing, Opportunities, and Orders—so you can limit what a team member sees or simplify their experience.
 
 #### Can access Proposals
 
 - **Off** – Proposals tab is hidden.
 - **On** – Proposals tab is shown; the salesperson can view, manage, and edit all proposals.
 
-#### Can access Inbox
+#### Can access Conversations {#can-access-inbox}
 
-- **Off** – Inbox is hidden across the platform (navigation, contact and company profile page).
-- **On** – Inbox is available; the salesperson can view and interact with all inbox conversations.
+- **Off** – Conversations is hidden across the platform (navigation, contact and company profile page).
+- **On** – Conversations is available; the salesperson can view and interact with all conversations.
 
 #### Can access Leaderboard
 
@@ -153,3 +162,47 @@ If an admin reports they cannot see a feature or section that another admin can 
 :::note
 Only admins with the **Can create and manage admins** permission can view or modify another user's permissions.
 :::
+
+## Frequently asked questions
+
+<details>
+<summary>Can I hide wholesale prices from some users?</summary>
+
+Yes. Turn off `Can access Marketplace` for that admin. The Marketplace tab is hidden and wholesale pricing is removed from orders.
+
+</details>
+
+<details>
+<summary>Can I restrict access to specific sections of Partner Center?</summary>
+
+Yes. Go to `Partner Center` → `Administration` → `My team`, click `⋮` → `Edit member` for the user, and turn individual permissions on or off. Each permission shows or hides a specific area, such as Automations, Marketplace, Marketing, or billing reports.
+
+</details>
+
+<details>
+<summary>Can I limit which automations an admin can edit?</summary>
+
+The `Can view and edit Automations` permission is either on or off. When it's on, the admin can view, manage, and edit all automations; when it's off, the Automations tab is hidden.
+
+</details>
+
+<details>
+<summary>Why can't an admin see an area that another admin can?</summary>
+
+The most likely cause is different permission settings, not a bug. Compare the affected admin's permissions in `Edit member` with those of an admin who does have access, adjust them, and click **Save**.
+
+</details>
+
+<details>
+<summary>Who can change another user's permissions?</summary>
+
+Only admins with the `Can create and manage admins` permission can view or modify another user's permissions.
+
+</details>
+
+<details>
+<summary>How do I limit a salesperson to only their own opportunities and orders?</summary>
+
+Set `Can manage Opportunities` to **Opportunities assigned to the user** and `Can manage Orders` to **Orders assigned to the user**. The salesperson then sees only the opportunities and orders assigned to them.
+
+</details>

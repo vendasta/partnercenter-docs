@@ -1,14 +1,23 @@
 ---
 title: "AI Inside Sales Representative: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Inside Sales Representative"
-description: "An overview of the AI Inside Sales Representative service, detailing the process from the fulfillment form through onboarding, ISR configuration, training, and the 30-day check-in."
+description: "What the AI Inside Sales Representative setup service includes, the setup process from fulfillment form to 30-day check-in, requirements, and FAQs."
 brand: vendasta-services
 product: vendasta-services-core
-audience: smb
+audience: partners
+content_type: overview
+kb_id: KB-00078
+answer_snippet: "The AI Inside Sales Representative (ISR) Setup is a Vendasta Services do-it-with-me service where experts configure, train, and launch an AI Employee that qualifies leads, captures contact details, and books appointments. Conversations AI must be active on the account."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';
 import OptimizationPlanFaq from './_optimization-plan-faq.mdx';
+
+The AI Inside Sales Representative (ISR) Setup is a Vendasta Services do-it-with-me service where experts configure, train, and launch an AI Employee that qualifies leads, captures contact details, and books appointments. Conversations AI must be active on the account.
 
 :::tip Share a client-facing version
 Want to hand this to a client? The **grey-labeled guide** has the same information with no brand or platform names, so it is safe to send directly.
@@ -21,7 +30,7 @@ Want to hand this to a client? The **grey-labeled guide** has the same informati
 **Conversations AI** must be active on your account. See the full [requirements](#requirements) below.
 :::
 
-The AI Inside Sales Representative (ISR) Setup is a do-it-with-me service where our experts configure, train, and launch the AI Inside Sales Representative for your business. Our team handles the technical setup, configures a sales-qualified persona, sets up lead discovery and qualification logic, enables lead capture and appointment booking capabilities, and connects your knowledge sources, including your services list, website, and FAQs.
+Our team handles the technical setup, configures a sales-qualified persona, sets up lead discovery and qualification logic, enables lead capture and appointment booking capabilities, and connects your knowledge sources, including your services list, website, and FAQs.
 
 :::info Two ways to get the AI Inside Sales Representative
 
@@ -95,7 +104,7 @@ Using the information gathered during the onboarding call, we will configure you
 
 #### 4. Training call
 
-This call will walk you through your new AI Inside Sales Representative: where to find your captured leads, how the qualification logic works, how to manage conversations in Business App, and how appointment notifications are handled.
+This call will walk you through your AI Inside Sales Representative: where to find your captured leads, how the qualification logic works, how to manage conversations in Business App, and how appointment notifications are handled.
 
 * **Timeline:** This call can be booked in as little as 1 business day after ISR Setup completion, depending on availability.
 
@@ -260,7 +269,7 @@ We will also need the following information for an Authorized Business Represent
 
 <summary>I don't have an EIN for my business. Can you still set up A2P?</summary>
 
-Unfortunately, this is a limitation of our SMS provider and we are unable to use a SIN/SSN instead of the EIN at this time. Our team is aware of this limitation and is looking into solutions to ensure you are still able to manage SMS conversations with your customers.
+No. This is a limitation of our SMS provider: a SIN/SSN can't be used instead of an EIN for A2P registration.
 
 </details>
 

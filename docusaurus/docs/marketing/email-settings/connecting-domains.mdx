@@ -1,23 +1,31 @@
 ---
-title: Connect domains
+title: "How do I connect a domain for marketing email campaigns?"
 sidebar_label: Connect Domains
 sidebar_position: 6
-description: Set up the DNS records needed to connect and verify a domain for sending marketing email campaigns.
-last_reviewed: 2026-09-14
+description: "Add the verification, SPF, and other DNS records needed to connect and verify your client's domain for sending marketing email campaigns."
 brand: vendasta
 product: marketing
 audience: partners
+content_type: how-to
+kb_id: KB-00094
+answer_snippet: "To send marketing email campaigns from your client's domain, add a verification record and an SPF record with the domain's DNS host, then choose the verified domain in the Campaign Settings tab."
+doc_owner: marketing
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-If you're a partner using or reselling marketing email products like Constant Contact, you'll need to set up your DNS records to ensure the email campaigns sent on behalf of your customer's domain work properly. This guide will walk you through the process of setting up the necessary DNS records.
+To send marketing email campaigns from your client's domain, add a verification record and an SPF record with the domain's DNS host, then choose the verified domain in the `Campaign Settings` tab.
 
-## Domain connection
+If you use or resell marketing email products like Constant Contact, you need to set up these DNS records so the email campaigns sent on behalf of your client's domain work properly.
+
+## What DNS settings do I need to connect a domain? {#domain-connection}
 
 When using marketing email services, you need to verify domain ownership and ensure proper email delivery through DNS settings. The required DNS settings depend on the hosting provider:
 
 ![Domain connections showing DNS settings](./img/marketing-email-settings/domain-connections.jpg)
 
-## DNS hosting options
+## Where is my DNS hosted? {#dns-hosting-options}
 
 You have several options for where your DNS is hosted:
 
@@ -47,7 +55,7 @@ If your domain uses Google Workspace, you'll need to add the MX records in your 
 
 If you're using a different DNS provider, you'll need to add the required records in their interface.
 
-## Required DNS records
+## Which DNS records do I need to add? {#required-dns-records}
 
 ### Verification record
 
@@ -76,7 +84,7 @@ The SPF (Sender Policy Framework) record helps prevent email spoofing by specify
 
 ![SPF record setup example](./img/marketing-email-settings/spf-record-setup.jpg)
 
-## Troubleshooting
+## What do I do if my domain doesn't verify? {#troubleshooting}
 
 If you encounter issues with your email marketing setup:
 
@@ -85,6 +93,32 @@ If you encounter issues with your email marketing setup:
 - Allow sufficient time for DNS propagation (can take up to 24-48 hours)
 - Confirm you have the necessary permissions to modify DNS settings
 - Contact your DNS provider or email marketing service for additional assistance
+
+## Frequently asked questions
+
+<details>
+<summary>How long does it take for DNS records to verify?</summary>
+
+DNS propagation can take up to 24-48 hours. If records still show as missing after that, check them for typos or formatting errors.
+</details>
+
+<details>
+<summary>Why do I need a verification record?</summary>
+
+The verification record proves to the email marketing service that you own the domain. After the domain is verified, you can select it in the `Campaign Settings` tab.
+</details>
+
+<details>
+<summary>What does the SPF record do?</summary>
+
+The SPF (Sender Policy Framework) record specifies which mail servers are authorized to send email on behalf of your domain. It helps prevent email spoofing, improves deliverability, and keeps emails from being marked as spam.
+</details>
+
+<details>
+<summary>Can I connect a domain hosted on WordPress Hosting Standard?</summary>
+
+No. Custom domains are available on WordPress Hosting Pro and Premium plans only.
+</details>
 
 ## Additional resources
 

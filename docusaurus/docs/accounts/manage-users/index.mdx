@@ -40,8 +40,8 @@ Inviting users from an account opens the **Invite users** panel:
 1. Navigate to **Partner Center**.
 2. Go to `Accounts` → `Manage Accounts`.
 3. Select the account where the user should be added, and click `Invite users`. You can also open the panel directly from the invite icon on the `Manage Accounts` list.
-4. In the `Users` field, type an email address. Matching CRM contacts are suggested as you type — select one to create the user from that contact with their details prefilled, or enter a full address to invite someone new. Add as many users as needed.
-5. Optional: under `Customize users`, select a user to edit their contact information (name, phone, correspondence language, greeting name) or add a custom greeting to their onboarding email, with a preview.
+4. In the `Users` field, type an email address. Matching CRM contacts are suggested as you type — select one to create the user from that contact with their details prefilled, or enter a full address to invite someone new. You can invite up to five users at a time.
+5. Optional: under `Customize users`, select a user to edit their contact information (name, phone, correspondence language, greeting name), choose their `Permissions` (which Business App tabs and products they can access, with `Select all` and `Clear all`), or add a custom greeting to their onboarding email, with a preview.
 6. Click `Invite [count] users`.
 
 The users are added to the account, and each receives the [onboarding email](/business-app/ai-onboarding-experience) — inviting is what sends it. If someone isn't ready for Business App yet, keep them as a contact in the CRM and invite them when the time is right; the panel will suggest them by name.
@@ -150,7 +150,7 @@ Yes, some systems support multi-account access for users like consultants or fra
 <details>
 <summary>What should I do if a user doesn't receive their onboarding or welcome email?</summary>
 
-Check that the email address is correct and ask them to check spam/junk folders. To resend, open the options menu (⋮) next to the user — on the account or in **Accounts → Manage Users** — and choose **Send Onboarding Email** or **Send Set Password email (Welcome email)**.
+Check that the email address is correct and ask them to check spam/junk folders. To resend, open the options menu (⋮) next to the user — on the account or in `Accounts` → `Manage Users` — and choose **Send Onboarding Email** or **Send Set Password email (Welcome email)**.
 </details>
 
 <details>
@@ -175,4 +175,18 @@ Yes. If the **User Management** tab is enabled in a user's permissions, they can
 <summary>Are user additions and removals tracked?</summary>
 
 Yes. When a user is added or removed from an account, it is logged in the CRM activity feed on both the associated company and contact records. The log notes who performed the action and which account it was for.
+</details>
+
+<details>
+<summary>How do I add a client user and set their permissions before they get any email?</summary>
+
+Do not use "Invite users" on the account, because that sends the onboarding email right away. Instead go to `Accounts` → `Manage Users` → `Create user`, enter the email (the only required field), and **uncheck the send password / onboarding email option**. Add the account with `Add account`, expand it, and toggle permissions (for example turn off User management, CRM, Files, Projects, Invoices, Orders). When ready, click the three dots next to the user on the account page and send either the **set password email** or the **onboarding email**. To check what the client sees, use `Impersonate` from the user's three-dot menu rather than "Open in Business App" as admin.
+
+</details>
+
+<details>
+<summary>How do I control which email notifications a client user receives?</summary>
+
+On the account's user list, open the three dots and choose `Edit notifications`. Options include instant email vs. daily digest, Executive Report frequency (weekly and/or monthly), and product-specific alerts (new leads and messages, reviews, mentions, local SEO). Notifications only fire for products the client actually has.
+
 </details>

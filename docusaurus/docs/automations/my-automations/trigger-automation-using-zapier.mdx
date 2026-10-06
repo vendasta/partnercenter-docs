@@ -1,23 +1,32 @@
 ---
-title: Trigger an automation using Zapier
+title: "How do I trigger an automation using Zapier?"
 sidebar_label: Trigger via Zapier
-description: Learn how to connect the Vendasta CRM to 3rd Party systems using Zapier and trigger automations.
+description: "Connect the Vendasta CRM to third-party apps through Zapier and use the Run Automation action to trigger your Vendasta automations."
 sidebar_position: 6
 sidebar_class_name: hidden-sidebar-item
 brand: vendasta
 product: automations
 audience: partners
+content_type: how-to
+kb_id: KB-00034
+answer_snippet: "You can trigger a Vendasta automation from any third-party app in Zapier by using that app as the Zap trigger and the Vendasta App's Run Automation action. The automation must be turned on in Vendasta and use a compatible trigger."
+doc_owner: automations
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-The Vendasta App in Zapier allows Partners to connect the Vendasta CRM to several 3rd Party systems using Zapier. Users can select any 3rd Party system available in Zapier as a Trigger which would initiate an action in the Vendasta CRM
+You can trigger a Vendasta automation from any third-party app in Zapier by using that app as the Zap trigger and the Vendasta App's `Run Automation` action. The automation must be turned on in Vendasta and use a compatible trigger.
 
-## How triggering an automation with Zapier works
+The Vendasta App in Zapier lets you connect the Vendasta CRM to third-party systems. You can select any third-party system available in Zapier as a trigger that initiates an action in the Vendasta CRM.
+
+## How do I trigger an automation with Zapier? {#how-triggering-an-automation-with-zapier-works}
 
 **Step 1: Selecting the Trigger**
 
 In this step, you can select the trigger that initiates an action in your workflow. As an example when a New Payment in Quickbooks Online can be used as a trigger, however, you can also choose from various other triggers available in Zapier.
 
-**Step 2: Choosing the Action**
+**Step 2: Choosing the Action App**
 
 After selecting the trigger, you'll need to choose the app that will carry out your desired action. In this scenario, that app would be the Vendasta App. This means that whenever a New Payment is received in Quickbooks online, an automation would be executed in the Vendasta CRM. As part of the Vendasta App in Zapier various actions are possible.
 
@@ -101,7 +110,7 @@ Before publishing the Zap, be sure to test the steps in Zapier. This can help id
 
 After testing, a 'Run Automation Successful' message confirms that the Zap is working as expected and ready to be published.
 
-## Connect Facebook Lead Ads to Vendasta automations
+## How do I connect Facebook Lead Ads to Vendasta automations? {#connect-facebook-lead-ads-to-vendasta-automations}
 
 You can automatically create contacts in Vendasta CRM whenever a new lead submits a Facebook Lead Ad. This uses Zapier as middleware between Facebook and Vendasta.
 
@@ -135,3 +144,54 @@ To find a Company ID, open the company in `Partner Center` → `CRM` → `Compan
 | Primary company not linking | Use the numeric Company ID, not the company name |
 | Leads not appearing in CRM | Verify the Zap is **On** and all required fields are mapped |
 | Automation not triggering | Confirm the automation is toggled **On** in Partner Center and uses a compatible trigger type |
+
+## Frequently asked questions
+
+<details>
+<summary>Why don't I see my automation in the Automation ID list?</summary>
+
+Make sure the automation uses a compatible trigger, such as Triggered via API or Triggered manually for an Account or Order, and that it is turned on in Vendasta. Automations that are off can't be triggered via Zapier.
+
+</details>
+
+<details>
+<summary>Which ID do I use to sign in to the Vendasta App in Zapier?</summary>
+
+Enter your Partner ID, or the Account ID of the client you are setting up Zapier for. The Organization ID field is then populated automatically based on the ID you signed in with.
+
+</details>
+
+<details>
+<summary>Can I trigger a Vendasta automation from QuickBooks?</summary>
+
+Yes. In Zapier, set a QuickBooks Online event such as New Payment as the trigger, then add the Vendasta App's Run Automation action and select the automation to run.
+
+</details>
+
+<details>
+<summary>Can I sync Facebook Lead Ads leads with the Vendasta CRM?</summary>
+
+Yes, through Zapier. Set **Facebook Lead Ads** with **New Lead** as the trigger, then add a Vendasta action: **Run Automation** to run a Vendasta automation for each lead, or **Create or Update Contact** to write the lead directly to the CRM.
+
+</details>
+
+<details>
+<summary>How do I make sure incoming data maps to the right CRM fields?</summary>
+
+Map the fields in the Vendasta action step in Zapier, for example first name, last name, email, and phone to the corresponding Vendasta CRM fields. Test the action before you publish the Zap to catch missing fields or incorrect data.
+
+</details>
+
+<details>
+<summary>How do I link a contact to a company from Zapier?</summary>
+
+Pass the numeric Company ID, not the company name, in the **Primary Company** field. The company must already exist in the CRM, and you can find its ID in the company's URL in `Partner Center` → `CRM` → `Companies`.
+
+</details>
+
+<details>
+<summary>How do I know my Zap is working?</summary>
+
+Test the step in Zapier before publishing. A 'Run Automation Successful' message confirms the Zap is working and ready to publish.
+
+</details>

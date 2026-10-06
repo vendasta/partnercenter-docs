@@ -1,16 +1,23 @@
 ---
 title: Email authentication
 sidebar_label: Email Authentication
-description: Learn how to set up email authentication for your marketing emails
+description: "Set up SPF, DKIM, and DMARC records for your marketing email sending domain in Partner Center, and troubleshoot records that don't verify."
 sidebar_position: 1
 brand: vendasta
 product: marketing
 audience: partners
+content_type: overview
+kb_id: KB-00171
+answer_snippet: "Email authentication in Partner Center Marketing tells receiving mail servers that emails sent from your domain are legitimate. To set it up, copy the four DNS records (SPF, DMARC, and two DKIM CNAMEs) from Marketing → Email settings and add them at your domain's DNS provider."
+doc_owner: marketing
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 # Email Authentication
 
-Email authentication is a way to tell receiving mail servers that emails sent from your domain are legitimate. This helps prevent your emails from being marked as spam or rejected. 
+Email authentication in Partner Center Marketing tells receiving mail servers that emails sent from your domain are legitimate. To set it up, copy the four DNS records (SPF, DMARC, and two DKIM CNAMEs) from `Marketing` → `Email settings` and add them at your domain's DNS provider. This helps prevent your emails from being marked as spam or rejected.
 
 To set up email authentication, you need to add specific DNS records to the domain you're using to send emails. This guide will walk you through the process.
 
@@ -44,7 +51,7 @@ Proper authentication significantly increases the likelihood that your emails wi
 Authentication prevents malicious actors from sending emails that appear to come from your domain, protecting your brand reputation.
 
 ### Compliance Requirements
-Many email providers now require proper authentication, and some will automatically reject emails from domains without proper SPF, DKIM, and DMARC records.
+Many email providers require proper authentication, and some will automatically reject emails from domains without proper SPF, DKIM, and DMARC records.
 
 ## Before You Begin
 
@@ -54,7 +61,7 @@ Before setting up email authentication, make sure you have:
 2. **Your domain name** - The domain you want to send emails from (e.g., yourbusiness.com)
 3. **Administrative access** - You'll need permission to modify DNS records for your domain
 
-## Getting Your DNS Records
+## How do I get my DNS records? {#getting-your-dns-records}
 
 To get the specific DNS records you need to add:
 
@@ -162,6 +169,32 @@ Go to `Partner Center` → `Marketing` → `Email settings` and find your domain
 - **Wait for propagation** — DNS changes can take up to 72 hours to take effect globally
 - **Contact your DNS provider** — They can verify that records were added correctly
 - **Check for conflicting records** — Look for existing SPF or DMARC records that need to be merged rather than replaced
+
+## Frequently asked questions
+
+<details>
+<summary>How do I authorize my domain so marketing emails don't go to spam?</summary>
+
+Go to `Partner Center` → `Marketing` → `Email settings` and copy the four records shown for your domain in the `Email domains` card: one SPF (TXT), one DMARC (TXT), and two DKIM (CNAME). Add all four at your DNS provider. Authentication doesn't complete until all four are published, including both DKIM CNAMEs.
+</details>
+
+<details>
+<summary>I added the records at my domain provider. Do I still need to wait?</summary>
+
+Yes. DNS changes usually propagate within 48 hours, and it can take up to 72 hours for authentication to show as verified in Partner Center. A `Domain authorization required` banner stays on the page until every record lands.
+</details>
+
+<details>
+<summary>Will adding the Vendasta SPF record affect the email I already send from my domain?</summary>
+
+It can if you add it as a second SPF record. A domain can only have one SPF record, and a second `TXT v=spf1 ...` record breaks SPF validation. Combine all `include:` entries into a single SPF record instead.
+</details>
+
+<details>
+<summary>Why does a record show Not found in Email settings?</summary>
+
+`Not found` in red in the `Current value` column means the record is missing, has a syntax problem, or DNS propagation is still in progress. Allow up to 72 hours, then check that you copied the value exactly as shown in Partner Center.
+</details>
 
 ## Need Help?
 

@@ -1,24 +1,31 @@
 ---
 title: Pricing
-description: View pricing information and manage your product pricing strategies
+description: "See the wholesale price, billing model, and active wholesale discounts for each product and service on the Pricing page in Partner Center."
 sidebar_position: 6
 tags: [pricing, administration, partner-center]
 keywords: [pricing, wholesale prices, discounts, billing models]
 brand: vendasta
 product: partner-center-core
 audience: partners
+content_type: reference
+kb_id: KB-00140
+answer_snippet: "The Pricing page in Partner Center Administration shows the wholesale price you pay for each product and service, its billing model (Standard or Stairstep), and any active wholesale discounts."
+doc_owner: partner-center-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-The **Pricing** section of administration shows you the wholesale pricing for your services and products, as well as the billing model for the products and any active wholesale discounts.
+The Pricing page in Partner Center Administration shows the wholesale price you pay for each product and service, its billing model (Standard or Stairstep), and any active wholesale discounts.
 
 ![Pricing page overview](./img/administration/my-account/pricing/pricing-page.png)
 
 ## Understanding the pricing table
 
-The Pricing page displays a comprehensive table of all available products and services with the following information:
+The Pricing page displays a table of all available products and services with the following information:
 
 ### Table columns
 
@@ -118,6 +125,24 @@ Use the search bar at the top of the Pricing page to filter products by name. Yo
 <summary>What's the difference between Standard and Stairstep billing?</summary>
 
 **Standard billing** uses fixed pricing regardless of volume. **Stairstep billing** offers tiered pricing where costs may decrease as you purchase more units or reach certain volume thresholds. Stairstep billing is generally reserved for Partners that have a very large volume of activations and need to purchase products in bulk.
+</details>
+
+<details>
+<summary>Where can I see my wholesale discounts and free units?</summary>
+
+Active wholesale discounts appear in the `Discounts` column of the Pricing table. Each discount shows its type (for example, "100 free units per period"), its start date, and its period, such as monthly or quarterly.
+</details>
+
+<details>
+<summary>Is the price on the Pricing page the wholesale price?</summary>
+
+Yes. The `Wholesale Price` column shows the cost you pay for each product, displayed as a starting price or a fixed rate.
+</details>
+
+<details>
+<summary>What does "Starting at" mean in the Wholesale Price column?</summary>
+
+"Starting at $X.XX/mo" means the product has multiple tiers, and the lowest tier starts at that monthly price. "Starting at Free" means the product has a free tier, with paid options at higher tiers.
 </details>
 
 :::tip More questions about pricing?

@@ -1,15 +1,23 @@
 ---
-title: Partner Troubleshooting Guide
-description: Troubleshooting guides to help resolve common platform issues before escalating to Vendasta Support
+title: "How do I fix common Partner Center issues?"
+sidebar_label: Partner Troubleshooting Guide
+description: "Fix common Partner Center and Business App issues, like login problems, slowness, and failed activations, before contacting Vendasta Support."
 sidebar_position: 5
 brand: vendasta
 product: partner-center-core
 audience: partners
+content_type: troubleshooting
+kb_id: KB-00012
+answer_snippet: "If something isn't working in Partner Center or Business App, check status.vendasta.com for outages, clear your cache and cookies, disable browser extensions, and try another browser. If the issue continues, email support@vendasta.com with the details listed below."
+doc_owner: partner-center-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-# Partner Troubleshooting Guide
+# How do I fix common Partner Center issues?
 
-This space contains guides which will aid you in troubleshooting some issues you may possibly encounter while working in the platform. These guides should help you determine if an issue you are facing can be resolved before they are considered technical issues which require escalation to the Vendasta Support team.
+If something isn't working in Partner Center or Business App, check status.vendasta.com for outages, clear your cache and cookies, disable browser extensions, and try another browser. If the issue continues, email support@vendasta.com with the details listed below. Each section below explains a common issue and how to fix it, so you can resolve it before escalating to the Vendasta Support team.
 
 :::info
 Please note there is no guarantee these actions will resolve your issue so if after troubleshooting you still experience issues please submit a ticket to [support@vendasta.com](mailto:support@vendasta.com)
@@ -68,23 +76,34 @@ It is a good practice to capture a HAR file to identify potential issues before 
 3. Re-open intended page
 4. If the issue remains contact [support@vendasta.com](mailto:support@vendasta.com)
 
-## Common issue: Mailing Information Not Configured
+## Common issue: Mailing information not configured
 
 ### Explanation
 
-This error will occur when the email settings have not been enabled on their default Market. This contact information needs to be enabled to comply with international spam laws.
+Every promotional email must include a physical mailing address to comply with anti-spam laws. The platform adds this address to the footer of each campaign email. If no address is available for the market an account belongs to, the account can't be added to the campaign.
+
+Each market has its own `Required Contact Information for Campaigns` setting, and it overrides your Partner defaults. If a market is set to `None (warning: disables campaigns)`, campaigns fail for every account in that market, even when your Partner defaults address is complete. The recipient's email address doesn't cause this error.
 
 ### Issue
 
-This error will appear in the history of a list that failed to be added to a campaign.
+This error appears in:
+
+- The history of a list that failed to be added to a campaign
+- An automation's `Activity` tab, on a `Start a campaign` step: "Failed to complete due to an error. The required contact information for campaigns is missing."
 
 ### Fix
 
-1. Navigate to **Administration > Customize**
-2. Select **Markets** from the top tab
-3. Click the **pencil** next to the market name to edit settings
-4. Scroll down to **Email Settings**
-5. Change the contact information to **Your Contact Information** from **None**
+1. Navigate to `Administration` → `Customize`
+2. Select the `Markets` tab
+3. Click the pencil icon next to the market the affected account belongs to
+4. Expand `Email Settings` and scroll to `Required Contact Information for Campaigns`
+5. Under `Information Displayed`, choose one of:
+   - `Partner's Contact Information` uses the address saved on the `Partner defaults` tab
+   - `Market's Contact Information` uses an address specific to this market
+6. Click `Save`
+7. Re-add the list to the campaign, or test the automation with a new account
+
+If you choose `Partner's Contact Information`, open the `Partner defaults` tab → `Email Settings` → `Required Contact Information for Campaigns` and confirm the address, city, country, state or province, and postal code are filled in.
 
 ## Common issue: Network and Platform Connectivity (How to Generate a Network HAR File)
 
@@ -128,10 +147,10 @@ The HAR file may be over 35MB. If so, we recommend file sharing with Google Driv
 
 To get your HAR file in Safari:
 
-1. Navigate to the menu bar at the top of the screen, and click on **"Safari"** then select **Preferences > Advanced**
+1. Navigate to the menu bar at the top of the screen, and click on **"Safari"** then select `Preferences` → `Advanced`
 2. Make sure the option **"Show Develop menu in the menu bar"** (the last setting) is selected
 3. Then, you should be able to proceed with getting a HAR file like normal from the browser:
-   - Right click > `Inspect element` → `Network` > Check **"Preserve log"** > Refresh page > Right click on any lines that appear > Select **"Save HAR"**
+   - Right click → `Inspect element` → `Network`, check **"Preserve log"**, refresh the page, right click on any lines that appear, and select **"Save HAR"**
 
 ## Common issue: Product Activation Failed but I was Charged
 
@@ -150,7 +169,7 @@ A credit card was charged the wholesale cost of a failed product activation.
 No fix is required.
 
 1. Check **Billing Center** under **Refunds**
-2. Once the refund has been issued, you can see it in **Partner Center** by going to **Administration > Financial Documents > Credit Notes**
+2. Once the refund has been issued, you can see it in **Partner Center** by going to `Administration` → `Financial Documents` → `Credit Memos`
 
 ## Common issue: Jim Salesman is Showing on the Email When I Send a Test
 
@@ -289,4 +308,25 @@ Support on-Demand handles technical platform issues, while Vendasta Services man
 <summary>Why can't I access certain areas of the platform?</summary>
 
 Platform access issues can be caused by browser cache problems, network restrictions, or account permissions. Try clearing your cache first, then generate a HAR file if issues persist. Your network may be blocking specific domains required for platform functionality.
+</details>
+
+<details>
+<summary>What should I include in a support ticket?</summary>
+
+Include your Partner ID, the Account Group ID if applicable, the affected user, steps to reproduce the issue, and screenshots or a video of any error messages. See [Submitting a Support Ticket](#best-practice-submitting-a-support-ticket).
+
+</details>
+
+<details>
+<summary>How do I check whether Vendasta is having an outage?</summary>
+
+Visit [status.vendasta.com](https://status.vendasta.com) before troubleshooting your browser. If there's no active incident, work through the login and cache fixes on this page.
+
+</details>
+
+<details>
+<summary>Which browser works best with Partner Center?</summary>
+
+Chrome is recommended. If an issue only happens in one browser, the problem is specific to that browser, so clearing its cache or disabling its extensions usually helps.
+
 </details>

@@ -1,10 +1,17 @@
 ---
 title: "AI Reputation Specialist: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Reputation Specialist"
-description: "An overview of the AI Reputation Specialist service, detailing the process from the fulfillment form to the final configuration and ongoing support."
+description: "What the AI Reputation Specialist Setup service includes, from the fulfillment form and onboarding call to setup, the 30-day check-in, and ongoing optimization."
 brand: vendasta-services
 product: vendasta-services-core
-audience: smb
+audience: partners
+content_type: overview
+kb_id: KB-00041
+answer_snippet: "AI Reputation Specialist Setup is a done-for-you service where our experts configure, train, and launch the AI Reputation Specialist to automate review responses, request new reviews, and manage reputation workflows. It requires Reputation AI Premium."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';
@@ -20,7 +27,9 @@ Want to hand this to a client? The **grey-labeled guide** has the same informati
 **Reputation AI Premium** must be active on your account to receive this service.
 :::
 
-The AI Reputation Specialist Setup is a done-for-you service where our experts configure, train, and launch the AI Reputation Specialist for your business. Our team handles all the technical configuration and customization, tailoring the setup to your specific business needs. The service focuses on configuring automated review responses, requesting new reviews, and managing reputation workflows.
+AI Reputation Specialist Setup is a done-for-you service where our experts configure, train, and launch the AI Reputation Specialist to automate review responses, request new reviews, and manage reputation workflows. It requires Reputation AI Premium.
+
+Our team handles all the technical configuration and customization, tailoring the setup to your specific business needs.
 
 :::info Two ways to get the AI Reputation Specialist
 
@@ -56,7 +65,7 @@ To ensure a smooth and efficient process, please fill out the fulfillment form w
 
 Our team of experts will lead an onboarding call to understand your business needs and how to adjust our reputation workflows to suit you. We will come to the call with your initial Reputation Specialist setup with your branding and customized review response style to adjust during the call. We will refine any additional knowledge sources and/or review response instructions together.
 
-We will also train and walk you through the new workflow. Our team of experts will show you where you can find your reviews, review request emails and SMS templates, and where to modify the AI's review response instructions.
+We will also train and walk you through the workflow. Our team of experts will show you where you can find your reviews, review request emails and SMS templates, and where to modify the AI's review response instructions.
 
 * **Timeline:** An onboarding call can be booked in as little as 1 business day, depending on availability.
 * **For U.S. Businesses:** A2P registration is required to validate the business' use of SMS. Please be ready with your business legal information if you'd like to use SMS. Registration for A2P can take up to two weeks to complete.
@@ -132,7 +141,7 @@ We will also need the following information for an Authorized Business Represent
 
 <summary> I don't have an EIN for my business. Can you still set up A2P?</summary>
 
-Unfortunately, this is a limitation of our SMS provider and we are unable to use a SIN/SSN instead of the EIN at this time. Our team is aware of this limitation and is looking into solutions to ensure you are still able to manage SMS conversations with your customers.
+No. This is a limitation of our SMS provider: A2P registration requires an EIN, and a SIN/SSN can't be used instead.
 
 </details>
 

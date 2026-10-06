@@ -1,18 +1,25 @@
 ---
-title: "Tutorial: Create a lead generation form"
+title: "How do I create a lead generation form?"
 sidebar_position: 1
 sidebar_label: "Tutorial: Lead generation form"
-description: "Step-by-step tutorial to build a lead generation form from the Lead generation template, add fields and sections, style with AI, connect automations, publish, and test."
+description: "Build a lead generation form in Partner Center Marketing: add fields, set field properties, style it with CSS or AI, connect automations, embed, and test."
 tags: [forms, tutorial, lead-generation, automations, styling]
 keywords: [lead generation form, form templates, form fields, form automations, form styling, form publishing, form testing]
 brand: vendasta
 product: marketing
 audience: partners
+content_type: how-to
+kb_id: KB-00096
+answer_snippet: "To create a lead generation form in Partner Center, go to Marketing → Forms, click Create form, and select the Lead generation template. You then add and configure fields, style the form, connect automations, embed the form on your website, and test it."
+doc_owner: marketing
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-This tutorial will walk you through creating a high-converting lead generation form based on the Lead generation template. You will customize fields, optionally add a file upload, organize with sections, style with AI, connect automations, and publish.
+To create a lead generation form in Partner Center, go to `Marketing` → `Forms`, click `Create form`, and select the `Lead generation` template. You then add and configure fields, style the form, connect automations, embed the form on your website, and test it.
 
-## Step 1 — Start from the Lead generation template
+## Step 1 — How do I start from the Lead generation template? {#step-1--start-from-the-lead-generation-template}
 
 1. Navigate to `Marketing` → `Forms`
 2. Click **Create form**
@@ -28,7 +35,7 @@ The lead generation template includes four fields by default:
 
 These fields will be used to automatically create a new contact and company record in the CRM with the information provided by the visitor.
 
-## Step 2 — Add and organize additional fields to your form
+## Step 2 — How do I add and organize additional fields? {#step-2--add-and-organize-additional-fields-to-your-form}
 
 You can add more fields to your form to capture more information from your visitor by clicking **Add Field** and selecting the field type you need.
 
@@ -39,13 +46,13 @@ You can add more fields to your form to capture more information from your visit
 
 ![Form field options](./img/marketing/form-field-types.png)
 
-For this lead generation form, we are going to get consent from the visitor to send them more emails by adding the Contact fields **Marketing email consent** and **Marketing email consent source**.
+For this lead generation form, get consent from the visitor to send them more emails by adding the Contact fields **Marketing email consent** and **Marketing email consent source**.
 
 Move the marketing consent fields to the bottom of the form by clicking and dragging them below the other fields. These types of consent fields are typically placed at the bottom of the form so that a user has filled out the other fields and is more likely to consent to receive more emails.
 
 ![Move marketing consent fields to the bottom of the form](./img/marketing/drag-and-drop-form-fields.png)
 
-## Step 3 — Customize field properties
+## Step 3 — How do I customize field properties? {#step-3--customize-field-properties}
 
 Once your fields are in place, you can customize how they behave and appear using field properties. Field properties control display options, default values, dynamic behaviors, and the information that gets captured when the form is submitted.
 
@@ -53,22 +60,22 @@ Once your fields are in place, you can customize how they behave and appear usin
 
 ### Creating a dropdown field on forms
 
-Click on the **Marketing email consent** field to open the properties panel. Click on the **Field type** dropdown and change the field type from `Text` to `Dropdown`. This will make it so the user can only select from one of our pre-defined options: `Yes` or `No`.
+Click on the **Marketing email consent** field to open the properties panel. Click on the **Field type** dropdown and change the field type from `Text` to `Dropdown`. This will make it so the user can only select from one of the predefined options: `Yes` or `No`.
 
 ![Change field type to Dropdown](./img/marketing/form-field-type-dropdown.png)
-The **label** field is what will be displayed above the dropdown. For our field it will make sense to frame it as a question like: "Would you like to receive more emails from us?"
+The **label** field is what will be displayed above the dropdown. For this field, frame it as a question like: "Would you like to receive more emails from us?"
 
 ![setting form field label](./img/marketing/setting-field-label-values.png)
 
 Click the + button to add a new option to the dropdown. Here, the **label** field is what will be displayed to the user as an option when they are filling out the form and the **value** field is what will be captured when the form is submitted. Add the options `Yes` and `No`.
 
-Finally, set the default value to the `Yes` option that was created. This helps us ensure that the user is opted in to receive more emails by default.
+Finally, set the default value to the `Yes` option that was created. This ensures that the user is opted in to receive more emails by default.
 
 ![setting form field properties](./img/marketing/setting-field-dropdown-values.png)
 
 ### Hiding form fields 
 
-Adding a hidden field to your form allows you to capture information that is not displayed to the user, but is still useful for your business, like knowing the source of the form submission. In this case, we will use a hidden field to set our consent source to the form name.
+Adding a hidden field to your form allows you to capture information that is not displayed to the user, but is still useful for your business, like knowing the source of the form submission. In this case, you use a hidden field to set our consent source to the form name.
 
 ![hiding form fields](./img/marketing/hiding-form-fields.png)
 
@@ -88,11 +95,11 @@ Forms automatically capture common UTM parameters like `utm_source`, `utm_medium
 
 Click on the **Marketing email consent source** field to open the properties panel and check off the box  **Populate field dynamically** to enable this feature. Type in the query parameter `campaign` into the input box.
 
-Now, whenever someone consents to receive more emails, the CRM will automatically update to show if they came from a specific campaign. This lets us know which campaigns are specifically driving more sign-ups to our email list.
+Whenever someone consents to receive more emails, the CRM will automatically update to show if they came from a specific campaign. This lets you know which campaigns are specifically driving more sign-ups to our email list.
 
 For more detailed information on tracking form submissions, see [Track form submissions in GA4](./tracking-form-submissions-ga4.mdx).
 
-## Step 4 — Match your form design to your website
+## Step 4 — How do I match my form design to my website? {#step-4--match-your-form-design-to-your-website}
 
 You can customize the appearance of the form to match your website's design and branding by clicking the **Design** tab. Simple changes like the form width and colors can be made using the interactive controls inside of the **Design** tab and will be reflected in the preview on the right.
 
@@ -102,11 +109,11 @@ More complex changes to other elements can be made by using the **Custom CSS** f
 
 ![An example of a more complex form design change using CSS](./img/marketing/custom-css-example-forms.png)
 
-Make note of the CSS class names used from our template that are used to style the form elements. These will be used to target specific elements when styling the form with CSS and are a good starting point for your own CSS code.
+Make note of the CSS class names from the template that are used to style the form elements. These will be used to target specific elements when styling the form with CSS and are a good starting point for your own CSS code.
 
 ### Design and style your form with AI
 
-If you are not familiar with CSS or it takes you a while to get the desired look and feel of your form, you can use our Design with AI feature to generate a starting point for your CSS code!
+If you are not familiar with CSS or it takes you a while to get the desired look and feel of your form, you can use the Design with AI feature to generate a starting point for your CSS code!
 
 ![Design with AI input example](./img/marketing/design-forms-with-ai-input.png)
 
@@ -119,7 +126,7 @@ If you are not familiar with CSS or it takes you a while to get the desired look
 
 Give AI a screenshot of your website and ask it to style the form to match your website's design and branding with any additional formatting or styling you need. The CSS code will automatically be generated and present when you embed the form on your website later.
 
-## Step 5 — Configure form automations
+## Step 5 — How do I configure form automations? {#step-5--configure-form-automations}
 
 Automations can be used to trigger actions when a form is submitted. For example, you can send an email notification to a team member, add the contact to a specific list, assign the contact to a team member, or trigger a workflow.
 
@@ -147,7 +154,7 @@ You can edit existing form automation templates by using the **Advanced mode** t
 For more information on building automations with the automation builder, see [Creating and configuring automations](../../automations/my-automations/creating-and-configuring-automations.mdx).
 :::
 
-## Step 6 — Form submission settings and publishing
+## Step 6 — How do I configure submission settings and publish the form? {#step-6--form-submission-settings-and-publishing}
 
 With the majority of the form setup complete, you can now configure the form settings and publish it to your website. These aren't directly related to how the form looks itself or the information it captures, but are important for how the form behaves and is used.
 
@@ -155,7 +162,7 @@ With the majority of the form setup complete, you can now configure the form set
 
 The **Redirect link** field lets you send users to another URL after they submit a form. Set this to an appropriate URL if you have one. If you leave this field blank, the user will get a confirmation message after they submit the form. 
 
-The **Conversations integration** makes every new form submission appear as either a new conversation or a new message for an existing conversation. This is a great way to see form submissions as part of the holistic conversation history for a contact or company. Check the box next to **Create a conversation** if it is not already turned on.
+The **Conversations integration** makes every new form submission appear as either a new conversation or a new message for an existing conversation. This lets you see form submissions as part of the holistic conversation history for a contact or company. Check the box next to **Create a conversation** if it is not already turned on.
 
 ![Conversations form submission](./img/marketing/conversations-form-submission.png)
 
@@ -169,7 +176,7 @@ Click on the `Embed` button to view the code you need to embed the form on your 
 
 ![Form embed code](./img/marketing/embed-code-for-forms.png)
 
-## Step 7 — Test your form
+## Step 7 — How do I test my form? {#step-7--test-your-form}
 
 Before turning your form live, you should test it to make sure it is working as expected. For this tutorial form that means:
 
@@ -186,7 +193,7 @@ You don't have to paste your form embed code into your website to test it! There
 - [W3Schools](https://www.w3schools.com/html/html_examples.asp)
 :::
 
-## Embedding multiple forms on a page
+## How do I embed multiple forms on a page? {#embedding-multiple-forms-on-a-page}
 
 You can safely place more than one form embed on the same page. Each form renders inside its own isolated shadow DOM, so styles and scripts from one form never affect another.
 
@@ -220,7 +227,7 @@ Older embed codes using `id="__custom_form_widget"` still work for pages with a 
 If your site inserts form embed tags dynamically after the page loads, call `window.CRMFormsInit()` after inserting the tags to trigger initialization without a page reload.
 :::
 
-## Styling forms from the host page
+## How do I style forms from the host page? {#styling-forms-from-the-host-page}
 
 Each form renders inside a shadow DOM for CSS isolation. Standard CSS selectors in your page's stylesheets **cannot** cross the shadow boundary — they have no effect on elements inside the form:
 
@@ -295,7 +302,7 @@ When multiple forms are on the same page, you can scope `::part()` rules to one 
 Your form ID appears in the embed code from the form editor. It follows the pattern `FormConfigID-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`. You can also inspect the rendered page in browser DevTools and look for the host element: `<div class="crm-form-host" data-form-id="FormConfigID-...">`.
 :::
 
-## Interacting with forms using JavaScript
+## How do I interact with forms using JavaScript? {#interacting-with-forms-using-javascript}
 
 Because each form renders inside a shadow root, `document.querySelector()` alone cannot reach elements inside it. Use the host element's `shadowRoot` property to query inside the shadow tree.
 
@@ -362,5 +369,47 @@ Yes! Forms can integrate with various platforms through automations and webhooks
 <summary>How do I prevent spam submissions?</summary>
 
 Enable reCAPTCHA protection in the form settings to prevent automated spam. You can choose between visible checkbox verification or invisible protection. See [reCAPTCHA key configuration](./recaptcha-key.mdx) for setup instructions.
+
+</details>
+
+<details>
+<summary>How do I send a thank-you or follow-up email after someone submits a form?</summary>
+
+Open the form's automations tab, select the template "Send a follow up email when a form is submitted", and click **Use template**. Choose an existing email campaign from the dropdown, then click **Save automation**.
+
+</details>
+
+<details>
+<summary>Why do I see an error message when I use the follow-up email automation template?</summary>
+
+The template requires you to choose an email campaign to send to the contact when the form is submitted. Choose an existing campaign from the dropdown and click **Save automation**, or save the automation and come back after you create a campaign.
+
+</details>
+
+<details>
+<summary>How do I capture UTM parameters or the lead source in a hidden field?</summary>
+
+Forms automatically capture common UTM parameters like `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, and `utm_term`. To store a query parameter on a specific field, open the field's properties, check **Make hidden**, check **Populate field dynamically**, and enter the query parameter name.
+
+</details>
+
+<details>
+<summary>How do I set a default value for a form field?</summary>
+
+Click the field to open its properties panel and set the **Default value**. For dropdown fields, set the default to one of the options you created.
+
+</details>
+
+<details>
+<summary>Where do form submissions go?</summary>
+
+Contact and Company fields are linked to the matching records in the CRM, so a submission creates or updates those records. If **Create a conversation** is turned on in the form settings, each submission also appears in Conversations as a new conversation or a new message in an existing one.
+
+</details>
+
+<details>
+<summary>How do I find my form ID?</summary>
+
+Your form ID appears in the embed code from the form editor and follows the pattern `FormConfigID-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`. You can also inspect the rendered page in browser DevTools and look for the `data-form-id` attribute on the `crm-form-host` element.
 
 </details>

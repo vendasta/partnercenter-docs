@@ -1,18 +1,25 @@
 ---
-title: "Package Management & Store Integration"
+title: "How do I manage packages and share them from the store?"
 sidebar_label: "Package Management & Store Integration"
 sidebar_position: 2
-description: "Guide to package lifecycle, connecting packages to the store (categories and visibility), and sharing them with customers. Troubleshooting for missing packages, duplicates, and multi-market issues is in the Package Troubleshooting guide."
+description: "Edit, copy, archive, restore, and delete Marketplace packages, organize them in the store, and share them with Buy it Now links, direct links, and campaigns."
 tags: [marketplace, packages, package-management, store-organization, package-sharing]
 keywords: [package management, edit packages, archive packages, arrange store, share package links, store integration, package lifecycle]
 brand: vendasta
 product: marketplace
 audience: partners
+content_type: how-to
+kb_id: KB-00131
+answer_snippet: "In Partner Center, you manage packages under Marketplace → Packages, where you can edit, copy, archive, restore, and delete them. You can share packages with customers through Buy it Now links, direct package links, or buttons in Marketing campaigns."
+doc_owner: marketplace
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 ## What is Package Management & Store Integration?
 
-Package Management & Store Integration covers the entire package lifecycle: editing, optimizing, arranging in store, and sharing with customers. This ensures your packages perform effectively and drive sales.
+In Partner Center, you manage packages under `Marketplace` → `Packages`, where you can edit, copy, archive, restore, and delete them. You can share packages with customers through Buy it Now links, direct package links, or buttons in Marketing campaigns.
 
 ## Why is Package Management & Store Integration important?
 
@@ -30,10 +37,10 @@ Effective package management drives better results:
 - Edit published and draft packages
 - Archive and restore packages
 - Delete packages permanently
-- Real-time publishing control
+- Publishing control
 
 ### Store organization
-- Strategic package positioning
+- Package positioning
 - Package ordering configuration
 - Category management
 - Visual hierarchy control
@@ -44,9 +51,9 @@ Effective package management drives better results:
 - Linking to packages from `Marketing` → `Campaigns`
 - Performance tracking
 
-## How to manage package lifecycle
+## How do I manage the package lifecycle? {#how-to-manage-package-lifecycle}
 
-### Adding multiple instances of a product to a package
+### How do I add multiple instances of a product to a package? {#adding-multiple-instances-of-a-product-to-a-package}
 
 You cannot add the same product more than once to a package directly. To sell multiple units of a product, use **add-ons** instead:
 
@@ -56,15 +63,15 @@ You cannot add the same product more than once to a package directly. To sell mu
 
 Alternatively, if the product has `Allow multiple purchases per account` enabled (under Advanced settings in Editions), customers can purchase it multiple times, but note this disables add-on support for that product.
 
-### Package pricing model and invoice/Shopping Cart compatibility
+### Why doesn't my package appear on an invoice or in Shopping Cart? {#package-pricing-model-and-invoiceshopping-cart-compatibility}
 
 Packages must use the **line-item pricing model** to work with invoices and Shopping Cart checkout. Legacy packages (created before the pricing model update) are automatically migrated when first opened and saved in the package editor. If a package is not appearing as an option when creating an invoice, open it in `Marketplace` → `Packages`, save it, and try again.
 
-### Price visibility in the store preview
+### Why isn't my package price showing in the store? {#price-visibility-in-the-store-preview}
 
 For package pricing to display to customers in the store, the package's `Purchase behaviour` must be set to `Add to Shopping Cart`. If another option (Contact Sales, External URL) is selected, the price is intentionally hidden from the preview and store listing.
 
-### Copy a package across markets
+### How do I copy a package to another market? {#copy-a-package-across-markets}
 
 To make a package available in a different market:
 
@@ -77,7 +84,7 @@ To make a package available in a different market:
 
 The copied package appears in the target market. Adjust pricing or contents as needed for that market.
 
-### Edit packages
+### How do I edit a package? {#edit-packages}
 1. Navigate to `Partner Center` → `Marketplace` → `Packages`
 2. Select target market (if using Markets)
 3. Click on package to modify
@@ -97,7 +104,7 @@ The copied package appears in the target market. Adjust pricing or contents as n
 Existing packages that use the legacy pricing model will automatically convert to the line-item pricing model the first time they are opened and saved in the package constructor. Pricing and contents are preserved, review them before saving to confirm everything looks correct.
 :::
 
-### Archive packages
+### How do I archive a package? {#archive-packages}
 1. Go to `Partner Center` → `Marketplace` → `Packages`
 2. Select appropriate market (if applicable)
 3. Find target package
@@ -111,7 +118,7 @@ Existing packages that use the legacy pricing model will automatically convert t
 - Enables quick restoration
 - Visible in Partner Center with the `Archived` filter
 
-#### Restore archived packages
+#### How do I restore an archived package? {#restore-archived-packages}
 Restoration returns archived packages to active status, making them available for customer purchase.
 
 **Restoration process**
@@ -122,7 +129,7 @@ Restoration returns archived packages to active status, making them available fo
 5. Click the `options menu` (⋮) → `Restore`
 6. Package immediately returns to active status
 
-#### Permanently delete packages
+#### How do I permanently delete a package? {#permanently-delete-packages}
 
 :::warning
 Deletion permanently removes packages from the system. This action cannot be undone and should be used only for packages that will never be needed again.
@@ -151,7 +158,7 @@ This walkthrough shows archiving a package, restoring it from the `Archived` fil
   allowFullScreen
 ></iframe>
 
-## Package sharing and customer engagement
+## How do I share packages with customers? {#package-sharing-and-customer-engagement}
 
 ### Package link sharing methods
 
@@ -247,7 +254,7 @@ Direct links are automatically available for all published packages with `Add to
 
 #### Buy it Now link workflow
 
-When a customer clicks a Buy it Now link, the current flow is:
+When a customer clicks a Buy it Now link, the flow is:
 
 1. Customer is prompted to log in (or create an account)
 2. After login, they are directed to `Business App` → `Store` where the package is pre-loaded
@@ -255,7 +262,7 @@ When a customer clicks a Buy it Now link, the current flow is:
 
 The link does not take customers directly to a checkout page. It routes through Business App.
 
-#### Adding a Contact Sales button to a package
+#### How do I add a Contact Sales button to a package? {#adding-a-contact-sales-button-to-a-package}
 
 For the `Contact Sales` button to appear on a package in the store, the package must have a **salesperson assigned via a Contact Form**. Without a salesperson configured, the `Contact Sales` option will not display even if `Contact Sales` is selected as the Purchase option. Set this up in `Manage Store` → `[package]` → `Purchase behaviour` → `Contact Sales`.
 
@@ -281,7 +288,7 @@ If either is missing, the `Check out` button will not function or will not appea
 **Communication strategy**
 - **Context Setting** - Explain package value and relevance before sharing links
 - **Follow-Up Planning** - Establish communication plan for post-share engagement
-- **Multiple Touchpoints** - Use different sharing methods for comprehensive outreach
+- **Multiple Touchpoints** - Use different sharing methods to reach more customers
 - **Performance Tracking** - Monitor link usage and conversion rates
 
 **Security and access**
@@ -290,11 +297,11 @@ If either is missing, the `Check out` button will not function or will not appea
 - Regular link performance review and optimization
 - Consider link expiration for time-sensitive offers
 
-## Store integration and visibility management
+## How do I organize packages in the store? {#store-integration-and-visibility-management}
 
 :::info Customer impact
 
-Package order determines how customers see your offerings in both Business App store and Public Store. Strategic ordering can significantly impact conversion rates and average order values.
+Package order determines how customers see your offerings in both Business App store and Public Store. Package order can affect conversion rates and average order values.
 
 :::
 
@@ -312,4 +319,39 @@ Proper category assignment ensures packages appear in logical store sections and
 
 For packages that do not appear in the Business App store, show up more than once in the Public Store, or look wrong across markets, use the **[Package Troubleshooting & Advanced Guide](./package-troubleshooting-guide.mdx)**. Start with **Common package visibility issues**, **Duplicate packages in Public Store**, and **Multi-market package synchronization**.
 
-Effective package management requires ongoing attention to customer needs, market conditions, and business objectives. The tools and strategies outlined in this guide provide the foundation for building a successful package-based business that drives revenue growth and customer satisfaction.
+## Frequently asked questions
+
+<details>
+<summary>Why is the Create Buy it Now link option unavailable for my package?</summary>
+
+A Buy it Now link requires the package to be published with its purchase behavior set to `Add to Shopping Cart`. The target user must also already exist on the account.
+
+</details>
+
+<details>
+<summary>Why can't I see my package when I create an invoice?</summary>
+
+Packages must use the line-item pricing model to work with invoices and Shopping Cart checkout. Open the package in `Marketplace` → `Packages`, save it, and try again.
+
+</details>
+
+<details>
+<summary>Can I hide a published package from the store?</summary>
+
+Yes. Archiving a package removes it from the customer store immediately and preserves its configuration. You can restore it later from the `Archived` filter.
+
+</details>
+
+<details>
+<summary>Where do I find the direct link to a package?</summary>
+
+Direct links are available for published packages with `Add to Shopping Cart` purchase behavior. Open the package in `Partner Center` → `Marketplace` → `Packages` and use the `Copy link` button.
+
+</details>
+
+<details>
+<summary>Can I add the same product to a package more than once?</summary>
+
+No. To sell multiple units of a product, create an add-on for the product in Vendor Center and add the base product plus the add-on to the package.
+
+</details>

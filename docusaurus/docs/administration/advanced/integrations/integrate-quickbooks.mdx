@@ -1,16 +1,23 @@
 ---
-title: Integrate QuickBooks with Partner Center
+title: "How do I integrate QuickBooks with Partner Center?"
 sidebar_label: QuickBooks
 sidebar_position: 2
-description: Learn how to integrate QuickBooks with Partner Center for contact syncing and automation
+description: "Connect QuickBooks to Partner Center to sync contacts into the CRM, choose invoice, sales receipt, and payment data, and manage the connection."
 brand: vendasta
 product: partner-center-core
 audience: partners
+content_type: how-to
+kb_id: KB-00179
+answer_snippet: "The QuickBooks integration in Partner Center is a one-way sync of contacts from QuickBooks to the Partner Center CRM, plus 3 automation triggers. To set it up, go to Administration → Integrations, click the QuickBooks card, and click Add Connection."
+doc_owner: partner-center-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-The QuickBooks Integration in Partner Center allows you to sync data between QuickBooks and Vendasta. The integration is a one-way sync of contacts from QuickBooks to Vendasta's CRM, plus 3 automation triggers.
+The QuickBooks integration in Partner Center is a one-way sync of contacts from QuickBooks to the Partner Center CRM, plus 3 automation triggers. To set it up, go to `Administration` → `Integrations`, click the QuickBooks card, and click `Add Connection`.
 
-## Setting up the QuickBooks integration
+## How do I set up the QuickBooks integration? {#setting-up-the-quickbooks-integration}
 
 You can set up a connection with QuickBooks by navigating to the Integrations page of Partner Center.
 
@@ -49,7 +56,7 @@ Click `Continue` after choosing the options that apply.
 After the initial connection with QuickBooks, all contacts in QuickBooks are synced with the Partner Center CRM. You can opt out of this by deselecting the Sync Customer Data option on the form during the initial connection.
 :::
 
-## Manage synced data
+## How do I choose which data syncs? {#manage-synced-data}
 
 You can choose the data that you want to sync between QuickBooks and Partner Center CRM:
 
@@ -66,7 +73,7 @@ Ensure that there is an active connection with QuickBooks by clicking on the `Ma
 
 <img src={require('./img/integrations/quickbooks/quickbooks_data_settings.jpg').default} alt="QuickBooks Connection Settings Page" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-## Integration example
+## What happens when I create an invoice in QuickBooks? {#integration-example}
 
 Consider, for example, a contact in Partner Center named Amy. Amy's contact profile in Partner Center shows no recent activities recorded.
 
@@ -79,3 +86,40 @@ You create an invoice for Amy in QuickBooks.
 A note is created on Amy's contact profile in Partner Center with details from QuickBooks, including Invoice Number, Contact Name, and Invoice amount.
 
 <img src={require('./img/integrations/quickbooks/contact_note.jpg').default} alt="Contact Note" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## Frequently asked questions
+
+<details>
+<summary>Is the QuickBooks integration a two-way sync?</summary>
+
+No. The integration is a one-way sync of contacts from QuickBooks to the Partner Center CRM.
+
+</details>
+
+<details>
+<summary>What data can I sync from QuickBooks?</summary>
+
+You can sync Contact Data, Invoice Data, Sales Receipt Data, and Payment Data. Choose the options on the Pre-Connect Form when you connect, and change them later on the `Connection Settings` page.
+
+</details>
+
+<details>
+<summary>What happens in the CRM when I create an invoice in QuickBooks?</summary>
+
+A note is created on the contact's profile in Partner Center with details from QuickBooks, including the invoice number, contact name, and invoice amount.
+
+</details>
+
+<details>
+<summary>Can I stop all QuickBooks contacts from syncing when I first connect?</summary>
+
+Yes. After the initial connection, all QuickBooks contacts sync to the Partner Center CRM unless you deselect the Sync Customer Data option on the form during the initial connection.
+
+</details>
+
+<details>
+<summary>How do I disconnect QuickBooks?</summary>
+
+Go to the `Manage` tab on the Integrations page and click the QuickBooks connection card to open the `Connection Settings` page. From there, you can choose to disconnect the integration.
+
+</details>

@@ -6,9 +6,18 @@ sidebar_position: 5
 brand: vendasta
 product: marketing
 audience: partners
+content_type: overview
+kb_id: KB-00068
+answer_snippet: "Email settings in Partner Center, at Marketing → Email settings, control how your email campaigns are authenticated and sent. Before you send campaigns, add four DNS records for your domain (one SPF, two DKIM, one DMARC), set your sender and reply information, and add a mailing address."
+doc_owner: marketing
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-Email settings are crucial for ensuring your email campaigns reach recipients' inboxes successfully. Proper configuration of authentication protocols, sender information, and deliverability settings helps avoid spam filters and maintain your sender reputation.
+Email settings in Partner Center, at `Marketing` → `Email settings`, control how your email campaigns are authenticated and sent. Before you send campaigns, add four DNS records for your domain (one SPF, two DKIM, one DMARC), set your sender and reply information, and add a mailing address.
+
+Configuring authentication, sender information, and deliverability settings helps your campaigns avoid spam filters and maintain your sender reputation.
 
 ## Overview
 
@@ -214,6 +223,13 @@ It applies to review requests and NPS requests as well as email campaigns. The d
 <summary>Can I edit or remove a section of the partner email template for one partner?</summary>
 
 No. Partner email templates are managed in Sendwithus, and shared sections appear in every partner email. Changing a shared section changes it for all partners. Per-partner control needs a feature request.
+
+</details>
+
+<details>
+<summary>How do I set up my email settings?</summary>
+
+Connect your business domain, then add the SPF record (TXT), both DKIM records (CNAME), and the DMARC record (TXT) at your DNS provider. Verify that all four records show a `Current value` in `Email domains`. Then set your sender name and email address and configure your business mailing address.
 
 </details>
 

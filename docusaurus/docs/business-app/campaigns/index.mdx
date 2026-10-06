@@ -4,13 +4,22 @@ title: Campaigns
 sidebar_position: 1
 description: Create and manage email and SMS marketing campaigns in Business App. Use templates, AI, and the builder to reach your audience.
 brand: vendasta
-product: business-app-core
+product: campaigns
 audience: partners
+content_type: overview
+kb_id: KB-00038
+answer_snippet: "Campaigns in Business App let your clients run email and SMS marketing from one place. The base plan includes email sending (10,000 emails per month by default), and SMS requires an add-on."
+doc_owner: campaigns
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 # Campaigns Overview
 
-Campaigns in Business App let your clients run email and SMS marketing from one place. The base plan includes email sending (e.g. 10,000 emails per month); SMS requires an add-on. Clients can create campaigns from scratch or from templates, add email or SMS steps, use AI to generate content, and send to filtered contact lists.
+Campaigns in Business App let your clients run email and SMS marketing from one place. The base plan includes email sending (10,000 emails per month by default), and SMS requires an add-on.
+
+Clients can create campaigns from scratch or from templates, add email or SMS steps, use AI to generate content, and send to filtered contact lists.
 
 <iframe src="//www.youtube-nocookie.com/embed/cg0a5aRUjAk" width="560" height="315" frameBorder="0" allowFullScreen></iframe>
 
@@ -21,7 +30,7 @@ Campaigns in Business App let your clients run email and SMS marketing from one 
 - **Targeted sends**: Choose time zone, send days, and filter contacts so the right message reaches the right audience.
 - **Integrated with Business App**: Campaigns live alongside contacts, Conversations, and automations.
 
-## Tracking your sending limits
+## How do I track campaign sending limits? {#tracking-your-sending-limits}
 
 <img src={require('./img/campaigns-pro/emails-sent-counter.png').default} alt="Marketing emails and SMS sent this billing period counters" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -32,7 +41,7 @@ At the top of the Campaigns page you'll see two counters showing how much of you
 
 Both counters reset at the start of each billing period.
 
-## How to use Campaigns
+## How do I create and send a campaign? {#how-to-use-campaigns}
 
 **Step 1** — Go to `Business App` → `Campaigns` → `Create Campaign`. Give your campaign a name and select **Create**.
 
@@ -141,4 +150,34 @@ Yes. To send SMS messages in Email & SMS Marketing, an **SMS add-on is required*
 
 The low-volume A2P submission type limits a single business to **6000 SMS segments per day**. A long message can consume multiple segments, so the number of messages you can send in a day may be lower than 6000 when messages are longer than one segment.
 
+</details>
+
+<details>
+<summary>How do the sending counters reset?</summary>
+
+The **Marketing emails sent this billing period** and **Marketing SMS sent this billing period** counters at the top of the Campaigns page show usage against your monthly limit. Both counters reset at the start of each billing period.
+</details>
+
+<details>
+<summary>Can I send a published campaign again to the same contact list?</summary>
+
+Not directly. Duplicate the campaign (or use the three-dot menu → **Copy campaign**), add your contacts to the new copy, and publish it.
+</details>
+
+<details>
+<summary>Why were some contacts not added to my campaign?</summary>
+
+When a campaign uses dynamic fields and a contact is missing a value for that field, that contact is excluded. Remove or make optional the dynamic field, or fill in the missing values in the CRM before adding the contacts.
+</details>
+
+<details>
+<summary>Why haven't my campaign emails been delivered yet?</summary>
+
+Emails can be deferred when the receiving mail server temporarily rejects them, and the sending system retries automatically. Deferred emails typically deliver within a few hours, so no action is needed unless an email stays undelivered for more than 24 hours.
+</details>
+
+<details>
+<summary>What image formats can I use in campaigns?</summary>
+
+Campaigns support **JPEG** and **PNG** images. Keep each file under 5 MB.
 </details>

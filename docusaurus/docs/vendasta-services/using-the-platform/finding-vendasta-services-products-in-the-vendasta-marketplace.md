@@ -1,17 +1,26 @@
 ---
-title: "Finding Vendasta Services Products in the Vendasta Marketplace"
+title: "How do I find Vendasta Services products in the Vendasta Marketplace?"
 sidebar_label: "Finding Vendasta Services Products in the Vendasta Marketplace"
-description: "Learn two ways to identify Vendasta Services products while browsing the Vendasta Marketplace: filtering by vendor and recognizing product logos."
+description: "Find Vendasta Services products in the Vendasta Marketplace by filtering Discover Products by vendor or by recognizing their product logos."
 brand: vendasta-services
 product: vendasta-services-core
-audience: smb
+audience: partners
+content_type: how-to
+kb_id: KB-00091
+answer_snippet: "To find Vendasta Services products in Partner Center, go to Marketplace → Discover Products, select All under Explore, and add the filter Vendor → Vendasta Services. You can also recognize them by their grey circular logos with a colored ring."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
+
+To find Vendasta Services products in Partner Center, go to `Marketplace` → `Discover Products`, select `All` under `Explore`, and add the filter `Vendor` → `Vendasta Services`. You can also recognize them by their grey circular logos with a colored ring.
 
 Vendasta Services is Vendasta's in-house fulfillment team. Partnering with us gives you access to skilled digital professionals who handle the work for you, so your clients maintain a strong online presence, a well-managed reputation, and an active presence across social platforms.
 
 Our products don't include "Vendasta Services" in the title, so they may not be immediately recognizable. Here are two ways to identify them while browsing the Marketplace.
 
-## Filtering by vendor
+## How do I filter Marketplace products by vendor? {#filtering-by-vendor}
 
 1.  Open [Partner Center](https://partners.vendasta.com/login) and log in to your account.
 
@@ -26,7 +35,7 @@ Our products don't include "Vendasta Services" in the title, so they may not be 
 
 5.  The table will now display all products and services fulfilled by Vendasta Services.
 
-## Recognizing product logos
+## How do I recognize Vendasta Services product logos? {#recognizing-product-logos}
 
 Aside from using filters, you can recognize Vendasta Services products by their distinct logos.
 
@@ -39,3 +48,26 @@ Each product page includes details about what's included in the service, sales r
 :::tip
 Still have questions? Email us at [marketingservices@yourdigitalagents.com](mailto:marketingservices@yourdigitalagents.com) and we'll be happy to help.
 :::
+
+## Frequently asked questions
+
+<details>
+<summary>Why can't I find a Vendasta Services product by searching for "Vendasta Services"?</summary>
+
+Vendasta Services products don't include "Vendasta Services" in their titles. Filter the Discover Products table by `Vendor` → `Vendasta Services` to see them all.
+
+</details>
+
+<details>
+<summary>Does Discover Products show products I'm not selling in my store?</summary>
+
+Yes. The Discover Products page shows all available products in the Vendasta Marketplace, regardless of whether you're selling them in your store.
+
+</details>
+
+<details>
+<summary>What details are on a Vendasta Services product page?</summary>
+
+Each product page includes details about what's included in the service, sales resources, and FAQs.
+
+</details>

@@ -1,18 +1,25 @@
 ---
-title: Integrate Salesforce with Partner Center
+title: "How do I integrate Salesforce with Partner Center?"
 sidebar_label: Salesforce
 sidebar_position: 3
 description: Connect Salesforce to Partner Center and Business App for two-way sync of Contacts and Companies.
 brand: vendasta
 product: partner-center-core
 audience: partners
+content_type: how-to
+kb_id: KB-00196
+answer_snippet: "The Salesforce integration syncs Contacts and Companies both ways between Salesforce, Partner Center, and Business App. You connect it in Partner Center under Administration → Integrations by selecting Salesforce and authorizing with Salesforce OAuth."
+doc_owner: partner-center-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-# Integrate Salesforce with Partner Center
+# How do I integrate Salesforce with Partner Center? {#integrate-salesforce-with-partner-center}
 
-The Salesforce integration enables two-way data sync for Contacts and Companies between Business App / Partner Center and Salesforce. Once connected, updates made in either system automatically sync to the other, keeping records aligned across platforms.
+The Salesforce integration syncs Contacts and Companies both ways between Salesforce, Partner Center, and Business App. You connect it in Partner Center under `Administration` → `Integrations` by selecting `Salesforce` and authorizing with `Salesforce OAuth`. Once connected, updates made in either system automatically sync to the other.
 
-## Why use the Salesforce integration
+## Why use the Salesforce integration? {#why-use-the-salesforce-integration}
 
 Many teams rely on both Salesforce and Business App to manage customer relationships. Without automation, keeping data aligned requires manual work and often leads to errors. This integration:
 
@@ -21,11 +28,11 @@ Many teams rely on both Salesforce and Business App to manage customer relations
 - Reduces duplicate or conflicting records
 - Helps sales, marketing, and fulfillment teams work from a consistent source of truth
 
-## Who can use it
+## Who can use the Salesforce integration? {#who-can-use-it}
 
 Both you and your SMB clients. You manage the connection in **Partner Center**, while your clients benefit from synced data inside **Business App**.
 
-## What syncs
+## What data syncs between Salesforce and Partner Center? {#what-syncs}
 
 | Object | Direction |
 | --- | --- |
@@ -36,11 +43,11 @@ Both you and your SMB clients. You manage the connection in **Partner Center**, 
 Only Contacts and Companies are included in the sync.
 :::
 
-## Salesforce access for AI employees
+## How do AI Employees access Salesforce data? {#salesforce-access-for-ai-employees}
 
 A **Salesforce MCP** is also available under [AI Capabilities](../../../ai/ai-capabilities/index.md). Add it to any AI Employee to give them direct access to Salesforce CRM data (Contacts, Companies, and Leads), so the AI Employee can look up records during a conversation, reference recent activity, or answer questions grounded in live Salesforce data.
 
-### What the MCP can do
+### What can the Salesforce MCP do? {#what-the-mcp-can-do}
 
 The MCP exposes Salesforce search tools that the AI Employee uses on demand. It can:
 
@@ -49,7 +56,7 @@ The MCP exposes Salesforce search tools that the AI Employee uses on demand. It 
 - **Search leads** and return name, email, company, and status.
 - **Apply filters** (name, email, industry, etc.) to narrow results when the user provides specific criteria.
 
-### MCP vs. two-way sync
+### How is the MCP different from the two-way sync? {#mcp-vs-two-way-sync}
 
 The MCP is independent of the two-way sync described above:
 
@@ -58,13 +65,13 @@ The MCP is independent of the two-way sync described above:
 
 You can use either, or both together.
 
-### Add the MCP to an AI Employee
+### How do I add the Salesforce MCP to an AI Employee? {#add-the-mcp-to-an-ai-employee}
 
 Open your AI Employee, add a new capability, and choose the **Salesforce MCP** connection. See [Creating custom capabilities](../../../ai/ai-capabilities/creating-custom-capabilities.md) for the full setup flow.
 
-## Connect Salesforce
+## How do I connect Salesforce? {#connect-salesforce}
 
-1. In Partner Center, navigate to `Administration` → `Connections` → `Browse`.
+1. In Partner Center, navigate to `Administration` → `Integrations` → `Browse`.
 2. Select `Salesforce`, then click `Connect Salesforce`.
 3. In the pre-connect form, choose the sync options you want enabled, then click `Continue`.
 4. Authorize the connection using `Salesforce OAuth`. Sign in to your Salesforce account and grant the requested permissions.
@@ -72,7 +79,7 @@ Open your AI Employee, add a new capability, and choose the **Salesforce MCP** c
 
 After the connection is established, records begin syncing automatically.
 
-## Verify the sync
+## How do I verify the sync? {#verify-the-sync}
 
 Test the connection in both directions:
 
@@ -113,6 +120,27 @@ Contacts and Companies.
 <details>
 <summary>How do I disconnect Salesforce?</summary>
 
-Go to `Administration` → `Connections`, open the Salesforce connection, and choose to disconnect. After disconnecting, no further changes will sync between the two systems.
+Go to `Administration` → `Integrations`, open the Salesforce connection, and choose to disconnect. After disconnecting, no further changes will sync between the two systems.
+
+</details>
+
+<details>
+<summary>Does the Salesforce integration sync Leads?</summary>
+
+No. The two-way sync covers only Contacts and Companies. The Salesforce MCP, which you add to an AI Employee, can search Leads on demand.
+
+</details>
+
+<details>
+<summary>If I delete a record in Salesforce, is it deleted in Partner Center too?</summary>
+
+No. Deletions don't sync in either direction. Remove the record manually in each platform if you want it removed from both.
+
+</details>
+
+<details>
+<summary>How long does it take for changes to sync?</summary>
+
+Changes typically sync within a few minutes. To test the connection, create or update a Contact or Company in one system and confirm it appears in the other.
 
 </details>

@@ -1,38 +1,47 @@
 ---
-title: "Creating & Managing Your Own Products"
+title: "How do I create and manage my own products?"
 sidebar_label: "Create & Manage Custom Products"
 sidebar_position: 2
-description: "Complete guide to creating, configuring, and managing your own products in the Vendasta Marketplace"
+description: "Create your own products in Marketplace and Vendor Center: pricing, editions, activation, order forms, trials, marketing, integrations, and add-ons."
 tags: [marketplace, create-product, custom-products, product-creation, vendor-center]
 keywords: [create product, custom products, product creation, vendor center, product integration, webhooks, SSO, marketing pages, order forms]
 brand: vendasta
 product: marketplace
 audience: partners
+content_type: how-to
+kb_id: KB-00090
+answer_snippet: "You can create your own products in Marketplace at Marketplace → Products → Create Product. Enter the basic information, pricing, and marketing content, then publish the product or continue editing it in Vendor Center for advanced settings."
+doc_owner: marketplace
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 # Creating & Managing Your Own Products
 
-The marketplace includes 250+ curated solutions you can resell, and also robust capabilities to create, market, sell, bill, and fulfill your own products and services. This guide covers quick creation through advanced management and optimization.
+You can create your own products in Marketplace at `Marketplace` → `Products` → `Create Product`. Enter the basic information, pricing, and marketing content, then publish the product or continue editing it in Vendor Center for advanced settings.
+
+In addition to the 250+ solutions you can resell, the marketplace lets you create, market, sell, bill, and fulfill your own products and services. This guide covers quick creation through advanced management.
 
 ## Why create your own products?
 
 **Expand your service portfolio**
-- Leverage marketplace infrastructure
+- Use marketplace infrastructure
 - Integrate with the platform
 - Use billing, invoicing, and customer management tools
 - Utilize sales and marketing frameworks
 
-**Advanced platform integration**
+**Platform integration**
 - Product categories for discovery
-- Robust invoicing
+- Invoicing
 - Custom marketing pages (full HTML)
-- Sophisticated order forms
+- Custom order forms
 - Unlimited add‑ons
 - Webhooks and SSO
 
-## Product creation methods
+## How do I create a product? {#product-creation-methods}
 
-### Quick start product creation
+### How do I create a product quickly? {#quick-start-product-creation}
 
 The fastest way to get your product into the marketplace with essential features configured.
 
@@ -89,14 +98,14 @@ All prices are set in USD.
 - Makes product available for packaging and store addition
 - Can be edited later but goes live immediately
 
-### Advanced product creation
+### How do I use advanced product creation? {#advanced-product-creation}
 
-For comprehensive product setup with full feature access, use Vendor Center for advanced configuration options.
+For full product setup with access to all features, use Vendor Center for advanced configuration options.
 
 Access: Through **Vendor Center** for advanced configuration.
 
 
-## Product info
+## What can I configure in the Product info tab? {#product-info}
 
 The **Product info** tab contains your product's core settings.
 
@@ -118,13 +127,13 @@ Configure the steps taken when provisioning your product:
 
 #### Auto Activation Toggle
 
-The **Auto Activation** toggle (found in **Marketplace > Products > [your product] > Product Info**) allows the product to activate automatically without requiring an admin to manually process an order.
+The **Auto Activation** toggle (found in `Marketplace` → `Products` → your product → `Product Info`) allows the product to activate automatically without requiring an admin to manually process an order.
 
 :::info Order Form dependency
 Auto Activation only works if the product has **no Order Form** configured. If an Order Form is attached, the toggle has no effect — the order must be manually processed so the form can be completed. Remove the Order Form first if you want auto activation to apply.
 :::
 
-#### Auto-activating a product when a new account is created
+#### How do I auto-activate a product when a new account is created? {#auto-activating-a-product-when-a-new-account-is-created}
 
 To activate a custom product automatically every time a new account is created:
 
@@ -161,7 +170,7 @@ Build a fulfillment form for internal use when provisioning the product:
 
 Set which countries your product is available in. By default, products are available in all countries.
 
-### Free trial management
+### How do I offer a free trial? {#free-trial-management}
 
 You can offer a trial period to let customers try your product before buying. Toggle **Offer a trial period** to enable trials and configure the following:
 
@@ -172,7 +181,7 @@ You can offer a trial period to let customers try your product before buying. To
 
 <img src={require('./img/trial-settings.png').default} alt="Trial settings showing duration and end-of-trial options" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-## Marketing
+## How do I customize my product's marketing? {#marketing}
 
 You can fully customize how your product appears to customers by editing the **Marketing** tab within a product in Vendor Center. Hover over any element to see what it controls. The following elements are available for customization:
 
@@ -194,7 +203,7 @@ All of these elements can be tailored to match your branding guidelines, giving 
 
 <img src={require('./img/marketing-tab.png').default} alt="Marketing tab showing the preview of a product listing with product information, screenshots, and pricing tabs" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-## Integration
+## How do I integrate my product with external systems? {#integration}
 
 The **Integration** tab contains three sections for connecting your product with external systems and automating workflows.
 
@@ -222,31 +231,31 @@ Choose a basic access URL for your product, or allow users to SSO from the Venda
   - *SAML* — Authenticate users via SAML.
 - **Product access URL** — The URL users are redirected to when launching your product. You can optionally include `<accountId>` as a placeholder in the URL.
 
-### Task Manager integration
+### Task Manager/Fulfillment integration {#task-manager-integration}
 
-Standardize your fulfillment process by automating project and task creation in Task Manager. Toggle **Integrate with Task Manager** to activate.
+Standardize your fulfillment process by automating project and task creation in Task Manager/Fulfillment. Toggle **Integrate with Task Manager** to activate.
 
-- **Projects** — Automatically create a project in Task Manager each time this product is purchased. Select a project template and choose who fulfills it:
-  - *Vendor* — Create projects in your Task Manager.
-  - *Reseller* — Create projects in the reseller's Task Manager.
+- **Projects** — Automatically create a project in Task Manager/Fulfillment each time this product is purchased. Select a project template and choose who fulfills it:
+  - *Vendor* — Create projects in your Task Manager/Fulfillment.
+  - *Reseller* — Create projects in the reseller's Task Manager/Fulfillment.
 - **Event-generated tasks and projects** — Automatically create a task or project when an event occurs in a different product:
   - *Reviews* — When a customer review is left for businesses.
   - *Mentions* — When the business is mentioned across the web.
   - *Listings* — When a listing is missing or inaccurate.
   - Choose whether these are fulfilled by *Vendor* or *Reseller*.
 
-## Add-ons
+## How do I create add-ons? {#add-ons}
 
 Add-ons let you create additional features or services that customers can purchase alongside your product. Each add-on is essentially its own product attached to the parent product. Click **Create Add-on** to get started.
 
-## Compare product
+## How do I compare or suspend my product? {#compare-product}
 
 The **Compare product** tab shows the activation status of your product and lets you compare your published product against your current draft. If you've made edits, the differences will appear here so you can review changes before publishing.
 
 - **Suspend new activations** — Prevent new customers from activating the product while keeping it available for existing users.
 - **Open** — Open the product (and all of its add-ons) to the marketplace so it can be activated.
 
-## Custom products and the Start/Stop Selling buttons
+## Why don't custom products have Start Selling or Stop Selling buttons? {#custom-products-and-the-startstop-selling-buttons}
 
 Custom (private) products you create in Vendor Center do not have **Start Selling** or **Stop Selling** buttons. This is by design — your own products are already enabled for selling in your marketplace. To prevent a custom product from being ordered, use **Suspend new activations** in the **Compare product** tab of Vendor Center instead.
 
@@ -259,3 +268,40 @@ Custom (private) products you create in Vendor Center do not have **Start Sellin
 - Set up notification emails so your team is alerted when products are activated or canceled.
 - If offering editions, keep tier names and pricing differences clear for customers.
 - Test your product's purchase flow end-to-end before publishing.
+
+## Frequently asked questions
+
+<details>
+<summary>How do I automatically activate a product when a new account is created?</summary>
+
+Go to `Partner Center` → `Administration` → `Customize` → `Account Creation`, and add your custom product under **Products to activate on account creation**. The product activates on every new account without requiring a separate order.
+
+</details>
+
+<details>
+<summary>Why isn't Auto Activation working for my product?</summary>
+
+Auto Activation only works if the product has no Order Form configured. If an Order Form is attached, the order must be manually processed so the form can be completed. Remove the Order Form first if you want auto activation to apply.
+
+</details>
+
+<details>
+<summary>How do I stop a custom product from being ordered?</summary>
+
+Use **Suspend new activations** in the **Compare product** tab of Vendor Center. This prevents new customers from activating the product while keeping it available for existing users. Custom products don't have **Start Selling** or **Stop Selling** buttons.
+
+</details>
+
+<details>
+<summary>How do I offer a free trial for my product?</summary>
+
+Toggle **Offer a trial period**, set the **Duration** in days, and choose what happens **At end of trial**: **Do nothing** keeps the product active, and **Deactivate** deactivates it when the trial ends.
+
+</details>
+
+<details>
+<summary>Can my product send customers to a URL after they purchase it?</summary>
+
+Yes. In the **Access and SSO** section of the **Integration** tab, choose an **Access type** such as **Public webpage** or **Activation-specific URL**, and enter the **Product access URL** that users are redirected to when they launch your product.
+
+</details>

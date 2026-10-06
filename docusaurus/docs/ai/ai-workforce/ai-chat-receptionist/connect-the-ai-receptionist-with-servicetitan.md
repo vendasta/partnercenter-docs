@@ -1,10 +1,17 @@
 ---
-title: "Connect the AI Chat Receptionist with ServiceTitan"
+title: "How do I connect the AI Chat Receptionist with ServiceTitan?"
 sidebar_label: Connect with ServiceTitan
 description: Connect the AI Chat Receptionist to ServiceTitan to look up customers, schedule appointments, and provide job status updates.
 brand: vendasta
 product: ai-workforce
 audience: partners
+content_type: how-to
+kb_id: KB-00194
+answer_snippet: "To connect the AI Chat Receptionist with ServiceTitan, add custom capabilities with ServiceTitan API tools to your AI Employee in AI → Workforce in Business App. Your AI Receptionist can then look up customers, schedule appointments, and check job status in your ServiceTitan account."
+doc_owner: ai-workforce
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 import {AISparkleIcon} from '@site/src/components/Icons'
@@ -12,7 +19,7 @@ import {ChatUserMessage, ChatAIMessage} from '@site/src/components/ChatBubble'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-By connecting the AI Chat Receptionist with ServiceTitan, your AI Receptionist can access customer information, schedule appointments, and manage service requests in your ServiceTitan account.
+To connect the AI Chat Receptionist with ServiceTitan, add custom capabilities with ServiceTitan API tools to your AI Employee in `AI` → `Workforce` in Business App. Your AI Receptionist can then look up customers, schedule appointments, and check job status in your ServiceTitan account.
 
 **In this guide, you will set up your AI Receptionist to be able to:**
 - Look up customer information and service history;
@@ -53,7 +60,7 @@ You can get more detailed help on gathering this information from the ServiceTit
 
 ---
 
-## Capability 1: Customer lookup and service history
+## Capability 1: How do I add customer lookup and service history? {#capability-1-customer-lookup-and-service-history}
 
 This capability allows your AI Receptionist to search for customers and retrieve their service history, providing instant access to past jobs, upcoming appointments, and customer preferences.
 
@@ -231,7 +238,7 @@ Initiate a ServiceTitan customer search **when**:
 
 ---
 
-## Capability 2: Appointment scheduling and job creation
+## Capability 2: How do I add appointment scheduling and job creation? {#capability-2-appointment-scheduling-and-job-creation}
 
 This capability enables your AI Receptionist to schedule new appointments, create service jobs in ServiceTitan, and manage the booking process end-to-end.
 
@@ -385,7 +392,7 @@ After successfully creating an appointment:
 
 ---
 
-## Capability 3: Job status and updates
+## Capability 3: How do I add job status and updates? {#capability-3-job-status-and-updates}
 
 This capability allows your AI Receptionist to provide real-time updates on job status, technician location, and estimated arrival times.
 
@@ -647,7 +654,7 @@ Dave will call you about 30 minutes before arrival. Please make sure the area un
 You'll receive a confirmation email at sarah.williams@email.com, and we'll send you a reminder the day before. Welcome to our family of customers, Sarah!
 </ChatAIMessage>
 
-## Testing & troubleshooting
+## How do I test and troubleshoot the ServiceTitan connection? {#testing--troubleshooting}
 
 This section walks you through diagnosing the most common issues with connecting ServiceTitan to the AI Receptionist: from authentication errors and API limits, to empty results and permission issues.
 
@@ -687,7 +694,7 @@ You'll encounter a `403 Forbidden` response when your app lacks necessary permis
 ```
 
 #### How do we fix this error?
-1. Check your API permissions in ServiceTitan Settings → Integrations → API Application Access
+1. Check your API permissions in ServiceTitan at `Settings` → `Integrations` → `API Application Access`
 2. Ensure your app has the required scopes (e.g., `jpm:jobs:read`, `crm:customers:read`)
 3. Re-authorize your application after adding new permissions
 4. Verify the tenant admin has approved the required permission levels
@@ -712,7 +719,7 @@ ServiceTitan returned a `429 Too Many Requests` error, indicating you've exceede
 This view shows the raw HTTP request the AI sent, including headers and request body.
 
 #### How do we fix this error?
-1. Open "Conversations" → "Explanation" in your Business App
+1. Open `Conversations` → `Explanation` in your Business App
 2. Review the API call details for correct endpoints and parameters
 3. Verify that all required headers are included
 4. Check that request body format matches ServiceTitan API requirements
@@ -741,7 +748,7 @@ The API returned a `404 Not Found` error, meaning the requested resource doesn't
 <details>
 <summary>Can I use this ServiceTitan integration with other AI Employees besides the Chat Receptionist?</summary>
 
-Absolutely! While this guide focuses on the AI Chat Receptionist, the Custom Capabilities and tools you create here work with any AI Employee, including your [AI Voice Receptionist](../ai-voice-receptionist.md).
+Yes. While this guide focuses on the AI Chat Receptionist, the Custom Capabilities and tools you create here work with any AI Employee, including your [AI Voice Receptionist](../ai-voice-receptionist.md).
 
 This means customers can get ServiceTitan information and schedule appointments through phone calls, SMS, web chat, or any other channel your AI Employees support. The same ServiceTitan data will be available regardless of how customers choose to interact with your business.
 
@@ -776,13 +783,13 @@ The ServiceTitan integration provides real-time operational data through API cal
 **ServiceTitan API provides:** Live job status, customer history, technician schedules, real-time availability  
 **Knowledge Base should include:** Service policies, pricing information, service area details, company procedures, emergency protocols
 
-Your AI will use the ServiceTitan API to answer "When is my next appointment?" and the Knowledge Base to answer "What's your service area?" For best results, ensure your [Knowledge Sources](../index.mdx#knowledge-sources) include comprehensive business policies and procedures to complement the real-time operational data.
+Your AI will use the ServiceTitan API to answer "When is my next appointment?" and the Knowledge Base to answer "What's your service area?" For best results, ensure your [Knowledge Sources](../index.mdx#knowledge-sources) include complete business policies and procedures to complement the real-time operational data.
 </details>
 
 <details>
 <summary>What if customers ask about ServiceTitan-related information the API can't provide?</summary>
 
-Great question! The ServiceTitan API provides operational and customer data, but customers often need additional business information. Add these topics to your [Knowledge Base](../../knowledge-base/index.md):
+The ServiceTitan API provides operational and customer data, but customers often need additional business information. Add these topics to your [Knowledge Base](../../knowledge-base/index.md):
 
 - Service area boundaries and travel charges
 - Emergency service policies and after-hours rates

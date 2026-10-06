@@ -2,13 +2,22 @@
 sidebar_position: 5
 title: Email deliverability
 sidebar_label: Email Deliverability
-description: Complete guide to email deliverability including Vendasta platform features, best practices, troubleshooting, and technical configuration.
+description: "How sender domains and SPF, DKIM, and DMARC records affect email deliverability, plus best practices, error codes, and spam troubleshooting."
 brand: vendasta
 product: marketing
 audience: partners
+content_type: overview
+kb_id: KB-00058
+answer_snippet: "Email deliverability for Partner Center emails and Campaigns depends on your sender domain, authentication records, content, and list health. The platform sends from a verified default domain, or from your own domain once you add SPF, DKIM, and DMARC records and update Marketing → Email settings."
+doc_owner: marketing
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-Sending emails is a crucial part of digital marketing. However, ensuring that your email campaigns actually reach your recipients' inboxes is a complex challenge. This article covers best practices and tips to improve your email deliverability when using Campaigns.
+Email deliverability for Partner Center emails and Campaigns depends on your sender domain, authentication records, content, and list health. The platform sends from a verified default domain, or from your own domain once you add SPF, DKIM, and DMARC records and update `Marketing` → `Email settings`.
+
+This article covers how the platform handles sender domains, best practices, and troubleshooting to improve your email deliverability when using Campaigns.
 
 ## What is email deliverability?
 
@@ -16,7 +25,7 @@ Email deliverability refers to the ability to successfully deliver emails to rec
 
 ## How Vendasta helps improve your email deliverability
 
-Spam laws and regulations are becoming more complex, and precautions are needed to prevent emails from being flagged as spam. To help deliver your emails successfully, Vendasta makes automatic adjustments to optimize your email delivery.
+Spam laws and regulations require precautions to prevent emails from being flagged as spam. To help deliver your emails successfully, Vendasta makes automatic adjustments to optimize your email delivery.
 
 ### Automatic domain management
 
@@ -318,6 +327,27 @@ Ask the recipient to:
 3. Click `Report as Not Spam` (or drag the email to the inbox)
 
 Once the recipient marks the email as Not Spam, future calendar invitations from the same sender are more likely to land in the inbox.
+
+</details>
+
+<details>
+<summary>Why can't I send emails from my Gmail address?</summary>
+
+Free email addresses such as gmail.com, outlook.com, and yahoo.com can't be verified because you don't own those domains, and they won't save as a sender address. The platform sends from your address at a verified default domain instead, so your emails pass spam filters.
+
+</details>
+
+<details>
+<summary>Where do replies go when my emails are sent from the default domain?</summary>
+
+All replies are automatically forwarded to the email address you used to sign up for the platform.
+
+</details>
+
+<details>
+<summary>What do I enter in Advanced email settings to use my own domain?</summary>
+
+Go to `Partner Center` → `Marketing` → `Email settings`. In the `Advanced email settings` card, set `Sender domain` to `Use my own email domain`, enter an email address on your custom domain, and select `Save`. Add one SPF (TXT), two DKIM (CNAME), and one DMARC (TXT) record to your DNS, and allow up to 72 hours for the changes to propagate.
 
 </details>
 

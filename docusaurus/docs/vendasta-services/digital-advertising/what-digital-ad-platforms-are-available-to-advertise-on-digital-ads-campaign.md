@@ -13,10 +13,19 @@ tags:
   - social-ads
 brand: vendasta-services
 product: vendasta-services-core
-audience: smb
+audience: partners
+content_type: overview
+kb_id: KB-00164
+answer_snippet: "Vendasta Services runs managed ad campaigns for your clients through the Specialty Ad Campaign on Google and Bing search, Google Display, Facebook and Instagram, YouTube, TikTok, and LinkedIn."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-With the [Specialty Ad Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN), Vendasta Services offers advertising across a diverse range of platforms for advertising, catering to different needs and budgets.
+Vendasta Services runs managed ad campaigns for your clients through the Specialty Ad Campaign on Google and Bing search, Google Display, Facebook and Instagram, YouTube, TikTok, and LinkedIn.
+
+See the [Specialty Ad Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN) in Marketplace for details.
 
 ## Search Ads - Google & Bing
 
@@ -43,7 +52,7 @@ Facebook and Instagram ads are better for demand creation, similar to display ad
 
 The most effective ads on these platforms resemble social posts rather than traditional ads. For example, an ad for dog dental products might feature a cute picture of a dog, making it look like a regular post that users might share, like, or engage with. This approach increases the likelihood of users pausing to read and interact with the ad.
 
-When creating ads, choose high-quality images and videos that blend seamlessly into users' feeds, ensuring they look like natural social media content. This strategy enhances engagement and makes your ads more effective on these visually-driven platforms.
+When creating ads, choose high-quality images and videos that blend naturally into users' feeds, ensuring they look like natural social media content. This strategy enhances engagement and makes your ads more effective on these visually-driven platforms.
 * **Supported by:** [Specialty Ad Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN)
 
 ## YouTube Video Ads
@@ -125,5 +134,26 @@ Our team handles the full setup and optimization of catalog-based Sales campaign
 <summary>What do you need to provide for Facebook Marketplace ads?</summary>
 
 You must create a product catalog or integrate a feed, and enable Marketplace as a sales channel if it's available for your business type.
+
+</details>
+
+<details>
+<summary>Does Vendasta Services manage Facebook, Instagram, and Google ads?</summary>
+
+Yes. The [Specialty Ad Campaign](https://partners.vendasta.com/marketplace/products/MP-WM65PB2J5PL6BCNLB5JJN58DDQWXZVPN) supports Google and Bing search ads, Google Display ads, Facebook and Instagram (Meta) ads, YouTube video ads, TikTok ads, and LinkedIn ads.
+
+</details>
+
+<details>
+<summary>Can LinkedIn ads be white-labeled?</summary>
+
+No. LinkedIn ads must be managed through personal LinkedIn accounts, which are publicly searchable. For advice on how to present this to your clients, reach out to your Vendasta sales rep.
+
+</details>
+
+<details>
+<summary>Can I get a platform and budget recommendation before ordering?</summary>
+
+Yes. [Request a digital ads proposal](https://digital-ads-proposal.websitepro.hosting/) to have strategists review your campaign goals and recommend platforms, budget, and strategy.
 
 </details>

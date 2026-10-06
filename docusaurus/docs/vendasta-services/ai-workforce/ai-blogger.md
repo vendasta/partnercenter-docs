@@ -2,10 +2,16 @@
 title: "AI Blogger: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Blogger"
 description: "An overview of the AI Blogger service: how setup works, how your autonomous blog calendar is built, and ongoing optimization."
-last_reviewed: 2026-09-21
 brand: vendasta-services
 product: vendasta-services-core
-audience: smb
+audience: partners
+content_type: overview
+kb_id: KB-00045
+answer_snippet: "AI Blogger Setup is a done-with-you service where our experts configure, train, and launch the AI Blogger, which drafts or schedules SEO-focused posts to your WordPress site on an autonomous blog calendar. It requires Social AI Premium."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';
@@ -18,10 +24,12 @@ Want to hand this to a client? The **grey-labeled guide** has the same informati
 :::
 
 :::info Requirements
-**Social AI Premium** must be active on the account. A **WordPress** site is required: WordPress is the only supported blogging platform at this time.
+**Social AI Premium** must be active on the account. A **WordPress** site is required: WordPress is the only supported blogging platform.
 :::
 
-The AI Blogger Setup is a done-with-you service where our experts configure, train, and launch the AI Blogger for your business. Our team handles the branding, trains the AI on your voice and target keywords, connects your WordPress site, and sets up an autonomous blog calendar that drafts or schedules SEO-focused posts.
+AI Blogger Setup is a done-with-you service where our experts configure, train, and launch the AI Blogger, which drafts or schedules SEO-focused posts to your WordPress site on an autonomous blog calendar. It requires Social AI Premium.
+
+Our team handles the branding, trains the AI on your voice and target keywords, connects your WordPress site, and sets up the blog calendar.
 
 :::info Two ways to get the AI Blogger
 
@@ -66,7 +74,7 @@ Only one WordPress blog is used per post. If you have multiple WordPress sites, 
 
 ### 3. Walkthrough and training call
 
-We walk you through the new workflow: where to find your generated blog calendar and individual posts, how drafts, scheduled posts, and published posts are managed in Business App and on WordPress, how to edit or regenerate a blog before it publishes, and how to chat with your AI Blogger directly to generate posts, refine drafts, or adjust content conversationally.
+We walk you through the workflow: where to find your generated blog calendar and individual posts, how drafts, scheduled posts, and published posts are managed in Business App and on WordPress, how to edit or regenerate a blog before it publishes, and how to chat with your AI Blogger directly to generate posts, refine drafts, or adjust content conversationally.
 
 ### 4. 30-day review
 
@@ -141,7 +149,7 @@ It is a done-with-you service where our experts configure, train, and launch you
 <details>
 <summary>Which blogging platforms are supported?</summary>
 
-WordPress is the only supported platform at this time. Additional platforms may be added in the future.
+WordPress is the only supported blogging platform.
 </details>
 
 <details>
@@ -172,6 +180,24 @@ We train it using your website, business profile, target keywords, and any brand
 <summary>What happens after the first 30 days?</summary>
 
 We complete a 30-day review and audit, checking brand voice consistency, SEO performance, and content accuracy, and confirm whether your cadence, blog length, or approval setting should be adjusted.
+</details>
+
+<details>
+<summary>What product does the AI Blogger require?</summary>
+
+Social AI Premium must be active on the account, and you need a WordPress site. WordPress is the only supported blogging platform.
+</details>
+
+<details>
+<summary>How does the WordPress blog integration work?</summary>
+
+We connect your site using the Blog Post Connector plugin: install and activate it on your WordPress site, generate a connection key from Settings → Blog Post Connector, and enter your site URL and key into your AI Blogger setup. We can walk you through it during onboarding, or do it for you with access to your WordPress dashboard.
+</details>
+
+<details>
+<summary>Do I upload blog content, or are posts created automatically?</summary>
+
+Posts are created automatically. The AI Blogger runs on a recurring daily, weekly, or monthly trigger that generates a blog calendar and writes each post. With the Draft setting, posts wait for your approval; with the Schedule setting, they publish automatically on the calendar date.
 </details>
 
 <OptimizationPlanFaq />

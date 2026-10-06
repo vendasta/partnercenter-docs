@@ -1,18 +1,25 @@
 ---
 title: Automation steps reference
-description: Complete reference for every step (action) your automations can perform, organized by category.
+description: "Reference for every step a Partner Center automation can perform, by category, with availability, special cases, and example use cases."
 sidebar_position: 8
 sidebar_class_name: hidden-sidebar-item
 brand: vendasta
 product: automations
 audience: partners
+content_type: reference
+kb_id: KB-00114
+answer_snippet: "The Automations steps reference lists every step (action) a Partner Center automation can perform after a trigger fires, organized by category. Every workflow needs at least one step, and steps run top-to-bottom in the order you add them."
+doc_owner: automations
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 # Automation steps reference
 
-Steps are what your automation does after a trigger fires. Every workflow needs at least one step, and steps run top-to-bottom in the order you add them.
+The Automations steps reference lists every step (action) a Partner Center automation can perform after a trigger fires, organized by category. Every workflow needs at least one step, and steps run top-to-bottom in the order you add them.
 
-## How step availability works
+## Which steps are available for my trigger? {#how-step-availability-works}
 
 The steps you can add depend on what the trigger puts in scope:
 
@@ -109,10 +116,10 @@ Steps marked **(draft)** are in development and may change or be removed before 
 
 | Step | Overview | Special Cases | Example Use Cases |
 | --- | --- | --- | --- |
-| Create a fulfillment task | Creates a task in Task Manager. The fulfillment agent can be the default agent or a specific individual. | Available on account-scoped triggers. If the assigned agent doesn't exist, no one is assigned. | When the **Design a Business Card** product is activated, assign the partner's primary business-card designer. |
-| Create a fulfillment project for the account | Creates a project in Task Manager from the selected template. | Available on account-scoped triggers. If Task Manager is inactive, it will be activated. Using this step twice in one workflow results in a rejected activation. | When the Website product is activated, create the Website Builder project from the Website Builder template. |
-| Add account to Task Manager | Adds the account to Task Manager so tasks can start generating. | Available on account-scoped triggers. | |
-| Pause or cancel the Task Manager account | Pauses or cancels a Task Manager account. **Pause**: stops generating product-based tasks and projects (manually created ones can still be added). **Cancel**: stops any new tasks or projects from being created and closes all existing ones. | Available on account-scoped triggers. | |
+| Create a fulfillment task | Creates a task in Task Manager/Fulfillment. The fulfillment agent can be the default agent or a specific individual. | Available on account-scoped triggers. If the assigned agent doesn't exist, no one is assigned. | When the **Design a Business Card** product is activated, assign the partner's primary business-card designer. |
+| Create a fulfillment project for the account | Creates a project in Task Manager/Fulfillment from the selected template. | Available on account-scoped triggers. If Task Manager/Fulfillment is inactive, it will be activated. Using this step twice in one workflow results in a rejected activation. | When the Website product is activated, create the Website Builder project from the Website Builder template. |
+| Add account to Task Manager | Adds the account to Task Manager/Fulfillment so tasks can start generating. | Available on account-scoped triggers. | |
+| Pause or cancel the Task Manager account | Pauses or cancels a Task Manager/Fulfillment account. **Pause**: stops generating product-based tasks and projects (manually created ones can still be added). **Cancel**: stops any new tasks or projects from being created and closes all existing ones. | Available on account-scoped triggers. | |
 
 ## Lists
 
@@ -259,6 +266,57 @@ The Workflow category is in **early access**.
 ## Walkthrough
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xd42JUUys-E" title="Automation Steps Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Frequently asked questions
+
+<details>
+<summary>Why don't I see a step I expected?</summary>
+
+The steps you can add depend on what the trigger puts in scope. For example, no-scope triggers such as On a schedule only show steps that don't need an entity, while account-scoped triggers add account-focused steps such as Assign a salesperson.
+
+</details>
+
+<details>
+<summary>How do I change the salesperson on an account with an automation?</summary>
+
+Use the Assign a salesperson or Assign a sales team step on an account-scoped trigger. If the account already has a salesperson, you can choose to replace them; if reassign is off, accounts with an existing salesperson are skipped. To remove salespeople, use Unassign salespeople.
+
+</details>
+
+<details>
+<summary>Can an If/else branch have more than two paths?</summary>
+
+No. The If/else branch step splits the workflow into two paths based on whether a condition is met. See [Logic & flow control](./logic-and-flow-control.mdx) for configuration details.
+
+</details>
+
+<details>
+<summary>Can an automation place a phone call?</summary>
+
+Yes. The Make outbound call with an employee step places an outbound AI phone call to a contact using the AI employee you select.
+
+</details>
+
+<details>
+<summary>How do I send a text message to someone who isn't in my CRM?</summary>
+
+Use the Send an SMS message to a phone number step. It sends an SMS to any phone number you specify, including numbers not in your CRM, such as an on-call salesperson.
+
+</details>
+
+<details>
+<summary>Can automations handle invoices?</summary>
+
+Yes. The Sales category includes steps to charge, finalize, and send an invoice. For example, when an invoice is past due, the Charge an invoice step can attempt automatic payment collection.
+
+</details>
+
+<details>
+<summary>How do I roll out AI employees to many accounts at once?</summary>
+
+Use the Apply blueprint step to deploy a blueprint of AI employees, CRM fields, and automations to the target account, or Copy AI employee configuration to another company to standardize an AI employee from a single template. Both steps are available on account-scoped triggers.
+
+</details>
 
 ## Related resources
 
