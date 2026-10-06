@@ -45,7 +45,8 @@ When you invite a new Business App user, they receive an **onboarding email** in
 - A subject line of **"Welcome to \[your Business App name\]"** — the same subject as the classic welcome email. The preview text under the subject greets the recipient by name.
 - A short intro, then a **"We already got to work"** summary — the same checklist of completed work that appears on the SMB's Home page (see [What the work summary shows](#what-the-work-summary-shows)). The content is generated from the business's own information — business name, website, number of pages read, reviews found, active products, and so on.
 - If a Vibe website has been built, a **preview image of that landing page** near the top, linked to the live site.
-- A single call to action — **See what's ready for you** — that takes the SMB to their Business App Home page. The link works whether the user still needs to set a password or can log in directly. When a password is needed first, the create-password page shows the user's email address, lets them set a password, and continues with a **Get started** button.
+- A single call to action — **See what's ready for you** — that takes the SMB to their Business App Home page. The link works whether the user still needs to set a password or can log in directly. When a password is needed first, the create-password page shows the user's email address, lets them set a password, and continues with a **Get started** button. For a user who still needs to set a password, a line under the button reads *Already set your password? Log in any time at \[your Business App URL\]*, so the email keeps working as a way back to Business App after the password is set.
+- A sign-off with the **Sender Name** from the account's market email settings, or your partner name if no sender name is set. The same name appears in the email header when no logo is set.
 
 The email adapts to the **products that are active** on the account, so no two businesses necessarily receive the same checklist. The next section lays out every line it can contain.
 
@@ -79,7 +80,7 @@ The table below lists every line the summary can contain, the exact condition fo
 | **Drafted your first week's social posts** - ready for you to review and approve | Social AI **Premium** is active and drafted posts are waiting | **review and approve** — opens the drafts for approval (in-app only; the email shows this line without a link) |
 | Read your website (**\{count\} pages** from \{domain\}) and taught your AI everything about your business | The business has a website on file | the website domain |
 | Prefilled your **business profile** | Always | **review suggestions** when the business description is empty and AI has drafted one, otherwise **ready for you to review** |
-| Named your AI Chat Receptionist **\{name\}** | The receptionist has been named for the account | **change it** |
+| Named your AI Chat Receptionist **\{name\}** | The receptionist has been named for the account | **change it** (when the SMB can edit the receptionist), **chat with \{name\}** (in-app only, when the SMB has access to AI) — opens a chat with the receptionist in the Inbox |
 
 :::note
 The onboarding email shows this same checklist. It keeps the fewest inline links — typically just the Vibe **see it live** link and the website domain — because the richer in-app links (drafting responses, opening a specialist chat, and so on) live behind login.
@@ -91,7 +92,7 @@ When an account is created, AI reads what's known about the business — startin
 
 The SMB sees it in two places:
 
-- On the work summary, as **"Named your AI Chat Receptionist \[name\]"**, with a **change it** link into the receptionist's configuration page.
+- On the work summary, as **"Named your AI Chat Receptionist \[name\]"**, with a **change it** link into the receptionist's configuration page and a **chat with \[name\]** link that opens a conversation with the receptionist.
 - On the **Meet your AI receptionist** next-step card, whose title becomes **"Meet \[name\]"** once the naming has run.
 
 The naming line waits until the name has actually been set, so the SMB never sees a placeholder. If the business has no website on file, a suitable name is still generated from the other business details. The SMB or your team can rename the receptionist at any time, and a later name change is never overwritten.
@@ -123,6 +124,13 @@ The email waits for the site to finish building (allow **5–15 minutes** for it
 
 You shape this through what's active on the account at invite time: activate Vibe before inviting and the client's first touch leads with a live site; invite without Vibe and the email focuses on the rest of the work. One site per account — re-sending the email to an account with a published Vibe site never creates a second one. See the [FAQ](#frequently-asked-questions) for the full details.
 
+### What the demo website includes
+
+The demo website is built from the business's own information and is set up to capture leads from day one:
+
+- **A lead capture form.** Every demo site includes a form that asks visitors for their name, email address (required), and a message. Each submission is saved to the business's CRM as a new contact and shows up as a lead. The form doesn't ask for a phone number.
+- **The business's web chat.** When Conversations AI is active on the account, the site also embeds the account's web chat widget, so visitors can chat with the business's AI receptionist. If Conversations AI is still activating when the build starts, the build waits a few minutes for it so the chat can be included. Activate Conversations AI before inviting and the client's demo site opens with a working web chat.
+
 ### When the email is sent
 
 Adding a user to an account is what sends the onboarding email. There is no checkbox to select or clear — the email goes out as part of creating the user, and it **replaces** the classic welcome email for that person. The two are never sent together.
@@ -139,7 +147,8 @@ Adding a user to an account is what sends the onboarding email. There is no chec
 
 - An automation that creates a user — see [Create a user from a contact](/automations/my-automations/create-a-user-from-contact).
 - A client signing themselves up for Business App.
-- A user created through the API, where that user is associated with an account.
+- A user created through the API, where that user is associated with an account — including an existing user given their first account in your partner through the API.
+- The example account created for your own business when you sign up as a partner. Vibe Free is activated on it, so the onboarding email you receive includes a demo website for your business.
 - A Business App user inviting another user from `Administration` → `Users` in their own Business App.
 
 Users created through single sign-on are not sent the email. When more than one of these paths would fire for the same person at the same time, only one email is sent.
@@ -154,9 +163,10 @@ The **Invite users** side panel is the fastest way to invite one or several user
 
 <img src={require('./img/invite-users-panel.png').default} alt="The Invite users panel open on an account, with an email typed in the Users field and an 'Invite email@example.com' suggestion below it" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-1. In the **Users** field, type an email address. As you type, matching CRM contacts are suggested — select one to create the user from that contact, with their details prefilled — or type a full address to invite someone new. Repeat to invite more users in the same batch.
+1. In the **Users** field, type an email address. As you type, matching CRM contacts are suggested — select one to create the user from that contact, with their details prefilled — or type a full address to invite someone new. Repeat to invite more users in the same batch — up to five users at a time.
 2. Optional: under **Customize users**, select a user to adjust their details:
    - **Contact information** — first name, last name, email, phone number, **Correspondence language** (the language of the platform and their emails, including the onboarding email template), and **Greeting name** (the name used to address them in emails).
+   - **Permissions** — the Business App tabs and products the user can access, with **Select all** and **Clear all**. The section summarizes the choice as **Full access** or a count such as *10 of 19 tabs*. Each user in the list also shows whether they **Can add and manage users**.
    - **Email** — a **Custom greeting** for the onboarding email, with a **Preview** button.
 3. Click **Invite \[count\] users**.
 
@@ -308,6 +318,7 @@ SMBs stay in control of their own dashboard. Both the work-done card and the pro
 - Each dismissible section has a small **✕** (labeled **Dismiss**) in line with its header.
 - The **work-done card** dismisses as a whole.
 - The **upgrade cards dismiss one at a time** — the section only disappears once the SMB has dismissed (or is ineligible for) every card in it.
+- Dismissing the work-done card or an upgrade card hides it **only on that account**. An SMB user who works across several accounts keeps the cards on the others.
 - Dismissals are stored **per browser** (in the browser's local storage), so they don't follow the SMB to another device. To bring dismissed cards back, the SMB can clear their browser's site data for the Business App.
 - Recommended next-steps cards are removed when the SMB dismisses them or completes the underlying task.
 
