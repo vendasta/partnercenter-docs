@@ -2,6 +2,9 @@
 title: "Project Tracking for Your Customers"
 sidebar_label: "Project Tracking for Your Customers"
 description: "See how Project Tracking in Business App lets your customers check the status of their website, digital ads campaign, listing claim, and social calendar without contacting you."
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 When will this website be live? What's the status of our digital ads campaign? Is my listing claimed yet? When should I expect the next social calendar?

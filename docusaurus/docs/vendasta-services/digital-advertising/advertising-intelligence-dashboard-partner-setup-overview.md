@@ -2,6 +2,9 @@
 title: "Advertising Intelligence Dashboard"
 sidebar_label: "Advertising Intelligence Dashboard"
 description: "Overview of setting up and using the Advertising Intelligence Dashboard: connecting accounts, configuring metrics, tracking conversions, and viewing campaign performance."
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 This guide covers setting up and using the Advertising Intelligence Dashboard: connecting ad accounts, configuring metrics and conversions, and viewing campaign performance.

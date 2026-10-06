@@ -3,9 +3,10 @@ id: administration-advanced-single-sign-on
 title: Single Sign-On
 description: "Configure SSO so clients can access products with your organization's logins. Available for Premium and Custom subscriptions."
 sidebar_position: 4
+brand: vendasta
+product: partner-center-core
+audience: partners
 ---
-
-# Single Sign-On
 
 Single Sign-On (SSO) lets clients access Vendasta products using your organization's logins. SSO is available for partners on **Premium** or **Custom** subscriptions. Configure it from `Partner Center` → `Administration` → `Advanced` → `Single Sign-On`.
 
@@ -15,26 +16,32 @@ Vendasta maintains a current SOC 2® Type 2 report covering its security control
 
 ## What SSO is
 
-SSO in Partner Center is an authentication mechanism that lets users access the platform with a single set of credentials. It streamlines the login process and improves user experience by enabling access without repeatedly entering usernames and passwords for different services.
+SSO lets your clients log into Vendasta products using your organization's own login credentials and identity provider, instead of a separate Vendasta username and password. You connect your identity provider once, and your clients sign in through your own custom login screen.
 
-## How it works
+## Supported identity providers
 
-- **Less friction** – SSO reduces unnecessary authorization steps, especially on first-time launches of integrated tools. Users can be routed directly into Partner Center or associated applications without extra authorization dialogs.
-- **Return to your page** – The SSO flow captures the URL of the page you are on so you return to the same page after completing authentication. This keeps context and continuity in your workflow.
-- **Session and access** – SSO manages session transfers and authentication states so users stay logged in and keep the right access. It supports role-based access control so permissions match each user’s role in the platform.
+SSO supports any identity provider that implements the standard **OAuth2** or **OpenID Connect (OIDC)** authentication flows. There's no fixed list of named providers: if your identity provider supports either standard, you can connect it.
 
-When issues occur (for example login failures or session transfer problems), troubleshooting usually involves checking session handling and authentication flows so the user is properly authenticated and redirected in Partner Center.
+## How to set up SSO
 
-Overall, SSO simplifies access, maintains session integrity, and supports a smooth experience within the platform.
+1. Go to `Partner Center` → `Administration` → `Advanced` → `Single Sign-On`, then open `Partner SSO Integration`.
+2. In your identity provider, create a new OAuth2 Client to represent the Vendasta Platform. Note the `Client ID` and `Client Secret`. When prompted for a redirect URL, enter:
 
-## What SSO covers
+   ```
+   https://sso-api-prod.apigateway.co/oauth2/callback
+   ```
 
-- **SSO setup** – Configure Single Sign-On for your organization
-- **Authentication providers** – Connect with popular identity providers
-- **User management** – Manage user access and permissions through SSO
-- **Security protocols** – SAML, OAuth, and other authentication methods
-- **Troubleshooting** – Common SSO issues and solutions
+   This same URI must also be added to your identity provider's list of authorized redirect URIs.
+
+3. In the Vendasta form, enter the `OAuth2 Client ID` and `OAuth2 Client Secret` from step 2.
+4. Set `Integration Type` to match what your identity provider supports:
+   - `OpenID Connect Discovery`
+   - `OAuth2`
+5. Enter your identity provider's endpoints:
+   - For `OpenID Connect Discovery`: the `Discovery Endpoint`
+   - For `OAuth2`: the `Authorization`, `Token`, and `User Info` endpoints
+6. Click `Create` to enable the integration.
 
 ## Documentation and support
 
-For detailed SSO setup and authentication help, contact the support team or your Vendasta representative.
+If you run into login or session issues after setup, contact the support team or your Vendasta representative.

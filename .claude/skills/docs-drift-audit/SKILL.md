@@ -33,15 +33,22 @@ A corollary: never spend a human's attention on the convention pile. Fix it once
 
 You cannot prove you broke nothing without knowing what was already broken.
 
+Docusaurus reports two distinct failures and **you must capture both**. Partner Center fails mostly on links; Business App has zero broken links and fails only on anchors. A baseline that greps for links alone will print `NO REGRESSIONS` on Business App no matter what the run did to it.
+
 ```bash
-cd docusaurus && npm run build 2>&1 | grep -c 'Broken link on source page path'
+cd docusaurus && npm run build 2>&1 | tee /tmp/build.log | grep -cE 'Broken (link|anchor) on source page path'
 ```
 
 Record the number **and the full list**. Both matter: a run that fixes one broken link and introduces another still reports the same count.
 
 ```bash
-npm run build 2>&1 | grep 'Broken link on source page path' | sed 's/.*path = //' | sort > /tmp/baseline_links.txt
+grep -E 'Broken (link|anchor) on source page path' /tmp/build.log | sed 's/.*path = //' | sort > /tmp/baseline_links.txt
+grep -A2 'Broken anchor on source page path' /tmp/build.log | grep -- '-> linking to' | sed 's/.*-> linking to //' | sort > /tmp/baseline_anchors.txt
 ```
+
+Anchors need their own file because the source page tells you nothing about which fragment broke. Keep both baselines per repo; do not pool them.
+
+Run the build from **inside `docusaurus/`**, not from the repo root. Business App's root `npm run build` shells out to a `docusaurus` binary that is not on PATH there and exits 127 — which looks like a clean run with zero broken links if you only check the grep.
 
 Many baseline "broken links" point at files that do not exist in the repo at all. Those are pre-existing and not yours to fix in this pass. Say so in the report rather than silently absorbing them.
 
@@ -108,6 +115,12 @@ Both are implemented in `scripts/detect.py`.
 
 Deterministic work should be deterministic. `scripts/sweep.py` converts bold-and-`>` navigation into backticks-and-`→`, skipping fenced code blocks, blockquote lines, and anything containing a markdown link target.
 
+**Fixed 2026-09-18: the sweep now sees separators inside a single bold span.** It previously matched only `**A** > **B**` (two spans), not `**A > B > C**` (one span), and reported `0 lines in 0 files` on corpora full of the second form. Partner Center English went from 0 to 105 lines once the script could see them.
+
+To avoid rewriting prose that merely contains a `>`, a single-span chain is only expanded when **every** segment looks like a UI label: non-empty, 45 characters or fewer, five words or fewer, and starting with a capital or a digit. So `**CRM > Companies**` is rewritten and `**Check that the value > the threshold**` is not.
+
+The cost of that caution is that a line can come out mixed, with one chain converted and an ambiguous bold span left beside it. Measured on Partner Center: 6 of 105 lines. Every one was a bold span with a dangling arrow or a bold *instruction* rather than a nav label, so leaving them is correct. Hand them to Pass B rather than widening the heuristic.
+
 Always dry-run first, inspect the samples, then apply:
 
 ```bash
@@ -133,6 +146,12 @@ Roughly three agents suits a 500-file corpus. Each agent's brief must contain:
 - **The register entries relevant to its folders**, written as ground truth with the verified correct value spelled out. Do not make an agent infer the right answer.
 - **The traps.** Name the things that look wrong but are right (`Payouts` is real; "AI Workforce" as a *concept* in prose is correct even though the *nav item* is `Workforce`; a page that is accurate except for its opening route must not be rewritten wholesale).
 - **The house rules** from the repo's `CLAUDE.md`: no `>` character, backticks for UI elements and bold for emphasis only, sentence-case headings, no em dashes.
+- **The Business App rules, when briefing against that repo.** They are additional, not shared, and an agent briefed with Partner Center's list alone will violate all three:
+  - **No "Vendasta" in any user-facing doc.** It is a gray-label product. Use "Business App" or the specific product name.
+  - **No internal references** — never mention partners, resellers, agencies, or internal teams. The audience is the business owner.
+  - **Evergreen only** — no "previously", "formerly", "used to", or "before this update". Current state only.
+
+  Business App also runs an automated Gemini style review on every PR touching `docusaurus/docs/`. It will comment inline on violations, so a sweep PR that ignores these rules arrives pre-loaded with review noise.
 - **`Do NOT run npm run build`** — concurrent Docusaurus builds clash. Build centrally after all agents finish.
 - **`Do NOT commit.`**
 - **"If a fix requires inventing a fact you cannot verify from this brief, DO NOT GUESS. Leave it and report it."** This single line is what keeps the output trustworthy.
@@ -145,11 +164,16 @@ Tell agents to make surgical edits and not to improve prose they were not asked 
 ## Phase 6 — Verify
 
 ```bash
-cd docusaurus && npm run build 2>&1 | grep 'Broken link on source page path' | sed 's/.*path = //' | sort > /tmp/after_links.txt
-diff /tmp/baseline_links.txt /tmp/after_links.txt && echo "NO REGRESSIONS"
+cd docusaurus && npm run build 2>&1 | tee /tmp/after_build.log | grep -cE 'Broken (link|anchor) on source page path'
+grep -E 'Broken (link|anchor) on source page path' /tmp/after_build.log | sed 's/.*path = //' | sort > /tmp/after_links.txt
+grep -A2 'Broken anchor on source page path' /tmp/after_build.log | grep -- '-> linking to' | sed 's/.*-> linking to //' | sort > /tmp/after_anchors.txt
+
+diff /tmp/baseline_links.txt   /tmp/after_links.txt   \
+  && diff /tmp/baseline_anchors.txt /tmp/after_anchors.txt \
+  && echo "NO REGRESSIONS"
 ```
 
-Compare the **set**, not the count.
+Compare the **set**, not the count — and compare **both** sets. `NO REGRESSIONS` only counts if both diffs are clean.
 
 Then re-run the Phase 4 hunt and confirm each register entry is at zero. Anything non-zero is either a miss or a deliberate exception — and every deliberate exception must appear in the report with its reason. Real examples worth expecting:
 
@@ -188,10 +212,18 @@ Run this against **both** documentation repos; the platform serves both audience
 
 | | Partner Center docs | Business App docs |
 |---|---|---|
-| Content root | `docusaurus/docs/` | see that repo's `CLAUDE.md` |
+| Content root | `docusaurus/docs/` | `docusaurus/docs/` |
+| Translations | `docusaurus/i18n/{de,es,fr}/` — 92 `.md`/`.mdx` per locale | none, English only |
 | Learning content | `docusaurus/training/` | n/a |
-| Build | `cd docusaurus && npm run build` | per repo |
+| Build | `cd docusaurus && npm run build` | `cd docusaurus && npm run build` |
+| Root `npm run build` | works | **broken** — exits 127, no root `node_modules` |
+| Corpus (2026-09-16) | 583 English + 276 translated | 461 |
+| Baseline (2026-09-16) | 117 broken links, 31 broken anchors | 0 broken links, 2 broken anchors |
 | Audience | partner | SMB client |
+| Extra house rules | none | gray-label, no internal refs, evergreen |
+| PR automation | none | Gemini style review on `docusaurus/docs/` |
+
+**Partner Center is multilingual and the corpus is not 583 files, it is 859.** The 2026-08-29 run covered `docusaurus/docs/` only, so the `de`, `es`, and `fr` trees were never audited. Include `docusaurus/i18n/` in the hunt or the routine will fix an English nav label and leave three translations pointing at the old door. Business App has no `i18n/` and needs no locale pass.
 
 House rules live in the repo's own `CLAUDE.md` and win any conflict with this file. The ones that matter most here: **never use `>` in markdown**, UI elements in backticks rather than bold, sentence-case headings, images in an `img/` folder beside the page.
 

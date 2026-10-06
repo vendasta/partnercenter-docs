@@ -4,6 +4,9 @@ sidebar_label: "GA4 Complete Build"
 description: "A done-for-you service that creates a new GA4 property, installs and connects Google Tag Manager, and sets up to three goals."
 tags: [vendasta-services, digital-advertising, google-analytics, ga4, google-tag-manager, tracking, goals]
 keywords: [GA4, Google Analytics 4, Google Tag Manager, GTM, goals, conversions, analytics setup]
+brand: vendasta-services
+product: vendasta-services-core
+audience: smb
 ---
 
 ## Overview

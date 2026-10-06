@@ -2,20 +2,31 @@
 title: Service Accounts
 description: Manage service accounts and automated access for integrations
 sidebar_position: 3
+brand: vendasta
+product: partner-center-core
+audience: partners
 ---
 
-This section covers the management of service accounts for automated access and system-to-system integrations within the Vendasta platform.
+Service accounts give you machine-to-machine access to Vendasta APIs, authenticated with a private key instead of a user login. Use them for system-to-system integrations that need to call Vendasta APIs without a person signing in.
 
 :::info API and access security
 Vendasta maintains a current SOC 2® Type 2 report covering its security controls. For details on how automated access and API keys are secured, see [Security and privacy](/getting-started/security-and-privacy) or visit the [Vendasta Trust Center](https://trust.vendasta.com/).
 :::
 
-## Service account management
+## How to create a service account
 
-- Account Creation - Set up service accounts for automated processes
-- Permission Management - Configure access levels and permissions for service accounts
-- API Key Management - Generate and manage API keys for service account authentication
-- Access Monitoring - Track and monitor service account usage and activity
-- Security Best Practices - Guidelines for secure service account implementation
+1. Go to `Partner Center` → `Administration` → `Advanced` → `Service Accounts`.
+2. Click `Create Account`.
+3. On the `Add Service Account` page:
+   - Optionally enter a `Title` to help you identify the account later.
+   - Enter an `Email` ID. It must be at least 3 characters long and contain only lowercase letters, numbers, and hyphens. This becomes the account's identifier: `<your-id>@partner-service-account.apigateway.co`.
+4. Click `Create`.
 
-If you need assistance with service accounts or have questions about automated access, please contact our support team.
+## How to generate a private key
+
+Creating a service account takes you to its `Manage Keys` page.
+
+1. Click `Generate Private Key (ES256)` or `Generate Private Key (RS256)`, depending on which signing algorithm your integration requires.
+2. Use the generated key to authenticate your integration's API requests.
+
+If you need assistance with service accounts or have questions about automated access, contact our support team.

@@ -4,6 +4,9 @@ sidebar_label: Welcome email
 description: Learn what the Business App welcome email contains, what can be customized, and how to use Marketing Campaigns as the recommended workaround for custom onboarding content.
 tags: [users, welcome-email, campaigns, onboarding]
 keywords: [welcome email, customize, onboarding, marketing campaigns, white label]
+brand: vendasta
+product: partner-center-core
+audience: partners
 ---
 
 ## What is the welcome email?
@@ -15,7 +18,7 @@ The welcome email gives a Business App user a link to set their password and acc
 | Element | Customizable? |
 |---------|--------------|
 | Logo and brand colors | Yes, via market white-label settings |
-| Sender name | Yes, via email domain settings |
+| Sender name and sender email | Yes, via the market's (or your partner default) `Email Settings` under `Administration` → `Customize` |
 | Sending domain | No, selected automatically |
 | Subject line | No, hard-coded |
 | Email body content | No, hard-coded |
@@ -25,10 +28,16 @@ The body of the welcome email is fixed and cannot be edited directly. The most c
 
 ## How the sending domain is chosen
 
-The platform selects the best sending domain for you automatically, based on the domains configured for your account. There is no domain picker to set at send time.
+The welcome and onboarding emails are sent from the **Sender Email** in the account's market email settings, but only when that address is on your verified sending domain. There is no domain picker to set at send time. The platform picks the address in this order:
+
+1. The market's sender email, if its domain matches your sending domain and both DKIM records for that domain are verified.
+2. Your partner-level sender email, if the market has its own address that doesn't qualify and your partner-level address does.
+3. A platform address, if neither of your addresses qualifies.
+
+The **Sender Name** is used in every case, so the email still shows your brand even when it's sent from the platform address.
 
 :::tip
-To influence which domain is used, configure your sending domains under `Marketing` → `Email settings`. A verified, correctly configured domain improves deliverability.
+To send these emails from your own address, set up and verify your sending domain, including both DKIM records, under `Marketing` → `Email settings`. See [Email authentication](/marketing/email-settings/email-authentication) for the DNS records. An authenticated sender also improves deliverability.
 :::
 
 ## Recommended workaround: Marketing Campaigns
@@ -78,4 +87,13 @@ The confirmation dialog shows which market's branding will be used and gives you
 <summary>Can I add a custom message to the welcome email?</summary>
 
 Yes, a brief custom introductory message can be added when creating a user or resending the email. It attaches to whichever email you're sending — the welcome email or the onboarding email — and appears above the standard content. For fully custom content, use a Marketing Campaign as described above.
+</details>
+
+<details>
+<summary>Can I add an existing user to an account without sending a welcome email?</summary>
+
+No. When you add a user to an account, the platform sends a welcome or onboarding email. There is no option to silently add users without notifying them.
+
+If you are adding corporate team members so they can work across many accounts, check whether they already have the access they need. Users with existing access often do not need to be added to each new account.
+
 </details>
