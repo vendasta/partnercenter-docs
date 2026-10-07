@@ -1,0 +1,253 @@
+---
+title: Mi equipo
+description: Administra los miembros de tu equipo, roles y permisos en Vendasta Partner Center
+sidebar_position: 1
+tags: [my-team, administration, partner-center]
+keywords: [my team, team members, roles, permissions]
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+En la página `My team`, puedes ver y administrar todo tu equipo de un vistazo, incluidos Admins, Salespeople y Digital Agents (usuarios de Task Manager).
+
+<img src={require('./img/administration/my-team/manage-my-team-overview.jpg').default} alt="Vista general de mi equipo" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Puedes acceder a la página desde `Partner Center` → `Administration` → [`My team`](https://partners.vendasta.com/my-team). En esta página, puedes ver una lista de los miembros de tu equipo, junto con sus roles y la fecha del último inicio de sesión.
+
+## Crear miembros del equipo
+
+Puedes crear diferentes tipos de miembros del equipo según su rol: Partner Center Admins, Salespeople o Digital Agents. Cada rol tiene distintos niveles de acceso y permisos.
+
+### Crear un Partner Center Admin
+
+Los Partner Center Admins acceden a la plataforma a través de [partners.vendasta.com](https://partners.vendasta.com). Es una buena práctica dar a la mayoría de tu equipo interno *algún* nivel de acceso de administrador.
+
+:::note
+Puedes restringir a los Admins de ciertas acciones en Partner Center, como crear Admins adicionales, acceder a los informes de facturación, personalizar la plataforma, personalizar el Marketplace y administrar Salespeople.
+:::
+
+Para crear un Partner Center Admin:
+
+1. Ve a `Partner Center` → `Administration` → [`My team`](https://partners.vendasta.com/my-team).
+2. Haz clic en `Invite Team Member` en la esquina superior derecha de la pantalla.
+   :::note
+   Si no ves el botón `Invite Team Member`, no tienes permiso para crear nuevos Admins. Comunícate con otro Admin de tu organización que tenga estos permisos, o pídele que se comunique con nuestro equipo de soporte.
+   :::
+
+   <img src={require('./img/administration/my-team/invite-team-member-button.jpg').default} alt="Botón Invite Team Member" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+3. Completa el formulario Create Admin User:
+   1. Ingresa el nombre, apellido y correo electrónico del Admin.
+   2. Selecciona los permisos que quieres otorgar al Admin.
+   3. Selecciona a qué Markets debe tener acceso el Admin.
+4. Una vez que confirmes que la información ingresada es correcta, haz clic en `Send`.
+
+:::tip Aprende más sobre los permisos
+Los permisos te permiten definir con mucho detalle quién tiene acceso a qué en Partner Center.
+[Aprende más sobre los permisos](./permissions.mdx)
+:::
+
+Una vez creado un nuevo Partner Center Admin, recibirá un correo de bienvenida en la dirección de correo electrónico que ingresaste al crear el miembro del equipo. El correo de bienvenida contiene un enlace que permite al Admin establecer su contraseña e iniciar sesión en Partner Center.
+
+<img src={require('./img/administration/my-team/welcome-email.jpg').default} alt="Correo de bienvenida" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Crear un Salesperson {#create-a-salesperson}
+
+Para crear un Salesperson:
+
+1. En Partner Center, ve a `Administration` → `My team`, luego selecciona `Invite Team Member` en la esquina superior derecha de la pantalla.
+2. Completa el nombre, apellido y dirección de correo electrónico.
+3. Selecciona la opción `Salesperson` en Role.
+4. Luego, selecciona el `Market` al que quieres que el Salesperson tenga acceso.
+5. Asegúrate de que `Send Welcome Email to the user` esté marcado.
+6. Haz clic en `Send`.
+
+<img src={require('./img/administration/my-team/create-salespeople.jpg').default} alt="Interfaz para crear Salespeople" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Video explicativo {#walkthrough-video}
+
+<iframe src="https://drive.google.com/file/d/1P_aIclwB3EKyh_q6wZ8pi52tyl9J2W7m/preview" width="640" height="480" allowFullScreen></iframe>
+
+## Ver y editar miembros del equipo
+
+Puedes ver información detallada de los miembros del equipo y hacer cambios en sus perfiles, roles y permisos.
+
+### Ver el perfil de un miembro del equipo
+
+- Haz clic en el nombre de un miembro del equipo, O haz clic en el icono de menú al final de la fila y luego en `View profile`.
+
+### Editar un miembro del equipo
+
+1. Haz clic en el icono de menú al final de la fila y luego en `Edit member`.
+2. En el panel lateral, edita el nombre, la dirección de correo electrónico o el rol del miembro del equipo.
+
+:::note
+Si deseleccionas un rol, el miembro del equipo perderá los permisos asociados con ese rol.
+:::
+
+<img src={require('./img/administration/my-team/edit-team-member.jpg').default} alt="Editar miembro del equipo" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## Eliminar miembros del equipo
+
+Puedes quitar miembros del equipo de tu organización cuando ya no necesiten acceso. Antes de eliminar, considera si necesitas eliminar al miembro por completo o solo un rol específico.
+
+:::danger
+Una vez que se elimina un Admin, no se puede restaurar. Antes de eliminar a un miembro del equipo, determina si el miembro debe eliminarse o si solo debe quitarse el rol de Admin. Si un miembro ya no necesita ser Admin, puedes quitar el rol de Admin desmarcando ese rol y SIN eliminar al miembro en sí.
+:::
+
+### Eliminar un miembro del equipo
+
+1. Ve a `Partner Center` → `Administration` → `My team`
+2. Haz clic en el icono junto al **Admin** que quieres eliminar y luego selecciona `Delete member`.
+
+:::info
+No es posible eliminar al usuario con el que tienes la sesión iniciada actualmente.
+:::
+
+<img src={require('./img/administration/my-team/delete-admin-screenshot.png').default} alt="Captura de la interfaz para eliminar un admin" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## Administrar cuentas de miembros del equipo
+
+Puedes administrar las cuentas de los miembros del equipo restableciendo contraseñas y reenviando correos de bienvenida para ayudarlos a acceder a la plataforma.
+
+### Restablecer contraseña
+
+Hay dos formas de restablecer contraseñas:
+
+<Tabs>
+<TabItem value="own-password" label="Restablecer tu propia contraseña">
+
+Puedes restablecer tu propia contraseña de Admin haciendo clic en tu nombre en la esquina superior derecha de Partner Center y haciendo clic en `Edit Profile`, desplázate hasta la sección de contraseña, ingresa tu contraseña actual y la nueva. Haz clic en `Save`.
+
+<img src={require('./img/administration/my-team/reset-password-profile.jpg').default} alt="Menú de perfil que muestra la opción Edit Profile" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+<img src={require('./img/administration/my-team/reset-password-section.jpg').default} alt="Sección de contraseña en la configuración del perfil" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+</TabItem>
+<TabItem value="team-member-password" label="Restablecer contraseñas de miembros del equipo">
+
+Para ayudar a los miembros del equipo a restablecer sus contraseñas, puedes reenviarles su correo de bienvenida, que contiene un enlace para establecer su contraseña:
+
+1. Ve a `Partner Center` → `Administration` → `My team`
+2. Haz clic en el icono de menú (⋮) junto al nombre del miembro del equipo
+3. Selecciona `Resend welcome email`
+
+El miembro del equipo recibirá un correo con instrucciones para establecer o restablecer su contraseña.
+
+</TabItem>
+</Tabs>
+
+## Ver la actividad de inicio de sesión de los miembros del equipo
+
+Partner Center registra la actividad de cada miembro del equipo, lo cual es útil para solucionar problemas de acceso o investigar comportamientos de inicio de sesión sospechosos.
+
+Para ver la actividad de un usuario específico:
+
+1. Ve a `Partner Center` → `Administration` → `My team`
+2. Haz clic en el nombre del miembro del equipo, o haz clic en `⋮` → `View profile`
+3. Ve a la pestaña `User activity`
+
+El registro de actividad muestra:
+- Inicios de sesión exitosos
+- Intentos de inicio de sesión fallidos
+- Restablecimientos de contraseña
+
+## Límites de puestos
+
+Los puestos son personas de tu empresa que podrán usar Vendasta. Esto puede incluir Salespeople, especialistas en marketing, profesionales de cumplimiento y administradores. Asegúrate de verificar cuántos puestos de miembros del equipo tiene disponibles tu nivel de suscripción, ya que se te puede cobrar por puestos adicionales si superas el límite de puestos gratuitos. Esto normalmente se muestra en un banner en la parte superior de la página "My team".
+
+<img src={require('./img/administration/my-team/seat-limits.jpg').default} alt="Banner de límites de puestos" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Cómo puedo agregar Partner Center Admins adicionales?</summary>
+
+Los Partner Center Admins se pueden crear a través de Partner Center en `Partner Center` → `Administration` → `My team`.
+
+<img src={require('./img/administration/my-team/admin-my-team-navigation.png').default} alt="Navegación a My team" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Una vez en esta área, puedes usar el botón `Invite Team Member` y completar el formulario para crear un nuevo Partner Center Admin.
+
+<img src={require('./img/administration/my-team/invite-team-member.png').default} alt="Botón Invite Team Member" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+</details>
+
+<details>
+<summary>¿Puedo cambiar la dirección de correo electrónico de un Partner Center admin?</summary>
+
+Actualmente, no hay ninguna opción para actualizar o editar la dirección de correo electrónico de un admin en Partner Center. La mejor opción es crear un nuevo perfil de admin usando la nueva dirección de correo electrónico deseada y luego eliminar el perfil de admin anterior si ya no se necesita.
+
+Ve a la pestaña `Administration` → `My team` para crear o eliminar un perfil de admin.
+
+<img src={require('./img/administration/my-team/my-team-navigation.jpg').default} alt="Navegación a My team en la pestaña de administración" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Para eliminar a un miembro del equipo, haz clic en los tres puntos junto al nombre del miembro del equipo y selecciona `Delete Member`.
+
+<img src={require('./img/administration/my-team/delete-team-member.jpg').default} alt="Opción para eliminar miembro del equipo" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Para agregar un nuevo miembro del equipo, selecciona `Invite Team Member` en la esquina superior derecha de la pantalla. Ten en cuenta que esto usará un puesto de equipo, lo que puede generar un cargo si actualmente estás en el límite de tu cantidad de puestos.
+
+<img src={require('./img/administration/my-team/add-team-member.jpg').default} alt="Opción para agregar un nuevo miembro del equipo" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+</details>
+
+<details>
+<summary>¿Cuántos puestos obtengo en una prueba gratuita?</summary>
+
+En una prueba gratuita, tendrás un número limitado de puestos para prevenir actividad fraudulenta:
+- Admin: 5 puestos
+- Salesperson: 5 puestos
+- Digital Agents: 5 puestos
+
+Esto es para garantizar que solo usuarios legítimos accedan a la plataforma y que no haya abuso de la prueba gratuita.
+</details>
+
+<details id="what-to-do-when-your-team-member-or-clients-cannot-log-in">
+<summary>¿Qué debo hacer si los miembros de mi equipo no pueden iniciar sesión?</summary>
+
+Si los miembros de tu equipo tienen problemas para iniciar sesión, hay varios pasos que puedes seguir para ayudar a resolver el problema.
+
+### Verifica si recibieron sus datos de inicio de sesión
+
+Cuando creas un nuevo usuario en la plataforma, este debería recibir automáticamente un correo con sus datos de inicio de sesión. Pídele que revise su correo (incluidas las carpetas de spam/correo no deseado) en busca de un mensaje de Vendasta con sus credenciales de inicio de sesión.
+
+### Asegúrate de que estén usando la URL de inicio de sesión correcta
+
+Asegúrate de que los miembros de tu equipo estén usando la URL de inicio de sesión correcta. La URL de inicio de sesión suele tener este formato: `https://partners.vendasta.com`.
+
+### Restablece su contraseña
+
+Si un miembro de tu equipo olvidó su contraseña, puedes ayudarlo a restablecerla:
+
+1. Ve a la página de inicio de sesión de tu empresa
+2. Haz clic en "Forgot Password"
+3. Deberá ingresar la dirección de correo electrónico asociada con su cuenta
+4. Recibirá un correo con instrucciones para restablecer su contraseña
+
+### Comunícate con soporte
+
+Si los pasos anteriores no resuelven el problema, comunícate con Vendasta Support para obtener más ayuda. Ten lista la siguiente información:
+
+- La dirección de correo electrónico del usuario
+- Cuándo se creó el usuario
+- Qué mensajes de error (si los hay) recibe al intentar iniciar sesión
+- Capturas de pantalla de cualquier mensaje de error
+- Si este es un problema nuevo o si antes podía iniciar sesión
+
+</details>
+
+<details>
+<summary>¿Dónde puedo encontrar la actividad de un miembro del equipo?</summary>
+
+1. Ve a `Partner Center` → `Administration` → `My team`
+2. Haz clic en `View Profile` para el usuario que quieres revisar
+3. Ve a la pestaña `User activity`
+
+Podrás ver eventos como:
+- Inicios de sesión exitosos
+- Intentos de inicio de sesión fallidos
+- Restablecimientos de contraseña
+
+</details>

@@ -1,0 +1,46 @@
+---
+id: administration-advanced
+title: Avanzado
+description: "APIs, integraciones, cuentas de servicio, SSO y traducción para usuarios avanzados y desarrolladores."
+sidebar_position: 0
+---
+
+Avanzado, dentro de **Administration**, te ofrece APIs, integraciones, cuentas de servicio, inicio de sesión único y herramientas de traducción. Úsalos para conectar sistemas externos, automatizar flujos de trabajo y adaptar la plataforma a tu organización.
+
+## Qué puedes hacer
+
+- **Usar APIs públicas**: intégrate con Vendasta mediante programación; hay un sandbox disponible para pruebas
+- **Conectar herramientas de terceros**: QuickBooks, Google Meet, Zoom, Zapier; autenticación y configuración de conexiones en un solo lugar
+- **Administrar cuentas de servicio**: crea cuentas para el acceso de sistema a sistema; claves de API y permisos
+- **Configurar el SSO**: inicio de sesión único con tu proveedor de identidad para una autenticación centralizada
+- **Traducir y personalizar**: usa Weblate para traducir y personalizar el idioma y la interfaz de la plataforma para tus mercados
+
+## Cómo funciona
+
+Las APIs e integraciones usan conexiones seguras y dependen de tu suscripción; hay un sandbox disponible para pruebas antes de producción. Las cuentas de servicio proporcionan acceso automatizado para integraciones de máquina a máquina; el SSO delega el inicio de sesión del usuario a tu proveedor de identidad. Los tipos de conexión (clave de API, SSO, administrado por el proveedor) se configuran por integración en `Partner Center` → `Administration` → `Integrations`.
+
+## Artículos en esta sección
+
+- **[Developer APIs](./developer-apis/index.mdx)**: APIs públicas, entorno de sandbox, productos de la API e integración con Zapier
+- **[Integrations](./integrations/index.mdx)**: autenticación y conexiones, Google Meet y Zoom, QuickBooks, y acciones de contacto de Zapier
+- **[Service Accounts](./service-accounts/index.mdx)**: acceso automatizado, permisos, claves de API y supervisión de uso
+- **[Single Sign-On](./single-sign-on/index.mdx)**: configuración de SSO, proveedores de identidad y acceso de usuarios
+- **[Translate & Customize](./translate-customize/index.mdx)**: traduce y personaliza con Weblate
+
+## Primeros pasos
+
+1. **APIs**: ve a [Developer APIs](./developer-apis/index.mdx) y a [developers.vendasta.com](https://developers.vendasta.com/platform); confirma que tu plan incluya acceso a la API y solicita el sandbox si lo necesitas.
+2. **Integraciones**: ve a `Partner Center` → `Administration` → `Integrations`. Comienza con [Authentication and connections](./integrations/authentication-and-connections.mdx) y luego agrega QuickBooks, Google Meet/Zoom o Zapier según lo necesites.
+3. **SSO o cuentas de servicio**: ve a [Single Sign-On](./single-sign-on/index.mdx) para la autenticación de usuarios o a [Service Accounts](./service-accounts/index.mdx) para integraciones automatizadas.
+
+:::tip
+Usa el entorno de sandbox para probar los cambios de la API y de integraciones antes de activarlos. Contacta a soporte para obtener acceso al sandbox si lo necesitas.
+:::
+
+## Manejo de errores y solución de problemas
+
+- **Fallos de la API o de integración**: comprueba las claves de API, el acceso a la API de tu suscripción y las URL de los extremos; confirma las URL de los webhooks y los formatos de datos para las integraciones.
+- **Problemas de SSO**: verifica la configuración del proveedor de identidad, la validez del certificado y el mapeo de atributos del usuario.
+- **Errores de permisos**: asegúrate de que las cuentas de servicio tengan el acceso correcto y de que los permisos de la API estén configurados correctamente.
+
+Si tienes problemas persistentes, contacta a [support@vendasta.com](mailto:support@vendasta.com) con los detalles del error y el contexto de la integración.

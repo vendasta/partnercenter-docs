@@ -1,0 +1,386 @@
+---
+title: Integra Autotask con Partner Center
+sidebar_label: Autotask
+sidebar_position: 6
+description: Conecta tu cuenta de Datto Autotask PSA con Vendasta para sincronizar automáticamente los registros de empresas y contactos en ambas direcciones.
+---
+
+# Integra Autotask con Partner Center
+
+Conecta tu cuenta de Datto Autotask PSA con Vendasta para sincronizar automáticamente los registros de empresas y contactos en ambas direcciones. Cuando un registro cambia en Autotask, aparece en Vendasta en cuestión de segundos, y viceversa. Sin Zapier. Sin entrada manual de datos. Sin copiar y pegar entre sistemas.
+
+Esta integración mantiene tus datos de clientes alineados entre ambas plataformas para que tu equipo siempre trabaje con información actualizada.
+
+## Quién puede usarla
+
+Tanto los partners como sus clientes SMB. Los partners administran la conexión en Partner Center, mientras que los SMB se benefician de los datos sincronizados dentro de Business App.
+
+## Qué se sincroniza
+
+| Datos | De Autotask a la plataforma | De la plataforma a Autotask |
+|------|---------------------|---------------------|
+| Empresas (clientes) | Sincronización automática | Sincronización automática (cuando está habilitada) |
+| Contactos | Sincronización automática | Sincronización automática (cuando está habilitada) |
+
+## Antes de comenzar: permisos de Autotask
+
+Antes de conectar, tu cuenta de Autotask debe estar configurada con los permisos correctos. Sin ellos, es posible que la conexión no funcione y que la sincronización falle de forma silenciosa.
+
+Necesitarás:
+- Una cuenta activa de Vendasta
+- Una cuenta de Autotask PSA
+- El **User Name** y el **Secret** (clave de API) de tu usuario de API de Autotask
+
+:::info Cómo obtener las credenciales de la API
+En Autotask, ve a `Admin` → `Resources (Human Resources)` → `API User`. Crea un usuario dedicado exclusivamente a la API, seleccionando el proveedor de la integración durante la creación.
+:::
+
+### Paso 1: crea un nivel de seguridad en Autotask
+
+Crear un nivel de seguridad dedicado le da a la integración un conjunto de permisos limpio y controlado.
+
+1. Inicia sesión en Autotask.
+2. Ve a `Admin` → `Account Settings and Users` → `Security` → `Security Levels`.
+3. Haz clic en **Create New** y elige **Clone an existing security level**.
+4. Selecciona **Api User (System)** como plantilla.
+5. Nómbralo **Vendasta API Access**.
+6. Guarda los cambios.
+
+### Paso 2: habilita los webhooks en el nivel de seguridad
+
+Los webhooks permiten que Autotask notifique a Vendasta sobre los cambios en tiempo real.
+
+1. Abre el nivel de seguridad que creaste (**Vendasta API Access**).
+2. Ve a la pestaña **Other Settings**.
+3. Busca la sección **Webhooks**.
+4. Configura los webhooks como **Enabled**.
+5. Configura el número máximo de webhooks en al menos **5** (la integración crea webhooks para eventos de Company y Contact: crear, actualizar y eliminar).
+6. Guarda los cambios.
+
+:::warning
+Si los webhooks no están habilitados, la conexión aparecerá como "Connected" en Vendasta, pero los cambios en Autotask no se sincronizarán de vuelta a Vendasta. Esta es la causa más común de los reportes de "la sincronización no funciona".
+:::
+
+### Paso 3: habilita los permisos de Company y Contact
+
+1. En el mismo nivel de seguridad, ve a la pestaña **Companies**.
+2. Habilita el acceso de **Read** y **Write**.
+3. Ve a la pestaña **Contacts**.
+4. Habilita el acceso de **Read** y **Write**.
+5. Guarda los cambios.
+
+### Paso 4: crea un usuario de API
+
+La integración se conecta con un usuario de API dedicado, no con un inicio de sesión personal.
+
+1. En Autotask, ve a `Admin` → `Resources (Human Resources)` → `API User`.
+2. Haz clic en **Create New**.
+3. Completa los datos básicos como el nombre y el correo electrónico.
+4. Ve a la pestaña **Security**. Asigna el nivel de seguridad **Vendasta API Access** (creado en el paso 1).
+5. En la sección **API Tracking Identifier**, elige **Integration Vendor** y selecciona el proveedor.
+6. Guarda el usuario.
+7. Anota el **Username** y el **Secret**: los necesitarás en la siguiente sección.
+
+:::warning
+Guarda el nombre de usuario y el secret de la API en el administrador de contraseñas aprobado por tu organización. No los compartas por correo electrónico ni chat.
+:::
+
+## ¿Ya tienes registros en Vendasta?
+
+Antes de conectar, responde esta pregunta: ¿Ya tienes empresas y contactos en el CRM de Vendasta que también existen en Autotask?
+
+| Tu situación | Qué hacer |
+|----------------|-----------|
+| No hay registros existentes en Vendasta | Usa la [importación masiva de CRM](#importación-masiva-cómo-evitar-registros-duplicados) para llevar tus empresas y contactos existentes de Autotask a Vendasta y luego conecta. La integración se encarga de la sincronización en tiempo real a partir de ese momento. |
+| Sí, los registros existen en ambos sistemas | Debes importar primero los ID de Autotask para evitar duplicados. Sigue la sección de [importación masiva](#importación-masiva-cómo-evitar-registros-duplicados) que aparece a continuación ANTES de conectar. |
+| Ya está conectado y estás viendo duplicados | Sigue la sección de [recuperación](#recuperación-ya-tienes-duplicados) al final de esta página. |
+
+## Importación masiva: cómo evitar registros duplicados
+
+Si tu CRM de Vendasta ya tiene empresas y contactos que también existen en Autotask, debes vincularlos con los ID de Autotask antes de conectar. Sin esto, la sincronización crea registros duplicados a medida que los registros cambian en Autotask.
+
+:::warning
+Haz esto ANTES de conectar Autotask. El orden importa: importa primero las empresas y luego los contactos.
+:::
+
+### Paso 1: obtén tus ID de Autotask
+
+En Autotask, abre cada empresa o contacto. El ID es visible en la barra de URL o en el panel de detalles del registro.
+
+### Paso 2: prepara tu CSV de empresas
+
+Crea un archivo CSV con las columnas que se indican abajo. La columna **external_id** es fundamental: vincula el registro de Vendasta con el registro de Autotask.
+
+El formato debe ser exactamente `autotask:{id}` sin espacios.
+
+| Company Name | Company Website | Phone number | Street address line 1 | City/locality | State/province/region | Zip/postal code | Country | External ID |
+|---|---|---|---|---|---|---|---|---|
+| Marqt Administratie | www.example.com | 85657687 | 1032 8th Street East | Saskatoon | SK | S7H 0S2 | CA | autotask:30684201 |
+| Albany Apple Store | www.albanyapple.com | 55501234 | 123 Main St | Albany | NY | 12207 | US | autotask:29683562 |
+
+### Paso 3: prepara tu CSV de contactos
+
+Crea un archivo CSV para los contactos siguiendo el mismo formato, con `autotask:{id}` como external_id.
+
+| First name | Last name | Phone number | Email | Street address line 1 | City/locality | State/province/region | Zip/postal code | Country | External ID |
+|---|---|---|---|---|---|---|---|---|---|
+| Jane | Smith | 5550100 | jane.smith@example.com | 1032 8th Street East | Saskatoon | SK | S7H 0S2 | CA | autotask:30684161 |
+| Sneha | Iyer | 4353 4545 | sneha.iyer@example.com | 1 Grand Southern Trunk Road | Chennai | Tamil Nadu | 600016 | India | autotask:30686245 |
+
+### Paso 4: importa primero las empresas
+
+1. Ve a `Partner Center` → `CRM` → `Companies` → `Import`.
+
+<img src={require('./img/integrations/autotask/autotask_companies_import.png').default} alt="Lista de empresas de CRM con el botón Import en la esquina superior derecha" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+2. Sube tu CSV de empresas.
+3. En la pantalla de mapeo, asegúrate de que la columna **external_id** esté asignada al campo **External ID**.
+
+<img src={require('./img/integrations/autotask/autotask_company_field_mapping.png').default} alt="Mapeo de campos del CSV de empresas con External ID asignado" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+4. Completa la importación.
+
+### Paso 5: importa los contactos
+
+1. Ve a `CRM` → `Contacts` → `Import`.
+
+<img src={require('./img/integrations/autotask/autotask_contacts_import.png').default} alt="Lista de contactos de CRM con el botón Import en la esquina superior derecha" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+2. Sube tu CSV de contactos.
+3. Mapea los campos: los contactos se asociarán con las empresas por el nombre de la empresa.
+
+<img src={require('./img/integrations/autotask/autotask_contact_field_mapping.png').default} alt="Mapeo de campos del CSV de contactos" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+4. Completa la importación.
+
+### Paso 6: verifica
+
+Abre algunos registros en el CRM de Vendasta. Confirma que el campo **external_id** esté completado con el valor `autotask:{id}`.
+
+### Paso 7: ahora, conecta Autotask
+
+Continúa con la siguiente sección. Cuando se ejecute la sincronización, esta hará coincidir los registros por external_id, sin duplicados.
+
+:::warning
+Si te saltas este paso y conectas primero, la sincronización creará registros duplicados para cada empresa y contacto. Consulta la sección de [recuperación](#recuperación-ya-tienes-duplicados) al final de esta página si esto ya ha ocurrido.
+:::
+
+## Configuración de la integración con Autotask
+
+Con tus permisos de Autotask configurados y la importación masiva completa (si era necesaria), estás listo para conectar.
+
+### Paso 1: abre Integrations
+
+Desde Partner Center, haz clic en `Administration` → `Integrations`. También puedes acceder desde `Marketplace` → `Integrations`.
+
+<img src={require('./img/integrations/autotask/autotask_administration.png').default} alt="Página de administración de Partner Center con el enlace de Integrations bajo Advanced" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Paso 2: encuentra la tarjeta de Autotask
+
+En la página de Integrations, localiza la tarjeta de Autotask. Haz clic en **Connect**.
+
+<img src={require('./img/integrations/autotask/autotask_integration_card.png').default} alt="Tarjeta de integración de Autotask en la página de Integrations" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Paso 3: ingresa tus credenciales y elige la configuración de sincronización
+
+Aparece el diálogo **Connect Autotask**. Ambos campos de credenciales son obligatorios:
+
+| Campo | Qué ingresar | Dónde encontrarlo |
+|-------|--------------|-----------------|
+| **User Name** | El nombre de usuario de tu usuario de API de Autotask | Autotask → Admin → API User (el recurso `ApiUser`) |
+| **Secret** | La clave de API asociada a ese usuario | En el mismo lugar, generada al crear el usuario de API |
+
+El mismo diálogo también contiene dos casillas de sincronización. Ambas están seleccionadas de forma predeterminada: configúralas antes de conectar:
+
+| Configuración | Qué hace | Recomendación |
+|---------|-------------|-------------|
+| **Sync back to Autotask** | Cuando los datos de un cliente de Autotask se actualizan en Vendasta, el cambio se refleja en Autotask | Déjala seleccionada para una sincronización bidireccional |
+| **Set as Primary CRM** | Designa a Autotask como el sistema principal para recibir los contactos recién creados desde la plataforma. Los cambios realizados en Autotask también se sincronizan de vuelta a la plataforma | Déjala seleccionada si Autotask es tu sistema principal |
+
+Haz clic en **Add Connection**.
+
+<img src={require('./img/integrations/autotask/autotask_preconnect_form.png').default} alt="Diálogo Connect Autotask con los campos User Name y Secret y las dos casillas de sincronización" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+:::warning
+Si ves un error 500 en este paso, tus credenciales son incorrectas o tu usuario de API está deshabilitado. Regresa a Autotask Admin y verifica el nombre de usuario, el secret y que el usuario esté activo. No vuelvas a intentarlo con las mismas credenciales: volverá a fallar.
+:::
+
+### Paso 4: conexión confirmada
+
+Si tus credenciales son válidas, la página de Autotask muestra una insignia verde de **Connected**, junto con **Account details** que indica quién conectó la integración y cuándo. Un botón **Disconnect** reemplaza a **Connect**.
+
+<img src={require('./img/integrations/autotask/autotask_connection_confirmed.png').default} alt="Página de integración de Autotask con una insignia verde Connected, Account details y un botón Disconnect" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Paso 5: revisa o cambia tu configuración
+
+Tus credenciales y la configuración de sincronización siguen siendo editables después de conectar. En la página de Autotask, desplázate hasta `Settings` → `Integrated Service Fields` para actualizar el **User Name** o el **Secret**, o para cambiar las opciones **Sync back to Autotask** y **Set as Primary CRM** que elegiste en el paso 3.
+
+Actualiza la página para confirmar que tus cambios se guardaron.
+
+### Paso 6: sincronización en tiempo real
+
+Las empresas y los contactos de Autotask se sincronizan con Vendasta automáticamente cada vez que se realizan cambios a nivel de empresa o contacto en el lado de Autotask. Esto se ejecuta en segundo plano: no necesitas permanecer en la página. Las empresas se sincronizan primero, luego los contactos.
+
+### Paso 7: verifica la sincronización
+
+1. Abre `CRM` → `Companies` en Partner Center.
+2. Busca una empresa que exista en Autotask.
+3. Confirma que aparezca con el nombre, teléfono, correo electrónico y dirección correctos.
+4. Abre un contacto de esa empresa y confirma que esté vinculado correctamente.
+
+Listo. Tu integración de Autotask está activa. Los cambios se sincronizarán en tiempo real a partir de este momento.
+
+## Administra los datos sincronizados
+
+La integración sincroniza los siguientes tipos de datos:
+
+- **Companies**: nombre de la empresa, teléfono, correo electrónico, dirección, sitio web (bidireccional)
+- **Contacts**: nombre, apellido, teléfono, correo electrónico, dirección, asociación con la empresa (bidireccional)
+- **Notas del feed de actividad**: cada evento de sincronización se registra en el registro para que sepas qué cambió, cuándo y de dónde provino
+- **Eliminaciones seguras**: eliminar un registro en un sistema NO lo elimina en el otro. En su lugar, se registra una nota de actividad.
+
+Para administrar qué se sincroniza, ve a **Settings** en tu página de conexión de Autotask:
+
+- **Sync back to Autotask** seleccionado: los cambios en Vendasta se envían a Autotask
+- **Sync back to Autotask** sin seleccionar: los cambios solo fluyen de Autotask a Vendasta (unidireccional)
+
+### Sincronización unidireccional frente a bidireccional
+
+| Modo | Recomendado cuando | Qué esperar |
+|------|-------------------|-----------------|
+| Sincronización unidireccional | Autotask es tu fuente de verdad principal y quieres que los cambios fluyan solo hacia Vendasta. | Las actualizaciones realizadas en Autotask se sincronizan con Vendasta. Los cambios realizados únicamente en Vendasta no se escriben de vuelta en Autotask. |
+| Sincronización bidireccional | Tu equipo trabaja activamente en ambos sistemas y quiere que las actualizaciones se mantengan alineadas. | Los cambios se mueven en ambas direcciones. Acuerda de antemano quién es responsable de la calidad de los datos y dónde suelen ocurrir las ediciones, para evitar actualizaciones en conflicto. |
+
+## Ejemplo de la integración
+
+Aquí tienes un ejemplo real de la integración en acción:
+
+1. Un partner agrega un nuevo contacto, "Sneha Iyer", bajo la empresa "Le Royal Meridien" en el lado de Autotask.
+2. En cuestión de segundos, Sneha Iyer aparece en el CRM de Vendasta bajo Le Royal Meridien, con una nota de sincronización en el feed de actividad que confirma el evento.
+3. El equipo actualiza el número de teléfono de Sneha Iyer en Vendasta. Con **Sync back to Autotask** seleccionado, el número de teléfono actualizado se envía automáticamente de vuelta a Autotask.
+
+<img src={require('./img/integrations/autotask/autotask_sync_example.png').default} alt="Perfil de contacto de Sneha Iyer con notas de actividad de sincronización de Autotask" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## Enfoque recomendado para la implementación
+
+Implementa la integración de forma gradual para poder confirmar que se comporta como se espera antes de depender de ella para todos los registros:
+
+1. Comienza con una empresa de prueba interna y un contacto.
+2. Verifica el comportamiento del mapeo de campos y confirma que los registros aparecen como se espera en ambos sistemas.
+3. Decide si la sincronización unidireccional o bidireccional se ajusta mejor a tu equipo.
+4. Capacita a los administradores sobre dónde actualizar los registros de clientes de ahora en adelante.
+5. Implementa la integración al resto del equipo una vez que el proceso esté confirmado.
+
+## Solución de problemas
+
+| Qué ves | Qué está pasando | Cómo solucionarlo |
+|-------------|-------------------|--------------|
+| Error 500 al conectar | Las credenciales de la API no son válidas o el usuario está deshabilitado | Verifica las credenciales en Autotask Admin. Vuelve a ingresarlas. |
+| Aparece "Connected" pero nada se sincroniza | Los webhooks no están habilitados en el nivel de seguridad | Abre el nivel de seguridad en Autotask → Other Settings → habilita los webhooks con un límite de 5 o más |
+| Los contactos no aparecen | El contacto no está vinculado a una empresa en Autotask | Vincula el contacto a una empresa en Autotask. Los contactos sin vincular se omiten. |
+| Registros duplicados después de conectar | Los registros existían en ambos sistemas sin ID de Autotask | Desconecta. Elimina los duplicados. Realiza una importación masiva con external_id. Vuelve a conectar. Consulta la sección de [recuperación](#recuperación-ya-tienes-duplicados). |
+| Estado "Broken" en la tarjeta de conexión | Las credenciales de la API caducaron o fueron revocadas | Haz clic en **Re-authenticate**. Vuelve a ingresar las credenciales. |
+| La sincronización de vuelta a Autotask no funciona | Al registro le falta su ID de Autotask | Revisa el registro en Vendasta. Si autotask-company-id o autotask-contact-id está vacío, usa la importación masiva para agregar los ID externos. |
+
+## Recuperación: ¿ya tienes duplicados?
+
+Si conectaste Autotask antes de importar los ID externos de empresas y contactos y ahora tienes registros duplicados:
+
+1. Desconecta la integración de Autotask desde la configuración de Integrations.
+2. Fusiona o elimina los registros duplicados en el CRM de Vendasta.
+3. Prepara archivos CSV con los ID de Autotask (sigue la sección de [importación masiva](#importación-masiva-cómo-evitar-registros-duplicados) que aparece arriba).
+4. Importa primero las empresas, luego los contactos, con los valores de external_id.
+5. Vuelve a conectar la integración: la sincronización ahora coincidirá por external_id. No habrá nuevos duplicados.
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Puedo seguir usando Zapier con esta integración?</summary>
+
+Puedes, pero no lo recomendamos. Ejecutar ambas crea registros duplicados. Desactiva tus Zaps relacionados con Autotask después de conectar la integración nativa.
+
+</details>
+
+<details>
+<summary>¿Qué pasa si me desconecto?</summary>
+
+No se elimina nada. Los registros permanecen en ambos sistemas. Volver a conectar más tarde reanuda la sincronización desde donde se detuvo.
+
+</details>
+
+<details>
+<summary>¿Puedo crear un contacto en Vendasta sin asociarlo a una empresa?</summary>
+
+Sí. Vendasta permite que los contactos existan de forma independiente sin una asociación a una empresa. Sin embargo, los contactos independientes no se sincronizarán con Autotask. Autotask exige una relación obligatoria entre empresa y contacto: cada contacto debe pertenecer a una empresa. Si un contacto existe en Vendasta sin una asociación a una empresa, la integración omitirá la sincronización y registrará una nota de actividad indicando que el contacto no se sincronizó.
+
+</details>
+
+<details>
+<summary>¿Cómo soluciono un contacto que no se sincroniza con Autotask?</summary>
+
+Asocia el contacto con una empresa en Vendasta. Una vez establecida la relación entre empresa y contacto, el contacto será elegible para sincronizarse con Autotask en el próximo ciclo de sincronización.
+
+</details>
+
+<details>
+<summary>¿Esta limitación se aplica a todas las integraciones o solo a Autotask?</summary>
+
+Esto es específico de Autotask. Cada integración tiene sus propios requisitos de modelo de datos. Autotask exige estrictamente una jerarquía de empresa y contacto. Otras integraciones pueden manejar los contactos independientes de forma diferente según su propio modelo de datos.
+
+</details>
+
+<details>
+<summary>¿Qué tan rápido se sincronizan los datos?</summary>
+
+Basado en webhooks, típicamente en cuestión de segundos. Si la API de Autotask está lenta, hasta 1 minuto.
+
+</details>
+
+<details>
+<summary>¿Eliminar un registro en Autotask lo elimina en Vendasta?</summary>
+
+No. Las eliminaciones no son destructivas. Se crea una nota de actividad. El registro permanece.
+
+</details>
+
+<details>
+<summary>¿Pueden varios usuarios conectarse a la misma cuenta de Autotask?</summary>
+
+No. Una conexión por cuenta de Vendasta. La conexión es a nivel de cuenta, no a nivel de usuario.
+
+</details>
+
+<details>
+<summary>¿Qué pasa si tengo contactos en Vendasta que no están en Autotask?</summary>
+
+Si tienen direcciones de correo electrónico coincidentes, se emparejarán durante la sincronización. Si no, usa el proceso de importación masiva para completar de antemano los ID de Autotask antes de conectar.
+
+</details>
+
+<details>
+<summary>¿Son seguros los datos?</summary>
+
+Sí. Comunicación directa de API a API. Los datos se cifran en tránsito. Sin intermediarios externos.
+
+</details>
+
+<details>
+<summary>¿Por qué mi sincronización se rompió después de un cambio de credenciales?</summary>
+
+Es posible que tus credenciales de la API hayan caducado. Revisa la tarjeta de integración; si muestra el estado "Broken", haz clic en **Re-authenticate** y vuelve a ingresar tus credenciales.
+
+</details>
+
+<details>
+<summary>¿La integración sincroniza notas históricas o toda la actividad del CRM?</summary>
+
+No. La integración sincroniza los registros de empresas y contactos, y registra los eventos de sincronización (creaciones, actualizaciones, eliminaciones seguras) en el feed de actividad a medida que ocurren. No importa retroactivamente notas históricas ni refleja toda la actividad pasada del CRM de un sistema al otro.
+
+</details>
+
+<details>
+<summary>¿Cuánto tiempo suele tomar la configuración?</summary>
+
+Puedes completar la configuración en 5 a 10 minutos si ya cuentas con acceso de administrador de Autotask y los permisos necesarios. Agrega tiempo adicional para el paso de importación masiva si tienes registros existentes en ambos sistemas.
+
+</details>

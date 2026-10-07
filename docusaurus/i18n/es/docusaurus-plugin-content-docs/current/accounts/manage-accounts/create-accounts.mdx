@@ -1,0 +1,349 @@
+---
+title: Create Accounts
+sidebar_label: Create Accounts
+sidebar_position: 2
+description: Guía paso a paso para crear cuentas de negocio individuales y masivas en Business App
+tags: [account-creation, business-profile, bulk-import]
+keywords: [create-account, add-business, account-setup, bulk-import]
+---
+
+import { GraduationCapIcon } from '@site/src/components/Icons';
+
+# Crear cuentas
+
+## ¿Qué es la creación de cuentas?
+
+La creación de cuentas es el proceso de agregar nuevas ubicaciones de negocio a tu sistema de Business App. Cada cuenta representa un negocio individual o una ubicación de negocio a la que das servicio, y contiene su perfil de negocio completo, información de contacto y configuración de servicios.
+
+## ¿Por qué es importante la creación de cuentas?
+
+Crear cuentas de negocio precisas es esencial porque:
+
+- **Base para todos los servicios**: las cuentas son necesarias para activar productos y brindar servicios
+- **Precisión de datos**: la información de negocio adecuada garantiza una prestación de servicios y una generación de informes efectivas
+- **Experiencia del cliente**: los perfiles completos permiten paneles y comunicaciones personalizadas
+- **Éxito de la integración**: los datos precisos mejoran la integración con servicios y plataformas de terceros
+
+## ¿Qué incluye la creación de cuentas?
+
+### Creación de cuentas individuales
+- Búsqueda de negocios y llenado automático de datos
+- Ingreso manual del perfil de negocio
+- Configuración de campos obligatorios y opcionales
+- Asignación de categoría y mercado
+
+### Importación masiva de cuentas
+- Sistema de importación basado en plantillas CSV
+- Validación de datos y verificación de errores
+- Procesamiento por lotes para varias cuentas
+- Aplicación de configuraciones predeterminadas
+
+## Cómo crear cuentas individuales
+
+### Usar la búsqueda de negocios
+
+La forma más rápida de crear cuentas para negocios conocidos:
+
+1. Ve a `Accounts` → `Manage Accounts`
+2. Haz clic en `Create Account` en la esquina superior derecha
+3. **Busca el negocio**:
+   - Ingresa el nombre del negocio y la ubicación (por ejemplo, "Starbucks, Broadway, New York, NY")
+   - Usa términos de búsqueda específicos para obtener mejores resultados
+   - Incluye la ciudad y el estado para evitar ambigüedades
+4. **Revisa los resultados de la búsqueda**:
+   - Selecciona el negocio correcto entre los resultados
+   - Verifica la dirección y la información de contacto
+   - Toma nota de cualquier sugerencia de competidores para los informes
+5. **Completa la información adicional** según sea necesario
+6. Haz clic en `Create Account`
+
+:::info
+La búsqueda de negocios completa automáticamente la dirección, el teléfono y la información de categoría cuando los negocios se encuentran en directorios públicos.
+:::
+
+### Creación manual de cuentas
+
+Cuando los negocios no aparecen en los resultados de búsqueda:
+
+1. Haz clic en `Go to Account Creation` desde la interfaz de búsqueda
+2. **Completa la información de negocio obligatoria**:
+   - `Business Name`: nombre oficial del negocio tal como aparece públicamente
+   - `Street Address`: ubicación física del negocio
+   - `City, State/Province, ZIP`: detalles completos de la ubicación
+   - `Country/Region`: país de ubicación del negocio
+   - `Phone Number`: número de contacto principal del negocio
+   - `Business Categories`: selecciona hasta 3 categorías relevantes
+
+:::info Referencia de Business Categories  
+Para ver una lista completa de las categorías de negocio disponibles y una guía sobre la clasificación adecuada, consulta [Business Categories](../directory/business-categories.mdx). Una categorización adecuada garantiza funciones de producto e integración óptimas.
+:::
+
+:::warning
+Si no existe una categoría adecuada, selecciona "Other", pero ten en cuenta que algunas funciones del producto pueden verse limitadas.
+:::
+
+3. **Agrega información opcional**:
+   - `Website URL`: dirección del sitio web del negocio
+   - `Customer Identifier`: tu ID de seguimiento interno
+   - `Business Description`: breve descripción de los servicios
+   - `Additional Contact Info`: teléfono secundario, fax, correo electrónico
+4. **Configura los ajustes de la cuenta**:
+   - `Market Assignment`: selecciona el mercado geográfico correspondiente
+   - `Service Area`: elige si el negocio atiende a los clientes en su ubicación
+   - `Business Hours`: información del horario de atención
+5. Haz clic en `Create Account` para guardar
+
+### Manejo de tipos de negocio especiales
+
+**Service Area Businesses (SAB)**: negocios que atienden a los clientes en la ubicación del cliente y no tienen un local público fijo (plomeros, jardineros, peluqueros de mascotas móviles, etc.):
+
+Los SAB comúnmente no aparecen en la barra de búsqueda de creación de cuentas. Esto es normal. La búsqueda usa la API de ubicaciones de Google, que solo muestra negocios con una dirección física verificada. Un SAB que no publica una dirección no aparecerá en los resultados.
+
+**Para crear una cuenta para un SAB:**
+
+1. En la búsqueda de `Create Account`, escribe el nombre del negocio. Si no aparece, haz clic en `Skip to Account Creation` (o `Go to Account Creation`).
+2. Completa el nombre del negocio y una dirección válida. Si el SAB no tiene una dirección pública, usa la dirección del propietario o un marcador de posición de ciudad/código postal.
+3. Una vez creada la cuenta, actualiza el listado para definir un radio de área de servicio y elimina u oculta la dirección pública si es necesario.
+
+:::warning
+Crear una cuenta **sin dirección** limita Listing Sync y otros productos que dependen de listados. Esos productos requieren una dirección física para sincronizar datos. Agrega una dirección válida antes de activar los productos de listados.
+:::
+
+**Negocios con varias ubicaciones**:
+
+**Negocios con varias ubicaciones**: crea cuentas separadas para cada ubicación física, usa una convención de nombres consistente (por ejemplo, "Nombre del negocio - Ubicación") y planea agruparlas más adelante usando Multi-Location Groups.
+
+## Cómo importar varias cuentas
+
+### Prepararse para la importación masiva
+
+Antes de importar cuentas:
+
+1. Ve a `Accounts` → `Manage Accounts`
+2. Haz clic en `Import Accounts`
+3. **Descarga la plantilla CSV** para asegurar un formato adecuado
+4. **Reúne los datos necesarios** de todos los negocios:
+   - Nombres y direcciones de los negocios
+   - Números de teléfono e información de contacto
+   - Categorías y clasificaciones de negocio
+   - Asignaciones de mercado (si corresponde)
+
+### Preparación del archivo CSV
+
+**Columnas obligatorias:**
+- Business Name
+- Street Address
+- City
+- State/Province
+- ZIP/Postal Code
+- Phone Number
+- Business Category (consulta la [guía de Business Categories](../directory/business-categories.mdx) para conocer las opciones válidas, o [descarga la lista completa](../directory/downloads/business-categories-list.csv))
+
+**Columnas opcionales:**
+- Customer Identifier
+- Website URL
+- Business Description
+- Market Assignment
+- Additional Contact Information
+- Business Hours
+- `ServiceAreaBusiness`: establécelo en `TRUE` si la cuenta es un Service Area Business; `FALSE` o en blanco en caso contrario. Este campo **distingue mayúsculas de minúsculas**: solo `TRUE` y `FALSE` (en mayúsculas) son válidos. Usar `true`, `True`, `yes` o cualquier otro valor hará que la fila falle en la validación.
+
+**Formato de guardado:** guarda tu archivo como **CSV UTF-8** (no como CSV estándar ni en formato de Excel) para evitar errores de codificación de caracteres durante la importación.
+
+:::info
+Usa un formato consistente para los números de teléfono, las direcciones y las categorías para garantizar un procesamiento de importación exitoso.
+:::
+
+:::warning
+La activación automática de productos **no se ejecuta en cuentas cargadas por CSV**. Los productos que quieras activar para las cuentas importadas deben activarse por lotes de forma separada después de la importación, usando listas de cuentas o la acción Activate Product.
+:::
+
+### Ejecutar la importación
+
+1. **Sube tu archivo CSV preparado**
+2. **Revisa la vista previa de la importación**:
+   - Verifica si hay errores de validación de datos
+   - Verifica las asignaciones de categoría de negocio
+   - Confirma el formato de las direcciones
+3. **Configura los ajustes de importación**:
+   - Asignación de mercado predeterminada para todas las cuentas
+   - Preferencias de creación de usuarios
+   - Configuración del correo de bienvenida
+4. **Gestiona la detección de duplicados**:
+   - Revisa los posibles negocios duplicados
+   - Elige entre fusionar o crear cuentas separadas
+   - Resuelve los conflictos de dirección
+5. Haz clic en `Import Accounts` para procesar
+
+### Tareas posteriores a la importación
+
+Después de una importación exitosa:
+
+1. **Revisa las cuentas creadas** para verificar su precisión
+2. **Corrige cualquier problema de datos** identificado durante la importación
+3. **Asigna las cuentas a las listas correspondientes** para su organización
+4. **Configura productos y servicios** para las nuevas cuentas
+5. **Configura el acceso de usuarios** para el acceso al panel del cliente
+
+### Enriquecimiento después de la importación
+
+Después de la importación, el sistema intenta enriquecer cada cuenta con datos de Google (dirección, teléfono, categorías, horarios). Algunas cuentas se omiten y no se enriquecen:
+
+- El país o el estado del negocio no coincide con lo que figura en Google
+- El nombre de la empresa o la dirección en el CSV es significativamente diferente del listado de Google (puntaje de similitud bajo)
+- No existe un listado de Google para el negocio
+- La cuenta no tiene dirección (los SAB sin dirección no se enriquecen)
+
+Las cuentas que no se enriquecen igualmente se importan con éxito. Solo conservan los datos de tu CSV.
+
+## Cómo manejar problemas de creación de cuentas
+
+### Negocio no encontrado en la búsqueda
+
+**Causas comunes y soluciones:**
+
+**Variaciones en el nombre del negocio:**
+- Prueba con nombres abreviados o abreviaturas comunes
+- Busca sin sufijos de tipo de negocio (por ejemplo, "LLC", "Inc.")
+- Usa los nombres del propietario o gerente si el nombre del negocio no es claro
+
+**Negocios nuevos o no listados:**
+- Usa el proceso de creación manual de cuentas
+- Verifica la información del negocio directamente con el cliente
+- Revisa si hubo cambios de nombre recientes o un cambio de marca
+
+**Problemas relacionados con la dirección:**
+- Prueba buscar por dirección en lugar del nombre del negocio
+- Verifica la dirección actual con servicios de mapas
+- Revisa si hubo reubicaciones o cierres recientes
+
+### Resolución de errores de importación
+
+**Errores de validación de datos:**
+- **Campos obligatorios faltantes**: completa todas las columnas obligatorias en el CSV
+- **Formatos de teléfono inválidos**: usa un formato consistente (por ejemplo, (555) 123-4567)
+- **Errores de validación de dirección**: verifica que las direcciones existan y estén correctamente formateadas
+- **Errores en la asignación de categoría**: usa los nombres exactos de las categorías del sistema (consulta [Business Categories](../directory/business-categories.mdx) o [descarga la lista completa](../directory/downloads/business-categories-list.csv) para conocer todas las opciones de categoría válidas)
+- **Error de validación de `ServiceAreaBusiness`**: este campo solo acepta `TRUE` o `FALSE` (en mayúsculas). Usar cualquier otro valor, incluyendo `true`, `yes`, `1`, o dejarlo con un valor no en blanco que no sea `TRUE`/`FALSE`, hará que la fila falle. En blanco se trata como `FALSE`.
+
+**Manejo de negocios duplicados:**
+- **Nombres similares**: revisa con cuidado para distinguir duplicados legítimos de negocios similares
+- **Direcciones iguales**: verifica si hay negocios que comparten ubicación (como centros comerciales)
+- **Conflictos de número de teléfono**: verifica qué negocio usa actualmente el número
+
+### Mejores prácticas para la creación de cuentas
+
+**Calidad de datos:**
+- Verifica siempre la información del negocio antes de crear cuentas
+- Usa los nombres de negocio oficiales tal como aparecen en los documentos legales
+- Incluye información de dirección completa para los servicios basados en ubicación
+- Selecciona las categorías de negocio más específicas disponibles
+
+**Organización:**
+- Usa convenciones de nombres consistentes para negocios similares
+- Aplica etiquetas relevantes inmediatamente después de la creación
+- Asigna los mercados adecuados según los territorios de servicio
+- Planifica la organización y agrupación futura en listas
+
+**Comunicación con el cliente:**
+- Prepara materiales de bienvenida para los nuevos titulares de cuenta
+- Configura el acceso de usuario inicial rápidamente después de crear la cuenta
+- Configura los ajustes de notificación adecuados
+
+## Configuración de importación masiva (usuarios y notificaciones)
+
+Al importar mediante CSV, puedes configurar el acceso de usuarios y las notificaciones para los usuarios recién creados:
+
+- Permitir acceso a Business App
+- Enviar notificaciones
+- Enviar el correo de bienvenida
+
+Verás estas opciones durante el asistente de importación después de asignar los campos. La importación masiva envía solo el correo de bienvenida clásico; no envía el [correo de incorporación](/business-app/ai-onboarding-experience).
+
+:::info
+Puedes ajustar los permisos de usuario más adelante desde Manage Users si es necesario.
+:::
+
+## Solución de problemas de la búsqueda de negocios
+
+Si un negocio no aparece en la búsqueda de `Create Account`:
+
+- **Service Area Business**: los SAB sin dirección pública no son devueltos por la API de ubicaciones de Google, que impulsa la búsqueda. Esto es normal, no un error. Haz clic en `Skip to Account Creation` para agregar la cuenta manualmente.
+- **Negocios nuevos o recién listados**: los negocios nuevos pueden no aparecer todavía en la base de datos de Google. Usa la creación manual.
+- **Variaciones de nombre**: prueba con nombres abreviados (quita "LLC", "Inc.", etc.) o busca por dirección.
+
+Hacer clic en `Skip to Account Creation` siempre te permite crear la cuenta manualmente, sin importar si aparece o no en los resultados de búsqueda.
+
+## Preguntas frecuentes (FAQ)
+
+<details>
+<summary>¿Cuál es la diferencia entre buscar un negocio y crearlo manualmente?</summary>
+
+La búsqueda de negocios completa automáticamente la información a partir de directorios públicos, ahorrando tiempo y garantizando precisión. La creación manual requiere que ingreses toda la información, pero funciona para cualquier negocio, incluidos los nuevos o no listados.
+</details>
+
+<details>
+<summary>¿Puedo editar la información de la cuenta después de crearla?</summary>
+
+Sí, la mayor parte de la información de la cuenta se puede editar después de crearla. Sin embargo, los cambios en la ubicación del negocio o la asignación de mercado pueden afectar las integraciones y los informes, así que realiza estos cambios con cuidado.
+</details>
+
+<details>
+<summary>¿Qué pasa si selecciono la categoría de negocio incorrecta?</summary>
+
+Puedes cambiar las categorías de negocio después de crear la cuenta editándola. Sin embargo, algunas funciones del producto son específicas de la categoría, así que elige las categorías más precisas desde el inicio.
+</details>
+
+<details>
+<summary>¿Cómo manejo negocios con varias ubicaciones durante la creación?</summary>
+
+Crea cuentas separadas para cada ubicación física y luego usa Multi-Location Groups para gestionarlas en conjunto. Esto proporciona datos específicos de cada ubicación mientras permite informes consolidados.
+</details>
+
+<details>
+<summary>¿Puedo importar cuentas con diferentes asignaciones de mercado?</summary>
+
+Sí, incluye una columna Market en tu archivo CSV para asignar diferentes mercados durante la importación. Las cuentas sin especificación de mercado usarán la configuración de mercado predeterminada.
+</details>
+
+<details>
+<summary>¿Qué debo hacer si falla la importación del CSV?</summary>
+
+Revisa los mensajes de error, corrige los problemas de formato de datos en tu archivo CSV e intenta importar nuevamente. Los problemas comunes incluyen campos obligatorios faltantes, formatos de teléfono inválidos o entradas duplicadas.
+</details>
+
+<details>
+<summary>¿Cómo creo cuentas para negocios de área de servicio sin direcciones?</summary>
+
+Los SAB a menudo no aparecen en la búsqueda de Create Account porque la API de ubicaciones de Google no muestra negocios sin una dirección pública verificada. Para crear la cuenta:
+
+1. Escribe el nombre del negocio en la barra de búsqueda. Si no aparece, haz clic en `Skip to Account Creation`.
+2. Ingresa el nombre del negocio y una dirección (usa la dirección del propietario o un marcador de posición de ciudad/código postal si no hay una dirección pública).
+3. Después de crear la cuenta, actualiza el listado para definir un área de servicio y oculta la dirección si es necesario.
+
+Crear una cuenta sin dirección limitará Listing Sync y otros productos de listados hasta que se agregue una dirección.
+</details>
+
+<details>
+<summary>¿Puedo configurar el acceso de usuarios durante la creación de la cuenta?</summary>
+
+Sí. Al crear una cuenta individual, el panel de **Users** te permite agregar los primeros usuarios de la cuenta durante la creación; ellos reciben el [correo de incorporación](/business-app/ai-onboarding-experience) una vez que la cuenta y sus productos están listos. Para las importaciones masivas, puedes configurar los ajustes predeterminados de usuario, incluyendo si se envía el correo de bienvenida.
+</details>
+
+<details>
+<summary>¿De dónde se obtiene la información al crear una cuenta mediante búsqueda?</summary>
+
+Se usa la API de ubicaciones de Google para obtener el nombre, la dirección, el número de teléfono, el sitio web, la geolocalización, la categoría de negocio y el horario de atención. Las URL de los perfiles sociales se obtienen del sitio web del negocio.
+</details>
+
+{/* growth-engine callout — commented out 2026-08-19 (Cal, Learn tab refresh) because the
+    Your growth engine path is hidden until its remaining steps and Snapshot videos ship.
+    Restore at relaunch; see training/growth-engine/index.mdx. */}
+{/*
+<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
+  <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
+  <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>
+    New to running the full sales motion? Take the <a href="/learn/growth-engine" style={{color: '#3C9A63', fontWeight: 600}}>Your growth engine</a> course in Vendasta Learn — Beginner, 6 lessons.
+  </span>
+</div>
+*/}

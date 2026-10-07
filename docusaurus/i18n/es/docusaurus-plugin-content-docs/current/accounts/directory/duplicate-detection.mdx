@@ -1,0 +1,242 @@
+---
+title: Detección y gestión de duplicados
+sidebar_label: Detección de duplicados
+sidebar_position: 4
+description: Identifica, previene y resuelve cuentas de empresas duplicadas para una gestión de datos limpia
+tags: [duplicate-accounts, data-management, account-cleanup, data-quality]
+keywords: [duplicate-detection, merge-accounts, account-cleanup, data-deduplication]
+---
+
+## ¿Qué es la detección de duplicados?
+
+La detección de duplicados identifica cuentas de empresa que podrían representar la misma entidad comercial pero que existen como registros separados en tu sistema. Esto ayuda a mantener la calidad de los datos, evita confusiones y garantiza informes y una gestión de clientes precisos.
+
+## ¿Por qué es importante la detección de duplicados?
+
+Una gestión eficaz de duplicados proporciona:
+
+- **Calidad de datos**: mantiene registros de empresa limpios y precisos sin redundancia
+- **Experiencia del cliente**: evita confusiones y problemas en la prestación del servicio derivados de tener varias cuentas
+- **Precisión en los informes**: garantiza que los análisis e informes reflejen el rendimiento real de la empresa
+- **Eficiencia de recursos**: evita esfuerzos desperdiciados al gestionar varias cuentas para la misma empresa
+- **Integridad de facturación**: evita la facturación duplicada o problemas en la prestación del servicio
+- **Coordinación del equipo**: garantiza que todos los miembros del equipo trabajen con el mismo registro de empresa
+
+## ¿Qué causa las cuentas duplicadas?
+
+### Escenarios comunes de duplicados
+
+**Variaciones en la información de la empresa:**
+- Pequeñas diferencias en el nombre (por ejemplo, "Joe's Pizza" frente a "Joe's Pizzeria")
+- Variaciones de la entidad comercial (por ejemplo, "Smith Law Firm" frente a "Smith Law Firm, LLC")
+- Diferencias en el formato de la dirección (por ejemplo, "123 Main St" frente a "123 Main Street")
+- Variaciones en el formato del número de teléfono (por ejemplo, "(555) 123-4567" frente a "555-123-4567")
+
+**Factores operativos:**
+- Varios miembros del equipo creando cuentas para la misma empresa
+- Cambios de nombre o de marca de la empresa que generan cuentas nuevas
+- Distintas ubicaciones de la misma cadena de empresas
+- Operaciones comerciales estacionales o temporales
+
+**Problemas de entrada de datos:**
+- Errores tipográficos o variaciones ortográficas en los nombres de empresa
+- Información de dirección incompleta durante la creación
+- Información de contacto distinta para la misma empresa
+- Entrada manual cuando la búsqueda de empresas no encuentra las cuentas existentes
+
+## Cómo identificar cuentas duplicadas
+
+### Detección automática de duplicados
+
+Partner Center puede escanear tus cuentas y generar un informe de posibles duplicados.
+
+1. Ve a `Accounts`
+2. Selecciona ⋮ en la esquina superior derecha
+3. Haz clic en `Manage Duplicates`
+
+Partner Center genera un informe con las cuentas que podrían ser duplicados. Haz clic en cualquier par para revisar los detalles y luego elimina la cuenta que quieras quitar.
+
+### Identificación manual de duplicados
+
+**Detección basada en búsqueda:**
+1. **Busca variaciones** de los nombres de empresa durante la creación de la cuenta
+2. **Comprueba direcciones similares** en la misma zona geográfica
+3. **Busca coincidencias de números de teléfono** entre distintas cuentas
+4. **Revisa categorías de empresa similares** en ubicaciones específicas
+
+**Procedimientos de auditoría regulares:**
+- **Revisiones mensuales de duplicados** con enfoques de búsqueda sistemáticos
+- **Auditorías por área geográfica** para empresas en ciudades o regiones específicas
+- **Revisiones basadas en categorías** para tipos de empresa comunes que puedan tener duplicados
+- **Auditorías por equipo** en las que varios miembros del equipo trabajan con cuentas similares
+
+### Mejores prácticas de detección
+
+**Durante la creación de la cuenta:**
+1. **Busca minuciosamente en las cuentas existentes** antes de crear cuentas nuevas
+2. **Prueba varias variaciones de búsqueda** (nombres abreviados, apodos comunes)
+3. **Comprueba direcciones y números de teléfono similares**
+4. **Revisa las cuentas creadas recientemente** en la misma zona geográfica
+
+**Monitoreo continuo:**
+- **Configura alertas automáticas** para la detección de posibles duplicados
+- **Revisiones periódicas de calidad de datos** para identificar patrones
+- **Capacitación del equipo** sobre técnicas de prevención de duplicados
+- **Documentación** de variaciones de nombres de empresa conocidas o duplicados comunes
+
+## Cómo resolver cuentas duplicadas
+
+### Proceso de resolución de duplicados
+
+**Paso 1: verificar el estado de duplicado**
+1. **Compara la información de la empresa** una al lado de la otra
+2. **Verifica si las cuentas representan** la misma empresa física
+3. **Comprueba si existen motivos legítimos** para tener varias cuentas (distintas ubicaciones, unidades de negocio)
+4. **Confirma el estado de duplicado** antes de continuar con la resolución
+
+**Paso 2: identificar la cuenta principal**
+1. **Determina qué cuenta** tiene la información más completa
+2. **Considera el historial de la cuenta** y las relaciones ya establecidas
+3. **Revisa el acceso de usuarios** y las integraciones existentes
+4. **Selecciona la cuenta** que debe conservarse como registro principal
+
+**Paso 3: consolidación de datos**
+1. **Exporta los datos importantes** de las cuentas duplicadas antes de eliminarlas
+2. **Transfiere la información crítica** a la cuenta principal:
+   - Detalles de contacto o información de empresa faltantes
+   - Credenciales y permisos de acceso de usuario
+   - Historial de productos y configuraciones
+   - Notas importantes y archivos adjuntos
+   - Asignaciones de etiquetas y membresías de listas
+
+### Combinar información de cuentas
+
+**Proceso de transferencia de información:**
+1. **Abre ambas cuentas** para compararlas
+2. **Identifica la información única** en la cuenta duplicada
+3. **Actualiza la cuenta principal** con cualquier detalle faltante:
+   - Números de teléfono o métodos de contacto adicionales
+   - Nombres comerciales alternativos o "doing business as"
+   - Ubicaciones secundarias o áreas de servicio
+   - Categorías o servicios de empresa adicionales
+4. **Verifica la precisión de la información** después de la consolidación
+5. **Documenta la fusión** en las notas de la cuenta
+
+**Gestión de usuarios y accesos:**
+1. **Revisa las cuentas de usuario** asociadas a los registros duplicados
+2. **Transfiere los usuarios** a la cuenta principal o combina la información de usuario
+3. **Actualiza los permisos de usuario** para que coincidan con los niveles de acceso previstos
+4. **Notifica a los usuarios afectados** sobre la consolidación de cuentas
+5. **Prueba el acceso de usuario** después de la consolidación
+
+### Eliminación segura de duplicados
+
+**Lista de verificación previa a la eliminación:**
+- [ ] Cuenta principal actualizada con toda la información importante
+- [ ] Usuarios transferidos o recreados en la cuenta principal
+- [ ] Historial de productos y configuraciones documentados o transferidos
+- [ ] Archivos y notas importantes preservados
+- [ ] Miembros del equipo notificados de la consolidación de la cuenta
+- [ ] Cliente notificado si es necesario
+
+**Proceso de eliminación:**
+1. **Verificación final** de que la cuenta duplicada ya no es necesaria
+2. **Documenta el motivo de la eliminación** en las notas de la cuenta principal
+3. **Elimina la cuenta duplicada** siguiendo los procedimientos de eliminación estándar
+4. **Verifica que la cuenta principal** conserve toda la información necesaria
+5. **Actualiza cualquier referencia externa** para que apunte a la cuenta principal
+
+## Cómo prevenir futuros duplicados
+
+### Mejores prácticas para la creación de cuentas
+
+**Procedimientos de búsqueda mejorados:**
+1. **Usa términos de búsqueda completos**, incluidas las variaciones del nombre de la empresa
+2. **Busca por número de teléfono** y dirección para detectar cuentas existentes
+3. **Comprueba las cuentas creadas recientemente** en la misma zona geográfica
+4. **Prueba ortografías alternativas** y nombres de empresa abreviados
+
+**Capacitación del equipo y pautas:**
+- **Establece protocolos de búsqueda** antes de crear la cuenta
+- **Capacita a los miembros del equipo** sobre escenarios comunes de duplicados
+- **Crea guías de referencia** para tipos de empresa complicados
+- **Reuniones periódicas del equipo** para hablar sobre la prevención de duplicados
+
+### Configuración del sistema
+
+**Herramientas automáticas de prevención:**
+1. **Activa las advertencias de duplicados** durante la creación de la cuenta
+2. **Configura algoritmos de coincidencia aproximada** para la similitud de nombres de empresa
+3. **Configura alertas de coincidencia** de direcciones y números de teléfono
+4. **Implementa flujos de aprobación** para posibles creaciones de duplicados
+
+**Estándares de calidad de datos:**
+- **Estandariza las convenciones de formato** de los nombres de empresa
+- **Establece pautas de formato** de direcciones
+- **Crea estándares de formato** para números de teléfono
+- **Implementa reglas de validación de datos** para la creación de cuentas
+
+### Mantenimiento continuo
+
+**Auditorías periódicas de duplicados:**
+1. **Programa revisiones mensuales de duplicados** usando las herramientas del sistema
+2. **Asigna responsabilidades** para la detección y resolución de duplicados
+3. **Realiza un seguimiento de las métricas de resolución de duplicados** para mejorar el proceso
+4. **Documenta los patrones comunes de duplicados** para la prevención
+
+**Mejora de procesos:**
+- **Analiza las causas raíz de los duplicados** para mejorar la prevención
+- **Actualiza los procedimientos de búsqueda y creación** según los hallazgos
+- **Mejora la capacitación del equipo** en las áreas problemáticas identificadas
+- **Perfecciona los algoritmos de detección automática** para mayor precisión
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Cómo puedo saber si dos cuentas son realmente duplicados o empresas separadas legítimas?</summary>
+
+Compara las direcciones de la empresa, los números de teléfono, la información de propiedad y las operaciones comerciales. Los verdaderos duplicados tendrán información comercial principal idéntica o muy similar, mientras que las empresas separadas (incluso con nombres similares) tendrán detalles operativos distintos.
+</details>
+
+<details>
+<summary>¿Qué debo hacer si elimino accidentalmente la cuenta equivocada durante la resolución de duplicados?</summary>
+
+La eliminación de cuentas suele ser permanente, así que contacta a Vendasta Support de inmediato. Algunos sistemas pueden tener opciones de respaldo o recuperación, pero es mejor prevenir esto verificando cuidadosamente qué cuenta conservar antes de eliminar.
+</details>
+
+<details>
+<summary>¿Se pueden considerar duplicados dos ubicaciones de la misma cadena de empresas?</summary>
+
+No, distintas ubicaciones físicas de la misma empresa deben tener cuentas separadas, incluso si comparten el mismo nombre de empresa. Cada ubicación atiende a clientes distintos y puede tener características operativas diferentes.
+</details>
+
+<details>
+<summary>¿Cómo gestiono los duplicados cuando las empresas han cambiado de nombre o de propietario?</summary>
+
+Si se trata de la misma empresa con un cambio de nombre, combina las cuentas y actualiza el nombre de la empresa. Si el propietario ha cambiado significativamente, considera si es más adecuado tener cuentas separadas para hacer un seguimiento de distintas entidades comerciales.
+</details>
+
+<details>
+<summary>¿Debo combinar cuentas si tienen información de contacto distinta para la misma empresa?</summary>
+
+Sí, pero conserva toda la información de contacto en la cuenta combinada. Los distintos métodos de contacto (varios números de teléfono, diversas direcciones de correo electrónico) pueden ser valiosos para comunicarse con la empresa y deben consolidarse en lugar de perderse.
+</details>
+
+<details>
+<summary>¿Qué sucede con el acceso de usuario cuando combino cuentas duplicadas?</summary>
+
+Es posible que los usuarios de las cuentas duplicadas deban recrearse o transferirse a la cuenta principal. Planifica este proceso cuidadosamente y comunícate con los usuarios afectados sobre cualquier cambio en sus credenciales de acceso.
+</details>
+
+<details>
+<summary>¿Con qué frecuencia debo ejecutar auditorías de detección de duplicados?</summary>
+
+Las revisiones mensuales de duplicados suelen ser suficientes para la mayoría de las organizaciones, pero la creación de cuentas en gran volumen puede requerir auditorías más frecuentes. Establece un calendario que equilibre la exhaustividad con la disponibilidad de recursos.
+</details>
+
+<details>
+<summary>¿Puedo prevenir los duplicados por completo con la configuración del sistema?</summary>
+
+Aunque la configuración del sistema puede ayudar a identificar posibles duplicados y ofrecer advertencias, algunos duplicados pueden seguir ocurriendo debido a variaciones en los datos o a la anulación manual. Combina las herramientas automáticas con buenos procesos y capacitación para obtener los mejores resultados.
+</details>
+

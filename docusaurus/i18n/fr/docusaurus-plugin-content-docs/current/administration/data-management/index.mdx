@@ -1,0 +1,65 @@
+---
+title: Gestion des données
+description: Découvrez la gestion des données sur la plateforme de Vendasta, y compris les objets CRM, le scoring et les pipelines
+---
+
+# Gestion des données
+
+La gestion des données fournit des outils pour organiser vos données commerciales à l'aide de champs personnalisés, de pipelines de vente et de systèmes de scoring. Utilisez-les pour capturer des informations propres à votre activité, suivre les processus de vente et prioriser les prospects.
+
+:::info Sécurité et confidentialité des données
+Vendasta maintient un rapport SOC 2® Type 2 actuel couvrant ses contrôles de sécurité. Pour plus de détails sur la façon dont vos données sont sécurisées et traitées, consultez [Sécurité et confidentialité](/getting-started/security-and-privacy) ou visitez le [Vendasta Trust Center](https://trust.vendasta.com/).
+:::
+
+## Ce que c'est
+
+La gestion des données comporte trois éléments principaux :
+
+- **Champs personnalisés** – Stockez des informations commerciales uniques sur les comptes, les utilisateurs, les commandes et les produits
+- **Pipelines de vente** – Suivez la progression des opportunités et les prévisions de revenus
+- **Scoring** – Priorisez les prospects et les opportunités grâce à des règles et des pondérations automatisées
+
+Ensemble, ils structurent vos données pour une meilleure segmentation, automatisation et prise de décision.
+
+## Ce que vous pouvez faire
+
+- **Créer des champs personnalisés** – Définissez des champs avec cinq types (texte, entier, date, liste déroulante, devise) qui pilotent le filtrage et le tri dans les automatisations
+- **Utiliser des filtres avancés** – Dans les automatisations, filtrez selon les valeurs des champs personnalisés (par exemple Contains, Does not contain, Is one of, Before, After) selon le type de champ
+- **Créer des pipelines de vente** – Utilisez le pipeline par défaut à quatre étapes ou créez des pipelines personnalisés avec vos propres étapes et pourcentages de prévision
+- **Segmenter le marketing** – Envoyez des campagnes ciblées en utilisant les données des champs personnalisés (par exemple « débutant » contre « établi » selon la taille ou le type)
+- **Automatiser les attributions** – Attribuez des vendeurs ou des équipes à des comptes selon des critères tels que le revenu estimé dans les champs personnalisés
+- **Stocker des données propres à votre activité** – Capturez des éléments comme « équipe de football préférée », « nombre de chambres d'hôtel » ou « niveau de service »
+- **Gérer le scoring des prospects et des opportunités** – Configurez des règles de scoring, des pondérations et des analyses ; déclenchez des actions lorsque les scores franchissent des seuils
+- **Importer et gérer les données** – Alimentez les champs personnalisés via des imports en masse, l'API de Vendasta ou une saisie manuelle
+
+## Comment ça marche
+
+Le pipeline par défaut comporte quatre étapes : **Lead**, **Contact**, **Qualified** et **Proposal**, avec des pourcentages de prévision de 0 %, 20 %, 40 % et 60 %. Les prévisions de revenus utilisent la probabilité que vous définissez pour chaque étape.
+
+Les champs personnalisés doivent être définis avant de pouvoir stocker des données. Vous choisissez un type d'objet (compte, utilisateur, commande ou produit) et un type de champ. Le type de champ contrôle quelles valeurs vous pouvez stocker et comment le champ peut être filtré et trié dans les règles d'automatisation.
+
+## Articles de cette section
+
+- **[Objets CRM](./crm-objects/index.mdx)** – Champs personnalisés et structures de données ; types d'objets, types de champs et filtres d'automatisation
+- **[Dispositions de champs](./crm-objects/field-layouts.mdx)** – Regroupez, réorganisez et masquez les champs CRM pour contrôler la présentation des fiches
+- **[Pipelines](./pipelines/index.mdx)** – Gestion des pipelines de vente, étapes et modèles
+- **[Score](./score/index.mdx)** – Scoring des prospects et des opportunités, critères et affichage dans le CRM
+
+## Pour commencer
+
+1. **Définir des champs personnalisés** – Allez dans `Partner Center` → `Administration` → `Custom Fields`. Choisissez le type d'objet et le type de champ (texte, entier, date, liste déroulante, devise). Le type de champ affecte la façon dont les données sont stockées et utilisées dans les automatisations.
+
+2. **Créer ou personnaliser des pipelines** – Allez dans `Partner Center` → `Administration` → `Pipelines`. Modifiez le pipeline par défaut ou cliquez sur **Create pipeline**. Définissez les pourcentages de prévision par étape ; classez les étapes selon la probabilité de réussite.
+
+3. **Configurer le scoring** – Allez dans `Partner Center` → `Administration` → `Score`. Configurez les critères de scoring des prospects et des opportunités ; les scores apparaissent dans le tableau des entreprises du CRM.
+
+## Gestion des erreurs et dépannage
+
+- **Type de champ** – Choisissez-le avec soin ; il affecte la façon dont les données sont stockées et les filtres d'automatisation disponibles. Le modifier ultérieurement peut avoir un impact sur les données existantes.
+- **Attribution d'objet** – Vérifiez que chaque champ est associé au bon type d'objet (compte, utilisateur, commande ou produit).
+- **Import de données** – Lors de l'import de listes de comptes, associez les colonnes aux bonnes définitions de champs personnalisés.
+- **Pipelines** – Vérifiez que les étapes sont classées selon la probabilité de réussite et que les pourcentages correspondent à vos attentes de conversion.
+
+:::warning
+Le type de champ influence considérablement la façon dont les données peuvent être stockées et filtrées dans les règles d'automatisation. Choisissez-le avec soin ; les modifications après la création peuvent avoir un impact sur les données existantes.
+:::

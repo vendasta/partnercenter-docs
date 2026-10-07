@@ -1,0 +1,80 @@
+---
+id: client-notifications
+title: Paramètres de notification de Partner Center
+description: Configurez les préférences de notification de Partner Center, y compris le commutateur principal, la portée Plateforme ou Utilisateur, et la diffusion par application ou par courriel.
+sidebar_position: 1
+---
+
+# Paramètres de notification de Partner Center
+
+Les notifications de Partner Center vous tiennent, vous et votre équipe, informés de l'activité liée aux commandes, aux tâches, aux produits, et plus encore. Avant qu'une notification individuelle puisse se déclencher, le commutateur principal doit être activé.
+
+## Le commutateur de notification principal
+
+Le commutateur principal contrôle l'ensemble des notifications. Lorsqu'il est désactivé, aucune notification n'est envoyée, peu importe les paramètres individuels.
+
+Pour l'activer :
+
+1. Allez dans `Partner Center` → `Administration` → `Client Notifications`
+2. Repérez **Global Settings** (également appelé **All Notifications** dans certaines vues)
+3. Activez le commutateur
+
+Une fois le commutateur principal activé, les paramètres de notification de chaque produit et zone de la plateforme deviennent disponibles pour une configuration individuelle.
+
+:::warning
+Si vous avez activé les notifications pour des produits précis mais que vous ne recevez rien, vérifiez d'abord le commutateur principal : c'est la cause la plus fréquente.
+:::
+
+## Platform Settings et User Settings
+
+Les notifications peuvent être configurées à deux niveaux différents :
+
+| Portée | Qui la configure | Ce qu'elle contrôle |
+|---|---|---|
+| **Platform Settings** | L'administrateur de Partner Center | Les notifications pour l'ensemble du compte partenaire (par exemple, toutes les commandes de vente, peu importe qui les a passées) |
+| **User Settings** | L'utilisateur individuel | Les notifications pertinentes uniquement pour cet utilisateur (par exemple, seulement les commandes de vente dans lesquelles il est impliqué) |
+
+**Quand utiliser Platform Settings :** utilisez cette portée pour une visibilité à l'échelle de l'équipe, par exemple pour alerter toute votre équipe de vente lorsqu'une commande est passée.
+
+**Quand utiliser User Settings :** utilisez cette portée pour une pertinence personnelle, par exemple pour un vendeur qui ne souhaite être informé que de ses propres comptes ou tâches.
+
+:::info
+Les Platform Settings sont gérés par les administrateurs et s'appliquent à toute l'équipe. Les utilisateurs peuvent ajuster leurs propres User Settings sans affecter les autres.
+:::
+
+## Diffusion par application ou par courriel
+
+Pour chaque notification, vous pouvez choisir son mode de diffusion :
+
+- **App** — La notification apparaît dans le panneau de notifications de Partner Center
+- **Email** — La notification est envoyée à l'adresse courriel de l'utilisateur
+- Les deux options peuvent être activées simultanément
+
+Configurez la diffusion pour chaque type de notification dans `Administration` → `Client Notifications`, puis développez le produit ou la zone concernée.
+
+## Configurer les notifications par produit
+
+Après avoir activé le commutateur principal, développez chaque section de produit pour configurer ses notifications :
+
+- **Business App** — activité au sein du Business App de vos clients
+- **Review Management** — nouveaux avis et réponses
+- **Social AI** — publication de billets et activité des campagnes
+- **WordPress Hosting** — modifications et alertes du site Web
+- **Orders and Commerce** — passations de commandes, exécutions et événements de facturation
+- **Task Manager** — attributions, mises à jour et achèvements de tâches
+
+Activez ou désactivez les différents types de notification dans chaque section, et définissez la diffusion par App et/ou par Email pour chaque type.
+
+## Questions courantes
+
+**J'ai activé une notification mais je ne la reçois pas.**
+Vérifiez le commutateur principal dans `Administration` → `Client Notifications` → `Global Settings`. S'il est désactivé, aucune notification ne se déclenche, peu importe les paramètres individuels.
+
+**Je reçois trop de notifications.**
+Passez de Platform Settings à User Settings afin de ne recevoir que les notifications pertinentes pour votre propre activité, plutôt que toute l'activité du compte.
+
+**Les notifications d'un coéquipier ne fonctionnent pas.**
+Confirmez que le commutateur principal est activé, puis vérifiez si le type de notification précis est activé dans Platform Settings. L'utilisateur concerné peut également vérifier ses propres User Settings.
+
+**Les notifications sont activées mais le courriel n'arrive pas.**
+Confirmez que la diffusion par courriel est activée pour ce type de notification. Vérifiez également les dossiers de courrier indésirable, et validez l'adresse courriel de l'utilisateur dans son profil.

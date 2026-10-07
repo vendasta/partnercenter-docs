@@ -1,0 +1,193 @@
+---
+id: customize
+title: Personnaliser
+description: Personnalisez les fonctionnalités de la plateforme, les processus d'achat, les paramètres de Business App et l'expérience client dans la plateforme Vendasta.
+sidebar_label: Personnaliser
+sidebar_position: 1
+tags: [customize, business-app, purchasing, platform-settings]
+keywords: [buy-it-yourself, platform-customization, business-app-settings, snapshot-configuration]
+---
+
+Ce guide explique comment personnaliser les fonctionnalités et les paramètres de la plateforme qui touchent vos clients, des processus d'achat aux interactions avec Business App en passant par l'accès aux snapshots.
+
+## Qu'est-ce que la personnalisation de la plateforme?
+
+La personnalisation de la plateforme vous permet de contrôler la façon dont vos clients interagissent avec votre plateforme, y compris les processus d'achat, l'accès à Business App et d'autres fonctionnalités. Utilisez-la pour aligner l'expérience avec votre modèle d'affaires et les besoins de vos clients.
+
+## Pourquoi c'est important
+
+- **Alignement avec le modèle d'affaires** – Adaptez les processus d'achat et d'accès à votre démarche commerciale
+- **Image de marque professionnelle** – Créez une expérience cohérente et personnalisée pour vos clients
+- **Accès contrôlé** – Gérez quand et comment vos clients peuvent acheter ou accéder aux fonctionnalités
+- **Expérience utilisateur améliorée** – Simplifiez les interactions avec vos clients et réduisez la confusion
+
+## Ce qui est inclus
+
+- Contrôles d'achat Buy-it-Yourself
+- Paramètres de contact et de conversation de Business App
+- Gestion des snapshots de prospects et de l'accès aux comptes
+- Personnalisation des ententes clients et du panier d'achat
+- Configuration des sources de fiches et d'avis
+
+## Comment configurer l'achat Buy-it-Yourself
+
+Le processus « BIY » ou « Buy-it-Yourself » permet à vos clients d'acheter et d'activer des produits par eux-mêmes. Certains partenaires préfèrent contrôler le moment ou le financement, vous pouvez donc mettre en place un processus contrôlé à la place.
+
+### Comment fonctionne Buy-it-Yourself
+
+Lorsqu'un client démarre une commande et paie le prix de détail, le processus d'activation automatique vous facture le total en gros. Cela fonctionne bien pour les achats en tout temps, mais peut ne pas convenir aux partenaires qui souhaitent contrôler le moment ou le financement en gros de façon variable.
+
+:::info
+Les produits et services offerts gratuitement ne font pas partie de l'expérience BIY.
+:::
+
+### Buy-it-Yourself par rapport aux mises à niveau en libre-service
+
+Buy-it-Yourself couvre le premier achat et la première activation d'un produit par un client. Si un client possède déjà un produit et souhaite passer à un niveau supérieur, il s'agit plutôt d'une **mise à niveau en libre-service** — un paramètre distinct configuré par produit sous `Partner Center` → `Marketplace` → `Products` → *(sélectionnez le produit)* → `Product Info` → `Upgrade Path`. Consultez [Configuration des produits](/marketplace/products#product-info-tab) pour les étapes de configuration.
+
+### Créer une expérience d'achat personnalisée
+
+Pour créer un processus d'achat contrôlé :
+
+1. Allez à `Partner Center` → `Administration` → `Customize` → menu déroulant `Sales`
+2. Sélectionnez `Configure Orders and Sales Processes`
+3. Faites défiler jusqu'à `Default Content` → `Custom fields` pour les commandes
+
+:::info
+Si vous avez plusieurs marchés, sélectionnez votre marché cible avant de continuer.
+:::
+
+4. Créez des questions de formulaire de commande dans la section `Administrative Questions`
+5. Marquez les questions comme `required` et `hidden from end users` afin que seuls les utilisateurs partenaires les voient
+6. Lorsque les clients cliquent sur `Buy` et saisissent le paiement, les commandes passent à `Awaiting Partner Approval`
+7. Utilisez une simple case à cocher (p. ex. « cette commande est approuvée ») pour contrôler le moment
+8. Lorsque vous êtes prêt, remplissez le champ et cliquez sur `Approve` pour traiter la commande
+
+## Comment personnaliser les paramètres de contact de Business App
+
+### Bouton Contact Us
+
+Vous pouvez personnaliser le bouton `Contact Us` dans Business App afin que vos clients puissent entamer une conversation avec vous.
+
+1. Allez à `Partner Center` → `Administration` → `Customize Business App`
+2. Ouvrez `Conversation Messages` et activez ou désactivez `Customers can start conversations with you`
+
+## Comment configurer l'expérience de snapshot pour les prospects
+
+Contrôlez comment les prospects interagissent avec les rapports snapshot et demandent l'accès à Business App.
+
+### Configurer l'accès des prospects
+
+Par défaut, les prospects peuvent demander l'accès à Business App à partir des rapports snapshot. Pour personnaliser :
+
+1. Allez à `Partner Center` → `Administration` → `Customize`
+2. Cliquez sur la section `Sales` pour la déployer
+3. Sélectionnez `Edit Default Marketing and User Experience`
+4. Suivez l'assistant : création de compte, exigences d'accès à Business App, préférences de communication avec les prospects
+5. Cliquez sur `Finish` (prévisualisez d'abord si vous le souhaitez)
+
+### Avantages
+
+- Les prospects découvrent les avantages de la plateforme par eux-mêmes
+- Processus de création de compte personnalisable
+- Accès contrôlé aux fonctionnalités de Business App
+- Communication personnalisée avec les prospects
+
+## Comment gérer les ententes clients
+
+### Entente du panier d'achat
+
+Vous pouvez modifier les ententes clients affichées dans le panier d'achat au moment du paiement.
+
+1. Allez à `Partner Center` → `Administration` → `Customize`
+2. Ouvrez `Sales` → `Configure Orders and Sales Processes`
+3. Faites défiler jusqu'à `Customer Agreements`
+4. Modifiez le texte selon vos exigences et enregistrez
+
+:::info
+Les ententes clients devraient être révisées par un conseiller juridique pour assurer la conformité aux réglementations locales.
+:::
+
+## Comment configurer les sources de fiches et d'avis
+
+### Aperçu
+
+L'application Listing Management vous permet de choisir les sites de fiches et d'avis surveillés pour chaque client, selon l'industrie et l'emplacement. Vous pouvez aussi prioriser les sources qui prennent en charge les médias pour améliorer le référencement et l'engagement.
+
+### Accéder aux sources de fiches
+
+1. Allez à `Partner Center` → `Administration` → `Customize`
+2. Sous `Product Settings`, sélectionnez `Listing Sources`
+
+### Gérer les sites de fiches
+
+- **Filtres** – Par catégorie, pays ou industrie
+- **Gestion des sites** – Activez ou désactivez des plateformes de fiches et d'avis spécifiques
+- **Actions groupées** – Appliquez des changements à plusieurs sites à la fois
+
+### Sources de fiches prenant en charge les médias
+
+Les sources qui permettent d'ajouter des photos et des vidéos aux fiches ou aux avis peuvent améliorer l'engagement et le référencement.
+
+**Avantages :** Meilleur attrait visuel, engagement accru, référencement renforcé, présence en ligne plus complète.
+
+**Sources média disponibles :** Seules certaines sources de fiches et d'avis prennent en charge les médias. Pour la liste des sources compatibles avec les médias établie par Vendasta, utilisez :
+
+<a href="/attachments/Listing_Sources_that_Support_Media.pdf" target="_blank" rel="noopener">Listing_Sources_that_Support_Media.pdf</a> (40 Ko)
+
+### Bonnes pratiques
+
+- Priorisez les sources compatibles avec les médias lorsque cela est utile
+- Activez les sites pertinents pour les industries et emplacements de vos clients
+- Envisagez les sources qui permettent des avis visuels générés par les clients
+- Révisez et mettez à jour vos sélections à mesure que de nouvelles plateformes apparaissent
+- Testez les fiches pour confirmer leur fonctionnement et le téléversement des médias
+
+## Foire aux questions
+
+<details>
+<summary>Puis-je désactiver complètement l'achat Buy-it-Yourself?</summary>
+
+Oui. Utilisez des questions administratives obligatoires et masquées aux utilisateurs finaux afin que toutes les commandes passent à `Awaiting Partner Approval`. Vous contrôlez ensuite quand approuver et traiter chaque commande.
+</details>
+
+<details>
+<summary>Les prospects peuvent-ils accéder à Business App sans compléter un snapshot?</summary>
+
+Par défaut, les prospects demandent l'accès à Business App par l'entremise des rapports snapshot. Vous pouvez modifier ce comportement dans `Edit Default Marketing and User Experience` pour définir d'autres parcours d'accès.
+</details>
+
+<details>
+<summary>À quelle fréquence devrais-je mettre à jour les sources de fiches et d'avis?</summary>
+
+Révisez les sources de fiches chaque trimestre ou lors de l'entrée dans de nouveaux marchés. De nouvelles plateformes apparaissent souvent, et la pertinence pour les industries de vos clients peut changer.
+</details>
+
+<details>
+<summary>Puis-je définir des ententes clients différentes selon les marchés?</summary>
+
+Oui. Avec plusieurs marchés, vous pouvez définir des ententes clients par marché dans **Configure Orders and Sales Processes**.
+</details>
+
+<details>
+<summary>Que devrais-je inclure dans les questions personnalisées du formulaire de commande?</summary>
+
+Incluez des questions qui appuient votre processus de vente : cases à cocher d'approbation, niveaux de priorité ou autres exigences. Gardez-les simples et pertinentes.
+</details>
+
+<details>
+<summary>Puis-je prévisualiser les changements avant de les appliquer?</summary>
+
+Oui. La plupart des assistants de personnalisation offrent un aperçu avant de terminer. Prévisualisez les changements importants pour vous assurer qu'ils correspondent à ce que vous voulez.
+</details>
+
+<details>
+<summary>Comment m'assurer que les sources de fiches prennent en charge le téléversement de médias?</summary>
+
+Vérifiez la configuration de la source de fiches pour la prise en charge des médias, ou utilisez la liste PDF téléchargeable des sources compatibles avec les médias. Les grandes plateformes (p. ex. Google Business Profile, Facebook) prennent généralement en charge les images et les vidéos; les plus petits annuaires peuvent être uniquement textuels.
+</details>
+
+## Articles dans cette section
+
+- **[Gestion de l'équipe de vente](./sales-team-management.md)** – Permissions de vente, contrôles d'accès, visibilité des prix et limites de rapports
+- **[Marchés et configuration avancée](./market-settings.md)** – Marchés, programmes d'accès anticipé, priorités d'affaires et fonctionnalités avancées de la plateforme

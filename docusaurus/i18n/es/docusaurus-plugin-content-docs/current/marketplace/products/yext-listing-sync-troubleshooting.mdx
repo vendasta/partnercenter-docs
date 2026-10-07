@@ -1,0 +1,54 @@
+---
+title: Solución de problemas de Yext Listing Sync
+sidebar_label: Yext troubleshooting
+description: Resuelve errores comunes de Yext Listing Sync, incluido "Invalid Entity Field Categories" y otros problemas de sincronización.
+tags: [yext, listing-sync, troubleshooting, marketplace]
+keywords: [yext error, invalid entity field categories, listing sync, yext troubleshooting]
+---
+
+## Error: "Invalid Entity Field Categories"
+
+### Qué significa este error
+
+El error "Invalid Entity Field Categories" aparece en Yext Listing Sync cuando la categoría de negocio asignada a la cuenta no está en el catálogo de categorías de Yext. Yext mantiene su propia lista de categorías de negocio compatibles, y las categorías que no se asignan a una categoría válida de Yext provocarán este error.
+
+Esto es un problema de configuración. No indica un problema con el servicio de sincronización en sí.
+
+### Cómo solucionarlo
+
+Actualiza la categoría de negocio de la cuenta a una que Yext admita. Elige una categoría que describa de cerca el negocio.
+
+**Ejemplo:** si la cuenta tiene "Car detailing service" y esa categoría no está en el catálogo de Yext, actualízala a "Auto Repair Shop" u otra categoría compatible similar.
+
+**Pasos:**
+
+1. Ve a `Partner Center` → `Accounts` → `Manage Accounts`.
+2. Abre la cuenta con el error.
+3. Haz clic en `Edit Account` y ve a `Business Profile` → `Categories`.
+4. Quita la categoría no compatible y selecciona una categoría similar de la lista disponible.
+5. Guarda la cuenta.
+6. Vuelve a intentar la Yext Listing Sync desde la configuración de producto de la cuenta.
+
+:::tip
+Si no estás seguro de qué categoría admite Yext, elige una categoría de industria más amplia (por ejemplo, "Automotive" o "Home Services") como punto de partida. Puedes actualizarla de nuevo una vez que identifiques la opción compatible más cercana.
+:::
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Cómo sé qué categorías admite Yext?</summary>
+
+La lista de categorías compatibles de Yext no se muestra directamente en Partner Center. El enfoque más confiable es seleccionar una categoría de industria amplia y conocida de la lista de Business Categories y probar la sincronización. Si el error persiste, prueba con una categoría principal más amplia.
+</details>
+
+<details>
+<summary>¿Cambiar la categoría afectará a otros productos de listados?</summary>
+
+Sí. La categoría de negocio se comparte en todos los productos de listados de la cuenta. Cambiarla afecta cómo se categoriza el negocio en todos los directorios conectados, no solo en Yext. Elige una categoría que represente con precisión al negocio.
+</details>
+
+<details>
+<summary>La categoría se ve correcta: ¿por qué Yext la sigue rechazando?</summary>
+
+Algunas categorías que parecen válidas en Partner Center no están en el catálogo específico de Yext. Incluso si una categoría funciona para otros productos de listados, es posible que Yext no la admita. Prueba con una categoría similar o una categoría principal más amplia.
+</details>

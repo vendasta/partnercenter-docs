@@ -1,0 +1,172 @@
+---
+id: track-web-chat-events-google-analytics
+title: Rastrea eventos del chat web en Google Analytics (GA4) con Tag Manager (GTM)
+sidebar_label: Google Analytics event tracking
+sidebar_position: 10
+description: Configura Google Tag Manager para enviar eventos del widget de chat web a Google Analytics GA4 para el seguimiento de interacción y atribución.
+---
+
+El widget de chat web emite eventos que se pueden rastrear en Google Analytics, lo cual es útil para medir la interacción con el sitio web y atribuir las interacciones del chat web a tus esfuerzos de marketing, como orgánico, social o anuncios.
+
+Los eventos rastreables incluyen:
+
+- Cuando un usuario hace clic en el FAB para abrir o cerrar el widget de chat web
+- Cuando se inicia una nueva conversación
+- Cuando un usuario hace clic en el botón Enviar para enviar un mensaje
+- Cuando se capta un nuevo cliente potencial
+- Cuando se elige un horario de reunión
+
+Este documento muestra los pasos para agregar un widget de chat web a un sitio web y rastrear los eventos del widget con Google Analytics.
+
+:::info Requisitos previos
+Esta guía asume que tienes una cuenta de Google Analytics y Google Tag Manager instalado en tu sitio. Consulta [Configurar Google Tag Manager](https://support.google.com/tagmanager/answer/14842164?hl=en) si aún no lo has hecho.
+:::
+
+## 1. Instala el chat web mediante Google Tag Manager
+
+En Google Tag Manager, en `Tags`, agrega una nueva etiqueta `Custom HTML` que incluya el script del widget de chat web. El script se encuentra en tu configuración de chat web en Partner Center o Business App.
+
+Configura el disparador como `Initialization - All Pages` para que el widget se cargue en todas las páginas del sitio.
+
+<img src={require('./img/track-web-chat-ga4/gtm-webchat-install-tag.png').default} alt="GTM Custom HTML tag with web chat widget script" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## 2. Instala Google Analytics con Tag Manager
+
+En Google Tag Manager, en **Tags**, agrega una nueva etiqueta con la siguiente configuración:
+
+- **Tag configuration:** Google Analytics → Google Tag
+- **Tag ID:** el ID de tu contenedor de Google Analytics (se encuentra en el panel de Google Analytics)
+- **Triggering:** Initialization - All Pages
+
+<img src={require('./img/track-web-chat-ga4/gtm-ga-tag-setup.png').default} alt="GTM Google Analytics tag setup" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## 3. Agrega disparadores
+
+El widget de chat web emite eventos cuando ocurren acciones del visitante. Usa disparadores de GTM para enviar estos eventos a Google Analytics.
+
+### Tipos de evento
+
+| Nombre del evento | Clave del evento | Descripción |
+|---|---|---|
+| Start web chat | `inbx_web_chat_start_chat` | Se emite cuando se inicia una nueva conversación con un visitante |
+| Lead captured | `inbx_web_chat_lead_captured` | Se emite cuando el chat web capta un cliente potencial |
+| Send message | `inbx_web_chat_clicked_send_message` | Se emite cuando un visitante envía un mensaje |
+| Open/close FAB | `inbx_web_chat_clicked_fab_openclose_widget` | Se emite cuando un visitante abre o cierra la ventana de chat |
+| Appointment time selected | `inbx_web_chat_clicked_appointment_time` | Se emite cuando un visitante selecciona un horario de cita (**solo Neighborly**) |
+
+En Google Tag Manager, ve a la pestaña `Triggers` y agrega un nuevo disparador para cada evento que quieras rastrear:
+
+- **Trigger type:** Custom Event
+- **Event name:** la clave del evento de la tabla anterior
+
+<img src={require('./img/track-web-chat-ga4/gtm-custom-event-trigger.png').default} alt="GTM Custom Event trigger configuration" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Agrega un disparador para cada evento que quieras rastrear. Tu lista de disparadores debería verse similar a:
+
+<img src={require('./img/track-web-chat-ga4/gtm-triggers-list.png').default} alt="GTM triggers list showing all web chat events" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## 4. Rastrea eventos del chat web
+
+Agrega una última etiqueta para enviar los eventos de los disparadores a Google Analytics. Ve a la pestaña `Tags` y agrega una nueva etiqueta.
+
+### Configuración de la etiqueta
+
+- **Tag type:** Google Analytics → Google Analytics: GA4 Event
+- **Measurement ID:** el mismo ID usado para tu etiqueta de Google Analytics en el paso 2
+- **Event name:** configúralo como `{{Event}}`. Esto usa dinámicamente el nombre del evento del disparador
+
+<img src={require('./img/track-web-chat-ga4/gtm-ga4-event-tag.png').default} alt="GA4 Event tag configuration" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Triggering
+
+Debajo de la configuración de la etiqueta, agrega los disparadores creados en el paso 3. Verás la lista completa de disparadores disponibles para seleccionar.
+
+<img src={require('./img/track-web-chat-ga4/gtm-ga4-event-triggers.png').default} alt="Adding web chat triggers to GA4 event tag" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Agrega todos los disparadores en los que quieras que se active esta etiqueta de evento. Tu configuración final debería verse así:
+
+<img src={require('./img/track-web-chat-ga4/gtm-final-configuration.png').default} alt="Final GA4 event tag configuration with all triggers" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Rastrea variables adicionales
+
+El widget de chat web también emite datos adicionales que puedes capturar en GA4:
+
+| Nombre de la variable | Descripción |
+|---|---|
+| `namespace` | El namespace donde se creó el chat web |
+| `conversationId` | El ID de conversación de los eventos |
+
+Para rastrear estas variables, agrega User-Defined Variables en GTM:
+
+<img src={require('./img/track-web-chat-ga4/gtm-user-defined-variables.png').default} alt="GTM User-Defined Variables section" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Haz clic en `New` en User-Defined Variables, configura el tipo de variable como `Data Layer Variable` y configura el `Data Layer Variable Name` como `conversationId`.
+
+<img src={require('./img/track-web-chat-ga4/gtm-conversation-id-variable.png').default} alt="Adding conversationId as a Data Layer Variable" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Repite el proceso para cualquier otra variable de la tabla anterior.
+
+Luego abre tu Widget Event Tag y agrega los nuevos parámetros de evento:
+
+<img src={require('./img/track-web-chat-ga4/gtm-widget-event-tag.png').default} alt="Selecting the Widget Event Tag to add parameters" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+<img src={require('./img/track-web-chat-ga4/gtm-event-parameters.png').default} alt="Adding event parameters to the Widget Event Tag" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Después de publicar, los nuevos campos aparecerán en tus eventos de Google Analytics:
+
+<img src={require('./img/track-web-chat-ga4/ga4-events-view.png').default} alt="Google Analytics events view showing web chat event parameters" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## Pruebas
+
+### Google Tag Manager
+
+Haz clic en el botón `Preview` en la parte superior de GTM para abrir la pantalla de vista previa. Tu sitio web se abrirá en una pestaña nueva. Interactúa con el widget de chat web y verifica que los eventos aparezcan en la vista previa de GTM.
+
+<img src={require('./img/track-web-chat-ga4/gtm-preview-mode.png').default} alt="GTM preview mode showing web chat events" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Si todo funciona correctamente, los eventos se mostrarán como `Succeeded`:
+
+<img src={require('./img/track-web-chat-ga4/gtm-event-success.png').default} alt="GTM event showing Succeeded status" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Google Analytics
+
+En tu panel de Google Analytics, ve a `Admin` → `Data display` → `DebugView`. Interactúa con el widget de chat web en tu sitio y confirma que los eventos aparecen en tiempo real.
+
+<img src={require('./img/track-web-chat-ga4/ga4-debug-view.png').default} alt="GA4 DebugView showing incoming web chat events" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+También puedes verificarlo en la vista general `Realtime`:
+
+<img src={require('./img/track-web-chat-ga4/ga4-realtime-overview.png').default} alt="GA4 Realtime overview showing web chat events" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Una vez confirmado, publica los cambios de GTM para que tu sitio en vivo comience a rastrear estos eventos.
+
+## Copia la configuración a varias cuentas de clientes
+
+Si gestionas varios negocios, puedes duplicar tu configuración de GTM usando la función de **exportación/importación de contenedores**.
+
+### Exporta tu contenedor de GTM
+
+1. Abre tu cuenta de GTM y selecciona el contenedor configurado.
+2. Ve a `Admin` en la navegación superior.
+3. En la columna `Container`, selecciona `Export Container`.
+4. Elige la versión más reciente del contenedor y haz clic en `Export`. Guarda el archivo `.json` en tu computadora.
+
+### Importa a otra cuenta de GTM
+
+1. Abre la cuenta o el contenedor de GTM de destino.
+2. Ve a `Admin` → `Container` → `Import Container`.
+3. Elige el archivo `.json` de la exportación.
+4. Selecciona el contenedor `Existing` o `New`, según corresponda.
+5. Elige `Merge` para agregar elementos junto a los existentes y luego resuelve cualquier conflicto.
+6. Revisa la pantalla de resumen y haz clic en `Confirm`.
+
+Después de importar, actualiza los detalles específicos del cliente:
+
+- IDs de medición de Google Analytics (dos ubicaciones)
+- El script del widget de chat web
+
+Prueba en `Preview Mode` antes de publicar en el sitio en vivo del cliente.
+
+:::tip
+Guarda cada configuración como una versión de GTM antes de hacer cambios, para tener una opción de reversión si es necesario.
+:::

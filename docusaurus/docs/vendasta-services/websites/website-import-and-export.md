@@ -1,23 +1,33 @@
 ---
-title: "Website Import and Export"
+title: "How do I import or export a website with Vendasta Services?"
 sidebar_label: "Import and Export"
 sidebar_position: 7
-description: "If you have an existing WordPress website and would like to move it onto Vendasta's hosting platform (WordPress Hosting Pro), Vendasta Services can help! You can also export your website if you need to move it to a new host."
+description: "Import an existing WordPress website onto WordPress Hosting Pro through Vendasta Services vetting, or export your site file to move it to a new host."
 updated_at: "2025-06-03T17:16:27Z"
 labels: []
 section_id: 18536913508375
 locale: "en-us"
+brand: vendasta-services
+product: vendasta-services-core
+audience: partners
+content_type: how-to
+kb_id: KB-00050
+answer_snippet: "Vendasta Services can import an existing WordPress website onto WordPress Hosting Pro after it passes the free Website Import Vetting, and can provide your website file if you move the site to a new host. Imported sites come with Website Support+ (3-month commitment)."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-If you have an existing WordPress website and would like to move it onto Vendasta’s hosting platform (WordPress Hosting Pro), Vendasta Services can help!
+Vendasta Services can import an existing WordPress website onto WordPress Hosting Pro after it passes the free Website Import Vetting, and can provide your website file if you move the site to a new host. Imported sites come with Website Support+ (3-month commitment).
 
 You will also gain access to Vendasta Services’ Website Support team when we import a site with Website Support+ activated _(3-month commitment)_.
 
 For the full list of what Website Support+ covers, see the [Website Support](./vendasta-services-website-support.md) article.
 
-## **What benefits are there when importing a site through Vendasta Services?**
+## What benefits are there when importing a site through Vendasta Services?
 
-With Vendasta Services, your website is in trusted hands! To import the site, our Website Support+ team will:
+To import the site, our Website Support+ team will:
 
 *   Package and download the website from the original hosting platform
 *   Upload and set up the site in our WordPress Hosting Pro hosting platform
@@ -28,7 +38,7 @@ _\*Plugins or themes may require a license key to update._
 
 
 
-## **Vetting Process for Importing & Support:**
+## How does the vetting process for import and support work? {#vetting-process-for-importing--support}
 
 **Vetting:**
 
@@ -76,7 +86,7 @@ _Please note that a site can take up to 72 hours to fully propagate. During this
 
 If our Website Support+ team is unable to support the website in question, we will email you to let you know that we are unable to support this site and explain why we had to reject it.
 
-## Custom add-on delivery times
+## How long do custom add-ons take to deliver? {#custom-add-on-delivery-times}
 
 If you request work beyond the standard import and support scope, the following are typical delivery timelines once we have everything we need (content, logins, and any paid plugin licenses):
 
@@ -100,7 +110,7 @@ If you request work beyond the standard import and support scope, the following 
 These timelines pause while we wait on information or assets from you. We will send up to two reminders (about one per week); if we do not hear back, the request is placed on hold. Content, logins, and any paid plugins must be provided before work begins.
 :::
 
-## Exporting a Website
+## How do I export a website? {#exporting-a-website}
 
 If you have decided you wish to move a website to a new host and discontinue support, we are able to provide you with the file for your website.
 
@@ -115,10 +125,9 @@ Our team can provide you with the necessary file and credentials for the existin
 
 **Important Note:** Once you have discontinued your hosting with us, we will only have access to the website on our servers for six months, after which it will be permanently deleted.
 
-## **Frequently asked questions (FAQs):**
+## Frequently asked questions (FAQs)
 
 <details>
-
 <summary>Is my site eligible for Website Support+?</summary>
 
 We support the following for Website Support+:
@@ -134,7 +143,6 @@ Website support requests can be sent to [marketingservices@yourdigitalagents.com
 </details>
 
 <details>
-
 <summary>My site is already on WordPress Hosting Pro, can you support it?</summary>
 
 If your site is already hosted on WordPress Hosting Pro, activate the standalone Website Support+ product. If the site is rejected for Website Support+, once we vet it, we will reject the product, and you will be automatically refunded. Rejected sites can be rebuilt with our website design team.
@@ -144,7 +152,6 @@ Website support requests can be sent to [marketingservices@yourdigitalagents.com
 </details>
 
 <details>
-
 <summary>Can you install the AI Chat Receptionist on my imported website?</summary>
 
 Yes! Website Support+ includes installation of the AI Chat Receptionist on your imported website. Our Website Support+ team will:
@@ -159,7 +166,6 @@ If you need advanced features such as full brand configuration beyond basic bran
 </details>
 
 <details>
-
 <summary>What type of forms will you set up on my site?</summary>
 
 As part of Website Support+, we can convert an existing third-party contact form into a CRM form so that submissions flow directly into your CRM as leads. We set up standard contact and lead-capture forms.
@@ -180,9 +186,43 @@ If you need any of these advanced features, reach out and our team can scope the
 </details>
 
 <details>
-
 <summary>What will happen to my existing form and submission data?</summary>
 
 When we convert your form to a CRM form, the legacy form is deactivated and removed from the front end of your site, so visitors only see the new CRM form. We do not remove the legacy form plugin, so any previously collected submissions remain viewable in your WordPress backend. Your existing form entries are also migrated into the CRM.
+
+</details>
+
+<details>
+<summary>Which product do I activate to start a website import?</summary>
+
+Activate the free Website Import Vetting product on the applicable account, then complete its fulfillment form with the site credentials. You receive an email with the vetting findings, telling you whether the site is approved or denied for import and support.
+
+</details>
+
+<details>
+<summary>What gets activated if a site is approved for import?</summary>
+
+We activate WordPress Hosting Pro and the Website Import & Support add-on, which has a one-time setup fee plus a 3-month monthly support fee. The import is completed within 3 business days after vetting.
+
+</details>
+
+<details>
+<summary>Can you import a website that isn't built on WordPress, such as Squarespace or Wix?</summary>
+
+No. Sites that are not WordPress sites are rejected for import and support. We recommend rebuilding denied sites with our design team.
+
+</details>
+
+<details>
+<summary>Will my website be down while it moves to the custom domain?</summary>
+
+Downtime should be minimal but could last a few hours while the DNS records remap to your website. A site can take up to 72 hours to fully propagate, and you may see an insecure connection error page during that time.
+
+</details>
+
+<details>
+<summary>Can I move a website to another host if my client leaves?</summary>
+
+Yes. Reach out to our team for your website file, then import it with the All In One Import/Export plugin on a WordPress installation at your new host. We can't access your new hosting or perform the import for you, and after you discontinue hosting, the site stays on our servers for six months before it's permanently deleted.
 
 </details>

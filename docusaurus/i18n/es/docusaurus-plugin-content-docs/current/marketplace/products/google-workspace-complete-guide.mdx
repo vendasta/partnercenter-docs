@@ -1,0 +1,340 @@
+---
+title: "Google Workspace complete integration guide"
+sidebar_label: "Google Workspace guide"
+sidebar_position: 3
+description: "Guía completa para configurar, transferir y gestionar la integración de Google Workspace con la plataforma de Vendasta"
+tags: [marketplace, google-workspace, setup, transfer, sso, integration]
+keywords: [Google Workspace setup, Google Workspace transfer, SSO configuration, domain setup, user management, Business App integration]
+---
+
+Esta guía completa cubre todo lo que necesitas saber sobre la integración de Google Workspace con la plataforma de Vendasta, incluida la configuración inicial, la transferencia de suscripciones existentes y la gestión de configuraciones de SSO.
+
+## Descripción general de la integración con Google Workspace
+
+La integración de Google Workspace con la plataforma de Vendasta ofrece soluciones de productividad para tus clientes mientras mantienes una gestión centralizada a través de Partner Center. Esta integración admite tanto configuraciones nuevas de Google Workspace como transferencias de suscripciones existentes.
+
+**Beneficios clave de la integración**
+- Facturación y gestión centralizadas a través de Partner Center
+- Autenticación de usuario fluida con Business App
+- Aprovisionamiento y desaprovisionamiento automatizados
+- Control administrativo integral
+- Compatibilidad con SSO e inicio de sesión directo de Google
+
+## Requisitos previos a la configuración
+
+Antes de comenzar cualquier configuración de Google Workspace, asegúrate de tener los siguientes requisitos previos:
+
+### Requisitos esenciales
+- **Acceso administrativo al dominio**: capacidades completas de gestión de DNS para el dominio objetivo
+- **Dirección de correo secundaria**: correo alternativo en un dominio diferente para fines administrativos
+- **Configuración de usuario de Business App**: usuarios configurados que coincidan con la estructura de dominio de Google Workspace
+
+### Configuración del dominio
+- Verifica la propiedad del dominio y los derechos administrativos
+- Asegúrate de que la configuración de DNS se pueda modificar (registros TXT y MX)
+- Planifica la estructura de dominio para todos los usuarios de Google Workspace
+- Formato de ejemplo: `username@clientdomain.com`
+
+### Planificación de usuarios
+- Identifica a todos los usuarios que necesitarán acceso a Google Workspace
+- Planifica la estructura de roles y permisos de usuario
+- Determina las responsabilidades administrativas
+- Considera los requisitos de escalado futuros
+
+## Configuración nueva de Google Workspace
+
+### Configuración de usuarios de Business App
+
+**Crear usuarios nuevos**
+1. En `Partner Center`, abre `Accounts` → `Manage Accounts` → `[Nombre de la cuenta]` y haz clic en `Invite users`. Se abre el panel Invite users con la cuenta preseleccionada.
+2. Escribe la dirección de correo electrónico de cada usuario, asegurándote de que el dominio del correo coincida con el dominio de Google Workspace. Se sugieren contactos de CRM coincidentes mientras escribes.
+3. Haz clic en `Invite [cantidad] users`. Cada usuario invitado recibe el [correo de incorporación](/business-app/ai-onboarding-experience).
+
+Alternativamente, crea usuarios de forma centralizada desde `Accounts` → `Manage Users` → `Create user`, y luego agrégalos a la cuenta objetivo: selecciona el ícono de edición → `Edit Permissions` → `Add Account`, ubica la cuenta, marca su casilla y haz clic en `Add Accounts`.
+
+**Usar usuarios existentes**
+
+Si ya existen usuarios con el dominio correspondiente, invítalos desde el panel `Invite users` de la cuenta escribiendo su correo electrónico, o gestiona su acceso a la cuenta directamente:
+
+1. Ve a `Partner Center` → `Accounts` → `Manage Users`
+2. Selecciona el ícono de edición junto al usuario objetivo → `Edit Permissions`
+3. Haz clic en `Add Account`
+4. Ubica la cuenta objetivo y marca la casilla
+5. Haz clic en `Add Accounts`
+6. Repite para todos los usuarios correspondientes
+
+Salta a la activación si los usuarios ya están asignados a la cuenta objetivo.
+
+### Activación de Google Workspace
+
+**Proceso de activación inicial**
+1. Ve a `Partner Center` → `Accounts` → `Manage Accounts`
+2. Selecciona la cuenta objetivo
+3. Haz clic en `Create Order` → `Add Google Workspace`
+4. Haz clic en `Continue`
+5. Marca ambas casillas de confirmación `I understand...`
+
+### Escenarios de configuración
+
+Elige el escenario que mejor coincida con tu estrategia de implementación:
+
+#### Escenario A: configuración gestionada por el cliente
+**Caso de uso:** el cliente gestiona toda la configuración de Google Workspace de forma independiente
+
+**Configuración:**
+- `Domain name`: dominio del cliente para Google Workspace
+- `Username`: dirección de correo principal del cliente (debe coincidir con el dominio)
+- `Business App user`: selecciona el usuario de Business App correspondiente
+- `Admin email address`: correo alternativo del cliente (se requiere un dominio diferente)
+
+**Flujo del proceso**
+- El cliente recibe el correo **Welcome to Google Workspace**
+- El cliente completa la verificación de dominio y la configuración de DNS
+- El cliente configura los ajustes de Google Workspace de forma independiente
+- El partner mantiene la facturación y la supervisión administrativa
+
+#### Escenario B: configuración por el partner, administración por el cliente
+**Caso de uso:** el partner realiza la configuración inicial, el cliente asume la administración
+
+**Configuración:**
+- `Domain name`: dominio del cliente para Google Workspace
+- `Username`: dirección de correo principal del cliente (debe coincidir con el dominio)
+- `Business App user`: selecciona el usuario de Business App correspondiente
+- `Admin email address`: correo alternativo del cliente (se requiere un dominio diferente)
+
+**Flujo del proceso:**
+- El partner completa la activación inicial y la verificación de dominio
+- El cliente recibe las credenciales administrativas
+- El cliente asume las responsabilidades administrativas continuas
+- El partner mantiene la relación de facturación
+
+#### Escenario C: configuración y administración por el partner
+**Caso de uso:** el partner mantiene el control administrativo continuo
+
+**Configuración:**
+- `Domain name`: dominio del cliente para Google Workspace
+- `Username`: dirección de correo del partner en el dominio del cliente
+- `Business App user`: selecciona el usuario de Business App correspondiente
+- `Admin email address`: correo alternativo para la recuperación de contraseña
+
+**Flujo del proceso:**
+- El partner mantiene el control administrativo total
+- El partner gestiona todas las tareas de configuración y administración
+- Los usuarios del cliente acceden a través de la integración con Business App
+- El partner ofrece soporte y gestión continuos
+
+### Finalización de la activación
+
+1. Completa el formulario de configuración según el escenario elegido
+2. Marca la casilla de confirmación `I understand...`
+3. Haz clic en `Purchase` para comenzar la activación
+4. **Espera hasta 10 minutos** para la activación del producto
+
+### Configuración administrativa (para configuraciones gestionadas por el partner)
+
+**Aceptación de los Términos del Servicio:**
+1. Supervisa la bandeja de entrada del correo de administrador en busca del mensaje "Google Workspace Admin User for..."
+2. Haz clic en `Reset Password` en el correo
+3. Ingresa una contraseña segura en los campos `New Password` y `Confirm Password`
+4. Haz clic en `Reset` para completar la configuración de la contraseña
+5. Ve a [https://admin.google.com](https://admin.google.com)
+6. Inicia sesión con el correo y la contraseña configurados
+7. Acepta los Términos del Servicio de Google Workspace
+
+### Verificación de dominio y configuración de DNS
+
+**Pasos finales de configuración:**
+1. Ve a `Partner Center` → `Accounts` → `Manage Accounts` → `[Nombre de la cuenta]`
+2. Haz clic en `Google Workspace`
+3. Selecciona `Setup` en la barra lateral
+4. Sigue las instrucciones de verificación:
+   - **Método recomendado:** proceso de verificación automatizado
+   - **Métodos alternativos:** configuración manual de DNS
+
+**Configuración de registros DNS:**
+- **Registros TXT:** verificación de propiedad del dominio
+- **Registros MX:** configuración de enrutamiento de correo
+- **Instrucciones específicas por host:** usa `View full instructions` para obtener orientación específica de la plataforma
+- **Soporte:** contacta al proveedor de tu dominio para obtener ayuda con la configuración si es necesario
+
+### Aprovisionamiento de usuarios adicionales
+
+**Agregar asientos adicionales:**
+1. Ve a `Partner Center` → `Accounts` → `Manage Accounts` → `[Nombre de la cuenta]`
+2. Haz clic en `Google Workspace` en la sección Products
+3. Ubica las filas "Seat Available For Use"
+4. Haz clic en `Create User` para cada asiento disponible
+
+**Configuración de usuario:**
+- `Business App user`: selecciona el usuario de Business App correspondiente
+- `First name and last name`: nombre completo del usuario
+- `Google Workspace username`: nombre de usuario que coincide con el usuario de Business App
+- `Alternate email`: correo de recuperación en un dominio diferente
+
+Repite para todos los asientos adicionales comprados.
+
+## Transferir suscripciones existentes de Google Workspace
+
+### Descripción general de la transferencia
+
+Google no permite transferencias a resellers que hayan alojado previamente el mismo Google Workspace en los últimos 18 meses (una restricción que Google introdujo el 7 de marzo de 2025). Verifica el historial de alojamiento previo del cliente antes de iniciar una transferencia.
+
+**Diferencias entre transferencia y suscripción nueva:**
+- Las cuentas transferidas NO requieren iniciar sesión en Business App
+- Los usuarios continúan con sus patrones de inicio de sesión existentes de Google Workspace
+- No hay interrupción en los flujos de trabajo y datos existentes
+- La facturación se transfiere a Vendasta mientras se mantiene la experiencia del usuario
+
+### Pasos de transferencia del cliente
+
+**Acciones requeridas del cliente:**
+1. Proporciona al cliente el Reseller ID de Vendasta: `C02e5br85`
+2. Pide a tu cliente que vaya a [admin.google.com/TransferToken](https://admin.google.com/TransferToken). (Si llegas a una página 404 después de hacer clic en el enlace anterior, intenta abrir el enlace en una pestaña de navegación privada/incógnito de tu navegador).
+3. Pídele que haga clic en `Generate Transfer Token`. Ten en cuenta que se generará un token en el backend de Google. Este token no será visible para el cliente.
+
+### Procesamiento de la transferencia por el partner
+
+**Configuración en Partner Center:**
+1. Ve a `Partner Center` → `Accounts` → `Manage Accounts` → `[Nombre de la cuenta]`
+2. Haz clic en `Create Order` → `Add Google Workspace Transfer`
+3. Ingresa el `Transfer Token` proporcionado por el cliente
+4. Marca la confirmación `I understand...`
+5. Haz clic en `Purchase`
+
+**Finalización de la transferencia:**
+1. Revisa el cálculo de asientos (la transferencia es gratuita, no hay facturación por la activación)
+2. Haz clic en `Google Workspace Transfer` en la sección Products
+3. Confirma los detalles de la transferencia:
+   - Revisa el número de asientos que se transfieren
+   - Marca la confirmación `I understand...`
+   - Haz clic en `Confirm Transfer`
+4. Espera varios minutos para el procesamiento y la activación de asientos
+5. Verifica que el cliente acepte los términos y condiciones de Google Workspace
+
+<img src={require('./img/google-workspace/activate-products.jpg').default} alt="Activate products screen showing Google Workspace transfer option" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+<img src={require('./img/google-workspace/purchase-screen.jpg').default} alt="Purchase screen for confirming Google Workspace transfer details" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## Transferir Google Workspace fuera de Vendasta
+
+Puedes transferir cuentas de Google Workspace **fuera de la plataforma de Vendasta** cancelando el producto.
+
+### ¿Qué sucede después de la cancelación?
+
+- Los **correos y datos** de Google Workspace del cliente **permanecen intactos**.
+- La cuenta simplemente deja de ser gestionada por Vendasta y **vuelve a Google**.
+- El **administrador de Google Workspace** recibirá un correo electrónico pidiéndole que acceda a la **Google Admin Console** y configure la facturación directamente con Google.
+
+Para evitar cualquier interrupción del servicio, el cliente **debe configurar el pago con Google dentro de los 7 días** posteriores a la cancelación del producto. Este proceso **no es automático** ni lo gestiona Vendasta.
+
+### Cancelar asientos individuales
+
+Si estás cancelando asientos específicos en lugar del producto completo, contacta también a **support@vendasta.com**, ya que pueden ser necesarios **ajustes de backend** para completar el proceso.
+
+## Gestión y configuración de SSO
+
+### Comprender la integración de SSO
+
+La integración de inicio de sesión único (SSO) permite que los usuarios accedan a Google Workspace usando las credenciales de Business App, lo que proporciona autenticación centralizada y una experiencia de usuario fluida en todos los productos de la plataforma.
+
+### Desactivar SSO para acceso directo de Google
+
+**Caso de uso:** los usuarios prefieren iniciar sesión directamente en Google en lugar de autenticarse a través de Business App
+
+**Proceso para desactivar SSO:**
+1. Ve a `Partner Center`
+2. Abre la cuenta con Google Workspace activo
+3. Accede a Google Workspace desde Partner Center
+
+<img src={require('./img/google-workspace/workspace-sso-1.jpg').default} alt="Google Workspace product view in Partner Center for an account" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+4. Abre el panel de Workspace
+5. Selecciona `Settings` en el panel izquierdo
+6. Ubica el interruptor de SSO (Single Sign-On)
+7. Activa o desactiva SSO según sea necesario
+
+<img src={require('./img/google-workspace/workspace-sso-2.jpg').default} alt="Google Workspace settings with the SSO toggle visible" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+**Impacto de desactivar SSO:**
+- Los usuarios pueden acceder a los productos de Google directamente mediante el inicio de sesión de Google
+- Business App y Google Workspace se convierten en experiencias de inicio de sesión separadas
+- Se reduce la integración entre plataformas
+- Los usuarios mantienen una autenticación separada para cada sistema
+
+### Buenas prácticas de SSO
+
+**Cuándo mantener SSO activado:**
+- Se desea una gestión de usuarios centralizada
+- Se prefiere un único punto de autenticación
+- Integración con otros productos de Business App
+- Capacitación y soporte de usuarios simplificados
+
+**Cuándo desactivar SSO:**
+- Los usuarios prefieren la experiencia nativa de Google
+- Dependencias de flujos de trabajo existentes de Google
+- Menor complejidad para los usuarios finales
+- Uso independiente de Google y Business App
+
+## Gestión avanzada y solución de problemas
+
+### Buenas prácticas de gestión de usuarios
+
+**Estrategia de aprovisionamiento de usuarios:**
+- Planifica la jerarquía y los permisos de usuario antes de la configuración
+- Mantén convenciones de nomenclatura consistentes
+- Documenta los roles y responsabilidades de los usuarios
+- Revisión y limpieza periódica de cuentas no utilizadas
+
+**Gestión de control de acceso:**
+- Configura los permisos de usuario correspondientes
+- Implementa políticas y requisitos de seguridad
+- Supervisa los patrones de acceso y uso de los usuarios
+- Auditorías de seguridad y actualizaciones periódicas
+
+### Monitoreo de la integración
+
+**Monitoreo del rendimiento:**
+- Pruebas de conectividad periódicas entre sistemas
+- Supervisa las tasas de éxito de autenticación
+- Haz seguimiento de la adopción y los patrones de uso de los usuarios
+- Identifica y resuelve rápidamente los problemas de integración
+
+**Gestión de facturación y cuentas:**
+- Revisión periódica de la utilización de asientos
+- Supervisa las discrepancias de facturación
+- Planifica el crecimiento y escalado de usuarios
+- Mantén un conteo de usuarios preciso para la facturación
+
+### Problemas comunes y soluciones
+
+**Problemas de verificación de dominio:**
+- Verifica la propagación de registros DNS (puede tardar de 24 a 48 horas)
+- Confirma los valores correctos de los registros TXT y MX
+- Revisa si hay registros DNS en conflicto
+- Contacta al proveedor de tu dominio para obtener ayuda con la configuración
+
+**Problemas de autenticación de usuario:**
+- Verifica que la configuración del usuario de Business App coincida con Google Workspace
+- Confirma los permisos de usuario y las asignaciones de cuenta
+- Revisa la configuración de SSO
+- Prueba el flujo de autenticación con usuarios de muestra
+
+**Problemas de transferencia:**
+- Verifica la generación y validez del token de transferencia
+- Confirma el historial de alojamiento previo del cliente (restricción de 18 meses)
+- Revisa la propiedad del dominio y el acceso administrativo
+- Asegúrate de que se hayan completado todos los pasos previos
+
+### Soporte y recursos
+
+**Rutas de escalamiento:**
+- Preguntas de facturación: equipo de gestión de cuentas
+- Problemas específicos de Google: soporte de Google Workspace
+- Problemas de DNS/dominio: soporte del registrador de dominio
+
+
+## Video explicativo de configuración
+
+Para una guía visual del proceso de configuración, consulta este recorrido completo:
+
+<iframe src="https://drive.google.com/file/d/1g5VKa8MIaMd-7KjERa4RuNv9vmcADz9m/preview" width="640" height="480" allow="autoplay"></iframe>

@@ -1,0 +1,123 @@
+---
+title: Working with packages – orders & subscriptions
+sidebar_label: Working with packages
+description: Crea, define precios y gestiona paquetes en pedidos y suscripciones minoristas, incluida la visibilidad y la compatibilidad con multifrecuencia.
+tags: [orders, packages, subscriptions, pricing]
+keywords: [package pricing, add item to package, package visibility, multifrequency, setup fee]
+---
+
+## ¿Qué es trabajar con paquetes?
+
+Los paquetes te permiten agrupar varios productos o servicios dentro de un pedido o suscripción minorista. Cada artículo en el paquete conserva su propia frecuencia de facturación y precio individual. Cuando agregas un paquete a un pedido, los precios por línea de artículo configurados en el [constructor de paquetes](/marketplace/packages/) se transfieren directamente, de modo que el precio que estableces a nivel de paquete se conserva en cada pedido.
+
+## ¿Por qué es importante trabajar con paquetes?
+
+Los paquetes simplifican la venta y la facturación al agrupar artículos relacionados, permitir estrategias de precios flexibles y ofrecer visibilidad personalizable para tus clientes. Admiten facturación multifrecuencia, reduciendo la necesidad de varios pedidos separados.
+
+## Qué puedes hacer con los paquetes
+
+- Usar los precios del constructor de paquetes tal cual, o ajustarlos a nivel de pedido
+- Establecer precios individuales por línea de artículo o usar la asignación inteligente de precios para un precio total de paquete
+- Gestionar tarifas de configuración dentro de los paquetes
+- Agregar o quitar artículos de los paquetes
+- Establecer la visibilidad del cliente para el contenido y los precios del paquete
+- Crear paquetes con frecuencias de facturación mixtas
+
+## Cómo configurarlo
+
+### Agregar un artículo a un paquete
+
+1. En el pedido o suscripción minorista, abre el `menú kebab` en la línea del artículo.
+2. Pasa el cursor sobre `Add to Package`.
+3. Selecciona el paquete deseado de la lista.
+4. Confirma la adición.
+
+El total del paquete aumentará por el total minorista del artículo.
+
+### Quitar un artículo de un paquete
+
+1. Selecciona el `menú kebab` en la línea de artículo.
+2. Elige `Remove Item`.
+
+El artículo se eliminará tanto del pedido como del paquete. El total del paquete disminuirá por el valor minorista de ese artículo.
+
+### Crear un nuevo paquete
+
+1. Abre el `menú kebab` en una línea de artículo.
+2. Pasa el cursor sobre `Add to Package`.
+3. Selecciona `+ Create new package`.
+4. En el modal, ingresa un nombre y establece el precio.
+5. Usa el flujo `Add to Package` para incluir artículos adicionales.
+
+### Ajustar el precio de un artículo en un pedido
+
+Los precios del constructor de paquetes se transfieren automáticamente, pero puedes anularlos para un pedido específico:
+
+- Haz clic en el campo de precio azul de cualquier artículo en el paquete para establecer un precio diferente para esa línea de artículo.
+
+El total del paquete se actualizará para reflejar el nuevo precio combinado de todos los artículos. Este cambio se aplica solo al pedido actual.
+
+### Ajustar el precio total del paquete en un pedido
+
+- Haz clic en el campo de precio azul del total del paquete para establecer un solo precio para todo el paquete.
+
+Todos los precios de los artículos se recalcularán automáticamente usando un desglose ponderado basado en el valor minorista y la frecuencia de facturación de cada artículo. Este cambio se aplica solo al pedido actual.
+
+## Personalizar los detalles del paquete
+
+Para cambiar el nombre de un paquete o ajustar la visibilidad:
+
+1. Abre el `menú kebab` en la línea del paquete.
+2. Selecciona `Edit package details`.
+3. Actualiza el nombre y elige entre los siguientes ajustes de visibilidad:
+
+   - `Customers cannot see contents or prices`
+   - `Customers can see contents but not prices`
+   - `Customers can see contents and prices`
+
+De forma predeterminada, el contenido del paquete está oculto. Los clientes solo verán el nombre del paquete y el precio total.
+
+:::note
+Los cambios en los detalles del paquete afectan solo al pedido actual o a la nueva suscripción minorista. No afectan a las versiones del paquete vendidas a otros clientes.
+:::
+
+## Compatibilidad con multifrecuencia en paquetes
+
+Los paquetes admiten frecuencias de facturación mixtas, lo que te permite incluir:
+
+- Artículos mensuales
+- Artículos anuales
+- Artículos facturados una sola vez
+
+Las suscripciones minoristas reflejarán automáticamente el ciclo de facturación propio de cada artículo.
+
+## Lógica de precios automática
+
+- **Transferencia de precios:** cuando se agrega un paquete a un pedido, los precios individuales por línea de artículo del constructor de paquetes se transfieren directamente. El pedido refleja el precio exacto configurado en el paquete.
+- **Control de precios a nivel de artículo:** puedes anular el precio de cualquier línea de artículo a nivel de pedido. Haz clic en el campo de precio azul de cualquier artículo para establecer un precio personalizado para ese pedido específico.
+- **Asignación inteligente de precios:** establece un precio total de paquete a nivel de pedido y el sistema lo distribuye automáticamente entre los artículos usando un desglose ponderado basado en el valor minorista y la frecuencia de facturación.
+- Si hay una tarifa de configuración presente, se asignará a cualquier artículo facturado una sola vez en el paquete.
+- Si no existen artículos facturados una sola vez, la tarifa de configuración se aplicará al primer artículo del paquete.
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Cómo se gestionan las tarifas de configuración en los paquetes?</summary>
+
+Las tarifas de configuración se distribuyen entre cualquier artículo facturado una sola vez en el paquete. Si no existe ninguno, la tarifa se aplica al primer artículo.
+
+</details>
+
+<details>
+<summary>¿Puedo cambiar el nombre de un paquete después de que se ha creado?</summary>
+
+Sí. Usa la opción `Edit package details` en el `menú kebab` del paquete. Este cambio solo se aplica al pedido o suscripción actual.
+
+</details>
+
+<details>
+<summary>¿Los cambios en el paquete afectarán a otros clientes?</summary>
+
+No. Las ediciones a un paquete en un pedido o suscripción no afectan a otras instancias de ese paquete.
+
+</details>

@@ -1,15 +1,25 @@
 ---
-title: Vendasta payments and payouts setup guide
+title: "How do I set up Vendasta Payments and payouts?"
 sidebar_label: Vendasta Payments
 sidebar_position: 1
 description: Set up Vendasta Payments, connect Stripe accounts, and manage account verification and settings
 tags: [vendasta-payments, setup, stripe, account-management]
 keywords: [vendasta-payments, stripe-connection, account-verification, payment-configuration]
+brand: vendasta
+product: partner-center-core
+audience: partners
+content_type: how-to
+kb_id: KB-00097
+answer_snippet: "Vendasta Payments lets you invoice, bill, and collect payment from your clients under your brand, processed through Stripe. To set it up, go to Administration → Commerce Settings → Vendasta Payments in Partner Center, create an account or connect Stripe, and add a payout bank account."
+doc_owner: partner-center-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 ## What is Vendasta Payments?
 
-Invoice, bill, and collect payment for all of your services through a single, integrated platform. Provide your local business clients with a seamless buying experience—all in one place, and all under your brand.
+Vendasta Payments lets you invoice, bill, and collect payment from your clients under your brand, processed through Stripe. To set it up, go to `Administration` → `Commerce Settings` → `Vendasta Payments` in Partner Center, create an account or connect Stripe, and add a payout bank account.
 
 :::info Payment security
 Vendasta maintains a current SOC 2® Type 2 report covering its security controls, and payments are processed through Stripe. For details on how payment and platform data is secured, see [Security and privacy](/getting-started/security-and-privacy) or visit the [Vendasta Trust Center](https://trust.vendasta.com/).
@@ -57,11 +67,11 @@ Vendasta Payments is available in:
 - USA, Canada, New Zealand, Australia, United Kingdom, Czech Republic
 - Additional countries with sales assistance: Germany, Belgium, Netherlands, Poland, Switzerland
 
-## How to set up Vendasta Payments
+## How do I set up Vendasta Payments? {#how-to-set-up-vendasta-payments}
 
-### Prerequisites: My Billing setup
+### Prerequisites: My billing setup
 
-Before setting up Vendasta Payments, ensure your billing information is properly configured in **Partner Center > Administration > My Billing**. The following settings must be complete:
+Before setting up Vendasta Payments, ensure your billing information is properly configured in `Partner Center` → `Administration` → `My billing`. The following settings must be complete:
 
 - **Billing Contact**: Your business contact information
 - **Payment Method**: Credit card on file (not required if currently billed by Vendasta via invoice)
@@ -70,15 +80,13 @@ These settings are necessary to be billed the wholesale costs associated with ac
 
 ### Standard Vendasta Payments account setup
 
-<iframe src="https://www.loom.com/embed/df6a770f5aef4db2935b81683559f7e9" frameborder="0" width="100%" height="400px" allowfullscreen></iframe>
-
 Before beginning the setup process, partners must review and agree to the additional [Terms of Service](https://www.vendasta.com/terms/terms-of-service/) associated with using Vendasta Payments.
 
 ![Terms of Service](./img/setup-terms-of-service.jpg)
 
 To create a new Vendasta Payments account:
 
-1. Navigate to `Administration` > `Commerce Settings` > `Vendasta Payments`
+1. Navigate to `Administration` → `Commerce Settings` → `Vendasta Payments`
 2. Click **Set up Vendasta Payments** to create your Stripe account
 3. Provide the following required information:
    - **Legal business name** (must exactly match the name associated with your tax ID)
@@ -106,9 +114,9 @@ Vendasta Payments is not available for Free or Trial subscription tiers. This re
 
 By default, the currency that you accept for online payments is the currency that you use in your billing relationship with Vendasta (your contract currency).
 
-Vendasta Payments can currently accept payments from Visa, Mastercard, American Express, and Discover credit cards.
+Vendasta Payments accepts payments from Visa, Mastercard, American Express, and Discover credit cards.
 
-Payments that you have received will be displayed under the **Partner Center > Commerce > Payments** tab.
+Payments that you have received will be displayed under the `Partner Center` → `Commerce` → `Payments` tab.
 
 ![Payments tab](./img/payments-tab.jpg)
 
@@ -127,7 +135,7 @@ By default, "Vendasta" appears on customer credit card statements when they make
 
 ### Connect your existing Stripe account
 
-If you're a Partner with an existing Stripe Standard account, you can connect it to Vendasta Payments to take advantage of comprehensive billing features, including invoicing, subscriptions, and payments.
+If you're a Partner with an existing Stripe Standard account, you can connect it to Vendasta Payments to use billing features, including invoicing, subscriptions, and payments.
 
 #### Requirements for Stripe connection
 - You already use Stripe to collect payments from customers
@@ -145,7 +153,7 @@ If you're a Partner with an existing Stripe Standard account, you can connect it
 - **Platform Fee**: 0.75% of the transaction amount
 
 #### Connection process
-1. Navigate to `Administration` > `Commerce Settings` > `Vendasta Payments`
+1. Navigate to `Administration` → `Commerce Settings` → `Vendasta Payments`
 2. Select the option to `Connect Stripe Account`
 
 ![Connect Stripe Account option](./img/vendasta-payments/connect-stripe-account-1.jpg)
@@ -158,12 +166,12 @@ If you're a Partner with an existing Stripe Standard account, you can connect it
 5. Complete the integration process
 
 :::info
-This feature is currently only available for new users who haven't completed transactions with platform-generated accounts.
+This feature is only available for new users who haven't completed transactions with platform-generated accounts.
 :::
 
-## How to set up payouts
+## How do I set up payouts? {#how-to-set-up-payouts}
 
-To access your payout settings, navigate to `Partner Center` > `Commerce` > `Payouts` or `Administration` > `Commerce Settings` > `Vendasta Payments`.
+To access your payout settings, navigate to `Partner Center` → `Commerce` → `Payouts` or `Administration` → `Commerce Settings` → `Vendasta Payments`.
 
 ### How to set up bank accounts
 
@@ -176,7 +184,7 @@ If you do not have a banking relationship in every country where you operate, bu
 When configuring your first bank account for payouts:
 
 1. Go to the `Administration` tab
-2. Navigate to `Commerce Settings` > `Vendasta Payments`
+2. Navigate to `Commerce Settings` → `Vendasta Payments`
 3. Click on `Add Bank Account` under Receiving Payout
 4. Enter your bank account details:
    - Account holder type (Individual or Company)
@@ -193,7 +201,7 @@ If you already have one bank account connected and want to replace it, you must 
 
 ### Setting a default bank account
 
-If you add more than one bank account to receive payouts, you need to select a default account to specify which account receives your payouts. You can change your default bank account at any time within the Stripe dashboard.
+If you add more than one bank account to receive payouts, you need to select a default account to specify which account receives your payouts. You can change your default bank account at any time. If you connected your own Stripe account, change it in your Stripe dashboard; otherwise, contact billingsupport@vendasta.com.
 
 ![Set default bank account](./img/set-default-bank-account.jpg)
 
@@ -215,7 +223,7 @@ In supported countries, you can add multiple bank accounts to receive payouts in
 
 By default, payouts will be made to your bank account in your default currency. However, you can add a new payout destination and choose to convert your funds to a different currency before the funds are deposited into a bank account. Stripe may charge a fee for currency conversion; visit the [Stripe Docs](https://stripe.com/docs/payouts) to learn more.
 
-## Understanding your Vendasta Payments Stripe account
+## How does my Vendasta Payments Stripe account work? {#understanding-your-vendasta-payments-stripe-account}
 
 When you set up Vendasta Payments, a Stripe account is created and linked to your Vendasta account. This is separate from any personal Stripe account you may already have.
 
@@ -226,13 +234,13 @@ When you set up Vendasta Payments, a Stripe account is created and linked to you
 
 ### Stripe dashboard access
 
-Partners do not have direct access to the Stripe dashboard. Payment and payout reporting is available in Partner Center under **Commerce > Payments** and **Commerce > Payouts**.
+Partners using a Vendasta Payments account don't have access to the Stripe dashboard. Only partners who connect their own Stripe account (Bring Your Own Stripe) can access their Stripe dashboard. Payment and payout reporting is available in Partner Center under `Commerce` → `Payments` and `Commerce` → `Payouts`.
 
 ### Changing your business type
 
 If you selected the wrong business type when setting up Vendasta Payments (for example, Company vs. Individual), contact [billingsupport@vendasta.com](mailto:billingsupport@vendasta.com) to have this corrected.
 
-## Managing account information
+## How do I manage my account information? {#managing-account-information}
 
 ### Update your business name
 
@@ -240,15 +248,17 @@ There are two separate business name settings for Vendasta Payments, and they co
 
 | Setting | What it controls | Where to change it |
 |---|---|---|
-| **Stripe legal business name** | Your legal name for payouts, compliance, and tax reporting | Stripe Dashboard > Settings > Account details |
-| **Partner Center display name** | The name shown to clients on invoice payment screens and credit card statements | `Partner Center` > `Administration` > `Business Profile` |
+| **Stripe legal business name** | Your legal name for payouts, compliance, and tax reporting | Stripe Dashboard → `Settings` → `Account details` |
+| **Partner Center display name** | The name shown to clients on invoice payment screens and credit card statements | `Partner Center` → `Administration` → `Business Profile` |
 
 Keeping these two settings aligned avoids confusion where clients see a different name when paying an invoice than they expect.
 
-**To update your legal business name in Stripe:**
+**To update your legal business name in Stripe (Bring Your Own Stripe accounts only):**
 
-1. Log in to your Stripe account via the link in `Administration` > `Commerce Settings` > `Vendasta Payments` > `Manage Account`
-2. Go to **Settings > Account details**
+If you use a Vendasta Payments account, contact billingsupport@vendasta.com to update your legal business name.
+
+1. Log in to your Stripe account via the link in `Administration` → `Commerce Settings` → `Vendasta Payments` → `Manage Account`
+2. Go to `Settings` → `Account details`
 3. Update the **Legal business name** field
 4. Save your changes
 
@@ -258,18 +268,18 @@ Changing your legal business name in Stripe may trigger an identity re-verificat
 
 **To update the name shown on client invoice payment screens:**
 
-1. Navigate to `Partner Center` > `Administration` > `Business Profile`
+1. Navigate to `Partner Center` → `Administration` → `Business Profile`
 2. Update the **Business name** field
 3. Save your changes
 
 ### Update ownership information
 To replace ownership details in your payment account:
 
-1. Navigate to `Administration` > `Commerce Settings` > `Vendasta Payments`
+1. Navigate to `Administration` → `Commerce Settings` → `Vendasta Payments`
 2. In the `Accepting Payments` section, click `Manage Account`
 3. On the Identity Verification page, click `Update` beside the current owner
 4. Complete the new owner information form
-5. Remove the previous owner by clicking `Remove Person` > `Done`
+5. Remove the previous owner by clicking `Remove Person` → `Done`
 
 ![Manage Account button](./img/vendasta-payments/manage-account.jpg)
 
@@ -280,14 +290,14 @@ To replace ownership details in your payment account:
 ### Update invoice address
 To change the address appearing on customer invoices:
 
-1. Go to `Administration` > `My Billing`
+1. Go to `Administration` → `My billing`
 2. Click on `Billing Contact`
 3. Update the address information as needed
 4. Save changes
 
 Updated addresses will appear on all future customer invoices.
 
-## Customer-facing Terms of Service for payment processing
+## What are the customer-facing Terms of Service for payment processing? {#customer-facing-terms-of-service-for-payment-processing}
 
 Your customers need to accept the Terms of Service that apply to payment processing when they pay for a Service Order. These terms explain that Vendasta is facilitating payment collection on your behalf, and provides information about how refunds, disputes, and other payment-specific details are handled.
 
@@ -295,12 +305,12 @@ This helps limit your liability in case of payment disputes with your customers.
 
 The Terms have been created with partner protection and minimizing your liability in mind. All partners using Vendasta Payments should leave this setting switched on so that these Terms will be displayed when the customer makes a payment. Disabling these Terms is not recommended, as it may increase your liability.
 
-## Troubleshooting setup issues
+## How do I troubleshoot setup issues? {#troubleshooting-setup-issues}
 
 ### "Unsupported in Your Area" Error
 If you see this message despite being in a supported region:
 
-1. Navigate to `Administration` > `My Billing`
+1. Navigate to `Administration` → `My billing`
 2. Check that your billing contact information is complete
 3. Ensure your billing address is fully filled out with postal code
 4. Save any missing information and retry setup
@@ -379,7 +389,7 @@ You'll pay a 0.75% platform fee in addition to your existing negotiated Stripe f
 <details>
 <summary>Can I transfer customer payment details from my existing Stripe account?</summary>
 
-Currently, automatic transfer of customer payment information is not available. You'll need to manually input payment details into the platform.
+Automatic transfer of customer payment information is not available. You'll need to manually input payment details into the platform.
 </details>
 
 <details>
@@ -391,7 +401,7 @@ Yes, you can view payment details processed through the platform. However, payou
 <details>
 <summary>Can I add my own Stripe account if I'm already using a platform account?</summary>
 
-This feature is currently only available for new users who haven't completed transactions with platform-generated accounts.
+This feature is only available for new users who haven't completed transactions with platform-generated accounts.
 </details>
 
 <details>
@@ -415,5 +425,17 @@ Due to increased fraudulent transactions, Vendasta Payments is restricted on Fre
 <details>
 <summary>If I create a Stripe connection through Vendasta Payments, can I access my Stripe account?</summary>
 
-No, Stripe access is restricted to Billing Support. If you need assistance with your Vendasta Payments account please submit a ticket to billingsupport@vendasta.com.
+No. Only partners who connect their own Stripe account (Bring Your Own Stripe) can access the Stripe dashboard. For Vendasta Payments accounts, Stripe access is restricted to Billing Support. If you need assistance with your Vendasta Payments account please submit a ticket to billingsupport@vendasta.com.
+</details>
+
+<details>
+<summary>Which countries is Vendasta Payments available in?</summary>
+
+Vendasta Payments is available in the USA, Canada, New Zealand, Australia, the United Kingdom, and the Czech Republic. Germany, Belgium, the Netherlands, Poland, and Switzerland are available with sales assistance.
+</details>
+
+<details>
+<summary>How long does Vendasta Payments account approval take?</summary>
+
+After you complete the account application and configure banking details for payouts, account approval typically takes 1-2 business days.
 </details>

@@ -1,18 +1,39 @@
 ---
 title: "Local Listings Management"
 sidebar_label: "Local Listings Management"
-description: "An overview of the fully managed Local Listings Management service, detailing the process for claiming, optimizing, and monitoring your business listings on Google, Apple, and Bing."
+description: "Overview of the Local Listings Management service: listing setup and claiming, guided verification, ownership transfer, and monthly monitoring."
+brand: vendasta-services
+product: vendasta-services-core
+audience: partners
+content_type: overview
+kb_id: KB-00084
+answer_snippet: "Local Listings Management is a Vendasta Services offering where specialists create and claim your client's listings on Google Business Profile, Apple Business Connect, and Bing Places, guide the client through verification, and then optimize and monitor the listings monthly."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 # Local Listings Management
 
+Local Listings Management is a Vendasta Services offering where specialists create and claim your client's listings on Google Business Profile, Apple Business Connect, and Bing Places, guide the client through verification, and then optimize and monitor the listings monthly.
+
 ## Overview
 
-Local Listings Management is a fully managed solution where a team of specialists claims, optimizes, and monitors your business listings on Google Business Profile, Apple Business Connect, and Bing Places.
+The service runs in two phases: initial setup, claiming, and verification, followed by ongoing monthly monitoring and content updates.
+
+:::warning The client completes the verification
+
+Google, Apple, and Bing all require the **business itself** to verify — by answering the primary business line, recording a video, or reading a postcard PIN. Our team cannot complete verification on their behalf. We set the listings up, tell the client exactly what each platform is asking for, and follow up until they are through. Set this expectation before the order.
+
+:::
 
 ## What's Included
 
-Fully managed listings across Google Business Profile, Apple Business Connect, and Bing Places, plus ongoing monthly monitoring, posting, uploads, and retroactive review responses.
+* **Listing creation, claiming, and initial setup** on Google Business Profile, Apple Business Connect, and Bing Places
+* **Dedicated, hands-on support through each platform's verification requirements**
+* **Complete ownership transfer and dashboard connectivity** once the listings are verified
+* **Ongoing monthly monitoring**, posting, uploads, and retroactive review responses
 
 ### Ongoing profile monitoring
 
@@ -43,7 +64,7 @@ Have the following ready for your onboarding call and verification:
 * **Someone available at the business** who can answer the primary business phone line for verification steps
 * **Content for the monthly Google Business Profile post** (you supply this each month)
 
-## Getting Started
+## How does Local Listings Management get started? {#getting-started}
 
 The initial phase involves submitting your business information, participating in a required onboarding call, and completing the verification process for each listing platform.
 
@@ -62,7 +83,7 @@ An onboarding call is required for all customers to verify key business informat
 
 ### 3. Listing verification
 
-Each listing site has its own methods for verifying a business. You may be presented with one or more of the following options:
+Each listing site has its own methods for verifying a business, and each one has to be completed by someone at the business — our team cannot complete them on the client's behalf. We start the request, explain what the platform is asking for, and stay with them until it is done. The client may be presented with one or more of the following options:
 
 * Phone call verification
 * SMS verification
@@ -81,9 +102,9 @@ If a physical postcard is the only option, it will be mailed to the business add
 ## FAQ
 
 <details>
-<summary> Can someone claim my listings completely on my behalf?</summary>
+<summary> Can the listings be claimed completely on the client's behalf?</summary>
 
-The process often requires sending a verification phone call to the primary business line, so it is necessary for someone to be present at the business location to complete the claim.
+Not entirely. Our team creates and claims the listings, sets them up, and guides the client through verification — but the verification step belongs to the business on all three platforms. It often requires answering a verification phone call to the primary business line, so someone needs to be present at the business location to complete the claim. Once verified, our team takes over ownership and ongoing management.
 </details>
 
 <details>
@@ -146,4 +167,11 @@ Responding to both positive and negative reviews helps establish credibility and
 <summary>Where should I upload attachments for my order?</summary>
 
 Please upload all attachments in the fulfillment form. Alternatively, you can email them to our team.
+</details>
+
+<details>
+<summary>Why don't I see an Apple listing for a client's account?</summary>
+
+Apple does not support listings for service-area businesses. If the account is set up as a service-area business, the Apple card does not appear in Local SEO.
+
 </details>

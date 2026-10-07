@@ -1,15 +1,25 @@
 ---
-title: "Google Workspace complete integration guide"
+title: "How do I set up and manage Google Workspace for my clients?"
 sidebar_label: "Google Workspace guide"
 sidebar_position: 3
-description: "Complete guide to setting up, transferring, and managing Google Workspace integration with the Vendasta platform"
+description: "Set up, transfer, and cancel Google Workspace for clients in Partner Center, and manage users, DNS, and SSO for Google Workspace."
 tags: [marketplace, google-workspace, setup, transfer, sso, integration]
 keywords: [Google Workspace setup, Google Workspace transfer, SSO configuration, domain setup, user management, Business App integration]
+brand: vendasta
+product: marketplace
+audience: partners
+content_type: how-to
+kb_id: KB-00020
+answer_snippet: "To set up Google Workspace for a client, open the account in Accounts → Manage Accounts in Partner Center and click Create Order → Add Google Workspace. To move an existing subscription to Vendasta, use Add Google Workspace Transfer with the client's transfer token."
+doc_owner: marketplace
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-This comprehensive guide covers everything you need to know about integrating Google Workspace with the Vendasta platform, including initial setup, transferring existing subscriptions, and managing SSO configurations.
+To set up Google Workspace for a client, open the account in `Accounts` → `Manage Accounts` in Partner Center and click `Create Order` → `Add Google Workspace`. To move an existing subscription to Vendasta, use `Add Google Workspace Transfer` with the client's transfer token. This guide covers setup, transfers in and out of Vendasta, and SSO.
 
-## Overview of Google Workspace integration
+## What is the Google Workspace integration? {#overview-of-google-workspace-integration}
 
 Google Workspace integration with the Vendasta platform provides productivity solutions for your clients while maintaining centralized management through Partner Center. This integration supports both new Google Workspace setups and transfers of existing subscriptions.
 
@@ -46,17 +56,15 @@ Before beginning any Google Workspace configuration, ensure you have the followi
 ### Business App user configuration
 
 **Creating new users**
-1. In `Partner Center` → `Accounts`, start a new user from `Manage Users` → `Create User`, or open `Manage Accounts` → `[Account Name]` → `Users` if you are already working inside that account.
-2. Complete user form ensuring email domain matches Google Workspace domain
-3. Add user to target account:
-   - Select the edit icon → `Edit Permissions` → `Add Account`
-   - Locate target account and select checkbox
-   - Click `Add Accounts`
-4. Repeat for all Google Workspace users
+1. In `Partner Center`, open `Accounts` → `Manage Accounts` → `[Account Name]` and click `Invite users`. The Invite users panel opens with the account preselected.
+2. Type each user's email address, ensuring the email domain matches the Google Workspace domain. Matching CRM contacts are suggested as you type.
+3. Click `Invite [count] users`. Each invited user receives the [onboarding email](/business-app/ai-onboarding-experience).
+
+Alternatively, create users centrally from `Accounts` → `Manage Users` → `Create user`, then add them to the target account: select the edit icon → `Edit Permissions` → `Add Account`, locate the account, select its checkbox, and click `Add Accounts`.
 
 **Using existing users**
 
-If users already exist with matching domain:
+If users already exist with matching domain, invite them from the account's `Invite users` panel by typing their email, or manage their account access directly:
 
 1. Navigate to `Partner Center` → `Accounts` → `Manage Users`
 2. Select the edit icon next to the target user → `Edit Permissions`
@@ -179,7 +187,7 @@ Repeat for all additional purchased seats.
 
 ### Transfer overview
 
-Google does not allow transfers to resellers that previously hosted the same Google Workspace within the last 18 months (a restriction Google introduced March 7, 2025). Verify the client's previous hosting history before initiating a transfer.
+Google doesn't allow transfers to a reseller that hosted the same Google Workspace within the last 18 months. Verify the client's previous hosting history before initiating a transfer.
 
 **Transfer vs. new subscription differences:**
 - Transferred accounts do NOT require Business App login
@@ -219,7 +227,25 @@ Google does not allow transfers to resellers that previously hosted the same Goo
 
 ## Transferring Google Workspace out of Vendasta
 
-You can transfer Google Workspace account(s) **out of the Vendasta platform** by cancelling the product.
+You can transfer Google Workspace account(s) **out of the Vendasta platform** by cancelling the product. This is the usual path when a client stops working with you but wants to keep their branded email.
+
+:::info
+Moving out does **not** use a transfer token. The transfer token in [Transferring existing Google Workspace subscriptions](#transferring-existing-google-workspace-subscriptions) is only for moving a subscription **into** Vendasta.
+:::
+
+### Before you cancel
+
+Make sure the client can take over billing on the Google side — otherwise their email is at risk once the 7-day window below starts:
+
+1. **Confirm who the client's Google Workspace super administrator is.** Setting up billing with Google requires a super administrator (or an administrator with billing privileges) in the [Google Admin Console](https://admin.google.com). Being an admin in Business App or Partner Center does not grant any Google Workspace admin role.
+2. **Make sure that person can sign in to the Google Admin Console.** If nobody at the client holds the super administrator role, an existing super administrator must assign it in the Google Admin Console under `Directory` → `Users` → the user → `Admin roles and privileges` before you cancel.
+3. **Tell the client to expect an email from Google** prompting them to set up billing, and that they have 7 days to act on it.
+
+### Cancel the product
+
+Cancel Google Workspace on the client's account as you would any other product. See [Cancel products](/accounts/manage-accounts/product-management#cancel-products).
+
+If the cancellation is blocked with a message that licenses are still assigned in Google Workspace, contact **support@vendasta.com** with the account ID and the exact message rather than deleting users to get past it — deleting a Google Workspace user deletes that user's mailbox.
 
 ### What happens after cancellation?
 
@@ -337,6 +363,36 @@ Single Sign-On (SSO) integration allows users to access Google Workspace through
 
 ## Setup walkthrough video
 
-For visual guidance through the setup process, reference this comprehensive walkthrough:
+For visual guidance through the setup process, watch this walkthrough:
 
 <iframe src="https://drive.google.com/file/d/1g5VKa8MIaMd-7KjERa4RuNv9vmcADz9m/preview" width="640" height="480" allow="autoplay"></iframe>
+
+## Frequently asked questions
+
+<details>
+<summary>What is Vendasta's reseller ID for a Google Workspace transfer?</summary>
+
+Give your client Vendasta's Reseller ID, `C02e5br85`. The client then generates a transfer token at [admin.google.com/TransferToken](https://admin.google.com/TransferToken).
+
+</details>
+
+<details>
+<summary>How do I move a client's Google Workspace out of Vendasta?</summary>
+
+Cancel the Google Workspace product. The client's emails and data stay intact, and their Google Workspace admin gets an email to set up billing directly with Google, which they must do within 7 days to avoid interruption.
+
+</details>
+
+<details>
+<summary>How do I cancel one Google Workspace seat instead of all of them?</summary>
+
+Cancel the seat and also contact support@vendasta.com, since removing individual seats may need backend adjustments.
+
+</details>
+
+<details>
+<summary>Why can't I transfer a client's Google Workspace to Vendasta?</summary>
+
+Google blocks transfers to a reseller that hosted the same Google Workspace in the last 18 months. Also confirm the transfer token is valid and that the client has admin access to the domain.
+
+</details>

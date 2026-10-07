@@ -52,7 +52,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'fr', 'es'],
   },
 
   presets: [
@@ -105,6 +105,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
+          // Account templates renamed to Blueprints (2026-09, CRMAAS-3221)
+          { from: '/accounts/manage-accounts/account-templates', to: '/accounts/manage-accounts/blueprints' },
+          { from: '/automations/my-automations/apply-account-template', to: '/automations/my-automations/apply-blueprint' },
           // Security & privacy: convenience aliases to the Security and privacy page
           { from: '/security', to: '/getting-started/security-and-privacy' },
           { from: '/trust-center', to: '/getting-started/security-and-privacy' },
@@ -113,9 +116,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/commerce/orders/order-processing-and-activation', to: '/commerce/orders/creating-and-managing-orders' },
           // Vendasta Ads in Partner Center promoted to its own top-level "Ads" sidebar item (2026-08)
           { from: '/vendasta-services/digital-advertising/vendasta-ads-partner-center', to: '/ads' },
+          // Account templates renamed to Blueprints (2026-08, CRMAAS-3153)
+          { from: '/accounts/manage-accounts/account-templates', to: '/accounts/manage-accounts/blueprints' },
+          { from: '/automations/my-automations/apply-account-template', to: '/automations/my-automations/apply-blueprint' },
           // --- Learn restructure (2026-07): TRAINING -> LEARN, paths + lifecycle libraries ---
-          // builder lab broken out into its own path (2026-07)
-          { from: '/learn/builder/the-builder-lab', to: '/learn/build-lab' },
+          // AI foundations step 6 renamed (2026-09-18, DOC-966): "agent" as a noun for
+          // an AI Employee was retired in the terminology pass, so the step and its
+          // route follow. The path is hidden, but the old URL may be bookmarked.
+          { from: '/learn/ai-foundations/agents-and-automations-together', to: '/learn/ai-foundations/ai-employees-and-automations-together' },
+          // Builder merge (2026-08-29): the builder and build-lab paths became one
+          // eight-step path under /learn/builder. Steps that only re-taught AI
+          // foundations material land on the closest surviving step.
+          { from: '/learn/builder/the-builder-lab', to: '/learn/builder' },
+          { from: '/learn/builder/how-systems-talk', to: '/learn/builder' },
+          { from: '/learn/builder/the-integration-landscape', to: '/learn/builder/start-with-what-exists' },
+          { from: '/learn/builder/capabilities-in-depth', to: '/learn/builder/build-the-doorway' },
+          { from: '/learn/builder/custom-tools', to: '/learn/builder/build-the-doorway' },
+          { from: '/learn/builder/authenticate-and-first-api-call', to: '/learn/builder/call-the-api-yourself' },
+          { from: '/learn/builder/webhooks-and-platform-events', to: '/learn/builder/wire-it-to-your-systems' },
+          { from: '/learn/builder/advanced-automations', to: '/learn/builder/hand-off-to-the-automation' },
+          { from: '/learn/builder/beyond-the-platform', to: '/learn/builder/where-the-platform-ends' },
+          { from: '/learn/build-lab', to: '/learn/builder' },
+          { from: '/learn/build-lab/switch-on-the-platform', to: '/learn/builder/start-with-what-exists' },
+          { from: '/learn/build-lab/build-the-custom-tool', to: '/learn/builder/build-the-doorway' },
+          { from: '/learn/build-lab/test-and-run-it', to: '/learn/builder/watch-it-work' },
           // Master Sales Series (2026-08): path scoped to the Master Sales Training Series only.
           // These four steps had no series episode behind them and were removed.
           { from: '/learn/sales/run-a-discovery-call', to: '/learn/sales' },
@@ -141,16 +165,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           // dissolved sections
           { from: '/learn/platform', to: '/learn/products' },
           { from: '/learn/automations-ai', to: '/learn/ai-workforce' },
-          { from: '/learn/automations-ai/AI-and-Automations-in-the-Vendasta-Platform', to: '/learn/ai-workforce/autopilot' },
-          { from: '/learn/automations-ai/Acquisition-Automation-AI', to: '/learn/ai-workforce/autopilot' },
+          { from: '/learn/automations-ai/AI-and-Automations-in-the-Vendasta-Platform', to: '/learn/builder/autopilot' },
+          { from: '/learn/automations-ai/Acquisition-Automation-AI', to: '/learn/builder/autopilot' },
+          { from: '/learn/ai-workforce/autopilot', to: '/learn/builder/autopilot' },
           { from: '/learn/platform/integrations/Integrations-101', to: '/learn/builder' },
+          // "Hire your first AI Employee" step 7 rebuilt (2026-09): the sell-and-manage
+          // step retired, its selling, pricing, and support content already covered by the
+          // Sell the AI Workforce and Vendasta Services paths.
+          { from: '/learn/ai-workforce/sell-and-manage', to: '/learn/ai-workforce/deploy-a-receptionist-for-a-client' },
           // AI Receptionist lessons consolidated into the AI Workforce path
           { from: '/learn/products/ai-receptionist/Meet-Your-First-AI-Employee-The-AI-Receptionist', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
           { from: '/learn/products/ai-receptionist/AI-Receptionist-Setup-and-Configuration', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
           { from: '/learn/products/ai-receptionist/Vendasta-AI-Receptionist-Walkthrough', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
           { from: '/learn/products/ai-receptionist/AI-Receptionist-Implementation-Essentials', to: '/learn/ai-workforce/put-a-receptionist-to-work' },
           // marketplace lessons harvested into paths
-          { from: '/learn/platform/marketplace/Package-Digital-Products-with-Vendasta', to: '/learn/ai-workforce/sell-and-manage' },
+          { from: '/learn/platform/marketplace/Package-Digital-Products-with-Vendasta', to: '/learn/sell-the-ai-workforce/know-your-offer' },
           { from: '/learn/platform/marketplace/Billing-and-Payment-Basics', to: '/learn/getting-started/connect-payments-and-billing' },
           // library regroup: business-app
           { from: '/learn/platform/business-app/Introducing-Business-App', to: '/learn/products/engage/business-app/introduction-to-business-app' },
@@ -221,6 +250,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           // Vendasta Services: social media onboarding + timeline folded into the section index
           { from: '/vendasta-services/social-media-management/social-media-management-onboarding', to: '/vendasta-services/social-media-management/' },
           { from: '/vendasta-services/social-media-management/social-media-marketing-timeline', to: '/vendasta-services/social-media-management/' },
+          // Vendasta Services: manual blog writing retired; blog content is now delivered by the AI Blogger
+          { from: '/vendasta-services/blogs', to: '/vendasta-services/ai-workforce/ai-blogger' },
+          { from: '/vendasta-services/blogs/blog-post-service-expectations', to: '/vendasta-services/ai-workforce/ai-blogger' },
           // Vendasta Services: expectation brochures article removed
           { from: '/vendasta-services/expectations/expectation-brochures', to: '/vendasta-services/expectations/' },
           // Vendasta Services digital advertising: MatchCraft overview replaced by Specialty Ad Campaign
@@ -499,6 +531,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       },
       items: [
         // Moved to DocSidebar swizzle (src/theme/DocSidebar/index.tsx)
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
       ],
     },
     footer: {

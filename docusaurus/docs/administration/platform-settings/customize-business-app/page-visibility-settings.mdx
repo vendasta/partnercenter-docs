@@ -13,6 +13,9 @@ keywords:
   - page visibility
   - business app pages
   - customize navigation
+brand: vendasta
+product: partner-center-core
+audience: partners
 ---
 
 The Pages section in Customize Business App controls which pages customers see in their Business App navigation and configures page-specific features. You can show or hide entire pages and fine-tune individual page settings.
@@ -21,11 +24,11 @@ The Pages section in Customize Business App controls which pages customers see i
 
 ## How do I access page settings?
 
-Navigate to `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Pages`, then select the page you want to configure.
+Navigate to `Partner Center` → `Administration` → `Customize Business App` → `Pages`, then select the page you want to configure.
 
 ## Understanding `Show this page`
 
-Most pages have a `Show this page` toggle that controls whether the page appears in customers' Business App navigation.
+Most pages have a `Show this page` checkbox that controls whether the page appears in customers' Business App navigation. Tick it to show the page, clear it to hide the page.
 
 **What happens when you hide a page:**
 - The page is removed from the customer's navigation menu
@@ -78,44 +81,26 @@ The `Recent Activity` section shows a feed of recent actions and events across t
 **When to show:** Customers want to see what's happening across their business
 **When to hide:** You want a cleaner, more focused dashboard
 
+### Should I show the Next steps card?
+
+The `"Next steps" card` (`showGetStarted`) setting controls the checklist of setup tasks on Home — connecting Google, adding web chat, registering a texting number, and so on. Items clear as each task is completed or dismissed. See [the AI onboarding experience](/business-app/ai-onboarding-experience#next-steps-cards) for what the cards contain.
+
+**When to show:** You want customers guided through setup inside Business App
+**When to hide:** You onboard customers through other channels, such as calls or custom training
+
+The Home page also carries the `"AI has done the work" card` and `"Recommended for your business" cards` settings — both covered in [the AI onboarding experience](/business-app/ai-onboarding-experience#how-partners-customize-what-smbs-see).
+
 ---
 
-## Get started page settings
+## Where the Get Started settings went
 
-The Get Started page guides new customers through initial setup steps.
+`Pages` no longer has a `Get Started` entry — opening that address takes you to `Pages` → `Home` instead.
 
-`Show this page` (`showGetStarted`)
-Controls whether customers see the Get Started onboarding page.
+Onboarding guidance for new customers is now the **Next steps** card on Home, controlled by the `"Next steps" card` checkbox described above. That checkbox uses the same `showGetStarted` setting as the old page, so whatever you had configured carries over.
 
-### When should I show the Get Started page?
-
-Show this page when:
-- You want to guide customers through initial setup
-- Customers need help connecting accounts and configuring features
-- You're onboarding new customers who need orientation
-
-Hide this page when:
-- Customers are already set up and don't need onboarding guidance
-- You provide onboarding through other channels (calls, custom training)
-
-### How do I add a custom onboarding video?
-
-1. Enable the `Onboarding video` checkbox.
-2. Enter a YouTube video URL in the `Custom onboarding video` field.
-3. Click `Save`.
-
-The custom video replaces the default onboarding video shown to customers.
-
-:::tip
-Create a video that introduces your brand and explains how customers should use your customized Business App experience.
+:::info
+The custom onboarding video and Customer Journey settings that lived on the old Get Started tab are no longer configurable from Customize Business App.
 :::
-
-### What is the Customer Journey section?
-
-The `Customer Journey` section displays an interactive diagram showing key stages that people go through to become your customer's customer. Customers can select stages to access tailored growth strategies.
-
-**When to show:** Customers benefit from understanding and optimizing their customer acquisition funnel
-**When to hide:** The customer journey concept doesn't align with your service offering
 
 ---
 
@@ -150,7 +135,7 @@ The **Contact Us Modal** group on this page controls what customers see when the
 
 **How to configure the support center link:**
 
-1. Go to `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Pages` → `Inbox/Messages`
+1. Go to `Partner Center` → `Administration` → `Customize Business App` → `Pages` → `Inbox/Messages`
 2. Under `Contact Us Modal`, check `Show a support center link`
 3. Enter the destination in `Support center URL` (must start with `https://`)
 4. Optionally customize `Button text` (defaults to "Visit support center")
@@ -412,4 +397,11 @@ Hidden pages are not visible to customers, so they won't know to request them. I
 <summary>Do hidden pages affect billing or product access?</summary>
 
 No. Page visibility only controls the navigation interface. Product access, billing, and feature functionality are managed separately through product assignments and account settings.
+</details>
+
+<details>
+<summary>How do I hide the Store or Executive Report sections from all clients?</summary>
+
+Go to `Accounts` → `Manage Business App` → `Customize Business App`. Uncheck `Store` and save. This hides it for everyone, and you can turn it back on later. You can also remove whole Executive Report sections (for example Websites, or Leads if you do not sell web chat) so clients do not see sections full of zeros.
+
 </details>

@@ -2,11 +2,21 @@
 title: AI Chat Receptionist Overview
 sidebar_position: 2
 description: Set up, train, and monitor the AI Chat Receptionist to capture leads and answer visitor questions across web chat and SMS.
+brand: vendasta
+product: ai-workforce
+audience: partners
+content_type: overview
+kb_id: KB-00018
+answer_snippet: "To set up the AI Chat Receptionist, go to AI → Workforce in Partner Center and click Configure on the AI Chat Receptionist. It answers website visitors' questions 24/7, captures their contact details in your CRM, and responds in over 40 languages."
+doc_owner: ai-workforce
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 import { AISparkleIcon, GraduationCapIcon } from '@site/src/components/Icons';
 
-The AI Chat Receptionist helps you capture leads and respond to website visitors 24/7. In this guide, you'll learn how to set up, train, and monitor your AI assistant to work for your business.
+To set up the AI Chat Receptionist, go to `AI` → `Workforce` in Partner Center and click `Configure` on the AI Chat Receptionist. It answers website visitors' questions 24/7, captures their contact details in your CRM, and responds in over 40 languages. This guide covers how to set up, train, and monitor it.
 
 **By default, the AI Chat Receptionist:**
 - Answers questions about your business using information from your knowledge base and website
@@ -58,13 +68,13 @@ The AI detects the visitor's language automatically from their messages. No conf
 If a visitor writes in a language not listed above, the AI will still attempt to respond, but results may vary. To get the best results for a specific language, check whether it appears in the table above.
 :::
 
-## Set up the AI Chat Receptionist
+## How do I set up the AI Chat Receptionist? {#set-up-the-ai-chat-receptionist}
 
 Follow these simple steps to configure your AI Chat Receptionist so it effectively engages visitors and captures valuable leads.
 
 ### Step 1: Configure basic settings for the AI Chat Receptionist
 
-Go to <AISparkleIcon /> `AI` → `AI Workforce` and then click `Configure` on the AI Chat Receptionist.
+Go to <AISparkleIcon /> `AI` → `Workforce` and then click `Configure` on the AI Chat Receptionist.
 
 - `Name and Image`
 Give your AI a friendly, professional name and photo. The AI Receptionist knows their name and the photo will help you distinguish between other AI Employees in your app.
@@ -81,7 +91,7 @@ Managing multiple locations under one brand or franchise? With a [multi-location
 :::
 
 :::tip Respond differently on each channel
-Your AI Chat Receptionist knows which channel it's replying on, so it can adapt its tone and reply length per channel. To set this up, add channel-specific instructions to the `Purpose` prompt or to a capability's instructions. For example, "When responding on SMS, keep replies to one or two sentences with no formatting; when responding on web chat, you can use short lists and links." Both places work. See [Adjust responses by channel](../index.mdx#adjust-responses-by-channel) for examples.
+Your AI Chat Receptionist knows which channel it's replying on, so it can adapt its tone and reply length per channel. To set this up, add channel-specific instructions to the `Role` prompt or to a capability's instructions. For example, "When responding on SMS, keep replies to one or two sentences with no formatting; when responding on web chat, you can use short lists and links." Both places work. See [Adjust responses by channel](../index.mdx#adjust-responses-by-channel) for examples.
 :::
 
 ### Step 2: Configure your AI Chat Receptionist capabilities
@@ -92,14 +102,14 @@ Capabilities are like instructions that guide how your AI Chat Receptionist beha
   The AI automatically asks visitors for contact details such as name, phone number, or email and saves captured leads directly to your CRM. This capability is turned on by default.
 
   :::tip Webchat visitors showing as anonymous?
-  If contacts are appearing under the `Anonymous Visitors` tab instead of being saved to your CRM, check that the Lead Capture capability is enabled. Go to `AI Workforce` and then `Configure` on the Chat Receptionist, then open `Capabilities` and make sure `Lead Capture` is toggled on, then save.
+  If contacts are appearing under the `Anonymous Visitors` tab instead of being saved to your CRM, check that the Lead Capture capability is enabled. Go to `Workforce` and then `Configure` on the Chat Receptionist, then open `Capabilities` and make sure `Lead Capture` is toggled on, then save.
   :::
 
   **How phone numbers are stored**
 
   When a visitor provides a phone number without a country code, the system defaults to +1 (US). When a visitor includes a country code (for example, +44 for the UK), it is stored as provided.
 
-  If your business serves international customers, you can add an instruction to your Q&A or Purpose prompt asking visitors to include their country code when sharing a phone number. For example:
+  If your business serves international customers, you can add an instruction to your Q&A or `Role` prompt asking visitors to include their country code when sharing a phone number. For example:
 
   ```text
   Please include your country code when sharing your phone number (for example, +44 for the UK or +61 for Australia).
@@ -110,7 +120,7 @@ Capabilities are like instructions that guide how your AI Chat Receptionist beha
 
   **Setting up a booking link via Q&A instructions**
 
-  If you want the AI to share a booking link rather than book directly, add an instruction to your Q&A or Purpose that includes the link text. For example:
+  If you want the AI to share a booking link rather than book directly, add an instruction to your Q&A or `Role` that includes the link text. For example:
 
   ```text
   When a visitor asks to book a meeting or schedule an appointment, share this link: [your booking link here]
@@ -145,7 +155,7 @@ With multi-service booking enabled, the AI can:
 - `Custom Capabilities`
   Expand your AI Chat Receptionist's skills by adding custom capabilities tailored to your unique business needs. You can learn more about [Custom Capabilities](../../ai-capabilities/creating-custom-capabilities.md) in depth.
 
-### Step 3: Add purpose and business knowledge to the AI Chat Receptionist
+### Step 3: Add role and business knowledge to the AI Chat Receptionist
 
 To respond accurately to general inquiries, your AI Chat Receptionist needs context about your business.
 
@@ -157,7 +167,7 @@ To respond accurately to general inquiries, your AI Chat Receptionist needs cont
 
 When a visitor chats through the Web Chat widget, the AI Chat Receptionist receives the URL of the page they're currently on with every message they send. The AI can use this URL to answer vague, context-dependent questions ("is this still available?", "what's the price?", "tell me more") without making the visitor re-explain what they're looking at.
 
-This works automatically. No configuration is required for the AI to receive the URL. To get the most out of it, make sure the relevant pages of the SMB's website are in the AI's knowledge base, and consider tuning the Purpose or a capability prompt to tell the AI how to interpret the URL pattern for that business.
+This works automatically. No configuration is required for the AI to receive the URL. To get the most out of it, make sure the relevant pages of the SMB's website are in the AI's knowledge base, and consider tuning the `Role` or a capability prompt to tell the AI how to interpret the URL pattern for that business.
 
 :::info The AI sees the URL, not the page content
 The AI is only given the URL string itself, not a rendered view of the page. To answer detailed questions about what's on a page, the AI needs that page's content in its knowledge base, or a [custom capability](../../ai-capabilities/creating-custom-capabilities.md) that can look up the data (for example, an inventory lookup tool keyed off the URL).
@@ -165,7 +175,7 @@ The AI is only given the URL string itself, not a rendered view of the page. To 
 
 ### Tune a prompt to use the current URL
 
-To teach the AI Chat Receptionist how the SMB's URLs map to specific products, vehicles, or pages, add instructions to the Purpose field or to a capability prompt.
+To teach the AI Chat Receptionist how the SMB's URLs map to specific products, vehicles, or pages, add instructions to the `Role` field or to a capability prompt.
 
 #### Example: Auto dealer inventory pages
 
@@ -196,34 +206,20 @@ The same pattern works for any business with structured URLs: e-commerce product
 The visitor's current URL is provided on the Web Chat channel. Other channels (SMS, voice, email) don't have a "current page" concept, so this context isn't available there.
 :::
 
-## Test and monitor your AI Chat Receptionist
+## How do I test and monitor my AI Chat Receptionist? {#test-and-monitor-your-ai-chat-receptionist}
 
 Once your AI Chat Receptionist is set up, it's important to test how it handles real conversations and monitor its interactions over time. This helps you ensure the AI is answering questions accurately, capturing leads, and creating a positive experience for your website visitors. Regular testing and review will help you catch issues early and continuously improve your AI's performance as your business evolves.
 
 ### Test the AI Chat Receptionist's responses
 
-Click the `Try it` button from <AISparkleIcon /> `AI` → `AI Workforce` to open up a `My Listing` page you can use to test chat responses before installing the website widget. For best results, open the test in an incognito window so it starts with a clean session.
+Click the `Chat` button on the AI Chat Receptionist's card from <AISparkleIcon /> `AI` → `Workforce` to open a private conversation with the employee. The conversation is just between you and the AI Chat Receptionist, so you can test its responses before you install the web chat widget on your site.
 
 Ask the kinds of questions your real customers might ask, and pay attention to:
 - How the AI responds
 - Whether it gives too much or too little information
 - If it's assuming something you didn't intend
 
-#### Testing with fresh conversations
-
-For accurate testing results, you'll want each test to start with a fresh conversation that doesn't carry over previous context:
-
-**Method 1: Use Incognito/Private Browsing**
-- Open the test page in a new incognito or private browsing window
-- This ensures a completely fresh session each time
-- Best for quick, one-off tests
-
-**Method 2: Clear Site Cookies (Advanced)**
-- In your browser's developer tools (F12), navigate to the Application or Storage tab
-- Find cookies for the My Listing page domain
-- Delete all cookies for that site
-- Refresh the page to start a new conversation
-- Best for systematic testing when you need multiple fresh conversations in sequence
+For a test that starts clean rather than carrying context from your last one, open the conversation in an incognito or private browsing window.
 
 :::tip Testing best practice
 Test the same prompt multiple times to see if you get consistent results. AI responses can vary slightly, so testing helps you identify if your prompts need to be more specific.
@@ -264,7 +260,7 @@ The Explanation feature is your most valuable debugging tool. Each response expl
 **Using explanations to improve performance:**
 - If the AI didn't use a tool you expected, check if the capability prompt clearly defines when to use it
 - If wrong knowledge was referenced, consider refining your knowledge base or adding more specific content
-- If the reasoning seems off, your Purpose or capability instructions may need clarification
+- If the reasoning seems off, your `Role` or capability instructions may need clarification
 
 ### Systematic iteration workflow
 
@@ -276,13 +272,13 @@ Improving your AI Chat Receptionist is an iterative process. Follow this workflo
 - Review the AI explanation to understand why it happened
 
 **Step 2: Determine the Fix Location**
-- **Purpose issue**: The AI's overall tone, greeting, or general behavior needs adjustment
+- **`Role` issue**: The AI's overall tone, greeting, or general behavior needs adjustment
 - **Capability issue**: The AI didn't take an action when it should have, or did something unexpected
 - **Knowledge issue**: The AI gave incorrect information or couldn't find relevant facts
 - **Tool issue**: An API call failed or returned unexpected data
 
 **Step 3: Make One Change at a Time**
-- Adjust only one element (Purpose, one capability, or one knowledge source)
+- Adjust only one element (`Role`, one capability, or one knowledge source)
 - Save your changes
 - Document what you changed and why
 
@@ -302,13 +298,13 @@ Improving your AI Chat Receptionist is an iterative process. Follow this workflo
 - Track if your fix improved the overall experience
 - Be ready to iterate further if needed
 
-:::tip When to adjust Purpose vs. Capabilities vs. Knowledge
-- **Adjust Purpose** when the issue affects all conversations (tone, general behavior, introduction)
+:::tip When to adjust Role vs. Capabilities vs. Knowledge
+- **Adjust `Role`** when the issue affects all conversations (tone, general behavior, introduction)
 - **Adjust Capabilities** when the issue is about when/how to take specific actions in certain situations
 - **Adjust Knowledge** when the issue is about incorrect facts or missing information
 - **Adjust Tools** when API calls are failing or returning unexpected data
 
-If you're unsure, start with the most specific element (capabilities or knowledge) before adjusting the broad Purpose.
+If you're unsure, start with the most specific element (capabilities or knowledge) before adjusting the broad `Role`.
 :::
 
 ### Testing across multiple channels
@@ -335,16 +331,16 @@ If you've enabled your AI Chat Receptionist on multiple channels (web chat, SMS,
 ## Frequently asked questions about setting up your AI Chat Receptionist
 
 <details>
-<summary>What should I include in the Purpose prompt?</summary>
+<summary>What should I include in the `Role` prompt?</summary>
 
-Your Purpose prompt sets the tone and behavior of your AI Chat Receptionist. Include instructions about your business's voice, how the AI should greet visitors, and any important policies or information it should share.
+Your `Role` prompt sets the tone and behavior of your AI Chat Receptionist. Include instructions about your business's voice, how the AI should greet visitors, and any important policies or information it should share.
 
 </details>
 
 <details>
 <summary>How often should I update my AI Chat Receptionist's knowledge?</summary>
 
-Regularly review and update your AI's Purpose prompt and knowledge sources to ensure the responses stay accurate and aligned with your latest business offerings and policies. Once a month is a good starting point for many businesses, but your business might need to do it more or less often. 
+Regularly review and update your AI's `Role` prompt and knowledge sources to ensure the responses stay accurate and aligned with your latest business offerings and policies. Once a month is a good starting point for many businesses, but your business might need to do it more or less often. 
 
 </details>
 
@@ -364,7 +360,7 @@ You know your business best! To improve your AI's accuracy, take a moment to wri
 - The most common questions your customers ask  
 - The key information the AI should always collect from visitors
 
-Use this info to write clear Purpose prompts and add any relevant content to your AI's knowledge base that might be missing.
+Use this info to write clear `Role` prompts and add any relevant content to your AI's knowledge base that might be missing.
 
 </details>
 
@@ -381,7 +377,7 @@ No. The AI is given the URL of the page the visitor is on, but it does not see t
 It depends on the outcomes the SMB is after.
 
 - If they only want a smoother experience, the AI naturally picks up that the visitor is on a specific page and references it. No tuning is required.
-- If they want specific behavior tied to specific URL patterns (e.g. always look up inventory when the customer is on a `/inventory/[id]` page), add instructions to the Purpose or a capability prompt that explain the URL pattern and how the AI should react.
+- If they want specific behavior tied to specific URL patterns (e.g. always look up inventory when the customer is on a `/inventory/[id]` page), add instructions to the `Role` or a capability prompt that explain the URL pattern and how the AI should react.
 
 </details>
 
@@ -420,6 +416,34 @@ For any other channel that the chat receptionist can respond to, the AI is confi
 :::info
 This only applies to conversations where messages have been sent from Conversations AI. For example, the chat receptionist would respond instantly to an SMS message from a new contact if it was assigned to monitor the SMS channel.
 :::
+
+</details>
+
+<details>
+<summary>Where do I get the code to add the AI Chat Receptionist to my website?</summary>
+
+The Web Chat widget isn't added to your website automatically. In Partner Center, go to `Conversations` → `More` → `Conversations Settings`, click `Manage widgets`, and create a `New Web Chat`, then use `Embed` to copy the code. See [How do I set up the AI web chat widget on my website?](/conversations/ai-assisted-web-chat-widget).
+
+</details>
+
+<details>
+<summary>What languages does the AI Chat Receptionist speak?</summary>
+
+It detects and responds in over 40 languages, including English, French, and Spanish. See [Supported languages](#supported-languages) for the full list.
+
+</details>
+
+<details>
+<summary>Why are web chat contacts showing as anonymous visitors?</summary>
+
+Check that the Lead Capture capability is on. Go to `AI` → `Workforce`, click `Configure` on the Chat Receptionist, open `Capabilities`, and make sure `Capture Lead Information` is enabled.
+
+</details>
+
+<details>
+<summary>Why does the in-app Chat test behave differently from the chat widget on my website?</summary>
+
+The in-app `Chat` button uses a different mode than the website chat widget. Booking is not fully enabled in that mode, so the AI cannot see the real calendar and may suggest times that are not available. Test booking functionality on the actual chat widget instead.
 
 </details>
 

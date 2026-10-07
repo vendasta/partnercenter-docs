@@ -1,11 +1,23 @@
 ---
 title: Email settings
 description: Configure email authentication, deliverability, and settings for reliable campaign delivery
-sidebar_label: Email Settings
+sidebar_label: Email settings
 sidebar_position: 5
+brand: vendasta
+product: marketing
+audience: partners
+content_type: overview
+kb_id: KB-00068
+answer_snippet: "Email settings in Partner Center, at Marketing → Email settings, control how your email campaigns are authenticated and sent. Before you send campaigns, add four DNS records for your domain (one SPF, two DKIM, one DMARC), set your sender and reply information, and add a mailing address."
+doc_owner: marketing
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
-Email settings are crucial for ensuring your email campaigns reach recipients' inboxes successfully. Proper configuration of authentication protocols, sender information, and deliverability settings helps avoid spam filters and maintain your sender reputation.
+Email settings in Partner Center, at `Marketing` → `Email settings`, control how your email campaigns are authenticated and sent. Before you send campaigns, add four DNS records for your domain (one SPF, two DKIM, one DMARC), set your sender and reply information, and add a mailing address.
+
+Configuring authentication, sender information, and deliverability settings helps your campaigns avoid spam filters and maintain your sender reputation.
 
 ## Overview
 
@@ -25,8 +37,8 @@ Proper email configuration is essential because:
 
 Before sending email campaigns, you must configure:
 
-1. **Domain Authentication** - SPF, DKIM, and DMARC records
-2. **Sender Information** - From name and email address
+1. **Domain authentication** - Four DNS records: one SPF (TXT), two DKIM (CNAME), and one DMARC (TXT)
+2. **Sender information** - `Sender name` and `Reply Address` in the `Sender and reply settings` card, plus `Sender domain` and `Email address` in the `Advanced email settings` card
 3. **Mailing Address** - Required business address for compliance
 4. **User Verification** - Email verification for all platform users
 
@@ -61,13 +73,13 @@ Ensure your emails reach recipients successfully:
 
 ### User management and verification
 
-For user access and email verification, see the [My Team](/administration/my-account/my-team) section under Administration.
+For user access and email verification, see the [My team](/administration/my-account/my-team) section under Administration.
 
 ### Technical requirements and compliance
 
 Understand platform requirements, limitations, and legal compliance:
 
-- **[Email Settings Requirements](./email-settings-requirements.mdx)** - Complete setup requirements, CAN-SPAM compliance, custom domain requirements, and email size limitations
+- **[Email settings requirements](./email-settings-requirements.mdx)** - Complete setup requirements, CAN-SPAM compliance, custom domain requirements, and email size limitations
 
 ## Getting started checklist
 
@@ -77,10 +89,10 @@ Understand platform requirements, limitations, and legal compliance:
 - [ ] Configure DNS settings
 
 ### 2. Authentication setup
-- [ ] Add SPF record to DNS
-- [ ] Configure DKIM signing
-- [ ] Set up DMARC policy
-- [ ] Verify all records are valid
+- [ ] Add the SPF record (TXT) to DNS
+- [ ] Add **both** DKIM records (CNAME) to DNS
+- [ ] Add the DMARC record (TXT) to DNS
+- [ ] Verify all four records show a `Current value` in `Email domains`
 
 ### 3. Sender configuration
 - [ ] Set sender name and email address  
@@ -134,9 +146,9 @@ Yes. There are two approaches depending on what you're trying to do.
 
 **Option 1: Authorize an additional sender domain**
 
-If you want to send campaigns from a second domain (for example, a sub-brand or a different business unit), you can authenticate that domain in `Marketing` → `Email Settings` → [Connect Domains](./connecting-domains.mdx). Each domain requires SPF, DKIM, and DMARC DNS records. DNS changes can take up to 72 hours to propagate, and verification won't complete until all records are published correctly.
+If you want to send campaigns from a second domain (for example, a sub-brand or a different business unit), you can authenticate that domain in `Marketing` → `Email settings` → [Connect Domains](./connecting-domains.mdx). Each domain requires four DNS records: one SPF (TXT), two DKIM (CNAME), and one DMARC (TXT). DNS changes can take up to 72 hours to propagate, and verification won't complete until all four records are published correctly, including both DKIM CNAMEs.
 
-Once verified, you can select the domain as your sender in Email Settings.
+Once verified, you can select the domain as your sender in Email settings.
 
 **Option 2: Create a separate market**
 
@@ -147,8 +159,8 @@ Creating additional markets requires a Custom plan. Contact your Vendasta repres
 :::
 
 **Troubleshooting:**
-- *Gmail shows "via yourdomain.com" in the sender line*: This appears when the sending domain doesn't match the from address domain. Ensure the domain you're sending from is the one authenticated in Email Settings.
-- *Domain stuck in "Pending"*: Check that all three DNS records (SPF, DKIM, DMARC) are published at your DNS provider and allow up to 72 hours for propagation.
+- *Gmail shows "via yourdomain.com" in the sender line*: This appears when the sending domain doesn't match the domain of the `Email address` set in `Advanced email settings`. Ensure the domain you're sending from is the one authenticated in `Email settings`.
+- *Domain stuck in "Pending"*: Check that all four DNS records (one SPF, two DKIM, one DMARC) are published at your DNS provider and allow up to 72 hours for propagation. A single missing DKIM CNAME is the most common cause.
 </details>
 
 <details>
@@ -170,9 +182,9 @@ While not required, registering your domain with Google Postmaster Tools provide
 </details>
 
 <details>
-<summary>Can I use a different domain for Marketing Email Settings vs. Partner Branding Email Settings?</summary>
+<summary>Can I use a different domain for Marketing Email settings vs. Partner branding Email settings?</summary>
 
-No. Marketing Email Settings and Partner Branding Email Settings are tied: they share the same sending domain. You cannot configure a separate domain for campaign sends versus brand notifications (such as Daily Digests or Executive Reports). If you change the domain in one place, it affects both.
+No. Marketing Email settings and Partner branding Email settings are tied: they share the same sending domain. You cannot configure a separate domain for campaign sends versus brand notifications (such as Daily Digests or Executive Reports). If you change the domain in one place, it affects both.
 
 </details>
 
@@ -200,6 +212,27 @@ If you're unsure which record is conflicting, use a DNS lookup tool like [MXTool
 
 </details>
 
+<details>
+<summary>Does the Admin → Email display-address override apply to review requests, or only to email campaigns?</summary>
+
+It applies to review requests and NPS requests as well as email campaigns. The display address set under `Admin` → `Email` is used for those sends.
+
+</details>
+
+<details>
+<summary>Can I edit or remove a section of the partner email template for one partner?</summary>
+
+No. Partner email templates are managed in Sendwithus, and shared sections appear in every partner email. Changing a shared section changes it for all partners. Per-partner control needs a feature request.
+
+</details>
+
+<details>
+<summary>How do I set up my email settings?</summary>
+
+Connect your business domain, then add the SPF record (TXT), both DKIM records (CNAME), and the DMARC record (TXT) at your DNS provider. Verify that all four records show a `Current value` in `Email domains`. Then set your sender name and email address and configure your business mailing address.
+
+</details>
+
 ## Best practices
 
 ### Domain management
@@ -207,8 +240,8 @@ If you're unsure which record is conflicting, use a DNS lookup tool like [MXTool
 **Automatic Domain Monitoring:**
 To ensure your emails reach inboxes rather than spam folders, Vendasta automatically monitors and manages your email domain settings:
 
-- **Every 2 weeks** - Partner Center admins receive notifications when Email Settings use an unverified domain
-- **After 8 weeks** - Email Settings automatically roll back to send from Vendasta's grey-label domain (with notification)
+- **Every 2 weeks** - Partner Center admins receive notifications when Email settings use an unverified domain
+- **After 8 weeks** - Email settings automatically roll back to send from Vendasta's grey-label domain (with notification)
 
 Notifications are sent both as in-platform alerts and email messages to Partner Center administrators.
 
@@ -220,7 +253,7 @@ Notifications are sent both as in-platform alerts and email messages to Partner 
 - Respond to verification notifications quickly
 
 ### Authentication setup
-- Implement all three authentication protocols (SPF, DKIM, DMARC)
+- Implement all three authentication protocols (SPF, DKIM, DMARC), which means publishing four DNS records: one SPF, two DKIM, and one DMARC
 - Start with a permissive DMARC policy and gradually strengthen it
 - Regularly review authentication reports
 
