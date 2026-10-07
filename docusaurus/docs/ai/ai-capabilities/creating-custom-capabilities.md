@@ -57,13 +57,13 @@ Custom capabilities can be used with both pre-built AI Employees (Chat Reception
 
 You can create entirely custom AI Employees with specialized capabilities. Custom AI Employees use the same framework as pre-built AI Employees, giving you complete control over their configuration.
 
-**When to Create Custom AI Employees:**
+#### When to create custom AI Employees
 - You need an AI Employee specialized for a specific business function (e.g., job estimator, project manager)
 - Pre-built AI Employees don't fit your exact use case
 - You want complete control over conversation flows and responses
 - You need industry-specific knowledge and capabilities
 
-**Basic Steps:**
+#### Basic steps
 1. On the `Workforce` page, click `Create` 
 2. Set up the basic profile (name, avatar, role)
 3. Configure communication channels (web chat, SMS, phone, etc.)
@@ -71,14 +71,14 @@ You can create entirely custom AI Employees with specialized capabilities. Custo
 5. Add both built-in and custom capabilities
 6. Test your custom AI Employee before deploying
 
-**Benefits of Custom AI Employees:**
+#### Benefits of custom AI Employees
 - Specialized for specific business functions
 - Tailored conversation flows and responses
 - Industry-specific knowledge and capabilities
 - Complete control over behavior and appearance
 - Can be deployed across multiple channels (web chat, in-platform chat, automations)
 
-**Using Custom Capabilities with Custom AI Employees:**
+#### Using custom capabilities with custom AI Employees
 Custom capabilities work seamlessly with Custom AI Employees. You can:
 - Create custom capabilities specifically for your Custom AI Employee
 - Reuse custom capabilities across multiple AI Employees (both pre-built and custom)
@@ -164,7 +164,7 @@ Headers are extra info sent with the API request, often for security. For exampl
 - `Content-Type: application/json` (tells the AI what kind of data is sent)
 
 #### No external processing needed  
-Check this box if your tool doesn’t actually call an outside API but works internally—like formatting dates or text within the AI. This saves unnecessary network calls.
+Check this box if your tool doesn’t actually call an outside API but works internally, like formatting dates or text within the AI. This saves unnecessary network calls.
 
 ## Writing effective capability prompts
 
@@ -249,17 +249,17 @@ This structure is easier to scan and helps the AI understand exactly what to do.
 
 ### Advanced testing techniques
 
-**Test with Fresh Conversations**
+#### Test with fresh conversations
 - Use incognito/private browsing windows for clean test sessions
 - Or clear cookies between tests to ensure no context carryover
 - This helps verify your capability works consistently for new visitors
 
-**Test Multiple Phrasings**
-- Try different ways customers might ask for the same thing
+#### Test multiple phrasings
+- Try different ways customers ask for the same thing
 - Test with incomplete requests to see how the AI gathers missing information
 - Verify the capability doesn't trigger when it shouldn't
 
-**Review AI Explanations Systematically**
+#### Review AI explanations systematically
 - Check if the AI considered your capability and why it did or didn't use it
 - Examine the exact API call parameters to verify correct data mapping
 - Look at the API response and how the AI interpreted it
@@ -269,27 +269,27 @@ This structure is easier to scan and helps the AI understand exactly what to do.
 
 When refining custom capabilities, follow this systematic approach:
 
-**Step 1: Start Simple**
+#### Step 1: start simple
 - Create a minimal capability prompt with just the basics
 - Test that the core functionality works
 - Add complexity incrementally
 
-**Step 2: Identify Specific Issues**
+#### Step 2: identify specific issues
 - Document exactly what went wrong (with examples)
 - Note the customer's input and the AI's response
 - Review the explanation to understand the AI's decision-making
 
-**Step 3: Make One Change at a Time**
+#### Step 3: make one change at a time
 - Adjust only one aspect (prompt wording, tool parameter, or response template)
 - Save and test immediately
 - If it doesn't work, revert and try a different approach
 
-**Step 4: Test the Change**
+#### Step 4: test the change
 - Use the same customer input that previously failed
 - Verify the issue is resolved
 - Test edge cases to ensure no unintended side effects
 
-**Step 5: Document Your Changes**
+#### Step 5: document your changes
 - Keep notes on what you changed and why
 - Record which changes improved performance
 - Build a reference for future capabilities
@@ -307,28 +307,28 @@ Start with the most specific fix (tool configuration) before adjusting broader e
 
 After deploying custom capabilities, monitor their performance:
 
-**Track Success Rates**
+#### Track success rates
 - Review conversations where the capability was used
 - Identify common failure patterns
 - Look for scenarios you didn't test
 
-**Monitor API Performance**
+#### Monitor API performance
 - Check API response times in explanations
 - Watch for API rate limits or timeout issues
 - Track error rates and common error types
 
-**Customer Experience Indicators**
+#### Customer experience indicators
 - Note when customers express frustration or confusion
 - Look for repeated clarifying questions
 - Check if customers achieve their goals
 
-**Optimization Signals**
+#### Optimization signals
 - The AI frequently asks for the same missing information (add to prompt)
 - The capability triggers incorrectly (refine trigger conditions)
 - Customers rephrase requests multiple times (improve prompt clarity)
 - API calls fail frequently (check tool configuration or API stability)
 
-## Example Custom Capability: Product information lookup
+## Example custom capability: product information lookup
 
 ### Example tool configuration
 
@@ -381,7 +381,7 @@ After deploying custom capabilities, monitor their performance:
 ```
 👉 **Why this works:** Providing exact response templates (with bold formatting for variables) ensures consistent, professional customer communication.
 
-#### Before/After Comparison
+#### Before/after comparison
 
 **❌ Vague prompt:**
 ```
@@ -404,9 +404,9 @@ Clear trigger conditions, required information, response templates, and error ha
 
 When an AI Employee is responding on **Web Chat**, it receives the URL of the page the visitor is currently on with every message. You can combine this context with a lookup capability so the AI answers vague questions ("is this still available?", "what's the price?") without needing to ask which item the visitor means.
 
-This pattern is especially powerful for businesses with structured URLs — e-commerce product pages, vehicle inventory, real estate listings, service pages, and so on.
+This pattern works especially well for businesses with structured URLs: e-commerce product pages, vehicle inventory, real estate listings, service pages, and so on.
 
-**Prompt snippet — extend the lookup capability with URL parsing:**
+**Prompt snippet: extend the lookup capability with URL parsing:**
 
 ```markdown
 ## Using the Current Page URL
@@ -430,6 +430,6 @@ For the AI Chat Receptionist, see [Make responses page-aware with the visitor's 
 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
   <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
   <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>
-    New to how AI Employees work? Take the <a href="/learn/ai-foundations" style={{color: '#3C9A63', fontWeight: 600}}>AI foundations</a> course in Vendasta Learn — Beginner, 6 lessons.
+    New to how AI Employees work? Take the <a href="/learn/ai-foundations" style={{color: '#3C9A63', fontWeight: 600}}>AI foundations</a> course in Vendasta Learn: Beginner, 6 lessons.
   </span>
 </div>

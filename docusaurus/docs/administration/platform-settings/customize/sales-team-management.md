@@ -65,7 +65,7 @@ Salespeople have focused access designed for day-to-day sales activities:
 
 Market-wide access determines whether salespeople can see all accounts in their territory:
 
-1. Navigate to `Administration` → `Customize` → `Sales` → `Settings`
+1. Navigate to `Partner Center` → `Administration` → `Customize` → `Sales` → `Settings`
 2. Locate the `Market-wide access` configuration
 3. Enable to allow salespeople to see all market accounts
 4. Disable to restrict salespeople to assigned accounts only
@@ -83,7 +83,7 @@ Sales Managers always have access to all accounts in their market, regardless of
 
 To protect sensitive cost information while maintaining sales functionality:
 
-1. Go to `Administration` → `Customize` 
+1. Go to `Partner Center` → `Administration` → `Customize`
 2. Expand the `Sales` section
 3. Scroll down to pricing controls
 4. Toggle off `Show wholesale prices`
@@ -122,7 +122,7 @@ Look for the `Salespeople can send campaigns` toggle in the Sales section of the
 
 To control how many Snapshot Reports each salesperson can generate monthly:
 
-1. Navigate to `Administration` → `Customize` → `Sales`
+1. Navigate to `Partner Center` → `Administration` → `Customize` → `Sales`
 2. Check `Limit monthly Snapshot Reports` under Settings
 3. Enter the desired `Snapshot Report limit`
 4. Configure limits for specific markets if needed
