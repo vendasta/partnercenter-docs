@@ -88,7 +88,7 @@ const PATHS: HomePathCard[] = [
     id: "ai-workforce",
     kicker: "2 · Put one to work",
     title: "Hire your first AI Employee",
-    blurb: "Run a receptionist for your own business, teach it to book, train it to answer accurately, then deploy one for a client and prove it works.",
+    blurb: "Put a receptionist to work, teach it to book, train it to answer accurately, then deploy one for a client and prove it works.",
     tag: "AI",
     scope: ["5 steps", "5 labs"],
     gate: "About 1 hour 30 minutes",
@@ -185,9 +185,9 @@ const AI_FOUNDATIONS_ITEMS: ExplorerItem[] = [
 
 const AI_WORKFORCE_ITEMS: ExplorerItem[] = [
   { title: "Meet the AI Employees", to: "/learn/ai-workforce/meet-your-workforce" },
-  { title: "Run a receptionist for your own business", to: "/learn/ai-workforce/put-a-receptionist-to-work" },
+  { title: "Put a receptionist to work", to: "/learn/ai-workforce/put-a-receptionist-to-work" },
   { title: "Connect calendars and booking", to: "/learn/ai-workforce/teach-it-to-book" },
-  { title: "Train it to answer accurately", to: "/learn/ai-workforce/train-your-employee" },
+  { title: "Train your AI Employee", to: "/learn/ai-workforce/train-your-employee" },
   { title: "Deploy a receptionist for a client", to: "/learn/ai-workforce/deploy-a-receptionist-for-a-client" },
 ];
 
