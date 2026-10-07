@@ -202,13 +202,13 @@ const GROW_AI_ITEMS: ExplorerItem[] = [
 ];
 
 const SELL_AI_ITEMS: ExplorerItem[] = [
-  { title: "Know your offer", to: "/learn/sell-the-ai-workforce/know-your-offer" },
-  { title: "Get in the room", to: "/learn/sell-the-ai-workforce/get-in-the-room" },
-  { title: "Demo with confidence", to: "/learn/sell-the-ai-workforce/demo-with-confidence" },
-  { title: "Sell the outcome", to: "/learn/sell-the-ai-workforce/sell-the-outcome" },
-  { title: "Execute the play", to: "/learn/sell-the-ai-workforce/execute-the-play" },
+  { title: "Your packages and pricing", to: "/learn/sell-the-ai-workforce/know-your-offer" },
+  { title: "Find your first prospects", to: "/learn/sell-the-ai-workforce/get-in-the-room" },
+  { title: "Build a live demo", to: "/learn/sell-the-ai-workforce/demo-with-confidence" },
+  { title: "Run the sales call", to: "/learn/sell-the-ai-workforce/sell-the-outcome" },
+  { title: "Propose and close", to: "/learn/sell-the-ai-workforce/execute-the-play" },
   { title: "Practice the pitch", to: "/learn/sell-the-ai-workforce/practice-the-pitch" },
-  { title: "From signed to activated", to: "/learn/sell-the-ai-workforce/from-signed-to-activated" },
+  { title: "Take your client live", to: "/learn/sell-the-ai-workforce/from-signed-to-activated" },
   { title: "How to sell skill check", to: "/learn/sell-the-ai-workforce/sell-ai-workforce-skill-check" },
 ];
 
@@ -223,14 +223,14 @@ const SALES_ITEMS: ExplorerItem[] = [
 
 const BUILDER_ITEMS: ExplorerItem[] = [
   { title: "Start with what the platform already does", to: "/learn/builder/start-with-what-exists" },
-  { title: "Build the doorway", to: "/learn/builder/build-the-doorway" },
-  { title: "Watch it work", to: "/learn/builder/watch-it-work" },
+  { title: "Build a custom tool", to: "/learn/builder/build-the-doorway" },
+  { title: "Test the tool", to: "/learn/builder/watch-it-work" },
   { title: "Hand off to the automation", to: "/learn/builder/hand-off-to-the-automation" },
   { title: "Put your workforce on autopilot", to: "/learn/builder/autopilot" },
-  { title: "Wire it to your own systems", to: "/learn/builder/wire-it-to-your-systems" },
+  { title: "Send data out with a webhook", to: "/learn/builder/wire-it-to-your-systems" },
   { title: "Call the API yourself", to: "/learn/builder/call-the-api-yourself" },
   { title: "Book into an outside system", to: "/learn/builder/book-into-an-outside-system" },
-  { title: "Where the platform ends", to: "/learn/builder/where-the-platform-ends" },
+  { title: "When to hand off to a developer", to: "/learn/builder/where-the-platform-ends" },
   { title: "Connect your own systems skill check", to: "/learn/builder/wire-to-act-skill-check" },
 ];
 
