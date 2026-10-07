@@ -533,6 +533,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       items: [
         // Moved to DocSidebar swizzle (src/theme/DocSidebar/index.tsx)
         {
+          label: 'Submit a Ticket',
+          href: 'https://partners.vendasta.com/crm/tickets',
+          position: 'right',
+          className: 'navbar-ticket-button',
+        },
+        {
           type: 'localeDropdown',
           position: 'right',
         },

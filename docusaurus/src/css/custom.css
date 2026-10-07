@@ -266,13 +266,15 @@ ul.theme-doc-sidebar-menu.menu__list li.theme-doc-sidebar-item-link-level-1:firs
 .navbar__items--right {
   position: absolute !important;
   inset: 0;
-  display: grid !important;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex !important;
+  justify-content: flex-end;
   align-items: center;
+  gap: 12px;
   pointer-events: none;
 }
 
 .navbar__items--right .dropdown,
+.navbar__items--right .navbar-ticket-button,
 .navbar__items--right .navbarSearchContainer_Bca1 {
   pointer-events: auto;
 }
@@ -289,8 +291,6 @@ ul.theme-doc-sidebar-menu.menu__list li.theme-doc-sidebar-item-link-level-1:firs
 }
 
 .navbar__items--right .dropdown {
-  grid-column: 3;
-  justify-self: end;
   margin-right: 20px;
 }
 
@@ -395,8 +395,9 @@ button[title*="theme"] {
   visibility: hidden !important;
 }
 
-/* Language switcher (locale dropdown) styled as a pill button */
-.navbar__items--right .dropdown > .navbar__link {
+/* Language switcher (locale dropdown) and Submit a Ticket link styled as pill buttons */
+.navbar__items--right .dropdown > .navbar__link,
+.navbar__items--right .navbar-ticket-button {
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -413,7 +414,9 @@ button[title*="theme"] {
 }
 
 .navbar__items--right .dropdown > .navbar__link:hover,
-.navbar__items--right .dropdown > .navbar__link:focus {
+.navbar__items--right .dropdown > .navbar__link:focus,
+.navbar__items--right .navbar-ticket-button:hover,
+.navbar__items--right .navbar-ticket-button:focus {
   color: #fff !important;
   border-color: rgba(255, 255, 255, 0.6);
   background: rgba(255, 255, 255, 0.08);
@@ -433,6 +436,10 @@ button[title*="theme"] {
   content: "\1F310";
   font-size: 13px;
   line-height: 1;
+}
+
+.navbar__items--right .navbar-ticket-button svg {
+  display: none;
 }
 
 .navbar__items--right .dropdown__menu {
