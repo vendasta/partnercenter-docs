@@ -2862,3 +2862,76 @@ div[class*="language-"] pre {
 [data-theme='dark'] .pitch-say {
   background: rgba(63, 155, 99, 0.12);
 }
+
+/* ── Start here journey (training/index.mdx) ─────────────────────────────── */
+/* Numbered stages down the page in the shape of a single-path walkthrough:
+   a grey ordinal before each h2, circled step numbers inside each stage, a
+   meta line, and a "Start" link. Added 2026-10-07 (Learn sidebar reorg). */
+.learn-journey {
+  counter-reset: learn-stage;
+}
+
+.learn-journey h2 {
+  counter-increment: learn-stage;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-top: 2.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.learn-journey h2::before {
+  content: counter(learn-stage);
+  flex: 0 0 auto;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.learn-journey__meta {
+  margin: -0.25rem 0 1rem;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.learn-journey ol {
+  list-style: none;
+  counter-reset: learn-step;
+  padding-left: 0;
+  margin: 0 0 1.25rem;
+}
+
+.learn-journey ol > li {
+  counter-increment: learn-step;
+  position: relative;
+  padding-left: 2.4rem;
+  margin-bottom: 0.65rem;
+  line-height: 1.6;
+}
+
+.learn-journey ol > li::before {
+  content: counter(learn-step);
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.learn-journey__start {
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.learn-journey__start::after {
+  content: " \2192";
+}

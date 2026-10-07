@@ -1,5 +1,12 @@
-// Learn tab "Start here" page: the learning paths as numbered cards, in the
-// order the sidebar lists them. Ported from the internal Vendasta Learn homepage
+// NOT RENDERED since 2026-10-07. Start here (training/index.mdx) is now a
+// single-path walkthrough written in MDX, in the shape of Stripe's "Sell
+// subscriptions as a SaaS startup" guide, with the on-page TOC on the right.
+// This component is the former card grid, kept current and importable so the
+// cards can come back without a rebuild (for example as the motion router in
+// phase 3 of the sidebar reorg plan).
+//
+// Learning paths as numbered cards, in the order the sidebar lists them.
+// Ported from the internal Vendasta Learn homepage
 // (vendastalearn internal-docs-site src/components/HomeCatalog) on 2026-08-19,
 // Cal's Learn tab refresh. Data is hand-curated below: there is no generated
 // course manifest in this repo, so when a path gains or loses a visible step,
