@@ -2,147 +2,137 @@
 title: Start here
 sidebar_position: 0
 sidebar_label: Start here
-description: One journey from a new Partner Center account to selling and running an AI Workforce for your clients, in six paths. What Learn is, why the order matters, and every step along the way.
-toc_min_heading_level: 2
-toc_max_heading_level: 2
+description: One journey from a new Partner Center account to selling and running an AI Workforce for your clients, in six paths. Expand any path to see every step.
+hide_table_of_contents: true
 ---
 
-{/* Rebuilt 2026-10-07 (Cal, sidebar reorg phase 1) as a single-path walkthrough
-    in the shape of Stripe's "Sell subscriptions as a SaaS startup" guide:
-    numbered stages down the page, the steps inside each, the on-page TOC on the
-    right. The opening follows Cursor Learn's lead: say what this is, what it is
-    not, and why the order matters before listing anything. Stage numbering and
-    the step-list styling live in src/css/custom.css under .learn-journey. The
-    former card grid (src/components/LearnHome.tsx) is no longer rendered; it is
-    kept with a restore note. Plan: OUTPUTS/learn-tab-sidebar-reorg/ in Cal's
-    workspace. Phase 3 of that plan adds Resell / Distribute / Embed routing here. */}
+import JourneyStages from '@site/src/components/JourneyStages';
 
-Welcome to Vendasta Learn.
+{/* Rebuilt 2026-10-07 (Cal, sidebar reorg phase 1). The six paths render as
+    numbered, expandable bars (src/components/JourneyStages.tsx) so the whole
+    journey is visible above the fold and any path opens to show every step.
+    Step data is hand-curated below; when a path gains or loses a step, update
+    it here and the chips to match the path's PathHeader. The former card grid
+    (src/components/LearnHome.tsx) is kept but not rendered. Plan:
+    OUTPUTS/learn-tab-sidebar-reorg/ in Cal's workspace. Phase 3 of that plan
+    adds Resell / Distribute / Embed routing here. */}
 
-Learn takes you from a new Partner Center account to an AI Workforce you run for your own business and sell to your clients. It is one journey in six paths, and each path leaves work in place: a platform that carries your brand and collects payment, an AI Employee answering for a real business, a pitch you have rehearsed against a live objection, an automation that runs when nobody is in the conversation.
+Welcome to Vendasta Learn. Six paths take you from a new Partner Center account to an AI Workforce you run for your own business and sell to your clients, and each one leaves real work in place. Learn is not the documentation: that is where you go with a task in hand. Learn is where you go for what to do next and in what order, and the order rests on one idea: you run it before you sell it.
 
-Learn is not the documentation. The Documentation tab is where you go with a task in hand: how a setting works, what a field means, which edition carries a feature. Learn is where you go when you want to know what to do next and in what order. Every step here is a sequence of actions in your own Partner Center, with the documentation linked at the moment a task needs it.
-
-The order matters, and it is built on one idea: you run it before you sell it. You set up the platform for your own business before you bring in a client. You hire an AI Receptionist for your own front desk before you deploy one for a client. You meet the whole roster before you pitch it. By the time you are in a sales conversation, every claim you make is something you have already watched work.
+<JourneyStages
+  stages={[
+    {
+      title: "Get set up",
+      tagline: "Make the platform yours, then bring in your first client.",
+      meta: ["9 steps", "Beginner", "2 h 15 min"],
+      blurb: "You leave with email sending from your own domain, payments collecting on their own, your brand on everything a client sees, an AI Receptionist on your own website, and your first client account live with a product on it.",
+      to: "/learn/getting-started",
+      steps: [
+        { title: "The Vendasta Platform", to: "/learn/getting-started/the-vendasta-platform", description: "the white-label model, the two workspaces, and where your team and your AI Employees live" },
+        { title: "Connect your domain and email", to: "/learn/getting-started/connect-your-domain-and-email", description: "every email the platform sends arrives from your business" },
+        { title: "Connect payments and billing", to: "/learn/getting-started/connect-payments-and-billing", description: "the wholesale-to-retail model, the Stripe decision, and billing that collects on its own" },
+        { title: "Brand your platform", to: "/learn/getting-started/brand-it", description: "your logo and color across both workspaces, and which pages clients see" },
+        { title: "Turn on your own AI Receptionist", to: "/learn/getting-started/turn-on-your-own-ai-receptionist", description: "configure it, give it knowledge, test it, and put the widget on your site" },
+        { title: "Bring in your first client", to: "/learn/getting-started/bring-in-your-first-client", description: "the account, a product live on it, and the invite that opens their Business App" },
+        { title: "Walk your client's first experience", to: "/learn/getting-started/walk-your-clients-first-experience", description: "the onboarding email, their Home page, and the three settings on your side that decide it" },
+        { title: "Where to get help", to: "/learn/getting-started/where-to-get-help", description: "the AI assistant, two documentation sites, your Client Success team, webinars, and Vendasta Services" },
+        { title: "Get set up skill check", to: "/learn/getting-started/get-set-up-skill-check", description: "ten scenario questions drawn from every step" },
+      ],
+    },
+    {
+      title: "Hire your first AI Employee",
+      tagline: "Run a receptionist for yourself, then deploy one for a client.",
+      meta: ["5 steps", "Beginner to Intermediate", "1 h 30 min"],
+      blurb: "Put one AI Employee to work for a real business and prove it. You run a receptionist for your own front desk first, teach it to book on a real calendar, train it to answer accurately, then deploy one for a client on their account and test it before you hand it over.",
+      to: "/learn/ai-workforce",
+      steps: [
+        { title: "Meet your AI Workforce", to: "/learn/ai-workforce/meet-your-workforce", description: "the five-employee team working for your own business, and the three parts they all share" },
+        { title: "Put a receptionist to work", to: "/learn/ai-workforce/put-a-receptionist-to-work", description: "why you hire for yourself first, chat or voice, and the ten-question audit before anyone meets it" },
+        { title: "Teach it to book", to: "/learn/ai-workforce/teach-it-to-book", description: "calendars, booking links, and call routing by business hours" },
+        { title: "Train your AI Employee", to: "/learn/ai-workforce/train-your-employee", description: "audit what it knows, fix the source, write a guardrail, and re-test" },
+        { title: "Deploy a receptionist for a client", to: "/learn/ai-workforce/deploy-a-receptionist-for-a-client", description: "configure the receptionist that belongs to your client and run the go-live test" },
+      ],
+    },
+    {
+      title: "Know what you're selling",
+      tagline: "Every AI Employee, the job it does on day one, and the edition that carries it.",
+      meta: ["7 steps", "Beginner", "1 h"],
+      blurb: "Meet every AI Employee you will put in front of a client. Each step takes one of the five core AI Employees, shows the job it does on day one, and names the product and edition that carry it, so you quote the right thing before you activate anything. The specialist bench covers the three custom builds.",
+      to: "/learn/grow-your-ai-workforce",
+      steps: [
+        { title: "AI Receptionist", to: "/learn/grow-your-ai-workforce/ai-receptionist", description: "every call, text, and web chat answered, at any hour" },
+        { title: "AI Reputation Specialist", to: "/learn/grow-your-ai-workforce/ai-reputation-specialist", description: "every review answered on brand, sensitive cases flagged for you" },
+        { title: "AI Social Media Manager", to: "/learn/grow-your-ai-workforce/ai-social-media-manager", description: "a social calendar generated, scheduled, and published on its own" },
+        { title: "AI Blogger", to: "/learn/grow-your-ai-workforce/ai-blogger", description: "SEO-ready posts written and published to WordPress on schedule" },
+        { title: "AI Sales Assistant", to: "/learn/grow-your-ai-workforce/ai-sales-assistant", description: "every conversation captured, the CRM current without typing" },
+        { title: "The specialist bench", to: "/learn/grow-your-ai-workforce/the-specialist-bench", description: "the data analyst, support, and inside sales builds, and when to bring them in" },
+        { title: "Know what you're selling skill check", to: "/learn/grow-your-ai-workforce/grow-ai-workforce-skill-check", description: "match the problem to the employee and the edition that carries the promise" },
+      ],
+    },
+    {
+      title: "How to sell",
+      tagline: "The packages, the live demo, the close, and the launch to a first captured lead.",
+      meta: ["8 steps", "Beginner", "2 h"],
+      blurb: "Your prospects do not buy AI. They buy captured leads, faster response times, and lower payroll. This path covers the AI Workforce packages, your best-fit first prospects, a live demo on any prospect's website, discovery and objections, the proposal, a rehearsal against a skeptical AI business owner, and the launch sequence that takes a signed client to their first captured lead.",
+      to: "/learn/sell-the-ai-workforce",
+      steps: [
+        { title: "Know your offer", to: "/learn/sell-the-ai-workforce/know-your-offer", description: "the packages, the retention math behind them, and one opening line tuned to any business" },
+        { title: "Get in the room", to: "/learn/sell-the-ai-workforce/get-in-the-room", description: "your best-fit first clients, why your existing book beats any cold list, and the words that open the door" },
+        { title: "Demo with confidence", to: "/learn/sell-the-ai-workforce/demo-with-confidence", description: "the five to lead with, the three to grow into, and the five-minute live demo" },
+        { title: "Sell the outcome", to: "/learn/sell-the-ai-workforce/sell-the-outcome", description: "the four discovery questions, the timed demo, the objection responses, and the pre-call ROI ritual" },
+        { title: "Execute the play", to: "/learn/sell-the-ai-workforce/execute-the-play", description: "which kit to open with, the Three Baskets proposal, and the ask" },
+        { title: "Practice the pitch", to: "/learn/sell-the-ai-workforce/practice-the-pitch", description: "call Vendasta Pitch Partner and handle two live objections" },
+        { title: "From signed to activated", to: "/learn/sell-the-ai-workforce/from-signed-to-activated", description: "live in 7 days, first lead in 14, and the proof point you capture" },
+        { title: "How to sell skill check", to: "/learn/sell-the-ai-workforce/sell-ai-workforce-skill-check", description: "twelve scenario questions covering the offer, the outreach, the demo, the close, and the launch" },
+      ],
+    },
+    {
+      title: "Your sales assets",
+      tagline: "Rebrandable kits, the ROI calculator, success stories, and the sales videos.",
+      meta: ["Reference page"],
+      blurb: "Everything you reach for during a sale, on one page. Not a path: open it when you need it and keep it open while you work through How to sell.",
+      to: "/learn/sales-assets",
+      cta: "Open",
+      steps: [
+        { title: "Sales kits, ready to rebrand", to: "/learn/sales-assets#sales-kits-ready-to-rebrand", description: "pitch decks, one-pagers, and images for the whole AI Workforce and for each AI Employee" },
+        { title: "Numbers and proof", to: "/learn/sales-assets#numbers-and-proof", description: "the AI ROI Calculator and the success stories library, filtered by AI Employee" },
+        { title: "Sales videos", to: "/learn/sales-assets#sales-videos", description: "the pitch foundation, the live demo, the discovery framework, and the Three Baskets proposal" },
+        { title: "Rehearse and keep learning", to: "/learn/sales-assets#rehearse-and-keep-learning", description: "the Vendasta Pitch Partner line and the on-demand webinar bootcamps" },
+      ],
+    },
+    {
+      title: "Connect your own systems",
+      tagline: "One build end to end: a custom tool, an automation, a webhook, and a real API call.",
+      meta: ["10 steps", "Intermediate to Advanced", "2 h 10 min"],
+      blurb: "An AI Employee for a home-services client that books jobs on a real calendar, saves every lead to the CRM, and checks the weather before it confirms outdoor work. Three steps need no code at all: the first, the automation handoff, and autopilot. The rest reach outside the platform with a custom tool, a webhook, a scoped API token, and a booking into a system your client already runs.",
+      to: "/learn/builder",
+      steps: [
+        { title: "Start with what the platform already does", to: "/learn/builder/start-with-what-exists", description: "what makes a system connectable, the ladder from a setting to custom code, and the one job left over" },
+        { title: "Build the doorway", to: "/learn/builder/build-the-doorway", description: "a working call becomes a custom tool, and a prompt gives it judgment" },
+        { title: "Watch it work", to: "/learn/builder/watch-it-work", description: "test where it runs, read what it did, and isolate a failing call" },
+        { title: "Hand off to the automation", to: "/learn/builder/hand-off-to-the-automation", description: "trigger scope, guarding a trigger, and the follow-through worker" },
+        { title: "Put your workforce on autopilot", to: "/learn/builder/autopilot", description: "automations that run when nobody is in the conversation" },
+        { title: "Wire it to your own systems", to: "/learn/builder/wire-it-to-your-systems", description: "send data out with a webhook and start an automation from outside" },
+        { title: "Call the API yourself", to: "/learn/builder/call-the-api-yourself", description: "a real call against your own data, in the browser, with no code" },
+        { title: "Book into an outside system", to: "/learn/builder/book-into-an-outside-system", description: "a booking that lands in the scheduling system your client already runs" },
+        { title: "Where the platform ends", to: "/learn/builder/where-the-platform-ends", description: "the custom-code line, handing it off well, and productizing what you built" },
+        { title: "Connect your own systems skill check", to: "/learn/builder/wire-to-act-skill-check", description: "twelve scenario questions covering the whole path" },
+      ],
+    },
+  ]}
+/>
 
 ## How to use Learn
 
-Every path opens with an overview that lists its steps, the time it takes, and what you will be able to do at the end. Steps carry **Try it now** actions: short tasks in your own Partner Center that leave the result in place. Each path ends with a skill check of scenario questions drawn from every step. Take it as many times as you like; a wrong answer points you at the step to revisit. The last step of each path hands off to the next one.
+Take the six paths in order the first time through, then come back to any step as a reference. Every path opens with an overview, every step carries a **Try it now** action in your own Partner Center, and every path ends with a skill check of scenario questions you can retake freely. The last step of each path hands off to the next one.
 
-Take the six paths in order the first time through. After that, come back to any step as a reference.
-
-**Before you begin.** Get set up assumes three things, and every path after it builds on that setup:
-
-- **Partner Center admin access.** You will change settings in `Administration` that only an admin can reach.
-- **A paid subscription.** Several steps activate products on your own account or on a client's.
-- **Access to your domain's DNS settings.** Connecting your email domain adds records at your DNS host.
-
-Partner Center, at [partners.vendasta.com](https://partners.vendasta.com), is your administration workspace and where most steps happen. Business App is what your clients use; some steps open a client's Business App from Partner Center so you can configure what they will see.
-
-<div className="learn-journey">
-
-## Get set up
-
-Make the platform yours before anyone else sees it. You leave this path with email sending from your own domain, payments collecting on their own, your brand on everything a client sees, an AI Receptionist on your own website, and your first client account live with a product on it.
-
-<p className="learn-journey__meta">9 steps · Beginner · About 2 hours 15 minutes</p>
-
-1. [The Vendasta Platform](/learn/getting-started/the-vendasta-platform): the white-label model, the two workspaces, and where your team and your AI Employees live.
-2. [Connect your domain and email](/learn/getting-started/connect-your-domain-and-email): every email the platform sends arrives from your business.
-3. [Connect payments and billing](/learn/getting-started/connect-payments-and-billing): the wholesale-to-retail model, the Stripe decision, and billing that collects on its own.
-4. [Brand your platform](/learn/getting-started/brand-it): your logo and color across both workspaces, and which pages clients see.
-5. [Turn on your own AI Receptionist](/learn/getting-started/turn-on-your-own-ai-receptionist): configure it, give it knowledge, test it, and put the widget on your site.
-6. [Bring in your first client](/learn/getting-started/bring-in-your-first-client): the account, a product live on it, and the invite that opens their Business App.
-7. [Walk your client's first experience](/learn/getting-started/walk-your-clients-first-experience): the onboarding email, their Home page, and the three settings on your side that decide it.
-8. [Where to get help](/learn/getting-started/where-to-get-help): the AI assistant, two documentation sites, your Client Success team, webinars, and Vendasta Services.
-9. [Get set up skill check](/learn/getting-started/get-set-up-skill-check): ten scenario questions drawn from every step.
-
-<a className="learn-journey__start" href="/learn/getting-started">Start Get set up</a>
-
-## Hire your first AI Employee
-
-Put one AI Employee to work for a real business and prove it. You run a receptionist for your own front desk first, teach it to book on a real calendar, train it to answer accurately, then deploy one for a client on their account and test it before you hand it over.
-
-<p className="learn-journey__meta">5 steps · Beginner to Intermediate · About 1 hour 30 minutes</p>
-
-1. [Meet your AI Workforce](/learn/ai-workforce/meet-your-workforce): the five-employee team working for your own business, and the three parts they all share.
-2. [Put a receptionist to work](/learn/ai-workforce/put-a-receptionist-to-work): why you hire for yourself first, chat or voice, and the ten-question audit before anyone meets it.
-3. [Teach it to book](/learn/ai-workforce/teach-it-to-book): calendars, booking links, and call routing by business hours.
-4. [Train your AI Employee](/learn/ai-workforce/train-your-employee): audit what it knows, fix the source, write a guardrail, and re-test.
-5. [Deploy a receptionist for a client](/learn/ai-workforce/deploy-a-receptionist-for-a-client): configure the receptionist that belongs to your client and run the go-live test.
-
-<a className="learn-journey__start" href="/learn/ai-workforce">Start Hire your first AI Employee</a>
-
-## Know what you're selling
-
-Meet every AI Employee you will put in front of a client. Each step takes one of the five core AI Employees, shows the job it does on day one, and names the product and edition that carry it, so you quote the right thing before you activate anything. The specialist bench covers the three custom builds.
-
-<p className="learn-journey__meta">7 steps · Beginner · About 1 hour</p>
-
-1. [AI Receptionist](/learn/grow-your-ai-workforce/ai-receptionist): every call, text, and web chat answered, at any hour.
-2. [AI Reputation Specialist](/learn/grow-your-ai-workforce/ai-reputation-specialist): every review answered on brand, sensitive cases flagged for you.
-3. [AI Social Media Manager](/learn/grow-your-ai-workforce/ai-social-media-manager): a social calendar generated, scheduled, and published on its own.
-4. [AI Blogger](/learn/grow-your-ai-workforce/ai-blogger): SEO-ready posts written and published to WordPress on schedule.
-5. [AI Sales Assistant](/learn/grow-your-ai-workforce/ai-sales-assistant): every conversation captured, the CRM current without typing.
-6. [The specialist bench](/learn/grow-your-ai-workforce/the-specialist-bench): the data analyst, support, and inside sales builds, and when to bring them in.
-7. [Know what you're selling skill check](/learn/grow-your-ai-workforce/grow-ai-workforce-skill-check): match the problem to the employee and the edition that carries the promise.
-
-<a className="learn-journey__start" href="/learn/grow-your-ai-workforce">Start Know what you're selling</a>
-
-## How to sell
-
-Your prospects do not buy AI. They buy captured leads, faster response times, and lower payroll. This path covers the AI Workforce packages, your best-fit first prospects, a live demo you can build on any prospect's website, discovery and objections, the proposal, a rehearsal against a skeptical AI business owner, and the launch sequence that takes a signed client to their first captured lead.
-
-<p className="learn-journey__meta">8 steps · Beginner · About 2 hours</p>
-
-1. [Know your offer](/learn/sell-the-ai-workforce/know-your-offer): the packages, the retention math behind them, and one opening line tuned to any business.
-2. [Get in the room](/learn/sell-the-ai-workforce/get-in-the-room): your best-fit first clients, why your existing book beats any cold list, and the words that open the door.
-3. [Demo with confidence](/learn/sell-the-ai-workforce/demo-with-confidence): the five to lead with, the three to grow into, and the five-minute live demo.
-4. [Sell the outcome](/learn/sell-the-ai-workforce/sell-the-outcome): the four discovery questions, the timed demo, the objection responses, and the pre-call ROI ritual.
-5. [Execute the play](/learn/sell-the-ai-workforce/execute-the-play): which kit to open with, the Three Baskets proposal, and the ask.
-6. [Practice the pitch](/learn/sell-the-ai-workforce/practice-the-pitch): call Vendasta Pitch Partner and handle two live objections.
-7. [From signed to activated](/learn/sell-the-ai-workforce/from-signed-to-activated): live in 7 days, first lead in 14, and the proof point you capture.
-8. [How to sell skill check](/learn/sell-the-ai-workforce/sell-ai-workforce-skill-check): twelve scenario questions covering the offer, the outreach, the demo, the close, and the launch.
-
-<a className="learn-journey__start" href="/learn/sell-the-ai-workforce">Start How to sell</a>
-
-## Your sales assets
-
-Everything you reach for during a sale, on one page. Not a path: open it when you need it and keep it open while you work through How to sell.
-
-<p className="learn-journey__meta">Reference page · Open any time</p>
-
-1. [Sales kits, ready to rebrand](/learn/sales-assets#sales-kits-ready-to-rebrand): pitch decks, one-pagers, and images for the whole AI Workforce and for each AI Employee.
-2. [Numbers and proof](/learn/sales-assets#numbers-and-proof): the AI ROI Calculator and the success stories library, filtered by AI Employee.
-3. [Sales videos](/learn/sales-assets#sales-videos): the pitch foundation, the live demo, the discovery framework, and the Three Baskets proposal.
-4. [Rehearse and keep learning](/learn/sales-assets#rehearse-and-keep-learning): the Vendasta Pitch Partner line and the on-demand webinar bootcamps.
-
-<a className="learn-journey__start" href="/learn/sales-assets">Open Your sales assets</a>
-
-## Connect your own systems
-
-One build, end to end: an AI Employee for a home-services client that books jobs on a real calendar, saves every lead to the CRM, and checks the weather before it confirms outdoor work. Three steps need no code at all: the first, the automation handoff, and autopilot. The rest reach outside the platform with a custom tool, a webhook, a scoped API token, and a booking into a system your client already runs.
-
-<p className="learn-journey__meta">10 steps · Intermediate to Advanced · About 2 hours 10 minutes</p>
-
-1. [Start with what the platform already does](/learn/builder/start-with-what-exists): what makes a system connectable, the ladder from a setting to custom code, and the one job left over.
-2. [Build the doorway](/learn/builder/build-the-doorway): a working call becomes a custom tool, and a prompt gives it judgment.
-3. [Watch it work](/learn/builder/watch-it-work): test where it runs, read what it did, and isolate a failing call.
-4. [Hand off to the automation](/learn/builder/hand-off-to-the-automation): trigger scope, guarding a trigger, and the follow-through worker.
-5. [Put your workforce on autopilot](/learn/builder/autopilot): automations that run when nobody is in the conversation.
-6. [Wire it to your own systems](/learn/builder/wire-it-to-your-systems): send data out with a webhook and start an automation from outside.
-7. [Call the API yourself](/learn/builder/call-the-api-yourself): a real call against your own data, in the browser, with no code.
-8. [Book into an outside system](/learn/builder/book-into-an-outside-system): a booking that lands in the scheduling system your client already runs.
-9. [Where the platform ends](/learn/builder/where-the-platform-ends): the custom-code line, handing it off well, and productizing what you built.
-10. [Connect your own systems skill check](/learn/builder/wire-to-act-skill-check): twelve scenario questions covering the whole path.
-
-<a className="learn-journey__start" href="/learn/builder">Start Connect your own systems</a>
-
-</div>
+:::info Before you begin
+Get set up assumes **Partner Center admin access**, **a paid subscription**, and **access to your domain's DNS settings**. Partner Center, at [partners.vendasta.com](https://partners.vendasta.com), is where most steps happen; some steps open a client's Business App from there so you can configure what they will see.
+:::
 
 ## Three ways to get the work done
 
-Once a client is live, the work of running their website, social calendar, ads, listings, and AI Employees falls into three buckets. You can run it yourself with AI Employees and automations, which is what these paths teach. You can bring in Vendasta Services to set up an AI Employee or a campaign with you. Or you can hand a service line over entirely and have Vendasta Services run it behind your brand. [The Vendasta Services documentation](/vendasta-services) covers each service line, what to have ready, and how the work runs once it is underway.
+Once a client is live, you can run their website, social calendar, ads, listings, and AI Employees yourself with AI Employees and automations, which is what these paths teach. You can bring in Vendasta Services to set up an AI Employee or a campaign with you. Or you can hand a service line over entirely and have Vendasta Services run it behind your brand. [The Vendasta Services documentation](/vendasta-services) covers each service line and how the work runs.
 
 ## Where to get help
 
