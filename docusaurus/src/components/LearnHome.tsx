@@ -160,13 +160,13 @@ interface ExplorerFacet {
 }
 
 const GETTING_STARTED_ITEMS: ExplorerItem[] = [
-  { title: "The Vendasta Platform", to: "/learn/getting-started/the-vendasta-platform" },
+  { title: "How the platform works", to: "/learn/getting-started/the-vendasta-platform" },
   { title: "Connect your domain and email", to: "/learn/getting-started/connect-your-domain-and-email" },
   { title: "Connect payments and billing", to: "/learn/getting-started/connect-payments-and-billing" },
   { title: "Brand your platform", to: "/learn/getting-started/brand-it" },
   { title: "Turn on your own AI Receptionist", to: "/learn/getting-started/turn-on-your-own-ai-receptionist" },
-  { title: "Bring in your first client", to: "/learn/getting-started/bring-in-your-first-client" },
-  { title: "Walk your client's first experience", to: "/learn/getting-started/walk-your-clients-first-experience" },
+  { title: "Add your first client", to: "/learn/getting-started/bring-in-your-first-client" },
+  { title: "What your client sees first", to: "/learn/getting-started/walk-your-clients-first-experience" },
   { title: "Where to get help", to: "/learn/getting-started/where-to-get-help" },
   { title: "Get set up skill check", to: "/learn/getting-started/get-set-up-skill-check" },
 ];
@@ -184,10 +184,10 @@ const AI_FOUNDATIONS_ITEMS: ExplorerItem[] = [
 ];
 
 const AI_WORKFORCE_ITEMS: ExplorerItem[] = [
-  { title: "Meet your AI Workforce", to: "/learn/ai-workforce/meet-your-workforce" },
-  { title: "Put a receptionist to work", to: "/learn/ai-workforce/put-a-receptionist-to-work" },
-  { title: "Teach it to book", to: "/learn/ai-workforce/teach-it-to-book" },
-  { title: "Train your AI Employee", to: "/learn/ai-workforce/train-your-employee" },
+  { title: "Meet the AI Employees", to: "/learn/ai-workforce/meet-your-workforce" },
+  { title: "Run a receptionist for your own business", to: "/learn/ai-workforce/put-a-receptionist-to-work" },
+  { title: "Connect calendars and booking", to: "/learn/ai-workforce/teach-it-to-book" },
+  { title: "Train it to answer accurately", to: "/learn/ai-workforce/train-your-employee" },
   { title: "Deploy a receptionist for a client", to: "/learn/ai-workforce/deploy-a-receptionist-for-a-client" },
 ];
 
@@ -197,7 +197,7 @@ const GROW_AI_ITEMS: ExplorerItem[] = [
   { title: "AI Social Media Manager", to: "/learn/grow-your-ai-workforce/ai-social-media-manager" },
   { title: "AI Blogger", to: "/learn/grow-your-ai-workforce/ai-blogger" },
   { title: "AI Sales Assistant", to: "/learn/grow-your-ai-workforce/ai-sales-assistant" },
-  { title: "The specialist bench", to: "/learn/grow-your-ai-workforce/the-specialist-bench" },
+  { title: "The three custom builds", to: "/learn/grow-your-ai-workforce/the-specialist-bench" },
   { title: "Know what you're selling skill check", to: "/learn/grow-your-ai-workforce/grow-ai-workforce-skill-check" },
 ];
 
