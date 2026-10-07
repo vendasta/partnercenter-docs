@@ -13,8 +13,8 @@
 // update it here.
 //
 // 2026-10-07 (Cal, sidebar reorg phase 1): Home became Start here, three paths
-// took plain-language labels (Know what you're selling, How to sell, Connect
-// your own systems), Your sales assets moved up to sit after How to sell, and
+// took plain-language labels (Know what you're selling, Make your first sale, Connect
+// your own systems), Your sales assets moved up to sit after Make your first sale, and
 // the Work with Vendasta Services path was archived to
 // docusaurus/archive/training/vendasta-services with redirects into
 // docs/vendasta-services. The "Learning for how you work" explorer is no longer
@@ -87,7 +87,7 @@ const PATHS: HomePathCard[] = [
   {
     id: "ai-workforce",
     kicker: "2 · Put one to work",
-    title: "Set up your first AI Employee",
+    title: "Hire your first AI Employee",
     blurb: "Put a receptionist to work, teach it to book, train it to answer accurately, then deploy one for a client and prove it works.",
     tag: "AI",
     scope: ["5 steps", "5 labs"],
@@ -111,7 +111,7 @@ const PATHS: HomePathCard[] = [
   {
     id: "sell-the-ai-workforce",
     kicker: "4 · The sale",
-    title: "How to sell",
+    title: "Make your first sale",
     blurb: "The AI Workforce packages, the live demo on any prospect's website, the ROI numbers, the close, and the launch that gets a client to their first captured lead.",
     tag: "Sales",
     scope: ["8 steps", "4 videos", "2 labs"],
@@ -209,7 +209,7 @@ const SELL_AI_ITEMS: ExplorerItem[] = [
   { title: "Propose and close", to: "/learn/sell-the-ai-workforce/execute-the-play" },
   { title: "Practice the pitch", to: "/learn/sell-the-ai-workforce/practice-the-pitch" },
   { title: "Take your client live", to: "/learn/sell-the-ai-workforce/from-signed-to-activated" },
-  { title: "How to sell skill check", to: "/learn/sell-the-ai-workforce/sell-ai-workforce-skill-check" },
+  { title: "Make your first sale skill check", to: "/learn/sell-the-ai-workforce/sell-ai-workforce-skill-check" },
 ];
 
 const SALES_ITEMS: ExplorerItem[] = [
