@@ -197,7 +197,7 @@ const GROW_AI_ITEMS: ExplorerItem[] = [
   { title: "AI Social Media Manager", to: "/learn/grow-your-ai-workforce/ai-social-media-manager" },
   { title: "AI Blogger", to: "/learn/grow-your-ai-workforce/ai-blogger" },
   { title: "AI Sales Assistant", to: "/learn/grow-your-ai-workforce/ai-sales-assistant" },
-  { title: "The three custom builds", to: "/learn/grow-your-ai-workforce/the-specialist-bench" },
+  { title: "Specialist AI Employees", to: "/learn/grow-your-ai-workforce/the-specialist-bench" },
   { title: "Know what you're selling skill check", to: "/learn/grow-your-ai-workforce/grow-ai-workforce-skill-check" },
 ];
 
