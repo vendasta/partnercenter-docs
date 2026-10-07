@@ -87,7 +87,7 @@ const PATHS: HomePathCard[] = [
   {
     id: "ai-workforce",
     kicker: "2 · Put one to work",
-    title: "Launch your first AI Employee",
+    title: "Set up your first AI Employee",
     blurb: "Put a receptionist to work, teach it to book, train it to answer accurately, then deploy one for a client and prove it works.",
     tag: "AI",
     scope: ["5 steps", "5 labs"],
