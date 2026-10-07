@@ -217,10 +217,6 @@ Each row shows the AI Employee's avatar, name, and description, along with a `Be
 
 A search box, a count of currently visible AI Employees, and `Show all` / `Hide all` buttons sit above the list. New AI Employees are `Visible` by default — hide one only if you're not ready for customers to ask about it.
 
-:::info Chat Receptionist can't be hidden
-The Chat Receptionist has no row in this list and always appears on the AI Workforce page.
-:::
-
 #### Market defaults and overrides
 
 This list follows the same partner-default-versus-market pattern as other settings on this page:
@@ -229,18 +225,18 @@ This list follows the same partner-default-versus-market pattern as other settin
 - Override for a specific market by selecting it from the dropdown.
 - A market with no override of its own shows disabled rows using the partner default. To use `Show all` or `Hide all` on that market, turn off the market default first.
 
-#### What hiding an AI Employee does (and doesn't do)
+#### What hiding an AI Employee does
 
-Hiding an AI Employee only removes its card from the AI Workforce page. It doesn't:
+Hiding an AI Employee removes its card from the AI Workforce page and disables it for customers in that market:
 
-- **Disable the AI Employee.** A customer who already has it configured keeps full access, and it keeps doing its automatic work.
-- **Remove it from the chat employee menu.** Customers can still open a hidden AI Employee from there and read its past conversations.
-- **Change what customers can buy.** Product availability, editions, and pricing are unaffected.
+- **It stops responding.** The AI Employee no longer responds to messages sent to it.
+- **It can't be assigned.** Customers can't select it as an option for a web chat widget, or assign it knowledge.
+- **Product availability is unaffected.** What customers can buy, and at what edition or price, doesn't change.
 
 When you hide an AI Employee that was previously visible, a warning repeats these points before you save. Changes may take a short time to reach the AI Workforce page after you save.
 
 :::tip
-Hiding only affects the AI Workforce page, so it's meant for AI Employees a customer can't buy from you yet — not for stopping a customer from using one they've already set up. To do that, remove access to the underlying product instead.
+Use this to pause an AI Employee for customers in a market, whether or not they've already configured it.
 :::
 
 ---
@@ -403,6 +399,8 @@ In most cases, yes. Hiding a page removes it from navigation but doesn't disable
 - Hidden Inbox still receives messages
 
 The page visibility setting controls customer access, not feature functionality.
+
+The exception is hiding an individual AI Employee under [AI Assistant page settings](#ai-assistant-page-settings): that does disable it. See [What hiding an AI Employee does](#what-hiding-an-ai-employee-does).
 </details>
 
 <details>
