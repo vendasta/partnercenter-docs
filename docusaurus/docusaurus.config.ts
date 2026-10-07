@@ -159,10 +159,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/learn/getting-started/accounts-and-users', to: '/learn/getting-started' },
           { from: '/learn/getting-started/customize-and-brand', to: '/learn/getting-started/brand-it' },
           { from: '/learn/getting-started/get-set-up-to-get-paid', to: '/learn/getting-started/connect-payments-and-billing' },
-          // Vendasta Services library rebuilt as the "Work with Vendasta Services" path (2026-08)
-          { from: '/learn/vendasta-services/grow-your-agency-with-marketing-experts', to: '/learn/vendasta-services/what-vendasta-services-does' },
-          { from: '/learn/vendasta-services/fulfilling-websites-with-marketing-services', to: '/learn/vendasta-services/order-and-launch-a-service' },
-          { from: '/learn/vendasta-services/introduction-to-digital-ads', to: '/learn/vendasta-services/choose-how-the-work-gets-done' },
+          // Work with Vendasta Services path archived (2026-10-07): every topic it taught
+          // lives in docs/vendasta-services, so Learn no longer carries a copy. Source
+          // files are kept at docusaurus/archive/training/vendasta-services. The three
+          // older library URLs below land on the docs too, so no redirect chains form.
+          { from: '/learn/vendasta-services', to: '/vendasta-services' },
+          { from: '/learn/vendasta-services/what-vendasta-services-does', to: '/vendasta-services' },
+          { from: '/learn/vendasta-services/choose-how-the-work-gets-done', to: '/vendasta-services/working-with-our-team/' },
+          { from: '/learn/vendasta-services/implement-your-ai-workforce', to: '/vendasta-services/ai-workforce/' },
+          { from: '/learn/vendasta-services/order-and-launch-a-service', to: '/vendasta-services/using-the-platform/' },
+          { from: '/learn/vendasta-services/run-the-work-over-time', to: '/vendasta-services/expectations/' },
+          { from: '/learn/vendasta-services/grow-your-agency-with-marketing-experts', to: '/vendasta-services' },
+          { from: '/learn/vendasta-services/fulfilling-websites-with-marketing-services', to: '/vendasta-services/using-the-platform/' },
+          { from: '/learn/vendasta-services/introduction-to-digital-ads', to: '/vendasta-services/working-with-our-team/' },
           // dissolved sections
           { from: '/learn/platform', to: '/learn/products' },
           { from: '/learn/automations-ai', to: '/learn/ai-workforce' },
@@ -238,7 +247,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/learn/products/websites/Get-your-Clients-Selling-Online-with-Accelerated-Templated-Website-Plus', to: '/learn/products/engage/websites/get-your-clients-selling-online' },
           { from: '/learn/products/websites/Websites-An-Introduction', to: '/learn/products/engage/websites/websites-an-introduction' },
           // vendasta-services renames (case-only renames live in nginx.conf - they collide with real pages on case-insensitive local filesystems)
-          { from: '/learn/vendasta-services/Grow-Your-Agency-with-our-Team-of-Marketing-Experts', to: '/learn/vendasta-services/what-vendasta-services-does' },
+          { from: '/learn/vendasta-services/Grow-Your-Agency-with-our-Team-of-Marketing-Experts', to: '/vendasta-services' },
           // --- end Learn restructure ---
           // Vendasta Services: AI Workforce section renamed (dropped "setup" from URLs)
           { from: '/vendasta-services/ai-workforce-setup', to: '/vendasta-services/ai-workforce/' },
@@ -510,7 +519,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           { from: '/partner-center/AI-receptionist-features-by-plan', to: '/ai/ai-workforce/ai-receptionist-features-by-plan' },
           // AI Workforce Optimization Plan content is now on every service page
           { from: '/vendasta-services/ai-workforce-setup/ai-workforce-optimization-plan', to: '/vendasta-services/ai-workforce/' },
-          { from: '/vendasta-services/working-with-our-team/white-labeling-communications-with-vendasta-services', to: '/vendasta-services/working-with-our-team' },
+          { from: '/vendasta-services/working-with-our-team/white-labeling-communications-with-vendasta-services', to: '/vendasta-services/working-with-our-team/' },
           { from: '/administration/platform-settings/ai-workforce', to: '/ai/ai-workforce' },
           { from: '/administration/platform-settings/ai-knowledge-base', to: '/ai/knowledge-base' },
           { from: '/administration/my-account/reports', to: '/reports' },
