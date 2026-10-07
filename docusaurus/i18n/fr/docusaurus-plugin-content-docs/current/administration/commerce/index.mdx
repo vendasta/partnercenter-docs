@@ -1,0 +1,52 @@
+---
+id: administration-commerce
+title: Commerce
+description: "Gérez le traitement des paiements, les paramètres de facturation, les commandes et les configurations fiscales dans Administration."
+sidebar_position: 2
+---
+
+# Commerce
+
+Commerce, dans **Administration**, vous permet de configurer le traitement des paiements, l'automatisation de la facturation par défaut, les paramètres de commande et les taux de taxe. Ces paramètres s'appliquent à l'ensemble de votre plateforme afin que les nouveaux comptes bénéficient d'un comportement cohérent en matière de facturation, de taxes et de commandes.
+
+## Ce que vous pouvez faire
+
+- **Configurer Vendasta Payments** – Créez de nouveaux comptes de paiement ou connectez des comptes Stripe Standard existants ; prise en charge des cartes, ACH et PAD dans plusieurs pays
+- **Configurer la facturation par défaut** – Choisissez le débit automatique ou la génération de factures pour tous les nouveaux comptes ; les paramètres s'appliquent uniquement aux comptes créés après l'enregistrement
+- **Gérer les paramètres de commande** – Configurez les flux de travail des commandes, l'exécution et la gestion des commandes
+- **Modifier les taux de taxe** – Modifiez les taux de taxe et gérez les exonérations ; les taux s'appliquent en fonction du code postal du client
+
+## Comment ça fonctionne
+
+- **Traitement des paiements** – Vendasta Payments (ou Stripe connecté) gère le traitement ; frais de plateforme de 0,75 % lors de la connexion de Stripe. Disponible aux États-Unis, au Canada, en Nouvelle-Zélande, en Australie, au Royaume-Uni, en République tchèque (et davantage avec le soutien de l'équipe commerciale).
+- **Facturation d'abonnement** – Les valeurs par défaut s'appliquent uniquement aux nouveaux comptes ; vous pouvez modifier n'importe quel compte individuel à partir de ses propres paramètres de facturation sous `Accounts` → `Manage Accounts`.
+- **Taxes** – La taxe s'applique automatiquement lorsque les adresses des clients incluent un code postal ; elle est utilisée sur les factures, les lignes de commande, le panier et les commandes de vente.
+
+## Articles de cette section
+
+- **[Vendasta Payments](./vendasta-payments/index.mdx)** – Création de nouveaux comptes, connexion Stripe, vérification, informations bancaires, moyens de paiement et prise en charge régionale
+- **[Paramètres de facturation par défaut](./default-billing-settings/index.mdx)** – Facturation d'abonnement par défaut pour les nouveaux comptes : collecte des paiements, renouvellement de l'abonnement, planification et mémo de facture
+- **[Paramètres de commande](./order-settings/index.mdx)** – Flux de travail des commandes, exécution et gestion des commandes
+- **[Gestion fiscale](./tax-rates/index.mdx)** – Taux de taxe, exonérations et calcul de la taxe basé sur l'adresse
+
+## Pour commencer
+
+1. **Traitement des paiements** – Allez dans `Partner Center` → `Administration` → `Commerce Settings` → `Vendasta Payments`. Créez un nouveau compte ou connectez Stripe ; complétez la vérification et les informations bancaires.
+2. **Facturation par défaut** – Allez dans `Administration` → `Default billing settings`. Activez le bouton `Subscriptions`, puis réglez `Payment collection`, `Subscription renewal`, `Subscription scheduling` et un `Memo` facultatif ; appliquez aux marchés si nécessaire.
+3. **Taxes** – Allez dans `Administration` → `Tax Rates`. Modifiez les taux (menu à trois points) ; assurez-vous que les adresses des clients comportent des codes postaux pour que la taxe s'applique.
+
+:::tip
+Vendasta Payments n'est pas disponible sur les niveaux Free ou Trial (prévention de la fraude). Complétez les coordonnées de facturation dans `Administration` → `My billing` ; une adresse manquante peut bloquer l'activation dans les régions prises en charge.
+:::
+
+## Gestion des erreurs et dépannage
+
+- **Paiement : « Unsupported in Your Area »** – Complétez les coordonnées de facturation et l'adresse (avec code postal) dans `Administration` → `My billing`.
+- **Paiement : aucune option de configuration** – Le compte peut être Free/Trial, dans une région non prise en charge, ou restreint.
+- **Les valeurs de facturation par défaut ne s'appliquent pas** – Les valeurs par défaut ne concernent que les comptes créés *après* l'enregistrement ; les comptes existants conservent leurs paramètres actuels.
+- **Aucune taxe appliquée** – Le compte client doit avoir une adresse complète avec code postal.
+- **Taxe incorrecte** – Vérifiez la configuration des taux de taxe et que l'adresse correspond bien à la juridiction visée.
+
+:::warning
+L'absence d'informations d'adresse de facturation peut empêcher l'activation de Vendasta Payments. Complétez toutes les coordonnées de facturation avant la configuration.
+:::

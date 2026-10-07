@@ -8,7 +8,7 @@ const KNOWN_LEVELS = [
 ];
 
 interface PathHeaderProps {
-  /** Number of steps in the path, e.g. 9 renders "9 parts" */
+  /** Number of steps in the path, e.g. 9 renders "9 lessons" */
   parts: number;
   /** e.g. "Beginner" or "Beginner to Intermediate" */
   difficulty: string;
@@ -43,7 +43,7 @@ export default function PathHeader({
     <div className="path-header">
       <div className="lesson-header__tags">
         <span className="path-header__count">
-          {parts} parts
+          {parts} lessons
         </span>
         <span className={`lesson-header__tag ${levelClass}`}>{difficulty}</span>
         {topics.map((topic) => (

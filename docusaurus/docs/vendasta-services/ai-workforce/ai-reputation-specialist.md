@@ -1,7 +1,17 @@
 ---
 title: "AI Reputation Specialist: Setup & Optimization Workforce Plan"
 sidebar_label: "AI Reputation Specialist"
-description: "An overview of the AI Reputation Specialist service, detailing the process from the fulfillment form to the final configuration and ongoing support."
+description: "What the AI Reputation Specialist Setup service includes, from the fulfillment form and onboarding call to setup, the 30-day check-in, and ongoing optimization."
+brand: vendasta-services
+product: vendasta-services-core
+audience: partners
+content_type: overview
+kb_id: KB-00041
+answer_snippet: "AI Reputation Specialist Setup is a done-for-you service where our experts configure, train, and launch the AI Reputation Specialist to automate review responses, request new reviews, and manage reputation workflows. It requires Reputation AI Premium."
+doc_owner: vendasta-services-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 import OptimizationPlanSection from './_optimization-plan-section.mdx';
@@ -17,7 +27,9 @@ Want to hand this to a client? The **grey-labeled guide** has the same informati
 **Reputation AI Premium** must be active on your account to receive this service.
 :::
 
-The AI Reputation Specialist Setup is a done-for-you service where our experts configure, train, and launch the AI Reputation Specialist for your business. Our team handles all the technical configuration and customization, tailoring the setup to your specific business needs. The service focuses on configuring automated review responses, requesting new reviews, and managing reputation workflows.
+AI Reputation Specialist Setup is a done-for-you service where our experts configure, train, and launch the AI Reputation Specialist to automate review responses, request new reviews, and manage reputation workflows. It requires Reputation AI Premium.
+
+Our team handles all the technical configuration and customization, tailoring the setup to your specific business needs.
 
 :::info Two ways to get the AI Reputation Specialist
 
@@ -53,7 +65,7 @@ To ensure a smooth and efficient process, please fill out the fulfillment form w
 
 Our team of experts will lead an onboarding call to understand your business needs and how to adjust our reputation workflows to suit you. We will come to the call with your initial Reputation Specialist setup with your branding and customized review response style to adjust during the call. We will refine any additional knowledge sources and/or review response instructions together.
 
-We will also train and walk you through the new workflow. Our team of experts will show you where you can find your reviews, review request emails and SMS templates, and where to modify the AI's review response instructions.
+We will also train and walk you through the workflow. Our team of experts will show you where you can find your reviews, review request emails and SMS templates, and where to modify the AI's review response instructions.
 
 * **Timeline:** An onboarding call can be booked in as little as 1 business day, depending on availability.
 * **For U.S. Businesses:** A2P registration is required to validate the business' use of SMS. Please be ready with your business legal information if you'd like to use SMS. Registration for A2P can take up to two weeks to complete.
@@ -129,7 +141,7 @@ We will also need the following information for an Authorized Business Represent
 
 <summary> I don't have an EIN for my business. Can you still set up A2P?</summary>
 
-Unfortunately, this is a limitation of our SMS provider and we are unable to use a SIN/SSN instead of the EIN at this time. Our team is aware of this limitation and is looking into solutions to ensure you are still able to manage SMS conversations with your customers.
+No. This is a limitation of our SMS provider: A2P registration requires an EIN, and a SIN/SSN can't be used instead.
 
 </details>
 
@@ -202,6 +214,41 @@ Yes. Email is available for all businesses, and SMS is available for Canadian an
 <summary> What kind of optimization is included after setup?</summary>
 
 If you have the AI Workforce Optimization Plan active, it includes adjustments to prompts, workflow refinements, and configuring new feature additions. These updates are intended to refine and improve what has already been set up, focusing on adjustments and enhancements to existing prompts, automations, and templates.
+
+</details>
+
+<details>
+<summary>Why do Google reviews briefly show as deleted, and why might AI responses post later than configured?</summary>
+
+Google can briefly quarantine a newly published review and return a temporary 404. During that window the platform shows the review as deleted. AI may attempt to respond within your configured timing, but posting succeeds only after Google restores the review. Wait for the review to reappear, then retry if needed. Multi-hour or multi-day delays usually come from Google's side, not from your clients' response settings.
+
+</details>
+
+<details>
+<summary>If reviews that were incorrectly marked deleted are unmarked, will AI respond to them automatically?</summary>
+
+No. Auto-response runs only within 48 hours of publication. Reviews outside that window need a manual backfill or re-run. Unmarking deleted status alone does not restart the auto-response flow.
+
+</details>
+
+<details>
+<summary>Can I change default SMS and email review templates in bulk for every account under a PID?</summary>
+
+You can deploy templates to selected locations from `Partner Center`, but there is no bulk option that changes the default template state across every account at once. Update defaults per account, or deploy to the locations you select.
+
+</details>
+
+<details>
+<summary>Where does the SMS review-template logo come from, and can the SMS landing page be customized?</summary>
+
+The template uses the logo uploaded in the Business Profile under `Images` → `Main Image`. Without a main image, you cannot enable the logo option on the template. SMS review-request landing pages are not customizable.
+
+</details>
+
+<details>
+<summary>Is the Reputation AI check-in kiosk generally available, and where do I find it?</summary>
+
+Yes. The check-in kiosk is a request workflow included with the Premium edition. Open it from the Business App rather than from the standalone Reputation product.
 
 </details>
 

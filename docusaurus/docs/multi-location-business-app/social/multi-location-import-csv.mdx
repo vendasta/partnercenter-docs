@@ -5,6 +5,9 @@ sidebar_position: 2
 description: Bulk upload, localize, and schedule social posts using CSV in Multi-Location Social
 tags: [social, multi-location, import-csv, bulk-upload]
 keywords: [social media, multi-location social, import csv, schedule posts]
+brand: vendasta
+product: multi-location
+audience: partners
 ---
 
 # Import CSV
@@ -62,6 +65,9 @@ Previously, you could only schedule one social post at a time. This feature remo
 
 <img src={require('./img/multi-location-CSV-location.png').default} alt="CSV Upload Location Selection" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
+   :::note
+   If LinkedIn is selected, use the **Only LinkedIn business pages** toggle to control which LinkedIn accounts receive the post. When enabled, posts are sent to LinkedIn business pages only. When disabled, posts are sent to both personal profiles and business pages.
+   :::
 :::warning
 If two or more of the locations you choose share the same Facebook, Instagram, LinkedIn, or X connection, you can't save the post. You'll see:
 
@@ -234,5 +240,12 @@ The original multi-location content will be used without personalization.
 <summary>Why can't I save posts to some of the locations I chose?</summary>
 
 This happens when two or more of the chosen locations share the same Facebook, Instagram, LinkedIn, or X connection. Import CSV blocks saving in this case to prevent duplicate posts. Remove the shared connection from the other location(s), or remove the affected location, then continue.
+
+</details>
+
+<details>
+<summary>Does Social Marketing support CSV content uploads, and where is the feature available?</summary>
+
+Yes. CSV import works at the multi-location (main location) level so you can upload and schedule content across locations. It is not available at the single-location level.
 
 </details>

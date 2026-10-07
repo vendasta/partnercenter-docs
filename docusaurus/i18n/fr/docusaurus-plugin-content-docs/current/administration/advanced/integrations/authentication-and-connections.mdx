@@ -1,0 +1,57 @@
+---
+title: Authentification et connexions
+sidebar_label: Authentification et connexions
+description: Comprenez les intégrations basées sur clé API, SSO et gérées par le fournisseur. Configuration, gestion et FAQ.
+slug: /administration/advanced/integrations/authentication-and-connections
+sidebar_position: 1
+---
+
+Découvrez les trois modèles de connexion et comment travailler avec chacun.
+
+## Intégrations par clé API
+
+1. Accédez à `Administration` → `Integrations` → `Browse` et ouvrez une intégration marquée « API-Key Based ».
+2. Cliquez sur `Add Connection` et fournissez la clé API ou les identifiants.
+3. Configurez les paramètres selon vos besoins.
+
+Gérez les intégrations depuis la page `Integrations`; vérifiez les indicateurs de statut (Connected, Pending, Issue).
+
+## Intégrations basées sur le SSO
+
+1. Trouvez l'application dans `Integrations` et cliquez sur `Connect`.
+2. Remplissez tout formulaire préalable à la connexion.
+3. Suivez le flux SSO pour créer ou lier un compte et autoriser le partage de données.
+4. Gérez les paramètres depuis l'onglet `Manage` et les paramètres de connexion.
+
+## Intégrations gérées par le fournisseur
+
+Certaines intégrations sont configurées et maintenues par le fournisseur. Suivez le guide de configuration du fournisseur et surveillez le statut dans Business App.
+
+## Dépannage
+
+- Des clés API invalides ou des permissions manquantes sont des causes fréquentes d'échec.
+- Relancez le flux SSO pour réautoriser si l'accès a expiré.
+- Contactez le fournisseur si la configuration est gérée par le fournisseur.
+
+## FAQ
+
+<details>
+<summary>Quel modèle dois-je utiliser?</summary>
+
+Utilisez le modèle exigé par l'intégration spécifique. La clé API repose sur des identifiants, le SSO délègue l'authentification, et le mode géré par le fournisseur est pris en charge par celui-ci.
+
+</details>
+
+<details>
+<summary>Le SSO prend-il en charge l'usurpation d'identité du partenaire?</summary>
+
+Non. Vous vous authentifiez directement auprès du tiers pendant le SSO.
+
+</details>
+
+<details>
+<summary>Y a-t-il des bonnes pratiques de sécurité?</summary>
+
+Limitez l'accès au strict nécessaire, faites tourner les clés API et réautorisez les connexions lorsque le système vous le demande.
+
+</details>

@@ -1,13 +1,25 @@
 ---
-title: Delete accounts
+title: "How do I delete an account in Partner Center?"
 sidebar_label: Delete accounts
 sidebar_position: 6
-description: Guidelines and procedures for safely removing business accounts from your system
+description: "Delete a business account in Partner Center, what deletion removes, how billing commitments continue, and alternatives such as deactivation."
 tags: [account-deletion, account-removal, data-management]
 keywords: [delete-account, remove-business, account-cleanup, data-retention]
+brand: vendasta
+product: partner-center-core
+audience: partners
+content_type: how-to
+kb_id: KB-00197
+answer_snippet: "To delete an account in Partner Center, go to Accounts → Manage Accounts, open the account, click Edit Account, and click Delete Account at the bottom of the form. Deletion is permanent and removes all of the account's data."
+doc_owner: partner-center-core
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 ## What is account deletion?
+
+To delete an account in Partner Center, go to `Accounts` → `Manage Accounts`, open the account, click `Edit Account`, and click `Delete Account` at the bottom of the form. Deletion is permanent and removes all of the account's data.
 
 Account deletion is the permanent removal of business accounts from your Business App system. This process removes all associated data including user access, product history, reporting data, and account settings.
 
@@ -23,6 +35,27 @@ Account deletion may be necessary for:
 
 :::warning
 Account deletion is permanent and irreversible. All data associated with the account will be lost, including historical reporting data, user access records, and product configurations.
+:::
+
+## Do you actually need to delete the account?
+
+Most requests to "remove" an account are not deletion requests. A customer who has cancelled is usually better handled by stopping their products and taking them out of your active lists — that stops the billing and clears your working view while keeping the history you may need later.
+
+Find your situation before following any steps below:
+
+| What you want | What to do | Data kept? |
+|---|---|---|
+| A customer cancelled — stop billing them and get them out of my active list | Cancel their products, then remove the account from your active lists | **Yes** |
+| Stop one product but keep the account running | Cancel that product only | **Yes** |
+| Pause temporarily, expecting them back | Cancel products, leave the account in place | **Yes** |
+| A duplicate or test account is cluttering the system | Delete the account | No |
+| The business closed permanently and I have no retention obligation | Delete the account | No |
+
+- To cancel products, see [Cancel products](/accounts/manage-accounts/product-management#cancel-products) on the Manage products page.
+- To take an account out of your working views, see [Account Lists](/accounts/accounts-lists/).
+
+:::tip
+Deleting is only the right answer when you actively want the data gone. If you are removing an account because a customer left, cancel the products instead — deletion does not stop commitment billing anyway (see [Billing after deletion](#billing-after-deletion) below).
 :::
 
 ## What happens when you delete an account?
@@ -53,7 +86,7 @@ If you delete an account with products on active commitments, you will continue 
 
 If a market is deactivated, all accounts assigned to that market are automatically reassigned to the **default market** within the same Partner ID. The accounts themselves are not deleted.
 
-## How to delete individual accounts
+## How do I delete an individual account? {#how-to-delete-individual-accounts}
 
 ### Pre-deletion checklist
 
@@ -74,13 +107,13 @@ To delete a single account:
 3. **Click on the account name** to open account details
 4. Click `Edit Account`
 5. **Scroll to the bottom** of the edit form
-6. **Locate the deletion section** (usually marked with warning colors)
+6. **Locate the deletion section**
 7. **Read the deletion warning** carefully
-8. **Type confirmation text** if required (often the business name)
+8. **Confirm the deletion** — if you are prompted to type the business name or account ID, enter it exactly as shown
 9. Click `Delete Account` and confirm the action
 
 :::warning
-Some systems require typing the business name or account ID to confirm deletion. This prevents accidental deletions.
+The confirmation prompt exists to prevent accidental deletion. Once confirmed, the account and its data cannot be recovered — see [Recovery limitations](#recovery-limitations).
 :::
 
 ### Immediate post-deletion effects
@@ -90,9 +123,9 @@ After deletion:
 - Users lose access to Business App dashboards
 - Automated services and integrations stop
 - Account data becomes inaccessible
-- Billing processes are terminated
+- Billing does not stop: products on active commitments keep billing until the commitment period ends
 
-## How to handle account deletion requests
+## How do I handle account deletion requests? {#how-to-handle-account-deletion-requests}
 
 ### Customer-requested deletions
 
@@ -117,7 +150,7 @@ For business-initiated deletions:
 5. **Communicate with affected teams** before deletion
 6. **Execute deletion** during appropriate maintenance windows
 
-## Alternatives to account deletion
+## What are the alternatives to deleting an account? {#alternatives-to-account-deletion}
 
 ### Account deactivation
 
@@ -130,11 +163,14 @@ Instead of deletion, consider deactivation:
 - Reduces risk of accidental data loss
 
 **How to deactivate accounts:**
-1. Edit the account settings
-2. Change account status to "Inactive" or "Deactivated"
-3. Remove active products and services
-4. Disable user access
-5. Remove from active account lists
+
+There is no single "deactivate account" switch. Deactivation is the combination of these steps:
+
+1. **Cancel the account's active products** — see [Cancel products](/accounts/manage-accounts/product-management#cancel-products). This is what stops the services and the billing.
+2. **Remove the account from your active lists** — see [Account Lists](/accounts/accounts-lists/), so it no longer appears in your day-to-day views.
+3. **Remove user access if required** — see [Manage users](/accounts/manage-users/).
+
+The account and its history remain intact and can be brought back into use at any time by reactivating products.
 
 ### Account archiving
 
@@ -155,7 +191,7 @@ For temporary issues:
 3. **Maintain account structure** for easy reactivation
 4. **Set suspension duration** and review dates
 
-## How to manage duplicate account cleanup
+## How do I clean up duplicate accounts? {#how-to-manage-duplicate-account-cleanup}
 
 ### Identifying duplicate accounts
 
@@ -181,7 +217,7 @@ Common signs of duplicate accounts:
 - Use consistent naming conventions
 - Regular data audits to identify potential duplicates
 
-## Data recovery and backup considerations
+## What should I back up before deleting an account? {#data-recovery-and-backup-considerations}
 
 ### Pre-deletion data backup
 
@@ -202,6 +238,12 @@ After account deletion:
 - Integration connections must be recreated
 
 ## Frequently asked questions (FAQs)
+
+<details>
+<summary>A customer cancelled with us. How do I remove them from my customer list?</summary>
+
+You do not need to delete the account. Cancel their active products to stop the billing and the services, then remove the account from your active lists so it no longer appears in your working views. The account and its history stay intact in case they return or you need the records later. See [Do you actually need to delete the account?](#do-you-actually-need-to-delete-the-account) for the full comparison.
+</details>
 
 <details>
 <summary>Can I recover an account after deletion?</summary>
@@ -236,7 +278,7 @@ Consider business closure type: temporary closures may warrant deactivation, whi
 <details>
 <summary>Can I bulk delete multiple accounts at once?</summary>
 
-Most systems don't support bulk deletion due to the permanent nature of the action. Each account typically requires individual deletion confirmation to prevent accidental mass deletions.
+No. Because deletion is permanent, each account must be deleted individually with its own confirmation. If you are trying to clear out a batch of former customers, cancel their products and remove them from your active lists instead — see [Do you actually need to delete the account?](#do-you-actually-need-to-delete-the-account)
 </details>
 
 <details>

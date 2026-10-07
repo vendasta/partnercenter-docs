@@ -1,0 +1,142 @@
+---
+title: Access controls
+description: Cómo controlar quién en tu equipo puede ver Premium Reports y cómo restringir el acceso a informes individuales usando el modelo de uso compartido estilo Google Docs
+sidebar_position: 5
+---
+
+Premium Reports tiene dos capas de control de acceso que funcionan juntas:
+
+1. **Acceso a nivel de equipo**: un permiso en cada administrador que determina si puede ver Premium Reports y si puede cambiar quién tiene acceso.
+2. **Uso compartido por informe**: uso compartido estilo Google Docs en cada informe individual que te permite otorgar o restringir el acceso a personas específicas.
+
+Un usuario debe cumplir con ambas capas para ver un informe. Esta página explica cómo funciona cada capa y cómo configurarlas.
+
+## Capa 1: permiso de Premium Reports a nivel de equipo
+
+### Dónde encontrarlo
+
+El permiso a nivel de equipo se encuentra en cada administrador en [My Team](/administration/my-account/my-team/).
+
+1. Ve a `Partner Center` → `Administration` → [`My team`](https://partners.vendasta.com/my-team)
+2. Haz clic en el nombre de un administrador para abrir sus permisos
+3. Expande `Show more permissions`
+4. Busca el menú desplegable **Premium Reports**
+
+<img src={require('./img/access-controls-team-member-dropdown.png').default} alt="Premium Reports permission dropdown in the My Team edit panel" style={{width: '50%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Las tres opciones
+
+| Opción | Qué puede hacer el usuario |
+|---|---|
+| `No access to reports` | No puede abrir Premium Reports. |
+| `View all unrestricted reports` | Puede abrir cualquier informe compartido con todo el equipo. No puede cambiar quién tiene acceso. |
+| `Manage permissions for all unrestricted reports` | Puede abrir cualquier informe compartido con todo el equipo y puede cambiar su configuración de uso compartido por informe. Necesario para otorgar a otros usuarios acceso a los informes. |
+
+Los "informes sin restricciones" son informes que no se han limitado a personas específicas. Consulta [Cómo funcionan juntas las dos capas](#how-the-two-layers-work-together) más abajo.
+
+### Quién puede cambiar esta configuración
+
+Editar el permiso de Premium Reports de otro miembro del equipo sigue las mismas reglas que editar cualquier otro permiso de administrador en My Team: quien edita debe ser un administrador con el permiso [**Can create and manage admins**](/administration/my-account/my-team/permissions#can-create-and-manage-admins).
+
+### Valores predeterminados y limitaciones
+
+- Este menú desplegable solo está disponible para miembros del equipo con el rol de **admin**. Los vendedores y otros miembros del equipo que no son administradores no pueden recibir acceso a Premium Reports.
+- Los administradores nuevos se crean con `View all unrestricted reports` de forma predeterminada.
+- El menú desplegable está **deshabilitado** para administradores cuyo acceso a mercados está restringido a [mercados](/administration/platform-settings/customize/market-settings) específicos. Para otorgar acceso a Premium Reports, el administrador debe tener acceso a `All markets`.
+
+:::info
+Cambiar este menú desplegable tiene efecto la próxima vez que el usuario cargue Premium Reports.
+:::
+
+## Capa 2: uso compartido por informe
+
+Una vez que un administrador tiene acceso a nivel de equipo, puedes restringir aún más cada informe individual mediante el uso compartido por informe, de forma similar a cómo se comparten las páginas de Google Docs y Confluence.
+
+### Dónde encontrarlo
+
+Abre cualquier Premium Report y luego:
+
+- Haz clic en el **ícono de candado** en la barra de herramientas del informe, o
+- Haz clic en el menú de tres puntos en la parte superior derecha y elige `Edit permissions`
+
+El ícono de candado también indica de un vistazo el modo de uso compartido actual del informe: un candado rojo significa que el informe está restringido a personas específicas.
+
+### Los tres modos de uso compartido
+
+<img src={require('./img/access-controls-permissions-modes.png').default} alt="Per-report Permissions dialog showing the three sharing modes" style={{width: '50%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+| Modo | Quién puede ver | Quién puede gestionar permisos |
+|---|---|---|
+| `Any admin can view and manage` | Cualquier administrador con `View` o `Manage permissions` | Cualquier administrador con `Manage permissions` |
+| `Any admin can view, only some can manage` | Cualquier administrador con `View` o `Manage permissions` | Solo las personas específicas indicadas |
+| `Only specific people can view or manage` | Solo las personas específicas indicadas | Solo las personas específicas indicadas con `Can manage` |
+
+Los dos primeros modos dejan el informe **sin restricciones**: cualquier administrador con acceso a nivel de equipo puede abrirlo. El tercer modo hace que el informe quede **restringido**: ni siquiera los administradores con acceso a nivel de equipo pueden abrirlo a menos que estén en la lista.
+
+### Agregar personas específicas
+
+Cuando el modo es `Any admin can view, only some can manage` o `Only specific people can view or manage`, puedes agregar usuarios individuales a la lista de acceso.
+
+<img src={require('./img/access-controls-permissions-specific-people.png').default} alt="Adding specific users to a per-report access list" style={{width: '50%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+1. Escribe el nombre de un miembro del equipo en el campo `Type a user name`
+2. Elige un nivel de acceso:
+   - **Can view**: el usuario puede abrir el informe
+   - **Can manage**: el usuario puede abrir el informe y cambiar su configuración de uso compartido
+3. Haz clic en `Add`
+4. Haz clic en `Save` para aplicar los cambios
+
+Repite el proceso para agregar más usuarios. Usa `Remove` junto a una entrada existente para revocar el acceso.
+
+:::tip
+Siempre se te agrega a la lista de acceso con **Can manage** al guardar, para que no puedas quedar accidentalmente sin acceso a un informe.
+:::
+
+### Las filas "All admins with report ... access"
+
+Dos filas siempre aparecen en la parte inferior de la lista de acceso:
+
+<img src={require('./img/access-controls-permissions-default-open.png').default} alt="Default Permissions dialog with All admins group rows" style={{width: '50%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+- `All admins with report view access`: representa a todos los administradores cuyo permiso a nivel de equipo es `View all unrestricted reports`.
+- `All admins with report manage access`: representa a todos los administradores cuyo permiso a nivel de equipo es `Manage permissions for all unrestricted reports`.
+
+Su acceso efectivo depende del modo de uso compartido:
+
+| Modo de uso compartido | All admins with **view** access | All admins with **manage** access |
+|---|---|---|
+| Any admin can view and manage | Puede ver | Puede gestionar |
+| Any admin can view, only some can manage | Puede ver | Puede ver |
+| Only specific people can view or manage | Sin acceso | Sin acceso |
+
+Estas filas te permiten ver de un vistazo qué puede hacer el resto de tu equipo sin tener que enumerar cada administrador individualmente.
+
+## Cómo funcionan juntas las dos capas {#how-the-two-layers-work-together}
+
+Un usuario puede abrir un Premium Report solo si se cumplen **ambas** condiciones:
+
+1. **A nivel de equipo:** su permiso en My Team es `View all unrestricted reports` o `Manage permissions for all unrestricted reports`.
+2. **Por informe:** el modo de uso compartido del informe es `Any admin can view and manage` o `Any admin can view, only some can manage` *(lo que lo hace "sin restricciones")*, **o** la persona está indicada por nombre en la lista de acceso del informe.
+
+Para cambiar la configuración de uso compartido de un informe, un usuario también debe tener `Can manage` en ese informe específico, ya sea mediante el modo `Any admin can view and manage` junto con el permiso a nivel de equipo `Manage permissions`, o estando indicado explícitamente con acceso `Can manage`.
+
+## Solución de problemas
+
+**P: Estoy tratando de agregar a un compañero de equipo a un informe y aparece atenuado con "Does not have access to reports".**
+
+R: El permiso de Premium Reports a nivel de equipo de ese compañero está configurado como `No access to reports`. Antes de poder otorgarle acceso a un informe específico, actualiza su permiso en My Team a al menos `View all unrestricted reports`.
+
+**P: El menú desplegable de Premium Reports aparece atenuado en My Team.**
+
+R: El administrador que estás editando está restringido a [mercados](/administration/platform-settings/customize/market-settings) específicos. Premium Reports requiere acceso a `All markets`. Actualiza primero su acceso a mercados y luego configura el permiso de Premium Reports.
+
+**P: Un miembro del equipo puede abrir un informe pero no puede cambiar su configuración de uso compartido.**
+
+R: Es posible que su permiso a nivel de equipo esté configurado como `View all unrestricted reports` (que es solo de vista) o que el modo del informe sea `Any admin can view, only some can manage` u `Only specific people can view or manage` y no esté en la lista con `Can manage`. Agrégalo explícitamente con `Can manage`, o cambia su permiso a nivel de equipo a `Manage permissions for all unrestricted reports` si corresponde.
+
+## Artículos relacionados
+
+- [Premium Reports overview](./index.mdx): primeros pasos con Premium Reports
+- [Financial reports](./financial-reports.mdx): análisis de facturación y cuentas por cobrar
+- [Sales performance reports](./sales-performance-reports.mdx): análisis de actividad de ventas y pipeline
+- [Operations reports](./operations-reports.mdx): monitoreo de conexiones de cuentas y automatización

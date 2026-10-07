@@ -1,0 +1,319 @@
+---
+title: Self-Signup Workflow – Enable Customer Self-Registration
+sidebar_label: Self-Signup
+description: Configura el autorregistro para permitir que los clientes creen sus propias cuentas de Business App y se incorporen por sí mismos.
+tags:
+  - business-app
+  - self-signup
+  - onboarding
+  - customer-acquisition
+keywords:
+  - self signup
+  - self-signup
+  - customer registration
+  - add your clients
+  - create account
+---
+
+## Introducción
+
+El autorregistro permite que tus clientes creen sus propias cuentas de Business App sin intervención manual. Comparte un enlace de registro o habilita el registro en tu página de inicio de sesión, y los nuevos clientes podrán incorporarse por sí mismos en cualquier momento.
+
+## ¿Qué es el autorregistro?
+
+El autorregistro es una función que permite a los usuarios finales registrarse para obtener una cuenta de Business App por su cuenta. Cuando un cliente se registra, se crea un nuevo registro de empresa en tu CRM con el Record Source establecido en "Self Signup", lo que facilita identificar y automatizar el seguimiento de estos clientes.
+
+Puedes compartir el enlace de registro directamente, incluirlo en materiales de marketing o habilitar una opción **Create Account** en tu página de inicio de sesión de Business App.
+
+## ¿Qué información se recopila durante el autorregistro?
+
+El autorregistro está diseñado para reducir la fricción y hacer que los clientes ingresen a Business App lo más rápido posible. El formulario de registro recopila la información mínima requerida:
+
+- **Correo de contacto**: la dirección de correo del usuario principal
+- **Nombre de la empresa**: se usa para buscar el negocio a través de Google Places
+
+### Registrarse con Google o Microsoft
+
+Los clientes pueden iniciar el registro de dos maneras:
+
+- **Ingresar una dirección de correo** directamente en el formulario de registro, o
+- **Sign up with Google** o **Sign up with Microsoft** usando una cuenta existente
+
+Cuando un cliente elige **Sign up with Google** o **Sign up with Microsoft**, autoriza Business App en la pantalla de inicio de sesión de Google o Microsoft, y su dirección de correo verificada se usa para crear la cuenta. Dado que el proveedor de la cuenta ya confirmó el correo, el cliente omite el paso de verificación de correo por separado y entra directamente al flujo de registro. Aun así, confirma el nombre de su empresa para que la plataforma pueda enriquecer el perfil del negocio mediante Google Places.
+
+:::info
+La dirección de correo es el único dato que se obtiene de la cuenta de Google o Microsoft; no se accede a contactos, calendario ni otros datos.
+:::
+
+:::tip
+El registro social elimina la creación de contraseña y la verificación de correo del flujo, lo que reduce la fricción y puede mejorar la finalización del registro. Los clientes pueden volver más tarde e iniciar sesión con la misma cuenta de Google o Microsoft desde la página de inicio de sesión de tu Business App.
+:::
+
+### Enriquecimiento automático de datos del negocio
+
+Cuando un cliente ingresa el nombre de su empresa, el sistema busca en Google Places para encontrar su negocio:
+
+- **Si se encuentra mediante Google Places**: los datos del negocio se completan automáticamente, incluyendo dirección, número de teléfono, horario comercial y otra información del perfil
+- **Si no se puede obtener un sitio web o número de teléfono** (el negocio no se encuentra, no tiene un perfil de Google Business, o su perfil no incluye esos datos), se le pide al cliente que proporcione opcionalmente su sitio web y número de teléfono
+
+Este enfoque equilibra la facilidad del registro con la captura de información valiosa del negocio.
+
+### Incorporación inmediata de IA
+
+Cuando un cliente completa el registro, la plataforma configura la IA de dos maneras:
+
+**Detrás de escena**, cuando se capturan datos del negocio desde Google Places o se proporciona un sitio web, el sistema automáticamente:
+
+- Agrega información de **Business Profile** a la base de conocimiento de IA
+- Agrega **Website Knowledge** rastreando el sitio web proporcionado
+- Habilita el **AI Receptionist** con este conocimiento de inmediato
+
+Esto significa que la IA está lista para funcionar en el momento en que el cliente llega a Business App.
+
+**En el flujo de registro**, después de que el cliente verifica su correo (o se registra con una cuenta de Google o Microsoft, lo que omite la verificación), se le muestra una vista previa en vivo de su AI Receptionist, ya entrenado con el perfil del negocio y los datos del sitio web capturados durante el registro. Puede chatear con él de inmediato y ver cómo responde *como su negocio* antes incluso de llegar a la página de inicio de Business App. Esto les da a los nuevos clientes un momento "wow" instantáneo y demuestra el valor de la IA desde su primera interacción.
+
+La AI Employee Preview se puede activar o desactivar por mercado en `Customize Business App` → `Add Your Clients`. Consulta [Add Your Clients Settings](/administration/platform-settings/customize-business-app/add-your-customers-settings#how-do-i-show-new-signups-a-preview-of-their-ai-receptionist) para más detalles.
+
+:::tip
+La incorporación automática de IA ayuda a demostrar el valor de inmediato. Los clientes pueden probar su AI Receptionist en Business App tan pronto como completan el registro, y con la AI Employee Preview habilitada, experimentan la IA incluso antes de terminar la incorporación.
+:::
+
+## ¿Por qué es importante el autorregistro?
+
+El autorregistro permite:
+
+- **Adquisición automatizada de clientes**: los clientes pueden registrarse sin esperar a que tú crees su cuenta
+- **Menos trabajo manual**: no es necesario agregar manualmente cuentas para cada cliente nuevo
+- **Disponibilidad 24/7**: los clientes pueden registrarse en cualquier momento, incluso fuera del horario comercial
+- **Crecimiento escalable**: gestiona un aumento de registros sin carga administrativa adicional
+- **Interacción inmediata**: los clientes pueden empezar a explorar tus ofertas de inmediato
+
+## Qué puedes hacer con el autorregistro
+
+Con el autorregistro, puedes:
+
+- Compartir un enlace de registro único por correo, redes sociales o tu sitio web
+- Habilitar una opción **Create Account** en la página de inicio de sesión de Business App
+- Configurar diferentes experiencias de registro por mercado
+- Automatizar flujos de incorporación para los clientes que se autorregistran
+- Rastrear las conversiones de autorregistro usando el campo Record Source
+- Presentar [Featured Packages](./featured-packages) para impulsar actualizaciones durante la incorporación
+- Mostrar a los nuevos registros una vista previa en vivo de su AI Receptionist, entrenado con la información de su negocio, justo después de la verificación de correo
+
+## Cómo configurar el autorregistro
+
+### Obtén tu enlace de registro
+
+1. En Partner Center, ve a `Accounts` → `Manage Business App`.
+2. Selecciona **Customize Business App**.
+3. Desplázate hasta la sección **Add Your Clients**.
+4. Busca el área **Self Sign-Up**.
+5. Copia el **Sign-Up Link** que se muestra.
+
+El enlace de registro sigue este formato:
+```
+{your-business-app-url}/public/business/{partner-id}/{market-id}/sign-up
+```
+
+:::tip
+Puedes navegar directamente a esta página en [partners.vendasta.com/customize-business-app/add-your-customers](https://partners.vendasta.com/customize-business-app/add-your-customers).
+:::
+
+### Habilita Create Account en la página de inicio de sesión
+
+Para que los clientes se registren directamente desde tu página de inicio de sesión de Business App:
+
+1. Navega a `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App`.
+2. Desplázate hasta la sección **Add Your Clients**.
+3. Habilita la casilla **Show Create Account**.
+4. Guarda los cambios.
+
+Cuando está habilitado, los clientes que visiten tu página de inicio de sesión de Business App verán una opción **Create Account** junto al formulario de inicio de sesión.
+
+:::info
+La opción **Show Create Account** se configura a nivel de partner y se aplica a tu mercado predeterminado. Para configuraciones específicas de mercado, selecciona el mercado correspondiente antes de hacer cambios.
+:::
+
+## Cómo activar el autorregistro para clientes de pequeñas empresas
+
+Sigue estos pasos para configurar un flujo completo de registro y compra de autoservicio. Esta guía te lleva a través de las plantillas de automatización integradas de la plataforma y las campañas de correo recomendadas para que puedas ponerte en marcha rápidamente.
+
+### Paso 1: Configura Featured Packages
+
+Antes de impulsar los registros, asegúrate de que los nuevos clientes tengan algo que comprar. [Featured Packages](./featured-packages) aparecen en la página de inicio de Business App para los clientes sin productos activos, dándoles una ruta clara desde el registro hasta la compra.
+
+1. En Partner Center, ve a `Accounts` → `Manage Business App` → `Customize Business App`.
+2. Desplázate hasta **Add Your Clients** y configura tus **Featured Packages**.
+3. Selecciona paquetes relevantes para los clientes que se autorregistran; comienza con tus ofertas más populares o de nivel de entrada.
+
+### Paso 2: Coloca tu enlace de registro
+
+Obtén tu enlace de registro desde `Customize Business App` → `Add Your Clients` → `Self Sign-Up` (consulta [Cómo configurar el autorregistro](#cómo-configurar-el-autorregistro) más arriba) y agrégalo donde los prospectos lo encontrarán:
+
+- **Tu sitio web**: agrega un botón de llamada a la acción en tu página de inicio, pie de página o una página de destino dedicada
+- **Firmas de correo**: incluye el enlace en las firmas de correo de tu equipo
+- **Redes sociales**: agrégalo a los enlaces de tu biografía en LinkedIn, Facebook o Google Business Profile
+- **Campañas de marketing**: úsalo en anuncios, boletines o directorios de partners
+- **Página de inicio de sesión**: habilita el interruptor **Show Create Account** para que los visitantes de la página de inicio de sesión de tu Business App puedan registrarse directamente
+
+:::tip
+Crea una página de destino dedicada que explique tus servicios e incluya el enlace de registro como la llamada a la acción principal. Esto te da una sola URL para promocionar en todos los canales.
+:::
+
+### Paso 3: Activa la automatización de la campaña de registro
+
+La plataforma incluye una plantilla de automatización preconstruida que gestiona automáticamente a los nuevos clientes que se autorregistran.
+
+1. En Partner Center, ve a **Automations**.
+2. Haz clic en **Automation Templates**.
+3. Busca la plantilla **Signup campaign | Drive self-serve revenue** y haz clic en **Use template**.
+4. Configura la plantilla:
+   - **Owner assignment**: elige qué vendedor o equipo debe asignarse a los nuevos clientes que se autorregistran
+   - **Email campaign**: selecciona la campaña **Self Signup - Welcome** (consulta el Paso 5) o elige la tuya propia
+5. Guarda y activa la automatización.
+
+Esta automatización se activa cuando se crea una empresa con el origen **Self Signup**. Asigna un responsable/vendedor y envía la campaña de correo de bienvenida elegida, dándole a cada nuevo registro atención inmediata sin trabajo manual.
+
+### Paso 4: Activa la automatización de compras y carritos abandonados
+
+Una segunda plantilla de automatización gestiona lo que sucede después de que un cliente que se autorregistra interactúa con tu tienda.
+
+1. En **Automations**, haz clic en **Automation Templates**.
+2. Busca la plantilla **Purchases & abandoned carts for self serve** y haz clic en **Use template**.
+3. Configura la plantilla:
+   - **Purchased branch**: selecciona una campaña de incorporación para enviar después de una compra exitosa. Usa **Purchase Complete - Generic** o **Purchase - Conversations AI Setup** de las Campañas recomendadas, o crea la tuya propia.
+   - **Not purchased branch**: selecciona una campaña de carrito abandonado. Usa **Purchase Incomplete - Generic** de las Campañas recomendadas, o crea la tuya propia.
+4. Guarda y activa la automatización.
+
+Esta automatización se activa cuando un usuario agrega, elimina o actualiza un artículo en su carrito de compras. Espera 30 minutos para ver si la compra se completa y luego envía la campaña correspondiente según el resultado.
+
+:::tip
+Agrega notificaciones en cada rama para alertar a tus equipos de ventas y de éxito. Así, tu equipo sabe cuándo un cliente completa una compra o abandona su carrito y puede hacer un seguimiento personal si es necesario.
+:::
+
+### Paso 5: Configura las campañas de correo
+
+La plataforma ofrece campañas de correo recomendadas diseñadas para el flujo de autoservicio. Encuéntralas en `Partner Center` → `Email Campaigns` → pestaña `Recommended Campaigns`.
+
+| Campaña | Propósito | Se usa con |
+|----------|---------|----------|
+| **Self Signup - Welcome** | Da la bienvenida a los nuevos clientes que se autorregistran, presenta tus servicios y los guía para comenzar | Automatización de campaña de registro (Paso 3) |
+| **Purchase Complete - Generic** | Incorpora a los clientes después de una compra exitosa | Automatización de compras — rama de compra realizada (Paso 4) |
+| **Purchase - Conversations AI Setup** | Guía a los clientes en la configuración de conversaciones impulsadas por IA después de la compra | Automatización de compras — rama de compra realizada (Paso 4) |
+| **Purchase Incomplete - Generic** | Reengancha a los clientes que agregaron artículos a su carrito pero no completaron la compra | Automatización de compras — rama de compra no realizada (Paso 4) |
+
+Para usar una campaña recomendada:
+
+1. Ve a `Email Campaigns` → `Recommended Campaigns`.
+2. Haz clic en el nombre de la campaña para obtener una vista previa.
+3. Úsala tal cual, o clónala para personalizar el contenido según tu marca.
+
+### Paso 6: Supervisa y optimiza
+
+Una vez que tu flujo de autoservicio esté activo, monitorea el rendimiento y ajusta:
+
+- **Volumen de registros**: filtra tu lista de cuentas por **Record Source** = "Self Signup" para ver cuántos clientes están llegando
+- **Actividad de carrito y compra**: revisa el historial de ejecución de automatizaciones en **Automations** para ver cuántos clientes están comprando frente a abandonando carritos
+- **Rendimiento del correo**: revisa las tasas de apertura y clics de tus campañas en **Email Campaigns**
+- **Featured Packages**: ajusta la selección de tus paquetes según lo que convierte; prueba diferentes ofertas o precios para mejorar la adopción
+
+## Cómo crear automatizaciones personalizadas
+
+Si necesitas más control más allá de las plantillas preconstruidas, puedes crear automatizaciones desde cero.
+
+### Configura una automatización personalizada
+
+1. En Partner Center, ve a **Automations**.
+2. Haz clic en **Create Automation**.
+3. Selecciona el disparador **A company is created**.
+4. Agrega una condición para filtrar por **Record Source** igual a **Self Signup**.
+5. Agrega las acciones que desees.
+
+### Acciones de automatización adicionales a considerar
+
+- **Crear una tarea de seguimiento**: programa una llamada de seguimiento o una demostración
+- **Agregar a una lista**: organiza a los clientes que se autorregistran para campañas dirigidas
+- **Crear una oportunidad**: rastrea el ingreso potencial de cada cliente que se autorregistra
+
+Para instrucciones detalladas, consulta la [descripción general de Automations](/automations/) y la [referencia de disparadores de automatización](/automations/my-automations/automation-triggers-reference).
+
+## Consejos y mejores prácticas
+
+### Usa configuraciones específicas por mercado
+
+Si atiendes a diferentes segmentos de clientes, configura los ajustes de autorregistro por mercado:
+
+- Diferentes enlaces de registro para cada mercado
+- Featured Packages específicos por mercado
+- Flujos de automatización adaptados según el mercado
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Dónde encuentro el enlace de autorregistro?</summary>
+
+Navega a `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Add Your Clients`. El enlace de registro se muestra en la sección **Self Sign-Up**.
+</details>
+
+<details>
+<summary>¿Pueden los clientes registrarse sin un enlace directo?</summary>
+
+Sí. Habilita la opción **Show Create Account** para agregar un enlace de registro a la página de inicio de sesión de tu Business App. Los clientes pueden entonces hacer clic en **Create Account** para registrarse.
+</details>
+
+<details>
+<summary>¿Pueden los clientes registrarse con una cuenta de Google o Microsoft?</summary>
+
+Sí. En el formulario de registro, los clientes pueden ingresar una dirección de correo o elegir **Sign up with Google** o **Sign up with Microsoft**. Cuando usan una cuenta de Google o Microsoft, se usa la dirección de correo verificada de esa cuenta para crear su cuenta de Business App, y omiten el paso de verificación de correo por separado. Solo se usa la dirección de correo; no se accede a ningún otro dato de la cuenta. Los clientes pueden volver más tarde e iniciar sesión con la misma cuenta desde la página de inicio de sesión de tu Business App.
+</details>
+
+<details>
+<summary>¿Cómo identifico a los clientes que se registraron por su cuenta?</summary>
+
+Los clientes que se autorregistran tienen su Record Source establecido en "Self Signup" en el CRM. Puedes filtrar cuentas o crear automatizaciones basadas en este campo.
+</details>
+
+<details>
+<summary>¿Puedo tener diferentes enlaces de registro para diferentes mercados?</summary>
+
+Sí. Cada mercado tiene su propio enlace de registro. Selecciona el mercado en **Customize Business App** para ver su URL de registro específica.
+</details>
+
+<details>
+<summary>¿Qué sucede cuando un cliente completa el autorregistro?</summary>
+
+Se crean una nueva empresa y un usuario en tu CRM. El Record Source de la empresa se establece en "Self Signup". Si tienes automatizaciones configuradas para este disparador, se ejecutarán automáticamente.
+</details>
+
+<details>
+<summary>¿Puedo personalizar lo que ven los clientes después de registrarse?</summary>
+
+Sí. Configura [Featured Packages](./featured-packages) para presentar opciones de actualización. También puedes personalizar la experiencia de Business App en la configuración de **Customize Business App**.
+</details>
+
+<details>
+<summary>¿Qué información recopila el formulario de autorregistro?</summary>
+
+El formulario recopila el correo de contacto y el nombre de la empresa. Si el negocio se encuentra mediante Google Places, se completan automáticamente datos adicionales del negocio (dirección, teléfono, horario). Si no se puede obtener un sitio web o número de teléfono del perfil de Google Business del negocio, o el negocio no tiene uno, se le pide al cliente que proporcione opcionalmente su sitio web y número de teléfono.
+</details>
+
+<details>
+<summary>¿Por qué el autorregistro solo pide información mínima?</summary>
+
+Reducir los campos del formulario minimiza la fricción y aumenta las tasas de finalización del registro. Los datos del negocio se enriquecen automáticamente mediante la búsqueda en Google Places, por lo que los clientes no necesitan ingresarlos manualmente.
+</details>
+
+<details>
+<summary>¿El autorregistro configura las funciones de IA automáticamente?</summary>
+
+Sí, de dos maneras:
+
+- **AI Knowledge Base y AI Receptionist:** cuando se capturan datos del negocio desde Google Places o se proporciona un sitio web, el sistema automáticamente agrega esta información a la base de conocimiento de IA y habilita el AI Receptionist. Los clientes pueden empezar a usar las funciones de IA inmediatamente después del registro.
+- **AI Employee Preview:** después de verificar su correo, a los nuevos registros se les muestra una vista previa de chat en vivo de su AI Receptionist, ya entrenado con el perfil del negocio y los datos del sitio web capturados durante el registro. Pueden chatear con él como su propia IA antes de llegar a la página de inicio de Business App. Esto se puede activar o desactivar por mercado en `Customize Business App` → `Add Your Clients`.
+</details>
+
+<details>
+<summary>¿Qué pasa si el negocio del cliente no se encuentra en Google Places?</summary>
+
+Si no se puede obtener un sitio web o número de teléfono del perfil de Google Business del negocio, o el negocio no tiene uno, se le pide al cliente que proporcione opcionalmente su sitio web y número de teléfono. El sistema usa el sitio web para completar la base de conocimiento de IA en su lugar.
+</details>

@@ -13,6 +13,9 @@ keywords:
   - page visibility
   - business app pages
   - customize navigation
+brand: vendasta
+product: partner-center-core
+audience: partners
 ---
 
 The Pages section in Customize Business App controls which pages customers see in their Business App navigation and configures page-specific features. You can show or hide entire pages and fine-tune individual page settings.
@@ -21,11 +24,11 @@ The Pages section in Customize Business App controls which pages customers see i
 
 ## How do I access page settings?
 
-Navigate to `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Pages`, then select the page you want to configure.
+Navigate to `Partner Center` → `Administration` → `Customize Business App` → `Pages`, then select the page you want to configure.
 
 ## Understanding `Show this page`
 
-Most pages have a `Show this page` toggle that controls whether the page appears in customers' Business App navigation.
+Most pages have a `Show this page` checkbox that controls whether the page appears in customers' Business App navigation. Tick it to show the page, clear it to hide the page.
 
 **What happens when you hide a page:**
 - The page is removed from the customer's navigation menu
@@ -78,44 +81,26 @@ The `Recent Activity` section shows a feed of recent actions and events across t
 **When to show:** Customers want to see what's happening across their business
 **When to hide:** You want a cleaner, more focused dashboard
 
+### Should I show the Next steps card?
+
+The `"Next steps" card` (`showGetStarted`) setting controls the checklist of setup tasks on Home — connecting Google, adding web chat, registering a texting number, and so on. Items clear as each task is completed or dismissed. See [the AI onboarding experience](/business-app/ai-onboarding-experience#next-steps-cards) for what the cards contain.
+
+**When to show:** You want customers guided through setup inside Business App
+**When to hide:** You onboard customers through other channels, such as calls or custom training
+
+The Home page also carries the `"AI has done the work" card` and `"Recommended for your business" cards` settings — both covered in [the AI onboarding experience](/business-app/ai-onboarding-experience#how-partners-customize-what-smbs-see).
+
 ---
 
-## Get started page settings
+## Where the Get Started settings went
 
-The Get Started page guides new customers through initial setup steps.
+`Pages` no longer has a `Get Started` entry — opening that address takes you to `Pages` → `Home` instead.
 
-`Show this page` (`showGetStarted`)
-Controls whether customers see the Get Started onboarding page.
+Onboarding guidance for new customers is now the **Next steps** card on Home, controlled by the `"Next steps" card` checkbox described above. That checkbox uses the same `showGetStarted` setting as the old page, so whatever you had configured carries over.
 
-### When should I show the Get Started page?
-
-Show this page when:
-- You want to guide customers through initial setup
-- Customers need help connecting accounts and configuring features
-- You're onboarding new customers who need orientation
-
-Hide this page when:
-- Customers are already set up and don't need onboarding guidance
-- You provide onboarding through other channels (calls, custom training)
-
-### How do I add a custom onboarding video?
-
-1. Enable the `Onboarding video` checkbox.
-2. Enter a YouTube video URL in the `Custom onboarding video` field.
-3. Click `Save`.
-
-The custom video replaces the default onboarding video shown to customers.
-
-:::tip
-Create a video that introduces your brand and explains how customers should use your customized Business App experience.
+:::info
+The custom onboarding video and Customer Journey settings that lived on the old Get Started tab are no longer configurable from Customize Business App.
 :::
-
-### What is the Customer Journey section?
-
-The `Customer Journey` section displays an interactive diagram showing key stages that people go through to become your customer's customer. Customers can select stages to access tailored growth strategies.
-
-**When to show:** Customers benefit from understanding and optimizing their customer acquisition funnel
-**When to hide:** The customer journey concept doesn't align with your service offering
 
 ---
 
@@ -150,7 +135,7 @@ The **Contact Us Modal** group on this page controls what customers see when the
 
 **How to configure the support center link:**
 
-1. Go to `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Pages` → `Inbox/Messages`
+1. Go to `Partner Center` → `Administration` → `Customize Business App` → `Pages` → `Inbox/Messages`
 2. Under `Contact Us Modal`, check `Show a support center link`
 3. Enter the destination in `Support center URL` (must start with `https://`)
 4. Optionally customize `Button text` (defaults to "Visit support center")
@@ -208,36 +193,7 @@ Show this page when customers have AI features enabled and would benefit from AI
 
 ### Choosing which AI Employees appear
 
-Below the page toggle, a list shows every AI Employee your customers could have. A checkbox on each row controls whether that AI Employee's card can appear on the [AI Workforce page](/ai/ai-workforce/upgrading-ai-employees) in Business App.
-
-Each row shows the AI Employee's avatar, name, and description, along with a `Beta` badge where it applies. A `Visible` or `Hidden` label next to the checkbox shows the current state:
-
-- **Checked (`Visible`)**: the AI Employee's card can appear on the AI Workforce page.
-- **Unchecked (`Hidden`)**: the card never appears on the AI Workforce page, for any customer in that market.
-
-A search box, a count of currently visible AI Employees, and `Show all` / `Hide all` buttons sit above the list. New AI Employees are `Visible` by default — hide one only if you're not ready for customers to ask about it.
-
-#### Market defaults and overrides
-
-This list follows the same partner-default-versus-market pattern as other settings on this page:
-
-- Configure defaults at the partner level using `All Markets`.
-- Override for a specific market by selecting it from the dropdown.
-- A market with no override of its own shows disabled rows using the partner default. To use `Show all` or `Hide all` on that market, turn off the market default first.
-
-#### What hiding an AI Employee does
-
-Hiding an AI Employee removes its card from the AI Workforce page and disables it for customers in that market:
-
-- **It stops responding.** The AI Employee no longer responds to messages sent to it.
-- **It can't be assigned.** Customers can't select it as an option for a web chat widget, or assign it knowledge.
-- **Product availability is unaffected.** What customers can buy, and at what edition or price, doesn't change.
-
-When you hide an AI Employee that was previously visible, a warning repeats these points before you save. Changes may take a short time to reach the AI Workforce page after you save.
-
-:::tip
-Use this to pause an AI Employee for customers in a market, whether or not they've already configured it.
-:::
+Below the page toggle, a list lets you remove individual AI Employees from the [AI Workforce page](/ai/ai-workforce/upgrading-ai-employees) in Business App, market by market. Hiding an AI Employee disables it for that market, not just its card. See the dedicated [Hiding AI Employees](/ai/ai-workforce/hiding-ai-employees) documentation for the full control, including market defaults, the Chat receptionist and Custom employee special cases, and what your clients see.
 
 ---
 
@@ -400,7 +356,7 @@ In most cases, yes. Hiding a page removes it from navigation but doesn't disable
 
 The page visibility setting controls customer access, not feature functionality.
 
-The exception is hiding an individual AI Employee under [AI Assistant page settings](#ai-assistant-page-settings): that does disable it. See [What hiding an AI Employee does](#what-hiding-an-ai-employee-does).
+The exception is hiding an individual AI Employee under [AI Assistant page settings](#ai-assistant-page-settings): that does disable it. See [Hiding AI Employees](/ai/ai-workforce/hiding-ai-employees).
 </details>
 
 <details>
@@ -447,4 +403,11 @@ Hidden pages are not visible to customers, so they won't know to request them. I
 <summary>Do hidden pages affect billing or product access?</summary>
 
 No. Page visibility only controls the navigation interface. Product access, billing, and feature functionality are managed separately through product assignments and account settings.
+</details>
+
+<details>
+<summary>How do I hide the Store or Executive Report sections from all clients?</summary>
+
+Go to `Accounts` → `Manage Business App` → `Customize Business App`. Uncheck `Store` and save. This hides it for everyone, and you can turn it back on later. You can also remove whole Executive Report sections (for example Websites, or Leads if you do not sell web chat) so clients do not see sections full of zeros.
+
 </details>

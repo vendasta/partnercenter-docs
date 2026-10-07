@@ -5,6 +5,9 @@ sidebar_position: 3
 description: Step-by-step guide to building custom AI capabilities that connect AI Employees to external systems using tools and APIs.
 tags: [ai-capabilities, custom-capabilities, ai-workforce, integrations]
 keywords: [custom capabilities, AI capabilities, tools, integrations, API, AI Employees, prompts, testing]
+brand: vendasta
+product: ai-workforce
+audience: partners
 ---
 
 import { AISparkleIcon, GraduationCapIcon } from '@site/src/components/Icons';
@@ -39,12 +42,12 @@ If an action can be performed via an API, it can likely become a custom capabili
 
 ### Step 1: access custom capability settings
 
-1. Navigate to <AISparkleIcon /> **AI** › **AI Workforce** in your Business App dashboard.
+1. Navigate to <AISparkleIcon /> `AI` → `Workforce` in your Business App dashboard.
 2. Select the AI Employee you want to enhance (this can be a pre-built AI Employee like Chat Receptionist or Voice Receptionist, or a Custom AI Employee you've created).
-3. Click the **Configure** button.
-4. Use the **Capabilities** tab to view and manage all available capabilities.
-5. Scroll down to the **Custom Capabilities** section.
-6. Click **Add a capability** to begin.
+3. Click `Configure` to open the AI Employee's `Configure` page.
+4. Open `Capabilities` to view and manage all available capabilities.
+5. Click `+ Add a capability`.
+6. Choose `+ New capability` to start building one of your own.
 
 :::tip Custom Capabilities Work Across All AI Employees
 Custom capabilities can be used with both pre-built AI Employees (Chat Receptionist, Voice Receptionist) and Custom AI Employees you create. This means you can build a custom capability once and use it across multiple AI Employees.
@@ -61,8 +64,8 @@ You can create entirely custom AI Employees with specialized capabilities. Custo
 - You need industry-specific knowledge and capabilities
 
 **Basic Steps:**
-1. In the AI Workforce section, click **Create** 
-2. Set up the basic profile (name, avatar, purpose)
+1. On the `Workforce` page, click `Create` 
+2. Set up the basic profile (name, avatar, role)
 3. Configure communication channels (web chat, SMS, phone, etc.)
 4. Add knowledge sources (website, documents, custom text)
 5. Add both built-in and custom capabilities
@@ -103,11 +106,10 @@ Consider the prompt as instructions for when you hire an employee. Be specific a
 
 ### Step 4: configure tools
 
-1. Click **Add Tool** to define the technical implementation.
-2. Choose your tool type:
-   - **Import from cURL**: Import existing API configurations
-   - **Manual configuration**: Set up custom API calls
-   - **MCP Connection**: Connect to external systems via Model Context Protocol
+1. Click `+ New tool` to define the technical implementation.
+2. Choose how to set the tool up:
+   - `Generate from cURL`: build the tool from a working API call
+   - Manual configuration: fill in the API call fields yourself
 3. Fill in the required tool fields (see [Tool Configuration Reference](#tool-configuration-reference)).
 4. Add multiple tools if your capability requires several API calls.
 
@@ -130,10 +132,10 @@ For comprehensive step-by-step instructions on finding API documentation, using 
 
 ## Tool configuration reference
 
-#### Import from cURL  
-cURL is a tool developers use to test APIs by typing commands. Many API docs show example cURL commands. Importing a cURL command here helps you fill in the tool setup automatically—saving time and avoiding mistakes.  
+#### Generate from cURL  
+cURL is a tool developers use to test APIs by typing commands. Many API docs show example cURL commands. Pasting a working cURL command here fills in the tool setup automatically, saving time and avoiding mistakes.  
 
-#### ID  
+#### Name  
 This is a unique name for your tool inside your AI’s setup. Choose something simple and descriptive, like `CheckInventory` or `BookAppointment`. You cannot use spaces.
 
 #### Description  
@@ -296,9 +298,9 @@ When refining custom capabilities, follow this systematic approach:
 - **Prompt issues**: The AI doesn't know when to use the capability or how to handle responses
 - **Tool configuration issues**: API calls fail, wrong parameters are sent, or authentication fails
 - **Knowledge issues**: The AI needs context it doesn't have (add to knowledge base, not capability)
-- **Purpose issues**: The AI's overall behavior conflicts with the capability (adjust AI Employee purpose)
+- **`Role` issues**: The AI's overall behavior conflicts with the capability (adjust the AI Employee's `Role`)
 
-Start with the most specific fix (tool configuration) before adjusting broader elements (prompts or purpose).
+Start with the most specific fix (tool configuration) before adjusting broader elements (prompts or the `Role`).
 :::
 
 ### Performance monitoring
@@ -425,9 +427,9 @@ The value at the end of the path is the `product_id`.
 For the AI Chat Receptionist, see [Make responses page-aware with the visitor's URL](../ai-workforce/ai-chat-receptionist/index.md#make-responses-page-aware-with-the-visitors-url) for the broader feature overview.
 :::
 
-<div style={{display: 'flex', alignItems: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px 0'}}>
+<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
   <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
-  <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)'}}>
+  <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>
     New to how AI Employees work? Take the <a href="/learn/ai-foundations" style={{color: '#3C9A63', fontWeight: 600}}>AI foundations</a> course in Vendasta Learn — Beginner, 6 lessons.
   </span>
 </div>

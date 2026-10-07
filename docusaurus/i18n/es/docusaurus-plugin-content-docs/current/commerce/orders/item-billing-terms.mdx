@@ -1,0 +1,110 @@
+---
+title: Billing terms – line item scheduling
+sidebar_label: Billing Terms
+description: Configura fechas de inicio y límites de renovación en las líneas de artículo para automatizar la activación y facturación de productos.
+tags: [billing, payments, orders, retail-subscriptions]
+keywords: [billing terms, start date, end date, contract duration, line item, retail subscriptions]
+---
+
+## ¿Qué son las condiciones de facturación?
+
+Las condiciones de facturación te permiten definir la fecha de inicio y el número de renovaciones para las líneas de artículo individuales en un pedido. Esto garantiza que los productos se activen automáticamente en la fecha de inicio programada y se desactiven al final de su período definido.
+
+Las condiciones de facturación también se integran con **Vendasta Payments**, permitiendo el cobro y cese automático de pagos minoristas. Esto elimina la necesidad de programar manualmente activaciones, recordatorios o varios pedidos.
+
+## Qué puedes hacer con las condiciones de facturación
+
+- Programar la activación de un producto para una fecha futura
+- Establecer duraciones fijas limitando el número de renovaciones
+- Automatizar la facturación y la desactivación
+- Ver los cronogramas de facturación a través de la tabla `Retail Subscriptions`
+
+## Cómo configurarlo
+
+Puedes establecer condiciones de facturación en una línea de artículo de dos maneras:
+
+### Opción 1: usa el hipervínculo `Automatically Renews`
+
+1. En un pedido, haz clic en el hipervínculo azul `Automatically Renews` debajo del nombre del producto.
+2. Se abrirá un modal con opciones de configuración para la fecha de inicio y las renovaciones.
+
+<img src={require('./img/automatically-renews-hyperlink.png').default} alt="Automatically Renews hyperlink below a product name in an order" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Opción 2: usa el menú kebab
+
+1. Haz clic en el ícono kebab (`⋮`) en la línea de artículo.
+2. Selecciona `Edit Billing Terms` en el menú.
+3. Se abrirá el mismo modal para ajustar las condiciones de facturación.
+
+<img src={require('./img/kebab-menu-billing-terms.png').default} alt="Edit Billing Terms option in the kebab menu on a line item" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Ambas opciones abren el mismo modal para configurar la fecha de inicio y las renovaciones:
+
+<img src={require('./img/billing-terms-modal.png').default} alt="Billing terms modal showing start date and renewal configuration options" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+Una vez aplicadas, las condiciones de facturación aparecen debajo de la línea de artículo.
+
+## Qué sucede cuando estableces condiciones de facturación
+
+### Establecer una fecha de inicio en una línea de artículo
+
+- El producto **no se activará** hasta la fecha de inicio definida.
+- Cuando se procesa el pedido:
+  - Las suscripciones minoristas se crean en estado **pending**.
+  - La activación ocurre automáticamente en la fecha programada.
+
+#### Si usas Vendasta Payments:
+
+- Se cobrará o facturará el producto (según los ajustes de facturación de la cuenta).
+- El producto se activará.
+
+#### Si **no** usas Vendasta Payments:
+
+- El producto se activará de todos modos, pero no ocurrirá facturación automática.
+
+### Establecer un número fijo de renovaciones (fecha de fin)
+
+- Un número establecido de renovaciones define la **fecha de fin** de un producto.
+- Después de la renovación final:
+  - El producto se desactiva.
+  - Las suscripciones minoristas finalizan.
+  - Toda la facturación asociada se detiene (si corresponde).
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Cuándo se activan otros artículos de un pedido si no hay una fecha establecida?</summary>
+
+Cualquier artículo sin una fecha de inicio establecida se activará en la **fecha de inicio del contrato** del pedido o en el momento en que se procese el pedido.
+
+</details>
+
+<details>
+<summary>¿Puedo cambiar una fecha de inicio después de que se procesa el pedido?</summary>
+
+No, el pedido no se puede editar después de procesarse. Sin embargo, puedes **cancelar la programación de la activación** y enviar un nuevo pedido con las condiciones de facturación actualizadas.
+
+</details>
+
+<details>
+<summary>¿Qué sucede con los productos en su fecha de fin?</summary>
+
+El producto se **desactiva**. Se vuelve inaccesible y se eliminan los datos asociados con él.
+
+</details>
+
+<details>
+<summary>¿Cómo puedo ver cuándo están programados los artículos para comenzar o finalizar?</summary>
+
+Usa `Retail Subscriptions`. La tabla de Subscriptions muestra las activaciones programadas y las fechas de fin en todas las cuentas. Esto también es visible en las pestañas `Products` y `Retail Subscriptions` dentro de cada cuenta.
+
+</details>
+
+<details>
+<summary>¿Qué es una fecha de inicio y duración del contrato, y en qué se diferencian?</summary>
+
+- La **fecha de inicio del contrato** programa cuándo comienza un pedido y todos sus artículos.
+- La **duración del contrato** es para fines de registro interno y **no** afecta la desactivación del producto.
+- Puedes crear automatizaciones para notificar cuando un pedido se acerca al vencimiento de su contrato.
+
+</details>

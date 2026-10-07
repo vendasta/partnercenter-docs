@@ -1,0 +1,223 @@
+---
+title: Objetos personalizados del CRM
+sidebar_label: Objetos personalizados
+description: Crea módulos personalizados del CRM para hacer seguimiento de datos específicos de la industria como equipos, propiedades, o vehículos junto con tus contactos y empresas. Admite importación masiva, automatizaciones, listas inteligentes, y API.
+tags: [crm, custom-objects, customization, automation, bulk-import, api]
+keywords: [custom objects, custom modules, custom crm, industry-specific crm, custom fields, bulk import, smart lists, automations, api]
+---
+
+# Objetos personalizados del CRM
+
+Los objetos personalizados te permiten extender el CRM más allá de los contactos, empresas, y oportunidades estándar, creando tipos de datos flexibles adaptados a tu negocio o industria. Haz seguimiento de registros especializados como equipos, propiedades, vehículos, mascotas, demostraciones, o cualquier otra entidad relevante para tu flujo de trabajo, todo dentro del mismo CRM, sin necesidad de desarrollo personalizado.
+
+:::note
+Los objetos personalizados están disponibles con las ediciones CRM AI Standard y Pro. Consulta [Ediciones de CRM AI](/ai/ai-workforce/ai-sales-assistant#crm-ai-editions) para más detalles.
+:::
+
+## Novedades
+
+Los objetos personalizados ahora admiten el conjunto completo de herramientas del CRM:
+
+- **Campos configurables**: texto, número, fecha, listas desplegables, y más
+- **Importación masiva**: carga archivos CSV, asigna campos, y completa registros a gran escala
+- **Automatizaciones**: activa flujos de trabajo al crear, actualizar, ingresar a una lista, o salir de una lista, y actualiza campos de objetos personalizados desde acciones de automatización
+- **Listas inteligentes**: segmenta registros de objetos personalizados con la misma capacidad de filtrado que los contactos y las empresas
+- **Compatibilidad con API**: crea, actualiza, y sincroniza registros de objetos personalizados de forma programática desde sistemas externos
+- **AI Sales Assistant**: actualiza automáticamente los campos de objetos personalizados según las conversaciones de venta, por ejemplo, el año y modelo del vehículo actualizados después de una reunión (requiere CRM AI)
+- **Personalización de campañas**: incluye los valores de los campos de objetos personalizados como campos de combinación en los correos electrónicos de campañas activados a través de automatizaciones
+
+## ¿Por qué usar objetos personalizados?
+
+Los registros estándar del CRM cubren los flujos de trabajo de venta comunes, pero muchos negocios necesitan hacer seguimiento de datos específicos de su industria. Los objetos personalizados te dan la flexibilidad para:
+
+- **Modelar cualquier dato del que dependa tu negocio**: haz seguimiento de activos, suscripciones, ubicaciones, equipos, mascotas, cualquier cosa que antes vivía en hojas de cálculo o herramientas externas.
+- **Automatizar en torno a procesos de negocio únicos**: dado que los objetos personalizados potencian las listas inteligentes y las automatizaciones, puedes crear flujos de trabajo que se activen según la actividad de un objeto, las fechas, o las relaciones.
+- **Unificar todos los datos relacionados con clientes**: los objetos personalizados se convierten en entidades de primera clase del CRM, así que los equipos de ventas y de servicio ven el contexto completo de cada cliente en un solo lugar.
+
+## Ejemplos de objetos personalizados
+
+| Industria | Objeto personalizado | Qué hace seguimiento |
+|----------|--------------|----------------|
+| Bienes raíces | Propiedades | Listados, direcciones, metros cuadrados, precio de venta |
+| Servicios para el hogar | Equipos | Marca, modelo, fecha de instalación, estado de garantía |
+| Automotriz | Vehículos | VIN, año, kilometraje, historial de servicio |
+| Gestión de propiedades | Unidades | Inquilino, fechas de arrendamiento, monto de renta, solicitudes de mantenimiento |
+| Salud | Pacientes | Historial de visitas, proveedor, información del seguro |
+| Servicios para mascotas | Mascotas | Raza, última fecha de aseo, estado de vacunación |
+| Operaciones de venta | Demostraciones | Quién reservó, quién presentó, quién investigó |
+
+## Crear un objeto personalizado
+
+1. Navega a `Administration` → `CRM Objects`.
+2. Haz clic en **Add custom object**.
+3. Nombra tu objeto y configura sus campos (texto, número, fecha, lista desplegable, y más).
+4. Guarda.
+
+Una vez guardado, el objeto personalizado aparece directamente en la navegación del CRM junto a los objetos estándar. Puedes comenzar a completar registros manualmente, mediante importación masiva, o a través de la API.
+
+## Organizar el diseño de campo
+
+Usa Organize Layout para controlar cómo se muestran los campos de un tipo de objeto del CRM, ya sea objetos estándar como contactos y empresas, o cualquier objeto personalizado.
+
+1. Ve a `Administration` → `CRM Objects`.
+2. Selecciona un tipo de objeto en la barra lateral.
+3. Haz clic en **Organize Layout**.
+
+Desde Organize Layout, puedes:
+
+- Organizar los campos en grupos de campos
+- Establecer el orden en que aparecen los campos dentro de cada grupo
+- Establecer el orden de clasificación de los campos que no están asignados a un grupo
+
+Puedes restablecer el diseño de un tipo de objeto a su configuración predeterminada en cualquier momento.
+Cada tipo de objeto personalizado tiene su propio [diseño de campo](/administration/data-management/crm-objects/field-layouts), así que puedes agrupar y ordenar sus campos de forma independiente de los contactos, las empresas, y las oportunidades.
+
+## Importar registros de objetos personalizados
+
+El flujo de trabajo de importación masiva admite completamente los objetos personalizados, facilitando la migración de listas de activos, registros de servicio, datos de inventario, o cualquier otro conjunto de datos personalizado al CRM.
+
+1. Ve al flujo de trabajo de **Bulk Import**.
+2. Carga tu archivo CSV.
+3. Elige tu objeto personalizado en **Import As**.
+4. Asigna las columnas del CSV a los campos de tu objeto personalizado.
+5. Completa la importación.
+
+## Automatizaciones y listas inteligentes potentes
+
+Los objetos personalizados funcionan sin problemas con las automatizaciones y las listas inteligentes, permitiendo una personalización potente del flujo de trabajo.
+
+**Activa automatizaciones cuando un objeto personalizado:**
+
+- Se crea
+- Se actualiza
+- Se agrega a una lista
+- Se elimina de una lista
+
+**Usa acciones de automatización para:**
+
+- Actualizar campos de objetos personalizados
+- Recuperar contactos, empresas, u oportunidades asociadas
+- Enviar notificaciones o mensajes de seguimiento
+- Iniciar una campaña para el contacto asociado, con los valores de los campos del objeto personalizado disponibles como campos de combinación en el contenido del correo electrónico
+
+Esto habilita flujos de trabajo específicos de cada vertical, como recordatorios de servicio, gestión de activos, seguimiento de demostraciones, y procesos de venta de varios pasos.
+
+## Casos de uso comunes
+
+### Recordatorios de servicio
+
+Los negocios que gestionan activos propiedad de los clientes pueden automatizar los recordatorios de mantenimiento.
+
+**Ejemplo: negocio de aseo de mascotas**
+
+Un negocio de aseo de mascotas crea un objeto **Pet** con un campo para **Last Grooming Date**.
+
+- **Lista inteligente**: mascotas donde **Last Grooming Date** tiene al menos 180 días de antigüedad
+- **Automatización**:
+  1. Cuando una mascota ingresa a la lista
+  2. Recuperar el contacto asociado
+  3. Iniciar una campaña para ese contacto: el correo electrónico puede incluir los valores de los campos del objeto personalizado (como el nombre de la mascota o la última fecha de aseo) como campos de combinación para personalizar el mensaje
+
+### Objetos específicos de ventas
+
+Haz seguimiento de procesos que no pertenecen dentro de una oportunidad.
+
+**Ejemplo: seguimiento de demostraciones**
+
+Un partner crea un objeto **Demo** vinculado a oportunidades con campos como:
+
+- Quién reservó
+- Quién presentó
+- Quién investigó
+
+Las automatizaciones pueden entonces actualizar los registros de demostración o avanzar las oportunidades según los eventos de reserva.
+
+## Actualizar campos de objetos personalizados automáticamente con IA
+
+Con una suscripción de CRM AI, el AI Sales Assistant puede actualizar automáticamente los campos de objetos personalizados según lo que suceda en tus conversaciones de venta, sin necesidad de ingreso manual.
+
+Por ejemplo, un negocio automotriz puede hacer que la IA complete los campos de **vehicle year** y **model** después de una reunión en la que el cliente habló sobre su vehículo. Tú eliges qué campos puede actualizar la IA y si debe sobrescribir siempre los valores existentes o solo completar los vacíos.
+
+Para configurar las actualizaciones de IA para campos de objetos personalizados:
+
+1. Ve a `Business App` → `CRM` → `AI Sales Assistant` → `Configure`
+2. En la capacidad **Update CRM**, busca los campos de tu objeto personalizado
+3. Establece la preferencia de sobrescritura para cada campo (**always overwrite** o **overwrite if empty**)
+
+La IA respeta cualquier restricción de campo que hayas configurado: nunca completará un campo con un valor fuera de sus opciones definidas.
+
+Consulta [AI Sales Assistant](/ai/ai-workforce/ai-sales-assistant) para conocer los detalles completos de configuración.
+
+## Compatibilidad con API
+
+Los objetos personalizados son totalmente compatibles a través de la API de Vendasta. Los partners pueden crear, actualizar, y sincronizar registros de objetos de forma programática desde sistemas externos o aplicaciones personalizadas. El upsert de objetos personalizados es compatible mediante la API.
+
+Para la referencia de endpoints y los detalles de autenticación, consulta el [Developer Center](https://developers.vendasta.com/).
+
+## Controlar la visibilidad en Business App
+
+Los partners pueden controlar si las páginas de objetos personalizados son visibles para sus clientes en Business App:
+
+1. Navega a `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Pages`.
+2. En **CRM Page Settings**, busca **Show CRM custom objects pages**.
+3. Activa o desactiva la configuración.
+
+Para más información sobre la visibilidad de páginas, consulta [Configuración de visibilidad de páginas](/administration/platform-settings/customize-business-app/page-visibility-settings).
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Quién tiene acceso a los objetos personalizados?</summary>
+
+Todos los usuarios con acceso a CRM Administration pueden crear y gestionar objetos personalizados.
+
+</details>
+
+<details>
+<summary>¿Puedo automatizar en torno a la actividad de objetos personalizados?</summary>
+
+Sí. Las listas inteligentes y las automatizaciones admiten completamente los campos de objetos personalizados y sus relaciones con contactos, empresas, y oportunidades.
+
+</details>
+
+<details>
+<summary>¿Puedo importar registros a un objeto personalizado?</summary>
+
+Sí. Los objetos personalizados aparecen como opciones en el flujo de trabajo de importación masiva. Carga un archivo CSV, elige tu objeto personalizado en **Import As**, y asigna los campos.
+
+</details>
+
+<details>
+<summary>¿Puedo vincular un objeto personalizado a contactos o empresas?</summary>
+
+Sí. Los objetos personalizados se pueden relacionar con objetos estándar del CRM e incluirse en automatizaciones para recuperar los contactos, empresas, u oportunidades asociadas.
+
+</details>
+
+<details>
+<summary>¿Pueden los desarrolladores sincronizar objetos personalizados de forma programática?</summary>
+
+Sí. El upsert de objetos personalizados es compatible a través de la API de Vendasta. Consulta el [Developer Center](https://developers.vendasta.com/) para más detalles.
+
+</details>
+
+<details>
+<summary>¿Qué ediciones de CRM AI incluyen objetos personalizados?</summary>
+
+Los objetos personalizados están incluidos en CRM AI Standard y Pro. Consulta [Ediciones de CRM AI](/ai/ai-workforce/ai-sales-assistant#crm-ai-editions) para la comparación completa de funciones.
+
+</details>
+
+<details>
+<summary>¿Hay un límite de cuántos objetos personalizados puede tener una cuenta?</summary>
+
+Sí. Cada cuenta puede tener hasta 3 objetos personalizados. Este límite se aplica ya sea que el objeto se cree manualmente o se implemente a través de un [blueprint](/accounts/manage-accounts/blueprints); si aplicar un blueprint superara el límite de una cuenta, la aplicación falla para esa cuenta con un error claro en lugar de fallar silenciosamente.
+
+</details>
+
+<details>
+<summary>¿Puedo incluir datos de objetos personalizados en correos electrónicos de campañas?</summary>
+
+Sí. Cuando se activa una campaña a través de una automatización vinculada a un objeto personalizado, puedes incluir los valores de los campos del objeto personalizado como campos de combinación en el contenido del correo electrónico. Esto te permite personalizar cada correo con datos específicos de ese registro de objeto personalizado, por ejemplo, una fecha de servicio, el nombre de un activo, o un tipo de trabajo.
+
+</details>

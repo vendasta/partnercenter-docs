@@ -4,16 +4,18 @@ type Difficulty = "Foundational" | "Beginner" | "Intermediate" | "Advanced";
 
 interface LessonHeaderProps {
   difficulty: Difficulty;
-  /** e.g. "about 7 minutes" */
-  time: string;
+  /** e.g. "about 7 minutes". Omit on skill checks, where it is not meaningful. */
+  time?: string;
   /** What the learner can do after this step */
   outcomes: string[];
-  /** Technical requirements only: access level, product activations, connected assets. Defaults to ["None"]. */
+  /** Technical requirements only: access level, product activations, connected assets. Omit when there are none. */
   required?: string[];
   /** Step includes video content */
   video?: boolean;
   /** Hands-on build step */
   lab?: boolean;
+  /** Subject pills, e.g. ["Partner Center", "Payments"] */
+  topics?: string[];
   /** e.g. "Getting started" */
   pathName?: string;
   step?: number;
@@ -24,9 +26,10 @@ export default function LessonHeader({
   difficulty,
   time,
   outcomes,
-  required = ["None"],
+  required,
   video = false,
   lab = false,
+  topics = [],
   pathName,
   step,
   totalSteps,
@@ -49,6 +52,11 @@ export default function LessonHeader({
             Lab
           </span>
         )}
+        {topics.map((topic) => (
+          <span key={topic} className="path-header__topic">
+            {topic}
+          </span>
+        ))}
         {pathName && step && totalSteps && (
           <span className="lesson-header__position">
             {pathName} · Step {step} of {totalSteps}
@@ -56,15 +64,23 @@ export default function LessonHeader({
         )}
       </div>
 
-      <div className="lesson-header__bar">
-        <span>
-          <strong>Estimated time</strong> · {time}
-        </span>
-        <span className="lesson-header__divider">|</span>
-        <span>
-          <strong>Required</strong> · {required.join(", ")}
-        </span>
-      </div>
+      {(time || (required && required.length > 0)) && (
+        <div className="lesson-header__bar">
+          {time && (
+            <span>
+              <strong>Estimated time</strong> · {time}
+            </span>
+          )}
+          {time && required && required.length > 0 && (
+            <span className="lesson-header__divider">|</span>
+          )}
+          {required && required.length > 0 && (
+            <span>
+              <strong>Required</strong> · {required.join(", ")}
+            </span>
+          )}
+        </div>
+      )}
 
       <div className="lesson-header__outcomes">
         <p className="lesson-header__outcomes-label">Outcomes</p>

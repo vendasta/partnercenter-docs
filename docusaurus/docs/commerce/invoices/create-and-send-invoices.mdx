@@ -1,16 +1,29 @@
 ---
-title: Create and Manage Invoices
-description: Learn how to create, send, and manage invoices, customize invoice settings, and configure email preferences for your billing operations.
+title: "How do I create and send invoices?"
+description: "Create, send, charge, and manage invoices in Partner Center, including invoice statuses, custom invoice numbers, and invoice email settings."
 sidebar_position: 2
+brand: vendasta
+product: commerce
+sidebar_label: Create and Manage Invoices
+audience: partners
+content_type: how-to
+kb_id: KB-00088
+answer_snippet: "Invoices in Partner Center let you request and collect payment for the products and services you provide your customers. To create one, go to Commerce → Invoices, click New → Invoice, add line items, and then click Send Invoice or charge a payment method on file."
+doc_owner: commerce
+review_frequency: 3-months
+last_reviewed: 2026-09-25
+last_reviewed_by: haleyserrano
 ---
 
 <img src={require('./img/commerce/invoices/create-send-invoices-header.jpg').default} alt="Create and send invoices" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-Partners can use invoices to request and collect payment for the products and services that they provide their customers. Invoices can be manually created or can be [automatically generated](/commerce/subscriptions/subscription-management) according to an account's subscriptions and product renewal dates.
+Invoices in Partner Center let you request and collect payment for the products and services you provide your customers. To create one, go to `Commerce` → `Invoices`, click `New` → `Invoice`, add line items, and then click `Send Invoice` or charge a payment method on file.
 
-Invoices will function differently depending on whether or not a partner has [set up Vendasta Payments](/commerce/payments/setting-up-vendasta-payments). Partners who have not set up Vendasta Payments are able to create, edit, and send invoices to their customers, but cannot collect payments from directly within the invoice email.
+Invoices can be manually created or can be [automatically generated](/commerce/subscriptions/subscription-management) according to an account's subscriptions and product renewal dates.
 
-Note that it is possible to invoice a customer for any product you're selling or any package (draft or published) in your Store. However, if you are invoicing a customer for a product that is not already active on their account, the product will not automatically activate once the invoice has been paid. Partners can instead activate the product by following the usual [steps for product activation](/accounts/manage-accounts/product-management) at any stage of the invoicing process
+Invoices function differently depending on whether you have [set up Vendasta Payments](/commerce/payments/setting-up-vendasta-payments). If you haven't set up Vendasta Payments, you can create, edit, and send invoices to your customers, but you can't collect payments directly within the invoice email.
+
+Note that it is possible to invoice a customer for any product you're selling or any package (draft or published) in your Store. However, if you are invoicing a customer for a product that is not already active on their account, the product will not automatically activate once the invoice has been paid. You can instead activate the product by following the usual [steps for product activation](/accounts/manage-accounts/product-management) at any stage of the invoicing process.
 
 <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
   <iframe 
@@ -21,7 +34,7 @@ Note that it is possible to invoice a customer for any product you're selling or
   ></iframe>
 </div>
 
-### Preparing to use invoices
+### What do I need before using invoices? {#preparing-to-use-invoices}
 
 Invoices can be used most effectively when the following criteria are met:
 
@@ -31,28 +44,32 @@ Invoices can be used most effectively when the following criteria are met:
 - You have set up Vendasta Payments and are capable of accepting payments and receiving payouts
 - You have created [tax rates](/administration/commerce/tax-rates/) (if applicable)
 
-### Creating an invoice
+### How do I create an invoice? {#creating-an-invoice}
 
-Invoices can be created at any time from the **Commerce → Invoices** tab in Partner Center, or by simply going into the account you wish to create an invoice for and clicking on the invoice tab. 
+Invoices can be created at any time from the `Commerce` → `Invoices` tab in Partner Center, or by going into the account you wish to create an invoice for and clicking on the invoice tab. 
 
 :::note Minimum invoice amount
 The minimum invoice amount is **$1.00**. Attempting to charge or send an invoice below this threshold will result in an error.
 :::
 
-- Click **New → Invoice** and select an account to create a draft invoice
+- Click `New` → `Invoice` and select an account to create a draft invoice
 - Select a **Due date** for the invoice. The due date controls the date displayed to the client on the invoice — it does not determine when payment is collected. If you use automatic charging, payment is collected immediately when the invoice is charged, regardless of the due date.
 - Select a **User** (recipient) for the invoice
 - Click **Add Item** to add an individual product to the invoice. You can add any product that you're currently selling in your Marketplace, or type any text into the text box to represent a line item that does not exist in your Marketplace
-  - If the product you select already has a retail price set, it will automatically populate the Unit Price and currency for that item. The price and currency can also be overwritten on an individual invoice (note that invoices can currently only accept payments in USD and CAD)
+  - If the product you select already has a retail price set, it will automatically populate the Unit Price and currency for that item. The price and currency can also be overwritten on an individual invoice (note that invoices only accept payments in USD and CAD)
   - To add a discount as a line item, input the description of the discount and enter a negative dollar amount. The negative value entered will be subtracted from the invoice total
 - You can also click **Add Custom Item** to create your own line item. 
 - If your invoice includes more than one of a certain item, this can be specified using the Quantity column
 - Use the Options **⋮** menu to remove an item from the invoice or [apply a tax rate](/administration/commerce/tax-rates/) to a line item. **Note:** Tax rates do not apply to invoices automatically — they must be manually added to each line item individually.
 - If necessary, add additional information to the invoice using the **Memo** field at the bottom of the invoice
 
-Invoices can also be created at any time when viewing an individual account in **Partner Center → Manage Accounts** by clicking the Options **⋮** menu next to the **Open Business App** button.
+Invoices can also be created at any time when viewing an individual account in `Partner Center` → `Manage Accounts` by clicking the Options **⋮** menu next to the **Open Business App** button.
 
-### Sending or charging an invoice
+### How do I create an invoice from an opportunity? {#creating-an-invoice-from-an-opportunity}
+
+You can also create an invoice directly from an [opportunity](/crm/opportunities/create-and-edit-opportunities) by clicking **Create invoice** on the opportunity. The invoice is created with the opportunity's products already added as line items, and stays linked to the opportunity, so its status is visible from the opportunity as it moves from due to paid.
+
+### How do I send or charge an invoice? {#sending-or-charging-an-invoice}
 
 <img src={require('./img/commerce/invoices/send-invoice.jpg').default} alt="Sending an invoice" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -62,11 +79,11 @@ When your invoice is ready, click **Send Invoice** to choose one or more recipie
 
 Alternatively, you may instantly charge your customer for the contents of the invoice by selecting **Automatically charge a payment method on file** under the **Collection** section. This will change the **Send Invoice** button at the top-right of the page to **Charge invoice**. After a successful charge, your customer will receive a receipt via email. This requires your customer to have at least one payment method saved in Vendasta Payments. Your customer will have a payment method saved if they have previously paid an invoice or made a purchase using the Shopping Cart. If your customer does not have a saved payment method, it is possible to enter a payment method on behalf of your customer by clicking **Edit** next to the payment method field in the **Collection** section.
 
-Sent invoices can be viewed at any time from the table on **Partner Center → Commerce → Invoices**.
+Sent invoices can be viewed at any time from the table on `Partner Center` → `Commerce` → `Invoices`.
 
 If an invoice has been missed or misplaced by its recipient, it can be sent again at any time. Clicking **Resend Invoice** while viewing a Due invoice will allow you to choose any recipient on the account to resend the invoice.
 
-### Paying an invoice
+### How does my customer pay an invoice? {#paying-an-invoice}
 
 After sending an invoice, the recipient that you've chosen will be emailed a digital copy of the invoice. Invoices sent to an account will also appear under the **Invoices** tab in Business App.
 
@@ -79,28 +96,28 @@ If Vendasta Payments is enabled when the invoice is sent, the recipient will hav
 
 After an invoice has been paid, the recipient can click **Download as PDF** to save a receipt in PDF format.
 
-### Managing invoices
+### How do I manage invoices? {#managing-invoices}
 
-All invoices can be viewed at any time from the table on **Partner Center → Commerce → Invoices**. Clicking the Options **⋮** menu on an invoice allows users to edit or delete a draft invoice, download a copy of an invoice in PDF format, or download a receipt for a paid invoice in PDF format.
+All invoices can be viewed at any time from the table on `Partner Center` → `Commerce` → `Invoices`. Clicking the Options **⋮** menu on an invoice allows users to edit or delete a draft invoice, download a copy of an invoice in PDF format, or download a receipt for a paid invoice in PDF format.
 
 Business App users can view the complete list of invoices they have received using the **Invoices** tab in the Business App.
 
 Partners can download a complete table of all sent non-voided invoices by clicking the **Export as CSV** button in the top right corner of the Invoices table.
 
-### Invoice statuses
+### What do the invoice statuses mean? {#invoice-statuses}
 
-An invoice's status is displayed in the Status column on the table in **Partner Center → Commerce → Invoices**. An invoice can have one of the following statuses.
+An invoice's status is displayed in the Status column on the table in `Partner Center` → `Commerce` → `Invoices`. An invoice can have one of the following statuses.
 
 - **Draft**: A draft invoice can be edited, and has not yet been sent to a recipient.
 - **Due**: A Due invoice has been sent to a recipient and can no longer be edited. Clicking **Resend Invoice** allows you to reselect a recipient and send the invoice again.
 - **Paid**: A Due invoice will be marked as Paid when its recipient pays for it via the **Pay this invoice** button. Alternately, if payment was collected outside of Vendasta Payments, an invoice can be marked as Paid by clicking the Options **⋮** menu, selecting **Change invoice status**, and selecting **Paid**.
 - **Void**: If an invoice has been sent in error or is no longer relevant, an invoice can be marked as Void by clicking the Options **⋮** menu, selecting **Change invoice status**, and selecting **Void**.
 
-Note that an account's **Invoicing settings** are all off by default. To edit these settings for a particular account, go to the **Products** section on the account's page under **Partner Center → Accounts → Manage Accounts → Select account** and click **Invoices.**
+Note that an account's **Invoicing settings** are all off by default. To edit these settings for a particular account, go to the **Products** section on the account's page under `Partner Center` → `Accounts` → `Manage Accounts` → `Select account` and click **Invoices.**
 
-### Customize invoice numbers
+### How do I customize invoice numbers? {#customize-invoice-numbers}
 
-Next invoice number customization allows new and existing partners to define the next number sequence for their upcoming invoices. This customization ensures seamless transitions, enhances professional appearance, and maintains a coherent invoicing system for your business.
+Next invoice number customization lets you define the next number sequence for your upcoming invoices, so your invoice numbers stay consistent with your existing billing records.
 
 **Common reasons to customize invoice numbers:**
 
@@ -109,7 +126,7 @@ Next invoice number customization allows new and existing partners to define the
 
 **To customize the next invoice number:**
 
-1. Navigate to **Partner Center → Commerce → Invoices**
+1. Navigate to `Partner Center` → `Commerce` → `Invoices`
 2. To access the setting, select the **three dots** in the top right hand corner of the page, and click **Set new invoice number**
 3. Input the desired **next invoice number**. **Note:** The number must be greater than any previously used invoice number
 
@@ -123,7 +140,7 @@ Next invoice number customization allows new and existing partners to define the
 - You can only set the next invoice number to a value greater than any number already used on an invoice
 - The invoice number sequence applies to all your transactions across all customers
 
-### Change invoice email settings
+### How do I change invoice email settings? {#change-invoice-email-settings}
 
 The email address showing at the bottom of the invoice sent to clients can be changed by going to **Partner Center → Administration → Customize →** Under partner defaults tab; click on **Email Settings → Sender Email → Change it and then apply the changes.**
 
@@ -149,9 +166,9 @@ For Partners with multiple markets, repeat the same steps under the '**Markets**
 
 **Draft invoices** can be deleted using the Options **⋮** menu on the invoice.
 
-**Sent or paid invoices** cannot be deleted — they are financial records. If you need to reverse the charge on a paid invoice, [issue a credit note](/commerce/credit-notes) instead. If a sent invoice was created in error and has not been paid, void it by selecting **Change invoice status → Void** from the Options **⋮** menu.
+**Sent or paid invoices** cannot be deleted — they are financial records. If you need to reverse the charge on a paid invoice, [issue a credit note](/commerce/credit-notes) instead. If a sent invoice was created in error and has not been paid, void it by selecting `Change invoice status` → `Void` from the Options **⋮** menu.
 
-Currently, Partners cannot retract or delete an invoice that has already been sent.
+You can't retract or delete an invoice that has already been sent.
 
 If you have sent an incorrect invoice, create and send a new invoice to your customer.
 
@@ -174,7 +191,7 @@ To void the invoice, navigate to **Partner Center → Commerce → Invoices → 
 
 If you want to generate an invoice on an account but do not want to send it to your client, or the client has already paid, you can mark the invoice status as "Paid" for your records:
 
-In **Partner Center → Commerce → Invoices → Select the invoice** (any invoice that is Past Due, or Due status) → **Click the three dots at the end of the row → Change invoice status → Paid:**
+In `Partner Center` → `Commerce` → `Invoices` → `Select the invoice` (any invoice that is Past Due, or Due status) → **Click the three dots at the end of the row → Change invoice status → Paid:**
 
 <img src={require('./img/commerce/invoices/mark-invoice-paid-1.png').default} alt="Mark invoice as paid step 1" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -187,7 +204,7 @@ In **Partner Center → Commerce → Invoices → Select the invoice** (any invo
 <details>
 <summary>Can invoices and receipts from Vendasta be sent to multiple users?</summary>
 
-**Yes** - a comma-separated list of email addresses can be added to the Billing Contact Information card in **Partner Center → Administration → My Billing**. Addresses listed here will receive invoices and email notifications regarding successful and failed payments, etc.
+**Yes** - a comma-separated list of email addresses can be added to the Billing Contact Information card in `Partner Center` → `Administration` → `My billing`. Addresses listed here will receive invoices and email notifications regarding successful and failed payments, etc.
 
 <img src={require('./img/commerce/invoices/billing-contact-information.png').default} alt="Billing Contact Information in Partner Center" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -252,10 +269,8 @@ Yes, the Billing Settings functionality within Business App allows users within 
 <summary>What is a recurring invoice template?</summary>
 
 :::caution Discontinued Feature
-The Recurring Invoice functionality has been discontinued for new Partners. Please familiarize yourself with the enhanced Subscription Billing feature, which has been introduced as a replacement.
+The Recurring Invoice functionality has been discontinued for new Partners. Use the Subscription Billing feature, which replaces it.
 :::
-
-Templates can not only ease your workload but also make you feel less stressed and at the same time increase your efficiency. It helps to save time and money while improving consistency.
 
 A recurring invoice template can be used to repeatedly invoice a customer for products or services they have bought that have a monthly renewal and can be automatically invoiced every month.
 
@@ -310,7 +325,7 @@ This is a known behavior. When filtering invoices by date range, the end date is
 <details>
 <summary>Why doesn't the net amount on my invoice report match after issuing a credit note?</summary>
 
-Credit notes are reported separately from invoices. An invoice export from **Commerce > Invoices > Export as CSV** shows gross invoice amounts only — it does not deduct credit notes from the totals.
+Credit notes are reported separately from invoices. An invoice export from `Commerce` → `Invoices` → `Export as CSV` shows gross invoice amounts only — it does not deduct credit notes from the totals.
 
 To calculate accurate net revenue, export both your invoices and your credit notes separately, then subtract the credit note totals from your invoice totals.
 

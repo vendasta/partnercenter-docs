@@ -1,0 +1,319 @@
+---
+title: Self-Signup Workflow – Enable Customer Self-Registration
+sidebar_label: Inscription libre-service
+description: Configurez l'inscription libre-service pour permettre aux clients de créer leur propre compte Business App et de s'intégrer eux-mêmes.
+tags:
+  - business-app
+  - self-signup
+  - onboarding
+  - customer-acquisition
+keywords:
+  - self signup
+  - self-signup
+  - customer registration
+  - add your clients
+  - create account
+---
+
+## Intro
+
+L'inscription libre-service permet à vos clients de créer leur propre compte Business App sans intervention manuelle. Partagez un lien d'inscription ou activez l'enregistrement sur votre page de connexion, et les nouveaux clients peuvent s'intégrer eux-mêmes à tout moment.
+
+## Qu'est-ce que l'inscription libre-service ?
+
+L'inscription libre-service est une fonctionnalité qui permet aux utilisateurs finaux de s'inscrire eux-mêmes à un compte Business App. Lorsqu'un client s'inscrit, une nouvelle fiche d'entreprise est créée dans votre CRM avec la source d'enregistrement (Record Source) définie sur « Self Signup », ce qui facilite l'identification et l'automatisation du suivi pour ces clients.
+
+Vous pouvez partager le lien d'inscription directement, l'intégrer dans du matériel marketing, ou activer une option **Create Account** sur votre page de connexion Business App.
+
+## Quelles informations sont capturées lors de l'inscription libre-service ?
+
+L'inscription libre-service est conçue pour réduire les frictions et faire entrer les clients dans Business App le plus rapidement possible. Le formulaire d'inscription capture le minimum d'informations requises :
+
+- **Courriel de contact** : L'adresse courriel de l'utilisateur principal
+- **Nom de l'entreprise** : Utilisé pour rechercher l'entreprise via Google Places
+
+### S'inscrire avec Google ou Microsoft
+
+Les clients peuvent commencer l'inscription de deux façons :
+
+- **Saisir une adresse courriel** directement sur le formulaire d'inscription, ou
+- **S'inscrire avec Google** ou **S'inscrire avec Microsoft** en utilisant un compte existant
+
+Lorsqu'un client choisit **S'inscrire avec Google** ou **S'inscrire avec Microsoft**, il autorise Business App sur l'écran de connexion de Google ou de Microsoft, et son adresse courriel vérifiée est utilisée pour créer le compte. Comme le fournisseur du compte a déjà confirmé le courriel, le client saute l'étape distincte de vérification par courriel et accède immédiatement au flux d'inscription. Il confirme tout de même le nom de son entreprise afin que la plateforme puisse enrichir le profil d'entreprise via Google Places.
+
+:::info
+L'adresse courriel est la seule information extraite du compte Google ou Microsoft — aucun contact, calendrier ou autre donnée n'est accédé.
+:::
+
+:::tip
+L'inscription sociale élimine la création de mot de passe et la vérification par courriel du flux, ce qui réduit les frictions et peut améliorer le taux d'achèvement des inscriptions. Les clients peuvent revenir plus tard et se connecter avec le même compte Google ou Microsoft depuis votre page de connexion Business App.
+:::
+
+### Enrichissement automatique des données d'entreprise
+
+Lorsqu'un client saisit le nom de son entreprise, le système effectue une recherche dans Google Places pour trouver son entreprise :
+
+- **Si trouvée via Google Places** : Les données de l'entreprise sont automatiquement renseignées, y compris l'adresse, le numéro de téléphone, les heures d'ouverture et d'autres informations de profil
+- **Si un site Web ou un numéro de téléphone ne peut pas être capturé** — l'entreprise n'est pas trouvée, n'a pas de fiche d'établissement Google (Google Business Profile), ou son profil n'inclut pas ces détails — le client est invité à fournir facultativement son site Web et son numéro de téléphone
+
+Cette approche équilibre la facilité d'inscription avec la capture d'informations précieuses sur l'entreprise.
+
+### Intégration IA immédiate
+
+Lorsqu'un client termine son inscription, la plateforme configure l'IA de deux façons :
+
+**En coulisses**, lorsque les données de l'entreprise sont capturées via Google Places ou qu'un site Web est fourni, le système effectue automatiquement les actions suivantes :
+
+- Ajoute les informations du **Business Profile** à la base de connaissances IA (AI Knowledge Base)
+- Ajoute les **Website Knowledge** en explorant le site Web fourni
+- Active l'**AI Receptionist** avec ces connaissances immédiatement
+
+Cela signifie que l'IA est prête à fonctionner dès que le client accède à Business App.
+
+**Dans le flux d'inscription**, après que le client a vérifié son courriel (ou s'est inscrit avec un compte Google ou Microsoft, ce qui saute la vérification), un aperçu en direct de son AI Receptionist lui est présenté — déjà entraîné sur le profil d'entreprise et les données du site Web capturées lors de l'inscription. Il peut clavarder avec lui immédiatement et voir comment il répond *en tant que son entreprise* avant même d'atteindre la page d'accueil de Business App. Cela procure aux nouveaux clients un effet « wow » instantané et démontre la valeur de l'IA dès leur toute première interaction.
+
+L'aperçu AI Employee Preview peut être activé ou désactivé par marché dans `Customize Business App` → `Add Your Clients`. Consultez [Add Your Clients Settings](/administration/platform-settings/customize-business-app/add-your-customers-settings#how-do-i-show-new-signups-a-preview-of-their-ai-receptionist) pour plus de détails.
+
+:::tip
+L'intégration IA automatique aide à démontrer la valeur immédiatement. Les clients peuvent tester leur AI Receptionist dans Business App dès qu'ils terminent leur inscription — et avec l'AI Employee Preview activé, ils font l'expérience de l'IA avant même d'avoir terminé leur intégration.
+:::
+
+## Pourquoi l'inscription libre-service est-elle importante ?
+
+L'inscription libre-service permet :
+
+- **L'acquisition automatisée de clients** : Les clients peuvent s'inscrire sans attendre que vous créiez leur compte
+- **La réduction du travail manuel** : Pas besoin d'ajouter manuellement un compte pour chaque nouveau client
+- **La disponibilité 24 h/24, 7 j/7** : Les clients peuvent s'enregistrer à tout moment, même en dehors des heures d'ouverture
+- **Une croissance évolutive** : Gérez l'augmentation des inscriptions sans charge administrative supplémentaire
+- **L'engagement immédiat** : Les clients peuvent commencer à explorer vos offres tout de suite
+
+## Ce que vous pouvez faire avec l'inscription libre-service
+
+Avec l'inscription libre-service, vous pouvez :
+
+- Partager un lien d'inscription unique par courriel, réseaux sociaux ou votre site Web
+- Activer une option **Create Account** sur la page de connexion Business App
+- Configurer différentes expériences d'inscription par marché
+- Automatiser les flux d'intégration pour les clients en inscription libre-service
+- Suivre les conversions d'inscription libre-service à l'aide du champ Record Source
+- Présenter des [Featured Packages](./featured-packages) pour stimuler les mises à niveau pendant l'intégration
+- Montrer aux nouveaux inscrits un aperçu en direct de leur AI Receptionist, entraîné sur les informations de leur entreprise, immédiatement après la vérification du courriel
+
+## Comment configurer l'inscription libre-service
+
+### Obtenir votre lien d'inscription
+
+1. Dans Partner Center, allez dans `Accounts` → `Manage Business App`.
+2. Sélectionnez **Customize Business App**.
+3. Faites défiler jusqu'à la section **Add Your Clients**.
+4. Trouvez la zone **Self Sign-Up**.
+5. Copiez le **Sign-Up Link** affiché.
+
+Le lien d'inscription suit ce format :
+```
+{your-business-app-url}/public/business/{partner-id}/{market-id}/sign-up
+```
+
+:::tip
+Vous pouvez accéder directement à cette page à [partners.vendasta.com/customize-business-app/add-your-customers](https://partners.vendasta.com/customize-business-app/add-your-customers).
+:::
+
+### Activer Create Account sur la page de connexion
+
+Pour permettre aux clients de s'enregistrer directement depuis votre page de connexion Business App :
+
+1. Accédez à `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App`.
+2. Faites défiler jusqu'à la section **Add Your Clients**.
+3. Activez la case à cocher **Show Create Account**.
+4. Enregistrez vos modifications.
+
+Une fois activée, les clients visitant votre page de connexion Business App verront une option **Create Account** à côté du formulaire de connexion.
+
+:::info
+L'option **Show Create Account** est configurée au niveau du partenaire et s'applique à votre marché par défaut. Pour des configurations spécifiques à un marché, sélectionnez le marché approprié avant d'apporter des modifications.
+:::
+
+## Comment activer l'inscription libre-service pour les clients de petites entreprises
+
+Suivez ces étapes pour mettre en place un parcours complet d'inscription et d'achat en libre-service. Ce guide vous accompagne à travers les modèles d'automatisation intégrés de la plateforme et les campagnes de courriel recommandées afin que vous puissiez démarrer rapidement.
+
+### Étape 1 : Configurer les Featured Packages
+
+Avant de stimuler les inscriptions, assurez-vous que les nouveaux clients ont quelque chose à acheter. Les [Featured Packages](./featured-packages) apparaissent sur la page d'accueil de Business App pour les clients sans produits actifs, leur offrant un parcours clair de l'inscription à l'achat.
+
+1. Dans Partner Center, allez dans `Accounts` → `Manage Business App` → `Customize Business App`.
+2. Faites défiler jusqu'à **Add Your Clients** et configurez vos **Featured Packages**.
+3. Sélectionnez des forfaits pertinents pour les clients en inscription libre-service — commencez par vos offres les plus populaires ou d'entrée de gamme.
+
+### Étape 2 : Placer votre lien d'inscription
+
+Obtenez votre lien d'inscription depuis `Customize Business App` → `Add Your Clients` → `Self Sign-Up` (voir [Comment configurer l'inscription libre-service](#comment-configurer-linscription-libre-service) ci-dessus), puis ajoutez-le là où les prospects le trouveront :
+
+- **Votre site Web** : Ajoutez un bouton d'appel à l'action sur votre page d'accueil, votre pied de page ou une page de destination dédiée
+- **Signatures de courriel** : Incluez le lien dans les signatures de courriel de votre équipe
+- **Réseaux sociaux** : Ajoutez-le aux liens de votre bio sur LinkedIn, Facebook ou votre fiche d'établissement Google
+- **Campagnes marketing** : Utilisez-le dans des publicités, infolettres ou répertoires de partenaires
+- **Page de connexion** : Activez le bouton **Show Create Account** afin que les visiteurs de votre page de connexion Business App puissent s'enregistrer directement
+
+:::tip
+Créez une page de destination dédiée qui explique vos services et inclut le lien d'inscription comme principal appel à l'action. Cela vous donne une URL unique à promouvoir sur tous les canaux.
+:::
+
+### Étape 3 : Activer l'automatisation de la campagne d'inscription
+
+La plateforme inclut un modèle d'automatisation préconfiguré qui gère automatiquement les nouveaux clients en inscription libre-service.
+
+1. Dans Partner Center, allez dans **Automations**.
+2. Cliquez sur **Automation Templates**.
+3. Trouvez le modèle **Signup campaign | Drive self-serve revenue** et cliquez sur **Use template**.
+4. Configurez le modèle :
+   - **Owner assignment** : Choisissez quel vendeur ou équipe doit être assigné aux nouveaux clients en inscription libre-service
+   - **Email campaign** : Sélectionnez la campagne **Self Signup - Welcome** (voir l'étape 5) ou choisissez la vôtre
+5. Enregistrez et activez l'automatisation.
+
+Cette automatisation se déclenche lorsqu'une entreprise est créée avec la source **Self Signup**. Elle attribue un responsable/vendeur et envoie la campagne de courriel de bienvenue choisie — offrant à chaque nouvel inscrit une attention immédiate sans travail manuel.
+
+### Étape 4 : Activer l'automatisation des achats et des paniers abandonnés
+
+Un second modèle d'automatisation gère ce qui se passe après qu'un client en inscription libre-service interagit avec votre boutique.
+
+1. Dans **Automations**, cliquez sur **Automation Templates**.
+2. Trouvez le modèle **Purchases & abandoned carts for self serve** et cliquez sur **Use template**.
+3. Configurez le modèle :
+   - **Purchased branch** : Sélectionnez une campagne d'intégration à envoyer après un achat réussi. Utilisez **Purchase Complete - Generic** ou **Purchase - Conversations AI Setup** parmi les campagnes recommandées, ou créez la vôtre
+   - **Not purchased branch** : Sélectionnez une campagne de panier abandonné. Utilisez **Purchase Incomplete - Generic** parmi les campagnes recommandées, ou créez la vôtre
+4. Enregistrez et activez l'automatisation.
+
+Cette automatisation se déclenche lorsqu'un utilisateur ajoute, retire ou met à jour un article dans son panier d'achat. Elle attend 30 minutes pour voir si l'achat se concrétise, puis envoie la campagne appropriée selon le résultat.
+
+:::tip
+Ajoutez des notifications à chaque branche pour alerter vos équipes de vente et de succès client. Ainsi, votre équipe sait quand un client termine un achat ou abandonne son panier et peut assurer un suivi personnalisé si nécessaire.
+:::
+
+### Étape 5 : Configurer les campagnes de courriel
+
+La plateforme fournit des campagnes de courriel recommandées conçues pour le parcours libre-service. Trouvez-les dans `Partner Center` → `Email Campaigns` → l'onglet `Recommended Campaigns`.
+
+| Campagne | Objectif | À utiliser avec |
+|----------|---------|----------|
+| **Self Signup - Welcome** | Accueille les nouveaux clients en inscription libre-service, présente vos services et les guide pour démarrer | Automatisation de la campagne d'inscription (étape 3) |
+| **Purchase Complete - Generic** | Intègre les clients après un achat réussi | Automatisation des achats — branche des achats réussis (étape 4) |
+| **Purchase - Conversations AI Setup** | Guide les clients dans la configuration des conversations alimentées par l'IA après l'achat | Automatisation des achats — branche des achats réussis (étape 4) |
+| **Purchase Incomplete - Generic** | Ré-engage les clients qui ont ajouté des articles à leur panier mais n'ont pas terminé l'achat | Automatisation des achats — branche des achats non réussis (étape 4) |
+
+Pour utiliser une campagne recommandée :
+
+1. Allez dans `Email Campaigns` → `Recommended Campaigns`.
+2. Cliquez sur le nom de la campagne pour la prévisualiser.
+3. Utilisez-la telle quelle, ou clonez-la pour personnaliser le contenu selon votre marque.
+
+### Étape 6 : Surveiller et optimiser
+
+Une fois votre parcours libre-service en ligne, suivez la performance et ajustez :
+
+- **Volume d'inscriptions** : Filtrez votre liste de comptes par **Record Source** = « Self Signup » pour voir combien de clients arrivent
+- **Activité du panier et des achats** : Consultez l'historique d'exécution des automatisations dans **Automations** pour voir combien de clients achètent par rapport à ceux qui abandonnent leur panier
+- **Performance des courriels** : Vérifiez les taux d'ouverture et de clic de vos campagnes dans **Email Campaigns**
+- **Featured Packages** : Ajustez votre sélection de forfaits en fonction de ce qui convertit — essayez différentes offres ou tarifications pour améliorer l'adoption
+
+## Créer des automatisations personnalisées
+
+Si vous avez besoin de plus de contrôle au-delà des modèles préconfigurés, vous pouvez créer des automatisations à partir de zéro.
+
+### Configurer une automatisation personnalisée
+
+1. Dans Partner Center, allez dans **Automations**.
+2. Cliquez sur **Create Automation**.
+3. Sélectionnez le déclencheur **A company is created**.
+4. Ajoutez une condition pour filtrer par **Record Source** égal à **Self Signup**.
+5. Ajoutez les actions souhaitées.
+
+### Autres actions d'automatisation à considérer
+
+- **Créer une tâche de suivi** : Planifiez un appel de suivi ou une démonstration
+- **Ajouter à une liste** : Organisez les clients en inscription libre-service pour des campagnes ciblées
+- **Créer une opportunité** : Suivez le revenu potentiel de chaque client en inscription libre-service
+
+Pour des instructions détaillées, consultez [Automations overview](/automations/) et la [Automation Triggers Reference](/automations/my-automations/automation-triggers-reference).
+
+## Conseils et bonnes pratiques
+
+### Utiliser des configurations spécifiques au marché
+
+Si vous desservez différents segments de clientèle, configurez les paramètres d'inscription libre-service par marché :
+
+- Des liens d'inscription différents pour chaque marché
+- Des Featured Packages spécifiques au marché
+- Des flux d'automatisation adaptés selon le marché
+
+## FAQ
+
+<details>
+<summary>Où trouver le lien d'inscription libre-service ?</summary>
+
+Accédez à `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Add Your Clients`. Le lien d'inscription est affiché dans la section **Self Sign-Up**.
+</details>
+
+<details>
+<summary>Les clients peuvent-ils s'inscrire sans lien direct ?</summary>
+
+Oui. Activez l'option **Show Create Account** pour ajouter un lien d'enregistrement à votre page de connexion Business App. Les clients peuvent alors cliquer sur **Create Account** pour s'enregistrer.
+</details>
+
+<details>
+<summary>Les clients peuvent-ils s'inscrire avec un compte Google ou Microsoft ?</summary>
+
+Oui. Sur le formulaire d'inscription, les clients peuvent saisir une adresse courriel ou choisir **S'inscrire avec Google** ou **S'inscrire avec Microsoft**. Lorsqu'ils utilisent un compte Google ou Microsoft, l'adresse courriel vérifiée de ce compte est utilisée pour créer leur compte Business App, et ils sautent l'étape distincte de vérification par courriel. Seule l'adresse courriel est utilisée — aucune autre donnée du compte n'est accédée. Les clients peuvent revenir plus tard et se connecter avec le même compte depuis votre page de connexion Business App.
+</details>
+
+<details>
+<summary>Comment puis-je identifier les clients qui se sont inscrits eux-mêmes ?</summary>
+
+Les clients en inscription libre-service ont leur Record Source défini sur « Self Signup » dans le CRM. Vous pouvez filtrer les comptes ou créer des automatisations basées sur ce champ.
+</details>
+
+<details>
+<summary>Puis-je avoir différents liens d'inscription pour différents marchés ?</summary>
+
+Oui. Chaque marché a son propre lien d'inscription. Sélectionnez le marché dans **Customize Business App** pour voir son URL d'inscription spécifique.
+</details>
+
+<details>
+<summary>Que se passe-t-il lorsqu'un client termine l'inscription libre-service ?</summary>
+
+Une nouvelle entreprise et un nouvel utilisateur sont créés dans votre CRM. Le Record Source de l'entreprise est défini sur « Self Signup ». Si vous avez configuré des automatisations pour ce déclencheur, elles s'exécuteront automatiquement.
+</details>
+
+<details>
+<summary>Puis-je personnaliser ce que voient les clients après leur inscription ?</summary>
+
+Oui. Configurez les [Featured Packages](./featured-packages) pour présenter des options de mise à niveau. Vous pouvez également personnaliser l'expérience Business App dans les paramètres **Customize Business App**.
+</details>
+
+<details>
+<summary>Quelles informations le formulaire d'inscription libre-service recueille-t-il ?</summary>
+
+Le formulaire recueille le courriel de contact et le nom de l'entreprise. Si l'entreprise est trouvée via Google Places, des données d'entreprise supplémentaires (adresse, téléphone, heures) sont automatiquement renseignées. Si un site Web ou un numéro de téléphone ne peut pas être capturé depuis la fiche d'établissement Google de l'entreprise — ou si l'entreprise n'en a pas — le client est invité à fournir facultativement son site Web et son numéro de téléphone.
+</details>
+
+<details>
+<summary>Pourquoi l'inscription libre-service ne demande-t-elle qu'un minimum d'informations ?</summary>
+
+Réduire le nombre de champs de formulaire minimise les frictions et augmente les taux d'achèvement des inscriptions. Les données d'entreprise sont enrichies automatiquement grâce à la recherche Google Places, de sorte que les clients n'ont pas besoin de les saisir manuellement.
+</details>
+
+<details>
+<summary>L'inscription libre-service configure-t-elle automatiquement les fonctionnalités IA ?</summary>
+
+Oui, de deux façons :
+
+- **AI Knowledge Base et AI Receptionist :** Lorsque les données de l'entreprise sont capturées via Google Places ou qu'un site Web est fourni, le système ajoute automatiquement ces informations à la base de connaissances IA et active l'AI Receptionist. Les clients peuvent commencer à utiliser les fonctionnalités IA immédiatement après l'inscription.
+- **AI Employee Preview :** Après avoir vérifié leur courriel, les nouveaux inscrits se voient présenter un aperçu de clavardage en direct de leur AI Receptionist — déjà entraîné sur le profil d'entreprise et les données du site Web capturées lors de l'inscription. Ils peuvent clavarder avec lui comme leur propre IA avant d'atteindre la page d'accueil de Business App. Cette fonctionnalité peut être activée ou désactivée par marché dans `Customize Business App` → `Add Your Clients`.
+</details>
+
+<details>
+<summary>Que se passe-t-il si l'entreprise du client n'est pas trouvée sur Google Places ?</summary>
+
+Si un site Web ou un numéro de téléphone ne peut pas être capturé depuis la fiche d'établissement Google de l'entreprise — ou si l'entreprise n'en a pas — le client est invité à fournir facultativement son site Web et son numéro de téléphone. Le système utilise alors le site Web pour renseigner la base de connaissances IA.
+</details>

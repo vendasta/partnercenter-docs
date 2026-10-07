@@ -1,0 +1,415 @@
+---
+title: Contrôler la visibilité des pages dans Business App
+sidebar_label: Paramètres de visibilité des pages
+description: Contrôlez quelles pages et fonctionnalités les clients voient dans leur tableau de bord Business App, avec des options de configuration par page.
+tags:
+  - business-app
+  - page-visibility
+  - customization
+  - navigation
+keywords:
+  - show page
+  - hide page
+  - page visibility
+  - business app pages
+  - customize navigation
+---
+
+La section Pages de Customize Business App contrôle quelles pages les clients voient dans la navigation de Business App et configure des fonctionnalités spécifiques à chaque page. Vous pouvez afficher ou masquer des pages entières et affiner les paramètres de chaque page.
+
+![Paramètres de visibilité des pages dans Customize Business App](./img/page-visibility-home.png)
+
+## Comment puis-je accéder aux paramètres des pages ?
+
+Accédez à `Partner Center` → `Administration` → `Customize Business App` → `Pages`, puis sélectionnez la page que vous voulez configurer.
+
+## Comprendre `Show this page`
+
+La plupart des pages ont une case à cocher `Show this page` qui contrôle si la page apparaît dans la navigation de Business App des clients. Cochez-la pour afficher la page, décochez-la pour la masquer.
+
+**Ce qui se passe quand vous masquez une page :**
+- La page est retirée du menu de navigation du client
+- Les clients ne peuvent pas accéder directement à la page
+- Les fonctionnalités sous-jacentes peuvent continuer à fonctionner (par exemple, les automatisations s'exécutent même si la page Automations est masquée)
+
+**Valeurs par défaut du partenaire par rapport aux paramètres de marché :**
+- Configurez les valeurs par défaut au niveau du partenaire en utilisant « All Markets »
+- Remplacez-les pour des marchés spécifiques en sélectionnant ce marché dans le menu déroulant
+- Les paramètres spécifiques à un marché ont priorité sur les valeurs par défaut du partenaire
+
+**Quand masquer des pages :**
+- La fonctionnalité ne fait pas partie de votre offre de services
+- Vous voulez simplifier l'interface pour certains segments de clients
+- La page affiche des fonctionnalités que les clients n'ont pas achetées
+
+---
+
+## Paramètres de la page d'accueil
+
+La page d'accueil est le tableau de bord principal que voient les clients lorsqu'ils se connectent à Business App.
+
+`Show this page` (`showDashboard`)
+Contrôle si les clients voient le tableau de bord d'accueil.
+
+### Qu'est-ce que l'entonnoir marketing et devrais-je l'afficher ?
+
+L'entonnoir marketing résume les indicateurs clés du rapport exécutif sous forme d'impressions, d'engagement et de prospects dans un affichage visuel en entonnoir.
+
+**Quand l'afficher :** les clients veulent un aperçu visuel rapide de leur performance marketing
+**Quand le masquer :** vous n'utilisez pas les indicateurs du rapport exécutif ou vous voulez un tableau de bord plus simple
+
+### Comment changer la plage de temps par défaut pour les rapports de la page d'accueil ?
+
+Le menu déroulant `Default reporting period` définit la plage de temps initialement sélectionnée pour les données de la page d'accueil.
+
+**Options :** 7 derniers jours, 30 jours, 90 jours, 6 mois ou 12 mois
+
+### Devrais-je afficher les ventes/commandes WordPress ?
+
+Le paramètre `Sales` affiche un résumé des commandes de commerce électronique provenant de sites WordPress Hosting utilisant WooCommerce.
+
+**Quand l'afficher :** les clients ont WordPress Hosting avec WooCommerce
+**Quand le masquer :** les clients n'utilisent pas le commerce électronique WordPress
+
+### Devrais-je afficher l'activité récente ?
+
+La section `Recent Activity` affiche un flux des actions et événements récents dans le compte du client.
+
+**Quand l'afficher :** les clients veulent voir ce qui se passe dans leur entreprise
+**Quand le masquer :** vous voulez un tableau de bord plus épuré et ciblé
+
+---
+
+## Paramètres de la page Get Started
+
+La page Get Started guide les nouveaux clients à travers les étapes de configuration initiale.
+
+`Show this page` (`showGetStarted`)
+Contrôle si les clients voient la page d'intégration Get Started.
+
+### Quand devrais-je afficher la page Get Started ?
+
+Affichez cette page lorsque :
+- Vous voulez guider les clients à travers la configuration initiale
+- Les clients ont besoin d'aide pour connecter des comptes et configurer des fonctionnalités
+- Vous intégrez de nouveaux clients qui ont besoin d'orientation
+
+Masquez cette page lorsque :
+- Les clients sont déjà configurés et n'ont pas besoin d'aide à l'intégration
+- Vous offrez l'intégration par d'autres canaux (appels, formation personnalisée)
+
+### Comment ajouter une vidéo d'intégration personnalisée ?
+
+1. Activez la case à cocher `Onboarding video`.
+2. Saisissez une URL de vidéo YouTube dans le champ `Custom onboarding video`.
+3. Cliquez sur `Save`.
+
+La vidéo personnalisée remplace la vidéo d'intégration par défaut présentée aux clients.
+
+:::tip
+Créez une vidéo qui présente votre marque et explique comment les clients doivent utiliser votre expérience Business App personnalisée.
+:::
+
+### Qu'est-ce que la section Customer Journey ?
+
+La section `Customer Journey` affiche un diagramme interactif montrant les étapes clés que les gens traversent pour devenir le client de votre client. Les clients peuvent sélectionner des étapes pour accéder à des stratégies de croissance adaptées.
+
+**Quand l'afficher :** les clients profitent de comprendre et d'optimiser leur entonnoir d'acquisition de clients
+**Quand le masquer :** le concept de parcours client ne correspond pas à votre offre de services
+
+---
+
+## Paramètres de la page Boîte de réception/Messages
+
+La page Inbox (aussi appelée Conversations Messages) affiche les communications avec les clients.
+
+`Show this page` (`showInboxMessage`)
+Contrôle si les clients voient la page Inbox/Messages.
+
+### Devrais-je laisser les clients discuter avec mon équipe ?
+
+Le paramètre `Customers can start conversations with you` contrôle si les clients peuvent initier des messages vers vous (le partenaire) via le lien Contact Us dans la navigation de Business App.
+
+**Quand activé :** les clients peuvent vous envoyer des messages ; les conversations apparaissent dans leur boîte de réception
+**Quand désactivé :** les clients ne peuvent répondre qu'après que vous ayez démarré une conversation avec eux
+
+:::info
+Même lorsque cette option est désactivée, les clients peuvent toujours vous envoyer des messages après que vous ayez initié une conversation avec eux. Le paramètre contrôle uniquement s'ils peuvent démarrer de nouvelles conversations.
+:::
+
+### Que puis-je contrôler dans la fenêtre modale Contact Us ?
+
+Le groupe **Contact Us Modal** sur cette page contrôle ce que voient les clients lorsqu'ils cliquent sur la carte **Contact Us** dans la navigation de Business App. Chaque option ci-dessous est indépendante : activez ou désactivez n'importe quelle combinaison.
+
+| Paramètre | Ce qu'il fait |
+|---------|---------------|
+| **Modal description** | Un message que vous rédigez (jusqu'à 250 caractères) qui apparaît en haut de la fenêtre modale, au-dessus de toutes les options ci-dessous. N'est lié à aucun interrupteur : il est toujours modifiable. |
+| **Show assigned salesperson name & email** | Affiche ou masque la carte de contact du membre de l'équipe assigné dans la fenêtre modale. |
+| **Customers can start a conversation** | Affiche le bouton de discussion décrit ci-dessus. |
+| **Show a support center link** | Ajoute un bouton qui ouvre une URL que vous spécifiez, dans un nouvel onglet. Fait apparaître deux champs : **Support center URL** (doit commencer par `https://`) et **Button text** (la valeur par défaut est « Visit support center »). |
+
+**Comment configurer le lien du centre de support :**
+
+1. Accédez à `Partner Center` → `Administration` → `Customize Business App` → `Pages` → `Inbox/Messages`
+2. Sous `Contact Us Modal`, cochez `Show a support center link`
+3. Saisissez la destination dans `Support center URL` (doit commencer par `https://`)
+4. Personnalisez éventuellement `Button text` (la valeur par défaut est « Visit support center »)
+5. Cliquez sur `Save`
+
+:::info
+Si toutes les options de Contact Us Modal sont désactivées et que la description de la fenêtre modale est vide, la carte Contact Us n'apparaît pas du tout dans la navigation du client.
+:::
+
+---
+
+## Paramètres de la page CRM
+
+La page CRM fournit des fonctionnalités de gestion de la relation client. Plusieurs sous-fonctionnalités peuvent être affichées ou masquées indépendamment.
+
+### Quelles fonctionnalités CRM devrais-je montrer aux clients ?
+
+Configurez la visibilité de chaque fonctionnalité CRM :
+
+| Paramètre | Ce qu'il affiche |
+|---------|---------------|
+| `Show CRM contacts page` | Les fiches de contacts et leur gestion |
+| `Show CRM companies page` | Les fiches d'entreprises/organisations |
+| `Show CRM tasks page` | La gestion des tâches et des choses à faire |
+| `Show CRM forms page` | Les formulaires personnalisés de collecte de données |
+| `Show CRM opportunities page` | Le pipeline de ventes et les affaires |
+
+### Fonctionnalités CRM avancées
+
+Ces fonctionnalités peuvent nécessiter des indicateurs de fonctionnalité spécifiques activés pour votre compte :
+
+| Paramètre | Ce qu'il affiche |
+|---------|---------------|
+| `Show CRM custom objects pages` | Les objets de données personnalisés que vous avez créés |
+| `Show CRM lists page` | Les listes dynamiques et la segmentation |
+| `Show CRM activity leaderboard page` | Le classement de l'activité de l'équipe |
+| `Show CRM lead scoring settings` | La configuration de la notation des prospects |
+
+### Quand masquer des fonctionnalités CRM spécifiques
+
+- **Masquer Contacts/Companies** : le client n'a pas besoin de fonctionnalités CRM
+- **Masquer Tasks** : le client gère ses tâches ailleurs
+- **Masquer Forms** : aucun formulaire personnalisé n'est configuré
+- **Masquer Opportunities** : le client ne suit pas de pipeline de ventes
+- **Masquer les fonctionnalités avancées** : ces fonctionnalités ne font pas partie de votre offre ou ne sont pas configurées
+
+---
+
+## Paramètres de la page AI Assistant
+
+`Show this page` (`showAiAssistant`)
+Contrôle si les clients voient la page AI Assistant.
+
+Affichez cette page lorsque les clients ont des fonctionnalités d'IA activées et pourraient bénéficier d'outils assistés par IA.
+
+---
+
+## Paramètres de la page Executive Report
+
+Le rapport exécutif fournit une analyse complète de la performance marketing.
+
+Pour une configuration détaillée des sections, notes et ordre du rapport exécutif, consultez la documentation dédiée [Customize Executive Report](/accounts/reports/customize-executive-report).
+
+---
+
+## Paramètres de la page My Products
+
+`Show this page` (`showMyProducts`)
+Contrôle si les clients voient la page My Products répertoriant leurs produits actifs.
+
+**Quand l'afficher :** les clients gèrent leurs propres produits ou ont besoin de voir ce qu'ils possèdent
+**Quand le masquer :** vous gérez les produits pour les clients et ne voulez pas qu'ils apportent des modifications
+
+### Foire aux questions sur My Products
+
+<details>
+<summary>Comment mes clients utilisent-ils la page My Products ?</summary>
+
+Les clients se connectent à Business App et cliquent sur `My Products` pour voir tous les produits et services actifs sur leur compte. La page répertorie tout ce à quoi ils ont accès afin qu'ils puissent ouvrir des produits ou épingler ceux qu'ils utilisent le plus au panneau latéral pour un accès rapide.
+</details>
+
+<details>
+<summary>Comment les clients peuvent-ils organiser les produits sur le panneau latéral de Business App ?</summary>
+
+Sur la page My Products, les clients cliquent sur l'**icône d'épingle** en haut à droite d'une fiche de produit pour choisir quels produits apparaissent sur le panneau latéral de Business App. Chaque utilisateur peut définir ses propres épingles, de sorte que différents membres de l'équipe peuvent avoir des produits différents épinglés.
+</details>
+
+<details>
+<summary>Pourquoi un client ne peut-il pas épingler un produit au panneau de navigation ?</summary>
+
+Seuls les produits ayant un tableau de bord ou un lien de destination peuvent être épinglés. Si un produit n'a pas de lien associé (par exemple, certains produits personnalisés), la fiche est affichée à titre de référence mais l'option d'épingle n'est pas disponible. Les liens de produits sont configurés lors de la mise en place du produit (par exemple dans Marketplace ou dans la configuration de produit personnalisé).
+</details>
+
+---
+
+## Paramètres de la page Store
+
+`Show this page` (`showStore`)
+Contrôle si les clients voient la page Store pour acheter des produits supplémentaires.
+
+**Quand l'afficher :** vous voulez que les clients s'auto-servent et achètent des produits
+**Quand le masquer :** tous les achats passent par votre équipe de vente
+
+Pour la configuration de la boutique, accédez à `Partner Center` → `Marketplace` → `Manage Store`.
+
+---
+
+## Paramètres de la page Business Profile
+
+La page Business Profile affiche et permet éventuellement de modifier les informations commerciales du client.
+
+### Devrais-je laisser les clients modifier leur propre profil ?
+
+Le paramètre `Customers can edit` contrôle si les clients peuvent modifier les informations de leur profil d'entreprise.
+
+**Quand activé :** tous les champs du Business Profile sont modifiables par les clients
+**Quand désactivé :** tous les champs sont en lecture seule ; les clients doivent vous contacter pour tout changement
+
+**Ce que les clients peuvent modifier lorsque c'est activé :**
+- Le nom de l'entreprise et les coordonnées
+- L'adresse et les détails de l'établissement
+- Les heures d'ouverture
+- L'URL du lien de réservation
+- Les catégories et descriptions
+
+---
+
+## Paramètres de la page Projects
+
+`Show this page` (`showFulfillment`)
+Contrôle si les clients voient la page Projects pour le suivi de la réalisation et des travaux de projet.
+
+**Quand l'afficher :** vous fournissez des services impliquant un suivi de projet ou des flux de réalisation
+**Quand le masquer :** vos services n'incluent pas de livrables basés sur des projets
+
+---
+
+## Paramètres de la page My Meetings
+
+`Show this page` (`meetingSchedulerBusinessApp`)
+Contrôle si les clients voient la page My Meetings avec des fonctionnalités de planification de réunions.
+
+**Quand l'afficher :** vous utilisez le planificateur de réunions et voulez que les clients réservent ou consultent des réunions
+**Quand le masquer :** vous n'utilisez pas la fonctionnalité de planificateur de réunions
+
+---
+
+## Paramètres de la page Guides
+
+`Show this page` (`showContentLibrary`)
+Contrôle si les clients voient la page Guides avec du contenu éducatif.
+
+Pour la configuration des guides personnalisés, y compris l'intégration au blog WordPress, consultez la documentation [Custom Content](/business-app/administration/custom-content-advanced-configuration).
+
+---
+
+## Paramètres de la page Files
+
+`Show this page` (`showFiles`)
+Contrôle si les clients voient la page Files pour le stockage et le partage de documents.
+
+**Quand l'afficher :** vous partagez des fichiers avec les clients ou voulez qu'ils téléversent des documents
+**Quand le masquer :** vous n'utilisez pas le partage de fichiers avec les clients
+
+---
+
+## Paramètres de la page Orders
+
+`Show this page` (`showOrderPage`)
+Contrôle si les clients voient la page Orders affichant leur historique d'achats.
+
+**Quand l'afficher :** les clients achètent des produits et doivent consulter l'historique des commandes
+**Quand le masquer :** vous gérez tous les achats et les clients n'ont pas besoin de visibilité sur les commandes
+
+---
+
+## Paramètres de la page Invoices
+
+`Show this page` (`showInvoices`)
+Contrôle si les clients voient la page Invoices pour les informations de facturation.
+
+**Quand l'afficher :** les clients gèrent leur propre facturation et ont besoin d'accéder aux factures
+**Quand le masquer :** vous gérez toute la facturation en externe ou ne voulez pas que les clients consultent les factures
+
+Pour la configuration de la facturation, accédez à `Partner Center` → `Billing`.
+
+---
+
+## Paramètres de la page Automations
+
+`Show this page` (`showAutomations`)
+Contrôle si les clients voient la page Automations.
+
+**Quand l'afficher :** les clients créent et gèrent leurs propres automatisations
+**Quand le masquer :** vous gérez les automatisations pour les clients ou n'offrez pas cette fonctionnalité
+
+:::info
+Les automatisations continuent de s'exécuter même lorsque la page Automations est masquée. Masquer la page ne fait que retirer l'accès du client pour consulter et gérer les automatisations.
+:::
+
+Pour les modèles d'automatisation, accédez à `Partner Center` → `Automations` → `Templates`.
+
+---
+
+## FAQ
+
+<details>
+<summary>Si je masque une page, la fonctionnalité fonctionne-t-elle toujours ?</summary>
+
+Dans la plupart des cas, oui. Masquer une page la retire de la navigation mais ne désactive pas la fonctionnalité sous-jacente. Par exemple :
+- Les automatisations masquées continuent de s'exécuter lorsqu'elles sont déclenchées
+- Les fonctionnalités CRM masquées continuent de stocker des données
+- La boîte de réception masquée continue de recevoir des messages
+
+Le paramètre de visibilité des pages contrôle l'accès du client, pas la fonctionnalité elle-même.
+</details>
+
+<details>
+<summary>Puis-je afficher des pages différentes selon les clients ?</summary>
+
+La visibilité des pages est configurée au niveau du partenaire ou du marché, pas par client. Pour afficher des pages différentes selon les segments de clients :
+1. Créez des marchés distincts pour chaque segment
+2. Configurez la visibilité des pages par marché
+3. Assignez les clients au marché approprié
+</details>
+
+<details>
+<summary>Comment puis-je prévisualiser ce que voient les clients ?</summary>
+
+Utilisez la fonctionnalité `View as Customer` :
+1. Accédez au compte d'un client
+2. Cliquez sur le menu à trois points
+3. Sélectionnez `View as Customer`
+
+Cela vous montre Business App exactement comme le voit ce client.
+</details>
+
+<details>
+<summary>Quel est l'ensemble minimal de pages que je devrais afficher ?</summary>
+
+Il n'y a pas de minimum requis. Cependant, la plupart des mises en œuvre incluent au moins :
+- **Home** : tableau de bord principal et point d'entrée
+- **Inbox/Messages** : capacité de communication
+- Une ou plusieurs pages de fonctionnalités pertinentes pour votre offre
+
+Les bonnes pages dépendent de vos services et des besoins de vos clients.
+</details>
+
+<details>
+<summary>Les clients peuvent-ils demander l'accès à des pages masquées ?</summary>
+
+Les pages masquées ne sont pas visibles pour les clients, donc ils ne sauront pas les demander. Si un client a besoin d'accéder à une fonctionnalité masquée, vous devrez soit :
+- Activer la page pour son marché
+- Le déplacer vers un autre marché où cette page est activée
+- Activer la page au niveau du partenaire pour tous les clients
+</details>
+
+<details>
+<summary>Les pages masquées affectent-elles la facturation ou l'accès aux produits ?</summary>
+
+Non. La visibilité des pages ne contrôle que l'interface de navigation. L'accès aux produits, la facturation et la fonctionnalité sont gérés séparément via les assignations de produits et les paramètres du compte.
+</details>

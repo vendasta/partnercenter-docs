@@ -1,0 +1,79 @@
+---
+id: create-user-lists-bulk-import-users
+title: Créer des listes d'utilisateurs et importer des utilisateurs en masse
+sidebar_label: Créer des listes d'utilisateurs et importer des utilisateurs en masse
+sidebar_position: 5
+description: Découvrez comment créer des listes d'utilisateurs et importer des utilisateurs en masse dans Business App
+---
+
+Après avoir [créé une liste](./create-account-lists.mdx) dans Business App, vous pouvez importer des utilisateurs via un fichier CSV. Les listes d'utilisateurs facilitent l'import, la visualisation et la gestion de grandes listes d'utilisateurs à la fois.
+
+## Comment importer des utilisateurs via CSV
+
+### Étape 1 : Sélectionnez `Import users` (CSV)
+
+Depuis la page de votre liste, sélectionnez le bouton `Import users` (CSV) pour ouvrir la fenêtre d'import.
+
+<img src={require('./img/accounts/users/import-users-step1.jpg').default} alt="Import users step 1" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Étape 2 : Téléchargez le modèle CSV
+
+Si c'est la première fois que vous importez des utilisateurs, téléchargez le modèle CSV pour vous assurer d'avoir le bon format. Vous pouvez également utiliser une liste d'utilisateurs précédemment exportée comme modèle.
+
+<img src={require('./img/accounts/users/import-users-step2.jpg').default} alt="Import users step 2" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Étape 3 : Remplissez le modèle CSV
+
+Ouvrez le modèle dans un tableur comme Excel ou Google Sheets et remplissez les champs requis :
+
+- `email` : L'adresse e-mail de l'utilisateur (obligatoire)
+- `first_name` : Le prénom de l'utilisateur
+- `last_name` : Le nom de famille de l'utilisateur
+- `job_title` : Le poste ou titre de fonction de l'utilisateur
+- `department` : Le service de l'utilisateur
+- `address` : L'adresse physique de l'utilisateur
+- `city` : La ville de l'utilisateur
+- `region` : L'état/la province de l'utilisateur
+- `country` : Le pays de l'utilisateur
+- `postal_code` : Le code postal de l'utilisateur
+- `phone` : Le numéro de téléphone de l'utilisateur
+
+Seul l'e-mail est obligatoire, mais l'ajout d'informations supplémentaires vous aidera à mieux segmenter et cibler vos utilisateurs.
+
+### Étape 4 : Téléversez votre fichier CSV
+
+Retournez à la fenêtre d'import dans Business App et :
+
+1. Téléversez votre fichier CSV en cliquant sur `Choose File`
+2. Prévisualisez vos données pour vous assurer que tout est correct
+3. Cliquez sur `Import`
+
+<img src={require('./img/accounts/users/import-users-step3.jpg').default} alt="Import users step 3" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+### Étape 5 : Attendez la fin de l'import
+
+Après avoir cliqué sur `Import`, le système traite votre fichier. Cela peut prendre quelques minutes selon la taille de votre liste. Vous recevez une notification lorsque l'import est terminé.
+
+<img src={require('./img/accounts/users/import-users-step4.jpg').default} alt="Import users step 4" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+
+## Résolution des erreurs d'import
+
+### Problèmes courants de format CSV
+
+- **Format d'e-mail invalide** : Assurez-vous que toutes les adresses e-mail respectent le format standard (par exemple, user@domain.com)
+- **E-mails en double** : Chaque adresse e-mail ne doit apparaître qu'une seule fois dans votre CSV
+- **Caractères spéciaux** : Certains caractères spéciaux peuvent provoquer des erreurs d'import
+- **En-têtes de colonnes incorrects** : Assurez-vous que les en-têtes de vos colonnes correspondent exactement à ceux du modèle
+
+### Que faire si votre import échoue
+
+1. Téléchargez le rapport d'erreurs (si disponible)
+2. Corrigez les problèmes identifiés dans votre fichier CSV
+3. Réessayez l'import
+
+## Bonnes pratiques pour les listes d'utilisateurs
+
+- Gardez vos listes organisées en créant des conventions de nommage claires
+- Mettez régulièrement vos listes à jour pour maintenir leur exactitude
+- Utilisez des balises et des champs personnalisés pour segmenter davantage vos utilisateurs
+- Exportez vos listes périodiquement comme sauvegarde

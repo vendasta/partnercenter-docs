@@ -12,8 +12,9 @@ import InlineHighlighter from "@site/src/components/InlineHighlighter";
 import MarkComplete from "@site/src/components/MarkComplete";
 import LessonHeader from "@site/src/components/LessonHeader";
 import LessonFooter from "@site/src/components/LessonFooter";
-import FlipCard, { FlipCardGrid } from "@site/src/components/FlipCard";
+import { IconFlipCard, IconFlipCardGrid } from "@site/src/components/FlipCard";
 import Accordion from "@site/src/components/Accordion";
+import LessonSection from "@site/src/components/LessonSection";
 
 <InlineHighlighter courseId="build-your-brand-and-your-day" site="vendasta_learn">
 
@@ -21,12 +22,12 @@ import Accordion from "@site/src/components/Accordion";
 
 <LessonHeader
   difficulty="Intermediate"
+  topics={["Sales productivity", "Prospecting"]}
   time="about 18 minutes"
-  required={["None"]}
   video={true}
-  pathName="The Master Sales Series"
+  pathName="The master sales series"
   step={1}
-  totalSteps={5}
+  totalSteps={6}
   outcomes={[
     "Decide whether to niche down or stay broad, based on local versus global reach",
     "Build an ideal-client profile that shapes your positioning, not just your pitch",
@@ -36,10 +37,7 @@ import Accordion from "@site/src/components/Accordion";
   ]}
 />
 
-{/* VIDEO: "The Perfect Sales Day" — Wistia ID `lq5ny4mfmt`, found by Shiva 2026-08-14 (the
-    standalone cut this lesson was drafted from, not the "Ep. 1" near-duplicate).
-    The brand-building half (Part 1) has no associated Wistia clip — sourced from the two
-    audited 360Learning courses instead. */}
+{/* Wistia lq5ny4mfmt */}
 
 Watch sales expert George Leith walk through what a well-run sales day looks like.
 
@@ -68,7 +66,9 @@ Watch sales expert George Leith walk through what a well-run sales day looks lik
 <script src="https://fast.wistia.net/player.js" async></script>
 
 
-## Build your brand
+## Decide who you serve, and tell their story
+
+A brand is a set of decisions, not a logo. Four of them do most of the work: who you serve, what those clients can expect, whose story your copy tells, and whether your operation keeps the promise. Expand each one:
 
 <Accordion
   items={[
@@ -125,7 +125,11 @@ Watch sales expert George Leith walk through what a well-run sales day looks lik
   ]}
 />
 
-## Run your sales day
+<LessonSection>
+
+## Structure your selling day
+
+A producing day is a set of habits, not a schedule. These seven separate the reps whose day generates conversations from the reps whose day generates admin. Expand each one:
 
 <Accordion
   items={[
@@ -150,9 +154,19 @@ Watch sales expert George Leith walk through what a well-run sales day looks lik
       )
     },
     {
+      id: 'morning-routine',
+      title: 'Build a startup routine, and get to it early',
+      badge: '3',
+      content: (
+        <>
+          <p>Run the same short routine every morning before the day's noise starts, so you arrive at your first real conversation already prepared rather than catching up.</p>
+        </>
+      )
+    },
+    {
       id: 'numbers',
       title: 'Become a chemist about your own numbers',
-      badge: '3',
+      badge: '4',
       content: (
         <>
           <p>Month-end revenue is a <em>lag</em> measure. By the time you see it, it is too late to change it.</p>
@@ -163,7 +177,7 @@ Watch sales expert George Leith walk through what a well-run sales day looks lik
     {
       id: 'sixty-thirty-ten',
       title: 'The 60/30/10 rule',
-      badge: '4',
+      badge: '5',
       content: (
         <>
           <p>60% talking to customers, 30% getting better at your craft, 10% administration. Most reps who feel busy without hitting budget have it flipped: heavy on admin, light on actual conversations.</p>
@@ -173,7 +187,7 @@ Watch sales expert George Leith walk through what a well-run sales day looks lik
     {
       id: 'line-by-line',
       title: 'Master the line-by-line',
-      badge: '5',
+      badge: '6',
       content: (
         <>
           <p>Without opening a spreadsheet, can you talk through your top ten accounts: what is happening, why it matters, when you last spoke, and when you speak next? If not, you do not know your book as well as you think. The spreadsheet organizes it. The line-by-line proves you know it.</p>
@@ -183,7 +197,7 @@ Watch sales expert George Leith walk through what a well-run sales day looks lik
     {
       id: 'next-opportunity',
       title: 'Always be looking for the next opportunity',
-      badge: '6',
+      badge: '7',
       content: (
         <>
           <p>"The way we have always done it" is a liability here, not a cliché. A rep certain they have found the ceiling is the rep who gets outworked by someone hungrier.</p>
@@ -193,19 +207,27 @@ Watch sales expert George Leith walk through what a well-run sales day looks lik
   ]}
 />
 
+</LessonSection>
+
 ## Split your book into A, B, and C
 
-<FlipCardGrid>
-  <FlipCard front="A accounts" back="Paying you real money right now. When an A account raises a hand, you drop what you are doing." subtext="Protect" />
-  <FlipCard front="B accounts" back="Your biggest opportunities, or A accounts in the making. This is where extra selling effort goes." subtext="Invest" />
-  <FlipCard front="C accounts" back="Flat or going nowhere. Find the one thing that would grow them, or manage them out." subtext="Limit" />
-</FlipCardGrid>
+Not every account deserves the same hour. Flip each tier to see what it gets from you:
+
+<IconFlipCardGrid>
+  <IconFlipCard gradient="blue" front="A accounts" back="Protect: Paying you real money right now. When an A account raises a hand, you drop what you are doing." />
+  <IconFlipCard gradient="green" front="B accounts" back="Invest: Your biggest opportunities, or A accounts in the making. This is where extra selling effort goes." />
+  <IconFlipCard gradient="purple" front="C accounts" back="Limit: Flat or going nowhere. Find the one thing that would grow them, or manage them out." />
+</IconFlipCardGrid>
 
 C accounts include fallen angels, former A accounts where something changed. Either find the specific thing that grows one back into a B, or manage it out. Aim to spend roughly 80% of your time on A accounts and the B accounts becoming A accounts.
+
+<LessonSection>
 
 ## Proof from the field
 
 Two of Vendasta's top-performing partner agencies were asked what separates them. Neither credited a tactic. One runs a standing monthly performance review so the client never wonders whether it is working: *"if you're not proving value, they're going to start shaking when they write that check."* The other was blunter: *"no lotion, potion, no magic. Just not afraid to work. First one in the building, last one to leave."*
+
+</LessonSection>
 
 :::tip Try it now
 Two parts. First, write the "before and after" of your own website's opening line — who is the hero in each version? Second, do a line-by-line, out loud, no spreadsheet, on your own top five accounts. Wherever you go blank on either one is this week's work.
@@ -307,9 +329,9 @@ Two parts. First, write the "before and after" of your own website's opening lin
 
 <LessonFooter
   to="/learn/sales/find-your-next-prospect"
-  pathName="The Master Sales Series"
+  pathName="The master sales series"
   step={1}
-  totalSteps={5}
+  totalSteps={6}
   description="Now fill the funnel that day is built to work."
 />
 

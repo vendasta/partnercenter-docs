@@ -1,0 +1,46 @@
+---
+id: order-pdf
+title: Order PDF
+sidebar_label: Order PDF
+description: Genera y descarga un resumen en PDF de cualquier pedido, incluidas las respuestas del formulario de pedido y las respuestas del formulario de cumplimiento.
+tags: [commerce, orders, pdf, fulfillment-forms]
+keywords: [order pdf, download order, order export, fulfillment form pdf, order form pdf]
+---
+
+# Order PDF
+
+Los administradores pueden generar un resumen en PDF descargable de cualquier pedido de venta. El PDF captura el registro completo del pedido, incluidos los detalles del producto, las respuestas del formulario de pedido y las respuestas del formulario de cumplimiento, en un formato adecuado para archivar y consultar.
+
+:::info
+La generación de Order PDF está disponible solo para usuarios administradores.
+:::
+
+## Qué incluye el PDF
+
+El PDF del pedido contiene:
+
+- **Order details**: ID del pedido, productos, precios y estado
+- **Order form answers**: respuestas enviadas para cualquier campo del formulario de pedido (personalizado, común y adicional) en cada producto
+- **Fulfillment form answers**: respuestas enviadas a través del formulario de cumplimiento para cada producto
+
+Solo aparecen los campos respondidos. Los campos opcionales sin respuesta se omiten.
+
+## Cómo se muestran las respuestas de los campos
+
+Las respuestas del formulario se formatean para que sean legibles para las personas:
+
+| Tipo de campo | Formato de visualización |
+|---|---|
+| Checkbox | Yes o No |
+| File upload | Nombre del archivo (por ejemplo, `proposal.pdf`) |
+| User picker | Nombre completo y correo electrónico (por ejemplo, `Jane Smith (jane@example.com)`) |
+| Dropdown | Etiqueta seleccionada; se aplica tanto a selección única como múltiple |
+| Text | Contenido de texto |
+
+Las respuestas de texto largo tienen un límite de 3000 caracteres. Las respuestas que superan este límite se truncan y terminan con `… [truncated]`.
+
+## Datos del formulario de cumplimiento
+
+Las respuestas del formulario de cumplimiento se obtienen en el momento en que se genera el PDF. El formulario de cumplimiento de cada producto se obtiene de forma independiente.
+
+Si no se pueden recuperar los datos del formulario de cumplimiento de un producto, se omite la sección de cumplimiento de ese producto y el resto del PDF se genera normalmente.

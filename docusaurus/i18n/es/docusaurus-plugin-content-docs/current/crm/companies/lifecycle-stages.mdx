@@ -1,0 +1,67 @@
+---
+title: Etapas del ciclo de vida del CRM explicadas
+sidebar_label: Etapas del ciclo de vida
+description: La definición completa de cada etapa del ciclo de vida del CRM, cómo funcionan las transiciones automáticas, y cómo cambiar una etapa manualmente.
+tags: [crm, lifecycle, leads, pipeline]
+keywords: [lifecycle stages, lead, MQL, SQL, prospect, customer, CRM stages]
+---
+
+## ¿Qué son las etapas del ciclo de vida?
+
+Las etapas del ciclo de vida representan en qué punto se encuentra un contacto o empresa dentro de tu proceso de ventas y relación con el cliente, desde el conocimiento inicial hasta convertirse en cliente activo. Las etapas afectan la puntuación de clientes potenciales, los activadores de automatización, el filtrado, y los informes de pipeline, por lo que entenderlas es esencial para usar el CRM correctamente.
+
+## Las etapas, definidas
+
+| Etapa | Definición |
+|-------|-----------|
+| **Visitor** | alguien que ha interactuado con tu contenido o sitio web pero que todavía no ha sido identificado como un comprador potencial. |
+| **Lead** | un contacto o empresa que ha mostrado interés y ha ingresado al CRM. **Esta es la etapa predeterminada para los registros nuevos.** |
+| **MQL** (Marketing Qualified Lead) | un cliente potencial que marketing ha determinado que es un buen ajuste según la interacción o los criterios de perfil. |
+| **SAL** (Sales Accepted Lead) | un cliente potencial que el equipo de ventas ha revisado y aceptado para su seguimiento. |
+| **SQL** (Sales Qualified Lead) | un cliente potencial con el que ventas ha interactuado y confirmado que está listo para el proceso de ventas. |
+| **Prospect** | un SQL que tiene una oportunidad activa en el CRM. **Se establece automáticamente cuando se crea una oportunidad en el registro.** |
+| **Customer** | una empresa que tiene una oportunidad cerrada y ganada. **Se establece automáticamente cuando se marca una oportunidad como Closed Won.** |
+| **Former Customer** | una empresa que fue cliente anteriormente pero que ya no está activa. |
+
+## Transiciones automáticas de etapa
+
+Tres transiciones de etapa ocurren automáticamente según la actividad del CRM:
+
+1. **Lead**: se asigna a todos los contactos y empresas nuevos de forma predeterminada.
+2. **Prospect**: se establece automáticamente cuando se crea una oportunidad en el registro.
+3. **Customer**: se establece automáticamente cuando una oportunidad en el registro se marca como **Closed Won**.
+
+No necesitas mover manualmente los registros a través de estas transiciones. El CRM las actualiza cuando ocurre la acción asociada.
+
+## Cambiar una etapa manualmente
+
+Puedes establecer o anular manualmente una etapa del ciclo de vida desde un registro de contacto o empresa:
+
+1. Abre el perfil del contacto o empresa.
+2. Busca el campo `Lifecycle stage` en la barra lateral o el panel de detalles.
+3. Selecciona la nueva etapa en el menú desplegable.
+4. Guarda el registro.
+
+:::warning
+Si las automatizaciones están configuradas para gestionar las etapas del ciclo de vida (por ejemplo, una automatización que establece una etapa según la actividad), tu cambio manual puede anularse la próxima vez que se ejecute la automatización. Verifica tus automatizaciones activas antes de hacer cambios manuales de etapa a gran escala.
+:::
+
+## Preguntas frecuentes
+
+<details>
+<summary>¿Por qué cambió automáticamente la etapa de un contacto?</summary>
+
+Las causas más comunes son: se creó una oportunidad (pasa a Prospect) o se cerró ganada (pasa a Customer). También puede haber una automatización configurada para actualizar las etapas según la actividad o los criterios. Verifica el feed de actividad del registro para ver cuándo cambió la etapa.
+</details>
+
+<details>
+<summary>¿Puedo agregar etapas de ciclo de vida personalizadas?</summary>
+
+Las etapas de ciclo de vida predeterminadas son fijas. No puedes agregar o renombrar etapas. Para una segmentación adicional, usa etiquetas o campos personalizados.
+</details>
+
+<details>
+<summary>¿Puedo filtrar contactos y empresas por etapa de ciclo de vida?</summary>
+
+Sí. En `CRM` → `Companies` o `Contacts`, usa `Add filter` → `Lifecycle stage` para ver los registros en una etapa específica.
+</details>
