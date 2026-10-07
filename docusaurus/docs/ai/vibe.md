@@ -69,7 +69,7 @@ Vibe connects to Vendasta platform services including Forms, analytics, authenti
 Generate custom images directly within the application using Gemini. Describe the image you want, and Vibe creates and embeds it in the project.
 
 ### Code editor
-Switch to Code mode to view and edit the generated source code directly. Browse the file tree, open files in tabs, and make manual edits that sync with the preview. Code mode supports GitHub sync for version control and collaboration.
+Switch to Code mode to view and edit the generated source code directly. Browse the file tree, open files in tabs, and make manual edits that sync with the preview. Code mode supports GitHub sync for version control and collaboration. The code editor is a Pro plan feature.
 
 ### Checkpoints
 Vibe automatically creates checkpoints as you iterate. You can view diffs between versions and restore previous states if needed.
@@ -133,7 +133,7 @@ Yes. Vibe connects to Forms, analytics, sign-in, and CRM, so you can embed conta
 <details>
 <summary>Can I edit a Vibe app's code directly?</summary>
 
-Yes. Switch to Code mode to browse the file tree and edit files. Code mode supports GitHub sync for version control.
+Yes, on the Pro plan. Switch to Code mode to browse the file tree and edit files. Code mode supports GitHub sync for version control.
 
 </details>
 
