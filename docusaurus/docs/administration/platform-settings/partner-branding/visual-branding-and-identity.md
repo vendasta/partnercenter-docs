@@ -7,6 +7,7 @@ keywords: [partner-branding, white-label, logo-customization, favicon, brand-ide
 brand: vendasta
 product: partner-center-core
 audience: partners
+last_reviewed: 2026-10-07
 ---
 
 Customize your platform’s appearance with your own logos, colors, company name, and visual elements. White-label branding keeps your identity consistent everywhere customers see the platform: Business App, email campaigns, and client communications.
