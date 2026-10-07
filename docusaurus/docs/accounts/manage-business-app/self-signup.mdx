@@ -26,26 +26,26 @@ Self-signup lets your customers create their own Business App accounts without m
 
 Self-signup is a feature that allows end users to register for a Business App account on their own. When a customer signs up, a new company record is created in your CRM with the Record Source set to "Self Signup," making it easy to identify and automate follow-up for these customers.
 
-You can share the signup link directly, embed it in marketing materials, or enable a **Create Account** option on your Business App login page.
+You can share the signup link directly, embed it in marketing materials, or enable a `Create Account` option on your Business App login page.
 
 ## What information is captured during self-signup?
 
 Self-signup is designed to reduce friction and get customers into Business App as quickly as possible. The signup form captures minimal required information:
 
-- **Contact email**: The email address for the primary user
-- **Company name**: Used to look up the business via Google Places
+- `Contact email`: The email address for the primary user
+- `Company name`: Used to look up the business via Google Places
 
 ### Sign up with Google or Microsoft
 
 Customers can start signup in one of two ways:
 
 - **Enter an email address** directly on the signup form, or
-- **Sign up with Google** or **Sign up with Microsoft** using an existing account
+- `Sign up with Google` or `Sign up with Microsoft` using an existing account
 
-When a customer chooses **Sign up with Google** or **Sign up with Microsoft**, they authorize Business App on Google's or Microsoft's sign-in screen, and their verified email address is used to create the account. Because the account provider has already confirmed the email, the customer skips the separate email verification step and lands in the signup flow right away. They still confirm their company name so the platform can enrich the business profile through Google Places.
+When a customer chooses `Sign up with Google` or `Sign up with Microsoft`, they authorize Business App on Google's or Microsoft's sign-in screen, and their verified email address is used to create the account. Because the account provider has already confirmed the email, the customer skips the separate email verification step and lands in the signup flow right away. They still confirm their company name so the platform can enrich the business profile through Google Places.
 
 :::info
-The email address is the only detail pulled from the Google or Microsoft account — no contacts, calendar, or other data is accessed.
+The email address is the only detail pulled from the Google or Microsoft account: no contacts, calendar, or other data is accessed.
 :::
 
 :::tip
@@ -57,7 +57,7 @@ Social sign-up removes password creation and email verification from the flow, w
 When a customer enters their company name, the system searches Google Places to find their business:
 
 - **If found via Google Places**: Business data is automatically populated, including address, phone number, business hours, and other profile information
-- **If a website or phone number can't be captured** — the business isn't found, doesn't have a Google Business Profile, or its profile doesn't include those details — the customer is asked to optionally provide their website and phone number
+- **If a website or phone number can't be captured**: the business isn't found, doesn't have a Google Business Profile, or its profile doesn't include those details, and the customer is asked to optionally provide their website and phone number
 
 This approach balances ease of signup with capturing valuable business information.
 
@@ -73,12 +73,12 @@ When a customer completes signup, the platform sets up AI in two ways:
 
 This means the AI is ready to go the moment the customer lands in Business App.
 
-**In the signup flow**, after the customer verifies their email (or signs up with a Google or Microsoft account, which skips verification), they're shown a live preview of their AI Receptionist — already trained on the business profile and website data captured during signup. They can chat with it immediately and see how it responds *as their business* before they even reach the Business App homepage. This gives new customers an instant "wow" moment and demonstrates the value of AI from their very first interaction.
+**In the signup flow**, after the customer verifies their email (or signs up with a Google or Microsoft account, which skips verification), they're shown a live preview of their AI Receptionist, already trained on the business profile and website data captured during signup. They can chat with it immediately and see how it responds *as their business* before they even reach the Business App homepage. This gives new customers an instant "wow" moment and demonstrates the value of AI from their very first interaction.
 
 The AI Employee Preview can be turned on or off per market in `Customize Business App` → `Add Your Clients`. See [Add Your Clients Settings](/administration/platform-settings/customize-business-app/add-your-customers-settings#how-do-i-show-new-signups-a-preview-of-their-ai-receptionist) for details.
 
 :::tip
-The automatic AI onboarding helps demonstrate value immediately. Customers can test their AI Receptionist in Business App as soon as they complete signup — and with the AI Employee Preview enabled, they experience AI before they even finish onboarding.
+The automatic AI onboarding helps demonstrate value immediately. Customers can test their AI Receptionist in Business App as soon as they complete signup, and with the AI Employee Preview enabled, they experience AI before they even finish onboarding.
 :::
 
 ## Why is self-signup important?
@@ -96,7 +96,7 @@ Self-signup enables:
 With self-signup, you can:
 
 - Share a unique signup link via email, social media, or your website
-- Enable a **Create Account** option on the Business App login page
+- Enable a `Create Account` option on the Business App login page
 - Configure different signup experiences per market
 - Automate onboarding workflows for self-signup customers
 - Track self-signup conversions using the Record Source field
@@ -108,10 +108,10 @@ With self-signup, you can:
 ### Get your signup link
 
 1. In Partner Center, go to `Accounts` → `Manage Business App`.
-2. Select **Customize Business App**.
-3. Scroll to the **Add Your Clients** section.
-4. Find the **Self Sign-Up** area.
-5. Copy the **Sign-Up Link** displayed.
+2. Select `Customize Business App`.
+3. Scroll to the `Add Your Clients` section.
+4. Find the `Self Sign-Up` area.
+5. Copy the `Sign-Up Link` displayed.
 
 The signup link follows this format:
 ```
@@ -127,29 +127,29 @@ You can navigate directly to this page at [partners.vendasta.com/customize-busin
 To let customers register directly from your Business App login page:
 
 1. Navigate to `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App`.
-2. Scroll to the **Add Your Clients** section.
-3. Enable the **Show Create Account** checkbox.
+2. Scroll to the `Add Your Clients` section.
+3. Enable the `Show Create Account` checkbox.
 4. Save your changes.
 
-When enabled, customers visiting your Business App login page will see a **Create Account** option alongside the login form.
+When enabled, customers visiting your Business App login page will see a `Create Account` option alongside the login form.
 
 :::info
-The **Show Create Account** option is configured at the partner level and applies to your default market. For market-specific configurations, select the appropriate market before making changes.
+The `Show Create Account` option is configured at the partner level and applies to your default market. For market-specific configurations, select the appropriate market before making changes.
 :::
 
 ## How to turn on self-signup for small business customers
 
 Follow these steps to set up a complete self-serve signup and purchase flow. This guide walks you through the platform's built-in automation templates and recommended email campaigns so you can get up and running quickly.
 
-### Step 1: Configure Featured Packages
+### Step 1: configure Featured Packages
 
 Before driving signups, make sure new customers have something to buy. [Featured Packages](./featured-packages) appear on the Business App homepage for customers without active products, giving them a clear path from signup to purchase.
 
 1. In Partner Center, go to `Accounts` → `Manage Business App` → `Customize Business App`.
-2. Scroll to **Add Your Clients** and configure your **Featured Packages**.
-3. Select packages that are relevant to self-signup customers — start with your most popular or entry-level offerings.
+2. Scroll to `Add Your Clients` and configure your `Featured Packages`.
+3. Select packages that are relevant to self-signup customers: start with your most popular or entry-level offerings.
 
-### Step 2: Place your signup link
+### Step 2: place your signup link
 
 Get your signup link from `Customize Business App` → `Add Your Clients` → `Self Sign-Up` (see [How to set up self-signup](#how-to-set-up-self-signup) above), then add it where prospects will find it:
 
@@ -157,35 +157,35 @@ Get your signup link from `Customize Business App` → `Add Your Clients` → `S
 - **Email signatures**: Include the link in your team's email signatures
 - **Social media**: Add to your bio links on LinkedIn, Facebook, or Google Business Profile
 - **Marketing campaigns**: Use in ads, newsletters, or partner directories
-- **Login page**: Enable the **Show Create Account** toggle so visitors to your Business App login page can register directly
+- **Login page**: Enable the `Show Create Account` toggle so visitors to your Business App login page can register directly
 
 :::tip
 Create a dedicated landing page that explains your services and includes the signup link as the primary call to action. This gives you a single URL to promote across all channels.
 :::
 
-### Step 3: Activate the signup campaign automation
+### Step 3: activate the signup campaign automation
 
 The platform includes a pre-built automation template that handles new self-signup customers automatically.
 
-1. In Partner Center, go to **Automations**.
-2. Click **Automation Templates**.
-3. Find the **Signup campaign | Drive self-serve revenue** template and click **Use template**.
+1. In Partner Center, go to `Automations`.
+2. Click `Automation Templates`.
+3. Find the `Signup campaign | Drive self-serve revenue` template and click `Use template`.
 4. Configure the template:
-   - **Owner assignment**: Choose which salesperson or team should be assigned to new self-signup customers
-   - **Email campaign**: Select the **Self Signup - Welcome** campaign (see Step 5) or choose your own
+   - `Owner assignment`: Choose which salesperson or team should be assigned to new self-signup customers
+   - `Email campaign`: Select the `Self Signup - Welcome` campaign (see Step 5) or choose your own
 5. Save and activate the automation.
 
-This automation triggers when a company is created with the source **Self Signup**. It assigns an owner/salesperson and sends your chosen welcome email campaign — giving every new signup immediate attention without manual work.
+This automation triggers when a company is created with the source `Self Signup`. It assigns an owner/salesperson and sends your chosen welcome email campaign, giving every new signup immediate attention without manual work.
 
-### Step 4: Activate the purchases and abandoned carts automation
+### Step 4: activate the purchases and abandoned carts automation
 
 A second automation template handles what happens after a self-signup customer interacts with your store.
 
-1. In **Automations**, click **Automation Templates**.
-2. Find the **Purchases & abandoned carts for self serve** template and click **Use template**.
+1. In `Automations`, click `Automation Templates`.
+2. Find the `Purchases & abandoned carts for self serve` template and click `Use template`.
 3. Configure the template:
-   - **Purchased branch**: Select an onboarding campaign to send after a successful purchase. Use **Purchase Complete - Generic** or **Purchase - Conversations AI Setup** from Recommended Campaigns, or create your own.
-   - **Not purchased branch**: Select an abandoned cart campaign. Use **Purchase Incomplete - Generic** from Recommended Campaigns, or create your own.
+   - `Purchased branch`: Select an onboarding campaign to send after a successful purchase. Use `Purchase Complete - Generic` or `Purchase - Conversations AI Setup` from Recommended Campaigns, or create your own.
+   - `Not purchased branch`: Select an abandoned cart campaign. Use `Purchase Incomplete - Generic` from Recommended Campaigns, or create your own.
 4. Save and activate the automation.
 
 This automation triggers when a user adds, removes, or updates an item in their shopping cart. It waits 30 minutes to see if the purchase completes, then sends the appropriate campaign based on the outcome.
@@ -194,16 +194,16 @@ This automation triggers when a user adds, removes, or updates an item in their 
 Add notifications on each branch to alert your sales and success teams. This way, your team knows when a customer completes a purchase or abandons their cart and can follow up personally if needed.
 :::
 
-### Step 5: Set up email campaigns
+### Step 5: set up email campaigns
 
 The platform provides recommended email campaigns designed for the self-serve flow. Find them in `Partner Center` → `Email Campaigns` → `Recommended Campaigns` tab.
 
 | Campaign | Purpose | Use with |
 |----------|---------|----------|
-| **Self Signup - Welcome** | Welcomes new self-signup customers, introduces your services, and guides them to get started | Signup campaign automation (Step 3) |
-| **Purchase Complete - Generic** | Onboards customers after a successful purchase | Purchases automation — purchased branch (Step 4) |
-| **Purchase - Conversations AI Setup** | Guides customers through setting up AI-powered conversations after purchase | Purchases automation — purchased branch (Step 4) |
-| **Purchase Incomplete - Generic** | Re-engages customers who added items to their cart but didn't complete the purchase | Purchases automation — not purchased branch (Step 4) |
+| `Self Signup - Welcome` | Welcomes new self-signup customers, introduces your services, and guides them to get started | Signup campaign automation (Step 3) |
+| `Purchase Complete - Generic` | Onboards customers after a successful purchase | Purchases automation, purchased branch (Step 4) |
+| `Purchase - Conversations AI Setup` | Guides customers through setting up AI-powered conversations after purchase | Purchases automation, purchased branch (Step 4) |
+| `Purchase Incomplete - Generic` | Re-engages customers who added items to their cart but didn't complete the purchase | Purchases automation, not purchased branch (Step 4) |
 
 To use a recommended campaign:
 
@@ -211,14 +211,14 @@ To use a recommended campaign:
 2. Click the campaign name to preview it.
 3. Use it as-is, or clone it to customize the content for your brand.
 
-### Step 6: Monitor and optimize
+### Step 6: monitor and optimize
 
 Once your self-serve flow is live, track performance and adjust:
 
-- **Signup volume**: Filter your account list by **Record Source** = "Self Signup" to see how many customers are coming in
-- **Cart and purchase activity**: Review automation run history in **Automations** to see how many customers are purchasing vs. abandoning carts
-- **Email performance**: Check open rates and click rates on your campaigns in **Email Campaigns**
-- **Featured Packages**: Adjust your package selection based on what converts — try different offerings or pricing to improve uptake
+- **Signup volume**: Filter your account list by `Record Source` = "Self Signup" to see how many customers are coming in
+- **Cart and purchase activity**: Review automation run history in `Automations` to see how many customers are purchasing vs. abandoning carts
+- **Email performance**: Check open rates and click rates on your campaigns in `Email Campaigns`
+- `Featured Packages`: Adjust your package selection based on what converts: try different offerings or pricing to improve uptake
 
 ## Building custom automations
 
@@ -226,10 +226,10 @@ If you need more control beyond the pre-built templates, you can create automati
 
 ### Set up a custom automation
 
-1. In Partner Center, go to **Automations**.
-2. Click **Create Automation**.
-3. Select the trigger **A company is created**.
-4. Add a condition to filter by **Record Source** equals **Self Signup**.
+1. In Partner Center, go to `Automations`.
+2. Click `Create Automation`.
+3. Select the trigger `A company is created`.
+4. Add a condition to filter by `Record Source` equals `Self Signup`.
 5. Add your desired actions.
 
 ### Additional automation actions to consider
@@ -255,19 +255,19 @@ If you serve different customer segments, configure self-signup settings per mar
 <details>
 <summary>Where do I find the self-signup link?</summary>
 
-Navigate to `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Add Your Clients`. The signup link is displayed in the **Self Sign-Up** section.
+Navigate to `Partner Center` → `Accounts` → `Manage Business App` → `Customize Business App` → `Add Your Clients`. The signup link is displayed in the `Self Sign-Up` section.
 </details>
 
 <details>
 <summary>Can customers sign up without a direct link?</summary>
 
-Yes. Enable the **Show Create Account** option to add a registration link to your Business App login page. Customers can then click **Create Account** to register.
+Yes. Enable the `Show Create Account` option to add a registration link to your Business App login page. Customers can then click `Create Account` to register.
 </details>
 
 <details>
 <summary>Can customers sign up with a Google or Microsoft account?</summary>
 
-Yes. On the signup form, customers can enter an email address or choose **Sign up with Google** or **Sign up with Microsoft**. When they use a Google or Microsoft account, the verified email address on that account is used to create their Business App account, and they skip the separate email verification step. Only the email address is used — no other account data is accessed. Customers can return later and sign in with the same account from your Business App login page.
+Yes. On the signup form, customers can enter an email address or choose `Sign up with Google` or `Sign up with Microsoft`. When they use a Google or Microsoft account, the verified email address on that account is used to create their Business App account, and they skip the separate email verification step. Only the email address is used: no other account data is accessed. Customers can return later and sign in with the same account from your Business App login page.
 </details>
 
 <details>
@@ -279,7 +279,7 @@ Self-signup customers have their Record Source set to "Self Signup" in the CRM. 
 <details>
 <summary>Can I have different signup links for different markets?</summary>
 
-Yes. Each market has its own signup link. Select the market in **Customize Business App** to see its specific signup URL.
+Yes. Each market has its own signup link. Select the market in `Customize Business App` to see its specific signup URL.
 </details>
 
 <details>
@@ -291,13 +291,13 @@ A new company and user are created in your CRM. The company's Record Source is s
 <details>
 <summary>Can I customize what customers see after signing up?</summary>
 
-Yes. Configure [Featured Packages](./featured-packages) to present upgrade options. You can also customize the Business App experience in **Customize Business App** settings.
+Yes. Configure [Featured Packages](./featured-packages) to present upgrade options. You can also customize the Business App experience in `Customize Business App` settings.
 </details>
 
 <details>
 <summary>What information does the self-signup form collect?</summary>
 
-The form collects contact email and company name. If the business is found via Google Places, additional business data (address, phone, hours) is automatically populated. If a website or phone number can't be captured from the business's Google Business Profile — or the business doesn't have one — the customer is asked to optionally provide their website and phone number.
+The form collects contact email and company name. If the business is found via Google Places, additional business data (address, phone, hours) is automatically populated. If a website or phone number can't be captured from the business's Google Business Profile, or the business doesn't have one, the customer is asked to optionally provide their website and phone number.
 </details>
 
 <details>
@@ -312,11 +312,11 @@ Reducing form fields minimizes friction and increases signup completion rates. B
 Yes, in two ways:
 
 - **AI Knowledge Base and AI Receptionist:** When business data is captured from Google Places or a website is provided, the system automatically adds this information to the AI Knowledge Base and enables the AI Receptionist. Customers can start using AI features immediately after signup.
-- **AI Employee Preview:** After verifying their email, new signups are shown a live chat preview of their AI Receptionist — already trained on the business profile and website data captured during signup. They can chat with it as their own AI before reaching the Business App homepage. This can be turned on or off per market in `Customize Business App` → `Add Your Clients`.
+- **AI Employee Preview:** After verifying their email, new signups are shown a live chat preview of their AI Receptionist, already trained on the business profile and website data captured during signup. They can chat with it as their own AI before reaching the Business App homepage. This can be turned on or off per market in `Customize Business App` → `Add Your Clients`.
 </details>
 
 <details>
 <summary>What if the customer's business isn't found on Google Places?</summary>
 
-If a website or phone number can't be captured from the business's Google Business Profile — or the business doesn't have one — the customer is asked to optionally provide their website and phone number. The system uses the website to populate the AI Knowledge Base instead.
+If a website or phone number can't be captured from the business's Google Business Profile, or the business doesn't have one, the customer is asked to optionally provide their website and phone number. The system uses the website to populate the AI Knowledge Base instead.
 </details>

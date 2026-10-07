@@ -11,7 +11,7 @@ audience: partners
 
 ## What is the welcome email?
 
-The welcome email gives a Business App user a link to set their password and access their dashboard. Creating or inviting a user sends the [onboarding email](/business-app/ai-onboarding-experience) rather than the welcome email, so the welcome email is reached through the **Send Set Password email (Welcome email)** action on an existing user — useful for a password reset, or any time you'd prefer the shorter standard email. This email uses the white-label settings from the market the account is assigned to (logo, brand colors, sender name).
+The welcome email gives a Business App user a link to set their password and access their dashboard. Creating or inviting a user sends the [onboarding email](/business-app/ai-onboarding-experience) rather than the welcome email, so the welcome email is reached through the `Send Set Password email (Welcome email)` action on an existing user: useful for a password reset, or any time you'd prefer the shorter standard email. This email uses the white-label settings from the market the account is assigned to (logo, brand colors, sender name).
 
 ## What you can and cannot customize
 
@@ -22,19 +22,19 @@ The welcome email gives a Business App user a link to set their password and acc
 | Sending domain | No, selected automatically |
 | Subject line | No, hard-coded |
 | Email body content | No, hard-coded |
-| Custom introductory message | Yes, a short message can be added at send time (it attaches to whichever email is being sent — welcome or onboarding) |
+| Custom introductory message | Yes, a short message can be added at send time (it attaches to whichever email is being sent, welcome or onboarding) |
 
 The body of the welcome email is fixed and cannot be edited directly. The most common workaround is to use a **Marketing Campaign** to send a fully custom onboarding email after the user logs in for the first time.
 
 ## How the sending domain is chosen
 
-The welcome and onboarding emails are sent from the **Sender Email** in the account's market email settings, but only when that address is on your verified sending domain. There is no domain picker to set at send time. The platform picks the address in this order:
+The welcome and onboarding emails are sent from the `Sender Email` in the account's market email settings, but only when that address is on your verified sending domain. There is no domain picker to set at send time. The platform picks the address in this order:
 
 1. The market's sender email, if its domain matches your sending domain and both DKIM records for that domain are verified.
 2. Your partner-level sender email, if the market has its own address that doesn't qualify and your partner-level address does.
 3. A platform address, if neither of your addresses qualifies.
 
-The **Sender Name** is used in every case, so the email still shows your brand even when it's sent from the platform address.
+The `Sender Name` is used in every case, so the email still shows your brand even when it's sent from the platform address.
 
 :::tip
 To send these emails from your own address, set up and verify your sending domain, including both DKIM records, under `Marketing` → `Email settings`. See [Email authentication](/marketing/email-settings/email-authentication) for the DNS records. An authenticated sender also improves deliverability.
@@ -42,7 +42,7 @@ To send these emails from your own address, set up and verify your sending domai
 
 ## Recommended workaround: Marketing Campaigns
 
-Most partners use a Marketing Campaign to deliver custom onboarding content. This lets you control the message completely and send a series of emails rather than a single welcome note.
+Use a Marketing Campaign to deliver custom onboarding content. This lets you control the message completely and send a series of emails rather than a single welcome note.
 
 **How to set this up:**
 
@@ -86,7 +86,7 @@ The confirmation dialog shows which market's branding will be used and gives you
 <details>
 <summary>Can I add a custom message to the welcome email?</summary>
 
-Yes, a brief custom introductory message can be added when creating a user or resending the email. It attaches to whichever email you're sending — the welcome email or the onboarding email — and appears above the standard content. For fully custom content, use a Marketing Campaign as described above.
+Yes, a brief custom introductory message can be added when creating a user or resending the email. It attaches to whichever email you're sending, the welcome email or the onboarding email, and appears above the standard content. For fully custom content, use a Marketing Campaign as described above.
 </details>
 
 <details>
