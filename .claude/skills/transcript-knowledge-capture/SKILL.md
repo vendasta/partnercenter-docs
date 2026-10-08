@@ -33,9 +33,10 @@ staging ground the `learning-path-writing` skill draws from.
 
 Topics map to the real path/folder structure under `docusaurus/training/`
 (the learn-revamp content tree — this is what ET-689's "existing paths"
-actually refers to; `docusaurus/training/builder/_category_.json` is
-literally labeled "Wire your AI Workforce to Act", the exact path ET-689
-names as an example). Store one note file per **leaf topic slug** in `enablement-docs` at `_source-archive/learn-tab-revamp/transcript-notes/`,
+actually refers to; `docusaurus/training/connect-your-own-systems/` was
+`builder/`, labeled "Wire your AI Workforce to Act", when ET-689 named it as
+an example. Topic slugs below keep their original names so existing note
+files still match; the folder column is the current location). Store one note file per **leaf topic slug** in `enablement-docs` at `_source-archive/learn-tab-revamp/transcript-notes/`,
 flat (no subfolders) — every leaf name below is already unique.
 
 **This skill never writes into this repository.** Captured notes live in
@@ -45,11 +46,11 @@ flat (no subfolders) — every leaf name below is already unique.
 |---|---|---|
 | `getting-started` | Get started | `docusaurus/training/getting-started/` |
 | `ai-foundations` | AI foundations | `docusaurus/training/ai-foundations/` |
-| `ai-workforce` | Hire your first AI Employee | `docusaurus/training/ai-workforce/` |
-| `builder` | Wire your AI Workforce to Act | `docusaurus/training/builder/` |
+| `ai-workforce` | Hire your first AI Employee | `docusaurus/training/hire-your-first-ai-employee/` |
+| `builder` | Connect your own systems | `docusaurus/training/connect-your-own-systems/` |
 | `vibe` | Build with Vibe | `docusaurus/training/vibe/` |
 | `growth-engine` | Your growth engine | `docusaurus/training/growth-engine/` |
-| `vendasta-services` | Vendasta Services | `docusaurus/training/vendasta-services/` |
+| `vendasta-services` | Vendasta Services (archived 2026-10-07) | `docusaurus/archive/training/vendasta-services/` |
 | `advertising` | Attract > Advertising | `docusaurus/training/products/attract/advertising/` |
 | `local-seo-listings` | Attract > Local SEO & Listings | `docusaurus/training/products/attract/local-seo-listings/` |
 | `social-marketing` | Attract > Social Marketing | `docusaurus/training/products/attract/social-marketing/` |

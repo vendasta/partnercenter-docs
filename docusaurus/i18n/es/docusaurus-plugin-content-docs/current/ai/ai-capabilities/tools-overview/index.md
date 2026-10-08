@@ -181,6 +181,6 @@ Ahora que entiendes qué son las herramientas y cómo funcionan, sigue nuestro t
 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
   <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
   <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>
-    ¿Eres nuevo en la contratación y gestión de un empleado de IA? Toma el curso <a href="/learn/ai-workforce" style={{color: '#3C9A63', fontWeight: 600}}>Contrata a tu primer empleado de IA</a> en Vendasta Learn — Principiante a intermedio, 7 lecciones.
+    ¿Eres nuevo en la contratación y gestión de un empleado de IA? Toma el curso <a href="/learn/hire-your-first-ai-employee" style={{color: '#3C9A63', fontWeight: 600}}>Contrata a tu primer empleado de IA</a> en Vendasta Learn — Principiante a intermedio, 7 lecciones.
   </span>
 </div>

@@ -5,7 +5,7 @@ description: Write or edit learning path content under docusaurus/training/ (the
 
 # Writing learning paths
 
-Every rule in this file was earned by critiquing a real, shipped step line by line. The reference implementation is `docusaurus/training/getting-started/the-vendasta-platform.mdx` — when in doubt, match it. The strategy documents behind this work (IA spec, partner-call evidence, implementation plan) live in Cal's workspace at `~/mydev/strategy/docs-learn-revamp/`.
+Every rule in this file was earned by critiquing a real, shipped step line by line. The reference implementation is `docusaurus/training/getting-started/how-the-platform-works.mdx` — when in doubt, match it. The strategy documents behind this work (IA spec, partner-call evidence, implementation plan) live in Cal's workspace at `~/mydev/strategy/docs-learn-revamp/`.
 
 ## The one-sentence version
 

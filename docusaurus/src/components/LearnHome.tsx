@@ -1,9 +1,27 @@
-// Learn tab homepage: path cards up top, then the "Learning for how you work"
-// explorer — role and focus facets on the left, a clickable lesson list on the
-// right. Ported from the internal Vendasta Learn homepage (vendastalearn
-// internal-docs-site src/components/HomeCatalog) on 2026-08-19, Cal's Learn tab
-// refresh. Data is hand-curated below — there is no generated course manifest
-// in this repo, so when a path gains or loses a visible lesson, update it here.
+// NOT RENDERED since 2026-10-07. Start here (training/index.mdx) is now a
+// single-path walkthrough written in MDX, in the shape of Stripe's "Sell
+// subscriptions as a SaaS startup" guide, with the on-page TOC on the right.
+// This component is the former card grid, kept current and importable so the
+// cards can come back without a rebuild (for example as the motion router in
+// phase 3 of the sidebar reorg plan).
+//
+// Learning paths as numbered cards, in the order the sidebar lists them.
+// Ported from the internal Vendasta Learn homepage
+// (vendastalearn internal-docs-site src/components/HomeCatalog) on 2026-08-19,
+// Cal's Learn tab refresh. Data is hand-curated below: there is no generated
+// course manifest in this repo, so when a path gains or loses a visible step,
+// update it here.
+//
+// 2026-10-07 (Cal, sidebar reorg phase 1): Home became Start here, three paths
+// took plain-language labels (Know what you're selling, Make your first sale, Connect
+// your own systems), Your sales assets moved up to sit after Make your first sale, and
+// the Work with Vendasta Services path was archived to
+// docusaurus/archive/training/vendasta-services with redirects into
+// docs/vendasta-services. The "Learning for how you work" explorer is no longer
+// rendered: with one audience and no role facets it duplicated the sidebar.
+// Restore it by rendering <Explorer /> again in LearnHome below; FOCUS_AREAS
+// and the item arrays are kept current for that reason. The plan is in Cal's
+// workspace at OUTPUTS/learn-tab-sidebar-reorg/learn-sidebar-ia-plan.md.
 //
 // Hidden paths and their restore notes (they come back by adding a card to
 // PATHS and items to the facets below, plus the sidebar changes noted in each
@@ -23,10 +41,10 @@
 //   deleted, so it comes back without a rebuild. Restore by re-adding its card
 //   to PATHS, putting SALES_ITEMS back into FOCUS_AREAS as "Learning how to
 //   sell", returning position 7 and dropping className from
-//   training/sales/_category_.json, and repointing the Wire your AI Workforce
-//   to act skill-check footer back to /learn/sales.
-// (Builder and Build lab were merged into one visible path, Wire your AI
-//  Workforce to act, on 2026-08-29 and are no longer hidden.)
+//   training/sales/_category_.json, and repointing the Connect your own
+//   systems skill-check footer back to /learn/sales.
+// (Builder and Build lab were merged into one visible path, now Connect your
+//  own systems, on 2026-08-29 and are no longer hidden.)
 
 import React, { useMemo, useState } from "react";
 import Link from "@docusaurus/Link";
@@ -49,15 +67,18 @@ interface HomePathCard {
   tone: "purple" | "green" | "navy" | "teal" | "blue" | "forest" | "slate";
 }
 
-// Counts and time estimates mirror what each path's own PathHeader claims.
+// Cards run in sidebar order and the kicker carries the number. Step counts are
+// the visible step files in each path folder (skill check included); time
+// estimates mirror each path's own PathHeader. "Step," never "lesson," in
+// learner-facing copy (learning-path-writing rulebook).
 const PATHS: HomePathCard[] = [
   {
     id: "getting-started",
-    kicker: "Start here",
+    kicker: "1 · Set up",
     title: "Get set up",
-    blurb: "Run your business on Vendasta: the platform, setup, getting paid, your first client, and what they see on day one.",
+    blurb: "Make the platform yours: your domain and email, payments, your brand, your own AI Receptionist, your first client, and what they see on day one.",
     tag: "Platform",
-    scope: ["8 lessons", "1 video", "6 labs"],
+    scope: ["9 steps", "1 video", "6 labs"],
     gate: "About 2 hours 15 minutes",
     cta: "Start",
     to: "/learn/getting-started",
@@ -65,62 +86,62 @@ const PATHS: HomePathCard[] = [
   },
   {
     id: "ai-workforce",
-    kicker: "Put AI to work",
+    kicker: "2 · Put one to work",
     title: "Hire your first AI Employee",
-    blurb: "Get your first AI Employee hired, trained, and working for a client, then grow the roster from there.",
+    blurb: "Put a receptionist to work, teach it to book, train it to answer accurately, then deploy one for a client and prove it works.",
     tag: "AI",
-    scope: ["7 lessons", "5 labs"],
-    gate: "About 2 hours 30 minutes",
+    scope: ["6 steps", "5 labs"],
+    gate: "About 1 hour 40 minutes",
     cta: "Start",
-    to: "/learn/ai-workforce",
+    to: "/learn/hire-your-first-ai-employee",
     tone: "purple",
   },
   {
     id: "grow-your-ai-workforce",
-    kicker: "Staff the team",
-    title: "Grow your AI Workforce",
-    blurb: "Every member of the fleet, one at a time: watch each one work, learn its day-one job, and know the edition that carries it.",
+    kicker: "3 · The product",
+    title: "Know what you're selling",
+    blurb: "Each of the five core AI Employees, the job it does on day one, the edition that carries it, and the three specialist builds.",
     tag: "AI",
-    scope: ["6 lessons", "8 videos"],
+    scope: ["7 steps", "8 videos"],
     gate: "About 1 hour",
     cta: "Start",
-    to: "/learn/grow-your-ai-workforce",
+    to: "/learn/know-what-youre-selling",
     tone: "purple",
   },
   {
     id: "sell-the-ai-workforce",
-    kicker: "Sell it",
-    title: "Sell the AI Workforce",
-    blurb: "The packages, the live demo, the ROI numbers, the close, and the launch that gets a client to their first captured lead.",
+    kicker: "4 · The sale",
+    title: "Make your first sale",
+    blurb: "The AI Workforce packages, the live demo on any prospect's website, the ROI numbers, the close, and the launch that gets a client to their first captured lead.",
     tag: "Sales",
-    scope: ["7 lessons", "4 videos", "2 labs"],
+    scope: ["8 steps", "4 videos", "2 labs"],
     gate: "About 2 hours",
     cta: "Start",
-    to: "/learn/sell-the-ai-workforce",
+    to: "/learn/make-your-first-sale",
+    tone: "purple",
+  },
+  {
+    id: "sales-assets",
+    kicker: "5 · The toolkit",
+    title: "Your sales assets",
+    blurb: "Rebrandable sales kits for every AI Employee, the ROI calculator, success stories, the sales videos, and a line to rehearse your pitch on.",
+    tag: "Sales",
+    scope: ["Reference page"],
+    gate: "Open any time",
+    cta: "Open",
+    to: "/learn/sales-assets",
     tone: "purple",
   },
   {
     id: "builder",
-    kicker: "Build it",
-    title: "Wire your AI Workforce to act",
-    blurb: "One build end to end: a custom tool for the job the platform does not cover, an automation that follows through, and a real API call against your own data.",
+    kicker: "6 · Go deeper",
+    title: "Connect your own systems",
+    blurb: "One build end to end: a custom tool for the job the platform does not cover, an automation that follows through, a webhook out, and a real API call against your own data.",
     tag: "Build",
-    scope: ["8 lessons", "6 labs"],
-    gate: "About 1 hour 40 minutes",
+    scope: ["10 steps", "6 labs"],
+    gate: "About 2 hours 10 minutes",
     cta: "Start",
-    to: "/learn/builder",
-    tone: "purple",
-  },
-  {
-    id: "vendasta-services",
-    kicker: "Done for you",
-    title: "Work with Vendasta Services",
-    blurb: "Decide what to run yourself and what to hand over, then implement an AI workforce with expert help.",
-    tag: "Services",
-    scope: ["5 lessons"],
-    gate: "About 45 minutes",
-    cta: "Start",
-    to: "/learn/vendasta-services",
+    to: "/learn/connect-your-own-systems",
     tone: "purple",
   },
 ];
@@ -139,15 +160,15 @@ interface ExplorerFacet {
 }
 
 const GETTING_STARTED_ITEMS: ExplorerItem[] = [
-  { title: "The Vendasta Platform", to: "/learn/getting-started/the-vendasta-platform" },
+  { title: "How the platform works", to: "/learn/getting-started/how-the-platform-works" },
   { title: "Connect your domain and email", to: "/learn/getting-started/connect-your-domain-and-email" },
   { title: "Connect payments and billing", to: "/learn/getting-started/connect-payments-and-billing" },
-  { title: "Brand your platform", to: "/learn/getting-started/brand-it" },
+  { title: "Brand your platform", to: "/learn/getting-started/brand-your-platform" },
   { title: "Turn on your own AI Receptionist", to: "/learn/getting-started/turn-on-your-own-ai-receptionist" },
-  { title: "Bring in your first client", to: "/learn/getting-started/bring-in-your-first-client" },
-  { title: "Walk your client's first experience", to: "/learn/getting-started/walk-your-clients-first-experience" },
+  { title: "Add your first client", to: "/learn/getting-started/add-your-first-client" },
+  { title: "What your client sees first", to: "/learn/getting-started/what-your-client-sees-first" },
   { title: "Where to get help", to: "/learn/getting-started/where-to-get-help" },
-  { title: "Get set up skill check", to: "/learn/getting-started/get-set-up-skill-check" },
+  { title: "Get set up skill check", to: "/learn/getting-started/skill-check" },
 ];
 
 // Unused while AI foundations is hidden. Kept deliberately: the restore note at
@@ -163,32 +184,33 @@ const AI_FOUNDATIONS_ITEMS: ExplorerItem[] = [
 ];
 
 const AI_WORKFORCE_ITEMS: ExplorerItem[] = [
-  { title: "Meet your AI Workforce", to: "/learn/ai-workforce/meet-your-workforce" },
-  { title: "Put a receptionist to work", to: "/learn/ai-workforce/put-a-receptionist-to-work" },
-  { title: "Teach it to book", to: "/learn/ai-workforce/teach-it-to-book" },
-  { title: "Train your AI Employee", to: "/learn/ai-workforce/train-your-employee" },
-  { title: "Deploy a receptionist for a client", to: "/learn/ai-workforce/deploy-a-receptionist-for-a-client" },
+  { title: "Meet the AI Employees", to: "/learn/hire-your-first-ai-employee/meet-the-ai-employees" },
+  { title: "Put a receptionist to work", to: "/learn/hire-your-first-ai-employee/put-a-receptionist-to-work" },
+  { title: "Connect calendars and booking", to: "/learn/hire-your-first-ai-employee/connect-calendars-and-booking" },
+  { title: "Train your AI Employee", to: "/learn/hire-your-first-ai-employee/train-your-ai-employee" },
+  { title: "Deploy a receptionist for a client", to: "/learn/hire-your-first-ai-employee/deploy-a-receptionist-for-a-client" },
+  { title: "Hire your first AI Employee skill check", to: "/learn/hire-your-first-ai-employee/skill-check" },
 ];
 
 const GROW_AI_ITEMS: ExplorerItem[] = [
-  { title: "AI Receptionist", to: "/learn/grow-your-ai-workforce/ai-receptionist" },
-  { title: "AI Reputation Specialist", to: "/learn/grow-your-ai-workforce/ai-reputation-specialist" },
-  { title: "AI Social Media Manager", to: "/learn/grow-your-ai-workforce/ai-social-media-manager" },
-  { title: "AI Blogger", to: "/learn/grow-your-ai-workforce/ai-blogger" },
-  { title: "AI Sales Assistant", to: "/learn/grow-your-ai-workforce/ai-sales-assistant" },
-  { title: "The specialist bench", to: "/learn/grow-your-ai-workforce/the-specialist-bench" },
-  { title: "Grow your AI Workforce skill check", to: "/learn/grow-your-ai-workforce/grow-ai-workforce-skill-check" },
+  { title: "AI Receptionist", to: "/learn/know-what-youre-selling/ai-receptionist" },
+  { title: "AI Reputation Specialist", to: "/learn/know-what-youre-selling/ai-reputation-specialist" },
+  { title: "AI Social Media Manager", to: "/learn/know-what-youre-selling/ai-social-media-manager" },
+  { title: "AI Blogger", to: "/learn/know-what-youre-selling/ai-blogger" },
+  { title: "AI Sales Assistant", to: "/learn/know-what-youre-selling/ai-sales-assistant" },
+  { title: "Specialist AI Employees", to: "/learn/know-what-youre-selling/specialist-ai-employees" },
+  { title: "Know what you're selling skill check", to: "/learn/know-what-youre-selling/skill-check" },
 ];
 
 const SELL_AI_ITEMS: ExplorerItem[] = [
-  { title: "Know your offer", to: "/learn/sell-the-ai-workforce/know-your-offer" },
-  { title: "Get in the room", to: "/learn/sell-the-ai-workforce/get-in-the-room" },
-  { title: "Demo with confidence", to: "/learn/sell-the-ai-workforce/demo-with-confidence" },
-  { title: "Sell the outcome", to: "/learn/sell-the-ai-workforce/sell-the-outcome" },
-  { title: "Execute the play", to: "/learn/sell-the-ai-workforce/execute-the-play" },
-  { title: "Practice the pitch", to: "/learn/sell-the-ai-workforce/practice-the-pitch" },
-  { title: "From signed to activated", to: "/learn/sell-the-ai-workforce/from-signed-to-activated" },
-  { title: "Sell the AI Workforce skill check", to: "/learn/sell-the-ai-workforce/sell-ai-workforce-skill-check" },
+  { title: "Your packages and pricing", to: "/learn/make-your-first-sale/your-packages-and-pricing" },
+  { title: "Find your first prospects", to: "/learn/make-your-first-sale/find-your-first-prospects" },
+  { title: "Build a live demo", to: "/learn/make-your-first-sale/build-a-live-demo" },
+  { title: "Run the sales call", to: "/learn/make-your-first-sale/run-the-sales-call" },
+  { title: "Propose and close", to: "/learn/make-your-first-sale/propose-and-close" },
+  { title: "Practice the pitch", to: "/learn/make-your-first-sale/practice-the-pitch" },
+  { title: "Get your client live", to: "/learn/make-your-first-sale/get-your-client-live" },
+  { title: "Make your first sale skill check", to: "/learn/make-your-first-sale/skill-check" },
 ];
 
 const SALES_ITEMS: ExplorerItem[] = [
@@ -201,25 +223,18 @@ const SALES_ITEMS: ExplorerItem[] = [
 ];
 
 const BUILDER_ITEMS: ExplorerItem[] = [
-  { title: "Start with what the platform already does", to: "/learn/builder/start-with-what-exists" },
-  { title: "Build the doorway", to: "/learn/builder/build-the-doorway" },
-  { title: "Watch it work", to: "/learn/builder/watch-it-work" },
-  { title: "Hand off to the automation", to: "/learn/builder/hand-off-to-the-automation" },
-  { title: "Put your workforce on autopilot", to: "/learn/builder/autopilot" },
-  { title: "Wire it to your own systems", to: "/learn/builder/wire-it-to-your-systems" },
-  { title: "Call the API yourself", to: "/learn/builder/call-the-api-yourself" },
-  { title: "Book into an outside system", to: "/learn/builder/book-into-an-outside-system" },
-  { title: "Where the platform ends", to: "/learn/builder/where-the-platform-ends" },
-  { title: "Wire to act skill check", to: "/learn/builder/wire-to-act-skill-check" },
+  { title: "Start with what the platform already does", to: "/learn/connect-your-own-systems/start-with-what-the-platform-already-does" },
+  { title: "Build a custom tool", to: "/learn/connect-your-own-systems/build-a-custom-tool" },
+  { title: "Test the tool", to: "/learn/connect-your-own-systems/test-the-tool" },
+  { title: "Hand off to the automation", to: "/learn/connect-your-own-systems/hand-off-to-the-automation" },
+  { title: "Put your workforce on autopilot", to: "/learn/connect-your-own-systems/put-your-workforce-on-autopilot" },
+  { title: "Send data out with a webhook", to: "/learn/connect-your-own-systems/send-data-out-with-a-webhook" },
+  { title: "Call the API yourself", to: "/learn/connect-your-own-systems/call-the-api-yourself" },
+  { title: "Book into an outside system", to: "/learn/connect-your-own-systems/book-into-an-outside-system" },
+  { title: "When to hand off to a developer", to: "/learn/connect-your-own-systems/when-to-hand-off-to-a-developer" },
+  { title: "Connect your own systems skill check", to: "/learn/connect-your-own-systems/skill-check" },
 ];
 
-const SERVICES_ITEMS: ExplorerItem[] = [
-  { title: "What Vendasta Services does", to: "/learn/vendasta-services/what-vendasta-services-does" },
-  { title: "Choose how the work gets done", to: "/learn/vendasta-services/choose-how-the-work-gets-done" },
-  { title: "Implement your AI Workforce", to: "/learn/vendasta-services/implement-your-ai-workforce" },
-  { title: "Order and launch a service", to: "/learn/vendasta-services/order-and-launch-a-service" },
-  { title: "Run the work over time", to: "/learn/vendasta-services/run-the-work-over-time" },
-];
 
 // The "What's your role?" facet group (Admin / Sales / Builder) was removed
 // 2026-08-19 (Cal): too few roles to be useful yet. Restore it from git history
@@ -230,7 +245,6 @@ const FOCUS_AREAS: ExplorerFacet[] = [
   { id: "selling-ai", label: "Selling the AI Workforce", items: SELL_AI_ITEMS },
   { id: "ai-to-work", label: "Putting AI to work", items: [...AI_WORKFORCE_ITEMS, ...GROW_AI_ITEMS] },
   { id: "connecting", label: "Connecting your own systems", items: BUILDER_ITEMS },
-  { id: "delivering", label: "Partnering with our services team", items: SERVICES_ITEMS },
 ];
 
 function PathCard({ path }: { path: HomePathCard }) {
@@ -312,6 +326,7 @@ function FacetGroup({
   );
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function Explorer() {
   const [selectedId, setSelectedId] = useState(FOCUS_AREAS[0].id);
 
@@ -371,7 +386,7 @@ export default function LearnHome() {
   return (
     <div className="vd-home">
       <LearningPaths />
-      <Explorer />
+      {/* <Explorer /> hidden 2026-10-07; see the note at the top of this file. */}
     </div>
   );
 }
