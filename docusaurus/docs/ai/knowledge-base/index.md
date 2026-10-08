@@ -99,7 +99,7 @@ The knowledge base contains **information to reference** (reactive, fact-based).
 - Business hours, location, contact information
 - Pricing, product specifications, service details
 - FAQs, policies, procedures
-- Any factual information customers might ask about
+- Any factual information customers ask about
 
 ### Capabilities
 **Instructions that shape behavior**
@@ -135,7 +135,7 @@ Tools enable your AI employee to **perform actions** in external systems via API
 
 ## Best practices for Knowledge Base optimization
 
-### Start with What You Already Have
+### Start with what you already have
 Begin with existing resources rather than creating new content from scratch:
 - Price lists or service catalogs (CSV or spreadsheet format works great)
 - Product data sheets (PDFs)
@@ -145,15 +145,15 @@ Begin with existing resources rather than creating new content from scratch:
 
 **Example:** A pricing spreadsheet with columns for Service, Description, and Price is better than a paragraph describing all your services.
 
-### Less is Often More
+### Less is often more
 While you can add lots of knowledge, quality matters more than quantity:
 - **Be selective:** Only add information that's actually relevant to customer questions
 - **Avoid redundancy:** If the AI already knows general information, focus on what's specific to your business
 - **Remove outdated content:** Less accurate information is worse than no information
 
-**Example:** If you have 18 pages of blog articles about general topics, they might create noise. Focus on specific, business-relevant content instead.
+**Example:** If you have 18 pages of blog articles about general topics, they create noise. Focus on specific, business-relevant content instead.
 
-### Knowledge is for Reference, Not Instruction
+### Knowledge is for reference, not instruction
 Don't try to control AI behavior through the knowledge base:
 - ❌ **Wrong:** Adding "Always ask for email before phone number" to knowledge base
 - ✅ **Right:** Put that instruction in a capability instead
@@ -169,8 +169,8 @@ The knowledge base works best for information that doesn't change frequently:
 
 ### Use website auto-refresh for dynamic content
 If you do have website content that changes regularly:
-- Enable the "Automatic refresh" option when adding website knowledge sources
-- The system will check monthly for updates automatically
+- Enable the `Automatic refresh` option when adding website knowledge sources
+- The system checks monthly for updates automatically
 - This is great for blogs, menus, or service pages that evolve over time
 
 ### Exclude irrelevant website sections
@@ -216,6 +216,6 @@ No. You'll need to upload a new version of the file to refresh its content.
 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
   <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
   <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>
-    New to hiring and running an AI Employee? Take the <a href="/learn/hire-your-first-ai-employee" style={{color: '#3C9A63', fontWeight: 600}}>Hire your first AI Employee</a> course in Vendasta Learn — Beginner to Intermediate, 7 lessons.
+    New to hiring and running an AI Employee? Take the <a href="/learn/hire-your-first-ai-employee" style={{color: '#3C9A63', fontWeight: 600}}>Hire your first AI Employee</a> course in Vendasta Learn. Beginner to Intermediate, 7 lessons.
   </span>
 </div>
