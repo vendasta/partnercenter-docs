@@ -41,6 +41,7 @@ The fields shown here represent the core default set available to all accounts.
 9. `LinkedIn URL`: The URL of the contact's LinkedIn profile for professional networking
 10. `Primary company`: The primary company record associated with the contact in the CRM
 11. `Company website`: Name of the contact's company website (may be set independently from associated company)
+12. `Associated companies`: Companies associated with this contact
 
 ## Personal information & preferences
 
@@ -63,18 +64,19 @@ The fields shown here represent the core default set available to all accounts.
 
 ## Lead management & scoring
 
-25. `Lifecycle stage`: Lifecycle stage of the contact (e.g., 'Lead')
-26. `Lead score`: The calculated lead score of the contact based on engagement and behavior
-27. `Lead quality`: The calculated lead quality of the contact
-28. `Tags`: User-defined keywords or labels that can be used to categorize contacts
+25. `Market`: The market this contact belongs to (required when creating a contact)
+26. `Lifecycle stage`: Lifecycle stage of the contact (e.g., 'Lead')
+27. `Lead score`: The calculated lead score of the contact based on engagement and behavior
+28. `Lead quality`: The calculated lead quality of the contact
+29. `Tags`: User-defined keywords or labels that can be used to categorize contacts
 
 ## Activity & engagement tracking
 
-29. `Last activity date`: The date of the last recorded activity associated with the contact
-30. `Last engagement date`: The date of the last engagement from the contact  
-31. `Last contact date`: Date of last contact with the contact
-32. `Next task ID`: The unique identifier of the next task assigned to the contact
-33. `Next task due date`: Date indicating when the next task of the contact is due for completion
+30. `Last activity date`: The date of the last recorded activity associated with the contact
+31. `Last engagement date`: The date of the last engagement from the contact  
+32. `Last contact date`: Date of last contact with the contact
+33. `Next task ID`: The unique identifier of the next task assigned to the contact
+34. `Next task due date`: Date indicating when the next task of the contact is due for completion
 
 ## Email campaign tracking
 
@@ -103,49 +105,53 @@ The fields shown here represent the core default set available to all accounts.
 47. `Marketing email consent`: The current status for the contact's marketing email consent
 48. `Marketing email consent timestamp`: The timestamp when the marketing email consent was last updated
 49. `Marketing email consent source`: The source or method that updated the marketing email consent field
-50. `SMS consent`: The current status for the contact's SMS marketing consent
-51. `SMS consent timestamp`: The timestamp in which the SMS consent was updated
-52. `SMS consent source`: The source or method that updated the SMS consent field
+50. `Product email consent`: The current status for the contact's product email consent
+51. `Website email consent`: The current status for the contact's website email consent
+52. `SMS consent`: The current status for the contact's SMS marketing consent
+53. `SMS consent timestamp`: The timestamp in which the SMS consent was updated
+54. `SMS consent source`: The source or method that updated the SMS consent field
 
 ## Attribution & source tracking
 
-53. `Record source`: Name of the app or external system that created the contact (e.g., 'Salesforce', 'Hubspot', 'Gmail')
-54. `Record source drill down 1`: Record source drill down level 1 of the contact
-55. `Record source drill down 2`: Record source drill down level 2 of the contact
-56. `Original source`: Lead attribution original source of the contact
-57. `Original source drill down 1`: Lead attribution original source drill down level 1
-58. `Original source drill down 2`: Lead attribution original source drill down level 2
+55. `Record source`: Name of the app or external system that created the contact (e.g., 'Salesforce', 'Hubspot', 'Gmail')
+56. `Record source drill down 1`: Record source drill down level 1 of the contact
+57. `Record source drill down 2`: Record source drill down level 2 of the contact
+58. `Original source`: Lead attribution original source of the contact
+59. `Original source drill down 1`: Lead attribution original source drill down level 1
+60. `Original source drill down 2`: Lead attribution original source drill down level 2
 
 ## UTM & campaign attribution
 
-59. `UTM campaign`: The campaign of the UTM parameters for the contact
-60. `UTM medium`: The medium of the UTM parameters for the contact (e.g., 'cpc', 'email', 'social', 'organic', 'referral', 'affiliate', 'display', 'video', 'audio', 'sms', 'direct', 'other')
-61. `UTM source`: The source of the UTM parameters for the contact
-62. `UTM content`: The content of the UTM parameters for the contact  
-63. `UTM term`: The term of the UTM parameters for the contact (e.g., 'running+shoes', 'black+friday+sale', etc.)
+61. `UTM campaign`: The campaign of the UTM parameters for the contact
+62. `UTM medium`: The medium of the UTM parameters for the contact (e.g., 'cpc', 'email', 'social', 'organic', 'referral', 'affiliate', 'display', 'video', 'audio', 'sms', 'direct', 'other')
+63. `UTM source`: The source of the UTM parameters for the contact
+64. `UTM content`: The content of the UTM parameters for the contact  
+65. `UTM term`: The term of the UTM parameters for the contact (e.g., 'running+shoes', 'black+friday+sale', etc.)
 
 ## Click tracking IDs
 
-64. `GCLID`: Google click ID used to create the contact
-65. `FBCLID`: Facebook click ID used to create the contact
-66. `MSCLKID`: Microsoft click ID used to create the contact
+66. `GCLID`: Google click ID used to create the contact
+67. `FBCLID`: Facebook click ID used to create the contact
+68. `MSCLKID`: Microsoft click ID used to create the contact
 
 ## System fields
 
-67. `ID`: Unique identifier assigned to each contact
-68. `External ID`: An identifier used by external systems or databases to reference the contact
-69. `Updated date`: The date when the contact record was last updated
-70. `Created date`: The date when the contact record was created
+69. `ID`: Unique identifier assigned to each contact
+70. `External ID`: An identifier used by external systems or databases to reference the contact
+71. `Updated date`: The date when the contact record was last updated
+72. `Created date`: The date when the contact record was created
 
 ## Platform-specific information (Partner Center only)
 
-71. `Platform SSC contact IDs`: Identifies the SSC contact, which may be associated with zero or more account groups
-72. `Platform user ID`: Identifier for contact's underlying IAM user
-73. `Salesperson`: The salesperson in the platform
-74. `Additional salespeople`: Additional salespeople in the platform
+73. `Platform SSC contact IDs`: Identifies the SSC contact, which may be associated with zero or more account groups
+74. `Platform user ID`: Identifier for contact's underlying IAM user
+75. `Salesperson`: The salesperson in the platform
+76. `Additional salespeople`: Additional salespeople in the platform
+77. `Owner`: The user who owns this contact record
+78. `Contact additional team members`: Additional team members associated with this contact
 
 :::tip Viewing all available fields
-To see the complete list of contact fields available in your specific CRM instance, navigate to any contact record and click the `View all properties` or `More fields` option. This will show both default and integration-specific fields enabled for your account.
+Contact records are organized into accordion sections (Basic information, About contact, Primary location, Communication consent, Custom Fields). To find a specific field, use the `Search fields` box at the top of the field list. This search covers both default and integration-specific fields enabled for your account.
 :::
 
 ## Frequently asked questions
