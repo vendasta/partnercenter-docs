@@ -54,12 +54,14 @@ export default function JourneyStages({ stages }: JourneyStagesProps) {
     <ol className="jy">
       {stages.map((stage, i) => {
         const next = stages[i + 1];
+        const number = stages.slice(0, i + 1).filter((s) => !s.reference).length;
+        const nextNumber = next && !next.reference ? stages.slice(0, i + 2).filter((s) => !s.reference).length : null;
         const cta = stage.reference ? "Open" : "Start";
         const chips = [stage.time, `${stage.steps.length} ${stage.reference ? "sections" : "steps"}`, stage.level].filter(Boolean) as string[];
         return (
           <li key={stage.id} id={stage.id} className={`jy__stage${stage.reference ? " jy__stage--reference" : ""}`}>
             <span className="jy__node" aria-hidden="true">
-              {stage.reference ? <BookGlyph /> : i + 1}
+              {stage.reference ? <BookGlyph /> : number}
             </span>
             <details className="jy__details">
               <summary className="jy__summary">
@@ -106,7 +108,7 @@ export default function JourneyStages({ stages }: JourneyStagesProps) {
                   </Link>
                   {next && (
                     <Link to={`#${next.id}`} className="jy__next">
-                      Next: {i + 2}. {next.title}<span aria-hidden="true"> &rarr;</span>
+                      {nextNumber ? `Next: ${nextNumber}. ` : "Then: "}{next.title}<span aria-hidden="true"> &rarr;</span>
                     </Link>
                   )}
                 </div>

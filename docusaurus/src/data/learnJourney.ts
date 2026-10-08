@@ -112,21 +112,6 @@ export const JOURNEY: JourneyStage[] = [
     skillCheck: { to: "/learn/make-your-first-sale/skill-check", questions: 12 },
   },
   {
-    id: "sales-assets",
-    title: "Your sales assets",
-    tagline: "Rebrandable kits, the ROI calculator, success stories, and the sales videos.",
-    badge: "Reference",
-    blurb: "Everything you reach for during a sale, on one page. Not a path: open it when you need it and keep it open while you work through Make your first sale.",
-    to: "/learn/sales-assets",
-    reference: true,
-    steps: [
-      { title: "Sales kits, ready to rebrand", to: "/learn/sales-assets#sales-kits-ready-to-rebrand", description: "pitch decks, one-pagers, and images for the whole AI Workforce and for each AI Employee" },
-      { title: "Numbers and proof", to: "/learn/sales-assets#numbers-and-proof", description: "the AI ROI Calculator and the success stories library, filtered by AI Employee" },
-      { title: "Sales videos", to: "/learn/sales-assets#sales-videos", description: "the pitch foundation, the live demo, the discovery framework, and the Three Baskets proposal" },
-      { title: "Rehearse and keep learning", to: "/learn/sales-assets#rehearse-and-keep-learning", description: "the Vendasta Pitch Partner line and the on-demand webinar bootcamps" },
-    ],
-  },
-  {
     id: "connect-your-own-systems",
     title: "Connect your own systems",
     tagline: "One build end to end: a custom tool, an automation, a webhook, and a real API call.",
@@ -148,6 +133,21 @@ export const JOURNEY: JourneyStage[] = [
     ],
     skillCheck: { to: "/learn/connect-your-own-systems/skill-check", questions: 12 },
   },
+  {
+    id: "sales-assets",
+    title: "Your sales assets",
+    tagline: "Rebrandable kits, the ROI calculator, success stories, and the sales videos.",
+    badge: "Reference",
+    blurb: "Everything you reach for during a sale, on one page. Not a path: open it when you need it and keep it open while you work through Make your first sale.",
+    to: "/learn/sales-assets",
+    reference: true,
+    steps: [
+      { title: "Sales kits, ready to rebrand", to: "/learn/sales-assets#sales-kits-ready-to-rebrand", description: "pitch decks, one-pagers, and images for the whole AI Workforce and for each AI Employee" },
+      { title: "Numbers and proof", to: "/learn/sales-assets#numbers-and-proof", description: "the AI ROI Calculator and the success stories library, filtered by AI Employee" },
+      { title: "Sales videos", to: "/learn/sales-assets#sales-videos", description: "the pitch foundation, the live demo, the discovery framework, and the Three Baskets proposal" },
+      { title: "Rehearse and keep learning", to: "/learn/sales-assets#rehearse-and-keep-learning", description: "the Vendasta Pitch Partner line and the on-demand webinar bootcamps" },
+    ],
+  },
 ];
 
 /** "2 h 15 min" -> 135. Unparseable or missing -> 0. */
@@ -164,10 +164,11 @@ export function formatHours(minutes: number): string {
 }
 
 export function journeyTotals(stages: JourneyStage[]) {
+  const paths = stages.filter((s) => !s.reference);
   return {
-    paths: stages.length,
-    steps: stages.reduce((n, s) => n + s.steps.length, 0),
-    minutes: stages.reduce((n, s) => n + parseMinutes(s.time), 0),
-    skillChecks: stages.filter((s) => s.skillCheck).length,
+    paths: paths.length,
+    steps: paths.reduce((n, s) => n + s.steps.length, 0),
+    minutes: paths.reduce((n, s) => n + parseMinutes(s.time), 0),
+    skillChecks: paths.filter((s) => s.skillCheck).length,
   };
 }
