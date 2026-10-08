@@ -90,8 +90,8 @@ const PATHS: HomePathCard[] = [
     title: "Hire your first AI Employee",
     blurb: "Put a receptionist to work, teach it to book, train it to answer accurately, then deploy one for a client and prove it works.",
     tag: "AI",
-    scope: ["5 steps", "5 labs"],
-    gate: "About 1 hour 30 minutes",
+    scope: ["6 steps", "5 labs"],
+    gate: "About 1 hour 40 minutes",
     cta: "Start",
     to: "/learn/hire-your-first-ai-employee",
     tone: "purple",
@@ -189,6 +189,7 @@ const AI_WORKFORCE_ITEMS: ExplorerItem[] = [
   { title: "Connect calendars and booking", to: "/learn/hire-your-first-ai-employee/connect-calendars-and-booking" },
   { title: "Train your AI Employee", to: "/learn/hire-your-first-ai-employee/train-your-ai-employee" },
   { title: "Deploy a receptionist for a client", to: "/learn/hire-your-first-ai-employee/deploy-a-receptionist-for-a-client" },
+  { title: "Hire your first AI Employee skill check", to: "/learn/hire-your-first-ai-employee/skill-check" },
 ];
 
 const GROW_AI_ITEMS: ExplorerItem[] = [

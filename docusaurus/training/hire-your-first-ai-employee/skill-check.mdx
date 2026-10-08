@@ -1,0 +1,200 @@
+---
+title: Hire your first AI Employee skill check
+sidebar_label: Skill check
+sidebar_position: 6
+description: "Twelve scenario questions covering the whole path: where an AI Employee lives, the plan and edition gates, the audit, booking and call routing, training, and going live on a client's account."
+---
+
+import SkillCheck from "@site/src/components/SkillCheck";
+import CourseProgressBar from "@site/src/components/CourseProgressBar";
+import InlineHighlighter from "@site/src/components/InlineHighlighter";
+import MarkComplete from "@site/src/components/MarkComplete";
+import LessonHeader from "@site/src/components/LessonHeader";
+import LessonFooter from "@site/src/components/LessonFooter";
+
+{/* Added 2026-10-07 (Cal: the path was the only one without a skill check).
+    Every question traces to a step in this path; the platform facts behind the
+    plan gate, the edition gate, the Upgrade to gain access badge, team booking
+    links, Anonymous Visitors, and A2P registration were checked against
+    docs/ai/ai-workforce, docs/crm/my-meetings, and docs/business-app. Review
+    copy with source tags: strategy/docs-learn-revamp/drafts in Cal's workspace. */}
+
+<InlineHighlighter courseId="hire-your-first-ai-employee-skill-check" site="vendasta_learn">
+
+<CourseProgressBar courseId="hire-your-first-ai-employee-skill-check" site="vendasta_learn" />
+
+<LessonHeader
+  difficulty="Intermediate"
+  topics={["AI Workforce", "AI Receptionist", "Appointment booking", "Training AI", "Business App"]}
+  pathName="Hire your first AI Employee"
+  step={6}
+  totalSteps={6}
+  outcomes={[
+    "Place an AI Employee in the right workspace and check the right gate before you promise a channel",
+    "Choose chat or voice for a business, and audit a receptionist before anyone meets it",
+    "Sort a fix into knowledge or capability, and take a client's receptionist live",
+  ]}
+/>
+
+<SkillCheck
+  sessionSize={10}
+  intro="Ten scenarios drawn from every step: the roster and its gates, the receptionist and its audit, booking and routing, training, and a client's go-live."
+  questions={[
+    {
+      type: 'mcq',
+      question: 'A new client wants a receptionist answering questions for their dental practice. Where do you configure it?',
+      options: [
+        'In their Business App, opened from their account in Partner Center',
+        'In your own Partner Center, beside your own receptionist',
+        'In the Marketplace, on the Conversations AI product page',
+        'In the automations builder, as a trigger on their account'
+      ],
+      correctIndex: 0,
+      explanation: 'An AI Employee lives in the workspace of the business it serves. Open the client account in Partner Center, then Open in → Business App, and configure it under AI → Workforce.'
+    },
+    {
+      type: 'mcq',
+      question: 'A law firm finds your receptionist\'s tone too casual for their clients. Which part of the employee do you change?',
+      options: [
+        'The Role, under Profile, which sets tone and goals for every conversation',
+        'The knowledge sources, which hold the facts it answers from',
+        'The capabilities, which decide what it can do and when',
+        'The Autonomy level, which sets how freely it acts on its own'
+      ],
+      correctIndex: 0,
+      explanation: 'Every AI Employee has the same three parts. The Role is the job description that sets tone and goals; knowledge is what it answers from; capabilities are what it can do.'
+    },
+    {
+      type: 'mcq',
+      question: 'You are on the Starter plan and want AI answering the phone for your own business. What decides whether you can?',
+      options: [
+        'Your own plan: the Voice Receptionist unlocks at Professional and above',
+        'The Conversations AI edition active on your client accounts',
+        'Whether your phone number has finished A2P 10DLC registration',
+        'Whether your receptionist has the Book appointments capability'
+      ],
+      correctIndex: 0,
+      explanation: 'Two separate gates. Your own subscription decides what you run for your business: Starter includes the Chat Receptionist, and Professional and above add voice. A client\'s Conversations AI edition decides what they get.'
+    },
+    {
+      type: 'mcq',
+      question: 'A plumbing company gets almost every lead by phone, misses calls after 5 p.m., and has a website few people visit. Which receptionist do you lead with?',
+      options: [
+        'The Voice Receptionist, for a business that lives on the phone',
+        'The Chat Receptionist, since it is included from the Starter plan',
+        'Both at once, since neither one can run without the other',
+        'The Sales Assistant, recording calls straight into the CRM'
+      ],
+      correctIndex: 0,
+      explanation: 'The decision is the client\'s channels, not the technology. Chat suits leads that arrive through the website; voice suits the business that misses calls after hours. A business can run both, but it does not have to.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your receptionist is configured but not yet on any website. How do you test it before anyone meets it?',
+      options: [
+        'Open Chat from AI → Workforce in an incognito window and ask the ten questions a prospect would ask, prices included',
+        'Install the widget on the live site and read the first week of conversations as they arrive',
+        'Send the client a list of questions and ask them to report any answers that look wrong',
+        'Read the Role back to yourself and confirm every instruction a prospect needs is in it'
+      ],
+      correctIndex: 0,
+      explanation: 'The Chat button opens a private conversation with the employee before any widget is installed. Run the ten-question audit there, prices included, and repeat it after every knowledge change.'
+    },
+    {
+      type: 'mcq',
+      question: 'A visitor chatted with your receptionist for five minutes but never left a name, email, or phone number. Where do you find that conversation?',
+      options: [
+        'The Anonymous Visitors tab in Conversations',
+        'The CRM, as a new contact with a blank name',
+        'The Explanation view on the receptionist',
+        'The booking log in My Meetings'
+      ],
+      correctIndex: 0,
+      explanation: 'Every conversation lands in Conversations. Captured visitors become contacts; chats with no contact details captured sit in the Anonymous Visitors tab.'
+    },
+    {
+      type: 'mcq',
+      question: 'A teammate is on your round-robin team event but has never been assigned a booking. What do you check?',
+      options: [
+        'That they connected their own calendar, and that they are on the Sales Team in CRM → Sales Teams',
+        'That their event duration matches the team event, and that their buffer time is set to zero',
+        'That an admin connected their calendar for them, and that the event is set as a personal link',
+        'That the receptionist\'s Autonomy level is high, and that Transfer calls is turned on for them'
+      ],
+      correctIndex: 0,
+      explanation: 'Two conditions decide who appears in the rotation: each teammate connects their own calendar, signing in as themselves, and round-robin membership comes from the Sales Team they belong to.'
+    },
+    {
+      type: 'mcq',
+      question: 'You want calls transferred to the front desk during business hours and leads captured after hours. How do you build it?',
+      options: [
+        'A custom capability of its own that checks the hours in the business\'s knowledge sources and calls Transfer calls or Capture leads by name',
+        'A longer prompt on the existing Capture leads capability, with the business\'s opening hours typed directly into it',
+        'A second after-hours capture capability built from scratch, running alongside the one the receptionist already has',
+        'A list of the opening hours written into the Role, so the receptionist sees them at the start of every conversation'
+      ],
+      correctIndex: 0,
+      explanation: 'Give the routing its own capability, branch it for during and after hours, and reference the other capabilities by exact name. Point the hours check at the knowledge sources so a holiday never needs an edit here.'
+    },
+    {
+      type: 'mcq',
+      question: 'Your receptionist quotes last year\'s price for one package. What do you fix first?',
+      options: [
+        'The knowledge: upload a clean, current price list as the authoritative source',
+        'The capabilities: add a new capability that holds this package\'s price',
+        'The Role: write the correct price into its job description',
+        'Nothing yet: let it correct itself over the next few conversations'
+      ],
+      correctIndex: 0,
+      explanation: 'A wrong answer to a specific question is usually a knowledge gap. The source it searched never had the real number, so give it one clean source to answer from.'
+    },
+    {
+      type: 'mcq',
+      question: 'You want the receptionist never to estimate a price it cannot find, on any conversation. Where does that rule belong?',
+      options: [
+        'In a capability, so it holds on every response and not only when a knowledge lookup runs',
+        'In a knowledge source titled pricing rules, uploaded beside the price list it protects',
+        'In the Business Profile knowledge source, next to the business\'s address and hours',
+        'In the FAQ page on the business\'s website, which the receptionist reads as knowledge'
+      ],
+      correctIndex: 0,
+      explanation: 'Knowledge is what the AI looks up when a question calls for it. A rule that must hold on every response belongs in a capability: knowledge is the degree, capabilities are the skill.'
+    },
+    {
+      type: 'mcq',
+      question: 'A United States client wants their receptionist sending text messages. When do you start their SMS registration?',
+      options: [
+        'During onboarding, from Business App → Administration → Conversation, because SMS waits for carrier approval',
+        'After go-live, once their text volume is high enough to make the registration worth filing',
+        'Only if they also text customers in Canada, since cross-border texting is what needs registering',
+        'Never: the Voice Receptionist registers the number with the carriers when it is first assigned'
+      ],
+      correctIndex: 0,
+      explanation: 'Carriers require A2P 10DLC registration before a United States business can send SMS. Calls and web chat work right away, but SMS starts only once registration is approved, so begin it during onboarding. Texting only within Canada needs no registration.'
+    },
+    {
+      type: 'mcq',
+      question: 'In a client\'s AI → Workforce, the Voice Receptionist card shows Upgrade to gain access instead of Chat and Configure. What does that tell you?',
+      options: [
+        'Their account does not have the product that carries it: voice needs Conversations AI Premium',
+        'The Voice Receptionist exists but has not been configured with a Role or knowledge yet',
+        'Your own Partner Center plan is below Professional, so no client can run voice',
+        'Their phone number is still waiting on A2P 10DLC registration with the carriers'
+      ],
+      correctIndex: 0,
+      explanation: 'The badge is the edition gate: the client does not own the product that carries that employee. It is the fastest way to see what they bought before you promise a channel.'
+    }
+  ]}
+/>
+
+<LessonFooter
+  to="/learn/know-what-youre-selling"
+  pathName="Hire your first AI Employee"
+  step={6}
+  totalSteps={6}
+  nextPathName="Know what you're selling"
+  description="Every AI Employee, the job it does on day one, and the product and edition that carry it, so you quote the right thing before you activate anything."
+/>
+
+</InlineHighlighter>
+<MarkComplete courseId="hire-your-first-ai-employee-skill-check" site="vendasta_learn" />
