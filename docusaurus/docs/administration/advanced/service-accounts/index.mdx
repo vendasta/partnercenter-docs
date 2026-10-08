@@ -13,6 +13,12 @@ Service accounts give you machine-to-machine access to Vendasta APIs, authentica
 Vendasta maintains a current SOC 2® Type 2 report covering its security controls. For details on how automated access and API keys are secured, see [Security and privacy](/getting-started/security-and-privacy) or visit the [Vendasta Trust Center](https://trust.vendasta.com/).
 :::
 
+## Who can manage service accounts
+
+The `Service Accounts` tile under `Administration` → `Advanced` appears only for admins with the `Can create and manage admins` permission. That permission can be turned on only for admins whose market access is set to all markets. If you don't see the tile, ask an admin on your team who has this permission to update your access. See [Permissions](/administration/my-account/my-team/permissions).
+
+If the tile shows an upgrade icon, service accounts aren't included in your current subscription.
+
 ## How to create a service account
 
 1. Go to `Partner Center` → `Administration` → `Advanced` → `Service Accounts`.
@@ -28,5 +34,27 @@ Creating a service account takes you to its `Manage Keys` page.
 
 1. Click `Generate Private Key (ES256)` or `Generate Private Key (RS256)`, depending on which signing algorithm your integration requires.
 2. Use the generated key to authenticate your integration's API requests.
+
+## How scopes work
+
+Scopes control which APIs an access token can call, such as `order:read` to read sales orders. You don't assign scopes to a service account, and there's no scope setting in Partner Center. Your integration lists the scopes it needs each time it requests an access token from the service account's key.
+
+To give your integration access to another API, add that API's scope to your integration's token request. Each endpoint in the [API reference](https://developers.vendasta.com/api-reference) lists the scopes it accepts. For step-by-step instructions, see [Obtaining an access token](https://developers.vendasta.com/getting-started/authorization/legged-oauth/obtaining-access-token).
+
+## FAQs
+
+<details>
+<summary>Can Vendasta Support add a scope to my service account?</summary>
+
+No action from Vendasta is needed. Scopes aren't stored on the service account. Add the scope to your integration's token request, then request a new access token.
+
+</details>
+
+<details>
+<summary>Why can't I see Service Accounts in Partner Center?</summary>
+
+Your user needs the `Can create and manage admins` permission, which is available only to admins with access to all markets. Ask an admin on your team who has this permission to update your access.
+
+</details>
 
 If you need assistance with service accounts or have questions about automated access, contact our support team.
