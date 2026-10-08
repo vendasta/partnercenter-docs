@@ -93,7 +93,7 @@ const PATHS: HomePathCard[] = [
     scope: ["5 steps", "5 labs"],
     gate: "About 1 hour 30 minutes",
     cta: "Start",
-    to: "/learn/ai-workforce",
+    to: "/learn/hire-your-first-ai-employee",
     tone: "purple",
   },
   {
@@ -105,7 +105,7 @@ const PATHS: HomePathCard[] = [
     scope: ["7 steps", "8 videos"],
     gate: "About 1 hour",
     cta: "Start",
-    to: "/learn/grow-your-ai-workforce",
+    to: "/learn/know-what-youre-selling",
     tone: "purple",
   },
   {
@@ -117,7 +117,7 @@ const PATHS: HomePathCard[] = [
     scope: ["8 steps", "4 videos", "2 labs"],
     gate: "About 2 hours",
     cta: "Start",
-    to: "/learn/sell-the-ai-workforce",
+    to: "/learn/make-your-first-sale",
     tone: "purple",
   },
   {
@@ -141,7 +141,7 @@ const PATHS: HomePathCard[] = [
     scope: ["10 steps", "6 labs"],
     gate: "About 2 hours 10 minutes",
     cta: "Start",
-    to: "/learn/builder",
+    to: "/learn/connect-your-own-systems",
     tone: "purple",
   },
 ];
@@ -160,15 +160,15 @@ interface ExplorerFacet {
 }
 
 const GETTING_STARTED_ITEMS: ExplorerItem[] = [
-  { title: "How the platform works", to: "/learn/getting-started/the-vendasta-platform" },
+  { title: "How the platform works", to: "/learn/getting-started/how-the-platform-works" },
   { title: "Connect your domain and email", to: "/learn/getting-started/connect-your-domain-and-email" },
   { title: "Connect payments and billing", to: "/learn/getting-started/connect-payments-and-billing" },
-  { title: "Brand your platform", to: "/learn/getting-started/brand-it" },
+  { title: "Brand your platform", to: "/learn/getting-started/brand-your-platform" },
   { title: "Turn on your own AI Receptionist", to: "/learn/getting-started/turn-on-your-own-ai-receptionist" },
-  { title: "Add your first client", to: "/learn/getting-started/bring-in-your-first-client" },
-  { title: "What your client sees first", to: "/learn/getting-started/walk-your-clients-first-experience" },
+  { title: "Add your first client", to: "/learn/getting-started/add-your-first-client" },
+  { title: "What your client sees first", to: "/learn/getting-started/what-your-client-sees-first" },
   { title: "Where to get help", to: "/learn/getting-started/where-to-get-help" },
-  { title: "Get set up skill check", to: "/learn/getting-started/get-set-up-skill-check" },
+  { title: "Get set up skill check", to: "/learn/getting-started/skill-check" },
 ];
 
 // Unused while AI foundations is hidden. Kept deliberately: the restore note at
@@ -184,32 +184,32 @@ const AI_FOUNDATIONS_ITEMS: ExplorerItem[] = [
 ];
 
 const AI_WORKFORCE_ITEMS: ExplorerItem[] = [
-  { title: "Meet the AI Employees", to: "/learn/ai-workforce/meet-your-workforce" },
-  { title: "Put a receptionist to work", to: "/learn/ai-workforce/put-a-receptionist-to-work" },
-  { title: "Connect calendars and booking", to: "/learn/ai-workforce/teach-it-to-book" },
-  { title: "Train your AI Employee", to: "/learn/ai-workforce/train-your-employee" },
-  { title: "Deploy a receptionist for a client", to: "/learn/ai-workforce/deploy-a-receptionist-for-a-client" },
+  { title: "Meet the AI Employees", to: "/learn/hire-your-first-ai-employee/meet-the-ai-employees" },
+  { title: "Put a receptionist to work", to: "/learn/hire-your-first-ai-employee/put-a-receptionist-to-work" },
+  { title: "Connect calendars and booking", to: "/learn/hire-your-first-ai-employee/connect-calendars-and-booking" },
+  { title: "Train your AI Employee", to: "/learn/hire-your-first-ai-employee/train-your-ai-employee" },
+  { title: "Deploy a receptionist for a client", to: "/learn/hire-your-first-ai-employee/deploy-a-receptionist-for-a-client" },
 ];
 
 const GROW_AI_ITEMS: ExplorerItem[] = [
-  { title: "AI Receptionist", to: "/learn/grow-your-ai-workforce/ai-receptionist" },
-  { title: "AI Reputation Specialist", to: "/learn/grow-your-ai-workforce/ai-reputation-specialist" },
-  { title: "AI Social Media Manager", to: "/learn/grow-your-ai-workforce/ai-social-media-manager" },
-  { title: "AI Blogger", to: "/learn/grow-your-ai-workforce/ai-blogger" },
-  { title: "AI Sales Assistant", to: "/learn/grow-your-ai-workforce/ai-sales-assistant" },
-  { title: "Specialist AI Employees", to: "/learn/grow-your-ai-workforce/the-specialist-bench" },
-  { title: "Know what you're selling skill check", to: "/learn/grow-your-ai-workforce/grow-ai-workforce-skill-check" },
+  { title: "AI Receptionist", to: "/learn/know-what-youre-selling/ai-receptionist" },
+  { title: "AI Reputation Specialist", to: "/learn/know-what-youre-selling/ai-reputation-specialist" },
+  { title: "AI Social Media Manager", to: "/learn/know-what-youre-selling/ai-social-media-manager" },
+  { title: "AI Blogger", to: "/learn/know-what-youre-selling/ai-blogger" },
+  { title: "AI Sales Assistant", to: "/learn/know-what-youre-selling/ai-sales-assistant" },
+  { title: "Specialist AI Employees", to: "/learn/know-what-youre-selling/specialist-ai-employees" },
+  { title: "Know what you're selling skill check", to: "/learn/know-what-youre-selling/skill-check" },
 ];
 
 const SELL_AI_ITEMS: ExplorerItem[] = [
-  { title: "Your packages and pricing", to: "/learn/sell-the-ai-workforce/know-your-offer" },
-  { title: "Find your first prospects", to: "/learn/sell-the-ai-workforce/get-in-the-room" },
-  { title: "Build a live demo", to: "/learn/sell-the-ai-workforce/demo-with-confidence" },
-  { title: "Run the sales call", to: "/learn/sell-the-ai-workforce/sell-the-outcome" },
-  { title: "Propose and close", to: "/learn/sell-the-ai-workforce/execute-the-play" },
-  { title: "Practice the pitch", to: "/learn/sell-the-ai-workforce/practice-the-pitch" },
-  { title: "Get your client live", to: "/learn/sell-the-ai-workforce/from-signed-to-activated" },
-  { title: "Make your first sale skill check", to: "/learn/sell-the-ai-workforce/sell-ai-workforce-skill-check" },
+  { title: "Your packages and pricing", to: "/learn/make-your-first-sale/your-packages-and-pricing" },
+  { title: "Find your first prospects", to: "/learn/make-your-first-sale/find-your-first-prospects" },
+  { title: "Build a live demo", to: "/learn/make-your-first-sale/build-a-live-demo" },
+  { title: "Run the sales call", to: "/learn/make-your-first-sale/run-the-sales-call" },
+  { title: "Propose and close", to: "/learn/make-your-first-sale/propose-and-close" },
+  { title: "Practice the pitch", to: "/learn/make-your-first-sale/practice-the-pitch" },
+  { title: "Get your client live", to: "/learn/make-your-first-sale/get-your-client-live" },
+  { title: "Make your first sale skill check", to: "/learn/make-your-first-sale/skill-check" },
 ];
 
 const SALES_ITEMS: ExplorerItem[] = [
@@ -222,16 +222,16 @@ const SALES_ITEMS: ExplorerItem[] = [
 ];
 
 const BUILDER_ITEMS: ExplorerItem[] = [
-  { title: "Start with what the platform already does", to: "/learn/builder/start-with-what-exists" },
-  { title: "Build a custom tool", to: "/learn/builder/build-the-doorway" },
-  { title: "Test the tool", to: "/learn/builder/watch-it-work" },
-  { title: "Hand off to the automation", to: "/learn/builder/hand-off-to-the-automation" },
-  { title: "Put your workforce on autopilot", to: "/learn/builder/autopilot" },
-  { title: "Send data out with a webhook", to: "/learn/builder/wire-it-to-your-systems" },
-  { title: "Call the API yourself", to: "/learn/builder/call-the-api-yourself" },
-  { title: "Book into an outside system", to: "/learn/builder/book-into-an-outside-system" },
-  { title: "When to hand off to a developer", to: "/learn/builder/where-the-platform-ends" },
-  { title: "Connect your own systems skill check", to: "/learn/builder/wire-to-act-skill-check" },
+  { title: "Start with what the platform already does", to: "/learn/connect-your-own-systems/start-with-what-the-platform-already-does" },
+  { title: "Build a custom tool", to: "/learn/connect-your-own-systems/build-a-custom-tool" },
+  { title: "Test the tool", to: "/learn/connect-your-own-systems/test-the-tool" },
+  { title: "Hand off to the automation", to: "/learn/connect-your-own-systems/hand-off-to-the-automation" },
+  { title: "Put your workforce on autopilot", to: "/learn/connect-your-own-systems/put-your-workforce-on-autopilot" },
+  { title: "Send data out with a webhook", to: "/learn/connect-your-own-systems/send-data-out-with-a-webhook" },
+  { title: "Call the API yourself", to: "/learn/connect-your-own-systems/call-the-api-yourself" },
+  { title: "Book into an outside system", to: "/learn/connect-your-own-systems/book-into-an-outside-system" },
+  { title: "When to hand off to a developer", to: "/learn/connect-your-own-systems/when-to-hand-off-to-a-developer" },
+  { title: "Connect your own systems skill check", to: "/learn/connect-your-own-systems/skill-check" },
 ];
 
 
