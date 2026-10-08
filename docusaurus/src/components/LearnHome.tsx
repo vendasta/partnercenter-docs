@@ -208,7 +208,7 @@ const SELL_AI_ITEMS: ExplorerItem[] = [
   { title: "Run the sales call", to: "/learn/sell-the-ai-workforce/sell-the-outcome" },
   { title: "Propose and close", to: "/learn/sell-the-ai-workforce/execute-the-play" },
   { title: "Practice the pitch", to: "/learn/sell-the-ai-workforce/practice-the-pitch" },
-  { title: "Take your client live", to: "/learn/sell-the-ai-workforce/from-signed-to-activated" },
+  { title: "Get your client live", to: "/learn/sell-the-ai-workforce/from-signed-to-activated" },
   { title: "Make your first sale skill check", to: "/learn/sell-the-ai-workforce/sell-ai-workforce-skill-check" },
 ];
 
