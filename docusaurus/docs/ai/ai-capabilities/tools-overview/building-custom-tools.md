@@ -10,7 +10,7 @@ audience: partners
 
 import { AISparkleIcon } from '@site/src/components/Icons';
 
-This comprehensive guide walks you through the complete process of building custom tools for your AI Employees. You'll learn how to find API documentation, use the cURL import feature, work with AI assistants, and test your tools effectively.
+This guide walks you through the complete process of building custom tools for your AI Employees. You'll learn how to find API documentation, use the cURL import feature, work with AI assistants, and test your tools effectively.
 
 :::info Before You Start
 If you're new to AI employees and capabilities, start with the [AI Overview](../../../ai/) to understand the broader concepts before diving into this tutorial.
@@ -193,7 +193,7 @@ While cURL import handles the technical setup, **parameter descriptions are crit
 **What gets auto-filled:**
 - Parameter names
 - Parameter types (String, Number, etc.)
-- Parameter locations (Query, Body, Path)
+- Parameter locations (Query, Body)
 
 **What you must do manually:**
 - Write clear descriptions for each parameter
@@ -307,7 +307,7 @@ curl -X POST "https://api.example.com/appointments" \
 - ✅ Headers (including authentication if included)
 - ✅ Parameter names
 - ✅ Parameter types (String, Number, Object, etc.)
-- ✅ Parameter locations (Query, Body, Path)
+- ✅ Parameter locations (Query, Body)
 
 **Requires Manual Work:**
 - ⚠️ **Tool Name**: Choose a descriptive name (no spaces)
@@ -604,7 +604,7 @@ Even with careful planning, you may encounter issues. Here's how to resolve comm
    - Check: `Workforce` → `Configure` → `Capabilities` tab
 
 **3. Conflicting capabilities**
-   - **Solution:** Review other capabilities that might be handling the same request
+   - **Solution:** Review other capabilities that also handle the same request
    - Refine trigger conditions to be more specific
 
 **4. Missing context**
@@ -669,7 +669,6 @@ Even with careful planning, you may encounter issues. Here's how to resolve comm
    - **Solution:** Verify parameters are in the correct location:
      - Query parameters for GET requests
      - Body parameters for POST/PUT requests
-     - Path parameters in URL
 
 #### Tool triggers incorrectly
 

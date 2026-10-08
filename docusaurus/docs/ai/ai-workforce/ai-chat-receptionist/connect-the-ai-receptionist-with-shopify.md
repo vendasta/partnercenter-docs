@@ -1,7 +1,7 @@
 ---
 title: "Connect the AI Chat Receptionist with Shopify"
 sidebar_label: Connect with Shopify
-description: Connect the AI Chat Receptionist to Shopify to search products, share details, and check inventory in chat.
+description: Connect the AI Chat Receptionist to Shopify to search products, share details, and check product availability in chat.
 brand: vendasta
 product: ai-workforce
 audience: partners
@@ -17,11 +17,11 @@ By connecting the AI Chat Receptionist with Shopify, you'll be able to integrate
 **In this guide, you will set up your AI Receptionist to be able to:**
 - Search your Shopify store for products by keyword;
 - Fetch detailed product information, including title, handle, price range, and description; and
-- Check real-time inventory levels.
+- Check whether products are available for sale.
 
 ### Why is connecting the AI Receptionist with Shopify important?
 
-When a customer visits a Shopify store they might have a general idea of a product they want but aren't sure exactly how to find it on the store website. Similarly, a customer might be able to find it in search but miss out on some key product details if they don't know where to look. This integration lets a customer ask general questions using chat and get helpful, personalized responses from the AI Receptionist that directs them where they want to go.
+When a customer visits a Shopify store, they often have a general idea of a product they want but aren't sure how to find it on the store website. Similarly, a customer can find a product in search but miss key product details if they don't know where to look. This integration lets a customer ask general questions using chat and get helpful, personalized responses from the AI Receptionist that directs them where they want to go.
 
 :::tip
 While this guide has been written primarily for your AI Chat Receptionist, you can use the Tools created in this guide with your AI Voice Receptionist, or any other AI Employee!
@@ -34,11 +34,11 @@ Before you connect your AI Receptionist to Shopify, you need to gather the follo
 | What you need | Where to find it | Scopes / Notes |
 |---------------|------------------|----------------|
 | **Shopify Store Domain** (`your-store.myshopify.com`) | `Admin` → `Settings` → `General`, copy `Store address` | N/A |
-| **Admin API Access Token** | <p>1. Click <code>New app</code> → <code>Configure Admin API</code> (select the permissions shown in “Scopes / Notes” and click Save)</p><p>2. Click <code>Install</code> → <code>Reveal token</code></p> | <ul><li>`read_inventory`</li><li>`read_products`</li></ul> |
-| **Storefront API Access Token** | <p>1. Click <code>Enable Storefront API</code> (turn on the permission listed in “Scopes / Notes” and click Save)</p><p>2. Click <code>Install / Update</code> → <code>Reveal token</code></p> | <ul><li>`unauthenticated_read_product_listings`</li></ul> |
+| **Admin API Access Token** | <p>1. Click <code>New app</code> → <code>Configure Admin API</code> (select the permissions shown in “Scopes / Notes” and click <code>Save</code>)</p><p>2. Click <code>Install</code> → <code>Reveal token</code></p> | <ul><li>`read_inventory`</li><li>`read_products`</li></ul> |
+| **Storefront API Access Token** | <p>1. Click <code>Enable Storefront API</code> (turn on the permission listed in “Scopes / Notes” and click <code>Save</code>)</p><p>2. Click <code>Install / Update</code> → <code>Reveal token</code></p> | <ul><li>`unauthenticated_read_product_listings`</li></ul> |
 | *(Optional)* **GraphQL Familiarity** | Review [Shopify Admin GraphQL API docs](https://shopify.dev/docs/api/admin-graphql) | N/A |
 
-#### Shopify help resources
+### Shopify help resources
 
 :::info
 You can get more detailed help on gathering this information from the Shopify help links below:
@@ -71,7 +71,7 @@ For your AI Receptionist to be able to get information from Shopify, it will nee
 
 ### Shopify tool: getProductList
 
-`getProductList` is your AI Receptionist's product‑search tool. We are using it to send a keyword to Shopify’s Storefront API and returns up to five matching products with title, handle, price range, and availability. 
+`getProductList` is your AI Receptionist's product‑search tool. It sends a keyword to Shopify’s Storefront API and returns up to five matching products with title, handle, price range, and availability.
 Use the values below (replacing any placeholders) to create your version of this tool.
 
 #### Summary
@@ -191,7 +191,7 @@ query {
 - Do **not** include pagination cursors, pageInfo, or unrelated fields.
 - Ensure the query is syntactically valid and fully escaped if it will be sent as a JSON string.
 - Include the `handle` field so you can build product URLs.
-- Product links should be constructed using the format: `https://cegxnb-y0.myshopify.com/products/HANDLE`
+- Product links should be constructed using the format: `https://{{your-shopify-domain}}/products/HANDLE`
 
 ### If no matching products are found
 - Politely inform the user that no products matched their query.
@@ -291,7 +291,7 @@ You’ll encounter a `Syntax Error` (the GraphQL query couldn’t be understood)
 This view shows the raw HTTP request the AI sent, including headers and the GraphQL body.
 
 #### How do we fix this error?
-1. Open "Conversations" → "Explanation" in your Business App.
+1. Open `Conversations` → `Explanation` in your Business App.
 2. Confirm the GraphQL query and headers match your intended values.
 3. Correct any typos in the tool prompt or mapping logic.
 </TabItem>
@@ -342,7 +342,7 @@ While this guide is specific to Shopify, you can create similar integrations wit
 <details>
 <summary>How does the Shopify integration work with my AI's Knowledge Base?</summary>
 
-The Shopify integration provides real-time product data through API calls, while your [Knowledge Base](../../knowledge-base/index.md) contains static business information. These work together perfectly:
+The Shopify integration provides real-time product data through API calls, while your [Knowledge Base](../../knowledge-base/index.md) contains static business information. These work together:
 
 **Shopify API provides:** Live product availability, current prices, product descriptions  
 **Knowledge Base should include:** Shipping policies, return information, size guides, care instructions, warranty details
@@ -353,7 +353,7 @@ Your AI will use the Shopify API to answer "Do you have this product?" and the K
 <details>
 <summary>What if customers ask about Shopify-related questions the API can't answer?</summary>
 
-Great question! The Shopify API provides product and inventory data, but customers often need additional information. Add these topics to your Knowledge Base:
+The Shopify API provides product and inventory data, but customers often need additional information. Add these topics to your Knowledge Base:
 
 - Shipping costs and delivery times
 - Return and exchange policies  
@@ -422,7 +422,7 @@ You can monitor product inquiry patterns through several methods:
 
  1. **Conversation reviews:** Check the [Conversations](/business-app/conversations/) tab to see which products customers mention most frequently
 
-2. **AI explanation feature:** Click "Explanation" on AI responses to see exactly which tools were called and what products were searched
+2. **AI explanation feature:** Click `Explanation` on AI responses to see exactly which tools were called and what products were searched
 
 3. **Automation tracking:** Set up automations to log product inquiries or notify your team about trending searches
 
@@ -511,7 +511,7 @@ Yes, update the GraphQL body in the tool definition to include any product field
 </details>
 
 <details>
-<summary>What should I do if the GraphQL query format changes in the future?</summary>
+<summary>What should I do if Shopify changes the GraphQL query format?</summary>
 
 Shopify's API evolves over time, so monitor their [API documentation](https://shopify.dev/docs/api/storefront) for changes. If query formats change:
 
