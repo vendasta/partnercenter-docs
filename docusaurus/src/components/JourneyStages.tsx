@@ -60,11 +60,11 @@ export default function JourneyStages({ stages }: JourneyStagesProps) {
         const chips = [stage.time, `${stage.steps.length} ${stage.reference ? "sections" : "steps"}`, stage.level].filter(Boolean) as string[];
         return (
           <li key={stage.id} id={stage.id} className={`jy__stage${stage.reference ? " jy__stage--reference" : ""}`}>
-            <span className="jy__node" aria-hidden="true">
-              {stage.reference ? <BookGlyph /> : number}
-            </span>
             <details className="jy__details">
               <summary className="jy__summary">
+                <span className="jy__node" aria-hidden="true">
+                  {stage.reference ? <BookGlyph /> : number}
+                </span>
                 <span className="jy__head">
                   {stage.reference && <span className="jy__kicker">Reference</span>}
                   <span className="jy__title">{stage.title}</span>

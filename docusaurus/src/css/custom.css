@@ -3019,19 +3019,38 @@ div[class*="language-"] pre {
   background: var(--ifm-color-emphasis-200);
 }
 
-.jy__stage:first-child::before {
-  top: 1.25rem;
+/* The first and last nodes sit mid-row, so the line is covered above the first
+   node and drawn only down to the last one. */
+.jy__stage:last-child::before {
+  display: none;
 }
 
-.jy__stage:last-child::before {
-  bottom: auto;
-  height: 1.25rem;
+.jy__stage:first-child .jy__summary::before,
+.jy__stage:last-child .jy__summary::before {
+  content: "";
+  position: absolute;
+  left: calc(-2.7rem - 2px);
+  width: 4px;
+  top: 0;
+  height: 50%;
+  background: var(--ifm-background-color);
+}
+
+.jy__stage:last-child .jy__summary::before {
+  left: calc(-2.7rem - 1px);
+  width: 2px;
+  background: var(--ifm-color-emphasis-200);
+}
+
+.jy__stage:first-child:last-child .jy__summary::before {
+  display: none;
 }
 
 .jy__node {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: calc(-4rem - 1px);
+  top: 50%;
+  transform: translateY(-50%);
   width: 2.6rem;
   height: 2.6rem;
   border-radius: 50%;
@@ -3070,6 +3089,7 @@ div[class*="language-"] pre {
 
 .jy__summary {
   display: flex;
+  position: relative;
   align-items: center;
   gap: 1rem;
   padding: 0.95rem 1.1rem 0.95rem 1.25rem;
@@ -3271,6 +3291,16 @@ div[class*="language-"] pre {
   }
   .jy__stage::before {
     left: 1.1rem;
+  }
+  .jy__node {
+    left: calc(-3.2rem - 1px);
+  }
+  .jy__stage:first-child .jy__summary::before,
+  .jy__stage:last-child .jy__summary::before {
+    left: calc(-2.1rem - 2px);
+  }
+  .jy__stage:last-child .jy__summary::before {
+    left: calc(-2.1rem - 1px);
   }
   .jy__chips {
     display: none;
