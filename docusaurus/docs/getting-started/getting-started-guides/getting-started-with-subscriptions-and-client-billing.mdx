@@ -73,16 +73,17 @@ You can configure billing at two levels: **default settings** that apply to all 
 
 Default billing settings are applied automatically to every new account you create, saving you from configuring each one manually.
 
-Navigate to `Partner Center` → `Administration` → `Default billing settings`.
+Navigate to `Administration` → `Default billing settings`.
 
-1. Turn the **Subscriptions** toggle **On**.
-2. Under **Subscription scheduling**, choose when subscriptions renew:
+1. **Select a market** from the dropdown at the top of the page. Settings are configured per market and will only apply to new accounts in that market.
+2. Turn the **Subscriptions** toggle **On**.
+3. Under **Subscription scheduling**, choose when subscriptions renew:
    - **Use subscription start date**: each subscription renews based on when it was originally created.
    - **Use a specific renewal date**: all new subscriptions renew on the same day of each month.
 3. Set the **Payment collection** method to **Automatic** or **Manual**.
 4. Under **Subscription renewal**, choose how invoices are handled:
-   - **Email payable invoice to billing recipient**: automatically emails the invoice to your client on renewal. Set the **Invoice due date** (e.g., within 7 days).
-   - **Automatically charge payment method on file**: charges your client's saved card automatically. If no payment method is on file, the invoice is emailed instead.
+   - With **Manual** collection: Choose **Do nothing** (subscriptions will not charge accounts or create invoices) or **Create a draft invoice** (invoice is not sent to the customer; use if collecting payment manually). If you select **Create a draft invoice**, set the **Invoice due date** (e.g., within 7 days).
+   - With **Automatic** collection: The invoice is automatically charged to the payment method on file. If no payment method is on file, the invoice is emailed instead.
 5. Optionally, add a **Memo** to appear at the bottom of every subscription invoice.
 6. Click **Save**.
 
@@ -126,12 +127,12 @@ Navigate to `Partner Center` → `Commerce` → `Invoices`.
 
 ### Create an invoice manually
 
-1. Click `New` → `Invoice` and select the client account.
-2. Set a **Due date** and choose a **User** (the recipient at the client's account).
-3. Click **Add Item** to add products from your Marketplace, or **Add Custom Item** to enter a custom line item.
-4. Optionally, add a **Memo** to include additional context such as terms, conditions, or a thank-you note.
-5. Choose a **Collection method**: select **Email the invoice to the customer to pay** or **Charge a payment method on file**.
-6. Review the subtotal and total, then click **Send Invoice** or **Charge Invoice** (the button changes based on your collection method).
+1. Click `New` → `Invoice` and select the client account. This immediately creates and saves a draft invoice.
+2. Set the **Recipient** (required) and optionally add **Additional recipients**. 
+3. Set an **Issue date** and a **Due date**.
+4. Click `Add item` to add products from your Marketplace, or `Add custom item` to enter a custom line item.
+5. Optionally, add a **Memo** to include additional context such as terms, conditions, or a thank-you note.
+6. Review the subtotal and total, then click `Send invoice` to email it to the recipient.
 
 <img src={require('./img/subscriptions-and-client-billing/create-invoice.png').default} alt="Create a new invoice in Partner Center" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -145,10 +146,11 @@ Draft invoices can be edited as many times as needed before sending. Once sent, 
 |---|---|
 | **Draft** | Created but not yet sent; can still be edited |
 | **Due** | Sent to the client; no longer editable |
+| **Past due** | Payment is overdue |
 | **Paid** | Payment has been collected |
 | **Void** | Cancelled; no longer actionable |
 
-To mark an invoice as paid manually: go to `Commerce` → `Invoices`, click the options menu (⋮) on the invoice, select **Change invoice status**, and choose **Paid**.
+To mark an invoice as paid manually: go to `Commerce` → `Invoices`, click the options menu (⋮) on the invoice, and select `Mark as paid`.
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'flex-start'}}>
 <img src={require('./img/subscriptions-and-client-billing/invoice-options-menu.png').default} alt="Invoice options menu" style={{width: '23%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
@@ -167,7 +169,7 @@ To mark an invoice as paid manually: go to `Commerce` → `Invoices`, click the 
 
 You can apply a discount to a one-off invoice or to a recurring subscription:
 
-- **Invoice discount**: open the invoice, click **Discount**, choose a percentage or fixed amount, and click **Apply**. This applies to that invoice only.
+- **Invoice discount**: On an invoice line item, click the options menu (⋮) and select `Add discount`. Choose a percentage or fixed amount. This applies to that line item only.
 
 <div style={{display: 'flex', gap: '16px', alignItems: 'flex-start', marginBottom: '24px'}}>
 <img src={require('./img/subscriptions-and-client-billing/invoice-item-options-menu.png').default} alt="Invoice item options menu showing Add to package, Set item tax, Add discount, and Remove item" style={{width: '73%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
@@ -187,9 +189,9 @@ Only one discount can be applied per invoice line item.
 
 ### Set up tax rates
 
-If you need to charge tax on your invoices, create tax rates first in `Partner Center` → `Administration` → `Tax Rates`.
+If you need to charge tax on your invoices, create tax rates first in `Administration` → `Tax rates`.
 
-1. Click **Create Tax Rate**.
+1. Click `Create tax rate`.
 2. Select a **Country** and optionally a **State/Prov**.
 3. Enter a **Tax name** and the **Rate (%)**.
 4. Optionally add a **Description/Tax number** and an **Accounting code**.
@@ -197,7 +199,7 @@ If you need to charge tax on your invoices, create tax rates first in `Partner C
 
 <img src={require('./img/subscriptions-and-client-billing/create-tax-rate.png').default} alt="Create a tax rate dialog" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-Once created, tax rates can be applied to individual line items on any invoice. Open the invoice, click the options menu (⋮) on a line item, and select **Set Item Tax**.
+Once created, tax rates can be applied to individual line items on any invoice. Open the invoice, click the options menu (⋮) on a line item, and select `Set item tax`.
 
 [Learn more about discounts and tax rates](/commerce/invoices/discounts-in-invoices-and-subscriptions)
 
@@ -215,7 +217,7 @@ No. Activating a product creates a subscription to track the service, but billin
 <details>
 <summary>Where do I set up billing for my clients?</summary>
 
-Set defaults for new accounts at `Partner Center` → `Administration` → `Default billing settings`. To override the defaults for one client, open the account in **Manage Accounts** and use the **Billing settings** tab.
+Set defaults for new accounts at `Administration` → `Default billing settings`. Remember to select a market first, as settings are configured per market. To override the defaults for one client, open the account in **Manage Accounts** and use the **Billing settings** tab.
 
 </details>
 
