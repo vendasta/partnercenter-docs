@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Link from "@docusaurus/Link";
+import { useLocation } from "@docusaurus/router";
 import { parseMinutes, type JourneyStage } from "../data/learnJourney";
 
 // Start here (training/index.mdx): the Learn journey as a vertical stepper.
@@ -8,7 +9,7 @@ import { parseMinutes, type JourneyStage } from "../data/learnJourney";
 // a hand-off link to the next path. A reference page (sales assets) gets a
 // book glyph and an Open button instead of Start. Native <details>, so it
 // works without JavaScript; the only script is opening the stage named in the
-// URL hash (/learn#make-your-first-sale). Data: src/data/learnJourney.ts.
+// URL hash (/learn#make-your-first-sale), on load and on in-page hash changes. Data: src/data/learnJourney.ts.
 // Styles: .jy in src/css/custom.css. Rebuilt 2026-10-08 from the earlier
 // expandable bars (Start here redesign, after the docs-site landing research).
 
@@ -46,9 +47,12 @@ function QuizGlyph() {
 }
 
 export default function JourneyStages({ stages }: JourneyStagesProps) {
+  // Runs on load and again whenever the hash changes, so an in-page "Next:"
+  // link opens its stage the same way a /learn#... deep link does.
+  const { hash } = useLocation();
   useEffect(() => {
     try {
-      const id = window.location.hash.replace(/^#/, "");
+      const id = hash.replace(/^#/, "");
       if (!id) return;
       const el = document.getElementById(id);
       const details = el?.querySelector("details");
@@ -59,7 +63,7 @@ export default function JourneyStages({ stages }: JourneyStagesProps) {
     } catch {
       // Hash handling is a convenience only.
     }
-  }, []);
+  }, [hash]);
 
   return (
     <ol className="jy">
