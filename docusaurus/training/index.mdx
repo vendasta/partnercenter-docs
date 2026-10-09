@@ -7,63 +7,132 @@ hide_table_of_contents: true
 ---
 
 import { JOURNEY } from '@site/src/data/learnJourney';
-import JourneyTotals from '@site/src/components/JourneyTotals';
 import JourneyStages from '@site/src/components/JourneyStages';
 import RouterCards from '@site/src/components/RouterCards';
 
 {/* Redesigned 2026-10-08 (Cal, Start here redesign) after a review of twelve
     docs-site learning landings (OUTPUTS/learn-tab-sidebar-reorg/
     learn-landing-best-practices.md in Cal's workspace). The journey data lives
-    in src/data/learnJourney.ts: edit a path there once and the totals strip,
-    the stepper, and the step lists all follow. The cards and the stepper are
+    in src/data/learnJourney.ts: edit a path there once and the stepper and
+    the step lists follow. The tag row reuses the PathHeader classes so Start
+    here matches each path overview. The cards and the stepper are
     src/components/RouterCards.tsx and JourneyStages.tsx; styles under .learn-,
     .rc, and .jy in src/css/custom.css. The former card grid
-    (src/components/LearnHome.tsx) is kept but not rendered. */}
+    (src/components/LearnHome.tsx) and the totals strip
+    (src/components/JourneyTotals.tsx) are kept but not rendered. */}
 
-<p className="learn-hero__lead">Welcome to Vendasta Learn. Five paths take you from a new Partner Center account to an AI Workforce you run for your own business and sell to your clients. You set up the platform, hire your first AI Employee, meet the rest of the roster, make your first sale, and connect it to the systems you and your clients already run.</p>
+<div className="lesson-header__tags">
+  <span className="path-header__count">{JOURNEY.filter((s) => !s.reference).length} paths</span>
+  <span className="lesson-header__tag lesson-header__tag--foundational">Beginner to Intermediate</span>
+  {["Partner Center", "Branding", "AI Receptionist", "AI Workforce", "Pitching", "Integrations", "Automations"].map((topic) => (
+    <span key={topic} className="path-header__topic">{topic}</span>
+  ))}
+</div>
 
-<JourneyTotals stages={JOURNEY} />
+<p className="learn-hero__lead">Welcome to Vendasta Learn, your guide to getting started: what to do first, and in what order. Five paths take you from a new Partner Center account to an AI Workforce you run for your own business and sell to your clients. You set up the platform, hire your first AI Employee, meet the rest of the roster, make your first sale, and connect it to the systems you and your clients already run.</p>
+
+<p className="learn-hero__lead">This learning journey is organized so you master the system for yourself before you sell it. If you want to <a href="/learn/make-your-first-sale">skip straight to selling</a>, go right ahead. We do recommend you hire an AI Receptionist for yourself before you deploy one for a client, so everything you talk about in a sales conversation is something you have already made work. As you grow with the platform, the Documentation tab has detailed walkthroughs of everything in it. Happy learning!</p>
 
 <div className="learn-hero__actions">
   <a className="learn-btn" href="/learn/getting-started">Start with Get set up</a>
-  <a className="learn-ghost" href="#the-journey">See all five paths &darr;</a>
+  <a className="learn-ghost" href="#your-learning-journey">See all five paths &darr;</a>
 </div>
 
-## Where are you?
+:::tip Where you will be working
+Everything in these paths is done from your main administration workspace: **Partner Center**, at [partners.vendasta.com](https://partners.vendasta.com). Some steps open a client's Business App from there, so you can set up what they will see.
+:::
 
-<RouterCards
-  cards={[
-    { kicker: "New account", text: "Nothing set up yet.", to: "/learn/getting-started", linkText: "1. Get set up" },
-    { kicker: "Already set up", text: "Domain, billing, and brand are done.", to: "/learn/hire-your-first-ai-employee", linkText: "2. Hire your first AI Employee" },
-    { kicker: "Ready to sell", text: "You run a receptionist and want your first client.", to: "/learn/make-your-first-sale", linkText: "4. Make your first sale", note: "Read 3 first if you have not." },
-    { kicker: "Want to build", text: "Connect a client's calendar, CRM, or API.", to: "/learn/connect-your-own-systems", linkText: "5. Connect your own systems" },
-  ]}
-/>
-
-<p className="learn-order-line">First time through, take the paths in order. After that, come back to any step as a reference.</p>
-
-<div className="learn-band">
-
-Learn is your guide to getting started: what to do first, and in what order. The order rests on one idea: you run it before you sell it. You hire an AI Receptionist for your own front desk before you deploy one for a client, so every claim you make in a sales conversation is something you have already watched work. As you grow with the platform, the Documentation tab has detailed walkthroughs of everything in it.
-
-</div>
-
-## The journey
+## Your learning journey
 
 <JourneyStages stages={JOURNEY} />
 
-## Before you begin
+<div className="container homepage-bottom-section learn-resources">
+  <div className="row homepage-row-edge">
+    {/* Left: AI Receptionist video card */}
+    <div className="col col--6">
+      <div className="card home-resource-card">
+        <div className="card__header">
+          <h3>Watch an AI Receptionist in action</h3>
+          <p className="margin-bottom--sm">Already set up and ready to get your AI Workforce rolling? Watch this video to see how it works.</p>
+        </div>
+        <div className="card__body">
+          {/* Wistia 8csq9pq02v */}
+          <div
+            className="wistia_responsive_padding"
+            style={{ padding: '56.25% 0 0 0', position: 'relative' }}
+          >
+            <div
+              className="wistia_responsive_wrapper"
+              style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
+            >
+              <iframe
+                src="https://fast.wistia.net/embed/iframe/8csq9pq02v?web_component=true&seo=true"
+                title="AI Chat Receptionist walkthrough"
+                allow="autoplay; fullscreen"
+                allowTransparency
+                frameBorder="0"
+                scrolling="no"
+                className="wistia_embed"
+                name="wistia_embed"
+                width="100%"
+                height="100%"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<RouterCards
-  minWidth="180px"
-  cards={[
-    { kicker: "Access", text: "Partner Center admin on a paid subscription. Several steps change settings in Administration and activate products." },
-    { kicker: "DNS", text: "You can edit your domain's DNS records, or know who can. Connecting your email domain adds records at your DNS host." },
-    { kicker: "Where it happens", text: "Partner Center at partners.vendasta.com. Some steps open a client's Business App from there so you can configure what they will see." },
-  ]}
-/>
+    {/* Right: Link list card, same links as the Documentation home */}
+    <div className="col col--6">
+      <div className="card">
+        <div className="card__body">
+          <ul className="clean-list home-link-list">
+            <li>
+              <div>
+                <a href="https://partners.vendasta.com/dashboard" target="_blank" rel="noopener noreferrer">Sign into Partner Center</a>
+                <p className="home-link-desc">Access your dashboard and tools.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="https://status.vendasta.com/" target="_blank" rel="noopener noreferrer">Check system status</a>
+                <p className="home-link-desc">See real-time platform availability updates.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="https://trust.vendasta.com/" target="_blank" rel="noopener noreferrer">Vendasta Trust Center</a>
+                <p className="home-link-desc">Review security, privacy, and SOC 2® and SOC 3® reporting.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="https://developers.vendasta.com/platform/ZG9jOjEwMTkzMDg0-overview" target="_blank" rel="noopener noreferrer">API Documentation</a>
+                <p className="home-link-desc">Explore Vendasta APIs and integration guides.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="https://www.facebook.com/groups/1367530863635364/" target="_blank" rel="noopener noreferrer">Join our Partner Community</a>
+                <p className="home-link-desc">Connect with other partners and share best practices.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="https://feedback.vendasta.com/changelog/upgrades-to-our-support-system-on-march-30th-2026" target="_blank" rel="noopener noreferrer">Contact Support</a>
+                <p className="home-link-desc">To contact support, email support@vendasta.com</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://fast.wistia.net/player.js" async></script>
 
-## Still stuck?
+## Troubleshooting guide
 
 <RouterCards
   minWidth="180px"

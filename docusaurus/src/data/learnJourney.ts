@@ -23,6 +23,10 @@ export interface JourneyStage {
   level?: string;
   /** One short format badge, or none. Keep to one so the chip row stays readable. */
   badge?: string;
+  /** Replaces the time, step-count, and level chips. Used by the reference
+      page to count what is on it by type. Keep the counts in step with
+      training/sales-assets/index.mdx. */
+  chips?: string[];
   /** Paragraph shown when expanded, above the steps. */
   blurb: string;
   to: string;
@@ -39,7 +43,6 @@ export const JOURNEY: JourneyStage[] = [
     tagline: "Make the platform yours, then bring in your first client.",
     time: "2 h 15 min",
     level: "Beginner",
-    badge: "No code needed",
     blurb: "You leave with email sending from your own domain, payments collecting on their own, your brand on everything a client sees, an AI Receptionist on your own website, and your first client account live with a product on it.",
     to: "/learn/getting-started",
     steps: [
@@ -60,7 +63,6 @@ export const JOURNEY: JourneyStage[] = [
     tagline: "Run a receptionist for yourself, then deploy one for a client.",
     time: "1 h 40 min",
     level: "Beginner to Intermediate",
-    badge: "No code needed",
     blurb: "Put one AI Employee to work for a real business and prove it. You run a receptionist for your own front desk first, teach it to book on a real calendar, train it to answer accurately, then deploy one for a client on their account and test it before you hand it over.",
     to: "/learn/hire-your-first-ai-employee",
     steps: [
@@ -78,7 +80,6 @@ export const JOURNEY: JourneyStage[] = [
     tagline: "Every AI Employee, the job it does on day one, and the edition that carries it.",
     time: "1 h",
     level: "Beginner",
-    badge: "No code needed",
     blurb: "Meet every AI Employee you will put in front of a client. Each step takes one of the five core AI Employees, shows the job it does on day one, and names the product and edition that carry it, so you quote the right thing before you activate anything. The last step covers the Specialist AI Employees.",
     to: "/learn/know-what-youre-selling",
     steps: [
@@ -97,7 +98,6 @@ export const JOURNEY: JourneyStage[] = [
     tagline: "The packages, the live demo, the close, and the launch to a first captured lead.",
     time: "2 h",
     level: "Beginner",
-    badge: "No code needed",
     blurb: "Your prospects do not buy AI. They buy captured leads, faster response times, and lower payroll. This path covers the AI Workforce packages, your best-fit first prospects, a live demo on any prospect's website, discovery and objections, the proposal, a rehearsal against a skeptical AI business owner, and the launch sequence that takes a signed client to their first captured lead.",
     to: "/learn/make-your-first-sale",
     steps: [
@@ -117,7 +117,6 @@ export const JOURNEY: JourneyStage[] = [
     tagline: "One build end to end: a custom tool, an automation, a webhook, and a real API call.",
     time: "2 h 10 min",
     level: "Intermediate",
-    badge: "Some API work",
     blurb: "An AI Employee for a home-services client that books jobs on a real calendar, saves every lead to the CRM, and checks the weather before it confirms outdoor work. Three steps need no code at all: the first, the automation handoff, and autopilot. The rest reach outside the platform with a custom tool, a webhook, a scoped API token, and a booking into a system your client already runs.",
     to: "/learn/connect-your-own-systems",
     steps: [
@@ -137,7 +136,7 @@ export const JOURNEY: JourneyStage[] = [
     id: "sales-assets",
     title: "Your sales assets",
     tagline: "Rebrandable kits, the ROI calculator, success stories, and the sales videos.",
-    badge: "Reference",
+    chips: ["6 rebrandable kits", "4 sales videos"],
     blurb: "Everything you reach for during a sale, on one page. Not a path: open it when you need it and keep it open while you work through Make your first sale.",
     to: "/learn/sales-assets",
     reference: true,

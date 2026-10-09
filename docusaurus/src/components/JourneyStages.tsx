@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Link from "@docusaurus/Link";
-import type { JourneyStage } from "../data/learnJourney";
+import { parseMinutes, type JourneyStage } from "../data/learnJourney";
 
 // Start here (training/index.mdx): the Learn journey as a vertical stepper.
 // A continuous line down the left, one numbered node per path, and a row that
@@ -14,6 +14,17 @@ import type { JourneyStage } from "../data/learnJourney";
 
 interface JourneyStagesProps {
   stages: JourneyStage[];
+}
+
+// Chip time, rounded down to the half hour so the row reads at a glance:
+// "2 h 10 min" shows as "2 h", "1 h 40 min" as "1 h 30 min". The data keeps
+// the exact time each PathHeader shows.
+function roundedTime(time?: string): string | undefined {
+  const minutes = Math.floor(parseMinutes(time) / 30) * 30;
+  if (!minutes) return time;
+  const h = Math.floor(minutes / 60);
+  const m = minutes % 60;
+  return [h && `${h} h`, m && `${m} min`].filter(Boolean).join(" ");
 }
 
 function BookGlyph() {
@@ -57,7 +68,7 @@ export default function JourneyStages({ stages }: JourneyStagesProps) {
         const number = stages.slice(0, i + 1).filter((s) => !s.reference).length;
         const nextNumber = next && !next.reference ? stages.slice(0, i + 2).filter((s) => !s.reference).length : null;
         const cta = stage.reference ? "Open" : "Start";
-        const chips = [stage.time, `${stage.steps.length} ${stage.reference ? "sections" : "steps"}`, stage.level].filter(Boolean) as string[];
+        const chips = stage.chips ?? [roundedTime(stage.time), `${stage.steps.length} ${stage.reference ? "sections" : "steps"}`, stage.level].filter(Boolean) as string[];
         return (
           <li key={stage.id} id={stage.id} className={`jy__stage${stage.reference ? " jy__stage--reference" : ""}`}>
             <details className="jy__details">

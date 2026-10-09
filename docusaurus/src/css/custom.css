@@ -2925,22 +2925,15 @@ div[class*="language-"] pre {
   font-weight: 600;
 }
 
-.learn-order-line {
-  margin: 0.75rem 0 0;
-  font-size: 0.92rem;
-  color: var(--ifm-color-emphasis-700);
-}
-
-.learn-band {
-  margin: 2rem 0 1.75rem;
-  padding: 1rem 1.25rem;
-  border-left: 4px solid #3F9B63;
-  background: rgba(63, 155, 99, 0.07);
-  border-radius: 0 8px 8px 0;
-}
-
-.learn-band p:last-child {
+/* Start here: video card beside the link list. The cards stretch to equal
+   height, so center the video in the left card instead of leaving a gap below. */
+.learn-resources .home-resource-card .card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-bottom: 0;
+  padding-top: 16px;
 }
 
 /* Router cards */
