@@ -25,7 +25,7 @@ The [Get started learning path](/learn/getting-started) sequences your first-wee
 
 Vendasta Payments is the built-in payment processing in Partner Center that lets your clients pay your invoices online by credit card under your brand, with funds deposited into your bank account automatically.
 
-You set it up at `Partner Center` → `Administration` → `Commerce Settings` → `Vendasta Payments`. This guide walks you through the setup process from start to finish.
+You set it up at `Administration` → `Commerce settings` → `Vendasta payments`. This guide walks you through the setup process from start to finish.
 
 :::note
 Vendasta Payments is only available on paid plans. It is not available on Free or Trial tiers. [View plan details](https://www.vendasta.com/pricing)
@@ -46,7 +46,7 @@ Before setting up Vendasta Payments, make sure the following are in place.
 
 ### Complete your billing contact information
 
-Navigate to `Partner Center` → `Administration` → `My billing`.
+Navigate to `Administration` → `My billing`.
 
 Confirm that your **Billing Contact** information is complete, including a full address with postal code. Incomplete billing information is the most common reason setup fails, even in supported regions.
 
@@ -70,11 +70,11 @@ If you see an "Unsupported in Your Area" error during setup, go back to **My Bil
 
 ## Step 2: How do I create my Vendasta Payments account? {#step-2-create-your-vendasta-payments-account}
 
-Navigate to `Partner Center` → `Administration` → `Commerce Settings` → `Vendasta Payments`.
+Navigate to `Administration` → `Commerce settings` → `Vendasta payments`.
 
-<img src={require('./img/administration-vendasta-payments.png').default} alt="Administration page showing Vendasta Payments under Commerce settings" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+<img src={require('./img/administration-vendasta-payments.png').default} alt="Administration page showing Vendasta payments under Commerce settings" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-1. Click **Set up Stripe Account**.
+1. Click `Set up Stripe account`.
 2. Review and accept the Vendasta Payments Terms of Service.
 3. Fill in your business information:
    - **Legal business name**: must match the name on your tax ID exactly
@@ -85,23 +85,26 @@ Navigate to `Partner Center` → `Administration` → `Commerce Settings` → `V
 4. Configure your **bank account** for payouts (covered in Step 3).
 5. Submit your application and wait for approval, typically 1 to 2 business days.
 
-### Set your customer statement descriptor
+### Set your account statement description
 
-During setup, you'll be asked for a **customer statement description**. This is the text that appears on your clients' credit card statements when they pay you. Set this to your business name so clients recognize the charge and don't dispute it.
+During setup, you'll be asked for an **account statement description**. This is the text that appears on your clients' credit card statements when they pay you. Set this to your business name so clients recognize the charge and don't dispute it.
 
-:::warning
-By default, "Vendasta" appears on client credit card statements. Replace this with your business name during setup. You have up to 22 characters.
-:::
+**Requirements:**
+- Must be between 5 and 22 characters
+- Use your business name for easy client recognition
 
 ### Understand transaction fees
 
 Standard Vendasta Payments processing fees are:
 
-| Currency | Fee per transaction |
+| Fee Type | Rate |
 |---|---|
-| USD, CAD, AUD, NZD | 2.9% + $0.30 |
-| GBP | 2.9% + £0.20 |
-| CZK | 2.9% + 8.00 Kč |
+| Credit or debit card transaction | 2.9% + $0.30 |
+| Direct debit transaction | 1% per transaction |
+
+Additional currency-specific fees:
+- GBP: 2.9% + £0.20
+- CZK: 2.9% + 8.00 Kč
 
 Fees are automatically deducted after each payment is collected. For full refunds, the transaction fee is deducted from your connected bank account.
 
@@ -115,27 +118,26 @@ Fees are automatically deducted after each payment is collected. For full refund
 
 Once your Vendasta Payments account is approved, you need to add a bank account to receive client payments.
 
-Navigate to `Partner Center` → `Commerce` → `Payouts`, or `Partner Center` → `Administration` → `Commerce Settings` → `Vendasta Payments`.
+Navigate to `Administration` → `Commerce settings` → `Vendasta payments` (or view `Commerce` → `Payouts` to see payout history once configured).
 
-1. Click **Add Bank Account** under the **Receiving Payout** section.
+1. In the `Receiving payouts` section, click `Add bank account`.
 2. Enter your bank account details:
    - **Country of bank account**
    - **Currency**
    - **Transit number**
    - **Institution number**
    - **Account number**
-3. Set this account as your **default** for payouts.
-4. Click **Save bank account**.
+3. Click `Save bank account`.
 
 <img src={require('./img/receiving-bank-account.png').default} alt="Receiving bank account form with transit, institution, and account number fields" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 :::tip
-If you need to replace an existing bank account, add the new one first, set it as default, then remove the old one. You cannot remove a bank account while it is set as the default.
+After adding a bank account, you can set it as your default for payouts using the account's menu.
 :::
 
 ### How payouts work
 
-After your first payment is received, Stripe holds the funds for up to one week. After that initial period, payouts are released on a 7-day rolling basis into your bank account. You can view all received payments under `Partner Center` → `Commerce` → `Payments`.
+After your first payment is received, Stripe holds the funds for up to one week. After that initial period, payouts are released on a 7-day rolling basis into your bank account. You can view all received payments under `Commerce` → `Payments`.
 
 ### Multi-currency payouts
 
@@ -151,7 +153,7 @@ If you operate in multiple countries, you can add separate bank accounts for eac
 
 If you already use Stripe to collect payments, you can connect your existing Stripe Standard account to Vendasta Payments instead of creating a new one.
 
-Navigate to `Partner Center` → `Administration` → `Commerce Settings` → `Vendasta Payments` and select **Connect an existing account**.
+Navigate to `Administration` → `Commerce settings` → `Vendasta payments` and select `Connect an existing account`.
 
 ### Requirements
 
@@ -179,7 +181,7 @@ If your Stripe connection does not complete, confirm that the connected Stripe a
 <details>
 <summary>What are the Vendasta Payments processing fees?</summary>
 
-Standard fees are 2.9% + $0.30 per transaction for USD, CAD, AUD, and NZD, 2.9% + £0.20 for GBP, and 2.9% + 8.00 Kč for CZK. Fees are deducted automatically after each payment is collected. If you connect your own Stripe account, your existing Stripe rates stay the same and Vendasta adds a 0.75% platform fee on each transaction.
+Standard fees are 2.9% + $0.30 per credit or debit card transaction, and 1% per direct debit transaction. Additional currency-specific fees apply for GBP and CZK. Fees are deducted automatically after each payment is collected. If you connect your own Stripe account, your existing Stripe rates stay the same and Vendasta adds a 0.75% platform fee on each transaction.
 
 </details>
 
@@ -200,7 +202,7 @@ No. Vendasta Payments is only available on paid plans. It is not available on Fr
 <details>
 <summary>Why do I see an "Unsupported in Your Area" error during setup?</summary>
 
-The most common cause is incomplete billing contact information. Go to `Partner Center` → `Administration` → `My billing` and make sure your billing address is fully filled in, including the postal code.
+The most common cause is incomplete billing contact information. Go to `Administration` → `My billing` and make sure your billing address is fully filled in, including the postal code.
 
 </details>
 
@@ -214,14 +216,14 @@ After you submit your application, approval typically takes 1 to 2 business days
 <details>
 <summary>When are client payments deposited into my bank account?</summary>
 
-After your first payment is received, Stripe holds the funds for up to one week. After that, payouts are released on a 7-day rolling basis into your bank account. You can view received payments in `Partner Center` → `Commerce` → `Payments`.
+After your first payment is received, Stripe holds the funds for up to one week. After that, payouts are released on a 7-day rolling basis into your bank account. You can view received payments in `Commerce` → `Payments`.
 
 </details>
 
 <details>
 <summary>Can I connect my own Stripe account instead of creating a new one?</summary>
 
-Yes. You can connect an existing Stripe Standard account from `Partner Center` → `Administration` → `Commerce Settings` → `Vendasta Payments` by selecting **Connect an existing account**. This option is not available if you have already processed transactions through a Vendasta-generated Stripe account.
+Yes. You can connect an existing Stripe Standard account from `Administration` → `Commerce settings` → `Vendasta payments` by selecting `Connect an existing account`. This option is not available if you have already processed transactions through a Vendasta-generated Stripe account.
 
 </details>
 

@@ -23,7 +23,7 @@ The [Get started learning path](/learn/getting-started) sequences your first-wee
 
 # How do I brand the platform as my own?
 
-To brand Vendasta as your own, go to `Administration` → `Partner Branding` in Partner Center to set your company name, logo, favicon, and primary color. Then rename Business App and add a custom domain in `Customize Business App` → `Branding`.
+To brand Vendasta as your own, go to `Administration` → `Partner branding` in Partner Center to set your company name, logo, favicon, and primary color. Then rename Business App and add a custom domain in `Customize Business App` → `Branding`.
 
 Vendasta is a **white-label platform**, meaning you can brand it entirely as your own with no mention of Vendasta. Before you add any clients or send anything to customers, this is the first thing to set up. Everything your clients see (Business App, email campaigns, invoices, notifications) will carry your brand.
 
@@ -46,7 +46,7 @@ Some white-labeling features, such as custom domains, are only available on cert
 
 Partner Branding controls how your business is represented across the platform, in client-facing emails, and in Business App.
 
-Navigate to `Partner Center` → `Administration` → **[Partner Branding](https://partners.vendasta.com/customize-branding)**.
+Navigate to `Administration` → `Partner branding`.
 
 ### Company name
 
@@ -72,28 +72,28 @@ The **Theme** setting controls the light or dark appearance of Partner Center na
 
 ### Logo
 
-Your logo appears in Business App, outgoing email campaigns, and other client-facing areas. Upload one version for light mode and one for dark mode so it looks sharp in either context.
+Your logo appears in Business App, outgoing email campaigns, and other client-facing areas. Upload a single logo (recommended 360 × 58 pixels with a transparent background), and optionally enable a separate dark theme logo.
 
-1. In the **Logo** section, click the upload area for **Light mode logo** and upload your logo file.
-2. If you have a version suited to dark backgrounds, upload it under **Dark mode logo** as well.
+1. In the **Logo** section, click `Change image` and upload your logo file.
+2. Toggle **Use a different logo for dark theme** if you want to upload a separate version for dark backgrounds.
 3. Click **Save**.
 
 **File recommendations:**
 - Format: PNG with a transparent background
-- Resolution: High-resolution for clear display across devices
+- Recommended size: 360 × 58 pixels
 
 <img src={require('./img/logo-upload.png').default} alt="Logo upload section in Partner Branding settings" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 ### Company avatar / shortcut icon
 
-The shortcut icon appears when a client saves Business App to their phone's home screen, and is also used to represent your company in Inbox chat.
+The shortcut icon appears when a client saves Business App to their phone's home screen, and is also used to represent your company in Conversations chat.
 
 1. In the **Company Avatar** section, upload a square image.
 2. Click **Save**.
 
 **File requirements:**
-- Format: GIF, JPG, or PNG
-- Recommended size: 512 x 512 pixels
+- Format: PNG, SVG, JPG, or JPEG
+- Recommended size: 512 × 512 pixels
 
 <img src={require('./img/company-avatar.png').default} alt="Company avatar and shortcut icon upload section in Partner Branding" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -104,9 +104,9 @@ A favicon is the small icon that appears in the browser tab when clients have Bu
 1. In the **Favicon** section, upload your favicon file.
 2. Click **Save**.
 
-:::warning
-Favicons must be **ICO files only** (e.g., `favicon.ico`). PNG and JPG files will not upload. Use an online converter if you only have a PNG version.
-:::
+**File requirements:**
+- Format: ICO files only (e.g., `favicon.ico`)
+- Recommended size: 16 × 16 pixels
 
 <img src={require('./img/favicon-upload.png').default} alt="Favicon upload section in Partner Branding" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -152,13 +152,13 @@ Keep the name short. Two to three words works best across all device sizes. Avoi
 A custom domain lets clients access Business App from your own branded URL (e.g., `app.youragency.com`) instead of a default Vendasta URL.
 
 :::note
-Custom domain setup is available on select plans. [View plan details](https://www.vendasta.com/pricing)
+Custom domain setup is available on Professional and Premium plans. [View plan details](https://www.vendasta.com/pricing)
 :::
 
-1. In the **Branding** section, click **Add custom domain**.
-2. Follow the domain configuration steps.
+1. In the **Branding** section, click `Add custom domain`.
+2. This opens setup instructions in a new tab. Follow the documentation to configure your domain's DNS records and SSL certificate.
 
-[Learn more about custom domain setup](/partner-center/#customize-your-domains)
+[Learn more about custom domain setup](/administration/platform-settings/partner-branding#how-do-i-add-a-custom-domain)
 
 ### Web chat footer branding
 
@@ -190,18 +190,17 @@ When you're just getting set up, start by thinking about what you're actually of
 
 | Page | Show it when... | Hide it when... |
 |---|---|---|
-| **Home** | Always, it's the main dashboard | N/A |
-| **Get Started** | Onboarding new clients | Clients are fully set up |
+| **Home** | Always, it's the main dashboard | Rarely hidden |
+| **Conversations Messages** | Clients manage their own customer messaging | You manage all client communication |
 | **My Products** | Clients manage or browse their own products | You manage everything for them |
 | **Store** | You want clients to self-serve and purchase | All purchases go through your team |
-| **Inbox / Messages** | You want clients to message you | You prefer to initiate all contact |
 | **Executive Report** | Clients want performance analytics | N/A |
 | **Projects** | You deliver project-based services (e.g. website builds) | You don't use fulfillment workflows |
 | **Invoices** | Clients manage their own billing | You handle billing externally |
 
 ### How to show or hide a page
 
-1. Select the page from the left sidebar (e.g., **Home**, **Store**, **Inbox**).
+1. Under `Pages`, select a page from the list.
 2. Toggle **Show this page** on or off.
 3. Click **Save**.
 
@@ -221,7 +220,7 @@ If you serve distinct client segments, for example different industries, regions
 
 By default, your Partner Branding settings apply to all markets. To customize a specific market:
 
-1. Go to `Partner Center` → `Administration` → `Partner branding`.
+1. Go to `Administration` → `Partner branding`.
 2. Click the **All Markets** dropdown in the top right.
 
 <img src={require('./img/all-markets-dropdown.png').default} alt="All Markets dropdown in Partner Branding" style={{width: '50%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
