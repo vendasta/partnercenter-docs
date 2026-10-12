@@ -74,6 +74,29 @@ To get the specific DNS records you need to add:
 DNS changes usually propagate within 48 hours, and it can take up to 72 hours for authentication to show as verified in Partner Center. Be patient if your records don't verify immediately.
 :::
 
+## How do I authenticate a client's domain? {#client-domains}
+
+Partner Center `Email settings` covers your own sending domain. Each client account authenticates its own domain separately in Business App:
+
+1. Open the client's Business App and go to `Administration` → `Email configuration`
+2. Use `Authorize a domain` to add the client's domain
+3. Add the SPF, DKIM, and DMARC records shown there at the client's DNS provider
+4. Wait for each record to show as verified
+
+This covers emails the platform sends from the client's domain, including contact form notifications from websites on WordPress Hosting. For the client-facing steps, see [Email Configuration](https://docs.businessapp.io/business-app/administration/email/email-configuration/) in the Business App docs.
+
+### Website form emails land in Junk or quarantine
+
+If a client's website form notifications show as `Delivered` in the WordPress Hosting `Email History` tab but never reach the inbox, check the client's domain:
+
+- The form sends from the client's own domain, for example `info@clientbusiness.com`
+- The domain has a DMARC policy of `p=quarantine` or `p=reject`
+- The domain isn't authorized in the client's Business App
+
+When all three are true, the recipient's mail provider can't verify the email and moves it to Junk or quarantine, or rejects it. `Delivered` only means the recipient's server accepted the email.
+
+To fix it, have the client release the filtered emails from Junk or their Microsoft 365 or Google Workspace quarantine and mark them as not junk. Then authorize the domain as described above. For the full steps, see [Email delivery and troubleshooting](https://docs.businessapp.io/wordpress-hosting/email-history/email-delivery-and-troubleshooting/) in the WordPress Hosting docs.
+
 ## SPF troubleshooting
 
 ### You can only have one SPF record per domain
@@ -160,6 +183,7 @@ Go to `Partner Center` → `Marketing` → `Email settings` and find your domain
 | Symptom | Likely cause |
 |---------|-------------|
 | Emails bounce with DMARC reject | Policy is `p=reject` and SPF or DKIM alignment is failing; verify both pass before tightening policy |
+| Website form emails show as `Delivered` but land in Junk or quarantine | Policy is `p=quarantine` and the client's domain isn't authorized in Business App; see [Website form emails land in Junk or quarantine](#website-form-emails-land-in-junk-or-quarantine) |
 | Receiving DMARC reports for every failed delivery | `ruf=mailto:` is set in the record; remove it |
 | Multiple DMARC records broke verification | Consolidate to a single `_dmarc.<domain>` TXT record |
 
@@ -194,6 +218,12 @@ It can if you add it as a second SPF record. A domain can only have one SPF reco
 <summary>Why does a record show Not found in Email settings?</summary>
 
 `Not found` in red in the `Current value` column means the record is missing, has a syntax problem, or DNS propagation is still in progress. Allow up to 72 hours, then check that you copied the value exactly as shown in Partner Center.
+</details>
+
+<details>
+<summary>Why are my client's website form emails going to Junk when Email History shows them as delivered?</summary>
+
+`Delivered` means the recipient's mail server accepted the email, not that it reached the inbox. If the form sends from the client's own domain and that domain has a DMARC policy of `p=quarantine` or `p=reject`, the recipient's provider filters any email it can't verify. Authorize the client's domain in their Business App at `Administration` → `Email configuration`. See [How do I authenticate a client's domain?](#client-domains)
 </details>
 
 ## Need Help?
