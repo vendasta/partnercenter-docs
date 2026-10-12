@@ -167,6 +167,13 @@ Yes. Custom capabilities can simply add new instructions for the AI Employee to 
 Test that it activates when it should and not when it shouldn't, using various phrasings, and confirm the AI asks for required information before using tools. Use the Explanations feature in Conversations to see which capabilities are used, where they conflict, and when the AI chooses not to use one.
 </details>
 
+<details>
+<summary>Where does the "Escalate to Vendasta Support" capability send the ticket?</summary>
+
+It emails the support team (check spam). If a workflow syncs that support inbox into vTicket, the ticket appears there; otherwise it stays email-only, like Partner Center support chat. The capability is not available in webchat; it works in Google Chat and platform chat. Request webchat enablement through a support ticket if you need it there.
+
+</details>
+
 ---
 
 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
