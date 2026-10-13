@@ -111,7 +111,8 @@ An invoice's status is displayed in the Status column on the table in `Partner C
 - **Draft**: A draft invoice can be edited, and has not yet been sent to a recipient.
 - **Due**: A Due invoice has been sent to a recipient and can no longer be edited. Clicking **Resend Invoice** allows you to reselect a recipient and send the invoice again.
 - **Paid**: A Due invoice will be marked as Paid when its recipient pays for it via the **Pay this invoice** button. Alternately, if payment was collected outside of Vendasta Payments, an invoice can be marked as Paid by clicking the Options **⋮** menu, selecting **Change invoice status**, and selecting **Paid**.
-- **Void**: If an invoice has been sent in error or is no longer relevant, an invoice can be marked as Void by clicking the Options **⋮** menu, selecting **Change invoice status**, and selecting **Void**.
+
+If a Due or Paid invoice was sent in error or needs to be cancelled, [issue a credit note](/commerce/credit-notes) on the invoice for the full amount. Open the invoice, click the Options **⋮** menu in the top right corner, and select `Issue credit note`.
 
 Note that an account's **Invoicing settings** are all off by default. To edit these settings for a particular account, go to the **Products** section on the account's page under `Partner Center` → `Accounts` → `Manage Accounts` → `Select account` and click **Invoices.**
 
@@ -166,7 +167,7 @@ For Partners with multiple markets, repeat the same steps under the '**Markets**
 
 **Draft invoices** can be deleted using the Options **⋮** menu on the invoice.
 
-**Sent or paid invoices** cannot be deleted — they are financial records. If you need to reverse the charge on a paid invoice, [issue a credit note](/commerce/credit-notes) instead. If a sent invoice was created in error and has not been paid, void it by selecting `Change invoice status` → `Void` from the Options **⋮** menu.
+**Sent or paid invoices** cannot be deleted — they are financial records. If you need to reverse the charge on a paid invoice, [issue a credit note](/commerce/credit-notes) instead. If a sent invoice was created in error and has not been paid, issue a credit note for the full amount to cancel the balance due.
 
 You can't retract or delete an invoice that has already been sent.
 
@@ -176,13 +177,7 @@ If you have sent an invoice to the incorrect recipient, an invoice can be sent t
 
 <img src={require('./img/commerce/invoices/send-invoice-option.jpg').default} alt="Send invoice option" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-If the invoice is still under the status 'due,' it can also be voided.
-
-To void the invoice, navigate to **Partner Center → Commerce → Invoices → Click the 3 dots next to the invoice and select Change Invoice Status.** Select the **void** status, and **save.**
-
-<img src={require('./img/commerce/invoices/change-invoice-status-option.jpg').default} alt="Change invoice status option" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
-
-<img src={require('./img/commerce/invoices/void-invoice-status.jpg').default} alt="Void invoice status selection" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+If the invoice is still Due, you can cancel the balance by issuing a credit note. Open the invoice in `Partner Center` → `Commerce` → `Invoices`, click the Options **⋮** menu in the top right corner, select `Issue credit note`, and apply a credit for the full amount. See [Credit notes](/commerce/credit-notes) for details.
 
 </details>
 
@@ -197,7 +192,7 @@ In `Partner Center` → `Commerce` → `Invoices` → `Select the invoice` (any 
 
 <img src={require('./img/commerce/invoices/mark-invoice-paid-2.png').default} alt="Mark invoice as paid step 2" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-***Please note that invoices with the status "Paid" or "Void" do not have the option to change the invoice status.***
+***Please note that invoices with the status "Paid" do not have the option to change the invoice status.***
 
 </details>
 
@@ -341,7 +336,7 @@ This error is caused by an invoice that contains an empty line item — a line w
 3. **Duplicate the invoice** using the Options **⋮** menu
 4. On the duplicate, delete the empty line item
 5. Charge the duplicate invoice
-6. Void the original invoice
+6. Issue a credit note on the original invoice for the full amount
 
 To prevent this in future, ensure every line item has a product description and a value greater than $0.00 before saving.
 
