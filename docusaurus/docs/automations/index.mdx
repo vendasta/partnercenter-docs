@@ -103,6 +103,19 @@ The automation runs whenever the trigger conditions are met (if it's turned on).
 
 ![Create automation button](./my-automations/img/automations/create-automation-5.jpg)
 
+## Who an automation runs as
+
+An automation runs on behalf of the person who turned it on. It uses that person's permissions to send emails, update CRM records, and take other actions.
+
+If that person's role or permissions change, or they leave your team, the automation can no longer act. A banner appears saying **"Automation requires valid permissions to run."** While the banner is showing, the automation keeps receiving triggers, but **every run fails, and failed triggers are not replayed** when you fix it.
+
+**To avoid lost runs:**
+
+- Before removing or changing a team member's access, check whether they own any running automations, and transfer them.
+- For business-critical automations, have an admin turn them on from a shared admin account rather than a personal one.
+
+See [Fixing "Automation requires valid permissions to run"](./automation-history/automation-permissions-error.mdx).
+
 ## Best practices
 
 - **Start simple** — Build and test simple automations before complex workflows.
