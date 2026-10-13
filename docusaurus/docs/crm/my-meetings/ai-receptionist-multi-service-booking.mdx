@@ -26,8 +26,8 @@ This capability uses the same event types, groups, and service menus you set up 
 | Cancel an appointment | Available | Planned |
 | Book several services in one conversation | Available | Available |
 | How the prospect is identified | Email address | Email address — the agent asks for it out loud |
-| Confirmation | Email | Email |
-| Reminder | Email, at the default reminder timing | Email, at the default reminder timing |
+| Confirmation | Email by default; SMS when the event type uses an SMS channel (see [SMS notifications](./sms-notifications.mdx)) | Email by default; SMS when the event type uses an SMS channel |
+| Reminder | Email at the default reminder timing, or SMS when the event type uses an SMS channel | Email at the default reminder timing, or SMS when the event type uses an SMS channel |
 | Recommended AI model | No specific requirement | **OpenAI GPT Realtime (2.0)** |
 
 ---
@@ -80,15 +80,15 @@ Voice supports new bookings in this release. Rescheduling and cancelling over a 
 
 ## What both capabilities share
 
-- **Email is always required** on a Partner Center event type. The **Required** toggle for email is on and can't be switched off, since email is how confirmations and reminders are delivered here.
-- **Phone number is optional.** Its **Required** toggle is off by default. Turn it on if you need a number — it persists after save and is still set when you reopen the event type.
-- **Confirmations and reminders go by email only.** There's no notification-medium selector in Partner Center. Every event type created or updated here sends an email confirmation and an email reminder at the default reminder timing, whether or not a phone number is required. This is enforced at the API level too, so the rule holds even for bookings created outside the UI.
+- **Email is required by default** on a Partner Center event type, since email is how the receptionist identifies the prospect and how confirmations and reminders are delivered unless you set up SMS.
+- **Phone number is optional.** Its **Required** toggle is off by default. Turn it on if you need a number — it persists after save and is still set when you reopen the event type. It must be on before you can choose an SMS channel.
+- **Confirmations and reminders go by email by default.** Every event type created here sends an email confirmation and an email reminder at the default reminder timing. Once your Partner Center is set up for SMS, you can choose `SMS` or `Both` on the event type instead, and receptionist bookings follow that channel. See [SMS notifications for meetings](./sms-notifications.mdx).
 - **Multi-service booking** is available on a service menu and on a group.
 - Appointments are created in the correct timezone for the prospect.
 - **Business App is unaffected.** Event-type dropdowns, voice booking, reschedule, cancel, and the SMS-based flows all behave exactly as they do today in Business App. A Business App voice call is never asked for an email address, and its voice dropdown still lists only SMS-notifying event types.
 
-:::note No SMS in Partner Center
-Confirmations and reminders are email only for Partner Center bookings, on both capabilities. There's no SMS confirmation or SMS reminder here.
+:::note SMS in Partner Center
+SMS confirmations and reminders are available for Partner Center event types once your subscription includes SMS messaging and you've registered an SMS number under `Inbox` → `Settings`. Until then, Partner Center bookings notify by email. See [SMS notifications for meetings](./sms-notifications.mdx) for eligibility and setup.
 :::
 
 ---
@@ -118,7 +118,7 @@ No. Assigning and using the equivalent capability in Business App works exactly 
 <details>
 <summary>Can I require SMS confirmations for a Partner Center booking?</summary>
 
-No. Confirmations and reminders for Partner Center bookings are always sent by email, regardless of whether a phone number is required on the event type. This is enforced at the API level, so it applies even to bookings created outside the UI.
+Yes, once your Partner Center is set up for SMS. On the event type, turn on `Required` next to `Phone Number` and choose `SMS` or `Both` as the confirmation and reminder channel. If your subscription doesn't include SMS messaging, your company is outside a supported country, or you haven't registered an SMS number yet, the SMS options stay disabled and notifications are sent by email. See [SMS notifications for meetings](./sms-notifications.mdx).
 
 </details>
 
@@ -133,5 +133,6 @@ Check how much else is loaded on that receptionist. A large set of role instruct
 
 - [My Meetings](./index.mdx)
 - [Groups and Service Menus](./groups-and-service-menus.mdx)
+- [SMS notifications for meetings](./sms-notifications.mdx)
 - [AI Chat Receptionist](../../ai/ai-workforce/ai-chat-receptionist/index.md)
 - [AI Voice Receptionist](../../ai/ai-workforce/ai-voice-receptionist.md)

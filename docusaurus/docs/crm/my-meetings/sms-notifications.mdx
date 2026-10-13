@@ -1,0 +1,119 @@
+---
+id: sms-notifications
+title: SMS notifications for meetings
+sidebar_label: SMS notifications
+sidebar_position: 5
+description: Send your guests SMS confirmations, reminders, reschedule and cancellation messages for meetings booked through My Meetings in Partner Center, and register for SMS if you haven't yet.
+tags: [crm, meetings, sms, notifications, reminders, partner-center]
+keywords: [SMS reminders Partner Center, SMS confirmation My Meetings, meeting SMS notifications, register for SMS Partner Center, booking link SMS, Inbox settings SMS]
+---
+
+When a guest books a meeting with you through a Partner Center booking link, you can send them a confirmation, a reminder before the meeting starts, and a message if the meeting is rescheduled or cancelled. These messages go out by email by default. Once your Partner Center is set up for SMS, you can send them by SMS as well, or instead, the same way your clients can in Business App.
+
+Fewer missed meetings, less manual chasing. The guest gets a text with the meeting details and a link to their booking page, where they can reschedule or cancel on their own.
+
+:::info Rolling out
+SMS notifications in Partner Center are being rolled out gradually. If you don't see the SMS options described on this page when you edit an event type, they haven't reached your Partner Center yet, and your notifications stay on email.
+:::
+
+## Before you start
+
+To send SMS from Partner Center, three things need to be in place:
+
+1. **A subscription that includes SMS messaging.** SMS notifications use the same SMS messaging that powers your Partner Center Inbox. Subscription tiers that include Inbox SMS can send meeting SMS; trial subscriptions can't. If your plan doesn't include it, the event type page tells you so and `Register` stays disabled until you upgrade.
+2. **A company location in a supported country.** SMS notifications are available when your company is located in the **United States**, **Canada**, **Italy** or **Australia**. The country comes from your Partner Center company profile. In any other country, the SMS options don't appear and notifications stay on email.
+3. **A registered SMS phone number.** Your messages are sent from your company's own SMS number, set up under `Inbox` → `Settings`. What registration involves depends on your country:
+
+   | Country | What's required |
+   |---|---|
+   | United States | A2P 10DLC carrier registration (brand and campaign). Review by the carriers can take from a few days to a few weeks, and the most common rejection reason is a mismatch with IRS records. |
+   | Australia | A regulatory registration for your company before a number is assigned. |
+   | Canada, Italy | No carrier registration. Claim a phone number and you're ready to send. |
+
+You can start registration right from the event type page. See [Register for SMS from an event type](#register-for-sms-from-an-event-type).
+
+## Turn on SMS for a booking link
+
+1. Go to `CRM` → `My Meetings` → `Manage booking links`.
+2. Open an existing event type, or click `Create event type`.
+3. Under `Questions for invitee`, turn on `Required` next to `Phone Number`. SMS can only be sent to a guest who gave you a phone number, so the SMS options stay disabled until this is on.
+4. Choose a **confirmation channel**: `Email`, `SMS` or `Both`.
+5. Choose a **reminder channel** the same way. It follows your confirmation channel until you change it, after which the two work independently. For example, an email confirmation with an SMS reminder.
+6. Set the reminder timing, then `Save`.
+
+The same channel controls are available on [team booking links](./team-booking-links.mdx#confirmation-and-reminder-channels). Turning off `Phone Number` required disables `SMS` and `Both` again, and any SMS selection falls back to email.
+
+:::tip
+Already have a registered SMS number for your Inbox? Then there's nothing more to set up. Open the event type, make `Phone Number` required, and pick your channels.
+:::
+
+## Register for SMS from an event type
+
+If your subscription includes SMS messaging but you can't send yet, the event type page shows a `Register` button next to the SMS options, with a badge that tells you where you are in the process.
+
+| What you see | What it means | What to do |
+|---|---|---|
+| `Register` with the badge **Register to send SMS notifications** | You haven't registered yet, or no phone number is assigned to your company. | Click `Register`. A **Register for SMS** dialog reminds you to save your work, since it opens a different page. Click `Continue` to open `Inbox` → `Settings`. On the SMS card, click `Register now` (United States, Australia) or `Claim phone number` (Canada, Italy). |
+| `Register` disabled with the badge **Registration in progress** | Your registration has been submitted and is under review. | Wait for approval. Notifications stay on email in the meantime. Once approved, come back to the event type and pick `SMS` or `Both`. |
+| `Register` with the badge **Registration rejected** | The carriers rejected your registration. | Click `Register` to open `Inbox` → `Settings`, correct the information and resubmit. For the carrier requirements and the usual rejection reasons, see [SMS registration for US businesses](../../business-app/conversations/sms/us-businesses-sms-registration.mdx); the same rules apply to your company. |
+| `Register` disabled, with the message *Your subscription doesn't include SMS notifications. Upgrade to send booking confirmations and reminders by SMS.* | Your subscription tier doesn't include SMS messaging. | Upgrade your subscription, then return to the event type. |
+| No SMS options at all | Your company isn't in a supported country, or SMS notifications haven't been rolled out to your Partner Center yet. | Notifications stay on email. |
+
+Registration is done once for your whole company. Only someone who can open `Inbox` → `Settings` can register; if that isn't you, ask a Partner Center admin to complete it.
+
+While you can't send SMS, every event type keeps sending email, and `SMS` and `Both` can't be selected or saved.
+
+## What your guests receive
+
+- **Which messages.** A confirmation when they book, a reminder at the time set on the event type, and a message if the meeting is rescheduled or cancelled. Each message includes the meeting name, time and a link to the guest's booking page.
+- **Who it comes from.** Messages are sent from your company's SMS number. Partner Center has one number per company, shared by everyone on your team who books through it. Because a guest may have booked with a specific person rather than with your company, every message names your company so the guest knows who it's from. This is the same company name your meeting emails use.
+- **Language.** SMS from Partner Center is sent in English. Partner Center doesn't have a primary operating language setting, so the language controls that apply to Business App messages don't apply here.
+- **Opting out.** Every message ends with *Reply STOP to unsubscribe*. A guest who replies STOP receives no further SMS from your number, including reminders for meetings already booked. If the event type uses `Both`, they still receive email. Replying START opts them back in.
+
+## Business App is unchanged
+
+This page is about meetings booked through **Partner Center**. SMS notifications for meetings your clients book through Business App work exactly as before: they use the client's own registered number, the client's subscription and the client's primary operating language, and are set up at `Business App` → `Administration` → `SMS Configuration`.
+
+## Frequently asked questions
+
+<details>
+<summary>Does each person on my team need their own SMS number?</summary>
+
+No. Partner Center has one SMS number for your company, and every meeting booked through Partner Center sends from it. Guests always see your company name in the message.
+
+</details>
+
+<details>
+<summary>Can I send SMS in a language other than English?</summary>
+
+Not from Partner Center. SMS sent from Partner Center is always in English. Meetings booked through a client's Business App follow that client's primary operating language.
+
+</details>
+
+<details>
+<summary>What happens if a guest doesn't give a phone number?</summary>
+
+They can't. When an event type uses `SMS` or `Both`, `Phone Number` is a required field on the booking page, so a guest can't book without one. If you'd rather let guests book without a phone number, turn `Phone Number` required off; the event type then falls back to email.
+
+</details>
+
+<details>
+<summary>I registered for SMS in Inbox. Why do I still see the Register button?</summary>
+
+If the badge reads **Registration in progress**, the carriers are still reviewing your registration; this can take a few weeks for US companies. If the badge reads **Registration rejected**, open `Inbox` → `Settings` to see what was rejected, correct it and resubmit. Once approved and a number is assigned, the button disappears and `SMS` and `Both` become available.
+
+</details>
+
+<details>
+<summary>Do SMS reminders work the same as in Business App?</summary>
+
+Yes. The reminder channel and timing are set on the event type in the same way, and reschedule and cancellation messages go out on the same channel as the confirmation.
+
+</details>
+
+## Related
+
+- [My Meetings](./index.mdx)
+- [Team booking links](./team-booking-links.mdx)
+- [SMS registration for US businesses](../../business-app/conversations/sms/us-businesses-sms-registration.mdx)
+- [Conversations in Partner Center](../../conversations/conversations-in-partner-center.mdx)
