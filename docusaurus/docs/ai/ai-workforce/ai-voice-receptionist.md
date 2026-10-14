@@ -490,6 +490,13 @@ Yes, when those lines are configured to forward to the Business App number that 
 
 </details>
 
+<details>
+<summary>Can I test or use Voice AI without SMS / A2P registration?</summary>
+
+Yes. Voice AI does not require A2P. In the US, A2P applies to sending outbound SMS messages, not to Voice AI itself.
+
+</details>
+
 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
   <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
   <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>
