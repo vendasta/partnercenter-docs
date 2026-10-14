@@ -170,7 +170,7 @@ Test that it activates when it should and not when it shouldn't, using various p
 <details>
 <summary>Where does the "Escalate to Vendasta Support" capability send the ticket?</summary>
 
-It emails the support team (check spam). If a workflow syncs that support inbox into vTicket, the ticket appears there; otherwise it stays email-only, like Partner Center support chat. The capability is not available in webchat; it works in Google Chat and platform chat. Request webchat enablement through a support ticket if you need it there.
+It emails the Vendasta support team (check spam if you do not see a response). The capability works in Google Chat and platform chat but is not available in webchat. Contact support to request webchat enablement if you need it there.
 
 </details>
 
