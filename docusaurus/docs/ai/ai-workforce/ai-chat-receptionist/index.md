@@ -1,7 +1,7 @@
 ---
 title: AI Chat Receptionist Overview
 sidebar_position: 2
-description: Set up, train, and monitor the AI Chat Receptionist to capture leads and answer visitor questions across web chat and SMS.
+description: Set up, train, and monitor the AI Chat Receptionist to capture leads and answer visitor questions across web chat, SMS, email, Facebook, Instagram, and WhatsApp.
 brand: vendasta
 product: ai-workforce
 audience: partners
@@ -34,7 +34,7 @@ As your business grows, the AI adapts to new offerings and workflows without nee
 
 ## Supported languages
 
-The AI Chat Receptionist can transcribe and respond in 57 languages. A language is considered supported when it meets our accuracy standard for both transcription (understanding what the visitor typed or said) and translation (generating a reply).
+The AI Chat Receptionist can transcribe and respond in over 40 languages. A language is considered supported when it meets our accuracy standard for both transcription (understanding what the visitor typed or said) and translation (generating a reply).
 
 | Language | Language | Language |
 |----------|----------|----------|
@@ -80,7 +80,7 @@ Go to <AISparkleIcon /> `AI` → `Workforce` and then click `Configure` on the A
 Give your AI a friendly, professional name and photo. The AI Receptionist knows their name and the photo will help you distinguish between other AI Employees in your app.
 
 - `Communication Channels`
-Your AI Chat Receptionist is assigned to the `Web Chat` channel by default. This channel is always active and cannot be disabled. You can also assign your AI Receptionist to the `SMS` channel to reach customers via text messaging.
+Your AI Chat Receptionist is assigned to the `Web Chat` channel by default. This channel is always active and cannot be disabled. You can also assign your AI Receptionist to the `SMS`, email, Facebook, Instagram, and WhatsApp channels. The channels available depend on the Conversations AI edition on the account: Standard includes web chat, Facebook, Instagram, and WhatsApp, and Pro adds SMS.
 
 :::note
 The `Web Chat` widget isn't automatically added to your website! You'll need to install the widget code or enable it within your site builder before your AI can start engaging visitors. When you are ready to install the widget, refer to [How to install the Conversations Web Chat Widget](https://docs.businessapp.io/business-app/conversations/web-chat)

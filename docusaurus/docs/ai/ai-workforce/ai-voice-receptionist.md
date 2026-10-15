@@ -87,7 +87,7 @@ Before you begin, make sure you've completed these prerequisites so your AI Voic
 
 | What you need                     | Where to find it              | Notes                                                |
 | --------------------------------- | ----------------------------- | ---------------------------------------------------- |
-| AI Voice Receptionist access      | <AISparkleIcon /> `AI` → `Workforce`             | See the [AI Workforce Overview](./index.mdx) for edition and region availability.           |
+| AI Voice Receptionist access      | <AISparkleIcon /> `AI` → `Workforce`             | Requires Conversations AI Premium. See [Product editions](/business-app/conversations/conversations-ai/#product-editions) and [Geographic availability](/business-app/conversations/conversations-ai/#geographic-availability).           |
 | Conversations AI phone number        | <SettingsIcon /> `Administration` → `Conversations Settings` | You will need this number for call-forwarding and publishing. This number is assigned after activating an eligible edition of Conversations AI.                |
 | *(Optional)* Calendar connection    | <CRMIcon /> `CRM` → `My Meetings` → <SettingsIcon /> `Settings` → `Defaults` → `Connect Calendar`   | Lets your AI Voice Receptionist book meetings and appointments on the connected calendar.                          |
 
@@ -266,7 +266,7 @@ If the AI Voice Receptionist is unable to capture a caller's contact information
 <summary>What do I need before setting up my AI Voice Receptionist?</summary>
 
 Before getting started, make sure you have:
-- **AI Voice Receptionist access** through the Premium edition of Conversations AI (see [AI Workforce Overview](./index.mdx) for region availability)
+- **AI Voice Receptionist access** through the Premium edition of Conversations AI (see [Geographic availability](/business-app/conversations/conversations-ai/#geographic-availability) for regions)
 - **Conversations AI phone number** assigned after activating Pro or Premium (found under `Administration` → `Conversations Settings`)
 - **Basic business information** added to your knowledge base
 - *(Optional)* **Calendar connection** for appointment booking (set up under `CRM` → `My Meetings` → `Settings`)
@@ -474,12 +474,12 @@ No. The Conversations AI phone number assigned to your AI Voice Receptionist is 
 <details>
 <summary>What regions support AI Voice Receptionist?</summary>
 
-AI Voice Receptionist is currently available for businesses located in the **United States and Canada only**. This feature requires:
+AI Voice Receptionist is available for businesses located in the **United States, Canada, and Italy**. This feature requires:
 - Premium Conversations AI subscription
 - Business address in a supported region
 - Phone number assignment through Conversations
 
-For the most up-to-date region availability, see the [AI Workforce Overview](./index.mdx).
+See [Geographic availability](/business-app/conversations/conversations-ai/#geographic-availability) for details.
 
 </details>
 
