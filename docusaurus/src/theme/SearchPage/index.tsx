@@ -8,7 +8,8 @@ import {translate} from '@docusaurus/Translate';
 import {AI_SEARCH_LOCALES} from '../../components/AiSearch/config';
 import {openAssistant} from '../../components/AiSearch/assistant';
 import {useDocsSearch} from '../../components/AiSearch/useDocsSearch';
-import {groupByPage} from '../../components/AiSearch/resultUtils';
+import {useSemanticSearch} from '../../components/AiSearch/useSemanticSearch';
+import {groupByPage, mergeHits} from '../../components/AiSearch/resultUtils';
 import ResultRow from '../../components/AiSearch/ResultRow';
 import {SearchIcon, SparklesIcon} from '../../components/AiSearch/Icons';
 import '../../components/AiSearch/aiSearch.css';
@@ -41,7 +42,8 @@ function SearchPageContent() {
   }, [urlQuery]);
 
   const {results, loading, ready} = useDocsSearch(urlQuery, 100, 0);
-  const pages = useMemo(() => groupByPage(results), [results]);
+  const semantic = useSemanticSearch(urlQuery, 10, 0);
+  const pages = useMemo(() => mergeHits(groupByPage(results), semantic.hits, 5), [results, semantic.hits]);
 
   const submit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -109,7 +111,7 @@ function SearchPageContent() {
             <p className="ais-empty">
               {process.env.NODE_ENV !== 'production'
                 ? 'Keyword results only appear in production builds (npm run build && npm run serve).'
-                : loading || !ready
+                : loading || !ready || semantic.loading
                   ? translate({id: 'aiSearch.results.loading', message: 'Searching…'})
                   : translate({id: 'theme.SearchPage.noResultsText', message: 'No results were found'})}
             </p>

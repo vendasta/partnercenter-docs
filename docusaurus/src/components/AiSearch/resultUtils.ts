@@ -16,12 +16,34 @@ export function groupByPage(results: SearchResult[]): PageHit[] {
         breadcrumb: page.b ?? [],
         snippet: candidate,
         tokens: hit.tokens,
+        source: 'keyword',
       });
     } else if (!existing.snippet && candidate) {
       existing.snippet = candidate;
     }
   }
   return [...byUrl.values()];
+}
+
+/**
+ * Merge keyword and semantic hits into one ranked list, de-duplicated by page.
+ * Keyword hits lead (exact terms, real breadcrumbs); semantic hits are woven in after
+ * the first few so meaning-based matches are visible without scrolling.
+ */
+export function mergeHits(keyword: PageHit[], semantic: PageHit[], keywordLead = 3): PageHit[] {
+  const key = (url: string) => url.replace(/[?#].*$/, '').replace(/\/+$/, '') || '/';
+  const seen = new Set<string>();
+  const out: PageHit[] = [];
+  const push = (hit: PageHit) => {
+    const k = key(hit.url);
+    if (seen.has(k)) return;
+    seen.add(k);
+    out.push(hit);
+  };
+  keyword.slice(0, keywordLead).forEach(push);
+  semantic.forEach(push);
+  keyword.slice(keywordLead).forEach(push);
+  return out;
 }
 
 /** Title with matched terms wrapped in <mark>. */

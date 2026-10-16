@@ -39,4 +39,5 @@ export type PageHit = {
   breadcrumb: string[];
   snippet: string;
   tokens: string[];
+  source: 'keyword' | 'semantic';
 };

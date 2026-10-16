@@ -22,7 +22,8 @@ export default function ResultRow({hit, active, onHover, onSelect, snippetLength
       onMouseEnter={onHover}
       onClick={onSelect}
       role="option"
-      aria-selected={active}>
+      aria-selected={active}
+      data-source={hit.source}>
       <DocIcon size={16} className="ais-row__icon" />
       <span className="ais-row__body">
         <span

@@ -6,12 +6,13 @@ import {translate} from '@docusaurus/Translate';
 import {AI_SEARCH_LOCALES} from './config';
 import {openAssistant} from './assistant';
 import {useDocsSearch} from './useDocsSearch';
-import {groupByPage, pageLink} from './resultUtils';
+import {useSemanticSearch} from './useSemanticSearch';
+import {groupByPage, mergeHits, pageLink} from './resultUtils';
 import ResultRow from './ResultRow';
 import {DocIcon, SearchIcon, SparklesIcon} from './Icons';
 import './aiSearch.css';
 
-const MAX_ROWS = 5;
+const MAX_ROWS = 6;
 
 type Props = {onClose: () => void};
 
@@ -40,7 +41,8 @@ export default function SearchModal({onClose}: Props) {
   const openedAtPath = useRef(location.pathname);
 
   const {results, loading, ready} = useDocsSearch(query, 60);
-  const pages = useMemo(() => groupByPage(results), [results]);
+  const semantic = useSemanticSearch(query, 10);
+  const pages = useMemo(() => mergeHits(groupByPage(results), semantic.hits), [results, semantic.hits]);
   const rows = pages.slice(0, MAX_ROWS);
   const trimmed = query.trim();
   const hasQuery = trimmed.length > 0;
@@ -233,7 +235,7 @@ export default function SearchModal({onClose}: Props) {
                 <p className="ais-empty">
                   {!isProd
                     ? 'Keyword results only appear in production builds (npm run build && npm run serve).'
-                    : loading || !ready
+                    : loading || !ready || semantic.loading
                       ? translate({id: 'aiSearch.modal.loading', message: 'Searching…'})
                       : translate({id: 'aiSearch.modal.noResults', message: 'No results found.'})}
                 </p>
