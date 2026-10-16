@@ -166,4 +166,4 @@ The branding interface shows a live preview. Test logos, colors, and favicon on 
 
 ![Partner branding overview](./img/administration/partner-branding/customize-branding-overview.jpg)
 
-For help with visual branding, contact support at support@vendasta.com.
+For help with visual branding, open a ticket in the [Support Portal](https://partners.vendasta.com/crm/tickets).
