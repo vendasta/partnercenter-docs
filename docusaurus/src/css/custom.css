@@ -1067,6 +1067,22 @@ div[class*="language-"] pre {
   gap: 32px;
 }
 
+/* Let the slim footer wrap on narrow screens instead of widening the layout viewport
+   (which also stretched any position:fixed overlay, e.g. the AI search modal). */
+@media (max-width: 700px) {
+  .footer-slim-inner {
+    flex-wrap: wrap !important;
+    height: auto;
+    padding: 12px 0;
+    white-space: normal;
+    gap: 12px 20px !important;
+  }
+  .footer-slim-links {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+}
+
 .footer-slim-links a {
   color: rgba(255, 255, 255, 0.7) !important;
   font-size: 13px;

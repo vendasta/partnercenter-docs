@@ -1,5 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import {useLocation} from '@docusaurus/router';
+import AssistantDrawer from '../components/AiSearch/AssistantDrawer';
 
 declare global {
   interface Window {
@@ -188,6 +189,7 @@ export default function Root({children}: {children: React.ReactNode}): React.Rea
         />
       </noscript>
       {children}
+      <AssistantDrawer />
     </>
   );
 }

@@ -90,8 +90,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         indexBlog: false,
         // Only English content
         language: ['en'],
-        // Make search more visible
-        searchBarPosition: 'right',
+        // The navbar bar and /search page are replaced by src/theme/SearchBar and
+        // src/theme/SearchPage (AI-assisted search); the plugin still builds the index.
         // Highlight search terms in results
         highlightSearchTermsOnTargetPage: true,
         // Add search page that shows all results
