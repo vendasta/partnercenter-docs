@@ -22,6 +22,10 @@ SSO lets your clients log into Vendasta products using your organization's own l
 
 SSO supports any identity provider that implements the standard **OAuth2** or **OpenID Connect (OIDC)** authentication flows. There's no fixed list of named providers: if your identity provider supports either standard, you can connect it.
 
+### PKCE support
+
+SSO supports identity providers that require Proof Key for Code Exchange (PKCE), such as Salesforce. On every OAuth2 login, SSO sends an `S256` `code_challenge` to your identity provider and the matching `code_verifier` when it exchanges the authorization code for a token. You don't need to configure anything. Identity providers that don't require PKCE continue to work.
+
 ## How to set up SSO
 
 1. Go to `Partner Center` → `Administration` → `Advanced` → `Single Sign-On`, then open `Partner SSO Integration`.
