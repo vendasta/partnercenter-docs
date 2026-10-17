@@ -252,6 +252,21 @@ The quota resets daily. If you need a higher email limit, consider upgrading you
 </details>
 
 <details>
+<summary>How do I read a business's email and SMS usage for the current period through the API?</summary>
+
+Call `POST /grpc/v1/campaigns/quota/get` with a [service account](/administration/advanced/service-accounts/) token. The request works at the account group level: it returns the number of emails and SMS messages a business has sent this period, along with the period start and end dates.
+
+Your token can read usage for account groups under your own partner account. Requests for any other account group are denied.
+
+The API allows up to 100 calls per second, 500 per minute, and 10,000 per hour, counted across all your API calls together. Requests over the limit return a `429` response that includes how many seconds to wait before you retry.
+
+To stay within the limits, call the endpoint when a customer opens the page, then cache the result for about 5 to 15 minutes per business. If you request usage for many businesses at once, spread the calls out.
+
+For the full request and response reference, see the [platform API documentation](https://developers.vendasta.com/platform).
+
+</details>
+
+<details>
 <summary>My campaign appears stuck while sending or is loading indefinitely. What should I do?</summary>
 
 Campaigns go through a queue before emails start sending. The processing window is typically **10–15 minutes** before the first batch goes out. If the campaign is still stuck after 15 minutes:
