@@ -133,6 +133,7 @@ The campaign continues to run at the same monthly budget, with ongoing optimizat
 * **No manual A/B testing:** We don't set up manual variant tests. Optimization relies on Google's and Meta's built-in engines, which continuously test the creative assets we supply and steer spend toward the best-performing combinations.
 * **Regional availability:** Only available for businesses located in the United States and Canada. There is no exception process — businesses outside those two countries are served by [Specialty Ad Campaign](./specialty-ad-campaign.md).
 * **Not white-labeled:** Our team does not work directly with your clients. Reach out to your business representative for more information.
+* **No one-time Boost add-on:** Managed Ad Campaign doesn't support the one-time Boost add-on, and it can't be added to an existing Managed Ad Campaign order. To change the monthly budget, use `Request a Spend Change` (see [Making changes to a live campaign](#making-changes-to-a-live-campaign)).
 
 ## FAQ
 

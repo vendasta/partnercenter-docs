@@ -54,6 +54,8 @@ Customers can keep calling your existing business number and your telephone prov
    - Forwarding calls to your Conversations number after a certain number of rings
    - Forwarding calls automatically after-hours
 
+   When a call is forwarded, Conversations and the CRM show the original caller's phone number, not your forwarding number.
+
 :::tip
 For more help forwarding calls, see [Call Forwarding Setup in Conversations](/business-app/conversations/).
 :::
@@ -98,7 +100,11 @@ To get started, go to <AISparkleIcon /> `AI` → `Workforce` and click `Configur
 
 #### Set your AI Voice Receptionist's name and image
 
-Give your AI Voice Receptionist a friendly, professional name and upload a photo or icon. Your Voice Receptionist will use this name when speaking to callers, and the photo helps you quickly identify it among your other AI Employees in the app. 
+Give your AI Voice Receptionist a friendly, professional name and upload a photo or icon. Your Voice Receptionist will use this name when speaking to callers, and the photo helps you quickly identify it among your other AI Employees in the app.
+
+:::tip
+If you change the name later, also check your receptionist's instructions (including any scripted greetings or protocol sections) for the old name and update it there. The AI follows exact scripted wording over other settings, so a leftover name in a script is what callers hear.
+:::
 
 #### Choose your AI Voice Receptionist's voice
 
