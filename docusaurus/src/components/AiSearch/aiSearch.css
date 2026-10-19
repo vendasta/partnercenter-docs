@@ -17,7 +17,7 @@
   --ais-overlay-z: 1500;
 }
 
-/* ---------- Header: "Search /" + "Ask AI" ---------- */
+/* ---------- Header: search bar + "AI Assistant" ---------- */
 
 .ais-nav {
   display: inline-flex;
@@ -25,9 +25,18 @@
   gap: 8px;
 }
 
-.ais-nav__search,
+.ais-box {
+  position: relative;
+  /* Same footprint as the original plugin bar (500px) where it fits. The search group is
+     centred on the page, so the right-hand buttons (Submit a Ticket, language) set the
+     limit: 951px = their width plus the AI Assistant button, a 16px gap each side, and
+     room for a classic scrollbar. */
+  width: clamp(130px, calc(100vw - 951px), 500px);
+}
+
+.ais-box__field,
 .ais-nav__ask {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 8px;
   height: 34px;
@@ -37,129 +46,240 @@
   background: rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.92);
   font: 500 14px/1 var(--ifm-font-family-base);
-  cursor: pointer;
   transition: background 0.15s ease, border-color 0.15s ease;
 }
 
-.ais-nav__search {
-  width: 260px;
-  justify-content: flex-start;
+.ais-box__field {
+  cursor: text;
 }
 
-.ais-nav__search span {
-  flex: 1;
-  text-align: left;
-  color: rgba(255, 255, 255, 0.75);
+.ais-nav__ask {
+  display: inline-flex;
+  cursor: pointer;
 }
 
-.ais-nav__search:hover,
+.ais-box__field:hover,
+.ais-box.is-open .ais-box__field,
 .ais-nav__ask:hover,
-.ais-nav__search:focus-visible,
 .ais-nav__ask:focus-visible {
   background: rgba(255, 255, 255, 0.18);
   border-color: rgba(255, 255, 255, 0.4);
   outline: none;
 }
 
-.ais-nav__search kbd {
-  font: 500 12px/1 var(--ifm-font-family-base);
-  color: rgba(255, 255, 255, 0.8);
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 5px;
-  padding: 3px 6px;
-}
-
-/* ---------- Dialog ---------- */
-
-.ais-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: var(--ais-overlay-z);
-  width: 100vw;
-  max-width: 100dvw;
-  box-sizing: border-box;
-  background: rgba(246, 248, 250, 0.72);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  padding: 16px;
-  overflow-y: auto;
-}
-
-.ais-dialog {
-  width: min(648px, 100%);
-  margin: 0 auto;
-  background: #fff;
-  border: 1px solid var(--ais-border);
-  border-radius: 8px;
-  box-shadow: var(--ais-dialog-shadow);
-  overflow: hidden;
-  font-family: var(--ifm-font-family-base);
-  color: var(--ais-text);
-}
-
-.ais-dialog__input {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  height: 48px;
-  padding: 0 12px 0 14px;
-  border-bottom: 1px solid var(--ais-border);
-}
-
-.ais-dialog__search-icon {
-  color: var(--ais-muted);
+.ais-box__icon {
   flex: none;
+  color: rgba(255, 255, 255, 0.85);
 }
 
-.ais-dialog__input input {
+.ais-box__input {
   flex: 1;
   min-width: 0;
   height: 100%;
+  padding: 0;
   border: 0;
   outline: 0;
   background: transparent;
-  color: var(--ais-text);
-  font: 400 15px/1.4 var(--ifm-font-family-base);
+  color: #fff;
+  font: 500 14px/1 var(--ifm-font-family-base);
 }
 
-.ais-dialog__input input::placeholder {
-  color: #8792a2;
+.ais-box__input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
 }
 
-.ais-dialog__close {
+.ais-box__kbd {
   flex: none;
-  width: 28px;
-  height: 28px;
+  padding: 3px 6px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.8);
+  font: 500 12px/1 var(--ifm-font-family-base);
+}
+
+.ais-box__clear {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  padding: 0;
   border: 0;
-  border-radius: 6px;
+  border-radius: 5px;
   background: transparent;
-  color: var(--ais-muted);
-  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
   cursor: pointer;
 }
 
-.ais-dialog__close:hover {
-  background: #f0f2f5;
-  color: var(--ais-text);
+.ais-box__clear:hover {
+  background: rgba(255, 255, 255, 0.16);
 }
 
-.ais-dialog__menu {
-  max-height: min(70vh, 640px);
+/* ---------- Dropdown menu under the search bar ---------- */
+
+.ais-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  min-width: 380px;
+  max-height: calc(100vh - 76px);
   overflow-y: auto;
-  padding: 10px 12px 12px;
+  overscroll-behavior: contain;
+  z-index: var(--ais-overlay-z);
+  padding: 10px 10px 0;
+  border: 1px solid var(--ais-border);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: var(--ais-dialog-shadow);
+  color: var(--ais-text);
+  font-family: var(--ifm-font-family-base);
+  text-align: left;
 }
 
-.ais-section + .ais-section {
-  margin-top: 10px;
+.ais-aicard {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #e6e1f2;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fbf4ff 0%, #f3f6fd 100%);
+  color: inherit;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-.ais-section__label {
-  margin: 6px 0 6px 10px;
-  color: var(--ais-text-soft);
+.ais-aicard.is-active,
+.ais-aicard:hover {
+  border-color: #c9b8ff;
+  box-shadow: 0 4px 14px rgba(109, 74, 255, 0.1);
+}
+
+.ais-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #c026d3 0%, #3b82f6 100%);
+  color: #fff;
+  font: 600 12px/1 var(--ifm-font-family-base);
+}
+
+.ais-aicard__text {
+  display: block;
+  margin: 10px 0 8px;
+  color: #1f2937;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.ais-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ifm-color-primary);
+  font: 600 13px/1.2 var(--ifm-font-family-base);
+}
+
+.ais-section-label {
+  margin: 16px 0 4px 8px;
+  color: #94a0b8;
+  font: 700 11px/1 var(--ifm-font-family-base);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ais-article {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 8px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.ais-article:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ais-article.is-active {
+  background: #f3f6fb;
+}
+
+.ais-article__icon {
+  flex: none;
+  margin-top: 1px;
+  color: var(--ifm-color-primary);
+}
+
+.ais-article__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.ais-article__title {
+  color: #30313d;
+  font: 500 14px/1.35 var(--ifm-font-family-base);
+}
+
+.ais-article__ext {
+  margin-left: 5px;
+  color: #94a0b8;
+  font-size: 12px;
+}
+
+.ais-article__path {
+  overflow: hidden;
+  color: #8792a2;
+  font: 500 12px/1.3 var(--ifm-font-family-base);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ais-menu__footer {
+  position: sticky;
+  bottom: 0;
+  margin-top: 6px;
+  padding: 8px 0 10px;
+  border-top: 1px solid #eef0f4;
+  background: #fff;
+  text-align: center;
+}
+
+.ais-menu__spacer {
+  height: 10px;
+}
+
+.ais-viewall {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: var(--ifm-color-primary-dark);
+  font: 600 13px/1.2 var(--ifm-font-family-base);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.ais-viewall.is-active,
+.ais-viewall:hover {
+  background: #f3f6fb;
+}
+
+.ais-menu .ais-empty {
+  margin: 4px 8px 8px;
   font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0;
 }
 
 /* ---------- Rows ---------- */
@@ -214,6 +334,12 @@
   color: var(--ais-text);
 }
 
+.ais-row__ext {
+  margin-left: 6px;
+  color: var(--ais-muted);
+  font-size: 13px;
+}
+
 .ais-row__desc {
   font-size: 13px;
   line-height: 1.45;
@@ -234,29 +360,6 @@
   border-radius: 2px;
   background: var(--ais-mark);
   color: inherit;
-}
-
-.ais-more {
-  display: block;
-  width: 100%;
-  padding: 8px 10px;
-  margin-top: 2px;
-  border: 2px solid transparent;
-  border-radius: 6px;
-  background: transparent;
-  color: var(--ais-link);
-  font: 500 14px/1.4 var(--ifm-font-family-base);
-  text-align: left;
-  cursor: pointer;
-}
-
-.ais-more.is-active,
-.ais-more:hover {
-  background: var(--ais-row-active-bg);
-}
-
-.ais-more.is-active {
-  border-color: var(--ais-row-active-border);
 }
 
 .ais-empty {
@@ -557,28 +660,68 @@
 
 /* ---------- Responsive ---------- */
 
-@media (max-width: 996px) {
-  .ais-nav__search {
-    width: auto;
+@media (max-width: 1310px) {
+  /* Narrow desktops: the AI Assistant button shows only its icon, giving the bar the space. */
+  .ais-box {
+    width: clamp(130px, calc(100vw - 862px), 500px);
   }
-  .ais-nav__search span,
-  .ais-nav__search kbd,
   .ais-nav__ask span {
     display: none;
   }
-  .ais-nav__search,
+  .ais-nav__ask {
+    padding: 0 9px;
+  }
+}
+
+@media (max-width: 996px) {
+  /* Collapsed: an icon-sized search button. Open: the bar spans the top of the screen. */
+  .ais-box {
+    width: auto;
+    min-width: 0;
+  }
+  .ais-box:not(.is-open) .ais-box__field {
+    width: 36px;
+    padding: 0;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .ais-box:not(.is-open) .ais-box__input {
+    position: absolute;
+    width: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .ais-box:not(.is-open) .ais-box__kbd {
+    display: none;
+  }
+  /* The site centres the search container with a transform, which would trap a fixed child. */
+  .navbarSearchContainer_Bca1:has(.ais-box.is-open) {
+    transform: none !important;
+    left: 0 !important;
+    top: 0 !important;
+  }
+  .ais-box.is-open {
+    position: fixed;
+    top: 13px;
+    left: 8px;
+    right: 8px;
+    z-index: var(--ais-overlay-z);
+  }
+  .ais-box.is-open .ais-box__field {
+    background: #12345a;
+  }
+  .ais-box.is-open .ais-menu {
+    min-width: 0;
+  }
+  .ais-nav__ask span {
+    display: none;
+  }
   .ais-nav__ask {
     padding: 0 9px;
   }
 }
 
 @media (max-width: 600px) {
-  .ais-overlay {
-    padding: 8px;
-  }
-  .ais-dialog__menu {
-    max-height: calc(100dvh - 80px);
-  }
   .ais-page {
     margin: 12px 8px 32px;
     padding: 16px 14px 28px;

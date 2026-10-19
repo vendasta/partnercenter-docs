@@ -1,8 +1,9 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
+import {useLocation} from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import {translate} from '@docusaurus/Translate';
-import SearchModal from '../../components/AiSearch/SearchModal';
+import SearchMenu from '../../components/AiSearch/SearchMenu';
 import {AI_SEARCH_LOCALES} from '../../components/AiSearch/config';
 import {openAssistant} from '../../components/AiSearch/assistant';
 import {SearchIcon, SparklesIcon} from '../../components/AiSearch/Icons';
@@ -16,18 +17,33 @@ function isTypingTarget(target: EventTarget | null): boolean {
 }
 
 /**
- * Replaces the local-search plugin's navbar input with a compact "Search /" button that
- * opens the search dialog, plus an "Ask AI" button that opens the assistant.
+ * Header search bar (type here; "/" or ⌘K focuses it) with a dropdown menu of the AI
+ * answer card and top articles, plus an "AI Assistant" button that opens the assistant drawer.
  */
 export default function SearchBar(): React.ReactElement {
-  const [open, setOpen] = useState(false);
   const isBrowser = useIsBrowser();
+  const location = useLocation();
   const {
     i18n: {currentLocale},
   } = useDocusaurusContext();
   const aiEnabled = AI_SEARCH_LOCALES.includes(currentLocale);
-  const close = useCallback(() => setOpen(false), []);
 
+  const [query, setQuery] = useState('');
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const close = useCallback(() => {
+    setOpen(false);
+    inputRef.current?.blur();
+  }, []);
+
+  const reset = useCallback(() => {
+    close();
+    setQuery('');
+  }, [close]);
+
+  // "/" and ⌘K / Ctrl+K focus the search bar from anywhere.
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       const cmdK = (event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k';
@@ -35,35 +51,102 @@ export default function SearchBar(): React.ReactElement {
       if (cmdK || slash) {
         event.preventDefault();
         setOpen(true);
+        inputRef.current?.focus();
+        inputRef.current?.select(); // typing replaces any previous query
       }
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
   }, []);
 
+  // Close on a click anywhere outside the bar and its menu.
+  useEffect(() => {
+    if (!open) return undefined;
+    const onPointerDown = (event: MouseEvent) => {
+      if (!rootRef.current?.contains(event.target as Node)) setOpen(false);
+    };
+    document.addEventListener('mousedown', onPointerDown);
+    return () => document.removeEventListener('mousedown', onPointerDown);
+  }, [open]);
+
+  // A result was opened: reset the bar.
+  useEffect(() => {
+    setOpen(false);
+    setQuery('');
+  }, [location.pathname]);
+
+  const placeholder = translate({id: 'aiSearch.bar.placeholder', message: 'Search'});
+
   return (
     <div className="ais-nav">
-      <button
-        type="button"
-        className="ais-nav__search"
-        onClick={() => setOpen(true)}
-        aria-label={translate({id: 'aiSearch.trigger.label', message: 'Search'})}
-        aria-haspopup="dialog">
-        <SearchIcon size={15} />
-        <span>{translate({id: 'aiSearch.trigger.text', message: 'Search'})}</span>
-        <kbd aria-hidden="true">/</kbd>
-      </button>
+      <div className={`ais-box ${open ? 'is-open' : ''}`} ref={rootRef}>
+        <div
+          className="ais-box__field"
+          onClick={() => {
+            setOpen(true);
+            inputRef.current?.focus();
+          }}>
+          <SearchIcon size={15} className="ais-box__icon" />
+          <input
+            ref={inputRef}
+            className="ais-box__input"
+            type="text"
+            value={query}
+            onChange={(event) => {
+              setQuery(event.target.value);
+              setOpen(true);
+            }}
+            onFocus={() => setOpen(true)}
+            onKeyDown={(event) => {
+              if (event.key === 'Escape') {
+                event.preventDefault();
+                close();
+              }
+            }}
+            placeholder={placeholder}
+            aria-label={placeholder}
+            role="combobox"
+            aria-expanded={open}
+            aria-controls="ais-menu"
+            aria-autocomplete="list"
+            autoComplete="off"
+            spellCheck={false}
+            maxLength={1000}
+          />
+          {query ? (
+            <button
+              type="button"
+              className="ais-box__clear"
+              aria-label={translate({id: 'aiSearch.bar.clear', message: 'Clear search'})}
+              onMouseDown={(event) => event.preventDefault()}
+              onClick={(event) => {
+                event.stopPropagation();
+                setQuery('');
+                inputRef.current?.focus();
+              }}>
+              ✕
+            </button>
+          ) : (
+            !open && (
+              <kbd className="ais-box__kbd" aria-hidden="true">
+                /
+              </kbd>
+            )
+          )}
+        </div>
+        {open && isBrowser && <SearchMenu query={query} inputRef={inputRef} onClose={close} onReset={reset} />}
+      </div>
       {aiEnabled && (
         <button
           type="button"
           className="ais-nav__ask"
           onClick={() => openAssistant('', 'navbar')}
-          aria-label={translate({id: 'aiSearch.trigger.askLabel', message: 'Ask AI'})}>
-          <span>{translate({id: 'aiSearch.trigger.ask', message: 'Ask AI'})}</span>
+          aria-label={translate({id: 'aiSearch.trigger.askLabel', message: 'AI Assistant'})}
+          title={translate({id: 'aiSearch.trigger.askLabel', message: 'AI Assistant'})}>
+          <span>{translate({id: 'aiSearch.trigger.ask', message: 'AI Assistant'})}</span>
           <SparklesIcon size={15} />
         </button>
       )}
-      {open && isBrowser && <SearchModal onClose={close} />}
     </div>
   );
 }

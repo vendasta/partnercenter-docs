@@ -9,5 +9,11 @@ export const SEMANTIC_SEARCH_LOCALES = ['en'];
 /** Vendasta MCP server. Its `search_docs` tool is public (no token) and allows browser calls. */
 export const MCP_URL = 'https://mcp.vendasta.com/mcp';
 
-/** Only semantic hits from these hosts are shown; others cover sibling docs sites. */
-export const SEMANTIC_RESULT_HOSTS = ['docs.vendasta.com'];
+/** This site's host. Semantic hits from it become in-app links. */
+export const SITE_HOST = 'docs.vendasta.com';
+
+/** Hosts whose semantic hits are shown, with the label used for sibling sites. */
+export const SEMANTIC_RESULT_HOSTS: Record<string, string> = {
+  'docs.vendasta.com': '',
+  'docs.businessapp.io': 'Business App docs',
+};

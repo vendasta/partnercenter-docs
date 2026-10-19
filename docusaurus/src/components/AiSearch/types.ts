@@ -40,4 +40,10 @@ export type PageHit = {
   snippet: string;
   tokens: string[];
   source: 'keyword' | 'semantic';
+  /** Anchor of the best matching section, e.g. "#connectors" (keyword hits only). */
+  anchor?: string;
+  /** Text of that section heading, shown after the breadcrumb. */
+  heading?: string;
+  /** Lives on another docs site (opens in a new tab). */
+  external?: boolean;
 };

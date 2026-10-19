@@ -14,7 +14,7 @@ import ResultRow from '../../components/AiSearch/ResultRow';
 import {SearchIcon, SparklesIcon} from '../../components/AiSearch/Icons';
 import '../../components/AiSearch/aiSearch.css';
 
-/** Results page at /search: full keyword result list, with an "Ask AI" row on top. */
+/** Results page at /search: full keyword result list, with an "Ask the AI assistant" row on top. */
 export default function SearchPage(): React.ReactElement {
   return (
     <Layout>
@@ -43,7 +43,7 @@ function SearchPageContent() {
 
   const {results, loading, ready} = useDocsSearch(urlQuery, 100, 0);
   const semantic = useSemanticSearch(urlQuery, 10, 0);
-  const pages = useMemo(() => mergeHits(groupByPage(results), semantic.hits, 5), [results, semantic.hits]);
+  const pages = useMemo(() => mergeHits(groupByPage(results), semantic.hits, urlQuery), [results, semantic.hits, urlQuery]);
 
   const submit = (event: React.FormEvent) => {
     event.preventDefault();

@@ -1,4 +1,4 @@
-import {MCP_URL, SEMANTIC_RESULT_HOSTS} from './config';
+import {MCP_URL, SEMANTIC_RESULT_HOSTS, SITE_HOST} from './config';
 import type {PageHit} from './types';
 
 /**
@@ -61,14 +61,18 @@ function cleanExcerpt(markdown: string): string {
 }
 
 function cleanTitle(title: string): string {
-  return title.replace(/\s*\|\s*Vendasta Documentation\s*$/i, '').trim();
+  return title.replace(/\s*\|\s*(Vendasta Documentation|Product Help & Documentation|Product Help)\s*$/i, '').trim();
 }
 
+const ACRONYMS: Record<string, string> = {ai: 'AI', crm: 'CRM', seo: 'SEO', sms: 'SMS', api: 'API', faq: 'FAQ'};
+
 /** "/marketing/email-settings/x" -> ["Marketing", "Email settings"] (approximation of the real breadcrumb). */
-function breadcrumbFromPath(pathname: string): string[] {
+function breadcrumbFromPath(pathname: string, dropLeading?: string): string[] {
   const parts = pathname.split('/').filter(Boolean);
   parts.pop();
+  if (dropLeading && parts[0] === dropLeading) parts.shift();
   return parts.map((segment) => {
+    if (ACRONYMS[segment]) return ACRONYMS[segment];
     const words = segment.replace(/-/g, ' ');
     return words.charAt(0).toUpperCase() + words.slice(1);
   });
@@ -89,7 +93,8 @@ export async function semanticSearch(query: string, limit: number, signal: Abort
   const results = await callSearchDocs(query, limit, signal);
   const tokens = queryTokens(query);
   const seen = new Set<string>();
-  const hits: PageHit[] = [];
+  const local: PageHit[] = [];
+  const external: PageHit[] = [];
   for (const result of results) {
     if (!result.citation) continue;
     let url: URL;
@@ -98,18 +103,26 @@ export async function semanticSearch(query: string, limit: number, signal: Abort
     } catch {
       continue;
     }
-    if (!SEMANTIC_RESULT_HOSTS.includes(url.host)) continue;
+    const label = SEMANTIC_RESULT_HOSTS[url.host];
+    if (label === undefined) continue;
+    const isLocal = url.host === SITE_HOST;
     const path = normalizeUrl(url.pathname);
-    if (seen.has(path)) continue; // the same page can appear more than once (multiple excerpts)
-    seen.add(path);
-    hits.push({
-      url: path,
+    if (/^\/(tags|search)(\/|$)/.test(path)) continue; // listing pages, not content
+    const key = `${url.host}${path}`;
+    if (seen.has(key)) continue; // the same page can appear more than once (multiple excerpts)
+    seen.add(key);
+    const hit: PageHit = {
+      url: isLocal ? path : `${url.origin}${path}`,
       title: cleanTitle(result.title ?? path),
-      breadcrumb: breadcrumbFromPath(path),
+      // Sibling sites nest everything under one root segment (e.g. /business-app/...); the label covers it.
+      breadcrumb: isLocal ? breadcrumbFromPath(path) : [label, ...breadcrumbFromPath(path, 'business-app')],
       snippet: cleanExcerpt(result.content ?? ''),
       tokens,
       source: 'semantic',
-    });
+      external: !isLocal,
+    };
+    (isLocal ? local : external).push(hit);
   }
-  return hits;
+  // Same-site pages first, then sibling docs sites in their own relevance order.
+  return [...local, ...external];
 }
