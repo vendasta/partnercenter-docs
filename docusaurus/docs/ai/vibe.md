@@ -114,6 +114,15 @@ Every one of these is open source. On the Pro plan, the complete source of a pro
 
 Open the project, go to the `Settings` tab, and scroll to the bottom of the page. Select `Delete Project`. Deleting a project frees a slot if you have hit your plan's app limit.
 
+Deleting a project, or the account that owns it, archives the project. You can restore it from the `Archived` page within 30 days. The site's address is held for the project during that time. Custom domains must be added again after a restore.
+
+</details>
+
+<details>
+<summary>Can I restore a deleted Vibe project?</summary>
+
+Yes, within 30 days. Deleting a project, or the account that owns it, archives the project instead of erasing it. Restore it from the `Archived` page. The site's address is held for the project for those 30 days. After a restore, add any custom domains again.
+
 </details>
 
 <details>

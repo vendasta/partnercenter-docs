@@ -126,8 +126,8 @@ Write every instruction as an order addressed to the AI employee. An instruction
 
 This applies anywhere you write instructions: capability prompts, goals, and the instructions attached to individual capabilities.
 
-:::tip Back up a prompt before you rewrite it
-Capability prompts have no version history. Before making substantial edits, copy the existing prompt into a separate document so you can restore it. Experimenting is otherwise safe — you can adjust a prompt and re-test as many times as you need, and un-assign a capability from the AI employee if it is not behaving the way you want.
+:::tip Go back to earlier settings
+Each time you save an AI Employee's settings, the saved version is kept in its version history. If an edit doesn't work out, click `Restore previous settings` to open the version history and go back to an earlier version. Experimenting is otherwise safe — you can adjust a prompt and re-test as many times as you need, and un-assign a capability from the AI employee if it is not behaving the way you want.
 :::
 
 ### Tailor a capability to specific channels
@@ -291,7 +291,7 @@ Connect your calendar in your Business App settings. Appointment Booking schedul
 <details>
 <summary>Do capability prompts have version history?</summary>
 
-No. Capability prompts have no version history, so copy the existing prompt into a separate document before you make substantial edits.
+Yes. Saved AI Employee settings are kept in version history. Click `Restore previous settings` to open the version history and go back to an earlier version.
 
 </details>
 
