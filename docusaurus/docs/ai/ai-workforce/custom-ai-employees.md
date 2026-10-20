@@ -232,6 +232,8 @@ Keep customers and your team members informed by sending regular updates based o
 
 Your Custom AI Employee is automatically available in the AI Workforce tab after creation. Team members can chat directly with the AI Employee for internal assistance and decision support.
 
+You can attach a CSV file of up to 10 MB in chat and ask the AI Employee about it, for example which leads are in a particular region or how many customers are on each plan. The AI Employee reads up to several hundred rows, depending on how wide the rows are, so a longer file is only partly read. Calculations across many rows can come out wrong, so check any totals that matter.
+
 **Benefits:**
 
 - No additional setup required
