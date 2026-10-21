@@ -1,0 +1,110 @@
+---
+title: Automation versioning
+description: Edit running automations safely with draft-and-publish versioning. Create drafts, publish without disruption, view version history, and restore previous versions.
+sidebar_position: 2
+tags: [automations, versioning]
+keywords: [version, draft, publish, restore, version history, audit trail]
+brand: vendasta
+product: automations
+audience: partners
+---
+
+# Automation versioning
+
+Automation versioning lets you edit a running automation without affecting the live version. Changes are made in a draft, published as a versioned update, and tracked in a full version history. If something goes wrong, you can restore any previous version.
+
+## How it works
+
+Every automation has a **version group** that tracks its drafts, published versions, and audit history. The workflow follows three stages:
+
+| Stage | What happens |
+|---|---|
+| **Draft** | You edit a copy of the automation. The live version keeps running untouched. |
+| **Publish** | The draft becomes the next version. In-progress runs finish on the old version; new events route to the updated version. |
+| **Restore** | You create a draft from any previous version, then publish it as the next version number. |
+
+Version numbers increment automatically (v1, v2, v3). Published versions are locked — all edits go through a draft.
+
+:::info
+One draft exists at a time per automation. If a draft already exists, clicking `Edit` opens it instead of creating a second one.
+:::
+
+## Create and publish an automation
+
+1. Go to `Partner Center` → `Automations` → `My automations`.
+2. Click `Create automation`. This creates a draft.
+3. Configure the trigger and workflow steps.
+4. Click `Turn On`. The draft is published as version 1 and activated.
+
+Optionally, add a publish message to describe the change.
+
+## Edit a live automation
+
+1. Open the running automation and click `Edit`. A draft is created from the live version.
+2. Make changes in the draft. The live version continues running.
+3. Click `Turn On` to publish. The draft becomes the next version, the previous version drains, and events route to the updated version.
+
+:::tip
+Editing an automation's name, description, or tags does not create a version. Metadata is always editable without a draft.
+:::
+
+## Restore a previous version
+
+Restore creates a draft from a previous version and publishes it as the next version number. For example, restoring v1 after v3 creates v4 with v1's configuration. Version history is fully preserved — versions only move forward.
+
+1. Open the automation and go to `Version History`.
+2. Find the version to restore and click `Restore`. A draft is created from that version.
+3. Review the draft and click `Turn On` to publish.
+
+:::warning
+Restore is available when the automation has a running version. If the automation is off, you can still create a draft from any version by clicking `Edit`.
+:::
+
+## Version history and audit trail
+
+Every automation tracks a complete audit trail:
+
+| Event | What is recorded |
+|---|---|
+| Version published | Version number, timestamp, user, publish message |
+| Automation turned on | Which version was activated |
+| Automation turned off | Which version was stopped, stop mode (drain or stop) |
+| Version restored | Source version, resulting version number |
+
+To view the audit trail, open the automation and go to `Version History`.
+
+The system retains up to 100 published versions per automation. When the limit is reached, the oldest versions are removed, but their audit log entries are preserved.
+
+## Turn off a versioned automation
+
+When you turn off an automation, choose between two modes:
+
+| Mode | Behavior |
+|---|---|
+| **Drain** | In-progress runs finish, but no new runs start |
+| **Stop** | All activity stops immediately |
+
+Optionally, add a message explaining why the automation was turned off. The turn-off event and message are recorded in the audit trail.
+
+## Publish messages
+
+You can add an optional message when publishing a version or turning off an automation. Messages are recorded in the audit trail and help your team understand why a change was made. Messages cannot be edited after saving.
+
+## Webhook URLs
+
+Webhook URLs remain stable across all versions of an automation. Publishing a new version does not change the webhook URL.
+
+## What versioning does not cover
+
+| Scope | Details |
+|---|---|
+| Templates | Template automations do not have versioning |
+| System automations | System automations do not have versioning |
+| Bulk operations | Versioning applies to one automation at a time |
+| Account templates | Template-level versioning that propagates updates across accounts is not available |
+| Version comparison | Side-by-side diff between versions is not available |
+
+## Related resources
+
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx)
+- [Automation history](../automation-history/index.mdx)
