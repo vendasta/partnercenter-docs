@@ -1,0 +1,121 @@
+---
+id: google-workspace-transfer-back
+title: "How do I transfer a client's Google Workspace back to Vendasta after cancelling it?"
+sidebar_label: "Transfer Google Workspace back"
+sidebar_position: 4
+description: "Bring a cancelled Google Workspace back under Vendasta: the client's super administrator generates a transfer authorization in the Google Admin console, then you order Google Workspace Transfer in Partner Center."
+tags: [marketplace, google-workspace, transfer, troubleshooting]
+keywords: [Google Workspace transfer back, re-transfer Google Workspace, Google Workspace cancelled, Google Workspace suspended, reseller management, transfer authorization, C02e5br85, Google Workspace Transfer order]
+brand: vendasta
+product: marketplace
+audience: partners
+content_type: how-to
+kb_id: KB-00202
+answer_snippet: "To bring a cancelled Google Workspace back to Vendasta, the client's super administrator signs in at admin.google.com, opens Account → Reseller management, clicks Transfer, enters Vendasta's public identifier C02e5br85, and generates a transfer authorization. You then order Google Workspace Transfer on the account in Partner Center, leave the transfer token blank, and confirm the transfer."
+doc_owner: marketplace
+review_frequency: 3-months
+last_reviewed: 2026-10-21
+---
+
+When you cancel Google Workspace in Partner Center, the client's Google Workspace moves to Google and Google bills the client directly. The client's users, mailboxes, and data stay intact. To bring that Google Workspace back under Vendasta, the client's super administrator generates a transfer authorization in the Google Admin console, and you order `Google Workspace Transfer` on the account in Partner Center.
+
+This is the same Google Workspace Transfer used for any existing subscription. See [Transferring existing Google Workspace subscriptions](/marketplace/products/google-workspace-complete-guide#transferring-existing-google-workspace-subscriptions) for the general process. This article covers what's different when the Google Workspace was with Vendasta before.
+
+## Before you start
+
+Check these points with your client first. Each one can stop the transfer.
+
+- **Google limits how often a subscription moves.** Google allows a subscription to be transferred to a reseller at most 2 times in a calendar year, and a completed transfer can't be reversed. If the limit is reached, the client keeps paying Google directly until the next calendar year.
+- **The subscription must not be suspended.** If the client didn't set up billing with Google within 7 days of the cancellation, Google suspends the subscription and mail stops. The super administrator restores it by adding a payment method under `Billing` in the [Google Admin console](https://admin.google.com). Mail resumes once the subscription is active, and the transfer can go ahead.
+- **Someone at the client must be able to sign in as a super administrator.** Only a Google Workspace super administrator can generate a transfer authorization. Being an admin in Business App or Partner Center doesn't grant any Google Workspace role.
+- **Billing starts again on your side.** The `Google Workspace Transfer` product is free. When the transfer completes, the client's Google Workspace plan and each seat are added to the account and billed at your Google Workspace rates from the transfer date. If the client paid Google for an annual term, Google doesn't refund the remainder of that term.
+
+## Step 1: Sign in as the super administrator
+
+After cancellation, Business App sign-in doesn't apply to the client's Google Workspace. The super administrator signs in at [admin.google.com](https://admin.google.com) with their Google Workspace username and Google password.
+
+- **Use the admin username on the client's domain**, for example `admin@clientdomain.com`. The billing notice Google sends after cancellation goes to the alternate email address, which is a contact address and not a Google sign-in. Signing in with the alternate email shows that Google can't find the account.
+- **If the password is unknown**, the super administrator follows Google's steps to [recover administrator access](https://knowledge.workspace.google.com/admin/users/recovering-administrator-access-to-your-account).
+- **If you don't know who the super administrator is**, open a ticket in the [Support Portal](https://partners.vendasta.com/crm/tickets) with the account ID and the domain. Support can look up the admin username from the original activation.
+
+## Step 2: Have the client generate a transfer authorization
+
+The super administrator completes these steps in the Google Admin console:
+
+1. Go to `Menu` → `Account` → `Reseller management`. If `Reseller management` isn't in the menu, open [admin.google.com/ac/resellermanagement](https://admin.google.com/ac/resellermanagement) directly.
+2. Under `Subscriptions from Google`, find the Google Workspace subscription and click `Transfer`.
+3. Enter Vendasta's public identifier, `C02e5br85`, and click `Continue`.
+4. For each product group, select the option to transfer it to Vendasta. For any product group the client wants to keep with Google, select `Keep with Google`.
+5. Click `Continue`.
+6. Agree to the terms and click `Generate transfer authorization`.
+7. Click `Close`.
+
+Google stores the authorization on its side. The client doesn't receive a token, and you don't need one. Ask the client to tell you when they finish this step.
+
+## Step 3: Order Google Workspace Transfer
+
+1. In Partner Center, go to `Accounts` → `Manage Accounts` → `[Account Name]`.
+2. Click `Create Order` → `Add Google Workspace Transfer`.
+3. In `Domain`, enter the client's primary Google Workspace domain, for example `clientdomain.com`.
+4. Leave `Transfer Token` blank. The transfer authorization from step 2 takes its place.
+5. Check the `I understand...` acknowledgment and click `Purchase`.
+6. Under `Products`, click `Google Workspace Transfer`.
+7. Review the seat count, check the `I understand...` acknowledgment, and click `Confirm Transfer`.
+
+## Step 4: Wait for the plan and seats to activate
+
+After you confirm, the account shows that the transfer is in progress and that Google Workspace activates shortly. At this point only `Google Workspace Transfer` appears under `Products`. The client's Google Workspace plan, for example `Google Workspace | Business Standard`, and its seats appear when the transfer finishes. This usually takes a few minutes.
+
+Your client's users keep signing in with their Google passwords, and their mail and data don't change during the transfer.
+
+If only `Google Workspace Transfer` still appears 8 hours after you confirmed, open a ticket in the [Support Portal](https://partners.vendasta.com/crm/tickets) with the account ID, the domain, and the time you confirmed the transfer.
+
+## Troubleshooting
+
+### Google can't find the account at sign-in
+
+The client is signing in with the alternate email address from Google's billing notice. Sign in with the super administrator's username on the client's domain instead. See [Step 1](#step-1-sign-in-as-the-super-administrator).
+
+### There's no Transfer option in Reseller management
+
+- Confirm the person signed in is a super administrator. Other admin roles don't see `Reseller management`.
+- Open [admin.google.com/ac/resellermanagement](https://admin.google.com/ac/resellermanagement) directly and look under `Subscriptions from Google`.
+- If the subscription is suspended, restore it first by adding a payment method under `Billing`, then try again.
+
+### Google says the subscription can't be transferred
+
+The subscription has reached Google's limit of 2 reseller transfers in a calendar year. The client keeps paying Google directly until the next calendar year, when the client can generate a new transfer authorization.
+
+### Only Google Workspace Transfer appears after confirming
+
+The transfer is still processing. Wait for the plan and seats to appear. If they don't appear within 8 hours, open a ticket in the [Support Portal](https://partners.vendasta.com/crm/tickets). Don't cancel `Google Workspace Transfer` or place a new `Add Google Workspace` order for the same domain while you wait.
+
+## Frequently asked questions
+
+<details>
+<summary>Can I undo a Google Workspace cancellation?</summary>
+
+Not from Partner Center. Cancellation moves the client's Google Workspace to Google right away. To bring it back, the client's super administrator generates a transfer authorization for Vendasta's public identifier `C02e5br85`, and you order `Google Workspace Transfer` on the account.
+
+</details>
+
+<details>
+<summary>Does my client lose email or data when Google Workspace is cancelled or transferred back?</summary>
+
+No. Users, mailboxes, and data stay in the client's Google Workspace. Mail stops only if Google suspends the subscription because no one set up billing with Google within 7 days of the cancellation. Adding a payment method under `Billing` in the Google Admin console restores it.
+
+</details>
+
+<details>
+<summary>Why doesn't my client see a transfer token?</summary>
+
+When the client generates a transfer authorization in `Reseller management`, Google keeps it on its side and doesn't display a token. Leave `Transfer Token` blank on the `Google Workspace Transfer` order.
+
+</details>
+
+<details>
+<summary>How many times can a client's Google Workspace be transferred?</summary>
+
+Google allows a subscription to be transferred to a reseller at most 2 times in a calendar year. A completed transfer can't be reversed.
+
+</details>

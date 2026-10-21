@@ -13,8 +13,8 @@ kb_id: KB-00020
 answer_snippet: "To set up Google Workspace for a client, open the account in Accounts → Manage Accounts in Partner Center and click Create Order → Add Google Workspace. To move an existing subscription to Vendasta, use Add Google Workspace Transfer with the client's transfer token."
 doc_owner: marketplace
 review_frequency: 3-months
-last_reviewed: 2026-09-25
-last_reviewed_by: haleyserrano
+last_reviewed: 2026-10-21
+last_reviewed_by: schanda
 ---
 
 To set up Google Workspace for a client, open the account in `Accounts` → `Manage Accounts` in Partner Center and click `Create Order` → `Add Google Workspace`. To move an existing subscription to Vendasta, use `Add Google Workspace Transfer` with the client's transfer token. This guide covers setup, transfers in and out of Vendasta, and SSO.
@@ -187,7 +187,7 @@ Repeat for all additional purchased seats.
 
 ### Transfer overview
 
-Google doesn't allow transfers to a reseller that hosted the same Google Workspace within the last 18 months. Verify the client's previous hosting history before initiating a transfer.
+Google allows a subscription to be transferred to a reseller at most 2 times in a calendar year, and a completed transfer can't be reversed. Check with your client before initiating a transfer. To bring back a Google Workspace you cancelled in Partner Center, see [How do I transfer a client's Google Workspace back to Vendasta after cancelling it?](/marketplace/products/google-workspace-transfer-back)
 
 **Transfer vs. new subscription differences:**
 - Transferred accounts do NOT require Business App login
@@ -198,18 +198,20 @@ Google doesn't allow transfers to a reseller that hosted the same Google Workspa
 ### Client transfer steps
 
 **Required client actions:**
-1. Provide client with Vendasta's Reseller ID: `C02e5br85`
-2. Have your client browse to [admin.google.com/TransferToken](https://admin.google.com/TransferToken). (If you land on a 404 page after clicking the above link, try opening the link in your browser's private/incognito browsing tab.)
-3. Have them click `Generate Transfer Token`. Please note a token will be generated on Google's backend. This token will not be visible to the client.
+1. Provide your client with Vendasta's public identifier: `C02e5br85`
+2. Have your client's Google Workspace super administrator sign in to the [Google Admin console](https://admin.google.com) and go to `Menu` → `Account` → `Reseller management`, or open [admin.google.com/ac/resellermanagement](https://admin.google.com/ac/resellermanagement) directly.
+3. Have them find the subscription, click `Transfer`, enter `C02e5br85`, and click `Continue`.
+4. Have them choose to transfer each product group to Vendasta, click `Continue`, agree to the terms, and click `Generate transfer authorization`. Google stores the authorization on its side, so the client doesn't see a token.
 
 ### Partner transfer processing
 
 **Partner Center configuration:**
 1. Navigate to `Partner Center` → `Accounts` → `Manage Accounts` → `[Account Name]`
 2. Click `Create Order` → `Add Google Workspace Transfer`
-3. Enter client-provided `Transfer Token`
-4. Check `I understand...` acknowledgment
-5. Click `Purchase`
+3. Enter the client's primary domain in `Domain`
+4. Leave `Transfer Token` blank when the client generated a transfer authorization in `Reseller management`. Enter a token only if the client gave you one.
+5. Check `I understand...` acknowledgment
+6. Click `Purchase`
 
 **Transfer completion:**
 1. Review seat calculation (transfer is free, no billing for activation)
@@ -252,7 +254,7 @@ If the cancellation is blocked with a message that licenses are still assigned i
 - The client's Google Workspace **emails and data remain intact**.
 - The account simply stops being managed by Vendasta and **transfers back to Google**.
 - The **Google Workspace admin** does not receive an email. To set up billing directly with Google, they sign in to the **Google Admin Console** at [admin.google.com](https://admin.google.com).
-- Cancellation **can't be undone**. Once Google Workspace is deactivated in Partner Center, the reseller relationship ends and the account belongs to Google.
+- Cancellation **can't be undone** in Partner Center. Once Google Workspace is deactivated, the reseller relationship ends and the account belongs to Google. To bring it back, the client generates a new transfer authorization. See [How do I transfer a client's Google Workspace back to Vendasta after cancelling it?](/marketplace/products/google-workspace-transfer-back)
 
 To avoid any service interruption, the client **must set up payment with Google within 7 days** of cancelling the product. This process is **not automatic** or managed by Vendasta.
 
@@ -350,7 +352,8 @@ Single Sign-On (SSO) integration allows users to access Google Workspace through
 
 **Transfer problems:**
 - Verify transfer token generation and validity
-- Confirm client's previous hosting history (18-month restriction)
+- Confirm the subscription hasn't reached Google's limit of 2 reseller transfers in a calendar year
+- Confirm the subscription isn't suspended in the Google Admin console
 - Check domain ownership and administrative access
 - Ensure all prerequisite steps completed
 
@@ -373,7 +376,7 @@ For visual guidance through the setup process, watch this walkthrough:
 <details>
 <summary>What is Vendasta's reseller ID for a Google Workspace transfer?</summary>
 
-Give your client Vendasta's Reseller ID, `C02e5br85`. The client then generates a transfer token at [admin.google.com/TransferToken](https://admin.google.com/TransferToken).
+Give your client Vendasta's public identifier, `C02e5br85`. The client's super administrator enters it under `Account` → `Reseller management` → `Transfer` in the Google Admin console and generates a transfer authorization.
 
 </details>
 
@@ -394,6 +397,6 @@ Cancel the seat and also open a ticket in the [Support Portal](https://partners.
 <details>
 <summary>Why can't I transfer a client's Google Workspace to Vendasta?</summary>
 
-Google blocks transfers to a reseller that hosted the same Google Workspace in the last 18 months. Also confirm the transfer token is valid and that the client has admin access to the domain.
+Google allows at most 2 reseller transfers of a subscription in a calendar year, and a suspended subscription can't be transferred until billing is restored. Also confirm the client's super administrator generated the transfer authorization for `C02e5br85` and that you entered the primary domain on the order.
 
 </details>
