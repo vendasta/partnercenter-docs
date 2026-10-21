@@ -2,20 +2,29 @@
 title: "How do I integrate QuickBooks with Partner Center?"
 sidebar_label: QuickBooks
 sidebar_position: 2
-description: "Connect QuickBooks to Partner Center to sync contacts into the CRM, choose invoice, sales receipt, and payment data, and manage the connection."
+description: "Connect QuickBooks to Partner Center to sync contacts and companies with the CRM, choose invoice, sales receipt, and payment data, and manage the connection."
 brand: vendasta
 product: partner-center-core
 audience: partners
 content_type: how-to
 kb_id: KB-00179
-answer_snippet: "The QuickBooks integration in Partner Center is a one-way sync of contacts from QuickBooks to the Partner Center CRM, plus 3 automation triggers. To set it up, go to Administration → Integrations, click the QuickBooks card, and click Add Connection."
+answer_snippet: "The QuickBooks integration in Partner Center syncs contacts and companies from QuickBooks to the Partner Center CRM, syncs company changes back to QuickBooks, and adds 3 automation triggers. To set it up, go to Administration → Integrations, click the QuickBooks card, and click Add Connection."
 doc_owner: partner-center-core
 review_frequency: 3-months
 last_reviewed: 2026-09-25
 last_reviewed_by: haleyserrano
 ---
 
-The QuickBooks integration in Partner Center is a one-way sync of contacts from QuickBooks to the Partner Center CRM, plus 3 automation triggers. To set it up, go to `Administration` → `Integrations`, click the QuickBooks card, and click `Add Connection`.
+The QuickBooks integration in Partner Center syncs contacts and companies from QuickBooks to the Partner Center CRM, syncs company changes back to QuickBooks, and adds 3 automation triggers. To set it up, go to `Administration` → `Integrations`, click the QuickBooks card, and click `Add Connection`.
+
+## How do company records sync? {#company-sync}
+
+QuickBooks does not store companies as separate records. Partner Center uses the `Company name` on each QuickBooks customer to create and update CRM companies.
+
+- If a QuickBooks customer has a company name, Partner Center creates or updates a CRM company with the name, phone number, and billing address from QuickBooks.
+- Contacts with the same company name share one CRM company, and each contact is linked to it.
+- If a company can't be synced, the contact still syncs without the company.
+- Changes you make to a synced company in the CRM sync back to QuickBooks.
 
 ## How do I set up the QuickBooks integration? {#setting-up-the-quickbooks-integration}
 
@@ -92,7 +101,7 @@ A note is created on Amy's contact profile in Partner Center with details from Q
 <details>
 <summary>Is the QuickBooks integration a two-way sync?</summary>
 
-No. The integration is a one-way sync of contacts from QuickBooks to the Partner Center CRM.
+For companies, yes. Companies sync from QuickBooks to the Partner Center CRM, and changes you make to a synced company in the CRM sync back to QuickBooks. Contacts sync from QuickBooks to the CRM only.
 
 </details>
 
