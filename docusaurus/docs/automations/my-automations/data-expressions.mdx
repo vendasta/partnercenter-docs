@@ -10,15 +10,13 @@ product: automations
 audience: partners
 ---
 
-# Data expressions in automations
-
-Data expressions let you extract and transform data from one automation step and pass it into the next. Instead of working with raw JSON responses, you can pull out exactly the fields you need — a contact name, an email address, a count of items — and use them downstream in your workflow.
+Data expressions let you extract and transform data from one automation step and pass it into the next. Instead of working with raw JSON responses, you can pull out exactly the fields you need, such as a contact name, an email address, or a count of items, and use them downstream in your workflow.
 
 <iframe src="https://drive.google.com/file/d/1cN06t0CWuROSuaqehFczIHg61DVN4lSP/preview" width="700" height="393.75" frameborder="0" allowfullscreen></iframe>
 
 ## Where you can use data expressions
 
-Data expressions are available in **trigger steps** and **action steps** within a regular automation. You can place them in any text field within the step's configuration — for example, an email address field, a message body, or a filter value.
+Data expressions are available in trigger steps and action steps within a regular automation. You can place them in any text field within the step's configuration, for example an email address field, a message body, or a filter value.
 
 | Step type | Supported | Notes |
 | --- | --- | --- |
@@ -27,31 +25,31 @@ Data expressions are available in **trigger steps** and **action steps** within 
 | **Goal** | No | Goal steps do not process data expressions |
 
 :::info
-Data expressions are not available in **snippets**. Because snippets are reusable fragments that get inserted into different automations, step IDs from the original context would not resolve correctly.
+Data expressions are not available in snippets. Because snippets are reusable fragments that get inserted into different automations, step IDs from the original context would not resolve correctly.
 :::
 
 ## Adding a data expression
 
-When you configure an action step in the automation builder, you can pull in data from a previous step using the **Add dynamic content** dialog.
+When you configure an action step in the automation builder, you can pull in data from a previous step using the `Add dynamic content` dialog.
 
 1. Open an action step in the automation builder and click into a configurable text field
-2. Select **Add dynamic content**
-3. Under **Category**, choose **From a previous step**
-4. Under **From a previous step**, select which step to pull data from (e.g., **Trigger**)
-5. Select the output field you want (e.g., **Form content**)
-6. Optionally, enter a path expression in the **Extract value** field to pull a specific piece of data from the response
+2. Select `Add dynamic content`
+3. Under `Category`, choose `From a previous step`
+4. Under `From a previous step`, select which step to pull data from (e.g., `Trigger`)
+5. Select the output field you want (e.g., `Form content`)
+6. Optionally, enter a path expression in the `Extract value` field to pull a specific piece of data from the response
 
-The **Extract value** field uses JQ syntax. If you leave it blank, the entire output of the selected field is used. If you enter an expression like `.data.contact.first_name`, only that specific value is extracted.
+The `Extract value` field uses JQ syntax. If you leave it blank, the entire output of the selected field is used. If you enter an expression like `.data.contact.first_name`, only that specific value is extracted.
 
 :::tip
-The **Extract value** field shows example expressions as placeholder text. Common patterns include `.data.name`, `.results[0].id`, and `.items | length`.
+The `Extract value` field shows example expressions as placeholder text. Common patterns include `.data.name`, `.results[0].id`, and `.items | length`.
 :::
 
-Once saved, the reference is stored as a step ID — for example `{.WorkflowStep.773dcc25-db4c-4d5d-882d-d3c8482e9770.response}` — which doesn't tell you which earlier step it points to. To see those connections on the canvas, turn on [Step references](./navigating-the-automation-canvas.mdx#step-references) in the automation editor toolbar.
+Once saved, the reference is stored as a step ID, for example `{.WorkflowStep.773dcc25-db4c-4d5d-882d-d3c8482e9770.response}`, which doesn't tell you which earlier step it points to. To see those connections on the canvas, turn on [Step references](./navigating-the-automation-canvas.mdx#step-references) in the automation editor toolbar.
 
 ## Expression syntax
 
-Expressions use [JQ syntax](https://jqlang.github.io/jq/manual/) — a lightweight language for extracting and transforming JSON data. Here are the patterns you will use most often.
+Expressions use [JQ syntax](https://jqlang.github.io/jq/manual/): a lightweight language for extracting and transforming JSON data. Here are the patterns you will use most often.
 
 ### Extract a field
 
@@ -130,7 +128,7 @@ Functions that access the environment or system (`env`, `debug`, `input`, `halt`
 
 ## Graceful error handling
 
-Data expressions are designed to fail safely. If an expression encounters an error — invalid JSON, a missing field, or a syntax issue — it returns the original value unchanged. Your automation continues running without interruption.
+Data expressions are designed to fail safely. If an expression encounters invalid JSON or a syntax issue, it returns the original value unchanged. If the field it references doesn't exist, it returns an empty string. Your automation continues running without interruption.
 
 This means:
 - A missing field returns an empty string, not an error
@@ -166,7 +164,7 @@ A third-party app (e.g., a booking platform or lead gen tool) sends a webhook to
 }
 ```
 
-**Action:** Create a contact — use `Add dynamic content` → `From a previous step` → `Trigger` for each field:
+**Action:** Create a contact. Use `Add dynamic content` → `From a previous step` → `Trigger` for each field:
 
 | Contact field | Extract value |
 | --- | --- |
@@ -175,16 +173,16 @@ A third-party app (e.g., a booking platform or lead gen tool) sends a webhook to
 | Email | `.data.contact.email` |
 | Phone | `.data.contact.phone` |
 
-Each expression reaches into the nested webhook payload and pulls out exactly the value needed — no manual data entry, no raw JSON.
+Each expression reaches into the nested webhook payload and pulls out exactly the value needed, with no manual data entry and no raw JSON.
 
 ## Best practices
 
-1. **Start simple** — Use basic field extraction (`.name`, `.email`) before reaching for complex expressions
-2. **Test in stages** — Verify each expression works before combining multiple in one step
-3. **Use descriptive step names** — Clear step names, plus [Step references](./navigating-the-automation-canvas.mdx#step-references) on the canvas, make it easy to see where each expression's data comes from
-4. **Stay under the limit** — Expressions have a 500-character maximum, so keep them focused on one transformation
-5. **Combine with logic steps** — Pair data expressions with if/else steps for powerful conditional workflows based on extracted data
+1. **Start simple.** Use basic field extraction (`.name`, `.email`) before reaching for complex expressions
+2. **Test in stages.** Verify each expression works before combining multiple in one step
+3. **Use descriptive step names.** Clear step names, plus [Step references](./navigating-the-automation-canvas.mdx#step-references) on the canvas, make it easy to see where each expression's data comes from
+4. **Stay under the limit.** Expressions have a 500-character maximum, so keep them focused on one transformation
+5. **Combine with logic steps.** Pair data expressions with if/else steps for conditional workflows based on extracted data
 
 ## Learn more
 
-- [JQ syntax reference](https://jqlang.github.io/jq/manual/) — Full documentation for the JQ query language
+- [JQ syntax reference](https://jqlang.github.io/jq/manual/): Full documentation for the JQ query language
