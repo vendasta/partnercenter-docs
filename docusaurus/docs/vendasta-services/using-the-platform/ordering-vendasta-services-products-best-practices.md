@@ -29,7 +29,7 @@ Ordering Vendasta Services products is the same as [ordering any product](../../
 6.  Click `Next`
 7.  Click `Review and Purchase`
 
-After completing the purchase, you will be presented with a [fulfillment form](./important-completing-fulfillment-forms). This form contains necessary details to be completed so that Vendasta Services teams can successfully complete the work that has been purchased.
+After completing the purchase, you will be presented with a [fulfillment form](/vendasta-services/using-the-platform/important-completing-fulfillment-forms/). This form contains necessary details to be completed so that Vendasta Services teams can successfully complete the work that has been purchased.
 
 ## How do I order website services? {#ordering---website-services}
 
@@ -55,7 +55,7 @@ Some services need additional products to be fulfilled. For example, Social AI i
 <details>
 <summary>What happens after I purchase a Vendasta Services product?</summary>
 
-You're presented with a [fulfillment form](./important-completing-fulfillment-forms). Complete it with the details the Vendasta Services team needs to do the work you purchased.
+You're presented with a [fulfillment form](/vendasta-services/using-the-platform/important-completing-fulfillment-forms/). Complete it with the details the Vendasta Services team needs to do the work you purchased.
 
 </details>
 

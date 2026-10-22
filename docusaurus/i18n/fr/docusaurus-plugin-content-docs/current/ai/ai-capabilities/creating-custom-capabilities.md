@@ -111,7 +111,7 @@ Considérez le prompt comme des instructions données à un nouvel employé que 
 4. Ajoutez plusieurs outils si votre capacité nécessite plusieurs appels API.
 
 :::tip Guide détaillé de création d'outils
-Pour des instructions complètes, étape par étape, sur la recherche de documentation d'API, l'utilisation de l'import cURL, le travail avec des assistants IA et le test des outils, consultez [Créer des outils personnalisés](./tools-overview/building-custom-tools).
+Pour des instructions complètes, étape par étape, sur la recherche de documentation d'API, l'utilisation de l'import cURL, le travail avec des assistants IA et le test des outils, consultez [Créer des outils personnalisés](/fr/ai/ai-capabilities/tools-overview/building-custom-tools/).
 :::
 
 ### Étape 5 : tester et affiner

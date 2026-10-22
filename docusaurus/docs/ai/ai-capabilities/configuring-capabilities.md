@@ -311,7 +311,7 @@ Yes. Your AI Employee knows which channel it's responding on, so a capability's 
 
 ## Next steps
 
-- **Create Custom Capabilities**: [Learn how to build custom capabilities](./creating-custom-capabilities) for specialized business needs
+- **Create Custom Capabilities**: [Learn how to build custom capabilities](/ai/ai-capabilities/creating-custom-capabilities/) for specialized business needs
 - **Advanced Prompting**: Explore prompt engineering techniques for better capability performance
 - **Integration Setup**: Connect external systems to enhance capability functionality
 
