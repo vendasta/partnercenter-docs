@@ -56,6 +56,8 @@ Customers can keep calling your existing business number and your telephone prov
 
    When a call is forwarded, Conversations and the CRM show the original caller's phone number, not your forwarding number.
 
+   Call forwarding is set up with the phone carrier, outside Conversations, so canceling Conversations AI doesn't turn it off and no reminder is sent. Before you cancel, turn off forwarding with the carrier so calls to the business line aren't still forwarded.
+
 :::tip
 For more help forwarding calls, see [Call Forwarding Setup in Conversations](/business-app/conversations/).
 :::
