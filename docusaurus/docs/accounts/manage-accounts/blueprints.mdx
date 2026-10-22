@@ -35,9 +35,9 @@ Default capabilities that come with every AI employee are not listed as componen
 Go to `Partner Center` → `Blueprints` to see the blueprints your partner account owns. Two tabs are available:
 
 - **My Blueprints**: the blueprints your account has created. This tab always shows the list view, and your place in the list is kept as you page through it.
-- **Public Blueprints**: blueprints made available across accounts. You can switch between list and card view here; your choice is kept while you stay on this tab, and the view resets to the default the next time you visit. The list view shows each blueprint's version as a badge (for example, `v1`, `v2`).
+- **Blueprint Templates**: blueprints made available across accounts. You can switch between list and card view here; your choice is kept while you stay on this tab, and the view resets to the default the next time you visit. The list view shows each blueprint's version as a badge (for example, `v1`, `v2`).
 
-Only Vendasta can mark a blueprint's configuration as public, publish or unpublish a public blueprint, or update a public blueprint's configuration. This option isn't available on the blueprints your account creates.
+Only Vendasta can mark a blueprint's configuration as a Blueprint Template, publish or unpublish a Blueprint Template, or update a Blueprint Template's configuration. This option isn't available on the blueprints your account creates.
 
 Filter the list by tag from the sidebar. The list shows each blueprint's name, the version being deployed, its source account, what it contains, and the date it was created.
 
@@ -46,10 +46,9 @@ Filter the list by tag from the sidebar. The list shows each blueprint's name, t
 ## Create a blueprint
 
 1. Click `Create blueprint`.
-2. Pick the **source account** and give the blueprint a **name**, then click `Next`. Partner Center scans the source account for everything that can be captured.
-3. Select the **components** to include, then save. Creating a blueprint takes a moment while the source account is captured.
-
-<img src={require('./img/create-blueprint.png').default} alt="Create blueprint dialog asking for a source account and a name, over the Blueprints list" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+2. In the dialog that opens, choose whether to start from a Blueprint Template or create the blueprint from scratch.
+3. Later in the flow, choose an account. Partner Center scans it for everything that can be captured, and you select the **components** to include based on that account.
+4. Save. Creating a blueprint takes a moment while the account is captured.
 
 A blueprint also carries a **description** of what it sets up, up to 500 characters, and up to 10 **tags** of 50 characters each for filtering the list.
 
@@ -120,7 +119,7 @@ Future applies will use that version instead. Applied accounts are not affected,
 
 ## Track where a blueprint is deployed
 
-The `Applied accounts` tab lists every account the blueprint has been applied to. Summary cards across the top break the rollout down by status, show the percentage of accounts in each, and act as filters. You can also search the list by account name.
+The `Applied accounts` tab lists every account the blueprint has been applied to, along with the version it received and `Applied by`, the user who applied it. Summary cards across the top break the rollout down by status, show the percentage of accounts in each, and act as filters. You can also search the list by account name.
 
 | Status | Meaning |
 | --- | --- |
