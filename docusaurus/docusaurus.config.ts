@@ -24,7 +24,12 @@ const config: Config = {
   organizationName: 'vendasta', // Usually your GitHub org/user name.
   projectName: 'partnercenter-docs', // Usually your repo name.
 
-  onBrokenLinks: 'warn',
+  // A dead link fails the build, so it cannot reach the live site. Anchors
+  // stay a warning: translated pages get translated heading ids, so an
+  // English page served as a locale's fallback cannot hit a heading on a
+  // translated page by its English id. Every English anchor resolves.
+  onBrokenLinks: 'throw',
+  onBrokenAnchors: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Add head tags
@@ -86,6 +91,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     ],
   ],
   plugins: [
+    [
+      './plugins/llms-txt.js',
+      {
+        title: 'Vendasta Documentation',
+        summary:
+          "Comprehensive documentation for the Vendasta platform — a white-label SaaS platform that helps agencies, media companies, and telcos sell and deliver digital solutions to local businesses. Covers Partner Center, Business App, AI workforce tools, commerce, CRM, automations, marketing, fulfillment, and managed services.",
+      },
+    ],
     [
       '@docusaurus/plugin-content-docs',
       {
