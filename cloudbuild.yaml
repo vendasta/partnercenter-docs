@@ -7,19 +7,24 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'us-central1-docker.pkg.dev/repcore-prod/docs-repo/partnercenter-docs:$COMMIT_SHA']
 
-  # Deploy container image to Cloud Run
+  # Deploy container image to Cloud Run. Retried because Cloud Run
+  # occasionally fails a good image with "Container import failed"; a fresh
+  # attempt on the same image succeeds. $$ escapes shell vars from Cloud
+  # Build substitution.
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    entrypoint: gcloud
+    entrypoint: bash
     args:
-      - 'run'
-      - 'deploy'
-      - 'partnercenter-docs'
-      - '--image'
-      - 'us-central1-docker.pkg.dev/repcore-prod/docs-repo/partnercenter-docs:$COMMIT_SHA'
-      - '--region'
-      - 'us-central1'
-      - '--platform'
-      - 'managed'
+      - '-c'
+      - |
+        for attempt in 1 2 3; do
+          gcloud run deploy partnercenter-docs \
+            --image us-central1-docker.pkg.dev/repcore-prod/docs-repo/partnercenter-docs:$COMMIT_SHA \
+            --region us-central1 \
+            --platform managed && exit 0
+          echo "Deploy attempt $$attempt failed; retrying in 30s"
+          sleep 30
+        done
+        exit 1
 
   # Also tag as latest for convenience
   - name: 'gcr.io/cloud-builders/docker'
