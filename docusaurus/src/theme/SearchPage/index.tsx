@@ -7,9 +7,7 @@ import useIsBrowser from '@docusaurus/useIsBrowser';
 import {translate} from '@docusaurus/Translate';
 import {AI_SEARCH_LOCALES} from '../../components/AiSearch/config';
 import {openAssistant} from '../../components/AiSearch/assistant';
-import {useDocsSearch} from '../../components/AiSearch/useDocsSearch';
-import {useSemanticSearch} from '../../components/AiSearch/useSemanticSearch';
-import {groupByPage, mergeHits} from '../../components/AiSearch/resultUtils';
+import {useMergedSearch} from '../../components/AiSearch/useMergedSearch';
 import ResultRow from '../../components/AiSearch/ResultRow';
 import {SearchIcon, SparklesIcon} from '../../components/AiSearch/Icons';
 import '../../components/AiSearch/aiSearch.css';
@@ -41,9 +39,7 @@ function SearchPageContent() {
     setDraft(urlQuery);
   }, [urlQuery]);
 
-  const {results, loading, ready} = useDocsSearch(urlQuery, 100, 0);
-  const semantic = useSemanticSearch(urlQuery, 10, 0);
-  const pages = useMemo(() => mergeHits(groupByPage(results), semantic.hits, urlQuery), [results, semantic.hits, urlQuery]);
+  const {pages, settled, ready} = useMergedSearch(urlQuery, {keywordLimit: 100, semanticLimit: 10, debounceMs: 0});
 
   const submit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -111,7 +107,7 @@ function SearchPageContent() {
             <p className="ais-empty">
               {process.env.NODE_ENV !== 'production'
                 ? 'Keyword results only appear in production builds (npm run build && npm run serve).'
-                : loading || !ready || semantic.loading
+                : !settled || !ready
                   ? translate({id: 'aiSearch.results.loading', message: 'Searching…'})
                   : translate({id: 'theme.SearchPage.noResultsText', message: 'No results were found'})}
             </p>

@@ -5,9 +5,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {translate} from '@docusaurus/Translate';
 import {AI_SEARCH_LOCALES} from './config';
 import {openAssistant} from './assistant';
-import {useDocsSearch} from './useDocsSearch';
-import {useSemanticSearch} from './useSemanticSearch';
-import {breadcrumbText, groupByPage, hitLink, mergeHits} from './resultUtils';
+import {useMergedSearch} from './useMergedSearch';
+import {breadcrumbText, hitLink} from './resultUtils';
 import {ArrowRightIcon, DocIcon, SparklesIcon} from './Icons';
 import type {PageHit} from './types';
 import './aiSearch.css';
@@ -84,16 +83,14 @@ export default function SearchMenu({query, inputRef, onClose, onReset}: Props) {
   const menuRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const {results, loading, ready} = useDocsSearch(query, 60);
-  const semantic = useSemanticSearch(query, 10);
-  const pages = useMemo(() => mergeHits(groupByPage(results), semantic.hits, query), [results, semantic.hits, query]);
+  const {pages, settled, ready} = useMergedSearch(query, {keywordLimit: 60, semanticLimit: 10, debounceMs: 200});
   const trimmed = query.trim();
   const hasQuery = trimmed.length > 0;
   const isProd = process.env.NODE_ENV === 'production';
 
   useEffect(() => {
     setActiveIndex(0);
-  }, [query, pages.length]);
+  }, [pages]);
 
   const go = useCallback(
     (url: string) => {
@@ -244,7 +241,7 @@ export default function SearchMenu({query, inputRef, onClose, onReset}: Props) {
         <p className="ais-empty">
           {!isProd
             ? 'Keyword results only appear in production builds (npm run build && npm run serve).'
-            : loading || !ready || semantic.loading
+            : !settled || !ready
               ? translate({id: 'aiSearch.menu.loading', message: 'Searching…'})
               : translate({id: 'aiSearch.menu.noResults', message: 'No matching articles. Try other words, or ask the AI assistant.'})}
         </p>

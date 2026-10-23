@@ -9,13 +9,13 @@ import type {SearchResult} from './types';
 /**
  * Runs the local keyword search (same index as the plugin's own search bar).
  * The worker only exists in production builds; in `npm run start` it returns nothing.
+ * `forQuery` is the trimmed query the current `results` answer.
  */
 export function useDocsSearch(query: string, limit = 100, debounceMs = 120) {
   const {
     siteConfig: {baseUrl},
   } = useDocusaurusContext();
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [answer, setAnswer] = useState<{query: string; results: SearchResult[]}>({query: '', results: []});
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -33,21 +33,18 @@ export function useDocsSearch(query: string, limit = 100, debounceMs = 120) {
   useEffect(() => {
     const trimmed = query.trim();
     if (!trimmed) {
-      setResults([]);
-      setLoading(false);
+      setAnswer({query: '', results: []});
       return undefined;
     }
     let cancelled = false;
-    setLoading(true);
     const timer = window.setTimeout(async () => {
+      let found: SearchResult[] = [];
       try {
-        const found = (await searchByWorker(baseUrl, '', trimmed, limit)) as SearchResult[];
-        if (!cancelled) setResults(found ?? []);
+        found = ((await searchByWorker(baseUrl, '', trimmed, limit)) as SearchResult[]) ?? [];
       } catch {
-        if (!cancelled) setResults([]);
-      } finally {
-        if (!cancelled) setLoading(false);
+        // No keyword results for this query.
       }
+      if (!cancelled) setAnswer({query: trimmed, results: found});
     }, debounceMs);
     return () => {
       cancelled = true;
@@ -55,5 +52,5 @@ export function useDocsSearch(query: string, limit = 100, debounceMs = 120) {
     };
   }, [query, baseUrl, limit, debounceMs]);
 
-  return {results, loading, ready};
+  return {results: answer.results, forQuery: answer.query, loading: answer.query !== query.trim(), ready};
 }

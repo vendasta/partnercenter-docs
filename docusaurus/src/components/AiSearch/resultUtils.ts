@@ -38,6 +38,22 @@ export function groupByPage(results: SearchResult[]): PageHit[] {
   return [...byUrl.values()];
 }
 
+/** Sentence punctuation around a word, which neither search should see. */
+const EDGE_PUNCTUATION = /^[?!.,;:"'()\[\]\u2018\u2019\u201C\u201D\u2026]+|[?!.,;:"'()\[\]\u2018\u2019\u201C\u201D\u2026]+$/g;
+
+/**
+ * The query both searches run: sentence punctuation trimmed from each word, spaces collapsed,
+ * so "how can I add a contact?" and "how can I add a contact" are one search. Punctuation
+ * inside a word stays ("G-Suite", "1.5", "what's").
+ */
+export function normalizeQuery(query: string): string {
+  return query
+    .split(/\s+/)
+    .map((word) => word.replace(EDGE_PUNCTUATION, ''))
+    .filter(Boolean)
+    .join(' ');
+}
+
 /**
  * Merge keyword and semantic hits into one ranked list (reciprocal rank fusion).
  *
