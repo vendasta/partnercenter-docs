@@ -122,7 +122,7 @@ Teach your Custom AI Employee about your business:
 - FAQs specific to the AI Employee's role
 - Any business-specific information relevant to their function
 
-For guidance on knowledge sources, see the [Knowledge Base documentation](../knowledge-base/).
+For guidance on knowledge sources, see the [Knowledge Base documentation](/ai/knowledge-base/).
 
 ### Step 5: configure capabilities
 

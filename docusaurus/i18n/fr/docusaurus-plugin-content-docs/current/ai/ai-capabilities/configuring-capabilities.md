@@ -225,7 +225,7 @@ Suivez les indicateurs clés pour mesurer l'efficacité des capacités :
 
 ## Prochaines étapes
 
-- **Créer des capacités personnalisées** : [Apprenez à créer des capacités personnalisées](./creating-custom-capabilities) pour des besoins commerciaux spécialisés
+- **Créer des capacités personnalisées** : [Apprenez à créer des capacités personnalisées](/fr/ai/ai-capabilities/creating-custom-capabilities/) pour des besoins commerciaux spécialisés
 - **Prompting avancé** : Explorez les techniques d'ingénierie de prompts pour de meilleures performances des capacités
 - **Configuration des intégrations** : Connectez des systèmes externes pour améliorer les fonctionnalités des capacités
 

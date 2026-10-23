@@ -13,7 +13,7 @@ import { AISparkleIcon } from '@site/src/components/Icons';
 This guide walks you through the complete process of building custom tools for your AI Employees. You'll learn how to find API documentation, use the cURL import feature, work with AI assistants, and test your tools effectively.
 
 :::info Before You Start
-If you're new to AI employees and capabilities, start with the [AI Overview](../../../ai/) to understand the broader concepts before diving into this tutorial.
+If you're new to AI employees and capabilities, start with the [AI Overview](/ai/) to understand the broader concepts before diving into this tutorial.
 :::
 
 ## Prerequisites

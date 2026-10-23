@@ -18,7 +18,7 @@ To receive Vendasta Services review response approval emails, add the person as 
 
 Vendasta Services review response services for Reputation AI can include an optional approval process for responses to negative reviews. Users can receive email notifications with the proposed responses.
 
-To receive these email notifications, you must [add the respective person as a user to the account in Partner Center](../../accounts/manage-users/) and configure the applicable user notifications.
+To receive these email notifications, you must [add the respective person as a user to the account in Partner Center](/accounts/manage-users/) and configure the applicable user notifications.
 
 ## How do I configure user notifications? {#configuring-user-notifications}
 
@@ -57,7 +57,7 @@ The user can click `Approve or Request Changes` within the email to be redirecte
 <details>
 <summary>Does the person approving responses need to be a user on the account?</summary>
 
-Yes. To receive review response approval emails, the person must be [added as a user to the account in Partner Center](../../accounts/manage-users/), with the applicable user notifications enabled.
+Yes. To receive review response approval emails, the person must be [added as a user to the account in Partner Center](/accounts/manage-users/), with the applicable user notifications enabled.
 
 </details>
 

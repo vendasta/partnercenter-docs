@@ -14,6 +14,10 @@ const config: Config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
+  // nginx serves every page as a directory and 301s the slash-less form to it,
+  // so emit the slash form everywhere (links, canonical, hreflang, sitemap)
+  // and the sitemap stops pointing at addresses that redirect.
+  trailingSlash: true,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -66,6 +70,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           routeBasePath: '/', // Set docs as the root
         },
         blog: false, // Disable blog
+        sitemap: {
+          // Crawlers ignore changefreq and priority; tag listings and the
+          // search page are not content worth indexing. Patterns match the
+          // full route, so the second of each pair covers /learn and the
+          // fr/es locales.
+          changefreq: null,
+          priority: null,
+          ignorePatterns: ['/tags/**', '/**/tags/**', '/search/', '/{fr,es}/search/'],
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
