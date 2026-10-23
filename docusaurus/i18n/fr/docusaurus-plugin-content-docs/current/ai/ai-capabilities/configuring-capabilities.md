@@ -112,7 +112,7 @@ When capturing a lead on SMS, ask for name and phone number only, one question a
 When capturing a lead by email, you can ask for name, email, phone, and preferred appointment time in a single reply.
 ```
 
-Pour des conseils sur le comportement spécifique à chaque canal pour l'ensemble de l'employé IA, consultez [Ajuster les réponses par canal](../ai-workforce/index.mdx#adjust-responses-by-channel).
+Pour des conseils sur le comportement spécifique à chaque canal pour l'ensemble de l'employé IA, consultez [Ajuster les réponses par canal](/fr/ai/ai-workforce/#adjust-responses-by-channel).
 
 #### Pourquoi les exemples sont importants
 

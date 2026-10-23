@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Link from "@docusaurus/Link";
 import { useLocation } from "@docusaurus/router";
+import useBrokenLinks from "@docusaurus/useBrokenLinks";
 import { parseMinutes, type JourneyStage } from "../data/learnJourney";
 
 // Start here (training/index.mdx): the Learn journey as a vertical stepper.
@@ -50,6 +51,10 @@ export default function JourneyStages({ stages }: JourneyStagesProps) {
   // Runs on load and again whenever the hash changes, so an in-page "Next:"
   // link opens its stage the same way a /learn#... deep link does.
   const { hash } = useLocation();
+  // Each stage <li> is an anchor the "Next:" links point at. Only theme
+  // headings register themselves, so tell the broken-anchor check about these.
+  const brokenLinks = useBrokenLinks();
+  stages.forEach((stage) => brokenLinks.collectAnchor(stage.id));
   useEffect(() => {
     try {
       const id = hash.replace(/^#/, "");
