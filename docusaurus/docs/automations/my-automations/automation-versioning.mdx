@@ -60,6 +60,17 @@ Restore creates a draft from a previous version and publishes it as the next ver
 Restore is available when the automation has a running version. If the automation is off, you can still create a draft from any version by clicking `Edit`.
 :::
 
+## Compare versions
+
+The compare dialog shows what differs between two versions of an automation. A summary sentence at the top names every change, for example: *Added "Send welcome email", changed settings on "Notify owner", and removed "Wait 2 days".*
+
+- Changes are listed in the order the steps appear in the automation.
+- Neighbouring changes of the same kind merge into one clause, such as *Added "A" and "B"*.
+- A moved step is counted once.
+- A count chip beside the summary shows how many steps were added, removed, edited, had settings changed, or moved. Each chip is colored to match its step cards.
+- Click a change in the summary to scroll to that step. The step is briefly highlighted.
+- Unchanged steps are hidden by default.
+
 ## Version history and audit trail
 
 Every automation tracks a complete audit trail:
@@ -102,7 +113,6 @@ Webhook URLs remain stable across all versions of an automation. Publishing a ne
 | System automations | System automations do not have versioning |
 | Bulk operations | Versioning applies to one automation at a time |
 | Account templates | Template-level versioning that propagates updates across accounts is not available |
-| Version comparison | Side-by-side diff between versions is not available |
 
 ## Related resources
 
