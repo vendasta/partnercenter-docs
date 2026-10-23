@@ -10,7 +10,7 @@ import { AISparkleIcon } from '@site/src/components/Icons';
 Esta guía completa te lleva a través de todo el proceso de creación de herramientas personalizadas para tus empleados de IA. Aprenderás a encontrar documentación de API, usar la función de importación cURL, trabajar con asistentes de IA y probar tus herramientas de manera efectiva.
 
 :::info Antes de empezar
-Si eres nuevo con los empleados de IA y las capacidades, comienza con la [Descripción general de IA](../../../ai/) para entender los conceptos generales antes de sumergirte en este tutorial.
+Si eres nuevo con los empleados de IA y las capacidades, comienza con la [Descripción general de IA](/es/ai/) para entender los conceptos generales antes de sumergirte en este tutorial.
 :::
 
 ## Requisitos previos

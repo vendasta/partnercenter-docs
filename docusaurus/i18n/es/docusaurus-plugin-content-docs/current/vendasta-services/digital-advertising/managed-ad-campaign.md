@@ -91,7 +91,7 @@ Las campañas rinden significativamente mejor con activos suministrados al momen
 
 ## Primeros pasos
 
-1. **Crea el plan de anuncios.** Ve a `Partner Center` → `Ads` → `Ad plans` → `Create new plan`, elige la red, y deja que Vendasta Ads genere el texto del anuncio, las palabras clave, la segmentación, y las opciones de presupuesto. Comparte la propuesta con tu cliente y realiza el pedido una vez que esté aprobada. Consulta [Crear un plan de anuncios](./vendasta-ads-partner-center.md#creating-an-ad-plan) para el recorrido completo.
+1. **Crea el plan de anuncios.** Ve a `Partner Center` → `Ads` → `Ad plans` → `Create new plan`, elige la red, y deja que Vendasta Ads genere el texto del anuncio, las palabras clave, la segmentación, y las opciones de presupuesto. Comparte la propuesta con tu cliente y realiza el pedido una vez que esté aprobada. Consulta [Crear un plan de anuncios](/es/ads/) para el recorrido completo.
 2. **Realiza el pedido** para la cuenta en Partner Center a través de la pestaña Ads, confirmando la red, el gasto mensual en medios, el margen del revendedor, y si se incluye el seguimiento de llamadas. Revisa el desglose de precios antes de enviar.
 3. **Construcción y lanzamiento de la campaña, el mismo día.** Vendasta Services construye y activa la campaña el mismo día hábil en que se hace el pedido.
 4. **Configuración de seguimiento de llamadas, dentro de 2 días hábiles,** si está incluido en el pedido.
