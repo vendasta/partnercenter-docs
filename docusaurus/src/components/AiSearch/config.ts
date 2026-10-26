@@ -14,7 +14,7 @@ export const MCP_URL = 'https://mcp.vendasta.com/mcp';
  * (AG-5FXRJCBV2K) and is connected to the docs assistant. Empty keeps the drawer in its
  * "not configured" state.
  */
-export const WEBCHAT_WIDGET_ID = '';
+export const WEBCHAT_WIDGET_ID = 'dbc1a796-c975-11f1-b4fa-32fd05cad730';
 
 /** Public conversation API used by the web chat widget (prod; the docs widget lives there). */
 export const CONVERSATION_API_URL = 'https://conversation-prod.apigateway.co/conversation.v1.ConversationService';

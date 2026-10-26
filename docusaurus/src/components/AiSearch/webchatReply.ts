@@ -51,7 +51,7 @@ function sleep(ms: number, signal: AbortSignal): Promise<void> {
 
 export async function waitForReply(
   source: ReplySource,
-  {visitorId, askedAt, signal, pollMs = 1500, timeoutMs = 60_000}: ReplyOptions,
+  {visitorId, askedAt, signal, pollMs = 1500, timeoutMs = 120_000}: ReplyOptions,
 ): Promise<{id: string; text: string}> {
   const askedTime = Date.parse(askedAt);
   const deadline = Date.now() + timeoutMs;
