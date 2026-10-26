@@ -1,4 +1,5 @@
-import type {WidgetMessage} from './webchatClient';
+import {ReplyTimeoutError} from './assistant';
+import {InvalidRequestError, type WidgetMessage} from './webchatClient';
 
 /**
  * Wait for the web chat AI's answer to one question. The backend writes the answer as a
@@ -21,10 +22,10 @@ export type ReplyOptions = {
   timeoutMs?: number;
 };
 
-/** No answer arrived within the wait limit. */
-export class ReplyTimeoutError extends Error {
-  name = 'ReplyTimeoutError';
-}
+export {ReplyTimeoutError};
+
+/** Polls in a row that may fail before the wait gives up with the last error. */
+const MAX_FAILED_POLLS = 3;
 
 /** The backend has the message but the AI is still writing it. */
 const UNFINISHED = new Set(['AI_RECEIVED', 'AI_THINKING']);
@@ -56,6 +57,7 @@ export async function waitForReply(
   const deadline = Date.now() + timeoutMs;
   // Messages that can never become the reply, so they are not fetched again.
   const settled = new Set<string>();
+  let failedPolls = 0;
 
   for (;;) {
     if (signal.aborted) throw abortError();
@@ -68,13 +70,16 @@ export async function waitForReply(
         if (!isReply) settled.add(message.messageId);
         else if (message.body && !UNFINISHED.has(message.aiStatus ?? '')) replies.push(message);
       }
+      failedPolls = 0;
       if (replies.length) {
         const first = replies.sort((a, b) => Date.parse(a.created) - Date.parse(b.created))[0];
         return {id: first.messageId, text: first.body};
       }
-    } catch {
+    } catch (err) {
       if (signal.aborted) throw abortError();
-      // A failed poll is retried on the next tick; the deadline still bounds the wait.
+      // A rejected request will not succeed on retry; a network blip usually will.
+      failedPolls += 1;
+      if (err instanceof InvalidRequestError || failedPolls >= MAX_FAILED_POLLS) throw err;
     }
     if (Date.now() + pollMs > deadline) throw new ReplyTimeoutError('No reply from the assistant in time');
     await sleep(pollMs, signal);

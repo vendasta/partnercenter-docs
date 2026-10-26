@@ -29,6 +29,16 @@ describe('renderMarkdown', () => {
     expect(html).not.toContain('<img');
   });
 
+  it('converts images with a title and keeps alt text as the link label', () => {
+    const html = renderMarkdown('![chart](https://example.com/c.png "Chart")');
+    expect(html).not.toContain('<img');
+    expect(html).toContain('>chart</a>');
+  });
+
+  it('opens protocol-relative links in a new tab', () => {
+    expect(renderMarkdown('[x](//evil.example/path)')).toContain('target="_blank" rel="noopener noreferrer"');
+  });
+
   it('opens external https links in a new tab', () => {
     expect(renderMarkdown('[docs](https://docs.vendasta.com/x)')).toContain(
       '<a href="https://docs.vendasta.com/x" target="_blank" rel="noopener noreferrer"',

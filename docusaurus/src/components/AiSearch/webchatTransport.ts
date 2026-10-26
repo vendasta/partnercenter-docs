@@ -1,6 +1,12 @@
-import {setAssistantTransport, type AssistantTransport} from './assistant';
+import {
+  MAX_QUESTION_LENGTH,
+  QuestionTooLongError,
+  RateLimitError,
+  setAssistantTransport,
+  type AssistantTransport,
+} from './assistant';
 import * as client from './webchatClient';
-import {InvalidRequestError, type WidgetConversation} from './webchatClient';
+import type {WidgetConversation} from './webchatClient';
 import {waitForReply} from './webchatReply';
 
 /**
@@ -8,9 +14,6 @@ import {waitForReply} from './webchatReply';
  * widget conversation, each question one widget message, and the web chat AI's reply
  * comes back as a single complete message.
  */
-
-/** The backend's limit on a message body, counted in characters. */
-export const MAX_QUESTION_LENGTH = 1000;
 
 export type WebchatDeps = {
   storage: Storage | null;
@@ -22,7 +25,8 @@ export type WebchatDeps = {
   waitForReply: typeof waitForReply;
 };
 
-type StoredConversation = WidgetConversation & {widgetId: string};
+/** `pending` marks a question still waiting for its answer when the tab last saved. */
+type StoredConversation = WidgetConversation & {widgetId: string; pending?: boolean};
 
 function browserStorage(): Storage | null {
   try {
@@ -34,13 +38,17 @@ function browserStorage(): Storage | null {
 
 const defaultDeps = (): WebchatDeps => ({
   storage: browserStorage(),
-  pageUrl: () => window.location.href,
-  ...client,
+  // Page path only: the query string can carry the visitor's search terms.
+  pageUrl: () => window.location.origin + window.location.pathname,
+  createConversation: client.createConversation,
+  sendMessage: client.sendMessage,
+  listMessageIds: client.listMessageIds,
+  getMessages: client.getMessages,
   waitForReply,
 });
 
 /** The participant ID claim in the widget token; it identifies the visitor's own messages. */
-function participantId(token: string): string {
+export function participantId(token: string): string {
   try {
     const payload = token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/');
     return (JSON.parse(atob(payload)) as {participant_id?: string}).participant_id ?? '';
@@ -49,63 +57,86 @@ function participantId(token: string): string {
   }
 }
 
+/** Fallback for a send response without a timestamp; a little early so the reply still counts. */
+function approximateSentAt(): string {
+  return new Date(Date.now() - 5000).toISOString();
+}
+
 export function createWebchatTransport(widgetId: string, deps: WebchatDeps = defaultDeps()): AssistantTransport {
   const key = `ais-webchat-${widgetId}`;
   // In-memory copy, used on its own when storage is unavailable.
   let current: StoredConversation | null = null;
 
-  const load = (): WidgetConversation | null => {
+  const write = (conversation: StoredConversation | null) => {
+    current = conversation;
+    try {
+      if (conversation) deps.storage?.setItem(key, JSON.stringify(conversation));
+      else deps.storage?.removeItem(key);
+    } catch {
+      // In memory only.
+    }
+  };
+
+  const load = (): StoredConversation | null => {
     try {
       const raw = deps.storage?.getItem(key);
       if (raw) current = JSON.parse(raw) as StoredConversation;
     } catch {
       // Keep the in-memory copy.
     }
-    return current && current.widgetId === widgetId ? current : null;
+    if (!current || current.widgetId !== widgetId) return null;
+    // A question was left waiting (the page reloaded mid-answer): its late answer would
+    // otherwise be taken for the next question's, so start a fresh conversation.
+    if (current.pending) {
+      write(null);
+      return null;
+    }
+    return current;
   };
 
-  const save = (conversation: WidgetConversation) => {
-    current = {...conversation, widgetId};
-    try {
-      deps.storage?.setItem(key, JSON.stringify(current));
-    } catch {
-      // In memory only.
-    }
-  };
-
-  const clear = () => {
-    current = null;
-    try {
-      deps.storage?.removeItem(key);
-    } catch {
-      // Nothing stored.
-    }
-  };
+  const clear = () => write(null);
 
   return {
     async ask(question, onReply, signal) {
       if (Array.from(question).length > MAX_QUESTION_LENGTH) {
-        throw new InvalidRequestError(`Question longer than ${MAX_QUESTION_LENGTH} characters`);
+        throw new QuestionTooLongError(`Question longer than ${MAX_QUESTION_LENGTH} characters`);
       }
       let conversation = load();
       if (!conversation) {
-        conversation = await deps.createConversation(widgetId, deps.pageUrl(), signal);
-        save(conversation);
+        const created = await deps.createConversation(widgetId, deps.pageUrl(), signal);
+        conversation = {...created, widgetId};
+        write(conversation);
       }
       const {token, conversationId} = conversation;
+      const visitorId = participantId(token);
+      if (!visitorId) {
+        clear();
+        throw new Error('Web chat token has no participant');
+      }
+
+      let sent: {messageId: string; createdAt?: string};
       try {
-        const sent = await deps.sendMessage(token, question, signal);
+        sent = await deps.sendMessage(token, question, signal);
+      } catch (err) {
+        // Throttled before anything was stored: the conversation is still good to reuse.
+        // Any other failure (for example a stale token) gets a fresh conversation next time.
+        if (!(err instanceof RateLimitError)) clear();
+        throw err;
+      }
+
+      write({...conversation, pending: true});
+      try {
         const reply = await deps.waitForReply(
           {
             listIds: (s) => deps.listMessageIds(conversationId, s),
             getMessages: (ids, s) => deps.getMessages(token, ids, s),
           },
-          {visitorId: participantId(token), askedAt: sent.createdAt, signal},
+          {visitorId, askedAt: sent.createdAt || approximateSentAt(), signal},
         );
+        write({...conversation, pending: false});
         onReply({id: reply.id, text: reply.text, done: true});
       } catch (err) {
-        // The AI may still answer later, or the stored token may be stale; a fresh conversation
-        // keeps a late answer out of the next question and recovers from a rejected token.
+        // The AI may still answer later; a fresh conversation keeps that answer out of the next question.
         clear();
         throw err;
       }

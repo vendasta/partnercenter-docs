@@ -1,3 +1,4 @@
+import {RateLimitError} from './assistant';
 import {
   CONVERSATION_API_URL,
   CONVERSATION_FIRESTORE_ENV,
@@ -21,14 +22,33 @@ export type WidgetMessage = {
   aiStatus?: string;
 };
 
-/** Too many messages from this IP (the backend allows about 15 a minute). */
-export class RateLimitError extends Error {
-  name = 'RateLimitError';
-}
+export {RateLimitError};
 
-/** The backend rejected the request, for example a question over the length limit. */
+/** The backend rejected the request, for example a stale participant token or unknown widget. */
 export class InvalidRequestError extends Error {
   name = 'InvalidRequestError';
+}
+
+/** Matches the server's RPC timeout, so a hung request fails instead of outliving the reply wait. */
+const REQUEST_TIMEOUT_MS = 20_000;
+
+/** Abort on the caller's signal or after the request timeout, whichever comes first. */
+async function fetchWithTimeout(url: string, init: RequestInit, signal: AbortSignal): Promise<Response> {
+  const controller = new AbortController();
+  const onAbort = () => controller.abort();
+  signal.addEventListener('abort', onAbort, {once: true});
+  if (signal.aborted) controller.abort();
+  const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+  try {
+    return await fetch(url, {...init, signal: controller.signal});
+  } catch (err) {
+    // A timeout is an ordinary failure (retryable); only the caller's abort stays an abort.
+    if (controller.signal.aborted && !signal.aborted) throw new Error('Request timed out');
+    throw err;
+  } finally {
+    clearTimeout(timer);
+    signal.removeEventListener('abort', onAbort);
+  }
 }
 
 async function callConversation<T>(
@@ -39,14 +59,15 @@ async function callConversation<T>(
 ): Promise<T> {
   const headers: Record<string, string> = {'Content-Type': 'application/json'};
   if (token) headers.Authorization = `Bearer ${token}`;
-  const response = await fetch(`${CONVERSATION_API_URL}/${method}`, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify(body),
+  const response = await fetchWithTimeout(
+    `${CONVERSATION_API_URL}/${method}`,
+    {method: 'POST', headers, body: JSON.stringify(body)},
     signal,
-  });
+  );
   if (response.status === 429) throw new RateLimitError(`${method} rate limited`);
-  if (response.status === 400) throw new InvalidRequestError(`${method} rejected: ${await response.text()}`);
+  if (response.status >= 400 && response.status < 500) {
+    throw new InvalidRequestError(`${method} rejected: ${response.status}`);
+  }
   if (!response.ok) throw new Error(`${method} failed: ${response.status}`);
   return (await response.json()) as T;
 }
@@ -133,12 +154,15 @@ type RunQueryRow = {document?: {fields?: {messageId?: {stringValue?: string}}}};
 
 /** IDs of the conversation's newest web chat messages, newest first. */
 export async function listMessageIds(conversationId: string, signal: AbortSignal, limit = 10): Promise<string[]> {
-  const response = await fetch(messagesQueryUrl(conversationId), {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(messageQuery(limit)),
+  const response = await fetchWithTimeout(
+    messagesQueryUrl(conversationId),
+    {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(messageQuery(limit))},
     signal,
-  });
+  );
+  if (response.status === 429) throw new RateLimitError('Firestore runQuery rate limited');
+  if (response.status >= 400 && response.status < 500) {
+    throw new InvalidRequestError(`Firestore runQuery rejected: ${response.status}`);
+  }
   if (!response.ok) throw new Error(`Firestore runQuery failed: ${response.status}`);
   const rows = (await response.json()) as RunQueryRow[];
   return rows.flatMap((row) => {

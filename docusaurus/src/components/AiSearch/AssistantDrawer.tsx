@@ -4,14 +4,15 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {
   ASSISTANT_EVENT,
   getAssistantTransport,
+  MAX_QUESTION_LENGTH,
+  QuestionTooLongError,
+  RateLimitError,
+  ReplyTimeoutError,
   type AssistantOpenDetail,
   type AssistantReply,
 } from './assistant';
 import {AI_SEARCH_LOCALES} from './config';
 import {renderMarkdown} from './markdown';
-import {InvalidRequestError, RateLimitError} from './webchatClient';
-import {ReplyTimeoutError} from './webchatReply';
-import {MAX_QUESTION_LENGTH} from './webchatTransport';
 import {SparklesIcon} from './Icons';
 import './aiSearch.css';
 
@@ -24,7 +25,9 @@ const THREAD_KEY = 'ais-assistant-thread';
 function loadThread(): Turn[] {
   try {
     const raw = sessionStorage.getItem(THREAD_KEY);
-    return raw ? (JSON.parse(raw) as Turn[]) : [];
+    const turns = raw ? (JSON.parse(raw) as Turn[]) : [];
+    // An answer still pending when the page unloaded will not arrive here.
+    return turns.map((t) => (t.role === 'assistant' && !t.done ? {...t, done: true, error: interruptedMessage()} : t));
   } catch {
     return [];
   }
@@ -38,12 +41,16 @@ function saveThread(turns: Turn[]): void {
   }
 }
 
+function interruptedMessage(): string {
+  return translate({id: 'aiSearch.assistant.interrupted', message: 'This answer was interrupted. Please ask again.'});
+}
+
 /** The message shown in the assistant bubble when a question fails. */
 function errorMessage(err: unknown): string {
   if (err instanceof RateLimitError) {
     return translate({id: 'aiSearch.assistant.rateLimited', message: 'Too many questions. Wait a minute and try again.'});
   }
-  if (err instanceof InvalidRequestError) {
+  if (err instanceof QuestionTooLongError) {
     return translate({id: 'aiSearch.assistant.tooLong', message: 'That question is too long. Shorten it and try again.'});
   }
   if (err instanceof ReplyTimeoutError) {

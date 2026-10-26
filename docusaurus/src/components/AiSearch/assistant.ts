@@ -27,6 +27,26 @@ export interface AssistantTransport {
   reset(): void;
 }
 
+/** Errors a transport can raise; the drawer picks its message from these. */
+
+/** Too many questions in a short time. */
+export class RateLimitError extends Error {
+  name = 'RateLimitError';
+}
+
+/** The question is longer than the transport accepts. */
+export class QuestionTooLongError extends Error {
+  name = 'QuestionTooLongError';
+}
+
+/** No answer arrived within the wait limit. */
+export class ReplyTimeoutError extends Error {
+  name = 'ReplyTimeoutError';
+}
+
+/** Longest question the drawer sends, in characters. */
+export const MAX_QUESTION_LENGTH = 1000;
+
 let activeTransport: AssistantTransport | null = null;
 
 export function setAssistantTransport(transport: AssistantTransport | null): void {

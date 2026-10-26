@@ -1,5 +1,5 @@
 import {afterEach, beforeEach, describe, expect, it, vi} from 'vitest';
-import type {WidgetMessage} from './webchatClient';
+import {InvalidRequestError, type WidgetMessage} from './webchatClient';
 import {ReplyTimeoutError, waitForReply, type ReplySource} from './webchatReply';
 
 const VISITOR = 'PARTICIPANT-visitor';
@@ -102,6 +102,38 @@ describe('waitForReply', () => {
     const calls = (src.listIds as ReturnType<typeof vi.fn>).mock.calls.length;
     await vi.advanceTimersByTimeAsync(5000);
     expect((src.listIds as ReturnType<typeof vi.fn>).mock.calls.length).toBe(calls);
+  });
+
+  it('returns the earliest of several finished replies', async () => {
+    const later = msg('MESSAGE-b', AI, 'Second', '2026-10-26T12:00:09Z');
+    const earlier = msg('MESSAGE-a', AI, 'First', '2026-10-26T12:00:04Z');
+    const {src} = source([[later, earlier]]);
+    await expect(waitForReply(src, options())).resolves.toMatchObject({text: 'First'});
+  });
+
+  it('accepts nanosecond-precision timestamps', async () => {
+    const answer = msg('MESSAGE-a', AI, 'Precise', '2026-10-26T12:00:00.123456789Z');
+    const {src} = source([[answer]]);
+    await expect(waitForReply(src, {...options(), askedAt: '2026-10-26T12:00:00.000000001Z'})).resolves.toMatchObject({
+      text: 'Precise',
+    });
+  });
+
+  it('stops at once when the backend rejects the request', async () => {
+    const {src} = source([[]]);
+    (src.listIds as ReturnType<typeof vi.fn>).mockRejectedValue(new InvalidRequestError('403'));
+    await expect(waitForReply(src, options())).rejects.toBeInstanceOf(InvalidRequestError);
+    expect(src.listIds).toHaveBeenCalledTimes(1);
+  });
+
+  it('gives up with the last error after three failed polls in a row', async () => {
+    const {src} = source([[]]);
+    (src.listIds as ReturnType<typeof vi.fn>).mockRejectedValue(new TypeError('Failed to fetch'));
+    const reply = waitForReply(src, options());
+    const assertion = expect(reply).rejects.toThrow('Failed to fetch');
+    await vi.advanceTimersByTimeAsync(3000);
+    await assertion;
+    expect(src.listIds).toHaveBeenCalledTimes(3);
   });
 
   it('retries after a transient poll failure', async () => {

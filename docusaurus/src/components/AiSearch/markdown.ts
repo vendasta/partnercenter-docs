@@ -17,9 +17,9 @@ export function renderMarkdown(markdown: string): string {
     )
     .replace(/<a href="([^"]*)"/g, (match, href: string) => {
       if (!SAFE_LINK.test(href)) return '<a';
-      if (!/^https?:\/\//i.test(href)) return match;
+      if (!/^(https?:)?\/\//i.test(href)) return match;
       try {
-        const url = new URL(href);
+        const url = new URL(href, 'https://docs.vendasta.com');
         if (typeof window !== 'undefined' && url.host === window.location.host) return match;
       } catch {
         return match;

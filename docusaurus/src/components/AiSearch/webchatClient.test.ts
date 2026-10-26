@@ -130,8 +130,31 @@ describe('listMessageIds', () => {
     expect(await listMessageIds('CONVERSATION-abc', signal)).toEqual([]);
   });
 
-  it('throws when Firestore refuses the query', async () => {
+  it('raises InvalidRequestError when Firestore refuses the query', async () => {
     mockFetch(403, {error: {status: 'PERMISSION_DENIED'}});
-    await expect(listMessageIds('CONVERSATION-abc', signal)).rejects.toThrow(/403/);
+    await expect(listMessageIds('CONVERSATION-abc', signal)).rejects.toBeInstanceOf(InvalidRequestError);
+  });
+});
+
+describe('request timeout', () => {
+  it('fails a hung request after 20 seconds as an ordinary error', async () => {
+    vi.useFakeTimers();
+    try {
+      vi.stubGlobal(
+        'fetch',
+        vi.fn(
+          (_url: string, init: RequestInit) =>
+            new Promise((_resolve, reject) =>
+              init.signal?.addEventListener('abort', () => reject(new DOMException('Aborted', 'AbortError'))),
+            ),
+        ),
+      );
+      const result = sendMessage('tok', 'q', signal);
+      const assertion = expect(result).rejects.toThrow('Request timed out');
+      await vi.advanceTimersByTimeAsync(20_000);
+      await assertion;
+    } finally {
+      vi.useRealTimers();
+    }
   });
 });

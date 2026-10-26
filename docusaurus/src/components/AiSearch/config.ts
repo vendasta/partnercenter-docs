@@ -22,7 +22,7 @@ export const CONVERSATION_API_URL = 'https://conversation-prod.apigateway.co/con
 /** Firestore environment segment matching CONVERSATION_API_URL. */
 export const CONVERSATION_FIRESTORE_ENV = 'prod';
 
-/** Inbox Firebase project and its public web API key (from the web chat widget's config). */
+/** Conversations' Firebase project and its public web API key (from the web chat widget's config). */
 export const INBOX_FIREBASE_PROJECT = 'inbox-291119';
 export const INBOX_FIREBASE_API_KEY = 'AIzaSyAmrv372h8otvJv6mBdHZzywPn5d6h6oPc';
 

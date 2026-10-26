@@ -1,12 +1,18 @@
 import {beforeEach, describe, expect, it, vi} from 'vitest';
-import {getAssistantTransport, setAssistantTransport, type AssistantReply} from './assistant';
+import {
+  getAssistantTransport,
+  QuestionTooLongError,
+  RateLimitError,
+  setAssistantTransport,
+  type AssistantReply,
+} from './assistant';
 import {InvalidRequestError} from './webchatClient';
 import {ReplyTimeoutError} from './webchatReply';
-import {createWebchatTransport, registerWebchatTransport, type WebchatDeps} from './webchatTransport';
+import {createWebchatTransport, participantId, registerWebchatTransport, type WebchatDeps} from './webchatTransport';
 
 /** Unsigned JWT carrying the claims the widget token has. */
-function token(participantId: string, widgetId = 'WIDGET-1'): string {
-  const payload = btoa(JSON.stringify({participant_id: participantId, widget_id: widgetId}));
+function token(participant: string, widgetId = 'WIDGET-1'): string {
+  const payload = btoa(JSON.stringify({participant_id: participant, widget_id: widgetId}));
   return `e30.${payload.replace(/=+$/, '')}.sig`;
 }
 
@@ -117,10 +123,56 @@ describe('webchat transport', () => {
   it('rejects questions over 1000 characters without calling the backend', async () => {
     const d = deps();
     await expect(createWebchatTransport('WIDGET-1', d).ask('x'.repeat(1001), () => undefined, signal())).rejects.toBeInstanceOf(
-      InvalidRequestError,
+      QuestionTooLongError,
     );
     expect(d.createConversation).not.toHaveBeenCalled();
     expect(d.sendMessage).not.toHaveBeenCalled();
+  });
+
+  it('accepts exactly 1000 characters, counting emoji as one character each', async () => {
+    const d = deps();
+    const transport = createWebchatTransport('WIDGET-1', d);
+    await transport.ask('x'.repeat(1000), () => undefined, signal());
+    await transport.ask('\u{1F600}'.repeat(600), () => undefined, signal());
+    expect(d.sendMessage).toHaveBeenCalledTimes(2);
+  });
+
+  it('keeps the conversation when a send is rate limited', async () => {
+    const d = deps();
+    const transport = createWebchatTransport('WIDGET-1', d);
+    await transport.ask('Q', () => undefined, signal());
+    (d.sendMessage as ReturnType<typeof vi.fn>).mockRejectedValueOnce(new RateLimitError('slow down'));
+    await expect(transport.ask('Q', () => undefined, signal())).rejects.toBeInstanceOf(RateLimitError);
+    await transport.ask('Q', () => undefined, signal());
+    expect(d.created).toBe(1);
+  });
+
+  it('starts a new conversation when the page reloaded while an answer was pending', async () => {
+    const d = deps();
+    let release: () => void = () => undefined;
+    (d.waitForReply as ReturnType<typeof vi.fn>).mockImplementationOnce(
+      () => new Promise((resolve) => (release = () => resolve({id: 'MESSAGE-a', text: 'late'}))),
+    );
+    // First tab instance sends a question and is "unloaded" before the answer comes.
+    void createWebchatTransport('WIDGET-1', d).ask('Q1', () => undefined, signal());
+    await vi.waitFor(() => expect(d.waitForReply).toHaveBeenCalledTimes(1));
+    // The reloaded page builds a new transport over the same sessionStorage.
+    await createWebchatTransport('WIDGET-1', d).ask('Q2', () => undefined, signal());
+    expect(d.created).toBe(2);
+    release();
+  });
+
+  it('refuses a token without a participant, so the visitor is never mistaken for the AI', async () => {
+    const d = deps({createConversation: vi.fn(async () => ({token: 'not-a-jwt', conversationId: 'CONVERSATION-x'}))});
+    await expect(createWebchatTransport('WIDGET-1', d).ask('Q', () => undefined, signal())).rejects.toThrow(/participant/);
+    expect(d.sendMessage).not.toHaveBeenCalled();
+  });
+
+  it('falls back to an approximate send time when the response has none', async () => {
+    const d = deps({sendMessage: vi.fn(async () => ({messageId: 'MESSAGE-q'}) as never)});
+    await createWebchatTransport('WIDGET-1', d).ask('Q', () => undefined, signal());
+    const {askedAt} = (d.waitForReply as ReturnType<typeof vi.fn>).mock.calls[0][1];
+    expect(Number.isNaN(Date.parse(askedAt))).toBe(false);
   });
 
   it('ignores a stored conversation that belongs to another widget', async () => {
@@ -152,6 +204,22 @@ describe('webchat transport', () => {
   it('rejects when the conversation cannot be created', async () => {
     const d = deps({createConversation: vi.fn().mockRejectedValue(new Error('down'))});
     await expect(createWebchatTransport('WIDGET-1', d).ask('Q', () => undefined, signal())).rejects.toThrow('down');
+  });
+});
+
+describe('participantId', () => {
+  it('reads the claim from a base64url payload', () => {
+    // Payload bytes chosen so base64 contains '+' and '/', which base64url writes as '-' and '_'.
+    const json = JSON.stringify({participant_id: 'PARTICIPANT-1', pad: '\u00fb\u00ff\u00fe'});
+    const b64 = btoa(json);
+    expect(b64).toMatch(/[+/]/);
+    const b64url = b64.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+    expect(participantId(`e30.${b64url}.sig`)).toBe('PARTICIPANT-1');
+  });
+
+  it('returns an empty string for a malformed token', () => {
+    expect(participantId('garbage')).toBe('');
+    expect(participantId('a.%%%.c')).toBe('');
   });
 });
 
