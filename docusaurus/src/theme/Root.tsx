@@ -1,6 +1,8 @@
 import React, {useEffect, useRef} from 'react';
 import {useLocation} from '@docusaurus/router';
 import AssistantDrawer from '../components/AiSearch/AssistantDrawer';
+import {WEBCHAT_WIDGET_ID} from '../components/AiSearch/config';
+import {registerWebchatTransport} from '../components/AiSearch/webchatTransport';
 
 declare global {
   interface Window {
@@ -93,6 +95,11 @@ function applyFaqSchema(): boolean {
 export default function Root({children}: {children: React.ReactNode}): React.ReactElement {
   const location = useLocation();
   const previousPathRef = useRef<string>('');
+
+  // Connect the AI assistant drawer to the web chat AI (client only).
+  useEffect(() => {
+    registerWebchatTransport(WEBCHAT_WIDGET_ID);
+  }, []);
 
   // Push pageview event to dataLayer on initial load and on every route change
   useEffect(() => {
