@@ -11,7 +11,7 @@ kb_id: KB-00179
 answer_snippet: "The QuickBooks integration in Partner Center syncs contacts and companies from QuickBooks to the Partner Center CRM, syncs company changes back to QuickBooks, and adds 3 automation triggers. To set it up, go to Administration → Integrations, click the QuickBooks card, and click Add Connection."
 doc_owner: partner-center-core
 review_frequency: 3-months
-last_reviewed: 2026-09-25
+last_reviewed: 2026-10-26
 last_reviewed_by: haleyserrano
 ---
 
@@ -31,9 +31,9 @@ QuickBooks does not store companies as separate records. Partner Center uses the
 You can set up a connection with QuickBooks by navigating to the Integrations page of Partner Center.
 
 - Click `Administration` → `Integrations` to navigate to the Integrations page.
-- Click on the `QuickBooks Integration Card`.
+- Find QuickBooks Online on the Integrations page (use the search box or the Accounting & Finance section) and select it.
 
-<img src={require('./img/integrations/quickbooks/quickbooks_integration_card.jpg').default} alt="QuickBooks Integration Card" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+<img src={require('./img/integrations/quickbooks/quickbooks_integration_card.jpg').default} alt="Partner Center Integrations page with QuickBooks Online listed" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 - You'll be taken to the QuickBooks marketing page, which provides information on what QuickBooks is and the possibilities an integration with QuickBooks provides. Click `Add Connection`.
 
@@ -50,14 +50,12 @@ Click `Continue` after choosing the options that apply.
 <img src={require('./img/integrations/quickbooks/quickbooks_preconnect_form.jpg').default} alt="QuickBooks Pre-Connect Form" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 - This leads to a single sign-on page where you can sign in to your QuickBooks account and provide permissions to establish the connection.
-- Upon successful connection, you'll be automatically redirected to the `Manage` tab on the Integrations page where you can confirm the connection with QuickBooks.
-- The established connection is shown on the `Manage` tab and the marketing page, as shown below:
+- Upon successful connection, you'll be automatically redirected to the Integrations page, where QuickBooks shows as connected.
+- QuickBooks then shows a green check on the Integrations page, and the integration's own page shows the established connection, as shown below:
 
-<img src={require('./img/integrations/quickbooks/quickbooks_connection_manage.jpg').default} alt="QuickBooks Connection on Manage Tab" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+<img src={require('./img/integrations/quickbooks/quickbooks_connection_manage.jpg').default} alt="QuickBooks Online integration page showing a connected account" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-<img src={require('./img/integrations/quickbooks/quickbooks_connection_marketing.jpg').default} alt="QuickBooks Connection on Marketing Page" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
-
-- Clicking either card will bring you to the `Connection Settings` page where you may specify what data to sync or choose to disconnect the integration.
+- Selecting QuickBooks Online on the Integrations page brings you to the `Connection Settings` page where you may specify what data to sync or choose to disconnect the integration.
 
 <img src={require('./img/integrations/quickbooks/quickbooks_connection_settings.jpg').default} alt="QuickBooks Connection Settings" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -74,11 +72,9 @@ You can choose the data that you want to sync between QuickBooks and Partner Cen
 3. Sales Receipt Data
 4. Payment Data
 
-Ensure that there is an active connection with QuickBooks by clicking on the `Manage` tab on the Integrations page and checking for the `QuickBooks Connection` card.
+Ensure that there is an active connection with QuickBooks: QuickBooks Online should show a green check on the Integrations page and should not be listed under **Needs attention**.
 
-<img src={require('./img/integrations/quickbooks/quickbooks_connection_card.jpg').default} alt="QuickBooks Connection Card" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
-
-- Clicking on the `Connection Card` takes you to the `Connection Settings` page. Here, you can specify what data is to be synced.
+- Selecting QuickBooks Online on the Integrations page takes you to the `Connection Settings` page. Here, you can specify what data is to be synced.
 
 <img src={require('./img/integrations/quickbooks/quickbooks_data_settings.jpg').default} alt="QuickBooks Connection Settings Page" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
@@ -129,6 +125,6 @@ Yes. After the initial connection, all QuickBooks contacts sync to the Partner C
 <details>
 <summary>How do I disconnect QuickBooks?</summary>
 
-Go to the `Manage` tab on the Integrations page and click the QuickBooks connection card to open the `Connection Settings` page. From there, you can choose to disconnect the integration.
+Open the QuickBooks integration from the Integrations page to reach `Connection Settings`. From there, you can choose to disconnect the integration.
 
 </details>
