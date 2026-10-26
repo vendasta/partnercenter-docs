@@ -9,6 +9,9 @@ import {
 } from './assistant';
 import {AI_SEARCH_LOCALES} from './config';
 import {renderMarkdown} from './markdown';
+import {InvalidRequestError, RateLimitError} from './webchatClient';
+import {ReplyTimeoutError} from './webchatReply';
+import {MAX_QUESTION_LENGTH} from './webchatTransport';
 import {SparklesIcon} from './Icons';
 import './aiSearch.css';
 
@@ -33,6 +36,20 @@ function saveThread(turns: Turn[]): void {
   } catch {
     // Storage unavailable; the thread lives in memory only.
   }
+}
+
+/** The message shown in the assistant bubble when a question fails. */
+function errorMessage(err: unknown): string {
+  if (err instanceof RateLimitError) {
+    return translate({id: 'aiSearch.assistant.rateLimited', message: 'Too many questions. Wait a minute and try again.'});
+  }
+  if (err instanceof InvalidRequestError) {
+    return translate({id: 'aiSearch.assistant.tooLong', message: 'That question is too long. Shorten it and try again.'});
+  }
+  if (err instanceof ReplyTimeoutError) {
+    return translate({id: 'aiSearch.assistant.timeout', message: "The assistant didn't answer in time. Please try again."});
+  }
+  return translate({id: 'aiSearch.assistant.failed', message: 'Something went wrong. Please try again.'});
 }
 
 /**
@@ -104,20 +121,8 @@ export default function AssistantDrawer(): React.ReactElement | null {
         setTurns((prev) => prev.map((t) => (t.id === replyId ? {...t, done: true} : t)));
       } catch (err) {
         if (!controller.signal.aborted) {
-          setTurns((prev) =>
-            prev.map((t) =>
-              t.id === replyId
-                ? {
-                    ...t,
-                    done: true,
-                    error: translate({
-                      id: 'aiSearch.assistant.failed',
-                      message: 'Something went wrong. Please try again.',
-                    }),
-                  }
-                : t,
-            ),
-          );
+          const error = errorMessage(err);
+          setTurns((prev) => prev.map((t) => (t.id === replyId ? {...t, done: true, error} : t)));
         }
       } finally {
         setBusy(false);
@@ -209,6 +214,7 @@ export default function AssistantDrawer(): React.ReactElement | null {
           ref={inputRef}
           value={draft}
           rows={1}
+          maxLength={MAX_QUESTION_LENGTH}
           onChange={(event) => setDraft(event.target.value)}
           onKeyDown={(event) => {
             if (event.key === 'Enter' && !event.shiftKey) {
