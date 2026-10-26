@@ -162,4 +162,4 @@ L'interface de gestion de la marque affiche un aperçu en direct. Testez les log
 
 ![Aperçu de l'image de marque du partenaire](./img/administration/partner-branding/customize-branding-overview.jpg)
 
-Pour de l'aide sur l'image de marque visuelle, contactez le support à support@vendasta.com.
+Pour de l'aide sur l'image de marque visuelle, ouvrez une demande dans [Demandes d'assistance dans Partner Center](https://partners.vendasta.com/crm/tickets).
