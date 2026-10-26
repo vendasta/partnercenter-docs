@@ -113,11 +113,11 @@ When Vibe is active, sending this email creates a demo website (one per account)
 
 Here is exactly what triggers it. A Vibe site is generated **only when all of the following are true**:
 
-1. **You send the onboarding email.** Vibe generation is the first step of the onboarding-email process — it never happens on its own. Sending the email is the only thing that can start it.
+1. **You send the onboarding email, or the SMB starts the build from Home.** Vibe generation is the first step of the onboarding-email process. An SMB with Vibe active can also start the same build with **Build it for me** on the [Vibe card](#the-vibe-card) on Business App Home. Both paths build the same one-per-account site, so they never produce two. A site is never generated on its own.
 2. **Vibe is active** on the account (any edition, including Free).
 3. **The account has no live Vibe site yet.** One demo site per account:
    - No Vibe project exists → a new site is generated.
-   - A site is already being built (for example, a teammate just triggered one) → the platform waits for that build instead of starting a second.
+   - A site is already being built (for example, a teammate just triggered one, or the SMB started one from Home) → the platform waits for that build instead of starting a second.
    - A published Vibe site already exists → nothing is generated; the email simply links to it.
 
 The email waits for the site to finish building (allow **5–15 minutes** for it to arrive). If the build is slow or fails, **the email is still sent** — it just won't include the website line or preview image. Site generation never blocks the rest of the onboarding email beyond that window.
@@ -128,8 +128,10 @@ You shape this through what's active on the account at invite time: activate Vib
 
 The demo website is built from the business's own information and is set up to capture leads from day one:
 
+- **Branding from the business's website.** When the account has a website on file, the demo site uses it for branding and content. Social profiles aren't used as a source.
+- **An example banner when there's no website.** When the account has no website on file, the site is built as an example of what's possible for the business. A banner across the top says so and invites the SMB to add their business details to make it theirs.
 - **A lead capture form.** Every demo site includes a form that asks visitors for their name, email address (required), and a message. Each submission is saved to the business's CRM as a new contact and shows up as a lead. The form doesn't ask for a phone number.
-- **The business's web chat.** When Conversations AI is active on the account, the site also embeds the account's web chat widget, so visitors can chat with the business's AI receptionist. If Conversations AI is still activating when the build starts, the build waits a few minutes for it so the chat can be included. Activate Conversations AI before inviting and the client's demo site opens with a working web chat.
+- **The business's web chat.** When Conversations AI is active on the account, the site also embeds the account's web chat widget, so visitors can chat with the business's AI receptionist. If Conversations AI is still activating when the build starts, the build waits a few minutes for it so the chat can be included. Activate Conversations AI before inviting and the client's demo site opens with a working web chat. A build the SMB starts from the Vibe card on Home doesn't wait: it includes web chat only if the account's web chat is already set up when the build starts.
 
 ### When the email is sent
 
@@ -142,12 +144,12 @@ Adding a user to an account is what sends the onboarding email. There is no chec
 - From the **Users** panel of Easy Account Create, while you're creating the account itself — see [Creating users in Easy Account Create](#creating-users-in-easy-account-create).
 - From a CSV import — see [Creating accounts in bulk](/accounts/manage-accounts/create-accounts).
 - From the CRM, on a contact or on a company's contact list — see [Sending it from the CRM](#sending-it-from-the-crm).
+- From your own integration, with the Send Onboarding Email API — see [Sending it with the API](#sending-it-with-the-api).
 
 **Places it sends on its own,** whenever a user is created on an account:
 
 - An automation that creates a user — see [Create a user from a contact](/automations/my-automations/create-a-user-from-contact).
 - A client signing themselves up for Business App.
-- A user created through the API, where that user is associated with an account — including an existing user given their first account in your partner through the API.
 - The example account created for your own business when you sign up as a partner. Vibe Free is activated on it, so the onboarding email you receive includes a demo website for your business.
 - A Business App user inviting another user from `Administration` → `Users` in their own Business App.
 
@@ -156,6 +158,24 @@ Users created through single sign-on are not sent the email. When more than one 
 :::info
 Because the email follows user creation everywhere, the volume you send tracks how many users you create — not how often you choose to notify someone. If you're adding a person who shouldn't hear from Business App yet, keep them as a CRM contact and invite them when the time is right.
 :::
+
+### Sending it with the API
+
+If you build your own flows on the Vendasta APIs, you can send the onboarding email to an existing user on your own terms. The send works the same as in Partner Center: a Vibe demo website is generated first when the account is eligible, then the email goes out. See the [Send Onboarding Email API reference](https://developers.vendasta.com/api-reference/vendasta-apis/business-center/user-send-onboarding-email) and the [Create business users guide](https://developers.vendasta.com/guides/crm/create-business-users).
+
+`POST /v1/business-center/users/send-onboarding-email`
+
+- **Authentication:** an OAuth token with any one of the scopes `user`, `user.business`, or `user.admin`.
+- **Required fields:** the user ID (`U-…`) and the account ID (`AG-…`). Your partner is taken from the account, and access is checked against that account's partner. The user must already have access to the account, otherwise the call returns `404`.
+- **Optional fields:** a custom intro (plain text, up to 1,000 characters), and wait for provisioning. Waiting holds the send for up to about 7 minutes while purchased products finish activating, so the email lists them.
+- **Language:** the email uses the user's language.
+- **Asynchronous:** a success response means the send has started, not that the email has been delivered. When a Vibe site is built, delivery can take up to about 17 minutes, or about 24 minutes with wait for provisioning.
+
+Creating a user through the API doesn't send the onboarding email. Call this endpoint as a separate step.
+
+Each user can receive at most 5 onboarding emails at once, then about one more every 4.8 hours (no more than 9 in 24 hours). The limit counts every send, including sends from Partner Center. A request over the limit still returns success (`200`), but no email is sent.
+
+The `GET /platform/users/{id}/actions/sendWelcomeEmail` API sends the set-password email, not the onboarding email.
 
 ### Inviting users with the Invite users panel
 
@@ -281,8 +301,9 @@ Once the AI Chat Receptionist has been named, the **Meet your AI receptionist** 
 
 ### Product upgrade cards
 
-Below the work-done card, a **Recommended for \[business name\]** section surfaces your core AI products so SMBs can add them without leaving Home. Each card leads with a benefit headline:
+Below the work-done card, a **Recommended for \[business name\]** section surfaces Vibe and your core AI products so SMBs can add them without leaving Home. The cards sit three to a row, and each leads with a benefit headline:
 
+- **Vibe** — "Launch your website, dashboard, or app"
 - **Local SEO** — "Get found first when customers search nearby"
 - **Conversations AI** — "Never miss another customer call"
 - **Reputation AI** — "Win more 5-star reviews, reply to every one"
@@ -294,10 +315,23 @@ Each card's button adapts to the account's state:
 |-----------|--------------------|
 | Product available with a self-serve upgrade path | **Get started** — opens the upgrade / checkout flow for that product |
 | Product available, but you route upgrades to your sales team | **Contact us** — opens the contact card in Business App |
-| Product already active (Pro tier or above) | **Open \[product\]** — a link into the product's app |
+| Product already active (Pro tier or above) | **Open** — a link into the product's app |
+| An order for the product is already in progress | **Order submitted.** (no button) |
 | Product provisioning | **Activating. This will only take a few moments.** (no button) |
 | **You've turned the upgrade option off for that product** | The card is not shown |
 | Product not in your catalog, or the account is suspended | The card is not shown |
+
+#### The Vibe card
+
+The Vibe card lets an SMB get a website built without leaving Home. It shows only when the SMB can access the AI tab, and it follows the same upgrade setting as the other cards: turning Vibe's upgrade option off hides the card for every account, including accounts that already have Vibe.
+
+- **Vibe not active** — **Get started** places an order for **Vibe Free**, at no charge, through the standard checkout. While the order is in progress the card shows **Order submitted.**, then **Activating** while Vibe is set up.
+- **Vibe active, no site yet** — **Build it for me** builds a demo website right on the card. This is the same one-per-account build the onboarding email starts, so it never creates a second site. The card narrates the build, and the SMB can leave the page while it runs.
+- **Site ready** — the card shows **Your site is ready!** with a preview and **View your site**, which opens the site in Vibe to edit and publish.
+- **Build failed** — **Your site couldn't be built.** with **Try again**.
+- **The account already has a Vibe project** — **Open**, a link into Vibe.
+
+When an SMB checks out from the Vibe card and returns to Home, the card waits a few minutes for Vibe to activate and then starts the build on its own. If activation takes longer, the card offers **Build it for me** once Vibe is active. See [How is a Vibe website kicked off?](#how-a-vibe-website-is-kicked-off) for what the site includes.
 
 Turning a product's upgrade option off in `Marketplace` → `Manage Products` removes that product's card from Home entirely rather than falling back to a **Contact us** button. This keeps **Contact us** meaningful: it appears only when you've deliberately chosen to route that product's upgrades to your sales team.
 
@@ -305,7 +339,7 @@ Turning a product's upgrade option off in `Marketplace` → `Manage Products` re
 If you haven't configured a product's upgrade settings at all, the upgrade path is treated as **on** and the card shows **Get started**. To suppress a card, turn the upgrade option off explicitly.
 :::
 
-When an SMB completes an upgrade, payment is collected through **Vendasta Payments** if you have it enabled — the SMB enters their card and checks out right from Home. If you don't use Vendasta Payments, the upgrade is sent to you as an **order** to process through your normal flow.
+When an SMB completes an upgrade, payment is collected through **Vendasta Payments** if you have it enabled — the SMB enters their card and checks out right from Home. If you don't use Vendasta Payments, the upgrade is sent to you as an **order** to process through your normal flow. The Vibe card's **Get started** orders Vibe Free, so no payment is collected.
 
 :::tip
 For a full breakdown of how each card decides what to show and how to configure the upgrade path per product, see [Customizing the "Recommended for your business" cards](/business-app/recommended-cards-configuration).
@@ -367,13 +401,13 @@ Only work that was genuinely done for their business. The summary is fully dynam
 <details>
 <summary>How do I control when a Vibe demo site is created?</summary>
 
-Through what's active on the account when you invite. A Vibe site is only ever created as a step of *sending the onboarding email*, and only when Vibe is active on the account and it has no live site yet:
+Through what's active on the account when you invite. A Vibe site is created when you send the onboarding email or when the SMB selects **Build it for me** on the Vibe card on Home, and only when Vibe is active on the account and it has no live site yet:
 
 - **Activate Vibe before inviting** and the client's onboarding email leads with their live demo site.
 - **Invite without Vibe active** and the email sends normally, focused on the rest of the AI's work — no site is built.
 - If the account **already has a published Vibe site**, re-sending the onboarding email is safe — it never creates a second one.
 
-The "AI has done the work" card toggle in Customize Business App controls only whether the card is displayed, not site generation.
+The "AI has done the work" card toggle in Customize Business App controls only whether the card is displayed, not site generation. To keep SMBs from starting a site from Home, turn Vibe's upgrade option off in `Marketplace` → `Manage Products`, or turn off the "Recommended for your business" cards.
 
 </details>
 
@@ -419,7 +453,7 @@ Yes. The name is a starting point, not a fixed setting. The SMB can use the **ch
 <details>
 <summary>What if the business doesn't have a website or Vibe isn't active?</summary>
 
-The summary adapts to what's actually true for the account. Lines that depend on a specific product (the Vibe website, review analysis, local visibility) only appear when that product is active. The website-read line appears whenever a website is on file, and the business-profile line always appears.
+The summary adapts to what's actually true for the account. Lines that depend on a specific product (the Vibe website, review analysis, local visibility) only appear when that product is active. The website-read line appears whenever a website is on file, and the business-profile line always appears. If Vibe is active and there's no website on file, the demo site is built as a labelled example — see [What the demo website includes](#what-the-demo-website-includes).
 
 </details>
 

@@ -4,7 +4,7 @@ sidebar_label: Recommended cards
 sidebar_position: 4
 description: How the product upgrade cards on Business App Home decide what to show, and how to configure each product's upgrade path so the cards drive the outcome you want.
 tags: [business-app, home, upgrades, marketplace, editions, ai]
-keywords: [recommended for your business, upgrade cards, get started, contact us, self-serve upgrade, store packages, contact sales, edition upgrade, Vendasta Payments]
+keywords: [recommended for your business, upgrade cards, get started, contact us, self-serve upgrade, custom package, contact a salesperson, edition upgrade, Vibe, Vibe Free, web chat installation, Vendasta Payments]
 brand: vendasta
 product: business-app-core
 audience: partners
@@ -12,7 +12,7 @@ audience: partners
 
 # Customizing the "Recommended for your business" cards
 
-The **Recommended for \[business name\]** cards on Business App Home let an SMB add your core AI products — Local SEO, Conversations AI, Reputation AI, and Social AI — without leaving Home. They're part of the [AI onboarding experience](/business-app/ai-onboarding-experience).
+The **Recommended for \[business name\]** cards on Business App Home let an SMB add Vibe and your core AI products — Local SEO, Conversations AI, Reputation AI, and Social AI — without leaving Home. They're part of the [AI onboarding experience](/business-app/ai-onboarding-experience).
 
 Each card leads with a benefit headline and a button. **What the button does is driven entirely by your own product setup** — whether you sell the product, whether it's already active, and how you've configured its upgrade path. This page explains how a card decides what to show and how to configure the outcome you want.
 
@@ -26,39 +26,65 @@ Each card leads with a benefit headline and a button. **What the button does is 
 
 ## How a card decides what to show
 
-These cards are designed to move SMBs up to the **Pro (or higher)** edition of a product. A card evaluates your setup for that product and the account's current state, then shows one of the following:
+The core AI product cards are designed to move SMBs up to the **Pro (or higher)** edition of a product. The Vibe card works differently — see [The Vibe card](#the-vibe-card). A card evaluates your setup for that product and the account's current state, then shows one of the following:
 
 | The card shows | When |
 |---|---|
-| **Get started** | You sell the product with an upgrade path clients can complete themselves — either a **self-serve upgrade** or **store packages** to display. Opens the upgrade flow right in Business App. |
-| **Contact us** | You sell the product but route upgrades to your team (**Contact sales**). Opens the contact card in Business App instead of a checkout. |
-| **Open \[product\]** | The product is already active at **Pro or higher**. The card becomes a link straight into the product. |
+| **Get started** | You sell the product with an upgrade path clients can complete themselves — either a **Self-serve upgrade** or **Upgrade with a custom package**. Opens the upgrade flow right in Business App. |
+| **Contact us** | You sell the product but route upgrades to your team (**Contact a salesperson**). Opens the contact card in Business App instead of a checkout. |
+| **Open** | The product is already active at **Pro or higher**. The card becomes a link straight into the product. |
+| **Order submitted.** | The account already has an order in progress for the product — submitted, awaiting the client's approval, scheduled, or being processed. No button appears. |
 | **Activating. This will only take a few moments.** | The product is mid-provisioning. No button appears until it finishes. |
 | *(the card is hidden)* | You've turned the product's **Upgrade** option off, you don't sell the product, or the account is suspended. |
 
 In short: **if you sell the product and have an upgrade turned on, the card shows.** If the SMB is on a Pro/Premium edition already, the card links them into the product. If they're on Standard or have no active edition, the card invites the upgrade with **Get started** or **Contact us**, depending on how you've set the product up.
 
 :::info
-Turning a product's **Upgrade** option off hides its card completely — it does not fall back to **Contact us**. If you want the product to stay visible with a sales-led path, leave **Upgrade** on and choose **Contact sales** instead.
+Turning a product's **Upgrade** option off hides its card completely — it does not fall back to **Contact us**. If you want the product to stay visible with a sales-led path, leave **Upgrade** on and choose **Contact a salesperson** instead.
 
 A product whose upgrade settings you've never configured is treated as upgradeable, so its card shows **Get started**. Suppressing a card takes an explicit change.
 :::
+
+### The Vibe card
+
+The Vibe card comes first in the row. Instead of moving the SMB up an edition, it gets them a website built from Home. It shows when you sell Vibe, the account isn't suspended, the SMB can access the AI tab, and Vibe's **Upgrade** option is on.
+
+| The card shows | When |
+|---|---|
+| **Get started** | Vibe isn't active on the account. Selecting it places an order for **Vibe Free**, at no charge, through the standard checkout. |
+| **Contact us** | Vibe isn't active and you route its upgrades to your team (**Contact a salesperson**). |
+| **Order submitted.**, then **Activating** | The Vibe Free order is in progress, then Vibe is being set up. |
+| **Build it for me** | Vibe is active and the account has no Vibe site yet. Builds the same one-per-account demo site the onboarding email creates, with live progress on the card. |
+| **Your site is ready!** with **View your site** | The build finished. Opens the site in Vibe to edit and publish. |
+| **Your site couldn't be built.** with **Try again** | The build failed. |
+| **Open** | The account already has a Vibe project. |
+| *(the card is hidden)* | You've turned Vibe's **Upgrade** option off — this hides the card even on accounts that already have Vibe — or you don't sell Vibe, or the SMB can't access the AI tab. |
+
+For what the demo site contains, see [How is a Vibe website kicked off?](/business-app/ai-onboarding-experience#how-a-vibe-website-is-kicked-off).
 
 ## Configuring the upgrade path for each product
 
 You control the button by configuring each product's upgrade path in Partner Center. The same setup that governs how clients buy and upgrade elsewhere is what these cards follow — there's nothing separate to configure for the cards themselves.
 
-Go to `Partner Center` → `Marketplace` → `Manage Products` and open the product (Local SEO, Conversations AI, Reputation AI, or Social AI). In the product's settings, choose how a client can move up an edition:
+Go to `Partner Center` → `Marketplace` → `Manage Products` and open the product (Vibe, Local SEO, Conversations AI, Reputation AI, or Social AI). In the product's settings, choose how a client can move up an edition:
 
 - **Self-serve upgrade** — the client completes the upgrade themselves. The card shows **Get started**.
-- **Store packages** — you surface your store packages for the client to choose from. The card shows **Get started** and opens those options.
-- **Contact sales** — the upgrade is handled by your team. The card shows **Contact us**, which opens the contact card in Business App.
+- **Upgrade with a custom package** — you choose a package for the client to upgrade to. The card shows **Get started** and opens that package.
+- **Contact a salesperson** — the upgrade is handled by your team. The card shows **Contact us**, which opens the contact card in Business App.
 
 You can also turn the product's **Upgrade** option **off** entirely. The card for that product then disappears from Home rather than showing a **Contact us** fallback — use this when you don't want the product promoted on Home at all.
 
 :::tip
-Want the cards to drive self-serve revenue? Configure your core products for a **self-serve upgrade** (or store packages) so the cards show **Get started** rather than **Contact us**.
+Want the cards to drive self-serve revenue? Configure your core products for a **Self-serve upgrade** (or a custom package) so the cards show **Get started** rather than **Contact us**.
 :::
+
+### The Web Chat installation card follows the same setting
+
+Conversations AI's upgrade setting also drives the **Installation** card on the SMB's Web Chat configuration page in Business App. That card appears in place of the installation code when Conversations AI isn't active, with the line *Upgrade to get AI Web Chat on your website*. Its button follows the same rules as the Home card:
+
+- **Self-serve upgrade**, **Upgrade with a custom package**, or never configured — **Get started**, which opens the upgrade flow.
+- **Contact a salesperson** — **Contact us**, which opens the contact card in Business App.
+- **Upgrade** turned off — **View product**, which opens the product's page in the Store.
 
 ### How the client completes an upgrade
 
@@ -66,6 +92,8 @@ When the card shows **Get started**, the upgrade follows your existing commerce 
 
 - **If you use Vendasta Payments**, the client enters their card and **buys the upgrade** right from Home.
 - **If you don't use Vendasta Payments**, the upgrade is submitted to you as an **order** to process through your normal flow.
+
+The Vibe card's **Get started** orders Vibe Free, so no payment is collected.
 
 For how an edition upgrade is billed (including proration on Vendasta's own products), see [Edition changes and proration](/marketplace/products/edition-changes).
 

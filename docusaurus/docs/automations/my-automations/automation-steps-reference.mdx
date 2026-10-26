@@ -90,19 +90,19 @@ Steps marked **(draft)** are in development and may change or be removed before 
 
 | Step | Overview | Special Cases | Example Use Cases |
 | --- | --- | --- | --- |
-| Start a campaign for the company | Enrolls all contacts associated with a company in a specified email campaign. | Available on company-scoped triggers. A campaign can only be sent to each company once. | When a contact is added to the **Enterprise Prospects** list, start a targeted campaign on the associated company. |
+| Start a campaign for the company | Enrolls all contacts associated with a company in a specified email campaign. Campaign performance stats appear in `Campaigns` alongside your other campaign metrics. | Available on company-scoped triggers. A campaign can only be sent to each company once. | When a contact is added to the **Enterprise Prospects** list, start a targeted campaign on the associated company. |
 | Pause campaign for company | Pauses an ongoing campaign for the company. Acts on all associated contacts (up to 50). | Available on company-scoped triggers. If an associated contact isn't on the campaign, it's treated as an error and the failed contacts appear in the activity. | When a company schedules a meeting with a salesperson, pause the outreach campaign. |
-| Send a marketing email to a company | Sends a one-off marketing email to the company's contacts. | Available on company-scoped triggers. | |
+| Send a marketing email to a company | Sends a one-off marketing email to the company's contacts. Performance stats appear only within the automation step itself, not in `Campaigns`. | Available on company-scoped triggers. | |
 | Copy email template to another company | Copies an email template from the source company to another company. | Available on company-scoped triggers. | |
 
 ### Contact-level
 
 | Step | Overview | Special Cases | Example Use Cases |
 | --- | --- | --- | --- |
-| Start a campaign for the contact | Enrolls a contact in a specified email campaign. | Available on contact-scoped triggers. | When a contact is created, enroll them in the standard welcome campaign. |
+| Start a campaign for the contact | Enrolls a contact in a specified email campaign. Campaign performance stats appear in `Campaigns` alongside your other campaign metrics. | Available on contact-scoped triggers. | When a contact is created, enroll them in the standard welcome campaign. |
 | Pause campaign for contact | Pauses an ongoing email campaign for the contact. | Available on contact-scoped triggers. If the campaign is already paused, nothing happens. | When a contact schedules a meeting with a salesperson, pause the outreach campaign. |
 | Start a Yesware campaign for the contact | Enrolls a contact in a Yesware email sequence. | Available on contact-scoped triggers. | When a contact is qualified as a Lead, enroll them in the sales Yesware sequence. |
-| Send a marketing email to a contact | Sends a one-off marketing email to the contact. | Available on contact-scoped triggers. | |
+| Send a marketing email to a contact | Sends a one-off marketing email to the contact. Performance stats appear only within the automation step itself, not in `Campaigns`. | Available on contact-scoped triggers. | |
 | Send a plain text email via Gmail | Sends a plain-text email from your connected Gmail account to the contact. | Available on contact-scoped triggers. Requires a connected Gmail account. | |
 | Send a plain text email via Outlook | Sends a plain-text email from your connected Outlook account to the contact. | Available on contact-scoped triggers. Requires a connected Outlook account. | |
 

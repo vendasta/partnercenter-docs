@@ -122,7 +122,7 @@ Teach your Custom AI Employee about your business:
 - FAQs specific to the AI Employee's role
 - Any business-specific information relevant to their function
 
-For guidance on knowledge sources, see the [Knowledge Base documentation](../knowledge-base/).
+For guidance on knowledge sources, see the [Knowledge Base documentation](/ai/knowledge-base/).
 
 ### Step 5: configure capabilities
 
@@ -140,7 +140,7 @@ Define what your Custom AI Employee can do:
 - Connect to external APIs and systems
 - Define custom workflows and processes
 
-For detailed information on creating custom capabilities, see [Creating Custom Capabilities](../ai-capabilities/creating-custom-capabilities.md).
+For detailed information on creating custom capabilities, see [Creating Custom Capabilities](/ai/ai-capabilities/creating-custom-capabilities/).
 
 ### Step 6: deploy your Custom AI Employee
 
@@ -160,7 +160,7 @@ Assign your Custom AI Employee to a web chat widget so it handles conversations 
 3. In the `AI employee` card, click `Select employee`, choose your Custom AI Employee, and click `Ok`.
 4. Click `Next` to save, then install the widget on your site.
 
-Requires Conversations AI Standard, Pro, or Premium. See [Web Chat Setup](../../conversations/ai-assisted-web-chat-widget.mdx) for details.
+Requires Conversations AI Standard, Pro, or Premium. See [Web Chat Setup](/conversations/ai-assisted-web-chat-widget/) for details.
 
 **Automations:**
 
@@ -232,6 +232,8 @@ Keep customers and your team members informed by sending regular updates based o
 
 Your Custom AI Employee is automatically available in the AI Workforce tab after creation. Team members can chat directly with the AI Employee for internal assistance and decision support.
 
+You can attach a CSV file of up to 10 MB in chat and ask the AI Employee about it, for example which leads are in a particular region or how many customers are on each plan. The AI Employee reads up to several hundred rows, depending on how wide the rows are, so a longer file is only partly read. Calculations across many rows can come out wrong, so check any totals that matter.
+
 **Benefits:**
 
 - No additional setup required
@@ -248,7 +250,7 @@ Assign your Custom AI Employee to a web chat widget to provide specialized chat 
 - Interactive knowledge navigation for website visitors
 - Lead capture and resource discovery
 
-For setup instructions, see [Web Chat Setup](../../conversations/ai-assisted-web-chat-widget.mdx).
+For setup instructions, see [Web Chat Setup](/conversations/ai-assisted-web-chat-widget/).
 
 ### Automations
 

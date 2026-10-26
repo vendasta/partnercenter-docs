@@ -65,6 +65,13 @@ Paste any public URL into Vibe and it will scaffold a new application inspired b
 ### Integrations
 Vibe connects to Vendasta platform services including Forms, analytics, authentication, and CRM. You can build applications that embed contact forms, surface live contacts and pipeline data, gate content behind sign-in, and more, all platform-native, already connected to your instance with no manual embed or configuration step.
 
+Vibe's built-in forms and CRM connection send leads to the CRM in Business App. To send leads from a site you build in Vibe, such as your own agency website, to your Partner Center CRM instead:
+
+1. In the Vibe project, go to `Settings` → `Connectors` and make sure the CRM connector is turned off.
+2. In Partner Center, build a form in `Marketing` → `Forms`, select `Embed`, and copy the code. Paste it into the Vibe chat and ask Vibe to add the form to your site. See [Create a form](/marketing/forms/create-a-form).
+3. To add web chat, copy the installation code of your Partner Center web chat widget and give it to Vibe the same way. See [AI web chat widget](/conversations/ai-assisted-web-chat-widget).
+4. Submit a test lead, then check `CRM` → `Contacts` in Partner Center, filtered by record source.
+
 ### AI image generation
 Generate custom images directly within the application using Gemini. Describe the image you want, and Vibe creates and embeds it in the project.
 
@@ -106,6 +113,15 @@ Every one of these is open source. On the Pro plan, the complete source of a pro
 <summary>How do I delete a project in Vibe?</summary>
 
 Open the project, go to the `Settings` tab, and scroll to the bottom of the page. Select `Delete Project`. Deleting a project frees a slot if you have hit your plan's app limit.
+
+Deleting a project, or the account that owns it, archives the project. You can restore it from the `Archived` page within 30 days. The site's address is held for the project during that time. Custom domains must be added again after a restore.
+
+</details>
+
+<details>
+<summary>Can I restore a deleted Vibe project?</summary>
+
+Yes, within 30 days. Deleting a project, or the account that owns it, archives the project instead of erasing it. Restore it from the `Archived` page. The site's address is held for the project for those 30 days. After a restore, add any custom domains again.
 
 </details>
 

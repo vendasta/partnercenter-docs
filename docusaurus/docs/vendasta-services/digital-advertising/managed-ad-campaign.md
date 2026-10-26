@@ -103,7 +103,7 @@ Campaigns perform meaningfully better with assets supplied at order time:
 
 ## Getting Started
 
-1. **Create the ad plan.** Go to `Partner Center` → `Ads` → `Ad plans` → `Create new plan`, choose the network, and let Vendasta Ads generate the ad copy, keywords, targeting, and budget options. Share the proposal with your client and order once it's approved. See [Creating an ad plan](./vendasta-ads-partner-center.md#creating-an-ad-plan) for the full walkthrough.
+1. **Create the ad plan.** Go to `Partner Center` → `Ads` → `Ad plans` → `Create new plan`, choose the network, and let Vendasta Ads generate the ad copy, keywords, targeting, and budget options. Share the proposal with your client and order once it's approved. See [Creating an ad plan](/ads/#creating-an-ad-plan) for the full walkthrough.
 2. **Place the order** for the account in Partner Center through the Ads tab, confirming the network, monthly media spend, reseller margin, and whether call tracking is included. Review the pricing breakdown before submitting.
 3. **Campaign build and launch — same day.** Vendasta Services builds and sets the campaign live the same business day the order is placed.
 4. **Call tracking setup — within 2 business days,** if included on the order.
@@ -133,6 +133,7 @@ The campaign continues to run at the same monthly budget, with ongoing optimizat
 * **No manual A/B testing:** We don't set up manual variant tests. Optimization relies on Google's and Meta's built-in engines, which continuously test the creative assets we supply and steer spend toward the best-performing combinations.
 * **Regional availability:** Only available for businesses located in the United States and Canada. There is no exception process — businesses outside those two countries are served by [Specialty Ad Campaign](./specialty-ad-campaign.md).
 * **Not white-labeled:** Our team does not work directly with your clients. Reach out to your business representative for more information.
+* **No one-time Boost add-on:** Managed Ad Campaign doesn't support the one-time Boost add-on, and it can't be added to an existing Managed Ad Campaign order. To change the monthly budget, use `Request a Spend Change` (see [Making changes to a live campaign](#making-changes-to-a-live-campaign)).
 
 ## FAQ
 

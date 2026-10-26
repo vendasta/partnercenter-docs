@@ -114,7 +114,7 @@ Consider the prompt as instructions for when you hire an employee. Be specific a
 4. Add multiple tools if your capability requires several API calls.
 
 :::tip Detailed Tool Building Guide
-For comprehensive step-by-step instructions on finding API documentation, using cURL import, working with AI assistants, and testing tools, see [Building Custom Tools](./tools-overview/building-custom-tools).
+For comprehensive step-by-step instructions on finding API documentation, using cURL import, working with AI assistants, and testing tools, see [Building Custom Tools](/ai/ai-capabilities/tools-overview/building-custom-tools/).
 :::
 
 ### Step 5: test and refine

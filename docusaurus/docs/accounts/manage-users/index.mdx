@@ -136,7 +136,9 @@ In the `Invite users` panel, typing an existing user's email is how you add that
 <details>
 <summary>How do users set their passwords after I create their accounts?</summary>
 
-Invited users receive an [onboarding email](/business-app/ai-onboarding-experience) (or the classic welcome email, if you selected that instead) with a secure link. The link takes them to a page where they set their own password and continue into Business App.
+Invited users receive an [onboarding email](/business-app/ai-onboarding-experience) with a secure link. The link takes them to a page where they set their own password and continue into Business App.
+
+Each set-password link works once. If a user opens a link that has already been used, or one replaced by a more recent email, the page tells them the link has expired. They can request a password reset from the login page, or you can send a fresh email from the options menu (⋮) next to the user.
 </details>
 
 <details>
@@ -178,7 +180,7 @@ Yes. When a user is added or removed from an account, it is logged in the CRM ac
 <details>
 <summary>How do I add a client user and set their permissions before they get any email?</summary>
 
-Do not use "Invite users" on the account, because that sends the onboarding email right away. Instead go to `Accounts` → `Manage Users` → `Create user`, enter the email (the only required field), and **uncheck the send password / onboarding email option**. Add the account with `Add account`, expand it, and toggle permissions (for example turn off User management, CRM, Files, Projects, Invoices, Orders). When ready, click the three dots next to the user on the account page and send either the **set password email** or the **onboarding email**. To check what the client sees, use `Impersonate` from the user's three-dot menu rather than "Open in Business App" as admin.
+Set their permissions as part of the invite. Adding a user to an account sends the onboarding email right away, and there is no checkbox to hold it back, so choose permissions before you invite rather than after: in the `Invite users` panel, select the user under `Customize users` and choose their `Permissions` (for example turn off User management, CRM, Files, Projects, Invoices, Orders) before you click `Invite [count] users`. If the person isn't ready to hear from Business App yet, keep them as a contact in the CRM and invite them when the time is right. To check what the client sees, use `Impersonate` from the user's three-dot menu rather than "Open in Business App" as admin.
 
 </details>
 

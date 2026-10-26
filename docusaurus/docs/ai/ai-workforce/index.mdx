@@ -193,10 +193,38 @@ The more up-to-date and specific your knowledge sources, the more helpful and ac
 
 ---
 
-### Save & test
+### Jobs to be done
+
+Jobs to be done show whether your receptionist is doing the work you expect of it. They appear on the AI Chat Receptionist and AI Voice Receptionist, not on custom AI Employees.
+
+- **Standard jobs:** Every receptionist has three standard jobs: answering questions, capturing leads, and handling customers who report wrong business information. Each standard job has one fixed target.
+- **Your own jobs:** Add jobs specific to the business, such as answering questions about deals and promotions, and set the target for each one.
+- **Results:** Each job shows `On target` or `Below target`, scored on a daily sample of real conversations from the last 30 days.
+
+---
+
+### Guardrails
+
+Guardrails are rules on what your AI Employee replies with and what it accepts from customers. You can set:
+
+- Length limits
+- Hiding or blocking phone numbers and email addresses
+- Blocked words
+- A safety check
+- A custom rule written in plain language
+
+Guardrails apply to chat. Voice AI Employees don't support them.
+
+---
+
+### Save and version history
 
 - **Save your configuration:**  
-  Don't forget to save changes before leaving the page!
+  One `Save` button saves and publishes your changes.
+- **Go back to earlier settings:**  
+  Each saved version is kept in version history. Click `Restore previous settings` to open the version history and go back to an earlier version.
+- **Edit with AI:**  
+  Describe the change you want in plain language. The AI proposes the edit, you review it, then save. {/* verify label in product */}
 - **Test your AI:**  
   Most AI Employees let you simulate conversations or actions, so you can preview how they'll interact with real customers.
 
@@ -354,5 +382,12 @@ Yes. Add channel-specific instructions to the `Role` field or to a capability's 
 <summary>How long does it take for role and capability changes to take effect in the AI chat?</summary>
 
 Save and publish your changes first. They apply only to new chat sessions, so start a new chat to test them. An existing conversation can nudge the AI toward its old answers.
+
+</details>
+
+<details>
+<summary>Can I attach a CSV file in an AI Employee chat?</summary>
+
+Yes. In platform chat, attach a CSV file of up to 10 MB and ask the AI Employee about it, for example which leads are in a particular region or how many customers are on each plan. The AI Employee reads up to several hundred rows, depending on how wide the rows are, so a longer file is only partly read. Calculations across many rows can come out wrong, so check any totals that matter.
 
 </details>

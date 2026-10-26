@@ -54,6 +54,8 @@ Customers can keep calling your existing business number and your telephone prov
    - Forwarding calls to your Conversations number after a certain number of rings
    - Forwarding calls automatically after-hours
 
+   When a call is forwarded, Conversations and the CRM show the original caller's phone number, not your forwarding number.
+
 :::tip
 For more help forwarding calls, see [Call Forwarding Setup in Conversations](/business-app/conversations/).
 :::
@@ -98,7 +100,11 @@ To get started, go to <AISparkleIcon /> `AI` → `Workforce` and click `Configur
 
 #### Set your AI Voice Receptionist's name and image
 
-Give your AI Voice Receptionist a friendly, professional name and upload a photo or icon. Your Voice Receptionist will use this name when speaking to callers, and the photo helps you quickly identify it among your other AI Employees in the app. 
+Give your AI Voice Receptionist a friendly, professional name and upload a photo or icon. Your Voice Receptionist will use this name when speaking to callers, and the photo helps you quickly identify it among your other AI Employees in the app.
+
+:::tip
+If you change the name later, also check your receptionist's instructions (including any scripted greetings or protocol sections) for the old name and update it there. The AI follows exact scripted wording over other settings, so a leftover name in a script is what callers hear.
+:::
 
 #### Choose your AI Voice Receptionist's voice
 
@@ -174,7 +180,7 @@ Some examples of instructions you might want to add include:
 You can extend your AI Voice Receptionist's capabilities by building your own custom capabilities. By adding your own "Tools" to custom capabilities, you can give your AI Voice Receptionist the ability to perform tasks that are specific to your business and build connections with other software you use.
 
 :::info Learn more about custom capabilities
-For more details on creating custom capabilities, see [Creating Custom Capabilities](../ai-capabilities/creating-custom-capabilities).
+For more details on creating custom capabilities, see [Creating Custom Capabilities](/ai/ai-capabilities/creating-custom-capabilities/).
 :::
 
 #### Transfer calls to other numbers from your AI Voice Receptionist
@@ -342,7 +348,7 @@ For more details, see the [Knowledge Base Overview](../knowledge-base/index.md).
 
 Absolutely! You can extend your AI Voice Receptionist's capabilities by creating custom tools and integrations specific to your business needs. This allows your AI to perform tasks like checking inventory, scheduling specific services, or connecting with other software you use.
 
-For detailed guidance on creating custom capabilities, see [Creating Custom Capabilities](../ai-capabilities/creating-custom-capabilities).
+For detailed guidance on creating custom capabilities, see [Creating Custom Capabilities](/ai/ai-capabilities/creating-custom-capabilities/).
 
 </details>
 
