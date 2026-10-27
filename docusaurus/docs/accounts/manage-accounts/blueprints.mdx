@@ -23,7 +23,7 @@ A blueprint captures the configuration of a source account as a set of component
 - Forms
 - CRM custom fields, custom objects, and field layouts
 - Pipelines
-- Campaigns, email templates, and review request templates
+- Campaigns, email templates, and reputation templates
 - Promotions
 - Automations
 - Lists
@@ -34,10 +34,10 @@ Default capabilities that come with every AI employee are not listed as componen
 
 Go to `Partner Center` → `Blueprints` to see the blueprints your partner account owns. Two tabs are available:
 
-- **My Blueprints**: the blueprints your account has created. This tab always shows the list view, and your place in the list is kept as you page through it.
-- **Blueprint Templates**: blueprints made available across accounts. You can switch between list and card view here; your choice is kept while you stay on this tab, and the view resets to the default the next time you visit. The list view shows each blueprint's version as a badge (for example, `v1`, `v2`).
+- **My Blueprints**: the blueprints your account has created or added. This tab always shows the list view, and your place in the list is kept as you page through it.
+- **Blueprint Templates**: Vendasta-curated, ready-to-use blueprints designed for specific industries and use cases. You can switch between list and card view here; your choice is kept while you stay on this tab, and the view resets to the default the next time you visit. The list view shows each blueprint's version as a badge (for example, `v1`, `v2`).
 
-Only Vendasta can mark a blueprint's configuration as a Blueprint Template, publish or unpublish a Blueprint Template, or update a Blueprint Template's configuration. This option isn't available on the blueprints your account creates.
+Blueprint Templates are maintained by Vendasta. To use one, you must first add it to your blueprints by clicking `Add to my blueprints` on the Blueprint Template's page. Once added, it appears in the `My Blueprints` tab and can be applied to accounts.
 
 Filter the list by tag from the sidebar. The list shows each blueprint's name, the version being deployed, its source account, what it contains, and the date it was created.
 
@@ -47,10 +47,25 @@ Filter the list by tag from the sidebar. The list shows each blueprint's name, t
 
 1. Click `Create blueprint`.
 2. In the dialog that opens, choose whether to start from a Blueprint Template or create the blueprint from scratch.
-3. Later in the flow, choose an account. Partner Center scans it for everything that can be captured, and you select the **components** to include based on that account.
-4. Save. Creating a blueprint takes a moment while the account is captured.
+3. Later in the flow, choose an account. Partner Center scans it for everything that can be included, and you select the **components** to include based on that account.
+4. Save. Creating a blueprint takes a moment while the account is scanned.
 
 A blueprint also carries a **description** of what it sets up, up to 500 characters, and up to 10 **tags** of 50 characters each for filtering the list.
+
+## Before you apply a Blueprint Template
+
+Blueprint Templates require the following products to be active on the target account:
+
+- **Campaigns Pro**
+- **Reputation AI**
+- **CRM AI**
+- **Conversations AI – Embedded** (or another Inbox product with AI)
+
+If any of these products are missing, the apply will fail.
+
+:::warning Custom object limit
+Most Blueprint Templates add 3 CRM custom objects to an account. Each account can hold a maximum of 3 [CRM custom objects](/crm/custom-objects) total. If the target account already has custom objects, applying a Blueprint Template may fail. Remove existing custom objects before applying the template, or choose accounts that don't already have custom objects configured.
+:::
 
 ## Apply a blueprint
 
@@ -183,7 +198,7 @@ Error detail is recorded going forward from the release of this feature. Applies
 | This account has reached the maximum of 3 custom object types. Remove one before deploying another. | Each account can have up to 3 [CRM custom objects](/crm/custom-objects). Remove one on the target account, then retry. |
 | Campaign updates are not yet supported. | Expected on any re-apply to an account that already has that campaign. See [Campaigns are created once, never updated](#campaigns-are-created-once-never-updated). |
 | Automation was created but could not be activated. | The automation landed on the account but is `Inactive`. Turn it on from the account's automations list. |
-| Failed to copy promotion images to target namespace. | A promotion image could not be copied. Retry the apply, and contact support if it persists. |
+| Failed to copy promotion images to target account. | A promotion image could not be copied. Retry the apply, and contact support if it persists. |
 
 ## Campaigns are created once, never updated
 
