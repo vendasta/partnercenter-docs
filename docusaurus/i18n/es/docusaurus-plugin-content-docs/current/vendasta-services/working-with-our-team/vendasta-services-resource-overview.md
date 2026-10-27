@@ -25,8 +25,7 @@ Este artículo proporciona una descripción general de los equipos y recursos de
     * **Correo electrónico:** onboarding@vendasta.com
 
 * **Support on Demand (solo para partners):** para preguntas sobre la plataforma de Vendasta, incluidos Partner Center, Business App, y Social AI.
-    * **Correo electrónico:** support@vendasta.com
-    * **Enviar un ticket:** contacta al soporte a través de Partner Center o por correo electrónico
+    * **Enviar un ticket:** abre una solicitud en [Solicitudes de soporte en Partner Center](https://partners.vendasta.com/crm/tickets)
 
 ---
 

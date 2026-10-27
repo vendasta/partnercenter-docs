@@ -118,5 +118,5 @@ Usa la barra de búsqueda en la parte superior de la página de Precios para fil
 </details>
 
 :::tip ¿Más preguntas sobre precios?
-Si tienes otras preguntas sobre precios o necesitas ayuda para entender tus costos mayoristas, contacta a [support@vendasta.com](mailto:support@vendasta.com) o escribe a billingsupport@vendasta.com. Para saber qué incluir en una solicitud, consulta [Práctica recomendada: Enviar un ticket de soporte](../../../getting-started/partner-troubleshooting-guide.mdx#best-practice-submitting-a-support-ticket).
+Si tienes otras preguntas sobre precios o necesitas ayuda para entender tus costos mayoristas, abre una solicitud en [Solicitudes de soporte en Partner Center](https://partners.vendasta.com/crm/tickets) o escribe a billingsupport@vendasta.com. Para saber qué incluir en una solicitud, consulta [Práctica recomendada: Enviar un ticket de soporte](/es/getting-started/partner-troubleshooting-guide/#best-practice-submitting-a-support-ticket).
 :::

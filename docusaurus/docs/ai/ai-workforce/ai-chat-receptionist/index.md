@@ -153,7 +153,7 @@ With multi-service booking enabled, the AI can:
 - Send one consolidated confirmation flow (email, SMS, or both based on requirements) and create one CRM activity for the multi-service booking
 
 - `Custom Capabilities`
-  Expand your AI Chat Receptionist's skills by adding custom capabilities tailored to your unique business needs. You can learn more about [Custom Capabilities](../../ai-capabilities/creating-custom-capabilities.md) in depth.
+  Expand your AI Chat Receptionist's skills by adding custom capabilities tailored to your unique business needs. You can learn more about [Custom Capabilities](/ai/ai-capabilities/creating-custom-capabilities/) in depth.
 
 ### Step 3: Add role and business knowledge to the AI Chat Receptionist
 
@@ -170,7 +170,7 @@ When a visitor chats through the Web Chat widget, the AI Chat Receptionist recei
 This works automatically. No configuration is required for the AI to receive the URL. To get the most out of it, make sure the relevant pages of the SMB's website are in the AI's knowledge base, and consider tuning the `Role` or a capability prompt to tell the AI how to interpret the URL pattern for that business.
 
 :::info The AI sees the URL, not the page content
-The AI is only given the URL string itself, not a rendered view of the page. To answer detailed questions about what's on a page, the AI needs that page's content in its knowledge base, or a [custom capability](../../ai-capabilities/creating-custom-capabilities.md) that can look up the data (for example, an inventory lookup tool keyed off the URL).
+The AI is only given the URL string itself, not a rendered view of the page. To answer detailed questions about what's on a page, the AI needs that page's content in its knowledge base, or a [custom capability](/ai/ai-capabilities/creating-custom-capabilities/) that can look up the data (for example, an inventory lookup tool keyed off the URL).
 :::
 
 ### Tune a prompt to use the current URL
@@ -200,7 +200,7 @@ When the customer is on a non-inventory page (homepage, /financing, /about, cont
 Customer words always override the URL. If they explicitly reference a different stock number, VIN, or year/make/model than what's on their current page, follow what they said and ignore the URL.
 ```
 
-The same pattern works for any business with structured URLs: e-commerce product pages, service pages, real estate listings, menu items, and so on. Pair this with a [custom capability](../../ai-capabilities/creating-custom-capabilities.md) that looks up live data using the ID parsed from the URL.
+The same pattern works for any business with structured URLs: e-commerce product pages, service pages, real estate listings, menu items, and so on. Pair this with a [custom capability](/ai/ai-capabilities/creating-custom-capabilities/) that looks up live data using the ID parsed from the URL.
 
 :::note Web Chat only
 The visitor's current URL is provided on the Web Chat channel. Other channels (SMS, voice, email) don't have a "current page" concept, so this context isn't available there.

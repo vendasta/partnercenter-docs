@@ -17,7 +17,7 @@ Solicitar productos de Vendasta Services es igual que [solicitar cualquier produ
 6.  Haz clic en `Next`
 7.  Haz clic en `Review and Purchase`
 
-Después de completar la compra, se te presentará un [formulario de cumplimiento](./important-completing-fulfillment-forms). Este formulario contiene los detalles necesarios que se deben completar para que los equipos de Vendasta Services puedan completar exitosamente el trabajo que se ha comprado.
+Después de completar la compra, se te presentará un [formulario de cumplimiento](/es/vendasta-services/using-the-platform/important-completing-fulfillment-forms/). Este formulario contiene los detalles necesarios que se deben completar para que los equipos de Vendasta Services puedan completar exitosamente el trabajo que se ha comprado.
 
 ## Solicitar: servicios de sitios web
 

@@ -56,6 +56,8 @@ Customers can keep calling your existing business number and your telephone prov
 
    When a call is forwarded, Conversations and the CRM show the original caller's phone number, not your forwarding number.
 
+   Call forwarding is set up with the phone carrier, outside Conversations, so canceling Conversations AI doesn't turn it off and no reminder is sent. Before you cancel, turn off forwarding with the carrier so calls to the business line aren't still forwarded.
+
 :::tip
 For more help forwarding calls, see [Call Forwarding Setup in Conversations](/business-app/conversations/).
 :::
@@ -180,7 +182,7 @@ Some examples of instructions you might want to add include:
 You can extend your AI Voice Receptionist's capabilities by building your own custom capabilities. By adding your own "Tools" to custom capabilities, you can give your AI Voice Receptionist the ability to perform tasks that are specific to your business and build connections with other software you use.
 
 :::info Learn more about custom capabilities
-For more details on creating custom capabilities, see [Creating Custom Capabilities](../ai-capabilities/creating-custom-capabilities).
+For more details on creating custom capabilities, see [Creating Custom Capabilities](/ai/ai-capabilities/creating-custom-capabilities/).
 :::
 
 #### Transfer calls to other numbers from your AI Voice Receptionist
@@ -348,7 +350,7 @@ For more details, see the [Knowledge Base Overview](../knowledge-base/index.md).
 
 Absolutely! You can extend your AI Voice Receptionist's capabilities by creating custom tools and integrations specific to your business needs. This allows your AI to perform tasks like checking inventory, scheduling specific services, or connecting with other software you use.
 
-For detailed guidance on creating custom capabilities, see [Creating Custom Capabilities](../ai-capabilities/creating-custom-capabilities).
+For detailed guidance on creating custom capabilities, see [Creating Custom Capabilities](/ai/ai-capabilities/creating-custom-capabilities/).
 
 </details>
 

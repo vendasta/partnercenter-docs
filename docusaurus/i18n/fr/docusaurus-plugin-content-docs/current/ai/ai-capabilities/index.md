@@ -29,7 +29,7 @@ La plateforme Vendasta fournit des capacités préconfigurées pour les fonction
 
 - **Lead Capture** : collecte et qualifie automatiquement les informations de prospect (nom, e-mail, téléphone, budget).
 - **Appointment Booking** : planifie des rendez-vous en utilisant vos systèmes de calendrier connectés.
-- **Transfer Call** : transfère en direct les appelants vers d'autres numéros en fonction de l'intention et des règles. Consultez [Transférer les appels vers d'autres numéros](../ai-workforce/ai-voice-receptionist.md#transfer-calls-to-other-numbers-from-your-ai-voice-receptionist).
+- **Transfer Call** : transfère en direct les appelants vers d'autres numéros en fonction de l'intention et des règles. Consultez [Transférer les appels vers d'autres numéros](/fr/ai/ai-workforce/ai-voice-receptionist/#transfer-calls-to-other-numbers-from-your-ai-voice-receptionist).
 
 #### Capacités personnalisées
 Pour des flux de travail spécialisés, vous pouvez créer vos propres capacités personnalisées qui :

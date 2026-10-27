@@ -144,12 +144,12 @@ Adding a user to an account is what sends the onboarding email. There is no chec
 - From the **Users** panel of Easy Account Create, while you're creating the account itself — see [Creating users in Easy Account Create](#creating-users-in-easy-account-create).
 - From a CSV import — see [Creating accounts in bulk](/accounts/manage-accounts/create-accounts).
 - From the CRM, on a contact or on a company's contact list — see [Sending it from the CRM](#sending-it-from-the-crm).
+- From your own integration, with the Send Onboarding Email API — see [Sending it with the API](#sending-it-with-the-api).
 
 **Places it sends on its own,** whenever a user is created on an account:
 
 - An automation that creates a user — see [Create a user from a contact](/automations/my-automations/create-a-user-from-contact).
 - A client signing themselves up for Business App.
-- A user created through the API, where that user is associated with an account — including an existing user given their first account in your partner through the API.
 - The example account created for your own business when you sign up as a partner. Vibe Free is activated on it, so the onboarding email you receive includes a demo website for your business.
 - A Business App user inviting another user from `Administration` → `Users` in their own Business App.
 
@@ -158,6 +158,24 @@ Users created through single sign-on are not sent the email. When more than one 
 :::info
 Because the email follows user creation everywhere, the volume you send tracks how many users you create — not how often you choose to notify someone. If you're adding a person who shouldn't hear from Business App yet, keep them as a CRM contact and invite them when the time is right.
 :::
+
+### Sending it with the API
+
+If you build your own flows on the Vendasta APIs, you can send the onboarding email to an existing user on your own terms. The send works the same as in Partner Center: a Vibe demo website is generated first when the account is eligible, then the email goes out. See the [Send Onboarding Email API reference](https://developers.vendasta.com/api-reference/vendasta-apis/business-center/user-send-onboarding-email) and the [Create business users guide](https://developers.vendasta.com/guides/crm/create-business-users).
+
+`POST /v1/business-center/users/send-onboarding-email`
+
+- **Authentication:** an OAuth token with any one of the scopes `user`, `user.business`, or `user.admin`.
+- **Required fields:** the user ID (`U-…`) and the account ID (`AG-…`). Your partner is taken from the account, and access is checked against that account's partner. The user must already have access to the account, otherwise the call returns `404`.
+- **Optional fields:** a custom intro (plain text, up to 1,000 characters), and wait for provisioning. Waiting holds the send for up to about 7 minutes while purchased products finish activating, so the email lists them.
+- **Language:** the email uses the user's language.
+- **Asynchronous:** a success response means the send has started, not that the email has been delivered. When a Vibe site is built, delivery can take up to about 17 minutes, or about 24 minutes with wait for provisioning.
+
+Creating a user through the API doesn't send the onboarding email. Call this endpoint as a separate step.
+
+Each user can receive at most 5 onboarding emails at once, then about one more every 4.8 hours (no more than 9 in 24 hours). The limit counts every send, including sends from Partner Center. A request over the limit still returns success (`200`), but no email is sent.
+
+The `GET /platform/users/{id}/actions/sendWelcomeEmail` API sends the set-password email, not the onboarding email.
 
 ### Inviting users with the Invite users panel
 

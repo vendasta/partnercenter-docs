@@ -29,7 +29,7 @@ La plataforma Vendasta ofrece capacidades preconfiguradas para funciones de nego
 
 - **Lead Capture**: recopila y califica automáticamente la información de los leads (nombre, correo electrónico, teléfono, presupuesto).
 - **Appointment Booking**: programa reuniones usando tus sistemas de calendario conectados.
-- **Transfer Call**: transfiere en vivo las llamadas a otros números según la intención y las reglas. Consulta [Transferir llamadas a otros números](../ai-workforce/ai-voice-receptionist.md#transfer-calls-to-other-numbers-from-your-ai-voice-receptionist).
+- **Transfer Call**: transfiere en vivo las llamadas a otros números según la intención y las reglas. Consulta [Transferir llamadas a otros números](/es/ai/ai-workforce/ai-voice-receptionist/#transfer-calls-to-other-numbers-from-your-ai-voice-receptionist).
 
 #### Capacidades personalizadas
 Para flujos de trabajo especializados, puedes crear tus propias capacidades personalizadas que:

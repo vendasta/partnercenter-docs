@@ -112,7 +112,7 @@ When capturing a lead on SMS, ask for name and phone number only, one question a
 When capturing a lead by email, you can ask for name, email, phone, and preferred appointment time in a single reply.
 ```
 
-Para obtener orientación sobre el comportamiento específico por canal en todo el AI Employee, consulta [Ajustar las respuestas por canal](../ai-workforce/index.mdx#adjust-responses-by-channel).
+Para obtener orientación sobre el comportamiento específico por canal en todo el AI Employee, consulta [Ajustar las respuestas por canal](/es/ai/ai-workforce/#adjust-responses-by-channel).
 
 #### Por qué importan los ejemplos
 
@@ -225,7 +225,7 @@ Haz seguimiento de las métricas clave para medir la efectividad de las capacida
 
 ## Próximos pasos
 
-- **Crea capacidades personalizadas**: [Aprende a crear capacidades personalizadas](./creating-custom-capabilities) para necesidades comerciales especializadas
+- **Crea capacidades personalizadas**: [Aprende a crear capacidades personalizadas](/es/ai/ai-capabilities/creating-custom-capabilities/) para necesidades comerciales especializadas
 - **Prompting avanzado**: Explora técnicas de ingeniería de prompts para mejorar el rendimiento de las capacidades
 - **Configuración de integraciones**: Conecta sistemas externos para mejorar la funcionalidad de las capacidades
 

@@ -81,7 +81,7 @@ Les capacités personnalisées fonctionnent parfaitement avec les employés IA p
 - Réutiliser des capacités personnalisées sur plusieurs employés IA (préconfigurés et personnalisés)
 - Créer des flux de travail spécialisés combinant plusieurs capacités personnalisées
 
-Pour des conseils complets sur la création d'employés IA personnalisés, consultez le [guide des employés IA personnalisés](../ai-workforce/custom-ai-employees.md).
+Pour des conseils complets sur la création d'employés IA personnalisés, consultez le [guide des employés IA personnalisés](/fr/ai/ai-workforce/custom-ai-employees/).
 
 ### Étape 2 : définir les informations de base de la capacité
 
@@ -111,7 +111,7 @@ Considérez le prompt comme des instructions données à un nouvel employé que 
 4. Ajoutez plusieurs outils si votre capacité nécessite plusieurs appels API.
 
 :::tip Guide détaillé de création d'outils
-Pour des instructions complètes, étape par étape, sur la recherche de documentation d'API, l'utilisation de l'import cURL, le travail avec des assistants IA et le test des outils, consultez [Créer des outils personnalisés](./tools-overview/building-custom-tools).
+Pour des instructions complètes, étape par étape, sur la recherche de documentation d'API, l'utilisation de l'import cURL, le travail avec des assistants IA et le test des outils, consultez [Créer des outils personnalisés](/fr/ai/ai-capabilities/tools-overview/building-custom-tools/).
 :::
 
 ### Étape 5 : tester et affiner
@@ -421,7 +421,7 @@ The value at the end of the path is the `product_id`.
 ```
 
 :::tip
-Pour l'AI Chat Receptionist, consultez [Rendre les réponses sensibles à la page grâce à l'URL du visiteur](../ai-workforce/ai-chat-receptionist/index.md#make-responses-page-aware-with-the-visitors-url) pour une présentation plus large de cette fonctionnalité.
+Pour l'AI Chat Receptionist, consultez [Rendre les réponses sensibles à la page grâce à l'URL du visiteur](/fr/ai/ai-workforce/ai-chat-receptionist/#make-responses-page-aware-with-the-visitors-url) pour une présentation plus large de cette fonctionnalité.
 :::
 
 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>

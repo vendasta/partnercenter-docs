@@ -6,7 +6,7 @@ description: "Cómo configurar las notificaciones de usuario para recibir correo
 
 Vendasta Services ofrece servicios de gestión de reputación que pueden incluir un proceso de aprobación opcional para las respuestas a reseñas negativas. Los usuarios pueden recibir notificaciones con respuestas propuestas a reseñas negativas.
 
-Para recibir estas notificaciones por correo electrónico, debes [agregar a la persona correspondiente como usuario a la cuenta en Partner Center](../../accounts/manage-users/) y configurar las notificaciones de usuario aplicables.
+Para recibir estas notificaciones por correo electrónico, debes [agregar a la persona correspondiente como usuario a la cuenta en Partner Center](/es/accounts/manage-users/) y configurar las notificaciones de usuario aplicables.
 
 ## Configurar las notificaciones de usuario
 

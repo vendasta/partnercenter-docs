@@ -123,7 +123,7 @@ To set your business up for success, we will need the following:
 
 **Website access**
 
-* Ability to install and activate a plugin on your WordPress dashboard (or admin access so our team can do this on your behalf), plus the connection key generated from Settings → Blog Post Connector.
+* Ability to install and activate a plugin on your WordPress dashboard (or admin access so our team can do this on your behalf), plus the connection key generated from Settings → Blog Post Connector. If your WordPress site is a Multisite network, the plugin runs only on the main site. Subsites can't open its settings page, so only the main site can be connected.
 
 **Content strategy**
 

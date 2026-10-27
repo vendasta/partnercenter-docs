@@ -81,7 +81,7 @@ Las capacidades personalizadas funcionan sin problemas con los Empleados de IA p
 - Reutilizar capacidades personalizadas en varios Empleados de IA (tanto preconfigurados como personalizados)
 - Crear flujos de trabajo especializados que combinen varias capacidades personalizadas
 
-Para obtener orientación completa sobre la creación de Empleados de IA personalizados, consulta la [guía de Empleados de IA personalizados](../ai-workforce/custom-ai-employees.md).
+Para obtener orientación completa sobre la creación de Empleados de IA personalizados, consulta la [guía de Empleados de IA personalizados](/es/ai/ai-workforce/custom-ai-employees/).
 
 ### Paso 2: define la información básica de la capacidad
 
@@ -111,7 +111,7 @@ Piensa en el prompt como las instrucciones que darías al contratar a un emplead
 4. Agrega varias herramientas si tu capacidad requiere varias llamadas de API.
 
 :::tip Guía detallada de creación de herramientas
-Para obtener instrucciones detalladas paso a paso sobre cómo encontrar documentación de API, usar la importación de cURL, trabajar con asistentes de IA y probar herramientas, consulta [Creación de herramientas personalizadas](./tools-overview/building-custom-tools).
+Para obtener instrucciones detalladas paso a paso sobre cómo encontrar documentación de API, usar la importación de cURL, trabajar con asistentes de IA y probar herramientas, consulta [Creación de herramientas personalizadas](/es/ai/ai-capabilities/tools-overview/building-custom-tools/).
 :::
 
 ### Paso 5: prueba y refina
@@ -421,7 +421,7 @@ The value at the end of the path is the `product_id`.
 ```
 
 :::tip
-Para el AI Chat Receptionist, consulta [Haz que las respuestas tengan en cuenta la página con la URL del visitante](../ai-workforce/ai-chat-receptionist/index.md#make-responses-page-aware-with-the-visitors-url) para conocer la funcionalidad completa.
+Para el AI Chat Receptionist, consulta [Haz que las respuestas tengan en cuenta la página con la URL del visitante](/es/ai/ai-workforce/ai-chat-receptionist/#make-responses-page-aware-with-the-visitors-url) para conocer la funcionalidad completa.
 :::
 
 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
