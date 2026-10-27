@@ -65,7 +65,7 @@ Blueprint Templates are maintained by Vendasta. To use one, you must first add i
 
 Filter the list by tag from the sidebar. The list shows each blueprint's name, the version being deployed, its source account, what it contains, and the date it was created.
 
-<img src={require('./img/account-templates3.png').default} alt="Blueprints list showing a blueprint's name, source account, contents, and date created" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+<img src={require('../img/account-templates3.png').default} alt="Blueprints list showing a blueprint's name, source account, contents, and date created" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 ## Create a blueprint
 
@@ -104,7 +104,7 @@ Rows with no linked account are skipped, and the wizard tells you how many.
 
 **Select components.** Choose which of the blueprint's components to apply.
 
-<img src={require('./img/apply-blueprint-targets.png').default} alt="Apply blueprint wizard on the Select targets step, with Individual accounts and Multi-location groups options above a searchable, filterable account table" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+<img src={require('../img/apply-blueprint-targets.png').default} alt="Apply blueprint wizard on the Select targets step, with Individual accounts and Multi-location groups options above a searchable, filterable account table" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 :::info
 Applying a blueprint only adds or updates. Nothing already configured on the target account is removed.
@@ -146,7 +146,7 @@ Select the `Version history` tab. Each entry shows:
 
 Expand a version to see its full component list, including whether each automation is `Active` or `Inactive`.
 
-<img src={require('./img/version-history-tab.png').default} alt="Version history tab showing a v2 and v1 timeline, the Current marker on v2, accounts on each version, and a Make v1 current button" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+<img src={require('../img/version-history-tab.png').default} alt="Version history tab showing a v2 and v1 timeline, the Current marker on v2, accounts on each version, and a Make v1 current button" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 ### Change which version new applies use
 
@@ -154,7 +154,7 @@ On any version that is not current, click `Make v{N} current`.
 
 Future applies will use that version instead. Applied accounts are not affected, nothing is deployed, and no account changes. Use it to stage a rollout, or to stop a bad version from reaching more accounts while you remediate.
 
-<img src={require('./img/make-version-current.png').default} alt="Make v1 current confirmation explaining that future applies will use v1 and applied accounts are not affected" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+<img src={require('../img/make-version-current.png').default} alt="Make v1 current confirmation explaining that future applies will use v1 and applied accounts are not affected" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 ## Track where a blueprint is deployed
 
@@ -167,7 +167,7 @@ The `Applied accounts` tab lists every account the blueprint has been applied to
 | `Failed` | The last apply did not complete. |
 | `Applying` | An apply is in progress. |
 
-<img src={require('./img/applied-accounts-tab.png').default} alt="Applied accounts tab with Up to date, Out of sync, Failed and Applying summary cards above a table of accounts, each showing its applied version and status" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+<img src={require('../img/applied-accounts-tab.png').default} alt="Applied accounts tab with Up to date, Out of sync, Failed and Applying summary cards above a table of accounts, each showing its applied version and status" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 Accounts running a version newer than the current version are not flagged and are not prompted to change.
 
@@ -194,7 +194,7 @@ Select accounts with the checkboxes. A bar appears above the table showing how m
 - `Roll back...`, then pick the version to restore the selection to
 - `Export errors`, which downloads one CSV covering the failed accounts in the selection
 
-<img src={require('./img/bulk-actions.png').default} alt="Applied accounts table with every row selected and the Actions menu open on Re-apply to latest version, Roll back and Export errors" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+<img src={require('../img/bulk-actions.png').default} alt="Applied accounts table with every row selected and the Actions menu open on Re-apply to latest version, Roll back and Export errors" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 You can select up to 100 accounts at a time. Each row updates independently as its account finishes. A roll back across a large selection runs in the background and can take a while.
 
@@ -204,7 +204,7 @@ A `Failed` row shows how many components failed. Click `View error details` on t
 
 The panel is headed with the account name and `Apply v{N} failed`, so you can see which version broke. Below that, every component that failed is listed with its name, a label for its type such as `AI_ASSISTANT`, and the error message returned when it was applied. Components that applied successfully are not listed, so a short panel on a failed account means most of the blueprint landed.
 
-<img src={require('./img/error-details-panel.png').default} alt="Error details panel headed Apply v2 failed, listing one failed AI_ASSISTANT component with the reason it could not be applied, and Close and Retry apply buttons" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+<img src={require('../img/error-details-panel.png').default} alt="Error details panel headed Apply v2 failed, listing one failed AI_ASSISTANT component with the reason it could not be applied, and Close and Retry apply buttons" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 `Retry apply` at the bottom of the panel re-runs the apply for that account, which is the quickest path once you have fixed the underlying cause.
 
