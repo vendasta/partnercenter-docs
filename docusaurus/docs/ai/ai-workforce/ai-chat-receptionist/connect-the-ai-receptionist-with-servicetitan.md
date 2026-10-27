@@ -54,7 +54,7 @@ Before you connect your AI Receptionist to ServiceTitan, you need to gather the 
 :::info
 You can get more detailed help on gathering this information from the ServiceTitan resources below:
 - Setting up API access ([ServiceTitan Developer Portal](https://developer.servicetitan.io/))
-- Managing integrations ([API Application Access Guide](https://help.servicetitan.com/admin-settings/integrations/api-application-access))
+- Managing integrations ([API Application Access Guide](https://help.servicetitan.com/docs/get-started-with-api-dev-portal-v2))
 - Understanding API permissions ([ServiceTitan API Documentation](https://developer.servicetitan.io/docs))
 :::
 
