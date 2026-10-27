@@ -130,6 +130,18 @@ Yes. You must have a Google Workspace account with Google Meet enabled.
 <details>
 <summary>Why does my Zoom connection stop working in Partner Center?</summary>
 
-Make sure your Zoom account is active and that you granted all requested permissions when you connected. If the problem continues, disconnect and reconnect your Zoom account.
+Zoom disconnects the integration when its access token is invalidated. This most often happens when you:
+
+- Change your Zoom password.
+- Sign out of Zoom on other devices.
+- Don't grant all requested permissions when connecting.
+
+To keep the connection stable:
+
+- Grant every permission on the Zoom consent screen, and select `Remember this authorization` if it's shown.
+- After a password change or security update, check the [Zoom App Marketplace](https://marketplace.zoom.us/) for a re-authentication prompt and renew it.
+- Avoid browser settings that automatically clear cookies.
+
+If it still disconnects, open the `Manage` tab in your user profile, select `Connected Apps`, disconnect Zoom, and then connect it again.
 
 </details>
