@@ -63,9 +63,35 @@ Connecting business accounts is a key step in getting value from Business App an
 
 2. **Understanding the layout**
    - **Needs attention**: broken connections come first, with **Reconnect** or **Resume** and the reason shown right on the row
-   - **MCP servers**: use **Add server** in this section to add an MCP server
+   - **MCP servers**: use **Connect MCP** in this section to connect a public MCP server — see [How do I connect a public MCP server?](#how-to-connect-a-public-mcp-server) below
    - **One section per category**: each shows six integrations, connected ones first, with **Show all** for the rest
    - **Rows with more than one account**: working accounts share one row (for example "amanda@… +2 more"), with an **Add** button to connect another
+
+### How do I connect a public MCP server? {#how-to-connect-a-public-mcp-server}
+
+A business can connect any tool that has a public MCP server to Business App. Add the server's URL, sign in, and give its capabilities to an AI Employee — there's no need to wait for a native integration.
+
+**Connect the MCP server:**
+
+1. In Business App, go to `Administration` → `Integrations`.
+2. In the **MCP servers** section, click **Connect MCP**.
+3. Enter the public MCP URL.
+4. Give the integration a name.
+5. Choose how to sign in: **API key** or **OAuth**.
+6. Enter the API key, or sign in and approve access for OAuth.
+7. The new integration card appears on the Integrations page.
+
+**Give it to an AI Employee:**
+
+1. Go to `AI Employee` and open the AI Employee to configure.
+2. Add the capability from the MCP integration you just connected.
+3. Save. Chat with the AI Employee and it will use that capability.
+
+Each connected MCP server shows up as its own integration card on the Integrations page.
+
+:::note
+Only public MCP URLs work — private or local servers aren't supported. Tool quality depends on the third-party MCP server; Vendasta doesn't control or support external servers.
+:::
 
 ### How do I filter and search integrations? {#how-to-filter-and-search-integrations}
 
@@ -74,7 +100,7 @@ Connecting business accounts is a key step in getting value from Business App an
 - **Mine**: show only the connections you made yourself
 - **Search**: looks at integration names, descriptions, and category names
 
-The filters you choose are kept in the page link, so you can copy the link and send a filtered view to someone else. Opening an integration and going back returns to the same filtered view.
+The filters and categories you choose are kept in the page link, so you can copy the link and send a filtered view to someone else. Opening an integration and going back returns to the same filtered view.
 
 ### How do I connect more than one account to an integration? {#how-to-connect-multiple-accounts}
 
@@ -486,5 +512,23 @@ Select **Retry**. While connections can't load, the page hides the **Connected**
 <summary>Is the Integrations page different in Business App and Partner Center?</summary>
 
 No. Business App and Partner Center share the same Integrations page.
+</details>
+
+<details>
+<summary>Can I connect a private or local MCP server?</summary>
+
+No. Only public MCP URLs work with **Connect MCP** — private or local servers aren't supported.
+</details>
+
+<details>
+<summary>What happens after I connect an MCP server?</summary>
+
+The MCP server appears as its own integration card on the Integrations page. To use it, go to `AI Employee`, open the AI Employee to configure, and add the capability from the MCP integration you just connected.
+</details>
+
+<details>
+<summary>Who supports the tools an MCP server provides?</summary>
+
+Tool quality depends on the third-party MCP server. Vendasta doesn't control or support external servers.
 </details>
 
