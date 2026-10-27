@@ -9,9 +9,7 @@ product: automations
 audience: partners
 ---
 
-# Get contact from company
-
-**Get contact from company** retrieves a contact linked to the company in scope and makes it available to downstream steps. Use it in company-scoped automations when you need to run contact-level actions (send an email, add to a list, assign an owner). This action is available on company-scoped triggers.
+`Get contact from company` retrieves a contact linked to the company in scope and makes it available to downstream steps. Use it in company-scoped automations when you need to run contact-level actions (send an email, add to a list, assign an owner). This action is available on company-scoped triggers.
 
 ## How it works
 
@@ -21,24 +19,24 @@ audience: partners
 4. Contact-scoped actions become available in subsequent steps
 
 :::warning
-If the company has no associated contacts, the step returns an error. Add an **If/else** branch to handle cases where no contact exists.
+If the company has no associated contacts, the step returns an error. Add an `If/else branch` to handle cases where no contact exists.
 :::
 
 ## Set up the action
 
 1. Open the automation builder and add a new step
-2. Under **Businesses**, select **Get contact from company**
+2. Under `Businesses`, select `Get contact from company`
 
-This action has no configuration fields — it retrieves a contact linked to the company in scope.
+This action has no configuration fields. It retrieves a contact linked to the company in scope.
 
 ## Outputs
 
-After the step runs, a contact record is available in scope. Downstream steps can act on the contact directly via **Add dynamic content**.
+After the step runs, a contact record is available in scope. Downstream steps can act on the contact directly via `Add dynamic content`.
 
 ## Related resources
 
-- [Actions overview](./actions-overview.mdx) — Browse all available actions
-- [Get company from contact](./get-company-from-contact.mdx) — Go the other direction
-- [Find contact](./find-contact.mdx) — Search for a contact by field criteria
-- [Logic & flow control](./logic-and-flow-control.mdx) — If/else branches, delays, and jump steps
-- [Creating and configuring automations](./creating-and-configuring-automations.mdx) — Build and configure workflows
+- [Actions overview](./actions-overview.mdx): Browse all available actions
+- [Get company from contact](./get-company-from-contact.mdx): Go the other direction
+- [Find contact](./find-contact.mdx): Search for a contact by field criteria
+- [Logic & flow control](./logic-and-flow-control.mdx): `If/else branch`, delays, and jump steps
+- [Creating and configuring automations](./creating-and-configuring-automations.mdx): Build and configure workflows
