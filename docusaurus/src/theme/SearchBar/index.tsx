@@ -79,7 +79,7 @@ export default function SearchBar(): React.ReactElement {
             setOpen(true);
             inputRef.current?.focus();
           }}>
-          <AiStarIcon size={17} className="ais-box__icon" />
+          <AiStarIcon size={17} className="ais-box__icon" gradient />
           <input
             ref={inputRef}
             className="ais-box__input"

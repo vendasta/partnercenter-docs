@@ -124,51 +124,76 @@
   text-align: left;
 }
 
-.ais-aicard {
-  display: block;
+.ais-ask {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   width: 100%;
-  padding: 14px 16px;
-  border: 1px solid #e6e1f2;
-  border-radius: 10px;
-  background: linear-gradient(180deg, #fbf4ff 0%, #f3f6fd 100%);
+  padding: 8px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
   color: inherit;
   font-family: inherit;
   text-align: left;
   cursor: pointer;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-.ais-aicard.is-active,
-.ais-aicard:hover {
-  border-color: #c9b8ff;
-  box-shadow: 0 4px 14px rgba(109, 74, 255, 0.1);
+.ais-ask.is-active {
+  background: #f5f1ff;
 }
 
-.ais-badge {
+/* Same violet-to-blue gradient as the header star. */
+.ais-ask__icon {
   display: inline-flex;
+  flex: none;
   align-items: center;
-  gap: 5px;
-  padding: 5px 11px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #c026d3 0%, #3b82f6 100%);
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
   color: #fff;
-  font: 600 12px/1 var(--ifm-font-family-base);
 }
 
-.ais-aicard__text {
-  display: block;
-  margin: 10px 0 8px;
-  color: #1f2937;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.ais-link {
-  display: inline-flex;
-  align-items: center;
+.ais-ask__body {
+  display: flex;
+  flex: 1;
+  align-items: baseline;
   gap: 6px;
-  color: var(--ifm-color-primary);
-  font: 600 13px/1.2 var(--ifm-font-family-base);
+  min-width: 0;
+}
+
+.ais-ask__label {
+  flex: none;
+  color: #6d28d9;
+  font: 600 14px/1.35 var(--ifm-font-family-base);
+}
+
+.ais-ask__query {
+  overflow: hidden;
+  color: #30313d;
+  font: 500 14px/1.35 var(--ifm-font-family-base);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ais-ask__kbd {
+  flex: none;
+  padding: 2px 6px;
+  border: 1px solid #ddd6fe;
+  border-radius: 5px;
+  background: #fff;
+  color: #6d28d9;
+  font: 500 12px/1.2 var(--ifm-font-family-base);
+}
+
+/* Below the articles: a hairline separates it from the last result. */
+.ais-articles + .ais-ask,
+.ais-empty + .ais-ask {
+  margin-top: 6px;
+  border-top: 1px solid #eef0f4;
+  border-radius: 0 0 8px 8px;
 }
 
 .ais-section-label {

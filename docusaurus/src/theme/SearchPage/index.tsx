@@ -9,7 +9,7 @@ import {AI_SEARCH_LOCALES} from '../../components/AiSearch/config';
 import {openAssistant} from '../../components/AiSearch/assistant';
 import {useMergedSearch} from '../../components/AiSearch/useMergedSearch';
 import ResultRow from '../../components/AiSearch/ResultRow';
-import {SearchIcon, SparklesIcon} from '../../components/AiSearch/Icons';
+import {AiStarIcon, SearchIcon} from '../../components/AiSearch/Icons';
 import '../../components/AiSearch/aiSearch.css';
 
 /** Results page at /search: full keyword result list, with an "Ask the AI assistant" row on top. */
@@ -87,7 +87,7 @@ function SearchPageContent() {
 
           {aiEnabled && (
             <button type="button" className="ais-row ais-row--ask" onClick={() => openAssistant(urlQuery, 'results_page')}>
-              <SparklesIcon size={16} className="ais-row__icon ais-row__icon--ai" />
+              <AiStarIcon size={16} className="ais-row__icon ais-row__icon--ai" />
               <span className="ais-row__body">
                 <span className="ais-row__title">
                   {translate({id: 'aiSearch.results.askTitle', message: 'Ask the AI assistant'})}

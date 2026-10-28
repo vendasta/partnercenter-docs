@@ -5,7 +5,7 @@ import {useLocation} from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {quoteInAssistant} from './assistant';
 import {AI_SEARCH_LOCALES} from './config';
-import {SparklesIcon} from './Icons';
+import {AiStarIcon} from './Icons';
 import './aiSearch.css';
 
 /** Article body: docs, training and MDX pages. */
@@ -115,7 +115,7 @@ export default function SelectionAsk(): React.ReactElement | null {
       // Keep the selection alive until the click lands.
       onMouseDown={(event) => event.preventDefault()}
       onClick={send}>
-      <SparklesIcon size={15} />
+      <AiStarIcon size={15} />
       {translate({id: 'aiSearch.selection.ask', message: 'Ask AI'})}
     </button>,
     document.body,

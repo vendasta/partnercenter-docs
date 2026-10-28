@@ -7,11 +7,20 @@ import {AI_SEARCH_LOCALES} from './config';
 import {openAssistant} from './assistant';
 import {useMergedSearch} from './useMergedSearch';
 import {breadcrumbText, hitLink} from './resultUtils';
-import {ArrowRightIcon, DocIcon, SparklesIcon} from './Icons';
+import {AiStarIcon, ArrowRightIcon, DocIcon} from './Icons';
 import type {PageHit} from './types';
 import './aiSearch.css';
 
 const MAX_ARTICLES = 5;
+
+const QUESTION_START =
+  /^(how|what|why|when|where|who|which|can|could|do|does|did|is|are|should|will|would)\b/i;
+
+/** "how do I…" or "…?": the reader wants an answer rather than a page. */
+export function looksLikeQuestion(query: string): boolean {
+  const text = query.trim();
+  return text.endsWith('?') || (QUESTION_START.test(text) && text.split(/\s+/).length > 1);
+}
 
 type Props = {
   query: string;
@@ -69,8 +78,45 @@ function ArticleRow({hit, active, onHover, onSelect}: ArticleRowProps) {
   );
 }
 
+type AskRowProps = {
+  query: string;
+  active: boolean;
+  onHover: () => void;
+  onSelect: () => void;
+};
+
+/** One-line "Ask AI" row that hands the query to the assistant drawer. */
+function AskRow({query, active, onHover, onSelect}: AskRowProps) {
+  return (
+    <button
+      type="button"
+      className={`ais-ask ${active ? 'is-active' : ''}`}
+      onPointerEnter={onHover}
+      // Keep focus in the search input so typing and arrow keys keep working.
+      onMouseDown={(event) => event.preventDefault()}
+      onClick={onSelect}
+      role="option"
+      aria-selected={active}>
+      <span className="ais-ask__icon">
+        <AiStarIcon size={13} />
+      </span>
+      <span className="ais-ask__body">
+        <span className="ais-ask__label">{translate({id: 'aiSearch.badge', message: 'Ask AI'})}</span>
+        {query && <span className="ais-ask__query">“{query}”</span>}
+      </span>
+      {active && (
+        <kbd className="ais-ask__kbd" aria-hidden="true">
+          ↵
+        </kbd>
+      )}
+    </button>
+  );
+}
+
 /**
- * Dropdown under the header search bar: AI answer card, top articles, "View all".
+ * Dropdown under the header search bar: top articles, an "Ask AI" row, "View all". The
+ * Ask AI row moves to the top when the bar is empty, the query reads like a question, or
+ * no article matches.
  * Mounted only while the search bar is open, so the search index loads on first use.
  */
 export default function SearchMenu({query, inputRef, onClose, onReset}: Props) {
@@ -88,9 +134,12 @@ export default function SearchMenu({query, inputRef, onClose, onReset}: Props) {
   const hasQuery = trimmed.length > 0;
   const isProd = process.env.NODE_ENV === 'production';
 
+  const noArticles = hasQuery && settled && ready && pages.length === 0;
+  const askFirst = aiEnabled && (!hasQuery || looksLikeQuestion(trimmed) || noArticles);
+
   useEffect(() => {
     setActiveIndex(0);
-  }, [pages]);
+  }, [pages, askFirst]);
 
   const go = useCallback(
     (url: string) => {
@@ -145,14 +194,16 @@ export default function SearchMenu({query, inputRef, onClose, onReset}: Props) {
     [go, onClose],
   );
 
-  // Display order for ↑/↓ and Enter. The AI card comes first, so Enter asks.
+  // Display order for ↑/↓ and Enter; Enter runs whichever item is first.
   const actions: Action[] = useMemo(() => {
     const list: Action[] = [];
-    if (aiEnabled) list.push({key: 'ask', run: () => ask(trimmed)});
+    const askAction = {key: 'ask', run: () => ask(trimmed)};
+    if (askFirst) list.push(askAction);
     listed.forEach((hit) => list.push({key: hit.url, run: () => openHit(hit)}));
+    if (aiEnabled && !askFirst) list.push(askAction);
     if (showViewAll) list.push({key: 'view-all', run: () => go(searchPageUrl(baseUrl, trimmed))});
     return list;
-  }, [aiEnabled, listed, showViewAll, ask, trimmed, openHit, go, baseUrl]);
+  }, [aiEnabled, askFirst, listed, showViewAll, ask, trimmed, openHit, go, baseUrl]);
 
   // Keyboard navigation comes from the header input, which keeps focus while the menu is open.
   useEffect(() => {
@@ -182,42 +233,18 @@ export default function SearchMenu({query, inputRef, onClose, onReset}: Props) {
 
   const indexOf = (key: string) => actions.findIndex((a) => a.key === key);
   const activeKey = actions[activeIndex]?.key;
+  const askRow = (
+    <AskRow
+      query={trimmed}
+      active={activeKey === 'ask'}
+      onHover={() => setActiveIndex(indexOf('ask'))}
+      onSelect={() => ask(trimmed)}
+    />
+  );
 
   return (
     <div className="ais-menu" id="ais-menu" ref={menuRef} role="listbox">
-      {aiEnabled && (
-        <button
-          type="button"
-          className={`ais-aicard ${activeKey === 'ask' ? 'is-active' : ''}`}
-          onPointerEnter={() => setActiveIndex(indexOf('ask'))}
-          // Keep focus in the search input so typing and arrow keys keep working.
-          onMouseDown={(event) => event.preventDefault()}
-          onClick={() => ask(trimmed)}>
-          <span className="ais-badge">
-            <SparklesIcon size={13} /> {translate({id: 'aiSearch.badge', message: 'Ask AI'})}
-          </span>
-          <span className="ais-aicard__text">
-            {hasQuery
-              ? translate(
-                  {
-                    id: 'aiSearch.menu.askWithQuery',
-                    message: 'Get an answer to “{query}” from the documentation, with links to the pages it comes from.',
-                  },
-                  {query: trimmed},
-                )
-              : translate({
-                  id: 'aiSearch.menu.askEmpty',
-                  message: 'Ask a question in plain language. Answers come from the documentation, with links to the pages they are based on.',
-                })}
-          </span>
-          <span className="ais-link">
-            {hasQuery
-              ? translate({id: 'aiSearch.menu.askLink', message: 'See full answer & sources'})
-              : translate({id: 'aiSearch.menu.askOpen', message: 'Ask the AI assistant'})}
-            <ArrowRightIcon size={14} />
-          </span>
-        </button>
-      )}
+      {askFirst && askRow}
 
       <p className="ais-section-label">
         {hasQuery
@@ -246,6 +273,8 @@ export default function SearchMenu({query, inputRef, onClose, onReset}: Props) {
               : translate({id: 'aiSearch.menu.noResults', message: 'No matching articles. Try other words, or ask the AI assistant.'})}
         </p>
       )}
+
+      {aiEnabled && !askFirst && askRow}
 
       {showViewAll ? (
         <div className="ais-menu__footer">

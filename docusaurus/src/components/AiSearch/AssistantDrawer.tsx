@@ -10,7 +10,7 @@ import {
 } from './assistant';
 import {AI_SEARCH_LOCALES} from './config';
 import {renderMarkdown} from './markdown';
-import {SparklesIcon} from './Icons';
+import {AiStarIcon} from './Icons';
 import './aiSearch.css';
 
 type Turn =
@@ -173,7 +173,7 @@ export default function AssistantDrawer(): React.ReactElement | null {
     <aside className="ais-drawer" aria-label={translate({id: 'aiSearch.assistant.label', message: 'AI assistant'})}>
       <header className="ais-drawer__header">
         <span className="ais-drawer__title">
-          <SparklesIcon size={16} /> {translate({id: 'aiSearch.assistant.title', message: 'AI assistant'})}
+          <AiStarIcon size={16} /> {translate({id: 'aiSearch.assistant.title', message: 'AI assistant'})}
         </span>
         <span className="ais-drawer__actions">
           <button type="button" className="ais-drawer__btn" onClick={newThread}>
