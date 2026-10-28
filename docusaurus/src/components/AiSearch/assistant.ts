@@ -6,7 +6,14 @@
 
 export const ASSISTANT_EVENT = 'ais:assistant';
 
-export type AssistantOpenDetail = {question: string; source: string};
+/** A passage the reader highlighted in an article and sent to the assistant. */
+export type AssistantQuote = {
+  text: string;
+  pageTitle: string;
+  pageUrl: string;
+};
+
+export type AssistantOpenDetail = {question: string; source: string; quote?: AssistantQuote};
 
 export type AssistantReply = {
   /** Stable id for the reply (message id once known). */
@@ -44,4 +51,14 @@ export function openAssistant(question = '', source = 'search'): void {
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({event: text ? 'ai_search_ask' : 'ai_assistant_open', search_query: text, source});
   window.dispatchEvent(new CustomEvent<AssistantOpenDetail>(ASSISTANT_EVENT, {detail: {question: text, source}}));
+}
+
+/** Open the assistant drawer with a highlighted passage quoted in the composer. */
+export function quoteInAssistant(quote: AssistantQuote): void {
+  if (typeof window === 'undefined') return;
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({event: 'ai_assistant_quote', page_path: quote.pageUrl, quote_length: quote.text.length});
+  window.dispatchEvent(
+    new CustomEvent<AssistantOpenDetail>(ASSISTANT_EVENT, {detail: {question: '', source: 'selection', quote}}),
+  );
 }

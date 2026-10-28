@@ -5,6 +5,7 @@ import {
   ASSISTANT_EVENT,
   getAssistantTransport,
   type AssistantOpenDetail,
+  type AssistantQuote,
   type AssistantReply,
 } from './assistant';
 import {AI_SEARCH_LOCALES} from './config';
@@ -13,10 +14,20 @@ import {SparklesIcon} from './Icons';
 import './aiSearch.css';
 
 type Turn =
-  | {role: 'user'; id: string; text: string}
+  | {role: 'user'; id: string; text: string; quote?: AssistantQuote}
   | {role: 'assistant'; id: string; text: string; done: boolean; error?: string};
 
 const THREAD_KEY = 'ais-assistant-thread';
+
+/** What the transport receives: the reader's question with the quoted passage as context. */
+function withQuote(question: string, quote?: AssistantQuote): string {
+  if (!quote) return question;
+  const passage = quote.text
+    .split('\n')
+    .map((line) => `> ${line}`)
+    .join('\n');
+  return `About this passage from "${quote.pageTitle}" (${quote.pageUrl}):\n\n${passage}\n\n${question}`;
+}
 
 function loadThread(): Turn[] {
   try {
@@ -48,6 +59,7 @@ export default function AssistantDrawer(): React.ReactElement | null {
   const [open, setOpen] = useState(false);
   const [turns, setTurns] = useState<Turn[]>([]);
   const [draft, setDraft] = useState('');
+  const [quote, setQuote] = useState<AssistantQuote | null>(null);
   const [busy, setBusy] = useState(false);
   const threadRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -63,14 +75,17 @@ export default function AssistantDrawer(): React.ReactElement | null {
   }, [turns]);
 
   const ask = useCallback(
-    async (question: string) => {
-      const text = question.trim();
+    async (question: string, quoted?: AssistantQuote) => {
+      const text =
+        question.trim() ||
+        (quoted ? translate({id: 'aiSearch.assistant.explainQuote', message: 'Explain this.'}) : '');
       if (!text || busy) return;
       const transport = getAssistantTransport();
-      const userTurn: Turn = {role: 'user', id: `u-${Date.now()}`, text};
+      const userTurn: Turn = {role: 'user', id: `u-${Date.now()}`, text, quote: quoted};
       const replyId = `a-${Date.now()}`;
       setTurns((prev) => [...prev, userTurn, {role: 'assistant', id: replyId, text: '', done: false}]);
       setDraft('');
+      setQuote(null);
 
       if (!transport) {
         setTurns((prev) =>
@@ -100,7 +115,7 @@ export default function AssistantDrawer(): React.ReactElement | null {
         );
       };
       try {
-        await transport.ask(text, onReply, controller.signal);
+        await transport.ask(withQuote(text, quoted), onReply, controller.signal);
         setTurns((prev) => prev.map((t) => (t.id === replyId ? {...t, done: true} : t)));
       } catch (err) {
         if (!controller.signal.aborted) {
@@ -126,11 +141,12 @@ export default function AssistantDrawer(): React.ReactElement | null {
     [busy],
   );
 
-  // Open requests from the search dialog, header button and results page.
+  // Open requests from the search dialog, header button, results page and text selection.
   useEffect(() => {
     const onOpen = (event: Event) => {
-      const {question} = (event as CustomEvent<AssistantOpenDetail>).detail;
+      const {question, quote: quoted} = (event as CustomEvent<AssistantOpenDetail>).detail;
       setOpen(true);
+      if (quoted) setQuote(quoted);
       if (question) void ask(question);
       else setTimeout(() => inputRef.current?.focus(), 50);
     };
@@ -181,6 +197,12 @@ export default function AssistantDrawer(): React.ReactElement | null {
         {turns.map((turn) =>
           turn.role === 'user' ? (
             <div key={turn.id} className="ais-msg ais-msg--user">
+              {turn.quote && (
+                <blockquote className="ais-quote ais-quote--sent">
+                  <span className="ais-quote__source">{turn.quote.pageTitle}</span>
+                  <span className="ais-quote__text">{turn.quote.text}</span>
+                </blockquote>
+              )}
               {turn.text}
             </div>
           ) : (
@@ -203,25 +225,46 @@ export default function AssistantDrawer(): React.ReactElement | null {
         className="ais-drawer__composer"
         onSubmit={(event) => {
           event.preventDefault();
-          void ask(draft);
+          void ask(draft, quote ?? undefined);
         }}>
-        <textarea
-          ref={inputRef}
-          value={draft}
-          rows={1}
-          onChange={(event) => setDraft(event.target.value)}
-          onKeyDown={(event) => {
-            if (event.key === 'Enter' && !event.shiftKey) {
-              event.preventDefault();
-              void ask(draft);
+        {quote && (
+          <blockquote className="ais-quote">
+            <span className="ais-quote__source">
+              {translate({id: 'aiSearch.assistant.quoteFrom', message: 'From'})} {quote.pageTitle}
+            </span>
+            <span className="ais-quote__text">{quote.text}</span>
+            <button
+              type="button"
+              className="ais-quote__remove"
+              onClick={() => setQuote(null)}
+              aria-label={translate({id: 'aiSearch.assistant.removeQuote', message: 'Remove quote'})}>
+              ✕
+            </button>
+          </blockquote>
+        )}
+        <div className="ais-drawer__row">
+          <textarea
+            ref={inputRef}
+            value={draft}
+            rows={1}
+            onChange={(event) => setDraft(event.target.value)}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter' && !event.shiftKey) {
+                event.preventDefault();
+                void ask(draft, quote ?? undefined);
+              }
+            }}
+            placeholder={
+              quote
+                ? translate({id: 'aiSearch.assistant.quotePlaceholder', message: 'Ask about this passage…'})
+                : translate({id: 'aiSearch.assistant.placeholder', message: 'Ask a question…'})
             }
-          }}
-          placeholder={translate({id: 'aiSearch.assistant.placeholder', message: 'Ask a question…'})}
-          aria-label={translate({id: 'aiSearch.assistant.placeholder', message: 'Ask a question…'})}
-        />
-        <button type="submit" className="ais-drawer__send" disabled={busy || !draft.trim()}>
-          {translate({id: 'aiSearch.assistant.send', message: 'Send'})}
-        </button>
+            aria-label={translate({id: 'aiSearch.assistant.placeholder', message: 'Ask a question…'})}
+          />
+          <button type="submit" className="ais-drawer__send" disabled={busy || (!draft.trim() && !quote)}>
+            {translate({id: 'aiSearch.assistant.send', message: 'Send'})}
+          </button>
+        </div>
       </form>
       <p className="ais-drawer__note">
         {translate({id: 'aiSearch.assistant.note', message: 'AI-generated. Check the linked docs before relying on an answer.'})}

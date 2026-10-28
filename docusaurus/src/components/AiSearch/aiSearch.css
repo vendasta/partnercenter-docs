@@ -603,10 +603,16 @@
 
 .ais-drawer__composer {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
   gap: 8px;
   padding: 12px 16px 6px;
   border-top: 1px solid var(--ais-border);
+}
+
+.ais-drawer__row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
 }
 
 .ais-drawer__composer textarea {
@@ -648,6 +654,99 @@
   padding: 0 16px 10px;
   color: var(--ais-muted);
   font-size: 11px;
+}
+
+/* ---------- Quoted passages (text selection → assistant) ---------- */
+
+.ais-quote-btn {
+  position: absolute;
+  z-index: calc(var(--ais-overlay-z) - 2);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 12px;
+  transform: translateX(-50%);
+  border: 0;
+  border-radius: 8px;
+  background: var(--ais-text);
+  color: #fff;
+  box-shadow: var(--ais-dialog-shadow);
+  font: 600 13px/1 var(--ifm-font-family-base);
+  white-space: nowrap;
+  cursor: pointer;
+  animation: ais-quote-in 120ms ease-out;
+}
+
+.ais-quote-btn:hover {
+  background: #1a1b25;
+}
+
+.ais-quote-btn:focus-visible {
+  outline: 2px solid var(--ais-row-active-border);
+  outline-offset: 2px;
+}
+
+@keyframes ais-quote-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 4px);
+  }
+}
+
+.ais-quote {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 6px 30px 6px 10px;
+  border-left: 3px solid var(--ais-accent);
+  border-radius: 4px;
+  background: #f6f8fa;
+  color: var(--ais-text-soft);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.ais-quote__source {
+  color: var(--ais-muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.ais-quote__text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  white-space: pre-wrap;
+}
+
+.ais-quote__remove {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--ais-muted);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.ais-quote__remove:hover {
+  background: #e3e8ee;
+}
+
+/* Inside a sent message bubble. */
+.ais-quote--sent {
+  margin-bottom: 6px;
+  padding-right: 10px;
+  background: rgba(255, 255, 255, 0.7);
 }
 
 @media (max-width: 600px) {
