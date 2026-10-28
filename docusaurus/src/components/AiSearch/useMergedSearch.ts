@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import {useDocsSearch} from './useDocsSearch';
 import {useSemanticSearch} from './useSemanticSearch';
-import {groupByPage, mergeHits, normalizeQuery} from './resultUtils';
+import {demoteLegacy, groupByPage, mergeHits, normalizeQuery} from './resultUtils';
 import type {PageHit} from './types';
 
 /** How long past the debounce the list waits for semantic hits before showing keyword hits alone. */
@@ -38,7 +38,8 @@ export function useMergedSearch(query: string, {keywordLimit, semanticLimit, deb
   useEffect(() => {
     if (shown.query === normalized || !keywordDone || !(semanticDone || gaveUpOn === normalized)) return;
     const hits = semanticDone ? semantic.hits : [];
-    setShown({query: normalized, pages: mergeHits(groupByPage(keyword.results), hits, normalized)});
+    const pages = demoteLegacy(mergeHits(groupByPage(keyword.results), hits, normalized));
+    setShown({query: normalized, pages});
   }, [shown.query, normalized, keywordDone, semanticDone, gaveUpOn, keyword.results, semantic.hits]);
 
   return {

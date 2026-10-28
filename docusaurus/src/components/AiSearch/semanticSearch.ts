@@ -89,7 +89,25 @@ export function queryTokens(query: string): string[] {
   );
 }
 
+/**
+ * Answers already received, by limit and query. The server's ranking varies slightly between
+ * calls, so the results page reuses the search menu's answer instead of asking again; that
+ * keeps "View all N results" and the page's count the same. Failures are not cached.
+ */
+const answers = new Map<string, PageHit[]>();
+const MAX_ANSWERS = 30;
+
 export async function semanticSearch(query: string, limit: number, signal: AbortSignal): Promise<PageHit[]> {
+  const key = `${limit}|${query}`;
+  const cached = answers.get(key);
+  if (cached) return cached;
+  const hits = await fetchSemanticHits(query, limit, signal);
+  answers.set(key, hits);
+  if (answers.size > MAX_ANSWERS) answers.delete(answers.keys().next().value as string);
+  return hits;
+}
+
+async function fetchSemanticHits(query: string, limit: number, signal: AbortSignal): Promise<PageHit[]> {
   const results = await callSearchDocs(query, limit, signal);
   const tokens = queryTokens(query);
   const seen = new Set<string>();

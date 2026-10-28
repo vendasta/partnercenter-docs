@@ -320,11 +320,7 @@
 .ais-row__icon {
   flex: none;
   margin-top: 3px;
-  color: var(--ais-accent);
-}
-
-.ais-row__icon--ai {
-  color: var(--ais-accent);
+  color: var(--ifm-color-primary);
 }
 
 .ais-row__body {
@@ -378,12 +374,23 @@
 /* ---------- Results page ---------- */
 
 .ais-page {
-  max-width: 760px;
-  margin: 24px auto 64px;
-  padding: 28px 32px 40px;
-  border-radius: 12px;
+  /* Same frame as a doc page's content panel: flush under the navbar, rounded top corners,
+     35px from the edges (no sidebar here, so on both sides). Full width from the first
+     paint, so the panel doesn't grow when the results arrive. */
+  box-sizing: border-box;
+  align-self: stretch;
+  width: auto;
+  min-height: calc(100vh - var(--ifm-navbar-height, 60px));
+  margin: 0 35px;
+  padding: 36px 32px 56px;
+  border-radius: 10px 10px 0 0;
   background: #fff;
   color: var(--ais-text);
+}
+
+.ais-page__inner {
+  max-width: 880px;
+  margin: 0 auto;
 }
 
 .ais-page__search {
@@ -406,7 +413,7 @@
 }
 
 .ais-page__search-icon {
-  color: var(--ais-muted);
+  color: var(--ais-accent);
   flex: none;
 }
 
@@ -434,15 +441,14 @@
   font-size: 14px;
 }
 
-.ais-row--ask {
-  margin-bottom: 8px;
-  border-color: var(--ais-border);
-  background: #fafbff;
+.ais-page__ask {
+  padding: 12px 10px;
+  border-bottom: 1px solid #eef1f5;
+  border-radius: 0;
 }
 
-.ais-row--ask:hover {
-  border-color: var(--ais-row-active-border);
-  background: var(--ais-row-active-bg);
+.ais-page__ask:hover {
+  background: #f5f1ff;
 }
 
 .ais-page__list .ais-row {
@@ -464,6 +470,22 @@
 
 .ais-page__list .ais-row__desc {
   font-size: 14px;
+}
+
+.ais-page__more {
+  display: block;
+  margin: 20px auto 0;
+  padding: 9px 16px;
+  border: 1px solid var(--ais-border);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ifm-color-primary-dark);
+  font: 600 14px/1.2 var(--ifm-font-family-base);
+  cursor: pointer;
+}
+
+.ais-page__more:hover {
+  background: #f3f6fb;
 }
 
 /* ---------- Assistant drawer ---------- */
@@ -815,9 +837,10 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 996px) {
+  /* Doc pages go edge to edge here too. */
   .ais-page {
-    margin: 12px 8px 32px;
-    padding: 16px 14px 28px;
+    margin: 0;
+    padding: 24px 16px 40px;
   }
 }

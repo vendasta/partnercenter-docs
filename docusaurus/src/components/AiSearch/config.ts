@@ -6,6 +6,9 @@ export const AI_SEARCH_LOCALES = ['en'];
 /** Locales where meaning-based (semantic) results are merged into search. The index is English. */
 export const SEMANTIC_SEARCH_LOCALES = ['en'];
 
+/** Search size for the menu and the results page; shared so "View all N results" matches the page. */
+export const SEARCH_LIMITS = {keywordLimit: 100, semanticLimit: 10};
+
 /** Vendasta MCP server. Its `search_docs` tool is public (no token) and allows browser calls. */
 export const MCP_URL = 'https://mcp.vendasta.com/mcp';
 

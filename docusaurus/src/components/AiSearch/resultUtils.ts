@@ -92,6 +92,20 @@ export function mergeHits(keyword: PageHit[], semantic: PageHit[], query = ''): 
 }
 
 /** Title with matched terms wrapped in <mark>. */
+/** Pages under /legacy/ document retired tools; they rank after current pages. */
+export function isLegacyHit(hit: PageHit): boolean {
+  try {
+    return /^\/legacy(\/|$)/.test(new URL(hit.url, 'https://docs.vendasta.com').pathname);
+  } catch {
+    return false;
+  }
+}
+
+/** Current pages first, legacy pages after them, each group keeping its order. */
+export function demoteLegacy(pages: PageHit[]): PageHit[] {
+  return [...pages.filter((hit) => !isLegacyHit(hit)), ...pages.filter(isLegacyHit)];
+}
+
 export function titleHtml(title: string, tokens: string[]): string {
   return highlight(title, tokens);
 }

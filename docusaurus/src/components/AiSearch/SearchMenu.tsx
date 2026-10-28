@@ -3,11 +3,12 @@ import Link from '@docusaurus/Link';
 import {useHistory} from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {translate} from '@docusaurus/Translate';
-import {AI_SEARCH_LOCALES} from './config';
+import {AI_SEARCH_LOCALES, SEARCH_LIMITS} from './config';
 import {openAssistant} from './assistant';
 import {useMergedSearch} from './useMergedSearch';
 import {breadcrumbText, hitLink} from './resultUtils';
-import {AiStarIcon, ArrowRightIcon, DocIcon} from './Icons';
+import {ArrowRightIcon, DocIcon} from './Icons';
+import AskRow from './AskRow';
 import type {PageHit} from './types';
 import './aiSearch.css';
 
@@ -78,40 +79,6 @@ function ArticleRow({hit, active, onHover, onSelect}: ArticleRowProps) {
   );
 }
 
-type AskRowProps = {
-  query: string;
-  active: boolean;
-  onHover: () => void;
-  onSelect: () => void;
-};
-
-/** One-line "Ask AI" row that hands the query to the assistant drawer. */
-function AskRow({query, active, onHover, onSelect}: AskRowProps) {
-  return (
-    <button
-      type="button"
-      className={`ais-ask ${active ? 'is-active' : ''}`}
-      onPointerEnter={onHover}
-      // Keep focus in the search input so typing and arrow keys keep working.
-      onMouseDown={(event) => event.preventDefault()}
-      onClick={onSelect}
-      role="option"
-      aria-selected={active}>
-      <span className="ais-ask__body">
-        <span className="ais-badge">
-          <AiStarIcon size={12} /> {translate({id: 'aiSearch.badge', message: 'Ask AI'})}
-        </span>
-        {query && <span className="ais-ask__query">“{query}”</span>}
-      </span>
-      {active && (
-        <kbd className="ais-ask__kbd" aria-hidden="true">
-          ↵
-        </kbd>
-      )}
-    </button>
-  );
-}
-
 /**
  * Dropdown under the header search bar: top articles, an "Ask AI" row, "View all". The
  * Ask AI row moves to the top when the bar is empty, the query reads like a question, or
@@ -128,7 +95,7 @@ export default function SearchMenu({query, inputRef, onClose, onReset}: Props) {
   const menuRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const {pages, settled, ready} = useMergedSearch(query, {keywordLimit: 60, semanticLimit: 10, debounceMs: 200});
+  const {pages, settled, ready} = useMergedSearch(query, {...SEARCH_LIMITS, debounceMs: 200});
   const trimmed = query.trim();
   const hasQuery = trimmed.length > 0;
   const isProd = process.env.NODE_ENV === 'production';
