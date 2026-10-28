@@ -1,11 +1,17 @@
 import {useEffect, useState} from 'react';
 import {useDocsSearch} from './useDocsSearch';
 import {useSemanticSearch} from './useSemanticSearch';
-import {demoteLegacy, groupByPage, mergeHits, normalizeQuery} from './resultUtils';
+import {demoteLegacy, groupByPage, mentionsQuery, mergeHits, normalizeQuery} from './resultUtils';
 import type {PageHit} from './types';
 
 /** How long past the debounce the list waits for semantic hits before showing keyword hits alone. */
 const SEMANTIC_WAIT_MS = 2500;
+
+/**
+ * Below this many keyword pages the query may be gibberish or badly misspelled, so semantic
+ * hits must also mention a query word (see mentionsQuery). Real queries find 15 or more.
+ */
+const FEW_KEYWORD_PAGES = 3;
 
 type Options = {keywordLimit: number; semanticLimit: number; debounceMs: number};
 
@@ -37,8 +43,11 @@ export function useMergedSearch(query: string, {keywordLimit, semanticLimit, deb
 
   useEffect(() => {
     if (shown.query === normalized || !keywordDone || !(semanticDone || gaveUpOn === normalized)) return;
-    const hits = semanticDone ? semantic.hits : [];
-    const pages = demoteLegacy(mergeHits(groupByPage(keyword.results), hits, normalized));
+    const keywordPages = groupByPage(keyword.results);
+    const semanticHits = semanticDone ? semantic.hits : [];
+    const hits =
+      keywordPages.length < FEW_KEYWORD_PAGES ? semanticHits.filter((hit) => mentionsQuery(hit, normalized)) : semanticHits;
+    const pages = demoteLegacy(mergeHits(keywordPages, hits, normalized));
     setShown({query: normalized, pages});
   }, [shown.query, normalized, keywordDone, semanticDone, gaveUpOn, keyword.results, semantic.hits]);
 

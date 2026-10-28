@@ -92,6 +92,48 @@ export function mergeHits(keyword: PageHit[], semantic: PageHit[], query = ''): 
 }
 
 /** Title with matched terms wrapped in <mark>. */
+const STOP_WORDS = new Set(
+  'the and for are can how what why when where who which does did with you your from this that into about'.split(' '),
+);
+
+/** Edit distance between two words, giving up once it passes `max`. */
+function withinEdits(a: string, b: string, max: number): boolean {
+  if (Math.abs(a.length - b.length) > max) return false;
+  let previous = Array.from({length: b.length + 1}, (_, i) => i);
+  for (let i = 1; i <= a.length; i++) {
+    const current = [i];
+    for (let j = 1; j <= b.length; j++) {
+      current[j] = Math.min(previous[j] + 1, current[j - 1] + 1, previous[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    }
+    if (Math.min(...current) > max) return false;
+    previous = current;
+  }
+  return previous[b.length] <= max;
+}
+
+/**
+ * Whether a hit's text has a word spelled like one of the query's words (typos allowed after
+ * the first letter: one for 5–7 letter words, two for longer ones). The semantic search always
+ * returns its nearest pages, even for gibberish, and its similarity scores for gibberish
+ * overlap real queries, so this text check is what tells a real match from noise.
+ */
+export function mentionsQuery(hit: PageHit, query: string): boolean {
+  const terms = query
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter((term) => term.length >= 3 && !STOP_WORDS.has(term));
+  if (terms.length === 0) return false;
+  const words = new Set(`${hit.title} ${hit.snippet} ${hit.breadcrumb.join(' ')}`.toLowerCase().split(/[^a-z0-9]+/));
+  return terms.some((term) => {
+    const max = term.length >= 8 ? 2 : term.length >= 5 ? 1 : 0;
+    for (const word of words) {
+      // A typo rarely hits the first letter; requiring it keeps "dolor" from matching "color".
+      if (word.startsWith(term) || (max > 0 && word[0] === term[0] && withinEdits(term, word, max))) return true;
+    }
+    return false;
+  });
+}
+
 /** Pages under /legacy/ document retired tools; they rank after current pages. */
 export function isLegacyHit(hit: PageHit): boolean {
   try {
