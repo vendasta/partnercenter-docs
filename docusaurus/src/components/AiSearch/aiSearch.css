@@ -15,6 +15,8 @@
   --ais-mark: #dbe7ff;
   --ais-dialog-shadow: 0 15px 35px rgba(60, 66, 87, 0.12), 0 5px 15px rgba(0, 0, 0, 0.08);
   --ais-overlay-z: 1500;
+  /* The AI mark: Ask AI badge, highlighted-text button, assistant Send. */
+  --ais-ai-gradient: linear-gradient(90deg, #c026d3 0%, #3b82f6 100%);
 }
 
 /* ---------- Header: search bar ---------- */
@@ -143,31 +145,24 @@
   background: #f5f1ff;
 }
 
-/* Same violet-to-blue gradient as the header star. */
-.ais-ask__icon {
-  display: inline-flex;
-  flex: none;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  border-radius: 6px;
-  background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
-  color: #fff;
-}
-
 .ais-ask__body {
   display: flex;
   flex: 1;
-  align-items: baseline;
-  gap: 6px;
+  align-items: center;
+  gap: 10px;
   min-width: 0;
 }
 
-.ais-ask__label {
+.ais-badge {
+  display: inline-flex;
   flex: none;
-  color: #6d28d9;
-  font: 600 14px/1.35 var(--ifm-font-family-base);
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: var(--ais-ai-gradient);
+  color: #fff;
+  font: 600 12px/1 var(--ifm-font-family-base);
 }
 
 .ais-ask__query {
@@ -650,10 +645,14 @@
   padding: 0 14px;
   border: 0;
   border-radius: 8px;
-  background: var(--ais-accent);
+  background: var(--ais-ai-gradient);
   color: #fff;
   font: 600 14px/1 var(--ifm-font-family-base);
   cursor: pointer;
+}
+
+.ais-drawer__send:not(:disabled):hover {
+  filter: brightness(0.92);
 }
 
 .ais-drawer__send:disabled {
@@ -681,7 +680,7 @@
   transform: translateX(-50%);
   border: 0;
   border-radius: 8px;
-  background: var(--ais-text);
+  background: var(--ais-ai-gradient);
   color: #fff;
   box-shadow: var(--ais-dialog-shadow);
   font: 600 13px/1 var(--ifm-font-family-base);
@@ -691,7 +690,7 @@
 }
 
 .ais-quote-btn:hover {
-  background: #1a1b25;
+  filter: brightness(0.92);
 }
 
 .ais-quote-btn:focus-visible {

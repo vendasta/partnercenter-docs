@@ -97,11 +97,10 @@ function AskRow({query, active, onHover, onSelect}: AskRowProps) {
       onClick={onSelect}
       role="option"
       aria-selected={active}>
-      <span className="ais-ask__icon">
-        <AiStarIcon size={13} />
-      </span>
       <span className="ais-ask__body">
-        <span className="ais-ask__label">{translate({id: 'aiSearch.badge', message: 'Ask AI'})}</span>
+        <span className="ais-badge">
+          <AiStarIcon size={12} /> {translate({id: 'aiSearch.badge', message: 'Ask AI'})}
+        </span>
         {query && <span className="ais-ask__query">“{query}”</span>}
       </span>
       {active && (
