@@ -1,12 +1,9 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {useLocation} from '@docusaurus/router';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import {translate} from '@docusaurus/Translate';
 import SearchMenu from '../../components/AiSearch/SearchMenu';
-import {AI_SEARCH_LOCALES} from '../../components/AiSearch/config';
-import {openAssistant} from '../../components/AiSearch/assistant';
-import {SearchIcon, SparklesIcon} from '../../components/AiSearch/Icons';
+import {SearchIcon} from '../../components/AiSearch/Icons';
 import '../../components/AiSearch/aiSearch.css';
 
 function isTypingTarget(target: EventTarget | null): boolean {
@@ -18,15 +15,11 @@ function isTypingTarget(target: EventTarget | null): boolean {
 
 /**
  * Header search bar (type here; "/" or ⌘K focuses it) with a dropdown menu of the AI
- * answer card and top articles, plus an "AI Assistant" button that opens the assistant drawer.
+ * answer card and top articles. The menu's "Ask AI Assistant" row opens the assistant drawer.
  */
 export default function SearchBar(): React.ReactElement {
   const isBrowser = useIsBrowser();
   const location = useLocation();
-  const {
-    i18n: {currentLocale},
-  } = useDocusaurusContext();
-  const aiEnabled = AI_SEARCH_LOCALES.includes(currentLocale);
 
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
@@ -136,17 +129,6 @@ export default function SearchBar(): React.ReactElement {
         </div>
         {open && isBrowser && <SearchMenu query={query} inputRef={inputRef} onClose={close} onReset={reset} />}
       </div>
-      {aiEnabled && (
-        <button
-          type="button"
-          className="ais-nav__ask"
-          onClick={() => openAssistant('', 'navbar')}
-          aria-label={translate({id: 'aiSearch.trigger.askLabel', message: 'AI Assistant'})}
-          title={translate({id: 'aiSearch.trigger.askLabel', message: 'AI Assistant'})}>
-          <span>{translate({id: 'aiSearch.trigger.ask', message: 'AI Assistant'})}</span>
-          <SparklesIcon size={15} />
-        </button>
-      )}
     </div>
   );
 }

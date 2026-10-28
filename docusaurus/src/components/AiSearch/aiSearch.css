@@ -17,7 +17,7 @@
   --ais-overlay-z: 1500;
 }
 
-/* ---------- Header: search bar + "AI Assistant" ---------- */
+/* ---------- Header: search bar ---------- */
 
 .ais-nav {
   display: inline-flex;
@@ -29,13 +29,11 @@
   position: relative;
   /* Same footprint as the original plugin bar (500px) where it fits. The search group is
      centred on the page, so the right-hand buttons (Submit a Ticket, language) set the
-     limit: 951px = their width plus the AI Assistant button, a 16px gap each side, and
-     room for a classic scrollbar. */
-  width: clamp(130px, calc(100vw - 951px), 500px);
+     limit: 819px = their width, a 16px gap each side, and room for a classic scrollbar. */
+  width: clamp(130px, calc(100vw - 819px), 500px);
 }
 
-.ais-box__field,
-.ais-nav__ask {
+.ais-box__field {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -53,15 +51,8 @@
   cursor: text;
 }
 
-.ais-nav__ask {
-  display: inline-flex;
-  cursor: pointer;
-}
-
 .ais-box__field:hover,
-.ais-box.is-open .ais-box__field,
-.ais-nav__ask:hover,
-.ais-nav__ask:focus-visible {
+.ais-box.is-open .ais-box__field {
   background: rgba(255, 255, 255, 0.18);
   border-color: rgba(255, 255, 255, 0.4);
   outline: none;
@@ -759,19 +750,6 @@
 
 /* ---------- Responsive ---------- */
 
-@media (max-width: 1310px) {
-  /* Narrow desktops: the AI Assistant button shows only its icon, giving the bar the space. */
-  .ais-box {
-    width: clamp(130px, calc(100vw - 862px), 500px);
-  }
-  .ais-nav__ask span {
-    display: none;
-  }
-  .ais-nav__ask {
-    padding: 0 9px;
-  }
-}
-
 @media (max-width: 996px) {
   /* Collapsed: an icon-sized search button. Open: the bar spans the top of the screen. */
   .ais-box {
@@ -811,12 +789,6 @@
   }
   .ais-box.is-open .ais-menu {
     min-width: 0;
-  }
-  .ais-nav__ask span {
-    display: none;
-  }
-  .ais-nav__ask {
-    padding: 0 9px;
   }
 }
 
