@@ -3,7 +3,7 @@ import {useLocation} from '@docusaurus/router';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import {translate} from '@docusaurus/Translate';
 import SearchMenu from '../../components/AiSearch/SearchMenu';
-import {SearchIcon} from '../../components/AiSearch/Icons';
+import {AiStarIcon} from '../../components/AiSearch/Icons';
 import '../../components/AiSearch/aiSearch.css';
 
 function isTypingTarget(target: EventTarget | null): boolean {
@@ -79,7 +79,7 @@ export default function SearchBar(): React.ReactElement {
             setOpen(true);
             inputRef.current?.focus();
           }}>
-          <SearchIcon size={15} className="ais-box__icon" />
+          <AiStarIcon size={17} className="ais-box__icon" />
           <input
             ref={inputRef}
             className="ais-box__input"

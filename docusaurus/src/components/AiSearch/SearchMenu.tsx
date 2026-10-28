@@ -194,7 +194,7 @@ export default function SearchMenu({query, inputRef, onClose, onReset}: Props) {
           onMouseDown={(event) => event.preventDefault()}
           onClick={() => ask(trimmed)}>
           <span className="ais-badge">
-            <SparklesIcon size={13} /> {translate({id: 'aiSearch.badge', message: 'AI answer'})}
+            <SparklesIcon size={13} /> {translate({id: 'aiSearch.badge', message: 'Ask AI'})}
           </span>
           <span className="ais-aicard__text">
             {hasQuery

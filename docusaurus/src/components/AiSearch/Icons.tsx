@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useId} from 'react';
 
 type IconProps = {size?: number; className?: string};
 
@@ -12,6 +12,27 @@ export function SparkleIcon({size = 26, className}: IconProps) {
       fill="currentColor"
       aria-hidden="true">
       <path d="M12 2c.4 4.6 2.9 7.3 7.5 7.8V12c-4.6.5-7.1 3.2-7.5 7.8h-2.2C9.4 15.2 6.9 12.5 2.3 12v-2.2C6.9 9.3 9.4 6.6 9.8 2H12z" />
+    </svg>
+  );
+}
+
+/** Outlined four-point star with a light violet-to-blue AI gradient, for the navy header bar. */
+export function AiStarIcon({size = 18, className}: IconProps) {
+  const gradientId = useId();
+  return (
+    <svg className={className} width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <defs>
+        <linearGradient id={gradientId} x1="5" y1="3" x2="19" y2="21" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stopColor="#d8b4fe" />
+          <stop offset="1" stopColor="#93c5fd" />
+        </linearGradient>
+      </defs>
+      <path
+        d="M12 3c.6 5.2 3.8 8.4 9 9-5.2.6-8.4 3.8-9 9-.6-5.2-3.8-8.4-9-9 5.2-.6 8.4-3.8 9-9z"
+        stroke={`url(#${gradientId})`}
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
