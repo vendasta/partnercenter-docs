@@ -146,5 +146,5 @@ Yes. The `Wholesale Price` column shows the cost you pay for each product, displ
 </details>
 
 :::tip More questions about pricing?
-If you have other questions about pricing or need assistance understanding your wholesale costs, open a ticket in the [Support Portal](https://partners.vendasta.com/crm/tickets) or email billingsupport@vendasta.com. For what to include in a request, see [Best practice: Submitting a Support Ticket](../../../getting-started/partner-troubleshooting-guide.mdx#best-practice-submitting-a-support-ticket).
+If you have other questions about pricing or need assistance understanding your wholesale costs, submit a support request in the [Support Portal](https://partners.vendasta.com/crm/tickets) or email billingsupport@vendasta.com. For what to include in a request, see [Best practice: Submitting a support request](../../../getting-started/partner-troubleshooting-guide.mdx#best-practice-submitting-a-support-request).
 :::
