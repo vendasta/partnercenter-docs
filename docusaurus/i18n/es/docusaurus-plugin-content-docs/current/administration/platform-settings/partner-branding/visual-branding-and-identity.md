@@ -162,4 +162,4 @@ La interfaz de marca muestra una vista previa en vivo. Prueba los logotipos, col
 
 ![Descripción general de la marca del partner](./img/administration/partner-branding/customize-branding-overview.jpg)
 
-Para obtener ayuda con la marca visual, abre una solicitud en [Solicitudes de soporte en Partner Center](https://partners.vendasta.com/crm/tickets).
+Para obtener ayuda con la marca visual, abre [una solicitud de soporte](https://partners.vendasta.com/crm/tickets).
