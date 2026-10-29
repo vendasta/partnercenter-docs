@@ -34,7 +34,7 @@ Vendasta Services, Vendasta's in-house fulfillment team, can be reached at marke
     * **Email:** onboarding@vendasta.com
 
 * **Support on Demand (for partners only):** For questions about the Vendasta platform, including Partner Center, Business App, and Social AI.
-    * **Submit a support request:** [Support Portal](https://partners.vendasta.com/crm/tickets), in Partner Center
+    * **Submit a support request:** [Support requests](https://partners.vendasta.com/crm/tickets), in Partner Center
 
 ---
 
@@ -76,6 +76,6 @@ Your assigned representative is shown in the bottom left corner of Partner Cente
 <details>
 <summary>How do I contact Vendasta support about the platform?</summary>
 
-Submit a support request in the [Support Portal](https://partners.vendasta.com/crm/tickets). Support on Demand handles questions about Partner Center, Business App, and Social AI.
+[Submit a support request](https://partners.vendasta.com/crm/tickets). Support on Demand handles questions about Partner Center, Business App, and Social AI.
 
 </details>
