@@ -98,11 +98,11 @@ After an invoice has been paid, the recipient can click **Download as PDF** to s
 
 ### How do I manage invoices? {#managing-invoices}
 
-All invoices can be viewed at any time from the table on `Partner Center` → `Commerce` → `Invoices`. Clicking the Options **⋮** menu on an invoice allows users to edit or delete a draft invoice, download a copy of an invoice in PDF format, or download a receipt for a paid invoice in PDF format.
+All invoices can be viewed at any time from the table on `Partner Center` → `Commerce` → `Invoices`. Clicking the Options **⋮** menu on an invoice allows users to edit or delete a draft invoice, download a copy of an invoice in PDF format, download a receipt for a paid invoice in PDF format, mark an invoice as paid, duplicate an invoice, copy its payment link, or issue a credit note.
 
 Business App users can view the complete list of invoices they have received using the **Invoices** tab in the Business App.
 
-Partners can download a complete table of all sent non-voided invoices by clicking the **Export as CSV** button in the top right corner of the Invoices table.
+You can download a complete table of all sent invoices by clicking the **Export as CSV** button in the top right corner of the Invoices table.
 
 ### What do the invoice statuses mean? {#invoice-statuses}
 
@@ -110,9 +110,11 @@ An invoice's status is displayed in the Status column on the table in `Partner C
 
 - **Draft**: A draft invoice can be edited, and has not yet been sent to a recipient.
 - **Due**: A Due invoice has been sent to a recipient and can no longer be edited. Clicking **Resend Invoice** allows you to reselect a recipient and send the invoice again.
-- **Paid**: A Due invoice will be marked as Paid when its recipient pays for it via the **Pay this invoice** button. Alternately, if payment was collected outside of Vendasta Payments, an invoice can be marked as Paid by clicking the Options **⋮** menu, selecting **Change invoice status**, and selecting **Paid**.
+- **Paid**: A Due invoice will be marked as Paid when its recipient pays for it via the **Pay this invoice** button. Alternately, if payment was collected outside of Vendasta Payments, you can click the Options **⋮** menu and select **Mark as paid**.
 
-If a Due or Paid invoice was sent in error or needs to be cancelled, [issue a credit note](/commerce/credit-notes) on the invoice for the full amount. Open the invoice, click the Options **⋮** menu in the top right corner, and select `Issue credit note`.
+To cancel a Due or Paid invoice, [issue a credit note](/commerce/credit-notes) on the invoice for the full amount with a reason. Open the invoice, click the Options **⋮** menu in the top right corner, and select `Issue credit note`.
+
+An invoice that is fully credited shows the status Paid with a balance of $0. The invoice lists each credit note with its reason and amount, so you can tell it apart from an invoice that was paid.
 
 Note that an account's **Invoicing settings** are all off by default. To edit these settings for a particular account, go to the **Products** section on the account's page under `Partner Center` → `Accounts` → `Manage Accounts` → `Select account` and click **Invoices.**
 
@@ -167,7 +169,7 @@ For Partners with multiple markets, repeat the same steps under the '**Markets**
 
 **Draft invoices** can be deleted using the Options **⋮** menu on the invoice.
 
-**Sent or paid invoices** cannot be deleted — they are financial records. If you need to reverse the charge on a paid invoice, [issue a credit note](/commerce/credit-notes) instead. If a sent invoice was created in error and has not been paid, issue a credit note for the full amount to cancel the balance due.
+**Sent or paid invoices** cannot be deleted — they are financial records. To cancel a sent invoice or reverse the charge on a paid invoice, [issue a credit note](/commerce/credit-notes) for the full amount with a reason.
 
 You can't retract or delete an invoice that has already been sent.
 
@@ -177,7 +179,7 @@ If you have sent an invoice to the incorrect recipient, an invoice can be sent t
 
 <img src={require('./img/commerce/invoices/send-invoice-option.jpg').default} alt="Send invoice option" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-If the invoice is still Due, you can cancel the balance by issuing a credit note. Open the invoice in `Partner Center` → `Commerce` → `Invoices`, click the Options **⋮** menu in the top right corner, select `Issue credit note`, and apply a credit for the full amount. See [Credit notes](/commerce/credit-notes) for details.
+To cancel the balance on a Due invoice, open it in `Partner Center` → `Commerce` → `Invoices`, click the Options **⋮** menu in the top right corner, select `Issue credit note`, and apply a credit for the full amount with a reason. See [Credit notes](/commerce/credit-notes) for details.
 
 </details>
 
@@ -186,13 +188,9 @@ If the invoice is still Due, you can cancel the balance by issuing a credit note
 
 If you want to generate an invoice on an account but do not want to send it to your client, or the client has already paid, you can mark the invoice status as "Paid" for your records:
 
-In `Partner Center` → `Commerce` → `Invoices` → `Select the invoice` (any invoice that is Past Due, or Due status) → **Click the three dots at the end of the row → Change invoice status → Paid:**
+In `Partner Center` → `Commerce` → `Invoices`, click the three dots at the end of the row for an invoice with Past Due or Due status, then select `Mark as paid`.
 
-<img src={require('./img/commerce/invoices/mark-invoice-paid-1.png').default} alt="Mark invoice as paid step 1" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
-
-<img src={require('./img/commerce/invoices/mark-invoice-paid-2.png').default} alt="Mark invoice as paid step 2" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
-
-***Please note that invoices with the status "Paid" do not have the option to change the invoice status.***
+Invoices with the status Paid do not have the `Mark as paid` option.
 
 </details>
 
@@ -336,7 +334,7 @@ This error is caused by an invoice that contains an empty line item — a line w
 3. **Duplicate the invoice** using the Options **⋮** menu
 4. On the duplicate, delete the empty line item
 5. Charge the duplicate invoice
-6. Issue a credit note on the original invoice for the full amount
+6. Issue a credit note on the original invoice for the full amount to cancel it
 
 To prevent this in future, ensure every line item has a product description and a value greater than $0.00 before saving.
 
