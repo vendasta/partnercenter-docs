@@ -31,6 +31,34 @@ AI Reputation Specialist Setup is a done-for-you service where our experts confi
 
 Our team handles all the technical configuration and customization, tailoring the setup to your specific business needs.
 
+Watch the AI Reputation Specialist walkthrough:
+
+{/* VIDEO: "AI Reputation Specialist Walkthrough" — Wistia ID `xw7sgjsgeq`, from Business App docs grey-label videos, confirmed 2026-10-29. */}
+
+<div
+  className="wistia_responsive_padding"
+  style={{ padding: '56.25% 0 0 0', position: 'relative' }}
+>
+  <div
+    className="wistia_responsive_wrapper"
+    style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
+  >
+    <iframe
+      src="https://fast.wistia.net/embed/iframe/xw7sgjsgeq?web_component=true&seo=true"
+      title="AI Reputation Specialist Walkthrough"
+      allow="autoplay; fullscreen"
+      allowTransparency
+      frameBorder="0"
+      scrolling="no"
+      className="wistia_embed"
+      name="wistia_embed"
+      width="100%"
+      height="100%"
+    ></iframe>
+  </div>
+</div>
+<script src="https://fast.wistia.net/player.js" async></script>
+
 :::info Two ways to get the AI Reputation Specialist
 
 Choose one or the other:

@@ -424,7 +424,7 @@ The value at the end of the path is the `product_id`.
 ```
 
 :::tip
-For the AI Chat Receptionist, see [Make responses page-aware with the visitor's URL](../ai-workforce/ai-chat-receptionist/index.md#make-responses-page-aware-with-the-visitors-url) for the broader feature overview.
+For the AI Chat Receptionist, see [Make responses page-aware with the visitor's URL](/ai/ai-workforce/ai-chat-receptionist/#make-responses-page-aware-with-the-visitors-url) for the broader feature overview.
 :::
 
 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
