@@ -40,7 +40,7 @@ For each affected site, choose one of three options and submit your decision in 
 | Have Vendasta Services rebuild it | A paid rebuild on PHP 8.3. [Express Website Build](https://partners.vendasta.com/marketplace/products/MP-6NCSZHXZZ5CMBHHSR8FFDXCT7KVGNB8W) is an AI-assisted rebuild of up to five pages. [Templated Website](https://partners.vendasta.com/marketplace/products/MP-XQC6XC2VMV3B4ZJZLD6Z6ZDXKN2VTC86) suits larger sites or sites with ecommerce, bookings, or custom forms. | Sites with outdated themes or many abandoned plugins |
 | Retire the site | The site is decommissioned and its WordPress Hosting subscription is deactivated. | Sites the business no longer uses |
 
-An [Express Website Build](./express-website-build.md) is a modern rebuild, not an exact copy of the current design. If your site has [Website Support+](./vendasta-services-website-support.md), contact Vendasta Services, as fixes may be covered.
+An [Express Website Build](/vendasta-services/websites/express-website-build/) is a modern rebuild, not an exact copy of the current design. If your site has [Website Support+](/vendasta-services/websites/vendasta-services-website-support/), contact Vendasta Services, as fixes may be covered.
 
 ## How do I fix a site that breaks after migration?
 
