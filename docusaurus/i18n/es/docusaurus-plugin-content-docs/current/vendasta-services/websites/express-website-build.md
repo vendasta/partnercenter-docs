@@ -17,7 +17,7 @@ Express Website Build es un paquete completo diseñado para poner en línea el n
 * **Redacción asistida por IA:** el contenido del sitio de tu cliente es generado por IA usando la información que proporcionas.
 * **Construido en WordPress:** el sitio web de tu cliente se construirá en el sistema de gestión de contenido más popular y flexible del mundo.
 * **Plugins estándar:** incluye plugins esenciales como Yoast SEO, Gravity Forms, y Divi Booster sin costo adicional.
-* **Alojamiento seguro:** el sitio de tu cliente se aloja en nuestra plataforma de alojamiento de WordPress propia, impulsada por Google Cloud Platform, con un certificado SSL incluido.
+* **Alojamiento seguro:** el sitio de tu cliente se aloja en un servicio de WordPress totalmente administrado, seguro y de alto rendimiento, con un certificado SSL gratuito incluido.
 * **Una ronda de revisiones:** obtienes una ronda de revisiones para asegurar que el sitio web cumpla con tus expectativas antes del lanzamiento.
 * **Entrega rápida:** el primer borrador se entrega el mismo día hábil o el siguiente, con el objetivo de lanzar el sitio completo dentro de 15 días.
 
@@ -31,7 +31,7 @@ Express Website Build es un paquete completo diseñado para poner en línea el n
 
 Se necesitan dos componentes para construir el sitio web de tu cliente, más el contenido de tu cliente. Piensa en tu sitio web como una casa: el alojamiento es el terreno sobre el que se asienta, y el dominio es su dirección.
 
-* **Alojamiento:** cada sitio web se aloja en nuestra plataforma propia WordPress Hosting. Website Support y WordPress Hosting se requieren desde el primer día como productos complementarios.
+* **Alojamiento:** cada sitio web se aloja en WordPress Hosting. Website Support y WordPress Hosting se requieren desde el primer día como productos complementarios.
 * **Dominio:**
   * **Si no tienes un dominio:** recomendamos comprar uno en GoDaddy, ya que se integra con nuestra plataforma.
   * **Si ya tienes un dominio:** otórganos acceso delegándolo a `websites@yourdigitalagents.com` (para GoDaddy) o `websitesanalytics@localmarketpage.com` (para Google/Squarespace). Alternativamente, proporciona la URL y las credenciales de inicio de sesión.
