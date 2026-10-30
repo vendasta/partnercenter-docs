@@ -112,7 +112,9 @@ An invoice's status is displayed in the Status column on the table in `Partner C
 - **Due**: A Due invoice has been sent to a recipient and can no longer be edited. Clicking **Resend Invoice** allows you to reselect a recipient and send the invoice again.
 - **Paid**: A Due invoice will be marked as Paid when its recipient pays for it via the **Pay this invoice** button. Alternately, if payment was collected outside of Vendasta Payments, you can click the Options **⋮** menu and select **Mark as paid**.
 
-To cancel a Due or Paid invoice, [issue a credit note](/commerce/credit-notes) on the invoice for the full amount with a reason. Open the invoice, click the Options **⋮** menu in the top right corner, and select `Issue credit note`.
+To cancel a Due or Paid invoice, [issue a credit note](/commerce/credit-notes) on the invoice for the full amount with a reason. Open the invoice, click the Options **⋮** menu in the top right corner, and select `Issue credit note`. There is no `Void` action in the Options **⋮** menu of a Due invoice.
+
+The `Status` filter in `Commerce` → `Invoices` also includes `Void`.
 
 An invoice that is fully credited shows the status Paid with a balance of $0. The invoice lists each credit note with its reason and amount, so you can tell it apart from an invoice that was paid.
 
@@ -180,6 +182,19 @@ If you have sent an invoice to the incorrect recipient, an invoice can be sent t
 <img src={require('./img/commerce/invoices/send-invoice-option.jpg').default} alt="Send invoice option" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 To cancel the balance on a Due invoice, open it in `Partner Center` → `Commerce` → `Invoices`, click the Options **⋮** menu in the top right corner, select `Issue credit note`, and apply a credit for the full amount with a reason. See [Credit notes](/commerce/credit-notes) for details.
+
+</details>
+
+<details>
+<summary>How do I void an invoice?</summary>
+
+There is no `Void` option in a Due invoice's Options **⋮** menu. To cancel a Due invoice, issue a credit note for the full amount instead. The menu on a Due invoice has `Download invoice`, `Mark as paid`, `Duplicate invoice`, `Copy payment link`, and `Issue credit note`.
+
+1. Go to `Partner Center` → `Commerce` → `Invoices` and open the invoice.
+2. Click the Options **⋮** menu and select `Issue credit note`.
+3. Credit the full amount and add a reason.
+
+You can create credit notes on a Due or Paid invoice. To see the credit notes you've issued, go to `Commerce` → `Credit notes`, or open the account and click its `Credit notes` tab. See [Credit notes](/commerce/credit-notes) for details.
 
 </details>
 

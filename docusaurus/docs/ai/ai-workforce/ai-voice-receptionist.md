@@ -505,6 +505,22 @@ Yes. Voice AI does not require A2P. In the US, A2P applies to sending outbound S
 
 </details>
 
+### Canceling
+
+<details>
+<summary>How do I stop the AI Voice Receptionist right away?</summary>
+
+To stop the AI Voice Receptionist right away, cancel the AI Receptionist product with the `Immediately` option:
+
+1. In Partner Center, go to `Accounts` → `Manage Accounts` and open the account.
+2. In the `Products` card on the `Overview`, click the **⋮** menu beside the AI Receptionist product and select `Cancel product`.
+3. Under **When should [product name] and its add-ons be canceled?**, choose `Immediately`, then click `Next`.
+4. Select a reason, then click `Save`.
+
+This cancels the product and its add-ons, such as the SMS and Voice add-ons. If you choose `End of current period` instead, the product ends on the date shown beside that option. For all cancellation options, see [Cancel products](/accounts/manage-accounts/product-management#cancel-products).
+
+</details>
+
 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', background: 'rgba(60, 154, 99, 0.08)', border: '1px solid rgba(60, 154, 99, 0.35)', borderRadius: '8px', padding: '14px 18px', margin: '16px auto', width: 'fit-content', maxWidth: '100%', textAlign: 'center'}}>
   <span style={{flexShrink: 0}}><GraduationCapIcon size={26} /></span>
   <span style={{fontSize: '14px', color: 'var(--ifm-font-color-base)', textAlign: 'center'}}>
