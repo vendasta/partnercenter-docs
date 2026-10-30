@@ -58,6 +58,8 @@ Customers can keep calling your existing business number and your telephone prov
 
    Call forwarding is set up with the phone carrier, outside Conversations, so canceling Conversations AI doesn't turn it off and no reminder is sent. Before you cancel, turn off forwarding with the carrier so calls to the business line aren't still forwarded.
 
+   {/* SME: The live check on Oct 30, 2026 found no call-forwarding or phone-number setting in Partner Center or Business App. Confirm the carrier-forwarding statements in this paragraph, including that canceling doesn't turn forwarding off and that no reminder is sent. */}
+
 :::tip
 For more help forwarding calls, see [Call Forwarding Setup in Conversations](/business-app/conversations/).
 :::
@@ -88,6 +90,8 @@ While this guide will cover accessing these other options, it will focus on sett
 ### Prerequisites for AI Voice Receptionist setup
 
 Before you begin, make sure you've completed these prerequisites so your AI Voice Receptionist setup goes smoothly.
+
+{/* SME: The live check on Oct 30, 2026 found no phone-number setting in Partner Center or Business App. Confirm where the Conversations AI phone number is shown (the table below and the troubleshooting FAQ point to Administration → Conversations Settings). */}
 
 | What you need                     | Where to find it              | Notes                                                |
 | --------------------------------- | ----------------------------- | ---------------------------------------------------- |
@@ -302,6 +306,8 @@ Yes! You can set up call forwarding from your existing business number to your a
 
 Most mobile carriers support simple star-codes for call forwarding. Check your [Conversations Settings](/administration/platform-settings/conversations-settings/) for carrier-specific activation codes and step-by-step instructions.
 
+{/* SME: The live check on Oct 30, 2026 found no call-forwarding setting in Partner Center or Business App. Confirm that Conversations Settings still shows carrier-specific forwarding codes. */}
+
 </details>
 
 ### Configuration and customization
@@ -502,6 +508,24 @@ Yes, when those lines are configured to forward to the Business App number that 
 <summary>Can I test or use Voice AI without SMS / A2P registration?</summary>
 
 Yes. Voice AI does not require A2P. In the US, A2P applies to sending outbound SMS messages, not to Voice AI itself.
+
+</details>
+
+### Canceling
+
+<details>
+<summary>How do I stop the AI Voice Receptionist right away?</summary>
+
+To stop the AI Voice Receptionist right away, cancel the AI Receptionist product with the `Immediately` option:
+
+1. In Partner Center, go to `Accounts` → `Manage Accounts` and open the account.
+2. In the `Products` card on the `Overview`, click the **⋮** menu beside the AI Receptionist product and select `Cancel product`.
+3. Under **When should [product name] and its add-ons be canceled?**, choose `Immediately`, then click `Next`.
+4. Select a reason, then click `Save`.
+
+This cancels the product and its add-ons, such as the SMS and Voice add-ons. If you choose `End of current period` instead, the product ends on the date shown beside that option. For all cancellation options, see [Cancel products](/accounts/manage-accounts/product-management#cancel-products).
+
+{/* SME: If the business line forwards calls to the Conversations number through the phone carrier, what happens to those calls after an immediate cancellation, and should the client turn off forwarding with their carrier first? The live check on Oct 30, 2026 found no call-forwarding or phone-number setting in Partner Center or Business App, so this step is not documented as fact here. */}
 
 </details>
 
