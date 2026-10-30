@@ -29,20 +29,20 @@ The goal is faster activation and more recurring product purchases: the SMB sees
 
 The experience has two connected halves:
 
-1. **The onboarding email** — replaces the standard welcome email when you create a user, and shows the work AI has already completed for the business.
+1. **The onboarding email** — replaces the Set password email when you create a user, and shows the work AI has already completed for the business.
 2. **The Business App Home cards** — sections on the Home dashboard: a "work your AI has done" card, recommended next steps, and product upgrade cards.
 
 Both are controlled by you, the partner, and both can be dismissed by the SMB. Details below.
 
 ## The onboarding email
 
-When you invite a new Business App user, they receive an **onboarding email** in place of the classic welcome email. Rather than a simple "set your password" note, it walks the SMB through what your AI has already accomplished for their business, then invites them in — and you can make it yours with a **custom introductory message** on every send. It's sent automatically wherever you invite users. You can send the classic welcome email afterward from the user's options menu.
+When you invite a new Business App user, they receive an **onboarding email** in place of the Set password email. Rather than a simple "set your password" note, it walks the SMB through what your AI has already accomplished for their business, then invites them in — and you can make it yours with a **custom introductory message** on every send. It's sent automatically wherever you invite users. You can send the Set password email afterward from the user's options menu.
 
 <img src={require('./img/ai-onboarding-email-preview.png').default} alt="The onboarding email, shown in the in-app preview: a subject line, a checklist of the work the AI has completed, and a 'See what's ready for you' call to action" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 ### What the email contains
 
-- A subject line of **"Welcome to \[your Business App name\]"** — the same subject as the classic welcome email. The preview text under the subject greets the recipient by name.
+- A subject line of **"Welcome to \[your Business App name\]"** — the same subject as the Set password email. The preview text under the subject greets the recipient by name.
 - A short intro, then a **"We already got to work"** summary — the same checklist of completed work that appears on the SMB's Home page (see [What the work summary shows](#what-the-work-summary-shows)). The content is generated from the business's own information — business name, website, number of pages read, reviews found, active products, and so on.
 - If a Vibe website has been built, a **preview image of that landing page** near the top, linked to the live site.
 - A single call to action — **See what's ready for you** — that takes the SMB to their Business App Home page. The link works whether the user still needs to set a password or can log in directly. When a password is needed first, the create-password page shows the user's email address, lets them set a password, and continues with a **Get started** button. For a user who still needs to set a password, a line under the button reads *Already set your password? Log in any time at \[your Business App URL\]*, so the email keeps working as a way back to Business App after the password is set.
@@ -135,7 +135,7 @@ The demo website is built from the business's own information and is set up to c
 
 ### When the email is sent
 
-Adding a user to an account is what sends the onboarding email. There is no checkbox to select or clear — the email goes out as part of creating the user, and it **replaces** the classic welcome email for that person. The two are never sent together.
+Adding a user to an account is what sends the onboarding email. There is no checkbox to select or clear — the email goes out as part of creating the user, and it **replaces** the Set password email for that person. The two are never sent together.
 
 **Places you send it yourself:**
 
@@ -175,7 +175,7 @@ Creating a user through the API doesn't send the onboarding email. Call this end
 
 Each user can receive at most 5 onboarding emails at once, then about one more every 4.8 hours (no more than 9 in 24 hours). The limit counts every send, including sends from Partner Center. A request over the limit still returns success (`200`), but no email is sent.
 
-The `GET /platform/users/{id}/actions/sendWelcomeEmail` API sends the set-password email, not the onboarding email.
+The `GET /platform/users/{id}/actions/sendWelcomeEmail` API sends the Set password email, not the onboarding email.
 
 ### Inviting users with the Invite users panel
 
@@ -200,12 +200,12 @@ You don't have to create a brand-new user to use the onboarding email. You can s
 
 1. Go to the account's users (**Accounts → Manage Accounts →** select the account **→ Users**, or `Accounts` → `Manage Users`). If the person isn't a user yet, add them to the account first.
 2. Open the **options menu (⋮)** next to the user.
-3. Choose **Send Onboarding Email**, then confirm.
+3. Choose **Send Onboarding email**, then confirm.
 
 This is handy for re-triggering the experience for someone already set up — and it's also the easiest way to see the real email yourself: add yourself as a user on the account and send it to your own inbox.
 
 :::note
-The classic **welcome email** is always available too. To send it after a user has been created, open the **options menu (⋮)** next to the user's name — either on the account or in `Accounts` → `Manage Users` — and click **Send Set Password email (Welcome email)**.
+The **Set password email** is always available too. To send it after a user has been created, open the **options menu (⋮)** next to the user's name — either on the account or in `Accounts` → `Manage Users` — and click **Send Set password email**.
 :::
 
 ### Sending it from the CRM
@@ -227,11 +227,11 @@ Each time you send the onboarding email, you can include a **custom greeting** �
 - It appears in the **preview**, so you can check it before sending.
 - It applies to **that send only**. It isn't saved as a default for future emails.
 
-The custom greeting is available when creating a new user, when sending to an existing user from the options menu, when sending from the CRM, and in the **Users** panel of Easy Account Create. This matches how the custom message on the classic welcome email works.
+The custom greeting is available when creating a new user, when sending to an existing user from the options menu, when sending from the CRM, and in the **Users** panel of Easy Account Create. This matches how the custom message on the Set password email works.
 
 ### Creating users in Easy Account Create
 
-You can add an account's first users while you create the account, in the **Users** panel of Easy Account Create. Those users receive the onboarding email instead of the classic welcome email.
+You can add an account's first users while you create the account, in the **Users** panel of Easy Account Create. Those users receive the onboarding email instead of the Set password email.
 
 - **Custom introductory message** — an optional greeting added to the top of the email. It applies to this account creation only and isn't saved as a default.
 - **Preview email** — opens the email before the account exists. It's branded with your white label, stands in a placeholder business name for the account you're creating, and renders in the language Partner Center is displayed in.
@@ -412,9 +412,9 @@ The "AI has done the work" card toggle in Customize Business App controls only w
 </details>
 
 <details>
-<summary>When should I send the classic welcome email instead of the onboarding email?</summary>
+<summary>When should I send the Set password email instead of the onboarding email?</summary>
 
-The onboarding email is the default because it shows value up front, and it takes a per-send **custom introductory message** so you can make it personal. The classic welcome email suits a plain set-password send — a password reset, or a user who's already familiar with the platform. The onboarding email always goes out when a user is added; send the classic welcome email afterward if you need it. For fully custom messaging, layer a Marketing Campaign on top.
+The onboarding email is the default because it shows value up front, and it takes a per-send **custom introductory message** so you can make it personal. The Set password email suits a password reset, or a user who's already familiar with the platform. The onboarding email always goes out when a user is added; send the Set password email afterward if you need it. For fully custom messaging, layer a Marketing Campaign on top.
 
 </details>
 
@@ -435,9 +435,9 @@ Each person receives their own copy, addressed to them in their correspondence l
 </details>
 
 <details>
-<summary>Can I still send the classic welcome email after a user is created?</summary>
+<summary>Can I still send the Set password email after a user is created?</summary>
 
-Yes. The classic welcome email is always available. Open the **options menu (⋮)** next to the user's name — either on the account or in `Accounts` → `Manage Users` — and click **Send Set Password email (Welcome email)**. This is useful for password resets or any time you'd prefer the standard welcome email over the onboarding email.
+Yes. The Set password email is always available. Open the **options menu (⋮)** next to the user's name — either on the account or in `Accounts` → `Manage Users` — and click **Send Set password email**. This is useful for password resets or any time you'd prefer the Set password email over the onboarding email.
 
 You don't choose a sending domain when you send it — the platform selects the best one automatically.
 
@@ -489,5 +489,5 @@ No. There is no setting to turn off the AI onboarding email. Add users in Partne
 
 - [Customizing the "Recommended for your business" cards](/business-app/recommended-cards-configuration) — how the upgrade cards decide what to show, and configuring each product's upgrade path
 - [Home Overview](/business-app/home) — the Business App Home dashboard your clients see
-- [Customizing the welcome email](/accounts/manage-users/welcome-email) — the classic welcome email and Marketing Campaign workaround
+- [Customizing the Set password email](/accounts/manage-users/welcome-email) — the Set password email and Marketing Campaign workaround
 - [Manage Users](/accounts/manage-users) — creating and managing Business App users
