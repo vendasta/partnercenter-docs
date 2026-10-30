@@ -93,7 +93,7 @@ Choose where your Custom AI Employee will work:
 
 **Available Channels:**
 
-- **Website chat**: Deploy on one or multiple website chat widgets. Custom AI Employees on Web Chat receive the visitor's current page URL with every message. See [Make responses page-aware with the visitor's URL](./ai-chat-receptionist/index.md#make-responses-page-aware-with-the-visitors-url) for how to tune prompts to use it.
+- **Website chat**: Deploy on one or multiple website chat widgets. Custom AI Employees on Web Chat receive the visitor's current page URL with every message. See [Make responses page-aware with the visitor's URL](/ai/ai-workforce/ai-chat-receptionist/#make-responses-page-aware-with-the-visitors-url) for how to tune prompts to use it.
 - **In-platform chat**: Chat directly in Partner Center (automatically available after creation)
 
 
@@ -222,6 +222,143 @@ Keep customers and your team members informed by sending regular updates based o
 - Automated follow-up on failed payments
 - Customer inquiries about payment status
 - Payment retry coordination
+
+</TabItem>
+<TabItem value="data-analyst" label="AI Data Analyst">
+
+Analyze business data, generate reports, and answer data-driven questions to support decision making.
+
+**Basic Configuration Required:**
+
+- **Knowledge Sources**: Data definitions, business metrics, reporting standards
+- **Capabilities**: Custom capabilities connecting to analytics platforms and databases
+- **Tools**: API integrations with data warehouses, BI tools, and analytics systems
+
+**Use Cases:**
+
+- Generate performance reports from business data
+- Answer questions about trends and patterns
+- Create data visualizations and summaries
+
+Watch the AI Data Analyst setup:
+
+{/* VIDEO: "AI Data Analyst Setup" — Wistia ID `fuoold4f5g`, from Business App docs grey-label videos, confirmed 2026-10-29. */}
+
+<div
+  className="wistia_responsive_padding"
+  style={{ padding: '56.25% 0 0 0', position: 'relative' }}
+>
+  <div
+    className="wistia_responsive_wrapper"
+    style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
+  >
+    <iframe
+      src="https://fast.wistia.net/embed/iframe/fuoold4f5g?web_component=true&seo=true"
+      title="AI Data Analyst Setup"
+      allow="autoplay; fullscreen"
+      allowTransparency
+      frameBorder="0"
+      scrolling="no"
+      className="wistia_embed"
+      name="wistia_embed"
+      width="100%"
+      height="100%"
+    ></iframe>
+  </div>
+</div>
+<script src="https://fast.wistia.net/player.js" async></script>
+
+</TabItem>
+<TabItem value="support-employee" label="AI Support Employee">
+
+Handle customer support inquiries, troubleshoot issues, and provide technical assistance across multiple channels.
+
+**Basic Configuration Required:**
+
+- **Knowledge Sources**: Product documentation, troubleshooting guides, FAQs, support procedures
+- **Capabilities**: Ticket creation, knowledge base search, escalation workflows
+- **Channels**: Web chat, email, SMS, in-platform chat
+
+**Use Cases:**
+
+- Answer common technical questions
+- Guide customers through troubleshooting steps
+- Create and track support tickets
+- Escalate complex issues to human agents
+
+Watch the AI Support Employee setup:
+
+{/* VIDEO: "AI Support Employee Setup" — Wistia ID `sucs5cue6a`, from Business App docs grey-label videos, confirmed 2026-10-29. */}
+
+<div
+  className="wistia_responsive_padding"
+  style={{ padding: '56.25% 0 0 0', position: 'relative' }}
+>
+  <div
+    className="wistia_responsive_wrapper"
+    style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
+  >
+    <iframe
+      src="https://fast.wistia.net/embed/iframe/sucs5cue6a?web_component=true&seo=true"
+      title="AI Support Employee Setup"
+      allow="autoplay; fullscreen"
+      allowTransparency
+      frameBorder="0"
+      scrolling="no"
+      className="wistia_embed"
+      name="wistia_embed"
+      width="100%"
+      height="100%"
+    ></iframe>
+  </div>
+</div>
+<script src="https://fast.wistia.net/player.js" async></script>
+
+</TabItem>
+<TabItem value="inside-sales-rep" label="AI Inside Sales Representative">
+
+Qualify leads, schedule meetings, and nurture prospects through the sales pipeline with personalized outreach.
+
+**Basic Configuration Required:**
+
+- **Knowledge Sources**: Product information, pricing, qualification criteria, objection handling scripts
+- **Capabilities**: Lead scoring, meeting booking, CRM integration, email and SMS outreach
+- **Channels**: Email, SMS, web chat, in-platform chat
+
+**Use Cases:**
+
+- Qualify inbound leads with discovery questions
+- Schedule product demos and sales calls
+- Follow up with prospects at the right time
+- Answer product and pricing questions
+
+Watch the AI Inside Sales Representative setup:
+
+{/* VIDEO: "AI Inside Sales Representative Setup" — Wistia ID `xylk08ufqi`, from Business App docs grey-label videos, confirmed 2026-10-29. */}
+
+<div
+  className="wistia_responsive_padding"
+  style={{ padding: '56.25% 0 0 0', position: 'relative' }}
+>
+  <div
+    className="wistia_responsive_wrapper"
+    style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}
+  >
+    <iframe
+      src="https://fast.wistia.net/embed/iframe/xylk08ufqi?web_component=true&seo=true"
+      title="AI Inside Sales Representative Setup"
+      allow="autoplay; fullscreen"
+      allowTransparency
+      frameBorder="0"
+      scrolling="no"
+      className="wistia_embed"
+      name="wistia_embed"
+      width="100%"
+      height="100%"
+    ></iframe>
+  </div>
+</div>
+<script src="https://fast.wistia.net/player.js" async></script>
 
 </TabItem>
 </Tabs>

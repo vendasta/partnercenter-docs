@@ -124,6 +124,19 @@ Published campaigns cannot be re-sent to the same list directly. To send again:
 2. Add your contacts to the new copy.
 3. Publish the copy.
 
+### Some contacts on a list never receive the campaign
+
+A campaign sends only to the contacts that were added to it as recipients. When you add a list, the campaign enrolls the list's members at that moment. Contacts you add to the list later aren't added to the campaign, so a long-running campaign can keep sending to an outdated set of recipients.
+
+1. Open the campaign and check who is enrolled as a recipient. Compare it with the current members of your list.
+2. If contacts are missing, copy the campaign (three-dot menu → `Copy campaign`).
+3. On the copy, add recipients from your up-to-date list rather than adding contacts one by one.
+4. Publish the copy, then pause the original campaign so it stops sending to the old recipients.
+
+:::tip
+To enroll future list members automatically, set up an automation with the `When a contact is added to a list` trigger.
+:::
+
 ## Frequently asked questions
 
 <details>
@@ -168,6 +181,13 @@ Not directly. Duplicate the campaign (or use the three-dot menu → **Copy campa
 <summary>Why were some contacts not added to my campaign?</summary>
 
 When a campaign uses dynamic fields and a contact is missing a value for that field, that contact is excluded. Remove or make optional the dynamic field, or fill in the missing values in the CRM before adding the contacts.
+</details>
+
+<details>
+<summary>Why are some contacts on my list not receiving the campaign?</summary>
+
+The campaign enrolls a list's members only at the moment you add the list. Contacts added to the list afterwards aren't enrolled. Copy the campaign, add your current list to the copy, publish it, and pause the original.
+
 </details>
 
 <details>

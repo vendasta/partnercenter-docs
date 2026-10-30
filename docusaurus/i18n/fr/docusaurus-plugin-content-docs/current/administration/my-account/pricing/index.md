@@ -118,5 +118,5 @@ La **facturation standard** applique un prix fixe, quel que soit le volume. La *
 </details>
 
 :::tip D'autres questions sur la tarification ?
-Si vous avez d'autres questions sur la tarification ou si vous avez besoin d'aide pour comprendre vos coûts de gros, ouvrez une demande dans [Demandes d'assistance dans Partner Center](https://partners.vendasta.com/crm/tickets) ou envoyez un courriel à billingsupport@vendasta.com. Pour savoir quoi inclure dans une demande, consultez [Bonne pratique : soumettre une demande d'assistance](/fr/getting-started/partner-troubleshooting-guide/#best-practice-submitting-a-support-ticket).
+Si vous avez d'autres questions sur la tarification ou si vous avez besoin d'aide pour comprendre vos coûts de gros, ouvrez [une demande d'assistance](https://partners.vendasta.com/crm/tickets) ou envoyez un courriel à billingsupport@vendasta.com. Pour savoir quoi inclure dans une demande, consultez [Bonne pratique : soumettre une demande d'assistance](/fr/getting-started/partner-troubleshooting-guide/#best-practice-submitting-a-support-request).
 :::

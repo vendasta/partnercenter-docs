@@ -1,6 +1,6 @@
 ---
 title: Logic & flow control
-description: Control how your automation flows — branch with if/else, pause with delays, jump between steps, and end automations early.
+description: "Control how your automation flows: branch with if/else, pause with delays, jump between steps, and end automations early."
 sidebar_position: 12
 sidebar_class_name: hidden-sidebar-item
 sidebar_label: Logic & flow control
@@ -11,9 +11,7 @@ product: automations
 audience: partners
 ---
 
-# Logic & flow control
-
-Logic and flow-control steps let you direct how an automation moves through its workflow — branching on conditions, pausing for the right moment, skipping ahead, or stopping early.
+Logic and flow-control steps let you direct how an automation moves through its workflow: branching on conditions, pausing for the right moment, skipping ahead, or stopping early.
 
 :::tip
 Complex workflows get hard to read. See [Navigating the automation canvas](./navigating-the-automation-canvas.mdx) for the step search, step references, and minimap tools that help you find your way around a large automation.
@@ -21,120 +19,122 @@ Complex workflows get hard to read. See [Navigating the automation canvas](./nav
 
 ## If/else branches
 
-The If/Else step splits your workflow into two paths based on whether a condition is met.
+The `If/else branch` step splits your workflow into ordered branches. The automation checks each branch's conditions from top to bottom and follows the first branch whose conditions are met. If none are met, it follows the `No conditions met` path.
 
 ### Set up an if/else step
 
-When adding a new step, select **If/Else** from the options:
+When adding a new step, select `If/else branch` under `Conditions`. Branch order matters:
 
-![If/Else step setup](./img/automations/ifelse-setup.jpg)
+<img src={require('./img/automations/ifelse-setup.jpg').default} alt="If/else branch info banner explaining that branch order matters: the automation follows the first branch whose condition is met, and you drag branches to set their order" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-You will be prompted to define a filter:
+You're prompted to define a filter for each branch:
 
-![If/Else filter configuration](./img/automations/ifelse-filter.jpg)
+<img src={require('./img/automations/ifelse-filter.jpg').default} alt="Automation canvas with an If/else branch step that checks Branch 1 (account location is Canada), then Branch 2 (account location is United States), with Branch 1, Branch 2, and No conditions met paths" style={{width: '100%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-After setting up your condition, the workflow shows two branches:
-- **If branch**: This path is followed when the condition is true
-- **Else branch**: This path is followed when the condition is false
+After setting up your conditions, the workflow shows a path for each branch:
+- `Branch 1`, `Branch 2`, and so on: followed when that branch is the first one whose conditions are met
+- `No conditions met`: followed when none of the branch conditions are met
 
-You can add different steps to each branch to create custom pathways based on your filter conditions.
+You can add different steps to each path to create custom pathways based on your filter conditions.
 
 ### Common use cases for if/else
 
-1. **Contact qualification** — Determine if a lead meets your criteria and end the automation for unqualified leads
-2. **Multi-path communication** — Send different follow-up emails based on customer responses and end the automation when a desired outcome is achieved
-3. **Time-sensitive processes** — End automations for contacts who haven't responded within a specified timeframe
+1. **Contact qualification**: Determine if a lead meets your criteria and end the automation for unqualified leads
+2. **Multi-path communication**: Send different follow-up emails based on customer responses and end the automation when a desired outcome is achieved
+3. **Time-sensitive processes**: End automations for contacts who haven't responded within a specified timeframe
 
 ## End this automation
 
-The **End This Automation** step terminates an automation at a specific point. This is useful when you've completed the necessary steps for some records and don't need to continue processing.
+The `End this automation` step terminates an automation at a specific point. Find it under the `Workflow` category in the step editor. This is useful when you've completed the necessary steps for some records and don't need to continue processing.
 
-![End This Automation step](./img/automations/end-automation.jpg)
+<img src={require('./img/automations/end-automation.jpg').default} alt="Automation canvas with an End this automation step on the No conditions met path of an If/else branch" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-Using this step along with if/else conditions gives you significant control over the automation flow. For example, you can terminate the automation early for certain leads while continuing the process for others based on specific criteria.
+Using this step along with `If/else branch` steps gives you significant control over the automation flow. For example, you can terminate the automation early for certain leads while continuing the process for others based on specific criteria.
 
 ## Delay steps
 
 ### Fixed delay
 
-The **Delay** step pauses the automation for a set amount of time (minutes, hours, or days) before proceeding to the next step. Find it under the **Delays** category in the step editor.
+The `Delay` step pauses the automation for a set amount of time (minutes, hours, or days) before proceeding to the next step. Find it under the `Delays` category in the step editor.
 
 ### Delay until an event happens
 
-The **Delay Until** step pauses the automation and waits until a specific event occurs in the CRM, giving you precise timing control.
+The `Delay until an event happens` step pauses the automation and waits until a specific event occurs in the CRM, giving you precise timing control. The step has two outcome paths: `Event happened`, followed when the event occurs within the wait time, and `Event did not happen`, followed when the wait time ends first.
 
-![Delay Until Step illustration](./img/automations/delay-until/delay-until-step-1.jpg)
+<img src={require('./img/automations/delay-until/delay-until-step-1.jpg').default} alt="Delay until an event happens step on the canvas, waiting up to 1 day for a meeting to be created or modified on the contact" style={{width: '50%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 #### Set up a delay until step
 
-1. Navigate to the **Automation Workflow Editor** within your CRM
-2. Add a **Delay Until** step at the appropriate point in the workflow
+1. Go to `Automations` → `My automations`, open the automation, and select the `Editor` tab
+2. Add a `Delay until an event happens` step at the appropriate point in the workflow
 3. Choose a delay period or specify an event that must occur before proceeding to the next step
-4. Save and activate the workflow
+4. Select `Publish`. Your changes don't go live until you publish
 
 #### Available delay until options
 
-- Name of the action: **Delay until an event happens**
-- List of sub-triggers currently available for a contact:
+When you add a `Delay until an event happens` step, you choose the event to wait for. These are the events available for a contact:
 
-![Delay Until options](./img/automations/delay-until/delay-until-step-2.jpg)
+<img src={require('./img/automations/delay-until/delay-until-step-2.jpg').default} alt="Add a step panel for a Delay until an event happens step, showing the step name, description, and event search box" style={{width: '50%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
-![Delay Until configuration](./img/automations/delay-until/delay-until-step-3.jpg)
-![Delay Until additional options](./img/automations/delay-until/delay-until-step-4.jpg)
+<div style={{marginBottom: '24px'}}>
+<img src={require('./img/automations/delay-until/delay-until-step-3.jpg').default} alt="Integrations events for the Delay until an event happens step, such as A Clio matter is closed and A Jobber job is completed" style={{width: '50%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
+</div>
+
+<img src={require('./img/automations/delay-until/delay-until-step-4.jpg').default} alt="Contacts events for the Delay until an event happens step, such as Web Chat captures a lead and Contact created or modified" style={{width: '50%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 #### Benefits of delay until steps
 
-- **Improved workflow precision** — Ensures that automated tasks happen at the optimal moment
-- **Better customer engagement** — Delays help optimize messaging and follow-up timing
-- **Enhanced sales process management** — Enables better tracking of missed sales touch points and notifications
+- **Improved workflow precision**: Ensures that automated tasks happen at the optimal moment
+- **Better customer engagement**: Delays help optimize messaging and follow-up timing
+- **Enhanced sales process management**: Enables better tracking of missed sales touch points and notifications
 
-![Delay Until benefits illustration](./img/automations/delay-until/delay-until-step-5.jpg)
+<img src={require('./img/automations/delay-until/delay-until-step-5.jpg').default} alt="Automation canvas with a Delay until an event happens step: the Event happened path leads to Update contact and the Event did not happen path leads to Notify a user" style={{width: '75%', border: '1px solid #e0e0e0', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}} />
 
 #### Use case example
 
-A business wants to automate follow-ups for new contacts generated via web chat. The workflow includes:
+Say you want to automate follow-ups for new contacts generated via web chat. The workflow includes:
 
 1. AI-generated thank-you email upon contact creation
 2. A plain text email sent to the contact
 3. A CRM sales task created for follow-up
-4. A **Delay Until** step to wait a set period before creating an opportunity
+4. A `Delay until an event happens` step to wait a set period before creating an opportunity
 5. A note added to the contact after the delay period
 
-By implementing a Delay Until step, the business ensures timely and meaningful engagement rather than immediate, potentially ineffective, actions.
+By using a `Delay until an event happens` step, you ensure timely and meaningful engagement rather than immediate, potentially ineffective, actions.
 
 ## Jump to a step
 
-The **Jump to a step** action sends the automation forward or backward to a different step in the workflow. Find it under the **Conditions** category in the step editor.
+The `Jump to a step` action sends the automation forward or backward to a different step in the workflow. Find it under the `Conditions` category in the step editor.
 
 Common uses:
-- **Retry loops** — Jump back to a check step every few hours until a condition is met
-- **Skip ahead** — Jump past steps that don't apply based on earlier conditions
+- **Retry loops**: Jump back to a check step every few hours until a condition is met
+- **Skip ahead**: Jump past steps that don't apply based on earlier conditions
 
 :::warning
-Be careful with backward jumps — without an exit condition (like an if/else that ends the automation), you can create an infinite loop.
+Be careful with backward jumps. Without an exit condition (like an `If/else branch` that ends the automation), you can create an infinite loop.
 :::
 
 ## Rate filter
 
-The **Rate filter** step limits how many entities pass through per time period. Find it under the **Conditions** category in the step editor.
+The `Rate filter` step limits how many entities pass through per time period. Find it under the `Conditions` category in the step editor.
 
-Use this when you need to throttle actions — for example, limiting notification emails to 10 per hour or pacing API calls to avoid rate limits on an external system.
+Use this when you need to throttle actions. For example, limit notification emails to 10 per hour or pace API calls to avoid rate limits on an external system.
 
-## A/B branch (Early Access)
+## A/B branch
 
-The **A/B branch** step splits automation runs between two paths, letting you test which approach performs better. Find it under the **Workflow** category in the step editor.
+The `A/B branch` step splits automation runs between two paths, letting you test which approach performs better. Find it under the `Workflow` category in the step editor.
 
 Use this to test different messaging, different action sequences, or different timing to see which path produces better outcomes.
 
 ## Best practices
 
-1. **Plan your logic flow** — Before implementing if/else steps, map out all possible paths your automation might take
-2. **Use meaningful delays** — Choose delay periods that make sense for your customer journey and business processes
-3. **Test complex branching** — Always test advanced automations thoroughly before deploying to production
-4. **Add exit conditions** — When using jump steps for loops, always include a way to break out
+1. **Plan your logic flow**: Before implementing if/else steps, map out all possible paths your automation might take
+2. **Use meaningful delays**: Choose delay periods that make sense for your customer journey and business processes
+3. **Test complex branching**: Always test advanced automations thoroughly before deploying to production
+4. **Add exit conditions**: When using jump steps for loops, always include a way to break out
 
 ## Related pages
 
-- **[Data expressions](./data-expressions.mdx)** — Extract and transform data between steps
-- **[Actions overview](./actions-overview.mdx)** — All available action steps
-- **[Triggers overview](./triggers-overview.mdx)** — What starts your automation
+- [Data expressions](./data-expressions.mdx): Extract and transform data between steps
+- [Actions overview](./actions-overview.mdx): All available action steps
+- [Triggers overview](./triggers-overview.mdx): What starts your automation
